@@ -1305,7 +1305,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "槍を伸ばして貫通した敵ユニットに物理ダメージを与え、物理防御を低下させる。さらに「デマーシアの旗印」にこのスキルが命中した場合、自身をそこまで引き寄せ、通り道にいた敵をノックアップさせる。",
-            "dynamicDescription": "槍を伸ばして<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@Effect3Amount@秒間、<scaleArmor>物理防御を@Effect2Amount@%</scaleArmor>低下させる。<br><br>槍が<spellName>「デマーシアの旗印」</spellName>に当たると自身をそこまで引き寄せ、通り道にいた敵を0.75秒間<status>ノックアップ</status>させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "槍を伸ばして<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@Effect3Amount@秒間、<scaleArmor>物理防御を@BaseARShred*100@%</scaleArmor>低下させる。<br><br>槍が<spellName>「デマーシアの旗印」</spellName>に当たると自身をそこまで引き寄せ、通り道にいた敵を0.75秒間<status>ノックアップ</status>する。@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1331,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1345,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1455,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "デマーシアの歴代王の力を借りて、ダメージを防ぐシールドを発生させ、周囲の敵にスロウを与える。",
-            "dynamicDescription": "王国の神聖な力を得て、周囲の敵に@Effect5Amount@秒間@Effect2Amount@%の<status>スロウ効果</status>を与え、自身は<shield>耐久値@BaseShield@のシールド</shield>を獲得する。このシールドは命中した敵チャンピオン1体につき、<shield>耐久値が@BonusShield@</shield>増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "王国の神聖な力を得て、周囲の敵に@Effect5Amount@秒間@BaseSlowAmount*100@%の<status>スロウ効果</status>を与え、自身は<shield>耐久値@TotalShield@のシールド</shield>を獲得する。このシールドは命中した敵チャンピオン1体につき、耐久値が<shield>@BonusShield@</shield>増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1481,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1495,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1605,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "デマーシアの誇りを胸に抱き、自動効果で攻撃速度が増加するようになる。発動すると指定地点にデマーシア軍の旗を投げ、地面に突き刺さると同時に魔法ダメージを与える。この旗は味方を鼓舞し、自身を含む味方チャンピオンの攻撃速度が、自動効果と同じ分だけ増加する。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <attackSpeed>攻撃速度が@PermanentAttackSpeed*100@%</attackSpeed>増加する。<br><br><spellActive>発動効果:</spellActive> 軍旗を投げて地面に突き刺し、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。また@Effect4Amount@秒間、旗の周囲にいる味方の<attackSpeed>攻撃速度を@Effect3Amount*100@%</attackSpeed>増加させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <attackSpeed>攻撃速度が@PermanentAttackSpeed*100@%</attackSpeed>増加する。<br><br><spellActive>発動効果:</spellActive> 軍旗を投げて地面に突き刺し、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。また@Effect4Amount@秒間、旗の周囲にいる味方の<attackSpeed>攻撃速度を@BaseAuraAS*100@%</attackSpeed>増加させる。@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1631,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1654,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

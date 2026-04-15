@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Lethal Tempo",
         "majorChangePatchVersion": "",
-        "tooltip": "Attacking an enemy champion grants you %i:scaleAS%@ASPerStack@ Attack Speed for 6 seconds, up to 6. At max stacks, deal @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>bonus adaptive damage</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>On-Attack</OnHit>.<br><br>Max Stack Uptime: @f1@s<br>Damage Dealt: @f2@<br><br>This rune also tracks the percent of your basic attacks against champions that are launched within 0.25 seconds of when your attack is ready after previously attacking a champion: @f3@% (@f4@ of @f5@)",
+        "tooltip": "Attacking an enemy champion grants you %i:scaleAS%@ASPerStack@ Attack Speed for 6 seconds, up to 6. At max stacks, deal @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>bonus adaptive damage</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>On-Attack</OnHit>.<br><br>Max Stack Uptime: @f1@s<br>Damage Dealt: @f2@<br><br>This rune also tracks the percent of your basic attacks against champions that are launched within 0.25 seconds of when your attack is ready after previously attacking a champion: @f3@% (@f4@ of @f5@)",
         "shortDesc": "Attacking an enemy champion grants you Attack Speed, up to 6 stacks. At max stacks, deal <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>bonus adaptive damage</font></lol-uikit-tooltipped-keyword> On-Attack.",
         "longDesc": "Attacking an enemy champion grants you [6% Melee || 4% Ranged] Attack Speed for 6 seconds, up to 6. At max stacks, deal [9 - 30 Melee || 6 - 24 Ranged] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>bonus adaptive damage On-Attack, increased by 1% per 1% Bonus Attack Speed</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Ramping Attack Speed",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Phase Rush",
-        "majorChangePatchVersion": "",
-        "tooltip": "Hitting an enemy champion with 3 attacks or <b>separate</b> abilities within 4s grants <speed>@MoveSpeedCalc@ Move Speed</speed> and <status>50% Slow Resistance</status> for 3s.<br><br>Cooldown: <attention>@CooldownCalc@s</attention><br><br>Total Activations: <attention>@f1@</attention>",
-        "shortDesc": "Hitting an enemy champion with 3 <b>separate</b> attacks or abilities grants a burst of <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword> and Slow Resist. ",
-        "longDesc": "Hitting an enemy champion with 3 attacks or <b>separate</b> abilities within 4s grants <speed>25 - 50% Move Speed</speed> based on level and <status>50% Slow Resistance</status> for 3s. Move Speed is 50% effective for ranged champions.<br>Cooldown: 30s - 10s",
+        "name": "Stormraider's Surge",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Dealing 25% of a champion's maximum health within 3s grants <speed>@MoveSpeedCalc@ Move Speed</speed> and <status>50% Slow Resistance</status> for 3s.<br><br>Cooldown: <attention>@CooldownCalc@s</attention><br><br>Total Activations: <attention>@f1@</attention>",
+        "shortDesc": "Dealing 25% of a champion's maximum health grants a burst of <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword> and Slow Resist. ",
+        "longDesc": "Dealing 25% of a champion's maximum health within 3s grants <speed>40% Move Speed</speed> and <status>50% Slow Resistance</status> for 3s. Move Speed is 75% effective for ranged champions.<br>Cooldown: 20s - 10s",
         "recommendationDescriptor": "Rush of Movement",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Total activations: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "Deathfire Touch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Damaging a champion with an ability burns them for @DamageCalc@ adaptive damage per second. After burning for 3 seconds, the damage of the burn increases by 100% while they remain on fire.<br><rules><br>Duration:<br>Single Target: 4s.<br>Area of Effect: 2s<br>Damage over Time: 1s<br></rules><br>You have dealt @f1@ damage to champions with Deathfire Touch burn.",
+        "shortDesc": "Damaging a champion with an ability burns them over time.",
+        "longDesc": "Damaging a champion with an ability burns them for 1 - 10 based on level (+<scaleAP>0.03 AP</scaleAP>) (+<scaleAD>0.08 bonus AD</scaleAD>)  adaptive damage per second. After burning for 3 seconds, the damage of the burn increases by 100% while they remain on fire.<br><rules><br>Duration:<br>Single Target: 4s.<br>Area of Effect: 2s<br>Damage over Time: 1s<br></rules>",
+        "recommendationDescriptor": "Sustained Ability Damage",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            "Burn Damage Dealt: @eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Guardian",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Hail of Blades",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Gain {{ Item_Melee_Ranged_Split }}% Attack Speed when you attack an enemy champion for up to @NumHits@ attacks. <br><br>Cooldown: @Cooldown@s.<br><hr><br>Hail of Blades attacks: @f1@<br>Percentage of Hail attacks landed: @f2@%<br><br><rules>Basic Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the Attack Speed limit.</rules>",
-        "shortDesc": "Gain a large amount of Attack Speed for the first 3 attacks made against enemy champions.",
-        "longDesc": "Gain 160% (80% for ranged champions) Attack Speed when you attack an enemy champion for up to 3 attacks.<br><br>No more than 3s can elapse between attacks or this effect will end.<br><br>Cooldown: 10s.<br><br><rules>Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the Attack Speed limit.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "When you attack an enemy champion, for up to @NumHits@ attacks, gain {{ Item_Melee_Ranged_Split }}% Attack Speed and deal <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>bonus true damage</trueDamage>. <br><br>Cooldown: @Cooldown@s.<br><hr><br>Hail of Blades attacks: @f1@<br>Damage Dealt: @f2@<br>Percentage of Hail attacks landed: @f3@%<br><br><rules>Basic Attack resets increase the attack limit by +1, up to +@MaxBonusHits@.<br>Allows you to temporarily exceed the Attack Speed limit.</rules>",
+        "shortDesc": "Gain a large amount of Attack Speed and <trueDamage>bonus true damage</trueDamage> for the first 3 attacks made against enemy champions.",
+        "longDesc": "Gain 120% (60% for ranged champions) Attack Speed and <trueDamage>bonus true damage</trueDamage> when you attack an enemy champion for up to 3 attacks.<br><br>No more than 3s can elapse between attacks or this effect will end.<br><br>Cooldown: 10s.<br>On-Hit Damage: 4 - 20 (+0.08 bonus AD, +0.06 AP) damage.<br><br><rules>Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the Attack Speed limit.</rules>",
         "recommendationDescriptor": "Flurry of Attacks",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Attacks made with extra Attack Speed: @eogvar1@",
-            "Percentage of Hail attacks landed: @eogvar2@%"
+            "Damage Dealt: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Arcane Comet",
         "majorChangePatchVersion": "",
-        "tooltip": "Damaging a champion with an ability hurls a comet at their location, or, if Arcane Comet is on cooldown, reduces its remaining cooldown.<br><br>Damage: @DamageCalc@<br>Cooldown: @CooldownCalc@s<br><rules><br>Cooldown Reduction:<br>Single Target: 20%.<br>Area of Effect: 10%.<br>Damage over Time: 5%.<br></rules><br>You have hit with @f3@% of comets fired, for a total of @f1@ damage to champions.",
+        "tooltip": "Damaging a champion with an ability hurls a comet at their location, dealing increased damage based on how far away they are.<br><br>Damage: @DamageCalc@<br>Cooldown: @CooldownCalc@s<br><rules><br>Damage amplification scales up to 100% at 750 range.<br></rules><br>You have hit with @f3@% of comets fired, for a total of @f1@ damage to champions.",
         "shortDesc": "Damaging a champion with an ability hurls a damaging comet at their location.",
-        "longDesc": "Damaging a champion with an ability hurls a comet at their location, or, if Arcane Comet is on cooldown, reduces its remaining cooldown.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Adaptive Damage</font></lol-uikit-tooltipped-keyword>: 30 - 130 based on level (<scaleAP>+0.05 AP</scaleAP> and <scaleAD>+0.1 bonus AD</scaleAD>)<br>Cooldown: 20 - 8s<br><rules><br>Cooldown Reduction:<br>Single Target: 20%.<br>Area of Effect: 10%.<br>Damage over Time: 5%.<br></rules>",
+        "longDesc": "Damaging a champion with an ability hurls a comet at their location, dealing increased damage based on distance.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Adaptive Damage</font></lol-uikit-tooltipped-keyword>: 15 - 100 based on level (<scaleAP>+0.05 AP</scaleAP> and <scaleAD>+0.1 bonus AD</scaleAD>)<br>Cooldown: 20 - 8s<br><rules><br>Damage amplification scales up to 100% at 750 range.<br></rules>",
         "recommendationDescriptor": "Ability Damage",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

@@ -800,18 +800,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +924,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Kennen néhány támadásonként passzívan extra sebzést okoz a célpontnak, és Viharjelet helyez rá. A képességet aktiválva megsebezheti a már megjelölt ellenfeleket, és újabb Viharjelet tehet rájuk.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> minden 5. támadás további <magicDamage>@TotalDamagePassive@ varázssebzést</magicDamage> okoz.<br><br><spellActive>Aktív:</spellActive> Kennen elektromos energiát szabadít el, amely <magicDamage>@TotalDamageActive@ varázssebzést</magicDamage> okoz a <spellName>Viharjelet</spellName> viselő közeli ellenfeleknek.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> minden 5. támadás további <magicDamage>@TotalDamagePassive@ %i:OnHit% <OnHit>találati</OnHit> varázssebzést</magicDamage> okoz.<br><br><spellActive>Aktív:</spellActive> Kennen elektromos energiát szabadít el, amely <magicDamage>@TotalDamageActive@ varázssebzést</magicDamage> okoz a <spellName>Viharjelet</spellName> viselő közeli ellenfeleknek.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Kennen villám alakot vesz fel, így áthaladhat más egységeken, és Viharjelet tesz rájuk. Ebben az alakban megnő Kennen mozgási sebessége, és amikor leveti ezt az alakot, megnő a támadási sebessége.",
-            "dynamicDescription": "Kennen legfeljebb @DurationAsBall@ másodpercre gömbvillámmá alakul. Ezalatt <speed>@MovementSpeed*100@% mozgási sebességre</speed> tesz szert, áthaladhat más egységeken, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz azon ellenfeleknek, akiken áthalad. Ha Kennen legalább egy ellenfelet meg tud sebezni, @EnergyRefund@ energiára tesz szert. <br><br>Miután véget ér a képesség, Kennen @DurationAfterBall@ másodpercre <attackSpeed>@AttackSpeed*100@% támadási sebességre</attackSpeed> tesz szert. Kennen <recast>újraaktiválással</recast> idő előtt megszakíthatja a képességet.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen legfeljebb @DurationAsBall@ másodpercre gömbvillámmá alakul. Ezalatt <speed>@MovementSpeed*100@% mozgási sebességre</speed> tesz szert, áthaladhat más egységeken, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz azon ellenfeleknek, akiken áthalad. Ha Kennen legalább egy ellenfelet meg tud sebezni, @EnergyRefund@ energiára tesz szert. <br><br>Miután véget ér a képesség, Kennen @DurationAfterBall@ másodpercre <attackSpeed>@TotalAS*100@% támadási sebességre</attackSpeed> tesz szert. A kritikus csapások @CritDurationBonus@ másodperccel meghosszabbítják ezt az időtartamot. Kennen <recast>újraaktiválással</recast> idő előtt megszakíthatja a képességet.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

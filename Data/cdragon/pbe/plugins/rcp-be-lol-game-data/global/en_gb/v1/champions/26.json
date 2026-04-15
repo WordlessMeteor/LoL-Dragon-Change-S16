@@ -751,7 +751,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Tosses a bomb to target area that sticks to units that come near it (prioritizes Champions). It detonates after 3 seconds, dealing area of effect damage. If a Time Bomb is detonated early by another Time Bomb, it also stuns enemies.",
-            "dynamicDescription": "Zilean tosses a time-delayed bomb that sticks to the first unit which comes within a small area around it. After @Effect2Amount@ seconds it detonates, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>.<br><br>Placing a second bomb on a unit that already has one detonates the first bomb immediately and <status>Stuns</status> enemies in the blast for @Effect4Amount@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean tosses a time-delayed bomb that sticks to the first unit which comes within a small area around it. After @FuseDuration@ seconds it detonates, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>.<br><br>Placing a second bomb on a unit that already has one detonates the first bomb immediately and <status>Stuns</status> enemies in the blast for @StunDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +898,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ Mana",
+            "cost": "@ManaCost@ Mana",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Zilean can prepare himself for future confrontations, reducing the cooldowns of his other basic abilities.",
-            "dynamicDescription": "Zilean turns time, reducing his other basic Ability Cooldowns by @Effect2Amount@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean turns time, reducing his other basic Ability Cooldowns by @CooldownReduction@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +941,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Zilean bends time around any unit, decreasing an enemy's Move Speed or increasing an ally's Move Speed for a short time.",
-            "dynamicDescription": "Zilean <status>Slows</status> an enemy champion by @Effect2Amount@% or grants an allied champion <speed>@Effect2Amount@% Move Speed</speed> for @Effect1Amount@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean <status>Slows</status> an enemy champion by @SpeedAmount@% or grants an allied champion <speed>@SpeedAmount@% Move Speed</speed> for @Duration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

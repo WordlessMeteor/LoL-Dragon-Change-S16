@@ -1305,7 +1305,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "嘉文四世延伸长枪，造成物理伤害，同时降低路径上所有敌方的物理防御。如果长枪碰到他的战旗，会将嘉文四世拉到战旗所在位置，并击飞路径中的敌人。",
-            "dynamicDescription": "嘉文延伸长枪，造成 <physicalDamage>@TotalDamage@ 物理伤害</physicalDamage>并移除 <scaleArmor>@Effect2Amount@% 物理防御</scaleArmor>，持续 @Effect3Amount@ 秒。<br><br>如果长枪与 <spellName>帝国战旗</spellName> 连结，那么嘉文会将自己拉向它，<status>击飞</status>路径上的敌人 0.75 秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "嘉文延伸长枪，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>并移除<scaleArmor>@BaseARShred*100@%物理防御</scaleArmor>，持续@Effect3Amount@秒。<br><br>如果长枪与<spellName>帝国战旗</spellName>连结，那么嘉文会将自己拉向它，<status>击飞</status>沿途经过的敌人0.75秒。@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1331,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1345,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1455,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "嘉文四世呼唤蒂玛西亚的上古王者灵魂，锻造出生命护盾，并且缓速周围敌人。",
-            "dynamicDescription": "嘉文召唤一个圣盾，对附近的敌人造成持续 @Effect5Amount@ 秒的 @Effect2Amount@% <status>缓速</status> 并提供 <shield>@BaseShield@ 护盾</shield>，每命中一名敌方英雄则额外提供 <shield>@BonusShield@</shield> 护盾。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "嘉文召唤一面圣盾，使附近的敌人<status>减速</status>@BaseSlowAmount*100@%，持续@Effect5Amount@秒，并为自身提供一道<shield>@TotalShield@ 护盾</shield>，每命中一名敌方英雄，都会使护盾提升<shield>@BonusShield@</shield>。@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1481,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1495,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1605,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "嘉文四世背负着象征蒂玛西亚的骄傲，被动的效果让他获得额外攻速和物理防御，主动的效果让他可以把战旗竖立于地，对命中的目标造成魔法伤害，同时提高周围友方英雄的攻速。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>嘉文获得 <attackSpeed>@PermanentAttackSpeed*100@% 攻击速度</attackSpeed>。<br><br><spellActive>主动：</spellActive>嘉文将一面战旗竖立于地，造成 <magicDamage>@TotalDamage@ 魔法伤害</magicDamage>并为附近的队友们提供持续 @Effect4Amount@ 秒的 <attackSpeed>@Effect3Amount*100@% 攻击速度</attackSpeed>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>嘉文获得<attackSpeed>@PermanentAttackSpeed*100@%攻击速度</attackSpeed>。<br><br><spellActive>主动：</spellActive>嘉文将旗帜插入地面，对命中的敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并为旗帜附近的友军提供<attackSpeed>@BaseAuraAS*100@%攻击速度</attackSpeed>，持续@Effect4Amount@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1631,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1654,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

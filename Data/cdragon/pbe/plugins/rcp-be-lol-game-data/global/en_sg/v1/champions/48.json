@@ -818,7 +818,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Trundle turns target location into his domain, gaining Attack Speed, Move Speed, and increased healing from all sources while on it.",
-            "dynamicDescription": "Trundle freezes an area for @Effect4Amount@ seconds. While inside he gains <speed>@Effect1Amount*100@% Move Speed</speed>, <attackSpeed>@Effect2Amount*100@% Attack Speed</attackSpeed>, and @Effect3Amount*100@% increased healing.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Trundle freezes an area for @Duration@ seconds. While inside he gains <speed>@MSBonus*100@% Move Speed</speed>, <attackSpeed>@ASBonus*100@% Attack Speed</attackSpeed>, and @HealingBonus*100@% increased healing.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -968,7 +968,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Trundle creates an ice pillar at target location, becoming impassable terrain and slowing all nearby enemy units.",
-            "dynamicDescription": "Trundle creates an icy pillar for @Effect1Amount@ seconds, briefly <status>Knocking Back</status> enemies directly over it and <status>Slowing</status> nearby enemies by @Effect2Amount@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Trundle creates an icy pillar for @PillarDuration@ seconds, briefly <status>Knocking Back</status> enemies directly over it and <status>Slowing</status> nearby enemies by @SlowAmount@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

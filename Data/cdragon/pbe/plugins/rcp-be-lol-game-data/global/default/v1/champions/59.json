@@ -1305,7 +1305,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV extends his lance, dealing physical damage and lowering the Armor of enemies in its path. Additionally, this will pull Jarvan to his Demacian Standard, knocking up enemies in his path.",
-            "dynamicDescription": "Jarvan extends his lance, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and removing <scaleArmor>@Effect2Amount@% Armor</scaleArmor> for @Effect3Amount@ seconds.<br><br>If the lance connects with <spellName>Demacian Standard</spellName>, Jarvan will pull himself to it, <status>Knocking Up</status> those in his path for 0.75 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan extends his lance, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and removing <scaleArmor>@BaseARShred*100@% Armor</scaleArmor> for @Effect3Amount@ seconds.<br><br>If the lance connects with <spellName>Demacian Standard</spellName>, Jarvan will pull himself to it, <status>Knocking Up</status> those in his path for 0.75 seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1331,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1345,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1455,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV calls upon the ancient kings of Demacia to shield him from harm and slow surrounding enemies.",
-            "dynamicDescription": "Jarvan summons an aegis, <status>Slowing</status> nearby enemies by @Effect2Amount@% for @Effect5Amount@ seconds and granting him a <shield>@BaseShield@ Shield</shield>, increased by <shield>@BonusShield@</shield> for each enemy champion hit.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan summons an aegis, <status>Slowing</status> nearby enemies by @BaseSlowAmount*100@% for @Effect5Amount@ seconds and granting him a <shield>@TotalShield@ Shield</shield>, increased by <shield>@BonusShield@</shield> for each enemy champion hit.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1481,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1495,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1605,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV carries the pride of Demacia, passively granting him bonus Attack Speed. Activating Demacian Standard allows Jarvan IV to place a Demacian flag that deals magic damage on impact and grants Attack Speed to nearby allied champions.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Jarvan gains <attackSpeed>@PermanentAttackSpeed*100@% Attack Speed</attackSpeed>.<br><br><spellActive>Active:</spellActive> Jarvan throws a standard into the ground, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and granting allies near the standard <attackSpeed>@Effect3Amount*100@% Attack Speed</attackSpeed> for @Effect4Amount@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Jarvan gains <attackSpeed>@PermanentAttackSpeed*100@% Attack Speed</attackSpeed>.<br><br><spellActive>Active:</spellActive> Jarvan throws a standard into the ground, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and granting allies near the standard <attackSpeed>@BaseAuraAS*100@% Attack Speed</attackSpeed> for @Effect4Amount@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1631,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1654,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

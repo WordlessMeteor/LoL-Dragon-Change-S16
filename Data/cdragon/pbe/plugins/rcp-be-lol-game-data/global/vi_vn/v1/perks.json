@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Nhịp Độ Chết Người",
         "majorChangePatchVersion": "",
-        "tooltip": "Tấn công tướng địch sẽ cho bạn thêm %i:scaleAS%@ASPerStack@ Tốc Độ Đánh trong 6 giây, tối đa 6. Ở số cộng dồn tối đa, đòn đánh sẽ gây thêm @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>sát thương thích ứng</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>Trên Đòn Đánh</OnHit>.<br><br>Thời Gian Duy Trì Cộng Dồn Tối Đa: @f1@ giây<br>Sát Thương Đã Gây Ra: @f2@<br><br>Ngọc bổ trợ này cũng sẽ theo dõi phần trăm số đòn đánh thường lên tướng được tung ra trong vòng 0.25 giây khi đòn đánh đã sẵn sàng sau khi tấn công tướng trước đó: @f3@% (@f4@/@f5@)",
+        "tooltip": "",
         "shortDesc": "Tấn công tướng địch sẽ cho bạn thêm Tốc Độ Đánh, tối đa 6 cộng dồn. Ở số cộng dồn tối đa, gây thêm <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>sát thương thích ứng</font></lol-uikit-tooltipped-keyword> Trên Đòn Đánh.",
         "longDesc": "Tấn công tướng địch sẽ cho bạn [6% cận chiến || 4% đánh xa] Tốc Độ Đánh trong 6 giây, tối đa 6. Ở số cộng dồn tối đa, gây thêm [9 - 30 cận chiến || 6 - 24 đánh xa] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>sát thương thích ứng Trên Đòn Đánh, tăng thêm 1% với mỗi 1% Tốc Độ Đánh Cộng Thêm</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Tăng Dần Tốc Độ Đánh",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Tăng Tốc Pha",
-        "majorChangePatchVersion": "",
-        "tooltip": "Đánh trúng tướng địch bằng 3 đòn đánh hoặc kỹ năng <b>riêng biệt</b> trong vòng 4 giây sẽ tăng thêm <speed>@MoveSpeedCalc@ Tốc Độ Di Chuyển</speed> và <status>50% Kháng Làm Chậm</status> trong 3 giây.<br><br>Hồi chiêu: <attention>@CooldownCalc@ giây</attention><br><br>Tổng Số Kích Hoạt: <attention>@f1@</attention>",
-        "shortDesc": "Đánh trúng tướng địch bằng 3 đòn đánh hoặc kỹ năng <b>riêng biệt</b> sẽ tăng mạnh <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>Tốc Độ Di Chuyển</lol-uikit-tooltipped-keyword> và Kháng Làm Chậm. ",
-        "longDesc": "Đánh trúng tướng địch bằng 3 đòn đánh hoặc kỹ năng <b>riêng biệt</b> trong vòng 4 giây sẽ tăng thêm <speed>25 - 50% Tốc Độ Di Chuyển</speed> tùy theo cấp và <status>50% Kháng Làm Chậm</status> trong 3 giây. Tốc Độ Di Chuyển có 50% hiệu lực đối với tướng đánh xa.<br>Hồi chiêu: 30 giây - 10 giây",
+        "name": "PhaseRush",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Tăng Hết Tốc Lực",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Tổng số kích hoạt: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "DeathfireTouch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            ""
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Hộ Vệ",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Mưa Kiếm",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Nhận {{ Item_Melee_Ranged_Split }}% Tốc Độ Đánh khi bạn tấn công tướng địch, tối đa @NumHits@ đòn đánh. <br><br>Hồi Chiêu: @Cooldown@ giây.<br><hr><br>Đòn đánh Mưa Kiếm: @f1@<br>Tỉ lệ đòn đánh Mưa Kiếm trúng đích: @f2@%<br><br><rules>Tái tạo Đòn Đánh Thường sẽ tăng giới hạn đòn đánh thêm 1.<br>Cho phép bạn tạm thời vượt qua giới hạn Tốc Độ Đánh.</rules>",
-        "shortDesc": "Nhận một lượng lớn Tốc độ Đánh trong 3 đòn đánh đầu tiên lên tướng.",
-        "longDesc": "Nhận 160% (80% cho tướng đánh xa) Tốc Độ Đánh khi bạn tấn công tướng địch, tối đa 3 đòn đánh.<br><br>Các đòn đánh không thể cách nhau quá 3 giây, nếu không hiệu ứng sẽ chấm dứt.<br><br>Hồi Chiêu: 10 giây.<br><br><rules>Tái tạo đòn đánh sẽ tăng giới hạn đòn đánh thêm 1.<br>Cho phép bạn tạm thời vượt qua giới hạn Tốc Độ Đánh.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Tấn Công Liên Hoàn",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Số đòn đánh với Tốc Độ Đánh cộng thêm: @eogvar1@",
-            "Phần trăm đòn đánh Mưa Kiếm trúng đích: @eogvar2@%"
+            ""
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Thiên Thạch Bí Ẩn",
         "majorChangePatchVersion": "",
-        "tooltip": "Gây sát thương lên tướng bằng kỹ năng sẽ thả một thiên thạch xuống chỗ kẻ đó, hoặc, nếu Thiên Thạch Bí Ẩn đang hồi, giảm hồi chiêu còn lại của nó.<br><br>Sát thương: @DamageCalc@<br>Hồi chiêu: @CooldownCalc@giây<br><rules><br>Giảm hồi chiêu:<br>Đơn mục tiêu: 20%.<br>Diện rộng: 10%.<br>Sát thương theo thời gian: 5%.<br></rules><br>Bạn đã dùng trúng đích @f3@% số thiên thạch, gây tổng cộng @f1@ sát thương lên tướng.",
+        "tooltip": "",
         "shortDesc": "Gây sát thương lên tướng bằng kỹ năng thả một thiên thạch xuống chỗ kẻ đó.",
-        "longDesc": "Gây sát thương lên tướng bằng khả năng thả một thiên thạch xuống chỗ của kẻ đó, hoặc, nếu Thiên Thạch Bí Ẩn đang hồi, giảm hồi chiêu còn lại của nó.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Sát thương Thích ứng</font></lol-uikit-tooltipped-keyword>: 30 - 130 theo cấp (<scaleAP>+0.05 SMPT</scaleAP> and <scaleAD>+0.1 SMCK cộng thêm</scaleAD>)<br>Hồi chiêu: 20 - 8 giây<br><rules><br>Giảm Hồi chiêu:<br>Đơn mục tiêu: 20%.<br>Diện rộng: 10%.<br>Sát thương theo thời gian: 5%.<br></rules>",
+        "longDesc": "",
         "recommendationDescriptor": "Sát Thương Kỹ Năng",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

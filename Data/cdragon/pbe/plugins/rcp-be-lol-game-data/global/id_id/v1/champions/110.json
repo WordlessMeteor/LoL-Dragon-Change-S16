@@ -1527,7 +1527,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Varus bersiap dan melesatkan tembakan yang kuat. Range dan damage ekstra didapatkan jika dia menghabiskan lebih banyak waktu untuk bersiap.",
-            "dynamicDescription": "<attention>Mulai Charging:</attention> Varus menarik busur panah ke belakang, membuatnya menjadi <status>Slow</status> sebesar @Effect7Amount*-100@%. Setelah @Effect5Amount@ detik, jika tidak ditembakkan, Varus akan membatalkan Ability ini dan mengembalikan @Effect4Amount*100@% biaya Mana-nya.<br><br><attention>Release:</attention> Varus melepaskan anak panah, memberikan <physicalDamage>@TotalDamageMinTooltip@ physical damage</physicalDamage>, berkurang @Effect3Amount*100@% per musuh yang terkena (minimum @Effect9Amount*100@%). Damage dan efek ledakan <keywordMajor>Blight</keywordMajor> meningkat hingga @MaxChargeAmp*100@% berdasarkan waktu charge (maksimum <physicalDamage>@TotalDamageMax@</physicalDamage>) .@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1677,7 +1677,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Pasif: Basic attack Varus menghasilkan magic damage bonus dan menerapkan Blight. Ability Varus yang lain akan meledakkan Blight dan menghasilkan magic damage berdasarkan Health maksimum target. Aktif: Varus memperkuat Piercing Arrow berikutnya.",
-            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Serangan Varus menghasilkan <magicDamage>@OnHitDamage@ magic damage</magicDamage> tambahan dan menerapkan stack <keywordMajor>Blight</keywordMajor> selama @Effect3Amount@ detik (maksimum @Effect4Amount@ stack).<br><br>Ability Varus yang lain meledakkan stack <keywordMajor>Blight</keywordMajor>, menghasilkan <magicDamage>@PercentHPPerStack@ magic damage Health maksimum</magicDamage> per stack (maksimum <magicDamage>@MaxPercentHPPerStack@ damage Health maksimum</magicDamage>). Meledakkan <keywordMajor>Blight</keywordMajor> pada champion dan monster epik juga mengurangi Cooldown Ability dasarnya sebanyak @CDRPerBlightStack*100@% Maksimum per stack mereka.<br><br><spellActive>Aktif:</spellActive> <spellName>Piercing Arrow</spellName> Varus berikutnya menghasilkan tambahan <magicDamage>@QEmpowerPercentHP@ magic damage dari Health yang hilang</magicDamage>, meningkat hingga <magicDamage>@MaxQEmpowerPercentHP@ damage dari Health yang hilang</magicDamage> berdasarkan waktu charge.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1827,7 +1827,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Varus menembakkan hujan anak panah yang menghasilkan physical damage dan mencemari tanah. Tanah yang tercemar akan mengurangi Move Speed musuh serta mengurangi heal dan regenerasi diri.",
-            "dynamicDescription": "Varus menembakkan hujan panah yang menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan mencemari tanah selama @Effect3Amount@ detik, menerapkan <status>Slow</status> pada musuh sebesar @SlowPercent*-100@% dan menerapkan @GrievousAmount*100@% Grievous Wounds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1977,7 +1977,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Varus melempar sulur terkutuk yang menghasilkan damage dan melumpuhkan champion musuh pertama yang dihantam, lalu menyebar ke arah champion musuh di sekitar yang belum terinfeksi dan turut melumpuhkan mereka yang tersentuh.",
-            "dynamicDescription": "Varus melempar sulur corruption, menerapkan <status>Root</status> pada champion pertama yang terkena selama @Effect2Amount@ detik dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Musuh yang <status>Terkena Root</status> mendapatkan @Effect4Amount@ stack <keywordMajor>Blight</keywordMajor> selama beberapa saat.<br><br>Corruption menyebar dari targetnya ke champion musuh yang tidak terinfeksi. Jika corruption mencapai mereka, mereka menerima damage dan <status>Root</status> yang sama.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

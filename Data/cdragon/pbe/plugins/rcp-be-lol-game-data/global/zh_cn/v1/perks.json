@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "致命节奏",
         "majorChangePatchVersion": "",
-        "tooltip": "攻击一个敌方英雄会为你提供持续6秒的%i:scaleAS%@ASPerStack@攻击速度，至多至6层。在满层时，攻击还会<OnHit>附带</OnHit>@NoteDamage@<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>额外自适应伤害</font></lol-uikit-tooltipped-keyword>。<br><br>满层运转时间：@f1@秒<br>已造成的伤害：@f2@<br><br>这个符文还会追踪你在之前攻击一个英雄之后，在你的攻击就绪的0.25秒内对英雄们打出的普攻次数占比：@f3@% (@f4@ / @f5@)",
+        "tooltip": "",
         "shortDesc": "攻击一个敌方英雄会为你提供攻击速度，至多至6层。在满层时，攻击还会附带<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>额外自适应伤害</font></lol-uikit-tooltipped-keyword>。",
         "longDesc": "攻击一个敌方英雄会为你提供持续6秒的[6%近战 || 4%远程]攻击速度，至多至6层。在满层时，攻击还会附带[9 - 30近战 || 6 - 24远程] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>额外自适应伤害，每1%额外攻击速度都会使其提升1%</lol-uikit-tooltipped-keyword>。",
         "recommendationDescriptor": "不断提升攻击速度",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "相位猛冲",
-        "majorChangePatchVersion": "",
-        "tooltip": "在4秒内用3次攻击或<b>独立</b>的技能命中一名敌方英雄时，会提供<speed>@MoveSpeedCalc@移动速度</speed>和<status>50%减速抵抗</status>，持续3秒。<br><br>冷却时间：<attention>@CooldownCalc@秒</attention><br><br>激活次数总和：<attention>@f1@</attention>",
-        "shortDesc": "用3次<b>独立</b>的攻击或技能命中一名敌方英雄时，会提供爆发性的<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移动速度</lol-uikit-tooltipped-keyword>和减速抵抗。 ",
-        "longDesc": "在4秒内用3次攻击或<b>独立</b>的技能命中一名敌方英雄时，会提供<speed>25 - 50%移动速度</speed>（基于等级）和<status>50%减速抵抗</status>，持续3秒。移动速度加成对远程英雄的效能为50%。<br>冷却时间：30秒 - 10秒",
+        "name": "PhaseRush",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "爆发移动速度",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "激活次数总和：@eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "DeathfireTouch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            ""
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "守护者",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "丛刃",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "在攻击敌方英雄时，提供{{ Item_Melee_Ranged_Split }}%攻击速度给最先的@NumHits@次攻击。<br><br>冷却时间：@Cooldown@秒。<br><hr><br>丛刃的攻击次数：@f1@<br>丛刃已打出攻击的占比：@f2@%<br><br><rules>被重置的普攻会使攻击次数上限提升1。<br>允许你暂时溢出你的攻击速度上限。</rules>",
-        "shortDesc": "在攻击敌方英雄时，提供大幅攻击速度给最先的3次攻击。",
-        "longDesc": "在攻击敌方英雄时，提供160%(远程英雄为80%)攻击速度给最先的3次攻击。<br><br>每次攻击的间隔不能超过3秒，否则这个效果就会结束。<br><br>冷却时间：10秒。<br><br><rules>被重置的攻击会使攻击次数上限提升1。<br>允许你暂时溢出你的攻击速度上限。</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "一连串攻击",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "带着额外攻速打出的攻击次数：@eogvar1@",
-            "已打出的连续攻击百分比：@eogvar2@%"
+            ""
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "奥术彗星",
         "majorChangePatchVersion": "",
-        "tooltip": "用一个技能对一名英雄造成伤害时，会在其位置处召唤一颗彗星，若【奥术彗星】尚未冷却，则改为缩减它的剩余冷却时间。<br><br>伤害：@DamageCalc@<br>冷却时间：@CooldownCalc@秒<br><rules><br>冷却缩减：<br>单体目标技能：20%。<br>范围效果技能：10%。<br>持续伤害技能：5%。<br></rules><br>你已召唤的彗星有@f3@%的命中率，共对英雄造成了@f1@伤害。",
+        "tooltip": "",
         "shortDesc": "用一个技能对一名英雄造成伤害时，会在其位置处召唤一颗彗星。",
-        "longDesc": "用一个技能对一名英雄造成伤害时，会在其位置处召唤一颗彗星，若【奥术彗星】尚未冷却，则改为减少它的剩余冷却时间。<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>自适应伤害</font></lol-uikit-tooltipped-keyword>：30 - 130基于等级(<scaleAP>+0.05法术强度</scaleAP>和<scaleAD>+0.1额外攻击力</scaleAD>)<br>冷却时间：20 - 8秒<br><rules><br>冷却缩减：<br>单体目标技能：20%。<br>群体目标技能：10%。<br>持续伤害技能：5%。<br></rules>",
+        "longDesc": "",
         "recommendationDescriptor": "技能伤害",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

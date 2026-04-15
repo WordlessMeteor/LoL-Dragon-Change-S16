@@ -800,18 +800,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +924,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Kennen pasif olarak birkaç saldırıda bir fazladan hasar verir ve hedefini Fırtına İşareti ile damgalar. Bu yeteneği aktifleştirerek, önceden Fırtına İşareti taşıyan hedeflere hasar verip bir Fırtına İşareti daha ekleyebilir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Her 5. saldırı fazladan <magicDamage>@TotalDamagePassive@ Büyü Hasarı</magicDamage> verir.<br><br><spellActive>Aktif:</spellActive> Kennen bir elektrik dalgası göndererek <spellName>Fırtına İşareti</spellName>'nden etkilenmiş yakınındaki rakiplere <magicDamage>@TotalDamageActive@ Büyü Hasarı</magicDamage> verir.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Her 5. saldırı %i:OnHit% <OnHit>isabet halinde</OnHit> fazladan <magicDamage>@TotalDamagePassive@ Büyü Hasarı</magicDamage> verir.<br><br><spellActive>Aktif:</spellActive> Kennen bir elektrik dalgası göndererek <spellName>Fırtına İşareti</spellName>'nden etkilenmiş yakınındaki rakiplere <magicDamage>@TotalDamageActive@ Büyü Hasarı</magicDamage> verir.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Kennen şimşek suretine bürünür ve birimlerin içinden geçebilir. İçinden geçtiği rakip birimlere Fırtına İşareti uygular. Kennen bu surete büründüğünde hareket hızı, suretten çıktığında saldırı hızı kazanır.",
-            "dynamicDescription": "Kennen bir şimşek topuna dönüşerek <speed>%@MovementSpeed*100@ Hareket Hızı</speed> kazanır, deşip geçtiği rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve @DurationAsBall@ saniyeliğine hayalet etkisi elde eder. Kennen en az bir rakibe hasar verirse @EnergyRefund@ Enerji kazanır. <br><br>Bu yetenek sona erdiğinde Kennen @DurationAfterBall@ saniyeliğine <attackSpeed>%@AttackSpeed*100@ Saldırı Hızı</attackSpeed> kazanır. Kennen bu yeteneği <recast>yeniden kullanarak</recast> erken sonlandırabilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen bir şimşek topuna dönüşerek <speed>%@MovementSpeed*100@ Hareket Hızı</speed> kazanır, deşip geçtiği rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve @DurationAsBall@ saniyeliğine hayalet etkisi elde eder. Kennen en az bir rakibe hasar verirse @EnergyRefund@ Enerji kazanır. <br><br>Bu yetenek sona erdiğinde Kennen @DurationAfterBall@ saniyeliğine <attackSpeed>%@TotalAS*100@ Saldırı Hızı</attackSpeed> kazanır. Kritik vuruşlar bu süreyi @CritDurationBonus@ saniye uzatır. Kennen bu yeteneği <recast>yeniden kullanarak</recast> erken sonlandırabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

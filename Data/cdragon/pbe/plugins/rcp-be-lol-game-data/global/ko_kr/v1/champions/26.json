@@ -751,7 +751,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "대상 위치에 가까이 오는 유닛(챔피언 우선)에게 들러붙는 폭탄을 던집니다. 폭탄은 3초 뒤 폭발하여 적에게만 광역 피해를 입힙니다. 다른 시한 폭탄 때문에 시한 폭탄이 일찍 폭발하면 적을 기절시킵니다.",
-            "dynamicDescription": "질리언이 주변 작은 반경 안에 들어오는 첫 번째 유닛에게 부착되는 시한 폭탄을 던집니다. @Effect2Amount@초가 지나면 폭탄이 터지면서 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>이미 폭탄이 있는 유닛에 두 번째 폭탄을 설치하면 바로 첫 번째 폭탄이 터지면서 @Effect4Amount@초 동안 폭발 반경 안의 적을 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +898,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "마나 @Effect3Amount@",
+            "cost": "Spell_ZileanW_Cost",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "질리언이 기본 스킬 재사용 대기시간을 줄여 이후 시작될 전투를 준비할 수 있습니다.",
-            "dynamicDescription": "질리언이 시간을 돌려 다른 기본 스킬의 재사용 대기시간을 @Effect2Amount@초 감소시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "질리언이 시간을 돌려 다른 기본 스킬의 재사용 대기시간을 @CooldownReduction@초 감소시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +941,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1051,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "질리언이 유닛 주변의 시간을 왜곡시켜 짧은 시간 동안 적의 이동 속도를 줄이거나 아군의 이동 속도를 높입니다.",
-            "dynamicDescription": "질리언이 @Effect1Amount@초 동안 적 챔피언을 @Effect2Amount@% <status>둔화</status>시키거나 아군 챔피언의 <speed>이동 속도를 @Effect2Amount@%</speed> 높입니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -1276,8 +1276,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Zeri พุ่งไปในระยะทางสั้น ๆ และเสริมพลังให้กับ Burst Fire 3 ครั้งถัดไป ทำให้ยิงทะลุศัตรูได้ เธอจะกระโดดข้ามหรือไถลตามแนวกำแพงที่เธอพุ่งใส่",
-            "dynamicDescription": "Zeri พุ่งไปในระยะทางสั้น ๆ และกระโดดข้ามกำแพงที่เธอพุ่งใส่ ทำให้เพิ่มระยะทางการพุ่งอย่างมาก ใน @BuffDuration@ วินาทีถัดไป กระสุนของ <spellName>Burst Fire</spellName> สามารถทะลุศัตรูได้ สร้างความเสียหาย @PenDamagePercent*100@% ให้กับศัตรูหลังจากตัวแรก และสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @BonusDamageTotal@ หน่วย</magicDamage>ต่อการโจมตี ให้กับเป้าหมายแรกที่โดน <br><br>การโจมตีโดนแชมเปี้ยนศัตรูด้วยการโจมตีหรือสกิลจะลดคูลดาวน์ของสกิลนี้ลง @CDReductionPerHit@ วินาที การโจมตีคริติคอลจะลดคูลดาวน์นี้ลง @CritCDReductionPerHit@ วินาทีแทน@SpellModifierDescriptionAppend@",
+            "description": "Zeri พุ่งไปในระยะสั้น ๆ และเสริมพลังให้กับ Burst Fire ให้สามารถยิงทะลุศัตรูได้ โดยเธอจะสามารถกระโดดข้ามกำแพงที่เธอพุ่งเข้าชนได้",
+            "dynamicDescription": "Zeri พุ่งไปในระยะทางสั้น ๆ และกระโดดข้ามกำแพงที่เธอพุ่งใส่ ทำให้เพิ่มระยะการพุ่งเป็นอย่างมาก โดยใน @BuffDuration@ วินาทีถัดไป กระสุนของ <spellName>Burst Fire</spellName> สามารถทะลุศัตรูได้ สร้างความเสียหาย @PenDamagePercent*100@% ให้กับศัตรูที่อยู่ข้างหลังเป้าหมาย และสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @BonusDamageTotal@ หน่วย</magicDamage>แบบ On-Hit ให้กับเป้าหมายแรกที่โดน<br><br>หากโจมตีโดนศัตรูจะลดคูลดาวน์ของสกิลนี้ลง @CDReductionPerHit@ วินาที และการโจมตีคริติคอลจะลดคูลดาวน์นี้ลง @CritCDReductionPerHit@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1295,10 +1295,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

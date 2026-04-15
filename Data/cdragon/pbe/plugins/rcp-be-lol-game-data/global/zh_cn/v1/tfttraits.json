@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "每@CastsToGainXP@次施放技能，【时光守护者】会储存<TFTBonus>@XPPerCast@</TFTBonus>经验值。若储存的经验值足够你升级，他会传输给你所需的经验值。<br><br>若你已是10级，他转而获得<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>伤害增幅。<br><br><rules>已储存的经验值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br>在【恭喜发财】中，获取经验值所需的施放技能次数提升至@CastsToGainXPCT@，直到阶段3-5为止。</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "每@CastsToGainXP@次施放技能，【时光守护者】会储存<TFTBonus>@XPPerCast@</TFTBonus>经验值。若储存的经验值足够你升级，他会传输给你所需的经验值。<br><br>若你已是10级，他转而获得<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>伤害增幅。<br><br><rules>已储存的经验值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,10 +12270,6 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
-                    },
-                    {
-                        "name": "CastsToGainXPCT",
-                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13774,7 +13770,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "每一秒，【恕瑞玛】弈子们获得@ASPerSecond*100@%攻击速度并回复@HealthRestorePerSecond@生命值。在战斗开始时，他们获得额外效果。<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>棱彩阶：解锁【内瑟斯】、【雷克顿】、以及【泽拉斯】，然后登场【（4) 恕瑞玛】</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@%最大生命值</row><br><row>(@MinUnits@) @ArmorMR@护甲和魔抗</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>每@GodhoodCadence@秒，一个【恕瑞玛】弈子会飞升成神。</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>仅在【内瑟斯】、【雷克顿】和【泽拉斯】都已被解锁时可用。</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
+        "tooltip_text": "每一秒，【恕瑞玛】弈子获得@ASPerSecond*100@%攻击速度和回复@HealthRestorePerSecond@生命值。战斗开始时，他们获得额外的效果。<br><br><row>(@MinUnits@) @BonusHealth*100@%最大生命值</row><br><row>(@MinUnits@) @ArmorMR@护甲和魔抗</row><br><row>(@MinUnits@)每@GodhoodCadence@秒，一个【恕瑞玛】弈子会飞升成神。</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13854,7 +13850,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 0.0
+                        "value": 1.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13862,7 +13858,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 0.0
+                        "value": 3.0
                     },
                     {
                         "name": "SkinScale",
@@ -13870,8 +13866,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -14574,7 +14570,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "在每个对战回合结束后，一个【飞升法杖】会出现在你的商店。它们拥有强大的效果，并且能够用金币购买。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>在【恭喜发财】中，【忠实追随者】随机法杖在你达到7级之前不会出现。</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "在每个对战回合结束后，一个【飞升法杖】会出现在你的商店。它们拥有强大的效果，并且能够用金币购买。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15394,7 +15390,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 40.0
+                        "value": 45.0
                     },
                     {
                         "name": "ExecuteHPPercent",
@@ -16634,6 +16630,10 @@
                         "value": 0.08
                     },
                     {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    },
+                    {
                         "name": "Serpent_DR_Teamwide",
                         "value": 0.08
                     },
@@ -16642,12 +16642,24 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Duration",
                         "value": 10.0
                     },
                     {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Interval",
                         "value": 1.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
                     },
                     {
                         "name": "Shield_Shield_Teamwide",
@@ -16660,6 +16672,10 @@
                     {
                         "name": "Wolf_HealthThreshold",
                         "value": 0.5
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
                     }
                 ]
             }
@@ -16677,7 +16693,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.1
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16708,6 +16724,10 @@
                         "value": 0.2
                     },
                     {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
                         "name": "Serpent_DR",
                         "value": 0.15
                     },
@@ -16720,12 +16740,32 @@
                         "value": 0.02
                     },
                     {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
                         "name": "Shield_Shield",
                         "value": 0.15
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16749,7 +16789,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16772,12 +16812,20 @@
                         "value": 30.0
                     },
                     {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
                         "name": "Mountain_APPerHealthThreshold",
                         "value": 2.0
                     },
                     {
                         "name": "Mountain_Health",
                         "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16796,8 +16844,20 @@
                         "value": 0.25
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16848,6 +16908,14 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
                         "name": "Mountain_DamageAmpPercent",
                         "value": 0.01
                     },
@@ -16858,6 +16926,18 @@
                     {
                         "name": "Mountain_HexesToReveal_TOOLTIPONLY",
                         "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16876,8 +16956,20 @@
                         "value": 0.35
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16885,6 +16977,119 @@
                     }
                 ],
                 "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 10,
                 "style_idx": 5,
                 "style_name": "kGold"
             }
@@ -17296,7 +17501,7 @@
         "trait_id": "TFT17_Stargazer_Serpent",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>蝰蛇</TFTStargazer>。<br><br>强化格内的友军获得@Serpent_DR_Teamwide*100@%伤害减免。强化格内的【观星者】获得更多，并且其技能现在会使敌人中毒，在@Serpent_Duration@秒内重复造成相当于一部分造成伤害的魔法伤害。<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%，@Serpent_Poison*100@%中毒伤害</expandRow><br><br><rules>玩家每提升1级，就会有更多格子显露出来</rules>",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>蝰蛇</TFTStargazer>。<br><br>强化格内的友军获得@Serpent_DR_Teamwide*100@%伤害减免。强化格内的【观星者】获得更多此加成，并且会使敌人中毒，在@Serpent_Duration@秒内重复造成相当于一部分造成伤害的魔法伤害。<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%，@Serpent_Poison*100@%中毒伤害</expandRow><br><br><rules>玩家每提升1级，就会有更多格子显露出来</rules>",
         "innate_trait_sets": [
             {
                 "constants": [

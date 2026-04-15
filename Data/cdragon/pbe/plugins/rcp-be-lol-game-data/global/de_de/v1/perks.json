@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Tödliches Tempo",
         "majorChangePatchVersion": "",
-        "tooltip": "Wenn du einen gegnerischen Champion angreifst, erhältst du 6&nbsp;Sekunden lang %i:scaleAS%@ASPerStack@&nbsp;Angriffstempo (maximal 6&nbsp;Steigerungen). Bei maximalen Steigerungen verursachen Angriffe außerdem @NoteDamage@&nbsp;<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>zusätzlichen adaptiven Schaden</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>bei Angriffen</OnHit>.<br><br>Dauer der maximalen Steigerungen: @f1@&nbsp;Sek.<br>Verursachter Schaden: @f2@<br><br>Diese Rune zeichnet auch den Prozentsatz deiner normalen Angriffe gegen Champions auf, die innerhalb von 0.25&nbsp;Sekunden nach dem Bereitwerden des Angriffs nach vorangegangenen Angriffen gegen einen Champion ausgeführt werden: @f3@&nbsp;% (@f4@ von @f5@)",
+        "tooltip": "",
         "shortDesc": "Wenn du einen gegnerischen Champion angreifst, erhältst du Angriffstempo (maximal 6&nbsp;Steigerungen). Bei maximalen Steigerungen verursachen Angriffe <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>zusätzlichen adaptiven Schaden</font></lol-uikit-tooltipped-keyword> bei Angriffen.",
         "longDesc": "Wenn du einen gegnerischen Champion angreifst, erhältst du 6&nbsp;Sekunden lang [6&nbsp;% für Nahkämpfer || 4&nbsp;% für Fernkämpfer] Angriffstempo (maximal 6&nbsp;Steigerungen). Bei maximalen Steigerungen verursachen Angriffe [9–30 für Nahkämpfer || 6–24 für Fernkämpfer] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>zusätzlichen adaptiven Schaden bei Angriffen, der pro 1&nbsp;% zusätzliches Angriffstempo um 1&nbsp;% erhöht wird</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Ansteigendes Angriffstempo",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Phasenrausch",
-        "majorChangePatchVersion": "",
-        "tooltip": "Triffst du einen Champion innerhalb von 4&nbsp;Sekunden mit 3 Angriffen oder <b>seperaten</b> Fähigkeiten, erhältst du 3&nbsp;Sekunden lang <speed>@MoveSpeedCalc@ Lauftempo</speed> und <status>50&nbsp;% Verlangsamungsresistenz</status>.<br><br>Abklingzeit: <attention>@CooldownCalc@&nbsp;Sekunden</attention><br><br>Gesamtaktivierungen: <attention>@f1@</attention>",
-        "shortDesc": "Triffst du einen Champion mit 3&nbsp;<b>individuellen</b> Angriffen oder Fähigkeiten, erhältst du einen <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>Lauftemposchub</lol-uikit-tooltipped-keyword> und Resistenz gegen Verlangsamung. ",
-        "longDesc": "Triffst du einen Champion innerhalb von 4&nbsp;Sekunden mit 3&nbsp;<b>individuellen</b> Angriffen oder Fähigkeiten, erhältst du für 3&nbsp;Sekunden abhängig von der Stufe <speed>25–50&nbsp;% Lauftempo</speed> und <status>50&nbsp;% Verlangsamungsresistenz</status>. Lauftempo ist zu 50&nbsp;% effektiv gegen Fernkampf-Champions.<br>Abklingzeit: 30&nbsp;Sekunden&nbsp;– 10&nbsp;Sekunden.",
+        "name": "PhaseRush",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Lauftemposchub",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Aktivierungen insgesamt: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "DeathfireTouch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            ""
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Bewahrer",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Klingenhagel",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Du erhältst für bis zu @NumHits@&nbsp;Angriffe {{ Item_Melee_Ranged_Split }}&nbsp;% Angriffstempo, wenn du einen gegnerischen Champion angreifst.<br><br>Abklingzeit: @Cooldown@&nbsp;Sek.<br><hr><br>Angriffe mit „Klingenhagel“: @f1@<br>Prozentsatz von getroffenen Hagelangriffen: @f2@&nbsp;%<br><br><rules>Zurückgesetzte normale Angriffe erhöhen das Angriffslimit um 1.<br>Mit „Klingenhagel“ kannst du kurzzeitig die Obergrenze für Angriffstempo überschreiten.</rules>",
-        "shortDesc": "Du erhöhst dein Angriffstempo für die ersten 3 Angriffe gegen gegnerische Champions stark.",
-        "longDesc": "Du erhältst für bis zu 3&nbsp;Angriffe 160&nbsp;% Angriffstempo (80&nbsp;% im Fall von Fernkampf-Champions), wenn du einen gegnerischen Champion angreifst.<br><br>Zwischen den Angriffen dürfen maximal 3&nbsp;Sekunde(n) vergehen, sonst endet der Effekt.<br><br>Abklingzeit: 10&nbsp;Sek.<br><br><rules>Zurückgesetzte Angriffe erhöhen das Angriffslimit um 1.<br>Mit „Klingenhagel“ kannst du kurzzeitig die Obergrenze für Angriffstempo überschreiten.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Mehrfache Angriffe",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Angriffe mit zusätzlichem Angriffstempo: @eogvar1@",
-            "Prozentsatz an getroffenen Hagel-Angriffen: @eogvar2@&nbsp;%"
+            ""
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Arkaner Komet",
         "majorChangePatchVersion": "",
-        "tooltip": "Wenn ein Champion durch eine Fähigkeit Schaden erleidet, fliegt ein Komet an dessen Position. Wenn „Arkaner Komet“ abklingt, wird die verbleibende Abklingzeit verringert.<br><br>Schaden: @DamageCalc@<br>Abklingzeit: @CooldownCalc@&nbsp;Sekunden<br><rules><br>Abklingzeitverringerung:<br>Einzelziel: 20&nbsp;%.<br>Flächenwirkung: 10&nbsp;%.<br>Schaden über Zeit: 5&nbsp;%.<br></rules><br>Du hast mit @f3@&nbsp;% der abgefeuerten Kometen getroffen und insgesamt @f1@&nbsp;Schaden an Champions verursacht.",
+        "tooltip": "",
         "shortDesc": "Wenn ein Champion durch eine Fähigkeit Schaden erleidet, fliegt ein Schaden verursachender Komet an dessen Position.",
-        "longDesc": "Wenn ein Champion durch eine Fähigkeit Schaden erleidet, fliegt ein Komet an dessen Position. Wenn „Arkaner Komet“ abklingt, wird die verbleibende Abklingzeit verringert.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Schaden (adaptiv)</font></lol-uikit-tooltipped-keyword>: 30–130 abhängig von der Stufe (<scaleAP>+0.05&nbsp;Fähigkeitsstärke</scaleAP> und <scaleAD>0.1&nbsp;zusätzlicher Angriffsschaden</scaleAD>)<br>Abklingzeit: 20–8&nbsp;Sekunden<br><rules><br>Abklingzeitverringerung:<br>Einzelziel: 20&nbsp;%<br>Flächenwirkung: 10&nbsp;%<br>Schaden über Zeit: 5&nbsp;%<br></rules>",
+        "longDesc": "",
         "recommendationDescriptor": "Fähigkeitsschaden",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

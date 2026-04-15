@@ -800,18 +800,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +924,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kennen passively deals extra damage and adds a Mark of the Storm to his target every few attacks, and he can activate this ability to damage and add another Mark of the Storm to targets who are already marked.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Every 5th Attack deals an additional <magicDamage>@TotalDamagePassive@ magic damage</magicDamage>.<br><br><spellActive>Active:</spellActive> Kennen sends out a blast of electricity, dealing <magicDamage>@TotalDamageActive@ magic damage</magicDamage> to nearby enemies affected by <spellName>Mark of the Storm</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Every 5th Attack deals an additional <magicDamage>@TotalDamagePassive@ magic damage</magicDamage> %i:OnHit% <OnHit>On-Hit</OnHit>.<br><br><spellActive>Active:</spellActive> Kennen sends out a blast of electricity, dealing <magicDamage>@TotalDamageActive@ magic damage</magicDamage> to nearby enemies affected by <spellName>Mark of the Storm</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kennen morphs into a lightning form, enabling him to pass through units and apply a Mark of the Storm. Kennen gains Move Speed when entering this form, and attack speed when leaving it.",
-            "dynamicDescription": "Kennen turns into a ball of lightning, gaining <speed>@MovementSpeed*100@% Move Speed</speed>, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemies he passes through, and becoming Ghosted for @DurationAsBall@ seconds. If Kennen damages at least one enemy, he gains @EnergyRefund@ Energy. <br><br>After this ability ends, Kennen gains <attackSpeed>@AttackSpeed*100@% Attack Speed</attackSpeed> for @DurationAfterBall@ seconds. Kennen can <recast>Recast</recast> to end this Ability early.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen turns into a ball of lightning, gaining <speed>@MovementSpeed*100@% Move Speed</speed>, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemies he passes through, and becoming Ghosted for @DurationAsBall@ seconds. If Kennen damages at least one enemy, he gains @EnergyRefund@ Energy. <br><br>After this ability ends, Kennen gains <attackSpeed>@TotalAS*100@% Attack Speed</attackSpeed> for @DurationAfterBall@ seconds. Critical Strikes extend this duration by @CritDurationBonus@ second(s). Kennen can <recast>Recast</recast> to end this Ability early.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

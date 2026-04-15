@@ -751,7 +751,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Ném một quả bom vào vùng chỉ định, thứ sẽ bám dính lấy bất kì đơn vị nào dám lại gần nó (ưu tiên Tướng). Quả bom sẽ phát nổ sau 3 giây, gây sát thương ra xung quanh. Nếu Bom Hẹn Giờ được kích nổ sớm hơn bởi một quả Bom Hẹn Giờ khác, nó sẽ làm choáng các nạn nhân.",
-            "dynamicDescription": "Zilean ném ra một quả bom hẹn giờ sẽ dính vào đơn vị đầu tiên bước vào phạm vi ảnh hưởng của nó. Sau @Effect2Amount@ giây nó sẽ phát nổ, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>.<br><br>Đặt quả bom thứ hai lên đơn vị đã có sẵn một quả sẽ khiến quả thứ nhất phát nổ lập tức và <status>Làm Choáng</status> những kẻ địch ở trong phạm vi ảnh hưởng @Effect4Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +898,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ Năng lượng",
+            "cost": "Spell_ZileanW_Cost",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Zilean có thể chuẩn bị trước cho những bất trắc trong tương lai, giảm thời gian hồi chiêu các kĩ năng cơ bản của nó.",
-            "dynamicDescription": "Zilean đảo ngược thời gian, giảm Hồi chiêu của các Kỹ năng cơ bản khác đi @Effect2Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean đảo ngược thời gian, giảm Hồi chiêu của các Kỹ năng cơ bản khác đi @CooldownReduction@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +941,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Zilean bẻ cong thời gian quanh một đơn vị, giảm tốc độ di chuyển nếu đó là kẻ địch và gia tăng nếu đó là đồng minh trong một thời gian ngắn.",
-            "dynamicDescription": "Zilean <status>Làm Chậm</status> một tướng địch đi @Effect2Amount@% hoặc tăng cho tướng đồng minh <speed>@Effect2Amount@% Tốc độ Di chuyển</speed> trong @Effect1Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

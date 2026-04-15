@@ -1305,7 +1305,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Jarvan IV ยืดหอกออกไปข้างหน้า สร้างความเสียหายกายภาพและลดเกราะของศัตรูที่อยู่ในเส้นทาง และหาก Jarvan ใช้สกิลนี้ไปยังธงของ Demacian Standard เขาจะดึงตนเองเข้าหาธง และชนศัตรูให้ลอยขึ้นไป",
-            "dynamicDescription": "Jarvan แทงหอกของเขาที่ยืดได้ สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และลด<scaleArmor>เกราะ @Effect2Amount@%</scaleArmor> เป็นเวลา @Effect3Amount@ วินาที<br><br>หากหอกพุ่งไปโดน <spellName>Demacian Standard</spellName> Jarvan จะดึงตัวเองเข้าไปหามัน <status>กระแทกศัตรูที่อยู่ในเส้นทางให้ลอยขึ้น</status>เป็นเวลา 0.75 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan ยืดหอกออกไป สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และลด <scaleArmor>เกราะ @BaseARShred*100@%</scaleArmor> เป็นเวลา @Effect3Amount@ วินาที<br><br>หากหอกพุ่งไปโดน <spellName>Demacian Standard</spellName> Jarvan จะดึงตัวเองเข้าไปหามัน <status>กระแทกศัตรูที่อยู่ในเส้นทางให้ลอยขึ้น</status>เป็นเวลา 0.75 วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1331,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1345,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1455,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Jarvan IV ตะโกนเรียกเหล่าราชาในอดีตมาช่วยป้องกันเขาจากความเสียหาย และลดความเร็วเคลื่อนที่ศัตรูรอบ ๆ",
-            "dynamicDescription": "Jarvan อัญเชิญเกราะ Aegis ออกมา <status>สโลว์</status>ศัตรูรอบข้าง @Effect2Amount@% เป็นเวลา @Effect5Amount@ วินาที และมอบ<shield>โล่ป้องกันความเสียหาย @BaseShield@ หน่วย</shield> เพิ่มขึ้น<shield> @BonusShield@ หน่วย</shield>ต่อจำนวนแชมเปี้ยนแต่ละตัวที่โดน@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan อัญเชิญโล่เอจิสออกมา <status>สโลว์</status>ศัตรูรอบข้าง @BaseSlowAmount*100@% เป็นเวลา @Effect5Amount@ วินาที และได้รับ<shield>โล่ป้องกันความเสียหาย @TotalShield@ หน่วย</shield> เพิ่มขึ้น <shield>@BonusShield@ หน่วย</shield>ต่อจำนวนแชมเปี้ยนที่โดน@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1481,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1495,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1605,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Jarvan IV แบกความภาคภูมิใจของชาว Demacia เอาไว้ ทำให้เขาได้รับความเร็วโจมตีเพิ่มขึ้น เมื่อกดใช้ Demacian Standard จะทำให้ Jarvan IV ปักธง Demacia สร้างความเสียหายเวท และช่วยให้ฝ่ายเดียวกันได้รับผลเพิ่มความเร็วโจมตีด้วย",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Jarvan ได้รับ<attackSpeed>ความเร็วโจมตี @PermanentAttackSpeed*100@%</attackSpeed><br><br><spellActive>กดใช้:</spellActive> Jarvan ปาหอกลงพื้น สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และทำให้เพื่อนร่วมทีมที่อยู่ใกล้หอกได้รับ<attackSpeed>ความเร็วโจมตีเพิ่ม @Effect3Amount*100@%</attackSpeed> เป็นเวลา @Effect4Amount@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Jarvan ได้รับ<attackSpeed>ความเร็วโจมตี @PermanentAttackSpeed*100@%</attackSpeed><br><br><spellActive>กดใช้:</spellActive> Jarvan ปาหอกลงพื้น สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และทำให้เพื่อนร่วมทีมที่อยู่ใกล้หอกได้รับ<attackSpeed>ความเร็วโจมตี @BaseAuraAS*100@%</attackSpeed> เป็นเวลา @Effect4Amount@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1631,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1654,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

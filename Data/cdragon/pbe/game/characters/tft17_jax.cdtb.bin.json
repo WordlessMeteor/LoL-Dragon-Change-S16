@@ -139,10 +139,10 @@
                     "name": "Damage",
                     "values": [
                         100.0,
-                        140.0,
-                        210.0,
-                        340.0,
-                        580.0,
+                        155.0,
+                        230.0,
+                        375.0,
+                        640.0,
                         300.0,
                         300.0
                     ],
@@ -154,7 +154,7 @@
                         0.15000000596046448,
                         0.15000000596046448,
                         0.15000000596046448,
-                        0.15000000596046448,
+                        0.20000000298023224,
                         0.15000000596046448,
                         0.15000000596046448,
                         0.15000000596046448
@@ -177,13 +177,13 @@
                 {
                     "name": "StartingManaReduction",
                     "values": [
-                        -10.0,
-                        -10.0,
-                        -10.0,
-                        -10.0,
-                        -10.0,
-                        -10.0,
-                        -10.0
+                        -20.0,
+                        -20.0,
+                        -20.0,
+                        -20.0,
+                        -20.0,
+                        -20.0,
+                        -20.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -334,6 +334,13 @@
                                 {
                                     "type": "Damage",
                                     "nameOverride": "TFT_AP_MagicDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ASandMS",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_StatBonusAttackspeed",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -765,7 +772,7 @@
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 70.0,
+                "{b35aa769}": 80.0,
                 "__type": "{ce9b917b}"
             },
             "{c4ab3550}": {
@@ -855,7 +862,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 10.0,
+        "mInitialMana": 20.0,
         "mShopData": "{1cef76ad}",
         "MobileHealthBarHeightOverride": 130.0,
         "mManaPerAttack": 5.0,

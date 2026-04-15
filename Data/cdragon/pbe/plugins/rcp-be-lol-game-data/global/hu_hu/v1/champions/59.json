@@ -1305,7 +1305,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "IV. Jarvan előredöf a lándzsájával, amivel fizikai sebzést okoz az útjába eső ellenfeleknek, és csökkenti a páncéljukat. Emellett a lándzsa a Demacia büszkeségéhez húzza Jarvant, aki a levegőbe löki az elébe kerülő ellenfeleket.",
-            "dynamicDescription": "Jarvan meghosszabbítja a lándzsáját, <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz mindent eltalált ellenfélnek, és @Effect3Amount@ másodpercre eltávolít róluk <scaleArmor>@Effect2Amount@% páncélt</scaleArmor>.<br><br>Ha a lándzsa érintkezik a <spellName>Demacia büszkesége</spellName> lobogójával, Jarvan odahúzza magát, 0,75 másodpercre <status>fellökve</status> minden útjába eső ellenfelet.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan meghosszabbítja a lándzsáját, <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz minden eltalált ellenfélnek, és @Effect3Amount@ másodpercre eltávolít róluk <scaleArmor>@BaseARShred*100@% páncélt</scaleArmor>.<br><br>Ha a lándzsa érintkezik a <spellName>Demacia büszkesége</spellName> lobogójával, Jarvan odahúzza magát, 0,75 másodpercre <status>fellökve</status> minden útjába eső ellenfelet.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1331,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1345,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1455,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "IV. Jarvan Demacia ősi királyaitól kér oltalmat, akik megvédik őt a sérülésektől és lassítják a közelében lévő ellenségeket.",
-            "dynamicDescription": "Jarvan megidéz egy égiszt, @Effect5Amount@ másodpercre @Effect2Amount@%-kal <status>lelassítja</status> a közeli ellenfeleket, és <shield>@BaseShield@ pajzsot</shield> kap, amely minden eltalált ellenfél után <shield>@BonusShield@</shield> ponttal növekszik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan megidéz egy égiszt, @Effect5Amount@ másodpercre @BaseSlowAmount*100@%-kal <status>lelassítja</status> a közeli ellenfeleket, és <shield>@TotalShield@ pajzsot</shield> kap, amely minden eltalált ellenfél után <shield>@BonusShield@</shield> ponttal növekszik.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1481,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1495,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1605,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "IV. Jarvan Demacia büszkeségét hordozza, ami passzívan bónusz támadási sebességet biztosít neki. A Demacia büszkesége képesség aktiválása lehetővé teszi IV. Jarvan számára, hogy elhelyezzen egy demaciai lobogót, amely a becsapódásakor varázssebzést okoz, és megnöveli a közelben tartózkodó szövetséges hősök támadási sebességét.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Jarvan <attackSpeed>@PermanentAttackSpeed*100@% támadási sebességre</attackSpeed> tesz szert.<br><br><spellActive>Aktív:</spellActive> Jarvan a kijelölt helyre dobja lobogóját, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz. A lobogó közelében a szövetségesek @Effect4Amount@ másodpercre <attackSpeed>@Effect3Amount*100@% támadási sebességre</attackSpeed> tesznek szert.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Jarvan <attackSpeed>@PermanentAttackSpeed*100@% támadási sebességre</attackSpeed> tesz szert.<br><br><spellActive>Aktív:</spellActive> Jarvan a kijelölt helyre dobja lobogóját, amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz. A lobogó közelében a szövetségesek @Effect4Amount@ másodpercre <attackSpeed>@BaseAuraAS*100@% támadási sebességre</attackSpeed> tesznek szert.@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1631,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1654,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

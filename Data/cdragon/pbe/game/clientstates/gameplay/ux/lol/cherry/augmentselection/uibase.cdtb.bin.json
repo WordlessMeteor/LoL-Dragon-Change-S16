@@ -28,6 +28,9 @@
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
         "Elements": [
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HitRegion",
+            "{4c5c5e4c}",
+            "{d5c52566}",
+            "{d8d280c3}",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_IdleVFX",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HoverVFX",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_PickedVFX",
@@ -35,6 +38,7 @@
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_FlashInVFX",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_RefreshVFX",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_RefreshOverlayVFX",
+            "{cc5c4526}",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Large",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Tag",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_TagSpacer",
@@ -42,7 +46,9 @@
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Desc",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Name",
             "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Medium",
-            "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/RerollButton"
+            "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/RerollButton",
+            "{1802c661}",
+            "{66a4c234}"
         ],
         "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HitRegion",
         "DefaultStateElements": {
@@ -415,6 +421,22 @@
         "HTMLStyleSheet": "{9c87124a}",
         "__type": "UiElementTextData"
     },
+    "{1802c661}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Aug_LevelUpRow",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Elements": [
+            "{7ab5dac3}"
+        ],
+        "Region": "{7ab5dac3}",
+        "LayoutStyle": {
+            "HorizontalJustification": 1,
+            "VerticalJustification": 1,
+            "RowVerticalAlignment": 1,
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_FlashInVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_FlashInVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
@@ -522,7 +544,7 @@
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_PickedVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_PickedVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
-        "Layer": 6,
+        "Layer": 11,
         "Position": {
             "UIRect": {
                 "Position": [
@@ -550,6 +572,37 @@
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/Particles/Augment_Silver_SelectedVFX",
         "__type": "UiElementParticleSystemData"
     },
+    "{4c5c5e4c}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_BackgroundVFX",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    618.0,
+                    236.0
+                ],
+                "Size": [
+                    364.0,
+                    587.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "{7c4535ee}",
+        "__type": "UiElementParticleSystemData"
+    },
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Medium": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Medium",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
@@ -558,7 +611,7 @@
             "UIRect": {
                 "Position": [
                     736.0,
-                    306.0
+                    326.0
                 ],
                 "Size": [
                     128.0,
@@ -589,7 +642,7 @@
             "UIRect": {
                 "Position": [
                     710.0,
-                    279.0
+                    299.0
                 ],
                 "Size": [
                     180.0,
@@ -614,7 +667,7 @@
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_RefreshOverlayVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_RefreshOverlayVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
-        "Layer": 21,
+        "Layer": 26,
         "Position": {
             "UIRect": {
                 "Position": [
@@ -641,6 +694,67 @@
         },
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/Particles/Augment_Silver_RefreshOverlayVFX",
         "__type": "UiElementParticleSystemData"
+    },
+    "{66a4c234}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Aug_LevelUpBg",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    736.0,
+                    246.0
+                ],
+                "Size": [
+                    128.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{7ab5dac3}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Aug_LevelUpRow/Aug_LevelUpRowRegion",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    736.0,
+                    243.0
+                ],
+                "Size": [
+                    128.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
     },
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/TagRow": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/TagRow",
@@ -689,7 +803,7 @@
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_IdleVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_IdleVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
-        "Layer": 5,
+        "Layer": 10,
         "Position": {
             "UIRect": {
                 "Position": [
@@ -720,7 +834,7 @@
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_NotPickedVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_NotPickedVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
-        "Layer": 6,
+        "Layer": 11,
         "Position": {
             "UIRect": {
                 "Position": [
@@ -780,7 +894,7 @@
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HoverVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HoverVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
-        "Layer": 6,
+        "Layer": 11,
         "Position": {
             "UIRect": {
                 "Position": [
@@ -839,10 +953,99 @@
         },
         "__type": "UiElementRegionData"
     },
+    "{cc5c4526}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Overlay",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Layer": 18,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    710.0,
+                    279.0
+                ],
+                "Size": [
+                    179.0,
+                    180.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{d5c52566}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/LevelSpacer",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    789.0,
+                    266.0
+                ],
+                "Size": [
+                    4.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{d8d280c3}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/LevelIcon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Layer": 52,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    777.0,
+                    266.0
+                ],
+                "Size": [
+                    18.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_RefreshVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_RefreshVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
-        "Layer": 7,
+        "Layer": 12,
         "Position": {
             "UIRect": {
                 "Position": [
@@ -869,6 +1072,24 @@
         },
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/Particles/Augment_Silver_RefreshVFX",
         "__type": "UiElementParticleSystemData"
+    },
+    "{083f2fd5}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/AugmentSelection_Titles",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Elements": [
+            "{c9fbef46}",
+            "{d290eb68}",
+            "{d106ed7a}"
+        ],
+        "Region": "{c9fbef46}",
+        "LayoutStyle": {
+            "HorizontalJustification": 1,
+            "VerticalJustification": 1,
+            "ColumnHorizontalAlignment": 1,
+            "__type": "LayoutStyleVerticalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
     },
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/AugmentSelection_Grid": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/AugmentSelection_Grid",
@@ -915,15 +1136,15 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{63b7d688}": {
+    "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/TooltipAnchor": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/TooltipAnchor",
         "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
         "Enabled": true,
         "Position": {
             "UIRect": {
                 "Position": [
-                    785.0,
-                    872.0
+                    781.0,
+                    779.0
                 ],
                 "Size": [
                     30.0,
@@ -1008,6 +1229,102 @@
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/Particles/Augment_ChoiceBGVFX",
         "MaxPlayCount": 0,
         "__type": "UiElementParticleSystemData"
+    },
+    "{c9fbef46}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/AugmentSelection_Titles/AugmentSelection_Titles_Region",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    300.0,
+                    92.0
+                ],
+                "Size": [
+                    1000.0,
+                    100.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{d106ed7a}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/AugmentSelection_Titles/AugmentSelection_Subtitle",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Layer": 200,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    8.0,
+                    -6.0
+                ],
+                "Size": [
+                    500.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/Clash_24_Beaufort_Gold1",
+        "TextAlignmentHorizontal": 1,
+        "WrappingMode": 1,
+        "__type": "UiElementTextData"
+    },
+    "{d290eb68}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection/AugmentSelection_Titles/AugmentSelection_Title",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelection",
+        "Layer": 200,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -343.0,
+                    -67.0
+                ],
+                "Size": [
+                    500.0,
+                    250.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{52c81fd5}",
+        "TextAlignmentHorizontal": 1,
+        "WrappingMode": 1,
+        "__type": "UiElementTextData"
     },
     "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelectionToggleScene": {
         "name": "ClientStates/Gameplay/UX/LoL/Cherry/AugmentSelection/UIBase/AugmentSelectionToggleScene",

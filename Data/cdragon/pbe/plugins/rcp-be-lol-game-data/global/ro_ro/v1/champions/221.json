@@ -1276,8 +1276,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Zeri se năpustește pe o distanță scurtă și își energizează următoarele 3 lovituri cu ''Focul rapid'', făcându-le să treacă prin inamici. Va sări și se va lipi de orice teren pe care îl atinge.",
-            "dynamicDescription": "Zeri se năpustește pe o distanță scurtă și sare peste orice teren pe care îl atinge, extinzând semnificativ raza năpustirii. Pentru următoarele @BuffDuration@ secunde, loviturile de <spellName>''Foc rapid''</spellName> trec prin țintă, provocând @PenDamagePercent*100@% din daune inamicilor loviți după primul și încă <magicDamage>@BonusDamageTotal@ daune magice</magicDamage> suplimentare la impact împotriva primei ținte lovite. <br><br>Lovirea unui campion inamic cu un atac sau cu o abilitate reduce timpul de reactivare al acestei abilități cu @CDReductionPerHit@ secunde. Loviturile critice reduc timpul de reactivare cu până la @CritCDReductionPerHit@ secunde.@SpellModifierDescriptionAppend@",
+            "description": "Zeri se năpustește pe o distanță scurtă și își energizează ''Focul rapid'' pentru a trece prin inamici. Va sări și se va lipi de orice teren pe care îl atinge.",
+            "dynamicDescription": "Zeri se năpustește pe o distanță scurtă și sare peste orice teren pe care îl atinge, extinzând semnificativ raza năpustirii. Pentru următoarele @BuffDuration@ secunde, loviturile de ''<spellName>Foc rapid</spellName>'' trec prin țintă, provocând @PenDamagePercent*100@% din daune inamicilor loviți după primul și încă <magicDamage>@BonusDamageTotal@ daune magice</magicDamage> suplimentare la impact împotriva primei ținte lovite. <br><br>Lovirea unui inamic cu un atac reduce timpul de reactivare al acestei abilități cu @CDReductionPerHit@ secunde. Loviturile critice reduc timpul de reactivare cu până la @CritCDReductionPerHit@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1295,10 +1295,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

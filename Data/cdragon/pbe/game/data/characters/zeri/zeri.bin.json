@@ -1025,6 +1025,7 @@
         "ObjectName": "ZeriQ",
         "mScriptName": "ZeriQ",
         "mSpell": {
+            "flags": 32,
             "mAffectsTypeFlags": 6154,
             "DataValues": [
                 {
@@ -1056,26 +1057,26 @@
                 {
                     "name": "ExcessAttackSpeedToADMult",
                     "values": [
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseDamage",
                     "values": [
-                        13.0,
-                        15.0,
                         17.0,
-                        19.0,
                         21.0,
-                        23.0,
-                        25.0
+                        25.0,
+                        29.0,
+                        33.0,
+                        37.0,
+                        41.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1083,12 +1084,12 @@
                     "name": "ActiveADRatio",
                     "values": [
                         1.0,
+                        1.0199999809265137,
                         1.0399999618530273,
+                        1.059999942779541,
                         1.0800000429153442,
-                        1.1200000047683716,
-                        1.159999966621399,
-                        1.2000000476837158,
-                        1.2400000095367432
+                        1.100000023841858,
+                        1.1200000047683716
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1353,6 +1354,9 @@
             ],
             "mTargetingTypeData": {
                 "__type": "Location"
+            },
+            "{8958fee2}": {
+                "__type": "{8958fee2}"
             },
             "mSpellCooldownOrSealedQueueThreshold": 0.25,
             "mCastingBreaksStealth": true,
@@ -2343,13 +2347,13 @@
                 {
                     "name": "CriticalEffectiveness",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2471,7 +2475,7 @@
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.25,
+                            "mCoefficient": 0.5,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -2906,13 +2910,13 @@
                 {
                     "name": "MSPercent",
                     "values": [
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2988,26 +2992,26 @@
                 {
                     "name": "BaseBonusMS",
                     "values": [
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "MaxHyperchargeDuration",
                     "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3052,7 +3056,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 1.0,
+                            "mCoefficient": 0.6000000238418579,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -3152,6 +3156,13 @@
                                 {
                                     "type": "ActiveDamage",
                                     "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MSPercent",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeed",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -3352,26 +3363,13 @@
                 {
                     "name": "BonusDamageBase",
                     "values": [
-                        15.0,
-                        17.0,
-                        19.0,
-                        21.0,
-                        23.0,
-                        25.0,
-                        27.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BonusADRatio",
-                    "values": [
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612
+                        20.0,
+                        22.0,
+                        24.0,
+                        26.0,
+                        28.0,
+                        30.0,
+                        32.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3424,6 +3422,19 @@
                         1.5,
                         1.5,
                         1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CDReductionModNonChamp",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3507,12 +3518,6 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "BonusADRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        },
-                        {
                             "mDataValue": "BonusAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
@@ -3540,11 +3545,11 @@
                 "ASSETS/Characters/Zeri/HUD/Icons2D/ZeriE.dds"
             ],
             "cooldownTime": [
-                22.0,
-                22.0,
+                24.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],
@@ -4259,7 +4264,7 @@
             "__type": "{ce9b917b}"
         },
         "{7bd4b298}": {
-            "{b35aa769}": 500.0,
+            "{b35aa769}": 550.0,
             "__type": "{ce9b917b}"
         },
         "{836cc82a}": {

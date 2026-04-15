@@ -1264,7 +1264,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "防御の構えを取り移動速度が低下する。構えを解くと、周囲の敵ユニットにタウント効果とダメージを与える。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> @PassiveShieldOOCTimer@秒間ダメージを受けずにいると、<shield>@TotalPassiveShield@の魔法ダメージを防ぐシールド</shield>を獲得する。<br><br><charge>チャージ開始:</charge> 受ける魔法ダメージを@MagicDamageReduction@、物理ダメージを@PhysicalDamageReduction@軽減するようになり、自身が@Effect3Amount@%の<status>スロウ効果</status>を受ける。<br><br><release>解放:</release> 敵チャンピオンに@Effect4Amount@ - @Effect7Amount@秒間<status>タウント効果</status>を付与し、<magicDamage>@MinTotalDamage@</magicDamage> - <magicDamage>@MaxTotalDamage@の魔法ダメージ</magicDamage>を与えて、ダメージ軽減効果を@Effect8Amount@秒間更新する。タウントの効果時間と効果範囲、ダメージはチャージ時間に応じて増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> @PassiveShieldOOCTimer@秒間ダメージを受けずにいると、<shield>@TotalPassiveShield@の魔法ダメージを防ぐシールド</shield>を獲得する。<br><br><charge>チャージ開始:</charge> 受ける魔法ダメージを@MagicDamageReduction@、物理ダメージを@PhysicalDamageReduction@軽減するようになり、自身が@SelfSlowPercent@%の<status>スロウ効果</status>を受ける。<br><br><release>解放:</release> 敵チャンピオンに@CCDurationMin@ - @CCDurationMax@秒間<status>タウント効果</status>を付与し、<magicDamage>@MinTotalDamage@</magicDamage> - <magicDamage>@MaxTotalDamage@の魔法ダメージ</magicDamage>を与えて、ダメージ軽減効果を@DRLingerDuration@秒間更新する。タウントの効果時間と効果範囲、ダメージはチャージ時間に応じて増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 275.0,
                 275.0,
@@ -1290,45 +1290,45 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.08,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1340,49 +1340,49 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {

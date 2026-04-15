@@ -1276,8 +1276,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Zeri melakukan dash jarak pendek, memperkuat 3 tembakan Burst Fire berikutnya, dan membuatnya menembus musuh. Dia akan melompati medan apa pun yang disentuhnya.",
-            "dynamicDescription": "Zeri melakukan dash jarak pendek dan melompati medan apa pun yang disentuhnya, menambah drastis range dash-nya. Selama @BuffDuration@ detik berikutnya, tembakan <spellName>Burst Fire</spellName> akan menembus dan menghasilkan @PenDamagePercent*100@% damage ke musuh setelah tembakan pertama dan tambahan <magicDamage>@BonusDamageTotal@ magic damage</magicDamage> On-Hit ke target yang pertama terkena. <br><br>Jika Zeri mengenai champion musuh dengan Serangan atau Ability, Cooldown Ability ini akan berkurang sebanyak @CDReductionPerHit@ detik. Critical Strike mengurangi cooldown sebanyak @CritCDReductionPerHit@ detik.@SpellModifierDescriptionAppend@",
+            "description": "Zeri dash jarak pendek dan memperkuat Burst Fire untuk menembus musuh. Dia akan melompati medan apa pun yang disentuhnya.",
+            "dynamicDescription": "Zeri dash jarak pendek dan melompati medan apa pun yang disentuhnya, menambah drastis range dash-nya. Selama @BuffDuration@ detik berikutnya, tembakan <spellName>Burst Fire</spellName> akan menembus dan menghasilkan @PenDamagePercent*100@% damage ke musuh setelah tembakan pertama dan tambahan <magicDamage>@BonusDamageTotal@ magic damage</magicDamage> On-Hit ke target yang pertama terkena. <br><br>Jika Zeri mengenai musuh dengan Serangan, cooldown Ability ini akan berkurang sebanyak @CDReductionPerHit@ detik. Critical Strike mengurangi cooldown sebanyak @CritCDReductionPerHit@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1295,10 +1295,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

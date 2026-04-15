@@ -4115,6 +4115,45 @@
                         145.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PillarDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -4328,8 +4367,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 5,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

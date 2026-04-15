@@ -751,7 +751,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Hedef bölgeye doğru fırlattığı bomba, yakınından geçen birimlere yapışır (Şampiyonlara öncelik verir). Bomba 3 saniye sonra patlayarak alan etkili hasar verir. Yerleştirilen Saatli Bomba, başka bir Saatli Bomba tarafından erken patlatılırsa, ek olarak rakipleri sersemletir.",
-            "dynamicDescription": "Zilean çevresindeki küçük alana giren ilk birime yapışan bir saatli bomba fırlatır. Bomba @Effect2Amount@ saniyenin ardından patlayarak <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.<br><br>Üstünde bomba olan bir birime ikinci bir bomba fırlatmak, ilk bombayı anında patlatır ve patlamanın içinde kalan rakipleri @Effect4Amount@ saniyeliğine <status>sersemletir</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +898,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ Mana",
+            "cost": "Spell_ZileanW_Cost",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Zilean diğer temel yeteneklerinin bekleme sürelerini azaltarak kendini önündeki çatışmalara hazırlayabilir.",
-            "dynamicDescription": "Zilean zamanı geri sararak diğer temel yeteneklerinin bekleme sürelerini @Effect2Amount@ saniye azaltır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean zamanı geri sararak diğer temel yeteneklerinin bekleme sürelerini @CooldownReduction@ saniye azaltır.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +941,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Zilean herhangi bir birimin etrafında zamanı bükerek kısa süreliğine rakiplerin hareket hızını azaltır veya takım arkadaşlarının hareket hızını arttırır.",
-            "dynamicDescription": "Zilean @Effect1Amount@ saniyeliğine bir rakip şampiyonu %@Effect2Amount@ <status>yavaşlatır</status> veya bir takım arkadaşına <speed>%@Effect2Amount@ Hareket Hızı</speed> kazandırır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

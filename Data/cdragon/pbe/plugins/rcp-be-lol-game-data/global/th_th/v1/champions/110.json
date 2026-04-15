@@ -1527,7 +1527,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Varus เตรียมความพร้อมก่อนยิงธนูออกไปอย่างเต็มกำลัง ความเสียหายและระยะทางที่ยิงจะมากขึ้นตามระยะเวลาในการเตรียมตัวยิง",
-            "dynamicDescription": "<attention>เริ่มชาร์จ:</attention> Varus ชาร์จการยิงครั้งถัดไป <status>สโลว์</status>ตัวเขาเอง @Effect7Amount*-100@% หลังจากนั้น @Effect5Amount@ วินาที หากยังไม่ยิง Varus จะยกเลิกสกิลนี้และได้รับมานากลับคืน @Effect4Amount*100@% จากมานาที่ใช้ไป<br><br><attention>ปล่อย:</attention> Varus ปล่อยลูกธนู สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamageMinTooltip@ หน่วย</physicalDamage> ลดลง @Effect3Amount*100@% ต่อจำนวนศัตรูที่โดน (ต่ำสุดที่ @Effect9Amount*100@%) ความเสียหายและเอฟเฟกต์ระเบิดของ <keywordMajor>Blight</keywordMajor> จะเพิ่มขึ้น @MaxChargeAmp*100@% ตามระยะเวลาชาร์จ (สูงสุด <physicalDamage>@TotalDamageMax@ หน่วย</physicalDamage>)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1677,7 +1677,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ติดตัว: การโจมตีปกติของ Varus จะสร้างโบนัสความเสียหายเวทและติดแต้มสะสมของ Blight ไว้ที่เป้าหมาย สกิลอื่น ๆ ของ Varus จะทำให้ Blight ระเบิดออก สร้างความเสียหายเวทตามพลังชีวิตสูงสุดของเป้าหมาย กดใช้: Piercing Arrow ครั้งถัดไปของ Varus จะได้รับการเสริมพลัง",
-            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>การโจมตีปกติของ Varus จะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @OnHitDamage@ หน่วย</magicDamage> และมอบสแตค <keywordMajor>Blight</keywordMajor> เป็นเวลา @Effect3Amount@ วินาที (สูงสุด @Effect4Amount@ สแตค)<br><br>สกิลอื่น ๆ ของ Varus จะทำการระเบิดสแตค <keywordMajor>Blight</keywordMajor> สร้าง<magicDamage>ความเสียหายเวท @PercentHPPerStack@ จากพลังชีวิตสูงสุด</magicDamage>ต่อสแตค (สูงสุด <magicDamage>@MaxPercentHPPerStack@ จากพลังชีวิตสูงสุด</magicDamage>) การระเบิดสแตค <keywordMajor>Blight</keywordMajor> บนตัวแชมเปี้ยนและมอนสเตอร์ในตำนานจะลดคูลดาวน์สกิลพื้นฐานของเขาลง @CDRPerBlightStack*100@% ของคูลดาวน์สูงสุดต่อสแตค<br><br><spellActive>กดใช้:</spellActive> สกิล <spellName>Piercing Arrow</spellName> ครั้งถัดไปของ Varus จะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @QEmpowerPercentHP@ ตามพลังชีวิตที่หายไป</magicDamage> เพิ่มขึ้นสูงสุด <magicDamage>@MaxQEmpowerPercentHP@ ตามพลังชีวิตที่หายไป</magicDamage> ขึ้นอยู่กับเวลาที่ชาร์จสกิล@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1827,7 +1827,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Varus ยิงฝนธนูออกไปสร้างความเสียหายกายภาพในบริเวณพื้นดินที่ถูกทำลาย จะลดความเร็วเคลื่อนที่ของศัตรู และทำให้ศัตรูมีการรักษาตนเองลดลงด้วย",
-            "dynamicDescription": "Varus ยิงฝนลูกธนู สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และทำลายพื้นเป็นระยะเวลา @Effect3Amount@&nbsp;วินาที พื้นที่ที่ถูกทำลายจะ<status>สโลว์</status>ศัตรู @SlowPercent*-100@% และส่งผล Grievous Wounds @GrievousAmount*100@%@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1977,7 +1977,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Varus โยนเถาวัลย์ออกไป มันจะหยุดการเคลื่อนที่ของศัตรูตัวแรกที่โดน หลังจากนั้น มันจะแตกกระจายออกไปยังแชมเปี้ยนของศัตรูที่อยู่ใกล้เคียง ซึ่งถ้าหากโดนก็จะถูกหยุดอยู่กับที่เช่นเดียวกัน",
-            "dynamicDescription": "Varus โยนเถาวัลย์ออกไปมัดศัตรู <status>ตรึง</status>แชมเปี้ยนศัตรูตัวแรกที่โดนเป็นเวลา @Effect2Amount@ วินาที และสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ศัตรูที่ถูก<status>ตรึง</status>จะได้รับ <keywordMajor>Blight</keywordMajor> จำนวน @Effect4Amount@ สแตคในช่วงเวลานั้น<br><br>เถาวัลย์จะกระจายออกต่อไปเข้าหาแชมเปี้ยนศัตรูที่ยังไม่ได้รับผลของสกิลนี้ ถ้าเถาวัลย์กระจายไปถึง พวกเขาจะได้รับความเสียหายและถูก<status>ตรึง</status>ในจำนวนที่เท่ากัน@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

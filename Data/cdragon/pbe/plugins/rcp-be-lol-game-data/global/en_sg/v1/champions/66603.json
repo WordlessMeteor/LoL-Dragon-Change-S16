@@ -75,7 +75,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Lux releases a sphere of light that binds and deals damage to up to two enemy units.",
-            "dynamicDescription": "Lux fires a ball of light, <status>Rooting</status> the first two enemies for @Effect3Amount@ seconds and dealing <magicDamage>@TotalDamageTT@ magic damage</magicDamage> to each.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux fires a ball of light, <status>Rooting</status> the first two enemies for @RootDuration@ seconds and dealing <magicDamage>@TotalDamageTT@ magic damage</magicDamage> to each.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -225,7 +225,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Lux throws her wand and bends the light around any friendly target it touches, protecting them from enemy damage.",
-            "dynamicDescription": "Lux throws her wand, granting <shield>@TotalShieldTT@ Shield</shield> for @Effect3Amount@ seconds to allies it passes through. Then it returns, granting the same <shield>Shield</shield> on its return.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux throws her wand, granting <shield>@TotalShieldTT@ Shield</shield> for @ShieldDuration@ seconds to allies it passes through. Then it returns, granting the same <shield>Shield</shield> on its return.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -375,7 +375,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Fires an anomaly of twisted light to an area, which slows nearby enemies. Lux can detonate it to damage enemies in the area of effect.",
-            "dynamicDescription": "Lux creates a light zone that <status>Slows</status> by @Effect1Amount@% and reveals the area. After @Effect3Amount@ seconds or on <recast>Recasting</recast> this Ability, it detonates, dealing <magicDamage>@TotalDamageTT@ magic damage</magicDamage> and <status>Slowing</status> for an additional @SlowLingerDuration@ second.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux creates a light zone that <status>Slows</status> by @SlowPercent@% and reveals the area. After @SlowZoneDuration@ seconds or on <recast>Recasting</recast> this Ability, it detonates, dealing <magicDamage>@TotalDamageTT@ magic damage</magicDamage> and <status>Slowing</status> for an additional @SlowLingerDuration@ second.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

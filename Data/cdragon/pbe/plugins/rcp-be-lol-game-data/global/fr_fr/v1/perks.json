@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Tempo mortel",
         "majorChangePatchVersion": "",
-        "tooltip": "Attaquer un champion ennemi vous octroie %i:scaleAS% +@ASPerStack@ vitesse d'attaque pendant 6 sec (6 effets cumulés max.). Au max d'effets cumulés, vous infligez également @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>pts de dégâts adaptatifs bonus</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>à l'attaque</OnHit>.<br><br>Durée au nombre d'effets cumulés max. : @f1@ sec.<br>Dégâts infligés : @f2@.<br><br>Cette rune traque également le pourcentage d'attaques de base lancées contre des champions moins de 0.25 sec après que votre attaque était prête suite à une attaque contre un champion : @f3@% (@f4@ sur @f5@).",
+        "tooltip": "",
         "shortDesc": "Attaquer un champion ennemi vous octroie de la vitesse d'attaque (6 effets cumulés max.). Au maximum d'effets cumulés, vous infligez également des <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>dégâts adaptatifs bonus</font></lol-uikit-tooltipped-keyword> à l'attaque.",
         "longDesc": "Attaquer un champion ennemi vous octroie +[6% pour les champions en mêlée || 4% pour les champions à distance] vitesse d'attaque pendant 6 sec (6 effets cumulés max.). Au maximum d'effets cumulés, vous infligez également [9 - 30 pour les champions en mêlée || 6 - 24 pour les champions à distance] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>pts de dégâts adaptatifs bonus à l'attaque. Ces dégâts augmentent de 1% tous les 1% de vitesse d'attaque bonus</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Vitesse d'attaque croissante",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Rush phasique",
-        "majorChangePatchVersion": "",
-        "tooltip": "Toucher un champion ennemi avec 3 attaques ou compétences <b>différentes</b> en moins de 4 sec octroie <speed>+@MoveSpeedCalc@ vitesse de déplacement</speed> et <status>+50% de résistance aux ralentissements</status> pendant 3 sec.<br><br>Délai de récupération : <attention>@CooldownCalc@ sec</attention>.<br><br>Total des activations : <attention>@f1@</attention>.",
-        "shortDesc": "Toucher un champion ennemi avec 3 attaques ou compétences <b>différentes</b> vous octroie un bonus en <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>vitesse de déplacement</lol-uikit-tooltipped-keyword> et en résistance aux ralentissements. ",
-        "longDesc": "Toucher un champion ennemi avec 3 attaques ou compétences <b>différentes</b> en moins de 4 sec octroie <speed>+25% - +50% de vitesse de déplacement</speed> (selon le niveau) et <status>+50% de résistance aux ralentissements</status> pendant 3 sec. Pour les champions à distance, l'efficacité de la vitesse de déplacement est de 50%.<br>Délai de récupération : 30 sec - 10 sec.",
+        "name": "PhaseRush",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Bref bonus de déplacement",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Total des activations : @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "DeathfireTouch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            ""
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Gardien",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Déluge de lames",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Quand vous attaquez un champion ennemi, votre vitesse d'attaque augmente de {{ Item_Melee_Ranged_Split }}% pour @NumHits@ attaques. <br><br>Délai de récupération : @Cooldown@ sec.<br><hr><br>Attaques de Déluge de lames : @f1@<br>Pourcentage d'attaques réussies avec Déluge de lames : @f2@%.<br><br><rules>Les réinitialisations d'attaque de base augmentent le nombre d'attaques max de 1.<br>Permet de dépasser temporairement la limite de vitesse d'attaque.</rules>",
-        "shortDesc": "Votre vitesse d'attaque augmente grandement pour vos 3 premières attaques contre des champions ennemis.",
-        "longDesc": "Quand vous attaquez un champion ennemi, votre vitesse d'attaque augmente de 160% (80% pour les champions à distance) pour 3 attaques.<br><br>Cet effet prend fin s'il s'écoule plus de 3 sec entre deux attaques.<br><br>Délai de récupération : 10 sec.<br><br><rules>Les réinitialisations d'attaque augmentent le nombre d'attaques max de 1.<br>Permet de dépasser temporairement la limite de vitesse d'attaque.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Déluge d'attaques",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Attaques avec un bonus en vitesse d'attaque : @eogvar1@",
-            "Pourcentage d'attaques réussies avec Déluge de lames : @eogvar2@%"
+            ""
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Comète arcanique",
         "majorChangePatchVersion": "",
-        "tooltip": "Blesser un champion avec une compétence fait tomber une comète à son emplacement ou, si Comète arcanique est en récupération, réduit son délai de récupération restant.<br><br>Dégâts : @DamageCalc@.<br>Délai de récupération : @CooldownCalc@ sec.<br><rules><br>Réduction du délai de récupération :<br>Cible unique : 20%.<br>Effet de zone : 10%.<br>Dégâts sur la durée : 5%.<br></rules><br>@f3@% de vos comètes ont touché une cible, pour un total de @f1@ pts de dégâts infligés aux champions.",
+        "tooltip": "",
         "shortDesc": "Blesser un champion avec une compétence fait tomber une comète destructrice sur sa position.",
-        "longDesc": "Blesser un champion avec une compétence fait tomber une comète à son emplacement ou, si Comète arcanique est en récupération, réduit son délai de récupération restant.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Dégâts adaptatifs</font></lol-uikit-tooltipped-keyword> : 30 - 130 (selon le niveau) (<scaleAP>+0.05 puissance</scaleAP> et <scaleAD>+0.1 dégâts d'attaque supplémentaires</scaleAD>).<br>Délai de récupération : 20 - 8sec.<br><rules><br>Réduction du délai de récupération :<br>Cible unique : 20%.<br>Effet de zone : 10%.<br>Dégâts sur la durée : 5%.<br></rules>",
+        "longDesc": "",
         "recommendationDescriptor": "Dégâts de compétence",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

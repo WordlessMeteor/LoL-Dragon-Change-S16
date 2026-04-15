@@ -686,6 +686,60 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "MSBonus",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.2800000011920929,
+                        0.36000001430511475,
+                        0.4399999976158142,
+                        0.5199999809265137,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ASBonus",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.44999998807907104,
+                        0.6000000238418579,
+                        0.75,
+                        0.8999999761581421,
+                        0.8999999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealingBonus",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/Characters/Trundle/HUD/Icons2D/Trundle_W.dds"
@@ -762,16 +816,14 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "MSBonus",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_MovementSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "ASBonus",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
@@ -812,8 +864,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "{7c4d6a20}",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -984,6 +1036,112 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "PillarDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        30.0,
+                        34.0,
+                        38.0,
+                        42.0,
+                        46.0,
+                        50.0,
+                        54.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowRadius",
+                    "values": [
+                        360.0,
+                        360.0,
+                        360.0,
+                        360.0,
+                        360.0,
+                        360.0,
+                        360.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackRadius",
+                    "values": [
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AllyDisplacementRange",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnemyDisplacementRange",
+                    "values": [
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnemyDisplacementSpeed",
+                    "values": [
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnemyDisplacementGravity",
+                    "values": [
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/Characters/Trundle/HUD/Icons2D/Trundle_E.dds"
@@ -1064,8 +1222,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SlowAmount",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -1124,8 +1281,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "{a0e0ed4d}",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1137,8 +1294,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

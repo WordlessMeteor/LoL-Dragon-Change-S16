@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Tempo letale",
         "majorChangePatchVersion": "",
-        "tooltip": "Attaccare un campione nemico conferisce %i:scaleAS%@ASPerStack@ velocità d'attacco per 6 secondi, fino a 6. Al massimo delle cariche, infligge @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>danni bonus adattivi</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>sull'attacco</OnHit>.<br><br>Disponibilità cariche massime: @f1@ secondi<br>Danni inflitti: @f2@<br><br>Questa runa traccia anche la percentuale dei tuoi attacchi base lanciati contro i campioni entro 0.25 secondi da quando l'attacco è pronto, dopo aver già attaccato un campione: @f3@% (@f4@ di @f5@)",
+        "tooltip": "",
         "shortDesc": "Attaccare un campione nemico conferisce velocità d'attacco, fino a 6. Al massimo delle cariche, infligge <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>danni bonus adattivi</font></lol-uikit-tooltipped-keyword> sull'attacco.",
         "longDesc": "Attaccare un campione nemico conferisce [6% corpo a corpo || 4% a distanza] velocità d'attacco per 6 secondi, fino a 6. Al massimo delle cariche, infligge [9 - 30 corpo a corpo || 6 - 24 a distanza] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>danni bonus adattivi sull'attacco, aumentati dell'1% per ogni 1% di velocità d'attacco bonus</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Crescita velocità d'attacco",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Scatto fasico",
-        "majorChangePatchVersion": "",
-        "tooltip": "Colpire un campione nemico con 3 <b>diversi</b> attacchi o abilità entro 4 secondo/i conferisce <speed>@MoveSpeedCalc@ velocità di movimento</speed> e un <status>50% di resistenza ai rallentamenti</status> per 3 secondo/i.<br><br>Ricarica: <attention>@CooldownCalc@s</attention><br><br>Attivazioni totali: <attention>@f1@</attention>",
-        "shortDesc": "Colpire un campione nemico con 3 <b>diversi</b> attacchi o abilità conferisce un aumento momentaneo della <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>velocità di movimento</lol-uikit-tooltipped-keyword> e resistenza ai rallentamenti. ",
-        "longDesc": "Colpire un campione nemico con 3 <b>diversi</b> attacchi o abilità entro 4 secondo/i conferisce <speed>25-50% della velocità di movimento</speed> in base al livello e <status>50% di resistenza ai rallentamenti</status> per 3 secondo/i. La velocità di movimento ha un 50% dell'efficacia per i campioni a distanza.<br>Ricarica: 30 secondo/i - 10 secondo/i",
+        "name": "PhaseRush",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Scarica di movimento",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Attivazioni totali: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "DeathfireTouch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            ""
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Sorvegliante",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Pioggia di lame",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Ottieni {{ Item_Melee_Ranged_Split }}% velocità d'attacco quando attacchi un campione nemico per un massimo di @NumHits@ attacchi. <br><br>Ricarica: @Cooldown@ secondo/i.<br><hr><br>Attacchi Pioggia di lame: @f1@<br>Percentuale attacchi Pioggia di lame andati a segno: @f2@%<br><br><rules>I reset dell'attacco base aumentano di 1 il limite di attacchi.<br>Permette di superare momentaneamente il limite di velocità d'attacco.</rules>",
-        "shortDesc": "Ottieni una grande quantità di velocità d'attacco per i primi 3 attacchi sferrati ai campioni nemici.",
-        "longDesc": "Ottieni 160% (80% per i campioni a distanza) velocità d'attacco quando attacchi un campione nemico per un massimo di 3 attacchi.<br><br>Tra gli attacchi non possono passare più di 3 secondo/i o l'effetto terminerà.<br><br>Ricarica: 10 secondo/i.<br><br><rules>I reset dell'attacco base aumentano di 1 il limite di attacchi.<br>Permette di superare momentaneamente il limite di velocità d'attacco.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Raffica di attacchi",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Attacchi effettuati con velocità d'attacco extra: @eogvar1@",
-            "Percentuale attacchi Pioggia di lame andati a segno: @eogvar2@%"
+            ""
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Cometa arcana",
         "majorChangePatchVersion": "",
-        "tooltip": "Danneggiare un campione con un'abilità scaglia una cometa verso la sua posizione, oppure, se Cometa arcana è in ricarica, riduce la sua ricarica residua.<br><br>Danni: @DamageCalc@<br>Ricarica: @CooldownCalc@ secondo/i<br><rules><br>Riduzione ricarica:<br>Bersaglio singolo: 20%.<br>Area d'effetto: 10%.<br>Danni nel tempo: 5%.<br></rules><br>Hai colpito con un @f3@% delle comete scagliate, per un totale di @f1@ danni ai campioni.",
+        "tooltip": "",
         "shortDesc": "Danneggiare un campione con un'abilità scaglia una cometa verso la sua posizione.",
-        "longDesc": "Danneggiare un campione con un'abilità scaglia una cometa verso la sua posizione, oppure, se Cometa arcana è in ricarica, riduce la sua ricarica residua.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Danni adattivi</font></lol-uikit-tooltipped-keyword>: 30-130 in base al livello (<scaleAP>+0.05 potere magico</scaleAP> e <scaleAD>+0.1 attacco fisico bonus</scaleAD>)<br>Ricarica: 20-8 secondi<br><rules><br>Riduzione ricarica:<br>Bersaglio singolo: 20%.<br>Effetti ad area: 10%.<br>Danni nel tempo: 5%.<br></rules>",
+        "longDesc": "",
         "recommendationDescriptor": "Danni abilità",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

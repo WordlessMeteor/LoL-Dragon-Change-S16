@@ -1276,8 +1276,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تندفع زيري لمسافة قصيرة وتحفز طلقاتها الثلاثة التالية من دفقة الطلقات، ما يجعلها تخترق أعداءها. ستقفز فوق أي تضاريس تلمسها وتنسفها.",
-            "dynamicDescription": "ستندفع زيري لمسافة قصيرة وتقفز فوق أي تضاريس تلمسها، ما يوسع نطاق اندفاعها بشكل كبير. خلال الـ @BuffDuration@ث التالية، ستخترق طلقاتها من <spellName>دفقة الطلقات</spellName> لتلحق @PenDamagePercent*100@% ضرر بالأعداء بعد الطلقة الأولى و <magicDamage>@BonusDamageTotal@ ضرر سحر</magicDamage> إضافيًا لدى الإصابة بأول هدف تصيبه. <br><br>تؤدي إصابة بطل معادٍ بهجوم أو قدرة إلى تقليص فترة تبريد هذه القدرة لمدة قدرها @CDReductionPerHit@ث. تقلص الضربات الحرجة من فترة التبريد مدة @CritCDReductionPerHit@ث بدل ذلك.@SpellModifierDescriptionAppend@",
+            "description": "تندفع زيري لمسافة قصيرة وتحفّز دفقة الطلقات لاختراق الأعداء. وتقفز وتنزلق فوق أي تضاريس تلمسها.",
+            "dynamicDescription": "تندفع زيري لمسافة قصيرة وتقفز فوق أي تضاريس تلمسها، مما يوسع نطاق اندفاعها بشكل كبير. خلال الـ @BuffDuration@ث التالية، تصبح طلقات قدرة <spellName>دفقة الطلقات</spellName> قادرة على الاختراق، فتلحق @PenDamagePercent*100@% ضرر بالأعداء بعد الأول وزيادة <magicDamage>@BonusDamageTotal@ ضرر سحر</magicDamage> لدى إصابة أول هدف. <br><br>تؤدي إصابة عدوٍ بهجوم إلى تقليص فترة تبريد هذه القدرة بمقدار @CDReductionPerHit@ث. تقلص الضربات الحرجة من فترة التبريد بمقدار @CritCDReductionPerHit@ث بدل ذلك.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1295,10 +1295,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

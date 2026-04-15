@@ -18628,7 +18628,7 @@
     "{0dfef57b}": {
         "mExpandedMutator": "MapSkin_Event_Current",
         "mMutators": [
-            "MapSkin_Map11_Sodapop_SRS"
+            "MapSkin_Default"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -18941,6 +18941,17 @@
         "mExpandedMutator": "RSBotsTimesliceManagerUpdate",
         "mMutators": [
             "RSBotsDisableTimesliceManagerUpdate(1)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{28c90ba9}": {
+        "mExpandedMutator": "CHERRY_Event",
+        "mMutators": [
+            "LoadingScreenTipsOverride(Cherry)",
+            "EnableWardPreload(0)",
+            "SubteamMaxTeamSize(2)",
+            "SubteamMaxTeams(8)",
+            "Event_AllAugment"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -19526,7 +19537,7 @@
         "mExpandedMutator": "TFT_Event_CT",
         "mMutators": [
             "TFTSetOverride(TFTSetEventCT)",
-            "AudioFeature(TFTSet16)",
+            "AudioFeature(TFTSet15)",
             "TFT_RolesRevamped(1)"
         ],
         "__type": "GameMutatorExpansions"
@@ -20291,6 +20302,14 @@
         "mExpandedMutator": "MapSkin_TFT_CarouselSet9",
         "mMutators": [
             "MapID(22)?MapSkinName(CarouselSet9)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{9f9ef224}": {
+        "mExpandedMutator": "CHERRY_SIZE_3",
+        "mMutators": [
+            "SubteamMaxTeamSize(3)",
+            "SubteamMaxTeams(6)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -23076,7 +23095,7 @@
             {
                 "championName": "Characters/Varus",
                 "mExcludedTags": 6704,
-                "mBuildTags": 240,
+                "mBuildTags": 208,
                 "__type": "ChampionAugmentTags"
             },
             {
@@ -23343,7 +23362,6 @@
             "{e2213221}": false,
             "{2094dd6e}": true,
             "{724bed8c}": true,
-            "{46a63d99}": true,
             "{7aacbbbc}": true,
             "{90ede9a7}": true,
             "{4ed93bd7}": true,
@@ -24314,8 +24332,9 @@
             "GDSEnum::CharacterKeywords",
             "TFTFavoredCombinations",
             "GDSEnum::TFTTraitSetStyle",
-            "ItemIconType",
-            "PlayerInputType"
+            "GDSEnum::ItemIconType",
+            "PlayerInputType",
+            "GDSEnum::ModesQuestState"
         ],
         "__type": "GameModeConstantStringVector"
     },

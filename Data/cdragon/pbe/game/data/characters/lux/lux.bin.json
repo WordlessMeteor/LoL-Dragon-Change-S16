@@ -926,6 +926,19 @@
                         0.75
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RootDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1105,13 +1118,10 @@
                 {
                     "EffectTag": 4096,
                     "EffectCalculation": {
-                        "mMultiplier": {
-                            "__type": "EffectValueCalculationPart"
-                        },
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "RootDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1606,6 +1616,19 @@
                         5.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        20.0,
+                        65.0,
+                        115.0,
+                        165.0,
+                        215.0,
+                        265.0,
+                        315.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1633,8 +1656,8 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.800000011920929,
@@ -1757,8 +1780,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1815,8 +1837,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowZoneDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

@@ -1276,8 +1276,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Zeri dashes a short distance and energizes her next 3 shots of Burst Fire, causing them to pierce through enemies. She will vault and grind over any terrain she touches.",
-            "dynamicDescription": "Zeri dashes a short distance and vaults over any terrain she touches, greatly extending the dash range. For the next @BuffDuration@ seconds, her shots of <spellName>Burst Fire</spellName> pierce dealing @PenDamagePercent*100@% damage to enemies after the first and an additional <magicDamage>@BonusDamageTotal@ magic damage</magicDamage> On-Hit to the first target struck. <br><br>Hitting an enemy champion with an Attack or Ability reduces this Ability's cooldown by @CDReductionPerHit@ seconds. Critical strikes reduce the cooldown by @CritCDReductionPerHit@ seconds instead.@SpellModifierDescriptionAppend@",
+            "description": "Zeri dashes a short distance and energizes Burst Fire to pierce through enemies. She will vault and grind over any terrain she touches.",
+            "dynamicDescription": "Zeri dashes a short distance and vaults over any terrain she touches, greatly extending the dash range. For the next @BuffDuration@ seconds, her shots of <spellName>Burst Fire</spellName> pierce dealing @PenDamagePercent*100@% damage to enemies after the first and an additional <magicDamage>@BonusDamageTotal@ magic damage</magicDamage> On-Hit to the first target struck. <br><br>Hitting an enemy with an Attack reduces this Ability's cooldown by @CDReductionPerHit@ seconds. Critical strikes reduce the cooldown by @CritCDReductionPerHit@ seconds instead.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1295,10 +1295,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

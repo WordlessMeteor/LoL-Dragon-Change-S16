@@ -1276,8 +1276,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Zeri röviden előreugrik, és felerősíti a következő 3 lövését, amelyek így áthatolnak az ellenfeleken. Ha egy tereptárgynak ugrik, a szögtől függően átvetődik vagy végigfut rajta.",
-            "dynamicDescription": "Zeri kisebb távolságra előretör, és ha tereptárgynak ütközne, átugrik rajta, jelentősen megnövelve az előretöréssel megtett távolságot. A következő @BuffDuration@ másodpercben <spellName>Gyorstüzelés</spellName> lövései áthatolnak, és az első után @PenDamagePercent*100@% sebzést okoznak az ellenségeknek, valamint további <magicDamage>@BonusDamageTotal@ varázssebzést</magicDamage> találatkor az első eltalált célpontnak. <br><br>Ha támadással vagy varázslattal eltalálsz egy ellenséges hőst, a képesség töltési ideje @CDReductionPerHit@ másodperccel csökken. Ha kritikus csapást okoz, a töltési idő @CritCDReductionPerHit@ másodperccel csökken.@SpellModifierDescriptionAppend@",
+            "description": "Zeri röviden előreugrik, és felerősíti a Gyorstüzelést, amely így áthatol az ellenfeleken. Ha egy tereptárgynak ugrik, a szögtől függően átvetődik vagy végigfut rajta.",
+            "dynamicDescription": "Zeri röviden előreugrik, és ha tereptárgynak ütközne, átvetődik rajta, jelentősen megnövelve az ugrással megtett távolságot. A következő @BuffDuration@ másodpercben a <spellName>Gyorstüzelés</spellName> lövései áthatolnak, és az első után @PenDamagePercent*100@% sebzést okoznak az ellenségeknek, valamint további <magicDamage>@BonusDamageTotal@ varázssebzést</magicDamage> találatkor az első eltalált célpontnak. <br><br>Ha támadással eltalálsz egy ellenfelet, a képesség töltési ideje @CDReductionPerHit@ másodperccel csökken. Ha kritikus csapást okoz, a töltési idő @CritCDReductionPerHit@ másodperccel csökken.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1295,10 +1295,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

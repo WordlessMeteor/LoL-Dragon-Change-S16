@@ -1264,7 +1264,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Galio ชาร์จพลังในท่าป้องกันและเคลื่อนที่ช้าลง หลังจากที่ปลดปล่อยชาร์จ Galio จะยั่วยุและสร้างความเสียหายให้กับศัตรูในบริเวณใกล้เคียง",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Galio ได้รับ<shield>โล่ป้องกันความเสียหายเวท @TotalPassiveShield@ หน่วย</shield> หลังจากไม่ได้รับความเสียหายมาเป็นเวลา @PassiveShieldOOCTimer@ วินาที<br><br><charge>เริ่มชาร์จ:</charge> Galio ลดความเสียหายเวททั้งหมดที่จะเข้ามา @MagicDamageReduction@ และความเสียหายกายภาพ @PhysicalDamageReduction@ และ<status>สโลว์</status>ตัวเขาเอง @Effect3Amount@%<br><br><release>ปล่อย:</release> Galio <status>ยั่วยุ</status>แชมเปี้ยนศัตรูเป็นเวลา @Effect4Amount@ ถึง @Effect7Amount@ วินาที สร้าง<magicDamage>ความเสียหายเวท @MinTotalDamage@</magicDamage> ถึง <magicDamage>@MaxTotalDamage@ หน่วย</magicDamage> และรีเฟรชระยะเวลาที่ลดความเสียหายเป็นเวลา @Effect8Amount@ วินาที ระยะเวลายั่วยุ ความเสียหาย และระยะสกิลจะเพิ่มขึ้นตามระยะเวลาชาร์จ@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Galio ได้รับ<shield>โล่ป้องกันเวท @TotalPassiveShield@ หน่วย</shield> หลังจากไม่ได้รับความเสียหายเป็นเวลา @PassiveShieldOOCTimer@ วินาที<br><br><charge>เริ่มชาร์จ:</charge> Galio ลดความเสียหายเวทที่ได้รับลง @MagicDamageReduction@ และความเสียหายกายภาพที่ได้รับ @PhysicalDamageReduction@ รวมถึง<status>สโลว์</status>ตัวเอง @SelfSlowPercent@%<br><br><release>ปล่อย:</release> Galio <status>ยั่วยุ</status>แชมเปี้ยนศัตรูเป็นเวลา @CCDurationMin@ ถึง @CCDurationMax@ วินาที สร้าง<magicDamage>ความเสียหายเวท @MinTotalDamage@</magicDamage> ถึง <magicDamage>@MaxTotalDamage@ หน่วย</magicDamage> และรีเฟรชระยะเวลาลดความเสียหายเพิ่มเป็นเวลา @DRLingerDuration@ วินาที ระยะเวลายั่วยุ ความเสียหาย และระยะสกิลเพิ่มขึ้นตามเวลาที่ชาร์จ@SpellModifierDescriptionAppend@",
             "range": [
                 275.0,
                 275.0,
@@ -1290,45 +1290,45 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.08,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1340,49 +1340,49 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {

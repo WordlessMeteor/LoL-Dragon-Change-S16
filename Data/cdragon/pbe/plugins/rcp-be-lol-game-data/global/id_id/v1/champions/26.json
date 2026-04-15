@@ -751,7 +751,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Melemparkan bom ke area target yang menempel ke unit yang mendekatinya (memprioritaskan champion). Meledak setelah 3 detik, menimbulkan damage AOE. Jika Time Bomb meledak lebih awal dikarenakan Time Bomb lainnya, juga akan mengakibatkan stun pada musuh.",
-            "dynamicDescription": "Zilean melemparkan bom waktu yang menempel ke unit pertama yang mendekati area kecil di sekitarnya. Meledak setelah @Effect2Amount@ detik, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>.<br><br>Menaruh bom kedua ke unit yang sudah membawa bom akan langsung meledakkan bom pertama dan menerapkan <status>Stun</status> ke musuh pertama dalam ledakannya selama @Effect4Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +898,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ Mana",
+            "cost": "Spell_ZileanW_Cost",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Zilean dapat mempersiapkan dirinya untuk pertempuran yang akan datang, mengurangi cooldown ability dasar lainnya.",
-            "dynamicDescription": "Zilean memutar waktu, mengurangi Cooldown Ability dasar lainnya sebanyak @Effect2Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean memutar waktu, mengurangi Cooldown Ability dasar lainnya sebanyak @CooldownReduction@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +941,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Zilean memelintir waktu di sekitar unit, mengurangi Move Speed musuh atau meningkatkan Move Speed sekutu dalam waktu singkat.",
-            "dynamicDescription": "Zilean menerapkan <status>Slow</status> pada champion musuh sebesar @Effect2Amount@% atau memberi champion sekutu <speed>@Effect2Amount@% Move Speed</speed> selama @Effect1Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

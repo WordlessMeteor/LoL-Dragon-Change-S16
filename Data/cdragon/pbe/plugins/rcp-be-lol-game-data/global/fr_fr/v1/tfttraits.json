@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Tous les @CastsToGainXP@ lancements de compétence, le Gardien du temps stocke <TFTBonus>@XPPerCast@</TFTBonus> XP. S'il en a suffisamment en stock pour vous permettre de passer au niveau supérieur, il vous transfère l'XP&nbsp;nécessaire. <br><br>Si vous êtes au niveau 10, il gagne <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;d'amplification des dégâts à la place.<br><br><rules>XP stockée : @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>Dans le Trésor de Crocc, le nombre d'utilisations de compétences nécessaires pour gagner de l'XP a été augmenté à @CastsToGainXPCT@ jusqu'à la phase 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Tous les @CastsToGainXP@ lancements de compétence, le Gardien du temps stocke <TFTBonus>@XPPerCast@</TFTBonus> XP. S'il en a suffisamment en stock pour vous permettre de passer au niveau supérieur, il vous transfère l'XP&nbsp;nécessaire. <br><br>Si vous êtes au niveau 10, il gagne <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;d'amplification des dégâts à la place.<br><br><rules>XP stockée : @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,10 +12270,6 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
-                    },
-                    {
-                        "name": "CastsToGainXPCT",
-                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13774,7 +13770,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Toutes les secondes, les Shurimiens gagnent @ASPerSecond*100@% de vitesse d'attaque et récupèrent @HealthRestorePerSecond@ PV. Au début du combat, ils gagnent des effets supplémentaires.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatique : débloquez Nasus, Renekton et Xerath, puis placez 4 champions Shurima sur votre plateau</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% de PV max</row><br><row>(@MinUnits@) @ArmorMR@ d'armure et résistance magique</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Un Shurimien se transcende toutes les @GodhoodCadence@ sec.</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Uniquement disponible lorsque Nasus, Renekton et Xerath sont débloqués.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
+        "tooltip_text": "Toutes les secondes, les Shurimiens gagnent @ASPerSecond*100@% de vitesse d'attaque et récupèrent @HealthRestorePerSecond@ PV. Au début du combat, ils gagnent des effets supplémentaires.<br><br><row>(@MinUnits@) @BonusHealth*100@% de PV max</row><br><row>(@MinUnits@) @ArmorMR@ d'armure et résistance magique</row><br><row>(@MinUnits@) Un Shurimien se transcende toutes les @GodhoodCadence@ sec.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13854,7 +13850,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 0.0
+                        "value": 1.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13862,7 +13858,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 0.0
+                        "value": 3.0
                     },
                     {
                         "name": "SkinScale",
@@ -13870,8 +13866,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -14574,7 +14570,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Après chaque combat, une breloque d'Ascendant apparaît dans votre boutique. Ces breloques d'Ascendant sont des effets puissants que vous pouvez acheter avec des PO.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>Dans le Trésor de Crocc, la breloque Fidèles disciples ne peut pas apparaître avant le niveau 7.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Après chaque combat, une breloque d'Ascendant apparaît dans votre boutique. Ces breloques d'Ascendant sont des effets puissants que vous pouvez acheter avec des PO.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15307,7 +15303,7 @@
         "trait_id": "TFT17_BlitzcrankUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PartyAnimal.TFT_Set17.png",
-        "tooltip_text": "Une fois par combat, après être tombé sous @HealthThreshold*100@% de PV, Blitzcrank devient impossible à cibler et régénère @PercentHealthHeal*100@% de ses PV max par seconde. Lorsqu'il atteint ses PV maximum, ou lorsqu'il ne reste aucun autre allié, il retourne au combat. S'il est entièrement soigné, pour le reste du combat, Blitzcrank est dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> et le passif de La fête est finie tire des projectiles quatre fois plus vite.",
+        "tooltip_text": "Une fois par combat, après être tombé sous @HealthThreshold*100@% de PV, Blitzcrank devient impossible à cibler et régénère @PercentHealthHeal*100@% de ses PV max par seconde. Lorsqu'il atteint ses PV maximum, ou lorsqu'il ne reste aucun autre allié, il retourne au combat. S'il est entièrement soigné, pour le reste du combat, Blitzcrank est dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> et le passif de La fête est finie tire des projectiles quatre fois plus vite.",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15394,7 +15390,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 40.0
+                        "value": 45.0
                     },
                     {
                         "name": "ExecuteHPPercent",
@@ -16472,7 +16468,7 @@
         "trait_id": "TFT17_SpaceGroove",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_SpaceGroove.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) Les Grooviens peuvent entrer dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font>. Lorsqu'ils sont dans le Groove, ils gagnent de la vitesse d'attaque et de la régénération de PV max. Ce bonus augmente pour chaque Groovien dans votre équipe.</row><br><row>(@MinUnits@) Tous les Grooviens commencent le combat dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> pendant @StartOfCombatDuration@ sec.</row><br><row>(@MinUnits@) Chaque seconde passée dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> confère @ADAPPerSecond@% de dégâts d'attaque et de puissance cumulables.</row><br><row>(@MinUnits@) Ces effets augmentent de @EffectBonus@% !</row><br><row>(@MinUnits@) <font color='#F39B9B'>E</font><font color='#F3D59B'>n</font><font color='#D5F39B'>t</font><font color='#9BF39B'>r</font><font color='#9BF3D5'>e</font><font color='#9BD5F3'>z</font> <font color='#9B9BF3'>d</font><font color='#D59BF3'>a</font><font color='#F39BD5'>n</font><font color='#F39B9B'>s</font> <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>g</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9BF39B'>o</font><font color='#9BF3D5'>v</font><font color='#9BD5F3'>e</font> <font color='#9BD5F3'>!</font></row><br><br><font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> : @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%, @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
+        "tooltip_text": "<row>(@MinUnits@) Les Grooviens peuvent entrer dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font>. Lorsqu'ils sont dans le Groove, ils gagnent de la vitesse d'attaque et de la régénération de PV max. Ce bonus augmente pour chaque Groovien dans votre équipe.</row><br><row>(@MinUnits@) Tous les Grooviens commencent le combat dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> pendant @StartOfCombatDuration@ sec.</row><br><row>(@MinUnits@) Chaque seconde passée dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> confère @ADAPPerSecond@% de dégâts d'attaque et de puissance cumulables.</row><br><row>(@MinUnits@) Ces effets augmentent de @EffectBonus@% !</row><br><row>(@MinUnits@) <font color='#F39B9B'>E</font><font color='#F3D59B'>n</font><font color='#D5F39B'>t</font><font color='#9BF39B'>r</font><font color='#9BF3D5'>e</font><font color='#9BD5F3'>z</font> <font color='#9B9BF3'>d</font><font color='#D59BF3'>a</font><font color='#F39BD5'>n</font><font color='#F39B9B'>s</font> <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>g</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9BF39B'>o</font><font color='#9BF3D5'>v</font><font color='#9BD5F3'>e</font> <font color='#9BD5F3'>!</font></row><br><br><font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> : @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%, @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -16634,6 +16630,10 @@
                         "value": 0.08
                     },
                     {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    },
+                    {
                         "name": "Serpent_DR_Teamwide",
                         "value": 0.08
                     },
@@ -16642,12 +16642,24 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Duration",
                         "value": 10.0
                     },
                     {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Interval",
                         "value": 1.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
                     },
                     {
                         "name": "Shield_Shield_Teamwide",
@@ -16660,6 +16672,10 @@
                     {
                         "name": "Wolf_HealthThreshold",
                         "value": 0.5
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
                     }
                 ]
             }
@@ -16677,7 +16693,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.1
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16708,6 +16724,10 @@
                         "value": 0.2
                     },
                     {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
                         "name": "Serpent_DR",
                         "value": 0.15
                     },
@@ -16720,12 +16740,32 @@
                         "value": 0.02
                     },
                     {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
                         "name": "Shield_Shield",
                         "value": 0.15
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16749,7 +16789,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16772,12 +16812,20 @@
                         "value": 30.0
                     },
                     {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
                         "name": "Mountain_APPerHealthThreshold",
                         "value": 2.0
                     },
                     {
                         "name": "Mountain_Health",
                         "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16796,8 +16844,20 @@
                         "value": 0.25
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16848,6 +16908,14 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
                         "name": "Mountain_DamageAmpPercent",
                         "value": 0.01
                     },
@@ -16858,6 +16926,18 @@
                     {
                         "name": "Mountain_HexesToReveal_TOOLTIPONLY",
                         "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16876,8 +16956,20 @@
                         "value": 0.35
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16885,6 +16977,119 @@
                     }
                 ],
                 "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 10,
                 "style_idx": 5,
                 "style_name": "kGold"
             }

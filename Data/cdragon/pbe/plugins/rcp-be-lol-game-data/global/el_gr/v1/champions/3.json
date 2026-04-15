@@ -1264,7 +1264,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Γκάλιο φορτίζει μια αμυντική στάση, ενώ κινείται αργά. Όταν απελευθερώνει την ενέργεια που έχει συγκεντρώσει, ο Γκάλιο προκαλεί τους κοντινούς εχθρούς και τους κάνει ζημιά.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Ο Γκάλιο αποκτά μια <shield>Μαγική Ασπίδα @TotalPassiveShield@</shield> αν δεν δεχτεί ζημιά για @PassiveShieldOOCTimer@ δευτ.<br><br><charge>Έναρξη Φόρτισης:</charge> Ο Γκάλιο μειώνει την εισερχόμενη Μαγική Ζημιά κατά @MagicDamageReduction@ και την εισερχόμενη Σωματική Ζημιά κατά @PhysicalDamageReduction@ και <status>Επιβραδύνει</status> τον εαυτό του κατά @Effect3Amount@%.<br><br><release>Εκτόξευση:</release> Ο Γκάλιο <status>Προκαλεί</status> αντίπαλους Ήρωες για @Effect4Amount@ έως @Effect7Amount@ δευτ., κάνει από <magicDamage>@MinTotalDamage@</magicDamage> έως <magicDamage>@MaxTotalDamage@ Μαγική Ζημιά</magicDamage> και ανανεώνει τη Μείωση Ζημιάς για @Effect8Amount@ δευτ. Η διάρκεια της Πρόκλησης, η ζημιά και η εμβέλεια αυξάνονται αναλογικά με τον χρόνο φόρτισης.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Ο Γκάλιο αποκτά <shield>@TotalPassiveShield@ Μαγική Ασπίδα</shield> όταν δεν δέχεται ζημιά για @PassiveShieldOOCTimer@ δευτερόλεπτα.<br><br><charge>Έναρξη Φόρτισης:</charge> Ο Γκάλιο μειώνει την εισερχόμενη Μαγική Ζημιά κατά @MagicDamageReduction@ και την εισερχόμενη Σωματική Ζημιά κατά @PhysicalDamageReduction@ και <status>Επιβραδύνεται</status> κατά @SelfSlowPercent@%.<br><br><release>Απελευθέρωση:</release> Ο Γκάλιο <status>Προκαλεί</status> τους αντίπαλους Ήρωες για @CCDurationMin@ έως @CCDurationMax@ δευτερόλεπτα, προκαλεί <magicDamage>@MinTotalDamage@</magicDamage> έως <magicDamage>@MaxTotalDamage@ Μαγική Ζημιά</magicDamage> και ανανεώνει τη μείωση ζημιάς για @DRLingerDuration@ δευτερόλεπτα. Η διάρκεια της Πρόκλησης, η ζημιά και η εμβέλεια αυξάνονται αναλογικά με τον χρόνο φόρτισης.@SpellModifierDescriptionAppend@",
             "range": [
                 275.0,
                 275.0,
@@ -1290,45 +1290,45 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.08,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1340,49 +1340,49 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {

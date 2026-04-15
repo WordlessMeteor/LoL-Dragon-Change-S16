@@ -1276,8 +1276,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "제리가 짧은 거리를 돌진하며 맞닥트리는 지형을 모두 뛰어넘습니다. 집중 사격의 다음 3발이 충전되어 적을 꿰뚫습니다.",
-            "dynamicDescription": "제리가 짧은 거리를 돌진하며 맞닥트리는 지형을 모두 뛰어넘습니다. 지형을 뛰어넘으면 돌진 거리가 크게 늘어납니다. @BuffDuration@초 동안 <spellName>집중 사격</spellName>의 다음 사격이 적을 꿰뚫어, 두 번째 적부터는 @PenDamagePercent*100@%의 피해를 입히며 처음 적중한 대상에게 추가 <magicDamage>@BonusDamageTotal@의 마법 피해</magicDamage>를 입힙니다. <br><br>기본 공격 또는 스킬로 적 챔피언을 맞히면 이 스킬의 재사용 대기시간이 @CDReductionPerHit@초 감소합니다. 치명타 적중 시 재사용 대기시간이 @CritCDReductionPerHit@초 감소합니다.@SpellModifierDescriptionAppend@",
+            "description": "제리가 짧은 거리를 돌진하며 집중 사격을 충전합니다. 충전된 집중 사격은 적을 꿰뚫습니다. 돌진 시 맞닥트리는 지형을 모두 뛰어넘습니다.",
+            "dynamicDescription": "제리가 짧은 거리를 돌진하며 맞닥트리는 지형을 모두 뛰어넘습니다. 지형을 뛰어넘으면 돌진 거리가 크게 늘어납니다. @BuffDuration@초 동안 <spellName>집중 사격</spellName>의 다음 사격이 적을 꿰뚫어, 두 번째 적부터는 @PenDamagePercent*100@%의 피해를 입히며 처음 적중한 대상에게 <magicDamage>@BonusDamageTotal@의 마법 피해</magicDamage>를 추가로 입힙니다. <br><br>기본 공격으로 적을 맞히면 이 스킬의 재사용 대기시간이 @CDReductionPerHit@초 감소합니다. 치명타 적중 시 재사용 대기시간이 @CritCDReductionPerHit@초 감소합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1295,10 +1295,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

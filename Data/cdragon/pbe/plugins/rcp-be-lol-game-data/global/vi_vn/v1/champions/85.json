@@ -800,18 +800,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +924,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Đòn đánh của Kennen có thể gây thêm sát thương và khắc một Dấu Ấn Sấm Sét lên mục tiêu sau mỗi cú đánh, đồng thời hắn có thể kích hoạt kỹ năng này để sát thương và khắc thêm một Dấu Ấn Sấm Sét lên những nạn nhân đang bị khắc dấu ấn này.",
-            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Mỗi Đòn đánh thứ 5 gây thêm <magicDamage>@TotalDamagePassive@ sát thương phép</magicDamage>.<br><br><spellActive>Kích hoạt:</spellActive> Kennen giải phóng luồng sét, gây <magicDamage>@TotalDamageActive@ sát thương phép</magicDamage> lên kẻ địch đang chịu ảnh hưởng của <spellName>Dấu Ấn Sấm Sét</spellName> đang ở gần đó.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Mỗi Đòn Đánh thứ năm gây thêm <magicDamage>@TotalDamagePassive@ sát thương phép</magicDamage> %i:OnHit% <OnHit>Trên Đòn Đánh</OnHit>.<br><br><spellActive>Kích hoạt:</spellActive> Kennen giải phóng luồng sét, gây <magicDamage>@TotalDamageActive@ sát thương phép</magicDamage> lên kẻ địch đang chịu ảnh hưởng của <spellName>Dấu Ấn Sấm Sét</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Kennen biến thành dạng sét, có thể đi xuyên vật thể và đặt Dấu Ấn Sấm Sét. Trong dạng này, Kennen được tăng Tốc độ Di chuyển. Khi trở về dạng thường, Kennen được tăng tốc độ đánh.",
-            "dynamicDescription": "Kennen biến thành một quả cầu sét, tăng <speed>@MovementSpeed*100@% Tốc Độ Di Chuyển</speed>, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên những kẻ địch cậu đi qua, và nhận hiệu ứng Bóng Mờ trong @DurationAsBall@ giây. Nếu gây sát thương lên ít nhất 1 kẻ địch, Kennen sẽ nhận được @EnergyRefund@ Nội Năng. <br><br>Sau khi kỹ năng này kết thúc, Kennen được tăng <attackSpeed>@AttackSpeed*100@% Tốc Độ Đánh</attackSpeed> trong @DurationAfterBall@ giây. Kennen có thể <recast>Tái Kích Hoạt</recast> để kết thúc sớm Kỹ Năng này.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen biến thành một quả cầu sét, tăng <speed>@MovementSpeed*100@% Tốc Độ Di Chuyển</speed>, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên những kẻ địch cậu đi qua, và nhận hiệu ứng Bóng Mờ trong @DurationAsBall@ giây. Nếu gây sát thương lên ít nhất 1 kẻ địch, Kennen sẽ nhận được @EnergyRefund@ Nội Năng. <br><br>Sau khi kỹ năng này kết thúc, Kennen được tăng <attackSpeed>@TotalAS*100@% Tốc Độ Đánh</attackSpeed> trong @DurationAfterBall@ giây. Đòn Chí Mạng sẽ kéo dài thời gian tác dụng thêm @CritDurationBonus@ giây. Kennen có thể <recast>Tái Kích Hoạt</recast> để kết thúc sớm Kỹ Năng này.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

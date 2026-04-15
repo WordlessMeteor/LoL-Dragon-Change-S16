@@ -1264,7 +1264,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Galio di chuyển chậm lại và tiến vào thế thủ. Khi dừng vận sức, Galio sẽ khiêu khích và gây sát thương các kẻ địch gần đó.",
-            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Galio nhận <shield>@TotalPassiveShield@ Lá Chắn Phép</shield> sau khi không nhận sát thương trong @PassiveShieldOOCTimer@ giây.<br><br><charge>Bắt Đầu Tụ Lực:</charge> Galio giảm @MagicDamageReduction@ sát thương phép và @PhysicalDamageReduction@ sát thương vật lý nhận vào, đồng thời <status>Làm Chậm</status> bản thân đi @Effect3Amount@%.<br><br><release>Thả Phím:</release> Galio <status>Khiêu khích</status> tướng địch trong @Effect4Amount@ đến @Effect7Amount@ giây, gây <magicDamage>@MinTotalDamage@</magicDamage> đến <magicDamage>@MaxTotalDamage@ sát thương phép</magicDamage>, và tái tạo lại thời gian giảm sát thương trong @Effect8Amount@ giây. Thời gian khiêu khích, sát thương, và phạm vi tác động tăng lên theo thời gian tụ lực. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Galio nhận <shield>@TotalPassiveShield@ Lá Chắn Phép</shield> sau khi không nhận sát thương trong @PassiveShieldOOCTimer@ giây.<br><br><charge>Bắt Đầu Tụ Lực:</charge> Galio giảm sát thương phép gánh chịu đi @MagicDamageReduction@, sát thương vật lý gánh chịu đi @PhysicalDamageReduction@ và tự <status>Làm Chậm</status> bản thân đi @SelfSlowPercent@%.<br><br><release>Thả:</release> Galio <status>Khiêu Khích</status> tướng địch trong @CCDurationMin@ - @CCDurationMax@ giây, gây <magicDamage>@MinTotalDamage@</magicDamage> - <magicDamage>@MaxTotalDamage@ sát thương phép</magicDamage>, và làm mới hiệu ứng giảm sát thương trong @DRLingerDuration@ giây. Thời gian khiêu khích, sát thương và tầm đánh tăng theo thời gian tụ lực.@SpellModifierDescriptionAppend@",
             "range": [
                 275.0,
                 275.0,
@@ -1290,45 +1290,45 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.08,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1340,49 +1340,49 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {

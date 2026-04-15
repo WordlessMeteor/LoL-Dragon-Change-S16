@@ -1305,7 +1305,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Jarvan IV proyecta su lanza ante sí, causando daño físico y mermando la armadura a los enemigos que se encuentre en su camino. Además, de este modo Jarvan se lanzará hacia su Estandarte demaciano, derribando a los enemigos que se encuentren en su camino.",
-            "dynamicDescription": "Jarvan extiende su lanza, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y elimina un <scaleArmor>@Effect2Amount@% de armadura</scaleArmor> durante @Effect3Amount@ s.<br><br>Si la lanza se conecta con <spellName>Estandarte demaciano</spellName>, Jarvan se desplaza hacia él y <status>lanza por los aires</status> a los enemigos en su camino durante 0,75 s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan extiende su lanza, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y elimina un <scaleArmor>@BaseARShred*100@% de armadura</scaleArmor> durante @Effect3Amount@ s.<br><br>Si la lanza se conecta con <spellName>Estandarte demaciano</spellName>, Jarvan se desplaza hacia él y <status>lanza por los aires</status> a los enemigos en su camino durante 0,75 s.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1331,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1345,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1455,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Jarvan IV invoca a los antiguos reyes de Demacia para que le protejan de todo posible daño y ralenticen a los enemigos que le rodeen.",
-            "dynamicDescription": "Jarvan invoca una protección, <status>ralentiza</status> a los enemigos cercanos un @Effect2Amount@% durante @Effect5Amount@ s y obtiene un <shield>escudo de @BaseShield@</shield>, que aumenta en <shield>@BonusShield@</shield> por cada campeón enemigo golpeado.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan invoca una protección, <status>ralentiza</status> a los enemigos cercanos un @BaseSlowAmount*100@% durante @Effect5Amount@ s y obtiene <shield>@TotalShield@ de escudo</shield>, que aumenta en <shield>@BonusShield@</shield> por cada campeón enemigo golpeado.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1481,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1495,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1605,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Jarvan IV representa el orgullo de Demacia y goza, de forma pasiva, de una bonificación de velocidad de ataque. Al activar Estandarte demaciano, Jarvan IV puede colocar una bandera de Demacia que inflige daño mágico al impactar y otorga velocidad de ataque a los campeones aliados cercanos.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Jarvan obtiene un <attackSpeed>@PermanentAttackSpeed*100@% de velocidad de ataque</attackSpeed>.<br><br><spellActive>Activa:</spellActive> Jarvan lanza un estandarte al suelo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y otorga a los aliados cerca del estandarte un <attackSpeed>@Effect3Amount*100@% de velocidad de ataque</attackSpeed> durante @Effect4Amount@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Jarvan obtiene un <attackSpeed>@PermanentAttackSpeed*100@% de velocidad de ataque</attackSpeed>.<br><br><spellActive>Activa:</spellActive> Jarvan lanza un estandarte al suelo, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y otorga a los aliados cerca del estandarte un <attackSpeed>@BaseAuraAS*100@% de velocidad de ataque</attackSpeed> durante @Effect4Amount@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1631,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1654,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

@@ -1445,7 +1445,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "大きな力で攻撃してソニックブームを発生させる。その後数秒間、通常攻撃で自身の前方に余波が発生する。",
-            "dynamicDescription": "<spellPassive>自動効果: </spellPassive>自身の<scaleArmor>物理防御が@BonusArmorPassive*100@%(%i:scaleArmor%@f1@)</scaleArmor>増加する。<spellName>「グラナイトシールド」</spellName>が有効な間は、この効果が<scaleArmor>@BonusArmorPassive*300@% (%i:scaleArmor%@f2@)</scaleArmor>になる。<br><br><spellPassive>発動効果: </spellPassive>次の通常攻撃が追加で<physicalDamage>@TotalBonusDamage@の物理ダメージ</physicalDamage>を与え、さらに余波が発生して自身の向いている方向に<physicalDamage>@ThunderclapSplash@の物理ダメージ</physicalDamage>を発生させる。この通常攻撃時の余波は発動から@ThunderclapBuffDuration@秒間発生し続ける。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果: </spellPassive><scaleArmor>物理防御が@BonusArmorPassive*100@% (%i:scaleArmor%@f1@)</scaleArmor>増加する。<spellName>「グラナイトシールド」</spellName>が有効な間は、この効果が<scaleArmor>@BonusArmorPassive*300@% (%i:scaleArmor%@f2@)</scaleArmor>になる。<br><br><spellPassive>発動効果: </spellPassive>次の通常攻撃が追加で<physicalDamage>@TotalBonusDamage@の物理ダメージ</physicalDamage>を与え、さらに余波が発生して対象の方向に<physicalDamage>@ThunderclapSplash@の物理ダメージ</physicalDamage>%i:OnHit%<OnHit>通常攻撃時効果</OnHit>を与える。その後@ThunderclapBuffDuration@秒間、通常攻撃で余波%i:OnHit%<OnHit>通常攻撃時効果</OnHit>が発生し続ける。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

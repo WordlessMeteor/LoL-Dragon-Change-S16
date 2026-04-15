@@ -800,18 +800,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +924,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Kennen infligge danni extra, dopo alcuni attacchi, e aggiunge un Marchio della tempesta al suo bersaglio. Può attivare questa abilità per infliggere danni e aggiungere un altro Marchio della tempesta ai bersagli che sono già stati marchiati.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> ogni quinto attacco infligge <magicDamage>@TotalDamagePassive@ danni magici</magicDamage> aggiuntivi.<br><br><spellActive>Attiva:</spellActive> Kennen sprigiona un'esplosione elettrica che infligge <magicDamage>@TotalDamageActive@ danni magici</magicDamage> ai nemici vicini affetti da <spellName>Marchio della tempesta</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> ogni quinto attacco infligge <magicDamage>@TotalDamagePassive@ danni magici aggiuntivi</magicDamage> %i:OnHit% <OnHit>sul colpo</OnHit>.<br><br><spellActive>Attiva:</spellActive> Kennen sprigiona un'esplosione elettrica che infligge <magicDamage>@TotalDamageActive@ danni magici</magicDamage> ai nemici vicini affetti da <spellName>Marchio della tempesta</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1074,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Kennen si trasforma in un fulmine globulare che gli permette di passare attraverso le unità applicando Marchio della tempesta. Kennen ottiene velocità di movimento quando entra in questa forma. Quando la abbandona ottiene velocità d'attacco.",
-            "dynamicDescription": "Kennen si trasforma in un fulmine globulare, guadagnando un <speed>@MovementSpeed*100@% di velocità di movimento</speed>, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici che attraversa, e diventando spettrale per @DurationAsBall@ secondi. Se Kennen danneggia almeno un nemico, ottiene @EnergyRefund@ energia.<br><br>Al termine di questa abilità, Kennen ottiene un <attackSpeed>@AttackSpeed*100@% di velocità d'attacco</attackSpeed> per @DurationAfterBall@ secondi. Kennen può <recast>rilanciare</recast> questa abilità per farla terminare in anticipo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen si trasforma in un fulmine globulare, guadagnando un <speed>@MovementSpeed*100@% di velocità di movimento</speed>, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici che attraversa, e diventando spettrale per @DurationAsBall@ secondi. Se Kennen danneggia almeno un nemico, ottiene @EnergyRefund@ energia. <br><br>Al termine di questa abilità, Kennen ottiene un <attackSpeed>@TotalAS*100@% di velocità d'attacco</attackSpeed> per @DurationAfterBall@ secondi. I colpi critici estendono la durata di @CritDurationBonus@ secondo/i. Kennen può <recast>rilanciare</recast> questa abilità per farla terminare in anticipo.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

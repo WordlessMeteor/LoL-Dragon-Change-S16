@@ -751,7 +751,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Coloca una bomba en una zona objetivo. La bomba, que se adhiere a las unidades cercanas (prioriza a los campeones), detona pasados 3 segundos e inflige daño de área. Además, si la Bomba de Tiempo detona antes de tiempo por la acción de otra, aturde a los enemigos afectados.",
-            "dynamicDescription": "Zilean lanza una bomba de efecto retardado que se adhiere a la primera unidad que entre dentro de un área pequeña a su alrededor. Después de @Effect2Amount@ seg, detona, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>.<br><br>Colocar una segunda bomba en una unidad que ya tiene una, detona la primera bomba inmediatamente y <status>aturde</status> a los enemigos dentro de la explosión durante @Effect4Amount@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +898,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ de Maná",
+            "cost": "Spell_ZileanW_Cost",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Zilean puede prepararse para futuros enfrentamientos reduciendo el enfriamiento de sus demás habilidades básicas.",
-            "dynamicDescription": "Zilean manipula el tiempo, lo que reduce los enfriamientos de sus otras habilidades básicas en @Effect2Amount@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean manipula el tiempo, lo que reduce el enfriamiento de sus otras habilidades básicas en @CooldownReduction@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +941,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Zilean manipula el tiempo en torno a cualquier unidad, lo que reduce la velocidad de movimiento de un enemigo o aumenta la velocidad de movimiento de un aliado durante un breve momento.",
-            "dynamicDescription": "Zilean <status>ralentiza</status> a un campeón enemigo un @Effect2Amount@% o le otorga a un campeón aliado un <speed>@Effect2Amount@% de Velocidad de Movimiento</speed> durante @Effect1Amount@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

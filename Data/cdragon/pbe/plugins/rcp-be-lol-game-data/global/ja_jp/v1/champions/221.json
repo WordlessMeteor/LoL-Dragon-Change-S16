@@ -1276,8 +1276,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "短い距離をダッシュし、次に行う3回の「バーストファイア」が強化されて敵を貫通するようになる。地形に触れた場合は、地形を飛び越えるか地形に沿って滑る。",
-            "dynamicDescription": "短い距離をダッシュする。地形に触れた場合は地形を飛び越え、ダッシュ距離が大幅に増加する。その後、@BuffDuration@秒間、<spellName>「バーストファイア」</spellName>が敵を貫通するようになり、2体目以降の敵には@PenDamagePercent*100@%のダメージを与え、最初に命中した対象には通常攻撃時効果で<magicDamage>@BonusDamageTotal@の魔法ダメージ</magicDamage>を追加で与える。<br><br>通常攻撃またはスキルを敵チャンピオンに命中させると、このスキルのクールダウンが@CDReductionPerHit@秒短縮される。クリティカルが発生すると、代わりにクールダウンが@CritCDReductionPerHit@秒短縮される。@SpellModifierDescriptionAppend@",
+            "description": "短い距離をダッシュし、「バーストファイア」が強化されて敵を貫通するようになる。地形に触れた場合は、地形を飛び越えるか地形に沿って滑る。",
+            "dynamicDescription": "短い距離をダッシュし、地形に触れた場合は地形を飛び越え、ダッシュ距離が大幅に増加する。その後、@BuffDuration@秒間、<spellName>バーストファイア</spellName>が貫通するようになり、2体目以降の敵には@PenDamagePercent*100@%のダメージを与える。また、最初に命中した対象には、通常攻撃時効果として<magicDamage>@BonusDamageTotal@の追加魔法ダメージ</magicDamage>を与える。<br><br>敵に通常攻撃を命中させると、このスキルのクールダウンが@CDReductionPerHit@秒短縮される。クリティカル攻撃の場合は代わりに@CritCDReductionPerHit@秒短縮される。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1295,10 +1295,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

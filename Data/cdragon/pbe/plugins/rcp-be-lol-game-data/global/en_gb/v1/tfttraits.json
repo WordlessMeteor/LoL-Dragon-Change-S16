@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Every @CastsToGainXP@ casts, the Chronokeeper stores <TFTBonus>@XPPerCast@</TFTBonus> XP. If he has enough stored for you to level up, he transfers you the required&nbsp;XP. <br><br>If you are level 10, he instead gains <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Damage Amp.<br><br><rules>Stored XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>In Choncc's Treasure, the amount of casts required to gain XP is increased to @CastsToGainXPCT@ until Stage 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Every @CastsToGainXP@ casts, the Chronokeeper stores <TFTBonus>@XPPerCast@</TFTBonus> XP. If he has enough stored for you to level up, he transfers you the required&nbsp;XP. <br><br>If you are level 10, he instead gains <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Damage Amp.<br><br><rules>Stored XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,10 +12270,6 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
-                    },
-                    {
-                        "name": "CastsToGainXPCT",
-                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13774,7 +13770,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Each second, Shurimans gain @ASPerSecond*100@% Attack Speed and restore @HealthRestorePerSecond@ Health. At combat start, they gain additional effects.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatic: Unlock Nasus, Renekton, and Xerath, then field 4 Shurima</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% max Health</row><br><row>(@MinUnits@) @ArmorMR@ Armor and Magic Resist</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>A Shuriman ascends to GODHOOD every @GodhoodCadence@ seconds </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Only available when Nasus, Renekton, and Xerath have been unlocked.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
+        "tooltip_text": "Each second, Shurimans gain @ASPerSecond*100@% Attack Speed and restore @HealthRestorePerSecond@ Health. At combat start, they gain additional effects.<br><br><row>(@MinUnits@) @BonusHealth*100@% max Health</row><br><row>(@MinUnits@) @ArmorMR@ Armor and Magic Resist</row><br><row>(@MinUnits@) A Shuriman ascends to GODHOOD every @GodhoodCadence@ seconds.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13854,7 +13850,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 0.0
+                        "value": 1.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13862,7 +13858,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 0.0
+                        "value": 3.0
                     },
                     {
                         "name": "SkinScale",
@@ -13870,8 +13866,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -14574,7 +14570,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "After each combat, an Ascendant Charm appears in your shop. These are powerful effects that can be bought for gold.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>In Choncc's Treasure, the Faithful Followers Charm cannot appear until you are level 7.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "After each combat, an Ascendant Charm appears in your shop. These are powerful effects that can be bought for gold.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15394,7 +15390,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 40.0
+                        "value": 45.0
                     },
                     {
                         "name": "ExecuteHPPercent",
@@ -16634,6 +16630,10 @@
                         "value": 0.08
                     },
                     {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    },
+                    {
                         "name": "Serpent_DR_Teamwide",
                         "value": 0.08
                     },
@@ -16642,12 +16642,24 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Duration",
                         "value": 10.0
                     },
                     {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Interval",
                         "value": 1.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
                     },
                     {
                         "name": "Shield_Shield_Teamwide",
@@ -16660,6 +16672,10 @@
                     {
                         "name": "Wolf_HealthThreshold",
                         "value": 0.5
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
                     }
                 ]
             }
@@ -16677,7 +16693,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.1
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16708,6 +16724,10 @@
                         "value": 0.2
                     },
                     {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
                         "name": "Serpent_DR",
                         "value": 0.15
                     },
@@ -16720,12 +16740,32 @@
                         "value": 0.02
                     },
                     {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
                         "name": "Shield_Shield",
                         "value": 0.15
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16749,7 +16789,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16772,12 +16812,20 @@
                         "value": 30.0
                     },
                     {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
                         "name": "Mountain_APPerHealthThreshold",
                         "value": 2.0
                     },
                     {
                         "name": "Mountain_Health",
                         "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16796,8 +16844,20 @@
                         "value": 0.25
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16848,6 +16908,14 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
                         "name": "Mountain_DamageAmpPercent",
                         "value": 0.01
                     },
@@ -16858,6 +16926,18 @@
                     {
                         "name": "Mountain_HexesToReveal_TOOLTIPONLY",
                         "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16876,8 +16956,20 @@
                         "value": 0.35
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16885,6 +16977,119 @@
                     }
                 ],
                 "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 10,
                 "style_idx": 5,
                 "style_name": "kGold"
             }
@@ -16895,7 +17100,7 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Fountain</TFTStargazer>.<br><br>Allies in empowered hexes gain @Fountain_ManaRegen_Teamwide@ Mana Regen. Stargazers in empowered hexes gain more and heal the lowest Health ally with their abilities.<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% ability damage heal</expandRow><br><br><rules>More hexes reveal at each player level</rules>",
+        "tooltip_text": "Stargazers chart a different constellation every game. This game: <TFTStargazer>The Fountain</TFTStargazer>.<br><br>Allies in empowered hexes gain @Fountain_ManaRegen_Teamwide@ Mana Regen. Stargazers in empowered hexes gain more and heal the lowest Health ally with their abilities.<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% ability damage heal</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% ability damage heal</row><br><br><rules>More hexes reveal at each player level</rules>",
         "innate_trait_sets": [
             {
                 "constants": [

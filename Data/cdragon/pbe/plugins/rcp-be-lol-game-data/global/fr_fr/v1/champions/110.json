@@ -1527,7 +1527,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Varus effectue un tir puissant dont les dégâts et la portée augmentent avec la durée de la charge.",
-            "dynamicDescription": "<attention>Début de la charge :</attention> Varus prépare sa prochaine flèche, ce qui le <status>ralentit</status> de @Effect7Amount*-100@%. Après @Effect5Amount@ sec, si Varus n'a pas tiré, il annule cette compétence et récupère @Effect4Amount*100@% du coût en mana.<br><br><attention>Relâchement :</attention> Varus relâche la flèche, infligeant <physicalDamage>@TotalDamageMinTooltip@ pts de dégâts physiques</physicalDamage>, et ces dégâts sont réduits de @Effect3Amount*100@% par ennemi touché (minimum : @Effect9Amount*100@%). Les dégâts de la flèche et du déclenchement des effets <keywordMajor>Meurtrissure</keywordMajor> sont augmentés d'un maximum de @MaxChargeAmp*100@% avec le temps de charge (max : <physicalDamage>@TotalDamageMax@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1677,7 +1677,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Passive : les attaques de base de Varus infligent des dégâts magiques supplémentaires ainsi que Meurtrissure. Les autres compétences de Varus déclenchent Meurtrissure, infligeant des dégâts magiques en fonction des PV max de la cible. Active : Varus renforce sa prochaine Flèche perforante.",
-            "dynamicDescription": "<spellPassive>Passive : </spellPassive>les attaques de Varus infligent <magicDamage>@OnHitDamage@ pts de dégâts magiques supplémentaires</magicDamage> et appliquent un effet de <keywordMajor>Meurtrissure</keywordMajor> pendant @Effect3Amount@ sec (@Effect4Amount@ effets max).<br><br>Les autres compétences de Varus déclenchent les effets <keywordMajor>Meurtrissure</keywordMajor>, infligeant <magicDamage>@PercentHPPerStack@ des PV max en dégâts magiques</magicDamage> par effet cumulé (max : <magicDamage>@MaxPercentHPPerStack@ des PV max en dégâts</magicDamage>). Contre les champions et les monstres épiques, déclencher des effets <keywordMajor>Meurtrissure</keywordMajor> réduit également les délais de récupération des compétences de base de Varus de @CDRPerBlightStack*100@% de leur maximum par effet cumulé.<br><br><spellActive>Active :</spellActive> la prochaine <spellName>Flèche perforante</spellName> de Varus inflige <magicDamage>@QEmpowerPercentHP@ des PV manquants en dégâts magiques</magicDamage> bonus, et ces dégâts sont augmentés jusqu'à <magicDamage>@MaxQEmpowerPercentHP@ des PV manquants</magicDamage> avec le temps de charge.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1827,7 +1827,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Varus tire une pluie de flèches qui inflige des dégâts physiques et souille le sol. Le sol souillé réduit la vitesse de déplacement des ennemis et réduit les soins qu'ils reçoivent et leur régénération.",
-            "dynamicDescription": "Varus tire une pluie de flèches qui inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> et souille le sol pendant @Effect3Amount@ sec, <status>ralentissant</status> les ennemis de @SlowPercent*-100@% et infligeant @GrievousAmount*100@% d'Hémorragie.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1977,7 +1977,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Varus lance une vrille de corruption qui blesse et immobilise le premier champion ennemi touché et qui se propage ensuite vers les champions non infectés proches, les immobilisant eux aussi en les touchant.",
-            "dynamicDescription": "Varus lance une vrille de corruption, <status>immobilisant</status> le premier champion touché pendant @Effect2Amount@ sec et infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>. Les ennemis <status>immobilisés</status> reçoivent @Effect4Amount@ effets <keywordMajor>Meurtrissure</keywordMajor> sur la durée.<br><br>La corruption se propage ensuite vers les champions ennemis non infectés. Si elle les atteint, elle leur inflige les mêmes dégâts et les <status>immobilise</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

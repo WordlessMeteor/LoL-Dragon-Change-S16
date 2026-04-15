@@ -751,7 +751,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Lance une bombe dans une zone. La bombe se colle sur une unité qui s'en approche (en priorité les champions) et explose après 3 secondes, infligeant des dégâts de zone. Si une Bombe à retardement explose prématurément à cause d'une autre Bombe à retardement, les ennemis sont également étourdis.",
-            "dynamicDescription": "Zilean lance une bombe à retardement qui se colle à la première unité ennemie qui entre dans sa zone. La bombe explose au bout de @Effect2Amount@ sec, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>.<br><br>Poser une bombe sur une unité qui en porte déjà une fait exploser la première bombe immédiatement, <status>étourdissant</status> pendant @Effect4Amount@ sec les ennemis pris dans l'explosion.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +898,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ pts de mana",
+            "cost": "Spell_ZileanW_Cost",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Zilean se prépare à de futures confrontations, réduisant le délai de récupération de ses autres compétences.",
-            "dynamicDescription": "Zilean manipule le temps, réduisant de @Effect2Amount@ sec le délai de récupération de ses autres compétences de base.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean manipule le temps, réduisant de @CooldownReduction@ sec le délai de récupération de ses autres compétences de base.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +941,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Zilean distord le temps autour d'une unité, réduisant la vitesse de déplacement d'un ennemi ou augmentant celle d'un allié pendant un court moment.",
-            "dynamicDescription": "Zilean <status>ralentit</status> un champion ennemi de @Effect2Amount@% ou octroie à un champion allié <speed>+@Effect2Amount@% de vitesse de déplacement</speed> pendant @Effect1Amount@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

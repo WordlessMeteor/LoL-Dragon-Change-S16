@@ -1264,7 +1264,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Galio si nabíjí obranný postoj, během této doby se může pohybovat jen pomalu. Jakmile nashromážděnou energii uvolní, vyprovokuje okolní nepřátele a způsobí jim poškození.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Poté, co Galio neutrpí po dobu @PassiveShieldOOCTimer@&nbsp;sek. žádné poškození, získá <shield>magický štít o síle @TotalPassiveShield@ bodů</shield>.<br><br><charge>Začátek nabíjení:</charge> Magické poškození utrpěné Galiem se sníží o @MagicDamageReduction@ a fyzické o @PhysicalDamageReduction@, zároveň však bude <status>zpomalený</status> o @Effect3Amount@&nbsp;%.<br><br><release>Uvolnění:</release> Galio na @Effect4Amount@–@Effect7Amount@&nbsp;sek. <status>vyprovokuje</status> nepřátelské šampiony, způsobí jim <magicDamage>@MinTotalDamage@</magicDamage>–<magicDamage>@MaxTotalDamage@ bodů magického poškození</magicDamage> a na @Effect8Amount@&nbsp;sek. si obnoví efekt snižující utrpěné poškození. Trvání provokace, její dosah a způsobované poškození rostou s dobou přípravy.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Když Galio po dobu @PassiveShieldOOCTimer@&nbsp;sek. neutrpí žádné poškození, získá <shield>štít proti magickému poškození o síle @TotalPassiveShield@ bodů</shield>.<br><br><charge>Začátek nabíjení:</charge> Magické poškození utrpěné Galiem se sníží o @MagicDamageReduction@ a fyzické o @PhysicalDamageReduction@, zároveň však bude <status>zpomalený</status> o @SelfSlowPercent@&nbsp;%.<br><br><release>Uvolnění:</release> Galio na @CCDurationMin@–@CCDurationMax@&nbsp;sek. <status>vyprovokuje</status> nepřátelské šampiony, způsobí jim <magicDamage>@MinTotalDamage@</magicDamage>–<magicDamage>@MaxTotalDamage@ bodů magického poškození</magicDamage> a na @DRLingerDuration@&nbsp;sek. si obnoví efekt snižující utrpěné poškození. Trvání provokace, její dosah a způsobované poškození rostou s dobou přípravy.@SpellModifierDescriptionAppend@",
             "range": [
                 275.0,
                 275.0,
@@ -1290,45 +1290,45 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.08,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1340,49 +1340,49 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {

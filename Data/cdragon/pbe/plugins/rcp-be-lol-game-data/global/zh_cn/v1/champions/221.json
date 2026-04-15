@@ -1312,8 +1312,8 @@
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "泽丽冲刺一小段距离，并激发她的下3发【电火迸射】，使它们获得穿刺敌人的效果。她将在接触任何地形时进行翻越和滑行。",
-            "dynamicDescription": "泽丽冲刺一小段距离，并翻越接触到的任何地形，来极大地延伸冲刺距离。接下来的@BuffDuration@秒，她的<spellName>电火迸射</spellName>将获得穿刺效果，对首个敌人之后的敌人们造成@PenDamagePercent*100@%伤害，并对命中的第一个目标附加额外的<magicDamage>@BonusDamageTotal@魔法伤害</magicDamage>。<br><br>用一次攻击或技能命中一名英雄时，会使这个技能的冷却时间缩短@CDReductionPerHit@秒。暴击会转而使这个技能的冷却时间缩短@CritCDReductionPerHit@秒。@SpellModifierDescriptionAppend@",
+            "description": "泽丽冲刺一小段距离，并激发【电火迸射】，使其获得穿刺敌人的效果。她将在接触任何地形时进行翻越和滑行。",
+            "dynamicDescription": "泽丽冲刺一小段距离，并翻越接触到的任何地形，来极大地延伸冲刺距离。在接下来的@BuffDuration@秒，她的<spellName>电火迸射</spellName>子弹将获得穿刺效果，对首个敌人之后的敌人们造成@PenDamagePercent*100@%伤害并对击中的首个目标附加额外的<magicDamage>@BonusDamageTotal@魔法伤害</magicDamage>。<br><br>用一次攻击或技能命中一名英雄时，会使这个技能的冷却时间缩短@CDReductionPerHit@秒。暴击会转而使该冷却时间缩短@CritCDReductionPerHit@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1331,10 +1331,10 @@
                 70.0
             ],
             "cooldownCoefficients": [
-                22.0,
+                24.0,
+                22.5,
                 21.0,
-                20.0,
-                19.0,
+                19.5,
                 18.0,
                 18.0
             ],

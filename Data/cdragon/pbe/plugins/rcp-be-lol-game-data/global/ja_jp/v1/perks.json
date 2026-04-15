@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "リーサルテンポ",
         "majorChangePatchVersion": "",
-        "tooltip": "敵チャンピオンに通常攻撃を行うと6秒間、攻撃速度が%i:scaleAS%@ASPerStack@増加する。この効果は最大6回までスタックする。最大スタックになると、%i:OnHit%<OnHit>通常攻撃時</OnHit>に@NoteDamage@の<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>追加アダプティブダメージ</font></lol-uikit-tooltipped-keyword>を与えるようになる。<br><br>最大スタック保持時間: @f1@秒<br>与えたダメージ: @f2@<br><br>このルーンはチャンピオンへの攻撃後、次の準備が整ってから0.25秒以内に行った通常攻撃の割合を記録する: @f3@%(@f4@/@f5@)",
+        "tooltip": "",
         "shortDesc": "敵チャンピオンに通常攻撃を行うと攻撃速度が増加する。この効果は最大6回までスタックする。最大スタックになると、通常攻撃時効果で<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>追加アダプティブダメージ</font></lol-uikit-tooltipped-keyword>を与えるようになる。",
         "longDesc": "敵チャンピオンに通常攻撃を行うと、6秒間、攻撃速度が[近接 6% || 遠隔 4%]増加する。この効果は最大6回までスタックする。最大スタックになると、通常攻撃時効果で[近接 9 - 30 || 遠隔 6 - 24]の<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>追加アダプティブダメージを与えるようになる。このダメージは増加攻撃速度1%ごとに1%増加する</lol-uikit-tooltipped-keyword>。",
         "recommendationDescriptor": "段階的に攻撃速度が増加",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "フェイズラッシュ",
-        "majorChangePatchVersion": "",
-        "tooltip": "4秒以内に敵チャンピオンに3回の通常攻撃または<b>個別の</b>スキルを命中させると、3秒間、<speed>移動速度が@MoveSpeedCalc@</speed>増加し、<status>50%のスロウ耐性</status>を獲得する。<br><br>クールダウン: <attention>@CooldownCalc@秒</attention><br><br>合計発動回数: <attention>@f1@</attention>",
-        "shortDesc": "敵チャンピオンを<b>個別の</b>スキルか通常攻撃で3回攻撃すると、瞬間的に<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移動速度</lol-uikit-tooltipped-keyword>とスロウ耐性が増加する。 ",
-        "longDesc": "4秒以内に敵チャンピオンを<b>個別の</b>スキルか通常攻撃で3回攻撃すると、3秒間、レベルに応じて<speed>移動速度が25 - 50%</speed>増加し、<status>50%のスロウ耐性</status>を獲得する。遠隔攻撃チャンピオンは増加移動速度の効率が50%になる。<br>クールダウン: 30秒 - 10秒",
+        "name": "PhaseRush",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "瞬間的な移動速度増加",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "発動回数合計: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "DeathfireTouch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            ""
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "ガーディアン",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "ヘイルブレード",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "敵チャンピオンに通常攻撃する際、最大@NumHits@回の通常攻撃の攻撃速度が{{ Item_Melee_Ranged_Split }}%増加する。<br><br>クールダウン: @Cooldown@秒<br><hr><br>ヘイルブレードでの攻撃: @f1@<br>ヘイルブレードの攻撃が命中した割合: @f2@%<br><br><rules>通常攻撃のモーションをキャンセルした場合、回数制限が1増加する。<br>この効果は一時的に攻撃速度の上限を超えられる。</rules>",
-        "shortDesc": "敵チャンピオンに対する最初の3回の通常攻撃の攻撃速度が大きく増加する。",
-        "longDesc": "敵チャンピオンに通常攻撃する際、最大3回の通常攻撃の攻撃速度が160%(遠距離チャンピオンは80%)増加する。<br><br>通常攻撃の間隔が3秒以上開くとこの効果は終了する。<br><br>クールダウン: 10秒<br><br><rules>攻撃のモーションをキャンセルした場合、回数制限が1増加する。<br>この効果は一時的に攻撃速度の上限を超えられる。</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "連続通常攻撃",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "攻撃速度が増加した状態で行った攻撃回数: @eogvar1@",
-            "ヘイルブレードの攻撃が命中した割合: @eogvar2@%"
+            ""
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "秘儀の彗星",
         "majorChangePatchVersion": "",
-        "tooltip": "スキルでダメージを与えた敵チャンピオンの位置に彗星を飛ばす。「秘儀の彗星」がクールダウン中にスキルでダメージを与えると、「秘儀の彗星」の残りクールダウンが短縮される。<br><br>ダメージ: @DamageCalc@<br>クールダウン: @CooldownCalc@秒<br><rules><br>クールダウン短縮量:<br>単体攻撃: 20%<br>範囲ダメージ: 10%<br>継続ダメージ: 5%<br></rules><br>これまでに発射された彗星の@f3@%が命中し、敵チャンピオンに与えた合計ダメージは@f1@。",
+        "tooltip": "",
         "shortDesc": "スキルでダメージを与えた敵チャンピオンの位置に彗星を飛ばす。",
-        "longDesc": "スキルでダメージを与えた敵チャンピオンの位置に彗星を飛ばす。「秘儀の彗星」のクールダウン中に敵チャンピオンにスキルでダメージを与えると「秘儀の彗星」の残りクールダウンが短縮される。<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>アダプティブダメージ</font></lol-uikit-tooltipped-keyword>: レベルに応じて30 - 130(<scaleAP>+魔力x0.05</scaleAP>および<scaleAD>増加攻撃力x0.1</scaleAD>)<br>クールダウン: 20秒 - 8秒<br><rules><br>クールダウン短縮量:<br>単体攻撃: 20%<br>範囲ダメージ: 10%<br>継続ダメージ: 5%<br></rules>",
+        "longDesc": "",
         "recommendationDescriptor": "スキルダメージ",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

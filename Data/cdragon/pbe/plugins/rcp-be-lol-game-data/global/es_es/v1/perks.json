@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Compás letal",
         "majorChangePatchVersion": "",
-        "tooltip": "Atacar a un campeón enemigo te otorga un %i:scaleAS%@ASPerStack@ de velocidad de ataque durante 6 s, hasta 6 acumulaciones. Con el máximo de acumulaciones, inflige @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>de daño adaptable adicional</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>al atacar</OnHit>.<br><br>Duración con el máximo de acumulaciones: @f1@ s<br>Daño infligido: @f2@<br><br>Esta runa también calcula el porcentaje de ataques básicos contra campeones que lanzas durante los 0.25 s posteriores a tener listo el ataque tras haber atacado a un campeón: @f3@% (@f4@ de @f5@)",
+        "tooltip": "",
         "shortDesc": "Atacar a un campeón enemigo te otorga velocidad de ataque, hasta 6 acumulaciones. Con el máximo de acumulaciones, inflige <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>daño adaptable adicional</font></lol-uikit-tooltipped-keyword> al atacar.",
         "longDesc": "Atacar a un campeón enemigo te otorga [6% para campeones cuerpo a cuerpo || 4% para campeones a distancia] de velocidad de ataque durante 6 s, hasta 6 acumulaciones. Con el máximo de acumulaciones, inflige [9 - 30 para campeones cuerpo a cuerpo || 6 - 24 para campeones a distancia] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>de daño adaptable adicional al atacar, que aumenta un 1% por cada 1% de velocidad de ataque adicional</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Velocidad de ataque creciente",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Irrupción de fase",
-        "majorChangePatchVersion": "",
-        "tooltip": "Golpear a un campeón enemigo con 3 ataques o habilidades <b>diferentes</b> en un margen de 4 s otorga un <speed>@MoveSpeedCalc@ de velocidad de movimiento</speed> y un <status>50% de resistencia a ralentizaciones</status> durante 3 s.<br><br>Enfriamiento: <attention>@CooldownCalc@ s</attention><br><br>Activaciones en total: <attention>@f1@</attention>",
-        "shortDesc": "Golpear a un campeón enemigo con 3 ataques o habilidades <b>diferentes</b> otorga una gran cantidad de <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>velocidad de movimiento</lol-uikit-tooltipped-keyword> y resistencia a ralentizaciones. ",
-        "longDesc": "Golpear a un campeón enemigo con 3 ataques o habilidades <b>diferentes</b> en un margen de 4 s otorga un <speed>25-50% de velocidad de movimiento</speed> (según el nivel) y un <status>50% de resistencia a ralentizaciones</status> durante 3 s. La velocidad de movimiento tiene un 50% de efectividad para campeones a distancia.<br>Enfriamiento: 30 - 10 s",
+        "name": "PhaseRush",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Mejora de movimiento",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Activaciones totales: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "DeathfireTouch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            ""
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Protector",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Lluvia de cuchillas",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Al atacar a un campeón enemigo, obtienes un {{ Item_Melee_Ranged_Split }}% de velocidad de ataque en un máximo de @NumHits@ ataques.<br><br>Enfriamiento: @Cooldown@ s<br><hr><br>Ataques de Lluvia de cuchillas: @f1@<br>Porcentaje de ataques acertados con Lluvia de cuchillas: @f2@%<br><br><rules>Los reinicios de los ataques básicos aumentan el límite de ataques en 1.<br>Permite sobrepasar el límite de velocidad de ataque temporalmente.</rules>",
-        "shortDesc": "Obtienes una gran cantidad de velocidad de ataque en los primeros 3 ataques contra campeones enemigos.",
-        "longDesc": "Al atacar a un campeón enemigo, obtienes un 160% (80% para campeones a distancia) de velocidad de ataque en un máximo de 3 ataques.<br><br>Si transcurren más de 3 s entre ataques, el efecto se detendrá.<br><br>Enfriamiento: 10 s<br><br><rules>Los reinicios de los ataques aumentan el límite de ataques en 1.<br>Permite sobrepasar el límite de velocidad de ataque temporalmente.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Ráfaga de ataques",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Ataques realizados con velocidad de ataque adicional: @eogvar1@",
-            "Porcentaje de ataques acertados con Lluvia de cuchillas: @eogvar2@%"
+            ""
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Cometa arcano",
         "majorChangePatchVersion": "",
-        "tooltip": "Infligir daño con una habilidad a un campeón proyecta un cometa hacia su ubicación o, si Cometa arcano está en enfriamiento, reduce el enfriamiento restante.<br><br>Daño: @DamageCalc@<br>Enfriamiento: @CooldownCalc@ s<br><rules><br>Reducción de enfriamiento:<br>Objetivo único: 20%<br>Área de efecto: 10%<br>Daño prolongado: 5%<br></rules><br>Has acertado un @f3@% de los cometas que has lanzado, con un total de @f1@ de daño a campeones.",
+        "tooltip": "",
         "shortDesc": "Infligir daño a un campeón con una habilidad proyecta un cometa dañino hacia su ubicación.",
-        "longDesc": "Infligir daño con una habilidad a un campeón proyecta un cometa hacia su ubicación o, si Cometa arcano está en enfriamiento, reduce el enfriamiento restante.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Daño adaptable</font></lol-uikit-tooltipped-keyword>: 30-130 según el nivel (<scaleAP>+0.05 de PH</scaleAP> y <scaleAD>+0.1 de DA adicional</scaleAD>).<br>Enfriamiento: 20-8 s<br><rules><br>Reducción de enfriamiento:<br>Objetivo único: 20%<br>Área de efecto: 10%<br>Daño prolongado: 5%<br></rules>",
+        "longDesc": "",
         "recommendationDescriptor": "Daño de habilidad",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Ölümcül Tempo",
         "majorChangePatchVersion": "",
-        "tooltip": "Bir rakip şampiyona saldırmak 6 saniyeliğine %i:scaleAS% @ASPerStack@ Saldırı Hızı kazandırır. En fazla 6 yük birikebilir. Azami yüke ulaştığında %i:OnHit% <OnHit>saldırı halinde</OnHit> @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>İlave Değişken Hasar</font></lol-uikit-tooltipped-keyword> verirsin.<br><br>Azami Yükte Geçirilen Süre: @f1@ sn.<br>Verilen Hasar: @f2@<br><br>Bu rün, bir şampiyona saldırdıktan sonra yine bir şampiyonu hedef alan ve hazır hale geldikten sonraki 0.25 saniye içinde yapılan normal saldırı yüzdesini de takip eder: %@f3@ (@f4@/@f5@)",
+        "tooltip": "",
         "shortDesc": "Bir rakip şampiyona saldırmak en fazla 6 kez birikebilecek şekilde saldırı hızı kazandırır. Azami yüke ulaştığında saldırı halinde <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>ilave değişken hasar</font></lol-uikit-tooltipped-keyword> verirsin.",
         "longDesc": "Bir rakip şampiyona saldırmak 6 saniyeliğine [yakın dövüşçüler için %6 || menzilli şampiyonlar için %4] Saldırı Hızı kazandırır. En fazla 6 yük birikebilir. Azami yüke ulaştığında saldırı halinde [yakın dövüşçüler için 9 ila 30 || menzilli şampiyonlar için 6 ila 24] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>İlave Değişken Hasar verirsin. Bu hasar %1 İlave Saldırı Hızı başına %1 artar</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Zamanla Artan Saldırı Hızı",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Sürat Coşkusu",
-        "majorChangePatchVersion": "",
-        "tooltip": "Rakip şampiyonlara 4 saniye içinde 3 saldırı veya <b>farklı</b> yetenek isabet ettirmek 3 saniyeliğine <speed>@MoveSpeedCalc@ Hareket Hızı</speed> ve <status>%50 Yavaşlatma Direnci</status> sağlar.<br><br>Bekleme Süresi: <attention>@CooldownCalc@ sn.</attention><br><br>Toplam Etkinleştirme Sayısı: <attention>@f1@</attention>",
-        "shortDesc": "Bir rakip şampiyona 3 <b>farklı</b> saldırı veya yetenek isabet ettirdiğinde kısa süreli bir <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>hareket hızı</lol-uikit-tooltipped-keyword> ve yavaşlatma direnci artışı kazanırsın. ",
-        "longDesc": "Rakip şampiyonlara 4 saniye içinde 3 saldırı veya <b>farklı</b> yetenek isabet ettirmek 3 saniyeliğine seviyeye bağlı olarak <speed>%25 ila %50 Hareket Hızı</speed> ve <status>%50 Yavaşlatma Direnci</status> sağlar. Hareket hızı ilavesi menzilli şampiyonlar için %50 etkilidir.<br>Bekleme Süresi: 30 ila 10 sn.",
+        "name": "PhaseRush",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Hareket Hızı",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Toplam Etkinleştirme: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "DeathfireTouch",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            ""
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Muhafız",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Keskin Sağanak",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Rakip şampiyonlara saldırmak, en fazla @NumHits@ saldırıya kadar %{{ Item_Melee_Ranged_Split }} Saldırı Hızı kazandırır. <br><br>Bekleme Süresi: @Cooldown@ sn.<br><hr><br>Keskin Sağanak Saldırıları: @f1@<br>İsabet Eden Sağanak Saldırılarının Yüzdesi: %@f2@<br><br><rules>Normal saldırı sıfırlamaları, saldırı sınırını 1 arttırır.<br>Geçici olarak saldırı hızı sınırını aşmana izin verir.</rules>",
-        "shortDesc": "Rakip şampiyonlara karşı gerçekleştirdiğin ilk 3 saldırı için büyük miktarda saldırı hızı kazanırsın.",
-        "longDesc": "Rakip şampiyonlara saldırmak, en fazla 3 saldırıya kadar %80 (menzilli şampiyonlar için %160) Saldırı Hızı kazandırır.<br><br>Saldırılar arasında 3 saniyeden uzun süre geçtiğinde etki kaybolur.<br><br>Bekleme Süresi: 10 sn.<br><rules>Saldırı sıfırlamaları, saldırı sınırını 1 arttırır.<br>Geçici olarak saldırı hızı sınırını aşmana izin verir.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
         "recommendationDescriptor": "Seri Saldırılar",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "İlave Saldırı Hızıyla Yapılan Saldırı: @eogvar1@",
-            "İsabet eden Sağanak saldırılarının yüzdesi: %@eogvar2@"
+            ""
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Sihirli Yıldız",
         "majorChangePatchVersion": "",
-        "tooltip": "Bir şampiyona yetenekle hasar vermek, o şampiyonun bulunduğu noktaya bir meteor fırlatır ya da bekleme süresindeyse Sihirli Yıldız'ın kalan bekleme süresini azaltır.<br><br>Hasar: @DamageCalc@<br>Bekleme Süresi: @CooldownCalc@ sn.<br><rules><br>Bekleme Süresinde Azalma:<br>Tek Hedef: %20<br>Alan Etkisi: %10<br>Zamanla Verilen Hasar: %5<br></rules><br>Şu ana kadar fırlattığın meteorların %@f3@ kadarı isabet ederek şampiyonlara toplam @f1@ Hasar verdi.",
+        "tooltip": "",
         "shortDesc": "Bir şampiyona yetenek isabet ettirmek, ona doğru hasar verici bir meteor fırlatır.",
-        "longDesc": "Bir şampiyona yeteneklerle hasar vermek, şampiyonun bulunduğu noktaya bir meteor fırlatır veya bekleme süresindeyse, Sihirli Yıldız'ın kalan bekleme süresini azaltır.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Değişken Hasar</font></lol-uikit-tooltipped-keyword>: Seviyeye bağlı olarak 30 ila 130 (<scaleAP>+0.05 YG</scaleAP> ve <scaleAD>+0.1 İlave SG</scaleAD>)<br>Bekleme Süresi: 20 ila 8 sn.<br><rules><br>Bekleme Süresinde Azalma:<br>Tek Hedef: %20<br>Alan Etkisi: %10<br>Zamanla Verilen Hasar: %5<br></rules>",
+        "longDesc": "",
         "recommendationDescriptor": "Yetenek Hasarı",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [
