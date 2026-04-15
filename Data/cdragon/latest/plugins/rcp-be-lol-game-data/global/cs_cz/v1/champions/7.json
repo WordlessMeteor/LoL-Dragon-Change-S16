@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "LeBlanc se vrhne na zvolenou pozici a způsobí poškození nepřátelům, kteří se v okolí tohoto místa nacházejí. Pokud LeBlanc aktivuje Zakřivení v následujících 4 sekundách ještě jednou, vrátí se na výchozí pozici.",
-            "dynamicDescription": "LeBlanc se vrhne kupředu a způsobí okolním nepřátelům <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. V intervalu @Effect3Amount@&nbsp;sek. po přeběhnutí může LeBlanc schopnost <recast>seslat znovu</recast>.<br><br><recast>Opětovné seslání:</recast> LeBlanc se vrátí na svou původní pozici.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc se vrhne kupředu a způsobí okolním nepřátelům <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. V intervalu @SnapbackTimeAllowed@&nbsp;sek. po přeběhnutí může LeBlanc schopnost <recast>seslat znovu</recast>.<br><br><recast>Opětovné seslání:</recast> LeBlanc se vrátí na svou původní pozici.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "LeBlanc vyšle řetěz, který spoutá prvního zasaženého nepřítele. Pokud se cíl do 1,5 sekundy řetězu nezbaví, LeBlanc jej znehybní a způsobí mu dodatečné poškození.",
-            "dynamicDescription": "LeBlanc vyšle řetěz, který spoutá prvního zasaženého nepřítele, čímž mu způsobí <magicDamage>@InitialDamage@ bodů magického poškození</magicDamage> a získá na něj <keywordStealth>pravé vidění</keywordStealth>.<br><br>Jestliže cíl zůstane spoután po dobu @Effect3Amount@&nbsp;sek., LeBlanc jej na @Effect4Amount@&nbsp;sek. <status>znehybní</status> a způsobí mu dodatečných <magicDamage>@DelayedDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc vyšle řetěz, který spoutá prvního zasaženého nepřítele, způsobí mu <magicDamage>@InitialDamage@ bodů magického poškození</magicDamage> a poskytne jí na něj <keywordStealth>pravé vidění</keywordStealth>.<br><br>Jestliže cíl zůstane spoután po dobu @TetherDuration@&nbsp;sek., LeBlanc jej na @RootDuration@&nbsp;sek. <status>znehybní</status> a způsobí mu dodatečných <magicDamage>@DelayedDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

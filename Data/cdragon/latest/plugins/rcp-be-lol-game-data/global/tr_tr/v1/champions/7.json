@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "LeBlanc bir konuma atılarak hedefinin yakınlarındaki rakiplere hasar verir. Vurkaç, sonraki 4 saniye boyunca LeBlanc'ı başlangıç noktasına döndürmek için yeniden kullanılabilir.",
-            "dynamicDescription": "LeBlanc atılarak yakınındaki rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. LeBlanc atıldıktan sonraki @Effect3Amount@ saniye boyunca yeteneği <recast>yeniden kullanabilir</recast>.<br><br><recast>Yeniden Kullanım:</recast> LeBlanc başlangıç noktasına geri döner.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc atılarak yakınındaki rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. LeBlanc atıldıktan sonraki @SnapbackTimeAllowed@ saniye boyunca yeteneği <recast>yeniden kullanabilir</recast>.<br><br><recast>Yeniden Kullanım:</recast> LeBlanc başlangıç noktasına geri döner.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "LeBlanc, isabet ettiği ilk rakibi bağlayan bir zincir fırlatır. Hedef 1,5 saniye boyunca zincirli kalırsa LeBlanc tarafından yere sabitlenir ve fazladan hasar alır.",
-            "dynamicDescription": "Fırlatılan zincir, isabet alan ilk birimin LeBlanc'a bağlanıp <magicDamage>@InitialDamage@ Büyü Hasarı</magicDamage> almasına ve <keywordStealth>Gerçek Görüş</keywordStealth> etkisine girmesine yol açar.<br><br>Hedef @Effect3Amount@ saniye boyunca zincirli kalırsa, LeBlanc tarafından @Effect4Amount@ saniyeliğine <status>sabitlenir</status> ve fazladan <magicDamage>@DelayedDamage@ Büyü Hasarı</magicDamage> alır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc, isabet ettiği ilk rakibi bağlayan bir zincir fırlatarak <magicDamage>@InitialDamage@ Büyü Hasarı</magicDamage> verir ve onun <keywordStealth>Gerçek Görüş</keywordStealth> etkisine girmesine yol açar.<br><br>Hedef @TetherDuration@ saniye boyunca zincirli kalırsa LeBlanc tarafından @RootDuration@ saniyeliğine <status>sabitlenir</status> ve fazladan <magicDamage>@DelayedDamage@ Büyü Hasarı</magicDamage> alır.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

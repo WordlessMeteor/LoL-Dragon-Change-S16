@@ -1147,7 +1147,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ハンマーを振り下ろしてダメージを与え、敵をスロウ状態にした後時間を置いて爆発する効果範囲を作り出す。",
-            "dynamicDescription": "ハンマーを打ち下ろして<physicalDamage>@BaseDamage@</physicalDamage><physicalDamage>(+最大体力の@HealthDamagePercent@%)の物理ダメージ</physicalDamage>を与え、足場が不安定なエリアを作り出す。<br><br>不安定なエリアは敵に@Effect3Amount@%の<status>スロウ効果</status>を与える。このエリアは@Effect4Amount@秒後に爆発して、再度<physicalDamage>@BaseDamage@</physicalDamage><physicalDamage>(+最大体力の@HealthDamagePercent@%)の物理ダメージ</physicalDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ハンマーを打ち下ろして<physicalDamage>@BaseDamage@</physicalDamage><physicalDamage>に最大体力の@HealthDamagePercent@%を加えた物理ダメージ</physicalDamage>を与え、足場が不安定なエリアを作り出す。<br><br>不安定なエリアは敵に@Slow_@%の<status>スロウ効果</status>を与える。このエリアは@DelayBetweenTwoHits@秒後に爆発して、再度<physicalDamage>@BaseDamage@</physicalDamage><physicalDamage>に最大体力の@HealthDamagePercent@%を加えた物理ダメージ</physicalDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自動効果で物理防御と魔法防御が増加する。このボーナスは体力が低下するとさらに増加する。発動すると移動速度が増加し、自身の周囲にいる敵のダッシュ行動を阻止する。ダッシュを中断させられた敵はスロウ状態および釘付け状態になる。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <scaleArmor>物理防御が@BonusArmor@</scaleArmor>、<scaleMR>魔法防御が@BonusMR@</scaleMR>増加する。自身の体力が@PassiveEmpoweredHealthPercent*100@%を下回ると、この増加量は2倍になる。<br><br><spellActive>発動効果:</spellActive> @Effect1Amount@秒間、<speed>移動速度が@Effect2Amount@%</speed>増加して、周囲に敵のダッシュを停止させるフィールドを発生させる。このフィールドで停止した敵には@GroundingDuration@秒間@SlowAmount*-100@%の<status>釘付け効果</status>と<status>スロウ効果</status>を付与し、<magicDamage>@InterruptDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <scaleArmor>@BonusArmor@の物理防御</scaleArmor>と<scaleMR>@BonusMR@の魔法防御</scaleMR>を獲得する。体力が@PassiveEmpoweredHealthPercent*100@%未満の場合、このボーナスは2倍になる。<br><br><spellActive>発動効果:</spellActive> <speed>移動速度が@Haste@%</speed>増加し、@Duration@秒間、自分の周囲に敵のダッシュを止めるゾーンを作り出す。このゾーンで止めた敵に<magicDamage>@InterruptDamage@の魔法ダメージ</magicDamage>を与えて<status>釘付け</status>にし、@GroundingDuration@秒間、@SlowAmount*-100@%の<status>スロウ効果</status>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "対象に向かってダッシュし、突き飛ばす。対象が壁にぶつかった場合、スタン状態になる。",
-            "dynamicDescription": "敵に向かって突撃し、<physicalDamage>@TackleDamage@の物理ダメージ</physicalDamage>を与えて突き飛ばす。地形にぶつけた場合、敵を@Effect3Amount@秒間<status>スタン</status>させて、<physicalDamage>@TackleDamage@の物理ダメージ</physicalDamage>を追加で与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵に向かって突撃し、<physicalDamage>@TackleDamage@の物理ダメージ</physicalDamage>を与えて突き飛ばす。地形にぶつけた場合、敵を@StunDuration@秒間<status>スタン</status>させて、<physicalDamage>@TackleDamage@の物理ダメージ</physicalDamage>を追加で与える。@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

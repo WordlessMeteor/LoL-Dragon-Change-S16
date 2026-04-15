@@ -4911,7 +4911,7 @@
                 },
                 "pass": 50,
                 "reflectionDefinition": {
-                    "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_White_Cubemap.TFT_Set15.dds",
+                    "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_White_Cubemap.TFT_Set17.dds",
                     "reflectionOpacityDirect": -1.5,
                     "reflectionOpacityGlancing": 0.10000000149011612,
                     "reflectionFresnel": 0.30000001192092896,
@@ -30286,7 +30286,7 @@
                 },
                 "pass": 50,
                 "reflectionDefinition": {
-                    "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_White_Cubemap.TFT_Set15.dds",
+                    "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_White_Cubemap.TFT_Set17.dds",
                     "reflectionOpacityDirect": -1.5,
                     "reflectionOpacityGlancing": 0.10000000149011612,
                     "reflectionFresnel": 0.30000001192092896,
@@ -46475,6 +46475,11 @@
         "name": "Characters/Xayah/Skins/Skin1/Materials/XayahSkin01_staticDef",
         "samplerValues": [
             {
+                "TextureName": "Mask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Shared/Materials/UVAnimate/Xayah_Skin01_Wing_TX_CM.tex",
                 "addressU": 1,
@@ -46497,19 +46502,19 @@
         ],
         "paramValues": [
             {
-                "name": "Top_Tile",
+                "name": "Anim_Scale_Frequency",
                 "value": [
                     1.0,
-                    1.0,
+                    0.0,
                     0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Anim_Wave_Frequency",
+                "name": "Anim_Scale_Intensity",
                 "value": [
-                    1.0,
+                    2.0,
                     0.0,
                     0.0,
                     0.0
@@ -46537,7 +46542,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Anim_Scale_Frequency",
+                "name": "Anim_Wave_Dir_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -46547,9 +46552,9 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Anim_Scale_Intensity",
+                "name": "Anim_Wave_Frequency",
                 "value": [
-                    2.0,
+                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -46567,7 +46572,41 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Anim_Wave_Dir_Intensity",
+                "name": "Bloom_Intensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bottom_ScrollSpeed",
+                "value": [
+                    -0.019999999552965164,
+                    0.019999999552965164,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_ColorBias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -46587,10 +46626,24 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Bottom_ScrollSpeed",
+                "name": "RimColor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLightOffset",
                 "value": [
-                    -0.019999999552965164,
-                    0.019999999552965164,
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Rim_max",
+                "value": [
+                    -2.0,
+                    0.0,
                     0.0,
                     0.0
                 ],
@@ -46605,9 +46658,34 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Top_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
             }
         ],
         "switches": [
+            {
+                "name": "ADDITIVE_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "RIM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "VERTEX_COLOR_ANIM",
                 "on": false,

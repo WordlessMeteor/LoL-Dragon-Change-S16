@@ -1,0 +1,904 @@
+{
+    "Characters/TFT17_Xayah/CharacterRecords/Root": {
+        "mCharacterName": "TFT17_Xayah",
+        "{8662cf12}": {
+            "{b35aa769}": 850.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "{b35aa769}": 50.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "{4af40dc3}": {
+            "{b35aa769}": 45.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 30.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 30.0,
+            "__type": "{ce9b917b}"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 1130.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.75,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.800000011920929,
+            "__type": "{ce9b917b}"
+        },
+        "basicAttack": {
+            "mAttackName": "TFT17_XayahBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT17_XayahBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "TFT17_XayahBasicAttack3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "TFT17_XayahBasicAttack4",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT17_XayahCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spells": [
+            "{5f604f9f}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{307c92de}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{47170ef2}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{34ed6daa}",
+        "mMoveInterval": -0.25,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{8eb55c11}",
+        "MobileHealthBarHeightOverride": 150.0,
+        "mManaPerAttack": 5.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "{1e5ab23d}": {
+        "ObjectName": "TFT17_XayahSpell_FeatherRecallMis",
+        "mScriptName": "TFT17_XayahSpell_FeatherRecallMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 7887,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            0.0,
+                            0.0,
+                            50.0
+                        ],
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            0.009999999776482582
+                        ],
+                        "mControlPoint2": [
+                            0.0033333334140479565,
+                            0.0,
+                            0.3866666555404663
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "{ff738f10}": 2,
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "__type": "ClearAlreadyHitTracking"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT17_Xayah_FeatherRecall_Mis",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT17_Xayah/Spells/TFT17_XayahBasicAttack": {
+        "ObjectName": "TFT17_XayahBasicAttack",
+        "mScriptName": "TFT17_XayahBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "{11704a2b}": 0.382099986076355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            0.0,
+                            0.0,
+                            50.0
+                        ],
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            0.009999999776482582
+                        ],
+                        "mControlPoint2": [
+                            0.0033333334140479565,
+                            0.0,
+                            0.3866666555404663
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "{ff738f10}": 2,
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "__type": "ClearAlreadyHitTracking"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "castFrame": 6.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT17_Xayah_BA_Mis",
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5f604f9f}": {
+        "ObjectName": "TFT17_XayahSpell",
+        "mScriptName": "TFT17_XayahSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "AttackNumEnemies",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassivePercentReducedDamage",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADDamage",
+                    "values": [
+                        40.0,
+                        48.0,
+                        72.0,
+                        900.0,
+                        375.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APDamage",
+                    "values": [
+                        10.0,
+                        6.0,
+                        9.0,
+                        60.0,
+                        75.0,
+                        75.0,
+                        75.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActivePercentReducedDamage",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RecallFeatherTargets",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeed",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "ADDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 1.0,
+                                    "mStat": 3,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "APDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mCastTime": 0.15000000596046448,
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castFrame": 9.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 2,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT17_XayahSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT17_XayahSpell_Name",
+                        "keyTooltip": "Spell_TFT17_XayahSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "AttackNumEnemies",
+                                    "nameOverride": "Spell_TFT17_XayahSpell_NumEnemies",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PassivePercentReducedDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT17_XayahSpell_DamageReduction",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "APDamage",
+                                    "nameOverride": "TFT_AP_Damage_NoCalculation",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ADDamage",
+                                    "nameOverride": "TFT_ADAP_PhysicalDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT17_Xayah/Spells/TFT17_XayahCritAttack": {
+        "ObjectName": "TFT17_XayahCritAttack",
+        "mScriptName": "TFT17_XayahCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.382099986076355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mApplyAttackDamage": true,
+            "castRange": [
+                9999.0,
+                9999.0,
+                9999.0,
+                9999.0,
+                9999.0,
+                9999.0,
+                9999.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            0.0,
+                            0.0,
+                            50.0
+                        ],
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            0.09666667133569717
+                        ],
+                        "mControlPoint2": [
+                            0.0,
+                            0.0,
+                            0.05000000447034836
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "{ff738f10}": 2,
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "__type": "ClearAlreadyHitTracking"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "castFrame": 6.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT17_Xayah_BA_Crit_Mis",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT17_Xayah/Spells/TFT17_XayahBasicAttack3": {
+        "ObjectName": "TFT17_XayahBasicAttack3",
+        "mScriptName": "TFT17_XayahBasicAttack3",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack3",
+            "{11704a2b}": 0.382099986076355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mApplyAttackDamage": true,
+            "castRange": [
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            0.0,
+                            0.0,
+                            50.0
+                        ],
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            0.009999999776482582
+                        ],
+                        "mControlPoint2": [
+                            -0.00955431442707777,
+                            0.0,
+                            0.20177777111530304
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "{ff738f10}": 2,
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "__type": "ClearAlreadyHitTracking"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "castFrame": 6.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT17_Xayah_BA_Mis",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT17_Xayah/Spells/TFT17_XayahBasicAttack2": {
+        "ObjectName": "TFT17_XayahBasicAttack2",
+        "mScriptName": "TFT17_XayahBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.382099986076355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mApplyAttackDamage": true,
+            "castRange": [
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mStartBoneName": "L_Hand",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            0.0,
+                            0.0,
+                            50.0
+                        ],
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            0.009999999776482582
+                        ],
+                        "mControlPoint2": [
+                            -0.008957169950008392,
+                            0.0,
+                            0.30000001192092896
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "{ff738f10}": 2,
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "__type": "ClearAlreadyHitTracking"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "castFrame": 6.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT17_Xayah_BA_Mis",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT17_Xayah/Spells/TFT17_XayahBasicAttack4": {
+        "ObjectName": "TFT17_XayahBasicAttack4",
+        "mScriptName": "TFT17_XayahBasicAttack4",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack4",
+            "{11704a2b}": 0.382099986076355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mApplyAttackDamage": true,
+            "castRange": [
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156,
+                284.6000061035156
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mStartBoneName": "L_hand",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            0.0,
+                            0.0,
+                            50.0
+                        ],
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            0.009999999776482582
+                        ],
+                        "mControlPoint2": [
+                            0.023885786533355713,
+                            0.0,
+                            0.1093333289027214
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "{ff738f10}": 2,
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "__type": "ClearAlreadyHitTracking"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "castFrame": 6.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT17_Xayah_BA_Mis",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT17_Xayah/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

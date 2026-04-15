@@ -331,49 +331,6 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Roof2",
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        -2.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky.TFT_Style2_Garen_Pengaren.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky.TFT_Style2_Garen_Pengaren.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "pass": -9920,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        110.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky_TX.TFT_Style2_Garen_Pengaren.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
                 "emitterName": "Roof3",
                 "EmitterPosition": {
                     "constantValue": [
@@ -413,6 +370,48 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "SKY",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        182.9511260986328,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Pengaren_Finisher_Sky01A.TFT_Style2_Garen_Pengaren.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "pass": -9990,
+                "alphaRef": 0,
+                "disableBackfaceCull": true,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        110.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky_TX.TFT_Style2_Garen_Pengaren.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -459,81 +458,26 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "childParticleSetDefinition": {
-                    "childrenIdentifiers": [
-                        {
-                            "effectKey": "PetStyleTwoGaren_Skin3_Finisher_ENV_CloudChild",
-                            "__type": "VfxChildIdentifier"
-                        }
-                    ],
-                    "__type": "VfxChildParticleSetDefinitionData"
-                },
-                "emitterName": "Cloud2",
-                "EmitterPosition": {
-                    "constantValue": [
-                        2328.415771484375,
-                        4173.29052734375,
-                        -4837.353515625
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "__type": "{8df5fcf7}"
-                },
-                "blendMode": 1,
-                "pass": -9950,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        -0.4350421130657196,
-                        9.059619903564453,
-                        2.348362445831299
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        0.000778668443672359,
-                        0.0007786670466884971,
-                        0.000780605711042881
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Roof3",
+                "emitterName": "SKY",
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        4762.61865234375,
-                        0.0
+                        5551.6357421875,
+                        421.83697509765625
                     ],
                     "__type": "ValueVector3"
                 },
                 "primitive": {
                     "mMesh": {
-                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SkyA.TFT_Style2_Garen_Pengaren.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SkyA.TFT_Style2_Garen_Pengaren.skl",
+                        "mSimpleMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Pengaren_Finisher_Sky01A.TFT_Style2_Garen_Pengaren.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 1,
-                "pass": -9999,
-                "meshRenderFlags": 0,
+                "pass": -9990,
                 "alphaRef": 0,
+                "disableBackfaceCull": true,
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -545,9 +489,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        0.9999992847442627,
-                        0.5543705224990845,
-                        0.9999994039535522
+                        0.699999988079071,
+                        1.0,
+                        0.699999988079071
                     ],
                     "__type": "ValueVector3"
                 },
@@ -564,12 +508,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "new1",
+                "emitterName": "new2",
                 "EmitterPosition": {
                     "constantValue": [
-                        1575.9530029296875,
-                        9176.5390625,
-                        -4391.71435546875
+                        539.78125,
+                        5759.69482421875,
+                        -387.38427734375
                     ],
                     "__type": "ValueVector3"
                 },
@@ -606,9 +550,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        1.4418171644210815,
-                        2.7340314388275146,
-                        2.7340290546417236
+                        0.007002315483987331,
+                        0.013278081081807613,
+                        0.013278083875775337
                     ],
                     "__type": "ValueVector3"
                 },
@@ -625,12 +569,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Cloud3",
+                "emitterName": "Cloud4",
                 "EmitterPosition": {
                     "constantValue": [
-                        2328.415771484375,
-                        4173.29052734375,
-                        -4837.353515625
+                        1432.85400390625,
+                        1887.6961669921875,
+                        316.0808410644531
                     ],
                     "__type": "ValueVector3"
                 },
@@ -652,9 +596,619 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        0.000778668443672359,
-                        0.0007786670466884971,
-                        0.000780605711042881
+                        8.589030767325312e-05,
+                        8.58900893945247e-05,
+                        8.610402437625453e-05
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Cloud6",
+                "EmitterPosition": {
+                    "constantValue": [
+                        892.907958984375,
+                        3489.994140625,
+                        -1428.96630859375
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle06.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle06.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.01647619716823101,
+                        1.0604053735733032,
+                        0.7395345568656921
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.4237036108970642,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SCloud",
+                "EmitterPosition": {
+                    "constantValue": [
+                        892.907958984375,
+                        3151.77978515625,
+                        -1428.96630859375
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle01.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle01.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.28158852458000183,
+                        1.0529074668884277,
+                        -2.142148733139038
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.42370373010635376,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SCloud1",
+                "EmitterPosition": {
+                    "constantValue": [
+                        892.907958984375,
+                        3151.77978515625,
+                        -1428.96630859375
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle05.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle05.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.28158852458000183,
+                        1.0529074668884277,
+                        -2.142148733139038
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.42370373010635376,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SCloud2",
+                "EmitterPosition": {
+                    "constantValue": [
+                        892.907958984375,
+                        3151.77978515625,
+                        -1428.96630859375
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle04.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle04.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.28158852458000183,
+                        1.0529074668884277,
+                        -2.142148733139038
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.42370373010635376,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SCloud3",
+                "EmitterPosition": {
+                    "constantValue": [
+                        892.907958984375,
+                        3151.77978515625,
+                        -1428.96630859375
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle02.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudSingle02.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.28158852458000183,
+                        1.0529074668884277,
+                        -2.142148733139038
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.42370373010635376,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Cloud7",
+                "EmitterPosition": {
+                    "constantValue": [
+                        -1239.4862060546875,
+                        5838.265625,
+                        -1302.7369384765625
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudA.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudA.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -0.2249908745288849,
+                        -5.185800552368164,
+                        2.0408458709716797
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.5253485441207886,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Cloud8",
+                "EmitterPosition": {
+                    "constantValue": [
+                        683.9566040039062,
+                        6919.5849609375,
+                        -1831.54443359375
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudD.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudD.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.28158852458000183,
+                        13.425704956054688,
+                        -2.142148971557617
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.5627498626708984,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Cloud9",
+                "EmitterPosition": {
+                    "constantValue": [
+                        -1118.9266357421875,
+                        7203.8125,
+                        -2226.739501953125
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudE.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudE.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.28158852458000183,
+                        -6.055051803588867,
+                        -2.1421492099761963
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.5253485441207886,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Cloud10",
+                "EmitterPosition": {
+                    "constantValue": [
+                        3037.65869140625,
+                        6539.2724609375,
+                        -2257.160888671875
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudB.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudB.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -4.732577800750732,
+                        28.680320739746094,
+                        5.847351551055908
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.5253486037254333,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Cloud11",
+                "EmitterPosition": {
+                    "constantValue": [
+                        1580.930908203125,
+                        6324.57177734375,
+                        -1037.1756591796875
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudC.TFT_Style2_Garen_Pengaren.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudC.TFT_Style2_Garen_Pengaren.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9960,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -35.30147933959961,
+                        0.1419343203306198,
+                        -25.750709533691406
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.4404403269290924,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
                     ],
                     "__type": "ValueVector3"
                 },
@@ -881,57 +1435,6 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Roof4",
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        6631.79638671875,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky.TFT_Style2_Garen_Pengaren.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky.TFT_Style2_Garen_Pengaren.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 3,
-                "pass": -9920,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        110.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        0.9999997019767761,
-                        1.8029639720916748,
-                        0.9999997615814209
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky_TX.TFT_Style2_Garen_Pengaren.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
                 "emitterName": "Ground1",
                 "EmitterPosition": {
                     "constantValue": [
@@ -1020,65 +1523,6 @@
     },
     "Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_ENV_02": {
         "complexEmitterDefinitionData": [
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Roof2",
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        2564.153564453125,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SkyA.TFT_Style2_Garen_Pengaren.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SkyA.TFT_Style2_Garen_Pengaren.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 3,
-                "pass": -9999,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.11054350435733795,
-                        94.49046325683594,
-                        -3.1542460918426514
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        0.9999995231628418,
-                        0.805972695350647,
-                        0.9999995827674866
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "constantValue": [
-                        0.8500000238418579,
-                        0.8500000238418579,
-                        0.8500000238418579
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky_TX.TFT_Style2_Garen_Pengaren.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
             {
                 "rate": {
                     "constantValue": 1.0,
@@ -2929,6 +3373,48 @@
                 },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudA_TX.TFT_Style2_Garen_Pengaren.tex",
                 "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "SKY",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        182.9511260986328,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Pengaren_Finisher_Sky01A.TFT_Style2_Garen_Pengaren.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9990,
+                "alphaRef": 0,
+                "disableBackfaceCull": true,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        110.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
             }
         ],
         "visibilityRadius": 12000.0,
@@ -2974,58 +3460,15 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Roof2",
+                "emitterName": "Ground3",
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        182.9511260986328,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky.TFT_Style2_Garen_Pengaren.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky.TFT_Style2_Garen_Pengaren.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "pass": -9990,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
                         0.0,
-                        110.0,
-                        0.0
+                        2570.84130859375
                     ],
                     "__type": "ValueVector3"
                 },
-                "birthScale0": {
-                    "constantValue": [
-                        0.9999992847442627,
-                        0.25382959842681885,
-                        0.9999994039535522
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky_TX.TFT_Style2_Garen_Pengaren.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Ground3",
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_GroundA.TFT_Style2_Garen_Pengaren.skn",
@@ -3053,6 +3496,14 @@
                 },
                 "isSingleParticle": 1,
                 "emitterName": "Ground4",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        2570.84130859375
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_GroundA.TFT_Style2_Garen_Pengaren.skn",
@@ -3146,6 +3597,14 @@
                 },
                 "isSingleParticle": 1,
                 "emitterName": "Outline1",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        2570.84130859375
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_GroundFarC.TFT_Style2_Garen_Pengaren.skn",
@@ -3173,6 +3632,14 @@
                 },
                 "isSingleParticle": 1,
                 "emitterName": "FarA1",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        2570.84130859375
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_FarA.TFT_Style2_Garen_Pengaren.skn",
@@ -3211,9 +3678,9 @@
                 "emitterName": "FarB3",
                 "EmitterPosition": {
                     "constantValue": [
-                        -2502.735595703125,
-                        -211.87063598632812,
-                        -6840.03564453125
+                        -2502.733642578125,
+                        -211.87051391601562,
+                        -4269.19384765625
                     ],
                     "__type": "ValueVector3"
                 },
@@ -3271,9 +3738,9 @@
                 "emitterName": "FarB4",
                 "EmitterPosition": {
                     "constantValue": [
-                        -3099.696533203125,
-                        -221.5143280029297,
-                        -6541.3291015625
+                        -3099.694580078125,
+                        -221.5142059326172,
+                        -3970.487060546875
                     ],
                     "__type": "ValueVector3"
                 },
@@ -3329,6 +3796,14 @@
                 },
                 "isSingleParticle": 1,
                 "emitterName": "FarB5",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        2570.84130859375
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_FarB.TFT_Style2_Garen_Pengaren.skn",
@@ -3447,6 +3922,48 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Chaos_TX.TFT_Style2_Garen_Pengaren.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "SKY",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        182.9511260986328,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Pengaren_Finisher_Sky01A.TFT_Style2_Garen_Pengaren.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -9990,
+                "alphaRef": 0,
+                "disableBackfaceCull": true,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        110.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky_TX.TFT_Style2_Garen_Pengaren.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -4739,27 +5256,26 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Roof3",
+                "emitterName": "SKY",
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        -2.0,
+                        182.9511260986328,
                         0.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "primitive": {
                     "mMesh": {
-                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky.TFT_Style2_Garen_Pengaren.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Sky.TFT_Style2_Garen_Pengaren.skl",
+                        "mSimpleMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Pengaren_Finisher_Sky01A.TFT_Style2_Garen_Pengaren.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 1,
                 "pass": -9990,
-                "meshRenderFlags": 0,
                 "alphaRef": 0,
+                "disableBackfaceCull": true,
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -4782,7 +5298,15 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Ground4",
+                "emitterName": "Ground",
+                "EmitterPosition": {
+                    "constantValue": [
+                        911.520263671875,
+                        34.650630950927734,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_GroundE.TFT_Style2_Garen_Pengaren.skn",
@@ -4796,6 +5320,14 @@
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.6129472255706787,
+                        0.6129472255706787,
+                        0.612947404384613
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_GroundA_TX.TFT_Style2_Garen_Pengaren.tex",
                 "birthUVOffset": {
                     "constantValue": [
@@ -4823,12 +5355,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "FartreeB3",
+                "emitterName": "FartreeB",
                 "EmitterPosition": {
                     "constantValue": [
-                        -5018.24365234375,
-                        556.3969116210938,
-                        10155.3310546875
+                        -4106.7138671875,
+                        254.01132202148438,
+                        5875.39404296875
                     ],
                     "__type": "ValueVector3"
                 },
@@ -4856,17 +5388,17 @@
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
-                        0.03772582486271858,
-                        170.6973419189453,
-                        0.3022637963294983
+                        1.23861563205719,
+                        154.44398498535156,
+                        -3.121499538421631
                     ],
                     "__type": "ValueVector3"
                 },
                 "birthScale0": {
                     "constantValue": [
-                        1.6775684356689453,
-                        1.6775684356689453,
-                        1.6775683164596558
+                        1.0282610654830933,
+                        1.0282608270645142,
+                        1.0282613039016724
                     ],
                     "__type": "ValueVector3"
                 },
@@ -4890,12 +5422,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "FartreeA1",
+                "emitterName": "FartreeA",
                 "EmitterPosition": {
                     "constantValue": [
-                        -4716.603515625,
-                        -533.6065063476562,
-                        -11100.9677734375
+                        -3805.0791015625,
+                        -498.95526123046875,
+                        -5686.48291015625
                     ],
                     "__type": "ValueVector3"
                 },
@@ -4931,9 +5463,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        1.459661841392517,
-                        1.4596617221832275,
-                        1.459661841392517
+                        0.8946955800056458,
+                        0.8946956396102905,
+                        0.8946958780288696
                     ],
                     "__type": "ValueVector3"
                 },
@@ -4950,12 +5482,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "FarB4",
+                "emitterName": "FarB",
                 "EmitterPosition": {
                     "constantValue": [
-                        -6000.830078125,
-                        -412.8892517089844,
-                        -8135.21533203125
+                        -2635.984619140625,
+                        -183.87789916992188,
+                        -5198.1689453125
                     ],
                     "__type": "ValueVector3"
                 },
@@ -4968,6 +5500,15 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7300068736076355
+                    ],
+                    "__type": "ValueColor"
+                },
                 "pass": -9910,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
@@ -4975,16 +5516,16 @@
                 "birthRotation0": {
                     "constantValue": [
                         -0.0,
-                        21.994915008544922,
+                        29.728307723999023,
                         0.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "birthScale0": {
                     "constantValue": [
-                        1.4364464282989502,
-                        1.4364464282989502,
-                        1.4364460706710815
+                        0.6949846744537354,
+                        0.6949844360351562,
+                        0.6949847340583801
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5001,12 +5542,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "FartreeB4",
+                "emitterName": "FartreeB1",
                 "EmitterPosition": {
                     "constantValue": [
-                        -8685.3203125,
-                        -550.4833984375,
-                        -8894.7080078125
+                        -4812.50146484375,
+                        -515.8319702148438,
+                        -4893.2109375
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5042,9 +5583,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        1.6775684356689453,
-                        1.6775684356689453,
-                        1.6775683164596558
+                        1.0282611846923828,
+                        1.028260588645935,
+                        1.0282609462738037
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5068,12 +5609,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "FarB5",
+                "emitterName": "FarB1",
                 "EmitterPosition": {
                     "constantValue": [
-                        -8924.9375,
-                        -379.8223876953125,
-                        -6542.865234375
+                        -5052.119140625,
+                        -345.17138671875,
+                        -3386.78466796875
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5100,9 +5641,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        1.434892177581787,
-                        1.434892177581787,
-                        1.434891939163208
+                        0.8795133829116821,
+                        0.8795134425163269,
+                        0.8795132040977478
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5119,63 +5660,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Cloud8",
+                "emitterName": "Cloud2",
                 "EmitterPosition": {
                     "constantValue": [
-                        -3333.36669921875,
-                        4830.578125,
-                        6342.37548828125
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudA.TFT_Style2_Garen_Pengaren.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_SingleCloudA.TFT_Style2_Garen_Pengaren.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "pass": -9950,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        -11.519667625427246,
-                        19.175809860229492,
-                        23.13875961303711
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        1.8652582168579102,
-                        1.865256667137146,
-                        1.8652573823928833
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Cloud_TX.TFT_Style2_Garen_Pengaren.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Cloud9",
-                "EmitterPosition": {
-                    "constantValue": [
-                        234.4820556640625,
-                        3999.94873046875,
-                        -10481.1015625
+                        787.53271484375,
+                        1426.9263916015625,
+                        -6138.41455078125
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5211,9 +5701,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        0.7745893001556396,
-                        0.7745888233184814,
-                        0.7745890021324158
+                        0.22379717230796814,
+                        0.22379690408706665,
+                        0.22379720211029053
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5230,11 +5720,11 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "FarB6",
+                "emitterName": "FarB2",
                 "EmitterPosition": {
                     "constantValue": [
-                        7925.90087890625,
-                        0.0,
+                        7090.10986328125,
+                        34.650630950927734,
                         -1876.1580810546875
                     ],
                     "__type": "ValueVector3"
@@ -5262,9 +5752,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        1.8643696308135986,
-                        1.8643696308135986,
-                        1.86436927318573
+                        1.1427605152130127,
+                        1.1427602767944336,
+                        1.142760157585144
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5281,7 +5771,15 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Outline2",
+                "emitterName": "Outline",
+                "EmitterPosition": {
+                    "constantValue": [
+                        911.520263671875,
+                        34.650630950927734,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_GroundFarD.TFT_Style2_Garen_Pengaren.skn",
@@ -5304,6 +5802,14 @@
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.6129472255706787,
+                        0.6129472255706787,
+                        0.612947404384613
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_FarF_TX.TFT_Style2_Garen_Pengaren.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -5317,11 +5823,11 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Cloud10",
+                "emitterName": "Cloud3",
                 "EmitterPosition": {
                     "constantValue": [
-                        0.0,
-                        -125.53347778320312,
+                        911.520263671875,
+                        -90.88280487060547,
                         0.0
                     ],
                     "__type": "ValueVector3"
@@ -5348,6 +5854,14 @@
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.5620708465576172,
+                        0.5620708465576172,
+                        0.5620710253715515
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_CloudA_TX.TFT_Style2_Garen_Pengaren.tex",
                 "birthUVOffset": {
                     "constantValue": [
@@ -5368,12 +5882,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Cloud11",
+                "emitterName": "Cloud4",
                 "EmitterPosition": {
                     "constantValue": [
-                        -1572.6055908203125,
-                        3684.091552734375,
-                        8857.2685546875
+                        -661.0839233398438,
+                        2023.2794189453125,
+                        5322.25439453125
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5409,9 +5923,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        0.4630579650402069,
-                        0.6953556537628174,
-                        0.46305787563323975
+                        0.28383007645606995,
+                        0.42621657252311707,
+                        0.28383007645606995
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5428,11 +5942,11 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "FartreeB5",
+                "emitterName": "FartreeB2",
                 "EmitterPosition": {
                     "constantValue": [
-                        -12121.5888671875,
-                        -260.90692138671875,
+                        -5796.33154296875,
+                        -207.03927612304688,
                         -3913.500732421875
                     ],
                     "__type": "ValueVector3"
@@ -5469,9 +5983,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        1.6775684356689453,
-                        1.6775684356689453,
-                        1.6775683164596558
+                        1.0282613039016724,
+                        1.0282610654830933,
+                        1.0282610654830933
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5495,11 +6009,11 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "FarB7",
+                "emitterName": "FarB3",
                 "EmitterPosition": {
                     "constantValue": [
-                        0.0,
-                        -362.6406555175781,
+                        911.520263671875,
+                        -327.9898681640625,
                         0.0
                     ],
                     "__type": "ValueVector3"
@@ -5526,6 +6040,14 @@
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.6129472255706787,
+                        0.6129472255706787,
+                        0.612947404384613
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_OutLine_TX.TFT_Style2_Garen_Pengaren.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -5539,7 +6061,15 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Ground5",
+                "emitterName": "Ground1",
+                "EmitterPosition": {
+                    "constantValue": [
+                        911.520263671875,
+                        34.650630950927734,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_GroundE.TFT_Style2_Garen_Pengaren.skn",
@@ -5562,6 +6092,14 @@
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.6129472255706787,
+                        0.6129472255706787,
+                        0.612947404384613
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Ground_A1Mask.TFT_Style2_Garen_Pengaren.tex",
                 "particleUVRotateRate": {
                     "dynamics": {
@@ -5609,12 +6147,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Chaos1",
+                "emitterName": "Chaos",
                 "EmitterPosition": {
                     "constantValue": [
-                        -5728.52734375,
-                        -410.7903747558594,
-                        -7207.12255859375
+                        -2296.66796875,
+                        -224.35391235351562,
+                        -4051.0419921875
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5631,6 +6169,14 @@
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.6129472255706787,
+                        0.6129472255706787,
+                        0.612947404384613
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_Chaos_TX.TFT_Style2_Garen_Pengaren.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -5644,12 +6190,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Cloud12",
+                "emitterName": "Cloud5",
                 "EmitterPosition": {
                     "constantValue": [
-                        2099.968994140625,
-                        2501.52490234375,
-                        7474.52392578125
+                        3011.486328125,
+                        840.7129516601562,
+                        3939.509765625
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5676,9 +6222,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        0.7393351197242737,
-                        1.1102302074432373,
-                        0.7393351197242737
+                        0.4531734883785248,
+                        0.6805126070976257,
+                        0.45317360758781433
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5695,12 +6241,12 @@
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
-                "emitterName": "Cloud13",
+                "emitterName": "Cloud6",
                 "EmitterPosition": {
                     "constantValue": [
-                        -287.76483154296875,
-                        4011.12744140625,
-                        8857.2685546875
+                        -308.6190185546875,
+                        2350.31396484375,
+                        -1496.5225830078125
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5727,9 +6273,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        0.4630579650402069,
-                        0.6953556537628174,
-                        0.46305787563323975
+                        0.2838301658630371,
+                        0.4262163043022156,
+                        0.28383007645606995
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5747,7 +6293,7 @@
                 },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
-                "emitterName": "sparkle1",
+                "emitterName": "sparkle",
                 "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -5755,9 +6301,9 @@
                 },
                 "EmitterPosition": {
                     "constantValue": [
-                        -598.466796875,
-                        -436.951171875,
-                        1959.189453125
+                        259.4177551269531,
+                        -449.671875,
+                        737.55078125
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5829,17 +6375,17 @@
                 "isRotationEnabled": 1,
                 "birthRotation0": {
                     "constantValue": [
-                        87.36737823486328,
-                        -62.943748474121094,
-                        26.837839126586914
+                        90.0,
+                        0.0,
+                        85.75599670410156
                     ],
                     "__type": "ValueVector3"
                 },
                 "birthScale0": {
                     "constantValue": [
-                        77.6531982421875,
-                        77.73645782470703,
-                        55.9999885559082
+                        47.59733581542969,
+                        66.30760192871094,
+                        34.325035095214844
                     ],
                     "__type": "ValueVector3"
                 },
@@ -5881,7 +6427,7 @@
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
-        "visibilityRadius": 5000.0,
+        "visibilityRadius": 6000.0,
         "particleName": "PetStyleTwoGaren_Skin3_Finisher_ENV_01",
         "particlePath": "Characters/PetStyleTwoGaren/Skins/Skin3/Particles/PetStyleTwoGaren_Skin3_Finisher_ENV_01",
         "transform": [

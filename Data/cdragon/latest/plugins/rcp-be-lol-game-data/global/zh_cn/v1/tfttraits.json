@@ -14867,6 +14867,2823 @@
         ]
     },
     {
+        "display_name": "受到星神赐福",
+        "trait_id": "Set17_CarouselMarket_EmpoweredHexTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GodBlessed.TFT_Set17.png",
+        "tooltip_text": "@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey1@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey2@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey3@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey4@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey5@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey6@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey7@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey8@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey9@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey10@<br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 0,
+                "style_idx": 1,
+                "style_name": "kThreat"
+            }
+        ]
+    },
+    {
+        "display_name": "法官",
+        "trait_id": "TFT17_ADMIN",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Arbiter.TFT_Set17.png",
+        "tooltip_text": "制订一份独特的神圣律法，可使你选择一个成因，以及该成因达成时施加至【法官】们的一个效果。<br><br><row>(@MinUnits@) 为你的律法选择1个成因和效果</row><br><row>(@MinUnits@) 效果变得更强。</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageInstances",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "ManaToSpend",
+                        "value": 50.0
+                    },
+                    {
+                        "name": "NumAttacks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "NumSeconds",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "OutputMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "OutputMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "魔术师",
+        "trait_id": "TFT17_APTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Replicator.TFT_Set17.png",
+        "tooltip_text": "【魔术师】施放技能时，会以削减过的效能触发第二次。<br><br><expandRow>(@MinUnits@) @Effectiveness*100@%效能</expandRow>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Effectiveness",
+                        "value": 0.22
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Effectiveness",
+                        "value": 0.45
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "挑战者",
+        "trait_id": "TFT17_ASTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Challenger.TFT_Set17.png",
+        "tooltip_text": "你的队伍获得@TeamwideAS*100@%攻击速度。【挑战者】获得额外攻击速度。当其目标阵亡时，【挑战者】会冲刺向一个新的目标，并提高他们的攻击速度@BurstPercent*100@%，持续@BurstDuration@秒。<br><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BurstDuration",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "BurstPercent",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "TeamwideAS",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.22
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.36
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.48
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "幻灵战队",
+        "trait_id": "TFT17_AnimaSquad",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
+        "tooltip_text": "在输掉1场玩家对战后，获得@TechPerCombat@【科技点】，并且会额外增加相当于你连败回合数@TechPerLoss@倍的【科技点】。此外，每个【幻灵战队】参与击杀时都会获得@TechPerKill@【科技点】。<br><br>每当【幻灵战队】们获得@TechBreakpoint@科技点，他们就会制造新的幻灵武器原型。你可以选择立刻拿走这些装备，或者保留你的【科技点】直到下一次获取更加强力的武器。<br><br><row>(@MinUnits@) 研发启动！</row><br><row>(@MinUnits@) 在赢得一场玩家对战之后，获得战利品！</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PairsPartnerWinMultiplier",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "TechBreakpoint",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "TechPerCombat",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "TechPerCombat_DU",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "TechPerDeath_PVE",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TechPerKill",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TechPerLoss",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TechPerLoss_DU",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TechPerRound_PVE",
+                        "value": 20.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 5,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "游侠",
+        "trait_id": "TFT17_AssassinTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Rogue.TFT_Set17.png",
+        "tooltip_text": "【游侠】们获得物理加成和法术加成。当其生命值首次降至@HealthThreshold*100@%时，他们会遁入暗影。原本以其为目标的敌人将会选取1名附近的敌人作为新的目标(坦克优先)。<br><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "AP",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "AP",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "AP",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.55
+                    },
+                    {
+                        "name": "AP",
+                        "value": 55.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "木灵族",
+        "trait_id": "TFT17_Astronaut",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Astronaut.TFT_Set17.png",
+        "tooltip_text": "【木灵族】吸引木灵，木灵会以木灵的方式强化【木灵族】的技能。他们还会获得额外生命值。<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%，@BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%，@BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%，@BonusHealth@ %i:scaleHealth%。在你的备战席上生成一个克隆栏位。在克隆完成时，获得放置在该栏位的弈子的一个1星版本以及金币。</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%，@BonusHealth@ %i:scaleHealth%。召唤四大木灵领主！</row><br><br><rules>克隆时间 = 弈子费用</rules>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 400.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 400.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 6.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "汪星机器人",
+        "trait_id": "TFT17_BlitzcrankUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PartyAnimal.TFT_Set17.png",
+        "tooltip_text": "每场战斗仅一次，在生命值降至@HealthThreshold*100@%后，变得不可被选取并且每秒回复@PercentHealthHeal*100@%最大生命值。生命值回满或没有其他友军存活时，返回战斗。如果生命值已回满，【布里茨】进入<font color='#F39B9B'>~</font><font color='#F3D59B'>太</font><font color='#D5F39B'>~</font><font color='#9BF39B'>空</font><font color='#9BF3D5'>~</font><font color='#9BD5F3'>律</font><font color='#9B9BF3'>~</font><font color='#D59BF3'>动</font><font color='#F39BD5'>~</font>状态，并且【派对破坏王】的被动会以四倍速召唤雷电，持续至战斗结束。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "PercentHealthHeal",
+                        "value": 0.15
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "新星特攻队",
+        "trait_id": "TFT17_DRX",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_NOVA.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) 对战开始@TeamAttackDelay@秒后，【新星特攻队】基于弈子效果，为友军提供一阵【能量激增】。</row><br><row>(@MinUnits@) 获得1个【特攻队员选择器】。被选择的【新星特攻队】弈子会在【能量激增】期间激活其特攻技能。</row><br><br><ShowIf.TFT17_DRX_HasAatrox><status>【亚托克斯】：</status>友军的伤害对敌人会施加@ShredAndSunder*100@%<TFTKeyword>魔抗击碎</TFTKeyword>和<TFTKeyword>护甲击碎</TFTKeyword></ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>【亚托克斯】：对敌人施加魔抗击碎和护甲击碎</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>【凯特琳】：</status>为友军提供@AS*100@%攻击速度</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>【凯特琳】：提供攻击速度</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>【阿卡丽】：</status>友军获得<TFTKeyword>技能暴击</TFTKeyword></ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>【阿卡丽】：友军获得技能暴击</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>【茂凯】：</status>友军治疗@Heal*100@%最大生命值</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>【茂凯】：治疗友军</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>【千珏】：</status>为你最强大的那个坦克提供<TFTBonus>@ShieldValue@</TFTBonus>护盾值</ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>【千珏】：为1名友军提供护盾</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>【纹章】：</status>友军造成@BonusTrueDamage*100@%可叠加的额外真实伤害</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>【纹章】：造成额外真实伤害</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AS",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "BonusTrueDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "ShieldValue",
+                        "value": 800.0
+                    },
+                    {
+                        "name": "ShredAndSunder",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "TeamAttackDelay",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "暗星",
+        "trait_id": "TFT17_DarkStar",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) 【暗星】创造【黑洞】，【黑洞】会吞噬最大生命值低于@ExecuteHPPercent*100@%的敌人。</row><br><row>(@MinUnits@) 并且他们获得@ADAP@% %i:scaleAD%%i:scaleAP%。</row><br><row>(@MinUnits@) 并且最强大的【暗星】单位进入【超大质量】状态，获得@SupermassivePercentBonus*100@%效能的【暗星】加成，并生成2个小型【黑洞】。</row><br><row>(@MinUnits@) 所有的【暗星】进入【超大质量】状态。达到10级后，吞！噬！天！地！万！物！。</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "ExecuteHPPercent",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "PercentHealth",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "SupermassivePercentBonus",
+                        "value": 0.85
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 6,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 9,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "织命人",
+        "trait_id": "TFT17_Fateweaver",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Fateweaver.TFT_Set17.png",
+        "tooltip_text": "固有能力：【织命人】拥有<TFTKeyword>技能暴击</TFTKeyword>。<br><br><row>(@MinUnits@) 技能中几率触发的效果拥有<TFTKeyword>幸运</TFTKeyword>。</row><br><row>(@MinUnits@) 获得@CritChance*100@%暴击几率和@CritDamage@%&nbsp;暴击伤害。暴击也会拥有<TFTKeyword>幸运</TFTKeyword>。</row><br><br><rules>技能暴击：技能伤害可产生暴击。额外的【技能暴击】提供10%暴击伤害。</rules><br><rules>幸运：触发时进行两次判定，取最优结果输出。</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CritDamage",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "CritChance",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "CritDamage",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "斗神",
+        "trait_id": "TFT17_FioraUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DivineDuelist.TFT_Set17.png",
+        "tooltip_text": "你的小小英雄在获胜时回复相当于@PlayerOmnivamp*100@%造成小小英雄伤害的生命值。<br><br>【菲奥娜】总会在一对一的对决中胜出。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DUHeal",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PVEHP",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PVENumWins",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "PlayerOmnivamp",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "旅人",
+        "trait_id": "TFT17_FlexTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
+        "tooltip_text": "战斗开始时：你的坦克们获得持续@ShieldDuration@秒的护盾。你的其他友军获得伤害增幅。<br>【旅人】获得两倍此加成。<br><br><expandRow>(@MinUnits@) @ShieldHP@护盾；@BonusDA*100@% %i:scaleDA%</expandRow><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "FlexTraitMultiplier",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.09
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 175.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 250.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 350.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.22
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 500.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.27
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 700.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "军工1号",
+        "trait_id": "TFT17_GravesTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_FactoryNew.TFT_Set17.png",
+        "tooltip_text": "参与对战后，打开一个武器库为你最强大的【格雷福斯】购买*永久*【升级】。<br><br>每有@NumberOfUpgradesBeforeRoundCostIncrease@个【升级】，后续【升级】都将多需要1回合。<br><br><rules>下一个【升级】@TFTUnitProperty.trait:TFT17_GravesTrait_RoundsUntilUpgrade@回合。</rules>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumberOfUpgradesBeforeRoundCostIncrease",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "斗士",
+        "trait_id": "TFT17_HPTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Brawler.png",
+        "tooltip_text": "你的队伍获得@TeamwideBonus*100@%生命值。【斗士】获得更多。<br><br><expandRow>(@MinUnits@) +@HealthBonus*100@%最大生命值</expandRow>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamwideBonus",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "灭星尊",
+        "trait_id": "TFT17_JhinUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Singularity.TFT_Set17.png",
+        "tooltip_text": "敌人的护甲和魔抗降低@PctResists*100@%。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PctResists",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "神谕",
+        "trait_id": "TFT17_ManaTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Channeler.TFT_Set17.png",
+        "tooltip_text": "固有能力：【神谕】们从所有来源中获得额外@InnateManaGain*100@%法力值。<br><br>你的队伍获得法力回复，【神谕】们获得更多。<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "InnateManaGain",
+                        "value": 0.2
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 7.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 9.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "霸天机甲",
+        "trait_id": "TFT17_Mecha",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Mecha.TFT_Set17.png",
+        "tooltip_text": "固有能力：【霸天机甲】单位们可以变形为其【究极形态】，升级其技能并获得@TransformedPercentHealth*100@%生命值。【已变形的霸天机甲】占用2个弈子栏位，并为【霸天机甲】羁绊提供双倍羁绊计数。<br><br><row>(@MinUnits@) 能量电芯：【霸天机甲】们获得@AP@%&nbsp;%i:scaleAD%%i:scaleAP%。</row><br><row>(@MinUnits@) 超频电容：提升至@AP@%&nbsp;%i:scaleAD%%i:scaleAP%。</row><br><row>(@MinUnits@) 精密工学：+@TeamSize@最大队伍规模</row><br><br><rules>使用【霸天机甲变形器】道具来给你的【霸天机甲】们切换形态</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamSize",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TransformedPercentHealth",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "AP",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "AP",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "AP",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "狂战士",
+        "trait_id": "TFT17_MeleeTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Slayer.png",
+        "tooltip_text": "你的队伍获得@TeamwideBonus*100@%全能吸血。【狂战士】获得额外全能吸血、物理加成，并且其全能吸血的过量治疗将转化为护盾(至多至@MaxPercentHealthShield*100@%最大生命值)<br><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxPercentHealthShield",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "TeamwideBonus",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "选择羁绊",
+        "trait_id": "TFT17_MissFortuneUndeterminedTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_MissFortuneUndetermindedTrait.TFT_Set17.png",
+        "tooltip_text": "当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的羁绊。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": []
+    },
+    {
+        "display_name": "武装战姬",
+        "trait_id": "TFT17_MissFortuneUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GunGoddess.TFT_Set17.png",
+        "tooltip_text": "当你登场【厄运小姐】时，需要在【神谕模式】、【挑战者模式】、以及【魔术师模式】中选择一种。【厄运小姐】的每个模式都会为其提供1个独特的技能，同时她获得对应的羁绊。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Allies",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "FlatDamage",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Mana",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumAttacks",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "黑暗魔女",
+        "trait_id": "TFT17_MorganaUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
+        "tooltip_text": "友军受到的技能伤害减少@UntransformedAbilityDA*100@%，当莫甘娜处于【黑暗形态】时，该效果提升至@TransformedAbilityDA*100@%。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TransformedAbilityDA",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "UntransformedAbilityDA",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "海魔人",
+        "trait_id": "TFT17_Primordian",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Primordian.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) 造成伤害时会基于独特【海魔人】的星级召唤【狂潮虫】。</row><br><row>(@MinUnits@) 召唤额外的@PercentMoreSwarmlings@%【狂潮虫】！在每场玩家对战后，获得1个随机的1费或2费弈子。</row><br><br><rules>@DamageTakenPercentModifier*100@%承受伤害会被计算至召唤【狂潮虫】的所需伤害。</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageTakenPercentModifier",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "PercentMoreSwarmlings",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "SwarmlingAttacks",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageMultiplier",
+                        "value": 1.45
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "灵能特工",
+        "trait_id": "TFT17_PsyOps",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PsyOps.TFT_Set17.png",
+        "tooltip_text": "获得【灵能特工装备】，任何友军都可以携带。<br><br><row>(@MinUnits@) 获得【@TFTUnitProperty.trait:TFT17_PsyOps_Item1@】</row><br><row>(@MinUnits@) 获得【@TFTUnitProperty.trait:TFT17_PsyOps_Item2@】，【灵能特工】携带【灵能特工装备】时获得额外效果</row><br><br><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TooltipOnlyEffectiveness",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "TooltipOnlyEffectiveness",
+                        "value": 50.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "狙神",
+        "trait_id": "TFT17_RangedTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Sniper.png",
+        "tooltip_text": "【狙神】获得伤害增幅，这个加成会在对抗更远目标时获得提升。<br><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%；+@PerHexIncrease@%&nbsp;%i:scaleDA%每格</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%；+@PerHexIncrease@%&nbsp;%i:scaleDA%每格</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%；+@PerHexIncrease@%&nbsp;%i:scaleDA%每格</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 18.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 24.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 28.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "堡垒卫士",
+        "trait_id": "TFT17_ResistTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Bastion.png",
+        "tooltip_text": "你的队伍获得@TeamwideResists@护甲和魔抗。<br><br>【堡垒卫士】们获得更多，并且该加成在对战的最初@Duration@秒内翻倍。<br><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%；非【堡垒卫士】单位额外获得@EnhancedTeamwideArmor@ %i:scaleArmor%%i:scaleMR%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedTeamwideArmor",
+                        "value": 20.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 16.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 16.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "救世主",
+        "trait_id": "TFT17_RhaastUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Redeemer.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) 每激活一个非唯一羁绊，你的队伍获得@BonusOffensiveStat1*100@%/@BonusOffensiveStat2*100@%/@BonusOffensiveStat3*100@%攻击速度，和@BonusDefensiveStat1@/@BonusDefensiveStat2@/@BonusDefensiveStat3@护甲和魔抗。</row><br><br>队伍获得的攻击速度：@TFTUnitProperty.trait:TFT17_RhaastUnique_OffensiveStatToGain@% %i:scaleAS%<br>队伍获得的双抗：@TFTUnitProperty.trait:TFT17_RhaastUnique_DefensiveStatToGain@ %i:scaleArmor%%i:scaleMR%",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDefensiveStat1",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "BonusDefensiveStat2",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "BonusDefensiveStat3",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "BonusOffensiveStat1",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "BonusOffensiveStat2",
+                        "value": 0.025
+                    },
+                    {
+                        "name": "BonusOffensiveStat3",
+                        "value": 0.03
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "暮光铁壁",
+        "trait_id": "TFT17_ShenUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Bulwark.TFT_Set17.png",
+        "tooltip_text": "召唤一个可放置的【圣物】。对战开始时，【圣物】可为邻格友军提供一个@PercentHealthShield*100@%最大生命值的护盾和@AttackSpeed*100@%攻击速度。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "AttackSpeedDuration",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "PercentHealthShield",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 60.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "重装战士",
+        "trait_id": "TFT17_ShieldTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Vanguard.TFT_Set12.png",
+        "tooltip_text": "【重装战士】在拥有护盾时获得@DamageReductionPct*100@%伤害减免。<br><br>对战开始时以及@HealthThreshold*100@%&nbsp;生命值时：获得一个最大生命值护盾，持续@ShieldDuration@秒。<br><br><row>(@MinUnits@) @ShieldPercentAmount*100@%最大生命值</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@%最大生命值</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@%最大生命值；<br>拥有护盾时：@EnhancedDurability*100@%&nbsp;%i:scaleDR%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageReductionPct",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.16
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "最高指挥官",
+        "trait_id": "TFT17_SonaUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Commander.TFT_Set17.png",
+        "tooltip_text": "(@MinUnits@) 每@RoundsPerMod@回合，娑娜都会提供一个随机【指令模块】，它可允许你变更一个友军在战斗期间的行为方式。【指令模块】持续@RoundsPerMod@个玩家战斗回合，不论是否被装备。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AS",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "HealthRatio",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "RoundsPerMod",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "太空律动",
+        "trait_id": "TFT17_SpaceGroove",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_SpaceGroove.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) 【太空律动】舞者们能够进入<font color='#F39B9B'>~</font><font color='#F3D59B'>太</font><font color='#D5F39B'>~</font><font color='#9BF39B'>空</font><font color='#9BF3D5'>~</font><font color='#9BD5F3'>律</font><font color='#9B9BF3'>~</font><font color='#D59BF3'>动</font><font color='#F39BD5'>~</font>。当进入这种状态时，他们获得攻击速度和最大生命值回复，你的队伍每有1名【太空律动】舞者还会进一步提升该加成。</row><br><row>(@MinUnits@) 所有【太空律动】舞者在对战开始时进入<font color='#F39B9B'>~</font><font color='#F3D59B'>太</font><font color='#D5F39B'>~</font><font color='#9BF39B'>空</font><font color='#9BF3D5'>~</font><font color='#9BD5F3'>律</font><font color='#9B9BF3'>~</font><font color='#D59BF3'>动</font><font color='#F39BD5'>~</font>，持续@StartOfCombatDuration@秒。</row><br><row>(@MinUnits@) 在<font color='#F39B9B'>~</font><font color='#F3D59B'>太</font><font color='#D5F39B'>~</font><font color='#9BF39B'>空</font><font color='#9BF3D5'>~</font><font color='#9BD5F3'>律</font><font color='#9B9BF3'>~</font><font color='#D59BF3'>动</font><font color='#F39BD5'>~</font>状态中每秒会获得@ADAPPerSecond@%可叠加的物理加成和法术加成。</row><br><row>(@MinUnits@) 提升这些加成@EffectBonus@%!</row><br><row>(@MinUnits@) <font color='#F39B9B'>~</font><font color='#F3D59B'>跟</font><font color='#D5F39B'>~</font><font color='#9BF39B'>着</font><font color='#9BF3D5'>~</font><font color='#9BD5F3'>节</font><font color='#9B9BF3'>~</font><font color='#D59BF3'>奏</font><font color='#F39BD5'>~</font><font color='#F39B9B'>动</font><font color='#F3D59B'>~</font><font color='#D5F39B'>起</font><font color='#9BF39B'>~</font><font color='#9BF3D5'>来</font><font color='#9BD5F3'>~</font><font color='#9B9BF3'>！</font></row><br><br><font color='#F39B9B'>~</font><font color='#F3D59B'>太</font><font color='#D5F39B'>~</font><font color='#9BF39B'>空</font><font color='#9BF3D5'>~</font><font color='#9BD5F3'>律</font><font color='#9B9BF3'>~</font><font color='#D59BF3'>动</font><font color='#F39BD5'>~</font>: @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%，@TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "PrismaticDamage",
+                        "value": 800.0
+                    },
+                    {
+                        "name": "PrismaticJumpDamage",
+                        "value": 1500.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 60.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "观星者",
+        "trait_id": "TFT17_Stargazer",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。<br><br>【观星者】处于强化格内可获得多种加成，最初为(@MinUnits@)个单位。<br><br><rules>玩家每提升1级，就会有更多的格子显露出来。</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Family_BaseSharePercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Huntress_AS_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Medallion_DA_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_IncreasePer3Star",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Medallion_Resists_Teamwide",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Mountain_AP_Initial",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Mountain_Health_BonusThreshold",
+                        "value": 1000.0
+                    },
+                    {
+                        "name": "Mountain_Health_Teamwide",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Serpent_DR_Teamwide",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Serpent_Duration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Shield_Interval",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Shield_Shield_Teamwide",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Wolf_HealthThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Family_HexesToReveal_TOOLTIPONLY",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.3
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Family_HexesToReveal_TOOLTIPONLY",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 35.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.03
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.5
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Family_EmpoweredSharePercent",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 35.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Mountain_DamageAmpPercent",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Mountain_HexesToReveal_TOOLTIPONLY",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.75
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "观星者",
+        "trait_id": "TFT17_Stargazer_Fountain",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>泉水</TFTStargazer>。<br><br>强化格内的友军获得@Fountain_ManaRegen_Teamwide@法力回复。强化格内的【观星者】获得更多，并且他们的技能现在会治疗最低生命值的友军。<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%，@Fountain_HealPercent*100@%技能伤害治疗</expandRow><br><br><rules>玩家每提升1级，就会有更多的格子显露出来</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "观星者",
+        "trait_id": "TFT17_Stargazer_Huntress",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>女猎手</TFTStargazer>。<br><br>对战开始时：标记最高生命值的敌人。<br><br>强化格内的友军获得@Huntress_AS_Teamwide*100@%攻击速度。【观星者】获得更多，并且当1名被标记的敌人阵亡时，治疗他们@Huntress_Heal*100@%最大生命值。<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%，@NumMarks@个标记</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%，@NumMarks@个标记</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%，@NumMarks@个标记</row><br><br><rules>玩家每提升1级，就会有更多的格子显露出来</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "观星者",
+        "trait_id": "TFT17_Stargazer_Medallion",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>勋章</TFTStargazer>。<br><br><row>(@MinUnits@)强化格内的友军获得@Medallion_DA@%伤害增幅，每个3星友军弈子都会使该加成提高@Medallion_IncreasePer3Star@%。</row><br><br>(当前&nbsp;加成：&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><br><rules>玩家每提升1级，就会有更多格子显露出来</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Medallion_DA_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_IncreasePer3Star",
+                        "value": 6.5
+                    },
+                    {
+                        "name": "Medallion_Resists_Teamwide",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Medallion_DA",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "观星者",
+        "trait_id": "TFT17_Stargazer_Mountain",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>秀山</TFTStargazer><br><br>每经过@Mountain_RoundsPerEmblem@个玩家对战回合，获得1个【观星者纹章】。强化格内的【观星者】获得多种加成。<br><br>(剩余战斗次数：@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) 获得@Mountain_Health*100@%生命值</row><br><row>(@MinUnits@) 以及@Mountain_ADAP*100@%物理加成和法术加成</row><br><row>(@MinUnits@) 以及@Mountain_Resists@护甲和魔抗</row><br><row>(@MinUnits@) 以及@Mountain_AS*100@%攻击速度</row><br><row>(@MinUnits@) 以及@Mountain_DR*100@%伤害减免</row><br><row>(@MinUnits@) 以及提升其它所有加成@Mountain_StatIncrease*100@%</row><br><br><rules>玩家每提升1级，就会有更多格子显露出来</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_MaxEmblems",
+                        "value": 25000.0
+                    },
+                    {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 6,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 7,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 8,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "观星者",
+        "trait_id": "TFT17_Stargazer_Serpent",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>蝰蛇</TFTStargazer>。<br><br>强化格内的友军获得@Serpent_DR_Teamwide*100@%伤害减免。强化格内的【观星者】获得更多，并且其技能现在会使敌人中毒，在@Serpent_Duration@秒内重复造成相当于一部分造成伤害的魔法伤害。<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%，@Serpent_Poison*100@%中毒伤害</expandRow><br><br><rules>玩家每提升1级，就会有更多格子显露出来</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Serpent_Duration",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "观星者",
+        "trait_id": "TFT17_Stargazer_Shield",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "【观星者】每局游戏都会观测到一个不同的星座。这局游戏：<TFTStargazer>圣坛</TFTStargazer>。<br><br><row>(@MinUnits@) *任意*弈子阵亡时，将其献祭到圣坛。强化格中的友军获得@Shield_Health_Teamwide@%生命值和@Shield_AS_Teamwide@%攻击速度。<br><br>献祭@Shield_NumDeaths@次后，强化格中的【观星者】获得额外@Shield_CashoutHP@% %i:scaleHealth%和@Shield_CashoutAS@% %i:scaleAS%<br><br>献祭次数：(@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>玩家等级每提升1级，就会有更多格子显露出来</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "观星者",
+        "trait_id": "TFT17_Stargazer_Wolf",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>野猪</TFTStargazer>。<br><br>赢下玩家对战时获得金币。强化格中的友军获得@Wolf_Health_Teamwide*100@%生命值、物理加成和法术加成。【观星者】获得更多。<br><br>(已获得的金币数：@TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@金币，@Wolf_Health*100@% %i:scaleHealth%，@Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><br><rules>玩家等级每提升1级，就会有更多格子显露出来</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.22
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "牧羊人",
+        "trait_id": "TFT17_SummonTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Shepherd.TFT_Set17.png",
+        "tooltip_text": "【牧羊人】召唤【群星誓约】并辅助其战斗。<br><br><row>(@MinUnits@) 召唤【羊咩咩】</row><br><row>(@MinUnits@) 召唤【咩咩羊】</row><br><row>(@MinUnits@) 【羊咩咩】和【咩咩羊】的誓约更加深厚</row><br><br><rules> 【羊咩咩】和【咩咩羊】的强度会随所有【牧羊人】的星级总数而提升</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "命运祭司",
+        "trait_id": "TFT17_TahmKenchUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Arcana.TFT_Set12.png",
+        "tooltip_text": "每@Rounds@回合，【塔姆】都会提供一个奖励！<br><br>剩余回合：@TFTUnitProperty.trait:TFT17_TahmKench_RoundsRemaining@<br>最后一次的奖励：@TFTUnitProperty.trait:TFT17_TahmKench_LastReward@",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Rounds",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "未来战士",
+        "trait_id": "TFT17_Timebreaker",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) 当你输掉对战时，获得免费刷新次数。当你赢下对战时，将经验值储存至【时空核心】中(随阶段提升)。</row><br><row>(@MinUnits@) 并且友军获得@AttackSpeed*100@%攻击速度。</row><br><row>(@MinUnits@) 并且【未来战士】们额外获得@TimebreakerAdditionalAS*100@%攻击速度</row><br><br><rules>从失败中获得的刷新次数：@TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>从胜利中获得的经验值：@TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "末日使者",
+        "trait_id": "TFT17_VexUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Doomer.TFT_Set17.png",
+        "tooltip_text": "对战开始时：将所有敌人刻印上【末日】标记。<br><br>每场对战敌人首次受到伤害时，他们的【末日】标记将被消耗，你最强大的【薇古丝】会从他们身上窃取@ADAP1@%物理加成和法术加成。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP1",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "天煞",
+        "trait_id": "TFT17_ZedUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GalaxyHunter.TFT_Set17.png",
+        "tooltip_text": "【劫】仅可通过强化符文【天煞灭影：劫】获得。<br><br>当至少有1个影分身存活时，【劫】额外获得@BonusAD*100@%物理加成。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusAD",
+                        "value": 0.4
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
         "display_name": "宇航员",
         "trait_id": "Astro",
         "set": "TFTSet3",

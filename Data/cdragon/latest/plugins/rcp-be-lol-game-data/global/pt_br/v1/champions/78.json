@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Poppy golpeia com o martelo, causando dano e criando uma área que reduz a velocidade de inimigos e explode após um intervalo.",
-            "dynamicDescription": "Poppy golpeia o chão, causando <physicalDamage>@BaseDamage@</physicalDamage> mais <physicalDamage>@HealthDamagePercent@% da Vida máxima como Dano Físico</physicalDamage> e tornando o solo instável. <br><br>A área instável causa @Effect3Amount@% de <status>Lentidão</status> aos inimigos e explode depois de @Effect4Amount@s, causando <physicalDamage>@BaseDamage@</physicalDamage> mais <physicalDamage>@HealthDamagePercent@% da Vida máxima como Dano Físico</physicalDamage> novamente.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy golpeia o chão, causando <physicalDamage>@BaseDamage@</physicalDamage> mais <physicalDamage>@HealthDamagePercent@% da Vida máxima como Dano Físico</physicalDamage> e tornando o solo instável. <br><br>A área instável causa @Slow_@% de <status>Lentidão</status> aos inimigos e explode depois de @DelayBetweenTwoHits@s, causando <physicalDamage>@BaseDamage@</physicalDamage> mais <physicalDamage>@HealthDamagePercent@% da Vida máxima como Dano Físico</physicalDamage> novamente.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Poppy recebe Armadura e Resistência Mágica passivamente, que aumentam quando ela estiver com Vida baixa. Ela pode ativar Presença Inabalável para receber Velocidade de Movimento e impedir avanços inimigos ao seu redor, fazendo com que o inimigo impedido sofra redução de velocidade e fique preso ao chão.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Poppy recebe <scaleArmor>@BonusArmor@ de Armadura</scaleArmor> e <scaleMR>@BonusMR@ de Resistência Mágica</scaleMR>. Esse efeito é dobrado se Poppy estiver com menos de @PassiveEmpoweredHealthPercent*100@% de Vida.<br><br><spellActive>Ativo:</spellActive> Poppy recebe <speed>@Effect2Amount@% de Velocidade de Movimento</speed> e projeta um campo ao seu redor por @Effect1Amount@s que impede avanços de inimigos. Inimigos impedidos pelo campo são <status>Presos ao chão</status>, sofrem @SlowAmount*-100@% de <status>Lentidão</status> por @GroundingDuration@s e <magicDamage>@InterruptDamage@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Poppy recebe <scaleArmor>@BonusArmor@ de Armadura</scaleArmor> e <scaleMR>@BonusMR@ de Resistência Mágica</scaleMR>. Esse efeito será dobrado se Poppy estiver com menos de @PassiveEmpoweredHealthPercent*100@% de Vida.<br><br><spellActive>Ativo:</spellActive> Poppy recebe <speed>@Haste@% de Velocidade de Movimento</speed> e projeta um campo ao seu redor por @Duration@s que impede avanços de inimigos. Inimigos impedidos pelo campo são <status>Presos ao chão</status> e sofrem @SlowAmount*-100@% de <status>Lentidão</status> por @GroundingDuration@s, além de <magicDamage>@InterruptDamage@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Poppy avança até o alvo e o empurra para trás. Se o alvo colidir com uma parede, ele será atordoado.",
-            "dynamicDescription": "Poppy avança sobre um inimigo, causando <physicalDamage>@TackleDamage@ de Dano Físico</physicalDamage> e empurrando-o para a frente. Se ela o fizer colidir contra um terreno, o inimigo é <status>Atordoado</status> por @Effect3Amount@s e sofre <physicalDamage>@TackleDamage@ de Dano Físico</physicalDamage> adicional.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy avança sobre um inimigo, causando <physicalDamage>@TackleDamage@ de Dano Físico</physicalDamage> e empurrando-o para a frente. Se ela o fizer colidir contra um terreno, o inimigo será <status>Atordoado</status> por @StunDuration@s e sofrerá <physicalDamage>@TackleDamage@ de Dano Físico</physicalDamage> adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

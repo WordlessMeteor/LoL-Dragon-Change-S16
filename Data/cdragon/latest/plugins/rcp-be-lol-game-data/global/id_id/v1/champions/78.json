@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Poppy mengayunkan palunya, menghasilkan damage dan menciptakan zona yang akan menerapkan slow ke musuh dan meledak setelah penundaan.",
-            "dynamicDescription": "Poppy menghantam tanah, menghasilkan <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>physical damage sebesar @HealthDamagePercent@% Health maksimum</physicalDamage> dan membuat tanah tidak stabil. <br><br>Area yang tidak stabil membuat musuh terkena <status>Slow</status> sebesar @Effect3Amount@% dan meletus setelah @Effect4Amount@ detik, menghasilkan <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>physical damage sebesar @HealthDamagePercent@% Health maksimum</physicalDamage> lagi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy menghantam tanah, menghasilkan <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>physical damage sebesar @HealthDamagePercent@% Health maksimum</physicalDamage> dan membuat tanah jadi tidak stabil. <br><br>Area yang tidak stabil membuat musuh terkena <status>Slow</status> sebesar @Slow_@% dan meletus setelah @DelayBetweenTwoHits@ detik, menghasilkan <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>physical damage sebesar @HealthDamagePercent@% Health maksimum</physicalDamage> lagi.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Poppy mendapatkan Armor dan Magic Resist secara pasif. Bonus ini meningkat saat Health-nya rendah. Poppy bisa mengaktifkan Steadfast Presence untuk mendapatkan Move Speed dan menghentikan dash musuh di sekitarnya. Jika dash dihentikan, musuh terkena slow, dan terjatuh.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Poppy mendapatkan <scaleArmor>@BonusArmor@ Armor</scaleArmor> dan <scaleMR>@BonusMR@ Magic Resist</scaleMR>. Bonus ini dikali dua jika Health Poppy di bawah @PassiveEmpoweredHealthPercent*100@%.<br><br><spellActive>Aktif:</spellActive> Poppy mendapatkan <speed>@Effect2Amount@% Move Speed</speed> dan memproyeksikan bidang di sekitarnya selama @Effect1Amount@ detik yang menghentikan dash musuh. Musuh yang terhenti oleh bidang tersebut terkena efek <status>Ground</status> dan efek <status>Slow</status> sebesar @SlowAmount*-100@% selama @GroundingDuration@ detik dan menerima <magicDamage>@InterruptDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Poppy mendapatkan <scaleArmor>@BonusArmor@ Armor</scaleArmor> dan <scaleMR>@BonusMR@ Magic Resist</scaleMR>. Bonus ini dikali dua jika Health Poppy di bawah @PassiveEmpoweredHealthPercent*100@%.<br><br><spellActive>Aktif:</spellActive> Poppy mendapatkan <speed>@Haste@% Move Speed</speed> dan memproyeksikan bidang di sekitarnya selama @Duration@ detik yang menghentikan dash musuh. Musuh yang terhenti oleh bidang tersebut terkena <status>Ground</status> dan <status>Slow</status> sebesar @SlowAmount*-100@% selama @GroundingDuration@ detik serta menerima <magicDamage>@InterruptDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Poppy melakukan dash dan mendorong mundur target. Jika terdorong ke dinding, target akan terkena stun.",
-            "dynamicDescription": "Poppy menabrak musuh, menghasilkan <physicalDamage>@TackleDamage@ physical damage</physicalDamage> dan menarik target ke depan. Jika Poppy menabrak mereka ke arah medan, musuh akan <status>Terkena Stun</status> selama @Effect3Amount@ detik dan menerima <physicalDamage>@TackleDamage@ physical damage</physicalDamage> tambahan.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy menabrak musuh, menghasilkan <physicalDamage>@TackleDamage@ physical damage</physicalDamage> dan membawa mereka ke depan. Jika Poppy menabrak mereka ke arah medan, musuh akan terkena <status>Stun</status> selama @StunDuration@ detik dan menerima <physicalDamage>@TackleDamage@ physical damage</physicalDamage> tambahan.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

@@ -1,0 +1,1099 @@
+{
+    "{339f2e92}": {
+        "mClipDataMap": {
+            "Attack1": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Attack1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack2": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Attack2.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Crit_In": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{ccef954b}": {
+                        "mShowSubmeshList": [
+                            "L_Arm_mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{ac5420f1}": {
+                        "mShowSubmeshList": [
+                            "R_Arm_mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Crit.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Death": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Audio_Death": {
+                        "mSoundName": "Play_sfx_JhinSkin05_Death3D_cast",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{61f14462}": {
+                        "mStartFrame": 18.0,
+                        "mJointNameToOverride": "R_Pauldron_Float",
+                        "mJointNameToSnapTo": "Snap_Extra2World",
+                        "__type": "JointSnapEventData"
+                    },
+                    "{7ed2e19f}": {
+                        "mStartFrame": 37.0,
+                        "mJointNameToOverride": "C_Pistol",
+                        "mJointNameToSnapTo": "Snap_Weapon2World",
+                        "__type": "JointSnapEventData"
+                    },
+                    "HideGeo": {
+                        "mStartFrame": 120.0,
+                        "mHideSubmeshList": [
+                            "Base_mat",
+                            "Cloth_mat",
+                            "Head_Normal_mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/Death.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Run": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{5c47ad5d}": {
+                        "mMaskDataName": "{5c47ad5d}",
+                        "mBlendInTime": 0.5,
+                        "mBlendOutTime": 0.5,
+                        "__type": "ConformToPathEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Run.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle1": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mTickDuration": 0.10000000149011612,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Idle1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Celebration": {
+                "mClipNameList": [
+                    "DanceLoop"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "DanceLoop": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Dancein.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Crit_ToIdle": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{ccef954b}": {
+                        "mEndFrame": 30.0,
+                        "mShowSubmeshList": [
+                            "L_Arm_mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{ac5420f1}": {
+                        "mEndFrame": 27.0,
+                        "mShowSubmeshList": [
+                            "R_Arm_mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Crit_ToIdle.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Crit": {
+                "mClipNameList": [
+                    "Crit_In",
+                    "Crit_ToIdle"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Attack3": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Attack3.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack4_In": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Attack4_In.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack4_Out": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Attack4_Out.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack4": {
+                "mClipNameList": [
+                    "Attack4_In",
+                    "Attack4_Out"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Spell_Cast": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_SpellCast.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{8d33df87}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{635f20ad}": {
+                        "mShowSubmeshList": [
+                            "{8c401814}",
+                            "L_Arm_mat",
+                            "R_Arm_mat",
+                            "Base_mat"
+                        ],
+                        "mHideSubmeshList": [
+                            "Cloth_mat",
+                            "Head_Normal_mat",
+                            "Shoulder_mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{f59dce7f}": {
+                        "mEffectKey": "TFT17_Jhin_Spell_HeadGlow",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "HEAD",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{d3d854d6}": {
+                        "__type": "IdleParticlesVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_SpellLoop.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell": {
+                "mClipNameList": [
+                    "Spell_Cast",
+                    "{8d33df87}"
+                ],
+                "mEventDataMap": {
+                    "{4acd8033}": {
+                        "mEffectKey": "TFT17_Jhin_Spell_Cas",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "VFX_Channel": {
+                        "mStartFrame": 44.0,
+                        "mFireIfAnimationEndsEarly": true,
+                        "mEffectKey": "TFT17_Jhin_Spell_Channel",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{4dcd2409}": {
+                        "mStartFrame": 44.0,
+                        "mFireIfAnimationEndsEarly": true,
+                        "mEffectKey": "TFT17_Jhin_Spell_Channel_Chest",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "Spell_Out": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{b0c68e2f}": {
+                        "mEffectKey": "TFT17_Jhin_Spell_Cape_Dissolve",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Jhin/Skins/Base/Animations/TFT17_Jhin_Crit_ToIdle.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "EndFrame": 2.0,
+                "__type": "AtomicClipData"
+            }
+        },
+        "mMaskDataMap": {
+            "UpperBody": {
+                "mWeightList": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "MaskData"
+            },
+            "{4fc1e099}": {
+                "mWeightList": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "MaskData"
+            },
+            "{5c47ad5d}": {
+                "mWeightList": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "MaskData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "mPriority": 1,
+                "__type": "TrackData"
+            },
+            "Upper": {
+                "__type": "TrackData"
+            }
+        },
+        "mBlendDataTable": {
+            "6247030502141246797": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208476870491469": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6391149151960743245": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6030852527412002125": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5621869008294296909": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6473166354251300173": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298393289178445": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10832289110054976845": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1035573625340083533": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3626941284388224333": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6385097817918586189": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352413820501325": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364255402376525": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207952482581837": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12209195684588993869": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13823245390858206541": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11740310106270121293": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10174721757247225165": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10174721756721961990": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721754791759562": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "6385097816231668898": {
+                "mTime": 0.5,
+                "__type": "TimeBlendData"
+            },
+            "10174721756916336329": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721757292136561": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721756442648455": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721754073661440": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721755528161572": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721755578494429": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721755561716810": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721755477828715": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721755382604819": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721755580812928": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721756117751135": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721756595750285": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721754314774713": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721754918124513": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            },
+            "10174721755560307874": {
+                "mClipName": "Spell_Out",
+                "__type": "TransitionClipBlendData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

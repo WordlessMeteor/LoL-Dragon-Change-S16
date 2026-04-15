@@ -1,0 +1,436 @@
+{
+    "{3a0926f8}": {
+        "mClipDataMap": {
+            "Attack1": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{369a31d2}": {
+                        "mStartFrame": 11.0,
+                        "mSoundName": "Play_sfx_tft17_RammusBasicAttack_cast",
+                        "__type": "SoundEventData"
+                    },
+                    "{d1c5a4a6}": {
+                        "mStartFrame": 15.0,
+                        "mSoundName": "Play_sfx_tft17_RammusBasicAttack_hit",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/rammus_attack1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack2": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{369a31d2}": {
+                        "mStartFrame": 11.0,
+                        "mSoundName": "Play_sfx_tft17_RammusBasicAttack_cast",
+                        "__type": "SoundEventData"
+                    },
+                    "{d4bc83a0}": {
+                        "mStartFrame": 19.0,
+                        "mSoundName": "Play_sfx_tft17_RammusBasicAttack_cast",
+                        "__type": "SoundEventData"
+                    },
+                    "{d1c5a4a6}": {
+                        "mStartFrame": 14.0,
+                        "mSoundName": "Play_sfx_tft17_RammusBasicAttack_hit",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{ce2214fc}": {
+                        "mStartFrame": 22.0,
+                        "mSoundName": "Play_sfx_tft17_RammusBasicAttack_hit",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/rammus_attack2.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Death": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/rammus_death.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Run": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/Rammus_Run.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle1": {
+                "mFlags": 8,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{b3177b52}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{45a6418f}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "scale": 0.5,
+                        "__type": "ParticleEventData"
+                    },
+                    "{b21779bf}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{46a64322}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "scale": 0.5,
+                        "__type": "ParticleEventData"
+                    },
+                    "{b117782c}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{47a644b5}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "scale": 0.5,
+                        "__type": "ParticleEventData"
+                    },
+                    "{b0177699}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{40a639b0}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "scale": 0.5,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mTickDuration": 0.10000000149011612,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/rammus_idle1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Celebration": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/rammus_dance.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "mUpdaterResourceData": {
+                    "mUpdaterDataList": [
+                        {
+                            "Input": {
+                                "__type": "MoveSpeedParametricUpdater"
+                            },
+                            "mOutputType": 1,
+                            "mValueProcessorDataList": [
+                                {
+                                    "mMultiplier": 0.003000000026077032,
+                                    "__type": "LinearTransformProcessorData"
+                                }
+                            ],
+                            "__type": "UpdaterData"
+                        }
+                    ],
+                    "__type": "UpdaterResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell_Windup": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Hide": {
+                        "mHideSubmeshList": [
+                            "Ball"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/rammus_spell1_windup.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{3e56fa0e}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Mesh": {
+                        "mShowSubmeshList": [
+                            "Ball"
+                        ],
+                        "mHideSubmeshList": [
+                            "BODY"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/TFT17_Rammus_Ball_Run.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell_Cast": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "HideBody": {
+                        "mShowSubmeshList": [
+                            "Ball"
+                        ],
+                        "mHideSubmeshList": [
+                            "BODY"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{7eae23cc}": {
+                        "mEffectKey": "TFT17_Rammus_Q_Rollout_Placeholder_Buff_Trail",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Ball_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{7d762386}": {
+                        "mSoundName": "Play_sfx_tft17_RammusSpell_rampup",
+                        "__type": "SoundEventData"
+                    },
+                    "{19c8d3ee}": {
+                        "mStartFrame": 33.0,
+                        "mSoundName": "Play_sfx_tft17_RammusSpell_hit",
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{b786e3ee}": {
+                        "mStartFrame": 56.0,
+                        "mSoundName": "Play_sfx_tft17_RammusSpell_buffdeactivate",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Rammus/Skins/Base/Animations/RammusWheelSpell.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell": {
+                "mClipNameList": [
+                    "Spell_Windup",
+                    "Spell_Cast"
+                ],
+                "__type": "SequencerClipData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "__type": "TrackData"
+            }
+        },
+        "mBlendDataTable": {
+            "6247030500013570574": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208474742815246": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052617431022094": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298391161502222": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352411692825102": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253274700302": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207950354905614": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11556968082104056334": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052616385134592": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052617839634724": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052617889967581": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052618429224287": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052619558698317": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052619033435142": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052617103232714": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052619075950909": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6247030501810357961": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6463208476539602633": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "4492052619227809481": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "8779298392958289609": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13630352413489612489": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11374364255071487689": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3084207952151693001": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "12209195684258105033": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13823245390527317705": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11556968083900843721": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6247030502186158193": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208476915402865": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4492052619603609713": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298393334089841": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352413865412721": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364255447287921": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207952527493233": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12209195684633905265": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13823245390903117937": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11556968084276643953": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6247030501658499389": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6463208476387744061": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "8779298392806431037": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13630352413337753917": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11374364254919629117": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3084207951999834429": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "12209195684106246461": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13823245390375459133": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11556968083748985149": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

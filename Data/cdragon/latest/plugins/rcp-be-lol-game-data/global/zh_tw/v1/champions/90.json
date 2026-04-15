@@ -1240,7 +1240,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "馬爾札哈開啟兩扇通往虛空的傳送門，在短暫的延遲後，能量就會從虛空之中噴發，並且在兩道傳送門之間對流，對擊中的敵人造成魔法傷害和沉默效果。",
-            "dynamicDescription": "馬爾札哈開啟一道通往虛空的傳送門，傳送門會噴發出虛空中的能量，造成 <magicDamage>@TotalDamageTooltip@ 魔法傷害</magicDamage> 並<status>沉默</status>擊中的敵人，持續 @Effect2Amount@ 秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "馬爾札哈開啟兩道通往虛空的傳送門，傳送門會噴發出虛空能量，造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>和<status>沉默</status>效果，持續@SilenceDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1690,7 +1690,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "馬爾札哈釋放虛空中的能量，壓迫一名目標英雄，在其周圍創造一股負面能量。",
-            "dynamicDescription": "馬爾札哈<status>壓制</status>一名敵方英雄並在 @Effect4Amount@ 秒內造成 <magicDamage>@TotalDamageTooltip@ 魔法傷害</magicDamage>。此外在目標位置製造一個帶有負能量的領域，在 @Effect3Amount@ 秒內造成相當於其<magicDamage>@ZoneDamageTooltip@ 最大生命的魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "馬爾札哈<status>壓制</status>敵方英雄，並在@CCDuration@秒內造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>。在目標周圍創造一個負能量區域，在@PoolDuration@秒內造成<magicDamage>@ZoneDamageTooltip@最大生命的魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

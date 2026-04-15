@@ -74,7 +74,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Malzahar membuka dua portal ke Void. Setelah jeda singkat, portal menembakkan proyektil yang menghasilkan Magic Damage dan silence ke champion musuh.",
-            "dynamicDescription": "Malzahar membuka dua portal ke Void yang menembakkan proyektil ke tengah, menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> dan <status>Silence</status> selama @Effect2Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Malzahar membuka dua portal ke Void yang menembakkan proyektil ke tengah, menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> dan menerapkan <status>Silence</status> selama @SilenceDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -524,7 +524,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Malzahar menyalurkan kekuatan Void untuk melumpuhkan champion lawan dengan menciptakan area energi negatif yang mematikan.",
-            "dynamicDescription": "Malzahar menerapkan <status>Suppress</status> pada satu champion musuh dan menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> selama @Effect4Amount@ detik. Sebuah area energi negatif tercipta di sekitar targetnya, menghasilkan <magicDamage>@ZoneDamageTooltip@ magic damage berdasarkan Health maksimum</magicDamage> selama @Effect3Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Malzahar menerapkan <status>Suppress</status> pada satu champion musuh dan menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> selama @CCDuration@ detik. Sebuah area energi negatif tercipta di sekitar targetnya, menghasilkan <magicDamage>@ZoneDamageTooltip@ Health maksimum sebagai magic damage</magicDamage> selama @PoolDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

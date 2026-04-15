@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.7.1",
+    "version": "16.8.1",
     "data": {
         "Leblanc": {
             "id": "Leblanc",
@@ -610,7 +610,7 @@
                     "id": "LeblancW",
                     "name": "魔影迷踪",
                     "description": "乐芙兰位移至目标位置，并对目标位置附近的敌人造成伤害。在接下来的4秒里，她可以激活此技能来回到她的初始位置。",
-                    "tooltip": "乐芙兰冲刺然后对附近的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在冲刺后的{{ e3 }}秒里，乐芙兰可以<recast>再次施放</recast>。<br /><br /><recast>再次施放：</recast>乐芙兰回到她的初始位置。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "乐芙兰冲刺然后对附近的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在冲刺后的{{ snapbacktimeallowed }}秒里，乐芙兰可以<recast>再次施放</recast>。<br /><br /><recast>再次施放：</recast>乐芙兰回到她的初始位置。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -753,7 +753,7 @@
                     "id": "LeblancE",
                     "name": "幻影锁链",
                     "description": "乐芙兰抛出一条锁链来束缚命中的第一个敌人。如果目标持续被束缚1.5秒，那么目标就会受到额外的魔法伤害并且被禁锢。",
-                    "tooltip": "乐芙兰抛出一个锁链来束缚命中的第一个敌人，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>并提供目标的<keywordStealth>真实视野</keywordStealth>。<br /><br />如果目标持续被束缚{{ e3 }}秒，则乐芙兰会将其<status>禁锢</status>{{ e4 }}秒，并造成额外的<magicDamage>{{ delayeddamage }}魔法伤害</magicDamage>。 {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "乐芙兰抛出一个锁链来束缚命中的第一个敌人，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>并提供目标的<keywordStealth>真实视野</keywordStealth>。<br /><br />如果目标持续被束缚{{ tetherduration }}秒，则乐芙兰会将其<status>禁锢</status>{{ rootduration }}秒，并造成额外的<magicDamage>{{ delayeddamage }}魔法伤害</magicDamage>。 {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "锁链伤害",

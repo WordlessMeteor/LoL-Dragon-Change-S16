@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "LeBlanc fonce jusqu'à l'endroit visé, infligeant des dégâts aux ennemis proches de son point d'arrivée. Dans les 4 sec qui suivent, LeBlanc peut réactiver Distorsion pour retourner à son point de départ.",
-            "dynamicDescription": "LeBlanc se rue dans une direction, puis inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches. Pendant @Effect3Amount@ sec après la ruée, LeBlanc peut <recast>réactiver</recast> cette compétence.<br><br><recast>Réactivation :</recast> LeBlanc retourne à son point de départ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc se rue dans une direction, puis inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches. Pendant @SnapbackTimeAllowed@ sec après la ruée, LeBlanc peut <recast>réactiver</recast> cette compétence.<br><br><recast>Réactivation :</recast> LeBlanc retourne à son point de départ.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "LeBlanc lance une chaîne qui s'attache au premier ennemi touché. Si la cible reste enchaînée pendant 1.5 sec, LeBlanc l'immobilise et lui inflige des dégâts supplémentaires.",
-            "dynamicDescription": "LeBlanc lance une chaîne qui s'attache au premier ennemi touché, infligeant <magicDamage>@InitialDamage@ pts de dégâts magiques</magicDamage> et octroyant une <keywordStealth>vision pure</keywordStealth> de l'ennemi.<br><br>Si l'ennemi reste enchaîné pendant @Effect3Amount@ sec, LeBlanc l'<status>immobilise</status> pendant @Effect4Amount@ sec et inflige <magicDamage>@DelayedDamage@ pts de dégâts magiques</magicDamage> supplémentaires.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc lance une chaîne qui s'attache au premier ennemi touché, lui infligeant <magicDamage>@InitialDamage@ pts de dégâts magiques</magicDamage> et octroyant une <keywordStealth>vision pure</keywordStealth> de l'ennemi.<br><br>Si l'ennemi reste enchaîné pendant @TetherDuration@ sec, LeBlanc l'<status>immobilise</status> pendant @RootDuration@ sec et inflige <magicDamage>@DelayedDamage@ pts de dégâts magiques</magicDamage> bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

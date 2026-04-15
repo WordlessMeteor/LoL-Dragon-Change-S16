@@ -1,0 +1,504 @@
+{
+    "{5bf0aee6}": {
+        "mClipDataMap": {
+            "Attack1": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_Attack1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack2": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_attack2.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Death": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "WeaponHide": {
+                        "mName": "WeaponHide",
+                        "mHideSubmeshList": [
+                            "weapon"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "WeaponSnap": {
+                        "mStartFrame": 14.0,
+                        "mJointNameToOverride": "C_Hammer",
+                        "mJointNameToSnapTo": "Snap_Hammer2World",
+                        "__type": "JointSnapEventData"
+                    },
+                    "{bc48e427}": {
+                        "mStartFrame": 16.0,
+                        "mJointNameToOverride": "C_Anvil",
+                        "mJointNameToSnapTo": "Snap_Anvil2World",
+                        "__type": "JointSnapEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_death.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Run": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_Run.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Celebration": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{017d126c}": {
+                        "mSoundName": "Play_vo_Ornn_Dance3D_oneshot",
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{047d1725}": {
+                        "mStartFrame": 10.0,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{33ceb391}": {
+                        "mStartFrame": 5.0,
+                        "mSoundName": "Play_sfx_Ornn_Dance3D_buffactivate",
+                        "__type": "SoundEventData"
+                    },
+                    "{30ceaed8}": {
+                        "mStartFrame": 15.0,
+                        "mSoundName": "Play_sfx_Ornn_Dance3D_buffactivate",
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_Celebration.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle1": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_Idle1_BASE.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell_In": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{e5f052ad}": {
+                        "mEffectKey": "TFT17_Ornn_W_Cas_Mouth",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "c_buffbone_glb_head_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "l_eye": {
+                        "mEffectKey": "TFT17_Ornn_W_Cas_Eye",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "l_eye",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "R_eye": {
+                        "mEffectKey": "TFT17_Ornn_W_Cas_Eye",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "R_eye",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_Spell2_In.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "startFrame": 15.0,
+                "__type": "AtomicClipData"
+            },
+            "Spell_ToIdle": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_Spell2_toIdle.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell": {
+                "mClipNameList": [
+                    "Spell_In",
+                    "Spell_ToIdle"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Crit": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Ornn/Skins/Base/Animations/TFT17_Ornn_Crit.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            }
+        },
+        "mMaskDataMap": {
+            "Beard": {
+                "mWeightList": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.47999998927116394,
+                    0.47999998927116394,
+                    0.47999998927116394,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "MaskData"
+            },
+            "horn": {
+                "mWeightList": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.5999999642372131,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "MaskData"
+            },
+            "HEAD": {
+                "mWeightList": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.3100000023841858,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "MaskData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "mPriority": 1,
+                "__type": "TrackData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

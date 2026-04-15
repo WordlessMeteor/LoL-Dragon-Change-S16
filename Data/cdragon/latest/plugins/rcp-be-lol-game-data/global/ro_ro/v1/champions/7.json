@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "LeBlanc se năpustește spre o locație-țintă, provocându-le daune inamicilor din acea zonă. În următoarele 4 secunde, poate activa din nou ''Distorsiunea'' pentru a reveni în poziția inițială.",
-            "dynamicDescription": "LeBlanc se năpustește, apoi le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din apropiere. Timp de @Effect3Amount@ secunde după năpustire, LeBlanc poate <recast>refolosi</recast> abilitatea.<br><br><recast>Refolosire:</recast> LeBlanc se întoarce în locația de unde a plecat.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc se năpustește, apoi le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor din apropiere. Timp de @SnapbackTimeAllowed@ secunde după năpustire, LeBlanc poate <recast>refolosi</recast> abilitatea.<br><br><recast>Refolosire:</recast> LeBlanc se întoarce în locația de unde a plecat.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "LeBlanc aruncă un lanț care se prinde de primul inamic lovit. Dacă ținta rămâne prinsă timp de 1,5 secunde, LeBlanc o țintuiește și îi provoacă daune suplimentare.",
-            "dynamicDescription": "LeBlanc aruncă un lanț care se prinde de primul inamic lovit, provocându-i <magicDamage>@InitialDamage@ daune magice</magicDamage> și oferind <keywordStealth>''viziune supranaturală''</keywordStealth> asupra lui.<br><br>Dacă ținta rămâne prinsă în lanț timp de @Effect3Amount@ secunde, LeBlanc o <status>țintuiește</status> timp de @Effect4Amount@ secunde și îi provoacă încă <magicDamage>@DelayedDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc aruncă un lanț care se prinde de primul inamic lovit, provocându-i <magicDamage>@InitialDamage@ daune magice</magicDamage> și primind <keywordStealth>viziune supranaturală</keywordStealth> asupra lui.<br><br>Dacă ținta rămâne prinsă în lanț timp de @TetherDuration@ secunde, LeBlanc o <status>țintuiește</status> timp de @RootDuration@ secunde și îi provoacă încă <magicDamage>@DelayedDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

@@ -195,7 +195,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Run": {
+            "Run_Base": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/MasterYi/Skins/Skin09/Animations/masteryi_skin09_run02.anm",
@@ -845,7 +845,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Spell4_Start": {
+            "Spell4": {
                 "mFlags": 8,
                 "mTrackDataName": "{308026a3}",
                 "mEventDataMap": {
@@ -938,56 +938,6 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
-            },
-            "Spell4_Loop": {
-                "mFlags": 2,
-                "mMaskDataName": "Blade",
-                "mTrackDataName": "{4ff1374f}",
-                "mEventDataMap": {
-                    "HideMesh": {
-                        "mName": "HideMesh",
-                        "mHideSubmeshList": [
-                            "Base"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "Blade": {
-                        "mName": "Blade",
-                        "mShowSubmeshList": [
-                            "DualBlade"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "ShowUlt": {
-                        "mName": "ShowUlt",
-                        "mShowSubmeshList": [
-                            "Ult"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "HideArmor": {
-                        "mName": "HideArmor",
-                        "mShowSubmeshList": [
-                            "Ult_Armor"
-                        ],
-                        "mHideSubmeshList": [
-                            "Armor"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    }
-                },
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/MasterYi/Skins/Skin09/Animations/masteryi_skin09_Dualblade_loop.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
-            "Spell4": {
-                "mClipNameList": [
-                    "Spell4_Start",
-                    "Spell4_Loop"
-                ],
-                "__type": "SequencerClipData"
             },
             "{e2e28681}": {
                 "mFlags": 2,
@@ -1120,7 +1070,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Idle1": {
+            "{23ce9ff2}": {
                 "mSelectorPairDataList": [
                     {
                         "mClipName": "{e2e28681}",
@@ -1256,6 +1206,72 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "Idle1": {
+                "Updater": {
+                    "driver": {
+                        "Spell": "Characters/MasterYi/Spells/HighlanderAbility/Highlander",
+                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "mTrueConditionClipName": "Idle_Ult",
+                "mFalseConditionClipName": "{23ce9ff2}",
+                "__type": "ConditionBoolClipData"
+            },
+            "Run": {
+                "Updater": {
+                    "driver": {
+                        "Spell": "Characters/MasterYi/Spells/HighlanderAbility/Highlander",
+                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "mTrueConditionClipName": "Run_Ult",
+                "mFalseConditionClipName": "{b87a3f27}",
+                "__type": "ConditionBoolClipData"
+            },
+            "{b87a3f27}": {
+                "Updater": {
+                    "__type": "IsHomeguardParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "mTrueConditionClipName": "{f636cdf6}",
+                "mFalseConditionClipName": "{f636cdf6}",
+                "__type": "ConditionBoolClipData"
+            },
+            "{bc1ef3fb}": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Base",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Fast",
+                        "mValue": 400.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "{f636cdf6}": {
+                "Updater": {
+                    "driver": {
+                        "BuffType": 15,
+                        "__type": "HasBuffOfTypeBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "mTrueConditionClipName": "Run_Haste",
+                "mFalseConditionClipName": "{bc1ef3fb}",
+                "__type": "ConditionBoolClipData"
             }
         },
         "mMaskDataMap": {
@@ -1810,27 +1826,27 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "3084207949570525323": {
+            "17371216857835915403": {
                 "mClipName": "{2c993319}",
                 "__type": "TransitionClipBlendData"
             },
-            "3084207949587302942": {
+            "17371216857852693022": {
                 "mClipName": "{cb223827}",
                 "__type": "TransitionClipBlendData"
             },
-            "3084207949938047720": {
+            "17371216858203437800": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "3084207950027116234": {
+            "17371216861618959794": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "3084207952482581837": {
+            "17371216860747971917": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "3084207952895499517": {
+            "17371216861160889597": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
@@ -2070,7 +2086,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11374364254877113350": {
+            "2580175498861518834": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -2166,35 +2182,19 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12217611125000125160": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "12217611127215729814": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "12217611127957576957": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
             "12293627452757622024": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12304220884280687336": {
+            "13255853227527518952": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "12304220886496291990": {
+            "13255853229984858183": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12304220886516457396": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "12304220887238139133": {
+            "13255853230484970749": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
@@ -2259,10 +2259,6 @@
                 "__type": "TimeBlendData"
             },
             "13156647006022188365": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "13255853229984858183": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -2444,6 +2440,14 @@
             },
             "18440898983995587563": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254877113350": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1825666299529387014": {
+                "mTime": 0.30000001192092896,
                 "__type": "TimeBlendData"
             }
         },

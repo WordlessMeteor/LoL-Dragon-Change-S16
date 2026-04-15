@@ -478,13 +478,13 @@
                     350.0
                 ]
             },
-            "desc": "Cherry_SelfDestruct_Summary",
+            "desc": "Ogni @BombDelay@ secondi <keywordMajor>lancio automaticamente</keywordMajor>, ti attacchi una bomba che esplode, infliggendo <trueDamage>ingenti danni puri</trueDamage> e <status>lanciando in aria</status> i nemici vicini.",
             "iconLarge": "assets/ux/cherry/augments/icons/selfdestruct_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/selfdestruct_small.png",
             "id": 108,
             "name": "Autodistruzione",
             "rarity": 0,
-            "tooltip": "Cherry_SelfDestruct_Tooltip"
+            "tooltip": "Ogni @BombDelay@ secondi <keywordMajor>lancio automaticamente</keywordMajor>, ti attacchi una bomba che esplode, infliggendo <trueDamage>@MaxHealthDamage*100@% della salute massima come danni puri</trueDamage> e <status>lancia in aria</status> i nemici vicini per @KnockupDuration@ secondi."
         },
         {
             "apiName": "ServeBeyondDeath",
@@ -568,13 +568,13 @@
                     30.0
                 ]
             },
-            "desc": "Cherry_ServeBeyondDeath_Summary",
+            "desc": "La prima volta che muori a ogni turno, torni in vita con <scaleHealth>piena salute</scaleHealth> che però <status>decade</status> nel tempo. <br><br><keywordMajor>L'eliminazione</keywordMajor> di un campione nemico durante il <status>decadimento</status> della tua salute blocca il <status>decadimento</status>.",
             "iconLarge": "assets/ux/cherry/augments/icons/servebeyonddeath_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/servebeyonddeath_small.png",
             "id": 120,
             "name": "Oltre la morte",
             "rarity": 0,
-            "tooltip": "Cherry_ServeBeyondDeath_Tooltip"
+            "tooltip": "La prima volta che muori a ogni turno, torni in vita con <scaleHealth>piena salute</scaleHealth> che però <status>decade</status> nel corso di @DecayDuration@ secondi. <br><br><keywordMajor>L'eliminazione</keywordMajor> di un campione nemico durante il <status>decadimento</status> della tua salute blocca il <status>decadimento</status> e fissa la <scaleHealth>salute</scaleHealth> a un <healing>@TriumphPercent@% della salute massima</healing>."
         },
         {
             "apiName": "UndyingGuard",
@@ -924,13 +924,13 @@
                     10.0
                 ]
             },
-            "desc": "Cherry_QuantumComputing_Summary",
+            "desc": "<keywordMajor>Lanci automaticamente</keywordMajor> e periodicamente un enorme fendente intorno a te, infliggendo <physicalDamage>danni fisici</physicalDamage>. <br><br>I nemici colpiti dal bordo esterno subiscono <status>rallentamento</status>, ricevono <physicalDamage>danni</physicalDamage> aggiuntivi e ti forniscono <healing>guarigione</healing>.",
             "iconLarge": "assets/ux/cherry/augments/icons/quantumcomputing_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quantumcomputing_small.png",
             "id": 66,
             "name": "Calcolo quantistico",
             "rarity": 2,
-            "tooltip": "Cherry_QuantumComputing_Tooltip"
+            "tooltip": "Ogni @Cooldown@ secondi <keywordMajor>lanci automaticamente</keywordMajor> un enorme fendente in un cerchio intorno a te, infliggendo <physicalDamage>@BaseDamageTotal@ danni fisici</physicalDamage>. <br><br>I nemici colpiti dalla metà esterna vengono <status>rallentati</status> di un @SlowPercentage@%, che decade nell'arco di @SlowDuration@ secondi, subiscono <physicalDamage>@OuterEdgeTooltip@ danni fisici aggiuntivi in base alla salute massima</physicalDamage> e tu ti curi di un <healing>@OuterConeHealingRatio@% dei danni inflitti dal campione</healing>."
         },
         {
             "apiName": "DemonsDance",
@@ -1248,13 +1248,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmuteChaos_Tooltip",
+            "desc": "Ottieni <keywordMajor>@AugmentsToGrantToolTipOnly@%i:Augment% Impianti casuali</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmutechaos_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmutechaos_small.png",
             "id": 243,
             "name": "Trasmutazione: Caos",
             "rarity": 2,
-            "tooltip": "Cherry_TransmuteChaos_Tooltip"
+            "tooltip": "Ottieni <keywordMajor>@AugmentsToGrantToolTipOnly@%i:Augment% Impianti casuali</keywordMajor>."
         },
         {
             "apiName": "Chauffeur",
@@ -1505,13 +1505,13 @@
                     0.029999999329447746
                 ]
             },
-            "desc": "Cherry_Quest_MadHatter_Summary",
+            "desc": "Requisito: indossa @QuestThreshold@ cappelli alla fine del combattimento.<br><br>Ricompensa: ottieni <scaleAF>forza adattiva</scaleAF>, <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR>, <scaleTenacity>Tenacia</scaleTenacity> e <speed>velocità di movimento</speed> per cappello.",
             "iconLarge": "assets/ux/cherry/augments/icons/mad_hatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mad_hatter_small.png",
             "id": 318,
             "name": "Missione: Cappellaio matto",
             "rarity": 1,
-            "tooltip": "Cherry_Quest_MadHatter_Tooltip"
+            "tooltip": "Requisito: indossa @QuestThreshold@ cappelli alla fine del combattimento.<br><br>Ricompensa: ottieni <scaleAF>@AFPerHat@ Forza adattiva</scaleAF>, @ArmorMRPerHat@ <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR>, <scaleTenacity>@TenacityPerHat*100@% Tenacia</scaleTenacity> e <speed>@MSPerHat@ velocità di movimento</speed> per cappello.<br><br>Attualmente fornisce: <scaleAF>@f1@ Forza adattiva</scaleAF>, @f2@ <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR>, <scaleTenacity>@f3*100@% Tenacia</scaleTenacity> e <speed>@f4@ velocità di movimento</speed>.<br><br><rules>Perdi metà dei cappelli quando perdi un turno.</rules>"
         },
         {
             "apiName": "BladeWaltz",
@@ -1879,13 +1879,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SummonerRevolution_Summary",
+            "desc": "I tuoi <keywordMajor>Incantesimi dell'evocatore</keywordMajor> ottengono un certo numero di cariche (@BonusCharges@) aggiuntive. <br><br>Inoltre, <spellName>Flash</spellName> si azzera a ogni nuovo turno.",
             "iconLarge": "assets/ux/cherry/augments/icons/summonerrevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/summonerrevolution_small.png",
             "id": 223,
             "name": "Rivoluzione dell'evocatore",
             "rarity": 1,
-            "tooltip": "Cherry_SummonerRevolution_Summary"
+            "tooltip": "I tuoi <keywordMajor>Incantesimi dell'evocatore</keywordMajor> ottengono un certo numero di cariche (@BonusCharges@) aggiuntive. <br><br>Inoltre, <spellName>Flash</spellName> si azzera a ogni nuovo turno."
         },
         {
             "apiName": "IceCold",
@@ -2065,13 +2065,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_TankItOrLeaveit_Summary",
+            "desc": "Puoi attivare la <crit>difesa critica</crit> usando la tua <crit>probabilità di critico</crit> (al massimo @MaxChance*100@%), con la probabilità di ridurre i danni subiti. <br><br>Ottieni <crit>%i:scaleCrit% @CritChance*100@% probabilità di critico</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/tankitorleaveit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tankitorleaveit_small.png",
             "id": 80,
             "name": "Difendere o lasciare",
             "rarity": 0,
-            "tooltip": "Cherry_TankItOrLeaveIt_Tooltip"
+            "tooltip": "Puoi attivare la <crit>difesa critica</crit> usando la tua <crit>probabilità di critico</crit> (al massimo @MaxChance*100@%), con la probabilità di ridurre i danni subiti di @CriticalDefendCalc@. <br><br>Ottieni <crit>%i:scaleCrit% @CritChance*100@% probabilità di critico</crit>."
         },
         {
             "apiName": "CraftingSellAugment",
@@ -2413,13 +2413,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_Stats_Tooltip",
+            "desc": "Ottieni @AmountOfStatAnvils@ %i:StatAnvil% Incudini per statistiche!",
             "iconLarge": "assets/ux/cherry/augments/icons/stats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stats_small.png",
             "id": 226,
             "name": "Statistiche!",
             "rarity": 0,
-            "tooltip": "Cherry_Stats_Tooltip"
+            "tooltip": "Ottieni @AmountOfStatAnvils@ %i:StatAnvil% Incudini per statistiche!"
         },
         {
             "apiName": "MasterofDuality",
@@ -2596,7 +2596,7 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_SearingDawn_Summary",
+            "desc": "Le tue abilità marchiano i nemici, che subiscono <magicDamage>danni magici</magicDamage> aggiuntivi dall'attacco o dall'abilità successivi del tuo alleato.",
             "iconLarge": "assets/ux/cherry/augments/icons/searingdawn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/searingdawn_small.png",
             "id": 72,
@@ -2983,13 +2983,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_PhenomenalEvil_Summary",
+            "desc": "Ottieni permanentemente <scaleAP>@APPerProc@ potere magico</scaleAP> quando colpisci un nemico con un'abilità.<br><br>Se ottenuto dopo il turno @RoundCounterForBonusAP@, ottieni <scaleAP>@BonusAPForLatePick@ potere magico</scaleAP>.",
             "iconLarge": "assets/ux/cherry/augments/icons/phenomenalevil_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/phenomenalevil_small.png",
             "id": 65,
             "name": "Male fenomenale",
             "rarity": 1,
-            "tooltip": "Cherry_PhenomenalEvil_Tooltip"
+            "tooltip": "Ottieni permanentemente <scaleAP>@APPerProc@ potere magico</scaleAP> quando colpisci un nemico con un'abilità.<br><br>@SpellIDCD@ secondi di ricarica per abilità.<br><br><rules>Se ottenuto dopo il turno @RoundCounterForBonusAP@, ottieni <scaleAP>@BonusAPForLatePick@ potere magico</scaleAP>.</rules>"
         },
         {
             "apiName": "BigBrain",
@@ -3153,7 +3153,7 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_UltimateRoulette_Summary",
+            "desc": "Sostituisci <spellName>Fuga</spellName> con una <attention>suprema</attention> casuale. <br><br>Dopo il lancio della <attention>suprema</attention>, questa viene sostituita da un'altra <attention>suprema</attention> casuale.",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
@@ -3593,13 +3593,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_UltimateRevolution_Summary",
+            "desc": "Una volta per turno, azzeri la ricarica della tua <attention>suprema</attention> dopo averla lanciata.",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 88,
             "name": "Rivoluzione suprema",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRevolution_Tooltip"
+            "tooltip": "Una volta per turno, azzeri la ricarica della tua <attention>suprema</attention> dopo averla lanciata."
         },
         {
             "apiName": "TricksterDemon",
@@ -3789,13 +3789,13 @@
                     0.30000001192092896
                 ]
             },
-            "desc": "Cherry_SlowAndSteady_Summary",
+            "desc": "La tua <speed>velocità d'attacco</speed> non può superare @StaticRatio@. Tutta la <speed>velocità d'attacco</speed> bonus viene convertita in <scaleAD>attacco fisico</scaleAD>.<br>",
             "iconLarge": "assets/ux/cherry/augments/icons/slowandsteady_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slowandsteady_small.png",
             "id": 250,
             "name": "Lento e inesorabile",
             "rarity": 1,
-            "tooltip": "Cherry_SlowAndSteady_Tooltip"
+            "tooltip": "La tua <speed>velocità d'attacco</speed> non può superare @StaticRatio@. Tutta la <speed>velocità d'attacco</speed> bonus viene convertita in <scaleAD>attacco fisico</scaleAD> (<scaleAD>@ADPerAS@ attacco fisico</scaleAD> ogni <speed>1% di velocità d'attacco</speed>).<br><br>Attualmente ottieni: @f1@ <scaleAD>attacco fisico</scaleAD>"
         },
         {
             "apiName": "FrostWraith",
@@ -4042,7 +4042,7 @@
             "id": 79,
             "name": "Sinfonia della guerra",
             "rarity": 2,
-            "tooltip": "Cherry_SymphonyofWar_Tooltip"
+            "tooltip": "Ottieni le rune chiave <spellName>Tempo letale</spellName> e <spellName>Conquistatore</spellName>.<br><li><spellName>Tempo letale</spellName>: attaccare i campioni ti fornisce <attackSpeed>velocità d'attacco</attackSpeed> cumulabile fino a 6 volte. A 6 cariche, i tuoi attacchi scagliano un dardo che infligge danni aggiuntivi.<br><li><spellName>Conquistatore</spellName> - Gli attacchi e le abilità che colpiscono i campioni ti garantiscono <adaptiveForce>Forza Adattiva</adaptiveForce>, accumulandosi fino a 12 volte. A 12 cariche, ti curi di una percentuale dei danni che infliggi ai campioni."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -4184,7 +4184,7 @@
             "id": 60,
             "name": "Anima dell'oceano",
             "rarity": 0,
-            "tooltip": "Cherry_OceanSoul_Tooltip"
+            "tooltip": "Ottieni Anima dell'oceano, che garantisce la rigenerazione di <healing>salute</healing> e <scaleMana>mana</scaleMana> dopo aver inflitto danni ai nemici."
         },
         {
             "apiName": "Bodyguard",
@@ -4346,13 +4346,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_Quest_WoogletsWitchcap_Summary",
+            "desc": "Immediato: ottieni un <attention>Bastone colossale</attention>.<br><br>Requisito: possiedi <attention>Copricapo di Rabadon</attention> e <attention>Clessidra di Zhonya</attention>.<br><br>Ricompensa: ottieni <attention>Copricapo di Wooglet</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_woogletswitchcap_small.png",
             "id": 156,
             "name": "Missione: Copricapo di Wooglet",
             "rarity": 2,
-            "tooltip": "Cherry_Quest_WoogletsWitchcap_Summary"
+            "tooltip": "Immediato: ottieni un <attention>Bastone colossale</attention>.<br><br>Requisito: possiedi <attention>Copricapo di Rabadon</attention> e <attention>Clessidra di Zhonya</attention>.<br><br>Ricompensa: ottieni <attention>Copricapo di Wooglet</attention>."
         },
         {
             "apiName": "Earthwake",
@@ -4616,7 +4616,7 @@
             "id": 76,
             "name": "Boom sonico",
             "rarity": 0,
-            "tooltip": "Cherry_SonicBoom_Tooltip"
+            "tooltip": "Potenziare, <healing>curare</healing> o <shield>proteggere</shield> il tuo alleato infligge <trueDamage>@Damage@ danni puri</trueDamage> e <status>rallenta i nemici che lo circondano</status> di un @SlowAmount*-100@% per @SlowDuration@ secondi.<br><br>Danni inflitti in questo turno: @f1@<br>Totale danni inflitti: @f2@"
         },
         {
             "apiName": "TwiceThrice",
@@ -4641,13 +4641,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_TwiceThrice_Tooltip",
+            "desc": "Ogni @ProcCadence@ attacchi, gli effetti {{ Item_Keyword_OnHit }} sono attivati una seconda volta.",
             "iconLarge": "assets/ux/cherry/augments/icons/twicethrice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/twicethrice_small.png",
             "id": 107,
             "name": "Due, tre volte",
             "rarity": 1,
-            "tooltip": "Cherry_TwiceThrice_Tooltip"
+            "tooltip": "Ogni @ProcCadence@ attacchi, gli effetti {{ Item_Keyword_OnHit }} sono attivati una seconda volta."
         },
         {
             "apiName": "SymbioticMutation",
@@ -5052,7 +5052,7 @@
                     0.30000001192092896
                 ]
             },
-            "desc": "Cherry_Overflow_Summary",
+            "desc": "I tuoi costi in <scaleMana>mana</scaleMana> sono raddoppiati. <br><br>La tua abilità <healing>cura</healing>, <shield>protegge</shield> e i danni aumentano in base al tuo <scaleMana>mana massimo</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/overflow_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/overflow_small.png",
             "id": 311,
@@ -5338,13 +5338,13 @@
                     0.6000000238418579
                 ]
             },
-            "desc": "Cherry_RaidBoss_Summary",
+            "desc": "Inizi ogni turno imprigionato. Mentre sei imprigionato, ottieni una notevole riduzione danni, aumenti di dimensioni e ottieni potere nel tempo. <br><br>Quando fuggi, <status>respingi</status> i nemici e ottieni uno <shield>scudo</shield>.",
             "iconLarge": "assets/ux/cherry/augments/icons/raidboss_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/raidboss_small.png",
             "id": 125,
             "name": "Boss dei raid",
             "rarity": 2,
-            "tooltip": "Cherry_RaidBoss_Tooltip"
+            "tooltip": "Inizi ogni turno imprigionato al centro dell'arena, senza poter effettuare azioni. Mentre sei imprigionato, ottieni fino a un @DamageReductionMax*100@% di riduzione danni, aumenti di dimensioni e ottieni <scaleHealth>salute</scaleHealth>, <physicalDamage>attacco fisico</physicalDamage> e <scaleAP>potere magico</scaleAP> nel tempo (al massimo @StatIncrease*100@%). <br><br>Dopo @ImprisonDuration@ secondi o dopo aver raggiunto un <scaleHealth>@BreakoutHealthThreshold*100@% di salute</scaleHealth>, ti liberi <status>respingendo</status> i nemici e ottenendo uno <shield>@ShieldHealthRatio*100@scudo pari a un % della salute massima</shield>."
         },
         {
             "apiName": "OutlawsGrit",
@@ -5415,7 +5415,7 @@
                     15.0
                 ]
             },
-            "desc": "Cherry_OutlawsGrit_Summary",
+            "desc": "Dopo aver usato un'abilità di scatto, teletrasporto o teletrasporto lungo, ottieni <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR>.",
             "iconLarge": "assets/ux/cherry/augments/icons/outlawsgrit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/outlawsgrit_small.png",
             "id": 63,
@@ -5920,13 +5920,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_PrismaticEgg_Summary",
+            "desc": "Ottieni @KillStackCredit@ carica con le eliminazioni, una volta per turno per campione.<br><br>Dopo @RequiredKillCount@ cariche, si schiude in un <attention>Incudine per oggetto Prismatico</attention>, <attention>%i:Augment% Impianto prismatico</attention> e un <attention>%i:StatAnvil% Incudine per statistiche prismatica</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_prismaticegg_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_prismaticegg_small.png",
             "id": 224,
             "name": "Uovo prismatico",
             "rarity": 2,
-            "tooltip": "Cherry_PrismaticEgg_Tooltip"
+            "tooltip": "{{Cherry_PrismaticEgg_Summary}}"
         },
         {
             "apiName": "Clothesline",
@@ -6202,13 +6202,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SoulSiphon_Summary",
+            "desc": "<lifeSteal>Ti curi di un @HealPercentage*100@% dei danni inflitti</lifeSteal> con i <crit>colpi critici</crit> <br><br>Ottieni <crit>%i:scaleCrit% @CritChance*100@% probabilità di critico</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/soulsiphon_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/soulsiphon_small.png",
             "id": 77,
             "name": "Risucchio spirituale",
             "rarity": 1,
-            "tooltip": "Cherry_SoulSiphon_Tooltip"
+            "tooltip": "{{Cherry_SoulSiphon_Summary}}"
         },
         {
             "apiName": "GambaAnvil",
@@ -6385,13 +6385,13 @@
                     0.3499999940395355
                 ]
             },
-            "desc": "Cherry_ThreadtheNeedle_Summary",
+            "desc": "Ottieni @PercentPen*100@% <armorPen>%i:scaleAPen%penetrazione armatura</armorPen> e <magicPen>%i:scaleMPen% penetrazione magica</magicPen>.",
             "iconLarge": "assets/ux/cherry/augments/icons/threadtheneedle_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/threadtheneedle_small.png",
             "id": 84,
             "name": "Lavoro di ago e filo",
             "rarity": 1,
-            "tooltip": "Cherry_ThreadtheNeedle_Summary"
+            "tooltip": "Ottieni @PercentPen*100@% <armorPen>%i:scaleAPen%penetrazione armatura</armorPen> e <magicPen>%i:scaleMPen% penetrazione magica</magicPen>."
         },
         {
             "apiName": "BreadAndCheese",
@@ -6707,13 +6707,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_PandorasBox_Summary",
+            "desc": "Trasmuta tutti i tuoi Impianti in <keywordMajor>%i:Augment% Impianti Prismatici casuali</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/pandoras_box_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/pandoras_box_small.png",
             "id": 317,
             "name": "Vaso di Pandora",
             "rarity": 2,
-            "tooltip": "Cherry_PandorasBox_Summary"
+            "tooltip": "Trasmuta tutti i tuoi Impianti in <keywordMajor>%i:Augment% Impianti Prismatici casuali</keywordMajor>."
         },
         {
             "apiName": "ExtendoArm",
@@ -7125,13 +7125,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_SpiritLink_Summary",
+            "desc": "{{Cherry_SpiritLink@TeamSize@_Summary}}",
             "iconLarge": "assets/ux/cherry/augments/icons/spiritlink_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/spiritlink_small.png",
             "id": 78,
             "name": "Collegamento spirituale",
             "rarity": 2,
-            "tooltip": "Cherry_SpiritLink_Tooltip"
+            "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Danni reindirizzati totali: @f1@<br>Cura totale effettuata: @f2@<br>"
         },
         {
             "apiName": "Deathtouch",
@@ -7654,13 +7654,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_OkBoomerang_Summary",
+            "desc": "Lancia <keywordMajor>automaticamente</keywordMajor> un boomerang a un nemico nelle vicinanze ogni @Cooldown@ secondo/i.",
             "iconLarge": "assets/ux/cherry/augments/icons/okboomerang_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/okboomerang_small.png",
             "id": 61,
             "name": "OK Boomerang",
             "rarity": 1,
-            "tooltip": "Cherry_OkBoomerang_Tooltip"
+            "tooltip": "Lancia <keywordMajor>automaticamente</keywordMajor> un boomerang a un nemico nelle vicinanze ogni @Cooldown@ secondo/i, infliggendo <physicalDamage>@Damage@ danni fisici</physicalDamage> ai nemici colpiti.<br><br>Danni inflitti in questo turno: @f1@<br>Totale danni inflitti: @f2@"
         },
         {
             "apiName": "Hybrid",
@@ -8016,7 +8016,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SlimeTime_Summary",
+            "desc": "Ogni manciata di secondi <keywordMajor>lanci automaticamente</keywordMajor> dal corpo una scarica di melma, infliggendo <magicDamage>danni magici</magicDamage> ai nemici vicini. <br><br>Se colpisci un campione, secerni un blob che ti <healing>cura</healing> quando lo calpesti.",
             "iconLarge": "assets/ux/cherry/augments/icons/slimetime_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slimetime_small.png",
             "id": 232,
@@ -8572,13 +8572,13 @@
                     0.800000011920929
                 ]
             },
-            "desc": "Cherry_NestingDoll_Summary",
+            "desc": "Ottieni @BonusLives@ <attention>rianimazioni</attention> aggiuntive e inizia a rianimarti automaticamente dopo la morte.<br><br>Quando ti <attention>rianimi</attention>, <status>respingi</status> i nemici intorno a te e ritorni più piccolo con <scaleHealth>salute massima</scaleHealth> ridotta.",
             "iconLarge": "assets/ux/cherry/augments/icons/nesting_doll.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nesting_doll_small.png",
             "id": 177,
             "name": "Matriosca",
             "rarity": 1,
-            "tooltip": "Cherry_NestingDoll_Tooltip"
+            "tooltip": "Inizi automaticamente a <attention>rianimarti</attention> dopo @ReviveArmTime@ secondi e puoi essere <attention>rianimato</attention> @BonusLives@ volte in più. Ogni volta che vieni <attention>rianimato</attention>, sei più piccolo e hai un <scaleHealth>@ReviveMod*100@% della salute massima</scaleHealth>.<br><br>Quando <attention>torni in vita</attention>, <status>respingi</status> i nemici attorno a te."
         },
         {
             "apiName": "TapDancer",
@@ -8624,13 +8624,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_TapDancer_Summary",
+            "desc": "I tuoi attacchi ti conferiscono <speed>@MSPerHit@ velocità di movimento</speed> {{ Item_Keyword_OnHit }}. <br><br>Ottieni <attackSpeed>velocità d'attacco</attackSpeed> pari a un @MSToASConversion*10000@% della tua <speed>velocità di movimento</speed>.",
             "iconLarge": "assets/ux/cherry/augments/icons/tapdancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tapdancer_small.png",
             "id": 81,
             "name": "Tip tap",
             "rarity": 2,
-            "tooltip": "Cherry_TapDancer_Tooltip"
+            "tooltip": "I tuoi attacchi ti conferiscono <speed>@MSPerHit@ velocità di movimento</speed> {{ Item_Keyword_OnHit }}. <br><br>Ottiene <attackSpeed>@MSToASConversionCalc@ velocità d'attacco</attackSpeed>."
         },
         {
             "apiName": "FanTheHammer",
@@ -8743,7 +8743,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/replace_augment.png",
             "iconSmall": "assets/ux/cherry/augments/icons/replace_augment_small.png",
             "id": 364,
-            "name": "Cherry_ReplaceAugment_Name",
+            "name": "Sostituisci Impianto",
             "rarity": 4,
             "tooltip": "Cherry_ReplaceAugment_Summary"
         },
@@ -8837,13 +8837,13 @@
                     0.550000011920929
                 ]
             },
-            "desc": "Cherry_Minionmancer_Tooltip",
+            "desc": "Le tue evocazioni ottengono un aumento di dimensioni, salute e danni di un @MinionAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/minionmancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/minionmancer_small.png",
             "id": 104,
             "name": "Minionmante",
             "rarity": 1,
-            "tooltip": "Cherry_Minionmancer_Tooltip"
+            "tooltip": "Le tue evocazioni ottengono un aumento di dimensioni, salute e danni di un @MinionAmp*100@%."
         },
         {
             "apiName": "Multitool",
@@ -8937,7 +8937,7 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_TankEngine_Summary",
+            "desc": "Ottieni dimensioni maggiori e <scaleHealth>una percentuale di salute bonus</scaleHealth> per ogni uccisione.",
             "iconLarge": "assets/ux/cherry/augments/icons/tank_engine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tank_engine_small.png",
             "id": 313,
@@ -9048,13 +9048,13 @@
                     7.0
                 ]
             },
-            "desc": "Cherry_OmniSoul_Summary",
+            "desc": "Ottieni @SoulsToAdd@ <attention>anime del Drago</attention> casuali.",
             "iconLarge": "assets/ux/cherry/augments/icons/omnisoul_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/omnisoul_small.png",
             "id": 62,
             "name": "OnniAnima",
             "rarity": 2,
-            "tooltip": "Cherry_OmniSoul_Summary"
+            "tooltip": "Ottieni @SoulsToAdd@ <attention>anime del Drago</attention> casuali."
         },
         {
             "apiName": "DawnbringersResolve",
@@ -9148,13 +9148,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_SilverSpoon_Summary",
+            "desc": "Infliggi danni aumentati per ogni <keywordMajor>%i:Augment% Impianto Argento</keywordMajor> che possiedi.",
             "iconLarge": "assets/ux/cherry/augments/icons/silver_spoon.png",
             "iconSmall": "assets/ux/cherry/augments/icons/silver_spoon_small.png",
             "id": 356,
-            "name": "Cherry_SilverSpoon_Name",
+            "name": "Cucchiaio d'argento",
             "rarity": 0,
-            "tooltip": "Cherry_SilverSpoon_Tooltip"
+            "tooltip": "Infliggi @DamagePerSilver*100@% di danni aumentati per ogni <keywordMajor>%i:Augment% Impianto Argento</keywordMajor> che possiedi.<br><br>Infliggi un @F1*100@% di danni aggiuntivi."
         },
         {
             "apiName": "HoldVeryStill",
@@ -9896,13 +9896,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_StatsOnStatsOnStats_Tooltip",
+            "desc": "Ottieni @AmountOfStatAnvils@ %i:StatAnvil% Incudini per statistiche!",
             "iconLarge": "assets/ux/cherry/augments/icons/statsonstatsonstats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/statsonstatsonstats_small.png",
             "id": 228,
             "name": "Statistiche su statistiche su statistiche!",
             "rarity": 2,
-            "tooltip": "Cherry_StatsOnStatsOnStats_Tooltip"
+            "tooltip": "Ottieni @AmountOfStatAnvils@ %i:StatAnvil% Incudini per statistiche!"
         },
         {
             "apiName": "Deft",
@@ -10204,13 +10204,13 @@
                     0.07999999821186066
                 ]
             },
-            "desc": "Cherry_RighteousFury_Summary",
+            "desc": "Fornire <healing>cure</healing> e <shield>scudi</shield> aumenta i tuoi danni da abilità di un @SpellDamagePerStack*100@% cumulabile all'infinito per il resto del turno.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
             "id": 343,
             "name": "Furia del giusto",
             "rarity": 2,
-            "tooltip": "Cherry_RighteousFury_Tooltip"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@ secondo/i di ricarica per lancio abilità, Impianto e oggetto."
         },
         {
             "apiName": "OrbitalLaser",
@@ -10438,13 +10438,13 @@
                     0.5
                 ]
             },
-            "desc": "Cherry_MysticPunch_Summary",
+            "desc": "{{ Item_Keyword_OnHit }} riduce la ricarica delle tue abilità di @CooldownRefund@ secondi %i:scaleCooldown%.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Pugno mistico",
             "rarity": 2,
-            "tooltip": "Cherry_MysticPunch_Summary"
+            "tooltip": "{{ Item_Keyword_OnHit }} riduce la ricarica delle tue abilità di @CooldownRefund@ secondi %i:scaleCooldown%."
         },
         {
             "apiName": "Homeguard",
@@ -10788,13 +10788,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmutePrismatic_Tooltip",
+            "desc": "Ottieni un <keywordMajor>%i:Augment% Impianto Prismatico</keywordMajor> casuale.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmuteprismatic_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmuteprismatic_small.png",
             "id": 238,
             "name": "Trasmutazione: Prismatico",
             "rarity": 1,
-            "tooltip": "Cherry_TransmutePrismatic_Tooltip"
+            "tooltip": "Ottieni un <keywordMajor>%i:Augment% Impianto Prismatico</keywordMajor> casuale."
         },
         {
             "apiName": "GoHCravingForRisk",
@@ -11054,13 +11054,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmuteGold_Tooltip",
+            "desc": "Ottieni un <keywordMajor>%i:Augment% Impianto Oro</keywordMajor> casuale.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmutegold_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmutegold_small.png",
             "id": 237,
             "name": "Trasmutazione: Oro",
             "rarity": 0,
-            "tooltip": "Cherry_TransmuteGold_Tooltip"
+            "tooltip": "Ottieni un <keywordMajor>%i:Augment% Impianto Oro</keywordMajor> casuale."
         },
         {
             "apiName": "ApexInventor",
@@ -11762,13 +11762,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_StatsOnStats_Tooltip",
+            "desc": "Ottieni @AmountOfStatAnvils@ %i:StatAnvil% Incudini per statistiche!",
             "iconLarge": "assets/ux/cherry/augments/icons/statsonstats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/statsonstats_small.png",
             "id": 227,
             "name": "Statistiche su statistiche!",
             "rarity": 1,
-            "tooltip": "Cherry_StatsOnStats_Tooltip"
+            "tooltip": "Ottieni @AmountOfStatAnvils@ %i:StatAnvil% Incudini per statistiche!"
         },
         {
             "apiName": "Dashing",
@@ -12074,7 +12074,7 @@
                     700.0
                 ]
             },
-            "desc": "Cherry_SkilledSniper_Summary",
+            "desc": "Colpire un nemico con un'<keywordMajor>abilità non suprema</keywordMajor> dalla lunga distanza abbassa di molto la sua ricarica. ",
             "iconLarge": "assets/ux/cherry/augments/icons/skilledsniper_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/skilledsniper_small.png",
             "id": 113,
@@ -12490,13 +12490,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_Oathsworn_Tooltip",
+            "desc": "Sostituisci <spellName>Fuga</spellName> con <spellName>Chiamata del fato</spellName>.<br><br><rules><spellName>Chiamata del fato</spellName>, il tuo alleato non è bersagliabile per un massimo di 4 secondi. L'alleato può uscirne, lanciandosi verso una posizione, <status>respingendo</status> i nemici.</rules><br>",
             "iconLarge": "assets/ux/cherry/augments/icons/oathsworn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/oathsworn_small.png",
             "id": 109,
             "name": "Patto",
             "rarity": 1,
-            "tooltip": "Cherry_Oathsworn_Tooltip"
+            "tooltip": "Sostituisci <spellName>Fuga</spellName> con <spellName>Chiamata del fato</spellName>.<br><br><rules><spellName>Chiamata del fato</spellName>, il tuo alleato non è bersagliabile per un massimo di 4 secondi. L'alleato può uscirne, lanciandosi verso una posizione, <status>respingendo</status> i nemici.</rules><br>"
         },
         {
             "apiName": "AimForTheHead",
@@ -12719,13 +12719,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SummonersRoulette_Summary",
+            "desc": "Sostituisci i tuoi <attention>Incantesimi dell'evocatore</attention> con altri casuali. <br><br>Quando usi un <attention>Incantesimo dell'evocatore</attention>, sostituiscilo con un altro casuale con una ricarica di @Cooldown@ secondo/i.",
             "iconLarge": "assets/ux/cherry/augments/icons/summonersroulette_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/summonersroulette_small.png",
             "id": 123,
             "name": "Roulette dell'evocatore",
             "rarity": 2,
-            "tooltip": "Cherry_SummonersRoulette_Summary"
+            "tooltip": "Sostituisci i tuoi <attention>Incantesimi dell'evocatore</attention> con altri casuali. <br><br>Quando usi un <attention>Incantesimo dell'evocatore</attention>, sostituiscilo con un altro casuale con una ricarica di @Cooldown@ secondo/i."
         },
         {
             "apiName": "GoHSacrificeForSilver",
@@ -12818,13 +12818,13 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_ShrinkRay_Summary",
+            "desc": "I tuoi attacchi riducono i danni e le dimensioni del bersaglio di un @DamageReduction*100@% {{ Item_Keyword_OnHit }}.",
             "iconLarge": "assets/ux/cherry/augments/icons/shrinkray_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/shrinkray_small.png",
             "id": 74,
             "name": "Raggio ritirante",
             "rarity": 1,
-            "tooltip": "Cherry_ShrinkRay_Tooltip"
+            "tooltip": "I tuoi attacchi riducono i danni e le dimensioni del bersaglio di un @DamageReduction*100@% {{ Item_Keyword_OnHit }}."
         },
         {
             "apiName": "Castle",
@@ -13659,13 +13659,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_Perseverance_Summary",
+            "desc": "Ottieni un grande aumento di <healing>rigenerazione salute</healing>, che aumenta se il livello di <scaleHealth>salute</scaleHealth> è basso.",
             "iconLarge": "assets/ux/cherry/augments/icons/perseverance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/perseverance_small.png",
             "id": 64,
             "name": "Perseveranza",
             "rarity": 1,
-            "tooltip": "Cherry_Perseverance_Tooltip"
+            "tooltip": "Ottieni <healing>@BaseRegen*100@% rigenerazione salute base</healing>, che aumenta a <healing>@AmpedRegen*100@% rigenerazione salute base</healing> quando inferiore a un <scaleHealth>@AmpedHPThreshold*100@% di salute</scaleHealth>.<br><br>Guarigione in questo turno: @f1@<br>Guarigione totale: @f2@"
         },
         {
             "apiName": "JeweledGauntlet",

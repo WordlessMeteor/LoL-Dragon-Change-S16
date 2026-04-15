@@ -559,13 +559,13 @@
                 {
                     "name": "MoveSpeedDuration",
                     "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -580,6 +580,30 @@
                         18.5,
                         18.0,
                         17.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                "{bffdf499}": {
+                    "value": [
+                        45.0,
+                        45.0,
+                        44.0,
+                        43.0,
+                        42.0,
+                        41.0,
+                        41.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                "ARAM": {
+                    "value": [
+                        45.0,
+                        45.0,
+                        44.0,
+                        43.0,
+                        42.0,
+                        41.0,
+                        41.0
                     ],
                     "__type": "SpellEffectAmount"
                 }
@@ -620,13 +644,13 @@
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
             "cooldownTime": [
+                38.0,
+                38.0,
                 35.0,
-                35.0,
-                32.0,
+                33.0,
                 29.0,
                 26.0,
-                23.0,
-                23.0
+                26.0
             ],
             "canCastOrQueueWhileCasting": true,
             "mProjectTargetToCastRange": true,
@@ -728,19 +752,6 @@
             "{ec17e271}": [
                 {
                     "EffectTag": 268435456,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "Duration",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 2,
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
@@ -1228,6 +1239,11 @@
             },
             "__type": "BuffData"
         },
+        "__type": "SpellObject"
+    },
+    "{fea9c16e}": {
+        "ObjectName": "MelPassiveUltKillMark",
+        "mScriptName": "MelPassiveUltKillMark",
         "__type": "SpellObject"
     },
     "Characters/Mel/Spells/MelRAbility": {
@@ -2902,13 +2918,13 @@
                 {
                     "name": "InitialDamage",
                     "values": [
-                        30.0,
+                        35.0,
                         60.0,
-                        90.0,
-                        120.0,
-                        150.0,
-                        180.0,
-                        210.0
+                        85.0,
+                        110.0,
+                        135.0,
+                        160.0,
+                        185.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2993,7 +3009,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.6000000238418579,
+                            "mCoefficient": 0.550000011920929,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -3639,6 +3655,13 @@
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
@@ -4290,12 +4313,31 @@
         "characterToolData": {
             "mapAIPresence": {
                 "0": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
                     "__type": "ToolAiPresence"
                 },
                 "3": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
                     "__type": "ToolAiPresence"
                 },
                 "4": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
                     "__type": "ToolAiPresence"
                 }
             },

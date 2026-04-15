@@ -4928,19 +4928,6 @@
                         "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin27/Particles/Senna_Skin27_Q_AOE.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
-                    "mBeam": {
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            100.0,
-                            0.0
-                        ],
-                        "mLocalSpaceTargetOffset": [
-                            0.0,
-                            100.0,
-                            0.0
-                        ],
-                        "__type": "VfxBeamDefinitionData"
-                    },
                     "__type": "VfxPrimitiveBeam"
                 },
                 "blendMode": 4,
@@ -5076,19 +5063,6 @@
                         "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin27/Particles/Senna_Skin27_Q_AOE.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
-                    "mBeam": {
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            100.0,
-                            0.0
-                        ],
-                        "mLocalSpaceTargetOffset": [
-                            -0.0,
-                            100.0,
-                            0.0
-                        ],
-                        "__type": "VfxBeamDefinitionData"
-                    },
                     "__type": "VfxPrimitiveBeam"
                 },
                 "blendMode": 1,
@@ -5202,19 +5176,6 @@
                     "mMesh": {
                         "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin27/Particles/Senna_Skin27_Q_AOE.scb",
                         "__type": "VfxMeshDefinitionData"
-                    },
-                    "mBeam": {
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            90.0,
-                            0.0
-                        ],
-                        "mLocalSpaceTargetOffset": [
-                            0.0,
-                            90.0,
-                            0.0
-                        ],
-                        "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
                 },
@@ -5516,19 +5477,6 @@
                         "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin27/Particles/Senna_Skin27_Q_AOE_Swirl_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
-                    "mBeam": {
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            100.0,
-                            0.0
-                        ],
-                        "mLocalSpaceTargetOffset": [
-                            0.0,
-                            100.0,
-                            0.0
-                        ],
-                        "__type": "VfxBeamDefinitionData"
-                    },
                     "__type": "VfxPrimitiveBeam"
                 },
                 "blendMode": 4,
@@ -5769,19 +5717,6 @@
                     "mMesh": {
                         "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin27/Particles/Senna_Eclipse_Q_AOE_Swirl_01.scb",
                         "__type": "VfxMeshDefinitionData"
-                    },
-                    "mBeam": {
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            100.0,
-                            0.0
-                        ],
-                        "mLocalSpaceTargetOffset": [
-                            0.0,
-                            100.0,
-                            0.0
-                        ],
-                        "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
                 },
@@ -58530,7 +58465,7 @@
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "reflectionDefinition": {
-                    "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_White_Cubemap.TFT_Set15.dds",
+                    "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_White_Cubemap.TFT_Set17.dds",
                     "reflectionOpacityDirect": -1.0,
                     "reflectionOpacityGlancing": 0.15000000596046448,
                     "reflectionFresnelColor": [
@@ -88460,12 +88395,14 @@
                     -1.0,
                     -3.0
                 ],
+                "{cb13aff1}": -200.0,
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "hasPostRotateOrientation": 1,
                 "isRotationEnabled": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -88736,13 +88673,14 @@
                     -1.0,
                     -3.0
                 ],
+                "{cb13aff1}": -200.0,
                 "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "hasPostRotateOrientation": 1,
                 "isRotationEnabled": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -89226,7 +89164,10 @@
                     "__type": "ValueColor"
                 },
                 "pass": 21,
+                "{cb13aff1}": -200.0,
                 "disableBackfaceCull": true,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -89809,7 +89750,6 @@
                     },
                     "__type": "ValueColor"
                 },
-                "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -91402,6 +91342,10 @@
                     "__type": "ValueColor"
                 },
                 "pass": 50,
+                "softParticleParams": {
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "{cb13aff1}": -80.0,
                 "isUniformScale": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -170246,11 +170190,6 @@
                             ],
                             "__type": "ValueVector3"
                         },
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            0.0,
-                            20.0
-                        ],
                         "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
@@ -170452,11 +170391,6 @@
                 "primitive": {
                     "mBeam": {
                         "mSegments": 50,
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            0.0,
-                            20.0
-                        ],
                         "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
@@ -170563,11 +170497,6 @@
                             ],
                             "__type": "ValueVector3"
                         },
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            0.0,
-                            20.0
-                        ],
                         "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
@@ -170756,11 +170685,6 @@
                             ],
                             "__type": "ValueVector3"
                         },
-                        "mLocalSpaceSourceOffset": [
-                            0.0,
-                            0.0,
-                            20.0
-                        ],
                         "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
@@ -188696,11 +188620,6 @@
                             },
                             "__type": "ValueColor"
                         },
-                        "mLocalSpaceSourceOffset": [
-                            20.0,
-                            -30.0,
-                            0.0
-                        ],
                         "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
@@ -188971,11 +188890,6 @@
                             },
                             "__type": "ValueColor"
                         },
-                        "mLocalSpaceSourceOffset": [
-                            20.0,
-                            -30.0,
-                            0.0
-                        ],
                         "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
@@ -189282,11 +189196,6 @@
                             },
                             "__type": "ValueColor"
                         },
-                        "mLocalSpaceSourceOffset": [
-                            20.0,
-                            -30.0,
-                            0.0
-                        ],
                         "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"
@@ -190433,11 +190342,6 @@
                             },
                             "__type": "ValueColor"
                         },
-                        "mLocalSpaceSourceOffset": [
-                            20.0,
-                            -30.0,
-                            0.0
-                        ],
                         "__type": "VfxBeamDefinitionData"
                     },
                     "__type": "VfxPrimitiveBeam"

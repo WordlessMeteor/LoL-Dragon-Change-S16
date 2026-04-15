@@ -478,13 +478,13 @@
                     350.0
                 ]
             },
-            "desc": "Cherry_SelfDestruct_Summary",
+            "desc": "Κάθε @BombDelay@ δευτερόλεπτα κάνετε <keywordMajor>Αυτόματη Χρήση</keywordMajor>, τοποθετείτε μια βόμβα στον εαυτό σας, η οποία εκρήγνυται, προκαλώντας <trueDamage>τεράστια Πραγματική Ζημιά</trueDamage> και <status>εκτοξεύοντας στον αέρα</status> τους κοντινούς εχθρούς.",
             "iconLarge": "assets/ux/cherry/augments/icons/selfdestruct_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/selfdestruct_small.png",
             "id": 108,
             "name": "Αυτοκαταστροφή",
             "rarity": 0,
-            "tooltip": "Cherry_SelfDestruct_Tooltip"
+            "tooltip": "Κάθε @BombDelay@ δευτερόλεπτα, κάνετε <keywordMajor>Αυτόματη Χρήση</keywordMajor>, τοποθετείτε μια βόμβα στον εαυτό σας, η οποία εκρήγνυται, προκαλώντας <trueDamage>Πραγματική Ζημιά ίση με το @MaxHealthDamage*100@% της μέγιστης Ζωής</trueDamage> και <status>εκτοξεύοντας στον αέρα</status> τους κοντινούς εχθρούς για @KnockupDuration@ δευτερόλεπτα."
         },
         {
             "apiName": "ServeBeyondDeath",
@@ -568,13 +568,13 @@
                     30.0
                 ]
             },
-            "desc": "Cherry_ServeBeyondDeath_Summary",
+            "desc": "Κάθε γύρο, την πρώτη φορά που κανονικά θα έπρεπε να πεθάνετε, επιστρέφετε στο παιχνίδι με <scaleHealth>πλήρη Ζωή</scaleHealth>, η οποία <status>μειώνεται</status> σταδιακά. <br><br>Αν <keywordMajor>εξοντώσετε</keywordMajor> έναν αντίπαλο Ήρωα ενώ <status>μειώνεται</status> η Ζωή σας, η <status>μείωση</status> σταματά.",
             "iconLarge": "assets/ux/cherry/augments/icons/servebeyonddeath_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/servebeyonddeath_small.png",
             "id": 120,
             "name": "Υπακοή Πέρα Από Τον Θάνατο",
             "rarity": 0,
-            "tooltip": "Cherry_ServeBeyondDeath_Tooltip"
+            "tooltip": "Κάθε γύρο, την πρώτη φορά που κανονικά θα έπρεπε να πεθάνετε, επιστρέφετε στο παιχνίδι με <scaleHealth>πλήρη Ζωή</scaleHealth>, η οποία <status>μειώνεται</status> σταδιακά μέσα σε @DecayDuration@ δευτερόλεπτα. <br><br>Αν <keywordMajor>εξοντώσετε</keywordMajor> έναν αντίπαλο Ήρωα ενώ <status>μειώνεται</status> η Ζωή σας, η <status>μείωση</status> σταματά και η <scaleHealth>Ζωή</scaleHealth> σας επαναφέρεται στο <healing>@TriumphPercent@% της μέγιστης Ζωής</healing>."
         },
         {
             "apiName": "UndyingGuard",
@@ -924,13 +924,13 @@
                     10.0
                 ]
             },
-            "desc": "Cherry_QuantumComputing_Summary",
+            "desc": "Περιοδικά κάνετε με <keywordMajor>Αυτόματη Χρήση</keywordMajor> μια μαζική επίθεση γύρω σας, προκαλώντας <physicalDamage>Σωματική Ζημιά</physicalDamage>. <br><br>Οι εχθροί που χτυπιούνται από την εξωτερική άκρη <status>Επιβραδύνονται</status>, δέχονται επιπλέον <physicalDamage>ζημιά</physicalDamage> και σας <healing>θεραπεύουν</healing>.",
             "iconLarge": "assets/ux/cherry/augments/icons/quantumcomputing_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quantumcomputing_small.png",
             "id": 66,
             "name": "Κβαντική Πληροφορική",
             "rarity": 2,
-            "tooltip": "Cherry_QuantumComputing_Tooltip"
+            "tooltip": "Κάθε @Cooldown@ δευτ. κάνετε <keywordMajor>Αυτόματη Χρήση</keywordMajor> ενός τεράστιου χτυπήματος γύρω σας, προκαλώντας <physicalDamage>@BaseDamageTotal@ Σωματική Ζημιά</physicalDamage>. <br><br>Οι εχθροί που πετυχαίνει το εξωτερικό μισό του κύκλου δέχονται <status>Επιβράδυνση</status> κατά @SlowPercentage@% που μειώνεται σταδιακά σε διάστημα @SlowDuration@ δευτ. και επιπλέον <physicalDamage>Σωματική Ζημιά ίση με το @OuterEdgeTooltip@ της μέγιστης Ζωής τους</physicalDamage> και εσείς αναπληρώνετε <healing>Ζωή ίση με το @OuterConeHealingRatio@% της ζημιάς που προκαλείτε σε Ήρωες.</healing>."
         },
         {
             "apiName": "DemonsDance",
@@ -1248,13 +1248,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmuteChaos_Tooltip",
+            "desc": "Αποκτάτε <keywordMajor>@AugmentsToGrantToolTipOnly@ τυχαίες %i:Augment%Ενισχύσεις</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmutechaos_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmutechaos_small.png",
             "id": 243,
             "name": "Μεταστοιχείωση: Χάος",
             "rarity": 2,
-            "tooltip": "Cherry_TransmuteChaos_Tooltip"
+            "tooltip": "Αποκτάτε <keywordMajor>@AugmentsToGrantToolTipOnly@ τυχαίες %i:Augment%Ενισχύσεις</keywordMajor>."
         },
         {
             "apiName": "Chauffeur",
@@ -1505,13 +1505,13 @@
                     0.029999999329447746
                 ]
             },
-            "desc": "Cherry_Quest_MadHatter_Summary",
+            "desc": "Προϋπόθεση: Φορέστε @QuestThreshold@ καπέλα στο τέλος της μάχης.<br><br>Ανταμοιβή: Αποκτάτε <scaleAF>Ευέλικτη Ισχύ</scaleAF>, <scaleArmor>Θωράκιση</scaleArmor>, <scaleMR>Αντίσταση Μαγείας</scaleMR>, <scaleTenacity>Εμμονή</scaleTenacity> και <speed>Ταχύτητα Κίνησης</speed> ανά καπέλο.",
             "iconLarge": "assets/ux/cherry/augments/icons/mad_hatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mad_hatter_small.png",
             "id": 318,
             "name": "Αποστολή: Τρελοκαπελάς",
             "rarity": 1,
-            "tooltip": "Cherry_Quest_MadHatter_Tooltip"
+            "tooltip": "Προϋπόθεση: Φορέστε @QuestThreshold@ καπέλα στο τέλος της μάχης.<br><br>Ανταμοιβή: Αποκτήστε <scaleAF>@AFPerHat@ Ευέλικτη Ισχύ</scaleAF>, @ArmorMRPerHat@ <scaleArmor>Θωράκιση</scaleArmor> και <scaleMR>Αντίσταση Μαγείας</scaleMR>, <scaleTenacity>@TenacityPerHat*100@% Εμμονή</scaleTenacity> και <speed>@MSPerHat@ Ταχύτητα Κίνησης</speed> ανά καπέλο.<br><br>Αυτή τη στιγμή δίνει: <scaleAF>@f1@ Ευέλικτη Ισχύ</scaleAF>, @f2@ <scaleArmor>Θωράκιση</scaleArmor> και <scaleMR>Αντίσταση Μαγείας</scaleMR>, <scaleTenacity>@f3*100@% Εμμονή</scaleTenacity> και <speed>@f4@ Ταχύτητα Κίνησης</speed>.<br><br><rules>Χάνετε τα μισά καπέλα σας όταν χάνετε έναν γύρο.</rules>"
         },
         {
             "apiName": "BladeWaltz",
@@ -1879,13 +1879,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SummonerRevolution_Summary",
+            "desc": "Τα <keywordMajor>Ξόρκια Επικαλεστή</keywordMajor> σας αποκτούν @BonusCharges@ επιπλέον φόρτιση/φορτίσεις. <br><br>Το <spellName>Φλας</spellName> επανέρχεται σε κάθε γύρο.",
             "iconLarge": "assets/ux/cherry/augments/icons/summonerrevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/summonerrevolution_small.png",
             "id": 223,
             "name": "Επανάσταση Επικαλεστή",
             "rarity": 1,
-            "tooltip": "Cherry_SummonerRevolution_Summary"
+            "tooltip": "Τα <keywordMajor>Ξόρκια Επικαλεστή</keywordMajor> σας αποκτούν @BonusCharges@ επιπλέον φόρτιση/φορτίσεις. <br><br>Το <spellName>Φλας</spellName> επανέρχεται σε κάθε γύρο."
         },
         {
             "apiName": "IceCold",
@@ -2065,13 +2065,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_TankItOrLeaveit_Summary",
+            "desc": "Μπορείτε να κάνετε <crit>Καίρια Άμυνα</crit> χρησιμοποιώντας την <crit>Πιθανότητα Καίριου Χτυπήματος (έως @MaxChance*100@% πιθανότητα)</crit>, ώστε να λάβετε μειωμένη ζημιά. <br><br>Αποκτάτε <crit>%i:scaleCrit% @CritChance*100@% Πιθανότητα Καίριου Χτυπήματος</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/tankitorleaveit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tankitorleaveit_small.png",
             "id": 80,
             "name": "Καίρια Υπεράσπιση",
             "rarity": 0,
-            "tooltip": "Cherry_TankItOrLeaveIt_Tooltip"
+            "tooltip": "Μπορείτε να κάνετε <crit>Καίρια Άμυνα</crit> χρησιμοποιώντας την <crit>Πιθανότητα Καίριου Χτυπήματος (έως @MaxChance*100@% πιθανότητα)</crit>, μειώνοντας τη ζημιά που δέχεστε κατά @CriticalDefendCalc@. <br><br>Αποκτάτε <crit>%i:scaleCrit% @CritChance*100@% Πιθανότητα Καίριου Χτυπήματος</crit>."
         },
         {
             "apiName": "CraftingSellAugment",
@@ -2413,13 +2413,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_Stats_Tooltip",
+            "desc": "Αποκτήστε @AmountOfStatAnvils@ %i:StatAnvil% Αμόνια Στατιστικών!",
             "iconLarge": "assets/ux/cherry/augments/icons/stats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stats_small.png",
             "id": 226,
             "name": "Στατιστικά!",
             "rarity": 0,
-            "tooltip": "Cherry_Stats_Tooltip"
+            "tooltip": "Αποκτήστε @AmountOfStatAnvils@ %i:StatAnvil% Αμόνια Στατιστικών!"
         },
         {
             "apiName": "MasterofDuality",
@@ -2596,7 +2596,7 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_SearingDawn_Summary",
+            "desc": "Οι ικανότητές σας σημαδεύουν τους εχθρούς. Οι σημαδεμένοι εχθροί δέχονται επιπλέον <magicDamage>Μαγική Ζημιά</magicDamage> από την επόμενη επίθεση ή ικανότητα του συμμάχου σας.",
             "iconLarge": "assets/ux/cherry/augments/icons/searingdawn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/searingdawn_small.png",
             "id": 72,
@@ -2983,13 +2983,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_PhenomenalEvil_Summary",
+            "desc": "Αποκτήστε μόνιμα <scaleAP>@APPerProc@ Ισχύ Ικανότητας</scaleAP> όταν χτυπάτε έναν εχθρό με μια ικανότητα.<br><br>Αν επιλέξετε την Ενίσχυση μετά τον γύρο @RoundCounterForBonusAP@, κερδίζετε <scaleAP>@BonusAPForLatePick@ Ισχύ Ικανότητας</scaleAP>.",
             "iconLarge": "assets/ux/cherry/augments/icons/phenomenalevil_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/phenomenalevil_small.png",
             "id": 65,
             "name": "Φαινομενικό Κακό",
             "rarity": 1,
-            "tooltip": "Cherry_PhenomenalEvil_Tooltip"
+            "tooltip": "Αποκτήστε μόνιμα <scaleAP>@APPerProc@ Ισχύ Ικανότητας</scaleAP> όταν χτυπάτε έναν εχθρό με μια ικανότητα.<br>Χρόνος Επαναφόρτισης <br>@SpellIDCD@ δευτ. για κάθε ικανότητα.<br><br><rules>Αν επιλέξετε την Ενίσχυση μετά τον γύρο @RoundCounterForBonusAP@, κερδίζετε <scaleAP>@BonusAPForLatePick@ Ισχύ Ικανότητας</scaleAP>.</rules>"
         },
         {
             "apiName": "BigBrain",
@@ -3153,7 +3153,7 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_UltimateRoulette_Summary",
+            "desc": "Αντικαθιστά την <spellName>Υποχώρηση</spellName> με μια τυχαία <attention>Υπέρτατη</attention>. <br><br>Μετά τη χρήση της <attention>Υπέρτατης</attention>, αντικαταστήστε τη με μια νέα τυχαία <attention>Υπέρτατη</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
@@ -3593,13 +3593,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_UltimateRevolution_Summary",
+            "desc": "Μία φορά κάθε γύρο, ανανεώστε την <attention>Υπέρτατή</attention> σας αφού την χρησιμοποιήσετε.",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 88,
             "name": "Υπέρτατη Εξέγερση",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRevolution_Tooltip"
+            "tooltip": "Μία φορά κάθε γύρο, ανανεώστε την <attention>Υπέρτατή</attention> σας αφού την χρησιμοποιήσετε."
         },
         {
             "apiName": "TricksterDemon",
@@ -3789,13 +3789,13 @@
                     0.30000001192092896
                 ]
             },
-            "desc": "Cherry_SlowAndSteady_Summary",
+            "desc": "Η <speed>Ταχύτητα Επίθεσης</speed> δεν μπορεί να ξεπεράσει το @StaticRatio@. Όλη η μπόνους <speed>Ταχύτητα Επίθεσης</speed> μετατρέπεται σε <scaleAD>Ζημιά Επίθεσης</scaleAD>.<br>",
             "iconLarge": "assets/ux/cherry/augments/icons/slowandsteady_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slowandsteady_small.png",
             "id": 250,
             "name": "Αργά και Σταθερά",
             "rarity": 1,
-            "tooltip": "Cherry_SlowAndSteady_Tooltip"
+            "tooltip": "Η <speed>Ταχύτητα Επίθεσης</speed> δεν μπορεί να ξεπεράσει το @StaticRatio@. Όλη η μπόνους <speed>Ταχύτητα Επίθεσης</speed> μετατρέπεται σε <scaleAD>Ζημιά Επίθεσης</scaleAD> (<scaleAD>@ADPerAS@ Ζημιά Επίθεσης</scaleAD> για κάθε <speed>1% Ταχύτητας Επίθεσης</speed>).<br><br>Αυτή τη στιγμή κερδίζετε: @f1@ <scaleAD>Ζημιά Επίθεσης</scaleAD>"
         },
         {
             "apiName": "FrostWraith",
@@ -4042,7 +4042,7 @@
             "id": 79,
             "name": "Πολεμικός Παιάνας",
             "rarity": 2,
-            "tooltip": "Cherry_SymphonyofWar_Tooltip"
+            "tooltip": "Αποκτάτε τους Θεμελιώδεις Ρούνους <spellName>Φονικός Ρυθμός</spellName> και <spellName>Κατακτητής</spellName>.<br><li><spellName>Φονικός Ρυθμός</spellName> - Όταν επιτίθεστε σε Ήρωες, αποκτάτε <attackSpeed>Ταχύτητα Επίθεσης</attackSpeed> που συσσωρεύεται έως 6 φορές. Στις 6 στοίβες, οι επιθέσεις σας εκτοξεύουν έναν κεραυνό που προκαλεί επιπλέον ζημιά.<br><li><spellName>Κατακτητής</spellName> - Οι επιθέσεις και οι ικανότητες που χτυπούν αντίπαλους Ήρωες σας δίνουν <adaptiveForce>Ευέλικτη Ισχύ</adaptiveForce>, η οποία συσσωρεύεται έως και 12 φορές. Όταν φτάσετε τις 12 στοίβες, θεραπεύεστε κατά ένα μέρος της ζημιάς που προκαλείτε σε Ήρωες."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -4184,7 +4184,7 @@
             "id": 60,
             "name": "Ψυχή του Ωκεανού",
             "rarity": 0,
-            "tooltip": "Cherry_OceanSoul_Tooltip"
+            "tooltip": "Αποκτάτε την Ψυχή του Ωκεανού, λαμβάνοντας υψηλή αναπλήρωση <healing>Ζωής</healing> και <scaleMana>Μάνα</scaleMana> μετά την πρόκληση ζημιάς στους εχθρούς."
         },
         {
             "apiName": "Bodyguard",
@@ -4346,13 +4346,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_Quest_WoogletsWitchcap_Summary",
+            "desc": "Αμέσως: Αποκτάτε μια <attention>Περιττά Τεράστια Ράβδο</attention>.<br><br>Προϋπόθεση: Πρέπει να έχετε το <attention>Καπέλο του Ράμπαντον</attention> και την <attention>Κλεψύδρα της Ζόνια</attention>.<br><br>Ανταμοιβή: Αποκτάτε το <attention>Καπέλο Μάγισσας του Γούγκλετ</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_woogletswitchcap_small.png",
             "id": 156,
             "name": "Αποστολή: Καπέλο Μάγισσας του Γούγκλετ",
             "rarity": 2,
-            "tooltip": "Cherry_Quest_WoogletsWitchcap_Summary"
+            "tooltip": "Αμέσως: Αποκτάτε μια <attention>Περιττά Τεράστια Ράβδο</attention>.<br><br>Προϋπόθεση: Πρέπει να έχετε το <attention>Καπέλο του Ράμπαντον</attention> και την <attention>Κλεψύδρα της Ζόνια</attention>.<br><br>Ανταμοιβή: Αποκτάτε το <attention>Καπέλο Μάγισσας του Γούγκλετ</attention>."
         },
         {
             "apiName": "Earthwake",
@@ -4616,7 +4616,7 @@
             "id": 76,
             "name": "Ηχητική Έκρηξη",
             "rarity": 0,
-            "tooltip": "Cherry_SonicBoom_Tooltip"
+            "tooltip": "Οι ενισχύσεις, η <healing>Θεραπεία</healing> ή οι <shield>Ασπίδες</shield> που δίνετε στον σύμμαχό σας προκαλούν <trueDamage>@Damage@ Πραγματική Ζημιά</trueDamage> στους εχθρούς που βρίσκονται γύρω του και τους <status>Επιβραδύνουν</status> κατά @SlowAmount*-100@% για @SlowDuration@ δευτερόλεπτα.<br><br>Ζημιά που προκλήθηκε σε αυτόν τον γύρο: @f1@<br>Συνολική Ζημιά που προκλήθηκε: @f2@"
         },
         {
             "apiName": "TwiceThrice",
@@ -4641,13 +4641,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_TwiceThrice_Tooltip",
+            "desc": "Κάθε @ProcCadence@ επιθέσεις, οι επιδράσεις {{ Item_Keyword_OnHit }} εφαρμόζονται δύο φορές.",
             "iconLarge": "assets/ux/cherry/augments/icons/twicethrice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/twicethrice_small.png",
             "id": 107,
             "name": "Και Δυο Και Τρεις",
             "rarity": 1,
-            "tooltip": "Cherry_TwiceThrice_Tooltip"
+            "tooltip": "Κάθε @ProcCadence@ επιθέσεις, οι επιδράσεις {{ Item_Keyword_OnHit }} εφαρμόζονται δύο φορές."
         },
         {
             "apiName": "SymbioticMutation",
@@ -5052,7 +5052,7 @@
                     0.30000001192092896
                 ]
             },
-            "desc": "Cherry_Overflow_Summary",
+            "desc": "Το κόστος σε <scaleMana>Μάνα</scaleMana> είναι διπλάσιο. <br><br>Η <healing>Θεραπεία</healing>, η <shield>Ασπίδα</shield> και η ζημιά από τις ικανότητές σας αυξάνονται με βάση το <scaleMana>μέγιστο Μάνα</scaleMana> σας.",
             "iconLarge": "assets/ux/cherry/augments/icons/overflow_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/overflow_small.png",
             "id": 311,
@@ -5338,13 +5338,13 @@
                     0.6000000238418579
                 ]
             },
-            "desc": "Cherry_RaidBoss_Summary",
+            "desc": "Ξεκινάτε κάθε γύρο φυλακισμένοι. Ενώ είστε φυλακισμένοι, έχετε μαζική μείωση ζημιάς, αυξημένο μέγεθος και δύναμη σε βάθος χρόνου. <br><br>Όταν διαφεύγετε, <status>Απωθείτε</status> τους εχθρούς και αποκτάτε <shield>Ασπίδα</shield>.",
             "iconLarge": "assets/ux/cherry/augments/icons/raidboss_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/raidboss_small.png",
             "id": 125,
             "name": "Πανίσχυρος Εχθρός",
             "rarity": 2,
-            "tooltip": "Cherry_RaidBoss_Tooltip"
+            "tooltip": "Ξεκινάτε κάθε γύρο φυλακισμένοι στο κέντρο της αρένας και δεν μπορείτε να κάνετε τίποτα. Ενώ είστε φυλακισμένοι, έχετε έως @DamageReductionMax*100@% μείωση ζημιάς και αυξημένο μέγεθος, <scaleHealth>Ζωή</scaleHealth>, <physicalDamage>Ζημιά Επίθεσης</physicalDamage> και <scaleAP>Ισχύ Ικανότητας</scaleAP> σε βάθος χρόνου (έως @StatIncrease*100@%). <br><br>Μετά από @ImprisonDuration@ δευτερόλεπτα ή όταν η Ζωή σας φτάσει στο <scaleHealth>@BreakoutHealthThreshold*100@%</scaleHealth>, αποδράτε από τη φυλακή σας, <status>Απωθώντας</status> τους εχθρούς και αποκτώντας Ασπίδα με αντοχή ίση με το <shield>@ShieldHealthRatio*100@% της μέγιστης Ζωής σας</shield>."
         },
         {
             "apiName": "OutlawsGrit",
@@ -5415,7 +5415,7 @@
                     15.0
                 ]
             },
-            "desc": "Cherry_OutlawsGrit_Summary",
+            "desc": "Μετά τη χρήση μιας ικανότητας εφόρμησης, μεταφοράς ή τηλεμεταφοράς αποκτάτε <scaleArmor>Θωράκιση</scaleArmor> και <scaleMR>Αντίσταση Μαγείας</scaleMR>.",
             "iconLarge": "assets/ux/cherry/augments/icons/outlawsgrit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/outlawsgrit_small.png",
             "id": 63,
@@ -5920,13 +5920,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_PrismaticEgg_Summary",
+            "desc": "Αποκτάτε @KillStackCredit@ στοίβα μετά από κάθε εξόντωση, μία φορά για κάθε Ήρωα ανά γύρο.<br><br>Μετά από @RequiredKillCount@ στοίβες, εκκολάπτεται και δίνει ένα <attention>Αμόνι Πρισματικών Αντικειμένων</attention>, μια <attention>%i:Augment% Πρισματική Ενίσχυση</attention> και ένα <attention>%i:StatAnvil% Αμόνι Πρισματικών Στατιστικών</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_prismaticegg_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_prismaticegg_small.png",
             "id": 224,
             "name": "Πρισματικό Αυγό",
             "rarity": 2,
-            "tooltip": "Cherry_PrismaticEgg_Tooltip"
+            "tooltip": "{{Cherry_PrismaticEgg_Summary}}"
         },
         {
             "apiName": "Clothesline",
@@ -6202,13 +6202,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SoulSiphon_Summary",
+            "desc": "<lifeSteal>Θεραπεύεστε για το @HealPercentage*100@% της ζημιάς που προκαλούν</lifeSteal> τα <crit>Καίρια Χτυπήματα</crit>. <br><br>Αποκτάτε <crit>%i:scaleCrit% @CritChance*100@% Πιθανότητα Καίριου Χτυπήματος</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/soulsiphon_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/soulsiphon_small.png",
             "id": 77,
             "name": "Διοχέτευση Ψυχής",
             "rarity": 1,
-            "tooltip": "Cherry_SoulSiphon_Tooltip"
+            "tooltip": "{{Cherry_SoulSiphon_Summary}}"
         },
         {
             "apiName": "GambaAnvil",
@@ -6385,13 +6385,13 @@
                     0.3499999940395355
                 ]
             },
-            "desc": "Cherry_ThreadtheNeedle_Summary",
+            "desc": "Αποκτάτε @PercentPen*100@% <armorPen>%i:scaleAPen% Διείσδυση Θωράκισης</armorPen> και <magicPen>%i:scaleMPen% Διείσδυση Μαγείας</magicPen>.",
             "iconLarge": "assets/ux/cherry/augments/icons/threadtheneedle_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/threadtheneedle_small.png",
             "id": 84,
             "name": "Από το Μάτι της Βελόνας",
             "rarity": 1,
-            "tooltip": "Cherry_ThreadtheNeedle_Summary"
+            "tooltip": "Αποκτάτε @PercentPen*100@% <armorPen>%i:scaleAPen% Διείσδυση Θωράκισης</armorPen> και <magicPen>%i:scaleMPen% Διείσδυση Μαγείας</magicPen>."
         },
         {
             "apiName": "BreadAndCheese",
@@ -6707,13 +6707,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_PandorasBox_Summary",
+            "desc": "Μεταστοιχειώστε όλες τις Ενισχύσεις σε <keywordMajor>τυχαίες Πρισματικές%i:Augment% Ενισχύσεις</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/pandoras_box_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/pandoras_box_small.png",
             "id": 317,
             "name": "Το Κουτί της Πανδώρας",
             "rarity": 2,
-            "tooltip": "Cherry_PandorasBox_Summary"
+            "tooltip": "Μεταστοιχειώστε όλες τις Ενισχύσεις σε <keywordMajor>τυχαίες Πρισματικές%i:Augment% Ενισχύσεις</keywordMajor>."
         },
         {
             "apiName": "ExtendoArm",
@@ -7125,13 +7125,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_SpiritLink_Summary",
+            "desc": "{{Cherry_SpiritLink@TeamSize@_Summary}}",
             "iconLarge": "assets/ux/cherry/augments/icons/spiritlink_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/spiritlink_small.png",
             "id": 78,
             "name": "Ψυχικός Δεσμός",
             "rarity": 2,
-            "tooltip": "Cherry_SpiritLink_Tooltip"
+            "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Συνολική ζημιά που ανακατευθύνθηκε: @f1@<br>Συνολική θεραπεία: @f2@<br>"
         },
         {
             "apiName": "Deathtouch",
@@ -7654,13 +7654,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_OkBoomerang_Summary",
+            "desc": "<keywordMajor>Αυτόματη Χρήση</keywordMajor>: Ρίχνετε ένα μπούμερανγκ σε έναν κοντινό εχθρό κάθε @Cooldown@ δευτ.",
             "iconLarge": "assets/ux/cherry/augments/icons/okboomerang_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/okboomerang_small.png",
             "id": 61,
             "name": "OK Μπούμερ-ανγκ",
             "rarity": 1,
-            "tooltip": "Cherry_OkBoomerang_Tooltip"
+            "tooltip": "<keywordMajor>Αυτόματη Χρήση</keywordMajor>: Ρίχνετε ένα μπούμερανγκ σε έναν κοντινό εχθρό κάθε @Cooldown@ δευτ., προκαλώντας <physicalDamage>@Damage@ Σωματική Ζημιά</physicalDamage> στους εχθρούς που χτυπά.<br><br>Ζημιά που προκλήθηκε σε αυτόν τον γύρο: @f1@<br>Συνολική Ζημιά που προκλήθηκε: @f2@"
         },
         {
             "apiName": "Hybrid",
@@ -8016,7 +8016,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SlimeTime_Summary",
+            "desc": "Κάθε λίγα δευτ., κάνετε <keywordMajor>Αυτόματη Χρήση</keywordMajor> μιας ριπής γλίτσας από το σώμα σας, προκαλώντας <magicDamage>Μαγική Ζημιά</magicDamage> στους εχθρούς που βρίσκονται κοντά. <br><br>Αν χτυπήσετε Ήρωα, εκκρίνετε μια μάζα που σας <healing>θεραπεύει</healing> όταν την πατήσετε.",
             "iconLarge": "assets/ux/cherry/augments/icons/slimetime_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slimetime_small.png",
             "id": 232,
@@ -8572,13 +8572,13 @@
                     0.800000011920929
                 ]
             },
-            "desc": "Cherry_NestingDoll_Summary",
+            "desc": "Αποκτάτε @BonusLives@ επιπλέον <attention>Αναστάσεις</attention> και αρχίζετε να ανασταίνεστε χωρίς βοήθεια αφού πεθάνετε.<br><br>Όταν <attention>Ανασταίνεστε</attention>, <status>Απωθείτε</status> τους εχθρούς γύρω σας και επιστρέφετε με μικρότερο μέγεθος και μειωμένη <scaleHealth>μέγιστη Ζωή</scaleHealth>.",
             "iconLarge": "assets/ux/cherry/augments/icons/nesting_doll.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nesting_doll_small.png",
             "id": 177,
             "name": "Μπάμπουσκα",
             "rarity": 1,
-            "tooltip": "Cherry_NestingDoll_Tooltip"
+            "tooltip": "Ξεκινάτε να <attention>Ανασταίνεστε</attention> αυτόματα μετά από @ReviveArmTime@ δευτ. και μπορείτε να <attention>Αναστηθείτε</attention> @BonusLives@ ακόμα φορές. Κάθε φορά που <attention>Ανασταίνεστε</attention>, επιστρέφετε μικρότεροι και με <scaleHealth>@ReviveMod*100@% της μέγιστης Ζωής</scaleHealth>.<br><br>Όταν <attention>Ανασταίνεστε</attention>, <status>Απωθείτε</status> όλους τους γύρω εχθρούς."
         },
         {
             "apiName": "TapDancer",
@@ -8624,13 +8624,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_TapDancer_Summary",
+            "desc": "Οι επιθέσεις σας σας δίνουν <speed>@MSPerHit@ Ταχύτητα Κίνησης</speed> {{ Item_Keyword_OnHit }}. <br><br>Αποκτάτε <attackSpeed>Ταχύτητα Επίθεσης</attackSpeed> ίση με το @MSToASConversion*10000@% της <speed>Ταχύτητας Κίνησής</speed> σας.",
             "iconLarge": "assets/ux/cherry/augments/icons/tapdancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tapdancer_small.png",
             "id": 81,
             "name": "Φτερά στα Πόδια",
             "rarity": 2,
-            "tooltip": "Cherry_TapDancer_Tooltip"
+            "tooltip": "Οι επιθέσεις σας σας δίνουν <speed>@MSPerHit@ Ταχύτητα Κίνησης</speed> {{ Item_Keyword_OnHit }}. <br><br>Αποκτάτε <attackSpeed>@MSToASConversionCalc@ Ταχύτητα Επίθεσης</attackSpeed>."
         },
         {
             "apiName": "FanTheHammer",
@@ -8743,7 +8743,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/replace_augment.png",
             "iconSmall": "assets/ux/cherry/augments/icons/replace_augment_small.png",
             "id": 364,
-            "name": "Cherry_ReplaceAugment_Name",
+            "name": "Αντικατάσταση Ενίσχυσης",
             "rarity": 4,
             "tooltip": "Cherry_ReplaceAugment_Summary"
         },
@@ -8837,13 +8837,13 @@
                     0.550000011920929
                 ]
             },
-            "desc": "Cherry_Minionmancer_Tooltip",
+            "desc": "Τα πλάσματα που καλείτε έχουν @MinionAmp*100@% αυξημένο μέγεθος, Ζωή και ζημιά.",
             "iconLarge": "assets/ux/cherry/augments/icons/minionmancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/minionmancer_small.png",
             "id": 104,
             "name": "Υπηρετοδημιουργός",
             "rarity": 1,
-            "tooltip": "Cherry_Minionmancer_Tooltip"
+            "tooltip": "Τα πλάσματα που καλείτε έχουν @MinionAmp*100@% αυξημένο μέγεθος, Ζωή και ζημιά."
         },
         {
             "apiName": "Multitool",
@@ -8937,7 +8937,7 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_TankEngine_Summary",
+            "desc": "Αποκτήστε αυξημένο μέγεθος και <scaleHealth>ποσοστό μπόνους Ζωής</scaleHealth> ανά εξόντωση.",
             "iconLarge": "assets/ux/cherry/augments/icons/tank_engine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tank_engine_small.png",
             "id": 313,
@@ -9048,13 +9048,13 @@
                     7.0
                 ]
             },
-            "desc": "Cherry_OmniSoul_Summary",
+            "desc": "Αποκτήστε @SoulsToAdd@ τυχαίες <attention>Ψυχές Δράκου</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/omnisoul_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/omnisoul_small.png",
             "id": 62,
             "name": "Παντοδύναμη Ψυχή",
             "rarity": 2,
-            "tooltip": "Cherry_OmniSoul_Summary"
+            "tooltip": "Αποκτήστε @SoulsToAdd@ τυχαίες <attention>Ψυχές Δράκου</attention>."
         },
         {
             "apiName": "DawnbringersResolve",
@@ -9148,13 +9148,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_SilverSpoon_Summary",
+            "desc": "Προκαλείτε αυξημένη ζημιά για κάθε <keywordMajor>%i:Augment% Ασημένια Ενίσχυση</keywordMajor> που έχετε.",
             "iconLarge": "assets/ux/cherry/augments/icons/silver_spoon.png",
             "iconSmall": "assets/ux/cherry/augments/icons/silver_spoon_small.png",
             "id": 356,
-            "name": "Cherry_SilverSpoon_Name",
+            "name": "Ασημένιο Κουτάλι",
             "rarity": 0,
-            "tooltip": "Cherry_SilverSpoon_Tooltip"
+            "tooltip": "Προκαλείτε @DamagePerSilver*100@% αυξημένη ζημιά για κάθε <keywordMajor>%i:Augment% Ασημένια Ενίσχυση</keywordMajor> που έχετε.<br><br>Προκαλείτε ζημιά αυξημένη κατά @F1*100@%."
         },
         {
             "apiName": "HoldVeryStill",
@@ -9896,13 +9896,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_StatsOnStatsOnStats_Tooltip",
+            "desc": "Αποκτήστε @AmountOfStatAnvils@ %i:StatAnvil% Αμόνια Στατιστικών!",
             "iconLarge": "assets/ux/cherry/augments/icons/statsonstatsonstats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/statsonstatsonstats_small.png",
             "id": 228,
             "name": "Στατιστικά για στατιστικά για στατιστικά!",
             "rarity": 2,
-            "tooltip": "Cherry_StatsOnStatsOnStats_Tooltip"
+            "tooltip": "Αποκτήστε @AmountOfStatAnvils@ %i:StatAnvil% Αμόνια Στατιστικών!"
         },
         {
             "apiName": "Deft",
@@ -10204,13 +10204,13 @@
                     0.07999999821186066
                 ]
             },
-            "desc": "Cherry_RighteousFury_Summary",
+            "desc": "Όταν <healing>Θεραπεύετε</healing> ή όταν δίνετε <shield>Ασπίδες</shield>, η ζημιά των ικανοτήτων σας αυξάνεται κατά @SpellDamagePerStack*100@%. Αυτό το μπόνους συσσωρεύεται απεριόριστα μέχρι το τέλος του γύρου.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
             "id": 343,
             "name": "Ενάρετη Μανία",
             "rarity": 2,
-            "tooltip": "Cherry_RighteousFury_Tooltip"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Χρόνος Επαναφόρτισης @Cooldown@ δευτ. ανά χρήση ικανότητας, Ενίσχυση, και αντικείμενο."
         },
         {
             "apiName": "OrbitalLaser",
@@ -10438,13 +10438,13 @@
                     0.5
                 ]
             },
-            "desc": "Cherry_MysticPunch_Summary",
+            "desc": "Οι επιδράσεις {{ Item_Keyword_OnHit }} μειώνουν τον Χρόνο Επαναφόρτισης των ικανοτήτων σας κατά @CooldownRefund@ δευτ %i:scaleCooldown%.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Μυστικιστική Γροθιά",
             "rarity": 2,
-            "tooltip": "Cherry_MysticPunch_Summary"
+            "tooltip": "Οι επιδράσεις {{ Item_Keyword_OnHit }} μειώνουν τον Χρόνο Επαναφόρτισης των ικανοτήτων σας κατά @CooldownRefund@ δευτ %i:scaleCooldown%."
         },
         {
             "apiName": "Homeguard",
@@ -10788,13 +10788,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmutePrismatic_Tooltip",
+            "desc": "Αποκτάτε μια τυχαία <keywordMajor>%i:Augment% Πρισματική Ενίσχυση</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmuteprismatic_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmuteprismatic_small.png",
             "id": 238,
             "name": "Μεταστοιχείωση: Πρισματική",
             "rarity": 1,
-            "tooltip": "Cherry_TransmutePrismatic_Tooltip"
+            "tooltip": "Αποκτάτε μια τυχαία <keywordMajor>%i:Augment% Πρισματική Ενίσχυση</keywordMajor>."
         },
         {
             "apiName": "GoHCravingForRisk",
@@ -11054,13 +11054,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmuteGold_Tooltip",
+            "desc": "Αποκτάτε μια τυχαία <keywordMajor>%i:Augment% Χρυσή Ενίσχυση</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmutegold_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmutegold_small.png",
             "id": 237,
             "name": "Μεταστοιχείωση: Χρυσή",
             "rarity": 0,
-            "tooltip": "Cherry_TransmuteGold_Tooltip"
+            "tooltip": "Αποκτάτε μια τυχαία <keywordMajor>%i:Augment% Χρυσή Ενίσχυση</keywordMajor>."
         },
         {
             "apiName": "ApexInventor",
@@ -11762,13 +11762,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_StatsOnStats_Tooltip",
+            "desc": "Αποκτήστε @AmountOfStatAnvils@ %i:StatAnvil% Αμόνια Στατιστικών!",
             "iconLarge": "assets/ux/cherry/augments/icons/statsonstats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/statsonstats_small.png",
             "id": 227,
             "name": "Στατιστικά για στατιστικά!",
             "rarity": 1,
-            "tooltip": "Cherry_StatsOnStats_Tooltip"
+            "tooltip": "Αποκτήστε @AmountOfStatAnvils@ %i:StatAnvil% Αμόνια Στατιστικών!"
         },
         {
             "apiName": "Dashing",
@@ -12074,7 +12074,7 @@
                     700.0
                 ]
             },
-            "desc": "Cherry_SkilledSniper_Summary",
+            "desc": "Όταν χτυπάτε έναν εχθρό με μια <keywordMajor>ικανότητα εκτός της Υπέρτατης</keywordMajor> από μακρινή εμβέλεια, ο Χρόνος Επαναφόρτισης της ικανότητας μειώνεται σημαντικά. ",
             "iconLarge": "assets/ux/cherry/augments/icons/skilledsniper_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/skilledsniper_small.png",
             "id": 113,
@@ -12490,13 +12490,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_Oathsworn_Tooltip",
+            "desc": "Αντικαταστήστε την <spellName>Υποχώρηση</spellName> με το <spellName>Κάλεσμα της Μοίρας</spellName>.<br><br><rules><spellName>Το Κάλεσμα της Μοίρας</spellName> δεν επιτρέπει τη στόχευση του συμμάχου σας για έως 4 δευτερόλεπτα. Ο σύμμαχός σας μπορεί να εκτοξευτεί, <status>Απωθώντας</status> τους αντιπάλους.</rules><br>",
             "iconLarge": "assets/ux/cherry/augments/icons/oathsworn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/oathsworn_small.png",
             "id": 109,
             "name": "Ορκισμένος Σύντροφος",
             "rarity": 1,
-            "tooltip": "Cherry_Oathsworn_Tooltip"
+            "tooltip": "Αντικαταστήστε την <spellName>Υποχώρηση</spellName> με το <spellName>Κάλεσμα της Μοίρας</spellName>.<br><br><rules><spellName>Το Κάλεσμα της Μοίρας</spellName> δεν επιτρέπει τη στόχευση του συμμάχου σας για έως 4 δευτερόλεπτα. Ο σύμμαχός σας μπορεί να εκτοξευτεί, <status>Απωθώντας</status> τους αντιπάλους.</rules><br>"
         },
         {
             "apiName": "AimForTheHead",
@@ -12719,13 +12719,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SummonersRoulette_Summary",
+            "desc": "Αντικαταστήστε τα <attention>Ξόρκια Επικαλεστή</attention> σας με τυχαίες επιλογές. <br><br>Όταν χρησιμοποιείτε ένα <attention>Ξόρκι Επικαλεστή</attention>, αντικαταστήστε το με ένα άλλο τυχαίο με Χρόνο Επαναφόρτισης @Cooldown@ δευτ.",
             "iconLarge": "assets/ux/cherry/augments/icons/summonersroulette_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/summonersroulette_small.png",
             "id": 123,
             "name": "Ρουλέτα του Επικαλεστή",
             "rarity": 2,
-            "tooltip": "Cherry_SummonersRoulette_Summary"
+            "tooltip": "Αντικαταστήστε τα <attention>Ξόρκια Επικαλεστή</attention> σας με τυχαίες επιλογές. <br><br>Όταν χρησιμοποιείτε ένα <attention>Ξόρκι Επικαλεστή</attention>, αντικαταστήστε το με ένα άλλο τυχαίο με Χρόνο Επαναφόρτισης @Cooldown@ δευτ."
         },
         {
             "apiName": "GoHSacrificeForSilver",
@@ -12818,13 +12818,13 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_ShrinkRay_Summary",
+            "desc": "Οι επιθέσεις σας μειώνουν τη ζημιά και το μέγεθος του στόχου κατά @DamageReduction*100@% {{ Item_Keyword_OnHit }}.",
             "iconLarge": "assets/ux/cherry/augments/icons/shrinkray_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/shrinkray_small.png",
             "id": 74,
             "name": "Ακτίνα Συρρίκνωσης",
             "rarity": 1,
-            "tooltip": "Cherry_ShrinkRay_Tooltip"
+            "tooltip": "Οι επιθέσεις σας μειώνουν τη ζημιά και το μέγεθος του στόχου κατά @DamageReduction*100@% {{ Item_Keyword_OnHit }}."
         },
         {
             "apiName": "Castle",
@@ -13659,13 +13659,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_Perseverance_Summary",
+            "desc": "Αποκτάτε εξαιρετικά αυξημένη <healing>Αναπλήρωση Ζωής</healing>, η οποία αυξάνεται περαιτέρω όταν η <scaleHealth>Ζωή</scaleHealth> είναι χαμηλή.",
             "iconLarge": "assets/ux/cherry/augments/icons/perseverance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/perseverance_small.png",
             "id": 64,
             "name": "Επιμονή",
             "rarity": 1,
-            "tooltip": "Cherry_Perseverance_Tooltip"
+            "tooltip": "Αποκτάτε <healing>@BaseRegen*100@% βασική Αναπλήρωση Ζωής</healing>, που αυξάνεται σε <healing>@AmpedRegen*100@% βασική Αναπλήρωση Ζωής</healing> κάτω από <scaleHealth>@AmpedHPThreshold*100@% Ζωής</scaleHealth>.<br><br>Θεραπεία που έγινε σε αυτόν τον γύρο: @f1@<br>Συνολική θεραπεία που έγινε: @f2@"
         },
         {
             "apiName": "JeweledGauntlet",

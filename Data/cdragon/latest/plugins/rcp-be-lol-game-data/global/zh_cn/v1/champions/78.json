@@ -1237,7 +1237,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "波比挥舞她的铁锤，造成伤害并创造一个区域，这个区域会减速敌人并在一段时间后爆炸。",
-            "dynamicDescription": "波比猛砸地面，造成<physicalDamage>@BaseDamage@</physicalDamage>外加<physicalDamage>@HealthDamagePercent@%最大生命值的物理伤害</physicalDamage>并使该地面变得不稳定。 <br><br>不稳定区域会使敌人<status>减速</status>@Effect3Amount@%并在@Effect4Amount@秒后喷发，再次造成<physicalDamage>@BaseDamage@</physicalDamage>外加<physicalDamage>@HealthDamagePercent@%最大生命值的物理伤害</physicalDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "波比猛砸地面，造成<physicalDamage>@BaseDamage@</physicalDamage>外加<physicalDamage>@HealthDamagePercent@%最大生命值的物理伤害</physicalDamage>并使该地面变得不稳定。 <br><br>不稳定区域会使敌人<status>减速</status>@Slow_@%并在@DelayBetweenTwoHits@秒后喷发，再次造成<physicalDamage>@BaseDamage@</physicalDamage>外加<physicalDamage>@HealthDamagePercent@%最大生命值的物理伤害</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1387,7 +1387,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "波比被动获得护甲和魔法抗性。这个加成会在她生命值较低时得到提升。波比可以主动施放此技能来获得移动速度加成并中断附近敌人的突进。如果中断了一次突进，那么该敌人还会被减速和缚地。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>波比获得<scaleArmor>@BonusArmor@护甲</scaleArmor>和<scaleMR>@BonusMR@魔法抗性</scaleMR>。在波比低于@PassiveEmpoweredHealthPercent*100@%生命值时，这个加成会翻倍。<br><br><spellActive>主动：</spellActive>波比获得<speed>@Effect2Amount@%移动速度</speed>并投射出一个环绕自身的领域，持续@Effect1Amount@秒，该领域可中断敌人的冲刺。被领域中断的敌人们会受到持续@GroundingDuration@秒的<status>缚地</status>和@SlowAmount*-100@%<status>减速</status>，以及<magicDamage>@InterruptDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>波比获得<scaleArmor>@BonusArmor@护甲</scaleArmor>和<scaleMR>@BonusMR@魔法抗性</scaleMR>。在波比低于@PassiveEmpoweredHealthPercent*100@%生命值时，这个加成会翻倍。<br><br><spellActive>主动：</spellActive>波比获得<speed>@Haste@%移动速度</speed>并投射出一个环绕自身的领域，持续@Duration@秒，该领域可中断敌人的冲刺。被领域中断的敌人们会受到持续@GroundingDuration@秒的<status>缚地</status>和@SlowAmount*-100@%<status>减速</status>，以及<magicDamage>@InterruptDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1537,7 +1537,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "波比冲向目标并把目标推后。如果目标被推到墙上，就会受到晕眩效果。",
-            "dynamicDescription": "波比擒抱一名敌人，造成<physicalDamage>@TackleDamage@物理伤害</physicalDamage>并将该敌人带向前方。如果波比将目标擒抱到地形上，那么该敌人会被<status>晕眩</status>@Effect3Amount@秒并受到额外的<physicalDamage>@TackleDamage@物理伤害</physicalDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "波比擒抱一名敌人，造成<physicalDamage>@TackleDamage@物理伤害</physicalDamage>并将该敌人带向前方。如果波比将目标擒抱到地形上，那么该敌人会被<status>晕眩</status>@StunDuration@秒并受到额外的<physicalDamage>@TackleDamage@物理伤害</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

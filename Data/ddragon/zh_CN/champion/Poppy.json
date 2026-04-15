@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.7.1",
+    "version": "16.8.1",
     "data": {
         "Poppy": {
             "id": "Poppy",
@@ -411,7 +411,7 @@
                     "id": "PoppyQ",
                     "name": "圣锤猛击",
                     "description": "波比挥舞她的铁锤，造成伤害并创造一个区域，这个区域会减速敌人并在一段时间后爆炸。",
-                    "tooltip": "波比猛砸地面，造成<physicalDamage>{{ basedamage }}</physicalDamage>外加<physicalDamage>{{ healthdamagepercent }}%最大生命值的物理伤害</physicalDamage>并使该地面变得不稳定。 <br /><br />不稳定区域会使敌人<status>减速</status>{{ e3 }}%并在{{ e4 }}秒后喷发，再次造成<physicalDamage>{{ basedamage }}</physicalDamage>外加<physicalDamage>{{ healthdamagepercent }}%最大生命值的物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "波比猛砸地面，造成<physicalDamage>{{ basedamage }}</physicalDamage>外加<physicalDamage>{{ healthdamagepercent }}%最大生命值的物理伤害</physicalDamage>并使该地面变得不稳定。 <br /><br />不稳定区域会使敌人<status>减速</status>{{ slow_ }}%并在{{ delaybetweentwohits }}秒后喷发，再次造成<physicalDamage>{{ basedamage }}</physicalDamage>外加<physicalDamage>{{ healthdamagepercent }}%最大生命值的物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -558,7 +558,7 @@
                     "id": "PoppyW",
                     "name": "坚定风采",
                     "description": "波比被动获得护甲和魔法抗性。这个加成会在她生命值较低时得到提升。波比可以主动施放此技能来获得移动速度加成并中断附近敌人的突进。如果中断了一次突进，那么该敌人还会被减速和缚地。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>波比获得<scaleArmor>{{ bonusarmor }}护甲</scaleArmor>和<scaleMR>{{ bonusmr }}魔法抗性</scaleMR>。在波比低于{{ passiveempoweredhealthpercent*100 }}%生命值时，这个加成会翻倍。<br /><br /><spellActive>主动：</spellActive>波比获得<speed>{{ e2 }}%移动速度</speed>并投射出一个环绕自身的领域，持续{{ e1 }}秒，该领域可中断敌人的冲刺。被领域中断的敌人们会受到持续{{ groundingduration }}秒的<status>缚地</status>和{{ slowamount*-100 }}%<status>减速</status>，以及<magicDamage>{{ interruptdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>波比获得<scaleArmor>{{ bonusarmor }}护甲</scaleArmor>和<scaleMR>{{ bonusmr }}魔法抗性</scaleMR>。在波比低于{{ passiveempoweredhealthpercent*100 }}%生命值时，这个加成会翻倍。<br /><br /><spellActive>主动：</spellActive>波比获得<speed>{{ haste }}%移动速度</speed>并投射出一个环绕自身的领域，持续{{ duration }}秒，该领域可中断敌人的冲刺。被领域中断的敌人们会受到持续{{ groundingduration }}秒的<status>缚地</status>和{{ slowamount*-100 }}%<status>减速</status>，以及<magicDamage>{{ interruptdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -699,7 +699,7 @@
                     "id": "PoppyE",
                     "name": "英勇冲锋",
                     "description": "波比冲向目标并把目标推后。如果目标被推到墙上，就会受到晕眩效果。",
-                    "tooltip": "波比擒抱一名敌人，造成<physicalDamage>{{ tackledamage }}物理伤害</physicalDamage>并将该敌人带向前方。如果波比将目标擒抱到地形上，那么该敌人会被<status>晕眩</status>{{ e3 }}秒并受到额外的<physicalDamage>{{ tackledamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "波比擒抱一名敌人，造成<physicalDamage>{{ tackledamage }}物理伤害</physicalDamage>并将该敌人带向前方。如果波比将目标擒抱到地形上，那么该敌人会被<status>晕眩</status>{{ stunduration }}秒并受到额外的<physicalDamage>{{ tackledamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "初始伤害",

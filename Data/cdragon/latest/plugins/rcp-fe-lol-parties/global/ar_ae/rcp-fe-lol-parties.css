@@ -4274,12 +4274,16 @@ lol-uikit-content-block.game-type-category-disabled ul {
     font-family: var(--font-display)
 }
 
-.game-type-card .parties-game-type-card-intro {
+.game-type-card .parties-game-type-card-intro,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited {
     font-family: var(--font-body)
 }
 
 .game-type-card .parties-game-type-card-intro,
-.game-type-card .parties-game-type-lower-half label {
+.game-type-card .parties-game-type-lower-half label,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
@@ -4321,6 +4325,62 @@ lol-uikit-content-block.game-type-category-disabled ul {
 
 .game-type-card .parties-game-type-card-intro:lang(ar-ae) {
     letter-spacing: 0
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link:lang(ja-jp),
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited:lang(ja-jp) {
+    font-size: 13px
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link:lang(ar-ae),
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited {
+    color: #0596aa;
+    text-decoration: none
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link.hover,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link:hover,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited.hover,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited:hover {
+    color: #cdfafa
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link:after,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-parties/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link:lang(ar-ae):after,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link:hover:after,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited:hover:after {
+    background-color: #cdfafa
 }
 
 .game-type-card .parties-game-type-lower-half label {
@@ -4407,15 +4467,22 @@ lol-uikit-content-block.game-type-category-disabled ul {
     width: 1px
 }
 
+.game-type-card .parties-game-type-upper-half .parties-eligibility-error-wrapper {
+    position: absolute;
+    right: 40px;
+    top: 98px
+}
+
 .game-type-card .parties-game-type-upper-half .parties-eligibility-error {
     background-image: url(/fe/lol-parties/icon-warning-red.png);
     background-repeat: no-repeat;
     background-size: contain;
     height: 20px;
-    position: absolute;
-    right: 40px;
-    top: 98px;
     width: 22px
+}
+
+.game-type-card .parties-game-type-upper-half .parties-eligibility-error.clickable {
+    cursor: pointer
 }
 
 .game-type-card .parties-game-type-lower-half {
@@ -4462,6 +4529,16 @@ lol-uikit-content-block.game-type-category-disabled ul {
     cursor: pointer;
     position: relative;
     width: 170px
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] {
+    padding: 18px 12px;
+    text-align: left
+}
+
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:link,
+lol-uikit-content-block.game-mode-blocked-tooltip[type=tooltip-small] a:visited {
+    text-decoration: underline
 }
 
 .game-type-card .parties-game-type-card-break,

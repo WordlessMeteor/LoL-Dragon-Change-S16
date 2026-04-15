@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Poppy își rotește barosul, provocând daune și creând o zonă care va încetini inamicii și va exploda după o perioadă scurtă de timp.",
-            "dynamicDescription": "Poppy lovește pământul, provocând <physicalDamage>daune fizice în valoare de @BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% din viața maximă</physicalDamage>, iar zona devine instabilă. <br><br>Zona instabilă <status>încetinește</status> inamicii cu @Effect3Amount@% și explodează după @Effect4Amount@ secundă, provocând din nou <physicalDamage>daune fizice în valoare de @BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% din viața maximă</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": " Poppy lovește pământul, provocând <physicalDamage>daune fizice în valoare de @BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% din viața maximă</physicalDamage>, iar zona devine instabilă. <br><br>Zona instabilă <status>încetinește</status> inamicii cu @Slow_@% și explodează după @DelayBetweenTwoHits@ secundă, provocând din nou <physicalDamage>daune fizice în valoare de @BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% din viața maximă</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Poppy primește armură și rezistență la magie în mod pasiv. Bonusul crește când Poppy are foarte puțină viață. Poppy poate activa ''Dârzenia'' pentru a primi un bonus la viteza de mișcare și a opri năpustirile inamicilor din jurul ei. Dacă oprește o năpustire, inamicul este încetinit și pironit.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Poppy primește <scaleArmor>@BonusArmor@ armură</scaleArmor> și <scaleMR>@BonusMR@ rezistență la magie</scaleMR>. Acest bonus se dublează dacă Poppy are sub @PassiveEmpoweredHealthPercent*100@% viață.<br><br><spellActive>Activă:</spellActive> Poppy primește un bonus de <speed>@Effect2Amount@% la viteza de mișcare</speed> și proiectează un câmp în jurul ei timp de @Effect1Amount@ secunde care oprește năpustirile inamicilor. Inamicii care sunt opriți de câmp sunt <status>pironiți</status> și <status>încetiniți</status> cu @SlowAmount*-100@% timp de @GroundingDuration@ secunde și suferă <magicDamage>@InterruptDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Poppy primește <scaleArmor>@BonusArmor@ armură</scaleArmor> și <scaleMR>@BonusMR@ rezistență la magie</scaleMR>. Acest bonus se dublează dacă Poppy are sub @PassiveEmpoweredHealthPercent*100@% viață.<br><br><spellActive>Activă:</spellActive> Poppy primește un bonus de <speed>@Haste@% la viteza de mișcare</speed> și proiectează un câmp în jurul ei timp de @Duration@ secunde care oprește năpustirile inamicilor. Inamicii care sunt opriți de câmp sunt <status>pironiți</status> și <status>încetiniți</status> cu @SlowAmount*-100@% timp de @GroundingDuration@ secunde și suferă <magicDamage>@InterruptDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Poppy se aruncă asupra țintei și o împinge înapoi. Dacă o împinge în perete, o amețește.",
-            "dynamicDescription": "Poppy atacă un adversar, provocându-i <physicalDamage>@TackleDamage@ daune fizice</physicalDamage> și împingându-l în față. Dacă Poppy îl lovește de teren, inamicul este <status>amețit</status> timp de @Effect3Amount@ secunde și suferă încă <physicalDamage>@TackleDamage@ daune fizice</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy atacă un adversar, provocându-i <physicalDamage>@TackleDamage@ daune fizice</physicalDamage> și împingându-l în față. Dacă Poppy îl lovește de teren, inamicul este <status>amețit</status> timp de @StunDuration@ secunde și suferă încă <physicalDamage>@TackleDamage@ daune fizice</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

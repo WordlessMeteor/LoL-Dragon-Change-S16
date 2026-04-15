@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.7.1",
+    "version": "16.8.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -4880,7 +4880,7 @@
                     "id": "AlistarE",
                     "name": "Trample",
                     "description": "Alistar tramples nearby enemy units, ignoring unit collision and gaining stacks if he damages an enemy champion. At full stacks Alistar's next basic attack against an enemy champion deals additional magic damage and stuns them.",
-                    "tooltip": "Alistar begins trampling the ground, becoming Ghosted and dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> over {{ e3 }} seconds to nearby enemies. Each pulse that damages a champion grants a stack.<br /><br />At {{ e5 }} stacks, Alistar's next Attack against champions <status>Stuns</status> for {{ e6 }} second and deals an additional <magicDamage>{{ attackbonusdamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Alistar begins trampling the ground, becoming Ghosted and dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> over {{ duration }} seconds to nearby enemies. Each pulse that damages a champion grants a stack.<br /><br />At {{ maxstacks }} stacks, Alistar's next Attack against champions <status>Stuns</status> for {{ stunduration }} second and deals an additional <magicDamage>{{ attackbonusdamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -17676,6 +17676,75 @@
                     "name": "Grill Master Braum (Obsidian)",
                     "chromas": false,
                     "parentSkin": 42
+                },
+                {
+                    "id": "201051",
+                    "num": 51,
+                    "name": "Victorious Braum",
+                    "chromas": true
+                },
+                {
+                    "id": "201052",
+                    "num": 52,
+                    "name": "Victorious Braum (Bronze)",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201053",
+                    "num": 53,
+                    "name": "Victorious Braum (Silver)",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201054",
+                    "num": 54,
+                    "name": "Victorious Braum (Gold)",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201055",
+                    "num": 55,
+                    "name": "Victorious Braum (Platinum)",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201056",
+                    "num": 56,
+                    "name": "Victorious Braum (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201057",
+                    "num": 57,
+                    "name": "Victorious Braum (Diamond)",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201058",
+                    "num": 58,
+                    "name": "Victorious Braum (Master)",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201059",
+                    "num": 59,
+                    "name": "Victorious Braum (Grandmaster)",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201060",
+                    "num": 60,
+                    "name": "Victorious Braum (Challenger)",
+                    "chromas": false,
+                    "parentSkin": 51
                 }
             ],
             "lore": "Blessed with massive biceps and an even bigger heart, Braum is a beloved hero of the Freljord. Every mead hall north of Frostheld toasts his legendary strength, said to have felled a forest of oaks in a single night, and punched an entire mountain into rubble. Bearing an enchanted vault door as his shield, Braum roams the frozen north sporting a mustachioed smile as big as his muscles—a true friend to all those in need.",
@@ -17728,7 +17797,7 @@
                     "id": "BraumQ",
                     "name": "Winter's Bite",
                     "description": "Braum propels freezing ice from his shield, slowing and dealing magic damage.<br><br>Applies a stack of <font color='#FFF673'>Concussive Blows</font>.",
-                    "tooltip": "Braum propels freezing ice from his shield, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to the first enemy hit and <status>Slowing</status> them by {{ e2 }}% decaying over {{ e5 }} seconds.<br /><br />Applies a stack of <keywordMajor>Concussive Blows</keywordMajor>. {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Braum propels freezing ice from his shield, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to the first enemy hit and <status>Slowing</status> them by {{ initialslow }}% decaying over {{ slowduration }} seconds.<br /><br />Applies a stack of <keywordMajor>Concussive Blows</keywordMajor>. {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -17871,7 +17940,7 @@
                     "id": "BraumW",
                     "name": "Stand Behind Me",
                     "description": "Braum leaps to a target allied champion or minion. On arrival, Braum and the ally gain Armor and Magic Resist for a few seconds.",
-                    "tooltip": "Braum leaps to an allied champion or minion. On arrival, Braum grants the target <scaleArmor>{{ grantedallyarmor }} Armor</scaleArmor> and <scaleMR>{{ grantedallymr }} Magic Resist</scaleMR> for {{ e1 }} seconds. Braum grants himself <scaleArmor>{{ grantedbraumarmor }} Armor</scaleArmor> and <scaleMR>{{ grantedbraummr }} Magic Resist</scaleMR> for the same duration.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Braum leaps to an allied champion or minion. On arrival, Braum grants the target <scaleArmor>{{ grantedallyarmor }} Armor</scaleArmor> and <scaleMR>{{ grantedallymr }} Magic Resist</scaleMR> for {{ duration }} seconds. Braum grants himself <scaleArmor>{{ grantedbraumarmor }} Armor</scaleArmor> and <scaleMR>{{ grantedbraummr }} Magic Resist</scaleMR> for the same duration.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Resists",
@@ -18012,7 +18081,7 @@
                     "id": "BraumE",
                     "name": "Unbreakable",
                     "description": "Braum raises his shield in a direction for several seconds, intercepting all projectiles causing them to hit him and be destroyed. He negates the damage of the first attack completely and reduces the damage of all subsequent attacks from this direction.",
-                    "tooltip": "Braum raises his shield for {{ e2 }} seconds, intercepting enemy missiles from the chosen direction, causing them to hit Braum and then be destroyed. The first missile Braum blocks deals no damage, and subsequent projectiles deal {{ e3 }}% reduced damage.<br /><br />Braum gains <speed>{{ e4 }}% Move Speed</speed> while his shield is raised.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Braum raises his shield for {{ shieldholdduration }} seconds, intercepting enemy missiles from the chosen direction, causing them to hit Braum and then be destroyed. The first missile Braum blocks deals no damage, and subsequent projectiles deal {{ shieldfacingdramount }}% reduced damage.<br /><br />Braum gains <speed>{{ movespeedpercent }}% Move Speed</speed> while his shield is raised.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Duration",
@@ -55870,7 +55939,7 @@
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 51,
+                "attackdamage": 49,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 2.3,
                 "attackspeed": 0.625
@@ -56189,13 +56258,13 @@
                     ],
                     "cooldownBurn": "10/9.5/9/8.5/8",
                     "cost": [
-                        50,
-                        55,
                         60,
                         65,
-                        70
+                        70,
+                        75,
+                        80
                     ],
-                    "costBurn": "50/55/60/65/70",
+                    "costBurn": "60/65/70/75/80",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -67401,7 +67470,7 @@
                     "id": "LeblancW",
                     "name": "Distortion",
                     "description": "LeBlanc dashes to a location, dealing damage to enemies near her destination. For the next 4 seconds, activate Distortion again to return LeBlanc to her starting location.",
-                    "tooltip": "LeBlanc dashes then deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to nearby enemies. For {{ e3 }} seconds after dashing, LeBlanc can <recast>Recast</recast>.<br /><br /><recast>Recast:</recast> LeBlanc returns to her starting location.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "LeBlanc dashes then deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to nearby enemies. For {{ snapbacktimeallowed }} seconds after dashing, LeBlanc can <recast>Recast</recast>.<br /><br /><recast>Recast:</recast> LeBlanc returns to her starting location.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -67544,7 +67613,7 @@
                     "id": "LeblancE",
                     "name": "Ethereal Chains",
                     "description": "LeBlanc launches a chain that shackles the first enemy hit. If the target remains shackled for 1.5 seconds, LeBlanc roots them and deals additional damage.",
-                    "tooltip": "LeBlanc launches a chain that shackles the first enemy hit, dealing <magicDamage>{{ initialdamage }} magic damage</magicDamage> and granting <keywordStealth>True Sight</keywordStealth>.<br /><br />If they remain shackled for {{ e3 }} seconds, LeBlanc <status>Roots</status> them for {{ e4 }} seconds and deals an additional <magicDamage>{{ delayeddamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "LeBlanc launches a chain that shackles the first enemy hit, dealing <magicDamage>{{ initialdamage }} magic damage</magicDamage> and granting <keywordStealth>True Sight</keywordStealth>.<br /><br />If they remain shackled for {{ tetherduration }} seconds, LeBlanc <status>Roots</status> them for {{ rootduration }} seconds and deals an additional <magicDamage>{{ delayeddamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Chain Damage",
@@ -72843,21 +72912,21 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        18,
-                        17,
                         16,
+                        15.5,
                         15,
+                        14.5,
                         14
                     ],
-                    "cooldownBurn": "18/17/16/15/14",
+                    "cooldownBurn": "16/15.5/15/14.5/14",
                     "cost": [
-                        40,
-                        30,
-                        20,
-                        10,
+                        32,
+                        24,
+                        16,
+                        8,
                         0
                     ],
-                    "costBurn": "40/30/20/10/0",
+                    "costBurn": "32/24/16/8/0",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -76726,7 +76795,7 @@
                     "id": "MalzaharQ",
                     "name": "Call of the Void",
                     "description": "Malzahar opens up two portals to the Void. After a short delay, they fire projectiles that deal Magic Damage and silence enemy champions.",
-                    "tooltip": "Malzahar opens two portals to the Void that fire projectiles inward, dealing <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> and <status>Silencing</status> for {{ e2 }} second(s).{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Malzahar opens two portals to the Void that fire projectiles inward, dealing <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> and <status>Silencing</status> for {{ silenceduration }} second(s).{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -77155,7 +77224,7 @@
                     "id": "MalzaharR",
                     "name": "Nether Grasp",
                     "description": "Malzahar channels the essence of the Void to suppress an enemy champion over a zone of damaging negative energy.",
-                    "tooltip": "Malzahar <status>Suppresses</status> an enemy champion and deals <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> over {{ e4 }} seconds. A zone of negative energy is created around his target dealing <magicDamage>{{ zonedamagetooltip }} max Health magic damage</magicDamage> over {{ e3 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Malzahar <status>Suppresses</status> an enemy champion and deals <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> over {{ ccduration }} seconds. A zone of negative energy is created around his target dealing <magicDamage>{{ zonedamagetooltip }} max Health magic damage</magicDamage> over {{ poolduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Nether Grasp Damage",
@@ -78771,6 +78840,12 @@
                     "name": "Victorious Master Yi (Challenger)",
                     "chromas": false,
                     "parentSkin": 106
+                },
+                {
+                    "id": "11116",
+                    "num": 116,
+                    "name": "PROJECT: Command Line Yi",
+                    "chromas": true
                 }
             ],
             "lore": "Master Yi has tempered his body and sharpened his mind, so that thought and action have become almost as one. Though he chooses to enter into violence only as a last resort, the grace and speed of his blade ensures resolution is always swift. As one of the last living practitioners of the Ionian art of Wuju, Yi has devoted his life to continuing the legacy of his people—scrutinizing potential new disciples with the Seven Lenses of Insight to identify the most worthy among them.",
@@ -79684,13 +79759,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
+                        38,
                         35,
-                        32,
+                        33,
                         29,
-                        26,
-                        23
+                        26
                     ],
-                    "cooldownBurn": "35/32/29/26/23",
+                    "cooldownBurn": "38/35/33/29/26",
                     "cost": [
                         80,
                         60,
@@ -97827,7 +97902,7 @@
                     "id": "PoppyQ",
                     "name": "Hammer Shock",
                     "description": "Poppy swings her hammer, dealing damage and creating a zone that will slow enemies and explode after a delay.",
-                    "tooltip": "Poppy smashes the ground, dealing <physicalDamage>{{ basedamage }}</physicalDamage> plus <physicalDamage>{{ healthdamagepercent }}% max Health physical damage</physicalDamage> and making the ground unstable. <br /><br />The unstable area <status>Slows</status> enemies by {{ e3 }}% and erupts after {{ e4 }} second, dealing <physicalDamage>{{ basedamage }}</physicalDamage> plus <physicalDamage>{{ healthdamagepercent }}% max Health physical damage</physicalDamage> again.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Poppy smashes the ground, dealing <physicalDamage>{{ basedamage }}</physicalDamage> plus <physicalDamage>{{ healthdamagepercent }}% max Health physical damage</physicalDamage> and making the ground unstable. <br /><br />The unstable area <status>Slows</status> enemies by {{ slow_ }}% and erupts after {{ delaybetweentwohits }} second, dealing <physicalDamage>{{ basedamage }}</physicalDamage> plus <physicalDamage>{{ healthdamagepercent }}% max Health physical damage</physicalDamage> again.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -97974,7 +98049,7 @@
                     "id": "PoppyW",
                     "name": "Steadfast Presence",
                     "description": "Poppy passively gains Armor and Magic Resist. This bonus increases when she is low on Health. Poppy can activate Steadfast Presence to gain Move Speed and stop enemy dashes around her. If a dash is stopped, the enemy is slowed and grounded.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Poppy gains <scaleArmor>{{ bonusarmor }} Armor</scaleArmor> and <scaleMR>{{ bonusmr }} Magic Resist</scaleMR>. This bonus is doubled if Poppy is below {{ passiveempoweredhealthpercent*100 }}% Health.<br /><br /><spellActive>Active:</spellActive> Poppy gains <speed>{{ e2 }}% Move Speed</speed> and projects a field around her for {{ e1 }} seconds that stops enemy dashes. Enemies who are stopped by the field are <status>Grounded</status> and <status>Slowed</status> by {{ slowamount*-100 }}% for {{ groundingduration }} seconds and take <magicDamage>{{ interruptdamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Poppy gains <scaleArmor>{{ bonusarmor }} Armor</scaleArmor> and <scaleMR>{{ bonusmr }} Magic Resist</scaleMR>. This bonus is doubled if Poppy is below {{ passiveempoweredhealthpercent*100 }}% Health.<br /><br /><spellActive>Active:</spellActive> Poppy gains <speed>{{ haste }}% Move Speed</speed> and projects a field around her for {{ duration }} seconds that stops enemy dashes. Enemies who are stopped by the field are <status>Grounded</status> and <status>Slowed</status> by {{ slowamount*-100 }}% for {{ groundingduration }} seconds and take <magicDamage>{{ interruptdamage }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -98115,7 +98190,7 @@
                     "id": "PoppyE",
                     "name": "Heroic Charge",
                     "description": "Poppy dashes to the target and pushes it back. If the target is pushed into a wall, it is stunned.",
-                    "tooltip": "Poppy tackles an enemy, dealing <physicalDamage>{{ tackledamage }} physical damage</physicalDamage> and carrying them forward. If Poppy tackles them into terrain, the enemy is <status>Stunned</status> for {{ e3 }} seconds and take an additional <physicalDamage>{{ tackledamage }} physical damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Poppy tackles an enemy, dealing <physicalDamage>{{ tackledamage }} physical damage</physicalDamage> and carrying them forward. If Poppy tackles them into terrain, the enemy is <status>Stunned</status> for {{ stunduration }} seconds and take an additional <physicalDamage>{{ tackledamage }} physical damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Initial Damage",
@@ -119212,7 +119287,7 @@
                     "id": "Fling",
                     "name": "Fling",
                     "description": "Damages target enemy unit and flings them into the air behind Singed. If the target Singed flings lands in his Mega Adhesive, they are also rooted.",
-                    "tooltip": "Singed flings an enemy over his shoulder, dealing <magicDamage>{{ basedamage }} plus {{ e3 }}% max Health magic damage</magicDamage>.<br /><br />If Singed flings a target into his <spellName>Mega Adhesive</spellName>, they are <status>Rooted</status> for {{ e2 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Singed flings an enemy over his shoulder, dealing <magicDamage>{{ basedamage }} plus {{ maxhpdamage }}% max Health magic damage</magicDamage>.<br /><br />If Singed flings a target into his <spellName>Mega Adhesive</spellName>, they are <status>Rooted</status> for {{ rootduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -120035,7 +120110,7 @@
                     "id": "SionW",
                     "name": "Soul Furnace",
                     "description": "Sion shields himself and can reactivate after 3 seconds to deal Magic Damage to enemies nearby. When Sion kills enemies, he passively gains maximum Health.",
-                    "tooltip": "<spellPassive>Passive</spellPassive>: Sion gains <scaleHealth>{{ hpperkill }} max Health</scaleHealth> when he kills a unit, or {{ hpperchampkill }} for champion takedowns, large minions and large monsters.<br /><br /><spellActive>Active</spellActive>: Sion gains <shield>{{ totalshield }} Shield</shield> for 6 seconds. After {{ e7 }} seconds if the shield still holds, Sion can <recast>Recast</recast> to detonate the shield to deal <magicDamage>{{ totaldamage }} plus {{ e4 }}% max Health magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive</spellPassive>: Sion gains <scaleHealth>{{ hpperkill }} max Health</scaleHealth> when he kills a unit, or <scaleHealth>{{ hpperchampkill }}</scaleHealth> for champion takedowns, large minions and large monsters.<br /><br /><spellActive>Active</spellActive>: Sion gains <shield>{{ totalshield }} Shield</shield> for 6 seconds. After {{ e7 }} seconds if the shield still holds, Sion can <recast>Recast</recast> to detonate the shield to deal <magicDamage>{{ totaldamage }} plus {{ e4 }}% max Health magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Shield Amount",
@@ -120957,6 +121032,68 @@
                     "name": "Mythmaker Sivir (Paragon)",
                     "chromas": false,
                     "parentSkin": 50
+                },
+                {
+                    "id": "15072",
+                    "num": 72,
+                    "name": "PROJECT: Sivir",
+                    "chromas": true
+                },
+                {
+                    "id": "15073",
+                    "num": 73,
+                    "name": "PROJECT: Sivir (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15074",
+                    "num": 74,
+                    "name": "PROJECT: Sivir (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15075",
+                    "num": 75,
+                    "name": "PROJECT: Sivir (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15076",
+                    "num": 76,
+                    "name": "PROJECT: Sivir (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15077",
+                    "num": 77,
+                    "name": "PROJECT: Sivir (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15078",
+                    "num": 78,
+                    "name": "PROJECT: Sivir (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15079",
+                    "num": 79,
+                    "name": "PROJECT: Sivir (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15080",
+                    "num": 80,
+                    "name": "PROJECT: Sivir (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 72
                 }
             ],
             "lore": "Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won countless battles for those who can afford her exorbitant price. Known for her fearless resolve and endless ambition, she prides herself on recovering buried treasures from the perilous tombs of Shurima—for a generous bounty. With ancient forces stirring the very bones of Shurima, Sivir finds herself torn between conflicting destinies.",
@@ -121292,7 +121429,7 @@
                     "id": "SivirE",
                     "name": "Spell Shield",
                     "description": "Creates a magical barrier that blocks a single enemy ability cast on Sivir. She receives health and a burst of movement speed if a spell is blocked.",
-                    "tooltip": "Sivir creates a magical barrier for {{ e1 }} seconds that blocks the next incoming enemy Ability. If an ability is blocked, Sivir restores <healing>{{ totalheal }} health</healing> and triggers Fleet of Foot.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Sivir creates a magical barrier for {{ spellshieldduration }} seconds that blocks the next incoming enemy Ability. If an ability is blocked, Sivir restores <healing>{{ totalheal }} health</healing> and triggers Fleet of Foot.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Total AD Ratio",
@@ -121433,7 +121570,7 @@
                     "id": "SivirR",
                     "name": "On The Hunt",
                     "description": "Sivir leads her allies in battle, granting them a surge of Move Speed for a period of time. In addition, Sivir's attacks reduce her spell cooldowns.",
-                    "tooltip": "Sivir rallies her nearby allies, granting them <speed>{{ maxms*100 }}% Move Speed</speed> for {{ ultduration }} seconds.<br /><br />Sivir's attacks against champions while On The Hunt reduce the cooldown of her basic abilities by 0.5 seconds.<br /><br />Takedowns on recently damaged enemies refreshes the duration of the hunt.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Sivir rallies her nearby allies, granting them <speed>{{ maxms*100 }}% Move Speed</speed> for {{ ultduration }} seconds.<br /><br />Sivir's attacks against champions while On The Hunt reduce the cooldown of her basic abilities by {{ attackcooldownrefund }} seconds.<br /><br />Takedowns on recently damaged enemies refreshes the duration of the hunt.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -146029,7 +146166,7 @@
                     "id": "ViQ",
                     "name": "Vault Breaker",
                     "description": "Vi charges her gauntlets and unleashes a vault shattering punch, carrying her forward. Enemies she hits are knocked back and receive a stack of Denting Blows.",
-                    "tooltip": "<charge>Begin Charging:</charge> Vi begins charging a powerful punch, <status>Slowing</status> herself by {{ e4 }}%.<br /><br /><release>Release:</release> Vi dashes forward dealing between <physicalDamage>{{ totaldamage }} and {{ maxdamagetooltip }} physical damage</physicalDamage> based on charge time and applying <spellName>Denting Blows</spellName> to all enemies hit. Vi stops upon colliding with an enemy champion, and <status>Knocks</status> them <status>Back</status>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<charge>Begin Charging:</charge> Vi begins charging a powerful punch, <status>Slowing</status> herself by {{ selfslow }}%.<br /><br /><release>Release:</release> Vi dashes forward dealing between <physicalDamage>{{ totaldamage }} and {{ maxdamagetooltip }} physical damage</physicalDamage> based on charge time and applying <spellName>Denting Blows</spellName> to all enemies hit. Vi stops upon colliding with an enemy champion, and <status>Knocks</status> them <status>Back</status>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Minimum Damage",
@@ -148685,6 +148822,68 @@
                     "num": 48,
                     "name": "Masque of the Black Rose Vladimir",
                     "chromas": false
+                },
+                {
+                    "id": "8049",
+                    "num": 49,
+                    "name": "PsyOps Vladimir",
+                    "chromas": true
+                },
+                {
+                    "id": "8050",
+                    "num": 50,
+                    "name": "PsyOps Vladimir (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8051",
+                    "num": 51,
+                    "name": "PsyOps Vladimir (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8052",
+                    "num": 52,
+                    "name": "PsyOps Vladimir (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8053",
+                    "num": 53,
+                    "name": "PsyOps Vladimir (Tanzanite)",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8054",
+                    "num": 54,
+                    "name": "PsyOps Vladimir (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8055",
+                    "num": 55,
+                    "name": "PsyOps Vladimir (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8056",
+                    "num": 56,
+                    "name": "PsyOps Vladimir (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8057",
+                    "num": 57,
+                    "name": "PsyOps Vladimir (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 49
                 }
             ],
             "lore": "A fiend with a thirst for mortal blood, Vladimir has influenced the affairs of Noxus since the empire's earliest days. In addition to unnaturally extending his life, his mastery of hemomancy allows him to control the minds and bodies of others as easily as his own. In the flamboyant salons of the Noxian aristocracy, this has enabled him to build a fanatical cult of personality around himself—while in the lowest back alleys, it allows him to bleed his enemies dry.",
@@ -160284,6 +160483,68 @@
                     "name": "Zesty Dip Zac (Dessert Dip)",
                     "chromas": false,
                     "parentSkin": 24
+                },
+                {
+                    "id": "154033",
+                    "num": 33,
+                    "name": "Space Groove Zac",
+                    "chromas": true
+                },
+                {
+                    "id": "154034",
+                    "num": 34,
+                    "name": "Space Groove Zac (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154035",
+                    "num": 35,
+                    "name": "Space Groove Zac (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154036",
+                    "num": 36,
+                    "name": "Space Groove Zac (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154037",
+                    "num": 37,
+                    "name": "Space Groove Zac (Tanzanite)",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154038",
+                    "num": 38,
+                    "name": "Space Groove Zac (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154039",
+                    "num": 39,
+                    "name": "Space Groove Zac (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154040",
+                    "num": 40,
+                    "name": "Space Groove Zac (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154041",
+                    "num": 41,
+                    "name": "Space Groove Zac (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 33
                 }
             ],
             "lore": "Zac is the product of a toxic spill that ran through a chemtech seam and pooled in an isolated cavern deep in Zaun's Sump. Despite such humble origins, Zac has grown from primordial ooze into a thinking being who dwells in the city's pipes, occasionally emerging to help those who cannot help themselves or to rebuild the broken infrastructure of Zaun.",

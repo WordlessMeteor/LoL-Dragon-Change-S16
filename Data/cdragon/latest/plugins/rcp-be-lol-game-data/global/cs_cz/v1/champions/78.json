@@ -1147,7 +1147,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Poppy máchne kladivem, čímž způsobí poškození a vytvoří zónu, která zpomaluje protivníky a po chvíli vybuchne.",
-            "dynamicDescription": "Poppy udeří do země, způsobí <physicalDamage>fyzické poškození ve výši @BaseDamage@ bodů</physicalDamage> plus <physicalDamage>@HealthDamagePercent@&nbsp;% maximálního zdraví</physicalDamage> a učiní okolní zem nestabilní. <br><br>Nestabilní oblast <status>zpomaluje</status> nepřátele o @Effect3Amount@&nbsp;% a po uplynutí @Effect4Amount@&nbsp;sek. vybuchne, čímž znovu způsobí <physicalDamage>fyzické poškození ve výši @BaseDamage@ bodů</physicalDamage> plus <physicalDamage>@HealthDamagePercent@&nbsp;% maximálního zdraví</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy udeří do země, způsobí <physicalDamage>fyzické poškození ve výši @BaseDamage@ bodů</physicalDamage> plus <physicalDamage>@HealthDamagePercent@&nbsp;% maximálního zdraví</physicalDamage> a učiní okolní zem nestabilní. <br><br>Nestabilní oblast <status>zpomaluje</status> nepřátele o @Slow_@&nbsp;% a po uplynutí @DelayBetweenTwoHits@&nbsp;sek. vybuchne, čímž znovu způsobí <physicalDamage>fyzické poškození ve výši @BaseDamage@ bodů</physicalDamage> plus <physicalDamage>@HealthDamagePercent@&nbsp;% maximálního zdraví</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Poppy se pasivně zvyšuje hodnota brnění a odolnosti vůči magii. Pokud má Poppy málo zdraví, je tento bonus výraznější. Aktivací Nezdolného postoje získá bonus k rychlosti pohybu a zastaví okolní nepřátele, kteří se snaží bleskurychle přesunout na jinou pozici. Pokud nějakému nepříteli zastaví přeběh, zpomalí ho a uzemní.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Poppy získá <scaleArmor>+@BonusArmor@ k brnění</scaleArmor> a <scaleMR>+@BonusMR@ k odolnosti vůči magii</scaleMR>. Pokud má Poppy méně než @PassiveEmpoweredHealthPercent*100@&nbsp;% zdraví, je tento bonus dvojnásobný.<br><br><spellActive>Aktivace:</spellActive> Poppy získá na @Effect1Amount@&nbsp;sek. <speed>@Effect2Amount@&nbsp;% k rychlosti pohybu</speed> a vytvoří kolem sebe pole, které zastaví nepřátelské přeběhy. Nepřátelé, které pole zastaví, budou na @GroundingDuration@&nbsp;sek. <status>uzemněni</status> a <status>zpomaleni</status> o @SlowAmount*-100@&nbsp;% a utrpí <magicDamage>@InterruptDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Poppy získá <scaleArmor>+@BonusArmor@ k brnění</scaleArmor> a <scaleMR>+@BonusMR@ k odolnosti vůči magii</scaleMR>. Pokud má Poppy méně než @PassiveEmpoweredHealthPercent*100@&nbsp;% zdraví, tento bonus se zdvojnásobí.<br><br><spellActive>Aktivace:</spellActive> Poppy získá na @Duration@&nbsp;sek. <speed>@Haste@&nbsp;% k rychlosti pohybu</speed> a vytvoří kolem sebe pole, které zastaví nepřátelské přeběhy. Nepřátelé, které pole zastaví, budou na @GroundingDuration@&nbsp;sek. <status>uzemněni</status> a <status>zpomaleni</status> o @SlowAmount*-100@&nbsp;% a utrpí <magicDamage>@InterruptDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Poppy se vrhne ke zvolené jednotce a odhodí ji. Pokud cíl narazí do zdi, bude omráčen.",
-            "dynamicDescription": "Poppy popadne nepřítele, způsobí mu <physicalDamage>@TackleDamage@ bodů fyzického poškození</physicalDamage> a vrhne se s ním kupředu. Pokud s ním tímto způsobem narazí do terénní překážky, bude nepřítel na @Effect3Amount@&nbsp;sek. <status>omráčený</status> a utrpí dodatečných <physicalDamage>@TackleDamage@ bodů fyzického poškození</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy popadne nepřítele, způsobí mu <physicalDamage>@TackleDamage@ bodů fyzického poškození</physicalDamage> a vrhne se s ním kupředu. Pokud s ním tímto způsobem narazí do terénní překážky, bude nepřítel na @StunDuration@&nbsp;sek. <status>omráčený</status> a utrpí dodatečných <physicalDamage>@TackleDamage@ bodů fyzického poškození</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

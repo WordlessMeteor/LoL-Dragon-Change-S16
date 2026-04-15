@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.7.1",
+    "version": "16.8.1",
     "data": {
         "Braum": {
             "id": "Braum",
@@ -365,6 +365,75 @@
                     "name": "烤肉大师 布隆 夜色守胃者",
                     "chromas": false,
                     "parentSkin": 42
+                },
+                {
+                    "id": "201051",
+                    "num": 51,
+                    "name": "胜利之心 布隆",
+                    "chromas": true
+                },
+                {
+                    "id": "201052",
+                    "num": 52,
+                    "name": "胜利之心 布隆 英勇黄铜",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201053",
+                    "num": 53,
+                    "name": "胜利之心 布隆 不屈白银",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201054",
+                    "num": 54,
+                    "name": "胜利之心 布隆 荣耀黄金",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201055",
+                    "num": 55,
+                    "name": "胜利之心 布隆 华贵铂金",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201056",
+                    "num": 56,
+                    "name": "胜利之心 布隆 流光翡翠",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201057",
+                    "num": 57,
+                    "name": "胜利之心 布隆 璀璨钻石",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201058",
+                    "num": 58,
+                    "name": "胜利之心 布隆 超凡大师",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201059",
+                    "num": 59,
+                    "name": "胜利之心 布隆 傲世宗师",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201060",
+                    "num": 60,
+                    "name": "胜利之心 布隆 最强王者",
+                    "chromas": false,
+                    "parentSkin": 51
                 }
             ],
             "lore": "拥有大肌肉和大心脏的布隆，是一位受人爱戴的弗雷尔卓德英雄，在弗雷尔卓德北部的任何一家蜜酒坊里，都有人在这位传奇般的强壮英雄致敬。据说他曾在一夜之间扫平一整片橡树森林，还曾用拳头把一整座山打成碎石子。那抹小胡子勾勒出的笑容和布隆的肌肉一样夺目，他手持一扇附有魔法的秘库大门当盾牌，常年在北方的冻土上漫游，真诚友善地帮助着所有陷入危难之中的人。",
@@ -417,7 +486,7 @@
                     "id": "BraumQ",
                     "name": "寒冬之咬",
                     "description": "布隆驱动盾牌中的冷冻冰块，对敌人造成魔法伤害和减速效果。<br><br>对目标施加一层<font color='#FFF673'>震荡猛击</font>。",
-                    "tooltip": "布隆驱动盾牌里的冷冻冰块，对命中的第一个敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和在{{ e5 }}秒里持续衰减的{{ e2 }}%<status>减速</status>。<br /><br />施加一层<keywordMajor>震荡猛击</keywordMajor>。 {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "布隆驱动盾牌里的冷冻冰块，对命中的第一个敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和在{{ slowduration }}秒里持续衰减的{{ initialslow }}%<status>减速</status>。<br /><br />施加一层<keywordMajor>震荡猛击</keywordMajor>。 {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -560,7 +629,7 @@
                     "id": "BraumW",
                     "name": "挺身而出",
                     "description": "布隆跃向目标友军英雄或小兵。在抵达时，布隆和友军会暂时获得护甲和魔法抗性加成。",
-                    "tooltip": "布隆跃向一名友方英雄或小兵。在抵达时，布隆为目标提供持续{{ e1 }}秒的<scaleArmor>{{ grantedallyarmor }}护甲</scaleArmor>和<scaleMR>{{ grantedallymr }}魔法抗性</scaleMR>。布隆为他自己提供相同持续时间的<scaleArmor>{{ grantedbraumarmor }}护甲</scaleArmor>和<scaleMR>{{ grantedbraummr }}魔法抗性</scaleMR>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "布隆跃向一名友方英雄或小兵。在抵达时，布隆为目标提供持续{{ duration }}秒的<scaleArmor>{{ grantedallyarmor }}护甲</scaleArmor>和<scaleMR>{{ grantedallymr }}魔法抗性</scaleMR>。布隆为他自己提供相同持续时间的<scaleArmor>{{ grantedbraumarmor }}护甲</scaleArmor>和<scaleMR>{{ grantedbraummr }}魔法抗性</scaleMR>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础抗性",
@@ -701,7 +770,7 @@
                     "id": "BraumE",
                     "name": "坚不可摧",
                     "description": "布隆朝一个方向举起盾牌，持续数秒，可以拦截所有敌方飞行道具，并将它们摧毁，但自身要承受这些飞行道具的伤害。在举盾后，布隆将使承受的第一次攻击变得完全无效，并降低来自这个方向的所有后续攻击的伤害。",
-                    "tooltip": "布隆将他的盾牌举起{{ e2 }}秒，拦截来自选定方向的所有敌方弹体，使其命中布隆然后被摧毁。布隆格挡的首个弹体不会造成伤害，并且后续弹体造成的伤害降低{{ e3 }}%。<br /><br />布隆在举盾时获得<speed>{{ e4 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "布隆将他的盾牌举起{{ shieldholdduration }}秒，拦截来自选定方向的所有敌方弹体，使其命中布隆然后被摧毁。布隆格挡的首个弹体不会造成伤害，并且后续弹体造成的伤害降低{{ shieldfacingdramount }}%。<br /><br />布隆在举盾时获得<speed>{{ movespeedpercent }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "持续时间",

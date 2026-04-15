@@ -14867,6 +14867,2823 @@
         ]
     },
     {
+        "display_name": "Béni des dieux",
+        "trait_id": "Set17_CarouselMarket_EmpoweredHexTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GodBlessed.TFT_Set17.png",
+        "tooltip_text": "@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey1@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey2@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey3@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey4@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey5@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey6@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey7@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey8@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey9@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey10@<br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 0,
+                "style_idx": 1,
+                "style_name": "kThreat"
+            }
+        ]
+    },
+    {
+        "display_name": "Juge stellaire",
+        "trait_id": "TFT17_ADMIN",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Arbiter.TFT_Set17.png",
+        "tooltip_text": "Rédigez une loi divine unique, vous permettant de choisir un effet à appliquer aux Juges stellaires lorsqu'une cause choisie se produit.<br><br><row>(@MinUnits@) Choisissez une cause et un effet pour votre loi.</row><br><row>(@MinUnits@) Les effets sont plus puissants.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageInstances",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "ManaToSpend",
+                        "value": 50.0
+                    },
+                    {
+                        "name": "NumAttacks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "NumSeconds",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "OutputMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "OutputMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Réplicateur",
+        "trait_id": "TFT17_APTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Replicator.TFT_Set17.png",
+        "tooltip_text": "Les compétences des Réplicateurs se déclenchent une seconde fois avec une efficacité réduite.<br><br><expandRow>(@MinUnits@) @Effectiveness*100@% d'efficacité</expandRow>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Effectiveness",
+                        "value": 0.22
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Effectiveness",
+                        "value": 0.45
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Challenger",
+        "trait_id": "TFT17_ASTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Challenger.TFT_Set17.png",
+        "tooltip_text": "Votre équipe gagne @TeamwideAS*100@% de vitesse d'attaque. Les Challengers gagnent un bonus en vitesse d'attaque. Quand leur cible meurt, les Challengers se ruent sur une nouvelle cible et augmentent leur bonus en vitesse d'attaque de @BurstPercent*100@% pendant @BurstDuration@ sec.<br><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BurstDuration",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "BurstPercent",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "TeamwideAS",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.22
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.36
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.48
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Section Anima",
+        "trait_id": "TFT17_AnimaSquad",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
+        "tooltip_text": "Après avoir perdu un combat de joueur, vos unités de la Section Anima gagnent @TechPerCombat@ de tech, plus un montant équivalent à @TechPerLoss@ fois la durée de votre série de défaites. Vous gagnez également @TechPerKill@ de tech à chaque fois qu'une unité de la Section Anima participe à une élimination.<br><br>Lorsque vos unités de la Section Anima cumulent @TechBreakpoint@ de tech, elles vous proposent des armes de la Section Anima. Vous pouvez acheter ces armes avec votre tech, ou vous pouvez décider d'économiser votre tech pour acheter des armes plus puissantes plus tard dans la partie.<br><br><row>(@MinUnits@) Commencez vos recherches ! </row><br><row>(@MinUnits@) Après avoir remporté un combat contre un autre joueur, vous obtenez du butin !</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PairsPartnerWinMultiplier",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "TechBreakpoint",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "TechPerCombat",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "TechPerCombat_DU",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "TechPerDeath_PVE",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TechPerKill",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TechPerLoss",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TechPerLoss_DU",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TechPerRound_PVE",
+                        "value": 20.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 5,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Rebelle",
+        "trait_id": "TFT17_AssassinTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Rogue.TFT_Set17.png",
+        "tooltip_text": "Les Rebelles gagnent des dégâts d'attaque et de la puissance. La première fois qu'ils tombent en dessous de @HealthThreshold*100@% de PV, ils se glissent dans les ombres. Les ennemis qui les ciblaient se redirigent vers une unité proche, de préférence un tank.<br><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "AP",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "AP",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "AP",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.55
+                    },
+                    {
+                        "name": "AP",
+                        "value": 55.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Meeple",
+        "trait_id": "TFT17_Astronaut",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Astronaut.TFT_Set17.png",
+        "tooltip_text": "Placer des Meeples sur le plateau vous permet d'attirer des Meeps qui améliorent les compétences de ces unités de manière meepique. Ils gagnent aussi des PV bonus.<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%. Vous créez un emplacement de clonage sur votre banc. Vous obtenez des PO et une copie 1 étoile du champion placé à cet emplacement lorsque le clonage est terminé.</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%. INVOQUEZ LES QUATRE SEIGNEURS MEEPS !</row><br><br><rules>Temps de clonage = coût du champion</rules>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 400.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 400.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 6.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Bête de scène",
+        "trait_id": "TFT17_BlitzcrankUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PartyAnimal.TFT_Set17.png",
+        "tooltip_text": "Une fois par combat, après être tombé sous @HealthThreshold*100@% de PV, Blitzcrank devient impossible à cibler et régénère @PercentHealthHeal*100@% de ses PV max par seconde. Lorsqu'il atteint ses PV maximum, ou lorsqu'il ne reste aucun autre allié, il retourne au combat. S'il est entièrement soigné, pour le reste du combat, Blitzcrank est dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> et le passif de La fête est finie tire des projectiles quatre fois plus vite.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "PercentHealthHeal",
+                        "value": 0.15
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "N.O.V.A.",
+        "trait_id": "TFT17_DRX",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_NOVA.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) @TeamAttackDelay@ sec après le début du combat, N.O.V.A. octroie une surcharge stellaire aux alliés en fonction des champions.</row><br><row>(@MinUnits@) Vous obtenez un Sélecteur N.O.V.A. Le N.O.V.A. choisi active sa Frappe N.O.V.A. pendant la surcharge stellaire.</row><br><br><ShowIf.TFT17_DRX_HasAatrox><status>Aatrox :</status> les alliés infligent @ShredAndSunder*100@% de <TFTKeyword>scission</TFTKeyword> et <TFTKeyword>scission magique</TFTKeyword> aux ennemis.</ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>Aatrox : les alliés infligent scission et scission magique aux ennemis.</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>Caitlyn :</status> octroie @AS*100@% de vitesse d'attaque aux alliés.</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>Caitlyn : octroie de la vitesse d'attaque aux alliés.</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>Akali :</status> les alliés gagnent <TFTKeyword>Précision</TFTKeyword>.</ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>Akali : les alliés gagnent Précision.</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>Maokai :</status> les alliés reçoivent des soins équivalents à @Heal*100@% de leurs PV max.</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>Maokai : soigne les alliés.</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>Kindred :</status> octroie un bouclier de <TFTBonus>@ShieldValue@</TFTBonus> PV au tank le plus résistant.</ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>Kindred : octroie un bouclier à un allié.</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>Emblème :</status> les alliés infligent @BonusTrueDamage*100@% de dégâts bruts bonus cumulables.</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>Emblème : les alliés infligent des dégâts bruts bonus.</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AS",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "BonusTrueDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "ShieldValue",
+                        "value": 800.0
+                    },
+                    {
+                        "name": "ShredAndSunder",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "TeamAttackDelay",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Pulsar sombre",
+        "trait_id": "TFT17_DarkStar",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Les Pulsars sombres créent un trou noir qui consume les ennemis à @ExecuteHPPercent*100@% de leurs PV max.</row><br><row>(@MinUnits@) ET ils gagnent @ADAP@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) ET l'unité Pulsar sombre la plus forte devient supergéante, gagnant @SupermassivePercentBonus*100@% d'efficacité supplémentaire grâce à Pulsar sombre, et crée 2 trous noirs mineurs.</row><br><row>(@MinUnits@) Tous les Pulsars sombres deviennent supergéants. Au niveau 10, ILS CONSUMENT TOUT LE MONDE. </row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "ExecuteHPPercent",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "PercentHealth",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "SupermassivePercentBonus",
+                        "value": 0.85
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 6,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 9,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Tisse-destin",
+        "trait_id": "TFT17_Fateweaver",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Fateweaver.TFT_Set17.png",
+        "tooltip_text": "Inné : les Tisse-destin ont <TFTKeyword>Précision</TFTKeyword>.<br><br><row>(@MinUnits@) Les effets des compétences bénéficient de <TFTKeyword>Destinée</TFTKeyword>.</row><br><row>(@MinUnits@) Les Tisse-destin gagnent @CritChance*100@% de chances de coup critique et @CritDamage@%&nbsp;de dégâts critiques. Les coups critiques bénéficient également de <TFTKeyword>Destinée</TFTKeyword>.</row><br><br><rules>Précision : les dégâts des compétences peuvent infliger un coup critique. La Précision supplémentaire octroie 10% de dégâts de coup critique.</rules><br><rules>Destinée : l'unité effectue l'action deux fois et garde le meilleur résultat.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CritDamage",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "CritChance",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "CritDamage",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Duelliste divine",
+        "trait_id": "TFT17_FioraUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DivineDuelist.TFT_Set17.png",
+        "tooltip_text": "Votre Tacticien récupère @PlayerOmnivamp*100@% des dégâts infligés au joueur adverse lors d'une victoire.<br><br>Fiora remporte toujours un duel en un contre un.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DUHeal",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PVEHP",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PVENumWins",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "PlayerOmnivamp",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Voyageur",
+        "trait_id": "TFT17_FlexTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
+        "tooltip_text": "Début du combat : vos tanks gagnent un bouclier pendant @ShieldDuration@ sec. Vos autres alliés gagnent de l'amplification des dégâts. <br><br>Les Voyageurs en gagnent deux fois plus.<br><br><expandRow>(@MinUnits@) PV du bouclier : @ShieldHP@ ; @BonusDA*100@% %i:scaleDA%</expandRow><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "FlexTraitMultiplier",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.09
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 175.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 250.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 350.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.22
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 500.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.27
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 700.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Flambant neuf",
+        "trait_id": "TFT17_GravesTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_FactoryNew.TFT_Set17.png",
+        "tooltip_text": "Après un combat, vous ouvrez une armurerie pour acheter une amélioration permanente pour votre Graves le plus fort.<br><br>Toutes les @NumberOfUpgradesBeforeRoundCostIncrease@ améliorations, les prochaines améliorations nécessiteront une manche supplémentaire.<br><br><rules>Prochaine amélioration : @TFTUnitProperty.trait:TFT17_GravesTrait_RoundsUntilUpgrade@ manche(s).</rules>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumberOfUpgradesBeforeRoundCostIncrease",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Bagarreur",
+        "trait_id": "TFT17_HPTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Brawler.png",
+        "tooltip_text": "Votre équipe gagne @TeamwideBonus*100@% de PV. Les Bagarreurs en gagnent plus.<br><br><expandRow>(@MinUnits@) +@HealthBonus*100@% de PV max</expandRow>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamwideBonus",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Éradicateur",
+        "trait_id": "TFT17_JhinUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Singularity.TFT_Set17.png",
+        "tooltip_text": "Les ennemis ont @PctResists*100@% d'armure et de résistance magique en moins.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PctResists",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Canalisateur",
+        "trait_id": "TFT17_ManaTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Channeler.TFT_Set17.png",
+        "tooltip_text": "Inné : les Canalisateurs gagnent @InnateManaGain*100@% de mana bonus provenant de toutes les sources.<br><br>Votre équipe gagne de la régénération de mana. Les Canalisateurs en gagnent plus.<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "InnateManaGain",
+                        "value": 0.2
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 7.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 9.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Mecha",
+        "trait_id": "TFT17_Mecha",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Mecha.TFT_Set17.png",
+        "tooltip_text": "Inné : les Mechas peuvent se transformer et atteindre leur forme ultime, ce qui améliore leurs compétences et leur octroie @TransformedPercentHealth*100@% de PV bonus. Les Mechas ayant atteint leur forme ultime occupent 2 places sur le plateau et comptent comme 2 unités pour le type Mecha.<br><br><row>(@MinUnits@) Cellules d'énergie : les Méchas gagnent @AP@%&nbsp;%i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Cellules de surcadençage : bonus augmenté à @AP@%&nbsp;%i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Ingénierie de précision : augmente la taille de l'équipe de @TeamSize@.</row><br><br><rules>Utilisez le Forgeur de mecha pour basculer entre les formes de vos unités Mecha</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamSize",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TransformedPercentHealth",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "AP",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "AP",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "AP",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Maraudeur",
+        "trait_id": "TFT17_MeleeTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Slayer.png",
+        "tooltip_text": "Votre équipe gagne @TeamwideBonus*100@% d'omnivampirisme. Les Maraudeurs gagnent davantage d'omnivampirisme, des dégâts d'attaque, et leur excès de soins grâce à l'omnivampirisme est converti en bouclier (jusqu'à @MaxPercentHealthShield*100@% de leurs PV max).<br><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxPercentHealthShield",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "TeamwideBonus",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Choisissez un type",
+        "trait_id": "TFT17_MissFortuneUndeterminedTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_MissFortuneUndetermindedTrait.TFT_Set17.png",
+        "tooltip_text": "Lorsque vous placez Miss Fortune sur le plateau, vous choisissez si elle active le mode Canalisateur, le mode Challenger ou le mode Réplicateur. Miss Fortune dispose d'une compétence unique selon son mode et obtient le type associé.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": []
+    },
+    {
+        "display_name": "Déesse des flingues",
+        "trait_id": "TFT17_MissFortuneUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GunGoddess.TFT_Set17.png",
+        "tooltip_text": "Lorsque vous placez Miss Fortune sur le plateau, vous choisissez si elle active le mode Canalisateur, le mode Challenger ou le mode Réplicateur. Miss Fortune dispose d'une compétence unique selon son mode et obtient le type associé.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Allies",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "FlatDamage",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Mana",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumAttacks",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Dame sombre",
+        "trait_id": "TFT17_MorganaUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
+        "tooltip_text": "Les alliés subissent @UntransformedAbilityDA*100@% de dégâts en moins provenant des compétences. Bonus augmenté à @TransformedAbilityDA*100@% lorsque Morgana est en forme ténébreuse.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TransformedAbilityDA",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "UntransformedAbilityDA",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Primordien",
+        "trait_id": "TFT17_Primordian",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Primordian.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Les dégâts des Primordiens génèrent des swarmlings en fonction du niveau d'étoile unique de vos Primordiens.</row><br><row>(@MinUnits@) Les Primordiens font apparaître @PercentMoreSwarmlings@% de swarmlings en plus ! Après chaque combat contre un joueur, vous obtenez un champion aléatoire à 1 ou 2 PO. </row><br><br><rules>@DamageTakenPercentModifier*100@% des dégâts subis contribuent aux dégâts infligés.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageTakenPercentModifier",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "PercentMoreSwarmlings",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "SwarmlingAttacks",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageMultiplier",
+                        "value": 1.45
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Psionique",
+        "trait_id": "TFT17_PsyOps",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PsyOps.TFT_Set17.png",
+        "tooltip_text": "Vous obtenez des objets psioniques qui peuvent être équipés sur n'importe quel allié.<br><br><row>(@MinUnits@) Vous obtenez @TFTUnitProperty.trait:TFT17_PsyOps_Item1@.</row><br><row>(@MinUnits@) Vous obtenez @TFTUnitProperty.trait:TFT17_PsyOps_Item2@, les objets psioniques confèrent des effets supplémentaires aux Psioniques.</row><br><br><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TooltipOnlyEffectiveness",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "TooltipOnlyEffectiveness",
+                        "value": 50.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Sniper",
+        "trait_id": "TFT17_RangedTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Sniper.png",
+        "tooltip_text": "Les Snipers gagnent de l'amplification des dégâts, augmentée contre les cibles plus éloignées.<br><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA% ; +@PerHexIncrease@%&nbsp;%i:scaleDA% par hexagone</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA% ; +@PerHexIncrease@%&nbsp;%i:scaleDA% par hexagone</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA% ; +@PerHexIncrease@%&nbsp;%i:scaleDA% par hexagone</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 18.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 24.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 28.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Bastion",
+        "trait_id": "TFT17_ResistTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Bastion.png",
+        "tooltip_text": "Votre équipe gagne @TeamwideResists@ d'armure et de résistance magique.<br><br>Les Bastions en gagnent davantage, et cette valeur est doublée pendant les @Duration@ premières secondes de combat.<br><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR% ; les autres unités gagnent @EnhancedTeamwideArmor@ %i:scaleArmor%%i:scaleMR%.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedTeamwideArmor",
+                        "value": 20.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 16.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 16.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Rédempteur",
+        "trait_id": "TFT17_RhaastUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Redeemer.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Pour chaque type non unique actif, votre équipe gagne @BonusOffensiveStat1*100@%/@BonusOffensiveStat2*100@%/@BonusOffensiveStat3*100@% de vitesse d'attaque, ainsi que @BonusDefensiveStat1@/@BonusDefensiveStat2@/@BonusDefensiveStat3@ d'armure et de résistance magique.</row><br><br>Vitesse d'attaque octroyée à l'équipe : @TFTUnitProperty.trait:TFT17_RhaastUnique_OffensiveStatToGain@% %i:scaleAS%<br>Résistances octroyées à l'équipe : @TFTUnitProperty.trait:TFT17_RhaastUnique_DefensiveStatToGain@ %i:scaleArmor%%i:scaleMR%",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDefensiveStat1",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "BonusDefensiveStat2",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "BonusDefensiveStat3",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "BonusOffensiveStat1",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "BonusOffensiveStat2",
+                        "value": 0.025
+                    },
+                    {
+                        "name": "BonusOffensiveStat3",
+                        "value": 0.03
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Pavois",
+        "trait_id": "TFT17_ShenUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Bulwark.TFT_Set17.png",
+        "tooltip_text": "Shen invoque une relique à placer sur le plateau. Au début du combat, elle octroie aux alliés adjacents un bouclier de @PercentHealthShield*100@% des PV max et @AttackSpeed*100@% de vitesse d'attaque.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "AttackSpeedDuration",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "PercentHealthShield",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 60.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Initiateur",
+        "trait_id": "TFT17_ShieldTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Vanguard.TFT_Set12.png",
+        "tooltip_text": "Les Initiateurs gagnent @DamageReductionPct*100@% de durabilité quand ils sont protégés par un bouclier. <br><br>Au début du combat et en passant sous les @HealthThreshold*100@%&nbsp;de PV : les Initiateurs gagnent un bouclier en fonction des PV max pendant @ShieldDuration@&nbsp;sec.<br><br><row>(@MinUnits@) @ShieldPercentAmount*100@% des PV max</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@% des PV max</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@% des PV max ;<br>@EnhancedDurability*100@%&nbsp;%i:scaleDR% lorsqu'ils sont protégés par un bouclier.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageReductionPct",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.16
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Commandante",
+        "trait_id": "TFT17_SonaUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Commander.TFT_Set17.png",
+        "tooltip_text": "(@MinUnits@) Toutes les @RoundsPerMod@ manches, Sona vous octroie un mod de commandement aléatoire qui vous permet de modifier le comportement d'un allié pendant le combat. Les mods de commandement durent @RoundsPerMod@ combats contre un joueur même s'ils ne sont pas équipés.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AS",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "HealthRatio",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "RoundsPerMod",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Astro-groove",
+        "trait_id": "TFT17_SpaceGroove",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_SpaceGroove.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Les Grooviens peuvent entrer dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font>. Lorsqu'ils sont dans le Groove, ils gagnent de la vitesse d'attaque et de la régénération de PV max. Ce bonus augmente pour chaque Groovien dans votre équipe.</row><br><row>(@MinUnits@) Tous les Grooviens commencent le combat dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> pendant @StartOfCombatDuration@ sec.</row><br><row>(@MinUnits@) Chaque seconde passée dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> confère @ADAPPerSecond@% de dégâts d'attaque et de puissance cumulables.</row><br><row>(@MinUnits@) Ces effets augmentent de @EffectBonus@% !</row><br><row>(@MinUnits@) <font color='#F39B9B'>E</font><font color='#F3D59B'>n</font><font color='#D5F39B'>t</font><font color='#9BF39B'>r</font><font color='#9BF3D5'>e</font><font color='#9BD5F3'>z</font> <font color='#9B9BF3'>d</font><font color='#D59BF3'>a</font><font color='#F39BD5'>n</font><font color='#F39B9B'>s</font> <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>g</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9BF39B'>o</font><font color='#9BF3D5'>v</font><font color='#9BD5F3'>e</font> <font color='#9BD5F3'>!</font></row><br><br><font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> : @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%, @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "PrismaticDamage",
+                        "value": 800.0
+                    },
+                    {
+                        "name": "PrismaticJumpDamage",
+                        "value": 1500.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 60.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Visionnaire",
+        "trait_id": "TFT17_Stargazer",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie.<br><br>Les Visionnaires placés sur des hexagones renforcés bénéficient de divers bonus, à partir de (@MinUnits@) unités.<br><br><rules>De nouveaux hexagones sont révélés à chaque niveau de joueur.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Family_BaseSharePercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Huntress_AS_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Medallion_DA_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_IncreasePer3Star",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Medallion_Resists_Teamwide",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Mountain_AP_Initial",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Mountain_Health_BonusThreshold",
+                        "value": 1000.0
+                    },
+                    {
+                        "name": "Mountain_Health_Teamwide",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Serpent_DR_Teamwide",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Serpent_Duration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Shield_Interval",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Shield_Shield_Teamwide",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Wolf_HealthThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Family_HexesToReveal_TOOLTIPONLY",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.3
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Family_HexesToReveal_TOOLTIPONLY",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 35.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.03
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.5
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Family_EmpoweredSharePercent",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 35.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Mountain_DamageAmpPercent",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Mountain_HexesToReveal_TOOLTIPONLY",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.75
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Visionnaire",
+        "trait_id": "TFT17_Stargazer_Fountain",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Fontaine</TFTStargazer>.<br><br>Les alliés se trouvant sur des hexagones renforcés gagnent @Fountain_ManaRegen_Teamwide@ régénération de mana. Les Visionnaires sur des hexagones renforcés gagnent davantage et soignent l'allié ayant le moins de PV avec leurs compétences.<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% de soins des dégâts de compétence</expandRow><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Visionnaire",
+        "trait_id": "TFT17_Stargazer_Huntress",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Chasseresse</TFTStargazer>.<br><br>Début du combat : vous marquez les ennemis ayant le plus de PV. <br><br>Les alliés dans les hexagones renforcés gagnent @Huntress_AS_Teamwide*100@% de vitesse d'attaque. Les Visionnaires sur des hexagones renforcés gagnent davantage et sont soignés de @Huntress_Heal*100@% de leurs PV max lorsqu'un ennemi marqué meurt.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Visionnaire",
+        "trait_id": "TFT17_Stargazer_Medallion",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>Le Médaillon</TFTStargazer>.<br><br><row>(@MinUnits@) Les alliés sur des hexagones renforcés gagnent @Medallion_DA@% d'amplification des dégâts, augmenté de @Medallion_IncreasePer3Star@% pour chaque allié 3 étoiles.</row><br><br>(Bonus&nbsp;actuel :&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><br><rules>Plus d'hexagones sont révélés à chaque niveau de Tacticien.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Medallion_DA_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_IncreasePer3Star",
+                        "value": 6.5
+                    },
+                    {
+                        "name": "Medallion_Resists_Teamwide",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Medallion_DA",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Visionnaire",
+        "trait_id": "TFT17_Stargazer_Mountain",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Montagne</TFTStargazer>.<br><br>Tous les @Mountain_RoundsPerEmblem@ combats contre un joueur, vous obtenez un Emblème de Visionnaire. Les Visionnaires sur des hexagones renforcés bénéficient de divers bonus.<br><br>(Combats restants :&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) Ils gagnent @Mountain_Health*100@% de PV</row><br><row>(@MinUnits@) ET @Mountain_ADAP*100@% de dégâts d'attaque et de puissance</row><br><row>(@MinUnits@) ET @Mountain_Resists@ d'armure et de résistance magique</row><br><row>(@MinUnits@) ET @Mountain_AS*100@% de vitesse d'attaque</row><br><row>(@MinUnits@) ET @Mountain_DR*100@% de durabilité</row><br><row>(@MinUnits@) ET tous les autres bonus augmentent de @Mountain_StatIncrease*100@%</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de Tacticien.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_MaxEmblems",
+                        "value": 25000.0
+                    },
+                    {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 6,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 7,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 8,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Visionnaire",
+        "trait_id": "TFT17_Stargazer_Serpent",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>Le Serpent</TFTStargazer>.<br><br>Les alliés sur les hexagones renforcés gagnent @Serpent_DR_Teamwide*100@% de durabilité. Les Visionnaires sur des hexagones renforcés gagnent davantage et empoisonnent les ennemis, répétant une partie des dégâts infligés sous forme de dégâts magiques en @Serpent_Duration@ sec.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, @Serpent_Poison*100@% de dégâts de poison</expandRow><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Serpent_Duration",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Visionnaire",
+        "trait_id": "TFT17_Stargazer_Shield",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>L'Autel</TFTStargazer>.<br><br><row>(@MinUnits@) Lorsque N'IMPORTE QUEL CHAMPION MEURT, il est sacrifié sur l'autel. Les alliés sur les hexagones renforcés gagnent @Shield_Health_Teamwide@% de PV et @Shield_AS_Teamwide@% de vitesse d'attaque.<br><br>Après @Shield_NumDeaths@ sacrifices, les Visionnaires sur les hexagones renforcés gagnent @Shield_CashoutHP@% de %i:scaleHealth% bonus et @Shield_CashoutAS@% de %i:scaleAS% bonus.<br><br>Sacrifices : (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de Tacticien.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Visionnaire",
+        "trait_id": "TFT17_Stargazer_Wolf",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>Le Sanglier</TFTStargazer>.<br><br>Après avoir gagné un combat contre un joueur, vous gagnez des PO. Les alliés sur les hexagones renforcés gagnent @Wolf_Health_Teamwide*100@% de PV, de dégâts d'attaque et de la puissance. Les Visionnaires en gagnent plus.<br><br>(PO gagnées : @TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@ PO, @Wolf_Health*100@% %i:scaleHealth%, @Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.22
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Berger",
+        "trait_id": "TFT17_SummonTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Shepherd.TFT_Set17.png",
+        "tooltip_text": "Les Bergers invoquent des unités pour les aider au combat.<br><br><row>(@MinUnits@) Ils invoquent Bia.</row><br><row>(@MinUnits@) Ils invoquent Bayin.</row><br><row>(@MinUnits@) Le lien entre Bia et Bayin se renforce.</row><br><br><rules>Bia et Bayin sont de plus en plus forts en fonction du niveau total d'étoiles de tous vos Bergers.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Oracle",
+        "trait_id": "TFT17_TahmKenchUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Arcana.TFT_Set12.png",
+        "tooltip_text": "Toutes les @Rounds@ manches, Tahm Kench accorde une récompense !<br><br>Manches restantes : @TFTUnitProperty.trait:TFT17_TahmKench_RoundsRemaining@<br>Dernière récompense : @TFTUnitProperty.trait:TFT17_TahmKench_LastReward@",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Rounds",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Brise-temps",
+        "trait_id": "TFT17_Timebreaker",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) À chaque défaite, vous gagnez des relances gratuites. À chaque victoire, vous stockez de l'XP dans un Noyau temporel (évolue selon la phase).</row><br><row>(@MinUnits@) ET les alliés gagnent @AttackSpeed*100@% de vitesse d'attaque.</row><br><row>(@MinUnits@) ET les Brise-Temps gagnent @TimebreakerAdditionalAS*100@% de vitesse d'attaque bonus.</row><br><br><rules>Relances en cas de défaite : @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>XP en cas de victoire : @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Désespoir",
+        "trait_id": "TFT17_VexUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Doomer.TFT_Set17.png",
+        "tooltip_text": "Début du combat : vous marquez tous les ennemis avec Désespoir.<br><br>La première fois que des ennemis subissent des dégâts à chaque combat, leur Désespoir est consommé, volant @ADAP1@% de dégâts d'attaque et de puissance et les accordant à votre Vex la plus forte.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP1",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Chasseur galactique",
+        "trait_id": "TFT17_ZedUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GalaxyHunter.TFT_Set17.png",
+        "tooltip_text": "Zed est obtenu grâce à l'optimisation Zed.<br><br>Tant qu'au moins un clone est en vie, Zed bénéficie de @BonusAD*100@% de dégâts d'attaque bonus.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusAD",
+                        "value": 0.4
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
         "display_name": "Astronaute",
         "trait_id": "Astro",
         "set": "TFTSet3",

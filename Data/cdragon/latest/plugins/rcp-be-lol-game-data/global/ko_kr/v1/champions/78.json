@@ -1147,7 +1147,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "뽀삐가 망치를 휘둘러 피해를 입히고 적의 움직임을 느리게 만드는 지대를 생성합니다. 지대는 잠시 후 폭발합니다.",
-            "dynamicDescription": "뽀삐가 땅을 힘껏 내려쳐 <physicalDamage>@BaseDamage@</physicalDamage>+최대 체력의 <physicalDamage>@HealthDamagePercent@%에 해당하는 물리 피해</physicalDamage>를 입히고 지대를 불안정하게 만듭니다. <br><br>불안정한 지대는 적을 @Effect3Amount@% <status>둔화</status>시키고 @Effect4Amount@초 뒤 폭발하여 <physicalDamage>@BaseDamage@</physicalDamage>+최대 체력의 <physicalDamage>@HealthDamagePercent@%에 해당하는 물리 피해</physicalDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "뽀삐가 땅을 힘껏 내려쳐 <physicalDamage>@BaseDamage@</physicalDamage>+<physicalDamage>최대 체력의 @HealthDamagePercent@%에 해당하는 물리 피해</physicalDamage>를 입히고 지대를 불안정하게 만듭니다. <br><br>불안정한 지대는 적을 @Slow_@% <status>둔화</status>시키고 @DelayBetweenTwoHits@초 뒤 폭발하여 <physicalDamage>@BaseDamage@</physicalDamage>+<physicalDamage>최대 체력의 @HealthDamagePercent@%에 해당하는 물리 피해</physicalDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "기본 지속 효과로 뽀삐가 추가 방어력과 마법 저항력을 얻습니다. 뽀삐의 체력이 낮아지면 이 효과가 더 커집니다. 사용 시에는 뽀삐의 이동 속도가 증가하며 주변에서 돌진하는 적을 막습니다. 뽀삐에게 막힌 적은 느려지고 이동 스킬을 사용할 수 없습니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 뽀삐가 <scaleArmor>@BonusArmor@의 방어력</scaleArmor>과 <scaleMR>@BonusMR@의 마법 저항력</scaleMR>을 추가로 얻습니다. 뽀삐의 체력이 @PassiveEmpoweredHealthPercent*100@% 미만일 때는 효과가 두 배로 늘어납니다.<br><br><spellActive>사용 시:</spellActive> 뽀삐의 이동 속도가 <speed>@Effect2Amount@%</speed> 증가하고 역장을 둘러 @Effect1Amount@초 동안 주변에서 돌진하는 적을 막습니다. 가로막힌 적은 @GroundingDuration@초 동안 <status>이동 스킬을 사용할 수 없고</status> @SlowAmount*-100@% <status>둔화</status>되며 <magicDamage>@InterruptDamage@의 마법 피해</magicDamage>를 입습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 뽀삐가 <scaleArmor>@BonusArmor@의 방어력</scaleArmor>과 <scaleMR>@BonusMR@의 마법 저항력</scaleMR>을 추가로 얻습니다. 뽀삐의 체력이 @PassiveEmpoweredHealthPercent*100@% 미만일 때는 효과가 두 배로 늘어납니다.<br><br><spellActive>사용 시:</spellActive> 뽀삐의 <speed>이동 속도가 @Haste@%</speed> 증가하고 역장을 둘러 @Duration@초 동안 주변에서 돌진하는 적을 막습니다. 가로막힌 적은 @GroundingDuration@초 동안 <status>이동 스킬을 사용할 수 없고</status> @SlowAmount*-100@% <status>둔화</status>되며 <magicDamage>@InterruptDamage@의 마법 피해</magicDamage>를 입습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "뽀삐가 돌진해 대상을 밀어냅니다. 대상이 지형에 부딪힐 경우 기절합니다.",
-            "dynamicDescription": "뽀삐가 하나의 적에게 돌진해 <physicalDamage>@TackleDamage@의 물리 피해</physicalDamage>를 입히고 앞으로 밀어냅니다. 적이 지형에 부딪히면 적이 @Effect3Amount@초 동안 <status>기절</status>하고 <physicalDamage>@TackleDamage@의 추가 물리 피해</physicalDamage>를 입습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "뽀삐가 하나의 적에게 돌진해 <physicalDamage>@TackleDamage@의 물리 피해</physicalDamage>를 입히고 앞으로 밀어냅니다. 적이 지형에 부딪히면 적이 @StunDuration@초 동안 <status>기절</status>하고 <physicalDamage>@TackleDamage@의 추가 물리 피해</physicalDamage>를 입습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

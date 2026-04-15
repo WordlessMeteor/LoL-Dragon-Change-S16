@@ -931,16 +931,33 @@ lol-uikit-navigation-bar[type=tabbed] lol-uikit-navigation-item.lol-settings-nav
 .lol-settings-voice-ptt .lol-settings-voice-ptt-icon .lol-settings-voice-ptt-speaker-wrapper {
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 24px;
     justify-content: center
+}
+
+.lol-settings-voice-ptt .lol-settings-voice-ptt-icon .lol-settings-voice-ptt-speaker-wrapper .lol-settings-voice-ptt-voice-type-icon {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 19px;
+    margin-right: 2px;
+    width: 19px
+}
+
+.lol-settings-voice-ptt .lol-settings-voice-ptt-icon .lol-settings-voice-ptt-speaker-wrapper .lol-settings-voice-ptt-voice-type-icon.lol-settings-voice-ptt-party-icon {
+    background-image: url(/fe/lol-settings/party-voice-keybind-icon.png)
+}
+
+.lol-settings-voice-ptt .lol-settings-voice-ptt-icon .lol-settings-voice-ptt-speaker-wrapper .lol-settings-voice-ptt-voice-type-icon.lol-settings-voice-ptt-team-icon {
+    background-image: url(/fe/lol-settings/team-voice-key-bind-icon.png)
 }
 
 .lol-settings-voice-ptt .lol-settings-voice-ptt-icon .lol-settings-voice-ptt-speaker-wrapper .lol-settings-voice-ptt-speaker {
     background-image: url(/fe/lol-settings/mic-hover.png);
     background-size: cover;
-    height: 20px;
-    width: 20px
+    height: 17px;
+    width: 17px
 }
 
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label {

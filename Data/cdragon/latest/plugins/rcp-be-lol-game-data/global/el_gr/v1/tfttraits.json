@@ -14867,6 +14867,2823 @@
         ]
     },
     {
+        "display_name": "Θεϊκή Ευλογία",
+        "trait_id": "Set17_CarouselMarket_EmpoweredHexTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GodBlessed.TFT_Set17.png",
+        "tooltip_text": "@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey1@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey2@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey3@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey4@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey5@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey6@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey7@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey8@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey9@<br><br>@TFTUnitProperty.trait:TFT17_CarouselMarket_TraitTRAKey10@<br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 0,
+                "style_idx": 1,
+                "style_name": "kThreat"
+            }
+        ]
+    },
+    {
+        "display_name": "Κριτής",
+        "trait_id": "TFT17_ADMIN",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Arbiter.TFT_Set17.png",
+        "tooltip_text": "Συντάξτε έναν μοναδικό θεϊκό νόμο, ο οποίος σας επιτρέπει να επιλέξετε μια επίδραση που θα εφαρμόζεται στους Κριτές όταν ισχύει μια επιλεγμένη αιτία.<br><br><row>(@MinUnits@) Επιλέξτε μια αιτία και ένα αποτέλεσμα για τον νόμο σας</row><br><row>(@MinUnits@) Οι επιδράσεις είναι ισχυρότερες. </row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageInstances",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "ManaToSpend",
+                        "value": 50.0
+                    },
+                    {
+                        "name": "NumAttacks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "NumSeconds",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "OutputMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "OutputMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αντιγραφέας",
+        "trait_id": "TFT17_APTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Replicator.TFT_Set17.png",
+        "tooltip_text": "Οι ικανότητες των Δημιουργών αντιγράφων ενεργοποιούνται για δεύτερη φορά με μειωμένη αποτελεσματικότητα.<br><br><expandRow>(@MinUnits@) @Effectiveness*100@% της ισχύος</expandRow>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Effectiveness",
+                        "value": 0.22
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Effectiveness",
+                        "value": 0.45
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Διεκδικητής",
+        "trait_id": "TFT17_ASTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Challenger.TFT_Set17.png",
+        "tooltip_text": "Η ομάδα σας αποκτά @TeamwideAS*100@% Ταχύτητα Επίθεσης. Οι Διεκδικητές αποκτούν μπόνους Ταχύτητα Επίθεσης. Όταν πεθάνει ο στόχος τους, οι Διεκδικητές εφορμούν σε έναν νέο στόχο και αυξάνουν το μπόνους Ταχύτητας Επίθεσής τους κατά @BurstPercent*100@% για @BurstDuration@ δευτ.<br><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @AttackSpeedPercent*100@%&nbsp;%i:scaleAS%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BurstDuration",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "BurstPercent",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "TeamwideAS",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.22
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.36
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.48
+                    },
+                    {
+                        "name": "DamageReduction",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Άνιμα",
+        "trait_id": "TFT17_AnimaSquad",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
+        "tooltip_text": "Αφού χάσετε σε μια μάχη μεταξύ παικτών, κερδίζετε @TechPerCombat@ Τεχνολογία, συν επιπλέον Τεχνολογία που ισούται με @TechPerLoss@ φορές το μέγεθος του σερί ηττών σας. Επιπλέον, κερδίζετε @TechPerKill@ Τεχνολογία για κάθε εξόντωση Άνιμα.<br><br>Κάθε φορά που οι Άνιμα αποκτούν @TechBreakpoint@ Τεχνολογία, δημιουργούν πρωτότυπα νέα Όπλα Άνιμα. Μπορείτε να τα πάρετε ή να κρατήσετε την Τεχνολογία σας για να αποκτήσετε πιο ισχυρά όπλα την επόμενη φορά.<br><br><row>(@MinUnits@) Έναρξη Έρευνας! </row><br><row>(@MinUnits@) Αφού κερδίσετε μια μάχη εναντίον παίκτη, κερδίζετε λάφυρα!</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PairsPartnerWinMultiplier",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "TechBreakpoint",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "TechPerCombat",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "TechPerCombat_DU",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "TechPerDeath_PVE",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TechPerKill",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TechPerLoss",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TechPerLoss_DU",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TechPerRound_PVE",
+                        "value": 20.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 5,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αλήτης",
+        "trait_id": "TFT17_AssassinTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Rogue.TFT_Set17.png",
+        "tooltip_text": "Οι Αλήτες αποκτούν Ζημιά Επίθεσης και Ισχύ Ικανότητας. Την πρώτη φορά που η Ζωή τους πέφτει κάτω από @HealthThreshold*100@%, κρύβονται στις σκιές. Οι εχθροί που τους στοχεύουν ανακατευθύνονται σε μια κοντινή μονάδα, με προτεραιότητα σε Τανκ.<br><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @AP@% %i:scaleAD% %i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "AP",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "AP",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "AP",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.55
+                    },
+                    {
+                        "name": "AP",
+                        "value": 55.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Μιπ",
+        "trait_id": "TFT17_Astronaut",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Astronaut.TFT_Set17.png",
+        "tooltip_text": "Οι Ήρωες Μιπ προσελκύουν άλλα Μιπ που ενδυναμώνουν τις μιπκανότητές τους με μιπίσιους τρόπους. Αποκτούν επίσης μπόνους Ζωή.<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%. Δημιουργήστε μια Θέση Κλωνοποίησης στον Πάγκο σας. Όταν ολοκληρωθεί η κλωνοποίηση, θα κερδίσετε Χρυσό και θα αποκτήσετε σε αυτή τη θέση ένα αντίγραφο 1 Αστεριού του Ήρωα που έχετε τοποθετήσει εκεί.</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%. ΚΑΛΕΣΤΕ ΤΟΥΣ ΤΕΣΣΕΡΕΙΣ ΑΡΧΟΝΤΕΣ ΤΩΝ ΜΙΠ!</row><br><br><rules>Χρόνος κλωνοποίησης = Κόστος Ήρωα</rules>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 400.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 400.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "Meeps",
+                        "value": 6.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Η Ψυχή του Πάρτι",
+        "trait_id": "TFT17_BlitzcrankUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PartyAnimal.TFT_Set17.png",
+        "tooltip_text": "Μία φορά ανά μάχη, αφού η Ζωή του πέσει κάτω από @HealthThreshold*100@%, δεν μπορεί να γίνει στόχος και επισκευάζεται, ανακτώντας το @PercentHealthHeal*100@% της μέγιστης Ζωής του ανά δευτερόλεπτο. Όταν αποκατασταθεί πλήρως η Ζωή του ή όταν δεν απομένει κανένας άλλος σύμμαχος, επιστρέφει στη μάχη. Αν έχει όλη τη Ζωή του, μέχρι το τέλος της μάχης ο Μπλίτζκρανκ μπαίνει σε <font color='#F39B9B'>Ο</font> <font color='#9BF39B'>Ρ</font><font color='#9BF3D5'>υ</font><font color='#9BD5F3'>θ</font><font color='#9B9BF3'>μ</font><font color='#D59BF3'>ό</font><font color='#F39BD5'>ς</font> και η Παθητική του, ο Ακάλεστος, εκτοξεύει βολές τέσσερις φορές πιο γρήγορα.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "PercentHealthHeal",
+                        "value": 0.15
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "N.O.V.A",
+        "trait_id": "TFT17_DRX",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_NOVA.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) @TeamAttackDelay@ δευτερόλεπτα μετά την έναρξη της μάχης, οι μονάδες N.O.V.A. δίνουν στους συμμάχους τους μια έξαρση ισχύος, η οποία διαφέρει ανάλογα με τους Ήρωες.</row><br><row>(@MinUnits@) Αποκτάτε έναν επιλογέα Χτυπήματος. Η επιλεγμένη μονάδα N.O.V.A. ενεργοποιεί το Χτύπημά της όσο διαρκεί αυτή η έξαρση ισχύος.</row><br><br><ShowIf.TFT17_DRX_HasAatrox><status>Άατροξ:</status> Η ζημιά των συμμάχων προκαλεί <TFTKeyword>Ρωγμές</TFTKeyword> και <TFTKeyword>Καταστροφή</TFTKeyword> @ShredAndSunder*100@% στην άμυνα των εχθρών</ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>Άατροξ: Προκαλεί Ρωγμές και Καταστροφή στους εχθρούς</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>Κέιτλιν:</status> Δίνει στους συμμάχους @AS*100@% Ταχύτητα Επίθεσης</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>Κέιτλιν: Δίνει Ταχύτητα Επίθεσης</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>Ακάλι:</status> Οι σύμμαχοι αποκτούν <TFTKeyword>Ακρίβεια</TFTKeyword></ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>Ακάλι: Οι σύμμαχοι αποκτούν Ακρίβεια</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>Μαοκάι:</status> Οι σύμμαχοι θεραπεύονται για το @Heal*100@% της μέγιστης Ζωής τους</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>Μαοκάι: Θεραπεύει τους συμμάχους</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>Κίντρεντ:</status> Δίνουν Ασπίδα στο πιο δυνατό Τανκ με αντοχή <TFTBonus>@ShieldValue@</TFTBonus></ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>Κίντρεντ: Δίνουν Ασπίδα σε έναν σύμμαχο</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>Έμβλημα:</status> Οι σύμμαχοι προκαλούν @BonusTrueDamage*100@% μπόνους Πραγματική Ζημιά που συσσωρεύεται</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>Έμβλημα: Οι μονάδες προκαλούν μπόνους Πραγματική Ζημιά</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AS",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "BonusTrueDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "ShieldValue",
+                        "value": 800.0
+                    },
+                    {
+                        "name": "ShredAndSunder",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "TeamAttackDelay",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Σκοτεινό Άστρο",
+        "trait_id": "TFT17_DarkStar",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Οι μονάδες Σκοτεινού Άστρου δημιουργούν μια μαύρη τρύπα που καταβροχθίζει τους εχθρούς που έχουν το @ExecuteHPPercent*100@% της μέγιστης Ζωής.</row><br><row>(@MinUnits@) ΚΑΙ αποκτούν @ADAP@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) ΚΑΙ η ισχυρότερη μονάδα Σκοτεινού Άστρου αποκτά Υπερμάζα και ωφελείται @SupermassivePercentBonus*100@% περισσότερο από το Σκοτεινό Άστρο και δημιουργεί 2 μικρές Μαύρες Τρύπες.</row><br><row>(@MinUnits@) Όλες οι μονάδες Σκοτεινού Άστρου αποκτούν Υπερμάζα. Στο επίπεδο 10, ΚΑΤΑΒΡΟΧΘΙΖΟΥΝ ΤΑ ΠΑΝΤΑ. </row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "ExecuteHPPercent",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "PercentHealth",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "SupermassivePercentBonus",
+                        "value": 0.85
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 6,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 9,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Υφάντρα της Μοίρας",
+        "trait_id": "TFT17_Fateweaver",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Fateweaver.TFT_Set17.png",
+        "tooltip_text": "Εγγενής: Οι μονάδες της Υφάντρας της Μοίρας έχουν <TFTKeyword>Ακρίβεια</TFTKeyword>.<br><br><row>(@MinUnits@) Οι επιδράσεις των ικανοτήτων που βασίζονται σε πιθανότητες γίνονται <TFTKeyword>Τυχερές</TFTKeyword>.</row><br><row>(@MinUnits@) Οι μονάδες αποκτούν @CritChance*100@% Πιθανότητα Καίριου Χτυπήματος και @CritDamage@%&nbsp;Ζημιά Καίριου Χτυπήματος. Τα Καίρια Χτυπήματα είναι επίσης <TFTKeyword>Τυχερά</TFTKeyword>.</row><br><br><rules>Ακρίβεια: Η ζημιά από ικανότητες μπορεί να προκαλέσει Καίρια Χτυπήματα. Η Πρόσθετη Ακρίβεια δίνει 10% Ζημιά Καίριου Χτυπήματος.</rules><br><rules>Τύχη: Ελέγξτε δύο φορές και επιλέξτε το καλύτερο αποτέλεσμα.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CritDamage",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "CritChance",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "CritDamage",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Θεϊκός Μονομάχος",
+        "trait_id": "TFT17_FioraUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DivineDuelist.TFT_Set17.png",
+        "tooltip_text": "Ο Σύμβουλός σας θεραπεύεται για το @PlayerOmnivamp*100@% της ζημιάς που προκαλείτε στον αντίπαλο παίκτη όταν κερδίζετε.<br><br>Η Φιόρα κερδίζει πάντα τις μονομαχίες της.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DUHeal",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PVEHP",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PVENumWins",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "PlayerOmnivamp",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Ταξιδευτής",
+        "trait_id": "TFT17_FlexTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
+        "tooltip_text": "Αρχή της μάχης: Τα Τανκ σας αποκτούν Ασπίδα για @ShieldDuration@ δευτ. Οι άλλοι σύμμαχοί σας αποκτούν Ενίσχυση Ζημιάς. <br><br>Οι Ταξιδευτές αποκτούν διπλάσιο μπόνους.<br><br><expandRow>(@MinUnits@) @ShieldHP@ Ασπίδα, @BonusDA*100@% %i:scaleDA%</expandRow><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "FlexTraitMultiplier",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.09
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 175.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 250.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 350.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.22
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 500.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDA",
+                        "value": 0.27
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ShieldHP",
+                        "value": 700.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Ολοκαίνουργιο",
+        "trait_id": "TFT17_GravesTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_FactoryNew.TFT_Set17.png",
+        "tooltip_text": "Αφού λάβετε μέρος στη μάχη, ανοίξτε ένα Οπλοστάσιο και αγοράστε μια μόνιμη αναβάθμιση για τον ισχυρότερο Γκρέιβς σας.<br><br>Κάθε @NumberOfUpgradesBeforeRoundCostIncrease@ αναβαθμίσεις, οι μελλοντικές αναβαθμίσεις θα απαιτούν έναν επιπλέον γύρο.<br><br><rules>Επόμενη Αναβάθμιση: @TFTUnitProperty.trait:TFT17_GravesTrait_RoundsUntilUpgrade@ γύροι.</rules>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumberOfUpgradesBeforeRoundCostIncrease",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Καβγατζής",
+        "trait_id": "TFT17_HPTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Brawler.png",
+        "tooltip_text": "Η ομάδα σας αποκτά @TeamwideBonus*100@% Ζωή. Οι Καβγατζήδες αποκτούν περισσότερη.<br><br><expandRow>(@MinUnits@) +@HealthBonus*100@% μέγιστης Ζωής</expandRow>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamwideBonus",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HealthBonus",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Εξολοθρευτής",
+        "trait_id": "TFT17_JhinUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Singularity.TFT_Set17.png",
+        "tooltip_text": "Οι εχθροί έχουν @PctResists*100@% λιγότερη Θωράκιση και Αντίσταση Μαγείας.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PctResists",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Αγωγός",
+        "trait_id": "TFT17_ManaTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Channeler.TFT_Set17.png",
+        "tooltip_text": "Έμφυτη: Οι Αγωγοί αποκτούν @InnateManaGain*100@% επιπλέον Μάνα από όλες τις πηγές.<br><br>Η ομάδα σας αποκτά Αναπλήρωση Μάνα, που αυξάνεται για τους Αγωγούς.<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "InnateManaGain",
+                        "value": 0.2
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 7.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ChannelerManaRegen",
+                        "value": 9.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Mecha",
+        "trait_id": "TFT17_Mecha",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Mecha.TFT_Set17.png",
+        "tooltip_text": "Έμφυτη: Οι μονάδες Mecha μπορούν να μεταμορφωθούν στην Απόλυτη μορφή τους, αναβαθμίζοντας την ικανότητά τους και αποκτώντας @TransformedPercentHealth*100@% Ζωή. Οι μεταμορφωμένες μονάδες Mecha καταλαμβάνουν δύο θέσεις στην ομάδα και μετράνε διπλά για το Χαρακτηριστικό Mecha.<br><br><row>(@MinUnits@) Κυψέλες Ενέργειας: Οι μονάδες Mecha αποκτούν @AP@%&nbsp;%i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Υπερχρονισμένες Κυψέλες: Αυξάνεται σε @AP@%&nbsp;%i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Μηχανική Ακριβείας: +@TeamSize@ μέγεθος ομάδας</row><br><br><rules>Χρησιμοποιήστε το αντικείμενο Mecha-μόρφωση για να αλλάξετε τις μορφές των μονάδων Mecha σας</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamSize",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TransformedPercentHealth",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "AP",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "AP",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "AP",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Σκοτεινός Ιππότης",
+        "trait_id": "TFT17_MeleeTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Slayer.png",
+        "tooltip_text": "Η ομάδα σας αποκτά @TeamwideBonus*100@% Ολική Αρπαγή Ζωής. Οι Σκοτεινοί Ιππότες αποκτούν περισσότερη Ολική Αρπαγή Ζωής, Ζημιά Επίθεσης και η περισσευούμενη Θεραπεία από την Ολική Αρπαγή Ζωής μετατρέπεται σε Ασπίδα (έως @MaxPercentHealthShield*100@% της μεγ. Ζωής).<br><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @Omnivamp*100@% %i:scaleSV%, @AD*100@% %i:scaleAD%.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxPercentHealthShield",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "TeamwideBonus",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AD",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "ShieldAD",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Επιλέξτε Χαρακτηριστικό",
+        "trait_id": "TFT17_MissFortuneUndeterminedTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_MissFortuneUndetermindedTrait.TFT_Set17.png",
+        "tooltip_text": "Όταν βάζετε τη Μις Φόρτσουν στο ταμπλό, επιλέξτε μεταξύ Λειτουργίας Αγωγού, Λειτουργίας Διεκδικητή και Λειτουργίας Δημιουργού αντιγράφων. Η Μις Φόρτσουν έχει μια μοναδική ικανότητα που εξαρτάται από τη λειτουργία της και αποκτά το αντίστοιχο Χαρακτηριστικό.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": []
+    },
+    {
+        "display_name": "Θεά των Όπλων",
+        "trait_id": "TFT17_MissFortuneUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GunGoddess.TFT_Set17.png",
+        "tooltip_text": "Όταν βάζετε τη Μις Φόρτσουν στο ταμπλό, επιλέξτε μεταξύ Λειτουργίας Αγωγού, Λειτουργίας Διεκδικητή και Λειτουργίας Δημιουργού αντιγράφων. Η Μις Φόρτσουν έχει μια μοναδική ικανότητα που εξαρτάται από τη λειτουργία της και αποκτά το αντίστοιχο Χαρακτηριστικό.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Allies",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "FlatDamage",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Mana",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumAttacks",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Σκοτεινή Κυρία",
+        "trait_id": "TFT17_MorganaUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
+        "tooltip_text": "Οι σύμμαχοι δέχονται @UntransformedAbilityDA*100@% λιγότερη ζημιά από ικανότητες. Το όφελος γίνεται @TransformedAbilityDA*100@% όταν η Μοργκάνα έχει τη Σκοτεινή Μορφή της.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TransformedAbilityDA",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "UntransformedAbilityDA",
+                        "value": 0.05
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Πριμόρντιαν",
+        "trait_id": "TFT17_Primordian",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Primordian.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Όταν προκαλείτε ζημιά, εμφανίζονται Γεννήματα του Σμήνους με βάση το επίπεδο Αστεριών των μοναδικών Πριμόρντιαν.</row><br><row>(@MinUnits@) Δημιουργούνται @PercentMoreSwarmlings@% περισσότερα Γεννήματα του Σμήνους! Μετά από κάθε μάχη μεταξύ παικτών, αποκτάτε έναν τυχαίο Ήρωα κόστους 1 ή 2. </row><br><br><rules>Το @DamageTakenPercentModifier*100@% της ζημιάς που δέχονται οι μονάδες προστίθεται στη ζημιά που προκαλούν.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageTakenPercentModifier",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "PercentMoreSwarmlings",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "SwarmlingAttacks",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageMultiplier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageMultiplier",
+                        "value": 1.45
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Ψυχογενής",
+        "trait_id": "TFT17_PsyOps",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PsyOps.TFT_Set17.png",
+        "tooltip_text": "Αποκτάτε Ψυχογενή αντικείμενα που μπορείτε να δώσετε σε οποιονδήποτε σύμμαχο.<br><br><row>(@MinUnits@) Αποκτάτε το αντικείμενο @TFTUnitProperty.trait:TFT17_PsyOps_Item1@</row><br><row>(@MinUnits@) Αποκτάτε το αντικείμενο @TFTUnitProperty.trait:TFT17_PsyOps_Item2@, τα Ψυχογενή αντικείμενα αποκτούν επιπλέον επιδράσεις σε Ψυχογενείς μονάδες</row><br><br><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TooltipOnlyEffectiveness",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "TooltipOnlyEffectiveness",
+                        "value": 50.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Ελεύθερος Σκοπευτής",
+        "trait_id": "TFT17_RangedTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Sniper.png",
+        "tooltip_text": "Οι Ελεύθεροι Σκοπευτές αποκτούν Ενίσχυση Ζημιάς, η οποία ενισχύεται ενάντια σε στόχους που βρίσκονται πιο μακριά.<br><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%; +@PerHexIncrease@%&nbsp;%i:scaleDA% ανά εξάγωνο</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%, +@PerHexIncrease@%&nbsp;%i:scaleDA% ανά εξάγωνο</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;%i:scaleDA%, +@PerHexIncrease@%&nbsp;%i:scaleDA% ανά εξάγωνο</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 18.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 24.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PerHexIncrease",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "PercentDamageIncrease",
+                        "value": 28.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Προτείχισμα",
+        "trait_id": "TFT17_ResistTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Bastion.png",
+        "tooltip_text": "Η ομάδα σας αποκτά @TeamwideResists@ Θωράκιση και Αντίσταση Μαγείας.<br><br>Οι μονάδες Προτειχίσματος αποκτούν περισσότερη Θωράκιση και Αντίσταση Μαγείας και η ποσότητα διπλασιάζεται στα πρώτα @Duration@ δευτ. της μάχης.<br><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%</row><br><row>(@MinUnits@) @BonusArmor@ %i:scaleArmor%%i:scaleMR%, Οι μονάδες εκτός από τα Προτειχίσματα αποκτούν επιπλέον @EnhancedTeamwideArmor@ %i:scaleArmor%%i:scaleMR%.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedTeamwideArmor",
+                        "value": 20.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 16.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 16.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusArmor",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "BonusMR",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamwideResists",
+                        "value": 15.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Λυτρωτής",
+        "trait_id": "TFT17_RhaastUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Redeemer.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Για κάθε μη μοναδικό Χαρακτηριστικό που έχετε ενεργό, η ομάδα σας αποκτά @BonusOffensiveStat1*100@%/@BonusOffensiveStat2*100@%/@BonusOffensiveStat3*100@% Ταχύτητα Επίθεσης και @BonusDefensiveStat1@/@BonusDefensiveStat2@/@BonusDefensiveStat3@ Θωράκιση και Αντίσταση Μαγείας.</row><br><br>Ταχύτητα Επίθεσης για όλη την ομάδα: @TFTUnitProperty.trait:TFT17_RhaastUnique_OffensiveStatToGain@% %i:scaleAS%<br>Αντιστάσεις για όλη την ομάδα: @TFTUnitProperty.trait:TFT17_RhaastUnique_DefensiveStatToGain@ %i:scaleArmor%%i:scaleMR%",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDefensiveStat1",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "BonusDefensiveStat2",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "BonusDefensiveStat3",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "BonusOffensiveStat1",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "BonusOffensiveStat2",
+                        "value": 0.025
+                    },
+                    {
+                        "name": "BonusOffensiveStat3",
+                        "value": 0.03
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Προτείχισμα",
+        "trait_id": "TFT17_ShenUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Bulwark.TFT_Set17.png",
+        "tooltip_text": "Δημιουργεί ένα κειμήλιο που μπορείτε να τοποθετήσετε. Στην αρχή της μάχης, δίνει στους γειτονικούς συμμάχους Ασπίδα ίση με το @PercentHealthShield*100@% της μέγιστης Ζωής τους και @AttackSpeed*100@% Ταχύτητα Επίθεσης.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "AttackSpeedDuration",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "PercentHealthShield",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 60.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Εμπροσθοφυλακή",
+        "trait_id": "TFT17_ShieldTank",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Vanguard.TFT_Set12.png",
+        "tooltip_text": "Οι Ήρωες Εμπροσθοφυλακής αποκτούν @DamageReductionPct*100@% Ανθεκτικότητα όσο έχουν Ασπίδα. <br><br>Αρχή της μάχης και όταν έχουν @HealthThreshold*100@%&nbsp;Ζωή: Αποκτούν Ασπίδα βάσει μέγιστης Ζωής για @ShieldDuration@&nbsp;δευτ.<br><br><row>(@MinUnits@) @ShieldPercentAmount*100@% μέγιστης Ζωής</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@% μέγιστης Ζωής</row><br><row>(@MinUnits@) @ShieldPercentAmount*100@% μέγιστης Ζωής;<br>@EnhancedDurability*100@%&nbsp;%i:scaleDR% όσο έχουν Ασπίδα</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageReductionPct",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.16
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EnhancedDurability",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "ShieldPercentAmount",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Διοικητής",
+        "trait_id": "TFT17_SonaUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Commander.TFT_Set17.png",
+        "tooltip_text": "(@MinUnits@) Κάθε @RoundsPerMod@ γύρους, η Σόνα σάς δίνει μια τυχαία Εντολή Τροποποίησης που σας επιτρέπει να αλλάζετε τον τρόπο με τον οποίο συμπεριφέρεται ένας σύμμαχος στη μάχη. Οι Εντολές Τροποποίησης διαρκούν για @RoundsPerMod@ μάχες μεταξύ παικτών, ακόμα και αν δεν χρησιμοποιούνται.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AS",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "HealthRatio",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "RoundsPerMod",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Διαστημικός Ρυθμός",
+        "trait_id": "TFT17_SpaceGroove",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_SpaceGroove.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Οι Δεσμώτες του Ρυθμού μπορούν να μπουν σε <font color='#F39B9B'>Ο</font> <font color='#9BF39B'>Ρ</font><font color='#9BF3D5'>υ</font><font color='#9BD5F3'>θ</font><font color='#9B9BF3'>μ</font><font color='#D59BF3'>ό</font><font color='#F39BD5'>ς</font>. Όσο διαρκεί αυτό, αποκτούν Ταχύτητα Επίθεσης και μέγιστη Αναπλήρωση Ζωής. Αυτά τα μπόνους αυξάνονται για κάθε Δεσμώτη του Ρυθμού στην ομάδα σας.</row><br><row>(@MinUnits@) Όλοι οι Δεσμώτες του Ρυθμού ξεκινούν τη μάχη σε κατάσταση <font color='#F39B9B'>Ο</font> <font color='#9BF39B'>Ρ</font><font color='#9BF3D5'>υ</font><font color='#9BD5F3'>θ</font><font color='#9B9BF3'>μ</font><font color='#D59BF3'>ό</font><font color='#F39BD5'>ς</font> για @StartOfCombatDuration@ δευτερόλεπτα.</row><br><row>(@MinUnits@) Κάθε δευτερόλεπτο που βρίσκονται σε κατάσταση <font color='#F39B9B'>Ο</font> <font color='#9BF39B'>Ρ</font><font color='#9BF3D5'>υ</font><font color='#9BD5F3'>θ</font><font color='#9B9BF3'>μ</font><font color='#D59BF3'>ό</font><font color='#F39BD5'>ς</font>, αποκτούν @ADAPPerSecond@% Ζημιά Επίθεσης και Ισχύ Ικανότητας που συσσωρεύονται.</row><br><row>(@MinUnits@) Αυτές οι επιδράσεις αυξάνονται κατά @EffectBonus@%!</row><br><row>(@MinUnits@) <font color='#F39B9B'>Μ</font><font color='#F3D59B'>π</font><font color='#D5F39B'>ε</font> <font color='#9BF39B'>ί</font> <font color='#9BF3D5'>τ</font><font color='#9BD5F3'>ε</font><font color='#9B9BF3'>σ</font> <font color='#D59BF3'>τ</font><font color='#F39BD5'>ο</font><font color='#F39B9B'>ν</font><font color='#F3D59B'>Ρ</font><font color='#D5F39B'>υ</font> <font color='#9BF39B'>θ</font> <font color='#9BF3D5'>μ</font><font color='#9BD5F3'>ό</font><font color='#9B9BF3'>!</font></row><br><br><font color='#F39B9B'>Ο</font> <font color='#9BF39B'>Ρ</font><font color='#9BF3D5'>υ</font><font color='#9BD5F3'>θ</font><font color='#9B9BF3'>μ</font><font color='#D59BF3'>ό</font><font color='#F39BD5'>ς</font>: @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%, @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPPerSecond",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "EffectBonus",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "PrismaticDamage",
+                        "value": 800.0
+                    },
+                    {
+                        "name": "PrismaticJumpDamage",
+                        "value": 1500.0
+                    },
+                    {
+                        "name": "StartOfCombatDuration",
+                        "value": 60.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Αστρομάντης",
+        "trait_id": "TFT17_Stargazer",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Οι Αστρομάντεις χαρτογραφούν έναν διαφορετικό αστερισμό σε κάθε παιχνίδι.<br><br>Οι Αστρομάντεις σε ενισχυμένα εξάγωνα αποκτούν διάφορα μπόνους, ξεκινώντας από τις (@MinUnits@) μονάδες.<br><br><rules>Περισσότερα εξάγωνα αποκαλύπτονται σε κάθε Επίπεδο Παίκτη.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Family_BaseSharePercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Huntress_AS_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Medallion_DA_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_IncreasePer3Star",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Medallion_Resists_Teamwide",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Mountain_AP_Initial",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Mountain_Health_BonusThreshold",
+                        "value": 1000.0
+                    },
+                    {
+                        "name": "Mountain_Health_Teamwide",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Serpent_DR_Teamwide",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Serpent_Duration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_Duration",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Shield_Interval",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Shield_Shield_Teamwide",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Wolf_HealthThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Family_HexesToReveal_TOOLTIPONLY",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.3
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Family_HexesToReveal_TOOLTIPONLY",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 35.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.03
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.5
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Family_EmpoweredSharePercent",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Family_Stats",
+                        "value": 35.0
+                    },
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Medallion_DA",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "Mountain_APPerHealthThreshold",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Mountain_DamageAmpPercent",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Mountain_HexesToReveal_TOOLTIPONLY",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Shield_ADAP",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Shield_Shield",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_CriticalStrikeChance",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_ModifiedCriticalStrikeDamage",
+                        "value": 1.75
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αστρομάντης",
+        "trait_id": "TFT17_Stargazer_Fountain",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Οι Αστρομάντεις χαρτογραφούν έναν διαφορετικό αστερισμό σε κάθε παιχνίδι. Σε αυτό το παιχνίδι: <TFTStargazer>Το Σιντριβάνι</TFTStargazer>.<br><br>Οι σύμμαχοι στα ενισχυμένα εξάγωνα αποκτούν @Fountain_ManaRegen_Teamwide@ Αναπλήρωση Μάνα. Οι Αστρομάντεις σε ενισχυμένα εξάγωνα αποκτούν περισσότερα και θεραπεύουν τον σύμμαχο με τη χαμηλότερη Ζωή με τις ικανότητές τους.<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% θεραπεία από ζημιά ικανότητας</expandRow><br><br><rules>Αποκαλύπτονται περισσότερα εξάγωνα σε κάθε Επίπεδο Παίκτη</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Fountain_HealPercent",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αστρομάντης",
+        "trait_id": "TFT17_Stargazer_Huntress",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Οι Αστρομάντεις χαρτογραφούν έναν διαφορετικό αστερισμό σε κάθε παιχνίδι. Σε αυτό το παιχνίδι: <TFTStargazer>Η Κυνηγός</TFTStargazer>.<br><br>Αρχή της μάχης: Σημαδεύει τους εχθρούς με την περισσότερη Ζωή. <br><br>Οι σύμμαχοι στα ενισχυμένα εξάγωνα αποκτούν @Huntress_AS_Teamwide*100@% Ταχύτητα Επίθεσης. Οι Αστρομάντεις σε ενισχυμένα εξάγωνα αποκτούν περισσότερη Ζωή και θεραπεύονται για το @Huntress_Heal*100@% της μέγιστης Ζωής τους όταν πεθαίνει ένας σημαδεμένος εχθρός.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ σημάδια</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ σημάδια</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ σημάδια</row><br><br><rules>Αποκαλύπτονται περισσότερα εξάγωνα σε κάθε Επίπεδο Παίκτη</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS_Teamwide",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Huntress_Heal",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Huntress_AS",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αστρομάντης",
+        "trait_id": "TFT17_Stargazer_Medallion",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Οι Αστρομάντεις χαρτογραφούν έναν διαφορετικό αστερισμό σε κάθε παιχνίδι. Σε αυτό το παιχνίδι: <TFTStargazer>Το Μενταγιόν</TFTStargazer>.<br><br><row>(@MinUnits@) Οι σύμμαχοι στα ενισχυμένα εξάγωνα αποκτούν @Medallion_DA@% Ενίσχυση Ζημιάς, η οποία αυξάνεται κατά @Medallion_IncreasePer3Star@% για κάθε σύμμαχο 3 Αστεριών.</row><br><br>(Τρέχον&nbsp;μπόνους:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><br><rules>Αποκαλύπτονται περισσότερα εξάγωνα σε κάθε Επίπεδο Παίκτη</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Medallion_DA_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Medallion_IncreasePer3Star",
+                        "value": 6.5
+                    },
+                    {
+                        "name": "Medallion_Resists_Teamwide",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Medallion_DA",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Medallion_Resists",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αστρομάντης",
+        "trait_id": "TFT17_Stargazer_Mountain",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Οι Αστρομάντεις χαρτογραφούν έναν διαφορετικό αστερισμό σε κάθε παιχνίδι. Σε αυτό το παιχνίδι: <TFTStargazer>Το Βουνό</TFTStargazer><br><br>Κάθε @Mountain_RoundsPerEmblem@ μάχες μεταξύ παικτών, κερδίζετε ένα Έμβλημα Αστρομάντη. Οι Αστρομάντεις σε ενισχυμένα εξάγωνα αποκτούν διάφορα μπόνους.<br><br>(Μάχες που απομένουν:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) Αποκτά @Mountain_Health*100@% Ζωή</row><br><row>(@MinUnits@) ΚΑΙ @Mountain_ADAP*100@% Ζημιά Επίθεσης και Ισχύ Ικανότητας</row><br><row>(@MinUnits@) ΚΑΙ @Mountain_Resists@ Θωράκιση και Αντίσταση Μαγείας</row><br><row>(@MinUnits@) ΚΑΙ @Mountain_AS*100@% Ταχύτητα Επίθεσης</row><br><row>(@MinUnits@) ΚΑΙ @Mountain_DR*100@% Ανθεκτικότητα</row><br><row>(@MinUnits@) ΚΑΙ όλα τα άλλα μπόνους αυξάνονται κατά @Mountain_StatIncrease*100@%</row><br><br><rules>Αποκαλύπτονται περισσότερα εξάγωνα σε κάθε Επίπεδο Παίκτη</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_MaxEmblems",
+                        "value": 25000.0
+                    },
+                    {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 6,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 7,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DA",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 8,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αστρομάντης",
+        "trait_id": "TFT17_Stargazer_Serpent",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Οι Αστρομάντεις χαρτογραφούν έναν διαφορετικό αστερισμό σε κάθε παιχνίδι. Σε αυτό το παιχνίδι: <TFTStargazer>Το Ερπετό</TFTStargazer>.<br><br>Οι σύμμαχοι στα ενισχυμένα εξάγωνα αποκτούν @Serpent_DR_Teamwide*100@% Ανθεκτικότητα. Οι Αστρομάντεις στα ενισχυμένα εξάγωνα αποκτούν περισσότερη Ανθεκτικότητα και δηλητηριάζουν τους εχθρούς, προκαλώντας επιπλέον Μαγική Ζημιά ίση με ένα μέρος της ζημιάς που προκλήθηκε σε διάστημα @Serpent_Duration@ δευτερολέπτων.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, @Serpent_Poison*100@% ζημιά δηλητηρίου</expandRow><br><br><rules>Αποκαλύπτονται περισσότερα εξάγωνα σε κάθε Επίπεδο Παίκτη</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR_Teamwide",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Serpent_Duration",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Serpent_DR",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Serpent_Poison",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αστρομάντης",
+        "trait_id": "TFT17_Stargazer_Shield",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Οι Αστρομάντεις χαρτογραφούν έναν διαφορετικό αστερισμό σε κάθε παιχνίδι. Σε αυτό το παιχνίδι: <TFTStargazer>Ο Βωμός</TFTStargazer>.<br><br><row>(@MinUnits@) Όταν πεθαίνει ΟΠΟΙΟΣΔΗΠΟΤΕ Ήρωας, θυσιάζεται στον Βωμό. Οι σύμμαχοι στα ενισχυμένα εξάγωνα αποκτούν @Shield_Health_Teamwide@Ζωή και @Shield_AS_Teamwide@% Ταχύτητα Επίθεσης.<br><br>Μετά από @Shield_NumDeaths@ θυσίες, οι Αστρομάντεις σε ενισχυμένα εξάγωνα αποκτούν επιπλέον @Shield_CashoutHP@% %i:scaleHealth% και @Shield_CashoutAS@% %i:scaleAS%<br><br>Θυσίες: (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>Αποκαλύπτονται περισσότερα εξάγωνα σε κάθε Επίπεδο Παίκτη</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Αστρομάντης",
+        "trait_id": "TFT17_Stargazer_Wolf",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
+        "tooltip_text": "Οι Αστρομάντεις χαρτογραφούν έναν διαφορετικό αστερισμό σε κάθε παιχνίδι. Σε αυτό το παιχνίδι: <TFTStargazer>Ο Κάπρος</TFTStargazer>.<br><br>Όταν νικάτε σε μια μάχη μεταξύ παικτών, κερδίζετε Χρυσό. Οι σύμμαχοι στα ενισχυμένα εξάγωνα αποκτούν @Wolf_Health_Teamwide*100@% Ζωή, Ζημιά Επίθεσης και Ισχύ Ικανότητας. Οι Αστρομάντεις αποκτούν περισσότερα.<br><br>(Χρυσός που αποκτήθηκε: @TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@ Χρυσός, @Wolf_Health*100@% %i:scaleHealth%, @Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><br><rules>Αποκαλύπτονται περισσότερα εξάγωνα σε κάθε Επίπεδο Παίκτη</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP_Teamwide",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.22
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Βοσκός",
+        "trait_id": "TFT17_SummonTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Shepherd.TFT_Set17.png",
+        "tooltip_text": "Οι Βοσκοί καλούν τον Δεσμό των Άστρων για να τους βοηθήσει στη μάχη.<br><br><row>(@MinUnits@) Επίκληση του μωρού Μπία</row><br><row>(@MinUnits@) Επίκληση της Μπαγίν</row><br><row>(@MinUnits@) Ο δεσμός του μωρού Μπία και της Μπαγίν δυναμώνει</row><br><br><rules>Η δύναμη του μωρού Μπία και της Μπαγίν αυξάνεται ανάλογα με το συνολικό επίπεδο Αστεριών όλων των Βοσκών.</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Μάντης",
+        "trait_id": "TFT17_TahmKenchUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Arcana.TFT_Set12.png",
+        "tooltip_text": "Κάθε @Rounds@ γύρους, ο Ταμ Κεντς σάς δίνει μια ανταμοιβή!<br><br>Γύροι που απομένουν: @TFTUnitProperty.trait:TFT17_TahmKench_RoundsRemaining@<br>Τελευταία Ανταμοιβή: @TFTUnitProperty.trait:TFT17_TahmKench_LastReward@",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Rounds",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Χρονοθραύστης",
+        "trait_id": "TFT17_Timebreaker",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
+        "tooltip_text": "<row>(@MinUnits@) Όταν χάνετε, κερδίζετε δωρεάν ανανεώσεις. Όταν κερδίζετε, αποθηκεύετε ΕΜΠ σε έναν Χρονικό Πυρήνα (αυξάνεται ανάλογα με τη Φάση).</row><br><row>(@MinUnits@) ΚΑΙ οι σύμμαχοι αποκτούν @AttackSpeed*100@% Ταχύτητα Επίθεσης.</row><br><row>(@MinUnits@) ΚΑΙ οι Χρονοθραύστες αποκτούν επιπλέον @TimebreakerAdditionalAS*100@% Ταχύτητα Επίθεσης</row><br><br><rules>Ανανεώσεις σε περίπτωση ήττας: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>ΕΜΠ σε περίπτωση νίκης: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "RerollXPMultiplier",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TimebreakerAdditionalAS",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Καταστροφέας",
+        "trait_id": "TFT17_VexUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Doomer.TFT_Set17.png",
+        "tooltip_text": "Αρχή της μάχης: Όλοι οι εχθροί σημαδεύονται με Όλεθρο.<br><br>Την πρώτη φορά που οι εχθροί δέχονται ζημιά σε κάθε μάχη, ο Όλεθρός τους καταναλώνεται, κλέβοντας @ADAP1@% Ζημιά Επίθεσης και Ισχύ Ικανότητας από αυτούς και μεταφέροντας αυτά τα στατιστικά στην ισχυρότερη Βεξ σας.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP1",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Γαλαξιακός Κυνηγός",
+        "trait_id": "TFT17_ZedUniqueTrait",
+        "set": "TFTSet17",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GalaxyHunter.TFT_Set17.png",
+        "tooltip_text": "Μπορείτε να αποκτήσετε τον Ζεντ από την Ενίσχυση Εισβολέας Ζεντ.<br><br>Όσο είναι ζωντανός τουλάχιστον ένας κλώνος, ο Ζεντ αποκτά @BonusAD*100@% μπόνους Ζημιά Επίθεσης.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusAD",
+                        "value": 0.4
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
         "display_name": "Αστροναύτης",
         "trait_id": "Astro",
         "set": "TFTSet3",

@@ -3537,21 +3537,22 @@
                     default: t
                 }
             }
-            const a = function(t, e, n) {
-                if (this.audioContext = t, !(this.audioContext instanceof AudioContext)) throw new Error("this.audioContext must be an instance of AudioContext.");
-                this._playPromise = null, this._startedPlaying = !1, this._shouldStop = !1, this.options = {
-                    url: "",
-                    isLoop: !1,
-                    fadeIn: !1,
-                    fadeOut: !1,
-                    fadeFrom: 0,
-                    fadeTo: 1,
-                    fadeTime: 3e3,
-                    fadeShape: "linear",
-                    allowConcurrency: !0
-                }, Object.assign(this.options, n), e = e || null, this.set("url", e), this.audioElement = null, this.audioElementSource = null, this.set("gainNode", this._createGainNode())
-            };
-            Object.assign(a.prototype, {
+            const a = t => "AbortError" === t?.name || -1 !== t?.message?.indexOf("The play() request was interrupted"),
+                u = function(t, e, n) {
+                    if (this.audioContext = t, !(this.audioContext instanceof AudioContext)) throw new Error("this.audioContext must be an instance of AudioContext.");
+                    this._playPromise = null, this._startedPlaying = !1, this._shouldStop = !1, this.options = {
+                        url: "",
+                        isLoop: !1,
+                        fadeIn: !1,
+                        fadeOut: !1,
+                        fadeFrom: 0,
+                        fadeTo: 1,
+                        fadeTime: 3e3,
+                        fadeShape: "linear",
+                        allowConcurrency: !0
+                    }, Object.assign(this.options, n), e = e || null, this.set("url", e), this.audioElement = null, this.audioElementSource = null, this.set("gainNode", this._createGainNode())
+                };
+            Object.assign(u.prototype, {
                 _readyPromise: null,
                 ready: function() {
                     return this._readyPromise || (this._readyPromise = new r.default(((t, e) => {
@@ -3573,14 +3574,16 @@
                         } = t || {};
                         await this.ready(), !1 === this.options.allowConcurrency && this.isPlaying() && await this.stop(), e && await new r.default((t => setTimeout(t, 1e3 * e))), !1 !== n && (this.audioElement.currentTime = n), await this._play()
                     } catch (t) {
-                        if ("AbortError" !== t?.name && -1 === t?.message?.indexOf("The play() request was interrupted")) throw t
+                        if (!a(t)) throw t
                     } finally {
                         this._playPromise = null
                     }
                 },
                 _play: function() {
                     if (this._shouldStop) return this._shouldStop = !1, r.default.resolve(this);
-                    const t = this.audioElement.play();
+                    const t = this.audioElement.play().catch((t => {
+                        if (!a(t)) throw t
+                    }));
                     return this.options.fadeIn ? r.default.all([t, this.fadeIn(this.options, !0)]) : t
                 },
                 pause: function() {
@@ -3688,9 +3691,9 @@
                 _onPlay: function() {
                     this._startedPlaying = !0, this.trigger("play")
                 }
-            }), Object.assign(a.prototype, o.default);
-            var u = a;
-            e.default = u
+            }), Object.assign(u.prototype, o.default);
+            var c = u;
+            e.default = c
         }, (t, e) => {
             "use strict";
             Object.defineProperty(e, "__esModule", {

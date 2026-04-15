@@ -478,13 +478,13 @@
                     350.0
                 ]
             },
-            "desc": "Cherry_SelfDestruct_Summary",
+            "desc": "每@BombDelay@秒<keywordMajor>自動</keywordMajor>在自己身上綁上一顆炸彈，炸彈爆炸時會造成<trueDamage>大量真實傷害</trueDamage>並<status>擊飛</status>鄰近敵軍。",
             "iconLarge": "assets/ux/cherry/augments/icons/selfdestruct_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/selfdestruct_small.png",
             "id": 108,
             "name": "自我毀滅",
             "rarity": 0,
-            "tooltip": "Cherry_SelfDestruct_Tooltip"
+            "tooltip": "每@BombDelay@秒<keywordMajor>自動</keywordMajor>在自己身上綁上一顆炸彈，炸彈爆炸時會造成<trueDamage>@MaxHealthDamage*100@%最大生命真實傷害</trueDamage>並<status>擊飛</status>鄰近敵軍，效果持續@KnockupDuration@秒。"
         },
         {
             "apiName": "ServeBeyondDeath",
@@ -568,13 +568,13 @@
                     30.0
                 ]
             },
-            "desc": "Cherry_ServeBeyondDeath_Summary",
+            "desc": "每回合第一次死亡時，改為<scaleHealth>回滿生命</scaleHealth>，且隨時間<status>衰減</status>至零。<br><br>生命<status>衰減</status>時<keywordMajor>擊殺</keywordMajor>敵方英雄可停止<status>衰減</status>。",
             "iconLarge": "assets/ux/cherry/augments/icons/servebeyonddeath_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/servebeyonddeath_small.png",
             "id": 120,
             "name": "不得好死",
             "rarity": 0,
-            "tooltip": "Cherry_ServeBeyondDeath_Tooltip"
+            "tooltip": "每回合第一次死亡時，改為<scaleHealth>回滿生命</scaleHealth>並在@DecayDuration@秒內<status>衰減</status>至零。<br><br>生命<status>衰減</status>時<keywordMajor>擊殺</keywordMajor>敵方英雄可停止<status>衰減</status>，並將<scaleHealth>生命</scaleHealth>設為<healing>@TriumphPercent@%最大生命</healing>。"
         },
         {
             "apiName": "UndyingGuard",
@@ -924,13 +924,13 @@
                     10.0
                 ]
             },
-            "desc": "Cherry_QuantumComputing_Summary",
+            "desc": "定期<keywordMajor>自動施放</keywordMajor>一次大範圍斬擊，造成<physicalDamage>物理傷害</physicalDamage>。<br><br>被外圈命中的敵軍會<status>緩速</status>、承受額外<physicalDamage>傷害</physicalDamage>，並讓你<healing>回復生命</healing>。",
             "iconLarge": "assets/ux/cherry/augments/icons/quantumcomputing_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quantumcomputing_small.png",
             "id": 66,
             "name": "量子計算",
             "rarity": 2,
-            "tooltip": "Cherry_QuantumComputing_Tooltip"
+            "tooltip": "每@Cooldown@秒<keywordMajor>自動施放</keywordMajor>一次大範圍斬擊，造成<physicalDamage>@BaseDamageTotal@物理傷害</physicalDamage>。<br><br>敵軍遭命中時若位於技能範圍後半部，將被<status>緩速</status>@SlowPercentage@%，在@SlowDuration@秒內衰減至失效，並造成額外<physicalDamage>@OuterEdgeTooltip@最大生命的物理傷害</physicalDamage>，且你會回復<healing>@OuterConeHealingRatio@%對英雄造成傷害的生命</healing>。"
         },
         {
             "apiName": "DemonsDance",
@@ -1248,13 +1248,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmuteChaos_Tooltip",
+            "desc": "獲得<keywordMajor>@AugmentsToGrantToolTipOnly@件隨機%i:Augment%增幅裝置</keywordMajor>。",
             "iconLarge": "assets/ux/cherry/augments/icons/transmutechaos_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmutechaos_small.png",
             "id": 243,
             "name": "質變：大混亂",
             "rarity": 2,
-            "tooltip": "Cherry_TransmuteChaos_Tooltip"
+            "tooltip": "獲得<keywordMajor>@AugmentsToGrantToolTipOnly@件隨機%i:Augment%增幅裝置</keywordMajor>。"
         },
         {
             "apiName": "Chauffeur",
@@ -1505,13 +1505,13 @@
                     0.029999999329447746
                 ]
             },
-            "desc": "Cherry_Quest_MadHatter_Summary",
+            "desc": "條件：在戰鬥結束時戴著@QuestThreshold@頂帽子。<br><br>獎勵：每頂帽子賦予<scaleAF>適性之力</scaleAF>，<scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>，<scaleTenacity>%韌性</scaleTenacity>及<speed>跑速</speed>。",
             "iconLarge": "assets/ux/cherry/augments/icons/mad_hatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mad_hatter_small.png",
             "id": 318,
             "name": "任務：瘋狂帽匠",
             "rarity": 1,
-            "tooltip": "Cherry_Quest_MadHatter_Tooltip"
+            "tooltip": "條件：在戰鬥結束時戴著@QuestThreshold@頂帽子。<br><br>獎勵：每頂帽子賦予<scaleAF>@AFPerHat@適性之力</scaleAF>，@ArmorMRPerHat@ <scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>，<scaleTenacity>@TenacityPerHat*100@%韌性</scaleTenacity>及<speed>@MSPerHat@跑速</speed>。<br><br>目前獲得：<scaleAF>@f1@適性之力</scaleAF>，@f2@<scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>，<scaleTenacity>@f3*100@%韌性</scaleTenacity>及<speed>@f4@跑速</speed>。<br><br><rules>當回合落敗時會失去半數帽子。</rules>"
         },
         {
             "apiName": "BladeWaltz",
@@ -1879,13 +1879,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SummonerRevolution_Summary",
+            "desc": "<keywordMajor>召喚師技能</keywordMajor>獲得@BonusCharges@次額外充能次數。<br><br><spellName>閃現</spellName>每回合會重置。",
             "iconLarge": "assets/ux/cherry/augments/icons/summonerrevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/summonerrevolution_small.png",
             "id": 223,
             "name": "召喚革新",
             "rarity": 1,
-            "tooltip": "Cherry_SummonerRevolution_Summary"
+            "tooltip": "<keywordMajor>召喚師技能</keywordMajor>獲得@BonusCharges@次額外充能次數。<br><br><spellName>閃現</spellName>每回合會重置。"
         },
         {
             "apiName": "IceCold",
@@ -2065,13 +2065,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_TankItOrLeaveit_Summary",
+            "desc": "可根據自身<crit>暴擊率</crit>進行<crit>完美防禦(上限為@MaxChance*100@%機率)</crit>，觸發時減少承受的傷害。<br><br>增加<crit>%i:scaleCrit% @CritChance*100@%暴擊率</crit>。",
             "iconLarge": "assets/ux/cherry/augments/icons/tankitorleaveit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tankitorleaveit_small.png",
             "id": 80,
             "name": "毫髮無傷",
             "rarity": 0,
-            "tooltip": "Cherry_TankItOrLeaveIt_Tooltip"
+            "tooltip": "根據自身<crit>暴擊率</crit>進行<crit>完美防禦</crit>(上限為@MaxChance*100@%機率)，讓你減傷@CriticalDefendCalc@。<br><br>增加<crit>%i:scaleCrit% @CritChance*100@%暴擊率</crit>。"
         },
         {
             "apiName": "CraftingSellAugment",
@@ -2413,13 +2413,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_Stats_Tooltip",
+            "desc": "獲得@AmountOfStatAnvils@塊%i:StatAnvil%能力值鐵砧！",
             "iconLarge": "assets/ux/cherry/augments/icons/stats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stats_small.png",
             "id": 226,
             "name": "能力值！",
             "rarity": 0,
-            "tooltip": "Cherry_Stats_Tooltip"
+            "tooltip": "獲得@AmountOfStatAnvils@塊%i:StatAnvil%能力值鐵砧！"
         },
         {
             "apiName": "MasterofDuality",
@@ -2596,7 +2596,7 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_SearingDawn_Summary",
+            "desc": "技能會標記敵軍，友軍的下一次普攻或技能會對其造成額外<magicDamage>魔法傷害</magicDamage>。",
             "iconLarge": "assets/ux/cherry/augments/icons/searingdawn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/searingdawn_small.png",
             "id": 72,
@@ -2983,13 +2983,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_PhenomenalEvil_Summary",
+            "desc": "使用技能命中敵軍後，可永久增加<scaleAP>@APPerProc@魔法攻擊</scaleAP>。<br><br>如果在第@RoundCounterForBonusAP@回合後才獲得此增幅，則增加<scaleAP>@BonusAPForLatePick@魔法攻擊</scaleAP>。",
             "iconLarge": "assets/ux/cherry/augments/icons/phenomenalevil_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/phenomenalevil_small.png",
             "id": 65,
             "name": "極度邪惡",
             "rarity": 1,
-            "tooltip": "Cherry_PhenomenalEvil_Tooltip"
+            "tooltip": "使用技能命中敵軍後，可永久增加<scaleAP>@APPerProc@魔法攻擊</scaleAP>。<br><br>每項技能有@SpellIDCD@秒冷卻時間。<br><br><rules>如果在第@RoundCounterForBonusAP@回合後才獲得此增幅，則增加<scaleAP>@BonusAPForLatePick@魔法攻擊</scaleAP>。</rules>"
         },
         {
             "apiName": "BigBrain",
@@ -3153,7 +3153,7 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_UltimateRoulette_Summary",
+            "desc": "將<spellName>「逃亡」</spellName>換成隨機<attention>大絕</attention>。<br><br>施放<attention>大絕後</attention>，換成新的隨機<attention>大絕</attention>。",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
@@ -3593,13 +3593,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_UltimateRevolution_Summary",
+            "desc": "每回合可以在施放<attention>大絕</attention>後重置其冷卻時間一次。",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 88,
             "name": "終極革新",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRevolution_Tooltip"
+            "tooltip": "每回合可以在施放<attention>大絕</attention>後重置其冷卻時間一次。"
         },
         {
             "apiName": "TricksterDemon",
@@ -3789,13 +3789,13 @@
                     0.30000001192092896
                 ]
             },
-            "desc": "Cherry_SlowAndSteady_Summary",
+            "desc": "你的<speed>攻速</speed>無法超過@StaticRatio@。所有額外<speed>攻速</speed>轉換為<scaleAD>物攻</scaleAD>。<br>",
             "iconLarge": "assets/ux/cherry/augments/icons/slowandsteady_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slowandsteady_small.png",
             "id": 250,
             "name": "穩紮穩打",
             "rarity": 1,
-            "tooltip": "Cherry_SlowAndSteady_Tooltip"
+            "tooltip": "你的<speed>攻速</speed>無法超過@StaticRatio@。所有額外<speed>攻速</speed>轉換為<scaleAD>物攻</scaleAD>(每<speed>1%攻速</speed>轉換為<scaleAD>@ADPerAS@物攻</scaleAD>)。<br><br>目前獲得：@f1@<scaleAD>物理傷害</scaleAD>"
         },
         {
             "apiName": "FrostWraith",
@@ -4042,7 +4042,7 @@
             "id": 79,
             "name": "戰爭交響曲",
             "rarity": 2,
-            "tooltip": "Cherry_SymphonyofWar_Tooltip"
+            "tooltip": "獲得<spellName>致命節奏</spellName>與<spellName>征服者</spellName>關鍵符文。<br><li><spellName>致命節奏</spellName> - 普攻英雄會賦予<attackSpeed>攻速</attackSpeed>，最高累加6層。達到6層後，普攻會發射箭矢，造成額外傷害。<br><li><spellName>征服者</spellName> - 普攻及技能命中英雄時，賦予你<adaptiveForce>適性之力</adaptiveForce>，最高累加12層。達到12層後，將你對英雄造成的一部分傷害轉化為等比例的回復量。"
         },
         {
             "apiName": "TrueshotProdigy",
@@ -4184,7 +4184,7 @@
             "id": 60,
             "name": "海洋之魂",
             "rarity": 0,
-            "tooltip": "Cherry_OceanSoul_Tooltip"
+            "tooltip": "獲得癒水龍魂，對敵軍造成傷害後可增加大量<healing>生命</healing>及<scaleMana>魔力</scaleMana>回復。"
         },
         {
             "apiName": "Bodyguard",
@@ -4346,13 +4346,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_Quest_WoogletsWitchcap_Summary",
+            "desc": "立刻獲得<attention>巨型魔棒</attention>。<br><br>條件：擁有<attention>死亡之帽</attention>和<attention>中婭沙漏</attention>。<br><br>獎勵：獲得<attention>烏莉特的法帽</attention>。",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_woogletswitchcap_small.png",
             "id": 156,
             "name": "任務：烏莉特的法帽",
             "rarity": 2,
-            "tooltip": "Cherry_Quest_WoogletsWitchcap_Summary"
+            "tooltip": "立刻獲得<attention>巨型魔棒</attention>。<br><br>條件：擁有<attention>死亡之帽</attention>和<attention>中婭沙漏</attention>。<br><br>獎勵：獲得<attention>烏莉特的法帽</attention>。"
         },
         {
             "apiName": "Earthwake",
@@ -4616,7 +4616,7 @@
             "id": 76,
             "name": "餘音震盪",
             "rarity": 0,
-            "tooltip": "Cherry_SonicBoom_Tooltip"
+            "tooltip": "強化、<healing>治療</healing>、或<shield>賦予友軍護盾</shield>時，會對友軍周圍的敵軍造成<trueDamage>@Damage@真實傷害</trueDamage>，並<status>緩速@SlowAmount*-100@%</status>，持續@SlowDuration@秒。<br><br>本回合造成傷害：@f1@<br>總輸出傷害：@f2@"
         },
         {
             "apiName": "TwiceThrice",
@@ -4641,13 +4641,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_TwiceThrice_Tooltip",
+            "desc": "每@ProcCadence@次普攻會觸發第二次{{ Item_Keyword_OnHit }}效果。",
             "iconLarge": "assets/ux/cherry/augments/icons/twicethrice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/twicethrice_small.png",
             "id": 107,
             "name": "二次三次",
             "rarity": 1,
-            "tooltip": "Cherry_TwiceThrice_Tooltip"
+            "tooltip": "每@ProcCadence@次普攻會觸發第二次{{ Item_Keyword_OnHit }}效果。"
         },
         {
             "apiName": "SymbioticMutation",
@@ -5052,7 +5052,7 @@
                     0.30000001192092896
                 ]
             },
-            "desc": "Cherry_Overflow_Summary",
+            "desc": "你的<scaleMana>魔力</scaleMana>消耗加倍。<br><br>技能的<healing>治療</healing>、<shield>護盾</shield>以及傷害提升，提升幅度取決於<scaleMana>最大魔力</scaleMana>。",
             "iconLarge": "assets/ux/cherry/augments/icons/overflow_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/overflow_small.png",
             "id": 311,
@@ -5338,13 +5338,13 @@
                     0.6000000238418579
                 ]
             },
-            "desc": "Cherry_RaidBoss_Summary",
+            "desc": "你每回合開局將無法動彈。期間，獲得大量傷害減免，並隨時間體型變大，力量增強。<br><br>當你逃脫時，<status>擊退</status>敵軍並獲得<shield>護盾</shield>。",
             "iconLarge": "assets/ux/cherry/augments/icons/raidboss_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/raidboss_small.png",
             "id": 125,
             "name": "突襲頭目",
             "rarity": 2,
-            "tooltip": "Cherry_RaidBoss_Tooltip"
+            "tooltip": "每回合開始時，你會被困在競技場中間，無法行動。期間，獲得最多@DamageReductionMax*100@%傷害減免，並隨時間體型變大、增加<scaleHealth>生命</scaleHealth>、<physicalDamage>物攻</physicalDamage>，以及<scaleAP>魔攻</scaleAP>(最大@StatIncrease*100@%)。<br><br>@ImprisonDuration@秒後或達到<scaleHealth>@BreakoutHealthThreshold*100@%生命</scaleHealth>時，你會掙脫束縛，<status>擊退</status>敵軍並獲得等同於<shield>@ShieldHealthRatio*100@%最大生命的護盾</shield>。"
         },
         {
             "apiName": "OutlawsGrit",
@@ -5415,7 +5415,7 @@
                     15.0
                 ]
             },
-            "desc": "Cherry_OutlawsGrit_Summary",
+            "desc": "使用衝刺、瞬移或傳送技能後，增加<scaleArmor>物防</scaleArmor>和<scaleMR>魔防</scaleMR>。",
             "iconLarge": "assets/ux/cherry/augments/icons/outlawsgrit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/outlawsgrit_small.png",
             "id": 63,
@@ -5920,13 +5920,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_PrismaticEgg_Summary",
+            "desc": "每回合每位英雄限一次，參與擊殺時獲得@KillStackCredit@層。<br><br>達@RequiredKillCount@層後，孵化成<attention>稜鏡道具鐵砧</attention>、<attention>%i:Augment%稜鏡增幅裝置</attention>和<attention>%i:StatAnvil%稜鏡能力值鐵砧</attention>。",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_prismaticegg_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_prismaticegg_small.png",
             "id": 224,
             "name": "稜鏡蛋",
             "rarity": 2,
-            "tooltip": "Cherry_PrismaticEgg_Tooltip"
+            "tooltip": "{{Cherry_PrismaticEgg_Summary}}"
         },
         {
             "apiName": "Clothesline",
@@ -6202,13 +6202,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SoulSiphon_Summary",
+            "desc": "根據友軍造成<crit>暴擊</crit>傷害，<lifeSteal>自身回復@HealPercentage*100@%的生命</lifeSteal>。<br><br>增加<crit>%i:scaleCrit% @CritChance*100@%暴擊率</crit>。",
             "iconLarge": "assets/ux/cherry/augments/icons/soulsiphon_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/soulsiphon_small.png",
             "id": 77,
             "name": "靈魂虹吸",
             "rarity": 1,
-            "tooltip": "Cherry_SoulSiphon_Tooltip"
+            "tooltip": "{{Cherry_SoulSiphon_Summary}}"
         },
         {
             "apiName": "GambaAnvil",
@@ -6385,13 +6385,13 @@
                     0.3499999940395355
                 ]
             },
-            "desc": "Cherry_ThreadtheNeedle_Summary",
+            "desc": "獲得@PercentPen*100@%<armorPen>%i:scaleAPen%物理穿透</armorPen>與<magicPen>%i:scaleMPen%魔法穿透</magicPen>。",
             "iconLarge": "assets/ux/cherry/augments/icons/threadtheneedle_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/threadtheneedle_small.png",
             "id": 84,
             "name": "穿針引線",
             "rarity": 1,
-            "tooltip": "Cherry_ThreadtheNeedle_Summary"
+            "tooltip": "獲得@PercentPen*100@%<armorPen>%i:scaleAPen%物理穿透</armorPen>與<magicPen>%i:scaleMPen%魔法穿透</magicPen>。"
         },
         {
             "apiName": "BreadAndCheese",
@@ -6707,13 +6707,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_PandorasBox_Summary",
+            "desc": "將所有的增幅裝置物轉化為<keywordMajor>隨機稜鏡%i:Augment%增幅裝置</keywordMajor>。",
             "iconLarge": "assets/ux/cherry/augments/icons/pandoras_box_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/pandoras_box_small.png",
             "id": 317,
             "name": "潘朵拉的寶盒",
             "rarity": 2,
-            "tooltip": "Cherry_PandorasBox_Summary"
+            "tooltip": "將所有的增幅裝置物轉化為<keywordMajor>隨機稜鏡%i:Augment%增幅裝置</keywordMajor>。"
         },
         {
             "apiName": "ExtendoArm",
@@ -7125,13 +7125,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_SpiritLink_Summary",
+            "desc": "{{Cherry_SpiritLink@TeamSize@_Summary}}",
             "iconLarge": "assets/ux/cherry/augments/icons/spiritlink_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/spiritlink_small.png",
             "id": 78,
             "name": "靈魂連結",
             "rarity": 2,
-            "tooltip": "Cherry_SpiritLink_Tooltip"
+            "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>總計轉移傷害：@f1@<br>總治療量：@f2@<br>"
         },
         {
             "apiName": "Deathtouch",
@@ -7654,13 +7654,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_OkBoomerang_Summary",
+            "desc": "每@Cooldown@秒<keywordMajor>自動</keywordMajor>對鄰近敵軍發射回力鏢。",
             "iconLarge": "assets/ux/cherry/augments/icons/okboomerang_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/okboomerang_small.png",
             "id": 61,
             "name": "棒棒回力鏢",
             "rarity": 1,
-            "tooltip": "Cherry_OkBoomerang_Tooltip"
+            "tooltip": "每@Cooldown@秒<keywordMajor>自動</keywordMajor>對鄰近敵軍發射回力鏢，對命中的敵軍造成<physicalDamage>@Damage@物理傷害</physicalDamage>。<br><br>本回合造成傷害：@f1@<br>總輸出傷害：@f2@"
         },
         {
             "apiName": "Hybrid",
@@ -8016,7 +8016,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SlimeTime_Summary",
+            "desc": "每隔數秒，<keywordMajor>自動施放</keywordMajor>爆炸史萊姆，對鄰近敵軍造成<magicDamage>魔法傷害</magicDamage>。<br><br>若命中英雄，則在附近生成1坨黏液，踏過黏液可<healing>回復生命</healing>。",
             "iconLarge": "assets/ux/cherry/augments/icons/slimetime_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slimetime_small.png",
             "id": 232,
@@ -8572,13 +8572,13 @@
                     0.800000011920929
                 ]
             },
-            "desc": "Cherry_NestingDoll_Summary",
+            "desc": "獲得@BonusLives@次額外<attention>復活</attention>次數，死亡後會自動開始復活。<br><br><attention>復活</attention>時，<status>擊退</status>周遭敵軍，並以較小體型和較低的<scaleHealth>最大生命</scaleHealth>回歸。",
             "iconLarge": "assets/ux/cherry/augments/icons/nesting_doll.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nesting_doll_small.png",
             "id": 177,
             "name": "套娃",
             "rarity": 1,
-            "tooltip": "Cherry_NestingDoll_Tooltip"
+            "tooltip": "@ReviveArmTime@秒後自己會開始自動<attention>復活</attention>，而且可以額外<attention>復活</attention>@BonusLives@次。每次<attention>復活</attention>體型都會變小，且僅有<scaleHealth>@ReviveMod*100@%最大生命</scaleHealth>。<br><br><attention>復活</attention>時，<status>擊退</status>周遭敵軍。"
         },
         {
             "apiName": "TapDancer",
@@ -8624,13 +8624,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_TapDancer_Summary",
+            "desc": "普攻{{ Item_Keyword_OnHit }}時可增加<speed>@MSPerHit@跑速</speed>。<br><br>提升相當於@MSToASConversion*10000@%<speed>跑速</speed>的<attackSpeed>攻速</attackSpeed>。",
             "iconLarge": "assets/ux/cherry/augments/icons/tapdancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tapdancer_small.png",
             "id": 81,
             "name": "輕舞飛揚",
             "rarity": 2,
-            "tooltip": "Cherry_TapDancer_Tooltip"
+            "tooltip": "普攻{{ Item_Keyword_OnHit }}時可增加<speed>@MSPerHit@跑速</speed>。<br><br>增加<attackSpeed>@MSToASConversionCalc@攻速</attackSpeed>。"
         },
         {
             "apiName": "FanTheHammer",
@@ -8743,7 +8743,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/replace_augment.png",
             "iconSmall": "assets/ux/cherry/augments/icons/replace_augment_small.png",
             "id": 364,
-            "name": "Cherry_ReplaceAugment_Name",
+            "name": "修復增幅裝置",
             "rarity": 4,
             "tooltip": "Cherry_ReplaceAugment_Summary"
         },
@@ -8837,13 +8837,13 @@
                     0.550000011920929
                 ]
             },
-            "desc": "Cherry_Minionmancer_Tooltip",
+            "desc": "你的召喚物增加@MinionAmp*100@%體型、生命與傷害。",
             "iconLarge": "assets/ux/cherry/augments/icons/minionmancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/minionmancer_small.png",
             "id": 104,
             "name": "士兵術師",
             "rarity": 1,
-            "tooltip": "Cherry_Minionmancer_Tooltip"
+            "tooltip": "你的召喚物增加@MinionAmp*100@%體型、生命與傷害。"
         },
         {
             "apiName": "Multitool",
@@ -8937,13 +8937,13 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_TankEngine_Summary",
+            "desc": "每次擊殺，體型會增大，<scaleHealth>百分比額外生命</scaleHealth>增加。",
             "iconLarge": "assets/ux/cherry/augments/icons/tank_engine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tank_engine_small.png",
             "id": 313,
             "name": "坦克引擎",
             "rarity": 1,
-            "tooltip": "體型增加@SizeIncrement*100@%，增加<scaleHealth>@f2@額外生命</scaleHealth>(每次參與擊殺增加<scaleHealth>@MaxHPIncrement*100@% (@f1@)</scaleHealth>)。<br><br>參與擊殺：@f3@"
+            "tooltip": "體型增加@SizeIncrement*100@%，增加<scaleHealth>@f2@%額外生命</scaleHealth>(每次參與擊殺增加<scaleHealth>@MaxHPIncrement*100@%(@f1@)</scaleHealth>)。<br><br>參與擊殺次數：@f3@"
         },
         {
             "apiName": "CraftingAugmentSlot",
@@ -9048,13 +9048,13 @@
                     7.0
                 ]
             },
-            "desc": "Cherry_OmniSoul_Summary",
+            "desc": "獲得@SoulsToAdd@種隨機<attention>龍魂</attention>。",
             "iconLarge": "assets/ux/cherry/augments/icons/omnisoul_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/omnisoul_small.png",
             "id": 62,
             "name": "全能之魂",
             "rarity": 2,
-            "tooltip": "Cherry_OmniSoul_Summary"
+            "tooltip": "獲得@SoulsToAdd@種隨機<attention>龍魂</attention>。"
         },
         {
             "apiName": "DawnbringersResolve",
@@ -9148,13 +9148,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_SilverSpoon_Summary",
+            "desc": "每擁有一件<keywordMajor>%i:Augment%銀級增幅裝置</keywordMajor>，造成的傷害會提高。",
             "iconLarge": "assets/ux/cherry/augments/icons/silver_spoon.png",
             "iconSmall": "assets/ux/cherry/augments/icons/silver_spoon_small.png",
             "id": 356,
-            "name": "Cherry_SilverSpoon_Name",
+            "name": "銀湯匙",
             "rarity": 0,
-            "tooltip": "Cherry_SilverSpoon_Tooltip"
+            "tooltip": "每擁有一件<keywordMajor>%i:Augment%銀級增幅裝置</keywordMajor>，造成的傷害會提高@DamagePerSilver*100@%。<br><br>你所造成傷害增加@F1*100@%。"
         },
         {
             "apiName": "HoldVeryStill",
@@ -9896,13 +9896,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_StatsOnStatsOnStats_Tooltip",
+            "desc": "獲得@AmountOfStatAnvils@塊%i:StatAnvil%能力值鐵砧！",
             "iconLarge": "assets/ux/cherry/augments/icons/statsonstatsonstats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/statsonstatsonstats_small.png",
             "id": 228,
             "name": "能力值堆堆堆起來！",
             "rarity": 2,
-            "tooltip": "Cherry_StatsOnStatsOnStats_Tooltip"
+            "tooltip": "獲得@AmountOfStatAnvils@塊%i:StatAnvil%能力值鐵砧！"
         },
         {
             "apiName": "Deft",
@@ -10204,13 +10204,13 @@
                     0.07999999821186066
                 ]
             },
-            "desc": "Cherry_RighteousFury_Summary",
+            "desc": "使用<healing>治療</healing>或<shield>護盾</shield>時，技能傷害提升@SpellDamagePerStack*100@%，效果能在該回合無限累加。",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
             "id": 343,
             "name": "正義之怒",
             "rarity": 2,
-            "tooltip": "Cherry_RighteousFury_Tooltip"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@每次施放技能、增幅裝置和道具，冷卻時間為秒。"
         },
         {
             "apiName": "OrbitalLaser",
@@ -10438,13 +10438,13 @@
                     0.5
                 ]
             },
-            "desc": "Cherry_MysticPunch_Summary",
+            "desc": "{{ Item_Keyword_OnHit }}會縮短技能冷卻時間@CooldownRefund@秒%i:scaleCooldown%。",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "祕術拳擊",
             "rarity": 2,
-            "tooltip": "Cherry_MysticPunch_Summary"
+            "tooltip": "{{ Item_Keyword_OnHit }}會縮短技能冷卻時間@CooldownRefund@秒%i:scaleCooldown%。"
         },
         {
             "apiName": "Homeguard",
@@ -10788,13 +10788,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmutePrismatic_Tooltip",
+            "desc": "獲得一件隨機<keywordMajor>%i:Augment%稜鏡增幅裝置</keywordMajor>。",
             "iconLarge": "assets/ux/cherry/augments/icons/transmuteprismatic_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmuteprismatic_small.png",
             "id": 238,
             "name": "質變：稜鏡",
             "rarity": 1,
-            "tooltip": "Cherry_TransmutePrismatic_Tooltip"
+            "tooltip": "獲得一件隨機<keywordMajor>%i:Augment%稜鏡增幅裝置</keywordMajor>。"
         },
         {
             "apiName": "GoHCravingForRisk",
@@ -11054,13 +11054,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmuteGold_Tooltip",
+            "desc": "獲得一件隨機<keywordMajor>%i:Augment%金色增幅裝置</keywordMajor>。",
             "iconLarge": "assets/ux/cherry/augments/icons/transmutegold_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmutegold_small.png",
             "id": 237,
             "name": "質變：金級",
             "rarity": 0,
-            "tooltip": "Cherry_TransmuteGold_Tooltip"
+            "tooltip": "獲得一件隨機<keywordMajor>%i:Augment%金色增幅裝置</keywordMajor>。"
         },
         {
             "apiName": "ApexInventor",
@@ -11762,13 +11762,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_StatsOnStats_Tooltip",
+            "desc": "獲得@AmountOfStatAnvils@塊%i:StatAnvil%能力值鐵砧！",
             "iconLarge": "assets/ux/cherry/augments/icons/statsonstats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/statsonstats_small.png",
             "id": 227,
             "name": "能力值堆起來！",
             "rarity": 1,
-            "tooltip": "Cherry_StatsOnStats_Tooltip"
+            "tooltip": "獲得@AmountOfStatAnvils@塊%i:StatAnvil%能力值鐵砧！"
         },
         {
             "apiName": "Dashing",
@@ -12074,7 +12074,7 @@
                     700.0
                 ]
             },
-            "desc": "Cherry_SkilledSniper_Summary",
+            "desc": "在遠距離以<keywordMajor>非大絕技能</keywordMajor>命中敵軍時，可將該技能冷卻時間大幅縮短。 ",
             "iconLarge": "assets/ux/cherry/augments/icons/skilledsniper_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/skilledsniper_small.png",
             "id": 113,
@@ -12136,7 +12136,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_ParasiticRelationship_Summary",
+            "desc": "{{ Cherry_ParasiticRelationship@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/parasiticrelationship_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/parasiticrelationship_small.png",
             "id": 175,
@@ -12490,13 +12490,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_Oathsworn_Tooltip",
+            "desc": "將<spellName>逃亡</spellName>換為<spellName>命運呼喚</spellName>。<br><br><rules><spellName>命運呼喚</spellName>使友軍進入無法被指定的狀態，最多持續4秒。友軍可釋放自身，<status>擊退</status>敵軍。</rules><br>",
             "iconLarge": "assets/ux/cherry/augments/icons/oathsworn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/oathsworn_small.png",
             "id": 109,
             "name": "血誓同盟",
             "rarity": 1,
-            "tooltip": "Cherry_Oathsworn_Tooltip"
+            "tooltip": "將<spellName>逃亡</spellName>換為<spellName>命運呼喚</spellName>。<br><br><rules><spellName>命運呼喚</spellName>使友軍進入無法被指定的狀態，最多持續4秒。友軍可釋放自身，<status>擊退</status>敵軍。</rules><br>"
         },
         {
             "apiName": "AimForTheHead",
@@ -12719,13 +12719,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SummonersRoulette_Summary",
+            "desc": "隨機替換你的<attention>召喚師技能</attention>。<br><br>使用<attention>召喚師技能</attention>時，將其隨機替換成另一個，冷卻時間為@Cooldown@秒。",
             "iconLarge": "assets/ux/cherry/augments/icons/summonersroulette_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/summonersroulette_small.png",
             "id": 123,
             "name": "召喚師輪盤",
             "rarity": 2,
-            "tooltip": "Cherry_SummonersRoulette_Summary"
+            "tooltip": "隨機替換你的<attention>召喚師技能</attention>。<br><br>使用<attention>召喚師技能</attention>時，將其隨機替換成另一個，冷卻時間為@Cooldown@秒。"
         },
         {
             "apiName": "GoHSacrificeForSilver",
@@ -12818,13 +12818,13 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_ShrinkRay_Summary",
+            "desc": "你的普攻{{ Item_Keyword_OnHit }}會使目標的傷害和體型降低@DamageReduction*100@%。",
             "iconLarge": "assets/ux/cherry/augments/icons/shrinkray_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/shrinkray_small.png",
             "id": 74,
             "name": "縮小光線",
             "rarity": 1,
-            "tooltip": "Cherry_ShrinkRay_Tooltip"
+            "tooltip": "你的普攻{{ Item_Keyword_OnHit }}會使目標的傷害和體型降低@DamageReduction*100@%。"
         },
         {
             "apiName": "Castle",
@@ -13659,13 +13659,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_Perseverance_Summary",
+            "desc": "增加大量<healing>生命回復</healing>，<scaleHealth>生命</scaleHealth>低於一定值時增加更多。",
             "iconLarge": "assets/ux/cherry/augments/icons/perseverance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/perseverance_small.png",
             "id": 64,
             "name": "剛毅",
             "rarity": 1,
-            "tooltip": "Cherry_Perseverance_Tooltip"
+            "tooltip": "獲得<healing>@BaseRegen*100@%基礎生命回復</healing>，生命低於<scaleHealth>@AmpedHPThreshold*100@%</scaleHealth>時，提升至<healing>@AmpedRegen*100@%基礎生命回復</healing>。<br><br>本回合總治療量：@f1@<br>總治療量：@f2@"
         },
         {
             "apiName": "JeweledGauntlet",

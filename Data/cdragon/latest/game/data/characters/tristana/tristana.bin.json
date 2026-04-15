@@ -163,6 +163,19 @@
                         0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -178,6 +191,19 @@
                                 1.0499999523162842,
                                 1.149999976158142,
                                 1.25
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "APRatio",
+                            "values": [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -246,8 +272,8 @@
                             "__type": "StatBySubPartCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.5,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -672,8 +698,41 @@
                         1.149999976158142
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "APRatio",
+                            "values": [
+                                1.5,
+                                1.5,
+                                1.5,
+                                1.5,
+                                1.5,
+                                1.5,
+                                1.5
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "DamageCalc": {
                     "mFormulaParts": [
@@ -688,8 +747,8 @@
                             "__type": "StatByCoefficientCalculationPart"
                         },
                         {
-                            "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1194,6 +1253,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "APRatio",
+                            "values": [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "LandingDamage": {
                     "mFormulaParts": [
@@ -1342,8 +1421,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "{c35e794c}",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

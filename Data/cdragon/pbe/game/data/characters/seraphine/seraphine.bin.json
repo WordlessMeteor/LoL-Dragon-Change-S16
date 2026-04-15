@@ -1414,6 +1414,7 @@
         "ObjectName": "SeraphineQSecondaryMissile",
         "mScriptName": "SeraphineQSecondaryMissile",
         "mSpell": {
+            "flags": 32,
             "mAffectsTypeFlags": 6154,
             "mAnimationName": "none",
             "{11704a2b}": 0.0,
@@ -1433,21 +1434,30 @@
             "castRangeUseBoundingBoxes": true,
             "useAnimatorFramerate": true,
             "castRange": [
-                25000.0,
-                25000.0,
-                25000.0,
-                25000.0,
-                25000.0,
-                25000.0,
-                25000.0
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
             ],
-            "luaOnMissileUpdateDistanceInterval": 50.000999450683594,
+            "castRangeDisplayOverride": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
             "mMissileSpec": {
+                "mMissileWidth": 50.0,
                 "movementComponent": {
                     "mTargetHeightAugment": 100.0,
                     "mStartBoneName": "R_buffbone_Glb_Foot_Loc",
-                    "mTravelTime": 0.4000000059604645,
-                    "__type": "FixedTimeMovement"
+                    "mSpeed": 600.0,
+                    "__type": "FixedSpeedMovement"
                 },
                 "heightSolver": {
                     "__type": "BlendedLinearHeightSolver"
@@ -1457,7 +1467,7 @@
                 },
                 "behaviors": [
                     {
-                        "__type": "CastOnMovementComplete"
+                        "__type": "CastOnHit"
                     },
                     {
                         "__type": "DestroyOnMovementComplete"
@@ -1466,7 +1476,8 @@
                 "{c195fba6}": true,
                 "__type": "MissileSpecification"
             },
-            "mCastType": 3,
+            "mCastType": 7,
+            "missileSpeed": 400.0,
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -1485,9 +1496,8 @@
                 0,
                 0
             ],
-            "selectionPriority": 1,
             "mTargetingTypeData": {
-                "__type": "Location"
+                "__type": "Direction"
             },
             "mCastingBreaksStealth": true,
             "__type": "SpellDataResource"

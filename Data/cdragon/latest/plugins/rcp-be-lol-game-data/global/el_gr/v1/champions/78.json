@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Πόπι χτυπά με το σφυρί της, προκαλεί ζημιά και δημιουργεί μια ζώνη που επιβραδύνει τους εχθρούς και ανατινάζεται μετά από λίγο.",
-            "dynamicDescription": "Η Πόπι χτυπά με δύναμη το έδαφος, προκαλώντας Σωματική Ζημιά ίση με <physicalDamage>@BaseDamage@</physicalDamage> συν <physicalDamage>@HealthDamagePercent@% της μέγιστης Ζωής</physicalDamage> και κάνοντας το έδαφος ασταθές. <br><br>Η ασταθής περιοχή <status>Επιβραδύνει</status> τους εχθρούς κατά @Effect3Amount@% και ανατινάζεται μετά από @Effect4Amount@ δευτ., προκαλώντας ξανά Σωματική Ζημιά ίση με <physicalDamage>@BaseDamage@</physicalDamage> συν <physicalDamage>@HealthDamagePercent@% της μέγιστης Ζωής</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Πόπι χτυπά με δύναμη το έδαφος, προκαλώντας Σωματική Ζημιά ίση με <physicalDamage>@BaseDamage@</physicalDamage> συν <physicalDamage>@HealthDamagePercent@% της μέγιστης Ζωής</physicalDamage> και κάνοντας το έδαφος ασταθές. <br><br>Η ασταθής περιοχή <status>Επιβραδύνει</status> τους εχθρούς κατά @Slow_@% και ανατινάζεται μετά από @DelayBetweenTwoHits@ δευτ., προκαλώντας ξανά Σωματική Ζημιά ίση με <physicalDamage>@BaseDamage@</physicalDamage> συν <physicalDamage>@HealthDamagePercent@% της μέγιστης Ζωής</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Πόπι αποκτά παθητικά Θωράκιση και Αντίσταση Μαγείας. Αυτό το μπόνους αυξάνεται όταν έχει λίγη Ζωή. Η Πόπι μπορεί να ενεργοποιήσει την Ακλόνητη Παρουσία για να αποκτήσει Ταχύτητα Κίνησης και να διακόψει τις εφορμήσεις των εχθρών γύρω της. Εάν σταματήσει μια εφόρμηση, ο εχθρός επιβραδύνεται και γειώνεται.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Η Πόπι αποκτά <scaleArmor>@BonusArmor@ Θωράκιση</scaleArmor> και <scaleMR>@BonusMR@ Αντίσταση Μαγείας</scaleMR>. Αυτό το μπόνους διπλασιάζεται, αν η Ζωή της Πόπι είναι κάτω από @PassiveEmpoweredHealthPercent*100@%.<br><br><spellActive>Ενεργή:</spellActive> Η Πόπι κερδίζει <speed>@Effect2Amount@% Ταχύτητα Κίνησης</speed> και εκπέμπει γύρω της για @Effect1Amount@ δευτ. ένα πεδίο που σταματά τις εφορμήσεις των εχθρών. Στους εχθρούς που σταματά το πεδίο προκαλείται <status>Γείωση</status> και <status>Επιβράδυνση</status> κατά @SlowAmount*-100@% για @GroundingDuration@ δευτ., ενώ δέχονται και <magicDamage>@InterruptDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Η Πόπι αποκτά <scaleArmor>@BonusArmor@ Θωράκιση</scaleArmor> και <scaleMR>@BonusMR@ Αντίσταση Μαγείας</scaleMR>. Αυτό το μπόνους διπλασιάζεται εάν η Ζωή της Πόπι είναι κάτω από @PassiveEmpoweredHealthPercent*100@%.<br><br><spellActive>Ενεργή:</spellActive> Η Πόπι κερδίζει <speed>@Haste@% Ταχύτητα Κίνησης</speed> και εκπέμπει γύρω της για @Duration@ δευτ. ένα πεδίο που σταματά τις εφορμήσεις των εχθρών. Στους εχθρούς που σταματά το πεδίο προκαλείται <status>Γείωση</status> και <status>Επιβράδυνση</status> κατά @SlowAmount*-100@% για @GroundingDuration@ δευτ., ενώ δέχονται και <magicDamage>@InterruptDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Πόπι ορμά στον στόχο της και τον σπρώχνει προς τα πίσω. Αν ο στόχος πέσει επάνω σε τοίχο, ακινητοποιείται.",
-            "dynamicDescription": "Η Πόπι χτυπάει τον εχθρό, προκαλώντας <physicalDamage>@TackleDamage@ Σωματική Ζημιά</physicalDamage> και σπρώχνοντάς τον μακριά. Αν η Πόπι ρίξει τον εχθρό πάνω σε εμπόδιο, αυτός <status>ακινητοποιείται</status> για @Effect3Amount@ δευτ. και δέχεται επιπλέον <physicalDamage>@TackleDamage@ Σωματική Ζημιά</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Πόπι χτυπάει τον εχθρό, προκαλώντας <physicalDamage>@TackleDamage@ Σωματική Ζημιά</physicalDamage> και σπρώχνοντάς τον μακριά. Αν η Πόπι ρίξει τον εχθρό πάνω σε εμπόδιο, αυτός <status>ακινητοποιείται</status> για @StunDuration@ δευτ. και δέχεται επιπλέον <physicalDamage>@TackleDamage@ Σωματική Ζημιά</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

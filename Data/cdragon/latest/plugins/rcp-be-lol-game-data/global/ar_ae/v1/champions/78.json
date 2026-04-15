@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تضرب بوبي بمطرقتها، فتلحق الضرر وتنشئ منطقة تبطئ الأعداء وتنفجر بعد وهلة.",
-            "dynamicDescription": "تضرب بوبي الأرض فتلحق <physicalDamage>@BaseDamage@</physicalDamage> زائد <physicalDamage>@HealthDamagePercent@% من الصحة القصوى على شكل ضرر مادي</physicalDamage> وتجعل الأرض غير مستقرة. <br><br>تسبب المنطقة غير المستقرة <status>إبطاء</status> للأعداء بنسبة @Effect3Amount@% و تنفجر بعد مرور @Effect4Amount@ث، ملحقةً <physicalDamage>@BaseDamage@</physicalDamage> زائد <physicalDamage>@HealthDamagePercent@% من الصحة القصوى على شكل ضرر مادي</physicalDamage> مرة ثانية.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تضرب بوبي الأرض فتلحق <physicalDamage>@BaseDamage@</physicalDamage> زائد <physicalDamage>@HealthDamagePercent@% من الصحة القصوى على شكل ضرر مادي</physicalDamage> وتجعل الأرض غير مستقرة. <br><br>تسبب المنطقة غير المستقرة <status>إبطاء</status> للأعداء بنسبة @Slow_@% و تنفجر بعد مرور @DelayBetweenTwoHits@ث، ملحقةً <physicalDamage>@BaseDamage@</physicalDamage> زائد <physicalDamage>@HealthDamagePercent@% من الصحة القصوى على شكل ضرر مادي</physicalDamage> مرة ثانية.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تكتسب بوبي بشكل كامن دروعًا ومقاومة سحر. تزداد هذه المكافأة عندما تكون صحتها منخفضة. تستطيع بوبي تفعيل الحضور الراسخ لكسب سرعة حركة وإيقاف اندفاعات العدو من حولها. إذا تم إيقاف اندفاع، يتم إبطاء العدو وتثبيته في الأرض.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> تكتسب بوبي <scaleArmor>@BonusArmor@ دروع</scaleArmor> و <scaleMR>@BonusMR@ مقاومة سحر</scaleMR>. تتم مضاعفة هذه الزيادة إن كان لدى بوبي أقل من @PassiveEmpoweredHealthPercent*100@% صحة.<br><br><spellActive>التأثير النشط:</spellActive> تكتسب بوبي <speed>@Effect2Amount@% سرعة حركة</speed> وتطلق حقلًا حولها لمدة @Effect1Amount@ ثوان يوقف اندفاع الأعداء. يتعرض الأعداء الذين يتم إيقافهم بواسطة الحقل إلى <status>التثبيت</status> و <status>الإبطاء</status> بنسبة @SlowAmount*-100@% لمدة @GroundingDuration@ ثوان ويتلقون <magicDamage>@InterruptDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> تكسب بوبي <scaleArmor>@BonusArmor@ دروع</scaleArmor> و <scaleMR>@BonusMR@ مقاومة سحر</scaleMR>. تتضاعف هذه المكافأة إذا كانت صحة بوبي أقل من @PassiveEmpoweredHealthPercent*100@%.<br><br><spellActive>تأثير نشط:</spellActive> تكسب بوبي <speed>@Haste@% سرعة حركة</speed> وتنشر حقلًا حولها يوقف اندفاعات العدو لمدة @Duration@ث. يتعرض الأعداء الذين يوقفهم الحقل إلى <status>التثبيت</status> و<status>الإبطاء</status> بنسبة @SlowAmount*-100@% لمدة @GroundingDuration@ث، ويتلقون <magicDamage>@InterruptDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تندفع بوبي نحو الهدف وتدفعه إلى الخلف. وإذا تم دفع الهدف نحو حائط يتم صعقه.",
-            "dynamicDescription": "تعرقل بوبي عدوًا فتلحق به <physicalDamage>@TackleDamage@ ضرر مادي</physicalDamage> وتحمله إلى الأمام. إذا عرقلت بوبي العدو إلى داخل التضاريس، يتم <status>صعقه</status> لمدة @Effect3Amount@ ثوان ويتلقى مقدارًا إضافيًا من <physicalDamage>@TackleDamage@ الضرر المادي</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تعرقل بوبي عدوًا، فتلحق به <physicalDamage>@TackleDamage@ ضرر مادي</physicalDamage> وتحمله إلى الأمام. إذا عرقلته بوبي نحو التضاريس، فإن العدو <status>يُصعق</status> لمدة @StunDuration@ث ويتلقى <physicalDamage>@TackleDamage@ ضرر مادي</physicalDamage> إضافي.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

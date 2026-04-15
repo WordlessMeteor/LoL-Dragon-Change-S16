@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "勒布朗衝向指定區域，對她目的地附近的敵人造成魔法傷害。在接下來的 4 秒內，重啟移行瞬影將使勒布朗回到她一開始的施放位置。",
-            "dynamicDescription": "勒布朗衝刺並對附近敵人造成 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage>。衝刺 @Effect3Amount@ 秒後，勒布朗可以 <recast>重啟</recast> 此技能。<br><br><recast>重啟：</recast> 勒布朗返回她的起始位置。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "隨後勒布朗衝刺，對鄰近敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。在衝刺後的@SnapbackTimeAllowed@秒內，勒布朗可以<recast>重施技能</recast>。<br><br><recast>重施技能：</recast>勒布朗返回她的起始位置。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "勒布朗擲出ㄧ條鎖鏈鍊住第一個命中的敵人。如果目標被鍊住超過 1.5 秒，勒布朗將定身他們並對他們造成額外的傷害。",
-            "dynamicDescription": "勒布朗擲出一條鎖鏈，鍊住第一個命中的敵人，造成 <magicDamage>@InitialDamage@ 魔法傷害</magicDamage> 並獲得 <keywordStealth>真視</keywordStealth> 視野。<br><br>如果目標被鍊住持續 @Effect3Amount@ 秒，勒布朗 <status>定身</status> 目標，持續 @Effect4Amount@ 秒，並造成額外 <magicDamage>@DelayedDamage@ 魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "勒布朗擲出鎖鏈鍊住首位命中的敵軍，造成<magicDamage>@InitialDamage@魔法傷害</magicDamage>並獲得<keywordStealth>真視視野</keywordStealth>。<br><br>若目標被鍊住持續@TetherDuration@秒，勒布朗<status>定身</status>對方，持續@RootDuration@秒，並額外造成<magicDamage>@DelayedDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

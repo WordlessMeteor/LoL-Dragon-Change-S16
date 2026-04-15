@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.7.1",
+    "version": "16.8.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -4880,7 +4880,7 @@
                     "id": "AlistarE",
                     "name": "践踏",
                     "description": "阿利斯塔践踏附近的敌方单位，无视单位的碰撞体积并在他伤害到一名敌方英雄时获得一层充能。在满层充能时，阿利斯塔的下次对敌方英雄发起的普攻将造成额外魔法伤害和晕眩效果。",
-                    "tooltip": "阿利斯塔践踏地面，变为幽灵状态并在{{ e3 }}秒里持续对附近的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。每段践踏在至少伤害到一名敌方英雄时会为阿利斯塔提供一层效果。<br /><br />在{{ e5 }}层效果时，阿利斯塔的下一个对英雄打出的攻击会<status>晕眩</status>目标{{ e6 }}秒并造成额外的<magicDamage>{{ attackbonusdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "阿利斯塔践踏地面，变为幽灵状态并在{{ duration }}秒里持续对附近的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。每段践踏在至少伤害到一名敌方英雄时会为阿利斯塔提供一层效果。<br /><br />在{{ maxstacks }}层效果时，阿利斯塔的下一个对英雄打出的攻击会<status>晕眩</status>目标{{ stunduration }}秒并造成额外的<magicDamage>{{ attackbonusdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -17676,6 +17676,75 @@
                     "name": "烤肉大师 布隆 夜色守胃者",
                     "chromas": false,
                     "parentSkin": 42
+                },
+                {
+                    "id": "201051",
+                    "num": 51,
+                    "name": "胜利之心 布隆",
+                    "chromas": true
+                },
+                {
+                    "id": "201052",
+                    "num": 52,
+                    "name": "胜利之心 布隆 英勇黄铜",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201053",
+                    "num": 53,
+                    "name": "胜利之心 布隆 不屈白银",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201054",
+                    "num": 54,
+                    "name": "胜利之心 布隆 荣耀黄金",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201055",
+                    "num": 55,
+                    "name": "胜利之心 布隆 华贵铂金",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201056",
+                    "num": 56,
+                    "name": "胜利之心 布隆 流光翡翠",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201057",
+                    "num": 57,
+                    "name": "胜利之心 布隆 璀璨钻石",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201058",
+                    "num": 58,
+                    "name": "胜利之心 布隆 超凡大师",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201059",
+                    "num": 59,
+                    "name": "胜利之心 布隆 傲世宗师",
+                    "chromas": false,
+                    "parentSkin": 51
+                },
+                {
+                    "id": "201060",
+                    "num": 60,
+                    "name": "胜利之心 布隆 最强王者",
+                    "chromas": false,
+                    "parentSkin": 51
                 }
             ],
             "lore": "拥有大肌肉和大心脏的布隆，是一位受人爱戴的弗雷尔卓德英雄，在弗雷尔卓德北部的任何一家蜜酒坊里，都有人在这位传奇般的强壮英雄致敬。据说他曾在一夜之间扫平一整片橡树森林，还曾用拳头把一整座山打成碎石子。那抹小胡子勾勒出的笑容和布隆的肌肉一样夺目，他手持一扇附有魔法的秘库大门当盾牌，常年在北方的冻土上漫游，真诚友善地帮助着所有陷入危难之中的人。",
@@ -17728,7 +17797,7 @@
                     "id": "BraumQ",
                     "name": "寒冬之咬",
                     "description": "布隆驱动盾牌中的冷冻冰块，对敌人造成魔法伤害和减速效果。<br><br>对目标施加一层<font color='#FFF673'>震荡猛击</font>。",
-                    "tooltip": "布隆驱动盾牌里的冷冻冰块，对命中的第一个敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和在{{ e5 }}秒里持续衰减的{{ e2 }}%<status>减速</status>。<br /><br />施加一层<keywordMajor>震荡猛击</keywordMajor>。 {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "布隆驱动盾牌里的冷冻冰块，对命中的第一个敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和在{{ slowduration }}秒里持续衰减的{{ initialslow }}%<status>减速</status>。<br /><br />施加一层<keywordMajor>震荡猛击</keywordMajor>。 {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -17871,7 +17940,7 @@
                     "id": "BraumW",
                     "name": "挺身而出",
                     "description": "布隆跃向目标友军英雄或小兵。在抵达时，布隆和友军会暂时获得护甲和魔法抗性加成。",
-                    "tooltip": "布隆跃向一名友方英雄或小兵。在抵达时，布隆为目标提供持续{{ e1 }}秒的<scaleArmor>{{ grantedallyarmor }}护甲</scaleArmor>和<scaleMR>{{ grantedallymr }}魔法抗性</scaleMR>。布隆为他自己提供相同持续时间的<scaleArmor>{{ grantedbraumarmor }}护甲</scaleArmor>和<scaleMR>{{ grantedbraummr }}魔法抗性</scaleMR>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "布隆跃向一名友方英雄或小兵。在抵达时，布隆为目标提供持续{{ duration }}秒的<scaleArmor>{{ grantedallyarmor }}护甲</scaleArmor>和<scaleMR>{{ grantedallymr }}魔法抗性</scaleMR>。布隆为他自己提供相同持续时间的<scaleArmor>{{ grantedbraumarmor }}护甲</scaleArmor>和<scaleMR>{{ grantedbraummr }}魔法抗性</scaleMR>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础抗性",
@@ -18012,7 +18081,7 @@
                     "id": "BraumE",
                     "name": "坚不可摧",
                     "description": "布隆朝一个方向举起盾牌，持续数秒，可以拦截所有敌方飞行道具，并将它们摧毁，但自身要承受这些飞行道具的伤害。在举盾后，布隆将使承受的第一次攻击变得完全无效，并降低来自这个方向的所有后续攻击的伤害。",
-                    "tooltip": "布隆将他的盾牌举起{{ e2 }}秒，拦截来自选定方向的所有敌方弹体，使其命中布隆然后被摧毁。布隆格挡的首个弹体不会造成伤害，并且后续弹体造成的伤害降低{{ e3 }}%。<br /><br />布隆在举盾时获得<speed>{{ e4 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "布隆将他的盾牌举起{{ shieldholdduration }}秒，拦截来自选定方向的所有敌方弹体，使其命中布隆然后被摧毁。布隆格挡的首个弹体不会造成伤害，并且后续弹体造成的伤害降低{{ shieldfacingdramount }}%。<br /><br />布隆在举盾时获得<speed>{{ movespeedpercent }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "持续时间",
@@ -55869,7 +55938,7 @@
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 51,
+                "attackdamage": 49,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 2.3,
                 "attackspeed": 0.625
@@ -56188,13 +56257,13 @@
                     ],
                     "cooldownBurn": "10/9.5/9/8.5/8",
                     "cost": [
-                        50,
-                        55,
                         60,
                         65,
-                        70
+                        70,
+                        75,
+                        80
                     ],
-                    "costBurn": "50/55/60/65/70",
+                    "costBurn": "60/65/70/75/80",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -67400,7 +67469,7 @@
                     "id": "LeblancW",
                     "name": "魔影迷踪",
                     "description": "乐芙兰位移至目标位置，并对目标位置附近的敌人造成伤害。在接下来的4秒里，她可以激活此技能来回到她的初始位置。",
-                    "tooltip": "乐芙兰冲刺然后对附近的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在冲刺后的{{ e3 }}秒里，乐芙兰可以<recast>再次施放</recast>。<br /><br /><recast>再次施放：</recast>乐芙兰回到她的初始位置。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "乐芙兰冲刺然后对附近的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在冲刺后的{{ snapbacktimeallowed }}秒里，乐芙兰可以<recast>再次施放</recast>。<br /><br /><recast>再次施放：</recast>乐芙兰回到她的初始位置。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -67543,7 +67612,7 @@
                     "id": "LeblancE",
                     "name": "幻影锁链",
                     "description": "乐芙兰抛出一条锁链来束缚命中的第一个敌人。如果目标持续被束缚1.5秒，那么目标就会受到额外的魔法伤害并且被禁锢。",
-                    "tooltip": "乐芙兰抛出一个锁链来束缚命中的第一个敌人，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>并提供目标的<keywordStealth>真实视野</keywordStealth>。<br /><br />如果目标持续被束缚{{ e3 }}秒，则乐芙兰会将其<status>禁锢</status>{{ e4 }}秒，并造成额外的<magicDamage>{{ delayeddamage }}魔法伤害</magicDamage>。 {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "乐芙兰抛出一个锁链来束缚命中的第一个敌人，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>并提供目标的<keywordStealth>真实视野</keywordStealth>。<br /><br />如果目标持续被束缚{{ tetherduration }}秒，则乐芙兰会将其<status>禁锢</status>{{ rootduration }}秒，并造成额外的<magicDamage>{{ delayeddamage }}魔法伤害</magicDamage>。 {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "锁链伤害",
@@ -72842,21 +72911,21 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        18,
-                        17,
                         16,
+                        15.5,
                         15,
+                        14.5,
                         14
                     ],
-                    "cooldownBurn": "18/17/16/15/14",
+                    "cooldownBurn": "16/15.5/15/14.5/14",
                     "cost": [
-                        40,
-                        30,
-                        20,
-                        10,
+                        32,
+                        24,
+                        16,
+                        8,
                         0
                     ],
-                    "costBurn": "40/30/20/10/0",
+                    "costBurn": "32/24/16/8/0",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -76725,7 +76794,7 @@
                     "id": "MalzaharQ",
                     "name": "虚空召唤",
                     "description": "玛尔扎哈开启两扇通向虚空的传送门。在短暂的延迟后，两扇门之间会有虚空能量对流而过，造成魔法伤害并沉默敌方英雄。",
-                    "tooltip": "玛尔扎哈开启两扇通往虚空的传送门，在短暂的延迟后，能量就会从虚空之中喷发，并且在两道传送门之间对流，对击中的敌人造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>并使其<status>沉默</status>{{ e2 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "玛尔扎哈开启两扇通往虚空的传送门，在短暂的延迟后，能量就会从虚空之中喷发，并且在两道传送门之间对流，对击中的敌人造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>并使其<status>沉默</status>{{ silenceduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -77154,7 +77223,7 @@
                     "id": "MalzaharR",
                     "name": "冥府之握",
                     "description": "玛尔扎哈引导虚空的精萃来把一名敌方英雄压制在一个充满伤害的负能量地带上。",
-                    "tooltip": "玛尔扎哈<status>压制</status>一名敌方英雄并在{{ e4 }}秒里持续造成共<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>。一个负能量地带会在他目标周围生成，在{{ e3 }}秒里持续造成共<magicDamage>{{ zonedamagetooltip }}最大生命值的魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "玛尔扎哈<status>压制</status>一名敌方英雄并在{{ ccduration }}秒里持续造成共<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>。一个负能量地带会在他目标周围生成，在{{ poolduration }}秒里持续造成共<magicDamage>{{ zonedamagetooltip }}最大生命值的魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冥府之握 伤害",
@@ -78770,6 +78839,12 @@
                     "name": "胜利剑圣 易 最强王者",
                     "chromas": false,
                     "parentSkin": 106
+                },
+                {
+                    "id": "11116",
+                    "num": 116,
+                    "name": "源计划：改 · 林 易",
+                    "chromas": true
                 }
             ],
             "lore": "易师锤炼身体、磨砺心智，直至身心合一。尽管他将暴力作为不得已的选择，但他优雅迅猛的剑法总是让这一手段显得尤为快捷。作为无极之道最后的门徒，易大师致力于这个门派的传承，用七度洞悉目镜搜寻着最有资格的人，寻找潜在的新弟子。",
@@ -79683,13 +79758,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
+                        38,
                         35,
-                        32,
+                        33,
                         29,
-                        26,
-                        23
+                        26
                     ],
-                    "cooldownBurn": "35/32/29/26/23",
+                    "cooldownBurn": "38/35/33/29/26",
                     "cost": [
                         80,
                         60,
@@ -97826,7 +97901,7 @@
                     "id": "PoppyQ",
                     "name": "圣锤猛击",
                     "description": "波比挥舞她的铁锤，造成伤害并创造一个区域，这个区域会减速敌人并在一段时间后爆炸。",
-                    "tooltip": "波比猛砸地面，造成<physicalDamage>{{ basedamage }}</physicalDamage>外加<physicalDamage>{{ healthdamagepercent }}%最大生命值的物理伤害</physicalDamage>并使该地面变得不稳定。 <br /><br />不稳定区域会使敌人<status>减速</status>{{ e3 }}%并在{{ e4 }}秒后喷发，再次造成<physicalDamage>{{ basedamage }}</physicalDamage>外加<physicalDamage>{{ healthdamagepercent }}%最大生命值的物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "波比猛砸地面，造成<physicalDamage>{{ basedamage }}</physicalDamage>外加<physicalDamage>{{ healthdamagepercent }}%最大生命值的物理伤害</physicalDamage>并使该地面变得不稳定。 <br /><br />不稳定区域会使敌人<status>减速</status>{{ slow_ }}%并在{{ delaybetweentwohits }}秒后喷发，再次造成<physicalDamage>{{ basedamage }}</physicalDamage>外加<physicalDamage>{{ healthdamagepercent }}%最大生命值的物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -97973,7 +98048,7 @@
                     "id": "PoppyW",
                     "name": "坚定风采",
                     "description": "波比被动获得护甲和魔法抗性。这个加成会在她生命值较低时得到提升。波比可以主动施放此技能来获得移动速度加成并中断附近敌人的突进。如果中断了一次突进，那么该敌人还会被减速和缚地。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>波比获得<scaleArmor>{{ bonusarmor }}护甲</scaleArmor>和<scaleMR>{{ bonusmr }}魔法抗性</scaleMR>。在波比低于{{ passiveempoweredhealthpercent*100 }}%生命值时，这个加成会翻倍。<br /><br /><spellActive>主动：</spellActive>波比获得<speed>{{ e2 }}%移动速度</speed>并投射出一个环绕自身的领域，持续{{ e1 }}秒，该领域可中断敌人的冲刺。被领域中断的敌人们会受到持续{{ groundingduration }}秒的<status>缚地</status>和{{ slowamount*-100 }}%<status>减速</status>，以及<magicDamage>{{ interruptdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>波比获得<scaleArmor>{{ bonusarmor }}护甲</scaleArmor>和<scaleMR>{{ bonusmr }}魔法抗性</scaleMR>。在波比低于{{ passiveempoweredhealthpercent*100 }}%生命值时，这个加成会翻倍。<br /><br /><spellActive>主动：</spellActive>波比获得<speed>{{ haste }}%移动速度</speed>并投射出一个环绕自身的领域，持续{{ duration }}秒，该领域可中断敌人的冲刺。被领域中断的敌人们会受到持续{{ groundingduration }}秒的<status>缚地</status>和{{ slowamount*-100 }}%<status>减速</status>，以及<magicDamage>{{ interruptdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -98114,7 +98189,7 @@
                     "id": "PoppyE",
                     "name": "英勇冲锋",
                     "description": "波比冲向目标并把目标推后。如果目标被推到墙上，就会受到晕眩效果。",
-                    "tooltip": "波比擒抱一名敌人，造成<physicalDamage>{{ tackledamage }}物理伤害</physicalDamage>并将该敌人带向前方。如果波比将目标擒抱到地形上，那么该敌人会被<status>晕眩</status>{{ e3 }}秒并受到额外的<physicalDamage>{{ tackledamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "波比擒抱一名敌人，造成<physicalDamage>{{ tackledamage }}物理伤害</physicalDamage>并将该敌人带向前方。如果波比将目标擒抱到地形上，那么该敌人会被<status>晕眩</status>{{ stunduration }}秒并受到额外的<physicalDamage>{{ tackledamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "初始伤害",
@@ -119211,7 +119286,7 @@
                     "id": "Fling",
                     "name": "过肩摔",
                     "description": "伤害目标敌方单位，并将他们投掷到辛吉德身后。如果辛吉德将目标扔到强力粘胶上，目标还会被禁锢。",
-                    "tooltip": "辛吉德对一名敌人进行过肩摔，造成<magicDamage>{{ basedamage }}外加{{ e3 }}%最大生命值的魔法伤害</magicDamage>。<br /><br />如果辛吉德将一名目标摔到他的<spellName>强力粘胶</spellName>上，那么该目标还会被<status>禁锢</status>{{ e2 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "辛吉德对一名敌人进行过肩摔，造成<magicDamage>{{ basedamage }}外加{{ maxhpdamage }}%最大生命值的魔法伤害</magicDamage>。<br /><br />如果辛吉德将一名目标摔到他的<spellName>强力粘胶</spellName>上，那么该目标还会被<status>禁锢</status>{{ rootduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -120034,7 +120109,7 @@
                     "id": "SionW",
                     "name": "灵魂熔炉",
                     "description": "赛恩为自己套上护盾，并能在3秒后再次激活这个技能来对身边的敌人造成魔法伤害。在赛恩击杀敌人时，他会被动获得最大生命值。",
-                    "tooltip": "<spellPassive>被动</spellPassive>：赛恩每击杀一个单位就会获得<scaleHealth>{{ hpperkill }}最大生命值</scaleHealth>，或在参与击杀英雄、击杀大型小兵或大型野怪后获得{{ hpperchampkill }}最大生命值。<br /><br /><spellActive>主动</spellActive>：赛恩获得<shield>{{ totalshield }}护盾值</shield>，持续6秒。在{{ e7 }}秒后，如果护盾仍然存在，那么赛恩就能<recast>再次施放</recast>来引爆护盾，造成<magicDamage>{{ totaldamage }}外加{{ e4 }}%最大生命值的魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动</spellPassive>：赛恩每击杀一个单位就会获得<scaleHealth>{{ hpperkill }}最大生命值</scaleHealth>，或在参与击杀英雄、击杀大型小兵或大型野怪后获得<scaleHealth>{{ hpperchampkill }}最大生命值</scaleHealth>。<br /><br /><spellActive>主动</spellActive>：赛恩获得<shield>{{ totalshield }}护盾值</shield>，持续6秒。在{{ e7 }}秒后，如果护盾仍然存在，那么赛恩就能<recast>再次施放</recast>来引爆护盾，造成<magicDamage>{{ totaldamage }}外加{{ e4 }}%最大生命值的魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -120956,6 +121031,68 @@
                     "name": "剪纸仙灵 希维尔 典范",
                     "chromas": false,
                     "parentSkin": 50
+                },
+                {
+                    "id": "15072",
+                    "num": 72,
+                    "name": "源计划：幽灵 希维尔",
+                    "chromas": true
+                },
+                {
+                    "id": "15073",
+                    "num": 73,
+                    "name": "源计划：幽灵 希维尔 裂变",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15074",
+                    "num": 74,
+                    "name": "源计划：幽灵 希维尔 震击",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15075",
+                    "num": 75,
+                    "name": "源计划：幽灵 希维尔 地覆",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15076",
+                    "num": 76,
+                    "name": "源计划：幽灵 希维尔 默化",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15077",
+                    "num": 77,
+                    "name": "源计划：幽灵 希维尔 燎原",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15078",
+                    "num": 78,
+                    "name": "源计划：幽灵 希维尔 雪崩",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15079",
+                    "num": 79,
+                    "name": "源计划：幽灵 希维尔 冥火",
+                    "chromas": false,
+                    "parentSkin": 72
+                },
+                {
+                    "id": "15080",
+                    "num": 80,
+                    "name": "源计划：幽灵 希维尔 幻灭",
+                    "chromas": false,
+                    "parentSkin": 72
                 }
             ],
             "lore": "希维尔是著名的宝藏猎人和雇佣兵队长，在恕瑞玛沙漠中进行频繁的契约交易。她的兵器是一柄颇具传奇色彩的十字刃，她曾赢得过无数次战斗，虽然她本人报价不菲，但却深得雇主青睐。她有着著名的无畏决心和无尽的野心，并且以自己的事业为傲——只要赏金够高，她就能从凶险的恕瑞玛古墓中寻回深埋于地下的宝藏。不过随着好几股远古的力量搅动着恕瑞玛的根骨，希维尔突然发现自己被裹挟着、拉扯着，卷入了截然不同的命运。",
@@ -121291,7 +121428,7 @@
                     "id": "SivirE",
                     "name": "法术护盾",
                     "description": "制造一层法术屏障，来格挡一次对着希维尔施放的敌方单体技能。如果希维尔成功格挡了一次技能，那么就会回复生命值并获得爆发性的移动速度加成。",
-                    "tooltip": "希维尔制造一层持续{{ e1 }}秒的法术屏障，来格挡一次即将到来的敌方技能。如果希维尔成功格挡了一次技能，那么就会回复<healing>{{ totalheal }}生命值</healing>并触发【敏锐疾行】。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "希维尔制造一层持续{{ spellshieldduration }}秒的法术屏障，来格挡一次即将到来的敌方技能。如果希维尔成功格挡了一次技能，那么就会回复<healing>{{ totalheal }}生命值</healing>并触发【敏锐疾行】。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "总攻击力收益",
@@ -121432,7 +121569,7 @@
                     "id": "SivirR",
                     "name": "狩猎",
                     "description": "希维尔在战斗中引领她的友军，为他们提供持续一段时间的爆发性移动速度加成。此外，希维尔的攻击会缩短她的技能的冷却时间。",
-                    "tooltip": "希维尔在战斗中引领附近的友军，为他们提供持续{{ ultduration }}秒的<speed>{{ maxms*100 }}%移动速度</speed>。<br /><br />战争女神在【狩猎】激活期间，希维尔对英雄进行的攻击会使她的基础技能的冷却时间缩短0.5秒。<br /><br />参与击杀近期造成过伤害的敌人会刷新【狩猎】的持续时长。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "希维尔在战斗中引领附近的友军，为他们提供持续{{ ultduration }}秒的<speed>{{ maxms*100 }}%移动速度</speed>。<br /><br />在【狩猎】激活期间，希维尔对英雄进行的攻击会使她的基础技能的冷却时间缩短{{ attackcooldownrefund }}秒。<br /><br />参与击杀近期造成过伤害的敌人会刷新【狩猎】的持续时长。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -146028,7 +146165,7 @@
                     "id": "ViQ",
                     "name": "强能冲拳",
                     "description": "蔚对她的拳套进行充能，并且释放一记粉碎性的勾拳，同时带着她前冲。被她命中的敌人会被击退，同时会被施加一层爆弹重拳的效果。",
-                    "tooltip": "<charge>开始蓄力：</charge>蔚开始积蓄一次强力的冲拳，自身<status>减速</status>{{ e4 }}%。<br /><br /><release>释放：</release>蔚向前冲刺，基于蓄力时间造成<physicalDamage>{{ totaldamage }}到{{ maxdamagetooltip }}物理伤害</physicalDamage>，并对命中的所有敌人施加<spellName>爆弹重拳</spellName>。蔚会在与一名敌方英雄碰撞时停下，并将其<status>击</status><status>退</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<charge>开始蓄力：</charge>蔚开始积蓄一次强力的冲拳，自身<status>减速</status>{{ selfslow }}%。<br /><br /><release>释放：</release>蔚向前冲刺，基于蓄力时间造成<physicalDamage>{{ totaldamage }}到{{ maxdamagetooltip }}物理伤害</physicalDamage>，并对命中的所有敌人施加<spellName>爆弹重拳</spellName>。蔚会在与一名敌方英雄碰撞时停下，并将其<status>击</status><status>退</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "最小伤害",
@@ -148684,6 +148821,68 @@
                     "num": 48,
                     "name": "黑色玫瑰假面舞会 弗拉基米尔",
                     "chromas": false
+                },
+                {
+                    "id": "8049",
+                    "num": 49,
+                    "name": "灵能特工 弗拉基米尔",
+                    "chromas": true
+                },
+                {
+                    "id": "8050",
+                    "num": 50,
+                    "name": "灵能特工 弗拉基米尔 代号：龙焰",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8051",
+                    "num": 51,
+                    "name": "灵能特工 弗拉基米尔 代号：猫眼",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8052",
+                    "num": 52,
+                    "name": "灵能特工 弗拉基米尔 代号：天狼",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8053",
+                    "num": 53,
+                    "name": "灵能特工 弗拉基米尔 代号：蝮蛇",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8054",
+                    "num": 54,
+                    "name": "灵能特工 弗拉基米尔 代号：银翼",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8055",
+                    "num": 55,
+                    "name": "灵能特工 弗拉基米尔 代号：毒牙",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8056",
+                    "num": 56,
+                    "name": "灵能特工 弗拉基米尔 代号：蜘蛛",
+                    "chromas": false,
+                    "parentSkin": 49
+                },
+                {
+                    "id": "8057",
+                    "num": 57,
+                    "name": "灵能特工 弗拉基米尔 代号：幽灵",
+                    "chromas": false,
+                    "parentSkin": 49
                 }
             ],
             "lore": "弗拉基米尔是一个渴望凡人鲜血的魔鬼，早在诺克萨斯帝国建立之初，他就开始干涉帝国内政。他熟练掌握的血巫术，不仅能超越自然规律延长其寿命，还能让他随心所欲地控制他人的身体和思想。他用这个能力在诺克萨斯贵族奢华的沙龙聚会上聚拢了一群狂热的教众，也让他在社会底层的后巷里吸干了敌人的鲜血。",
@@ -160283,6 +160482,68 @@
                     "name": "香浓芝士 扎克 甜品抹酱",
                     "chromas": false,
                     "parentSkin": 24
+                },
+                {
+                    "id": "154033",
+                    "num": 33,
+                    "name": "太空律动 “节奏化身” 扎克",
+                    "chromas": true
+                },
+                {
+                    "id": "154034",
+                    "num": 34,
+                    "name": "太空律动 “节奏化身” 扎克 假装有心之钢",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154035",
+                    "num": 35,
+                    "name": "太空律动 “节奏化身” 扎克 假装有日炎圣盾",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154036",
+                    "num": 36,
+                    "name": "太空律动 “节奏化身” 扎克 假装有璀璨回响",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154037",
+                    "num": 37,
+                    "name": "太空律动 “节奏化身” 扎克 假装有千变者贾修",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154038",
+                    "num": 38,
+                    "name": "太空律动 “节奏化身” 扎克 假装有振奋盔甲",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154039",
+                    "num": 39,
+                    "name": "太空律动 “节奏化身” 扎克 假装有败魔",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154040",
+                    "num": 40,
+                    "name": "太空律动 “节奏化身” 扎克 假装有兰顿之兆",
+                    "chromas": false,
+                    "parentSkin": 33
+                },
+                {
+                    "id": "154041",
+                    "num": 41,
+                    "name": "太空律动 “节奏化身” 扎克 假装有荆棘之甲",
+                    "chromas": false,
+                    "parentSkin": 33
                 }
             ],
             "lore": "一滩泄漏的毒液，顺着炼金科技设施的裂缝流进了祖安的地沟区，在深处一个与世隔绝的坑洞里积成了一洼。出身虽然如此低微，但扎克却从一团蒙昧的黏液长成了一个有思想的实体，栖息在城里的管道中，偶尔露面，帮助那些无助的人，或是修缮祖安的各种公共设施。",

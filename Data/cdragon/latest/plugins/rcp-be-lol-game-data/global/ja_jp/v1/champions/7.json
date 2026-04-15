@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点にすばやく移動し、周囲の敵にダメージを与える。4秒以内にこのスキルを再使用すると、最初の位置に戻ることができる。",
-            "dynamicDescription": "ダッシュして周囲の敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。ダッシュ後@Effect3Amount@秒間は<recast>再発動</recast>できる。<br><br><recast>再発動:</recast> 最初の位置に戻る。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ダッシュし、周囲の敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。ダッシュ後の@SnapbackTimeAllowed@秒間、このスキルを<recast>再発動</recast>できる。<br><br><recast>再発動:</recast> ルブランが元の場所に戻る。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "鎖の幻影を放ち、最初に当たった敵を鎖で繋ぐ。1.5秒間繋いだままにすると、追加ダメージとスネアを与える。",
-            "dynamicDescription": "鎖の幻影を放ち、最初に当たった敵を鎖で繋いで、<magicDamage>@InitialDamage@の魔法ダメージ</magicDamage>を与え、<keywordStealth>真の視界</keywordStealth>を得る。<br><br>@Effect3Amount@秒間繋いだままにすると、@Effect4Amount@秒間<status>スネア効果</status>を付与して、さらに<magicDamage>@DelayedDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "鎖を放ち、最初に命中した敵に<magicDamage>@InitialDamage@の魔法ダメージ</magicDamage>を与えて鎖に繋ぎ、<keywordStealth>真の視界</keywordStealth>を付与する。<br><br>対象が@TetherDuration@秒間鎖に繋がれたままの場合、対象に@RootDuration@秒間の<status>スネア効果</status>を与え、追加で<magicDamage>@DelayedDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

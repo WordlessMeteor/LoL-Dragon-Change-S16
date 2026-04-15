@@ -478,13 +478,13 @@
                     350.0
                 ]
             },
-            "desc": "Cherry_SelfDestruct_Summary",
+            "desc": "<keywordMajor>Автоматически:</keywordMajor> раз в @BombDelay@ сек. к вам прикрепляется бомба – ее взрыв наносит <trueDamage>огромный чистый урон</trueDamage> и <status>подбрасывает</status> врагов рядом.",
             "iconLarge": "assets/ux/cherry/augments/icons/selfdestruct_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/selfdestruct_small.png",
             "id": 108,
             "name": "Самоуничтожение",
             "rarity": 0,
-            "tooltip": "Cherry_SelfDestruct_Tooltip"
+            "tooltip": "<keywordMajor>Автоматически:</keywordMajor> раз в @BombDelay@ сек. к вам прикрепляется бомба – ее взрыв наносит <trueDamage>чистый урон в размере @MaxHealthDamage*100@% от макс. здоровья</trueDamage> и <status>подбрасывает</status> врагов рядом на @KnockupDuration@ сек."
         },
         {
             "apiName": "ServeBeyondDeath",
@@ -568,13 +568,13 @@
                     30.0
                 ]
             },
-            "desc": "Cherry_ServeBeyondDeath_Summary",
+            "desc": "Вместо первой гибели в раунде вы <scaleHealth>полностью восстанавливаете здоровье</scaleHealth>, но оно начинает <status>убывать</status>. <br><br><keywordMajor>Участие в убийстве</keywordMajor> вражеского чемпиона останавливает <status>убывание</status>.",
             "iconLarge": "assets/ux/cherry/augments/icons/servebeyonddeath_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/servebeyonddeath_small.png",
             "id": 120,
             "name": "Служитель смерти",
             "rarity": 0,
-            "tooltip": "Cherry_ServeBeyondDeath_Tooltip"
+            "tooltip": "Вместо первой гибели в раунде вы <scaleHealth>полностью восстанавливаете здоровье</scaleHealth>, но оно начинает <status>убывать</status> в течение @DecayDuration@ сек. <br><br><keywordMajor>Участие в убийстве</keywordMajor> вражеского чемпиона останавливает <status>убывание</status>, и ваше <scaleHealth>здоровье</scaleHealth> становится равным <healing>@TriumphPercent@% от макс. запаса</healing>."
         },
         {
             "apiName": "UndyingGuard",
@@ -924,13 +924,13 @@
                     10.0
                 ]
             },
-            "desc": "Cherry_QuantumComputing_Summary",
+            "desc": "<keywordMajor>Автоматически:</keywordMajor> периодически вы совершаете круговой удар, нанося <physicalDamage>физ. урон</physicalDamage>. <br><br>Поражая врагов во внешней части области, <status>замедляет</status> их, наносит им доп. <physicalDamage>урон</physicalDamage> и <healing>лечит</healing> вас.",
             "iconLarge": "assets/ux/cherry/augments/icons/quantumcomputing_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quantumcomputing_small.png",
             "id": 66,
             "name": "Квантовые вычисления",
             "rarity": 2,
-            "tooltip": "Cherry_QuantumComputing_Tooltip"
+            "tooltip": "<keywordMajor>Автоматически:</keywordMajor> раз в @Cooldown@ сек. вы совершаете круговой удар, нанося <physicalDamage>@BaseDamageTotal@ ед. физ. урона</physicalDamage>. <br><br>Поражая врагов во внешней части области, <status>замедляет</status> их на @SlowPercentage@% (ослабевает за @SlowDuration@ сек.), наносит им доп. <physicalDamage>физ. урон в размере @OuterEdgeTooltip@ от макс. здоровья</physicalDamage> и <healing>лечит вас на @OuterConeHealingRatio@% от урона</healing>."
         },
         {
             "apiName": "DemonsDance",
@@ -1248,13 +1248,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmuteChaos_Tooltip",
+            "desc": "Вы получаете <keywordMajor>случайные %i:Augment%аугментации (@AugmentsToGrantToolTipOnly@)</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmutechaos_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmutechaos_small.png",
             "id": 243,
             "name": "Трансмутация: хаос",
             "rarity": 2,
-            "tooltip": "Cherry_TransmuteChaos_Tooltip"
+            "tooltip": "Вы получаете <keywordMajor>случайные %i:Augment%аугментации (@AugmentsToGrantToolTipOnly@)</keywordMajor>."
         },
         {
             "apiName": "Chauffeur",
@@ -1505,13 +1505,13 @@
                     0.029999999329447746
                 ]
             },
-            "desc": "Cherry_Quest_MadHatter_Summary",
+            "desc": "Требование: иметь шляпы (@QuestThreshold@) в конце боя.<br><br>Награда: вы получаете <scaleAF>адапт. силу</scaleAF>, <scaleArmor>броню</scaleArmor>, <scaleMR>сопр. магии</scaleMR>, <scaleTenacity>стойкость</scaleTenacity> и <speed>скорость передвижения</speed> за шляпу.",
             "iconLarge": "assets/ux/cherry/augments/icons/mad_hatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mad_hatter_small.png",
             "id": 318,
             "name": "Задание ''Безумный шляпник''",
             "rarity": 1,
-            "tooltip": "Cherry_Quest_MadHatter_Tooltip"
+            "tooltip": "Требование: иметь шляпы (@QuestThreshold@) в конце боя.<br><br>Награда: вы получаете <scaleAF>@AFPerHat@ адапт. силы</scaleAF>, @ArmorMRPerHat@ <scaleArmor>брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR>, <scaleTenacity>@TenacityPerHat*100@% стойкости</scaleTenacity> и <speed>@MSPerHat@ скорости передвижения</speed> за шляпу.<br><br>Текущие бонусы: <scaleAF>@f1@ адапт. силы</scaleAF>, @f2@ <scaleArmor>брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR>, <scaleTenacity>@f3*100@% стойкости</scaleTenacity> и <speed>@f4@ скорости передвижения</speed><br><br><rules>Поражение в раунде лишает половины шляп.</rules>"
         },
         {
             "apiName": "BladeWaltz",
@@ -1879,13 +1879,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SummonerRevolution_Summary",
+            "desc": "Ваши <keywordMajor>заклинания призывателя</keywordMajor> получают @BonusCharges@ доп. зар. <br><br>Перезарядка <spellName>Скачка</spellName> сбрасывается в каждом раунде.",
             "iconLarge": "assets/ux/cherry/augments/icons/summonerrevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/summonerrevolution_small.png",
             "id": 223,
             "name": "Призывательский сброс",
             "rarity": 1,
-            "tooltip": "Cherry_SummonerRevolution_Summary"
+            "tooltip": "Ваши <keywordMajor>заклинания призывателя</keywordMajor> получают @BonusCharges@ доп. зар. <br><br>Перезарядка <spellName>Скачка</spellName> сбрасывается в каждом раунде."
         },
         {
             "apiName": "IceCold",
@@ -2065,13 +2065,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_TankItOrLeaveit_Summary",
+            "desc": "У вас появляется <crit>крит. защита</crit>, зависящая от <crit>шанса крит. удара (не более @MaxChance*100@%)</crit> и снижающая получаемый урон при срабатывании.<br><br>Вы получаете <crit>%i:scaleCrit% @CritChance*100@% шанса крит. удара</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/tankitorleaveit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tankitorleaveit_small.png",
             "id": 80,
             "name": "Непробиваемость",
             "rarity": 0,
-            "tooltip": "Cherry_TankItOrLeaveIt_Tooltip"
+            "tooltip": "У вас появляется <crit>крит. защита</crit>, зависящая от <crit>шанса крит. удара (не более @MaxChance*100@%)</crit> и снижающая получаемый урон на @CriticalDefendCalc@ при срабатывании.<br><br>Вы получаете <crit>%i:scaleCrit% @CritChance*100@% шанса крит. удара</crit>."
         },
         {
             "apiName": "CraftingSellAugment",
@@ -2413,13 +2413,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_Stats_Tooltip",
+            "desc": "Вы получаете %i:StatAnvil% наковальни показателей (@AmountOfStatAnvils@)!",
             "iconLarge": "assets/ux/cherry/augments/icons/stats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stats_small.png",
             "id": 226,
             "name": "Показатели!",
             "rarity": 0,
-            "tooltip": "Cherry_Stats_Tooltip"
+            "tooltip": "Вы получаете %i:StatAnvil% наковальни показателей (@AmountOfStatAnvils@)!"
         },
         {
             "apiName": "MasterofDuality",
@@ -2596,7 +2596,7 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_SearingDawn_Summary",
+            "desc": "Ваши умения помечают врагов, заставляя их получать доп. <magicDamage>маг. урон</magicDamage> от следующей автоатаки или умения вашего союзника.",
             "iconLarge": "assets/ux/cherry/augments/icons/searingdawn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/searingdawn_small.png",
             "id": 72,
@@ -2983,13 +2983,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_PhenomenalEvil_Summary",
+            "desc": "Поразив врага умением, вы навсегда получаете <scaleAP>@APPerProc@ силы умений</scaleAP>.<br><br>При выборе после раунда @RoundCounterForBonusAP@ вы получаете <scaleAP>@BonusAPForLatePick@ силы умений</scaleAP>.",
             "iconLarge": "assets/ux/cherry/augments/icons/phenomenalevil_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/phenomenalevil_small.png",
             "id": 65,
             "name": "Невероятное зло",
             "rarity": 1,
-            "tooltip": "Cherry_PhenomenalEvil_Tooltip"
+            "tooltip": "Поразив врага умением, вы навсегда получаете <scaleAP>@APPerProc@ силы умений</scaleAP>.<br><br>Перезарядка для каждого умения: @SpellIDCD@ сек.<br><br><rules>При выборе после раунда @RoundCounterForBonusAP@ вы получаете <scaleAP>@BonusAPForLatePick@ силы умений</scaleAP>.</rules>"
         },
         {
             "apiName": "BigBrain",
@@ -3153,7 +3153,7 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_UltimateRoulette_Summary",
+            "desc": "<spellName>Бегство</spellName> заменяется случайным <attention>абс. умением</attention>. <br><br>Когда вы его применяете, оно заменяется другим случайным <attention>абс. умением</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
@@ -3593,13 +3593,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_UltimateRevolution_Summary",
+            "desc": "Раз за раунд, применив <attention>абс. умение</attention>, вы сбрасываете его перезарядку.",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 88,
             "name": "Абсолютный сброс",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRevolution_Tooltip"
+            "tooltip": "Раз за раунд, применив <attention>абс. умение</attention>, вы сбрасываете его перезарядку."
         },
         {
             "apiName": "TricksterDemon",
@@ -3789,13 +3789,13 @@
                     0.30000001192092896
                 ]
             },
-            "desc": "Cherry_SlowAndSteady_Summary",
+            "desc": "Ваша <speed>скорость атаки</speed> не может превышать @StaticRatio@. Все бонусы к <speed>скорости атаки</speed> превращаются в <scaleAD>силу атаки</scaleAD>.<br>",
             "iconLarge": "assets/ux/cherry/augments/icons/slowandsteady_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slowandsteady_small.png",
             "id": 250,
             "name": "Медленно, но верно",
             "rarity": 1,
-            "tooltip": "Cherry_SlowAndSteady_Tooltip"
+            "tooltip": "Ваша <speed>скорость атаки</speed> не может превышать @StaticRatio@. Все бонусы к <speed>скорости атаки</speed> превращаются в <scaleAD>силу атаки</scaleAD> (<scaleAD>@ADPerAS@ силы атаки</scaleAD> за <speed>1% скорости атаки</speed>).<br><br>Текущий бонус: @f1@ <scaleAD>силы атаки</scaleAD>"
         },
         {
             "apiName": "FrostWraith",
@@ -4042,7 +4042,7 @@
             "id": 79,
             "name": "Симфония войны",
             "rarity": 2,
-            "tooltip": "Cherry_SymphonyofWar_Tooltip"
+            "tooltip": "Вы получаете ключевые руны <spellName>Смертельный темп</spellName> и <spellName>Завоеватель</spellName>.<br><li><spellName>Смертельный темп</spellName> – атакуя чемпионов, вы получаете <attackSpeed>скорость атаки</attackSpeed>. Эффект суммируется до 6 р. Набрав 6 зар., при автоатаке вы выпускаете снаряд, наносящий доп. урон.<br><li><spellName>Завоеватель</spellName> – попадая по чемпиону автоатакой или умением, вы получаете <adaptiveForce>адапт. силу</adaptiveForce> (суммируется до 12 р.). Набрав 12 зар., вы будете восстанавливать здоровье в размере части урона, нанесенного вами чемпионам."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -4184,7 +4184,7 @@
             "id": 60,
             "name": "Морская душа",
             "rarity": 0,
-            "tooltip": "Cherry_OceanSoul_Tooltip"
+            "tooltip": "Вы получаете морскую душу, повышающую восстановление <healing>здоровья</healing> и <scaleMana>маны</scaleMana> при нанесении урона врагам."
         },
         {
             "apiName": "Bodyguard",
@@ -4346,13 +4346,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_Quest_WoogletsWitchcap_Summary",
+            "desc": "Вы получаете <attention>Слишком Большой Жезл</attention>.<br><br>Требование: иметь <attention>Смертельную шляпу Рабадона</attention> и <attention>Песочные часы Жони</attention>.<br><br>Награда: <attention>Шляпа ведьмы</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_woogletswitchcap_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_woogletswitchcap_small.png",
             "id": 156,
             "name": "Задание: Шляпа ведьмы",
             "rarity": 2,
-            "tooltip": "Cherry_Quest_WoogletsWitchcap_Summary"
+            "tooltip": "Вы получаете <attention>Слишком Большой Жезл</attention>.<br><br>Требование: иметь <attention>Смертельную шляпу Рабадона</attention> и <attention>Песочные часы Жони</attention>.<br><br>Награда: <attention>Шляпа ведьмы</attention>."
         },
         {
             "apiName": "Earthwake",
@@ -4616,7 +4616,7 @@
             "id": 76,
             "name": "Звуковой удар",
             "rarity": 0,
-            "tooltip": "Cherry_SonicBoom_Tooltip"
+            "tooltip": "Когда вы усиливаете союзника, <healing>лечите</healing> его или даете ему <shield>щит</shield>, он наносит врагам вокруг <trueDamage>@Damage@ ед. чистого урона</trueDamage> и <status>замедляет</status> их на @SlowAmount*-100@% на @SlowDuration@ сек.<br><br>Урон, нанесенный в этом раунде: @f1@<br>Суммарный нанесенный урон: @f2@"
         },
         {
             "apiName": "TwiceThrice",
@@ -4641,13 +4641,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_TwiceThrice_Tooltip",
+            "desc": "Каждую @ProcCadence@-ю автоатаку эффекты {{ Item_Keyword_OnHit }} срабатывают дважды.",
             "iconLarge": "assets/ux/cherry/augments/icons/twicethrice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/twicethrice_small.png",
             "id": 107,
             "name": "Двойная порция",
             "rarity": 1,
-            "tooltip": "Cherry_TwiceThrice_Tooltip"
+            "tooltip": "Каждую @ProcCadence@-ю автоатаку эффекты {{ Item_Keyword_OnHit }} срабатывают дважды."
         },
         {
             "apiName": "SymbioticMutation",
@@ -5052,7 +5052,7 @@
                     0.30000001192092896
                 ]
             },
-            "desc": "Cherry_Overflow_Summary",
+            "desc": "Ваши затраты <scaleMana>маны</scaleMana> удвоены.<br><br>Урон, <healing>лечение</healing> и <shield>прочность щитов</shield> от ваших умений растут в соответствии с вашей <scaleMana>макс. маной</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/overflow_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/overflow_small.png",
             "id": 311,
@@ -5338,13 +5338,13 @@
                     0.6000000238418579
                 ]
             },
-            "desc": "Cherry_RaidBoss_Summary",
+            "desc": "Вы начинаете каждый раунд в заточении, значительно снижая получаемый урон и постепенно повышая размер и мощь.<br><br>Вырвавшись на свободу, вы <status>отбрасываете врагов</status> и получаете <shield>щит</shield>.",
             "iconLarge": "assets/ux/cherry/augments/icons/raidboss_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/raidboss_small.png",
             "id": 125,
             "name": "Рейд-босс",
             "rarity": 2,
-            "tooltip": "Cherry_RaidBoss_Tooltip"
+            "tooltip": "Вы начинаете каждый раунд в центре арены, теряя способность к действию. При этом вы получаете до @DamageReductionMax*100@% меньше урона, а ваши размер, <scaleHealth>здоровье</scaleHealth>, <physicalDamage>сила атаки</physicalDamage> и <scaleAP>сила умений</scaleAP> постепенно растут (до @StatIncrease*100@%). <br><br>Через @ImprisonDuration@ сек. или при здоровье ниже <scaleHealth>@BreakoutHealthThreshold*100@%</scaleHealth> вы вырываетесь на свободу, <status>отбрасывая врагов</status> и получая <shield>щит прочностью @ShieldHealthRatio*100@% от макс. здоровья</shield>."
         },
         {
             "apiName": "OutlawsGrit",
@@ -5415,7 +5415,7 @@
                     15.0
                 ]
             },
-            "desc": "Cherry_OutlawsGrit_Summary",
+            "desc": "При применении умений с рывками, прыжками или телепортацией вы получаете <scaleArmor>броню</scaleArmor> и <scaleMR>сопр. магии</scaleMR>.",
             "iconLarge": "assets/ux/cherry/augments/icons/outlawsgrit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/outlawsgrit_small.png",
             "id": 63,
@@ -5920,13 +5920,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_PrismaticEgg_Summary",
+            "desc": "Вы получаете @KillStackCredit@ зар. при участии в убийстве (по 1 за чемпиона за раунд).<br><br>При @RequiredKillCount@ зар. превращается в <attention>призм. наковальню предметов</attention>, <attention>%i:Augment% призм. аугментацию</attention> и <attention>%i:StatAnvil% призм. наковальню показателей</attention>.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_prismaticegg_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_prismaticegg_small.png",
             "id": 224,
             "name": "Призматическое яйцо",
             "rarity": 2,
-            "tooltip": "Cherry_PrismaticEgg_Tooltip"
+            "tooltip": "{{Cherry_PrismaticEgg_Summary}}"
         },
         {
             "apiName": "Clothesline",
@@ -6202,13 +6202,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SoulSiphon_Summary",
+            "desc": "Вы <lifeSteal>лечитесь на @HealPercentage*100@%</lifeSteal> от <crit>урона крит. ударов</crit>.<br><br>Вы получаете <crit>%i:scaleCrit% @CritChance*100@% шанса крит. удара</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/soulsiphon_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/soulsiphon_small.png",
             "id": 77,
             "name": "Вытягивание души",
             "rarity": 1,
-            "tooltip": "Cherry_SoulSiphon_Tooltip"
+            "tooltip": "{{Cherry_SoulSiphon_Summary}}"
         },
         {
             "apiName": "GambaAnvil",
@@ -6385,13 +6385,13 @@
                     0.3499999940395355
                 ]
             },
-            "desc": "Cherry_ThreadtheNeedle_Summary",
+            "desc": "Вы получаете @PercentPen*100@% <armorPen>%i:scaleAPen% пробивания брони</armorPen> и <magicPen>%i:scaleMPen% маг. пробивания</magicPen>.",
             "iconLarge": "assets/ux/cherry/augments/icons/threadtheneedle_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/threadtheneedle_small.png",
             "id": 84,
             "name": "Прошивание",
             "rarity": 1,
-            "tooltip": "Cherry_ThreadtheNeedle_Summary"
+            "tooltip": "Вы получаете @PercentPen*100@% <armorPen>%i:scaleAPen% пробивания брони</armorPen> и <magicPen>%i:scaleMPen% маг. пробивания</magicPen>."
         },
         {
             "apiName": "BreadAndCheese",
@@ -6707,13 +6707,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_PandorasBox_Summary",
+            "desc": "Все ваши аугментации заменяются <keywordMajor>случайными призматическими%i:Augment% аугментациями</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/pandoras_box_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/pandoras_box_small.png",
             "id": 317,
             "name": "Ящик Пандоры",
             "rarity": 2,
-            "tooltip": "Cherry_PandorasBox_Summary"
+            "tooltip": "Все ваши аугментации заменяются <keywordMajor>случайными призматическими%i:Augment% аугментациями</keywordMajor>."
         },
         {
             "apiName": "ExtendoArm",
@@ -7125,13 +7125,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_SpiritLink_Summary",
+            "desc": "{{Cherry_SpiritLink@TeamSize@_Summary}}",
             "iconLarge": "assets/ux/cherry/augments/icons/spiritlink_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/spiritlink_small.png",
             "id": 78,
             "name": "Духовная связь",
             "rarity": 2,
-            "tooltip": "Cherry_SpiritLink_Tooltip"
+            "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Всего перенаправлено урона: @f1@<br>Всего восстановлено здоровья: @f2@<br>"
         },
         {
             "apiName": "Deathtouch",
@@ -7654,13 +7654,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_OkBoomerang_Summary",
+            "desc": "<keywordMajor>Автоматически:</keywordMajor> раз в @Cooldown@ сек. вы запускаете во врага рядом бумеранг.",
             "iconLarge": "assets/ux/cherry/augments/icons/okboomerang_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/okboomerang_small.png",
             "id": 61,
             "name": "Окей, бумеранг",
             "rarity": 1,
-            "tooltip": "Cherry_OkBoomerang_Tooltip"
+            "tooltip": "<keywordMajor>Автоматически:</keywordMajor> раз в @Cooldown@ сек. вы запускаете во врага рядом бумеранг, нанося <physicalDamage>@Damage@ ед. физ. урона</physicalDamage> пораженным врагам.<br><br>Урон, нанесенный в этом раунде: @f1@<br>Суммарный нанесенный урон: @f2@"
         },
         {
             "apiName": "Hybrid",
@@ -8016,7 +8016,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SlimeTime_Summary",
+            "desc": "<keywordMajor>Автоматически:</keywordMajor> раз в несколько секунд вы выпускаете волну слизи, наносящую <magicDamage>маг. урон</magicDamage> ближайшим врагам.<br><br>Если слизь поражает чемпиона, появляется капля, <healing>лечащая</healing> вас при подборе.",
             "iconLarge": "assets/ux/cherry/augments/icons/slimetime_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slimetime_small.png",
             "id": 232,
@@ -8572,13 +8572,13 @@
                     0.800000011920929
                 ]
             },
-            "desc": "Cherry_NestingDoll_Summary",
+            "desc": "Вы получаете доп. <attention>возрождения</attention> (@BonusLives@) и начинаете возрождаться после гибели.<br><br>При <attention>возрождении</attention> вы <status>отбрасываете</status> врагов рядом, ваше <scaleHealth>макс. здоровье</scaleHealth> падает.",
             "iconLarge": "assets/ux/cherry/augments/icons/nesting_doll.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nesting_doll_small.png",
             "id": 177,
             "name": "Матрешка",
             "rarity": 1,
-            "tooltip": "Cherry_NestingDoll_Tooltip"
+            "tooltip": "Вы автоматически начинаете <attention>возрождаться</attention> через @ReviveArmTime@ сек. и получаете доп. <attention>возрождения</attention> (@BonusLives@). При <attention>возрождении</attention> ваш размер снижается, а здоровье составляет <scaleHealth>@ReviveMod*100@% от макс.</scaleHealth>.<br><br>При <attention>возрождении</attention> вы <status>отбрасываете</status> врагов рядом."
         },
         {
             "apiName": "TapDancer",
@@ -8624,13 +8624,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_TapDancer_Summary",
+            "desc": "Автоатаки дают вам <speed>@MSPerHit@ скорости передвижения</speed> {{ Item_Keyword_OnHit }}. <br><br>Вы получаете <attackSpeed>скорость атаки</attackSpeed> в размере @MSToASConversion*10000@% от <speed>скорости передвижения</speed>.",
             "iconLarge": "assets/ux/cherry/augments/icons/tapdancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tapdancer_small.png",
             "id": 81,
             "name": "Чечетка",
             "rarity": 2,
-            "tooltip": "Cherry_TapDancer_Tooltip"
+            "tooltip": "Автоатаки дают вам <speed>@MSPerHit@ скорости передвижения</speed> {{ Item_Keyword_OnHit }}. <br><br>Вы получаете <attackSpeed>@MSToASConversionCalc@ скорости атаки</attackSpeed>."
         },
         {
             "apiName": "FanTheHammer",
@@ -8743,7 +8743,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/replace_augment.png",
             "iconSmall": "assets/ux/cherry/augments/icons/replace_augment_small.png",
             "id": 364,
-            "name": "Cherry_ReplaceAugment_Name",
+            "name": "Замена аугментации",
             "rarity": 4,
             "tooltip": "Cherry_ReplaceAugment_Summary"
         },
@@ -8837,13 +8837,13 @@
                     0.550000011920929
                 ]
             },
-            "desc": "Cherry_Minionmancer_Tooltip",
+            "desc": "Размер, здоровье и урон призванных бойцов повышены на @MinionAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/minionmancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/minionmancer_small.png",
             "id": 104,
             "name": "Повелитель миньонов",
             "rarity": 1,
-            "tooltip": "Cherry_Minionmancer_Tooltip"
+            "tooltip": "Размер, здоровье и урон призванных бойцов повышены на @MinionAmp*100@%."
         },
         {
             "apiName": "Multitool",
@@ -8937,7 +8937,7 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_TankEngine_Summary",
+            "desc": "При участии в убийстве ваш размер и <scaleHealth>доп. здоровье</scaleHealth> растут.",
             "iconLarge": "assets/ux/cherry/augments/icons/tank_engine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tank_engine_small.png",
             "id": 313,
@@ -9048,13 +9048,13 @@
                     7.0
                 ]
             },
-            "desc": "Cherry_OmniSoul_Summary",
+            "desc": "Вы получаете случайные <attention>души драконов</attention> (@SoulsToAdd@).",
             "iconLarge": "assets/ux/cherry/augments/icons/omnisoul_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/omnisoul_small.png",
             "id": 62,
             "name": "Собиратель душ",
             "rarity": 2,
-            "tooltip": "Cherry_OmniSoul_Summary"
+            "tooltip": "Вы получаете случайные <attention>души драконов</attention> (@SoulsToAdd@)."
         },
         {
             "apiName": "DawnbringersResolve",
@@ -9148,13 +9148,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_SilverSpoon_Summary",
+            "desc": "Вы наносите больше урона за каждую свою <keywordMajor>%i:Augment% серебряную аугментацию</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/silver_spoon.png",
             "iconSmall": "assets/ux/cherry/augments/icons/silver_spoon_small.png",
             "id": 356,
-            "name": "Cherry_SilverSpoon_Name",
+            "name": "Серебряная ложка",
             "rarity": 0,
-            "tooltip": "Cherry_SilverSpoon_Tooltip"
+            "tooltip": "Вы наносите на @DamagePerSilver*100@% больше урона за каждую свою <keywordMajor>%i:Augment% серебряную аугментацию</keywordMajor>.<br><br>Вы наносите на @F1*100@% больше урона."
         },
         {
             "apiName": "HoldVeryStill",
@@ -9896,13 +9896,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_StatsOnStatsOnStats_Tooltip",
+            "desc": "Вы получаете %i:StatAnvil% наковальни показателей (@AmountOfStatAnvils@)!",
             "iconLarge": "assets/ux/cherry/augments/icons/statsonstatsonstats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/statsonstatsonstats_small.png",
             "id": 228,
             "name": "Еще больше показателей!",
             "rarity": 2,
-            "tooltip": "Cherry_StatsOnStatsOnStats_Tooltip"
+            "tooltip": "Вы получаете %i:StatAnvil% наковальни показателей (@AmountOfStatAnvils@)!"
         },
         {
             "apiName": "Deft",
@@ -10204,13 +10204,13 @@
                     0.07999999821186066
                 ]
             },
-            "desc": "Cherry_RighteousFury_Summary",
+            "desc": "<healing>Лечение</healing> и <shield>щиты</shield> повышают урон от умений на @SpellDamagePerStack*100@% до конца раунда (суммируется бесконечно).",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
             "id": 343,
             "name": "Праведная ярость",
             "rarity": 2,
-            "tooltip": "Cherry_RighteousFury_Tooltip"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Перезарядка: @Cooldown@ сек. за каждое применение умения, аугментации или предмета."
         },
         {
             "apiName": "OrbitalLaser",
@@ -10438,13 +10438,13 @@
                     0.5
                 ]
             },
-            "desc": "Cherry_MysticPunch_Summary",
+            "desc": "{{ Item_Keyword_OnHit }} сокращает перезарядку умений на @CooldownRefund@ сек. %i:scaleCooldown%.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Мистический удар",
             "rarity": 2,
-            "tooltip": "Cherry_MysticPunch_Summary"
+            "tooltip": "{{ Item_Keyword_OnHit }} сокращает перезарядку умений на @CooldownRefund@ сек. %i:scaleCooldown%."
         },
         {
             "apiName": "Homeguard",
@@ -10788,13 +10788,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmutePrismatic_Tooltip",
+            "desc": "Вы получаете случайную <keywordMajor>%i:Augment% призматическую аугментацию</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmuteprismatic_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmuteprismatic_small.png",
             "id": 238,
             "name": "Трансмутация: призма",
             "rarity": 1,
-            "tooltip": "Cherry_TransmutePrismatic_Tooltip"
+            "tooltip": "Вы получаете случайную <keywordMajor>%i:Augment% призматическую аугментацию</keywordMajor>."
         },
         {
             "apiName": "GoHCravingForRisk",
@@ -11054,13 +11054,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_TransmuteGold_Tooltip",
+            "desc": "Вы получаете случайную <keywordMajor>%i:Augment% золотую аугментацию</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/transmutegold_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/transmutegold_small.png",
             "id": 237,
             "name": "Трансмутация: золото",
             "rarity": 0,
-            "tooltip": "Cherry_TransmuteGold_Tooltip"
+            "tooltip": "Вы получаете случайную <keywordMajor>%i:Augment% золотую аугментацию</keywordMajor>."
         },
         {
             "apiName": "ApexInventor",
@@ -11762,13 +11762,13 @@
                     0.10000000149011612
                 ]
             },
-            "desc": "Cherry_StatsOnStats_Tooltip",
+            "desc": "Вы получаете %i:StatAnvil% наковальни показателей (@AmountOfStatAnvils@)!",
             "iconLarge": "assets/ux/cherry/augments/icons/statsonstats_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/statsonstats_small.png",
             "id": 227,
             "name": "Больше показателей!",
             "rarity": 1,
-            "tooltip": "Cherry_StatsOnStats_Tooltip"
+            "tooltip": "Вы получаете %i:StatAnvil% наковальни показателей (@AmountOfStatAnvils@)!"
         },
         {
             "apiName": "Dashing",
@@ -12074,7 +12074,7 @@
                     700.0
                 ]
             },
-            "desc": "Cherry_SkilledSniper_Summary",
+            "desc": "Когда вы поражаете врага <keywordMajor>неабс. умением</keywordMajor> с большого расстояния, его перезарядка сильно сокращается. ",
             "iconLarge": "assets/ux/cherry/augments/icons/skilledsniper_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/skilledsniper_small.png",
             "id": 113,
@@ -12490,13 +12490,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_Oathsworn_Tooltip",
+            "desc": "<spellName>Бегство</spellName> заменяется <spellName>Зовом судьбы</spellName>.<br><br><rules><spellName>Зов судьбы</spellName> дает союзнику недосягаемость (до 4 сек.). Союзник может броситься в выбранную точку, <status>отбрасывая</status> врагов.</rules><br>",
             "iconLarge": "assets/ux/cherry/augments/icons/oathsworn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/oathsworn_small.png",
             "id": 109,
             "name": "Клятва верности",
             "rarity": 1,
-            "tooltip": "Cherry_Oathsworn_Tooltip"
+            "tooltip": "<spellName>Бегство</spellName> заменяется <spellName>Зовом судьбы</spellName>.<br><br><rules><spellName>Зов судьбы</spellName> дает союзнику недосягаемость (до 4 сек.). Союзник может броситься в выбранную точку, <status>отбрасывая</status> врагов.</rules><br>"
         },
         {
             "apiName": "AimForTheHead",
@@ -12719,13 +12719,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_SummonersRoulette_Summary",
+            "desc": "Ваши <attention>заклинания призывателя</attention> заменяются случайными. <br><br>При применении <attention>заклинания</attention> оно тоже заменяется случайным, его время перезарядки равно @Cooldown@ сек.",
             "iconLarge": "assets/ux/cherry/augments/icons/summonersroulette_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/summonersroulette_small.png",
             "id": 123,
             "name": "Рулетка призывателей",
             "rarity": 2,
-            "tooltip": "Cherry_SummonersRoulette_Summary"
+            "tooltip": "Ваши <attention>заклинания призывателя</attention> заменяются случайными. <br><br>При применении <attention>заклинания</attention> оно тоже заменяется случайным, его время перезарядки равно @Cooldown@ сек."
         },
         {
             "apiName": "GoHSacrificeForSilver",
@@ -12818,13 +12818,13 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_ShrinkRay_Summary",
+            "desc": "Ваши автоатаки снижают урон и размер цели на @DamageReduction*100@% {{ Item_Keyword_OnHit }}.",
             "iconLarge": "assets/ux/cherry/augments/icons/shrinkray_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/shrinkray_small.png",
             "id": 74,
             "name": "Уменьшающий луч",
             "rarity": 1,
-            "tooltip": "Cherry_ShrinkRay_Tooltip"
+            "tooltip": "Ваши автоатаки снижают урон и размер цели на @DamageReduction*100@% {{ Item_Keyword_OnHit }}."
         },
         {
             "apiName": "Castle",
@@ -13659,13 +13659,13 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_Perseverance_Summary",
+            "desc": "<healing>Восстановления здоровья</healing> значительно повышено. Бонус растет, когда у вас мало <scaleHealth>здоровья</scaleHealth>.",
             "iconLarge": "assets/ux/cherry/augments/icons/perseverance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/perseverance_small.png",
             "id": 64,
             "name": "Упорство",
             "rarity": 1,
-            "tooltip": "Cherry_Perseverance_Tooltip"
+            "tooltip": "Вы получаете <healing>@BaseRegen*100@% баз. восстановления здоровья</healing>. Бонус растет до <healing>@AmpedRegen*100@%</healing>, когда <scaleHealth>здоровье ниже @AmpedHPThreshold*100@%</scaleHealth>.<br><br>Эффективность лечения в этом раунде: @f1@<br>Общая эффективность лечения: @f2@"
         },
         {
             "apiName": "JeweledGauntlet",
