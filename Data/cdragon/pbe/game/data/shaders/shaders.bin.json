@@ -11793,7 +11793,7 @@
         "objectPath": "Shaders/UI/TFT/UI_BorderItem",
         "__type": "CustomShaderDef"
     },
-    "{1dd3a951}": {
+    "Shaders/SkinnedMesh/Distortion_Diffuse_Alpha": {
         "ShadingModel": "{baebc346}",
         "parameters": [
             {
@@ -14383,6 +14383,34 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Scroll_Scale_Noise_Scaling",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Scroll_Scale_Noise_Scaling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Scroll_Scale_Noise_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "Scroll_Scale_Noise_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Scroll_Texture_Scale",
                 "data": [
                     1.0,
@@ -14777,6 +14805,11 @@
             {
                 "name": "Gradient_Color_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/EDG_Rainbow2.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Scroll_Scale_Noise_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "ShaderTexture"
             },
             {

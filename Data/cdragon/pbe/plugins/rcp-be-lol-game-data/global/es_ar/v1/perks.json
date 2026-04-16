@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Cadencia Letal",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Al atacar a un campeón enemigo, obtienes @ASPerStack@ de Velocidad de Ataque (%i:scaleAS%) durante 6 seg. El efecto se puede acumular hasta 6 veces. Al reunir el máximo de acumulaciones, infliges @NoteDamage@ (%i:scaleAS%) de <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>daño adaptable adicional</font></lol-uikit-tooltipped-keyword> <OnHit>al atacar</OnHit> (%i:OnHit%).<br><br>Duración máxima de las acumulaciones: @f1@ seg<br>Daño infligido: @f2@<br><br>Esta runa también registra el porcentaje de ataques básicos contra campeones que se lanzan en un lapso de 0.25 seg luego de que puedas volver a atacar tras haber atacado a un campeón: @f3@% (@f4@ de @f5@)",
         "shortDesc": "Atacar a un campeón enemigo te otorga velocidad de ataque, hasta un máximo de 6 acumulaciones. Al tener el máximo de acumulaciones, infliges <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>daño adaptable adicional</font></lol-uikit-tooltipped-keyword> al atacar.",
         "longDesc": "Atacar a un campeón enemigo te otorga [6% cuerpo a cuerpo || 4% a distancia] de Velocidad de Ataque durante 6 seg, hasta un máximo de 6. Al alcanzar el máximo de acumulaciones, infliges [9 a 30 cuerpo a cuerpo || 6 a 24 a distancia] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>de daño adaptable adicional al atacar, que aumenta en un 1% por cada 1% de Velocidad de Ataque adicional</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Velocidad de ataque que aumenta",
@@ -994,11 +994,11 @@
     },
     {
         "id": 8230,
-        "name": "PhaseRush",
+        "name": "Saqueador de Tormentas",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Al infligir un 25% de la Vida Máxima de un campeón como daño en un lapso de 3 seg, obtienes <speed>@MoveSpeedCalc@ de Velocidad de Movimiento</speed> y un <status>50% de resistencia a ralentizaciones</status> durante 3 seg.<br><br>Enfriamiento: <attention>@CooldownCalc@ seg</attention><br><br>Total de activaciones: <attention>@f1@</attention>",
+        "shortDesc": "Al infligir un 25% de la Vida Máxima de un campeón como daño, obtienes una aumento súbito de <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>velocidad de movimiento</lol-uikit-tooltipped-keyword> y resistencia a ralentizaciones. ",
+        "longDesc": "Al infligir un 25% de la Vida Máxima de un campeón como daño en un lapso de 3 seg, obtienes un <speed>40% de Velocidad de Movimiento</speed> y un <status>50% de resistencia a ralentizaciones</status> durante 3 seg. La bonificación de velocidad de movimiento tiene un 75% de eficacia para campeones a distancia.<br>Enfriamiento: De 20 a 10 seg",
         "recommendationDescriptor": "Ráfaga de mov.",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1167,15 +1167,15 @@
     },
     {
         "id": 8992,
-        "name": "DeathfireTouch",
+        "name": "Toque de la Muerte Ígnea",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
-        "recommendationDescriptor": "",
+        "tooltip": "Al infligir daño a un campeón con una habilidad, lo quemas y le infliges @DamageCalc@ de daño adaptable por seg. Luego de 3 seg, el daño de la quemadura aumenta un 100% mientras el objetivo esté bajo el efecto.<br><rules><br>Duración:<br>Objetivo único: 4 seg<br>Área de efecto: 2 seg<br>Daño prolongado: 1 seg<br></rules><br>Infligiste @f1@ de daño a campeones con la quemadura de Toque de la Muerte Ígnea.",
+        "shortDesc": "Al infligir daño a un campeón con una habilidad, lo quemas de forma prolongada.",
+        "longDesc": "Al infligir daño a un campeón con una habilidad, lo quemas, lo que le inflige entre 1 y 10 según el nivel (+ <scaleAP>0.03 de Poder de Habilidad</scaleAP>) (+ <scaleAD>0.08 de Daño de Ataque adicional</scaleAD>) de daño adaptable por seg. Luego de 3 seg, el daño de la quemadura aumenta un 100% mientras el objetivo esté bajo el efecto.<br><rules><br>Duración:<br>Objetivo único: 4 seg<br>Área de efecto: 2 seg<br>Daño prolongado: 1 seg<br></rules>",
+        "recommendationDescriptor": "Daño de habilidad sostenido",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
-            ""
+            "Daño infligido con la quemadura: @eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1333,14 +1333,14 @@
         "id": 9923,
         "name": "Lluvia de Espadas",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Cuando atacas a un campeón enemigo, obtienes un {{ Item_Melee_Ranged_Split }}% de Velocidad de Ataque e infliges <font color='#48C4B7'>@BonusDamage@</font> de <trueDamage>daño verdadero adicional</trueDamage> durante un máximo de @NumHits@ ataques. <br><br>Enfriamiento: @Cooldown@ seg<br><hr><br>Ataques de Lluvia de Espadas: @f1@<br>Daño infligido: @f2@<br>Porcentaje de ataques de Lluvia de Espadas asestados: @f3@%<br><br><rules>Al reiniciar los ataques básicos, el límite de ataques aumenta en 1. El efecto se acumula hasta alcanzar los@MaxBonusHits@ ataques.<br>Puedes superar temporalmente el límite de velocidad de ataque.</rules>",
+        "shortDesc": "Obtienes una gran cantidad de velocidad de ataque e infliges <trueDamage>daño verdadero adicional</trueDamage> con tus primeros 3 ataques contra campeones enemigos.",
+        "longDesc": "Obtienes un 120% (un 60% para campeones a distancia) de Velocidad de Ataque e infliges <trueDamage>daño verdadero adicional</trueDamage> cuando atacas a un campeón enemigo durante un máximo de 3 ataques.<br><br>Si transcurren más de 3 seg entre los ataques, el efecto terminará.<br><br>Enfriamiento: 10 seg<br>Daño al impacto: De 4 a 20 (+ 0.08 de Daño de Ataque adicional + 0.06 de Poder de Habilidad) de daño<br><br><rules>Al reiniciar los ataques, el límite de ataques aumenta en 1.<br>Puedes superar temporalmente el límite de velocidad de ataque.</rules>",
         "recommendationDescriptor": "Ráfaga de ataques",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Ataques realizados con velocidad de ataque adicional: @eogvar1@",
-            ""
+            "Daño infligido: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1482,9 +1482,9 @@
         "id": 8229,
         "name": "Cometa Arcano",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Al infligir daño a un campeón con una habilidad, le disparas un cometa y le infliges una cantidad de daño que aumenta según la distancia a la que te encuentres del objetivo.<br><br>Daño: @DamageCalc@<br>Enfriamiento: @CooldownCalc@ seg<br><rules><br>La amplificación de daño aumenta hasta un 100% cuando el cometa recorre una distancia de 750.<br></rules><br>Un @f3@% de los cometas que lanzaste impactaron a los enemigos e infligiste un total de @f1@ de daño a campeones.",
         "shortDesc": "Dañar a un campeón con una habilidad desata un cometa que inflige daño en su ubicación.",
-        "longDesc": "",
+        "longDesc": "Al infligir daño a un campeón con una habilidad, le disparas un cometa y le infliges una cantidad de daño que aumenta según la distancia.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Daño adaptable</font></lol-uikit-tooltipped-keyword>: De 15 a 100 según el nivel (<scaleAP>+ 0.05 de Poder de Habilidad</scaleAP> y <scaleAD>+ 0.1 de Daño de Ataque adicional</scaleAD>)<br>Enfriamiento: De 20 a 8 seg<br><rules><br>La amplificación de daño aumenta hasta un 100% cuando el cometa recorre una distancia de 750.<br></rules>",
         "recommendationDescriptor": "Daño de habilidad",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

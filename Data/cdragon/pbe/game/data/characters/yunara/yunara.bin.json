@@ -584,7 +584,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 2,
-                            "mDataValue": "{9e3635ce}",
+                            "mDataValue": "Spread_AD_Ratio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1143,7 +1143,7 @@
                 },
                 "Calc_Move_Speed_Enhanced": {
                     "mMultiplier": {
-                        "mDataValue": "{c5483e4c}",
+                        "mDataValue": "Move_Speed_Modifier",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 5,
@@ -1277,7 +1277,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{ea2cc6a9}",
+                                "mDataValue": "Buff_Duration",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -2541,7 +2541,7 @@
                 },
                 "Calc_Damage_Per_Second": {
                     "mMultiplier": {
-                        "mDataValue": "{62fc6412}",
+                        "mDataValue": "DPS_Modifier",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mModifiedGameCalculation": "Calc_Damage_Initial",
@@ -2829,7 +2829,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{2da615ed}",
+                                "mDataValue": "Slow_Duration",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -2960,7 +2960,7 @@
                         "mFormulaParts": [
                             {
                                 "SourceObject": "Characters/Yunara/Spells/YunaraRAbility/YunaraR",
-                                "{137cf12a}": "{7806049b}",
+                                "{137cf12a}": "RW_Slow_Duration",
                                 "__type": "{9e9e2e5c}"
                             }
                         ],
@@ -3146,11 +3146,11 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{96806f45}",
+                            "mDataValue": "RW_ADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{7edb0429}",
+                            "mDataValue": "RW_APRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -3161,7 +3161,7 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{df09786b}",
+                            "mDataValue": "RW_Slow_Amount",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -3182,7 +3182,7 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{cc1c79e2}",
+                            "mDataValue": "RW_CDR",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -3349,7 +3349,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{ea2cc6a9}",
+                                "mDataValue": "Buff_Duration",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -3998,52 +3998,52 @@
     },
     "Characters/Yunara/CharacterRecords/Root": {
         "mCharacterName": "Yunara",
-        "{8662cf12}": {
-            "{b35aa769}": 590.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 590.0,
+            "__type": "ModifiableFloat"
         },
-        "{4d37af28}": {
-            "{b35aa769}": 110.0,
-            "__type": "{ce9b917b}"
+        "hpPerLevelModifiable": {
+            "baseValue": 110.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.800000011920929,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
         },
-        "{913157bb}": {
-            "{b35aa769}": 0.10999999940395355,
-            "__type": "{ce9b917b}"
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10999999940395355,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 110.0,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 275.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 275.0,
+                "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "{b35aa769}": 45.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 45.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 1.5,
-                "__type": "{ce9b917b}"
+                "baseValue": 1.5,
+                "__type": "ModifiableFloat"
             },
             "{3a509002}": {
-                "{b35aa769}": 0.15000000596046448,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.15000000596046448,
+                "__type": "ModifiableFloat"
             },
             "__type": "AbilityResourceSlotInfo"
         },
         "secondaryAbilityResource": {
             "arType": 14,
             "{726ee5cd}": {
-                "{b35aa769}": 8.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 8.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arMaxSegments": 800,
             "arHasRegenText": false,
@@ -4051,50 +4051,50 @@
             "VisibilityFlags": 9,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 55.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 55.0,
+            "__type": "ModifiableFloat"
         },
-        "{e2b5d80d}": {
-            "{b35aa769}": 2.5,
-            "__type": "{ce9b917b}"
+        "damagePerLevelModifiable": {
+            "baseValue": 2.5,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 25.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 25.0,
+            "__type": "ModifiableFloat"
         },
-        "{18956a21}": {
-            "{b35aa769}": 4.400000095367432,
-            "__type": "{ce9b917b}"
+        "armorPerLevelModifiable": {
+            "baseValue": 4.400000095367432,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
         "{01262a25}": {
-            "{b35aa769}": 1.2999999523162842,
-            "__type": "{ce9b917b}"
+            "baseValue": 1.2999999523162842,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 325.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 575.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 575.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.6499999761581421,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.6499999761581421,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.6499999761581421,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6499999761581421,
+            "__type": "ModifiableFloat"
         },
-        "{b9f2b365}": {
-            "{b35aa769}": 2.0,
-            "__type": "{ce9b917b}"
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.0,
+            "__type": "ModifiableFloat"
         },
         "acquisitionRange": 800.0,
         "basicAttack": {

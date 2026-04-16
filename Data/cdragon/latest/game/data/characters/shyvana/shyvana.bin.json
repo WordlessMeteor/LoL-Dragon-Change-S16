@@ -384,7 +384,7 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{317cbe8a}",
+                            "mDataValue": "FuryDragonFormMult",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -410,7 +410,7 @@
                                 "__type": "NumberCalculationPart"
                             },
                             "mPart2": {
-                                "mDataValue": "{159e14d0}",
+                                "mDataValue": "Fury_AoE_Efficacy",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"
@@ -1048,17 +1048,17 @@
                 "{a90da5f4}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{dce41ea0}",
+                            "mDataValue": "Max_Health_Damage",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{38c25ae4}",
+                            "mDataValue": "Max_Health_AD_Ratio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{f84b8898}",
+                            "mDataValue": "Max_Health_AP_Ratio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1074,7 +1074,7 @@
                         },
                         {
                             "mStat": 2,
-                            "mDataValue": "{91d16abc}",
+                            "mDataValue": "Damage_AD_Ratio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
@@ -1119,7 +1119,7 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{20b68eb5}",
+                            "mDataValue": "Damage_Monster_Bonus",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -2183,7 +2183,7 @@
                 },
                 "{fa8236f6}": {
                     "mMultiplier": {
-                        "mDataValue": "{4e0045ec}",
+                        "mDataValue": "MissingHealthHealMultiplier",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mModifiedGameCalculation": "{0c6d3894}",
@@ -2191,7 +2191,7 @@
                 },
                 "{80729703}": {
                     "mMultiplier": {
-                        "mDataValue": "{a2a9ff63}",
+                        "mDataValue": "MoveSpeedAmpTowardsEnemies",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 5,
@@ -3586,27 +3586,27 @@
     },
     "Characters/Shyvana/CharacterRecords/Root": {
         "mCharacterName": "Shyvana",
-        "{8662cf12}": {
-            "{b35aa769}": 625.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 625.0,
+            "__type": "ModifiableFloat"
         },
-        "{4d37af28}": {
-            "{b35aa769}": 100.0,
-            "__type": "{ce9b917b}"
+        "hpPerLevelModifiable": {
+            "baseValue": 100.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 1.399999976158142,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.399999976158142,
+            "__type": "ModifiableFloat"
         },
-        "{913157bb}": {
-            "{b35aa769}": 0.12999999523162842,
-            "__type": "{ce9b917b}"
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.12999999523162842,
+            "__type": "ModifiableFloat"
         },
         "primaryAbilityResource": {
             "arType": 5,
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arIncrements": 10.0,
             "arMaxSegments": 10,
@@ -3616,50 +3616,50 @@
             "{4eb6a404}": 1,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 62.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 62.0,
+            "__type": "ModifiableFloat"
         },
-        "{e2b5d80d}": {
-            "{b35aa769}": 3.0,
-            "__type": "{ce9b917b}"
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 35.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 35.0,
+            "__type": "ModifiableFloat"
         },
-        "{18956a21}": {
-            "{b35aa769}": 4.0,
-            "__type": "{ce9b917b}"
+        "armorPerLevelModifiable": {
+            "baseValue": 4.0,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 32.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 32.0,
+            "__type": "ModifiableFloat"
         },
         "{01262a25}": {
-            "{b35aa769}": 2.049999952316284,
-            "__type": "{ce9b917b}"
+            "baseValue": 2.049999952316284,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 350.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 350.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 150.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 150.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.625,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.6899999976158142,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6899999976158142,
+            "__type": "ModifiableFloat"
         },
-        "{b9f2b365}": {
-            "{b35aa769}": 2.0,
-            "__type": "{ce9b917b}"
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.0,
+            "__type": "ModifiableFloat"
         },
         "acquisitionRange": 600.0,
         "basicAttack": {

@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Tempo letal",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Dacă ataci un campion inamic, primești %i:scaleAS%@ASPerStack@ viteză de atac timp de 6 secunde, până la 6. La numărul maxim de cumuluri, provoci @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>daune adaptive bonus</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>la atac</OnHit>.<br><br>Disponibilitate cumuluri maxime: @f1@ sec.<br>Daune provocate: @f2@<br><br>Această rună ia în calcul și procentajul atacurilor tale de bază împotriva campionilor, lansate în decurs de 0.25 secunde de când atacul e pregătit, după un atac anterior împotriva unui campion: @f3@% (@f4@ din @f5@).",
         "shortDesc": "Dacă ataci un campion inamic, primești viteză de atac, până la maximum 6. La numărul maxim de cumuluri, provoci <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>daune adaptive bonus</font></lol-uikit-tooltipped-keyword> per atac.",
         "longDesc": "Dacă ataci un campion inamic, primești [6% campion melee || 4% campion de distanță] viteză de atac timp de 6 secunde, până la maximum 6. La numărul maxim de cumuluri, provoacă [9-30 campion melee || 6-24 campion de distanță] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>daune adaptive bonus la impact, valoare ce crește cu 1% per 1% viteză de atac bonus</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Viteza de atac bonus",
@@ -994,11 +994,11 @@
     },
     {
         "id": 8230,
-        "name": "PhaseRush",
+        "name": "Avânt tumultuos",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Când îi provoci unui campion daune în valoare de 25% din viața sa maximă într-un interval de 3 sec., primești <speed>@MoveSpeedCalc@ viteză de mișcare</speed> și <status>50% rezistență la încetiniri</status> timp de 3 sec.<br><br>Timp de reactivare: <attention>@CooldownCalc@ sec.</attention><br><br>Total activări: <attention>@f1@</attention>",
+        "shortDesc": "Când îi provoci unui campion daune egale cu 25% din viața sa maximă, primești un bonus la <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>viteza de mișcare</lol-uikit-tooltipped-keyword> și rezistență la încetiniri. ",
+        "longDesc": "Când îi provoci unui campion daune în valoare de 25% din viața sa maximă într-un interval de 3 sec., primești <speed>40% viteză de mișcare</speed> și <status>50% rezistență la încetiniri</status> timp de 3 sec. Viteza de mișcare are eficiență de 75% pentru campionii de distanță.<br>Timp de reactivare: 20-10 sec.",
         "recommendationDescriptor": "Bonus brusc de mișcare",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1167,15 +1167,15 @@
     },
     {
         "id": 8992,
-        "name": "DeathfireTouch",
+        "name": "Atingerea infernului",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
-        "recommendationDescriptor": "",
+        "tooltip": "Când îi provoci daune unui campion cu o abilitate, îl arzi în valoare de @DamageCalc@ daune adaptive pe secundă. După ce arde timp de 3 secunde, daunele arderii cresc cu 100% cât timp rămâne în flăcări.<br><rules><br>Durată:<br>O singură țintă: 4 sec.<br>AoE: 2 sec.<br>Daune în timp: 1 sec.<br></rules><br>Ai provocat @f1@ daune împotriva campionilor cu arderea ''Atingerii infernului''.",
+        "shortDesc": "Când îi provoci daune unui campion cu o abilitate, îl arzi în timp.",
+        "longDesc": "Când îi provoci daune unui campion cu o abilitate, îl arzi în valoare de 1-10 în funcție de nivel (+<scaleAP>0.03 puterea abilităților</scaleAP>) (+<scaleAD>0.08 daune bonus din atac</scaleAD>) daune adaptive pe secundă. După ce arde timp de 3 secunde, daunele arderii cresc cu 100% cât timp rămâne în flăcări.<br><rules><br>Durată:<br>O singură țintă: 4 sec.<br>AoE: 2 sec.<br>Daune în timp: 1 sec.<br></rules>",
+        "recommendationDescriptor": "Daune susținute din abilități",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
-            ""
+            "Daune din ardere provocate: @eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1333,14 +1333,14 @@
         "id": 9923,
         "name": "Ploaie de tăișuri",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Când ataci un campion inamic, timp de până la @NumHits@ atacuri, primești {{ Item_Melee_Ranged_Split }}% viteză de atac și provoci <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>daune reale bonus</trueDamage>. <br><br>Timp de reactivare: @Cooldown@ sec.<br><hr><br>Atacuri cu ''Ploaia de tăișuri'': @f1@<br>Daune provocate: @f2@<br>Procentaj de atacuri reușite cu ''Ploaia de tăișuri'': @f3@%<br><br><rules>La resetarea unui atac de bază, numărul maxim de atacuri se mărește cu +1, până la +@MaxBonusHits@.<br>Îți permite să depășești temporar limita de viteză de atac.</rules>",
+        "shortDesc": "Primești un bonus mare la viteza de atac și <trueDamage>daune reale bonus</trueDamage> pentru primele 3 atacuri împotriva campionilor inamici.",
+        "longDesc": "Primești 120% (60% pentru campioni care atacă la distanță) viteză de atac și <trueDamage>daune reale bonus</trueDamage> pentru maximum 3 atacuri lansate împotriva unui campion inamic.<br><br>Efectul se va încheia dacă decalajul dintre atacuri este mai mare de 3 sec.<br><br>Timp de reactivare: 10 sec.<br>Daune la impact: 4-20 (+0.08 daune bonus din atac, +0.06 puterea abilităților) daune.<br><br><rules>La resetarea unui atac, numărul maxim de atacuri se mărește cu 1.<br>Îți permite să depășești temporar limita de viteză de atac.</rules>",
         "recommendationDescriptor": "Rafală de atacuri",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Atacuri cu viteză de atac bonus: @eogvar1@",
-            ""
+            "Daune provocate: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1482,9 +1482,9 @@
         "id": 8229,
         "name": "Meteorit ocult",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Dacă lovești un campion cu o abilitate, arunci o cometă către locația lui, care provoacă daune crescute în funcție de distanța la care se află.<br><br>Daune: @DamageCalc@<br>Timp de reactivare: @CooldownCalc@ sec.<br><rules><br>Amplificarea daunelor crește până la 100% la 750 rază.<br></rules><br>Ai lovit cu @f3@% dintre cometele lansate, pentru un total de @f1@ daune împotriva campionilor.",
         "shortDesc": "Atunci când îi provoci daune unui campion printr-o abilitate, lansezi către el un meteorit care provoacă și el daune.",
-        "longDesc": "",
+        "longDesc": "Atunci când îi provoci daune unui campion printr-o abilitate, lansezi către el un meteorit, provocând daune crescute în funcție de distanță.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Daune adaptive</font></lol-uikit-tooltipped-keyword>: 15-100 în funcție de nivel (<scaleAP>+0.05 puterea abilităților</scaleAP> și <scaleAD>+0.1 daune bonus din atac</scaleAD>)<br>Timp de reactivare: 20-8 sec.<br><rules><br>Amplificarea daunelor crește până la 100% la 750 rază.<br></rules>",
         "recommendationDescriptor": "Daune abilități",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

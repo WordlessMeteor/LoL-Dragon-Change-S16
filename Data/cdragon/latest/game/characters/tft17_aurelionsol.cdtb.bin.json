@@ -451,7 +451,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{2c9e6dcf}",
+                                "mDataValue": "FighterDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -466,13 +466,13 @@
                         {
                             "mSubparts": [
                                 {
-                                    "mDataValue": "{fc9cb82e}",
+                                    "mDataValue": "ManaPerFighter",
                                     "__type": "NamedDataValueCalculationPart"
                                 },
                                 {
                                     "mStat": 4,
                                     "mStatFormula": 2,
-                                    "mDataValue": "{fc9cb82e}",
+                                    "mDataValue": "ManaPerFighter",
                                     "__type": "StatByNamedDataValueCalculationPart"
                                 }
                             ],
@@ -487,7 +487,7 @@
                     "mFormulaParts": [
                         {
                             "mPart1": {
-                                "mDataValue": "{fc9cb82e}",
+                                "mDataValue": "ManaPerFighter",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mPart2": {
@@ -499,7 +499,7 @@
                                     {
                                         "mStat": 4,
                                         "mStatFormula": 2,
-                                        "mDataValue": "{8bb4f51e}",
+                                        "mDataValue": "ManaASScalar",
                                         "__type": "StatByNamedDataValueCalculationPart"
                                     }
                                 ],
@@ -521,7 +521,7 @@
                                 {
                                     "mStat": 4,
                                     "mStatFormula": 2,
-                                    "mDataValue": "{8bb4f51e}",
+                                    "mDataValue": "ManaASScalar",
                                     "__type": "StatByNamedDataValueCalculationPart"
                                 }
                             ],
@@ -957,58 +957,58 @@
     },
     "Characters/TFT17_AurelionSol/CharacterRecords/Root": {
         "mCharacterName": "TFT17_AurelionSol",
-        "{8662cf12}": {
-            "{b35aa769}": 850.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 850.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.0,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 250.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 75.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 75.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
-        "{e62d9d92}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 1130.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 1130.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.75,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.75,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.800000011920929,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
         },
         "basicAttack": {
             "mAttackName": "TFT17_AurelionSolBasicAttack",
@@ -1046,11 +1046,11 @@
         "tier": 4,
         "mLinkedTraits": [
             {
-                "TraitData": "{0260015b}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_Mecha",
                 "__type": "TFTTraitContributionData"
             },
             {
-                "TraitData": "{c09777da}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_ManaTrait",
                 "__type": "TFTTraitContributionData"
             }
         ],

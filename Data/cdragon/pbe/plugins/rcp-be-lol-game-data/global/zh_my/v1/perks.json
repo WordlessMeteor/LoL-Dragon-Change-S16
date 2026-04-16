@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "致命节奏",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "攻击敌方英雄会提供%i:scaleAS%@ASPerStack@攻击速度，持续6秒，最多可提供6。叠至最大层数时，造成@NoteDamage@（%i:scaleAS%）<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>额外适性伤害</font></lol-uikit-tooltipped-keyword>%i:OnHit%<OnHit>普攻命中</OnHit>。<br><br>最大叠层持续时间：@f1@秒<br>造成的伤害：@f2@<br><br>此符文还会记录你在上一次攻击英雄结束后，在你准备就绪的0.25秒内对英雄打出的普攻次数占比：@f3@%（@f4@/@f5@）",
         "shortDesc": "攻击敌方英雄可获得攻击速度，最多可叠加6层。满层时，普攻造成<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>额外适性伤害</font></lol-uikit-tooltipped-keyword>。",
         "longDesc": "攻击敌方英雄可获得[6%近战 || 4%远程]攻击速度，持续6秒，最多可叠加至6层。最大叠层时，普攻造成[9 - 30近战 || 6 - 24远程] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>额外适性伤害，每拥有1%额外攻速就会提升1%伤害</lol-uikit-tooltipped-keyword>。",
         "recommendationDescriptor": "逐渐提升攻速",
@@ -994,11 +994,11 @@
     },
     {
         "id": 8230,
-        "name": "PhaseRush",
+        "name": "风暴浪涌",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "在3秒内对一名英雄造成其最大生命值25%的伤害，获得<speed>@MoveSpeedCalc@移动速度</speed>和<status>50%减速抗性</status>，持续3秒。<br><br>冷却时间：<attention>@CooldownCalc@秒</attention><br><br>总计激活次数：<attention>@f1@</attention>",
+        "shortDesc": "对一名英雄造成25%最大生命值的伤害时，获得爆发性<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移速</lol-uikit-tooltipped-keyword>加成和减速抗性。 ",
+        "longDesc": "在3秒内对一名英雄造成其最大生命值25%的伤害，获得<speed>40%移动速度</speed>和<status>50%减速抗性</status>，持续3秒。移动速度对远程英雄的效果为75%。<br>冷却时间：20秒 - 10秒",
         "recommendationDescriptor": "疾速移动",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1167,15 +1167,15 @@
     },
     {
         "id": 8992,
-        "name": "DeathfireTouch",
+        "name": "冥火之触",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
-        "recommendationDescriptor": "",
+        "tooltip": "使用技能对英雄造成伤害会使其燃烧，每秒造成@DamageCalc@适性伤害。燃烧3秒后，只要目标仍处于燃烧状态，燃烧伤害就会提升100%。<br><rules><br>持续时间：<br>单体目标：4秒。<br>范围效果：2秒<br>持续伤害：1秒<br></rules><br>你已通过“冥火之触”的燃烧效果对英雄造成@f1@伤害。",
+        "shortDesc": "使用技能对一名英雄造成伤害会使其持续燃烧。",
+        "longDesc": "使用技能对英雄造成伤害会使其燃烧，每秒造成1 - 10（随等级提升）（+<scaleAP>0.03魔法攻击</scaleAP>）（+<scaleAD>0.08额外物理攻击</scaleAD>）适性伤害。燃烧3秒后，只要目标仍处于燃烧状态，燃烧伤害就会提升100%。<br><rules><br>持续时间：<br>单体目标：4秒。<br>范围效果：2秒<br>持续伤害：1秒<br></rules>",
+        "recommendationDescriptor": "持续技能伤害",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
-            ""
+            "已造成燃烧伤害：@eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1333,14 +1333,14 @@
         "id": 9923,
         "name": "刀锋之雹",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "攻击敌方英雄时（上限为@NumHits@次普攻），获得{{ Item_Melee_Ranged_Split }}%攻击速度，并造成<font color='#48C4B7'>@BonusDamage@</font><trueDamage>额外真实伤害</trueDamage>。<br><br>冷却时间：@Cooldown@秒。<br><hr><br>刀锋之雹攻击次数：@f1@<br>造成伤害：@f2@<br>刀锋之雹命中率：@f3@%<br><br><rules>普攻重置效果可提升普攻次数上限1次，最多提升@MaxBonusHits@次。<br>允许你暂时突破攻速上限。</rules>",
+        "shortDesc": "对敌方英雄的前3次攻击会获得大量攻击速度，并造成<trueDamage>额外真实伤害</trueDamage>。",
+        "longDesc": "攻击敌方英雄时，获得120%（远程英雄获得60%）攻击速度和<trueDamage>额外真实伤害</trueDamage>，最多可持续3次攻击。<br><br>每次攻击间隔不得超过3秒，否则该效果将终止。<br><br>冷却时间：10秒。<br>命中伤害：4 - 20（+0.08 额外物理攻击、+0.06 魔法攻击）伤害。<br><br><rules>重置普攻会使普攻次数上限提升1次。<br>允许你暂时突破攻速上限。</rules>",
         "recommendationDescriptor": "短暂的快速普攻",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "普攻造成了额外攻速：@eogvar1@",
-            ""
+            "已造成伤害：@eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1482,9 +1482,9 @@
         "id": 8229,
         "name": "奥术彗星",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "使用技能对一名敌方英雄造成伤害时，会在其位置处召唤一颗彗星，并根据目标与你的距离造成额外伤害。<br><br>伤害：@DamageCalc@<br>冷却时间：@CooldownCalc@秒<br><rules><br>伤害增幅在750距离时可提升至100%。<br></rules><br>你发射的彗星命中率为@f3@%，对英雄总计造成@f1@伤害。",
         "shortDesc": "使用技能伤害一名敌方英雄时召唤一颗彗星至他们的位置。",
-        "longDesc": "",
+        "longDesc": "使用技能对一名敌方英雄造成伤害时，会在其位置处召唤一颗彗星，造成的伤害会随着距离而提升。<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适性伤害</font></lol-uikit-tooltipped-keyword>： 15 - 100，随等级提升（<scaleAP>+0.05魔法攻击</scaleAP>和<scaleAD>+0.1额外物理攻击</scaleAD>）<br>冷却时间：20 - 8秒<br><rules><br>伤害增幅在750距离时可提升至100%<br></rules>",
         "recommendationDescriptor": "技能伤害",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

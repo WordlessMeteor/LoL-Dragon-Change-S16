@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "リーサルテンポ",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "敵チャンピオンに通常攻撃を行うと、6秒間%i:scaleAS%攻撃速度が@ASPerStack@増加する。この効果は最大6回までスタックする。スタックが最大になると、%i:OnHit%<OnHit>通常攻撃時</OnHit>に@NoteDamage@(%i:scaleAS%)の<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>追加アダプティブダメージ</font></lol-uikit-tooltipped-keyword>を与える<br><br>最大スタックの持続時間: @f1@秒<br>与えたダメージ: @f2@<br><br>このルーンは、前回チャンピオンに通常攻撃を行ったのちに攻撃可能になってから0.25秒以内にチャンピオンに対して行った通常攻撃の割合も記録する: @f3@%(@f4@/@f5@)",
         "shortDesc": "敵チャンピオンに通常攻撃を行うと攻撃速度が増加する。この効果は最大6回までスタックする。最大スタックになると、通常攻撃時効果で<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>追加アダプティブダメージ</font></lol-uikit-tooltipped-keyword>を与えるようになる。",
         "longDesc": "敵チャンピオンに通常攻撃を行うと、6秒間、攻撃速度が[近接 6% || 遠隔 4%]増加する。この効果は最大6回までスタックする。最大スタックになると、通常攻撃時効果で[近接 9 - 30 || 遠隔 6 - 24]の<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>追加アダプティブダメージを与えるようになる。このダメージは増加攻撃速度1%ごとに1%増加する</lol-uikit-tooltipped-keyword>。",
         "recommendationDescriptor": "段階的に攻撃速度が増加",
@@ -994,11 +994,11 @@
     },
     {
         "id": 8230,
-        "name": "PhaseRush",
+        "name": "嵐乗りの勇躍",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "3秒以内に対象チャンピオンの最大体力の25%にあたるダメージを与えると、3秒間<speed>移動速度が@MoveSpeedCalc@</speed>、<status>スロウ耐性が50%</status>増加する。<br><br>クールダウン: <attention>@CooldownCalc@秒</attention><br><br>発動回数合計: <attention>@f1@</attention>",
+        "shortDesc": "対象チャンピオンの最大体力の25%にあたるダメージを与えると、瞬間的に<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移動速度</lol-uikit-tooltipped-keyword>が増加し、スロウ耐性を獲得する。 ",
+        "longDesc": "3秒以内に対象チャンピオンの最大体力の25%にあたるダメージを与えると、3秒間<speed>移動速度が40%</speed>、<status>スロウ耐性が50%</status>増加する。遠隔チャンピオンの場合、移動速度の増加量は75%になる。<br>クールダウン: 20秒 - 10秒",
         "recommendationDescriptor": "瞬間的な移動速度増加",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1167,15 +1167,15 @@
     },
     {
         "id": 8992,
-        "name": "DeathfireTouch",
+        "name": "デスファイア トーチ",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
-        "recommendationDescriptor": "",
+        "tooltip": "スキルでチャンピオンにダメージを与えると、対象を燃焼させて毎秒@DamageCalc@のアダプティブダメージを与える。燃焼効果が3秒後も続いている場合、ダメージが100%増加する。<br><rules><br>効果時間:<br>単体対象: 4秒<br>効果範囲: 2秒<br>継続ダメージ: 1秒<br></rules><br>「デスファイア トーチ」の燃焼でチャンピオンに合計@f1@のダメージを与えた。",
+        "shortDesc": "スキルでチャンピオンにダメージを与えると、継続燃焼ダメージを与える。",
+        "longDesc": "スキルでチャンピオンにダメージを与えると、対象を燃焼させて毎秒1 - 10(チャンピオンレベルに応じて)(+<scaleAP>魔力0.03</scaleAP>)(+<scaleAD>増加攻撃力0.08</scaleAD>)のアダプティブダメージを与える。燃焼効果が3秒後も続いている場合、ダメージが100%増加する。<br><rules><br>効果時間:<br>単体対象: 4秒<br>効果範囲: 2秒<br>継続ダメージ: 1秒<br></rules>",
+        "recommendationDescriptor": "継続スキルダメージ",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
-            ""
+            "与えた燃焼ダメージ量: @eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1333,14 +1333,14 @@
         "id": 9923,
         "name": "ヘイルブレード",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "敵チャンピオンに通常攻撃する際、最大@NumHits@回の通常攻撃の攻撃速度が{{ Item_Melee_Ranged_Split }}%増加し、<font color='#48C4B7'>@BonusDamage@</font><trueDamage>追加確定ダメージ</trueDamage>を与える。<br><br>クールダウン: @Cooldown@秒<br><hr><br>「ヘイルブレード」での攻撃: @f1@<br>与えたダメージ: @f2@<br>「ヘイルブレード」での攻撃命中率: @f3@%<br><br><rules>通常攻撃のモーションをキャンセルした場合、回数制限が+1増加する(最大+@MaxBonusHits@まで)。<br>この効果は一時的に攻撃速度の上限を超えられる。</rules>",
+        "shortDesc": "敵チャンピオンに対する最初の3回の通常攻撃の攻撃速度が大きく増加し、<trueDamage>追加確定ダメージ</trueDamage>を獲得する。",
+        "longDesc": "敵チャンピオンに通常攻撃する際、最大3回の通常攻撃の攻撃速度が120%(遠距離チャンピオンは60%)増加し、<trueDamage>追加確定ダメージ</trueDamage>を獲得する。<br><br>通常攻撃の間隔が3秒以上開くとこの効果は終了する。<br><br>クールダウン: 10秒<br>通常攻撃時のダメージ: 4 - 20 (+増加攻撃力0.08、+魔力0.06)のダメージ<br><br><rules>攻撃のモーションをキャンセルした場合、回数制限が1増加する。<br>この効果は一時的に攻撃速度の上限を超えられる。</rules>",
         "recommendationDescriptor": "連続通常攻撃",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "攻撃速度が増加した状態で行った攻撃回数: @eogvar1@",
-            ""
+            "与えたダメージ量: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1482,9 +1482,9 @@
         "id": 8229,
         "name": "秘儀の彗星",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "スキルでチャンピオンにダメージを与えると、対象のいる地点に彗星を放ち、対象との距離に応じて増加するダメージを与える。<br><br>ダメージ: @DamageCalc@<br>クールダウン: @CooldownCalc@秒<br><rules><br>ダメージ増幅量は射程750で最大100%まで増加する。<br></rules><br>これまでに放った彗星の@f3@%が命中し、チャンピオンに合計@f1@のダメージを与えた。",
         "shortDesc": "スキルでダメージを与えた敵チャンピオンの位置に彗星を飛ばす。",
-        "longDesc": "",
+        "longDesc": "スキルでチャンピオンにダメージを与えると、その位置に向かって彗星を飛ばし、距離に応じて増加するダメージを与える。<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>アダプティブダメージ</font></lol-uikit-tooltipped-keyword>: 15 - 100(レベルに応じて)(<scaleAP>+魔力0.05</scaleAP>および<scaleAD>+増加攻撃力0.1</scaleAD>)<br>クールダウン: 20 - 8秒<br><rules><br>ダメージ増幅率は距離750で最大100%まで増加する。<br></rules>",
         "recommendationDescriptor": "スキルダメージ",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

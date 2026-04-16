@@ -1,54 +1,54 @@
 {
     "Characters/TFT17_IvernMinion/CharacterRecords/Root": {
         "mCharacterName": "TFT17_IvernMinion",
-        "{8662cf12}": {
-            "{b35aa769}": 950.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 950.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.0,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 195.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 65.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 65.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 45.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 45.0,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 45.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 45.0,
+            "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
-        "{e62d9d92}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 180.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 180.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.550000011920929,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.550000011920929,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.6000000238418579,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6000000238418579,
+            "__type": "ModifiableFloat"
         },
         "basicAttack": {
             "mAttackName": "TFT17_IvernMinionBasicAttack",
@@ -80,15 +80,15 @@
         "tier": 2,
         "mLinkedTraits": [
             {
-                "TraitData": "{e85ac758}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_Astronaut",
                 "__type": "TFTTraitContributionData"
             },
             {
-                "TraitData": "{63271fd2}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_SummonTrait",
                 "__type": "TFTTraitContributionData"
             },
             {
-                "TraitData": "{d1fbd8ea}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_FlexTrait",
                 "__type": "TFTTraitContributionData"
             }
         ],
@@ -430,7 +430,7 @@
                                     },
                                     {
                                         "mBuffName": "{743a49ea}",
-                                        "mDataValue": "{ee8f22e7}",
+                                        "mDataValue": "BonusDamagePerMeep",
                                         "__type": "BuffCounterByNamedDataValueCalculationPart"
                                     }
                                 ],
@@ -462,7 +462,7 @@
                     "mFormulaParts": [
                         {
                             "mBuffName": "{743a49ea}",
-                            "mDataValue": "{ee8f22e7}",
+                            "mDataValue": "BonusDamagePerMeep",
                             "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
@@ -694,7 +694,7 @@
                             "mSubparts": [
                                 {
                                     "mSubpart": {
-                                        "mDataValue": "{235d31f8}",
+                                        "mDataValue": "HealingPercentHealth",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     "mRatio": 1.0,
@@ -703,7 +703,7 @@
                                 },
                                 {
                                     "mSubpart": {
-                                        "mDataValue": "{495116ac}",
+                                        "mDataValue": "HealingAP",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     "mRatio": 0.009999999776482582,
@@ -721,11 +721,11 @@
                         {
                             "mPart1": {
                                 "mBuffName": "{743a49ea}",
-                                "mDataValue": "{aaefda71}",
+                                "mDataValue": "MeepsPerAstro",
                                 "__type": "BuffCounterByNamedDataValueCalculationPart"
                             },
                             "mPart2": {
-                                "mDataValue": "{34724c8b}",
+                                "mDataValue": "HealingAndShieldingPerAstro",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"

@@ -176,7 +176,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{e467565f}",
+                                "mDataValue": "MeepShield",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -190,7 +190,7 @@
                     "mFormulaParts": [
                         {
                             "mBuffName": "{743a49ea}",
-                            "mDataValue": "{aaefda71}",
+                            "mDataValue": "MeepsPerAstro",
                             "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
@@ -410,7 +410,7 @@
                                 "mSubparts": [
                                     {
                                         "mSubpart": {
-                                            "mDataValue": "{313962b5}",
+                                            "mDataValue": "DamageAD",
                                             "__type": "NamedDataValueCalculationPart"
                                         },
                                         "mRatio": 1.0,
@@ -419,7 +419,7 @@
                                     },
                                     {
                                         "mSubpart": {
-                                            "mDataValue": "{a6b5cca7}",
+                                            "mDataValue": "DamageArmor",
                                             "__type": "NamedDataValueCalculationPart"
                                         },
                                         "mRatio": 1.0,
@@ -452,7 +452,7 @@
                     "mFormulaParts": [
                         {
                             "mBuffName": "{743a49ea}",
-                            "mDataValue": "{2cd08154}",
+                            "mDataValue": "DamagePerMeep",
                             "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
@@ -761,54 +761,54 @@
     },
     "Characters/TFT17_Poppy/CharacterRecords/Root": {
         "mCharacterName": "TFT17_Poppy",
-        "{8662cf12}": {
-            "{b35aa769}": 700.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 700.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.0,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 160.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 60.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 60.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 45.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 45.0,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 45.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 45.0,
+            "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
-        "{e62d9d92}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 180.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 180.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.6499999761581421,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.6499999761581421,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.5,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.5,
+            "__type": "ModifiableFloat"
         },
         "basicAttack": {
             "mAttackName": "TFT17_PoppyBasicAttack",
@@ -846,11 +846,11 @@
         "tier": 1,
         "mLinkedTraits": [
             {
-                "TraitData": "{e85ac758}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_Astronaut",
                 "__type": "TFTTraitContributionData"
             },
             {
-                "TraitData": "{15312cd7}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_ResistTank",
                 "__type": "TFTTraitContributionData"
             }
         ],

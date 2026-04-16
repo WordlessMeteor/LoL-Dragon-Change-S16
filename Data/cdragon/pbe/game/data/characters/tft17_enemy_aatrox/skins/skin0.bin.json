@@ -21,7 +21,7 @@
                 250.0,
                 130.0
             ],
-            "Material": "{bbe166ec}",
+            "Material": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Aatrox_inst",
             "materialController": {
                 "__type": "{eaf8e31e}"
             },
@@ -41,7 +41,7 @@
         ],
         "__type": "TftSkinCharacterDataProperties"
     },
-    "{23e1cdf7}": {
+    "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_SwordsGoingUp_SwordsChild": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1232,7 +1232,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{4816ac10}": {
+    "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_SwordsGoingUp": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1243,7 +1243,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{325195d9}",
+                            "effectKey": "TFT17_Enemy_Aatrox_SwordsGoingUp_SwordsChild",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -1577,7 +1577,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{5a5b77e9}": {
+    "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_SwordAOE_Indicator": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2430,7 +2430,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{72af9465}": {
+    "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_MissileGrid_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -5127,7 +5127,7 @@
         "particlePath": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_MissileGrid_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{7f6f5b01}": {
+    "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_MissileGrid_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -5442,7 +5442,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{a8cbc33f}": {
+    "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_SwordAOE_Explosion": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.15000000596046448,
@@ -8101,16 +8101,16 @@
     },
     "{326fad98}": {
         "resourceMap": {
-            "{822e7b6e}": "{4816ac10}",
-            "{325195d9}": "{23e1cdf7}",
-            "{ac5b202f}": "{5a5b77e9}",
-            "{94912e1d}": "{a8cbc33f}",
-            "{4b46b9b3}": "{7f6f5b01}",
-            "{8e669a57}": "{72af9465}"
+            "TFT17_Enemy_Aatrox_SwordsGoingUp": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_SwordsGoingUp",
+            "TFT17_Enemy_Aatrox_SwordsGoingUp_SwordsChild": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_SwordsGoingUp_SwordsChild",
+            "TFT17_Enemy_Aatrox_SwordAOE_Indicator": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_SwordAOE_Indicator",
+            "TFT17_Enemy_Aatrox_SwordAOE_Explosion": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_SwordAOE_Explosion",
+            "TFT17_Enemy_Aatrox_MissileGrid_Mis": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_MissileGrid_Mis",
+            "TFT17_Enemy_Aatrox_MissileGrid_Tar": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Particles/TFT17_Enemy_Aatrox_Base_MissileGrid_Tar"
         },
         "__type": "ResourceResolver"
     },
-    "{bbe166ec}": {
+    "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Aatrox_inst": {
         "name": "Characters/TFT17_Enemy_Aatrox/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Aatrox_inst",
         "samplerValues": [
             {
@@ -8227,7 +8227,7 @@
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "{90fe2753}",
+                        "shader": "Shaders/SkinnedMesh/TFT_Dissolve_Simple",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,

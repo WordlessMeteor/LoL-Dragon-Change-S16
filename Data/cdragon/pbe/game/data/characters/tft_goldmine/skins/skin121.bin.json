@@ -10,7 +10,7 @@
             "simpleSkin": "ASSETS/Characters/TFT_GoldMine/Skins/Skin121/TFT_GoldMine_Skin121.TFT_ArenaSkin_StarNemesis.skn",
             "texture": "ASSETS/Characters/TFT_GoldMine/Skins/Skin121/Level1_StarNesis_Goldmine_B.TFT_ArenaSkin_StarNemesis.tex",
             "selfIllumination": 2.0,
-            "Material": "{fd345558}",
+            "Material": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Starnemesis_Goldmine_Dissolve_inst",
             "castShadows": false,
             "reflectionFresnelColor": [
                 0,
@@ -20,27 +20,27 @@
             ],
             "materialOverride": [
                 {
-                    "Material": "{f2559ab7}",
+                    "Material": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Star_Away_Mat",
                     "submesh": "Damage03_Star",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{f2559ab7}",
+                    "Material": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Star_Away_Mat",
                     "submesh": "Damage01_Star",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{648f2ca1}",
+                    "Material": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Starnemesis_Goldmine_02_Dissolve_inst",
                     "submesh": "Damage01_Damaged",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{648f2ca1}",
+                    "Material": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Starnemesis_Goldmine_02_Dissolve_inst",
                     "submesh": "Damage02_Damaged",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{648f2ca1}",
+                    "Material": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Starnemesis_Goldmine_02_Dissolve_inst",
                     "submesh": "Damage03_Damaged",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -50,7 +50,7 @@
         "mResourceResolver": "{18b8b411}",
         "__type": "SkinCharacterDataProperties"
     },
-    "{0535d6d7}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Spawn_02": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.20000000298023224,
@@ -3705,7 +3705,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{06ef9208}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Spawn": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -3727,11 +3727,11 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{58fdd4b3}",
-                            "{416ddcac}",
-                            "{59fdd646}",
-                            "{5afdd7d9}",
-                            "{3f03d95a}"
+                            "Damage01",
+                            "Damage01_Star",
+                            "Damage02",
+                            "Damage03",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -3897,11 +3897,11 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{58fdd4b3}",
-                            "{416ddcac}",
-                            "{59fdd646}",
-                            "{5afdd7d9}",
-                            "{3f03d95a}"
+                            "Damage01",
+                            "Damage01_Star",
+                            "Damage02",
+                            "Damage03",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -4101,11 +4101,11 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{58fdd4b3}",
-                            "{416ddcac}",
-                            "{59fdd646}",
-                            "{5afdd7d9}",
-                            "{3f03d95a}"
+                            "Damage01",
+                            "Damage01_Star",
+                            "Damage02",
+                            "Damage03",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -4302,11 +4302,11 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{58fdd4b3}",
-                            "{416ddcac}",
-                            "{59fdd646}",
-                            "{5afdd7d9}",
-                            "{3f03d95a}"
+                            "Damage01",
+                            "Damage01_Star",
+                            "Damage02",
+                            "Damage03",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -4492,8 +4492,8 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{416ddcac}",
-                            "{3f03d95a}"
+                            "Damage01_Star",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -7009,7 +7009,7 @@
         "particlePath": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Spawn",
         "__type": "VfxSystemDefinitionData"
     },
-    "{0997da7f}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Click": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7305,8 +7305,8 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{416ddcac}",
-                            "{3f03d95a}"
+                            "Damage01_Star",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -8021,11 +8021,11 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{58fdd4b3}",
-                            "{416ddcac}",
-                            "{59fdd646}",
-                            "{5afdd7d9}",
-                            "{3f03d95a}"
+                            "Damage01",
+                            "Damage01_Star",
+                            "Damage02",
+                            "Damage03",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -11270,7 +11270,7 @@
         "particlePath": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Click",
         "__type": "VfxSystemDefinitionData"
     },
-    "{4fd80043}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Idle": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -11342,8 +11342,8 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{416ddcac}",
-                            "{3f03d95a}"
+                            "Damage01_Star",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -12079,11 +12079,11 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{58fdd4b3}",
-                            "{416ddcac}",
-                            "{59fdd646}",
-                            "{5afdd7d9}",
-                            "{3f03d95a}"
+                            "Damage01",
+                            "Damage01_Star",
+                            "Damage02",
+                            "Damage03",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -12349,7 +12349,7 @@
         "particlePath": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Idle",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a4dd0e3d}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Death": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.20000000298023224,
@@ -13169,11 +13169,11 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{58fdd4b3}",
-                            "{416ddcac}",
-                            "{59fdd646}",
-                            "{5afdd7d9}",
-                            "{3f03d95a}"
+                            "Damage01",
+                            "Damage01_Star",
+                            "Damage02",
+                            "Damage03",
+                            "Damage03_Star"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -13513,7 +13513,7 @@
         "particlePath": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Death",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d454f8d0}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Death_02": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.44999998807907104,
@@ -14234,16 +14234,16 @@
             "{a096c3ba}": "Maps/Shipping/Map22/Particles/TFT_VFX_Library/TFT_Get_Gold",
             "{52e51db3}": "{00000000}",
             "{d4f15938}": "{00000000}",
-            "{5f161aea}": "{0997da7f}",
-            "{c7f7a3f8}": "{a4dd0e3d}",
-            "{6da68a3c}": "{4fd80043}",
-            "{332255d1}": "{06ef9208}",
-            "{8cec96b4}": "{0535d6d7}",
-            "{04dd58c7}": "{d454f8d0}"
+            "StarNemesis_Goldmine_Away_Star_Click": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Click",
+            "StarNemesis_Goldmine_Away_Star_Death": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Death",
+            "StarNemesis_Goldmine_Away_Star_Idle": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Idle",
+            "StarNemesis_Goldmine_Away_Star_Spawn": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Spawn",
+            "StarNemesis_Goldmine_Away_Star_Spawn_02": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Spawn_02",
+            "StarNemesis_Goldmine_Away_Star_Death_02": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Death_02"
         },
         "__type": "ResourceResolver"
     },
-    "{648f2ca1}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Materials/Starnemesis_Goldmine_02_Dissolve_inst": {
         "name": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Starnemesis_Goldmine_02_Dissolve_inst",
         "samplerValues": [
             {
@@ -14433,7 +14433,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{f2559ab7}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Materials/Star_Away_Mat": {
         "name": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Star_Away_Mat",
         "samplerValues": [
             {
@@ -14708,7 +14708,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{fd345558}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Materials/Starnemesis_Goldmine_Dissolve_inst": {
         "name": "Characters/TFT_GoldMine/Skins/Skin121/Materials/Starnemesis_Goldmine_Dissolve_inst",
         "samplerValues": [
             {

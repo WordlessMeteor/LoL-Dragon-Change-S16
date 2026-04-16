@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Tempo letale",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Attaccare un campione nemico conferisce %i:scaleAS%@ASPerStack@ velocità d'attacco per 6 secondi, fino a 6 cariche. Al massimo delle cariche, infligge @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>danni adattivi bonus</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>sul colpo</OnHit>.<br><br>Tempo di mantenimento cariche massime: @f1@ secondo/i<br>Danni inflitti: @f2@<br><br>Questa runa traccia anche la percentuale dei tuoi attacchi base lanciati contro i campioni entro 0.25 secondi da quando l'attacco è pronto, dopo aver già attaccato un campione: @f3@% (@f4@ di @f5@)",
         "shortDesc": "Attaccare un campione nemico conferisce velocità d'attacco, fino a 6. Al massimo delle cariche, infligge <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>danni bonus adattivi</font></lol-uikit-tooltipped-keyword> sull'attacco.",
         "longDesc": "Attaccare un campione nemico conferisce [6% corpo a corpo || 4% a distanza] velocità d'attacco per 6 secondi, fino a 6. Al massimo delle cariche, infligge [9 - 30 corpo a corpo || 6 - 24 a distanza] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>danni bonus adattivi sull'attacco, aumentati dell'1% per ogni 1% di velocità d'attacco bonus</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Crescita velocità d'attacco",
@@ -994,11 +994,11 @@
     },
     {
         "id": 8230,
-        "name": "PhaseRush",
+        "name": "Scatto del razziatore della tempesta",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Infliggere danni pari a un 25% della salute massima di un campione entro 3 secondo/i fornisce <speed>@MoveSpeedCalc@ velocità di movimento</speed> e <status>50% resistenza al rallentamento</status> per 3 secondo/i.<br><br>Ricarica: <attention>@CooldownCalc@ secondo/i</attention><br><br>Attivazioni totali: <attention>@f1@</attention>",
+        "shortDesc": "Infliggere il 25% della salute massima di un campione garantisce una raffica di <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>velocità di movimento</lol-uikit-tooltipped-keyword> e resistenza al rallentamento. ",
+        "longDesc": "Infliggere danni pari a un 25% della salute massima di un campione entro 3 secondo/i fornisce <speed>40% velocità di movimento</speed> e <status>50% resistenza al rallentamento</status> per 3 secondo/i. La velocità di movimento è efficace al 75% per i campioni a distanza.<br>Ricarica: 20 - 10 secondo/i",
         "recommendationDescriptor": "Scarica di movimento",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1167,15 +1167,15 @@
     },
     {
         "id": 8992,
-        "name": "DeathfireTouch",
+        "name": "Tocco della morte bruciante",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
-        "recommendationDescriptor": "",
+        "tooltip": "Infliggere danni a un campione con un'abilità lo brucia, causando @DamageCalc@ danni adattivi al secondo. Dopo aver bruciato per 3 secondi, i danni della bruciatura aumentano di un 100% finché restano in fiamme.<br><rules><br>Durata:<br>Bersaglio singolo: 4 secondo/i.<br>Area d'effetto: 2 secondo/i<br>Danni nel tempo: 1 secondo/i<br></rules><br>Hai inflitto @f1@ danni ai campioni con la bruciatura di Tocco della morte bruciante.",
+        "shortDesc": "Infliggere danni a un campione con un'abilità lo brucia nel tempo.",
+        "longDesc": "Infliggere danni a un campione con un'abilità lo brucia per 1 - 10 in base al livello (+<scaleAP>0.03 potere magico</scaleAP>) (+<scaleAD>0.08 attacco fisico bonus</scaleAD>) di danni adattivi al secondo. Dopo aver bruciato per 3 secondi, i danni della bruciatura aumentano di un 100% finché restano in fiamme.<br><rules><br>Durata:<br>Bersaglio singolo: 4 secondo/i.<br>Area d'effetto: 2 secondo/i<br>Danni nel tempo: 1 secondo/i<br></rules>",
+        "recommendationDescriptor": "Danni abilità sostenuti",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
-            ""
+            "Danni da bruciatura inflitti: @eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1333,14 +1333,14 @@
         "id": 9923,
         "name": "Pioggia di lame",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Ottieni {{ Item_Melee_Ranged_Split }}% velocità d'attacco quando attacchi un campione nemico per un massimo di @NumHits@ attacchi e infliggi <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>danni puri bonus</trueDamage>. <br><br>Ricarica: @Cooldown@ secondo/i.<br><hr><br>Attacchi di Pioggia di lame: @f1@<br>Danni inflitti: @f2@<br>Percentuale di attacchi Pioggia andati a segno: @f3@%<br><br><rules>I reset dell'attacco base aumentano di 1 il limite di attacchi, fino a +@MaxBonusHits@.<br>Permette di superare momentaneamente il limite di velocità d'attacco.</rules>",
+        "shortDesc": "Ottieni una grande quantità di velocità d'attacco e <trueDamage>danni puri bonus</trueDamage> per i primi 3 attacchi sferrati ai campioni nemici.",
+        "longDesc": "Ottieni 120% (60% per i campioni a distanza) velocità d'attacco e <trueDamage>danni puri bonus</trueDamage> quando attacchi un campione nemico per un massimo di 3 attacchi.<br><br>Tra gli attacchi non possono passare più di 3 secondo/i o l'effetto terminerà.<br><br>Ricarica: 10 secondo/i.<br>Danni sul colpo: 4 - 20 (+0.08 attacco fisico bonus, +0.06 potere magico) danni.<br><br><rules>I reset dell'attacco base aumentano di 1 il limite di attacchi.<br>Permette di superare momentaneamente il limite di velocità d'attacco.</rules>",
         "recommendationDescriptor": "Raffica di attacchi",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Attacchi effettuati con velocità d'attacco extra: @eogvar1@",
-            ""
+            "Danni inflitti: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1482,9 +1482,9 @@
         "id": 8229,
         "name": "Cometa arcana",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Danneggiare un campione con un'abilità fa precipitare una cometa nella sua posizione., infliggendo danni aumentati in base a quanto lontani sono.<br><br>Danni: @DamageCalc@<br>Ricarica: @CooldownCalc@ secondo/i<br><rules><br>L'amplificazione dei danni aumenta fino a 100% alla distanza di 750.<br></rules><br>Hai colpito con il @f3@% delle comete lanciate, infliggendo un totale di @f1@ danni ai campioni.",
         "shortDesc": "Danneggiare un campione con un'abilità scaglia una cometa verso la sua posizione.",
-        "longDesc": "",
+        "longDesc": "Danneggiare un campione con un'abilità fa precipitare una cometa nella sua posizione., infliggendo danni aumentati in base alla distanza.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Danni adattivi</font></lol-uikit-tooltipped-keyword>: 15 - 100 in base al livello (<scaleAP>+0.05 potere magico</scaleAP> e <scaleAD>+0.1 attacco fisico bonus</scaleAD>)<br>Ricarica: 20 - 8 secondo/i<br><rules><br>L'amplificazione dei danni aumenta fino a un 100% a 750 di distanza.<br></rules>",
         "recommendationDescriptor": "Danni abilità",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

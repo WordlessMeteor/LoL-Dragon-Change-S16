@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Смертельный темп",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Атакуя вражеского чемпиона, вы получаете %i:scaleAS%@ASPerStack@ скорости атаки на 6 сек. (до 6 р.). При макс. зарядов вы наносите @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>ед. доп. адапт. урона</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>при попадании</OnHit>.<br><br>Время действия макс. зарядов: @f1@ сек.<br>Нанесенный урон: @f2@<br><br>Эта руна также учитывает процент автоатак против чемпионов, примененных за 0.25 сек. с их восстановления после предыдущей автоатаки против чемпиона: @f3@% (@f4@ из @f5@)",
         "shortDesc": "Поражая вражеских чемпионов автоатаками, вы увеличиваете свою скорость атаки (до 6 раз). Когда накоплено максимальное количество зарядов, вы наносите <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>дополнительный адаптивный урон</font></lol-uikit-tooltipped-keyword> при применении автоатак.",
         "longDesc": "Поражая вражеских чемпионов автоатаками, вы получаете [6% (ближний бой) || 4% (дальний бой)] скорости атаки на 6 сек. (до 6 раз). Когда накоплено максимальное количество зарядов, вы наносите [9-30 (ближний бой) || 6-24 (дальний бой)] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>дополнительного адаптивного урона при применении автоатак. Этот урон увеличивается на 1% за каждый 1% дополнительной скорости атаки</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Растущая скорость атаки",
@@ -994,11 +994,11 @@
     },
     {
         "id": 8230,
-        "name": "PhaseRush",
+        "name": "Штормовой налет",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Нанеся урон в размере 25% от макс. здоровья чемпиона за 3 сек., вы получаете <speed>@MoveSpeedCalc@ скорости передвижения</speed> и <status>50% устойчивости к замедлению</status> на 3 сек. <br><br>Перезарядка: <attention>@CooldownCalc@ сек.</attention><br><br>Общее число срабатываний: <attention>@f1@</attention>",
+        "shortDesc": "Нанося урон в 25% от макс. здоровья чемпиона, вы получаете <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>скорость передвижения</lol-uikit-tooltipped-keyword> и устойчивость к замедлению. ",
+        "longDesc": "Нанеся урон в размере 25% от макс. здоровья чемпиона за 3 сек., вы получаете <speed>40% скорости передвижения</speed> и <status>50% устойчивости к замедлению</status> на 3 сек. Чемпионы дальнего боя получают 75% бонуса к скорости передвижения.<br>Перезарядка: 20–10 сек.",
         "recommendationDescriptor": "Кратковременное ускорение",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1167,15 +1167,15 @@
     },
     {
         "id": 8992,
-        "name": "DeathfireTouch",
+        "name": "Прикосновение огня смерти",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
-        "recommendationDescriptor": "",
+        "tooltip": "Нанося чемпиону урон умением, вы поджигаете его, нанося @DamageCalc@ ед. адапт. урона в секунду. Через 3 сек. горения урон выше на 100%.<br><rules><br>Длительность:<br>Одна цель: 4 сек.<br>Область: 2 сек.<br>Периодический урон: 1 сек.<br></rules><br>Вы нанесли чемпионам @f1@ ед. урона поджогом с помощью Прикосновения огня смерти.",
+        "shortDesc": "Нанося чемпиону урон умением, вы поджигаете его, нанося период. урон.",
+        "longDesc": "Нанося чемпиону урон умением, вы поджигаете его, нанося 1–10 (+<scaleAP>0.03 от силы умений</scaleAP>) (+<scaleAD>0.08 </scaleAD>) ед. адапт. урона в сек. (зависит от уровня). Через 3 сек. горения урон выше на 100%.<br><rules><br>Длительность:<br>Одна цель: 4 сек.<br>Область: 2 сек.<br>Периодический урон: 1 сек.<br></rules>",
+        "recommendationDescriptor": "Стабильный урон от умений",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
-            ""
+            "Урон от горения: @eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1333,14 +1333,14 @@
         "id": 9923,
         "name": "Град клинков",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Атакуя вражеского чемпиона, вы получаете {{ Item_Melee_Ranged_Split }}% скорости атаки на несколько (@NumHits@) автоатак и дополнительно наносите ими <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>ед. чистого урона</trueDamage>. <br><br>Перезарядка: @Cooldown@ сек.<br><hr><br>Атаки с Градом клинков: @f1@<br>Нанесенный урон: @f2@<br>Попадания атаками с Градом клинков: @f3@%<br><br><rules>Сброшенные автоатаки увеличивают число допустимых усиленных атак на 1 (до @MaxBonusHits@).<br>Позволяет временно превысить предел скорости атаки.</rules>",
+        "shortDesc": "Значительно повышает скорость атаки первых 3 автоатак против вражеских чемпионов и дает им <trueDamage>доп. чистый урон</trueDamage>.",
+        "longDesc": "Атакуя вражеского чемпиона, вы получаете 120% (60% для чемпионов дальнего боя) скорости атаки на несколько (3) автоатак и дополнительно наносите ими <trueDamage>чистый урон</trueDamage>.<br><br>Эффект заканчивается, если при его действии между атаками проходит более 3 сек.<br><br>Перезарядка: 10 сек.<br>Урон при попадании: 4–20 (+0.08 от доп. силы атаки, +0.06 от силы умений).<br><br><rules>Сброшенные автоатаки увеличивают число допустимых усиленных атак на 1.<br>Позволяет временно превысить предел скорости атаки.</rules>",
         "recommendationDescriptor": "Шквалы атак",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Автоатаки, произведенные с увеличенной скоростью атаки: @eogvar1@",
-            ""
+            "Нанесенный урон: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1482,9 +1482,9 @@
         "id": 8229,
         "name": "Магическая комета",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "При нанесении чемпиону урона умением туда, где он находится, падает комета (урон зависит от расстояния).<br><br>Урон: @DamageCalc@ ед.<br>Перезарядка: @CooldownCalc@ сек.<br><rules><br>Урон растет до 100% на расстоянии в 750 ед.<br></rules><br>@f3@% комет попали, нанеся @f1@ ед. урона чемпионам.",
         "shortDesc": "Когда вы наносите урон умением чемпиону, туда, где он находится, падает комета, которая наносит урон.",
-        "longDesc": "",
+        "longDesc": "При нанесении чемпиону урона умением туда, где он находится, падает комета (урон зависит от расстояния).<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Адапт. урон</font></lol-uikit-tooltipped-keyword>: 15–100 ед., зависит от уровня (<scaleAP>+0.05 от силы умений</scaleAP> <scaleAD>+0.1 от доп. силы атаки</scaleAD>)<br>Перезарядка: 20–8 сек.<br><rules><br>Урон растет до 100% на расстоянии в 750 ед.<br></rules>",
         "recommendationDescriptor": "Урон умений",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

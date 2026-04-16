@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Lethal Tempo",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Menyerang champion musuh memberimu %i:scaleAS%@ASPerStack@ Attack Speed selama 6 detik, hingga 6. Pada stack maksimum, menghasilkan @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage bonus</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>On-Attack</OnHit>.<br><br>Durasi Aktif Stack Maksimum: @f1@ dtk<br>Damage Dihasilkan: @f2@<br><br>Rune juga melacak persentase basic attack-mu kepada champion yang dilancarkan dalam 0.25 detik ketika seranganmu siap setelah sebelumnya menyerang seorang champion: @f3@% (@f4@ dari @f5@)",
         "shortDesc": "Menyerang champion musuh memberimu Attack Speed, sampai 6 stack. Pada stack maksimum, menghasilkan <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage bonus</font></lol-uikit-tooltipped-keyword> On-Attack.",
         "longDesc": "Menyerang champion musuh memberimu [6% Melee || 4% Range] Attack Speed selama 6 detik, sampai 6. Saat stack maksimum, memberikan [9-30 Melee || 6-24 Ranged] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>adaptive damage bonus On-Attack, meningkat sebesar 1% per 1% Attack Speed Bonus</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Meningkatkan Attack Speed",
@@ -994,11 +994,11 @@
     },
     {
         "id": 8230,
-        "name": "PhaseRush",
+        "name": "Stormraider's Surge",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Menghasilkan 25% dari health maksimum champion dalam 3 dtk memberikan <speed>@MoveSpeedCalc@ Move Speed</speed> dan <status>50% Slow Resistance</status> selama 3 dtk.<br><br>Cooldown: <attention>@CooldownCalc@ dtk</attention><br><br>Total Aktivasi: <attention>@f1@</attention>",
+        "shortDesc": "Menghasilkan 25% dari health maksimum champion memberikan burst <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>MS</lol-uikit-tooltipped-keyword> dan Slow Resist. ",
+        "longDesc": "Menghasilkan 25% dari health maksimum champion dalam 3 dtk memberikan <speed>40% Move Speed</speed> dan <status>50% Slow Resistance</status> selama 3 dtk. Move Speed hanya 75% efektif untuk champion ranged.<br>Cooldown: 20-10 dtk",
         "recommendationDescriptor": "Gerakan Cepat",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1167,15 +1167,15 @@
     },
     {
         "id": 8992,
-        "name": "DeathfireTouch",
+        "name": "Deathfire Touch",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
-        "recommendationDescriptor": "",
+        "tooltip": "Menghasilkan damage pada champion dengan ability akan menerapkan burn ke mereka sebesar @DamageCalc@ adaptive damage per detik. Setelah menerima burn selama 3 detik, damage dari burn meningkat sebesar 100% selama mereka tetap terbakar.<br><rules><br>Durasi:<br>Satu Target: 4 dtk.<br>Area of Effect: 2 dtk<br>Damage Berkelanjutan: 1 dtk.<br></rules><br>Kamu telah menerapkan @f1@ damage pada champion dengan burn Deathfire Touch.",
+        "shortDesc": "Menghasilkan damage pada champion dengan ability akan menerapkan burn ke mereka seiring waktu.",
+        "longDesc": "Menghasilkan damage pada champion dengan ability akan menerapkan burn pada mereka sebesar 1 - 10 berdasarkan level (+<scaleAP>0.03 AP</scaleAP>) (+<scaleAD>0.08 AD bonus</scaleAD>) adaptive damage per detik. Setelah menerima burn selama 3 detik, damage dari burn meningkat sebesar 100% selama mereka tetap terbakar.<br><rules><br>Durasi:<br>Satu Target: 4 dtk.<br>Area of Effect: 2 dtk<br>Damage Berkelanjutan: 1 dtk<br></rules>",
+        "recommendationDescriptor": "Damage Ability Berkelanjutan",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
-            ""
+            "Burn Damage Dihasilkan: @eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1333,14 +1333,14 @@
         "id": 9923,
         "name": "Hail of Blades",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "Saat kamu menyerang champion musuh, hingga @NumHits@ serangan, mendapatkan {{ Item_Melee_Ranged_Split }}% Attack Speed dan menghasilkan <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>true damage bonus</trueDamage>. <br><br>Cooldown: @Cooldown@ dtk.<br><hr><br>Serangan Hail of Blades: @f1@<br>Damage Dihasilkan: @f2@<br>Persentase serangan Hail yang mengenai target: @f3@%<br><br><rules>Reset Basic Attack meningkatkan batas serangan sebanyak +1, hingga +@MaxBonusHits@.<br>Membuatmu bisa melewati batas Attack Speed sementara.</rules>",
+        "shortDesc": "Mendapatkan Attack Speed dalam jumlah besar dan <trueDamage>true damage bonus</trueDamage> untuk 3 serangan pertama yang dilakukan ke champion musuh.",
+        "longDesc": "Mendapatkan 120% Attack Speed (60% untuk champion ranged) dan <trueDamage>true damage bonus</trueDamage> saat kamu menyerang champion musuh hingga 3 serangan.<br><br>Efek ini berakhir jika lebih dari 3 detik berlalu tanpa menyerang.<br><br>Cooldown: 10 dtk.<br>Damage On-Hit: 4 - 20 damage (+0.08 AD bonus, + 0.06 AP).<br><br><rules>Reset Serangan meningkatkan batas serangan sebanyak 1.<br>Membuatmu bisa melewati batas Attack Speed sementara.</rules>",
         "recommendationDescriptor": "Rentetan Serangan",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Serangan dengan Attack Speed ekstra: @eogvar1@",
-            ""
+            "Damage Dihasilkan: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1482,9 +1482,9 @@
         "id": 8229,
         "name": "Arcane Comet",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "Menghasilkan damage pada champion dengan ability akan meluncurkan komet ke lokasinya, menghasilkan damage yang meningkat berdasarkan seberapa jauh jaraknya.<br><br>Damage: @DamageCalc@<br>Cooldown: @CooldownCalc@ dtk<br><rules><br>Damage Amplification meningkat hingga 100% pada 750 range.<br></rules><br> @f3@% dari komet yang diluncurkan, sebesar total @f1@ damage pada champion.",
         "shortDesc": "Menghasilkan damage ke champion dengan ability akan memunculkan komet penghancur di lokasinya.",
-        "longDesc": "",
+        "longDesc": "Menghasilkan damage pada champion dengan ability akan meluncurkan komet ke lokasinya, menghasilkan damage yang meningkat berdasarkan jarak.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Adaptive Damage</font></lol-uikit-tooltipped-keyword>: 15 - 100 berdasarkan level (<scaleAP>+0.05 AP</scaleAP> dan <scaleAD>+0.1 AD bonus</scaleAD>)<br>Cooldown: 20 - 8 dtk<br><rules><br>Damage Amplification meningkat hingga 100% pada 750 range.<br></rules>",
         "recommendationDescriptor": "Damage Ability",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

@@ -79,7 +79,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{65b4ba9a}",
+                                "mDataValue": "HealAP",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -96,7 +96,7 @@
                             "mSubparts": [
                                 {
                                     "mSubpart": {
-                                        "mDataValue": "{313962b5}",
+                                        "mDataValue": "DamageAD",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     "mRatio": 1.0,
@@ -126,7 +126,7 @@
                                 "__type": "{f3cbe7b2}"
                             },
                             "mPart2": {
-                                "mDataValue": "{ef3f3046}",
+                                "mDataValue": "NOVAModifier",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"
@@ -359,7 +359,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{ba37541e}",
+                                "mDataValue": "StrikeDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 1.0,
@@ -375,7 +375,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{725fbb52}",
+                                "mDataValue": "SweepDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 1.0,
@@ -407,7 +407,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{967a73ae}",
+                                "mDataValue": "NovaDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 1.0,
@@ -423,7 +423,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{da6779c2}",
+                                "mDataValue": "SweepArmor",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -702,58 +702,58 @@
     },
     "Characters/TFT17_Aatrox/CharacterRecords/Root": {
         "mCharacterName": "TFT17_Aatrox",
-        "{8662cf12}": {
-            "{b35aa769}": 700.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 700.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.0,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 175.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 90.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 90.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 50.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 50.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 45.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 45.0,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 45.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 45.0,
+            "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
-        "{e62d9d92}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 180.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 180.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.6000000238418579,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.6000000238418579,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.5,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.5,
+            "__type": "ModifiableFloat"
         },
         "basicAttack": {
             "mAttackName": "TFT17_AatroxBasicAttack",
@@ -791,11 +791,11 @@
         "tier": 1,
         "mLinkedTraits": [
             {
-                "TraitData": "{e57dbbed}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_DRX",
                 "__type": "TFTTraitContributionData"
             },
             {
-                "TraitData": "{15312cd7}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_ResistTank",
                 "__type": "TFTTraitContributionData"
             }
         ],

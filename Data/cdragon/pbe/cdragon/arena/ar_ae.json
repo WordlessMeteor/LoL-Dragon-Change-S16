@@ -378,13 +378,13 @@
                     1.0
                 ]
             },
-            "desc": "تكسب %i:StatAnvil% سندان إحصاءات موشوريًا.",
+            "desc": "تكسب <keywordMajor>%i:StatAnvil% سندان إحصاءات موشوريًا</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_prisstatanvil.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_prisstatanvil_small.png",
             "id": 340,
             "name": "تكسب سندان إحصاءات موشوريًا",
             "rarity": 4,
-            "tooltip": "تكسب سندان إحصاءات موشوريًا يمنحك أي خيار من هذه القائمة.<br><br><crit>+%i:scaleAPen% ضرر ضربة حرجة</crit><br><scaleHealth>+%i:scaleHealth% صحة وزيادة في الحجم</scaleHealth><br><armorPen>+%i:scaleAPen%  اختراق دروع</armorPen><br><magicPen>+%i:scaleMPen% اختراق سحر</magicPen><br><speed>+%i:scaleMS% سرعة حركة وتقليص حجم</speed><br><tenacity>+%i:scaleTenacity% تماسك</tenacity><br><healing>+%i:scaleHealShield% علاج وقوة درع</healing><br><lifeSteal>+%i:scaleSV% علاج كامن.</lifeSteal><br><gold>+%i:goldCoins% ذهب.</gold>"
+            "tooltip": "تكسب سندان إحصاءات موشوريًا يمنحك أي خيار من هذه القائمة.<br><br><crit>+%i:scaleCritMult% ضرر ضربة حرجة</crit><br><scaleHealth>+%i:scaleHealth% صحة وزيادة في الحجم</scaleHealth><br><armorPen>+%i:scaleAPen% اختراق دروع</armorPen><br><magicPen>+%i:scaleMPen% اختراق سحر</magicPen><br><speed>+%i:scaleMS% سرعة حركة وتقليص حجم</speed><br><scaleTenacity>+%i:scaleTenacity% تماسك</scaleTenacity><br><healing>+%i:scaleHealShield% علاج وقوة درع</healing><br><lifeSteal>+%i:scaleSV% علاج كامن</lifeSteal><br><gold>+%i:goldCoins% ذهب</gold>"
         },
         {
             "apiName": "Typhoon",
@@ -674,7 +674,7 @@
                         {
                             "__type": "{b22609db}",
                             "{91d404a5}": "BaseDamage",
-                            "{b2cd0eb0}": "{84c9d5d7}"
+                            "{b2cd0eb0}": "PerLevelDamage"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
@@ -1358,7 +1358,7 @@
                         {
                             "__type": "{b22609db}",
                             "{91d404a5}": "ShieldBaseValue",
-                            "{b2cd0eb0}": "{a40c37cb}"
+                            "{b2cd0eb0}": "BonusPerLevel"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
@@ -1541,7 +1541,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "{6ce2b3aa}"
+                            "mDataValue": "HealthPerSecond"
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
@@ -2011,7 +2011,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{af15acb0}",
+                            "mDataValue": "CritDefendRatio",
                             "mStat": 9,
                             "mStatFormula": 2
                         }
@@ -2127,13 +2127,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_WitchfulThinking_Summary",
+            "desc": "تكسب %i:scaleAP% <scaleAP>@AP@ قوة قدرة</scaleAP>.",
             "iconLarge": "assets/ux/cherry/augments/icons/witchfulthinking_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/witchfulthinking_small.png",
             "id": 97,
             "name": "تفكير ساحر",
             "rarity": 0,
-            "tooltip": "Cherry_WitchfulThinking_Summary"
+            "tooltip": "تكسب %i:scaleAP% <scaleAP>@AP@ قوة قدرة</scaleAP>."
         },
         {
             "apiName": "Quest_UrfsChampion",
@@ -2186,7 +2186,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -2488,7 +2488,7 @@
                     ],
                     "mMultiplier": {
                         "__type": "NamedDataValueCalculationPart",
-                        "mDataValue": "{b2f1b423}"
+                        "mDataValue": "FireworkDamageMod"
                     }
                 },
                 "TOOLTIPONLYDamage": {
@@ -2512,7 +2512,7 @@
                     ],
                     "mMultiplier": {
                         "__type": "NamedDataValueCalculationPart",
-                        "mDataValue": "{b2f1b423}"
+                        "mDataValue": "FireworkDamageMod"
                     }
                 }
             },
@@ -2636,7 +2636,7 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_SlapAround_Summary",
+            "desc": "كلما أخضعت عدوًا لتأثير <status>شل الحركة</status> أو <status>التثبيت في الأرض</status>، تكسب <scaleAF>%i:miniAdaptiveForce% @AdaptiveForce@ قوة متكيفة</scaleAF> حتى نهاية الجولة.",
             "iconLarge": "assets/ux/cherry/augments/icons/slaparound_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slaparound_small.png",
             "id": 136,
@@ -3725,7 +3725,7 @@
                     4.0
                 ]
             },
-            "desc": "تكسب <scaleAF>@AdaptiveForce@ %i:miniAdaptiveForce% قوة متكيفة</scaleAF> عندما تحقق إطاحة، مرة واحدة لكل بطل في كل جولة.<br><br><rules>عند كسب هذا التحسين بعد الجولة @RoundCounterForBonus@، تكسب  <scaleAF>@BonusForLatePick@ %i:miniAdaptiveForce% قوة متكيفة</scaleAF>.</rules>",
+            "desc": "تكسب <scaleAF>%i:miniAdaptiveForce% @AdaptiveForce@ قوة متكيفة</scaleAF> عندما تحقق إطاحة، مرة واحدة لكل بطل في كل جولة.<br><br><rules>عند كسب هذا التحسين بعد الجولة @RoundCounterForBonus@، تكسب <scaleAF>%i:miniAdaptiveForce% @BonusForLatePick@ قوة متكيفة</scaleAF>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/dematerialize_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/dematerialize_small.png",
             "id": 171,
@@ -4850,7 +4850,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "{b35aa769}"
+                            "mDataValue": "BaseValue"
                         },
                         {
                             "__type": "ByCharLevelInterpolationCalculationPart",
@@ -4992,7 +4992,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "{89ba3820}"
+                            "mDataValue": "InitialAmpPercent"
                         },
                         {
                             "__type": "AbilityResourceByCoefficientCalculationPart",
@@ -5465,7 +5465,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -5669,7 +5669,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{e1dd19a5}"
+                            "mDataValue": "APcoefficient"
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
@@ -5941,7 +5941,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{e1dd19a5}",
+                            "mDataValue": "APcoefficient",
                             "mStatFormula": 2
                         },
                         {
@@ -5952,7 +5952,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{4f815128}",
+                            "mDataValue": "Healthcoefficient",
                             "mStat": 12
                         }
                     ]
@@ -6130,7 +6130,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -6789,7 +6789,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{cac1b6d2}",
+                            "mDataValue": "Coefficient",
                             "mStat": 12
                         }
                     ]
@@ -6914,7 +6914,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -7209,7 +7209,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{ae70438b}",
+                            "mDataValue": "HealPowerToDamageTooltip",
                             "mStat": 34
                         }
                     ],
@@ -7573,8 +7573,8 @@
                     "mFormulaParts": [
                         {
                             "__type": "{b22609db}",
-                            "{91d404a5}": "{5f70f48a}",
-                            "{b2cd0eb0}": "{a40c37cb}"
+                            "{91d404a5}": "DamageBaseValue",
+                            "{b2cd0eb0}": "BonusPerLevel"
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
@@ -8135,7 +8135,7 @@
                     1.0
                 ]
             },
-            "desc": "لم يعد بوسعك %i:Reroll% الاستبدال.<br><br>تبدأ باختيار <keywordMajor>%i:Augment%تحسين ذهبي</keywordMajor>، وإذا كان لديك @AugmentThreshold@ أو أقل من التحسينات، تكسب <keywordMajor>%i:Augment%تحسينًا موشوريًا</keywordMajor> بدل ذلك.",
+            "desc": "لن تتمكن بعد الآن من %i:Reroll% الاستبدال.<br><br>تبدأ باختيار <keywordMajor>%i:Augment% تحسين ذهبي</keywordMajor>، وإذا كان لديك @AugmentThreshold@ أو أقل من التحسينات، تكسب <keywordMajor>%i:Augment% تحسينًا موشوريًا</keywordMajor> بدل ذلك.",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -8739,13 +8739,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_ReplaceAugment_Summary",
+            "desc": "<keywordMajor>تستبدل</keywordMajor> أحد <keywordMajor>%i:Augment%تحسيناتك</keywordMajor> بتحسين أعلى بـ <keywordMajor>@TierIncreaseToolTipOnly@%i:AugmentLevel% من الفئات</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/replace_augment.png",
             "iconSmall": "assets/ux/cherry/augments/icons/replace_augment_small.png",
             "id": 364,
             "name": "Cherry_ReplaceAugment_Name",
             "rarity": 4,
-            "tooltip": "Cherry_ReplaceAugment_Summary"
+            "tooltip": "<keywordMajor>تستبدل</keywordMajor> أحد <keywordMajor>%i:Augment%تحسيناتك</keywordMajor> بتحسين أعلى بـ <keywordMajor>@TierIncreaseToolTipOnly@%i:AugmentLevel% من الفئات</keywordMajor>."
         },
         {
             "apiName": "Tormentor",
@@ -8902,7 +8902,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{c7d485ea}",
+                            "mDataValue": "MaxHPIncrement",
                             "mStat": 12
                         }
                     ]
@@ -8977,7 +8977,7 @@
                     5.0
                 ]
             },
-            "desc": "افتح <keywordMajor>خانة %i:Augment% التحسين رقم @TooltipSlotToUnlock@</keywordMajor>.",
+            "desc": "افتح <keywordMajor>خانة %i:Augment% التحسين رقم @TooltipSlotToUnlock@</keywordMajor>.<br><br>بعد @RoundsUntilFreeAugment@ من الجولات، تكسب <keywordMajor>%i:Augment% تحسينًا فضيًا</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_slot.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_slot_small.png",
             "id": 341,
@@ -9927,13 +9927,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_Deft_Tooltip",
+            "desc": "تكسب %i:scaleAS% @AttackSpeed*100@% <speed>سرعة هجوم</speed>.",
             "iconLarge": "assets/ux/cherry/augments/icons/deft_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/deft_small.png",
             "id": 22,
             "name": "الماهر",
             "rarity": 0,
-            "tooltip": "Cherry_Deft_Tooltip"
+            "tooltip": "تكسب %i:scaleAS% @AttackSpeed*100@% <speed>سرعة هجوم</speed>."
         },
         {
             "apiName": "Goliath",
@@ -10511,7 +10511,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{8bfcfef7}",
+                            "mDataValue": "MovespeedShieldPercent",
                             "mStat": 7,
                             "mStatFormula": 2
                         }
@@ -10807,7 +10807,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -10858,7 +10858,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -10965,11 +10965,11 @@
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "{a47419e3}"
+                            "mDataValue": "CritHeal"
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{e8e55586}",
+                            "mDataValue": "CritHealRatio",
                             "mStat": 9,
                             "mStatFormula": 2
                         }
@@ -12419,7 +12419,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_BluntForce_Summary",
+            "desc": "تكسب %i:scaleAD% <scaleAD>@ADAmp*100@% ضرر هجوم</scaleAD>.",
             "iconLarge": "assets/ux/cherry/augments/icons/bluntforce_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/bluntforce_small.png",
             "id": 7,
@@ -13680,7 +13680,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{a1904faf}"
+                            "mDataValue": "CritConverRatio"
                         }
                     ]
                 }
@@ -13740,7 +13740,7 @@
                         {
                             "__type": "{b22609db}",
                             "{91d404a5}": "BaseDamage",
-                            "{b2cd0eb0}": "{84c9d5d7}"
+                            "{b2cd0eb0}": "PerLevelDamage"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",

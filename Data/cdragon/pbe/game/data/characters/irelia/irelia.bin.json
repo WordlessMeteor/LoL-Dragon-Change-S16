@@ -690,7 +690,7 @@
                     "mFormulaParts": [
                         {
                             "{91d404a5}": "OnHitBaseDamage",
-                            "{b2cd0eb0}": "{73f1945a}",
+                            "{b2cd0eb0}": "OnHitPerLevel",
                             "__type": "{b22609db}"
                         },
                         {
@@ -1735,7 +1735,7 @@
                 },
                 "FinalMagicDR": {
                     "mMultiplier": {
-                        "mDataValue": "{297f7f37}",
+                        "mDataValue": "MRReductionAmount",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mModifiedGameCalculation": "FinalPhysicalDR",
@@ -2736,52 +2736,52 @@
     },
     "Characters/Irelia/CharacterRecords/Root": {
         "mCharacterName": "Irelia",
-        "{8662cf12}": {
-            "{b35aa769}": 630.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 630.0,
+            "__type": "ModifiableFloat"
         },
-        "{4d37af28}": {
-            "{b35aa769}": 115.0,
-            "__type": "{ce9b917b}"
+        "hpPerLevelModifiable": {
+            "baseValue": 115.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.699999988079071,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.699999988079071,
+            "__type": "ModifiableFloat"
         },
-        "{913157bb}": {
-            "{b35aa769}": 0.17000000178813934,
-            "__type": "{ce9b917b}"
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.17000000178813934,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 101.0,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 350.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 350.0,
+                "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "{b35aa769}": 50.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 50.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 1.600000023841858,
-                "__type": "{ce9b917b}"
+                "baseValue": 1.600000023841858,
+                "__type": "ModifiableFloat"
             },
             "{3a509002}": {
-                "{b35aa769}": 0.1599999964237213,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.1599999964237213,
+                "__type": "ModifiableFloat"
             },
             "__type": "AbilityResourceSlotInfo"
         },
         "secondaryAbilityResource": {
             "arType": 14,
             "{726ee5cd}": {
-                "{b35aa769}": 4.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 4.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arIncrements": 1.0,
             "arMaxSegments": 4,
@@ -2793,50 +2793,50 @@
             "arOverrideSpacerName": "PipSpacer1",
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 65.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 65.0,
+            "__type": "ModifiableFloat"
         },
-        "{e2b5d80d}": {
-            "{b35aa769}": 3.5,
-            "__type": "{ce9b917b}"
+        "damagePerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 36.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 36.0,
+            "__type": "ModifiableFloat"
         },
-        "{18956a21}": {
-            "{b35aa769}": 4.699999809265137,
-            "__type": "{ce9b917b}"
+        "armorPerLevelModifiable": {
+            "baseValue": 4.699999809265137,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
         "{01262a25}": {
-            "{b35aa769}": 2.049999952316284,
-            "__type": "{ce9b917b}"
+            "baseValue": 2.049999952316284,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 335.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 335.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 200.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 200.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.656000018119812,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.656000018119812,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.656000018119812,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.656000018119812,
+            "__type": "ModifiableFloat"
         },
-        "{b9f2b365}": {
-            "{b35aa769}": 2.5,
-            "__type": "{ce9b917b}"
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.5,
+            "__type": "ModifiableFloat"
         },
         "acquisitionRange": 600.0,
         "basicAttack": {

@@ -350,7 +350,7 @@
                                 "__type": "{f3cbe7b2}"
                             },
                             "mPart2": {
-                                "mDataValue": "{a0795220}",
+                                "mDataValue": "NovaHeadshotModifier",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"
@@ -626,57 +626,57 @@
     },
     "Characters/TFT17_Caitlyn/CharacterRecords/Root": {
         "mCharacterName": "TFT17_Caitlyn",
-        "{8662cf12}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.0,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 195.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "{726ee5cd}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 65.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 65.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 15.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 15.0,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 15.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 15.0,
+            "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
-        "{e62d9d92}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 890.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 890.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.550000011920929,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.550000011920929,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.699999988079071,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.699999988079071,
+            "__type": "ModifiableFloat"
         },
         "basicAttack": {
             "mAttackName": "TFT17_CaitlynBasicAttack",
@@ -714,11 +714,11 @@
         "tier": 1,
         "mLinkedTraits": [
             {
-                "TraitData": "{e57dbbed}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_DRX",
                 "__type": "TFTTraitContributionData"
             },
             {
-                "TraitData": "{6b15c6a3}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_Fateweaver",
                 "__type": "TFTTraitContributionData"
             }
         ],

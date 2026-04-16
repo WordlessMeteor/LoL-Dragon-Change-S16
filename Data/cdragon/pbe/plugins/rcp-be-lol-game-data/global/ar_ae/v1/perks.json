@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "الإيقاع الفتاك",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "تمنحك مهاجمة بطل معاد %i:scaleAS%@ASPerStack@ سرعة هجوم لمدة 6ث، بحدٍ أقصاه 6. عند بلوغ التكدسات القصوى، تلحق @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>ضرر متكيف إضافي</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>لدى الهجوم</OnHit>.<br><br>فترة عمل التكدسات القصوى: @f1@ث<br>الضرر الملحق: @f2@<br><br>يتعقب هذا الرون كذلك النسبة المئوية لهجماتك الأساسية ضد الأبطال التي تم شنها في غضون 0.25ث منذ جهوزية هجومك بعد مهاجمة بطلٍ سابقًا: @f3@% (@f4@ من @f5@)",
         "shortDesc": "تمنحك مهاجمة بطل عدو سرعة هجوم، وصولًا إلى 6 من التكدسات كحد أقصى. عند بلوغ الحد الأقصى من التكدسات، تلحق <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>ضررًا متكيفًا إضافيًا</font></lol-uikit-tooltipped-keyword> عند الهجوم.",
         "longDesc": "تمنحك مهاجمة بطل عدو سرعة هجوم بمقدار [6% للقتال القريب || 4% للقتال بعيد المدى] لمدة 6ث، وحتى 6 من التكدسات. عند بلوغ الحد الأقصى من التكدسات، تلحق [9 - 30 للقتال القريب || 6 - 24 للقتال بعيد المدى] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>ضرر متكيف إضافي عند الهجوم، يزداد بنسبة 1% لكل 1% سرعة هجوم إضافية</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "سرعة الهجوم المتزايدة",
@@ -994,11 +994,11 @@
     },
     {
         "id": 8230,
-        "name": "PhaseRush",
+        "name": "اندفاع مُغير العاصفة",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "يؤدي إلحاق ضررٍ بنسبة 25% من صحة البطل القصوى خلال 3ث إلى منح <speed>@MoveSpeedCalc@ سرعة حركة</speed> و <status>50% مقاومة إبطاء</status> لمدة 3ث.<br><br>فترة التبريد: <attention>@CooldownCalc@ث</attention><br><br>إجمالي مرات التفعيل: <attention>@f1@</attention>",
+        "shortDesc": "يؤدي إلحاق ضرر بنسبة 25% من الصحة القصوى لبطل إلى منح دفقة <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>سرعة حركة</lol-uikit-tooltipped-keyword> ومقاومة إبطاء. ",
+        "longDesc": "يؤدي إلحاق ضررٍ بنسبة 25% من صحة البطل القصوى خلال 3ث إلى منح <speed>40% سرعة حركة</speed> و <status>50% مقاومة إبطاء</status> لمدة 3ث. سرعة الحركة فعالةٌ بنسبة 75% لأبطال المدى البعيد.<br>فترة التبريد: 20ث - 10ث",
         "recommendationDescriptor": "إندفاع الحركة",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1167,15 +1167,15 @@
     },
     {
         "id": 8992,
-        "name": "DeathfireTouch",
+        "name": "لمسة نار الموت",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
-        "recommendationDescriptor": "",
+        "tooltip": "يؤدي إلحاق الضرر ببطل باستخدام قدرة إلى حرقه بمقدار @DamageCalc@ ضرر متكيف كل ثانية. بعد تعرضه للحرق لمدة 3ث، يزداد ضرر الحرق بنسبة 100% ما دام مشتعلًا.<br><rules><br>المدة:<br>الهدف المنفرد: 4 ث.<br>منطقة التأثير: 2ث<br>الضرر بمرور الوقت: 1ث<br></rules><br>لقد ألحقت ضررًا قدره @f1@ بالأبطال باستخدام حرق لمسة نار الموت.",
+        "shortDesc": "يؤدي إلحاق الضرر ببطل باستخدام قدرة إلى حرقه بمرور الوقت.",
+        "longDesc": "يؤدي إلحاق الضرر ببطل باستخدام قدرة إلى حرقه بمقدار 1 - 10 حسب المستوى (+<scaleAP>0.03 قوة قدرة</scaleAP>) (+<scaleAD>0.08 ضرر هجوم إضافي</scaleAD>) كضرر متكيف كل ثانية. بعد تعرضه للحرق لمدة 3ث، يزداد ضرر الحرق بنسبة 100% ما دام مشتعلًا.<br><rules><br>المدة:<br>الهدف المنفرد: 4ث.<br>منطقة التأثير: 2ث<br>الضرر بمرور الوقت: 1ث<br></rules>",
+        "recommendationDescriptor": "ضرر قدرات متواصل",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
-            ""
+            "ضرر الحرق الملحق: @eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1333,14 +1333,14 @@
         "id": 9923,
         "name": "وابل النصال",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "",
-        "shortDesc": "",
-        "longDesc": "",
+        "tooltip": "عندما تهاجم بطلًا معاديًا بحدٍ أقصاه @NumHits@ من الهجمات، تكسب {{ Item_Melee_Ranged_Split }}% سرعة هجوم وتلحق <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>ضرر حقيقي إضافي</trueDamage>. <br><br>فترة التبريد: @Cooldown@ث.<br><hr><br>هجمات وابل النصال: @f1@<br>الضرر الملحق: @f2@<br>النسبة المئوية لهجمات الوابل الناجحة: @f3@%<br><br><rules>تؤدي عمليات إعادة ضبط الهجوم الأساسي إلى زيادة حد الهجوم بمقدار +1، بحدٍ أقصاه +@MaxBonusHits@.<br>تسمح لك بتجاوزٍ مؤقتٍ لحد سرعة الهجوم.</rules>",
+        "shortDesc": "تكسب قدرًا كبيرًا من سرعة الهجوم و<trueDamage>ضررًا حقيقيًا إضافيًا</trueDamage> في أول 3 من الهجمات المنفذة ضد الأبطال المعادين.",
+        "longDesc": "تكسب 120% (60% لأبطال المدى البعيد) سرعة هجوم و<trueDamage>ضررًا حقيقيًا إضافيًا</trueDamage> عندما تهاجم بطلًا معاديًا بعددٍ أقصاه 3 من الهجمات.<br><br>لا يمكن انقضاء أكثر من 3ث بين الهجمات، وإلا سينتهي هذا التأثير.<br><br>فترة التبريد: 10ث.<br>ضرر الإصابة: 4 - 20 (+0.08 ضرر هجوم إضافي، +0.06 قوة قدرة) ضرر.<br><br><rules>تؤدي عمليات إعادة ضبط الهجوم إلى زيادة حد الهجوم بمقدار 1.<br>تسمح لك بتجاوزٍ مؤقتٍ لحد سرعة الهجوم.</rules>",
         "recommendationDescriptor": "موجة من الهجمات",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "الهجمات المنفذة مع سرعة هجوم إضافية: @eogvar1@",
-            ""
+            "الضرر الملحق: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1482,9 +1482,9 @@
         "id": 8229,
         "name": "المذنب الغامض",
         "majorChangePatchVersion": "",
-        "tooltip": "",
+        "tooltip": "يؤدي إلحاق الضرر ببطل عبر قدرة إلى رمي مذنّب على موقعه، مما يلحق ضررًا متزايدًا بناءً على مدى بعده.<br><br>الضرر: @DamageCalc@<br>فترة التبريد: @CooldownCalc@ث<br><rules><br>يتزايد تضخيم الضرر بحدٍ أقصاه 100% عند 750 مدى.<br></rules><br>لقد أصبت باستخدام @f3@% من المذنّبات المرمية، بضررٍ إجماله @f1@ ضد الأبطال.",
         "shortDesc": "يتكفل إلحاق الضرر ببطل عبر قدرة برمي مذنّب ملحق للضرر على موقعه.",
-        "longDesc": "",
+        "longDesc": "يؤدي إلحاق الضرر ببطل عبر قدرة إلى رمي مذنّب على موقعه، مما يلحق ضررًا متزايدًا بناءً على المسافة.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>الضرر المتكيف</font></lol-uikit-tooltipped-keyword>: 15 - 100 حسب المستوى (<scaleAP>+0.05 قوة قدرة</scaleAP> و <scaleAD>+0.1 ضرر هجوم إضافي</scaleAD>)<br>فترة التبريد: 20 - 8ث<br><rules><br>يتزايد تضخيم الضرر إلى حدٍ أقصاه 100% عند بلوغ مدى قدره 750.<br></rules>",
         "recommendationDescriptor": "ضرر القدرة",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

@@ -398,7 +398,7 @@
                     DiscordButtonComponent: t,
                     DiscordLinkingPopupComponent: a,
                     DiscordPopupComponent: c
-                } = o.SharedComponents.getApi_SharedDiscordPopupComponents(), u = o.emberApplicationFactory.factoryDefinitionBuilder().setName("rcp-fe-lol-settings").setRoot(document.createElement("div")).setComponentFactory(o.ComponentFactory).setRouter(i.default).setEmber(o.Ember).setL10n(o.emberL10n).setTra(o.tra).setFeatureFlag("EMBER_CLI_COMPAT", !0).addRoute("Application", n(20).default).addRoute("General", n(21).default).addRoute("Notifications", n(22).default).addRoute("Chat", n(23).default).addRoute("Sound", n(24).default).addRoute("Voice", n(25).default).addRoute("BlockList", n(26).default).addRoute("GameHotkeys", n(27).default).addRoute("GameSound", n(28).default).addRoute("GameInterface", n(30).default).addRoute("GameGameplay", n(31).default).addRoute("Replays", n(32).default).addRoute("PrivacyNotice", n(33).default).addRoute("TermsOfUse", n(34).default).addRoute("ThirdpartyLicenses", n(35).default).addRoute("Version", n(36).default).addRoute("LegalStatements", n(37).default).addController("Application", n(38).default).addController("General", n(39).default).addController("Notifications", n(65).default).addController("Chat", n(66).default).addController("Sound", n(264).default).addController("Voice", n(265).default).addController("BlockList", n(266).default).addController("GameHotkeys", n(267).default).addController("GameSound", n(268).default).addController("GameInterface", n(270).default).addController("GameGameplay", n(271).default).addController("Replays", n(272).default).addController("PrivacyNotice", n(273).default).addController("TermsOfUse", n(274).default).addController("ThirdpartyLicenses", n(275).default).addController("Version", n(276).default).addController("LegalStatements", n(277).default).addComponent("ModalHeader", n(278).default).addComponent("ModalFooter", n(279).default).addComponent("NavigationBarGroup", n(280).default).addComponent("NavigationBarGroupItem", n(281).default).addComponent("BlockedPlayer", n(282).default).addComponent("BlockListError", n(283).default).addComponent("GameSoundContent", n(284).default).addComponent("GameInterfaceContent", n(285).default).addComponent("GameGameplayContent", n(286).default).addComponent("GameHotkeysAdditionalSection", n(287).default).addComponent("GameHotkeysAdditional", n(288).default).addComponent("GameHotkeysPrimaryButton", n(291).default).addComponent("GameHotkeysPrimary", n(292).default).addComponent("GameHotkeysQuickcast", n(294).default).addComponent("GameHotkeysContent", n(295).default).addComponent("RepairGameButton", n(296).default).addComponent("PublishingLocale", n(297).default).addComponent("AccountVerification", n(298).default).addComponent("SettingsSlider", n(299).default).addComponent("PushToTalkKey", n(300).default).addComponent("VngPublisherSettings", n(303).default).addComponent("HoneyfruitSettingsErrors", n(305).default).addComponent("PlayerName", r).addComponent("DiscordBeta", e).addComponent("DiscordButton", t).addComponent("DiscordPopup", c).addComponent("DiscordLinkingPopup", a).addService("Honeyfruit", n(307).default).addService("ModalManager", n(308).default).addService("Patch", n(311).default).addService("Persistence", n(312).default).addService("Voice", n(314).default).addHelper("FormatKeyBindings", o.Ember.Helper.helper(s.formatAdditionalKeyBindings)).addHelper("GetKeyBindingsModifier", o.Ember.Helper.helper(s.getPrimaryModifierDisplay)).addHelper("GetKeyBindingsMainKey", o.Ember.Helper.helper(s.getPrimaryMainKeyDisplay)).addTemplate("application", n(315)).addTemplate("index", n(316)).addTemplate("general", n(317)).addTemplate("notifications", n(318)).addTemplate("chat", n(319)).addTemplate("sound", n(320)).addTemplate("voice", n(321)).addTemplate("block-list", n(322)).addTemplate("game-hotkeys", n(323)).addTemplate("game-sound", n(324)).addTemplate("game-interface", n(325)).addTemplate("game-gameplay", n(326)).addTemplate("replays", n(327)).addTemplate("privacy-notice", n(328)).addTemplate("terms-of-use", n(329)).addTemplate("thirdparty-licenses", n(330)).addTemplate("loading", n(331)).addTemplate("version", n(332)).addTemplate("legal-statements", n(333)).addTemplate("components/modal-header", n(334)).addTemplate("components/modal-footer", n(335)).addTemplate("components/navigation-bar-group", n(336)).addTemplate("components/navigation-bar-group-item", n(337)).addTemplate("components/blocked-player", n(338)).addTemplate("components/block-list-error", n(339)).addTemplate("components/repair-game-button", n(340)).addTemplate("components/publishing-locale", n(341)).addTemplate("components/account-verification", n(342)).addTemplate("components/settings-slider", n(343)).addTemplate("components/push-to-talk-key", n(344)).addTemplate("components/game-sound-content", n(345)).addTemplate("components/game-interface-content", n(346)).addTemplate("components/game-gameplay-content", n(347)).addTemplate("components/game-hotkeys-additional-section", n(348)).addTemplate("components/game-hotkeys-additional", n(349)).addTemplate("components/game-hotkeys-primary-button", n(350)).addTemplate("components/game-hotkeys-primary", n(351)).addTemplate("components/game-hotkeys-quickcast", n(352)).addTemplate("components/game-hotkeys-content", n(353)).addTemplate("components/vng-publisher-settings", n(354)).addTemplate("components/honeyfruit-settings-error", n(355));
+                } = o.SharedComponents.getApi_SharedDiscordPopupComponents(), u = o.emberApplicationFactory.factoryDefinitionBuilder().setName("rcp-fe-lol-settings").setRoot(document.createElement("div")).setComponentFactory(o.ComponentFactory).setRouter(i.default).setEmber(o.Ember).setL10n(o.emberL10n).setTra(o.tra).setFeatureFlag("EMBER_CLI_COMPAT", !0).addRoute("Application", n(20).default).addRoute("General", n(21).default).addRoute("Notifications", n(22).default).addRoute("Chat", n(23).default).addRoute("Sound", n(24).default).addRoute("Voice", n(25).default).addRoute("BlockList", n(26).default).addRoute("GameHotkeys", n(27).default).addRoute("GameSound", n(28).default).addRoute("GameInterface", n(30).default).addRoute("GameGameplay", n(31).default).addRoute("Replays", n(32).default).addRoute("PrivacyNotice", n(33).default).addRoute("TermsOfUse", n(34).default).addRoute("ThirdpartyLicenses", n(35).default).addRoute("Version", n(36).default).addRoute("LegalStatements", n(37).default).addController("Application", n(38).default).addController("General", n(39).default).addController("Notifications", n(65).default).addController("Chat", n(66).default).addController("Sound", n(264).default).addController("Voice", n(265).default).addController("BlockList", n(266).default).addController("GameHotkeys", n(267).default).addController("GameSound", n(268).default).addController("GameInterface", n(270).default).addController("GameGameplay", n(271).default).addController("Replays", n(272).default).addController("PrivacyNotice", n(273).default).addController("TermsOfUse", n(274).default).addController("ThirdpartyLicenses", n(275).default).addController("Version", n(276).default).addController("LegalStatements", n(277).default).addComponent("ModalHeader", n(278).default).addComponent("ModalFooter", n(279).default).addComponent("NavigationBarGroup", n(280).default).addComponent("NavigationBarGroupItem", n(281).default).addComponent("BlockedPlayer", n(282).default).addComponent("BlockListError", n(283).default).addComponent("GameSoundContent", n(284).default).addComponent("GameInterfaceContent", n(285).default).addComponent("GameGameplayContent", n(286).default).addComponent("GameHotkeysAdditionalSection", n(287).default).addComponent("GameHotkeysAdditional", n(288).default).addComponent("GameHotkeysPrimaryButton", n(291).default).addComponent("GameHotkeysPrimary", n(292).default).addComponent("GameHotkeysQuickcast", n(294).default).addComponent("GameHotkeysContent", n(295).default).addComponent("RepairGameButton", n(297).default).addComponent("PublishingLocale", n(298).default).addComponent("AccountVerification", n(299).default).addComponent("SettingsSlider", n(300).default).addComponent("PushToTalkKey", n(301).default).addComponent("VngPublisherSettings", n(304).default).addComponent("HoneyfruitSettingsErrors", n(306).default).addComponent("PlayerName", r).addComponent("DiscordBeta", e).addComponent("DiscordButton", t).addComponent("DiscordPopup", c).addComponent("DiscordLinkingPopup", a).addService("Honeyfruit", n(308).default).addService("ModalManager", n(309).default).addService("Patch", n(312).default).addService("Persistence", n(313).default).addService("Voice", n(315).default).addService("Gameflow", n(296).default).addHelper("FormatKeyBindings", o.Ember.Helper.helper(s.formatAdditionalKeyBindings)).addHelper("GetKeyBindingsModifier", o.Ember.Helper.helper(s.getPrimaryModifierDisplay)).addHelper("GetKeyBindingsMainKey", o.Ember.Helper.helper(s.getPrimaryMainKeyDisplay)).addTemplate("application", n(316)).addTemplate("index", n(317)).addTemplate("general", n(318)).addTemplate("notifications", n(319)).addTemplate("chat", n(320)).addTemplate("sound", n(321)).addTemplate("voice", n(322)).addTemplate("block-list", n(323)).addTemplate("game-hotkeys", n(324)).addTemplate("game-sound", n(325)).addTemplate("game-interface", n(326)).addTemplate("game-gameplay", n(327)).addTemplate("replays", n(328)).addTemplate("privacy-notice", n(329)).addTemplate("terms-of-use", n(330)).addTemplate("thirdparty-licenses", n(331)).addTemplate("loading", n(332)).addTemplate("version", n(333)).addTemplate("legal-statements", n(334)).addTemplate("components/modal-header", n(335)).addTemplate("components/modal-footer", n(336)).addTemplate("components/navigation-bar-group", n(337)).addTemplate("components/navigation-bar-group-item", n(338)).addTemplate("components/blocked-player", n(339)).addTemplate("components/block-list-error", n(340)).addTemplate("components/repair-game-button", n(341)).addTemplate("components/publishing-locale", n(342)).addTemplate("components/account-verification", n(343)).addTemplate("components/settings-slider", n(344)).addTemplate("components/push-to-talk-key", n(345)).addTemplate("components/game-sound-content", n(346)).addTemplate("components/game-interface-content", n(347)).addTemplate("components/game-gameplay-content", n(348)).addTemplate("components/game-hotkeys-additional-section", n(349)).addTemplate("components/game-hotkeys-additional", n(350)).addTemplate("components/game-hotkeys-primary-button", n(351)).addTemplate("components/game-hotkeys-primary", n(352)).addTemplate("components/game-hotkeys-quickcast", n(353)).addTemplate("components/game-hotkeys-content", n(354)).addTemplate("components/vng-publisher-settings", n(355)).addTemplate("components/honeyfruit-settings-error", n(356));
                 return l.registerOnAppBuilder(u), u
             };
             var a, o = n(1),
@@ -14456,26 +14456,32 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                o = n(19);
-            const i = "Quickbinds",
-                s = "GameEvents",
-                r = "HUDEvents",
-                l = "ShopEvents";
-            var c = a.Ember.Component.extend({
+                o = n(19),
+                i = n(296);
+            const s = "Quickbinds",
+                r = "GameEvents",
+                l = "HUDEvents",
+                c = "ShopEvents";
+            var u = a.Ember.Component.extend({
                 persistenceService: a.Ember.inject.service("persistence"),
                 patchService: a.Ember.inject.service("patch"),
+                gameflowService: a.Ember.inject.service("gameflow"),
                 quickcastComponent: null,
                 keyToActionReverseMap: void 0,
-                isPracticeToolDisabled: a.Ember.computed.alias("patchService.isPatching"),
-                practiceToolButtonLabel: a.Ember.computed("isPracticeToolDisabled", (function() {
-                    return this.get("isPracticeToolDisabled") ? this.get("tra").get("lol_settings_hotkeys_button_label_patching") : this.get("tra").get("lol_settings_hotkeys_button_label_practice_tool")
+                isInvalidGameflowPhase: a.Ember.computed("gameflowService.phase", (function() {
+                    const e = this.get("gameflowService.phase");
+                    return !(!e || e === i.GAMEFLOW_PHASES.NONE || e === i.GAMEFLOW_PHASES.LOBBY)
+                })),
+                isPracticeToolDisabled: a.Ember.computed.or("patchService.isPatching", "isInvalidGameflowPhase"),
+                practiceToolButtonLabel: a.Ember.computed("patchService.isPatching", "isInvalidGameflowPhase", (function() {
+                    return this.get("patchService.isPatching") ? this.get("tra").get("lol_settings_hotkeys_button_label_patching") : this.get("isInvalidGameflowPhase") ? this.get("tra").get("lol_settings_hotkeys_button_label_unavailable") : this.get("tra").get("lol_settings_hotkeys_button_label_practice_tool")
                 })),
                 init() {
                     this._super(...arguments), this.get("handleComponentInitialized") && this.get("handleComponentInitialized")(this), this.initialiseKeyToActionMap()
                 },
                 initialiseKeyToActionMap: function() {
                     const e = {};
-                    [s, r, l].map((t => {
+                    [r, l, c].map((t => {
                         const n = this.get(`inputSettings.${t}`);
                         for (const a in n)
                             if (Object.prototype.hasOwnProperty.call(n, a)) {
@@ -14491,7 +14497,7 @@
                 },
                 resetToDefault: function() {
                     const e = {};
-                    e[i] = this.resetEventsContent(i), e[s] = this.resetEventsContent(s), e[r] = this.resetEventsContent(r), e[l] = this.resetEventsContent(l), this.initialiseKeyToActionMap(), this._saveInputSettings(e), this.get("quickcastComponent") && this.get("quickcastComponent").resetToDefault()
+                    e[s] = this.resetEventsContent(s), e[r] = this.resetEventsContent(r), e[l] = this.resetEventsContent(l), e[c] = this.resetEventsContent(c), this.initialiseKeyToActionMap(), this._saveInputSettings(e), this.get("quickcastComponent") && this.get("quickcastComponent").resetToDefault()
                 },
                 resetEventsContent: function(e) {
                     const t = {},
@@ -14517,7 +14523,42 @@
                     }
                 }
             });
-            t.default = c
+            t.default = u
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = t.GAMEFLOW_PHASES = void 0;
+            var a = n(1);
+            const o = "/lol-gameflow/v1/session";
+            t.GAMEFLOW_PHASES = {
+                NONE: "None",
+                LOBBY: "Lobby",
+                MATCHMAKING: "Matchmaking",
+                READY_CHECK: "ReadyCheck",
+                GAME_START: "GameStart",
+                IN_PROGRESS: "InProgress",
+                CHECKED_INTO_TOURNAMENT: "CheckedIntoTournament",
+                CHAMP_SELECT: "ChampSelect",
+                PRE_END_OF_GAME: "PreEndOfGame",
+                END_OF_GAME: "EndOfGame",
+                TERMINATED_IN_ERROR: "TerminatedInError",
+                FAILED_TO_LAUNCH: "FailedToLaunch",
+                RECONNECT: "Reconnect"
+            };
+            var i = a.Ember.Service.extend({
+                session: null,
+                phase: null,
+                init() {
+                    this._super(...arguments), a.db.observe(o, this, (e => {
+                        this.set("session", e), this.set("phase", e?.phase || null)
+                    }))
+                },
+                willDestroy() {
+                    this._super(...arguments), a.db.unobserve(o, this)
+                }
+            });
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14716,8 +14757,8 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                o = n(301),
-                i = n(302),
+                o = n(302),
+                i = n(303),
                 s = a.Ember.Component.extend({
                     key: void 0,
                     onChange: void 0,
@@ -15181,7 +15222,7 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1);
-            n(304);
+            n(305);
             var o = a.Ember.Component.extend({
                 classNames: ["vng-publisher-settings"],
                 honeyfruit: a.Ember.inject.service("honeyfruit"),
@@ -15213,7 +15254,7 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1);
-            n(306);
+            n(307);
             var o = a.Ember.Component.extend({
                 classNames: ["honeyfruit-settings__error"]
             });
@@ -15247,7 +15288,7 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(309)) && a.__esModule ? a : {
+                i = (a = n(310)) && a.__esModule ? a : {
                     default: a
                 };
             const s = o.dataBinding.bindTo(o.socket);
@@ -15372,7 +15413,7 @@
             };
             var a, o = n(3),
                 i = n(1),
-                s = (a = n(310)) && a.__esModule ? a : {
+                s = (a = n(311)) && a.__esModule ? a : {
                     default: a
                 };
             const r = i.dataBinding.bindTo(i.socket);
@@ -15407,9 +15448,15 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0;
+            }), t.default = t.PATCHER_ACTIONS = void 0;
             var a = n(1);
-            var o = a.Ember.Service.extend({
+            const o = {
+                PATCHING: "Patching",
+                REPAIRING: "Repairing",
+                CHECKING_FOR_UPDATES: "CheckingForUpdates"
+            };
+            t.PATCHER_ACTIONS = o;
+            var i = a.Ember.Service.extend({
                 leagueClientVersion: null,
                 gameClientVersion: null,
                 lolExternalPatchVersion: null,
@@ -15437,10 +15484,11 @@
                     this._super(...arguments), a.db.unobserve("/patcher/v1/products/league_of_legends/state", this)
                 },
                 isPatching: a.Ember.computed("patcherData.action", (function() {
-                    return "Patching" === this.get("patcherData.action") || "Repairing" === this.get("patcherData.action")
+                    const e = this.get("patcherData.action");
+                    return e === o.PATCHING || e === o.REPAIRING
                 })),
                 isCheckingForUpdates: a.Ember.computed("patcherData.action", (function() {
-                    return "CheckingForUpdates" === this.get("patcherData.action")
+                    return this.get("patcherData.action") === o.CHECKING_FOR_UPDATES
                 })),
                 isGettingReadyForGame: a.Ember.computed.or("isPatching"),
                 getSupportedGameReleases: () => a.db.get("/lol-patch/v1/products/league_of_legends/supported-game-releases", {
@@ -15448,14 +15496,14 @@
                 }),
                 putGamePatchUrl: e => a.db.put(`/lol-patch/v1/game-patch-url?url=${e}`)
             });
-            t.default = o
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                o = n(313),
+                o = n(314),
                 i = n(41);
             const {
                 DEFAULT_PROFILE_PRIVACY: s

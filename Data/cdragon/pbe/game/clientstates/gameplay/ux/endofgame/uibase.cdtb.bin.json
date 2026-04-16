@@ -366,7 +366,7 @@
         "VfxSystem": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Victory_VFX",
         "__type": "UiElementParticleSystemData"
     },
-    "{931a45ef}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Layer": 1000,
         "SceneTransitionIn": {
@@ -377,17 +377,17 @@
         },
         "__type": "UISceneData"
     },
-    "{1d28940a}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_VFXGroup": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_VFXGroup",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Elements": [
-            "{2e647138}"
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_VFXGroup/IGNB_VFX"
         ],
         "__type": "UiElementGroupData"
     },
-    "{2e647138}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_VFXGroup/IGNB_VFX": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_VFXGroup/IGNB_VFX",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Enabled": true,
         "Layer": 1,
         "Position": {
@@ -410,55 +410,55 @@
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "VfxSystem": "{c138b8d4}",
+        "VfxSystem": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_IGNB_VFX",
         "__type": "UiElementParticleSystemData"
     },
-    "{69115424}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Elements": [
-            "{ab9b02d5}",
-            "{f413b2c1}",
-            "{ca1ab0d4}",
-            "{d6ce3c0e}",
-            "{c533aeab}",
-            "{b9f760a0}"
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Clicked",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Default",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Disabled",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Hover",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Region"
         ],
         "IsEnabled": true,
-        "HitRegionElement": "{b9f760a0}",
+        "HitRegionElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Region",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "{f413b2c1}"
+                "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Default"
             ],
-            "TextElement": "{c533aeab}",
+            "TextElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "{d6ce3c0e}"
+                "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Hover"
             ],
-            "TextElement": "{c533aeab}",
+            "TextElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "{ab9b02d5}"
+                "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Clicked"
             ],
-            "TextElement": "{c533aeab}",
+            "TextElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
             "__type": "UiElementGroupButtonState"
         },
         "InactiveStateElements": {
             "DisplayElementList": [
-                "{ca1ab0d4}"
+                "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Disabled"
             ],
-            "TextElement": "{c533aeab}",
+            "TextElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
             "__type": "UiElementGroupButtonState"
         },
         "__type": "UiElementGroupButtonData"
     },
-    "{704ee3ae}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_TerminationText": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_TerminationText",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Enabled": true,
         "Layer": 2,
         "Position": {
@@ -490,9 +490,9 @@
         "TextAlignmentHorizontal": 1,
         "__type": "UiElementTextData"
     },
-    "{7b55c5b0}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_DetectedText": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_DetectedText",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Enabled": true,
         "Layer": 2,
         "Position": {
@@ -524,9 +524,9 @@
         "TextAlignmentHorizontal": 1,
         "__type": "UiElementTextData"
     },
-    "{ab9b02d5}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Clicked": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Clicked",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Layer": 12,
         "Position": {
             "UIRect": {
@@ -566,9 +566,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{b9f760a0}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Region": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Region",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -595,9 +595,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{c533aeab}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Enabled": true,
         "Layer": 15,
         "Position": {
@@ -629,9 +629,9 @@
         "TextAlignmentHorizontal": 1,
         "__type": "UiElementTextData"
     },
-    "{ca1ab0d4}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Disabled": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Disabled",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Layer": 13,
         "Position": {
             "UIRect": {
@@ -671,9 +671,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{d6ce3c0e}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Hover": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Hover",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Layer": 11,
         "Position": {
             "UIRect": {
@@ -713,9 +713,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{f413b2c1}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Default": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Default",
-        "Scene": "{931a45ef}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
         "Layer": 10,
         "Position": {
             "UIRect": {
@@ -754,42 +754,6 @@
             "__type": "AtlasData"
         },
         "__type": "UiElementIconData"
-    },
-    "{e007f653}": {
-        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ExplanationText",
-        "Scene": "{931a45ef}",
-        "Enabled": true,
-        "Layer": 2,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    510.0,
-                    802.0
-                ],
-                "Size": [
-                    580.0,
-                    100.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    0.5,
-                    0.5
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "TRAKey": "IGNB_gameEndExplanation",
-        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Explanation",
-        "TextAlignmentHorizontal": 1,
-        "HTMLStyleSheet": "{9c87124a}",
-        "WrappingMode": 1,
-        "__type": "UiElementTextData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene",
@@ -1265,7 +1229,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{d94d604a}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene",
         "Layer": 999,
         "SceneTransitionIn": {
@@ -1275,9 +1239,9 @@
         },
         "__type": "UISceneData"
     },
-    "{ec21fea0}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_Background": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_Background",
-        "Scene": "{d94d604a}",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene",
         "Enabled": true,
         "BlockInputEvents": true,
         "Position": {

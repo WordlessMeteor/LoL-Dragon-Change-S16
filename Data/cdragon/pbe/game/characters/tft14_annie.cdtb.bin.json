@@ -388,7 +388,7 @@
                         {
                             "mBuffName": "{c440c6fd}",
                             "mIconKey": "%i:scaleAdaptiveForce%",
-                            "mDataValue": "{4d63958c}",
+                            "mDataValue": "TibbersSizePerAmp",
                             "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
@@ -818,7 +818,7 @@
                         {
                             "mBuffName": "{c440c6fd}",
                             "mIconKey": "%i:scaleAdaptiveForce%",
-                            "mDataValue": "{4d63958c}",
+                            "mDataValue": "TibbersSizePerAmp",
                             "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1536,58 +1536,58 @@
     },
     "Characters/TFT14_Annie/CharacterRecords/Root": {
         "mCharacterName": "TFT14_Annie",
-        "{8662cf12}": {
-            "{b35aa769}": 850.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 850.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.0,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 130.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 40.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 40.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
-        "{e62d9d92}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 890.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 890.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.75,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.75,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.75,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.75,
+            "__type": "ModifiableFloat"
         },
         "basicAttack": {
             "mAttackName": "TFT14_AnnieBasicAttack",
@@ -1625,11 +1625,11 @@
         "tier": 4,
         "mLinkedTraits": [
             {
-                "TraitData": "{d2e8075e}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet14/Traits/TFT14_Immortal",
                 "__type": "TFTTraitContributionData"
             },
             {
-                "TraitData": "{85ca269a}",
+                "TraitData": "Maps/Shipping/Map22/Sets/TFTSet14/Traits/TFT14_Supercharge",
                 "__type": "TFTTraitContributionData"
             }
         ],

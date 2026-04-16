@@ -378,13 +378,13 @@
                     1.0
                 ]
             },
-            "desc": "Αποκτάτε ένα Πρισματικό Αμόνι Στατιστικών %i:StatAnvil%.",
+            "desc": "Αποκτάτε ένα <keywordMajor>%i:StatAnvil% Πρισματικό Αμόνι Στατιστικών</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_prisstatanvil.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_prisstatanvil_small.png",
             "id": 340,
             "name": "Αποκτάτε ένα Πρισματικό Αμόνι Στατιστικών",
             "rarity": 4,
-            "tooltip": "Αποκτάτε ένα Πρισματικό Αμόνι Στατιστικών, το οποίο σας επιστρέφει οτιδήποτε από αυτή τη λίστα.<br><br><crit>+%i:scaleAPen% Ζημιά Καίριου Χτυπήματος</crit><br><scaleHealth>+%i:scaleHealth% Ζωή και Αυξημένο Μέγεθος</scaleHealth><br><armorPen>+%i:scaleAPen% Διείσδυση Θωράκισης</armorPen><br><magicPen>+%i:scaleMPen% Διείσδυση Μαγείας</magicPen><br><speed>+%i:scaleMS% Ταχύτητα Κίνησης και Μειωμένο Μέγεθος</speed><br><tenacity>+%i:scaleTenacity% Εμμονή</tenacity><br><healing>+%i:scaleHealShield% Ισχύς Θεραπείας και Ασπίδας</healing><br><lifeSteal>+%i:scaleSV% Ολική Αρπαγή Ζωής.</lifeSteal><br><gold>+%i:goldCoins% Χρυσός.</gold>"
+            "tooltip": "Αποκτάτε ένα Πρισματικό Αμόνι Στατιστικών, το οποίο σας επιστρέφει οτιδήποτε από αυτή τη λίστα.<br><br><crit>+%i:scaleCritMult% Ζημιά Καίριου Χτυπήματος</crit><br><scaleHealth>+%i:scaleHealth% Ζωή και Αυξημένο Μέγεθος</scaleHealth><br><armorPen>+%i:scaleAPen% Διείσδυση Θωράκισης</armorPen><br><magicPen>+%i:scaleMPen% Διείσδυση Μαγείας</magicPen><br><speed>+%i:scaleMS% Ταχύτητα Κίνησης και Μειωμένο Μέγεθος</speed><br><scaleTenacity>+%i:scaleTenacity% Εμμονή</scaleTenacity><br><healing>+%i:scaleHealShield% Ισχύς Θεραπείας και Ασπίδας</healing><br><lifeSteal>+%i:scaleSV% Ολική Αρπαγή Ζωής</lifeSteal><br><gold>+%i:goldCoins% Χρυσός</gold>"
         },
         {
             "apiName": "Typhoon",
@@ -674,7 +674,7 @@
                         {
                             "__type": "{b22609db}",
                             "{91d404a5}": "BaseDamage",
-                            "{b2cd0eb0}": "{84c9d5d7}"
+                            "{b2cd0eb0}": "PerLevelDamage"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
@@ -1358,7 +1358,7 @@
                         {
                             "__type": "{b22609db}",
                             "{91d404a5}": "ShieldBaseValue",
-                            "{b2cd0eb0}": "{a40c37cb}"
+                            "{b2cd0eb0}": "BonusPerLevel"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
@@ -1541,7 +1541,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "{6ce2b3aa}"
+                            "mDataValue": "HealthPerSecond"
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
@@ -2011,7 +2011,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{af15acb0}",
+                            "mDataValue": "CritDefendRatio",
                             "mStat": 9,
                             "mStatFormula": 2
                         }
@@ -2127,13 +2127,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_WitchfulThinking_Summary",
+            "desc": "Η μονάδα αποκτά %i:scaleAP% <scaleAP>@AP@ Ισχύ Ικανότητας</scaleAP>.",
             "iconLarge": "assets/ux/cherry/augments/icons/witchfulthinking_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/witchfulthinking_small.png",
             "id": 97,
             "name": "Ευχή της Μάγισσας",
             "rarity": 0,
-            "tooltip": "Cherry_WitchfulThinking_Summary"
+            "tooltip": "Η μονάδα αποκτά %i:scaleAP% <scaleAP>@AP@ Ισχύ Ικανότητας</scaleAP>."
         },
         {
             "apiName": "Quest_UrfsChampion",
@@ -2186,7 +2186,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -2488,7 +2488,7 @@
                     ],
                     "mMultiplier": {
                         "__type": "NamedDataValueCalculationPart",
-                        "mDataValue": "{b2f1b423}"
+                        "mDataValue": "FireworkDamageMod"
                     }
                 },
                 "TOOLTIPONLYDamage": {
@@ -2512,7 +2512,7 @@
                     ],
                     "mMultiplier": {
                         "__type": "NamedDataValueCalculationPart",
-                        "mDataValue": "{b2f1b423}"
+                        "mDataValue": "FireworkDamageMod"
                     }
                 }
             },
@@ -2636,7 +2636,7 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_SlapAround_Summary",
+            "desc": "Κάθε φορά που <status>Ακινητοποιείτε</status> ή <status>Γειώνετε</status> έναν εχθρό, αποκτάτε <scaleAF>%i:miniAdaptiveForce% @AdaptiveForce@ Ευέλικτη Ισχύ</scaleAF> μέχρι το τέλος του γύρου.",
             "iconLarge": "assets/ux/cherry/augments/icons/slaparound_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slaparound_small.png",
             "id": 136,
@@ -3725,7 +3725,7 @@
                     4.0
                 ]
             },
-            "desc": "Αποκτάτε <scaleAF>@AdaptiveForce@ %i:miniAdaptiveForce% Ευέλικτη Ισχύ</scaleAF> μετά από κάθε εξόντωση, μία φορά για κάθε Ήρωα ανά γύρο.<br><br><rules>Αν αποκτήσετε αυτή την Ενίσχυση μετά τον γύρο @RoundCounterForBonus@, αποκτάτε <scaleAF>@BonusForLatePick@ %i:miniAdaptiveForce% Ευέλικτη Ισχύ</scaleAF>.</rules>",
+            "desc": "Αποκτάτε <scaleAF>%i:miniAdaptiveForce% @AdaptiveForce@ Ευέλικτη Ισχύ</scaleAF> μετά από κάθε εξόντωση, μία φορά για κάθε Ήρωα ανά γύρο.<br><br><rules>Αν αποκτήσετε αυτή την Ενίσχυση μετά τον γύρο @RoundCounterForBonus@, αποκτάτε <scaleAF>%i:miniAdaptiveForce% @BonusForLatePick@ Ευέλικτη Ισχύ</scaleAF>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/dematerialize_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/dematerialize_small.png",
             "id": 171,
@@ -4850,7 +4850,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "{b35aa769}"
+                            "mDataValue": "BaseValue"
                         },
                         {
                             "__type": "ByCharLevelInterpolationCalculationPart",
@@ -4992,7 +4992,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "{89ba3820}"
+                            "mDataValue": "InitialAmpPercent"
                         },
                         {
                             "__type": "AbilityResourceByCoefficientCalculationPart",
@@ -5465,7 +5465,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -5669,7 +5669,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{e1dd19a5}"
+                            "mDataValue": "APcoefficient"
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
@@ -5941,7 +5941,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{e1dd19a5}",
+                            "mDataValue": "APcoefficient",
                             "mStatFormula": 2
                         },
                         {
@@ -5952,7 +5952,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{4f815128}",
+                            "mDataValue": "Healthcoefficient",
                             "mStat": 12
                         }
                     ]
@@ -6130,7 +6130,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -6789,7 +6789,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{cac1b6d2}",
+                            "mDataValue": "Coefficient",
                             "mStat": 12
                         }
                     ]
@@ -6914,7 +6914,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -7209,7 +7209,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{ae70438b}",
+                            "mDataValue": "HealPowerToDamageTooltip",
                             "mStat": 34
                         }
                     ],
@@ -7573,8 +7573,8 @@
                     "mFormulaParts": [
                         {
                             "__type": "{b22609db}",
-                            "{91d404a5}": "{5f70f48a}",
-                            "{b2cd0eb0}": "{a40c37cb}"
+                            "{91d404a5}": "DamageBaseValue",
+                            "{b2cd0eb0}": "BonusPerLevel"
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
@@ -8135,7 +8135,7 @@
                     1.0
                 ]
             },
-            "desc": "Δεν μπορείτε πλέον να κάνετε %i:Reroll% ανανέωση.<br><br>Ξεκινήστε μια επιλογή <keywordMajor>%i:Augment%Χρυσής Ενίσχυσης</keywordMajor>. Αν έχετε @AugmentThreshold@ ή λιγότερες Ενισχύσεις, αποκτάτε μια <keywordMajor>%i:Augment%Πρισματική Ενίσχυση</keywordMajor>.",
+            "desc": "Δεν μπορείτε πλέον να κάνετε %i:Reroll% ανανέωση.<br><br>Ξεκινήστε μια επιλογή <keywordMajor>%i:Augment% Χρυσών Ενισχύσεων</keywordMajor>. Αν έχετε @AugmentThreshold@ ή λιγότερες Ενισχύσεις, αποκτάτε μια <keywordMajor>%i:Augment% Πρισματική Ενίσχυση</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -8739,13 +8739,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_ReplaceAugment_Summary",
+            "desc": "<keywordMajor>Αντικαταστήστε</keywordMajor> μία από τις <keywordMajor>%i:Augment% Ενισχύσεις</keywordMajor> σας σε μια Ενίσχυση <keywordMajor>@TierIncreaseToolTipOnly@%i:AugmentLevel% υψηλότερης βαθμίδας</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/replace_augment.png",
             "iconSmall": "assets/ux/cherry/augments/icons/replace_augment_small.png",
             "id": 364,
             "name": "Αντικατάσταση Ενίσχυσης",
             "rarity": 4,
-            "tooltip": "Cherry_ReplaceAugment_Summary"
+            "tooltip": "<keywordMajor>Αντικαταστήστε</keywordMajor> μία από τις <keywordMajor>%i:Augment% Ενισχύσεις</keywordMajor> σας σε μια Ενίσχυση <keywordMajor>@TierIncreaseToolTipOnly@%i:AugmentLevel% υψηλότερης βαθμίδας</keywordMajor>."
         },
         {
             "apiName": "Tormentor",
@@ -8902,7 +8902,7 @@
                     "mFormulaParts": [
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{c7d485ea}",
+                            "mDataValue": "MaxHPIncrement",
                             "mStat": 12
                         }
                     ]
@@ -8977,7 +8977,7 @@
                     5.0
                 ]
             },
-            "desc": "Ξεκλειδώστε την <keywordMajor>@TooltipSlotToUnlock@η Θέση Ενίσχυσης %i:Augment%</keywordMajor>.",
+            "desc": "Ξεκλειδώστε την <keywordMajor>@TooltipSlotToUnlock@η Θέση Ενίσχυσης %i:Augment%</keywordMajor>.<br><br>Σε @RoundsUntilFreeAugment@ γύρους, αποκτάτε μια <keywordMajor>%i:Augment% Ασημένια Ενίσχυση</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_slot.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_slot_small.png",
             "id": 341,
@@ -9927,13 +9927,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_Deft_Tooltip",
+            "desc": "Αποκτάτε %i:scaleAS% @AttackSpeed*100@% <speed>Ταχύτητα Επίθεσης</speed>.",
             "iconLarge": "assets/ux/cherry/augments/icons/deft_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/deft_small.png",
             "id": 22,
             "name": "Επιδεξιότητα",
             "rarity": 0,
-            "tooltip": "Cherry_Deft_Tooltip"
+            "tooltip": "Αποκτάτε %i:scaleAS% @AttackSpeed*100@% <speed>Ταχύτητα Επίθεσης</speed>."
         },
         {
             "apiName": "Goliath",
@@ -10511,7 +10511,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{8bfcfef7}",
+                            "mDataValue": "MovespeedShieldPercent",
                             "mStat": 7,
                             "mStatFormula": 2
                         }
@@ -10807,7 +10807,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -10858,7 +10858,7 @@
                             "mSubparts": [
                                 {
                                     "__type": "NamedDataValueCalculationPart",
-                                    "mDataValue": "{5cfeaeb1}"
+                                    "mDataValue": "HealthReductionPercent"
                                 },
                                 {
                                     "__type": "BuffCounterByCoefficientCalculationPart",
@@ -10965,11 +10965,11 @@
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "{a47419e3}"
+                            "mDataValue": "CritHeal"
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{e8e55586}",
+                            "mDataValue": "CritHealRatio",
                             "mStat": 9,
                             "mStatFormula": 2
                         }
@@ -12419,7 +12419,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_BluntForce_Summary",
+            "desc": "Αποκτάτε %i:scaleAD% <scaleAD>@ADAmp*100@% Ζημιά Επίθεσης</scaleAD>.",
             "iconLarge": "assets/ux/cherry/augments/icons/bluntforce_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/bluntforce_small.png",
             "id": 7,
@@ -13680,7 +13680,7 @@
                         },
                         {
                             "__type": "StatByNamedDataValueCalculationPart",
-                            "mDataValue": "{a1904faf}"
+                            "mDataValue": "CritConverRatio"
                         }
                     ]
                 }
@@ -13740,7 +13740,7 @@
                         {
                             "__type": "{b22609db}",
                             "{91d404a5}": "BaseDamage",
-                            "{b2cd0eb0}": "{84c9d5d7}"
+                            "{b2cd0eb0}": "PerLevelDamage"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
