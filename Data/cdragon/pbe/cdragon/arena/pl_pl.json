@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "Zyskujesz czar przywoływacza <spellName>Rutynowa Rozgrzewka</spellName>.<br><br>Uwalniasz swojego wewnętrznego tancerza, by zwiększyć swoje obrażenia o 2% na sekundę, do maksymalnie @MaxStacks@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "Rutynowa Rozgrzewka",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "Zyskujesz czar przywoływacza <spellName>Rutynowa Rozgrzewka</spellName>.<br><br>Uwalniasz swojego wewnętrznego tancerza, by zwiększyć swoje obrażenia o 2% na sekundę, do maksymalnie @MaxStacks*100@%."
         },
         {
             "apiName": "Vanish",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "Gdy zdrowie sojuszniczego bohatera spadnie poniżej <scaleHealth>@AllyHealthThreshold*100@%</scaleHealth>, poświęcasz część swojego zdrowia, zapewniając mu <shield>tarczę</shield>.",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "Świadome Poświęcenie",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "Gdy zdrowie sojuszniczego bohatera po raz pierwszy spadnie poniżej <scaleHealth>@AllyHealthThreshold*100@%</scaleHealth>, poświęcasz <scaleHealth>@CurrentHealthToDrain*100@% swojego obecnego zdrowia</scaleHealth>, by zapewnić mu <shield>tarczę równą @ShieldToGrant*100@% twojego obecnego zdrowia</shield>."
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "Zemsta",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "Twoje efekty przedmiotów i obrażenia w czasie mogą <crit>trafić krytycznie</crit>. <br><br>Zyskujesz <crit>%i:scaleCrit% @CritChance*100@% szansy na trafienie krytyczne</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "Wrażliwość",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "Twoje efekty przedmiotów i obrażenia w czasie mogą <crit>trafić krytycznie i zadać @CritDamage*100@% dodatkowych obrażeń</crit>. <br><br>Zyskujesz <crit>%i:scaleCrit% @CritChance*100@% szansy na trafienie krytyczne</crit>."
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Ruletka nad Ruletki",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "Zastępuje <spellName>Ucieczkę</spellName> losową <attention>superumiejętnością</attention>. Po użyciu tej <attention>superumiejętności</attention> zastępujesz ją nową losową <attention>superumiejętnością</attention>.<br><br><br><rules>Te zaklęcia to wciąż superumiejętności.</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "Twoje przywołańce zyskują @MinionAmp*100@% rozmiaru, zdrowia i obrażeń."
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "Dodaj narzędzie wielofunkcyjne do ekwipunku. Podczas każdej fazy zakupów wybierz 1 z 5 losowych przedmiotów. Narzędzie wielofunkcyjne stanie się tym przedmiotem w kolejnej rundzie walki.",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "Narzędzie wielofunkcyjne",
-            "rarity": 1,
-            "tooltip": "Dodaj narzędzie wielofunkcyjne do ekwipunku. Podczas każdej fazy zakupów wybierz 1 z 5 losowych przedmiotów. Narzędzie wielofunkcyjne stanie się tym przedmiotem w kolejnej rundzie walki.<br><br>W rundzie @PrismaticRound@ narzędzie wielofunkcyjne może losować pryzmatyczne przedmioty."
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "Po użyciu superumiejętności zyskujesz niewrażliwość na <status>efekty kontroli tłumu</status> przez @UnstoppableDuration@ sek. (Czas odnowienia: @Cooldown@ sek.).",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "Niepowstrzymana Superumiejętność",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "Po użyciu superumiejętności zyskujesz niewrażliwość na <status>efekty kontroli tłumu</status> przez @UnstoppableDuration@ sek. (Czas odnowienia: @Cooldown@ sek.)."
         },
         {
             "apiName": "Recursion",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "Możesz teraz <spellName>przejąć</spellName> superumiejętność swojego sojusznika.<br><br>Po udziale w zabójstwie skróć blokadę i czas odnowienia <spellName>przejęcia</spellName> o @TakedownRefund*100@%.<br><br>Zyskujesz @UltimateHaste@ jedn. przyspieszenia superumiejętności.",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "Wyzwolony z Kajdan",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "Możesz teraz <spellName>przejąć</spellName> superumiejętność swojego sojusznika.<br><br>Po udziale w zabójstwie skróć blokadę i czas odnowienia <spellName>przejęcia</spellName> o @TakedownRefund*100@%.<br><br>Zyskujesz @UltimateHaste@ jedn. przyspieszenia superumiejętności."
         },
         {
             "apiName": "Repulsor",
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Owoce Pracy",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "Zyskujesz 1 poziom teraz i 1 dodatkowy poziom co drugą rundę. <br><br>Twoje ograniczenie poziomu zostaje usunięte.<br><br><rules>Jeśli zostanie wzięte po rundzie @RoundCounterForBonus@, zapewnia dodatkowe poziomy (@BonusForLatePick@).</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "Mądrość Wieków",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "Zyskujesz 1 poziom teraz i 1 dodatkowy poziom co drugą rundę. <br><br>Twoje ograniczenie poziomu zostaje usunięte.<br><br><rules>Jeśli zostanie wzięte po rundzie @RoundCounterForBonus@, zapewnia dodatkowe poziomy (@BonusForLatePick@).</rules><br><br><rules>Zwiększenie poziomu tego ulepszenia natychmiast zapewnia ci poziomy.</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Teraz Mnie Widzisz",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>Umiejętność bierna:</passive> Pozostawiasz za sobą znak za każdym razem, gdy używasz <keywordMajor>umiejętności ruchowej</keywordMajor>.<br><br><active>Użycie:</active> Wracasz do pozostawionego wcześniej naznaczenia. Następnie zyskujesz <speed>@MSBuffAmount*100@% prędkości ruchu na @MSBuffDuration@ sek.</speed>"
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

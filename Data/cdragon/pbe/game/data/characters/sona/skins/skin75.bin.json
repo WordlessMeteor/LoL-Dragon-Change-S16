@@ -15077,7 +15077,7 @@
         "samplerValues": [
             {
                 "TextureName": "Vertex_Deform_Tex",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -15352,17 +15352,17 @@
         "samplerValues": [
             {
                 "TextureName": "Scroll_Scale_Noise_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Scroll_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Alt_Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -15408,6 +15408,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Scroll_Scale_U_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_U_Max",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_V_Max",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_Sine_Period",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_V_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Scroll_Scale_Noise_Scaling",
                 "value": [
@@ -15777,6 +15797,12 @@
         ],
         "switches": [
             {
+                "name": "USE_SINE__SCROLL_SCALE",
+                "on": false,
+                "Group": "Gradient",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCROLL_TEXTURE",
                 "on": false,
                 "Group": "Gradient",
@@ -15887,12 +15913,12 @@
         "samplerValues": [
             {
                 "TextureName": "Pattern_Mask",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "ScreenSpace_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -15937,7 +15963,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture2",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -16290,7 +16316,7 @@
         "samplerValues": [
             {
                 "TextureName": "Overlay_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -16298,7 +16324,7 @@
             },
             {
                 "TextureName": "Scroll_Texture",
-                "texturePath": "ASSETS/Characters/Morgana/Skins/Skin81/Morgana_Skin81_Body_tatto_mult2.SKINS_Morgana_Skin81.tex",
+                "texturePath": "ASSETS/Characters/Morgana/Skins/Skin81/Morgana_Skin81_Body_tatto_mult2.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -16313,7 +16339,7 @@
             },
             {
                 "TextureName": "Gradient_Map",
-                "texturePath": "ASSETS/Characters/Morgana/Skins/Skin81/Morgana_Skin81_Material_Gradient02_TX_CM.SKINS_Morgana_Skin81.tex",
+                "texturePath": "ASSETS/Characters/Morgana/Skins/Skin81/Morgana_Skin81_Material_Gradient02_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -16488,12 +16514,12 @@
         "samplerValues": [
             {
                 "TextureName": "Pattern_Mask",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "ScreenSpace_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -16538,7 +16564,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture2",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -16886,12 +16912,12 @@
         "samplerValues": [
             {
                 "TextureName": "Pattern_Mask",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "ScreenSpace_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -16936,7 +16962,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture2",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,

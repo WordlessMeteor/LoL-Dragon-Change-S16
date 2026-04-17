@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "Mendapatkan Summoner Spell <spellName>Warmup Routine</spellName>.<br><br>Channeling inner dancer-mu untuk meningkatkan damage sebesar 2% per detik, hingga maksimum @MaxStacks@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "Warmup Routine",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "Mendapatkan Summoner Spell <spellName>Warmup Routine</spellName>.<br><br>Channeling inner dancer-mu untuk meningkatkan damage sebesar 2% per detik, hingga maksimum @MaxStacks*100@%."
         },
         {
             "apiName": "Vanish",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "Saat Health champion sekutu turun di bawah <scaleHealth>@AllyHealthThreshold*100@%</scaleHealth>, menukarkan sebagian health-mu untuk memberikan <shield>Shield</shield> kepada mereka.",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "Willing Sacrifice",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "Saat pertama kali Health champion sekutu turun di bawah <scaleHealth>@AllyHealthThreshold*100@%</scaleHealth>, menukarkan <scaleHealth>@CurrentHealthToDrain*100@% Health kamu saat ini</scaleHealth> untuk memberi mereka <shield>shield setara dengan @ShieldToGrant*100@% Health kamu saat ini</shield>."
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "Vengeance",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "Itemmu dan efek damage berkelanjutan bisa <crit>Critical Strike</crit>. <br><br>Mendapatkan <crit>%i:scaleCrit% @CritChance*100@% Crit Chance</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "Vulnerability",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "Itemmu dan efek damage berkelanjutan bisa <crit>Critical Strike sebesar @CritDamage*100@% damage ekstra</crit>. <br><br>Mendapatkan <crit>%i:scaleCrit% @CritChance*100@% Crit Chance</crit>."
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Ultimate Roulette",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "Mengganti <spellName>Flee</spellName> dengan satu <attention>Ultima</attention> random. Setelah cast <attention>Ultima</attention>, ganti dengan <attention>Ultima</attention> random yang baru.<br><br><br><rules>Spell ini masih merupakan ultima.</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "Unit yang kamu summon memperoleh @MinionAmp*100@% peningkatan ukuran, health, dan damage."
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "Menambahkan Multitool ke inventory-mu. Pada setiap Fase Belanja, pilih 1 dari 5 item random, dan Multitool akan berubah menjadi item tersebut untuk ronde combat berikutnya.",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "Multitool",
-            "rarity": 1,
-            "tooltip": "Menambahkan Multitool ke inventory-mu. Pada setiap Fase Belanja, pilih 1 dari 5 item random, dan Multitool akan berubah menjadi item tersebut untuk ronde combat berikutnya.<br><br>Pada ronde @PrismaticRound@, Multitool bisa menggulir Item Prismatic."
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "Setelah menggunakan Ultima, kamu menjadi kebal terhadap <status>crowd control</status> selama @UnstoppableDuration@ detik. (Cooldown @Cooldown@ detik).",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "Ultimate Unstoppable",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "Setelah menggunakan Ultima, kamu menjadi kebal terhadap <status>crowd control</status> selama @UnstoppableDuration@ detik. (Cooldown @Cooldown@ detik)."
         },
         {
             "apiName": "Recursion",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "Sekarang kamu bisa <spellName>Hijack</spellName> ultima sekutumu.<br><br>Saat melakukan takedown, lockout dan cooldown <spellName>Hijack</spellName> berkurang sebesar @TakedownRefund*100@%.<br><br>Mendapatkan @UltimateHaste@ Ultimate Haste.",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "Unshackled",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "Sekarang kamu bisa <spellName>Hijack</spellName> ultima sekutumu.<br><br>Saat melakukan takedown, lockout dan cooldown <spellName>Hijack</spellName> berkurang sebesar @TakedownRefund*100@%.<br><br>Mendapatkan @UltimateHaste@ Ultimate Haste."
         },
         {
             "apiName": "Repulsor",
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Fruits of Your Labor",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "Mendapatkan 1 level sekarang, dan 1 level bonus tiap dua ronde. <br><br>Batasan levelmu dihapus.<br><br><rules>Jika diambil setelah ronde @RoundCounterForBonus@, kamu mendapatkan @BonusForLatePick@ level tambahan.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "Wisdom of Ages",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "Mendapatkan 1 level sekarang, dan 1 level bonus tiap dua ronde. <br><br>Batasan levelmu dihapus.<br><br><rules>Jika diambil setelah ronde @RoundCounterForBonus@, kamu mendapatkan @BonusForLatePick@ level tambahan.</rules><br><br><rules>Meningkatkan level augment ini langsung memberimu beberapa level</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Now You See Me",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>Pasif:</passive> Meninggalkan tanda setiap kali kamu menggunakan <keywordMajor>Ability Gerakan</keywordMajor>.<br><br><active>Aktif:</active> Kembali ke tanda sebelumnya yang kamu buat. Kamu kemudian mendapatkan <speed>@MSBuffAmount*100@% Move Speed selama @MSBuffDuration@ detik.</speed>"
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

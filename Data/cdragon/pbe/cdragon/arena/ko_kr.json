@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "<spellName>준비 운동</spellName> 소환사 주문을 얻습니다.<br><br>내면의 춤꾼에게 정신을 집중해 피해량이 초당 2% 증가하며 최대 @MaxStacks@% 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "준비 운동",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "<spellName>준비 운동</spellName> 소환사 주문을 얻습니다.<br><br>내면의 춤꾼에게 정신을 집중해 피해량이 초당 2% 증가하며 최대 @MaxStacks*100@% 증가합니다."
         },
         {
             "apiName": "Vanish",
@@ -378,13 +378,13 @@
                     1.0
                 ]
             },
-            "desc": "%i:StatAnvil% 프리즘 능력치 모루를 획득합니다.",
+            "desc": "<keywordMajor>%i:StatAnvil% 프리즘 능력치 모루</keywordMajor>를 획득합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_prisstatanvil.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_prisstatanvil_small.png",
             "id": 340,
             "name": "프리즘 능력치 모루 획득",
             "rarity": 4,
-            "tooltip": "다음 목록 중 하나를 부여하는 프리즘 능력치 모루를 획득합니다.<br><br><crit>+%i:scaleAPen% 치명타 피해량</crit><br><scaleHealth>+%i:scaleHealth% 체력 및 크기 증가</scaleHealth><br><armorPen>+%i:scaleAPen% 방어구 관통력</armorPen><br><magicPen>+%i:scaleMPen% 마법 관통력</magicPen><br><speed>+%i:scaleMS% 이동 속도 및 크기 감소</speed><br><tenacity>+%i:scaleTenacity% 강인함</tenacity><br><healing>+%i:scaleHealShield% 체력 회복량 및 보호막 흡수량</healing><br><lifeSteal>+%i:scaleSV% 모든 피해 흡혈</lifeSteal><br><gold>+%i:goldCoins% 골드</gold>"
+            "tooltip": "다음 목록 중 하나를 부여하는 프리즘 능력치 모루를 획득합니다.<br><br><crit>+%i:scaleCritMult% 치명타 피해량</crit><br><scaleHealth>+%i:scaleHealth% 체력 및 크기 증가</scaleHealth><br><armorPen>+%i:scaleAPen% 방어구 관통력</armorPen><br><magicPen>+%i:scaleMPen% 마법 관통력</magicPen><br><speed>+%i:scaleMS% 이동 속도 및 크기 감소</speed><br><scaleTenacity>+%i:scaleTenacity% 강인함</scaleTenacity><br><healing>+%i:scaleHealShield% 체력 회복 및 보호막 효과</healing><br><lifeSteal>+%i:scaleSV% 모든 피해 흡혈</lifeSteal><br><gold>+%i:goldCoins% 골드</gold>"
         },
         {
             "apiName": "Typhoon",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "아군 챔피언의 <scaleHealth>체력이 @AllyHealthThreshold*100@%</scaleHealth> 아래로 떨어지면, 자신의 체력 일부를 <shield>보호막</shield>으로 바꿔 해당 아군에게 부여합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "희생의 의지",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "처음으로 아군 챔피언의 <scaleHealth>체력이 @AllyHealthThreshold*100@%</scaleHealth> 아래로 떨어지면, <scaleHealth>현재 체력의 @CurrentHealthToDrain*100@%</scaleHealth>를 <shield>현재 체력의 @ShieldToGrant*100@%에 해당하는 보호막</shield>으로 바꿔 해당 아군에게 부여합니다."
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2127,13 +2127,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_WitchfulThinking_Summary",
+            "desc": "%i:scaleAP% <scaleAP>주문력이 @AP@</scaleAP> 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/witchfulthinking_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/witchfulthinking_small.png",
             "id": 97,
             "name": "사악한 정신",
             "rarity": 0,
-            "tooltip": "Cherry_WitchfulThinking_Summary"
+            "tooltip": "%i:scaleAP% <scaleAP>주문력이 @AP@</scaleAP> 증가합니다."
         },
         {
             "apiName": "Quest_UrfsChampion",
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "복수",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -2636,7 +2636,7 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_SlapAround_Summary",
+            "desc": "적을 <status>이동 불가</status> 상태로 만들거나 <status>이동 스킬을 사용할 수 없게</status> 하면 해당 라운드에 <scaleAF>@AdaptiveForce@의 %i:miniAdaptiveForce% 적응형 능력치</scaleAF>를 얻습니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/slaparound_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slaparound_small.png",
             "id": 136,
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "아이템 및 지속 피해 효과에 <crit>치명타</crit>가 적용될 수 있습니다. <br><br><crit>%i:scaleCrit% 치명타 확률이 @CritChance*100@%</crit> 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "취약",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "아이템 및 지속 피해 효과에 <crit>@CritDamage*100@%의 추가 피해를 입히는 치명타</crit>가 적용될 수 있습니다. <br><br><crit>%i:scaleCrit% 치명타 확률이 @CritChance*100@%</crit> 증가합니다."
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "궁극의 룰렛",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "<spellName>도주</spellName>를 무작위 <attention>궁극기</attention>로 교체합니다. <attention>궁극기</attention> 사용 후 새로운 무작위 <attention>궁극기</attention>로 교체합니다.<br><br><br><rules>이 주문들은 궁극기로 취급합니다.</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8135,7 +8135,7 @@
                     1.0
                 ]
             },
-            "desc": "더 이상 %i:Reroll%새로고침할 수 없습니다.<br><br><keywordMajor>%i:Augment%골드 증강</keywordMajor> 선택을 시작합니다. 보유한 증강이 @AugmentThreshold@개 이하라면 대신 <keywordMajor>%i:Augment%프리즘 증강</keywordMajor>을 얻습니다.",
+            "desc": "더 이상 %i:Reroll% 새로고침할 수 없습니다.<br><br><keywordMajor>%i:Augment% 골드 증강</keywordMajor> 선택을 시작합니다. 보유한 증강이 @AugmentThreshold@개 이하라면 대신 <keywordMajor>%i:Augment% 프리즘 증강</keywordMajor>을 얻습니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -8739,13 +8739,13 @@
                     1.0
                 ]
             },
-            "desc": "Cherry_ReplaceAugment_Summary",
+            "desc": "<keywordMajor>%i:Augment% 증강</keywordMajor> 중 하나를 <keywordMajor>@TierIncreaseToolTipOnly@등급 %i:AugmentLevel% 높은</keywordMajor> 증강으로 <keywordMajor>교체</keywordMajor>합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/replace_augment.png",
             "iconSmall": "assets/ux/cherry/augments/icons/replace_augment_small.png",
             "id": 364,
             "name": "증강 교체",
             "rarity": 4,
-            "tooltip": "Cherry_ReplaceAugment_Summary"
+            "tooltip": "<keywordMajor>%i:Augment% 증강</keywordMajor> 중 하나를 <keywordMajor>@TierIncreaseToolTipOnly@등급 %i:AugmentLevel% 높은</keywordMajor> 증강으로 <keywordMajor>교체</keywordMajor>합니다."
         },
         {
             "apiName": "Tormentor",
@@ -8846,55 +8846,6 @@
             "tooltip": "소환물의 크기, 체력, 피해량이 @MinionAmp*100@% 증가합니다."
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "보관함에 다용도 도구를 추가합니다. 구매 단계마다 무작위 5개 아이템 중 1개를 선택하면 다용도 도구가 다음 전투 라운드에 해당 아이템으로 변합니다.",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "다용도 도구",
-            "rarity": 1,
-            "tooltip": "보관함에 다용도 도구를 추가합니다. 구매 단계마다 무작위 5개 아이템 중 1개를 선택하면 다용도 도구가 다음 전투 라운드에 해당 아이템으로 변합니다.<br><br>@PrismaticRound@라운드에서는 다용도 도구 선택지에 프리즘 아이템이 등장할 수 있습니다."
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -8943,7 +8894,7 @@
             "id": 313,
             "name": "탱크 엔진",
             "rarity": 1,
-            "tooltip": "크기가 @SizeIncrement*100@% 커지고 <scaleHealth>@f2@의 추가 체력</scaleHealth>을 얻습니다. (처치 관여당 <scaleHealth>@MaxHPIncrement*100@% (@f1@)</scaleHealth>)<br><br>처치 관여: @f3@"
+            "tooltip": "크기가 @SizeIncrement*100@% 커지고 <scaleHealth>@f2@%의 추가 체력</scaleHealth>을 얻습니다. (처치 관여당 <scaleHealth>@MaxHPIncrement*100@% (@f1@)</scaleHealth>)<br><br>처치 관여: @f3@"
         },
         {
             "apiName": "CraftingAugmentSlot",
@@ -8977,7 +8928,7 @@
                     5.0
                 ]
             },
-            "desc": "<keywordMajor>@TooltipSlotToUnlock@번째 %i:Augment% 증강 슬롯</keywordMajor>을 잠금 해제합니다.",
+            "desc": "<keywordMajor>@TooltipSlotToUnlock@번째 %i:Augment% 증강 슬롯</keywordMajor>을 잠금 해제합니다.<br><br>@RoundsUntilFreeAugment@라운드 후 <keywordMajor>%i:Augment% 실버 증강</keywordMajor>을 획득합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_slot.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_slot_small.png",
             "id": 341,
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "궁극기 사용 시 @UnstoppableDuration@초 동안 <status>군중 제어 효과</status>에 면역이 됩니다. (재사용 대기시간 @Cooldown@초)",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "궁극의 저지 불가",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "궁극기 사용 시 @UnstoppableDuration@초 동안 <status>군중 제어 효과</status>에 면역이 됩니다. (재사용 대기시간 @Cooldown@초)"
         },
         {
             "apiName": "Recursion",
@@ -9927,13 +9878,13 @@
                     3.0
                 ]
             },
-            "desc": "Cherry_Deft_Tooltip",
+            "desc": "%i:scaleAS% @AttackSpeed*100@%의 <speed>공격 속도</speed>를 얻습니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/deft_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/deft_small.png",
             "id": 22,
             "name": "능수능란",
             "rarity": 0,
-            "tooltip": "Cherry_Deft_Tooltip"
+            "tooltip": "%i:scaleAS% @AttackSpeed*100@%의 <speed>공격 속도</speed>를 얻습니다."
         },
         {
             "apiName": "Goliath",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "이제 아군의 궁극기를 <spellName>강탈</spellName>할 수 있습니다.<br><br>처치 관여 시, <spellName>강탈</spellName>의 사용 제한 시간 및 재사용 대기시간이 @TakedownRefund*100@% 감소합니다.<br><br>궁극기 가속이 @UltimateHaste@ 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "해방",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "이제 아군의 궁극기를 <spellName>강탈</spellName>할 수 있습니다.<br><br>처치 관여 시, <spellName>강탈</spellName>의 사용 제한 시간 및 재사용 대기시간이 @TakedownRefund*100@% 감소합니다.<br><br>궁극기 가속이 @UltimateHaste@ 증가합니다."
         },
         {
             "apiName": "Repulsor",
@@ -12136,7 +12087,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_ParasiticRelationship_Summary",
+            "desc": "{{ Cherry_ParasiticRelationship@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/parasiticrelationship_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/parasiticrelationship_small.png",
             "id": 175,
@@ -12419,7 +12370,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_BluntForce_Summary",
+            "desc": "%i:scaleAD% <scaleAD>공격력이 @ADAmp*100@%</scaleAD> 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/bluntforce_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/bluntforce_small.png",
             "id": 7,
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "노력의 결실",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "지금 1레벨이 증가하고 두 라운드마다 추가로 1레벨이 증가합니다. <br><br>레벨 제한이 사라집니다.<br><br><rules>@RoundCounterForBonus@라운드 이후 이 증강을 선택할 경우, @BonusForLatePick@레벨이 추가로 증가합니다.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "세월의 지혜",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "지금 1레벨이 증가하고 두 라운드마다 추가로 1레벨이 증가합니다. <br><br>레벨 제한이 사라집니다.<br><br><rules>@RoundCounterForBonus@라운드 이후 이 증강을 선택할 경우, @BonusForLatePick@레벨이 추가로 증가합니다.</rules><br><br><rules>이 증강을 레벨 업하면 즉시 레벨이 오릅니다.</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "불의의 습격",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>기본 지속 효과:</passive> <keywordMajor>이동 스킬</keywordMajor>을 사용할 때마다 뒤에 표식을 남깁니다.<br><br><active>사용 시:</active> 이전에 남긴 표식으로 돌아갑니다. 이후 <speed>@MSBuffDuration@초 동안 이동 속도가 @MSBuffAmount*100@%</speed> 증가합니다."
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

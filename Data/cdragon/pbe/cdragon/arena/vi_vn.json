@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "Nhận Phép Bổ Trợ <spellName>Giãn Gân Cốt</spellName>.<br><br>Vận dụng vũ đạo ẩn giấu trong bạn để tăng 2% sát thương mỗi giây, tối đa @MaxStacks@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "Giãn Gân Cốt",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "Nhận Phép Bổ Trợ <spellName>Giãn Gân Cốt</spellName>.<br><br>Vận dụng vũ đạo ẩn giấu trong bạn để tăng 2% sát thương mỗi giây, tối đa @MaxStacks*100@%."
         },
         {
             "apiName": "Vanish",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "Khi một tướng đồng minh còn dưới <scaleHealth>@AllyHealthThreshold*100@% Máu</scaleHealth>, đánh đổi một phần máu của bạn để tạo <shield>Lá Chắn</shield> cho họ.",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "Sẵn Lòng Hy Sinh",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "Lần đầu tiên một tướng đồng minh còn dưới <scaleHealth>@AllyHealthThreshold*100@% Máu</scaleHealth>, đánh đổi <scaleHealth>@CurrentHealthToDrain*100@% Máu hiện tại của bạn</scaleHealth> để ban cho họ <shield>lá chắn bằng @ShieldToGrant*100@% Máu hiện tại của bạn</shield>."
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "Phục Hận",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "Trang Bị và hiệu ứng sát thương theo thời gian của bạn có thể <crit>Chí Mạng</crit>. <br><br>Nhận <crit>%i:scaleCrit% @CritChance*100@% Tỉ Lệ Chí Mạng</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "Yếu Điểm",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "Trang Bị và hiệu ứng sát thương theo thời gian của bạn có thể <crit>Chí Mạng và gây thêm @CritDamage*100@% sát thương</crit>. <br><br>Nhận <crit>%i:scaleCrit% @CritChance*100@% Tỉ Lệ Chí Mạng</crit>."
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Xổ Số Chiêu Cuối",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "Thay thế phép bổ trợ <spellName>Vọt Lẹ</spellName> bằng một <attention>Chiêu Cuối</attention> ngẫu nhiên. Sau khi thi triển <attention>Chiêu Cuối</attention>, thay thế bằng một <attention>Chiêu Cuối</attention> ngẫu nhiên mới.<br><br><br><rules>Những kỹ năng này vẫn là Chiêu Cuối.</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "Các đơn vị triệu hồi của bạn được tăng @MinionAmp*100@% kích cỡ, máu và sát thương."
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "Thêm Công Cụ Đa Dụng vào kho đồ của bạn. Trong mỗi Giai Đoạn Mua Sắm, chọn 1 trong 5 trang bị ngẫu nhiên; Công Cụ Đa Dụng sẽ biến thành trang bị đó cho vòng giao tranh kế tiếp.",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "Công Cụ Đa Dụng",
-            "rarity": 1,
-            "tooltip": "Thêm Công Cụ Đa Dụng vào kho đồ của bạn. Trong mỗi Giai Đoạn Mua Sắm, chọn 1 trong 5 trang bị ngẫu nhiên; Công Cụ Đa Dụng sẽ biến thành trang bị đó cho vòng giao tranh kế tiếp.<br><br>Tại vòng @PrismaticRound@, Công Cụ Đa Dụng có thể quay ra Trang Bị Tối Thượng."
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "Sau khi dùng Chiêu Cuối, bạn được miễn nhiễm <status>khống chế</status> trong @UnstoppableDuration@ giây. (@Cooldown@ giây hồi chiêu).",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "Chiêu Cuối Không Thể Cản Phá",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "Sau khi dùng Chiêu Cuối, bạn được miễn nhiễm <status>khống chế</status> trong @UnstoppableDuration@ giây. (@Cooldown@ giây hồi chiêu)."
         },
         {
             "apiName": "Recursion",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "Giờ bạn có thể <spellName>Tước Đoạt</spellName> chiêu cuối của đồng đội.<br><br>Khi hạ gục, giảm thời gian khóa và hồi chiêu của <spellName>Tước Đoạt</spellName> đi @TakedownRefund*100@%.<br><br>Nhận @UltimateHaste@ Điểm Hồi Chiêu Cuối.",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "Phá Xiềng",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "Giờ bạn có thể <spellName>Tước Đoạt</spellName> chiêu cuối của đồng đội.<br><br>Khi hạ gục, giảm thời gian khóa và hồi chiêu của <spellName>Tước Đoạt</spellName> đi @TakedownRefund*100@%.<br><br>Nhận @UltimateHaste@ Điểm Hồi Chiêu Cuối."
         },
         {
             "apiName": "Repulsor",
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Thành Quả Lao Động",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "Tăng ngay 1 cấp và tăng thêm 1 cấp sau mỗi 2 vòng đấu. <br><br>Bạn không còn bị giới hạn cấp độ.<br><br><rules>Nếu nhận sau vòng @RoundCounterForBonus@, tăng thêm @BonusForLatePick@ cấp nữa.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "Gừng Càng Già Càng Cay",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "Tăng ngay 1 cấp và tăng thêm 1 cấp sau mỗi 2 vòng đấu. <br><br>Bạn không còn bị giới hạn cấp độ.<br><br><rules>Nếu nhận sau vòng @RoundCounterForBonus@, tăng thêm @BonusForLatePick@ cấp nữa.</rules><br><br><rules>Tăng cấp độ của nâng cấp này ngay lập tức ban cho bạn thêm cấp</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Ú Òa",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>Nội Tại</passive>: Để lại một dấu ấn mỗi khi bạn sử dụng <keywordMajor>Kỹ Năng Di Chuyển</keywordMajor>.<br><br><active>Kích Hoạt:</active> Quay lại vị trí của dấu ấn trước đó mà bạn đã để lại. Sau đó nhận thêm <speed>@MSBuffAmount*100@% Tốc Độ Di Chuyển trong @MSBuffDuration@ giây.</speed>"
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

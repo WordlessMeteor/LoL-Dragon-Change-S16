@@ -1429,7 +1429,7 @@
                     2.0
                 ]
             },
-            "desc": "每几秒，朝你的友军<keywordMajor>自动</keywordMajor>施放一道防护之光，为你自身及其途经的友军提供<shield>护盾</shield>。",
+            "desc": "每几秒，朝你的友军<keywordMajor>自动</keywordMajor>施放一道防护之光，为你自身及其途经的友军提供<shield>护盾</shield>，然后折返并重复该效果。",
             "iconLarge": "assets/ux/cherry/augments/icons/lightwarden_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/lightwarden_small.png",
             "id": 231,
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "你的召唤物获得@MinionAmp*100@%体型提升、生命值和伤害。"
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "将【多功能工具】加入你的装备栏。在每个购物环节期间，从5个随机装备中选择1件，【多功能工具】会在下个对战回合变为那件装备。",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "多功能工具",
-            "rarity": 1,
-            "tooltip": "将【多功能工具】加入你的装备栏。在每个购物环节期间，从5个随机装备中选择1件，【多功能工具】会在下个对战回合变为那件装备。<br><br>在@PrismaticRound@回合，【多功能工具】可随出棱彩装备。"
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9117,7 +9068,7 @@
                     2.0
                 ]
             },
-            "desc": "在跌到<scaleHealth>@HealthThreshold*100@%生命值</scaleHealth>以下时，<healing>在@HealDuration@秒持续治疗@HealCalc@</healing>。",
+            "desc": "在跌到<scaleHealth>@HealthThreshold*100@%生命值</scaleHealth>以下时，<healing>在@HealDuration@秒内持续治疗@HealCalc@</healing>。",
             "iconLarge": "assets/ux/cherry/augments/icons/dawnbringersresolve_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/dawnbringersresolve_small.png",
             "id": 20,
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -12136,7 +12087,7 @@
                     2.0
                 ]
             },
-            "desc": "Cherry_ParasiticRelationship_Summary",
+            "desc": "{{ Cherry_ParasiticRelationship@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/parasiticrelationship_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/parasiticrelationship_small.png",
             "id": 175,
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

@@ -40917,7 +40917,7 @@
                     },
                     "erosionFeatherIn": 0.15000000596046448,
                     "erosionFeatherOut": 0.15000000596046448,
-                    "erosionMapName": "ASSETS/Characters/PetStyleTwoSenna/Skins/Skin2/Particles/PetStyleTwoSenna_Skin2_Augment_WarmupRoutine_shape7.TFT_Style2_Senna_HighNoon.tex",
+                    "erosionMapName": "ASSETS/Characters/PetStyleTwoSenna/Skins/Skin2/Particles/PetStyleTwoSenna_Skin2_Augment_WarmupRoutine_shape7.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -41043,7 +41043,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/PetStyleTwoSenna/Skins/Skin2/Particles/PetStyleTwoSenna_Skin2_Augment_WarmupRoutine_shape7.TFT_Style2_Senna_HighNoon.tex",
+                    "erosionMapName": "ASSETS/Characters/PetStyleTwoSenna/Skins/Skin2/Particles/PetStyleTwoSenna_Skin2_Augment_WarmupRoutine_shape7.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -167666,17 +167666,17 @@
         "samplerValues": [
             {
                 "TextureName": "Scroll_Scale_Noise_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Scroll_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Alt_Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -167722,6 +167722,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Scroll_Scale_U_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_U_Max",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_V_Max",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_Sine_Period",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_V_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Scroll_Scale_Noise_Scaling",
                 "value": [
@@ -168090,6 +168110,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_SINE__SCROLL_SCALE",
+                "on": false,
+                "Group": "Gradient",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_SCROLL_TEXTURE",
                 "on": false,
@@ -168702,22 +168728,22 @@
             },
             {
                 "TextureName": "_NoiseTex01",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "_NoiseTex02",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "_NoiseTex03",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "_DeformTex",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],

@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "Megkapod a <spellName>Bemelegítés</spellName> idézői varázslatot.<br><br>Felébreszted a benned élő táncost, és másodpercenként 2%-kal növeled a sebzésed, maximum @MaxStacks@%-ig.",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "Bemelegítés",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "Megkapod a <spellName>Bemelegítés</spellName> idézői varázslatot.<br><br>Felébreszted a benned élő táncost, és másodpercenként 2%-kal növeled a sebzésed, maximum @MaxStacks*100@%-ig."
         },
         {
             "apiName": "Vanish",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "Ha egy szövetséges hős <scaleHealth>életereje @AllyHealthThreshold*100@%</scaleHealth> alá esik, a saját életerőd egy részéért cserébe <shield>pajzsot</shield> biztosítasz neki.",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "Önkéntes áldozat",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "Ha egy szövetséges hős <scaleHealth>életereje @AllyHealthThreshold*100@%</scaleHealth> alá esik, <scaleHealth>a jelenlegi életerőd @CurrentHealthToDrain*100@%-áért</scaleHealth> cserébe egy, <shield>a jelenlegi életerőd @ShieldToGrant*100@%-ával megegyező pajzsot</shield> biztosítasz neki."
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "Bosszú",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "A tárgyaiddal és folyamatosan sebző hatásaiddal <crit>kritikus csapást</crit> mérhetsz. <br><br><crit>%i:scaleCrit% @CritChance*100@% kritikus csapási esélyt</crit> kapsz.",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "Sebezhetőség",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "A tárgyaiddal és folyamatosan sebző hatásaiddal <crit>kritikus csapást</crit> mérhetsz, további @CritDamage*100@% sebzést okozva. <br><br><crit>%i:scaleCrit% @CritChance*100@% kritikus csapási esélyt</crit> kapsz."
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Végső rulett",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "A <spellName>Menekülj</spellName> idézői varázslatot egy véletlenszerű <attention>végső képességre</attention> cseréli. A <attention>végső képesség</attention> elsütése után lecseréli azt egy új, véletlenszerű <attention>végső képességre</attention>.<br><br><br><rules>Ezek a varázslatok továbbra is végső képességek.</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "A megidézett egységek mérete, életereje és sebzése @MinionAmp*100@%-kal nő."
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "Hozzáadod a Multifunkcit a fegyvertáradhoz. Minden vásárlási szakaszban választhatsz egyet 5 véletlenszerű tárgy közül, amellyé a Multifunkci a következő harci körben átalakul.",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "Multifunkci",
-            "rarity": 1,
-            "tooltip": "Hozzáadod a Multifunkcit a fegyvertáradhoz. Minden vásárlási szakaszban választhatsz egyet 5 véletlenszerű tárgy közül, amellyé a Multifunkci a következő harci körben átalakul.<br><br>@PrismaticRound@ kör után a Multifunkci Spektrum osztályú tárgyat sorsolhat."
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "A végső képességed elsütése után @UnstoppableDuration@ másodpercig immunis leszel minden <status>tömegirányító</status> hatásra (@Cooldown@ másodperc töltési idő).",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "Végső soron megállíthatatlan",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "A végső képességed elsütése után @UnstoppableDuration@ másodpercig immunis leszel minden <status>tömegirányító</status> hatásra (@Cooldown@ másodperc töltési idő)."
         },
         {
             "apiName": "Recursion",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "Mostantól <spellName>elfoglalhatod</spellName> a szövetségesed végső képességét.<br><br>Kiiktatáskor az <spellName>Elfoglalás</spellName> zárolási ideje és töltési ideje @TakedownRefund*100@%-kal csökken.<br><br>@UltimateHaste@ végsőképesség-gyorsítást kapsz.",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "Levetett láncok",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "Mostantól <spellName>elfoglalhatod</spellName> a szövetségesed végső képességét.<br><br>Kiiktatáskor az <spellName>Elfoglalás</spellName> zárolási ideje és töltési ideje @TakedownRefund*100@%-kal csökken.<br><br>@UltimateHaste@ végsőképesség-gyorsítást kapsz."
         },
         {
             "apiName": "Repulsor",
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Munkád gyümölcsei",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "Azonnal lépsz 1 szintet, és minden további körben 1 bónusz szintet. <br><br>A szintkorlátod megszűnik.<br><br><rules>Ha a(z) @RoundCounterForBonus@. kör után választod, @BonusForLatePick@ további szintet kapsz.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "Korok bölcsessége",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "Azonnal lépsz 1 szintet, és minden további körben 1 bónusz szintet. <br><br>A szintkorlátod megszűnik.<br><br><rules>Ha a(z) @RoundCounterForBonus@. kör után választod, @BonusForLatePick@ további szintet kapsz.</rules><br><br><rules>Ha ez a bővítmény szintet lép, te is azonnal szinteket lépsz.</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Fogócska",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>Passzív:</passive> <keywordMajor>mozgási képesség</keywordMajor> használatakor egy jelet hagy hátra.<br><br><active>Aktív:</active> visszavisz a legutoljára kitett jelhez. Ezután @MSBuffDuration@ másodpercre <speed>@MSBuffAmount*100@% mozgási sebességet biztosít.</speed>"
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

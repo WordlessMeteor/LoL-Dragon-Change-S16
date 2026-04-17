@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "Αποκτάτε το Ξόρκι Επικαλεστή <spellName>Ασκήσεις Προθέρμανσης</spellName>.<br><br>Επιστρατεύστε τον χορευτή που κρύβετε μέσα σας και αυξήστε τη ζημιά σας κατά 2% το δευτερόλεπτο, έως @MaxStacks@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "Ασκήσεις Προθέρμανσης",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "Αποκτάτε το Ξόρκι Επικαλεστή <spellName>Ασκήσεις Προθέρμανσης</spellName>.<br><br>Επιστρατεύστε τον χορευτή που κρύβετε μέσα σας και αυξήστε τη ζημιά σας κατά 2% το δευτερόλεπτο, έως @MaxStacks*100@%."
         },
         {
             "apiName": "Vanish",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "Όταν η Ζωή ενός σύμμαχου Ήρωα πέσει κάτω από <scaleHealth>@AllyHealthThreshold*100@%</scaleHealth>, ανταλλάσσετε μέρος της δικής σας Ζωής για να του δώσετε <shield>Ασπίδα</shield>.",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "Πρόθυμη Θυσία",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "Την πρώτη φορά που η Ζωή ενός σύμμαχου Ήρωα πέσει κάτω από <scaleHealth>@AllyHealthThreshold*100@%</scaleHealth>, ανταλλάσσετε το <scaleHealth>@CurrentHealthToDrain*100@% της τρέχουσας Ζωής</scaleHealth> σας για να του δώσετε μια <shield>Ασπίδα ίση με το @ShieldToGrant*100@% της τρέχουσας Ζωής</shield> σας."
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "Εκδίκηση",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "Οι επιδράσεις αντικειμένων και ζημιάς σε βάθος χρόνου προκαλούν <crit>Καίρια Χτυπήματα</crit>. <br><br>Αποκτάτε <crit>%i:scaleCrit% @CritChance*100@% Πιθανότητα Καίριου Χτυπήματος</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "Τρωτό Σημείο",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "Οι επιδράσεις αντικειμένων και ζημιάς σε βάθος χρόνου προκαλούν <crit>Καίρια Χτυπήματα που προξενούν @CritDamage*100@% επιπλέον ζημιά</crit>. <br><br>Αποκτάτε <crit>%i:scaleCrit% @CritChance*100@% Πιθανότητα Καίριου Χτυπήματος</crit>."
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Υπέρτατη Ρουλέτα",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "Αντικαθιστά την <spellName>Υποχώρηση</spellName> με μια τυχαία <attention>Υπέρτατη</attention>. Μετά τη χρήση της <attention>Υπέρτατης</attention>, αντικαταστήστε τη με μια νέα τυχαία <attention>Υπέρτατη</attention>.<br><br><br><rules>Αυτά τα ξόρκια είναι ακόμα Υπέρτατες.</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "Τα πλάσματα που καλείτε έχουν @MinionAmp*100@% αυξημένο μέγεθος, Ζωή και ζημιά."
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "Προσθέτει το Πολυεργαλείο στο απόθεμά σας. Σε κάθε Φάση Αγοράς, επιλέξτε 1 από 5 τυχαία αντικείμενα και το Πολυεργαλείο θα μετατραπεί σε αυτό το αντικείμενο για τον επόμενο γύρο μάχης.",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "Πολυεργαλείο",
-            "rarity": 1,
-            "tooltip": "Προσθέτει το Πολυεργαλείο στο απόθεμά σας. Σε κάθε Φάση Αγοράς, επιλέξτε 1 από 5 τυχαία αντικείμενα και το Πολυεργαλείο θα μετατραπεί σε αυτό το αντικείμενο για τον επόμενο γύρο μάχης.<br><br>Στον γύρο @PrismaticRound@, το Πολυεργαλείο μπορεί να προσφέρει Πρισματικά Αντικείμενα."
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "Αφού χρησιμοποιήσετε την Υπέρτατη Ικανότητά σας, αποκτάτε Ανοσία στην <status>Καταστολή Πλήθους</status> για @UnstoppableDuration@ δευτερόλεπτα. (Χρόνος Επαναφόρτισης @Cooldown@ δευτ.).",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "Ασταμάτητη Υπέρτατη",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "Αφού χρησιμοποιήσετε την Υπέρτατη Ικανότητά σας, αποκτάτε Ανοσία στην <status>Καταστολή Πλήθους</status> για @UnstoppableDuration@ δευτερόλεπτα. (Χρόνος Επαναφόρτισης @Cooldown@ δευτ.)."
         },
         {
             "apiName": "Recursion",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "Τώρα μπορείτε να κάνετε <spellName>Μαγοκλοπή</spellName> στην Υπέρτατη του συμμάχου σας.<br><br>Με την εξόντωση, μειώνεται ο χρόνος κλειδώματος και ο Χρόνος Επαναφόρτισης της <spellName>Μαγοκλοπής</spellName> κατά @TakedownRefund*100@%.<br><br>Αποκτάτε @UltimateHaste@ Επιτάχυνση Υπέρτατης Ικανότητας.",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "Σπασμένα Δεσμά",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "Τώρα μπορείτε να κάνετε <spellName>Μαγοκλοπή</spellName> στην Υπέρτατη του συμμάχου σας.<br><br>Με την εξόντωση, μειώνεται ο χρόνος κλειδώματος και ο Χρόνος Επαναφόρτισης της <spellName>Μαγοκλοπής</spellName> κατά @TakedownRefund*100@%.<br><br>Αποκτάτε @UltimateHaste@ Επιτάχυνση Υπέρτατης Ικανότητας."
         },
         {
             "apiName": "Repulsor",
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Καρποί των Κόπων σας",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "Αποκτήστε 1 επίπεδο τώρα και 1 μπόνους επίπεδο κάθε δεύτερο γύρο. <br><br>Δεν έχετε πλέον όριο επιπέδων.<br><br><rules>Αν ληφθεί μετά τον γύρο @RoundCounterForBonus@, κερδίζετε @BonusForLatePick@ επιπλέον επίπεδα.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "Σοφία των Αιώνων",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "Αποκτήστε 1 επίπεδο τώρα και 1 μπόνους επίπεδο κάθε δεύτερο γύρο. <br><br>Δεν έχετε πλέον όριο επιπέδων.<br><br><rules>Αν ληφθεί μετά τον γύρο @RoundCounterForBonus@, κερδίζετε @BonusForLatePick@ επιπλέον επίπεδα.</rules><br><br><rules>Η αναβάθμιση αυτής της Ενίσχυσης σάς δίνει αμέσως επίπεδα</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Τώρα με βλέπεις",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>Παθητική:</passive> Αφήστε ένα σημάδι πίσω σας κάθε φορά που χρησιμοποιείτε μια <keywordMajor>Ικανότητα Κίνησης</keywordMajor>.<br><br><active>Ενεργή:</active> Επιστρέψτε σε ένα προηγούμενο σημάδι που έχετε αφήσει. Στη συνέχεια αποκτάτε <speed>@MSBuffAmount*100@% Ταχύτητα Κίνησης για @MSBuffDuration@ δευτ.</speed>"
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

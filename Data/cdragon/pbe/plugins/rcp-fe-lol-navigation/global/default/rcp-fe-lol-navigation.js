@@ -4049,13 +4049,16 @@
                     this.activityCenter.hideActivityCenter()
                 }
                 showTFTHome(e) {
-                    this.sendTFTHomeTelemetryEvent(e), i.Router.navigateTo("rcp-fe-lol-tft")
+                    this.sendTFTHomeTelemetryEvent(e), this.setTFTHomeSeen(!0), i.Router.navigateTo("rcp-fe-lol-tft")
                 }
                 sendTFTHomeTelemetryEvent(e) {
                     this._services.tft.sendTFTHomeTelemetryEvent(e)
                 }
                 sendTFTScreenLoadTelemetryEvent(e) {
                     this._services.tft.sendTFTScreenLoadTelemetryEvent(e)
+                }
+                setTFTHomeSeen(e) {
+                    this._services.tft.setTFTHomeSeen(e)
                 }
                 getFullPageModalManager() {
                     return i.fullPageModalManager
@@ -24445,7 +24448,7 @@
                 },
                 click: function() {
                     if (this.get("disabled") || this.get("active")) return;
-                    this.trigger("hideLobby"), this.sendAction(), this.get("item").id === a.NAV_BAR_MENU_ITEM_NAME_TO_ID.TFT && this.get("tftService").sendTFTHomeTelemetryEvent("TFT nav tab clicked");
+                    this.trigger("hideLobby"), this.sendAction(), this.get("item").id === a.NAV_BAR_MENU_ITEM_NAME_TO_ID.TFT && (this.get("tftService").sendTFTHomeTelemetryEvent("TFT nav tab clicked"), this.get("tftService").setTFTHomeSeen(!0));
                     const e = this.get("item.navigateWithTooltipRouteOptions") && !this.get("attentionTooltipSeen") ? this.get("attentionTooltip.routeOptions") : {};
                     this.navigateToRoute(e)
                 },
@@ -25258,6 +25261,7 @@
                     this._super(...arguments)
                 },
                 tftService: a.Ember.inject.service("tft"),
+                tftHomeSeen: a.Ember.computed.alias("tftService.tftHomeSeen"),
                 lastTFTSetSeen: a.Ember.computed.alias("tftService.lastTftSetCoreNameSeen"),
                 currentDefaultTFTSet: a.Ember.computed.alias("tftService.currentDefaultTFTSet"),
                 mapData: a.Ember.computed.alias("tftService.mapData"),
@@ -25279,7 +25283,8 @@
                     const e = this.get("mapData.assets.set-announcement-icon");
                     return e ? this.get("tftService").getLocalizedAssetPath(e) : ""
                 })),
-                showSetAnnouncement: a.Ember.computed("lastTFTSetSeen", "currentDefaultTFTSet", "setAnnouncementSeen", "setAnnouncementData", (function() {
+                showSetAnnouncement: a.Ember.computed("tftHomeSeen", "lastTFTSetSeen", "currentDefaultTFTSet", "setAnnouncementSeen", "setAnnouncementData", (function() {
+                    if (!1 === this.get("tftHomeSeen")) return !1;
                     if (!0 === this.get("setAnnouncementSeen") || !this.get("setAnnouncementData")) return !1;
                     const e = this.get("lastTFTSetSeen"),
                         t = this.get("currentDefaultTFTSet");
@@ -27929,6 +27934,7 @@
                 setAnnouncementSeenLocal: null,
                 currentDefaultTFTSet: null,
                 mapData: null,
+                tftHomeSeen: !1,
                 init() {
                     this._super(...arguments), this._setLocale(), this.handleWalletChanged = this.handleWalletChanged.bind(this), this.initDataBindings(), this.initGenericAssets()
                 },
@@ -27991,6 +27997,9 @@
                         id: "TFT_home_entered",
                         reason: e
                     })
+                },
+                setTFTHomeSeen(e) {
+                    this.set("tftHomeSeen", e)
                 },
                 async sendTFTScreenLoadTelemetryEvent(e) {
                     const t = Number(await i.Telemetry.getApplicationStartTime()),
@@ -32077,7 +32086,7 @@
             t.default = class {
                 constructor() {
                     const e = (0, s.getProvider)().getSocket();
-                    this._gameflowDataBinding = (0, s.dataBinding)("/lol-gameflow", e), this._gameflowDataBinding.observe("/v1/spectate", this, this._updateIsSpectating), this._gameflowDataBinding.observe("/v1/early-exit-enabled", this, this._updateIsEarlyExitEnabled), this._gameflowDataBinding.observe("/v1/early-exit-quit-enabled", this, this._updateIsEarlyExitQuitButtonEnabled), this._rootNode = document.createElement("div"), this._rootNode.classList.add("reconnect-container"), this._buttonContainer = document.createElement("div"), this._buttonContainer.classList.add("reconnect-button-container"), this._reconnectButton = this._buildButton({
+                    this._gameflowDataBinding = (0, s.dataBinding)("/lol-gameflow", e), this._gameflowDataBinding.observe("/v1/spectate", this, this._updateIsSpectating), this._gameflowDataBinding.observe("/v1/early-exit-enabled", this, this._updateIsEarlyExitEnabled), this._gameflowDataBinding.observe("/v1/early-exit-quit-enabled", this, this._updateIsEarlyExitQuitButtonEnabled), this._gameflowDataBinding.observe("/v1/session", this, this._onSessionChanged), this._rootNode = document.createElement("div"), this._rootNode.classList.add("reconnect-container"), this._buttonContainer = document.createElement("div"), this._buttonContainer.classList.add("reconnect-button-container"), this._reconnectButton = this._buildButton({
                         clickCallback: () => this._reconnect(),
                         className: "reconnect-to-game",
                         innerHTML: "HARD-CODED-STRING-RECONNECT"
@@ -32186,6 +32195,9 @@
                 }
                 async _onSysInfoRetrieved(e) {
                     0
+                }
+                _onSessionChanged(e) {
+                    null !== this._incompatibleDeviceModal && "Reconnect" !== e?.phase && (s.UIKit.getModalManager().remove(this._incompatibleDeviceModal), this._incompatibleDeviceModal = null)
                 }
             }
         }, (e, t, n) => {

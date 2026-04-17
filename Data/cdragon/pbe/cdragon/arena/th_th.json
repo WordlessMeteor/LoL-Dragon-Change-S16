@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "ได้รับเวทซัมมอนเนอร์ <spellName>Warmup Routine</spellName><br><br>ใช้เวลาร่ายสกิลเพื่อปลุกสัญชาตญาณนักเต้นในตัวคุณ เพิ่มความเสียหายที่คุณทำได้ 2% ต่อวินาทีที่ร่าย สูงสุดที่ @MaxStacks@%",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "Warmup Routine",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "ได้รับเวทซัมมอนเนอร์ <spellName>Warmup Routine</spellName><br><br>ใช้เวลาร่ายสกิลเพื่อปลุกสัญชาตญาณนักเต้นในตัวคุณ เพิ่มความเสียหายที่คุณทำได้ 2% ต่อวินาทีที่ร่าย สูงสุดที่ @MaxStacks*100@%"
         },
         {
             "apiName": "Vanish",
@@ -1429,13 +1429,13 @@
                     2.0
                 ]
             },
-            "desc": "ทุกวินาทีสั้น ๆ จะทำการ<keywordMajor>ร่ายอัตโนมัติ</keywordMajor>แสงแห่งการปกปัก มอบ<shield>โล่ป้องกัน</shield>ให้กับตัวคุณและเพื่อนร่วมทีมที่มันทะลุผ่านก่อนที่จะกลับมา และปล่อยเอฟเฟกต์ซ้ำ",
+            "desc": "ทุกวินาทีสั้น ๆ จะทำการ<keywordMajor>ร่ายอัตโนมัติ</keywordMajor>แสงแห่งการปกปัก มอบ<shield>โล่ป้องกัน</shield>ให้กับตัวคุณและเพื่อนร่วมทีม ที่มันทะลุผ่านก่อนที่จะกลับมา และปล่อยเอฟเฟกต์ซ้ำ",
             "iconLarge": "assets/ux/cherry/augments/icons/lightwarden_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/lightwarden_small.png",
             "id": 231,
             "name": "Light Warden",
             "rarity": 1,
-            "tooltip": "ทุก @Cooldown@ วินาที <keywordMajor>ร่ายอัตโนมัติ</keywordMajor>แสงแห่งการปกปัก มอบ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield>ให้กับตัวคุณและเพื่อนร่วมทีมที่มันทะลุผ่านก่อนที่จะกลับมา และปล่อยเอฟเฟกต์ซ้ำ"
+            "tooltip": "ทุก @Cooldown@ วินาที <keywordMajor>ร่ายอัตโนมัติ</keywordMajor>แสงแห่งการปกปัก มอบ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield> ให้กับตัวคุณและเพื่อนร่วมทีมที่มันทะลุผ่านก่อนที่จะกลับมา และปล่อยเอฟเฟกต์ซ้ำ"
         },
         {
             "apiName": "Quest_MadHatter",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "เมื่อแชมเปี้ยนร่วมทีมมี<scaleHealth>พลังชีวิตต่ำกว่า @AllyHealthThreshold*100@%</scaleHealth> คุณจะแลกพลังชีวิตบางส่วนของตัวเองเพื่อสร้าง<shield>โล่ป้องกัน</shield>ให้พวกเขา",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "Willing Sacrifice",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "เมื่อแชมเปี้ยนร่วมทีมมี<scaleHealth>พลังชีวิตต่ำกว่า @AllyHealthThreshold*100@%</scaleHealth> เป็นครั้งแรก คุณจะแลก<scaleHealth>พลังชีวิต @CurrentHealthToDrain*100@% ของพลังชีวิตปัจจุบันของคุณ</scaleHealth>เพื่อมอบ<shield>โล่ป้องกันเท่ากับ @ShieldToGrant*100@% ของพลังชีวิตปัจจุบันของคุณ</shield>ให้แก่พวกเขา"
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "Vengeance",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "ไอเทมและเอฟเฟกต์ความเสียหายชั่วระยะเวลาของคุณสามารถ<crit>ติดคริติคอล</crit>ได้<br><br>ได้รับ<crit>โอกาสคริติคอล %i:scaleCrit% @CritChance*100@%</crit>",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "Vulnerability",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "ไอเทมและเอฟเฟกต์สร้างความเสียหายต่อเนื่องของคุณสามารถ<crit>ติดคริติคอล</crit>ได้ และสร้างความเสียหายเพิ่มเติม @CritDamage*100@%<br><br>ได้รับ<crit>โอกาสคริติคอล %i:scaleCrit% @CritChance*100@%</crit>"
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Ultimate Roulette",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "แทนที่เวทซัมมอนเนอร์ <spellName>Flee</spellName> ด้วยสกิล<attention>อัลติเมท</attention>แบบสุ่ม และหลังร่ายสกิล<attention>อัลติเมท</attention>ดังกล่าว แทนที่มันด้วย<attention>สกิลอัลติเมท</attention>ใหม่แบบสุ่ม<br><br><br><rules>เวทเหล่านี้ยังถือว่าเป็นสกิลอัลติเมท</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6278,13 +6278,13 @@
                     300.0
                 ]
             },
-            "desc": "ได้รับ <gold>+%i:goldCoins% @GoldBonus@ ทอง</gold> และลดราคาของ Anvil ทั้งหมดลง<br><br><attention>Prismatic Anvil</attention>: <gold>-%i:goldCoins%@PrismaticCostReduction@ ทอง</gold><br><attention>Legendary Anvil</attention>: <gold>-%i:goldCoins%@LegendaryCostReduction@ ทอง</gold><br><attention>Stat Anvil</attention>: <gold>-%i:goldCoins% @StatCostReduction@ ทอง</gold><br><br><rules>ไอเทมที่ได้รับจาก Anvil นั้นจะขายคืนร้านค้าได้น้อยลง <gold>-%i:goldCoins% 500 ทอง</gold></rules>",
+            "desc": "ได้รับ <gold>+%i:goldCoins% @GoldBonus@ ทอง</gold> และลดราคาของ Anvil ทั้งหมดลง<br><br><attention>Prismatic Anvil</attention>: <gold>-%i:goldCoins% @PrismaticCostReduction@ ทอง</gold><br><attention>Legendary Anvil</attention>: <gold>-%i:goldCoins% @LegendaryCostReduction@ ทอง</gold><br><attention>Stat Anvil</attention>: <gold>-%i:goldCoins% @StatCostReduction@ ทอง</gold><br><br><rules>ไอเทมที่ได้รับจาก Anvil นั้นจะขายคืนร้านค้าได้น้อยลง <gold>-%i:goldCoins% 500 ทอง</gold></rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.png",
             "id": 234,
             "name": "Gamba Anvil",
             "rarity": 2,
-            "tooltip": "ได้รับ <gold>+%i:goldCoins% @GoldBonus@ ทอง</gold> และลดราคาของ Anvil ทั้งหมดลง<br><br><attention>Prismatic Anvil</attention>: <gold>-%i:goldCoins%@PrismaticCostReduction@ ทอง</gold><br><attention>Legendary Anvil</attention>: <gold>-%i:goldCoins%@LegendaryCostReduction@ ทอง</gold><br><attention>Stat Anvil</attention>: <gold>-%i:goldCoins% @StatCostReduction@ ทอง</gold><br><br><rules>ไอเทมที่ได้รับจาก Anvil นั้นจะขายคืนร้านค้าได้น้อยลง <gold>-%i:goldCoins% 500 ทอง</gold></rules>"
+            "tooltip": "ได้รับ <gold>+%i:goldCoins% @GoldBonus@ ทอง</gold> และลดราคาของ Anvil ทั้งหมดลง<br><br><attention>Prismatic Anvil</attention>: <gold>-%i:goldCoins% @PrismaticCostReduction@ ทอง</gold><br><attention>Legendary Anvil</attention>: <gold>-%i:goldCoins% @LegendaryCostReduction@ ทอง</gold><br><attention>Stat Anvil</attention>: <gold>-%i:goldCoins% @StatCostReduction@ ทอง</gold><br><br><rules>ไอเทมที่ได้รับจาก Anvil นั้นจะขายคืนร้านค้าได้น้อยลง <gold>-%i:goldCoins% 500 ทอง</gold></rules>"
         },
         {
             "apiName": "DivineIntervention",
@@ -6354,7 +6354,7 @@
                     2.5
                 ]
             },
-            "desc": "เรียกดวงดาวแห่งการคุ้มกันออกมา หลังจากเริ่มการต่อสู้ไปได้ไม่นาน เมื่อดาวลงมาถึง คุณและเพื่อนร่วมทีมใกล้เคียงจะเป็น<keywordMajor>อมตะ</keywordMajor>เป็นเวลาสั้น ๆ<br><br>จากนั้นความสามารถนี้จะ<keywordMajor>ร่ายอัตโนมัติ</keywordMajor>ทุก ๆ @BaseCD@ วินาที",
+            "desc": "เรียกดวงดาวแห่งการคุ้มกันออกมา หลังจากเริ่มการต่อสู้ไปได้ไม่นาน เมื่อดาวลงมาถึง คุณและเพื่อนร่วมทีมใกล้เคียง จะเป็น<keywordMajor>อมตะ</keywordMajor>เป็นเวลาสั้น ๆ<br><br>จากนั้นความสามารถนี้จะ<keywordMajor>ร่ายอัตโนมัติ</keywordMajor> ทุก ๆ @BaseCD@ วินาที",
             "iconLarge": "assets/ux/cherry/augments/icons/slowactingpainkillers_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/slowactingpainkillers_small.png",
             "id": 301,
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "ยูนิตที่คุณอัญเชิญจะมีขนาดตัว พลังชีวิต และความเสียหายเพิ่มขึ้น @MinionAmp*100@%"
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "เพิ่ม Multitool เข้าไปในช่องไอเทมของคุณ โดยเมื่อเข้าสู่ช่วงร้านค้าในแต่ละรอบ ให้เลือกไอเทมแบบสุ่มจาก 1 ใน 5 ชิ้น และ Multitool จะกลายเป็นไอเทมชิ้นนั้นในรอบการต่อสู้ถัดไป",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "Multitool",
-            "rarity": 1,
-            "tooltip": "เพิ่ม Multitool เข้าไปในช่องไอเทมของคุณ โดยเมื่อเข้าสู่ช่วงร้านค้าในแต่ละรอบ ให้เลือกไอเทมแบบสุ่มจาก 1 ใน 5 ชิ้น และ Multitool จะกลายเป็นไอเทมชิ้นนั้นในรอบการต่อสู้ถัดไป<br><br>เมื่อถึงรอบที่ @PrismaticRound@ Multitool จะสามารถสุ่มไอเทมระดับ Prismatic ได้"
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "หลังจากที่คุณใช้สกิลอัลติเมท คุณจะไม่ได้รับผล <status>CC</status> เป็นเวลา @UnstoppableDuration@ วินาที (คูลดาวน์ @Cooldown@ วินาที)",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "Ultimate Unstoppable",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "หลังจากที่คุณใช้สกิลอัลติเมท คุณจะไม่ได้รับผล <status>CC</status> เป็นเวลา @UnstoppableDuration@ วินาที (คูลดาวน์ @Cooldown@ วินาที)"
         },
         {
             "apiName": "Recursion",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "ตอนนี้คุณสามารถใช้ <spellName>Hijack</spellName> เพื่อขโมยสกิลอัลติเมทของเพื่อนร่วมทีมได้แล้ว<br><br>เมื่อสังหารสำเร็จ จะลดระยะเวลาการล็อกและคูลดาวน์ของ <spellName>Hijack</spellName> ลง @TakedownRefund*100@%<br><br>ได้รับเร่งสกิลอัลติเมท @UltimateHaste@ หน่วย",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "Unshackled",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "ตอนนี้คุณสามารถใช้ <spellName>Hijack</spellName> เพื่อขโมยสกิลอัลติเมทของเพื่อนร่วมทีมได้แล้ว<br><br>เมื่อสังหารสำเร็จ จะลดระยะเวลาการล็อกและคูลดาวน์ของ <spellName>Hijack</spellName> ลง @TakedownRefund*100@%<br><br>ได้รับเร่งสกิลอัลติเมท @UltimateHaste@ หน่วย"
         },
         {
             "apiName": "Repulsor",
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Fruits of Your Labor",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "ได้รับ 1 เลเวลทันที และได้รับโบนัสเลเวลอีก 1 เลเวลในทุก ๆ สองรอบ<br><br>เลเวลสูงสุดของคุณถูกนำออก<br><br><rules>หากเลือกรับหลังจบรอบ @RoundCounterForBonus@ จะได้รับเลเวลเพิ่มเติม @BonusForLatePick@ เลเวล</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "Wisdom of Ages",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "ได้รับ 1 เลเวลทันที และได้รับโบนัสเลเวลอีก 1 เลเวลในทุก ๆ สองรอบ<br><br>เลเวลสูงสุดของคุณถูกนำออก<br><br><rules>หากเลือกรับหลังจบรอบ @RoundCounterForBonus@ จะได้รับเลเวลเพิ่มเติม @BonusForLatePick@ เลเวล</rules><br><br><rules>การอัปเลเวล Augment นี้จะมอบเลเวลให้คุณทันที</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Now You See Me",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>ติดตัว:</passive> ทิ้งร่องรอยไว้เมื่อคุณใช้<keywordMajor>สกิลประเภทเคลื่อนที่</keywordMajor><br><br><active>กดใช้:</active> กลับสู่ตำแหน่งที่ทำเครื่องหมายไว้ล่าสุด จากนั้นคุณจะได้รับ<speed>ความเร็วเคลื่อนที่ @MSBuffAmount*100@% เป็นเวลา @MSBuffDuration@ วินาที</speed>"
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "<spellName>Isınma Hareketleri</spellName> sihirdar büyüsünü kazanırsın.<br><br>İçindeki dansçıyı dışarı çıkararak hasarını her saniye %2 arttırırsın. Bu oran en fazla %@MaxStacks@ olabilir.",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "Isınma Hareketleri",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "<spellName>Isınma Hareketleri</spellName> sihirdar büyüsünü kazanırsın.<br><br>İçindeki dansçıyı dışarı çıkararak hasarını her saniye %2 arttırırsın. Bu oran en fazla %@MaxStacks*100@ olabilir."
         },
         {
             "apiName": "Vanish",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "Bir takım arkadaşının <scaleHealth>canı %@AllyHealthThreshold*100@</scaleHealth> değerinin altına düştüğünde kendi canının bir kısmını feda ederek ona <shield>kalkan</shield> sağlarsın.",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "Fedakârlık",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "Bir takım arkadaşının canı ilk kez <scaleHealth>%@AllyHealthThreshold*100@</scaleHealth> değerinin altına düştüğünde <scaleHealth>kendi mevcut canının %@CurrentHealthToDrain*100@ kadarını</scaleHealth> feda edersin ve ona <shield>mevcut canının %@ShieldToGrant*100@ kadarına eşdeğer miktarda kalkan</shield> kazandırırsın."
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "İntikam",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "Eşyaların ve zamanla hasar veren etkilerin <crit>kritik vuruş</crit> yapabilir.<br><br><crit>%@CritChance*100@ Kritik Vuruş İhtimali %i:scaleCrit%</crit> kazanırsın.",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "Zafiyet",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "Eşyaların ve zamanla hasar veren etkilerin <crit>kritik vuruş yaparak %@CritDamage*100@ İlave Hasar</crit> verebilir.<br><br><crit>%@CritChance*100@ Kritik Vuruş İhtimali %i:scaleCrit%</crit> kazanırsın."
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Ulti Ruleti",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "<spellName>Kaç</spellName> büyüsünün yerini rasgele bir <attention>ulti</attention> alır. Kullanılan <attention>ultinin</attention> yerine farklı bir rasgele <attention>ulti</attention> gelir.<br><br><br><rules>Bu büyüler ulti sayılır.</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6278,13 +6278,13 @@
                     300.0
                 ]
             },
-            "desc": "<gold>@GoldBonus@ Altın %i:goldCoins%</gold> kazanırsın ve tüm örslerin bedeli azalır.<br><br><attention>Prizmatik Örsler</attention>: <gold>-@PrismaticCostReduction@ Altın %i:goldCoins%</gold><br><attention>Efsanevi Örsler</attention>: <gold>-@LegendaryCostReduction@ Altın %i:goldCoins%</gold><br><attention>Nitelik Örsleri</attention>: <gold>-@StatCostReduction@ Altın %i:goldCoins%</gold><br><br><rules>Örslerden elde edilen eşyaların geri satış bedeli <gold>500 Altın %i:goldCoins%</gold> azalır.</rules>",
+            "desc": "<gold>@GoldBonus@ Altın %i:goldCoins%</gold> kazanırsın ve tüm örslerin bedeli azalır.<br><br><attention>Prizmatik Örsler</attention>: <gold>@PrismaticCostReduction@ Altın %i:goldCoins%</gold><br><attention>Efsanevi Örsler</attention>: <gold>-@LegendaryCostReduction@ Altın %i:goldCoins%</gold><br><attention>Nitelik Örsleri</attention>: <gold>-@StatCostReduction@ Altın %i:goldCoins%</gold><br><br><rules>Örslerden elde edilen eşyaların geri satış bedeli <gold>500 Altın %i:goldCoins%</gold> azalır.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.png",
             "id": 234,
             "name": "Talih Örsü",
             "rarity": 2,
-            "tooltip": "<gold>@GoldBonus@ Altın %i:goldCoins%</gold> kazanırsın ve tüm örslerin bedeli azalır.<br><br><attention>Prizmatik Örsler</attention>: <gold>-@PrismaticCostReduction@ Altın %i:goldCoins%</gold><br><attention>Efsanevi Örsler</attention>: <gold>-@LegendaryCostReduction@ Altın %i:goldCoins%</gold><br><attention>Nitelik Örsleri</attention>: <gold>-@StatCostReduction@ Altın %i:goldCoins%</gold><br><br><rules>Örslerden elde edilen eşyaların geri satış bedeli <gold>500 Altın %i:goldCoins%</gold> azalır.</rules>"
+            "tooltip": "<gold>@GoldBonus@ Altın %i:goldCoins%</gold> kazanırsın ve tüm örslerin bedeli azalır.<br><br><attention>Prizmatik Örsler</attention>: <gold>@PrismaticCostReduction@ Altın %i:goldCoins%</gold><br><attention>Efsanevi Örsler</attention>: <gold>-@LegendaryCostReduction@ Altın %i:goldCoins%</gold><br><attention>Nitelik Örsleri</attention>: <gold>-@StatCostReduction@ Altın %i:goldCoins%</gold><br><br><rules>Örslerden elde edilen eşyaların geri satış bedeli <gold>500 Altın %i:goldCoins%</gold> azalır.</rules>"
         },
         {
             "apiName": "DivineIntervention",
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "Çağırdığın birimlerin boyutu, canı ve hasarı %@MinionAmp*100@ artar."
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "Çok Amaçlı'yı çantana ekler. Her hazırlık evresinde 5 rasgele eşyadan birini seçersin. Çok Amaçlı bir sonraki çatışma turu boyunca seçtiğin eşyaya dönüşür.",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "Çok Amaçlı",
-            "rarity": 1,
-            "tooltip": "Çok Amaçlı'yı çantana ekler. Her hazırlık evresinde 5 rasgele eşyadan birini seçersin. Çok Amaçlı bir sonraki çatışma turu boyunca seçtiğin eşyaya dönüşür.<br><br>Çok Amaçlı, @PrismaticRound@. turda prizmatik eşyalara dönüşebilir."
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "Ultini kullandıktan sonra @UnstoppableDuration@ saniyeliğine <status>kitle kontrolü</status> etkilerine karşı bağışıklık kazanırsın (@Cooldown@ sn. bekleme süresi).",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "Durdurulamaz Ulti",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "Ultini kullandıktan sonra @UnstoppableDuration@ saniyeliğine <status>kitle kontrolü</status> etkilerine karşı bağışıklık kazanırsın (@Cooldown@ sn. bekleme süresi)."
         },
         {
             "apiName": "Recursion",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "Artık takım arkadaşının ultisini <spellName>Gasp</spellName> edebilirsin.<br><br>Bir rakibi alt ettiğinde <spellName>Gasp'ın</spellName> kilitlenme ve bekleme süresi %@TakedownRefund*100@ azalır.<br><br>@UltimateHaste@ Ulti Hızı kazanırsın.",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "İsyanın Zinciri",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "Artık takım arkadaşının ultisini <spellName>Gasp</spellName> edebilirsin.<br><br>Bir rakibi alt ettiğinde <spellName>Gasp'ın</spellName> kilitlenme ve bekleme süresi %@TakedownRefund*100@ azalır.<br><br>@UltimateHaste@ Ulti Hızı kazanırsın."
         },
         {
             "apiName": "Repulsor",
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Çabanın Meyvesi",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "Hemen 1 seviye atlarsın ve her iki turda bir fazladan 1 seviye atlamaya devam edersin.<br><br>Seviye sınırın kalkar.<br><br><rules>Bu eklenti @RoundCounterForBonus@. turdan sonra alınırsa @BonusForLatePick@ ilave seviye kazandırır.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "Asırlık Bilgi",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "Hemen 1 seviye atlarsın ve her iki turda bir fazladan 1 seviye atlamaya devam edersin.<br><br>Seviye sınırın kalkar.<br><br><rules>Bu eklenti @RoundCounterForBonus@. turdan sonra alınırsa @BonusForLatePick@ ilave seviye kazandırır.</rules><br><br><rules>Bu eklentiye seviye atlatmak sana anında seviye kazandırır.</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Hokkabaz",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>Pasif:</passive> Bir <keywordMajor>hareket yeteneği</keywordMajor> kullandığında ardında bir işaret bırakırsın.<br><br><active>Aktif:</active> Bıraktığın son işarete geri dönersin. Ardından <speed>@MSBuffDuration@ saniyeliğine %@MSBuffAmount*100@ Hareket Hızı kazanırsın.</speed>"
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

@@ -41,13 +41,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_WarmupRoutine_Summary",
+            "desc": "Du erhältst den Beschwörerzauber <spellName>Aufwärmübungen</spellName>.<br><br>Du kanalisierst deinen inneren Tänzer, um deinen Schaden pro Sekunde um 2&nbsp;% zu erhöhen (maximal @MaxStacks@&nbsp;%).",
             "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.png",
             "id": 93,
             "name": "Aufwärmübungen",
             "rarity": 0,
-            "tooltip": "Cherry_WarmupRoutine_Tooltip"
+            "tooltip": "Du erhältst den Beschwörerzauber <spellName>Aufwärmübungen</spellName>.<br><br>Du kanalisierst deinen inneren Tänzer, um deinen Schaden pro Sekunde um 2&nbsp;% zu erhöhen (maximal @MaxStacks*100@&nbsp;%)."
         },
         {
             "apiName": "Vanish",
@@ -1536,7 +1536,7 @@
                         }
                     ]
                 },
-                "{3da09daf}": {
+                "HealthPerSecondCalc": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -1670,13 +1670,13 @@
                     0.75
                 ]
             },
-            "desc": "Cherry_WillingSacrifice_Summary",
+            "desc": "Wenn ein verbündeter Champion unter <scaleHealth>@AllyHealthThreshold*100@&nbsp;% Leben</scaleHealth> fällt, verwandelst du einen Teil deines Lebens in einen <shield>Schild</shield> für ihn.",
             "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.png",
             "id": 94,
             "name": "Bereitwilliges Opfer",
             "rarity": 1,
-            "tooltip": "Cherry_WillingSacrifice_Tooltip"
+            "tooltip": "Wenn ein verbündeter Champion zum ersten Mal unter <scaleHealth>@AllyHealthThreshold*100@&nbsp;% Leben</scaleHealth> fällt, verwandelst du <scaleHealth>@CurrentHealthToDrain*100@&nbsp;% deines aktuellen Lebens</scaleHealth> in einen <shield>Schild mit@ShieldToGrant*100@&nbsp;% deines aktuellen Lebens</shield> für ihn."
         },
         {
             "apiName": "Firefox",
@@ -2001,7 +2001,7 @@
         {
             "apiName": "TankItOrLeaveIt",
             "calculations": {
-                "{dddcba61}": {
+                "CriticalDefendCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -2178,7 +2178,7 @@
         {
             "apiName": "GoHCravingForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2297,13 +2297,13 @@
                     0.4399999976158142
                 ]
             },
-            "desc": "Cherry_Vengeance_Summary",
+            "desc": "{{ Cherry_Vengeance@TeamSize@_Summary }}",
             "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.png",
             "id": 90,
             "name": "Rache",
             "rarity": 1,
-            "tooltip": "Cherry_Vengeance_Tooltip"
+            "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
             "apiName": "Erosion",
@@ -3100,13 +3100,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_Vulnerability_Summary",
+            "desc": "Die Effekte deiner Gegenstände und dein Schaden über Zeit können <crit>kritisch treffen</crit>. <br><br>Du erhältst <crit>%i:scaleCrit% @CritChance*100@&nbsp;% Chance auf kritische Treffer</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
             "name": "Verwundbarkeit",
             "rarity": 1,
-            "tooltip": "Cherry_Vulnerability_TooltipDescription"
+            "tooltip": "Die Effekte deiner Gegenstände und dein Schaden über Zeit können <crit>kritisch treffen und verursachen dann @CritDamage*100@&nbsp;% zusätzlichen Schaden</crit>. <br><br>Du erhältst <crit>%i:scaleCrit% @CritChance*100@&nbsp;% Chance auf kritische Treffer</crit>."
         },
         {
             "apiName": "CannonFodder",
@@ -3157,9 +3157,9 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Ultimatives Roulette",
+            "name": "Cherry_UltimateRoulette_Name",
             "rarity": 2,
-            "tooltip": "Cherry_UltimateRoulette_Tooltip"
+            "tooltip": "Du ersetzt <spellName>Fliehen</spellName> durch eine zufällige <attention>ultimative Fähigkeit</attention>. Nachdem du die <attention>Ult<attention> gewirkt hast, wird sie durch eine neue zufällige </attention>Ult</attention> ersetzt.<br><br><br><rules>Diese Fähigkeiten sind immer noch ultimative Fähigkeiten.</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4070,13 +4070,13 @@
             },
             "dataValues": {
                 "Cooldown": [
+                    10.0,
+                    10.0,
                     8.0,
                     6.0,
                     4.0,
                     2.0,
-                    0.0,
-                    -2.0,
-                    -4.0
+                    2.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -4097,13 +4097,13 @@
                     2.0
                 ],
                 "MulticastDelay": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
                 ],
                 "SnipeDistance": [
                     700.0,
@@ -5457,7 +5457,7 @@
         {
             "apiName": "GoHCompulsionForPower",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -5989,11 +5989,11 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582,
-                    0.009999999776482582
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937,
+                    0.007499999832361937
                 ],
                 "MaxLevel": [
                     2.0,
@@ -6122,7 +6122,7 @@
         {
             "apiName": "GoHCravingForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -6906,7 +6906,7 @@
         {
             "apiName": "GoHCompulsionForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -8846,55 +8846,6 @@
             "tooltip": "Deine Beschwörungen erhalten @MinionAmp*100@&nbsp;% mehr Größe, Leben und Schaden."
         },
         {
-            "apiName": "Multitool",
-            "calculations": {},
-            "dataValues": {
-                "AmountOfItemsToRoll": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "PrismaticRound": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
-                ],
-                "SellableRound": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
-                ]
-            },
-            "desc": "Füge deinem Inventar „Multifunktionswerkzeug“ hinzu. Wähle in jeder Kaufphase 1 von 5 zufälligen Gegenständen aus, und „Multifunktionswerkzeug“ wird in der nächsten Kampfrunde zu diesem Gegenstand.",
-            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
-            "id": 331,
-            "name": "Multifunktionswerkzeug",
-            "rarity": 1,
-            "tooltip": "Füge deinem Inventar „Multifunktionswerkzeug“ hinzu. Wähle in jeder Kaufphase 1 von 5 zufälligen Gegenständen aus, und „Multifunktionswerkzeug“ wird in der nächsten Kampfrunde zu diesem Gegenstand.<br><br>In Runde @PrismaticRound@ kann „Multifunktionswerkzeug“ zu prismatischen Gegenständen werden."
-        },
-        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9825,13 +9776,13 @@
                     5.0
                 ]
             },
-            "desc": "Cherry_UltimateUnstoppable_Tooltip",
+            "desc": "Nachdem du deine Ult eingesetzt hast, wirst du @UnstoppableDuration@&nbsp;Sekunden lang immun gegen <status>Massenkontrolle</status> (@Cooldown@&nbsp;Sek. Abklingzeit).",
             "iconLarge": "assets/ux/cherry/augments/icons/ultimateunstoppable_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
             "id": 112,
             "name": "Unaufhaltsame Ult",
             "rarity": 0,
-            "tooltip": "Cherry_UltimateUnstoppable_Tooltip"
+            "tooltip": "Nachdem du deine Ult eingesetzt hast, wirst du @UnstoppableDuration@&nbsp;Sekunden lang immun gegen <status>Massenkontrolle</status> (@Cooldown@&nbsp;Sek. Abklingzeit)."
         },
         {
             "apiName": "Recursion",
@@ -10799,7 +10750,7 @@
         {
             "apiName": "GoHCravingForRisk",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10850,7 +10801,7 @@
         {
             "apiName": "GoHCompulsionForWealth",
             "calculations": {
-                "{2f9b7774}": {
+                "MaxHealthReduction": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -10959,7 +10910,7 @@
         {
             "apiName": "CriticalHealing",
             "calculations": {
-                "{5c2f8217}": {
+                "CriticalHealCalc": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [
@@ -11967,13 +11918,13 @@
                     60.0
                 ]
             },
-            "desc": "Cherry_Unshackled_Summary",
+            "desc": "Du kannst jetzt die Ult deines Verbündeten durch <spellName>Ultimative Übernahme</spellName> übernehmen.<br><br>Verringert bei einer Kill-Beteiligung Sperrdauer und Abklingzeit von <spellName>Ultimative Übernahme</spellName> um @TakedownRefund*100@&nbsp;%.<br><br>Du erhältst @UltimateHaste@ Hast für die ultimative Fähigkeit.",
             "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
             "id": 314,
-            "name": "Cherry_Unshackled_Name",
+            "name": "Sprenger der Ketten",
             "rarity": 1,
-            "tooltip": "Cherry_Unshackled_Summary"
+            "tooltip": "Du kannst jetzt die Ult deines Verbündeten durch <spellName>Ultimative Übernahme</spellName> übernehmen.<br><br>Verringert bei einer Kill-Beteiligung Sperrdauer und Abklingzeit von <spellName>Ultimative Übernahme</spellName> um @TakedownRefund*100@&nbsp;%.<br><br>Du erhältst @UltimateHaste@ Hast für die ultimative Fähigkeit."
         },
         {
             "apiName": "Repulsor",
@@ -13123,7 +13074,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Früchte harter Arbeit",
+            "name": "Cherry_FruitsOfYourLabor_Name",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13512,13 +13463,13 @@
                     4.0
                 ]
             },
-            "desc": "Cherry_WisdomofAges_Summary",
+            "desc": "Du steigst jetzt 1&nbsp;Stufe auf und in jeder zweiten Runde 1&nbsp;zusätzliche Stufe. <br><br>Deine Stufenobergrenze wird entfernt.<br><br><rules>Nach Runde&nbsp;@RoundCounterForBonus@ erhältst du @BonusForLatePick@&nbsp;zusätzliche Stufen.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.png",
             "id": 96,
             "name": "Weisheit der Zeitalter",
             "rarity": 2,
-            "tooltip": "Cherry_WisdomofAges_Tooltip"
+            "tooltip": "Du steigst jetzt 1&nbsp;Stufe auf und in jeder zweiten Runde 1&nbsp;zusätzliche Stufe. <br><br>Deine Stufenobergrenze wird entfernt.<br><br><rules>Nach Runde&nbsp;@RoundCounterForBonus@ erhältst du @BonusForLatePick@&nbsp;zusätzliche Stufen.</rules><br><br><rules>Ein Stufenaufstieg dieser Augmentierung gewährt dir sofort Stufen.</rules>"
         },
         {
             "apiName": "GoHSacrificeForPrismatic",
@@ -13614,7 +13565,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Schwer zu schnappen",
+            "name": "Cherry_NowYouSeeMe_Name",
             "rarity": 0,
             "tooltip": "<passive>Passiv:</passive> Du hinterlässt jedes Mal eine Markierung, wenn du eine <keywordMajor>Bewegungsfähigkeit</keywordMajor> einsetzt.<br><br><active>Aktiv:</active> Du kehrst zur letzten hinterlassenen Markierung zurück. Du erhältst @MSBuffDuration@&nbsp;Sekunden lang <speed>@MSBuffAmount*100@&nbsp;% Lauftempo.</speed>"
         },
@@ -13670,7 +13621,7 @@
         {
             "apiName": "JeweledGauntlet",
             "calculations": {
-                "{47725e9c}": {
+                "CritGranted": {
                     "__type": "GameCalculation",
                     "mDisplayAsPercent": true,
                     "mFormulaParts": [

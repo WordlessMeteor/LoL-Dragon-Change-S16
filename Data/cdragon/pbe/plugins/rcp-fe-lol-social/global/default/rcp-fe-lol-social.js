@@ -22361,7 +22361,7 @@
                     })
                 })),
                 remedyFeedbackBottomText: o.Ember.computed("didReportOffender", (function() {
-                    return this.get("tra.remedy_received_notification_body_bottom")
+                    return this.get("didReportOffender") ? this.get("tra.remedy_received_notification_body_bottom") : this.get("tra.remedy_received_notification_body_bottom_bystander")
                 }))
             });
             t.default = s
