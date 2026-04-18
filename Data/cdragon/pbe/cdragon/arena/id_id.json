@@ -2075,7 +2075,18 @@
         },
         {
             "apiName": "CraftingSellAugment",
-            "calculations": {},
+            "calculations": {
+                "{903f4f4f}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "BuffCounterByCoefficientCalculationPart",
+                            "mBuffName": "{7e05f704}",
+                            "mCoefficient": 1.0
+                        }
+                    ]
+                }
+            },
             "dataValues": {
                 "AugmentLevelsToGrant": [
                     2.0,
@@ -2102,7 +2113,7 @@
             "id": 342,
             "name": "Augment Level",
             "rarity": 4,
-            "tooltip": "Menghapus satu <keywordMajor>%i:Augment% Augment</keywordMajor>. <br><br>Mendapatkan @AugmentLevelsToGrant@ <keywordMajor>%i:AugmentLevel% Level Augment</keywordMajor> random."
+            "tooltip": "Cherry_CraftingSellAugment_Tooltip"
         },
         {
             "apiName": "WitchfulThinking",
@@ -3157,7 +3168,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Cherry_UltimateRoulette_Name",
+            "name": "Ultimate Roulette",
             "rarity": 2,
             "tooltip": "Mengganti <spellName>Flee</spellName> dengan satu <attention>Ultima</attention> random. Setelah cast <attention>Ultima</attention>, ganti dengan <attention>Ultima</attention> random yang baru.<br><br><br><rules>Spell ini masih merupakan ultima.</rules>"
         },
@@ -3228,76 +3239,76 @@
             "dataValues": {
                 "BaseDamage": [
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
                 ],
                 "CastRange": [
                     400.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0
                 ],
                 "EDITDECEIVEFORREALVALUES": 0,
                 "ExtraAATime": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearDamage": [
                     0.25,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "FearDuration": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearRadius": [
                     350.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "PseudoCastTime": [
                     0.125,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125
                 ],
                 "StealthDuration": [
                     3.0,
@@ -5810,8 +5821,8 @@
                 "DamageAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5828,8 +5839,8 @@
                 "HealingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5864,8 +5875,8 @@
                 "ShieldingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -7367,55 +7378,6 @@
             "tooltip": "Mendapatkan <lifeSteal>@Omnivamp*100@% Omnivamp</lifeSteal>."
         },
         {
-            "apiName": "Despoil",
-            "calculations": {},
-            "dataValues": {
-                "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "EnemyDetectionRadius": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ],
-                "MSRatio": [
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "Melakukan dash atau teleport memberimu <keywordMajor>Cursed Power</keywordMajor> jika ada musuh di dekatmu. Mendapatkan <speed>Move Speed</speed> yang meningkat seiring dengan <keywordMajor>Cursed Power</keywordMajor> milikmu.",
-            "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
-            "id": 330,
-            "name": "Despoil",
-            "rarity": 0,
-            "tooltip": "Melakukan dash atau blink memberimu <keywordMajor>@CurseCounter@ Cursed Power</keywordMajor> jika ada musuh di dekatmu. Mendapatkan <speed>Move Speed</speed> yang meningkat seiring dengan <keywordMajor>Cursed Power</keywordMajor> milikmu.<br><br>Mendapatkan <speed>@f1@ Move Speed</speed> (@MSRatio*100@% dari <keywordMajor>Cursed Power</keywordMajor> milikmu).<br><br>{{ Cherry_CurseShared }}"
-        },
-        {
             "apiName": "WellBeRightBack",
             "calculations": {
                 "TooltipTrueDamageCalculation": {
@@ -8864,8 +8826,8 @@
                     0.019999999552965164,
                     0.019999999552965164,
                     0.05000000074505806,
+                    0.07500000298023224,
                     0.10000000149011612,
-                    0.125,
                     0.125,
                     0.125
                 ],
@@ -9918,10 +9880,10 @@
                     0.30000001192092896
                 ],
                 "HealthAmp": [
-                    0.30000001192092896,
+                    0.15000000596046448,
+                    0.15000000596046448,
                     0.30000001192092896,
                     0.5,
-                    0.75,
                     0.75,
                     0.75,
                     0.75
@@ -13074,7 +13036,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Cherry_FruitsOfYourLabor_Name",
+            "name": "Fruits of Your Labor",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13565,7 +13527,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Cherry_NowYouSeeMe_Name",
+            "name": "Now You See Me",
             "rarity": 0,
             "tooltip": "<passive>Pasif:</passive> Meninggalkan tanda setiap kali kamu menggunakan <keywordMajor>Ability Gerakan</keywordMajor>.<br><br><active>Aktif:</active> Kembali ke tanda sebelumnya yang kamu buat. Kamu kemudian mendapatkan <speed>@MSBuffAmount*100@% Move Speed selama @MSBuffDuration@ detik.</speed>"
         },

@@ -2065,17 +2065,28 @@
                     2.0
                 ]
             },
-            "desc": "<crit>치명타 확률(최대 @MaxChance*100@%)</crit>만큼 <crit>치명타를 방어</crit>해 일정 확률로 받는 피해를 감소시킬 수 있습니다. <br><br><crit>%i:scaleCrit% 치명타 확률이 @CritChance*100@%</crit> 증가합니다.",
+            "desc": "공격당할 때 <crit>치명타 확률(최대 @MaxChance*100@%)</crit>에 따라 <crit>치명 방어</crit>가 발동해 받는 피해가 감소할 수 있습니다. <br><br><crit>%i:scaleCrit% 치명타 확률이 @CritChance*100@%</crit> 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/tankitorleaveit_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tankitorleaveit_small.png",
             "id": 80,
             "name": "확률적 방어",
             "rarity": 0,
-            "tooltip": "<crit>치명타 확률(최대 @MaxChance*100@%)</crit>만큼 <crit>치명타를 방어</crit>해 받는 피해를 @CriticalDefendCalc@% 감소시킬 수 있습니다. <br><br><crit>%i:scaleCrit% 치명타 확률이 @CritChance*100@%</crit> 증가합니다."
+            "tooltip": "공격당할 때 <crit>치명타 확률(최대 @MaxChance*100@%)</crit>에 따라 <crit>치명 방어</crit>가 발동해 받는 피해가 @CriticalDefendCalc@% 감소할 수 있습니다. <br><br><crit>%i:scaleCrit% 치명타 확률이 @CritChance*100@%</crit> 증가합니다."
         },
         {
             "apiName": "CraftingSellAugment",
-            "calculations": {},
+            "calculations": {
+                "{903f4f4f}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "BuffCounterByCoefficientCalculationPart",
+                            "mBuffName": "{7e05f704}",
+                            "mCoefficient": 1.0
+                        }
+                    ]
+                }
+            },
             "dataValues": {
                 "AugmentLevelsToGrant": [
                     2.0,
@@ -2102,7 +2113,7 @@
             "id": 342,
             "name": "증강 강화",
             "rarity": 4,
-            "tooltip": "<keywordMajor>%i:Augment% 증강</keywordMajor> 1개를 제거합니다. <br><br>무작위 <keywordMajor>%i:AugmentLevel% 증강 레벨</keywordMajor>을 @AugmentLevelsToGrant@개 획득합니다."
+            "tooltip": "Cherry_CraftingSellAugment_Tooltip"
         },
         {
             "apiName": "WitchfulThinking",
@@ -3228,76 +3239,76 @@
             "dataValues": {
                 "BaseDamage": [
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
                 ],
                 "CastRange": [
                     400.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0
                 ],
                 "EDITDECEIVEFORREALVALUES": 0,
                 "ExtraAATime": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearDamage": [
                     0.25,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "FearDuration": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearRadius": [
                     350.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "PseudoCastTime": [
                     0.125,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125
                 ],
                 "StealthDuration": [
                     3.0,
@@ -5810,8 +5821,8 @@
                 "DamageAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5828,8 +5839,8 @@
                 "HealingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5864,8 +5875,8 @@
                 "ShieldingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -7367,55 +7378,6 @@
             "tooltip": "<lifeSteal>모든 피해 흡혈 @Omnivamp*100@%</lifeSteal>를 얻습니다."
         },
         {
-            "apiName": "Despoil",
-            "calculations": {},
-            "dataValues": {
-                "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "EnemyDetectionRadius": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ],
-                "MSRatio": [
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "주변에 적이 있을 때 돌진하거나 순간이동하면 <keywordMajor>저주받은 힘</keywordMajor>을 얻습니다. <keywordMajor>저주받은 힘</keywordMajor>에 비례해 <speed>이동 속도</speed>가 증가합니다.",
-            "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
-            "id": 330,
-            "name": "침탈",
-            "rarity": 0,
-            "tooltip": "주변에 적이 있을 때 돌진하거나 순간이동하면 <keywordMajor>@CurseCounter@의 저주받은 힘</keywordMajor>을 얻습니다. <keywordMajor>저주받은 힘</keywordMajor>에 비례해 <speed>이동 속도</speed>가 증가합니다.<br><br><speed>@f1@의 이동 속도</speed>를 얻습니다. (<keywordMajor>저주받은 힘</keywordMajor>의 @MSRatio*100@%)<br><br>{{ Cherry_CurseShared }}"
-        },
-        {
             "apiName": "WellBeRightBack",
             "calculations": {
                 "TooltipTrueDamageCalculation": {
@@ -8864,8 +8826,8 @@
                     0.019999999552965164,
                     0.019999999552965164,
                     0.05000000074505806,
+                    0.07500000298023224,
                     0.10000000149011612,
-                    0.125,
                     0.125,
                     0.125
                 ],
@@ -9918,10 +9880,10 @@
                     0.30000001192092896
                 ],
                 "HealthAmp": [
-                    0.30000001192092896,
+                    0.15000000596046448,
+                    0.15000000596046448,
                     0.30000001192092896,
                     0.5,
-                    0.75,
                     0.75,
                     0.75,
                     0.75

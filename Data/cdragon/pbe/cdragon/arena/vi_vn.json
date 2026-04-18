@@ -2075,7 +2075,18 @@
         },
         {
             "apiName": "CraftingSellAugment",
-            "calculations": {},
+            "calculations": {
+                "{903f4f4f}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "BuffCounterByCoefficientCalculationPart",
+                            "mBuffName": "{7e05f704}",
+                            "mCoefficient": 1.0
+                        }
+                    ]
+                }
+            },
             "dataValues": {
                 "AugmentLevelsToGrant": [
                     2.0,
@@ -2102,7 +2113,7 @@
             "id": 342,
             "name": "Cấp Độ Nâng Cấp",
             "rarity": 4,
-            "tooltip": "Loại bỏ 1 <keywordMajor>%i:Augment% Nâng Cấp</keywordMajor>. <br><br>Nhận @AugmentLevelsToGrant@ <keywordMajor>%i:AugmentLevel% Cấp Độ Nâng Cấp</keywordMajor> ngẫu nhiên."
+            "tooltip": "Cherry_CraftingSellAugment_Tooltip"
         },
         {
             "apiName": "WitchfulThinking",
@@ -3157,7 +3168,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Cherry_UltimateRoulette_Name",
+            "name": "Xổ Số Chiêu Cuối",
             "rarity": 2,
             "tooltip": "Thay thế phép bổ trợ <spellName>Vọt Lẹ</spellName> bằng một <attention>Chiêu Cuối</attention> ngẫu nhiên. Sau khi thi triển <attention>Chiêu Cuối</attention>, thay thế bằng một <attention>Chiêu Cuối</attention> ngẫu nhiên mới.<br><br><br><rules>Những kỹ năng này vẫn là Chiêu Cuối.</rules>"
         },
@@ -3228,76 +3239,76 @@
             "dataValues": {
                 "BaseDamage": [
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
                 ],
                 "CastRange": [
                     400.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0
                 ],
                 "EDITDECEIVEFORREALVALUES": 0,
                 "ExtraAATime": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearDamage": [
                     0.25,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "FearDuration": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearRadius": [
                     350.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "PseudoCastTime": [
                     0.125,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125
                 ],
                 "StealthDuration": [
                     3.0,
@@ -5810,8 +5821,8 @@
                 "DamageAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5828,8 +5839,8 @@
                 "HealingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5864,8 +5875,8 @@
                 "ShieldingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -6278,13 +6289,13 @@
                     300.0
                 ]
             },
-            "desc": "Nhận <gold>+%i:goldCoins%@GoldBonus@ vàng</gold> và giảm giá của tất cả gói trang bị.<br><br><attention>Gói Trang Bị Kim Cương</attention>: <gold>-%i:goldCoins%@PrismaticCostReduction@vàng</gold><br><attention>Gói Trang Bị Huyền Thoại</attention>: <gold>-%i:goldCoins%@LegendaryCostReduction@vàng</gold><br><attention>Gói Trang Bị Chỉ Số</attention>: <gold>-%i:goldCoins%@StatCostReduction@vàng</gold><br><br><rules>Các trang bị nhận được từ gói trang bị được bán lại với giá giảm <gold>-%i:goldCoins%500 vàng</gold>.</rules>",
+            "desc": "Nhận <gold>+%i:goldCoins%@GoldBonus@ vàng</gold> và giảm giá của tất cả gói trang bị.<br><br><attention>Gói Trang Bị Kim Cương</attention>: <gold>%i:goldCoins%@PrismaticCostReduction@ vàng</gold><br><attention>Gói Trang Bị Huyền Thoại</attention>: <gold>-%i:goldCoins%@LegendaryCostReduction@ vàng</gold><br><attention>Gói Trang Bị Chỉ Số</attention>: <gold>-%i:goldCoins%@StatCostReduction@ vàng</gold><br><br><rules>Các trang bị nhận được từ gói trang bị được bán lại với giá giảm <gold>-%i:goldCoins%500 vàng</gold>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.png",
             "id": 234,
             "name": "Gói Trang Bị Đánh Cược",
             "rarity": 2,
-            "tooltip": "Nhận <gold>+%i:goldCoins%@GoldBonus@ vàng</gold> và giảm giá của tất cả gói trang bị.<br><br><attention>Gói Trang Bị Kim Cương</attention>: <gold>-%i:goldCoins%@PrismaticCostReduction@vàng</gold><br><attention>Gói Trang Bị Huyền Thoại</attention>: <gold>-%i:goldCoins%@LegendaryCostReduction@vàng</gold><br><attention>Gói Trang Bị Chỉ Số</attention>: <gold>-%i:goldCoins%@StatCostReduction@vàng</gold><br><br><rules>Các trang bị nhận được từ gói trang bị được bán lại với giá giảm <gold>-%i:goldCoins%500 vàng</gold>.</rules>"
+            "tooltip": "Nhận <gold>+%i:goldCoins%@GoldBonus@ vàng</gold> và giảm giá của tất cả gói trang bị.<br><br><attention>Gói Trang Bị Kim Cương</attention>: <gold>%i:goldCoins%@PrismaticCostReduction@ vàng</gold><br><attention>Gói Trang Bị Huyền Thoại</attention>: <gold>-%i:goldCoins%@LegendaryCostReduction@ vàng</gold><br><attention>Gói Trang Bị Chỉ Số</attention>: <gold>-%i:goldCoins%@StatCostReduction@ vàng</gold><br><br><rules>Các trang bị nhận được từ gói trang bị được bán lại với giá giảm <gold>-%i:goldCoins%500 vàng</gold>.</rules>"
         },
         {
             "apiName": "DivineIntervention",
@@ -7365,55 +7376,6 @@
             "name": "Chùy Hấp Huyết",
             "rarity": 0,
             "tooltip": "Tăng <lifeSteal>@Omnivamp*100@% Hút Máu Toàn Phần</lifeSteal>."
-        },
-        {
-            "apiName": "Despoil",
-            "calculations": {},
-            "dataValues": {
-                "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "EnemyDetectionRadius": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ],
-                "MSRatio": [
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "Lướt Đi hoặc Dịch Chuyển sẽ cho bạn <keywordMajor>Sức Mạnh Nguyền Rủa</keywordMajor> nếu có kẻ địch ở gần. Nhận thêm <speed>Tốc Độ Di Chuyển</speed> tỉ lệ với <keywordMajor>Sức Mạnh Nguyền Rủa</keywordMajor> của bạn.",
-            "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
-            "id": 330,
-            "name": "Tước Đoạt",
-            "rarity": 0,
-            "tooltip": "Lướt Đi hoặc Dịch Chuyển sẽ cho bạn <keywordMajor>@CurseCounter@ Sức Mạnh Nguyền Rủa</keywordMajor> nếu có kẻ địch ở gần. Nhận thêm <speed>Tốc Độ Di Chuyển</speed> tỉ lệ với <keywordMajor>Sức Mạnh Nguyền Rủa</keywordMajor> của bạn.<br><br>Nhận <speed>@f1@ Tốc Độ Di Chuyển</speed> (@MSRatio*100@% <keywordMajor>Sức Mạnh Nguyền Rủa</keywordMajor> của bạn).<br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "WellBeRightBack",
@@ -8864,8 +8826,8 @@
                     0.019999999552965164,
                     0.019999999552965164,
                     0.05000000074505806,
+                    0.07500000298023224,
                     0.10000000149011612,
-                    0.125,
                     0.125,
                     0.125
                 ],
@@ -9918,10 +9880,10 @@
                     0.30000001192092896
                 ],
                 "HealthAmp": [
-                    0.30000001192092896,
+                    0.15000000596046448,
+                    0.15000000596046448,
                     0.30000001192092896,
                     0.5,
-                    0.75,
                     0.75,
                     0.75,
                     0.75
@@ -13074,7 +13036,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Cherry_FruitsOfYourLabor_Name",
+            "name": "Thành Quả Lao Động",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13565,7 +13527,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Cherry_NowYouSeeMe_Name",
+            "name": "Ú Òa",
             "rarity": 0,
             "tooltip": "<passive>Nội Tại</passive>: Để lại một dấu ấn mỗi khi bạn sử dụng <keywordMajor>Kỹ Năng Di Chuyển</keywordMajor>.<br><br><active>Kích Hoạt:</active> Quay lại vị trí của dấu ấn trước đó mà bạn đã để lại. Sau đó nhận thêm <speed>@MSBuffAmount*100@% Tốc Độ Di Chuyển trong @MSBuffDuration@ giây.</speed>"
         },
@@ -13674,7 +13636,7 @@
                     3.0
                 ]
             },
-            "desc": "Kỹ năng của bạn có thể <crit>Chí Mạng</crit>. <br><br>Nhận <crit>%i:scaleCrit% @CritGranted@% Tỉ Lệ Chí Mạng</crit>.",
+            "desc": "Kỹ năng của bạn có thể <crit>Chí Mạng</crit>. <br><br>Nhận <crit>%i:scaleCrit% @CritGranted@ Tỉ Lệ Chí Mạng</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/jeweledgauntlet_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/jeweledgauntlet_small.png",
             "id": 48,

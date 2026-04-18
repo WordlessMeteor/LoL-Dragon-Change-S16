@@ -2075,7 +2075,18 @@
         },
         {
             "apiName": "CraftingSellAugment",
-            "calculations": {},
+            "calculations": {
+                "{903f4f4f}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "BuffCounterByCoefficientCalculationPart",
+                            "mBuffName": "{7e05f704}",
+                            "mCoefficient": 1.0
+                        }
+                    ]
+                }
+            },
             "dataValues": {
                 "AugmentLevelsToGrant": [
                     2.0,
@@ -2102,7 +2113,7 @@
             "id": 342,
             "name": "Level Augments",
             "rarity": 4,
-            "tooltip": "Remove an <keywordMajor>%i:Augment% Augment</keywordMajor>. <br><br>Gain @AugmentLevelsToGrant@ random <keywordMajor>%i:AugmentLevel% Augment Levels</keywordMajor>."
+            "tooltip": "Remove an <keywordMajor>%i:Augment% Augment</keywordMajor>. <br><br>Gain @AugmentLevelsToGrant@ random <keywordMajor>%i:AugmentLevel% Augment Levels</keywordMajor>.<br><br><attention>You have @LevelableAugmentCount@ %i:AugmentLevel% levelable augment(s).</attention>"
         },
         {
             "apiName": "WitchfulThinking",
@@ -3228,76 +3239,76 @@
             "dataValues": {
                 "BaseDamage": [
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
                 ],
                 "CastRange": [
                     400.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0
                 ],
                 "EDITDECEIVEFORREALVALUES": 0,
                 "ExtraAATime": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearDamage": [
                     0.25,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "FearDuration": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearRadius": [
                     350.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "PseudoCastTime": [
                     0.125,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125
                 ],
                 "StealthDuration": [
                     3.0,
@@ -5810,8 +5821,8 @@
                 "DamageAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5828,8 +5839,8 @@
                 "HealingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5864,8 +5875,8 @@
                 "ShieldingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -7367,55 +7378,6 @@
             "tooltip": "Gain <lifeSteal>@Omnivamp*100@% Omnivamp</lifeSteal>."
         },
         {
-            "apiName": "Despoil",
-            "calculations": {},
-            "dataValues": {
-                "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "EnemyDetectionRadius": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ],
-                "MSRatio": [
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "Dashing or Teleporting grants you <keywordMajor>Cursed Power</keywordMajor> if there is an enemy nearby. Gain <speed>Move Speed</speed> scaling with your <keywordMajor>Cursed Power</keywordMajor>.",
-            "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
-            "id": 330,
-            "name": "Despoil",
-            "rarity": 0,
-            "tooltip": "Dashing or Blinking grants you <keywordMajor>@CurseCounter@ Cursed Power</keywordMajor> if there is an enemy nearby. Gain <speed>Move Speed</speed> scaling with your <keywordMajor>Cursed Power</keywordMajor>.<br><br>Gain <speed>@f1@ Move Speed</speed> (@MSRatio*100@% of your <keywordMajor>Cursed Power</keywordMajor>).<br><br>{{ Cherry_CurseShared }}"
-        },
-        {
             "apiName": "WellBeRightBack",
             "calculations": {
                 "TooltipTrueDamageCalculation": {
@@ -8864,8 +8826,8 @@
                     0.019999999552965164,
                     0.019999999552965164,
                     0.05000000074505806,
+                    0.07500000298023224,
                     0.10000000149011612,
-                    0.125,
                     0.125,
                     0.125
                 ],
@@ -9918,10 +9880,10 @@
                     0.30000001192092896
                 ],
                 "HealthAmp": [
-                    0.30000001192092896,
+                    0.15000000596046448,
+                    0.15000000596046448,
                     0.30000001192092896,
                     0.5,
-                    0.75,
                     0.75,
                     0.75,
                     0.75
@@ -11293,13 +11255,13 @@
                     2.0
                 ]
             },
-            "desc": "Each round a star falls, pick it up transforms you into a powerful Magical Girl.<br><br>As a Magical Girl stars rain down around you and your enemies, dealing <magicDamage>magic damage</magicDamage>.",
+            "desc": "Each round a star falls, picking it up transforms you into a powerful Magical Girl.<br><br>As a Magical Girl, stars rain down around you and your enemies, dealing <magicDamage>magic damage</magicDamage>.",
             "iconLarge": "assets/ux/cherry/augments/icons/magic_girl.png",
             "iconSmall": "assets/ux/cherry/augments/icons/magic_girl_small.png",
             "id": 345,
             "name": "Magical Girl",
             "rarity": 2,
-            "tooltip": "Each round, a star falls over @TimeUntilStarLands@ seconds. After picking it up you transformation into a Magical Girl, knocking back nearby enemies, causing them to dance for @EnemyDanceDuration@ second, while granting you <scaleAF>@AdaptiveForce@ Adaptive Force</scaleAF> and a <shield>@TotalShield@ health Shield</shield>.<br><br>As a Magical Girl, every @FastSpawnRate@-@SlowSpawnRate@ seconds @StarsToSpawnPerWave@ stars fall from the sky striking around you and each of your enemies, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to those hit.<br><br><rules><br>Dancing enemies are invulnerable.<br>Stars rain down more frequently on enemies within @EnemycheckDistance@ range of you.</rules>"
+            "tooltip": "Each round, a star falls over @TimeUntilStarLands@ seconds. After picking it up you transform into a Magical Girl, knocking back nearby enemies, causing them to dance for @EnemyDanceDuration@ second, while granting you <scaleAF>@AdaptiveForce@ Adaptive Force</scaleAF> and a <shield>@TotalShield@ health Shield</shield>.<br><br>As a Magical Girl, every @FastSpawnRate@-@SlowSpawnRate@ seconds @StarsToSpawnPerWave@ stars fall from the sky striking around you and each of your enemies, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to those hit.<br><br><rules><br>Dancing enemies are invulnerable.<br>Stars rain down more frequently on enemies within @EnemycheckDistance@ range of you.</rules>"
         },
         {
             "apiName": "Desecrator",

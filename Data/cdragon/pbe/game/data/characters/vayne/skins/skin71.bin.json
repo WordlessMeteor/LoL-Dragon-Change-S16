@@ -159,8 +159,6 @@
                         "Play_vo_VayneSkin67_Receive3DBuff",
                         "Play_vo_VayneSkin67_Respawn2DGeneral",
                         "Play_vo_VayneSkin67_Spell2DRRankOne",
-                        "Play_vo_VayneSkin67_Spell3DEOnHitEmpoweredEnd",
-                        "Play_vo_VayneSkin67_Spell3DEOnHitEmpoweredStart",
                         "Play_vo_VayneSkin67_Spell3DEStun",
                         "Play_vo_VayneSkin67_Taunt3DGeneral",
                         "Play_vo_VayneSkin67_VayneBasicAttack2_cast3D",
@@ -170,6 +168,8 @@
                         "Play_vo_VayneSkin67_VayneCondemn_cast3D",
                         "Play_vo_VayneSkin67_VayneCritAttack_cast3D",
                         "Play_vo_VayneSkin67_VayneInquisition_cast3D",
+                        "Play_vo_VayneSkin67_VayneInquisition_EmpoweredEnd",
+                        "Play_vo_VayneSkin67_VayneInquisition_EmpoweredStart",
                         "Play_vo_VayneSkin67_VayneTumble_cast3D"
                     ],
                     "voiceOver": true,
@@ -205,7 +205,7 @@
             "submeshRenderOrder": "Body Hair R_Hand HemSide Hem Crossbow R_Hand_Effluence SleeveArrow DemonBody DemonHand01 DemonEyes DemonHair02 DemonHair01 DemonHead DemonHand02 DemonHand03 HeadDemonHand SleeveArrow_Q Crossbow_Ult HeadDemonHand_Ult",
             "materialOverride": [
                 {
-                    "Material": "Characters/Vayne/Skins/Skin71/Materials/Color_Switch_Body",
+                    "Material": "{83ce0900}",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -260,7 +260,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Vayne/Skins/Skin71/Vayne_Skin71_Demon_Eyes_TX_CM.Chroma_Vayne_Demoncursed.tex",
+                    "Material": "{2f9a92c0}",
                     "submesh": "DemonEyes",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -58978,6 +58978,883 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "{2f9a92c0}": {
+        "name": "Characters/Vayne/Skins/Skin71/Materials/DemonEye",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Vayne/Skins/Skin71/Vayne_Skin71_Demon_Eyes_TX_CM.Chroma_Vayne_Demoncursed.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_01",
+                "texturePath": "ASSETS/Shared/Materials/Blank.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_02",
+                "texturePath": "ASSETS/Characters/Zoe/Skins/Skin43/Zoe_Skin43_Black_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FBM_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Generic_Noise3.tex",
+                "samplerName": "Wrap_No_Mip",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Distortion_Texture",
+                "texturePath": "ASSETS/Characters/Vayne/Skins/Skin67/Vayne_Skin67_Demon_Head_Distortion.SKINS_Vayne_Skin67.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Distortion_Texture_02",
+                "texturePath": "ASSETS/Characters/Zoe/Skins/Skin43/Zoe_Skin43_Black_TX_CM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient",
+                "texturePath": "ASSETS/Characters/Vayne/Skins/Skin67/Vayne_Skin67_HeadDemonHand_Gradient.SKINS_Vayne_Skin67.tex",
+                "samplerName": "Clamp_No_Mip",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Screen_Space_Texture",
+                "texturePath": "ASSETS/Characters/Zoe/Skins/Skin43/Zoe_Skin43_Black_TX_CM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FlowMap_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FlowMap_Texture_02",
+                "texturePath": "ASSETS/Characters/Zoe/Skins/Skin43/Zoe_Skin43_Black_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Lightness_Adjustment_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/gradient_light_Dark.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Fresnel_Color_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Fresnel_Mask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "DeformNoise",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "DeformMask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Alpha_Multiplier",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Dir_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Frequency",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Intensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Frequency",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Speed",
+                "value": [
+                    0.17499999701976776,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Dir",
+                "value": [
+                    5.0,
+                    5.0,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformFeatureStrength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformTilling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformSpeed",
+                "value": [
+                    -0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformIntensity",
+                "value": [
+                    6.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformProtection",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Screen_Space_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Screen_Space_Tiling",
+                "value": [
+                    4.0,
+                    4.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Screen_Space_ScrollDirection",
+                "value": [
+                    -1.0,
+                    -2.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Screen_Space_ScrollSpeed",
+                "value": [
+                    0.009999999776482582,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Strength",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_ScrollDirection",
+                "value": [
+                    0.0,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_ScrollSpeed",
+                "value": [
+                    0.20000000298023224,
+                    -0.30000001192092896,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Strength_02",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Tiling_02",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_ScrollDirection_02",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_ScrollSpeed_02",
+                "value": [
+                    0.7024999856948853,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowMap_Strength",
+                "value": [
+                    0.9175000190734863,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowMap_Speed",
+                "value": [
+                    0.5799999833106995,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowMap_Strength_02",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowMap_Speed_02",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pattern_01_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pattern_02_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Panner_ScrollDirection",
+                "value": [
+                    0.0,
+                    -1.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Panner_ScrollSpeed",
+                "value": [
+                    0.29750001430511475,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Panner_ScrollDirection_02",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Panner_ScrollSpeed_02",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp1_Strength",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp1_Tiling",
+                "value": [
+                    4.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp1_ScrollDirection",
+                "value": [
+                    0.0,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp1_ScrollSpeed",
+                "value": [
+                    0.20000000298023224,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp2_Strength",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp2_Tiling",
+                "value": [
+                    4.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp2_ScrollDirection",
+                "value": [
+                    0.0,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp2_ScrollSpeed",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp3_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp3_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp3_ScrollDirection",
+                "value": [
+                    0.0,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Warp3_ScrollSpeed",
+                "value": [
+                    0.12250000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FBM_Alpha_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FBM_Alpha_Smoothstep",
+                "value": [
+                    0.5,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Lightness_Adjustment_Strength",
+                "value": [
+                    10.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fading_In_Speed",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fading_Out_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fading_In_Gradient",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Strength",
+                "value": [
+                    0.15000000596046448,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Tint_Color",
+                "value": [
+                    0.30588236451148987,
+                    0.3307545483112335,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Blend_Mode",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Thickness",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Softness",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    0.9098039269447327,
+                    0.19980163872241974,
+                    0.25896087288856506,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "Group": "Screen_Space",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE_LERP",
+                "on": false,
+                "Group": "Screen_Space",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_PATTERN_ONE",
+                "on": false,
+                "Group": "Pattern",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_PATTERN_TWO",
+                "on": false,
+                "Group": "Pattern",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_PATTERNS_ALPHA",
+                "on": false,
+                "Group": "Pattern",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADD_PATTERN_ALPHA",
+                "on": false,
+                "Group": "Pattern",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DISTORTION",
+                "on": false,
+                "Group": "Distortion",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DISTORTED_UV_FOR_MASK",
+                "on": false,
+                "Group": "Distortion",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_FLOWMAP",
+                "on": false,
+                "Group": "FlowMap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_PANNER",
+                "on": false,
+                "Group": "Panner",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_FBM",
+                "on": false,
+                "Group": "fBm",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_FBM_ALPHA",
+                "on": false,
+                "Group": "fBm",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_LIGHTNESS_ADJUSTMENT",
+                "on": false,
+                "Group": "Lightness_Adjustment",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_LIGHTNESS_BREATHE",
+                "on": false,
+                "Group": "Lightness_Adjustment",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_BLOOM",
+                "on": false,
+                "Group": "Bloom",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_BLOOM_TINT_COLOR",
+                "on": false,
+                "Group": "Bloom",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_FRESNEL",
+                "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_FRESNEL_COLOR_TEXTURE",
+                "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIM",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIMATION_BASED_ON_UV_AND_TEXTURE",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Aspect",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Alpha_Multiplier",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 0.8500000238418579,
+                        "mOffValue": 1.0,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "Characters/Vayne/Skins/Skin71/Materials/HeadDemonHand_Ult": {
         "name": "Characters/Vayne/Skins/Skin71/Materials/HeadDemonHand_Ult",
         "samplerValues": [
@@ -60188,6 +61065,51 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "AlphaRange",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 2.5,
+                        "mOffValue": 5.0,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Vayne/Skins/Skin71/Materials/DemonHair02": {
@@ -60586,6 +61508,568 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "AlphaRange",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 1.5,
+                        "mOffValue": 3.0,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "{83ce0900}": {
+        "name": "Characters/Vayne/Skins/Skin71/Materials/Body",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Vayne/Skins/Skin71/Vayne_Skin71_TX_CM.Chroma_Vayne_Demoncursed.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MaskTexture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "SecondaryDiffuseTexture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "DiffuseTintTexture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Ramp_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "PatternTexture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "BloomOutlineVDMask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "VertexDeformTexture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "DistortIntensity",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DiffuseTiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DiffuseScroll",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SeondaryDiffuseScroll",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SecondaryDiffuseTiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomColor",
+                "value": [
+                    0.45098039507865906,
+                    0.9960784316062927,
+                    0.95686274766922,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomIntensity",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "value": [
+                    0.48235294222831726,
+                    0.8156862854957581,
+                    0.7921568751335144,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineWidth",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelDistortAdd",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelDistortMul",
+                "value": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelDistortIntensity",
+                "value": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortTilling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortSpeed",
+                "value": [
+                    0.20000000298023224,
+                    -0.30000001192092896,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintRange",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaRange",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaEdge_Position",
+                "value": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaEdge_Width",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_EdgeWidth",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_EdgeWidth2",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexOffset_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexTile_B",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PatternTexScrollSpeed_B",
+                "value": [
+                    0.0,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TailDistortIntensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformIntensity",
+                "value": [
+                    1.7000000476837158,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Speed",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeform_Tilling",
+                "value": [
+                    0.7670000195503235,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_FRESNEL_FOR_ALPHA",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERT_COLOR_R_AS_TINT_MASK",
+                "on": false,
+                "Group": "Diffuse",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_TINT_TEXTURE",
+                "on": false,
+                "Group": "Diffuse",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_FRESNEL_FOR_DISTORTION_INTENSITY",
+                "on": false,
+                "Group": "Diffuse",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SECONDARY_DIFFUSE",
+                "on": false,
+                "Group": "Diffuse",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DIFFUSE_TEX_ALPHA",
+                "Group": "Diffuse",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RAMP",
+                "on": false,
+                "Group": "Diffuse",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_TINTCOLOR",
+                "on": false,
+                "Group": "Diffuse",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_BLOOM",
+                "Group": "Bloom / Outline / Vertex Deform",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_OUTLINE",
+                "Group": "Bloom / Outline / Vertex Deform",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_DEFORM_ON",
+                "on": false,
+                "Group": "Bloom / Outline / Vertex Deform",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_DLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Distortion_Diffuse_Alpha",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "BloomIntensity",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 0.10000000149011612,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "textures": [
+                {
+                    "name": "Diffuse_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "mDrivers": [
+                                    {
+                                        "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "Spell": "{f6befe65}",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "__type": "{d4933ea0}"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    }
+                                ],
+                                "__type": "AllTrueMaterialDriver"
+                            },
+                            "TextureName": "ASSETS/Characters/Vayne/Skins/Skin71/Vayne_Skin71_Ult_TX_CM.Chroma_Vayne_Demoncursed.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "staticSwitch": {
+                "name": "USE_OUTLINE",
+                "driver": {
+                    "mDrivers": [
+                        {
+                            "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "{f6befe65}",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "__type": "{d4933ea0}"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "__type": "DynamicMaterialStaticSwitch"
+            },
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Vayne/Skins/Skin71/Materials/DemonHead": {
@@ -60990,6 +62474,51 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "AlphaRange",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 3.5,
+                        "mOffValue": 7.0,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Vayne/Skins/Skin71/Materials/SleeveArrow": {
@@ -61563,6 +63092,12 @@
                                         "__type": "HasBuffDynamicMaterialBoolDriver"
                                     },
                                     "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
                                 }
                             ],
                             "__type": "AllTrueMaterialDriver"
@@ -61774,7 +63309,7 @@
             {
                 "name": "AlphaRange",
                 "value": [
-                    3.0,
+                    1.4249999523162842,
                     0.0,
                     0.0,
                     0.0
@@ -61974,6 +63509,51 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "AlphaRange",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 0.75,
+                        "mOffValue": 1.4249999523162842,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Vayne/Skins/Skin71/Materials/Hem": {
@@ -62011,7 +63591,7 @@
             },
             {
                 "TextureName": "BloomOutlineVDMask",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -62062,9 +63642,9 @@
             {
                 "name": "BloomColor",
                 "value": [
-                    0.0,
-                    0.0,
-                    0.0,
+                    0.45098039507865906,
+                    0.9960784316062927,
+                    0.95686274766922,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -62072,7 +63652,7 @@
             {
                 "name": "BloomIntensity",
                 "value": [
-                    1.0,
+                    0.10000000149011612,
                     0.0,
                     0.0,
                     0.0
@@ -62082,9 +63662,9 @@
             {
                 "name": "OutlineColor",
                 "value": [
-                    1.0,
-                    1.0,
-                    1.0,
+                    0.48235294222831726,
+                    0.8156862854957581,
+                    0.7921568751335144,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -62092,7 +63672,7 @@
             {
                 "name": "OutlineWidth",
                 "value": [
-                    0.30000001192092896,
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -62327,13 +63907,11 @@
             },
             {
                 "name": "USE_BLOOM",
-                "on": false,
                 "Group": "Bloom / Outline / Vertex Deform",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "USE_OUTLINE",
-                "on": false,
                 "Group": "Bloom / Outline / Vertex Deform",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -62375,6 +63953,47 @@
             }
         ],
         "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "BloomIntensity",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 0.10000000149011612,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
             "textures": [
                 {
                     "name": "Diffuse_Texture",
@@ -62399,6 +64018,12 @@
                                             "__type": "HasBuffDynamicMaterialBoolDriver"
                                         },
                                         "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "__type": "{d4933ea0}"
+                                        },
+                                        "__type": "NotMaterialDriver"
                                     }
                                 ],
                                 "__type": "AllTrueMaterialDriver"
@@ -62410,6 +64035,39 @@
                     "__type": "DynamicMaterialTextureSwapDef"
                 }
             ],
+            "staticSwitch": {
+                "name": "USE_OUTLINE",
+                "driver": {
+                    "mDrivers": [
+                        {
+                            "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "{f6befe65}",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "__type": "{d4933ea0}"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "__type": "DynamicMaterialStaticSwitch"
+            },
             "__type": "DynamicMaterialDef"
         },
         "__type": "StaticMaterialDef"
@@ -62519,6 +64177,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Alpha_Multiplier",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Anim_Wave_Speed",
                 "value": [
@@ -63669,6 +65337,51 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "AlphaRange",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 1.5,
+                        "mOffValue": 3.0,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Vayne/Skins/Skin71/Materials/DemonHand03": {
@@ -64067,6 +65780,51 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "AlphaRange",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 1.5,
+                        "mOffValue": 3.0,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Vayne/Skins/Skin71/Materials/DemonHand01": {
@@ -64176,6 +65934,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Alpha_Multiplier",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Anim_Wave_Speed",
                 "value": [
@@ -64883,153 +66651,10 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "__type": "StaticMaterialDef"
-    },
-    "Characters/Vayne/Skins/Skin71/Materials/Color_Switch_Body": {
-        "name": "Characters/Vayne/Skins/Skin71/Materials/Color_Switch_Body",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Vayne/Skins/Skin71/Vayne_Skin71_TX_CM.Chroma_Vayne_Demoncursed.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Texture_2",
-                "texturePath": "ASSETS/Characters/Vayne/Skins/Skin71/Vayne_Skin71_Ult_TX_CM.Chroma_Vayne_Demoncursed.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Scroll_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "Diffuse_Lerp_Factor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Mult",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineColor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineControl",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTex_TintColor",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexB_MaskStrength",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Color",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Color",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Tiles",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Tiles",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexR_Speed",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollTexG_Speed",
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "OUTLINE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "SCROLLTEX_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
         "dynamicMaterial": {
             "parameters": [
                 {
-                    "name": "Diffuse_Lerp_Factor",
+                    "name": "Alpha_Multiplier",
                     "driver": {
                         "mBoolDriver": {
                             "mDrivers": [
@@ -65050,10 +66675,18 @@
                                         "__type": "HasBuffDynamicMaterialBoolDriver"
                                     },
                                     "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
                                 }
                             ],
                             "__type": "AllTrueMaterialDriver"
                         },
+                        "mOnValue": 0.699999988079071,
+                        "mOffValue": 1.0,
                         "mTurnOnTimeSec": 0.0,
                         "mTurnOffTimeSec": 0.0,
                         "__type": "LerpMaterialDriver"
@@ -65542,7 +67175,7 @@
             },
             {
                 "TextureName": "BloomOutlineVDMask",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -65593,9 +67226,9 @@
             {
                 "name": "BloomColor",
                 "value": [
-                    0.0,
-                    0.0,
-                    0.0,
+                    0.45098039507865906,
+                    0.9960784316062927,
+                    0.95686274766922,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -65603,7 +67236,7 @@
             {
                 "name": "BloomIntensity",
                 "value": [
-                    1.0,
+                    0.10000000149011612,
                     0.0,
                     0.0,
                     0.0
@@ -65613,9 +67246,9 @@
             {
                 "name": "OutlineColor",
                 "value": [
-                    1.0,
-                    1.0,
-                    1.0,
+                    0.48235294222831726,
+                    0.8156862854957581,
+                    0.7921568751335144,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -65623,7 +67256,7 @@
             {
                 "name": "OutlineWidth",
                 "value": [
-                    0.30000001192092896,
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -65858,13 +67491,11 @@
             },
             {
                 "name": "USE_BLOOM",
-                "on": false,
                 "Group": "Bloom / Outline / Vertex Deform",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "USE_OUTLINE",
-                "on": false,
                 "Group": "Bloom / Outline / Vertex Deform",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -65906,6 +67537,47 @@
             }
         ],
         "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "BloomIntensity",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "Spell": "{f6befe65}",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
+                        },
+                        "mOnValue": 0.10000000149011612,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
             "textures": [
                 {
                     "name": "Diffuse_Texture",
@@ -65930,6 +67602,12 @@
                                             "__type": "HasBuffDynamicMaterialBoolDriver"
                                         },
                                         "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "__type": "{d4933ea0}"
+                                        },
+                                        "__type": "NotMaterialDriver"
                                     }
                                 ],
                                 "__type": "AllTrueMaterialDriver"
@@ -65941,6 +67619,39 @@
                     "__type": "DynamicMaterialTextureSwapDef"
                 }
             ],
+            "staticSwitch": {
+                "name": "USE_OUTLINE",
+                "driver": {
+                    "mDrivers": [
+                        {
+                            "Spell": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Neeko/Spells/NeekoPassiveAbility/NeekoPassive",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "{f6befe65}",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "__type": "{d4933ea0}"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "__type": "DynamicMaterialStaticSwitch"
+            },
             "__type": "DynamicMaterialDef"
         },
         "__type": "StaticMaterialDef"

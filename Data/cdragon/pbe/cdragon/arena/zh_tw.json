@@ -2075,7 +2075,18 @@
         },
         {
             "apiName": "CraftingSellAugment",
-            "calculations": {},
+            "calculations": {
+                "{903f4f4f}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "BuffCounterByCoefficientCalculationPart",
+                            "mBuffName": "{7e05f704}",
+                            "mCoefficient": 1.0
+                        }
+                    ]
+                }
+            },
             "dataValues": {
                 "AugmentLevelsToGrant": [
                     2.0,
@@ -2102,7 +2113,7 @@
             "id": 342,
             "name": "等級增幅裝置",
             "rarity": 4,
-            "tooltip": "移除1件<keywordMajor>%i:Augment%增幅裝置</keywordMajor>。<br><br>獲得@AugmentLevelsToGrant@個隨機<keywordMajor>%i:AugmentLevel%增幅裝置等級</keywordMajor>。"
+            "tooltip": "Cherry_CraftingSellAugment_Tooltip"
         },
         {
             "apiName": "WitchfulThinking",
@@ -3228,76 +3239,76 @@
             "dataValues": {
                 "BaseDamage": [
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
                 ],
                 "CastRange": [
                     400.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0
                 ],
                 "EDITDECEIVEFORREALVALUES": 0,
                 "ExtraAATime": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearDamage": [
                     0.25,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "FearDuration": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearRadius": [
                     350.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "PseudoCastTime": [
                     0.125,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125
                 ],
                 "StealthDuration": [
                     3.0,
@@ -5810,8 +5821,8 @@
                 "DamageAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5828,8 +5839,8 @@
                 "HealingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5864,8 +5875,8 @@
                 "ShieldingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -7024,13 +7035,13 @@
                     0.15000000596046448
                 ]
             },
-            "desc": "普攻時，發射一支箭矢，造成@AttackReduction*100@%傷害並觸發@OnHitMod*100@%的{{ Item_Keyword_OnHit }}效果。<br><br>增加<attackSpeed>@AttackSpeed*100@%總攻速</attackSpeed>。",
+            "desc": "普攻時，發射一支箭矢，造成@AttackReduction*100@%傷害並觸發@OnHitMod*100@%的{{ Item_Keyword_OnHit }}。<br><br>增加<attackSpeed>@AttackSpeed*100@%總攻速</attackSpeed>。",
             "iconLarge": "assets/ux/cherry/augments/icons/dualwield_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/dualwield_small.png",
             "id": 225,
             "name": "雙刀流",
             "rarity": 2,
-            "tooltip": "普攻時，發射一支箭矢，造成@AttackReduction*100@%傷害並觸發@OnHitMod*100@%的{{ Item_Keyword_OnHit }}效果。<br><br>增加<attackSpeed>@AttackSpeed*100@%總攻速</attackSpeed>。"
+            "tooltip": "普攻時，發射一支箭矢，造成@AttackReduction*100@%傷害並觸發@OnHitMod*100@%的{{ Item_Keyword_OnHit }}。<br><br>增加<attackSpeed>@AttackSpeed*100@%總攻速</attackSpeed>。"
         },
         {
             "apiName": "Augment405",
@@ -7365,55 +7376,6 @@
             "name": "飲血",
             "rarity": 0,
             "tooltip": "獲得<lifeSteal>@Omnivamp*100@%全能吸血</lifeSteal>效果。"
-        },
-        {
-            "apiName": "Despoil",
-            "calculations": {},
-            "dataValues": {
-                "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "EnemyDetectionRadius": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ],
-                "MSRatio": [
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "如果附近有敵人，衝刺或傳送會賦予你<keywordMajor>詛咒之力</keywordMajor>。獲得會隨著你的<keywordMajor>詛咒之力</keywordMajor>增加的<speed>跑速</speed>。",
-            "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
-            "id": 330,
-            "name": "洗劫",
-            "rarity": 0,
-            "tooltip": "如果附近有敵人，衝刺或閃現會賦予你<keywordMajor>@CurseCounter@詛咒之力</keywordMajor>。獲得會隨著你的<keywordMajor>詛咒之力</keywordMajor>增加的<speed>跑速</speed>。<br><br>增加<speed>@f1@跑速</speed>(相當於自身@MSRatio*100@%<keywordMajor>詛咒之力</keywordMajor>)。<br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "WellBeRightBack",
@@ -8864,8 +8826,8 @@
                     0.019999999552965164,
                     0.019999999552965164,
                     0.05000000074505806,
+                    0.07500000298023224,
                     0.10000000149011612,
-                    0.125,
                     0.125,
                     0.125
                 ],
@@ -9918,10 +9880,10 @@
                     0.30000001192092896
                 ],
                 "HealthAmp": [
-                    0.30000001192092896,
+                    0.15000000596046448,
+                    0.15000000596046448,
                     0.30000001192092896,
                     0.5,
-                    0.75,
                     0.75,
                     0.75,
                     0.75

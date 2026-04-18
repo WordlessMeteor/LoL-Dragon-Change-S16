@@ -982,17 +982,20 @@
             const w = {
                     TFT: "tft"
                 },
-                z = (e, t) => {
-                    const n = t?.hubType?.toLowerCase(),
-                        a = t?.hubId,
-                        o = t?.queryParams || {};
-                    n && Object.values(w).includes(n) ? a ? (r.logger.info(`Received ${e} message with hub type '${n}' and hub id '${a}'`), r.Router.navigateTo("rcp-fe-lol-tft", {
-                        page: a,
-                        queryParams: o
-                    })) : r.logger.error(`Received ${e} message with no hub id`) : r.logger.error(`Received ${e} message with invalid hub type '${n}'`)
+                z = {
+                    [w.TFT]: "rcp-fe-lol-tft"
                 };
-            t.routeToHub = z;
             const V = (e, t) => {
+                const n = t?.hubType?.toLowerCase(),
+                    a = t?.hubId,
+                    o = t?.queryParams || {};
+                n && Object.values(w).includes(n) ? a ? (r.logger.info(`Received ${e} message with hub type '${n}' and hub id '${a}'`), r.Router.navigateTo(z[n], {
+                    page: a,
+                    queryParams: o
+                })) : r.logger.error(`Received ${e} message with no hub id`) : r.logger.error(`Received ${e} message with invalid hub type '${n}'`)
+            };
+            t.routeToHub = V;
+            const K = (e, t) => {
                 const n = r.ComponentFactory.create("ShoppefrontContainerComponent", {
                     shoppefrontId: t.shoppefrontId,
                     customizations: {
@@ -1009,8 +1012,8 @@
                     }
                 })
             };
-            t.openShoppefront = V;
-            var K = {
+            t.openShoppefront = K;
+            var x = {
                 handshakeRequest: u,
                 viewportScreenChanged: R,
                 openExternalURL: I,
@@ -1021,7 +1024,7 @@
                 openLCUPaymentsModal: L,
                 openLCUDropRatesModal: B,
                 navigateToLoot: Y,
-                routeToHub: z,
+                routeToHub: V,
                 requestLCUEndpoint: A,
                 requestSkinEmblems: P,
                 showInternalBrowser: h,
@@ -1039,9 +1042,9 @@
                 sendTelemetryPageSessionUpdate: O,
                 sendLCUErrorLog: p,
                 getAliasFreeEligibility: m,
-                openShoppefront: V
+                openShoppefront: K
             };
-            t.default = K
+            t.default = x
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

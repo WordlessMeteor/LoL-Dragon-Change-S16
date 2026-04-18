@@ -1648,6 +1648,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Alpha_Multiplier",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Alpha_Multiplier",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "FBM_Alpha_Smoothstep",
                 "data": [
                     0.5,
@@ -14884,11 +14901,12 @@
         ],
         "featureDefines": {
             "FEATURE_BLOOM": "1",
+            "FEATURE_DISPLACEMENT": "1",
             "FEATURE_SCREENSPACE_UV": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 1,
+        "featureMask": 5,
         "objectPath": "Shaders/SkinnedMesh/Crepe_Anomaly_Mask",
         "__type": "CustomShaderDef"
     },

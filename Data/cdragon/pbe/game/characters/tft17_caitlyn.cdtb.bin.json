@@ -169,7 +169,6 @@
                 0.0,
                 0.0
             ],
-            "bHaveHitEffect": true,
             "castRange": [
                 9999.0,
                 9999.0,
@@ -198,7 +197,7 @@
                         "11": "Gun_Barrel_End",
                         "22": "BUFFBONE_GLB_WEAPON_1"
                     },
-                    "mSpeed": 2500.0,
+                    "mSpeed": 3000.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "verticalFacing": {
@@ -219,9 +218,7 @@
             },
             "mCastType": 1,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "TFT17_Caitlyn_P_Headshot_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "TFT17_Caitlyn_P_Headshot_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Head_Loc",
             "__type": "SpellDataResource"
@@ -314,7 +311,7 @@
                 }
             ],
             "mSpellCalculations": {
-                "{0771357d}": {
+                "ModifiedHeadshotDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
@@ -342,11 +339,11 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{dfaa6a93}": {
+                "ModifiedNovaHeadshotDamage": {
                     "mFormulaParts": [
                         {
                             "mPart1": {
-                                "mSpellCalculationKey": "{0771357d}",
+                                "mSpellCalculationKey": "ModifiedHeadshotDamage",
                                 "__type": "{f3cbe7b2}"
                             },
                             "mPart2": {
@@ -593,7 +590,7 @@
                         "11": "Gun_Barrel_End",
                         "22": "BUFFBONE_GLB_WEAPON_1"
                     },
-                    "mSpeed": 2500.0,
+                    "mSpeed": 3000.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "verticalFacing": {

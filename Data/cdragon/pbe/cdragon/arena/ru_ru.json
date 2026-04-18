@@ -382,7 +382,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_prisstatanvil.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_prisstatanvil_small.png",
             "id": 340,
-            "name": "Вы получаете призматическую наковальню показателей",
+            "name": "Призматическая наковальня показателей",
             "rarity": 4,
             "tooltip": "Вы получаете призм. наковальню показателей, дающую 1 из бонусов ниже.<br><br><crit>%i:scaleCritMult% крит. урон</crit><br><scaleHealth>%i:scaleHealth% здоровье и увеличение размера</scaleHealth><br><armorPen>%i:scaleAPen% пробивание брони</armorPen><br><magicPen>%i:scaleMPen% маг. пробивание</magicPen><br><speed>%i:scaleMS% скорость передвижения и уменьшение размера</speed><br><scaleTenacity>%i:scaleTenacity% стойкость</scaleTenacity><br><healing>%i:scaleHealShield% эффективность лечения и щитов</healing><br><lifeSteal>%i:scaleSV% всестор. вытягивание жизни</lifeSteal><br><gold>%i:goldCoins% золото.</gold>"
         },
@@ -2075,7 +2075,18 @@
         },
         {
             "apiName": "CraftingSellAugment",
-            "calculations": {},
+            "calculations": {
+                "{903f4f4f}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "BuffCounterByCoefficientCalculationPart",
+                            "mBuffName": "{7e05f704}",
+                            "mCoefficient": 1.0
+                        }
+                    ]
+                }
+            },
             "dataValues": {
                 "AugmentLevelsToGrant": [
                     2.0,
@@ -2102,7 +2113,7 @@
             "id": 342,
             "name": "Повышение ур. аугментаций",
             "rarity": 4,
-            "tooltip": "Вы лишаетесь 1 <keywordMajor>%i:Augment% аугментации</keywordMajor>. <br><br>Уровень @AugmentLevelsToGrant@ случайных <keywordMajor>%i:AugmentLevel% аугментаций повышается</keywordMajor>."
+            "tooltip": "Cherry_CraftingSellAugment_Tooltip"
         },
         {
             "apiName": "WitchfulThinking",
@@ -3228,76 +3239,76 @@
             "dataValues": {
                 "BaseDamage": [
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
                 ],
                 "CastRange": [
                     400.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0
                 ],
                 "EDITDECEIVEFORREALVALUES": 0,
                 "ExtraAATime": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearDamage": [
                     0.25,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "FearDuration": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearRadius": [
                     350.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "PseudoCastTime": [
                     0.125,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125
                 ],
                 "StealthDuration": [
                     3.0,
@@ -5810,8 +5821,8 @@
                 "DamageAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5828,8 +5839,8 @@
                 "HealingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5864,8 +5875,8 @@
                 "ShieldingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -6278,13 +6289,13 @@
                     300.0
                 ]
             },
-            "desc": "Вы получаете <gold>%i:goldCoins%@GoldBonus@ золота</gold>. У всех наковален снижена стоимость.<br><br><attention>Призматические наковальни</attention>: <gold>-%i:goldCoins%@PrismaticCostReduction@ золота</gold><br><attention>Легендарные наковальни</attention>: <gold>-%i:goldCoins%@LegendaryCostReduction@ золота</gold><br><attention>Наковальни показателей</attention>: <gold>-%i:goldCoins%@StatCostReduction@ золота</gold><br><br><rules>Стоимость предметов из наковален при перепродаже ниже на <gold>%i:goldCoins%500 золота</gold>.</rules>",
+            "desc": "Вы получаете <gold>%i:goldCoins%@GoldBonus@ золота</gold>. У всех наковален снижена стоимость.<br><br><attention>Призматические наковальни</attention>: <gold>на %i:goldCoins%@PrismaticCostReduction@ золота</gold><br><attention>Легендарные наковальни</attention>: <gold>на %i:goldCoins%@LegendaryCostReduction@ золота</gold><br><attention>Наковальни показателей</attention>: <gold>на %i:goldCoins%@StatCostReduction@ золота</gold><br><br><rules>Стоимость предметов из наковален при перепродаже ниже на <gold>%i:goldCoins%500 золота</gold>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.png",
             "id": 234,
             "name": "Наковальня виолы да гамба",
             "rarity": 2,
-            "tooltip": "Вы получаете <gold>%i:goldCoins%@GoldBonus@ золота</gold>. У всех наковален снижена стоимость.<br><br><attention>Призматические наковальни</attention>: <gold>-%i:goldCoins%@PrismaticCostReduction@ золота</gold><br><attention>Легендарные наковальни</attention>: <gold>-%i:goldCoins%@LegendaryCostReduction@ золота</gold><br><attention>Наковальни показателей</attention>: <gold>-%i:goldCoins%@StatCostReduction@ золота</gold><br><br><rules>Стоимость предметов из наковален при перепродаже ниже на <gold>%i:goldCoins%500 золота</gold>.</rules>"
+            "tooltip": "Вы получаете <gold>%i:goldCoins%@GoldBonus@ золота</gold>. У всех наковален снижена стоимость.<br><br><attention>Призматические наковальни</attention>: <gold>на %i:goldCoins%@PrismaticCostReduction@ золота</gold><br><attention>Легендарные наковальни</attention>: <gold>на %i:goldCoins%@LegendaryCostReduction@ золота</gold><br><attention>Наковальни показателей</attention>: <gold>на %i:goldCoins%@StatCostReduction@ золота</gold><br><br><rules>Стоимость предметов из наковален при перепродаже ниже на <gold>%i:goldCoins%500 золота</gold>.</rules>"
         },
         {
             "apiName": "DivineIntervention",
@@ -7365,55 +7376,6 @@
             "name": "Потрошение",
             "rarity": 0,
             "tooltip": "Вы получаете <lifeSteal>@Omnivamp*100@% к всестороннему вытягиванию жизни</lifeSteal>."
-        },
-        {
-            "apiName": "Despoil",
-            "calculations": {},
-            "dataValues": {
-                "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "EnemyDetectionRadius": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ],
-                "MSRatio": [
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "При рывке или телепортации вы получаете <keywordMajor>Проклятую силу</keywordMajor>, если рядом враг. Вы получаете <speed>скорость передвижения</speed>, зависящую от <keywordMajor>Проклятой силы</keywordMajor>.",
-            "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
-            "id": 330,
-            "name": "Разорение",
-            "rarity": 0,
-            "tooltip": "При рывке или телепортации вы получаете <keywordMajor>@CurseCounter@ ед. Проклятой силы</keywordMajor>, если рядом враг. Вы получаете <speed>скорость передвижения</speed>, зависящую от <keywordMajor>Проклятой силы</keywordMajor>.<br><br>Вы получаете <speed>@f1@ скорости передвижения</speed> (@MSRatio*100@% от <keywordMajor>Проклятой силы</keywordMajor>).<br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "WellBeRightBack",
@@ -8864,8 +8826,8 @@
                     0.019999999552965164,
                     0.019999999552965164,
                     0.05000000074505806,
+                    0.07500000298023224,
                     0.10000000149011612,
-                    0.125,
                     0.125,
                     0.125
                 ],
@@ -9918,10 +9880,10 @@
                     0.30000001192092896
                 ],
                 "HealthAmp": [
-                    0.30000001192092896,
+                    0.15000000596046448,
+                    0.15000000596046448,
                     0.30000001192092896,
                     0.5,
-                    0.75,
                     0.75,
                     0.75,
                     0.75

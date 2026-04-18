@@ -2075,7 +2075,18 @@
         },
         {
             "apiName": "CraftingSellAugment",
-            "calculations": {},
+            "calculations": {
+                "{903f4f4f}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "BuffCounterByCoefficientCalculationPart",
+                            "mBuffName": "{7e05f704}",
+                            "mCoefficient": 1.0
+                        }
+                    ]
+                }
+            },
             "dataValues": {
                 "AugmentLevelsToGrant": [
                     2.0,
@@ -2096,13 +2107,13 @@
                     3.0
                 ]
             },
-            "desc": "ลบ <keywordMajor>Augment %i:Augment%</keywordMajor> หนึ่งชิ้น<br><br>ได้รับ <keywordMajor>เลเวล Augment %i:AugmentLevel%</keywordMajor> แบบสุ่ม @AugmentLevelsToGrant@ ชิ้น",
+            "desc": "ลบ <keywordMajor>Augment %i:Augment%</keywordMajor> หนึ่งชิ้น<br><br>ได้รับ <keywordMajor>Augment Level %i:AugmentLevel%</keywordMajor> แบบสุ่ม @AugmentLevelsToGrant@ ชิ้น",
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_sellaug.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_sellaug_small.png",
             "id": 342,
             "name": "Level Augment",
             "rarity": 4,
-            "tooltip": "ลบ <keywordMajor>Augment %i:Augment%</keywordMajor> หนึ่งชิ้น<br><br>ได้รับ <keywordMajor>เลเวล Augment %i:AugmentLevel%</keywordMajor> แบบสุ่ม @AugmentLevelsToGrant@ ชิ้น"
+            "tooltip": "Cherry_CraftingSellAugment_Tooltip"
         },
         {
             "apiName": "WitchfulThinking",
@@ -2721,7 +2732,7 @@
                     3.0
                 ]
             },
-            "desc": "การสร้างความเสียหายด้วยสกิลจะยิงมิสไซล์เวท @NumberOfMissiles@ ลูก แต่ละลูกจะสร้าง<trueDamage>ความเสียหายจริงตามเปอร์เซ็นต์พลังชีวิตสูงสุด</trueDamage>",
+            "desc": "การสร้างความเสียหายด้วยสกิล จะยิงมิสไซล์เวท @NumberOfMissiles@ ลูก แต่ละลูกจะสร้าง<trueDamage>ความเสียหายจริง ตามเปอร์เซ็นต์พลังชีวิตสูงสุด</trueDamage>",
             "iconLarge": "assets/ux/cherry/augments/icons/magicmissile_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/magicmissile_small.png",
             "id": 133,
@@ -2983,7 +2994,7 @@
                     5.0
                 ]
             },
-            "desc": "ได้รับ<scaleAP>พลังเวทถาวร @APPerProc@ หน่วย</scaleAP>เมื่อคุณใช้สกิลโดนศัตรู<br><br>หากเลือกรับหลังจบรอบ @RoundCounterForBonusAP@ จะได้รับ<scaleAP>พลังเวท @BonusAPForLatePick@ หน่วย</scaleAP>",
+            "desc": "ได้รับ<scaleAP>พลังเวทถาวร @APPerProc@ หน่วย</scaleAP> เมื่อคุณใช้สกิลโดนศัตรู<br><br>หากเลือกรับหลังจบรอบ @RoundCounterForBonusAP@ จะได้รับ<scaleAP>พลังเวท @BonusAPForLatePick@ หน่วย</scaleAP>",
             "iconLarge": "assets/ux/cherry/augments/icons/phenomenalevil_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/phenomenalevil_small.png",
             "id": 65,
@@ -3100,7 +3111,7 @@
                     5.0
                 ]
             },
-            "desc": "ไอเทมและเอฟเฟกต์ความเสียหายชั่วระยะเวลาของคุณสามารถ<crit>ติดคริติคอล</crit>ได้<br><br>ได้รับ<crit>โอกาสคริติคอล %i:scaleCrit% @CritChance*100@%</crit>",
+            "desc": "ไอเทมและเอฟเฟกต์ความเสียหายชั่วระยะเวลา ของคุณสามารถ<crit>ติดคริติคอล</crit>ได้<br><br>ได้รับ<crit>โอกาสคริติคอล %i:scaleCrit% @CritChance*100@%</crit>",
             "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.png",
             "id": 92,
@@ -3157,7 +3168,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
             "id": 233,
-            "name": "Cherry_UltimateRoulette_Name",
+            "name": "Ultimate Roulette",
             "rarity": 2,
             "tooltip": "แทนที่เวทซัมมอนเนอร์ <spellName>Flee</spellName> ด้วยสกิล<attention>อัลติเมท</attention>แบบสุ่ม และหลังร่ายสกิล<attention>อัลติเมท</attention>ดังกล่าว แทนที่มันด้วย<attention>สกิลอัลติเมท</attention>ใหม่แบบสุ่ม<br><br><br><rules>เวทเหล่านี้ยังถือว่าเป็นสกิลอัลติเมท</rules>"
         },
@@ -3228,76 +3239,76 @@
             "dataValues": {
                 "BaseDamage": [
                     100.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
                 ],
                 "CastRange": [
                     400.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0,
+                    400.0
                 ],
                 "EDITDECEIVEFORREALVALUES": 0,
                 "ExtraAATime": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearDamage": [
                     0.25,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "FearDuration": [
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "FearRadius": [
                     350.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "PseudoCastTime": [
                     0.125,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125,
+                    0.125
                 ],
                 "StealthDuration": [
                     3.0,
@@ -5810,8 +5821,8 @@
                 "DamageAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5828,8 +5839,8 @@
                 "HealingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -5864,8 +5875,8 @@
                 "ShieldingAmp": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
-                    0.5,
+                    0.30000001192092896,
+                    0.44999998807907104,
                     0.5,
                     0.5,
                     0.5
@@ -7367,55 +7378,6 @@
             "tooltip": "ได้รับ<lifeSteal>ดูดเลือดต่อความเสียหายที่ทำได้ @Omnivamp*100@%</lifeSteal>"
         },
         {
-            "apiName": "Despoil",
-            "calculations": {},
-            "dataValues": {
-                "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "EnemyDetectionRadius": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ],
-                "MSRatio": [
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355,
-                    0.3499999940395355
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "การพุ่งหรือเทเลพอร์ตจะมอบสแตค <keywordMajor>Cursed Power</keywordMajor> ให้กับคุณหากมีศัตรูอยู่ใกล้ ๆ และได้รับ<speed>ความเร็วเคลื่อนที่</speed>ซึ่งจะสเกลเพิ่มขึ้นตามจำนวนสแตค <keywordMajor>Cursed Power</keywordMajor> ที่คุณมี",
-            "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
-            "id": 330,
-            "name": "Despoil",
-            "rarity": 0,
-            "tooltip": "การพุ่งหรือเทเลพอร์ตจะมอบสแตค <keywordMajor>Cursed Power @CurseCounter@ สแตค</keywordMajor> ให้กับคุณหากมีศัตรูอยู่ใกล้ ๆ และได้รับ<speed>ความเร็วเคลื่อนที่</speed>ซึ่งจะสเกลเพิ่มขึ้นตามจำนวนสแตค <keywordMajor>Cursed Power</keywordMajor> ที่คุณมี<br><br>ได้รับ<speed>ความเร็วเคลื่อนที่ @f1@ หน่วย</speed> (@MSRatio*100@% ของสแตค <keywordMajor>Cursed Power</keywordMajor> ที่คุณมี)<br><br>{{ Cherry_CurseShared }}"
-        },
-        {
             "apiName": "WellBeRightBack",
             "calculations": {
                 "TooltipTrueDamageCalculation": {
@@ -8864,8 +8826,8 @@
                     0.019999999552965164,
                     0.019999999552965164,
                     0.05000000074505806,
+                    0.07500000298023224,
                     0.10000000149011612,
-                    0.125,
                     0.125,
                     0.125
                 ],
@@ -8888,7 +8850,7 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "ได้รับขนาดที่ใหญ่ขึ้นและ<scaleHealth>โบนัสพลังชีวิตเป็นเปอร์เซ็นต์</scaleHealth>ต่อการโค่นล้มหนึ่งครั้ง",
+            "desc": "ได้รับขนาดที่ใหญ่ขึ้นและ<scaleHealth>โบนัสพลังชีวิต เป็นเปอร์เซ็นต์</scaleHealth>ต่อการโค่นล้มหนึ่งครั้ง",
             "iconLarge": "assets/ux/cherry/augments/icons/tank_engine_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tank_engine_small.png",
             "id": 313,
@@ -9450,7 +9412,7 @@
             "id": 38,
             "name": "From Beginning to End",
             "rarity": 1,
-            "tooltip": "ได้รับรูนคีย์สโตน <spellName>First Strike</spellName> และ <spellName>Dark Harvest</spellName><br><li><spellName>First Strike</spellName> - การสร้างความเสียหายให้กับแชมเปี้ยนจะทำให้พวกเขาได้รับความเสียหายเพิ่มขึ้นเป็นเวลา 3 วินาที เมื่อหมดเวลา จะได้รับ <gold>+%i:goldCoins% ทอง</gold> ตามโบนัสความเสียหายที่คุณทำได้<br><li><spellName>Dark Harvest</spellName> - การสร้างความเสียหายให้กับศัตรูที่มีพลังชีวิตต่ำกว่า <scaleHealth>50%</scaleHealth> จะสร้างโบนัสความเสียหาย และจะเพิ่มโบนัสความเสียหายนี้ให้แบบถาวร"
+            "tooltip": "ได้รับรูนคีย์สโตน <spellName>First Strike</spellName> และ <spellName>Dark Harvest</spellName><br><li><spellName>First Strike</spellName> - การสร้างความเสียหายให้กับแชมเปี้ยนจะทำให้พวกเขาได้รับความเสียหายเพิ่มขึ้นเป็นเวลา 3 วินาที เมื่อหมดเวลา จะได้รับ <gold>+%i:goldCoins% ทอง</gold> ตามโบนัสความเสียหายที่คุณทำได้<br><li><spellName>Dark Harvest</spellName> - การสร้างความเสียหายให้กับศัตรูที่มีพลังชีวิตต่ำกว่า <scaleHealth>50%</scaleHealth> จะสร้างโบนัสความเสียหาย และจะเพิ่มโบนัสความเสียหายนี้ให้แบบถาวร"
         },
         {
             "apiName": "PanicRoom",
@@ -9918,10 +9880,10 @@
                     0.30000001192092896
                 ],
                 "HealthAmp": [
-                    0.30000001192092896,
+                    0.15000000596046448,
+                    0.15000000596046448,
                     0.30000001192092896,
                     0.5,
-                    0.75,
                     0.75,
                     0.75,
                     0.75
@@ -13074,7 +13036,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
-            "name": "Cherry_FruitsOfYourLabor_Name",
+            "name": "Fruits of Your Labor",
             "rarity": 0,
             "tooltip": "{{Cherry_FruitsOfYourLabor_Summary}}"
         },
@@ -13565,7 +13527,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/nowyouseeme_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nowyouseeme_small.png",
             "id": 43,
-            "name": "Cherry_NowYouSeeMe_Name",
+            "name": "Now You See Me",
             "rarity": 0,
             "tooltip": "<passive>ติดตัว:</passive> ทิ้งร่องรอยไว้เมื่อคุณใช้<keywordMajor>สกิลประเภทเคลื่อนที่</keywordMajor><br><br><active>กดใช้:</active> กลับสู่ตำแหน่งที่ทำเครื่องหมายไว้ล่าสุด จากนั้นคุณจะได้รับ<speed>ความเร็วเคลื่อนที่ @MSBuffAmount*100@% เป็นเวลา @MSBuffDuration@ วินาที</speed>"
         },
@@ -13674,7 +13636,7 @@
                     3.0
                 ]
             },
-            "desc": "สกิลของคุณสามารถ<crit>ติดคริติคอล</crit>ได้<br><br>ได้รับ<crit>โอกาสคริติคอล %i:scaleCrit% @CritGranted@%</crit>",
+            "desc": "สกิลของคุณสามารถ<crit>ติดคริติคอล</crit>ได้<br><br>ได้รับ<crit>โอกาสคริติคอล %i:scaleCrit% @CritGranted@</crit>",
             "iconLarge": "assets/ux/cherry/augments/icons/jeweledgauntlet_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/jeweledgauntlet_small.png",
             "id": 48,
@@ -13804,7 +13766,7 @@
             "id": 309,
             "name": "And My Axe!",
             "rarity": 1,
-            "tooltip": "<keywordMajor>ร่ายอัตโนมัติ</keywordMajor>: ขว้างขวานไปยังศัตรูที่อยู่ใกล้ที่สุดทุก ๆ @Cooldown@ วินาที สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> <status>สโลว์</status>เป้าหมาย @SlowAmount*100@% เป็นเวลา @SlowDuration@ วินาที พร้อมทั้งลด<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท @ShredAmount*100@%</scaleMR> เป็นเวลา @DebuffDuration@ วินาที <br><br>การเก็บขวานนี้จะลดคูลดาวน์ (%i:cooldown%) ลงเหลือ @CDIfPickedUp@ วินาที"
+            "tooltip": "<keywordMajor>ร่ายอัตโนมัติ</keywordMajor>: ขว้างขวานไปยังศัตรูที่อยู่ใกล้ที่สุดทุก ๆ @Cooldown@ วินาที สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> <status>สโลว์</status>เป้าหมาย @SlowAmount*100@% เป็นเวลา @SlowDuration@ วินาที พร้อมทั้งลด<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท @ShredAmount*100@%</scaleMR> เป็นเวลา @DebuffDuration@ วินาที <br><br>การเก็บขวานนี้จะลดคูลดาวน์ (%i:cooldown%) ลงเหลือ @CDIfPickedUp@ วินาที"
         }
     ]
 }

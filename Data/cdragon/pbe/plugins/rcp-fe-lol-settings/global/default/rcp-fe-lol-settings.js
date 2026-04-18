@@ -14513,7 +14513,7 @@
                         this.set("quickcastComponent", e)
                     },
                     handlePracticeToolClick: function() {
-                        this.get("isPracticeToolEnabled") && (a.api.close(), setTimeout((() => {
+                        this.get("isPracticeToolDisabled") || (a.api.close(), setTimeout((() => {
                             (0, a.getProvider)().getOptional("rcp-fe-lol-parties").then((e => {
                                 e && e.showTrainingPracticeTool()
                             })).catch((e => {

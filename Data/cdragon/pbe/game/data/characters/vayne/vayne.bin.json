@@ -728,6 +728,198 @@
         },
         "__type": "SpellObject"
     },
+    "Characters/Vayne/Spells/VayneTumbleAbility": {
+        "mRootSpell": "Characters/Vayne/Spells/VayneTumbleAbility/VayneTumble",
+        "mChildSpells": [
+            "Characters/Vayne/Spells/VayneTumbleAbility/VayneTumble"
+        ],
+        "mName": "VayneTumbleAbility",
+        "AbilityTraits": 128,
+        "__type": "AbilityObject"
+    },
+    "Characters/Vayne/Spells/VayneRunCycleManager": {
+        "ObjectName": "VayneRunCycleManager",
+        "mScriptName": "VayneRunCycleManager",
+        "__type": "SpellObject"
+    },
+    "Characters/Vayne/Spells/VaynePassiveAbility": {
+        "mRootSpell": "Characters/Vayne/Spells/VaynePassiveAbility/VaynePassive",
+        "mChildSpells": [
+            "Characters/Vayne/Spells/VaynePassiveAbility/VaynePassive"
+        ],
+        "mName": "VaynePassiveAbility",
+        "mType": 3,
+        "__type": "AbilityObject"
+    },
+    "{773b516b}": {
+        "ObjectName": "VayneHunt",
+        "mScriptName": "VayneHunt",
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "VayneHunt",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "game_character_passiveName_Vayne",
+                    "keyTooltip": "game_character_passiveSummary_Vayne"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "CanTimeoutWhileCasting": false,
+            "mShowDuration": false,
+            "mShowAccumulatedDuration": false,
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Vayne/Spells/VaynePassiveAbility/VaynePassive": {
+        "ObjectName": "VaynePassive",
+        "mScriptName": "VaynePassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MovementSpeed",
+                    "values": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Range",
+                    "values": [
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        2000.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_P.dds"
+            ],
+            "castRange": [
+                2000.0,
+                2000.0,
+                2000.0,
+                2000.0,
+                2000.0,
+                2000.0,
+                2000.0
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "VaynePassive",
+                    "mFormat": "{476ec0b8}",
+                    "EnableExtendedTooltip": false,
+                    "mLocKeys": {
+                        "keyName": "game_character_passiveName_Vayne",
+                        "keyTooltip": "game_character_passiveDescription_Vayne",
+                        "keySummary": "game_character_passiveSummary_Vayne"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Vayne/Spells/VayneCritAttack": {
+        "ObjectName": "VayneCritAttack",
+        "mScriptName": "VayneCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "VayneBasicAttack",
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.48500001430511475,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "Vayne_BA_Crit_Mis",
+            "mHitEffectKey": "Vayne_BA_crit_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Vayne/Spells/VayneSilverDebuff": {
+        "ObjectName": "VayneSilverDebuff",
+        "mScriptName": "VayneSilverDebuff",
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_VayneSilverDebuff",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition": {
         "ObjectName": "VayneInquisition",
         "mScriptName": "VayneInquisition",
@@ -1004,203 +1196,6 @@
                 }
             ],
             "__type": "BotsSpellData"
-        },
-        "__type": "SpellObject"
-    },
-    "{6f05b740}": {
-        "ObjectName": "Vayne_Skin67",
-        "mScriptName": "Vayne_Skin67",
-        "__type": "SpellObject"
-    },
-    "Characters/Vayne/Spells/VayneTumbleAbility": {
-        "mRootSpell": "Characters/Vayne/Spells/VayneTumbleAbility/VayneTumble",
-        "mChildSpells": [
-            "Characters/Vayne/Spells/VayneTumbleAbility/VayneTumble"
-        ],
-        "mName": "VayneTumbleAbility",
-        "AbilityTraits": 128,
-        "__type": "AbilityObject"
-    },
-    "Characters/Vayne/Spells/VayneRunCycleManager": {
-        "ObjectName": "VayneRunCycleManager",
-        "mScriptName": "VayneRunCycleManager",
-        "__type": "SpellObject"
-    },
-    "Characters/Vayne/Spells/VaynePassiveAbility": {
-        "mRootSpell": "Characters/Vayne/Spells/VaynePassiveAbility/VaynePassive",
-        "mChildSpells": [
-            "Characters/Vayne/Spells/VaynePassiveAbility/VaynePassive"
-        ],
-        "mName": "VaynePassiveAbility",
-        "mType": 3,
-        "__type": "AbilityObject"
-    },
-    "{773b516b}": {
-        "ObjectName": "VayneHunt",
-        "mScriptName": "VayneHunt",
-        "mBuff": {
-            "mTooltipData": {
-                "mObjectName": "VayneHunt",
-                "mFormat": "{b34f999a}",
-                "mLocKeys": {
-                    "keyName": "game_character_passiveName_Vayne",
-                    "keyTooltip": "game_character_passiveSummary_Vayne"
-                },
-                "__type": "TooltipInstanceBuff"
-            },
-            "CanTimeoutWhileCasting": false,
-            "mShowDuration": false,
-            "mShowAccumulatedDuration": false,
-            "__type": "BuffData"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Vayne/Spells/VaynePassiveAbility/VaynePassive": {
-        "ObjectName": "VaynePassive",
-        "mScriptName": "VaynePassive",
-        "mSpell": {
-            "DataValues": [
-                {
-                    "name": "MovementSpeed",
-                    "values": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Range",
-                    "values": [
-                        2000.0,
-                        2000.0,
-                        2000.0,
-                        2000.0,
-                        2000.0,
-                        2000.0,
-                        2000.0
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "mImgIconName": [
-                "ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_P.dds"
-            ],
-            "castRange": [
-                2000.0,
-                2000.0,
-                2000.0,
-                2000.0,
-                2000.0,
-                2000.0,
-                2000.0
-            ],
-            "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "VaynePassive",
-                    "mFormat": "{476ec0b8}",
-                    "EnableExtendedTooltip": false,
-                    "mLocKeys": {
-                        "keyName": "game_character_passiveName_Vayne",
-                        "keyTooltip": "game_character_passiveDescription_Vayne",
-                        "keySummary": "game_character_passiveSummary_Vayne"
-                    },
-                    "__type": "TooltipInstanceSpell"
-                },
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Vayne/Spells/VayneCritAttack": {
-        "ObjectName": "VayneCritAttack",
-        "mScriptName": "VayneCritAttack",
-        "mSpell": {
-            "mAffectsTypeFlags": 5327,
-            "mAlternateName": "VayneBasicAttack",
-            "mAnimationName": "Crit",
-            "{11704a2b}": 0.48500001430511475,
-            "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "bHaveHitEffect": true,
-            "castRange": [
-                600.0,
-                600.0,
-                600.0,
-                600.0,
-                600.0,
-                600.0,
-                600.0
-            ],
-            "castRadius": [
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0
-            ],
-            "castConeDistance": 100.0,
-            "mMissileSpec": {
-                "movementComponent": {
-                    "mTargetHeightAugment": 100.0,
-                    "mOffsetInitialTargetHeight": 100.0,
-                    "mStartBoneName": "R_hand",
-                    "mSpeed": 2000.0,
-                    "__type": "FixedSpeedMovement"
-                },
-                "verticalFacing": {
-                    "__type": "VeritcalFacingMatchVelocity"
-                },
-                "behaviors": [
-                    {
-                        "__type": "CastOnMovementComplete"
-                    },
-                    {
-                        "__type": "DestroyOnMovementComplete"
-                    }
-                ],
-                "__type": "MissileSpecification"
-            },
-            "mCastType": 1,
-            "castFrame": 8.0,
-            "missileSpeed": 2000.0,
-            "mMissileEffectKey": "Vayne_BA_Crit_Mis",
-            "mHitEffectKey": "Vayne_BA_crit_tar",
-            "bHaveHitBone": true,
-            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
-            "mClientData": {
-                "mTargeterDefinitions": [
-                    {
-                        "useCasterBoundingBox": false,
-                        "__type": "TargeterDefinitionRange"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Vayne/Spells/VayneSilverDebuff": {
-        "ObjectName": "VayneSilverDebuff",
-        "mScriptName": "VayneSilverDebuff",
-        "mBuff": {
-            "mDescription": "game_buff_tooltip_VayneSilverDebuff",
-            "__type": "BuffData"
         },
         "__type": "SpellObject"
     },

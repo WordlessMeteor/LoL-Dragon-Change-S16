@@ -670,7 +670,7 @@
                     m.patch(a, [e, t])
                 },
                 saveAndExit(e = "tft-teamPlanner") {
-                    e = !0 === this.get("shouldShowTeamEditor") ? "TeamEditor" : "MyTeams", this.consecutiveUndoCount = 0, this.handleCaseWhenTeamIsEmpty().then((() => {
+                    return e = !0 === this.get("shouldShowTeamEditor") ? "TeamEditor" : "MyTeams", this.consecutiveUndoCount = 0, this.handleCaseWhenTeamIsEmpty().then((() => {
                         this.privateApi.currentTeamChampionNames = this.getCurrentTeamChampionNames(), this.privateApi.hide(e);
                         const t = this.get("currentlySelectedTeamId");
                         return Promise.all([m.patch(s.hasViewedTeamPlannerPath, !0), m.patch(s.lastViewedSetPath), m.put(s.previousContextPath, {
