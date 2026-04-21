@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Chiến Tranh Du Kích",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Nếu Teemo đứng yên và không hành động trong một khoảng thời gian ngắn, hắn sẽ trở nên Vô Hình vô thời hạn. Nếu đang ở trong bụi cỏ, Teemo có thể tiến vào và duy trì trạng thái Vô Hình của mình khi đang di chuyển. Sau khi thoát khỏi trạng thái Vô Hình, Teemo nhận được Yếu Tố Bất Ngờ, tăng Tốc Độ Đánh của hắn trong vài giây."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Phi Tiêu Mù",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Làm mờ tầm nhìn của kẻ địch bằng một chất độc cực mạnh, gây sát thương lên mục tiêu đồng thời khiến nạn nhân bị mù trong thời gian hiệu lực.",
+            "dynamicDescription": "Teemo bắn ra một phi tiêu, <status>Làm Mù</status> mục tiêu trong @BlindDuration@ giây và gây <magicDamage>@CalculatedDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Chạy Lẹ",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo chạy lăng xăng xung quanh, tăng nội tại Tốc Độ Di Chuyển của bản thân cho đến khi hắn bị trúng đòn bởi tướng địch hoặc trụ. Teemo có thể chạy nước rút để nhận thêm Tốc Độ Di Chuyển mà không bị mất đi khi trúng đòn trong một khoảng thời gian ngắn.",
             "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Teemo nhận <speed>@PassiveMoveSpeedBonus*100@% Tốc Độ Di Chuyển</speed> khi không bị dính sát thương từ tướng hoặc trụ trong @PassiveCooldownOnDamageTaken@ giây trước đó.<br><br><spellActive>Kích hoạt:</spellActive> Teemo tăng tốc, nhận <speed>@ActiveMoveSpeedBonus*100@% Tốc Độ Di Chuyển</speed> không bị mất khi dính sát thương trong @ActiveMoveSpeedBuffDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Bắn Độc",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Bẫy Độc",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo ném ra một bẫy độc phát nổ bằng một trong những cây nấm được cất trong ba lô của cậu. Nếu kẻ dịch dẫm trúng bẫy, nó sẽ phun ra một làn khói độc, làm chậm và gây sát thương theo thời gian. Nếu Teemo ném một cây nấm lên một cây nấm khác, nó sẽ nảy lên, gia tăng thêm tầm ném.",
+            "dynamicDescription": "Teemo quăng ra một bẫy nấm sẽ phát nổ khi bị dẫm lên. Các bẫy này <status>Làm Chậm</status> @SlowAmount@% và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong @DebuffDuration@ giây. Kẻ địch bị lộ diện trong cùng khoảng thời gian đó.<br><br>Bẫy tồn tại trong @MushroomDuration@ phút và được tàng hình. Một cây nấm được quăng lên một cây nấm khác sẽ nảy lên trước khi tiếp đất tại vị trí đó. Kỹ Năng này có @MaxAmmo@ tích trữ (@AmmoRechargeTime@ giây sạc lại).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

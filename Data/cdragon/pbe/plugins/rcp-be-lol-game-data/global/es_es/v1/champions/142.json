@@ -1279,7 +1279,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Deja al objetivo aletargado y hace que se duerma. Mientras está dormido, se reduce la resistencia mágica del objetivo. El daño del primer ataque que despierte al objetivo se duplica, hasta cierto límite.",
-            "dynamicDescription": "Zoe lanza una burbuja que inflige <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage> y que permanece como una trampa si no alcanza a ningún objetivo. El alcance de la burbuja se extiende cuando vuela sobre obstáculos del terreno.<br><br>Tras un breve lapso de tiempo, la víctima se queda <status>dormida</status> y se reduce su <scaleMR>resistencia mágica</scaleMR> en un @PercentPen*100@% durante 2 s. Los ataques y las habilidades despiertan a la víctima, pero infligen el doble de daño, hasta <trueDamage>@BreakDamageTooltip@ de daño verdadero</trueDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZoeE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1297,12 +1297,12 @@
                 80.0
             ],
             "cooldownCoefficients": [
+                18.0,
+                17.0,
                 16.0,
                 15.0,
                 14.0,
-                13.0,
-                12.0,
-                11.0
+                14.0
             ],
             "coefficients": {
                 "coefficient1": 0.45,

@@ -772,7 +772,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Shyvana erhält einen Schild sowie Lauftempo und nach einer kurzen Verzögerung detoniert der Bereich um sie herum.  In Drachengestalt heilt die Explosion sie, wenn sie einen gegnerischen Champion trifft.",
-            "dynamicDescription": "Shyvana hüllt sich @Duration@&nbsp;Sekunden lang in Flammen und erhält einen <shield>Schild in Höhe von @Calc_Shield@</shield>, der pro gegnerischem Champion in der Nähe um <shield>@Calc_Shield_Per_Nearby_Champion@</shield> erhöht wird, sowie <speed>@MoveSpeed@&nbsp;Lauftempo</speed>, das auf <speed>@MoveSpeedTowardsEnemies@</speed> erhöht wird, wenn sie sich auf gegnerische Champions zubewegt.<br><br>Wenn der Effekt endet, der <shield>Schild</shield> zerstört oder die Fähigkeit <recast>reaktiviert</recast> wird, explodiert der Bereich um sie herum und verursacht <magicDamage>@Damage@&nbsp;magischen Schaden</magicDamage>.<br><br><keywordMajor>Drachengestalt:</keywordMajor> Trifft die Detonation einen gegnerischen Champion, stellt Shyvana abhängig von ihrem fehlenden Leben <healing>@Calc_Heal_Min@ bis @Calc_Heal_Max@&nbsp;Leben</healing> wieder her.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -790,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -922,7 +922,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Shyvana schleudert einen Feuerball, der beim Aufprall auf ein großes Ziel explodiert und es verlangsamt. In Drachengestalt durchdringt er und explodiert beim Aufprall auf große Gegner, wobei er eine Feuerspur hinterlässt.",
-            "dynamicDescription": "Shyvana schleudert einen Feuerball auf das Zielgebiet, der <magicDamage>@Damage@&nbsp;magischen Schaden</magicDamage> verursacht und <status>@SlowDuration@&nbsp;Sekunden lang um @Calc_Slow@ verlangsamt</status>. Er explodiert, wenn er einen Gegner trifft oder seinen Endpunkt erreicht.<br><br><keywordMajor>Drachengestalt:</keywordMajor> Shyvanas Feuerball ist größer und durchdringt Gegner. Wenn er einen Champion oder ein großes Monster trifft oder seinen Endpunkt erreicht, löst er einen Feuerimpuls aus, der <magicDamage>@Calc_Dragon_Damage@&nbsp;magischen Schaden</magicDamage> verursacht und <status>@SlowDuration@&nbsp;Sekunden lang</status> um @Calc_Slow_Dragon@ verlangsamt. Der Feuerball hinterlässt für @GroundLingerDuration@&nbsp;Sekunden eine Spur, die <magicDamage>@DamagePerSecond@&nbsp;magischen Schaden pro Sekunde</magicDamage> verursacht. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -941,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

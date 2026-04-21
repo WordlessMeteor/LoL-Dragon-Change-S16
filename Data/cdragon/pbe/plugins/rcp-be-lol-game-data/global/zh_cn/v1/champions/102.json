@@ -772,7 +772,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "希瓦娜获得一个护盾和移动速度，并在短暂延迟后，她周围的区域会被引爆。在【魔龙形态】下，这次爆炸如果击中一个敌方英雄，则会治疗希瓦娜。",
-            "dynamicDescription": "希瓦娜将她自身包裹在烈焰中@Duration@秒，从而获得<shield>@Calc_Shield@护盾值</shield>，附近的每个敌方英雄都会使这个护盾值提升<shield>@Calc_Shield_Per_Nearby_Champion@</shield>；此外还会获得<speed>@MoveSpeed@移动速度</speed>，这个移速加成会在朝着敌方英雄移动时提升至<speed>@MoveSpeedTowardsEnemies@</speed>。<br><br>在这些效果结束时、<shield>护盾</shield>被打破时、或在<recast>再次施放</recast>时，她附近的区域会被引爆，造成<magicDamage>@Damage@魔法伤害</magicDamage>。<br><br><keywordMajor>魔龙形态：</keywordMajor>如果这次引爆命中了一个敌方英雄，那么希瓦娜会<healing>回复@Calc_Heal_Min@到@Calc_Heal_Max@生命值</healing>，基于她的已损失生命值。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "希瓦娜将她自身包裹在烈焰中@Duration@秒，从而获得<shield>@Calc_Shield@护盾值</shield>，附近的每个敌方英雄都会使这个护盾值提升<shield>@Calc_Shield_Per_Nearby_Champion@</shield>；此外还会获得<speed>@MoveSpeed@移动速度</speed>，这个移速加成会在朝着敌方英雄移动时提升至<speed>@MoveSpeedTowardsEnemies@</speed>。<br><br>在这些效果结束时、<shield>护盾</shield>被打破时、或在<recast>再次施放</recast>时，她附近的区域会被引爆，造成<magicDamage>@Damage@魔法伤害</magicDamage>。<br><br><keywordMajor>魔龙形态：</keywordMajor>如果这次引爆命中了一个敌方英雄，那么希瓦娜会<healing>回复@Calc_Base_Heal@+@Calc_Missing_Health_Heal@已损失生命值</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -790,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -922,7 +922,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "希瓦娜发射一团火球，火球在击中一个大型目标时爆炸并将其减速。在【魔龙形态】下，它会穿过敌人并在击中大型目标时爆炸，还会留下一条烈焰轨迹。",
-            "dynamicDescription": "希瓦娜向目标位置投出一团火球，造成<magicDamage>@Damage@魔法伤害</magicDamage>和<status>持续@SlowDuration@秒的@Calc_Slow@减速</status>。它会在击中一个敌人或达到终点时爆炸。<br><br><keywordMajor>魔龙形态：</keywordMajor>希瓦娜的火球更大并会穿过敌人们。在击中一个英雄、大型野怪、或达到它的终点时，它会触发一道烈焰脉冲来造成<magicDamage>@Calc_Dragon_Damage@魔法伤害</magicDamage>和<status>持续@SlowDuration@秒的@Calc_Slow_Dragon@减速</status>。火球留下一条持续@GroundLingerDuration@秒的轨迹，<magicDamage>每秒造成@DamagePerSecond@魔法伤害</magicDamage>。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "希瓦娜向目标位置投出一团火球，造成<magicDamage>@Damage@+@Calc_Max_Health_Damage@最大生命值的魔法伤害</magicDamage>和<status>持续@SlowDuration@秒的@Calc_Slow@减速</status>。它会在击中一个敌人或达到终点时爆炸。<br><br><keywordMajor>魔龙形态：</keywordMajor>希瓦娜的火球更大并会穿过敌人们。在击中一个英雄、大型野怪、或达到它的终点时，它会触发一道烈焰脉冲来造成<magicDamage>@Calc_Dragon_Damage@+@Calc_Max_Health_Dragon_Damage@最大生命值的魔法伤害</magicDamage>和<status>持续@SlowDuration@秒的@Calc_Slow_Dragon@减速</status>。火球留下一条持续@GroundLingerDuration@秒的轨迹，<magicDamage>每秒造成@DamagePerSecond@魔法伤害</magicDamage>。 @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -941,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

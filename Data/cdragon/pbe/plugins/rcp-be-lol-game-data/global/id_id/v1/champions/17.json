@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Guerrilla Warfare",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Jika Teemo tetap diam dan tidak melakukan tindakan apa pun dalam waktu singkat, dia menjadi Invisible tanpa batas waktu. Jika sedang berada di semak, Teemo bisa memasuki dan mempertahankan Invisibility-nya saat bergerak. Setelah keluar dari mode Invisibility, Teemo mendapatkan Element of Surprise, meningkatkan Attack Speed-nya selama beberapa detik."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Blinding Dart",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Membutakan penglihatan musuh dengan racun yang kuat, menghasilkan damage ke unit target, dan menyebabkan blind selama durasi tersebut.",
+            "dynamicDescription": "Teemo melemparkan dart, membuat target <status>Blind</status> selama @BlindDuration@ detik dan menghasilkan <magicDamage>@CalculatedDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Move Quick",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo berlarian di sekitar, secara pasif meningkatkan Move Speed sampai dia diserang oleh champion atau turret musuh. Teemo bisa berlari cepat untuk mendapatkan Move Speed bonus yang tidak hilang meskipun terkena serangan selama beberapa saat.",
             "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Teemo mendapatkan <speed>@PassiveMoveSpeedBonus*100@% Move Speed</speed> jika tidak terkena damage dari champion atau turret dalam @PassiveCooldownOnDamageTaken@ detik terakhir.<br><br><spellActive>Aktif:</spellActive> Teemo berlari, mendapatkan <speed>@ActiveMoveSpeedBonus*100@% Move Speed</speed> yang tidak akan hilang meski terkena serangan selama @ActiveMoveSpeedBuffDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Toxic Shot",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Noxious Trap",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo melempar jebakan beracun yang bisa meledak menggunakan jamur dari ranselnya. Jebakan yang diinjak musuh akan mengeluarkan awan beracun yang memberikan efek slow dan damage pada musuh seiring waktu. Jika Teemo melemparkan jamur ke jamur yang lain, maka jamur akan memantul lebih jauh.",
+            "dynamicDescription": "Teemo melempar jebakan jamur yang meledak saat terinjak. Jebakan ini menerapkan <status>Slow</status> sebesar @SlowAmount@% dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> selama @DebuffDuration@ detik. Musuh akan terlihat selama durasi yang sama.<br><br>Trap bertahan selama @MushroomDuration@ menit dan dalam kondisi stealth. Jamur yang dilempar ke atas jamur lain akan memantul sebelum mendarat di posisinya. Ability ini memiliki @MaxAmmo@ charge (diperbarui setiap @AmmoRechargeTime@ detik).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

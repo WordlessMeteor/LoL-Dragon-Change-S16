@@ -1722,13 +1722,13 @@
                 {
                     "name": "OnHitBonusHPRatio",
                     "values": [
-                        0.014999999664723873,
-                        0.014999999664723873,
-                        0.014999999664723873,
-                        0.014999999664723873,
-                        0.014999999664723873,
-                        0.014999999664723873,
-                        0.014999999664723873
+                        0.00800000037997961,
+                        0.009999999776482582,
+                        0.012000000104308128,
+                        0.014000000432133675,
+                        0.01600000075995922,
+                        0.017999999225139618,
+                        0.019999999552965164
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2129,6 +2129,13 @@
                                 {
                                     "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_OnHitDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "OnHitBonusHPRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_UdyrQ_OnHit_BonusHPRatio",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -4254,19 +4261,7 @@
         ],
         "ChaosJunglePath": [
             {
-                "Camp": 10,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 11,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 9,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 8,
+                "Camp": 7,
                 "__type": "TakeCamp"
             },
             {
@@ -4274,7 +4269,19 @@
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 7,
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
                 "__type": "TakeCamp"
             },
             {

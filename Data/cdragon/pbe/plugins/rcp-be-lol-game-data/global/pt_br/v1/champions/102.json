@@ -772,7 +772,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Shyvana recebe Escudo e Velocidade de Movimento. Depois de um curto intervalo, a área ao redor dela detona.  Durante a Forma de Dragão, a explosão a curará se atingir um Campeão inimigo.",
-            "dynamicDescription": "Shyvana se envolve em chamas por @Duration@s, recebendo <shield>@Calc_Shield@ de Escudo</shield>, que aumenta em <shield>@Calc_Shield_Per_Nearby_Champion@</shield> por Campeão inimigo próximo, e <speed>@MoveSpeed@ de Velocidade de Movimento</speed>, que aumenta para <speed>@MoveSpeedTowardsEnemies@</speed> ao se mover em direção a Campeões inimigos.<br><br>Quando o efeito termina, o <shield>Escudo</shield> é quebrado ou, ao <recast>reconjurar</recast>, a área ao redor dela explode, causando <magicDamage>@Damage@ de Dano Mágico</magicDamage>.<br><br><keywordMajor>Forma de Dragão:</keywordMajor> caso a detonação atinja um Campeão inimigo, Shyvana <healing>restaura @Calc_Heal_Min@ - @Calc_Heal_Max@ de Vida</healing> com base na Vida perdida.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -790,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -922,7 +922,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Shyvana lança uma bola de fogo que explode ao atingir um alvo grande, causando Lentidão. Na Forma de Dragão, ela atravessa e explode ao atingir inimigos grandes, deixando um rastro de fogo por onde passa.",
-            "dynamicDescription": "Shyvana lança uma bola de fogo no local-alvo, causando <magicDamage>@Damage@ de Dano Mágico</magicDamage> e <status>@Calc_Slow@ de Lentidão por @SlowDuration@s</status>. Explode ao atingir um inimigo ou ao chegar ao destino final.<br><br><keywordMajor>Forma de Dragão:</keywordMajor> a bola de fogo da Shyvana fica maior e atravessa os inimigos. Ao atingir um Campeão, monstro grande ou seu destino final, a habilidade aciona um pulso de fogo que causa <magicDamage>@Calc_Dragon_Damage@ de Dano Mágico</magicDamage> e <status>@Calc_Slow_Dragon@ de Lentidão por @SlowDuration@s</status>. Por @GroundLingerDuration@s, a bola de fogo deixa um rastro que causa <magicDamage>@DamagePerSecond@ de Dano Mágico por segundo</magicDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -941,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Kaçak Dövüş",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Teemo olduğu yerde durur ve kısa bir süre hiçbir şey yapmazsa, belirsiz bir süreliğine görünmez hale gelir. Teemo çalı içinde hareket ederken de görünmez hale gelebilir ve görünmezliğini bozmadan dolaşabilir. Teemo görünmezlikten çıktıktan sonra Şaşırtmaca Avantajı kazanır ve saldırı hızını birkaç saniyeliğine arttırır."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Kör Eden Dart",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Rakibin görüşünü etkileyen güçlü bir zehirle hedefe hasar verir ve etki süresi boyunca hedefin kör olmasına yol açar.",
+            "dynamicDescription": "Teemo hedefi @BlindDuration@ saniyeliğine <status>kör eden</status> ve ona <magicDamage>@CalculatedDamage@ Büyü Hasarı</magicDamage> veren bir dart fırlatır.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Seri Adım",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo koşuşturmaya başlar ve rakip bir şampiyon ya da kulenin saldırısına uğrayana kadar hareket hızı pasif olarak artar. Teemo, depara kalkarak kısa süreliğine darbe alsa bile kaybetmeyeceği ilave hareket hızı avantajı elde edebilir.",
             "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Teemo son @PassiveCooldownOnDamageTaken@ saniye içinde bir şampiyon veya kuleden hasar almamışsa <speed>%@PassiveMoveSpeedBonus*100@ Hareket Hızı</speed> kazanır.<br><br><spellActive>Aktif:</spellActive> Teemo koşmaya başlayarak @ActiveMoveSpeedBuffDuration@ saniyeliğine <speed>%@ActiveMoveSpeedBonus*100@ Hareket Hızı</speed> kazanır. Bu ilave, hasar aldığında kaybolmaz.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Zehirli Atış",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Tehlikeli Tuzak",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo, çantasında sakladığı mantarlardan birini kullanarak patlayıcı bir tuzak atar. Bir rakip tuzağa basarsa rakipleri yavaşlatan ve onların zamanla hasar almasına neden olan bir zehir bulutu yayılır. Teemo yerdeki başka bir mantarın üzerine mantar atarsa attığı mantar sekerek ilave menzil kazanır.",
+            "dynamicDescription": "Teemo üstüne basıldığında patlayan bir mantar tuzağı atar. Tuzaklar rakipleri @DebuffDuration@ saniye boyunca %@SlowAmount@ <status>yavaşlatır</status> ve onlara <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. Rakipler aynı süre boyunca açığa çıkar.<br><br>Tuzaklar @MushroomDuration@ dakika boyunca varlığını korur ve gizlenir. Başka bir mantarın üstüne atılan mantar, hedef konuma inmeden önce onun üstünden seker. Bu yetenek @MaxAmmo@ yüke sahiptir (@AmmoRechargeTime@ saniye yenilenme süresi).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

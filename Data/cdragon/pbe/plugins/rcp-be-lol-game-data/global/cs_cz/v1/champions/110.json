@@ -1528,7 +1528,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Varus se připraví a vypálí silnou střelu s výjimečným dosahem. Výše poškození se odvíjí od toho, jak dlouho se na výstřel připravoval.",
-            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>Začátek nabíjení:</attention> Varus natahuje luk k dalšímu výstřelu, což jej <status>zpomalí</status> o @MoveSpeedMod*-100@&nbsp;%. Pokud během @MaxChannelDuration@&nbsp;sek. nevystřelí, schopnost se zruší a Varus získá zpět @ManaRefund*100@&nbsp;% many spotřebované na její seslání.<br><br><attention>Uvolnění:</attention> Varus šíp vystřelí a způsobí jím <physicalDamage>@TotalDamageMinTooltip@ bodů fyzického poškození</physicalDamage>, za každého zasaženého nepřítele se tato hodnota snižuje o @FalloffPercent*100@&nbsp;% (až na minimum ve výši @MinDamagePercent*100@&nbsp;%). Poškození a účinky odpálení <keywordMajor>Nákazy</keywordMajor> se v závislosti na době nabíjení mohou zvýšit až o @MaxChargeAmp*100@&nbsp;% (maximálně <physicalDamage>@TotalDamageMax@ bodů poškození</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1678,7 +1678,7 @@
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Pasivní efekt: Varusovy základní útoky způsobují bonusové magické poškození a umisťují na cíl efekt Nákaza. Varusovy ostatní schopnosti Nákazu odpalují a způsobují tak magické poškození, jehož výše se odvíjí od maximálního zdraví cíle. Aktivace: Varus posílí svůj následující Průbojný šíp.",
-            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Varusovy útoky způsobují dodatečných <magicDamage>@OnHitDamage@ bodů magického poškození</magicDamage> a na @DebuffDuration@&nbsp;sek. na cíl umisťují stupeň <keywordMajor>Nákazy</keywordMajor> (maximálně @MaxStacks@ stupně).<br><br>Varusovy ostatní schopnosti odpalují nastřádané stupně <keywordMajor>Nákazy</keywordMajor> a způsobují <magicDamage>magické poškození ve výši @PercentHPPerStack@ maximálního zdraví</magicDamage> za každý takovýto stupeň (celkové poškození až <magicDamage>@MaxPercentHPPerStack@ maximálního zdraví</magicDamage>). Při odpálení <keywordMajor>Nákazy</keywordMajor> na šampionech a epických příšerách se navíc zkrátí přebíjecí doby jeho základních schopností o @CDRPerBlightStack*100@&nbsp;% jejich maximální hodnoty za každý odpálený stupeň.<br><br><spellActive>Aktivace:</spellActive> Příští Varusovo seslání schopnosti <spellName>Průbojný šíp</spellName> způsobí dodatečné <magicDamage>magické poškození ve výši @QEmpowerPercentHP@ chybějícího zdraví</magicDamage>, tato hodnota se může v závislosti na době nabíjení zvýšit až na <magicDamage>@MaxQEmpowerPercentHP@ chybějícího zdraví</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1828,7 +1828,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Varus vystřelí déšť šípů, které způsobují fyzické poškození a znesvěcují zemi. Znesvěcená země snižuje nepřátelům rychlost pohybu a omezuje jejich schopnost léčení a regenerace.",
-            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus vystřelí salvu šípů, které způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage> a na @GroundDuration@&nbsp;sek. vytvoří oblast znesvěcené země, která <status>zpomaluje</status> nepřátele o @SlowPercent*-100@&nbsp;% a způsobuje jim @GrievousAmount*100@% Vážné rány.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1978,7 +1978,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Varus švihne zraňujícím nečistým úponem, jenž znehybní prvního nepřátelského šampiona, kterého zasáhne. Poté se rozroste směrem k dalším okolním šampionům; pokud se jich dotkne, znehybní i je.",
-            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus švihne morovým úponem, který na @RootDuration@&nbsp;sek. <status>znehybní</status> prvního zasaženého šampiona a způsobí mu <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Na <status>znehybněných</status> nepřátelích se během trvání tohoto efektu nasčítají @PassiveStacks@ stupně <keywordMajor>Nákazy</keywordMajor>.<br><br>Zamoření se šíří z cíle na neinfikované nepřátelské šampiony. Pokud je zasáhne, způsobí jim stejné poškození a <status>znehybní</status> je.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

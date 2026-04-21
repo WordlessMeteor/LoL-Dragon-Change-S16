@@ -1528,7 +1528,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Varus se pregătește pentru un atac puternic. Cu cât pregătirea este mai îndelungată, cu atât săgeata are raza și daunele mai mari.",
-            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>Începutul încărcării:</attention> Varus începe să încarce următoarea lovitură, <status>încetinindu-se</status> cu @MoveSpeedMod*-100@%. După @MaxChannelDuration@ secunde, dacă nu trage, Varus va anula abilitatea și își va recupera @ManaRefund*100@% din costul de mană.<br><br><attention>Eliberare:</attention> Varus lansează săgeata, provocând <physicalDamage>@TotalDamageMinTooltip@ daune fizice</physicalDamage>, valoare redusă cu @FalloffPercent*100@% pentru fiecare inamic lovit (minimum @MinDamagePercent*100@%). Daunele și efectele detonării <keywordMajor>''Năpastei''</keywordMajor> cresc cu până la @MaxChargeAmp*100@% în funcție de timpul de încărcare (maximum <physicalDamage>@TotalDamageMax@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1678,7 +1678,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Pasivă: atacurile de bază ale lui Varus provoacă daune magice bonus și aplică ''Năpasta''. Celelalte abilități ale lui Varus detonează ''Năpasta'', provocând daune magice în funcție de viața maximă a țintei. Activă: Varus își îmbunătățește următoarea ''Săgeată sfredelitoare''.",
-            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>atacurile lui Varus provoacă încă <magicDamage>@OnHitDamage@ daune magice</magicDamage> și aplică un cumul de <keywordMajor>''Năpastă''</keywordMajor> timp de @DebuffDuration@ secunde (maximum @MaxStacks@ cumuluri).<br><br>Celelalte abilități ale lui Varus detonează cumulurile de <keywordMajor>''Năpastă''</keywordMajor>, provocând <magicDamage>daune magice în valoare de @PercentHPPerStack@ din viața maximă</magicDamage> per cumul (daune maxime de <magicDamage>@MaxPercentHPPerStack@ din viața maximă</magicDamage>). Detonarea <keywordMajor>''Năpastei''</keywordMajor> aplicate campionilor și monștrilor epici reduce și timpii de reactivare ai abilităților de bază cu @CDRPerBlightStack*100@% din timpul maxim per cumul.<br><br><spellActive>Activă:</spellActive> următoarea folosire a abilității ''<spellName>Săgeata sfredelitoare</spellName>'' provoacă <magicDamage>daune magice suplimentare în valoare de @QEmpowerPercentHP@ din viața lipsă</magicDamage>, crescute până la <magicDamage>@MaxQEmpowerPercentHP@ din viața lipsă</magicDamage> în funcție de timpul de încărcare.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1828,7 +1828,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Varus lansează o salvă de săgeți care provoacă daune fizice și pângăresc zona afectată. Zona pângărită scade viteza de mișcare a inamicilor și le reduce capacitatea de auto-vindecare și regenerare.",
-            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus lansează o salvă de săgeți care provoacă <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și pângăresc zona afectată timp de @GroundDuration@ secunde, <status>încetinind</status> inamicii cu @SlowPercent*-100@% și aplicându-le ''Răni grave'' de @GrievousAmount*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1978,7 +1978,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Varus lansează o spirală care imobilizează primul campion inamic lovit, apoi se extinde spre campionii neinfectați din apropiere, imobilizându-i și pe ei la contact.",
-            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus își atacă inamicii cu o spirală de energie nocivă, <status>țintuind</status> primul campion lovit timp de @RootDuration@ secunde și provocându-i <magicDamage>@TotalDamage@ daune magice</magicDamage>. Inamicii <status>țintuiți</status> primesc @PassiveStacks@ cumuluri de <keywordMajor>''Năpastă''</keywordMajor> de-a lungul duratei.<br><br>Spirala se răspândește de la țintă spre campionii inamici neinfectați. Dacă îi atinge, le provoacă același daune și îi <status>țintuiește</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

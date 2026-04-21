@@ -1528,7 +1528,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Варус постепенно натягивает тетиву, а затем производит мощный выстрел. Чем дольше Варус готовится к выстрелу, тем дальше летит стрела и тем больше урона она наносит.",
-            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>Начало подготовки:</attention> Варус натягивает тетиву, <status>замедляясь</status> на @MoveSpeedMod*-100@%. Если он не выстреливает в течение @MaxChannelDuration@ сек., умение отменяется и Варус восстанавливает @ManaRefund*100@% от затраченной маны.<br><br><attention>Применение:</attention> Варус выпускает стрелу, нанося <physicalDamage>@TotalDamageMinTooltip@ ед. физ. урона</physicalDamage>, снижающегося на @FalloffPercent*100@% за каждого пораженного врага (мин. урон – @MinDamagePercent*100@%). Урон и сила эффектов взрыва от <keywordMajor>Осквернения</keywordMajor> растут вплоть до @MaxChargeAmp*100@% в зависимости от времени подготовки (макс. урон – <physicalDamage>@TotalDamageMax@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1678,7 +1678,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Пассивно: автоатаки Варуса наносят дополнительный магический урон и накладывают Осквернение. Другие умения Варуса поглощают заряды Осквернения, нанося цели дополнительный магический урон, зависящий от ее максимального запаса здоровья. Активно: Варус усиливает следующую Пробивающую стрелу.",
-            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки Варуса дополнительно наносят <magicDamage>@OnHitDamage@ ед. маг. урона</magicDamage> и накладывают на цели заряд <keywordMajor>Осквернения</keywordMajor> на @DebuffDuration@ сек. (макс. заряды – @MaxStacks@).<br><br>Другие умения Варуса взрывают заряды <keywordMajor>Осквернения</keywordMajor>, нанося <magicDamage>маг. урон в размере @PercentHPPerStack@ от макс. здоровья</magicDamage> за заряд (макс. урон – <magicDamage>@MaxPercentHPPerStack@ от макс. здоровья</magicDamage>). Взрыв <keywordMajor>Осквернения</keywordMajor> на чемпионах и эпических монстрах также сокращает перезарядку баз. умений Варуса на @CDRPerBlightStack*100@% от макс. значения за заряд.<br><br><spellActive>Активно:</spellActive> следующая <spellName>Пробивающая стрела</spellName> Варуса дополнительно наносит <magicDamage>маг. урон в размере @QEmpowerPercentHP@ от недост. здоровья</magicDamage>. Урон растет до <magicDamage>@MaxQEmpowerPercentHP@ от недост. здоровья</magicDamage> в зависимости от времени подготовки.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1828,7 +1828,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Варус поражает указанную область градом стрел, оскверняя ее и нанося физический урон всем врагам в ее пределах. Кроме того, при нахождении на оскверненной земле скорость передвижения врагов уменьшается, а все эффекты самолечения ослабляются.",
-            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Варус поражает указанную область градом стрел, оскверняя ее на @GroundDuration@ сек. Враги внутри получают <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage> и Страшные раны (@GrievousAmount*100@%), а также <status>замедляются</status> на @SlowPercent*-100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1978,7 +1978,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Варус выпускает в указанном направлении щупальце порчи, которое наносит магический урон и обездвиживает первого вражеского чемпиона на своем пути, а затем пытается дотянуться до еще не пораженных чемпионов поблизости, чтобы обездвижить их тоже и нанести им урон.",
-            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Варус выпускает в указанном направлении щупальце порчи, <status>обездвиживающее</status> первого пораженного чемпиона на @RootDuration@ сек. и наносящее ему <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. <status>Обездвиженные</status> враги получают @PassiveStacks@ зар. <keywordMajor>Осквернения</keywordMajor> в ходе действия умения.<br><br>Порча распространяется на еще не пораженных чемпионов поблизости, нанося им такой же урон и <status>обездвиживая</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

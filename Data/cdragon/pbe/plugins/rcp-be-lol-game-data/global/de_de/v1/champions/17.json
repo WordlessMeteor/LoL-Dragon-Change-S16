@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Guerillakriegsführung",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Wenn Teemo stillsteht und für eine kurze Zeit nichts tut, wird er unsichtbar. Im hohen Gras kann sich Teemo auch bewegen, ohne wieder sichtbar zu werden. Nach Ende der Unsichtbarkeit hat Teemo das Überraschungsmoment auf seiner Seite, wodurch sein Angriffstempo für ein paar Sekunden lang erhöht ist."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Blendpfeil",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Verschleiert die Sicht eines Gegners mithilfe eines mächtigen Giftes, das dem Ziel Schaden zufügt und über die Dauer blendet.",
+            "dynamicDescription": "Teemo verschießt einen Pfeil, der das Ziel @BlindDuration@&nbsp;Sekunden lang <status>blendet</status> und ihm <magicDamage>@CalculatedDamage@&nbsp;magischen Schaden</magicDamage> zufügt.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Schnelle Bewegung",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo saust umher und erhöht passiv sein Lauftempo, bis er von einem gegnerischen Champion oder Turm getroffen wird. Teemo kann kurzzeitig rennen, um zusätzliches Lauftempo zu erhalten, das nicht durch Angriffe abgebrochen wird.",
             "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Teemo erhält <speed>@PassiveMoveSpeedBonus*100@&nbsp;% Lauftempo</speed>, sofern er nicht in den letzten @PassiveCooldownOnDamageTaken@&nbsp;Sekunden durch einen Champion oder Turm Schaden erlitten hat.<br><br><spellActive>Aktiv:</spellActive> Teemo sprintet und erhält @ActiveMoveSpeedBuffDuration@&nbsp;Sekunden lang <speed>@ActiveMoveSpeedBonus*100@&nbsp;% Lauftempo</speed>. Dieser Bonus geht nicht verloren, wenn er getroffen wird.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Giftschuss",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Giftfalle",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo fertigt aus einem der Pilze in seinem Rucksack eine explosive, giftige Falle und wirft diese aus. Wenn ein Gegner in die Falle tappt, wird eine Giftwolke freigesetzt, welche die Gegner verlangsamt und ihnen wiederholt Schaden zufügt. Wenn Teemo einen Pilz auf einen bereits platzierten Pilz wirft, prallt er darauf ab und verleiht ihm so zusätzliche Reichweite.",
+            "dynamicDescription": "Teemo wirft eine Pilzfalle, die explodiert, wenn ein Gegner auf sie tritt. Die Fallen <status>verlangsamen</status> um @SlowAmount@&nbsp;% und verursachen <magicDamage>@TotalDamage@&nbsp;magischen Schaden</magicDamage> über @DebuffDuration@&nbsp;Sekunden. Gegner werden für dieselbe Dauer aufgedeckt.<br><br>Die Fallen bleiben @MushroomDuration@&nbsp;Minuten lang bestehen und sind getarnt. Ein Pilz, der auf einen anderen Pilz geworfen wird, prallt ab und landet dann an seiner Position. Diese Fähigkeit hat @MaxAmmo@&nbsp;Aufladungen (@AmmoRechargeTime@&nbsp;Sekunden Aufladungszeit).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

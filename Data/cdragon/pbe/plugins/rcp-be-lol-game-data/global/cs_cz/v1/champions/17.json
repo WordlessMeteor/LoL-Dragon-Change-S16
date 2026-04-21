@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Partyzánská válka",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Pokud Teemo chvíli nehybně stojí a nic nedělá, na neomezenou dobu se zneviditelní. Pokud je Teemo v křoví, může si udržovat neviditelnost i během pohybu. Když Teemo neviditelnost zruší, získá Prvek překvapení, čímž si na několik sekund zvýší rychlost útoků."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Oslepující šipka",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Zahalí zrak nepřítele mocným jedem, který nepřítele poškodí a na dobu trvání i oslepí.",
+            "dynamicDescription": "Teemo vystřelí šipku, na @BlindDuration@&nbsp;sek. cíl <status>oslepí</status> a způsobí mu <magicDamage>@CalculatedDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Rychlý pohyb",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo cupitá kolem, čímž získává pasivní bonus k rychlosti pohybu, dokud ho nezasáhne nepřátelský šampion nebo věž. Teemo může sprintem získat na krátkou dobu bonus k rychlosti pohybu, o který nepřijde, ani když bude zasažen.",
             "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Pokud Teemo v posledních @PassiveCooldownOnDamageTaken@&nbsp;sek. neutrpěl žádné poškození od šampiona nebo věže, získá <speed>@PassiveMoveSpeedBonus*100@&nbsp;% k rychlosti pohybu</speed>.<br><br><spellActive>Aktivace:</spellActive> Teemo se rozběhne a získá na @ActiveMoveSpeedBuffDuration@&nbsp;sek. <speed>@ActiveMoveSpeedBonus*100@&nbsp;% k rychlosti pohybu</speed>. O tento bonus nepřijde, ani když jej někdo zasáhne.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Toxická střela",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Jedovatá past",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo nastraží výbušnou jedovatou past použitím jedné ze svých nasbíraných hub. Pokud na houbu stoupne nepřítel, houba vypustí jedovatý mrak, který bude po nějakou dobu nepřátele zpomalovat a poškozovat. Pokud Teemo hodí houbu na jinou houbu, ta se odrazí a získá dodatečný dosah.",
+            "dynamicDescription": "Teemo hodí houbovou past, která vybuchne, když na ni někdo šlápne. Past zasažený cíl na @DebuffDuration@&nbsp;sek. <status>zpomalí</status> o @SlowAmount@&nbsp;% a způsobí mu během této doby <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Nepřátelé jsou zároveň odhaleni.<br><br>Pasti mají životnost @MushroomDuration@&nbsp;min. a jsou neviditelné. Pokud Teemo hodí houbu na místo, kde se už nachází nějaká jiná, odrazí se o kus dál a tam přistane. Tato schopnost má @MaxAmmo@ nabití (rychlost dobíjení @AmmoRechargeTime@&nbsp;sek.).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

@@ -772,7 +772,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Shyvana memperoleh shield, movement speed, dan setelah jeda singkat, area di sekitarnya meledak.  Saat dalam Dragon Form, ledakan tersebut akan memulihkan Health-nya jika mengenai champion musuh.",
-            "dynamicDescription": "Shyvana menyelimuti dirinya dengan api selama @Duration@ detik, memperoleh <shield>@Calc_Shield@ Shield</shield>, yang meningkat sebesar <shield>@Calc_Shield_Per_Nearby_Champion@</shield> untuk setiap champion musuh di sekitar dan <speed>@MoveSpeed@ Move Speed</speed>, yang meningkat menjadi <speed>@MoveSpeedTowardsEnemies@</speed> saat bergerak menuju champion musuh.<br><br>Saat efek berakhir, <shield>Shield</shield>-nya hancur, atau saat <recast>Recast</recast>, area di sekitarnya meledak dan menghasilkan <magicDamage>@Damage@ magic damage</magicDamage>.<br><br><keywordMajor>Dragon Form:</keywordMajor> Jika ledakannya mengenai champion musuh, Shyvana <healing>memulihkan antara @Calc_Heal_Min@ hingga @Calc_Heal_Max@ Health</healing> berdasarkan Health yang hilang.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -790,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -922,7 +922,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Shyvana menembakkan bola api yang meledak saat mengenai target besar dan menerapkan Slow. Dalam Dragon Form, bola api ini menembus musuh dan meledak saat mengenai musuh besar, meninggalkan jejak api di belakangnya.",
-            "dynamicDescription": "Shyvana menembakkan bola api ke lokasi target, menghasilkan <magicDamage>@Damage@ magic damage</magicDamage> dan <status>Slow sebesar @Calc_Slow@ selama @SlowDuration@ detik</status>. Bola api meledak saat mengenai musuh atau mencapai jarak maksimumnya.<br><br><keywordMajor>Dragon Form:</keywordMajor> Bola api Shyvana membesar dan menembus musuh. Saat mengenai champion, monster besar, atau mencapai jarak maksimumnya, bola api memicu gelombang api yang menghasilkan <magicDamage>@Calc_Dragon_Damage@ magic damage</magicDamage> dan <status>Slow sebesar @Calc_Slow_Dragon@ selama @SlowDuration@ detik</status>. Bola api meninggalkan jejak api selama @GroundLingerDuration@ detik yang menghasilkan <magicDamage>@DamagePerSecond@ magic damage per detik</magicDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -941,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -752,7 +752,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "对目标地点抛掷一个炸弹，附着于附近单位（英雄优先）。炸弹在 3 秒钟后爆炸，造成范围伤害，若炸弹是由另一个炸弹引爆，则附加晕眩效果。",
-            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "极灵投掷定时炸弹，炸弹会附着在第一个进入它周围小区域的单位身上。在@FuseDuration@秒后爆炸，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>对已被附着了一颗炸弹的目标放置第二颗炸弹时，就会立即引爆第一颗炸弹，并使爆炸范围内的所有敌人<status>晕眩</status>@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -899,7 +899,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "Spell_ZileanW_Cost",
+            "cost": "@ManaCost@魔力",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "极灵可以预见未来的冲突并作出准备，减少其他技能的冷却时间。",
             "dynamicDescription": "极灵逆转时间，使他的其它基础技能冷却时间缩短@CooldownReduction@秒。@SpellModifierDescriptionAppend@",
@@ -1052,7 +1052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "极灵扭曲任意单位的时光，短时间内提升一名友军的移动速度或减少一名敌人的移动速度。",
-            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "极灵使一名敌方英雄<status>减速</status>@SpeedAmount@%，或为一名友方英雄提供<speed>@SpeedAmount@%移动速度</speed>，持续@Duration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

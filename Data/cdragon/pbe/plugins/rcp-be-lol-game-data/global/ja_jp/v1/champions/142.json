@@ -1279,7 +1279,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "対象に眠気を与えてから眠らせる。眠っている間は、対象の魔法防御が低下する。眠りを覚ます攻撃は2倍のダメージを与える(上限あり)。",
-            "dynamicDescription": "バブルを飛び蹴りして<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与える。バブルは何にも当たらなかった場合はトラップになってその場に残る。地形を越えて飛ばすとバブルの飛距離が伸びる。<br><br>バブルに触れた敵は少し経つと2秒間の<status>眠り</status>に落ち、<scaleMR>魔法防御</scaleMR>が@PercentPen*100@%低下する。通常攻撃かスキルを行うと目を覚ますが、2倍のダメージを与え、最大<trueDamage>@BreakDamageTooltip@の確定ダメージ</trueDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZoeE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1297,12 +1297,12 @@
                 80.0
             ],
             "cooldownCoefficients": [
+                18.0,
+                17.0,
                 16.0,
                 15.0,
                 14.0,
-                13.0,
-                12.0,
-                11.0
+                14.0
             ],
             "coefficients": {
                 "coefficient1": 0.45,

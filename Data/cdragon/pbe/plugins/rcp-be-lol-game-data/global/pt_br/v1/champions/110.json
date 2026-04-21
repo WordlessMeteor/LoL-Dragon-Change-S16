@@ -1528,7 +1528,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Varus prepara um poderoso disparo, que ganha alcance e dano extra quanto mais demorar para ser lançado.",
-            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>Início do carregamento:</attention> Varus prepara o próximo disparo, sofrendo @MoveSpeedMod*-100@% de <status>Lentidão</status>. Após @MaxChannelDuration@s, se não realizar o disparo, Varus cancelará a Habilidade e restituirá @ManaRefund*100@% do Custo de Mana dela.<br><br><attention>Liberar:</attention> Varus dispara a flecha, causando <physicalDamage>@TotalDamageMinTooltip@ de Dano Físico</physicalDamage>, que diminui em @FalloffPercent*100@% por inimigo atingido (mínimo de @MinDamagePercent*100@%). O dano e os efeitos de detonação de <keywordMajor>Arruinar</keywordMajor> aumentam em até @MaxChargeAmp*100@% de acordo com o tempo de carregamento (máximo de <physicalDamage>@TotalDamageMax@ de Dano Físico</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1678,7 +1678,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Passivo: Os ataques básicos de Varus causam Dano Mágico adicional e aplicam Arruinar. As outras habilidades de Varus detonam os acúmulos de Arruinar, causando Dano Mágico com base na Vida máxima do alvo. Ativo: Varus fortalece sua próxima Flecha Perfurante.",
-            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>os Ataques de Varus causam <magicDamage>@OnHitDamage@ de Dano Mágico adicional</magicDamage> e aplicam um acúmulo de <keywordMajor>Arruinar</keywordMajor> por @DebuffDuration@s (máx. de @MaxStacks@ acúmulos).<br><br>As outras Habilidades de Varus detonam os acúmulos de <keywordMajor>Arruinar</keywordMajor>, causando <magicDamage>@PercentHPPerStack@ da Vida máxima como Dano Mágico</magicDamage> por acúmulo (máximo de <magicDamage>@MaxPercentHPPerStack@ de dano com base na Vida máxima</magicDamage>). Detonar <keywordMajor>Arruinar</keywordMajor> em Campeões e monstros épicos também reduz os Tempos de Recarga das Habilidades básicas em @CDRPerBlightStack*100@% do Máximo a cada acúmulo.<br><br><spellActive>Ativo:</spellActive> a próxima <spellName>Flecha Perfurante</spellName> de Varus causa <magicDamage>@QEmpowerPercentHP@ da Vida perdida como Dano Mágico</magicDamage> adicional, podendo aumentar até <magicDamage>@MaxQEmpowerPercentHP@ de dano com base na Vida perdida</magicDamage> dependendo do tempo de carregamento.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1828,7 +1828,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Varus dispara uma chuva de flechas que causa Dano Físico e profana o terreno. Terrenos profanados reduzem a Velocidade de Movimento, autocura e regeneração dos inimigos.",
-            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus dispara uma chuva de flechas que causa <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> e profana o terreno por @GroundDuration@s, causando @SlowPercent*-100@% de <status>Lentidão</status> e aplicando @GrievousAmount*100@% de Feridas Dolorosas.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1978,7 +1978,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Varus lança um tentáculo de corrupção que causa dano e imobiliza o primeiro Campeão inimigo atingido, espalhando-se ainda para os Campeões inimigos próximos que ainda não estiverem infectados, imobilizando-os ao contato.",
-            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus lança um tentáculo de corrupção, <status>Enraizando</status> o primeiro Campeão atingido por @RootDuration@s e causando a ele <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. Inimigos <status>Enraizados</status> recebem @PassiveStacks@ acúmulos de <keywordMajor>Arruinar</keywordMajor> ao longo da duração.<br><br>A corrupção se espalha do alvo original para Campeões inimigos não infectados. Caso os alcance, eles sofrem o mesmo dano e são <status>Enraizados</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

@@ -772,7 +772,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Shyvana ottiene uno scudo, velocità di movimento e, dopo un breve ritardo, l'area intorno a lei esplode.  Quando è in forma draconica, l'esplosione le fornisce guarigione se colpisce un campione nemico.",
-            "dynamicDescription": "Shyvana si avvolge nelle fiamme per @Duration@ secondo/i, ottenendo uno <shield>scudo da @Calc_Shield@</shield>, aumentato di <shield>@Calc_Shield_Per_Nearby_Champion@</shield> per ogni campione nemico vicino, e <speed>@MoveSpeed@ velocità di movimento</speed> che aumenta fino a <speed>@MoveSpeedTowardsEnemies@</speed> quando si muove verso i campioni nemici.<br><br>Quando l'effetto termina, lo <shield>scudo</shield> si rompe, oppure al <recast>rilancio</recast>, l'area intorno a lei esplode, infliggendo <magicDamage>@Damage@ danni magici</magicDamage>.<br><br><keywordMajor>Forma del drago:</keywordMajor> se la detonazione colpisce un campione nemico, Shyvana <healing>rigenera da @Calc_Heal_Min@ a @Calc_Heal_Max@ salute</healing> in base alla sua salute mancante.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -790,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -922,7 +922,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Shyvana lancia una palla di fuoco che esplode colpendo un bersaglio grande e lo rallenta. In forma draconica, attraversa ed esplode colpendo i nemici di grandi dimensioni, lasciando dietro di sé una scia di fuoco.",
-            "dynamicDescription": "Shyvana lancia una palla di fuoco sulla posizione bersaglio, infliggendo <magicDamage>@Damage@ danni magici</magicDamage> e <status>rallentando di un @Calc_Slow@ per @SlowDuration@ secondo/i</status>. Esplode a contatto con un nemico o quando raggiunge la sua destinazione.<br><br><keywordMajor>Forma del drago:</keywordMajor> la palla di fuoco di Shyvana è più grande e trafigge i nemici. Quando colpisce un campione, un mostro grande o raggiunge il suo limite massimo, scatena un'ondata di fuoco che infligge <magicDamage>@Calc_Dragon_Damage@ danni magici</magicDamage> e <status>rallenta di un @Calc_Slow_Dragon@ per @SlowDuration@ secondo/i</status>. La palla di fuoco lascia una scia per @GroundLingerDuration@ secondo/i che infligge <magicDamage>@DamagePerSecond@ danni magici al secondo</magicDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -941,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

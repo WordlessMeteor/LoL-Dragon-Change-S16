@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Guérilla",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Si Teemo reste immobile et sans agir pendant un court instant, il devient invisible indéfiniment. Dans les herbes hautes, Teemo peut activer et maintenir son invisibilité tout en se déplaçant. Quand il quitte son invisibilité, Teemo profite de l'Effet de surprise, augmentant sa vitesse d'attaque pendant quelques secondes."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Fléchette aveuglante",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Un puissant venin obscurcit la vue de l'ennemi, infligeant des dégâts à la cible et l'aveuglant pendant la durée de l'effet.",
+            "dynamicDescription": "Teemo tire une fléchette, <status>aveuglant</status> la cible pendant @BlindDuration@ sec et infligeant <magicDamage>@CalculatedDamage@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Vélocité",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "La vitesse de déplacement de Teemo est passivement augmentée jusqu'à ce qu'il soit frappé par un champion ennemi ou une tourelle ennemie. Teemo peut sprinter pour gagner un bonus temporaire en vitesse de déplacement qui n'est pas annulé si Teemo est touché.",
             "dynamicDescription": "<spellPassive>Passive :</spellPassive> Teemo gagne <speed>+@PassiveMoveSpeedBonus*100@% de vitesse de déplacement</speed> s'il n'a pas été blessé par un champion ou une tourelle depuis @PassiveCooldownOnDamageTaken@ sec.<br><br><spellActive>Active :</spellActive> Teemo se met à sprinter, gagnant <speed>+@ActiveMoveSpeedBonus*100@% de vitesse de déplacement</speed> pendant @ActiveMoveSpeedBuffDuration@ sec, et ce bonus n'est pas perdu s'il se fait attaquer.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Tir toxique",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Piège nocif",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo se sert d'un des champignons stockés dans son sac à dos pour lancer un piège explosif. Si un ennemi marche sur le piège, un nuage empoisonné s'en échappe, ralentit les ennemis et leur inflige des dégâts sur la durée. Les champignons lancés sur d'autres champignons rebondissent et ont ainsi une plus grande portée.",
+            "dynamicDescription": "Teemo lance un champignon qui explose quand un ennemi marche dessus. Les pièges appliquent un <status>ralentissement</status> de @SlowAmount@% et infligent <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> en @DebuffDuration@ sec. Les ennemis sont révélés pendant la même durée.<br><br>Les pièges durent @MushroomDuration@ minutes et sont camouflés. Un champignon lancé sur un autre champignon rebondit avant de se planter dans le sol. Cette compétence a @MaxAmmo@ charges (@AmmoRechargeTime@ sec de rechargement).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

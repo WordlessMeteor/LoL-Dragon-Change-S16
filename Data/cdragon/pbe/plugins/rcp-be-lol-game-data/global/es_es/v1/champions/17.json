@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Guerra de guerrillas",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Si Teemo se queda quieto y no hace nada durante unos instantes, se vuelve invisible de manera indefinida. Si está en la maleza, Teemo puede hacerse invisible y mantener este estado mientras se mueve. Tras abandonar la invisibilidad, Teemo consigue el factor sorpresa y aumenta su velocidad de ataque durante unos pocos segundos."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Dardo cegador",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Nubla la visión del enemigo con un potente veneno, lo que inflige daño y ciega a la unidad objetivo mientras dure el efecto.",
+            "dynamicDescription": "Teemo dispara un dardo que <status>ciega</status> al objetivo durante @BlindDuration@ s e inflige <magicDamage>@CalculatedDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Movimiento rápido",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo se mueve a toda velocidad, lo que aumenta de forma pasiva su velocidad de movimiento hasta que es alcanzado por un campeón o una torreta enemigos. Teemo puede esprintar para obtener velocidad de movimiento adicional brevemente, y no se pierde aunque lo golpeen.",
             "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Teemo obtiene un <speed>@PassiveMoveSpeedBonus*100@% de velocidad de movimiento</speed> mientras no haya recibido daño de un campeón o una torreta en los últimos @PassiveCooldownOnDamageTaken@ s.<br><br><spellActive>Activa:</spellActive> Teemo realiza un sprint y obtiene un <speed>@ActiveMoveSpeedBonus*100@% de velocidad de movimiento</speed> durante @ActiveMoveSpeedBuffDuration@&nbsp;s que no se pierde al ser golpeado.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Tiro tóxico",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Trampa ponzoñosa",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo lanza una trampa venenosa explosiva utilizando una de las setas que lleva en su mochila. Si un enemigo la pisa, suelta una nube venenosa que ralentiza a los enemigos y los daña durante un tiempo. Si Teemo lanza una seta encima de otra, esta rebotará y tendrá alcance adicional.",
+            "dynamicDescription": "Teemo coloca una trampa de seta que explota cuando se pisa. Las trampas <status>ralentizan</status> un @SlowAmount@% e infligen <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a lo largo de @DebuffDuration@ s. Los enemigos quedan revelados mientras dura el efecto.<br><br>Las trampas duran @MushroomDuration@ min y están en sigilo. Una seta lanzada sobre otra rebota y cae en una nueva posición. Esta habilidad tiene @MaxAmmo@ cargas (@AmmoRechargeTime@ s de recarga).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

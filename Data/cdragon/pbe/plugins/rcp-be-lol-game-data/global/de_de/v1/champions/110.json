@@ -1528,7 +1528,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Varus spannt seinen Bogen und feuert dann einen kräftigen Schuss, dessen Reichweite und Schaden mit der Vorbereitungszeit steigt.",
-            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>Aufladungsbeginn:</attention> Varus bereitet seinen nächsten Schuss vor und <status>verlangsamt</status> sich selbst um @MoveSpeedMod*-100@&nbsp;%. Wenn der Schuss nach @MaxChannelDuration@&nbsp;Sekunden nicht abgefeuert wird, bricht Varus die Fähigkeit ab und erhält @ManaRefund*100@&nbsp;% der Manakosten zurück.<br><br><attention>Loslassen:</attention> Varus schießt den Pfeil ab und verursacht <physicalDamage>@TotalDamageMinTooltip@&nbsp;normalen Schaden</physicalDamage>. Der Schaden wird pro getroffenem Gegner um @FalloffPercent*100@&nbsp;% verringert (mindestens um @MinDamagePercent*100@&nbsp;%). Der Schaden und die Explosionseffekte von <keywordMajor>Verderbnis</keywordMajor> erhöhen sich abhängig von der Aufladungszeit auf bis zu @MaxChargeAmp*100@&nbsp;% (maximal <physicalDamage>@TotalDamageMax@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1678,7 +1678,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Passiv: Varus' normale Angriffe verursachen zusätzlichen magischen Schaden und bewirken „Verderbnis“. Varus' andere Fähigkeiten bringen „Verderbnis“ zur Explosion und verursachen magischen Schaden abhängig vom maximalen Leben des Ziels. Aktiv: Varus verstärkt seinen nächsten „Durchdringenden Pfeil“.",
-            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Varus' Angriffe verursachen zusätzlich <magicDamage>@OnHitDamage@&nbsp;magischen Schaden</magicDamage> und fügen @DebuffDuration@&nbsp;Sekunden lang eine Steigerung von <keywordMajor>Verderbnis</keywordMajor> hinzu (maximal @MaxStacks@&nbsp;Steigerungen).<br><br>Varus' andere Fähigkeiten lassen die <keywordMajor>Verderbnis</keywordMajor>-Steigerungen explodieren und verursachen pro Steigerung <magicDamage>magischen Schaden</magicDamage> in Höhe von @PercentHPPerStack@ des maximalen Lebens (max. <magicDamage>@MaxPercentHPPerStack@ des maximalen Lebens</magicDamage>). Wenn Varus' Grundfähigkeiten die <keywordMajor>Verderbnis</keywordMajor>-Steigerungen auf Champions und epischen Monstern explodieren lassen, verringern sich dadurch auch ihre Abklingzeiten um @CDRPerBlightStack*100@&nbsp;% ihres Maximalwerts pro Steigerung.<br><br><spellActive>Aktiv:</spellActive> Varus' nächster <spellName>Durchdringender Pfeil</spellName> verursacht abhängig von der Aufladungszeit zusätzlichen <magicDamage>@QEmpowerPercentHP@magischen Schaden</magicDamage> in Höhe von bis zu <magicDamage>@MaxQEmpowerPercentHP@ des fehlenden Lebens des Ziels</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1828,7 +1828,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Varus feuert einen Pfeilhagel, der normalen Schaden verursacht und den Boden entweiht. Der entweihte Boden verringert das Lauftempo von Gegnern und verringert deren Heilung und Regeneration.",
-            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus feuert einen Pfeilhagel ab, der <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> verursacht und den Boden @GroundDuration@&nbsp;Sekunden lang entweiht, woraufhin seine Gegner um @SlowPercent*-100@&nbsp;% <status>verlangsamt</status> und mit @GrievousAmount*100@&nbsp;% Klaffende Wunden belegt werden.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1978,7 +1978,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Varus schleudert eine Schaden verursachende Ranke der Verderbnis, die den ersten gegnerischen Champion, den sie trifft, bewegungsunfähig macht, und sich anschließend auf nicht infizierte Champions in der Nähe ausbreitet, die bei Berührung ebenfalls bewegungsunfähig werden.",
-            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus schleudert eine Ranke der Verderbnis, die <magicDamage>@TotalDamage@&nbsp;magischen Schaden</magicDamage> verursacht und den ersten getroffenen gegnerischen Champion @RootDuration@&nbsp;Sekunden lang <status>festhält</status>. <status>Festgehaltene</status> Gegner erhalten über die Wirkdauer @PassiveStacks@&nbsp;Steigerungen von <keywordMajor>Verderbnis</keywordMajor>.<br><br>Die Verderbnis breitet sich von ihrem Ziel auf nicht infizierte gegnerische Champions aus. Wenn sie sie erreicht, erleiden sie denselben Schaden und werden <status>festgehalten</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

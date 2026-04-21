@@ -1279,7 +1279,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "使目标疲倦，接着陷入沉睡。沉睡时，目标的魔法防御将会降低。首次对该目标的攻击会唤醒目标并造成双倍伤害，此伤害不会超过系统设定的上限。",
-            "dynamicDescription": "柔依踢出一颗泡泡，可造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>，若没有击中任何目标，则作为陷阱停留在场上。泡泡飞越地形时将会提升飞行距离。<br><br>在一段延迟后，被泡泡命中的目标会陷入<status>沉睡</status>状态，并减少@PercentPen*100@%的<scaleMR>魔法防御</scaleMR>，持续2秒。攻击和技能命中目标后会中断沉睡，并造成双倍伤害，最多造成 <trueDamage>@BreakDamageTooltip@真实伤害</trueDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZoeE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1297,12 +1297,12 @@
                 80.0
             ],
             "cooldownCoefficients": [
+                18.0,
+                17.0,
                 16.0,
                 15.0,
                 14.0,
-                13.0,
-                12.0,
-                11.0
+                14.0
             ],
             "coefficients": {
                 "coefficient1": 0.45,

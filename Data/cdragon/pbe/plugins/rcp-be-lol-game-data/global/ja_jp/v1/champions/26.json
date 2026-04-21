@@ -752,7 +752,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点に爆弾を投げ、近付いたユニットに付着させる(チャンピオン優先)。付着した爆弾は3秒後に爆発し、範囲ダメージを与える。爆発前にもう一つ「タイムボム」を仕掛けられると即時に爆発し、敵にスタン効果を与える。",
-            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "時限式の爆弾を投げる。爆弾は範囲の中心部に入った最初のユニットに付着する。爆弾は@FuseDuration@秒後に爆発し、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>同じユニットに2個目の爆弾をつけると1個目の爆弾がすぐに爆発し、爆風範囲内にいる敵に@StunDuration@秒間<status>スタン効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -899,7 +899,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "Spell_ZileanW_Cost",
+            "cost": "@ManaCost@マナ",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ジリアンは近い未来の戦いに備え、通常スキルのクールダウンを短縮することができる。",
             "dynamicDescription": "時間を進めて、他の通常スキルのクールダウンを@CooldownReduction@秒短縮する。@SpellModifierDescriptionAppend@",
@@ -1052,7 +1052,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "対象ユニット周辺の時間軸を短時間ねじ曲げ、対象が敵の場合はスロウを与え、味方の場合は移動速度を増加させる。",
-            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、敵チャンピオンに@SpeedAmount@%の<status>スロウ効果</status>を与えるか、味方チャンピオンの<speed>移動速度を@SpeedAmount@%</speed>増加させる。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

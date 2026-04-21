@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Técnicas de Guerrilha",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Se Teemo permanece imóvel e não faz nada por um curto período, fica Invisível por tempo indefinido. Caso esteja em um arbusto, Teemo pode manter sua Invisibilidade enquanto se move. Ao sair da Invisibilidade, Teemo ativa Elemento-Surpresa, aumentando a própria Velocidade de Ataque por alguns segundos."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Dardo Ofuscante",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Obscurece a visão de um inimigo com um poderoso veneno, causando dano e cegueira ao alvo pela duração do efeito.",
+            "dynamicDescription": "Teemo dispara um dardo, <status>Cegando</status> o alvo por @BlindDuration@s e causando <magicDamage>@CalculatedDamage@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Mover Depressa",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo corre por aí, aumentando passivamente sua Velocidade de Movimento até ser atingido por um Campeão ou torre inimiga. Ele pode sair em disparada para receber Velocidade de Movimento adicional (que não é interrompida por ataques) por um breve período.",
             "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Teemo recebe <speed>@PassiveMoveSpeedBonus*100@% de Velocidade de Movimento</speed> quando não tiver sofrido dano de um Campeão ou torre nos últimos @PassiveCooldownOnDamageTaken@s.<br><br><spellActive>Ativo:</spellActive> Teemo acelera, recebendo <speed>@ActiveMoveSpeedBonus*100@% de Velocidade de Movimento</speed> que não é perdida ao sofrer dano por @ActiveMoveSpeedBuffDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Tiro Tóxico",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Armadilha Venenosa",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo arremessa uma armadilha venenosa explosiva usando um dos cogumelos que guardou na mochila. Se um inimigo pisa na armadilha, ela solta uma nuvem venenosa que causa Lentidão e dano ao longo do tempo. Se Teemo arremessar um cogumelo em cima de outro, ele saltará, recebendo alcance adicional.",
+            "dynamicDescription": "Teemo arremessa uma armadilha de cogumelo que detona ao ser pisada. As armadilhas causam @SlowAmount@% de <status>Lentidão</status> e <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> ao longo de @DebuffDuration@s. Inimigos são revelados pela mesma duração.<br><br>As armadilhas duram @MushroomDuration@min e ficam em estado furtivo. Um cogumelo arremessado sobre outro ricocheteia antes de se fixar em uma posição. A Habilidade tem @MaxAmmo@ cargas (recarrega a cada @AmmoRechargeTime@s).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

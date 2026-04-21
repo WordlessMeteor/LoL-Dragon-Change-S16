@@ -1279,7 +1279,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Face ținta să devină somnoroasă, apoi să adoarmă. Cât timp doarme, rezistența la magie a țintei este redusă. Prima sursă de daune care lovește ținta o trezește și îi provoacă daune duble, până la o limită maximă.",
-            "dynamicDescription": "Zoe lansează un balon care provoacă <magicDamage>@TotalDamageTooltip@ daune magice</magicDamage>. Dacă nu lovește nicio țintă, acesta rămâne pe jos sub forma unei capcane. Raza balonului crește când zboară peste teren.<br><br>După o scurtă perioadă, victima <status>adoarme</status> și are <scaleMR>rezistența la magie</scaleMR> redusă cu @PercentPen*100@% timp de 2 secunde. Atacurile și abilitățile o trezesc, dar îi provoacă daune duble, de până la <trueDamage>@BreakDamageTooltip@ daune reale</trueDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZoeE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1297,12 +1297,12 @@
                 80.0
             ],
             "cooldownCoefficients": [
+                18.0,
+                17.0,
                 16.0,
                 15.0,
                 14.0,
-                13.0,
-                12.0,
-                11.0
+                14.0
             ],
             "coefficients": {
                 "coefficient1": 0.45,
@@ -1422,7 +1422,7 @@
         },
         {
             "spellKey": "r",
-            "name": "Șotron printre stele",
+            "name": "Portal Jump",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zoe/HUD/Icons2D/Zoe_R.png",
             "abilityVideoPath": "champion-abilities/0142/ability_0142_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0142/ability_0142_R1.jpg",

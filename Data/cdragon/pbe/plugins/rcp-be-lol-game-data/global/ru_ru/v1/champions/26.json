@@ -752,7 +752,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Зилеан кидает бомбу в указанную точку. Бомба прикрепляется к первому бойцу, оказавшемуся неподалеку (приоритет отдается чемпионам). Через 3 секунды бомба взрывается, нанося урон всем окружающим врагам. Если бомба взрывается раньше из-за другой бомбы, пораженные враги также оглушаются.",
-            "dynamicDescription": "Spell_ZileanQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Зилеан кидает бомбу замедленного действия, прикрепляющуюся к первому бойцу, оказавшемуся неподалеку. Через @FuseDuration@ сек. бомба взрывается, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>.<br><br>Если бомба прикрепляется к бойцу, к которому уже прикреплена бомба, первая взрывается сразу, <status>оглушая</status> всех пораженных врагов на @StunDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -899,7 +899,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "Spell_ZileanW_Cost",
+            "cost": "@ManaCost@ ед. маны",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Зилеан готовится к грядущей схватке, сокращая время перезарядки остальных базовых умений.",
             "dynamicDescription": "Зилеан меняет ход времени, сокращая перезарядку всех остальных базовых умений на @CooldownReduction@ сек.@SpellModifierDescriptionAppend@",
@@ -1052,7 +1052,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Зилеан искажает время вокруг цели, в результате чего враги замедляются, а союзники ускоряются.",
-            "dynamicDescription": "Spell_TimeWarp_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Зилеан <status>замедляет</status> вражеского чемпиона на @SpeedAmount@% или дает союзному чемпиону <speed>@SpeedAmount@% скорости передвижения</speed> на @Duration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

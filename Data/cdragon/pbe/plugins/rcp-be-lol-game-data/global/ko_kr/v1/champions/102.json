@@ -772,7 +772,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "쉬바나가 보호막과 이동 속도를 얻으며, 잠시 후 쉬바나 주변에 폭발을 일으킵니다.  용 형상일 때 폭발이 적 챔피언에게 적중하면 체력을 회복합니다.",
-            "dynamicDescription": "쉬바나가 @Duration@초 동안 화염으로 몸을 감싸 <shield>@Calc_Shield@의 보호막</shield>을 얻습니다. 보호막 흡수량은 주변 적 챔피언 한 명당 <shield>@Calc_Shield_Per_Nearby_Champion@</shield>만큼 증가합니다. 또한 <speed>이동 속도가 @MoveSpeed@</speed> 증가하며, 적 챔피언에게 접근 시 <speed>@MoveSpeedTowardsEnemies@</speed>까지 증가합니다.<br><br>효과가 종료되거나 <shield>보호막</shield>이 파괴되거나 스킬을 <recast>재사용</recast>할 경우 폭발하여 주변에 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입힙니다.<br><br><keywordMajor>용 형상:</keywordMajor> 폭발이 적 챔피언에게 적중하면 쉬바나가 잃은 체력에 비례해 <healing>@Calc_Heal_Min@~@Calc_Heal_Max@의 체력을 회복</healing>합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -790,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -922,7 +922,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "쉬바나가 화염구를 날리고 대형 대상에게 적중 시 폭발하며 둔화를 적용합니다. 용 형상일 때는 화염구가 대형 적에게 적중 시 관통하며 폭발하고 지나간 자리에 불길을 남깁니다.",
-            "dynamicDescription": "쉬바나가 대상 지역에 화염구를 날려 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입히고 <status>@SlowDuration@초 동안 @Calc_Slow@만큼 둔화</status>시킵니다. 화염구가 적에게 적중하거나 한계에 도달하면 폭발합니다.<br><br><keywordMajor>용 형상:</keywordMajor> 쉬바나의 화염구가 더 커지고 적을 관통합니다. 챔피언 또는 대형 몬스터에게 적중하거나 한계에 도달하면 불의 파동을 일으켜 <magicDamage>@Calc_Dragon_Damage@의 마법 피해</magicDamage>를 입히고 <status>@SlowDuration@초 동안 @Calc_Slow_Dragon@만큼 둔화</status>시킵니다. 화염구가 지나간 자리에 @GroundLingerDuration@초 동안 흔적이 남아 <magicDamage>매초 @DamagePerSecond@의 마법 피해</magicDamage>를 입힙니다. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -941,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

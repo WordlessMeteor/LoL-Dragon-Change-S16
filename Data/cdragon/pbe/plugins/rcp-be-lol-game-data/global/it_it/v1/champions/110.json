@@ -1528,7 +1528,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Varus si prepara e poi spara un colpo di incredibile potenza. Più tempo impiega a preparare il colpo e più guadagna gittata e danni.",
-            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>Inizio carica:</attention> Varus trattiene il colpo successivo, <status>rallentando</status> se stesso di un @MoveSpeedMod*-100@%. Se non ha ancora sparato dopo @MaxChannelDuration@ secondi, Varus annulla l'abilità e recupera un @ManaRefund*100@% del suo costo in mana.<br><br><attention>Rilascio:</attention> Varus scocca la freccia, infliggendo <physicalDamage>@TotalDamageMinTooltip@ danni fisici</physicalDamage>, ridotti di un @FalloffPercent*100@% per ogni nemico colpito (minimo @MinDamagePercent*100@%). I danni e gli effetti della detonazione di <keywordMajor>Flagello</keywordMajor> aumentano al massimo di un @MaxChargeAmp*100@% in base al tempo di caricamento (massimo <physicalDamage>@TotalDamageMax@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1678,7 +1678,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Passiva: gli attacchi base di Varus infliggono danni magici bonus e applicano Flagello. Le altre abilità di Varus fanno esplodere Flagello, infliggendo danni magici in base alla salute massima del bersaglio. Attiva: Varus potenzia la sua prossima Freccia penetrante.",
-            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>gli attacchi base di Varus infliggono <magicDamage>@OnHitDamage@ danni magici</magicDamage> aggiuntivi e applicano una carica di <keywordMajor>Flagello</keywordMajor> per @DebuffDuration@ secondi (massimo @MaxStacks@ cariche).<br><br>Le altre abilità di Varus fanno esplodere le cariche di <keywordMajor>Flagello</keywordMajor>, infliggendo <magicDamage>@PercentHPPerStack@ della salute massima del bersaglio in danni magici</magicDamage> per ogni carica (massimo <magicDamage>@MaxPercentHPPerStack@ della salute massima del bersaglio in danni</magicDamage>). Far esplodere <keywordMajor>Flagello</keywordMajor> contro campioni e mostri epici riduce inoltre il tempo di ricarica delle sue abilità di un @CDRPerBlightStack*100@% del loro tempo massimo per ogni carica.<br><br><spellActive>Attiva:</spellActive> la prossima <spellName>Freccia penetrante</spellName> di Varus infligge <magicDamage>@QEmpowerPercentHP@ della salute mancante in danni magici</magicDamage> aggiuntivi, aumentati fino <magicDamage>@MaxQEmpowerPercentHP@ della salute mancante in danni</magicDamage> in base al tempo di caricamento.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1828,7 +1828,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Varus spara una pioggia di frecce che infliggono danni fisici e profanano il terreno. Il suolo profanato rallenta la velocità di movimento dei nemici e riduce la rigenerazione e la guarigione su se stessi.",
-            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus spara una pioggia di frecce che infligge <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e profana il terreno per @GroundDuration@ secondi, <status>rallentando</status> i nemici di un @SlowPercent*-100@% e applicando un @GrievousAmount*100@% di Ferita grave.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1978,7 +1978,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Varus scaglia un dannoso tentacolo di corruzione che immobilizza il primo campione nemico colpito e l'effetto si diffonde verso i campioni non infetti nelle vicinanze, immobilizzandoli a contatto.",
-            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus scaglia un tentacolo di corruzione che <status>trattiene</status> il primo campione colpito per @RootDuration@ secondi e infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>. Le unità <status>trattenute</status> ottengono @PassiveStacks@ cariche di <keywordMajor>Flagello</keywordMajor>.<br><br>La corruzione si diffonde dal bersaglio verso i campioni nemici non infetti. Se li raggiunge, vengono <status>trattenuti</status> e subiscono la stessa quantità di danni.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

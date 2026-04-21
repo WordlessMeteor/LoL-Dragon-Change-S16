@@ -772,7 +772,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Shyvana kalkan ve hareket hızı kazanır. Ayrıca kısa bir gecikmenin ardından etrafındaki alan infilak eder.  Ejderha biçimindeyken bu patlamayı bir rakip şampiyona isabet ettirirse can yeniler.",
-            "dynamicDescription": "Shyvana etrafını @Duration@ saniyeliğine ateşle kuşatarak <shield>@Calc_Shield@ Kalkan</shield> ve <speed>@MoveSpeed@ Hareket Hızı</speed> kazanır. Kalkan miktarı yakındaki her rakip şampiyon başına <shield>@Calc_Shield_Per_Nearby_Champion@</shield> artar ve hareket hızı rakip şampiyonlara doğru ilerlerken artarak <speed>@MoveSpeedTowardsEnemies@</speed> olur.<br><br>Etki sona erdiğinde, <shield>kalkan</shield> kırıldığında veya yetenek <recast>yeniden kullanıldığında</recast> etrafındaki alan infilak ederek <magicDamage>@Damage@ Büyü Hasarı</magicDamage> verir.<br><br><keywordMajor>Ejderha Biçimi:</keywordMajor> Patlama bir rakip şampiyona isabet ederse Shyvana eksik canına bağlı olarak <healing>@Calc_Heal_Min@ ila @Calc_Heal_Max@ Can</healing> yeniler.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -790,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -922,7 +922,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Shyvana büyük bir hedefe çarpınca patlayan ve onu yavaşlatan bir ateş topu gönderir. Ejderha biçimindeyken bu ateş topu rakip birimlerin içinden geçer, büyük bir rakibe çarpınca patlar ve ardında ateşten bir iz bırakır.",
-            "dynamicDescription": "Shyvana hedef konuma bir ateş topu fırlatarak <magicDamage>@Damage@ Büyü Hasarı</magicDamage> verir ve <status>@SlowDuration@ saniyeliğine @Calc_Slow@ yavaşlatır</status>. Bir rakibe çarptığında veya hedefine ulaştığında patlar.<br><br><keywordMajor>Ejderha Biçimi:</keywordMajor> Shyvana'nın ateş topu büyür ve rakipleri deşip geçer. Bir şampiyona veya büyük canavara çarptığında ya da hedefine ulaştığında <magicDamage>@Calc_Dragon_Damage@ Büyü Hasarı</magicDamage> veren ve <status>@SlowDuration@ saniyeliğine @Calc_Slow_Dragon@ yavaşlatan</status> bir ateş dalgası tetikler. Ateş topu arkasında @GroundLingerDuration@ saniyeliğine <magicDamage>her saniye @DamagePerSecond@ Büyü Hasarı</magicDamage> veren bir iz bırakır. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ShyvanaE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -941,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Gerilla-hadviselés",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Ha Teemo rövid ideig nem mozdul és nem cselekszik, akkor korlátlan ideig lopakodhat. A bokrokban Teemo mozgás közben is képes lopakodni. A lopakodásból kilépve Teemo elnyeri a Meglepetés erejét, amely néhány másodpercre megnöveli a támadási sebességét."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Vakító lövés",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Erős méreggel homályosítja el a célpont látását, és sebzést okoz neki, illetve megvakítja a hatás időtartamára.",
+            "dynamicDescription": "Teemo kilő egy nyilat, ezzel @BlindDuration@ másodpercre <status>megvakítja</status> a célpontot, és <magicDamage>@CalculatedDamage@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Gyors futás",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo nekiiramodik, és passzívan növeli a mozgási sebességét, amíg el nem találja egy ellenséges hős vagy torony. Teemo sprintelhet is, ilyenkor egy rövid ideig a mozgási sebessége tovább nő, és a hatás találat esetén sem szakad meg.",
             "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Teemo <speed>mozgási sebessége @PassiveMoveSpeedBonus*100@%-kal</speed> nő, ha az elmúlt @PassiveCooldownOnDamageTaken@ másodpercben nem szenvedett sebzést ellenséges hőstől vagy toronytól.<br><br><spellActive>Aktív:</spellActive> Teemo futásnak ered, és @ActiveMoveSpeedBuffDuration@ másodperc erejéig a <speed>mozgási sebessége @ActiveMoveSpeedBonus*100@%-kal</speed> nő, ami találat esetén sem veszik el.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Méreglövedék",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Veszedelmes csapda",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo felhasználja a táskájában tárolt gombák egyikét, és eldob egy robbanást produkáló, mérges csapdát. Ha egy ellenfél rálép a csapdára, az egy mérgező felhőt bocsát ki, amely lassítja és folyamatosan sebzi az ellenfeleket. Ha Teemo egy másik gombára dobja a gombát, az továbbpattan, így messzebbre juttatható el.",
+            "dynamicDescription": "Teemo elhajít egy gombacsapdát, amely felrobban, ha rálépnek. A csapdák @DebuffDuration@ másodperc alatt @SlowAmount@%-os <status>lassítást</status> és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak. Az ellenfelek erre az időtartamra láthatóvá is válnak.<br><br>A csapdák @MushroomDuration@ percig maradnak meg, és láthatatlanok. Egy másik gombára dobott gomba pattan egyet, mielőtt a helyére érkezne. A képességnek @MaxAmmo@ töltete van (@AmmoRechargeTime@ másodperc újratöltési idő).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

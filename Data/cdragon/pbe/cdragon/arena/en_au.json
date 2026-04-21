@@ -3926,6 +3926,35 @@
                             "mLevel1Value": 0.07999999821186066
                         }
                     ]
+                },
+                "NoteDamage": {
+                    "__type": "{e9a3c91d}",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 30.0,
+                            "mStartValue": 9.0
+                        }
+                    ],
+                    "mMultiplier": {
+                        "__type": "SumOfSubPartsCalculationPart",
+                        "mSubparts": [
+                            {
+                                "__type": "NumberCalculationPart",
+                                "mNumber": 1.0
+                            },
+                            {
+                                "__type": "StatByCoefficientCalculationPart",
+                                "mCoefficient": 1.0,
+                                "mStat": 4,
+                                "mStatFormula": 2
+                            }
+                        ]
+                    },
+                    "mRangedMultiplier": {
+                        "__type": "NumberCalculationPart",
+                        "mNumber": 0.800000011920929
+                    }
                 }
             },
             "dataValues": {
@@ -7185,8 +7214,8 @@
                     2.0
                 ],
                 "OnHitDamageRatio": [
-                    0.25,
-                    0.25,
+                    0.20000000298023224,
+                    0.20000000298023224,
                     0.3499999940395355,
                     0.3499999940395355,
                     0.3499999940395355,
@@ -7376,6 +7405,55 @@
             "name": "Goredrink",
             "rarity": 0,
             "tooltip": "Gain <lifeSteal>@Omnivamp*100@% Omnivamp</lifeSteal>."
+        },
+        {
+            "apiName": "Despoil",
+            "calculations": {},
+            "dataValues": {
+                "CurseCounter": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "EnemyDetectionRadius": [
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0
+                ],
+                "MSRatio": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Dashing or Teleporting grants you <keywordMajor>Cursed Power</keywordMajor> if there is an enemy nearby. Gain <speed>Move Speed</speed> scaling with your <keywordMajor>Cursed Power</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
+            "id": 330,
+            "name": "Despoil",
+            "rarity": 0,
+            "tooltip": "Dashing or Blinking grants you <keywordMajor>@CurseCounter@ Cursed Power</keywordMajor> if there is an enemy nearby. Gain <speed>Move Speed</speed> scaling with your <keywordMajor>Cursed Power</keywordMajor>.<br><br>Gain <speed>@f1@ Move Speed</speed> (@MSRatio*100@% of your <keywordMajor>Cursed Power</keywordMajor>).<br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "WellBeRightBack",
@@ -8030,10 +8108,10 @@
                     1.0
                 ],
                 "MaxHealthRatio": [
-                    5.0,
-                    5.0,
+                    3.0,
+                    3.0,
+                    6.0,
                     8.0,
-                    10.0,
                     10.0,
                     10.0,
                     10.0
@@ -8299,10 +8377,10 @@
             "calculations": {},
             "dataValues": {
                 "AdaptiveForceRatio": [
-                    1.0,
-                    1.0,
-                    1.399999976158142,
-                    1.7999999523162842,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.25,
+                    1.5,
                     1.7999999523162842,
                     1.7999999523162842,
                     1.7999999523162842
@@ -8454,7 +8532,7 @@
             "dataValues": {
                 "BonusLives": [
                     1.0,
-                    2.0,
+                    1.0,
                     3.0,
                     4.0,
                     5.0,
@@ -8462,13 +8540,13 @@
                     7.0
                 ],
                 "CapstoneAllyBonusLives": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -8832,13 +8910,13 @@
                     0.125
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "SizeIncrement": [
                     0.10000000149011612,
@@ -8863,13 +8941,13 @@
             "calculations": {},
             "dataValues": {
                 "RoundsUntilFreeAugment": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "SlotsToGrant": [
                     1.0,
@@ -13202,7 +13280,7 @@
             "dataValues": {
                 "AbilityHasteRatio": [
                     0.30000001192092896,
-                    0.3499999940395355,
+                    0.30000001192092896,
                     0.550000011920929,
                     0.550000011920929,
                     0.550000011920929,

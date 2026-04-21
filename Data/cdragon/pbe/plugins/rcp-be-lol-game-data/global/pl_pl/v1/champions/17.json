@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Partyzantka",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Pozostając przez jakiś czas w bezruchu i nie wykonując żadnych akcji, Teemo na czas nieokreślony staje się niewidzialny. Będąc w zaroślach, Teemo może aktywować i utrzymać niewidzialność w trakcie ruchu. Po utracie niewidzialności Teemo zyskuje Element Zaskoczenia, zwiększając swoją prędkość ataku na kilka sekund."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Oślepiająca Strzałka",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Oślepia wroga potężnym jadem, zadając mu obrażenia i oślepiając go na czas działania.",
+            "dynamicDescription": "Teemo wystrzeliwuje strzałkę, która <status>oślepia</status> cel na @BlindDuration@ sek. i zadaje <magicDamage>@CalculatedDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Szybkie Ruchy",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Teemo truchta, biernie zwiększając prędkość ruchu do momentu zostania trafionym przez wrogiego bohatera bądź wieżę. Teemo może szybko biec, dzięki czemu na chwilę zyskuje dodatkową prędkość ruchu, która nie jest redukowana przez trafienie.",
             "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Teemo zyskuje <speed>@PassiveMoveSpeedBonus*100@% prędkości ruchu</speed>, jeśli nie otrzymał obrażeń od bohatera lub wieży w ciągu ostatnich @PassiveCooldownOnDamageTaken@ sek.<br><br><spellActive>Użycie:</spellActive> Teemo biegnie sprintem, zyskując na @ActiveMoveSpeedBuffDuration@ sek. <speed>@ActiveMoveSpeedBonus*100@% prędkości ruchu</speed>, której nie traci przy otrzymaniu obrażeń.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Toksyczne Strzałki",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Trująca Pułapka",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Teemo rzuca trującą pułapką wybuchową w postaci jednego z grzybów, które trzyma w plecaku. Po uruchomieniu pułapka wypuści obłok trucizny, spowalniając przeciwników i zadając obrażenia w czasie. Jeśli Teemo rzuci pułapką w inną pułapkę, ta odbije się, zyskując dodatkowy zasięg.",
+            "dynamicDescription": "Teemo rzuca grzybową pułapkę, która wybucha, gdy ktoś na nią nadepnie. Pułapki <status>spowalniają</status> o @SlowAmount@% i zadają <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w ciągu @DebuffDuration@ sek. Wrogowie zostają ujawnieni na tyle samo czasu.<br><br>Pułapki utrzymują się przez @MushroomDuration@ min i są ukryte. Grzyb rzucony na innego grzyba odbije się przed wylądowaniem. Ta umiejętność ma następującą liczbę ładunków: @MaxAmmo@ (@AmmoRechargeTime@ sek. odnowienia).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

@@ -1333,7 +1333,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "困倦使目标进入困倦状态，然后陷入昏睡。在昏睡状态下，目标的魔抗会被降低。打醒目标的第一个伤害来源会造成双倍伤害，但有封顶值。",
-            "dynamicDescription": "佐伊踢出一个气泡，可造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>，并会在未命中任何单位时如陷阱一般停留。在飞越墙体后，气泡的距离会得到延长。<br><br>在一段延迟后，被气泡命中的目标会陷入持续2秒的<status>昏睡</status>状态并降低@PercentPen*100@%<scaleMR>魔法抗性</scaleMR>。攻击和技能在命中目标时都会将其惊醒并造成双倍伤害，最多造成<trueDamage>@BreakDamageTooltip@真实伤害</trueDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "佐伊踢出一个气泡，可造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>，并会在未命中任何单位时如陷阱一般停留。在飞越墙体后，气泡的距离会得到延长。<br><br>如果气泡和陷阱都未命中一个敌方英雄，那么她会刷新此技能@CooldownRefresh*100@%冷却时间。<br><br>在一段延迟后，被气泡命中的目标会陷入<status>昏睡</status>状态并降低@PercentPen*100@%<scaleMR>魔法抗性</scaleMR>，持续2秒。攻击和技能在命中目标时都会将其惊醒并造成双倍伤害，最多造成<trueDamage>@BreakDamageTooltip@真实伤害</trueDamage>。<br><br>@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1351,12 +1351,12 @@
                 80.0
             ],
             "cooldownCoefficients": [
+                18.0,
+                17.0,
                 16.0,
                 15.0,
                 14.0,
-                13.0,
-                12.0,
-                11.0
+                14.0
             ],
             "coefficients": {
                 "coefficient1": 0.45,

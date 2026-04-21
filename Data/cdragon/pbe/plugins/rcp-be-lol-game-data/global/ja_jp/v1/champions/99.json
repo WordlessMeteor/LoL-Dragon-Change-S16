@@ -1818,7 +1818,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "光の玉を発射し、最大2体までの敵にダメージを与えてスネア効果を付与する。",
-            "dynamicDescription": "Spell_LuxQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "光の玉を発射し、最初に命中した2体の敵に<magicDamage>@TotalDamageTT@の魔法ダメージ</magicDamage>と@RootDuration@秒間の<status>スネア効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -1968,7 +1968,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定方向に杖を投げ、自身と杖に触れた味方チャンピオンに光を屈折させたシールドを付与する。杖は最大距離に達するとラックスのもとへ戻り、触れた味方チャンピオンと杖をキャッチしたラックスに再びシールドを付与する。",
-            "dynamicDescription": "Spell_LuxW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "杖を投げて、それに触れた味方に@ShieldDuration@秒間<shield>@TotalShieldTT@のシールド</shield>を付与する。杖が戻ってくる際も同量の<shield>シールド</shield>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -2118,7 +2118,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点に特異な光の玉を放ち、範囲内の敵にスロウ効果を付与する。効果時間内に再度発動すると光の玉が爆発し、範囲内の敵にダメージを与える。",
-            "dynamicDescription": "Spell_LuxE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "光の領域を作り出し、範囲内の敵に@SlowPercent@%の<status>スロウ効果</status>を与えて視界を得る。@SlowZoneDuration@秒経過するか<recast>再発動</recast>で爆発し、<magicDamage>@TotalDamageTT@の魔法ダメージ</magicDamage>を与えて<status>スロウ効果</status>を追加で@SlowLingerDuration@秒間付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

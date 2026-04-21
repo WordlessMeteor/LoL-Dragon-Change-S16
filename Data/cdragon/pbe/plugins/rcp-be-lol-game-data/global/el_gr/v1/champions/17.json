@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "Ανταρτοπόλεμος",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "Αν ο Τίμο σταθεί ακίνητος και δεν κάνει τίποτα για ένα σύντομο χρονικό διάστημα, γίνεται Αόρατος για απεριόριστο χρονικό διάστημα. Αν είναι μέσα σε βλάστηση, ο Τίμο μπορεί να γίνει και να παραμείνει Αόρατος ενώ κινείται. Μόλις πάψει να είναι Αόρατος, ο Τίμο κερδίζει το Στοιχείο του Αιφνιδιασμού, αυξάνοντας την Ταχύτητα Επίθεσής του για μερικά δευτερόλεπτα."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "Βελάκι Τύφλωσης",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Εμποδίζει την όραση ενός εχθρού με ένα πανίσχυρο δηλητήριο, προκαλώντας ζημιά στη στοχευμένη μονάδα και τυφλώνοντάς την όσο διαρκεί.",
+            "dynamicDescription": "Ο Τίμο ρίχνει ένα βελάκι, προκαλώντας <status>Τύφλωση</status> στον στόχο για @BlindDuration@ δευτ. και <magicDamage>@CalculatedDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "Γρήγορη Κίνηση",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Spell_TeemoW_Summary",
+            "description": "Ο Τίμο τρέχει γύρω-γύρω αυξάνοντας παθητικά την Ταχύτητα Κίνησής του, έως ότου δεχθεί χτύπημα από έναν αντίπαλο Ήρωα ή Πύργο. Ο Τίμο μπορεί να τρέξει για να αποκτήσει μπόνους Ταχύτητα Κίνησης, η οποία για μικρό χρονικό διάστημα δεν σταματά αν δεχτεί χτύπημα.",
             "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Ο Τίμο αποκτά <speed>Ταχύτητα Κίνησης @PassiveMoveSpeedBonus*100@%</speed>, αρκεί να μην έχει δεχτεί ζημιά από Ήρωα ή Πύργο τα τελευταία @PassiveCooldownOnDamageTaken@ δευτ.<br><br><spellActive>Ενεργή:</spellActive> Ο Τίμο επιταχύνει, αποκτώντας <speed>Ταχύτητα Κίνησης @ActiveMoveSpeedBonus*100@%</speed>, η οποία δεν χάνεται όταν δέχεται χτύπημα, για @ActiveMoveSpeedBuffDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "Τοξική Βολή",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "Δηλητηριώδης Παγίδα",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Ο Τίμο εκτοξεύει μια εκρηκτική δηλητηριώδη παγίδα χρησιμοποιώντας ένα από τα μανιτάρια που έχει στο σακίδιο του. Αν κάποιος εχθρός πατήσει στην παγίδα, αυτή απελευθερώνεται ένα δηλητηριώδες νέφος που επιβραδύνει τους εχθρούς και προκαλεί ζημιά με την πάροδο του χρόνου. Αν ο Τίμο πετάξει ένα μανιτάρι επάνω σε ένα άλλο, αυτό θα αναπηδήσει και θα αποκτήσει μεγαλύτερη εμβέλεια.",
+            "dynamicDescription": "Ο Τίμο πετάει μια μανιταροπαγίδα που ανατινάζεται όταν κάποιος πατήσει επάνω της. Οι παγίδες <status>Επιβραδύνουν</status> κατά @SlowAmount@% και προκαλούν <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> μέσα σε @DebuffDuration@ δευτ. Οι εχθροί αποκαλύπτονται για το ίδιο χρονικό διάστημα.<br><br>Οι παγίδες διαρκούν @MushroomDuration@ λεπτά και είναι αόρατες. Αν πετάξει ένα μανιτάρι επάνω σε ένα άλλο μανιτάρι, αυτό θα αναπηδήσει προτού προσγειωθεί στη θέση του. Αυτή η ικανότητα έχει @MaxAmmo@ φορτίσεις (ανανέωση κάθε@AmmoRechargeTime@ δευτ.)<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

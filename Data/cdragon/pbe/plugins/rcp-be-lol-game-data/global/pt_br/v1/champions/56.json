@@ -815,7 +815,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nocturne lança uma lâmina de sombras que causa dano, deixa um Rastro do Crepúsculo e faz com que os Campeões deixem um Rastro do Crepúsculo. Enquanto estiver no rastro, Nocturne ignora colisões com unidades e ganha aumento de Velocidade de Movimento e de Dano de Ataque.",
-            "dynamicDescription": "Spell_NocturneQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nocturne arremessa uma lâmina de sombras, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> e deixando um rastro de crepúsculo por @TrailDuration@s. Campeões inimigos atingidos também deixam um rastro. <br><br>Enquanto está no rastro, Nocturne recebe efeito Fantasma, <speed>@MoveSpeed@% de Velocidade de Movimento</speed> e <physicalDamage>@BonusTrailAD@ de Dano de Ataque.</physicalDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -965,7 +965,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nocturne fortalece suas lâminas, ganhando Velocidade de Ataque passivamente. Ativar Proteção das Trevas permite que Nocturne desapareça em meio às sombras, criando uma barreira mágica que bloqueia uma única habilidade inimiga e dobra a Velocidade de Ataque passiva dele caso bem-sucedida.",
-            "dynamicDescription": "Spell_NocturneW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Nocturne recebe <attackSpeed>@ActiveAS@% de Velocidade de Ataque</attackSpeed>.<br><br><spellActive>Ativo:</spellActive> Nocturne cria uma barreira sombria por 1,5s, bloqueando a próxima Habilidade inimiga. Se uma Habilidade for bloqueada, o efeito passivo é aumentado para <attackSpeed>@ActiveAS*2@% de Velocidade de Ataque</attackSpeed> por @DoubleASDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1115,7 +1115,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Nocturne coloca um pesadelo na mente de seu alvo, causando dano a cada segundo e aterrorizando-o caso ele não saia de seu alcance enquanto durar a habilidade.",
-            "dynamicDescription": "Spell_NocturneE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Nocturne recebe <speed>@TooltipFearMS*100@% de Velocidade de Movimento</speed> ao se mover em direção a inimigos que estão sob o efeito de <status>Temor</status>.<br><br><spellActive>Ativo:</spellActive> Nocturne cria um vínculo de pesadelo com o alvo, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> ao longo de @LeashDuration@s. Se o vínculo não for quebrado, o alvo sofre <status>Temor</status> por @CCDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,

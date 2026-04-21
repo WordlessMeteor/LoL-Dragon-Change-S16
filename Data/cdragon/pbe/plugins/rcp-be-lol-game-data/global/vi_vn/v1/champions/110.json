@@ -1528,7 +1528,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Varus kéo cung rồi bắn ra một phát cực mạnh. Tầm bắn và sát thương tăng theo thời gian kéo cung.",
-            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>Bắt Đầu Tụ Lực:</attention> Varus kéo cung để chuẩn bị cho phát bắn tiếp theo, <status>Làm Chậm</status> bản thân đi @MoveSpeedMod*-100@%. Sau @MaxChannelDuration@ giây, nếu không thả cung, Varus sẽ hủy Kỹ Năng và được hoàn lại @ManaRefund*100@% Năng Lượng tiêu hao.<br><br><attention>Thả:</attention> Varus bắn ra mũi tên, gây <physicalDamage>@TotalDamageMinTooltip@ sát thương vật lý</physicalDamage>, giảm đi @FalloffPercent*100@% với mỗi kẻ địch trúng phải (tối thiểu @MinDamagePercent*100@%). Sát thương kỹ năng và hiệu ứng kích nổ <keywordMajor>Tên Độc</keywordMajor> tăng lên đến @MaxChargeAmp*100@% dựa trên thời gian tụ lực (tối đa <physicalDamage>@TotalDamageMax@</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1678,7 +1678,7 @@
             "cost": "Không Tiêu hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nội tại: Đòn tấn công của Varus gây thêm sát thương phép và đặt cộng dồn Tên Độc. Các kĩ năng của Varus kích nổ Tên Độc, gây sát thương phép dựa trên máu tối đa của mục tiêu. Kích hoạt: Varus cường hóa Mũi Tên Xuyên Phá kế tiếp.",
-            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Đòn đánh của Varus gây thêm <magicDamage>@OnHitDamage@ sát thương phép</magicDamage> và áp dụng hiệu ứng <keywordMajor>Tên Độc</keywordMajor> trong @DebuffDuration@ giây (tối đa @MaxStacks@ cộng dồn).<br><br>Các Kỹ Năng khác của Varus kích nổ <keywordMajor>Tên Độc</keywordMajor>, gây sát thương phép bằng <magicDamage>@PercentHPPerStack@ Máu tối đa của mục tiêu</magicDamage> với mỗi cộng dồn (lên tới <magicDamage>@MaxPercentHPPerStack@ sát thương theo Máu tối đa</magicDamage>). Kích nổ <keywordMajor>Tên Độc</keywordMajor> trên tướng địch hoặc quái khủng sẽ giảm thời gian hồi chiêu các Kỹ Năng cơ bản của hắn đi @CDRPerBlightStack*100@% thời gian hồi chiêu tối đa với mỗi cộng dồn.<br><br><spellActive>Kích Hoạt:</spellActive> Lần thi triển <spellName>Mũi Tên Xuyên Phá</spellName> tiếp theo của Varus gây thêm <magicDamage>sát thương phép bằng @QEmpowerPercentHP@ Máu đã mất</magicDamage>, tăng lên tới <magicDamage>@MaxQEmpowerPercentHP@ sát thương theo Máu đã mất</magicDamage> dựa trên thời gian kéo cung.@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1828,7 +1828,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Varus bắn ra một làn mưa tên gây sát thương vật lí và yểm bùa mặt đất, khiến đối phương bị làm chậm và giảm khả năng tự hồi phục của chúng.",
-            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus bắn ra một cơn mưa tên gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> và yểm bùa mặt đất trong @GroundDuration@ giây, <status>Làm Chậm</status> kẻ địch đi @SlowPercent*-100@% và gây @GrievousAmount*100@% Vết Thương Sâu.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1978,7 +1978,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Varus tung ra một sợi tua có khả năng trói mục tiêu tướng đầu tiên đụng phải, sau đó dài ra và tiếp tục trói những mục tiêu chưa bị ảnh hưởng xung quanh.",
-            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Varus tung ra một sợi xích hắc ám, <status>Trói Chân</status> tướng địch đầu tiên trúng phải trong @RootDuration@ giây và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. Kẻ địch bị <status>Trói Chân</status> sẽ nhận thêm @PassiveStacks@ cộng dồn <keywordMajor>Tên Độc</keywordMajor> trong suốt thời gian hiệu lực.<br><br>Sợi xích hắc ám sẽ lan từ mục tiêu sang các tướng địch chưa bị lây nhiễm. Nếu nó chạm đến chúng, chúng sẽ chịu lượng sát thương và hiệu ứng <status>Trói Chân</status> tương tự.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,
