@@ -233,7 +233,8 @@
             "PetChibiSoraka_Skin2_Finisher_BoomCam": "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Finisher_BoomCam",
             "PetChibiSoraka_Skin2_Finisher_Mis_Target": "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Finisher_Mis_Target",
             "PetChibiSoraka_Skin2_Finisher_Cam2_Smoke": "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Finisher_Cam2_Smoke",
-            "PetChibiSoraka_Skin2_Finisher_Mis_Env": "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Finisher_Mis_Env"
+            "PetChibiSoraka_Skin2_Finisher_Mis_Env": "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Finisher_Mis_Env",
+            "{118c5f95}": "{6e609447}"
         },
         "__type": "ResourceResolver"
     },
@@ -373,6 +374,11 @@
                 },
                 "lifetime": 2.5,
                 "emitterName": "ActionLines3",
+                "rotationOverride": [
+                    0.0,
+                    45.0,
+                    0.0
+                ],
                 "birthVelocity": {
                     "constantValue": [
                         2000.0,
@@ -633,6 +639,11 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "EnemyAoE2",
+                "rotationOverride": [
+                    0.0,
+                    45.0,
+                    0.0
+                ],
                 "EmitterPosition": {
                     "constantValue": [
                         -50.0,
@@ -1565,7 +1576,6 @@
                 "colorLookUpTypeX": 0,
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
-                "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -1654,7 +1664,6 @@
                 "colorLookUpTypeX": 0,
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
-                "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -1988,7 +1997,6 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         1.5,
@@ -2201,7 +2209,6 @@
                 "pass": 100,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         10.0,
@@ -3497,7 +3504,6 @@
                 "pass": 100,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         15.0,
@@ -4328,7 +4334,6 @@
                 "pass": 100,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         10.0,
@@ -4418,9 +4423,9 @@
         "particlePath": "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Finisher_Ray02",
         "transform": [
             [
-                0.7071067690849304,
+                1.0,
                 0.0,
-                -0.7071067690849304,
+                0.0,
                 0.0
             ],
             [
@@ -4430,9 +4435,9 @@
                 0.0
             ],
             [
-                0.7071067690849304,
                 0.0,
-                0.7071067690849304,
+                0.0,
+                1.0,
                 0.0
             ],
             [
@@ -34076,6 +34081,32 @@
         "particleName": "PetChibiSoraka_Skin2_Finisher_Mis_Trail",
         "particlePath": "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Finisher_Mis_Trail",
         "flags": 213,
+        "transform": [
+            [
+                0.7071067690849304,
+                0.0,
+                -0.7071067690849304,
+                0.0
+            ],
+            [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.7071067690849304,
+                0.0,
+                0.7071067690849304,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Emote_Joke_Boom": {
@@ -47980,6 +48011,66 @@
             ],
             [
                 20.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{6e609447}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effectKey": "PetChibiSoraka_Skin2_Finisher_Ray02",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "new",
+                "primitive": {
+                    "__type": "{8df5fcf7}"
+                },
+                "alphaRef": 0,
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 8000.0,
+        "particleName": "PetChibiSoraka_Skin2_Finisher_Ray02_BB",
+        "particlePath": "Characters/PetChibiSoraka/Skins/Skin2/Particles/PetChibiSoraka_Skin2_Finisher_Ray02_BB",
+        "transform": [
+            [
+                0.7071067690849304,
+                0.0,
+                -0.7071067690849304,
+                0.0
+            ],
+            [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.7071067690849304,
+                0.0,
+                0.7071067690849304,
+                0.0
+            ],
+            [
+                0.0,
                 0.0,
                 0.0,
                 1.0

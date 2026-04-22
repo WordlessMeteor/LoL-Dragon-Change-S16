@@ -20,10 +20,10 @@
                         n = this;
                     return Object.keys(e).forEach((function(i) {
                         const o = e[i],
-                            a = n._getValue(i, o);
-                        a && a.then ? (a.then((function(e) {
+                            s = n._getValue(i, o);
+                        s && s.then ? (s.then((function(e) {
                             e || console.warn("The promise for the key " + i + " resolved with a falsy value: ", e), n._addValue(i, e)
-                        })), t.push(a)) : n._addValue(i, a)
+                        })), t.push(s)) : n._addValue(i, s)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -58,8 +58,8 @@
             "use strict";
             var i = S(n(1)),
                 o = v(n(4)),
-                a = v(n(14)),
-                s = v(n(39)),
+                s = v(n(14)),
+                a = v(n(39)),
                 r = v(n(40)),
                 l = v(n(41)),
                 c = v(n(5)),
@@ -98,10 +98,10 @@
                 if (n && n.has(e)) return n.get(e);
                 var i = {},
                     o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                for (var a in e)
-                    if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                        var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                        s && (s.get || s.set) ? Object.defineProperty(i, a, s) : i[a] = e[a]
+                for (var s in e)
+                    if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                        var a = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                        a && (a.get || a.set) ? Object.defineProperty(i, s, a) : i[s] = e[s]
                     } return i.default = e, n && n.set(e, i), i
             }
             const x = "/lol-summoner/v1/current-summoner",
@@ -257,7 +257,7 @@
                     this._binding.removeObserver(x, this)
                 }
                 _handleNewSession(e) {
-                    this._currentPlayer = e, this._lobbiesObserver = new o.default(this._currentPlayer, this._partyCreated.bind(this), this._partyDestroyed.bind(this), this._partyKicked.bind(this), this._partyTimeout.bind(this), this._partyGameStartError.bind(this), this._partyServiceShutdown.bind(this), this._partyServiceUnavailable.bind(this)), this._gameflowObserver = new a.default(this._gameflowPhaseChanged.bind(this))
+                    this._currentPlayer = e, this._lobbiesObserver = new o.default(this._currentPlayer, this._partyCreated.bind(this), this._partyDestroyed.bind(this), this._partyKicked.bind(this), this._partyTimeout.bind(this), this._partyGameStartError.bind(this), this._partyServiceShutdown.bind(this), this._partyServiceUnavailable.bind(this)), this._gameflowObserver = new s.default(this._gameflowPhaseChanged.bind(this))
                 }
                 _partyCreated(e) {
                     if (this._currentParty = e, this._ensureSelectedExists(), e.gameConfig) {
@@ -391,7 +391,7 @@
                     }))
                 }
                 _ensureSelectedExists() {
-                    this._selected || (this._selected = s.default.create({
+                    this._selected || (this._selected = a.default.create({
                         queues: this._queues
                     }))
                 }
@@ -407,17 +407,17 @@
                 _getFirstEligibleQueue(e, t = []) {
                     return i.logger.info("reasons.eligibility.fetch Getting first eligible queue"), new Promise((n => {
                         Promise.all([c.default.fetchEligibilities()]).then((o => {
-                            const a = c.default.get("eligibilities");
-                            if (e && a[e] && a[e].eligible) return void n(e);
-                            const s = t.slice();
-                            this._npeModeSelected && this._npeModeSelected === p.NPE_FIRST_TOUCH_QUEUE_SELECT_ID.TFT && s.unshift(p.DEFAULT_TFT_QUEUE_ID), s.push(p.DEFAULT_QUEUE_ID);
-                            for (let e = 0; e < s.length; e++) {
-                                const t = s[e];
-                                if (a[t] && a[t].eligible) return void n(t)
+                            const s = c.default.get("eligibilities");
+                            if (e && s[e] && s[e].eligible) return void n(e);
+                            const a = t.slice();
+                            this._npeModeSelected && this._npeModeSelected === p.NPE_FIRST_TOUCH_QUEUE_SELECT_ID.TFT && a.unshift(p.DEFAULT_TFT_QUEUE_ID), a.push(p.DEFAULT_QUEUE_ID);
+                            for (let e = 0; e < a.length; e++) {
+                                const t = a[e];
+                                if (s[t] && s[t].eligible) return void n(t)
                             }
-                            for (const e in a)
-                                if (a[e].eligible) return i.logger.info("NOT ELIGIBLE FOR DEFAULT QUEUES, SELECTING FIRST ELIGIBLE QUEUE FOUND:", e), void n(parseInt(e, 10));
-                            i.logger.error("COULD NOT FIND ELIGIBLE QUEUE OUT OF THOSE ENABLED", a), n(p.DEFAULT_QUEUE_ID)
+                            for (const e in s)
+                                if (s[e].eligible) return i.logger.info("NOT ELIGIBLE FOR DEFAULT QUEUES, SELECTING FIRST ELIGIBLE QUEUE FOUND:", e), void n(parseInt(e, 10));
+                            i.logger.error("COULD NOT FIND ELIGIBLE QUEUE OUT OF THOSE ENABLED", s), n(p.DEFAULT_QUEUE_ID)
                         }))
                     }))
                 }
@@ -468,13 +468,13 @@
                 }
                 _showGameModeTutorialIfNeeded(e, t, n, o) {
                     if (!(e && t && n && n.tutorialCards)) return;
-                    const a = (0, i.dataBinding)("/lol-settings");
-                    a.get("/v1/account/lol-tutorial").then((i => {
-                        const s = this._getGameModeTutorialSeenSettingsKey(e, t, o);
-                        if (i && i.data && i.data[s]) return;
+                    const s = (0, i.dataBinding)("/lol-settings");
+                    s.get("/v1/account/lol-tutorial").then((i => {
+                        const a = this._getGameModeTutorialSeenSettingsKey(e, t, o);
+                        if (i && i.data && i.data[a]) return;
                         const r = this._showGameModeTutorial(t, n),
                             l = e => {
-                                ("ok-button" === e || p.DISMISS_TUTORIAL_WITH_ANY_BUTTON.includes(t)) && (i.data || (i.data = {}), i.data[s] = !0, a.patch("/v1/account/lol-tutorial", {
+                                ("ok-button" === e || p.DISMISS_TUTORIAL_WITH_ANY_BUTTON.includes(t)) && (i.data || (i.data = {}), i.data[a] = !0, s.patch("/v1/account/lol-tutorial", {
                                     data: i.data,
                                     schemaVersion: i.schemaVersion
                                 }))
@@ -485,16 +485,16 @@
                 _showGameModeTutorial(e, t) {
                     const n = p.ONE_PAGE_TUTORIAL_GAME_MODES.includes(e),
                         o = n ? "GameModeOnePageTutorialComponent" : "GameModeTutorialComponent",
-                        a = p.ONE_PAGE_TUTORIAL_LONG_CARD_LAYOUT_GAME_MODES.includes(e),
-                        s = p.LANDSCAPE_IMAGE_LAYOUT_GAME_MODES.includes(e),
+                        s = p.ONE_PAGE_TUTORIAL_LONG_CARD_LAYOUT_GAME_MODES.includes(e),
+                        a = p.LANDSCAPE_IMAGE_LAYOUT_GAME_MODES.includes(e),
                         r = i.ComponentFactory.create(o, i.Ember.Object.create({
                             title: t.title,
                             subheader: t.subheader,
                             tutorialCards: t.tutorialCards,
                             tutorialBg: t.tutorialBg,
                             iconV2: t.iconV2,
-                            isLongCardLayout: a,
-                            isLandscapeImageLayout: s,
+                            isLongCardLayout: s,
+                            isLandscapeImageLayout: a,
                             gameMode: e
                         })),
                         l = i.ComponentFactory.getDOMNode(r);
@@ -544,17 +544,17 @@
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var a in e)
-                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            s && (s.get || s.set) ? Object.defineProperty(i, a, s) : i[a] = e[a]
+                    for (var s in e)
+                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                            var a = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                            a && (a.get || a.set) ? Object.defineProperty(i, s, a) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                o = s(n(5)),
-                a = s(n(13));
+                o = a(n(5)),
+                s = a(n(13));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -570,8 +570,8 @@
             }
             const l = i.default.getProvider().getSocket();
             var c = class {
-                constructor(e, t, n, o, a, s, r, c) {
-                    this._lobbyData = !1, this._currentPlayer = e, this._partyCreated = t, this._partyDestroyed = n, this._partyKicked = o, this._partyTimeout = a, this._partyGameStartError = s, this._partyServiceShutdown = r, this._partyServiceUnavailable = c, this._lobbyBinding = (0, i.dataBinding)("/lol-lobby", l), this._gameflowBinding = (0, i.dataBinding)("/lol-gameflow", l), this._observeLobbies(), this._observeEligibilitiesReady(), this._observeLobbyNotifications()
+                constructor(e, t, n, o, s, a, r, c) {
+                    this._lobbyData = !1, this._currentPlayer = e, this._partyCreated = t, this._partyDestroyed = n, this._partyKicked = o, this._partyTimeout = s, this._partyGameStartError = a, this._partyServiceShutdown = r, this._partyServiceUnavailable = c, this._lobbyBinding = (0, i.dataBinding)("/lol-lobby", l), this._gameflowBinding = (0, i.dataBinding)("/lol-gameflow", l), this._observeLobbies(), this._observeEligibilitiesReady(), this._observeLobbyNotifications()
                 }
                 createLobby(e) {
                     return this._lobbyBinding.post("v2/lobby", {
@@ -597,7 +597,7 @@
                     }))
                 }
                 _getPlayerStatus() {
-                    return a.default.getWithTimeout(this._gameflowBinding, "v1/gameflow-metadata/player-status", 50)
+                    return s.default.getWithTimeout(this._gameflowBinding, "v1/gameflow-metadata/player-status", 50)
                 }
                 lastLobbyQueueId() {
                     return this._getPlayerStatus().then((e => {
@@ -641,10 +641,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(7)) && i.__esModule ? i : {
+                s = (i = n(7)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(9);
+                a = n(9);
             const r = ["teammaxsizerestriction", "teamsizerestriction", "gameversionmismatch", "missingtoken"],
                 l = ["missingtoken", "playerranksoloonlyrestriction"],
                 c = "TeamSkillRestriction",
@@ -663,7 +663,7 @@
                     }
                 });
             e.exports = o.Ember.Object.extend(m, {
-                queues: a.default,
+                queues: s.default,
                 eligibilities: null,
                 validForSummonerIds: [],
                 validForPuuids: [],
@@ -681,7 +681,7 @@
                 hasMinorRestriction: function(e) {
                     for (let t = 0; t < e.length; t++) {
                         const n = e[t];
-                        if (-1 !== s.TENCENT_MINOR_RESTRICTIONS.indexOf(n.restrictionCode)) return !0
+                        if (-1 !== a.TENCENT_MINOR_RESTRICTIONS.indexOf(n.restrictionCode)) return !0
                     }
                     return !1
                 },
@@ -697,11 +697,11 @@
                     let i = e;
                     if (e && (i = e.slice(0), e.forEach((e => {
                             const i = e.restrictionCode;
-                            null !== i && s.MISSING_TOKEN_ERRORS.includes(i) && (t.push(e.restrictionArgs.errorCode), e.summonerIds && e.summonerIds.forEach((e => {
+                            null !== i && a.MISSING_TOKEN_ERRORS.includes(i) && (t.push(e.restrictionArgs.errorCode), e.summonerIds && e.summonerIds.forEach((e => {
                                 n.add(e)
                             })))
                         })), t.length > 0)) {
-                        i = i.filter((e => !e.restrictionArgs || !e.restrictionArgs.errorCode || !s.MISSING_TOKEN_ERRORS.includes(e.restrictionCode)));
+                        i = i.filter((e => !e.restrictionArgs || !e.restrictionArgs.errorCode || !a.MISSING_TOKEN_ERRORS.includes(e.restrictionCode)));
                         const e = o.Ember.Object.create({
                             restrictionCode: "MissingToken",
                             summonerIds: o.Ember.A(Array.from(n)),
@@ -764,7 +764,7 @@
                     return null
                 },
                 isQueueAvailable: function(e) {
-                    return !!a.default.availableQueueIds && a.default.availableQueueIds.includes(e)
+                    return !!s.default.availableQueueIds && s.default.availableQueueIds.includes(e)
                 },
                 fetchEligibilities: function() {
                     return this.checkEligibility().then((e => {
@@ -800,7 +800,7 @@
                 checkForRankedDivisionRestriction: function(e) {
                     if (this.set("hasRankedDivisionRestriction", !1), e.members.length < 2) return;
                     const t = e.gameConfig.queueId,
-                        n = a.default.getQueueById(t);
+                        n = s.default.getQueueById(t);
                     if (!n || !n.isRanked) return;
                     const i = [];
                     for (let t = 0; t < e.members.length; t++) i.push(e.members[t].summonerId);
@@ -843,8 +843,8 @@
             }), t.default = void 0;
             var i = n(1),
                 o = n(9),
-                a = r(n(10)),
-                s = r(n(5));
+                s = r(n(10)),
+                a = r(n(5));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -871,8 +871,8 @@
                         !e || this.isDestroying || this.isDestroyed || this.set("orderedQueueIds", this._splitQueues(e))
                     }))
                 },
-                platformConfigSingleton: a.default,
-                eligibilitiesSingleton: s.default,
+                platformConfigSingleton: s.default,
+                eligibilitiesSingleton: a.default,
                 gameSelectEligibilityHash: i.Ember.computed.alias("eligibilitiesSingleton.gameSelectEligibilityHash"),
                 tutorialFlowEnabled: i.Ember.computed.alias("platformConfigSingleton.tutorialFlowEnabled"),
                 disabledRgmButtonEnabled: i.Ember.computed.alias("platformConfigSingleton.disabledRgmButtonEnabled"),
@@ -896,12 +896,12 @@
                     const e = {},
                         t = {},
                         n = {},
-                        a = [],
-                        s = this.get("platformJson");
-                    if (!s || !s.length) return;
+                        s = [],
+                        a = this.get("platformJson");
+                    if (!a || !a.length) return;
                     let r = !1;
-                    s.forEach((i => {
-                        const s = i.id,
+                    a.forEach((i => {
+                        const a = i.id,
                             l = i.gameSelectCategory || o.CATEGORY_NAMES.PVP,
                             {
                                 mapId: c
@@ -920,7 +920,7 @@
                             gameSelectModeGroup: m,
                             assetMutator: d,
                             queues: []
-                        }), t[l][m].queues.push(s);
+                        }), t[l][m].queues.push(a);
                         const h = i.queueAvailability === o.QUEUE_AVAILABILITY.enabled;
                         p && h && (r || m !== o.MODE_GROUP_NAMES.AlternativeLeagueModes || (r = !0), n[l] = n[l] ? n[l] : {}, n[l][m] || (n[l][m] = {
                             mapId: c,
@@ -928,8 +928,8 @@
                             gameSelectModeGroup: m,
                             assetMutator: d,
                             queues: []
-                        }), n[l][m].queues.push(s), a.push(s)), i.available = h, e[s] = i
-                    })), this.get("disabledRgmButtonEnabled") && !r && n[o.CATEGORY_NAMES.PVP] && (n[o.CATEGORY_NAMES.PVP][o.MODE_GROUP_NAMES.AlternativeLeagueModes] = o.DISABLED_RGM_GAME_TYPE), this.set("queuesById", e), this.set("queuesByCategory", t), this.set("availableQueues", n), this.set("availableQueueIds", i.Ember.A(a))
+                        }), n[l][m].queues.push(a), s.push(a)), i.available = h, e[a] = i
+                    })), this.get("disabledRgmButtonEnabled") && !r && n[o.CATEGORY_NAMES.PVP] && (n[o.CATEGORY_NAMES.PVP][o.MODE_GROUP_NAMES.AlternativeLeagueModes] = o.DISABLED_RGM_GAME_TYPE), this.set("queuesById", e), this.set("queuesByCategory", t), this.set("availableQueues", n), this.set("availableQueueIds", i.Ember.A(s))
                 })),
                 getPickTypeForQueue: function(e) {
                     const t = this.get("queuesById");
@@ -1046,27 +1046,27 @@
                 secondary: [n.CREATE_CUSTOM, n.JOIN_CUSTOM]
             };
             t.CATEGORIES_DISPLAY_ORDER = o;
-            const a = {
+            const s = {
                 PRACTICE_TOOL: "PRACTICETOOL",
                 TUTORIAL: "TUTORIAL_FLOW"
             };
-            t.TRAINING_TYPES = a;
-            const s = [{
+            t.TRAINING_TYPES = s;
+            const a = [{
                 mapId: 11,
-                gameMode: a.TUTORIAL,
-                gameSelectModeGroup: a.TUTORIAL,
+                gameMode: s.TUTORIAL,
+                gameSelectModeGroup: s.TUTORIAL,
                 gameSelectCategory: n.TRAINING,
                 requiresCustomGameSubCategory: !1,
                 queues: []
             }, {
                 mapId: 11,
-                gameMode: a.PRACTICE_TOOL,
-                gameSelectModeGroup: a.PRACTICE_TOOL,
+                gameMode: s.PRACTICE_TOOL,
+                gameSelectModeGroup: s.PRACTICE_TOOL,
                 gameSelectCategory: n.TRAINING,
                 requiresCustomGameSubCategory: !0,
                 queues: []
             }];
-            t.TUTORIAL_GAME_TYPES = s;
+            t.TUTORIAL_GAME_TYPES = a;
             t.TUTORIAL_TYPE_MAPS = {
                 BASIC_TUTORIAL: 12,
                 BATTLE_TRAINING: 11,
@@ -1171,7 +1171,7 @@
             }), t.default = void 0;
             var i = n(1),
                 o = n(12);
-            const a = Object.freeze({
+            const s = Object.freeze({
                     LcuLobbyPotatoModeForced: !1,
                     LcuTutorialEnabled: !0,
                     LcuTutorialNewEnabled: !1,
@@ -1186,7 +1186,7 @@
                     ChallengesClientState: o.CHALLENGES_CLIENT_STATES.HIDDEN,
                     RankedProgressionEnabled: !0
                 }),
-                s = (0, i.emberDataBinding)({
+                a = (0, i.emberDataBinding)({
                     Ember: i.Ember,
                     websocket: (0, i.getProvider)().getSocket(),
                     logPrefix: "plugin:parties:platform-config-singleton",
@@ -1253,7 +1253,7 @@
                         }
                     }
                 });
-            var r = i.Ember.Object.extend(s, {
+            var r = i.Ember.Object.extend(a, {
                 potatoModeForced: i.Ember.computed("initialConfigurationComplete", "LcuLobbyPotatoModeForced", (function() {
                     return this._getValueOrDefault("LcuLobbyPotatoModeForced")
                 })),
@@ -1290,7 +1290,7 @@
                 _getValueOrDefault: function(e) {
                     const t = this.get("initialConfigurationComplete"),
                         n = this.get(e);
-                    if (!this._isNill(n) || t) return this._isNill(n) ? a[e] : n
+                    if (!this._isNill(n) || t) return this._isNill(n) ? s[e] : n
                 },
                 _splitQueues: function(e) {
                     const t = e ? `${e}`.split(",") : [],
@@ -1539,32 +1539,32 @@
             "use strict";
             var i = n(1),
                 o = n(9);
-            let a = o.SETTINGS_API.SCHEMA_VERSION;
+            let s = o.SETTINGS_API.SCHEMA_VERSION;
             e.exports = {
                 getWithTimeout: function(e, t, n) {
                     return new Promise((i => {
-                        let o, a;
+                        let o, s;
                         e.get(t).then((e => {
-                            clearTimeout(o), a || i(e)
+                            clearTimeout(o), s || i(e)
                         })), o = setTimeout((() => {
-                            a = !0, i(null)
+                            s = !0, i(null)
                         }), n)
                     }))
                 },
                 getAccountSetting: function(e) {
                     return (0, i.dataBinding)("/lol-settings").get(o.SETTINGS_API.PATH).then((t => {
                         const n = t && t.data && t.data[e];
-                        return a = t && t.schemaVersion, n
+                        return s = t && t.schemaVersion, n
                     }))
                 },
                 saveAccountSetting: function(e, t) {
-                    if (void 0 === a || a < 0) return Promise.reject("Schema version invalid, settings not updated.");
+                    if (void 0 === s || s < 0) return Promise.reject("Schema version invalid, settings not updated.");
                     const n = {
                         [e]: t
                     };
                     return (0, i.dataBinding)("/lol-settings").patch(o.SETTINGS_API.PATH, {
                         data: n,
-                        schemaVersion: a
+                        schemaVersion: s
                     })
                 }
             }
@@ -1578,31 +1578,31 @@
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
                         default: e
                     };
-                    var n = a(t);
+                    var n = s(t);
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var s in e)
-                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
-                            var r = o ? Object.getOwnPropertyDescriptor(e, s) : null;
-                            r && (r.get || r.set) ? Object.defineProperty(i, s, r) : i[s] = e[s]
+                    for (var a in e)
+                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
+                            var r = o ? Object.getOwnPropertyDescriptor(e, a) : null;
+                            r && (r.get || r.set) ? Object.defineProperty(i, a, r) : i[a] = e[a]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
                 o = n(15);
 
-            function a(e) {
+            function s(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (a = function(e) {
+                return (s = function(e) {
                     return e ? n : t
                 })(e)
             }
-            const s = i.default.getProvider().getSocket();
+            const a = i.default.getProvider().getSocket();
             var r = class {
                 constructor(e) {
-                    i.logger.trace("GameflowObserver constructor called"), this._lastPhase = null, this._gameflowBinding = (0, i.dataBinding)("/lol-gameflow", s), this._gameflowPhaseChangeCallback = e, this._observeSession()
+                    i.logger.trace("GameflowObserver constructor called"), this._lastPhase = null, this._gameflowBinding = (0, i.dataBinding)("/lol-gameflow", a), this._gameflowPhaseChangeCallback = e, this._observeSession()
                 }
                 _observeSession() {
                     this._gameflowBinding.observe("v1/session", (e => {
@@ -1613,9 +1613,9 @@
                     if (i.logger.trace(`_handleGameflowData called with data: ${JSON.stringify(e)}`), !e || !e.phase) return void i.logger.trace(`Early return: data=${!!e}, phase=${e?.phase}`);
                     const t = e.phase,
                         n = this._lastPhase,
-                        a = e.gameData?.gameId;
-                    if (i.logger.trace(`Gameflow phase transition: ${n} -> ${t}`), i.logger.trace(`Current game ID from session data: ${a}`), n === o.GAMEFLOW_PHASES.CHAMP_SELECT && t === o.GAMEFLOW_PHASES.GAME_START) {
-                        i.logger.trace(`Starting CLIENT_LAUNCH experience for ChampSelect -> GameStart (game_id: ${a})`);
+                        s = e.gameData?.gameId;
+                    if (i.logger.trace(`Gameflow phase transition: ${n} -> ${t}`), i.logger.trace(`Current game ID from session data: ${s}`), n === o.GAMEFLOW_PHASES.CHAMP_SELECT && t === o.GAMEFLOW_PHASES.GAME_START) {
+                        i.logger.trace(`Starting CLIENT_LAUNCH experience for ChampSelect -> GameStart (game_id: ${s})`);
                         const t = this._buildGameLaunchContext(e, n, "start");
                         i.datadogRum.startOperation(i.datadogRum.XP_CGL_PREGAME_GAME_START_LAUNCH, t)
                     }
@@ -1644,15 +1644,15 @@
                     if (!t) return i.logger.trace("Game client validation failed: no gameClient data"), !1;
                     const n = !0 === t.running,
                         o = !0 === t.visible || "NotRunning" !== t.clientState,
-                        a = n && o;
-                    return i.logger.trace(`Game client validation: running=${n}, visible=${t.visible}, clientState=${t.clientState}, valid=${a}`), a
+                        s = n && o;
+                    return i.logger.trace(`Game client validation: running=${n}, visible=${t.visible}, clientState=${t.clientState}, valid=${s}`), s
                 }
                 _buildGameLaunchContext(e, t, n) {
                     const i = e?.gameData?.gameId,
-                        a = e?.gameData?.queue?.gameMode;
+                        s = e?.gameData?.queue?.gameMode;
                     return {
                         game: {
-                            key: (0, o.getGameKeyFromGameMode)(a),
+                            key: (0, o.getGameKeyFromGameMode)(s),
                             instance_id: i
                         },
                         game_start: {
@@ -1684,10 +1684,10 @@
                 }
                 _buildReconnectContext(e, t, n) {
                     const i = e?.gameData?.gameId,
-                        a = e?.gameData?.queue?.gameMode;
+                        s = e?.gameData?.queue?.gameMode;
                     return {
                         game: {
-                            key: (0, o.getGameKeyFromGameMode)(a),
+                            key: (0, o.getGameKeyFromGameMode)(s),
                             instance_id: i
                         },
                         game_reconnect: {
@@ -1720,12 +1720,12 @@
             }), Object.defineProperty(t, "GAME_CONTEXT_KEYS", {
                 enumerable: !0,
                 get: function() {
-                    return a.GAME_CONTEXT_KEYS
+                    return s.GAME_CONTEXT_KEYS
                 }
             }), Object.defineProperty(t, "GAME_MODES", {
                 enumerable: !0,
                 get: function() {
-                    return s.default
+                    return a.default
                 }
             }), Object.defineProperty(t, "GAME_SEARCH_STATES", {
                 enumerable: !0,
@@ -1780,13 +1780,13 @@
             }), Object.defineProperty(t, "getGameKeyFromGameMode", {
                 enumerable: !0,
                 get: function() {
-                    return a.getGameKeyFromGameMode
+                    return s.getGameKeyFromGameMode
                 }
             });
             var i = b(n(16)),
                 o = b(n(17)),
-                a = n(18),
-                s = b(n(19)),
+                s = n(18),
+                a = b(n(19)),
                 r = b(n(20)),
                 l = b(n(31)),
                 c = b(n(32)),
@@ -1840,18 +1840,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.GAME_CONTEXT_KEYS = void 0, t.getGameKeyFromGameMode = function(e) {
-                return e === o.default.TFT ? a.TFT : a.LEAGUE_OF_LEGENDS
+                return e === o.default.TFT ? s.TFT : s.LEAGUE_OF_LEGENDS
             };
             var i, o = (i = n(19)) && i.__esModule ? i : {
                 default: i
             };
-            const a = {
+            const s = {
                 TFT: "tft",
                 LEAGUE_OF_LEGENDS: "league_of_legends"
             };
-            t.GAME_CONTEXT_KEYS = a;
-            var s = a;
-            t.default = s
+            t.GAME_CONTEXT_KEYS = s;
+            var a = s;
+            t.default = a
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1872,8 +1872,8 @@
             }), t.default = void 0;
             var i = p(n(21)),
                 o = p(n(22)),
-                a = p(n(23)),
-                s = p(n(24)),
+                s = p(n(23)),
+                a = p(n(24)),
                 r = p(n(25)),
                 l = p(n(26)),
                 c = p(n(27)),
@@ -1889,8 +1889,8 @@
             var h = {
                 COMPONENT_TYPES: i.default,
                 CURRENCY_TYPES: o.default,
-                INVENTORY_TYPES: a.default,
-                MEDIA_TYPES: s.default,
+                INVENTORY_TYPES: s.default,
+                MEDIA_TYPES: a.default,
                 MEDIA_LOAD_TYPES: r.default,
                 MODAL_TYPES: l.default,
                 OFFER_PURCHASE_STATES: c.default,
@@ -2069,15 +2069,15 @@
             const n = "RANKED_SOLO_5x5",
                 i = "RANKED_FLEX_SR",
                 o = "RANKED_FLEX_TT",
-                a = "CHERRY",
-                s = "RANKED_TFT",
+                s = "CHERRY",
+                a = "RANKED_TFT",
                 r = "RANKED_TFT_DOUBLE_UP",
                 l = "RANKED_TFT_TURBO",
                 c = "RANKED_TFT_PAIRS",
                 m = [n, i],
                 u = [...m, o],
-                d = [a],
-                p = [s, r],
+                d = [s],
+                p = [a, r],
                 h = [l, c],
                 g = [...p, ...h],
                 b = [...u, ...p],
@@ -2086,8 +2086,8 @@
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: i,
                 RANKED_FLEX_TT_QUEUE_TYPE: o,
-                RANKED_CHERRY_QUEUE_TYPE: a,
-                RANKED_TFT_QUEUE_TYPE: s,
+                RANKED_CHERRY_QUEUE_TYPE: s,
+                RANKED_TFT_QUEUE_TYPE: a,
                 RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: r,
                 RANKED_TFT_TURBO_QUEUE_TYPE: l,
                 RANKED_TFT_PAIRS_QUEUE_TYPE: c,
@@ -2109,8 +2109,8 @@
             const n = "UNRANKED",
                 i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 o = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                a = ["IV", "III", "II", "I"],
-                s = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                s = ["IV", "III", "II", "I"],
+                a = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
             function r(e) {
                 const t = {};
@@ -2131,12 +2131,12 @@
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 HIGHEST_TIER: i[i.length - 1],
                 LOWEST_TIER: i[0],
-                DIVISIONS: a,
-                HIGHEST_DIVISION: a[a.length - 1],
-                LOWEST_DIVISION: a[0],
+                DIVISIONS: s,
+                HIGHEST_DIVISION: s[s.length - 1],
+                LOWEST_DIVISION: s[0],
                 LP_PER_DIVISION: 100,
                 TIER_NAME_TO_ORDINAL: r(o),
-                DIVISION_TO_ORDINAL: r(a),
+                DIVISION_TO_ORDINAL: r(s),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -2144,9 +2144,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: s,
+                TFT_RATED_TIERS: a,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: s[0],
+                LOWEST_TFT_RATED_TIER: a[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -2228,19 +2228,19 @@
             t.TIME_UNITS = n;
             const i = 36e5,
                 o = 864e5,
-                a = 6048e5,
-                s = {
+                s = 6048e5,
+                a = {
                     MILLISECONDS_IN_A_SECOND: 1e3,
                     MILLISECONDS_IN_A_MINUTE: 6e4,
                     MILLISECONDS_IN_A_HOUR: i,
                     MILLISECONDS_IN_A_DAY: o,
-                    MILLISECONDS_IN_A_WEEK: a,
+                    MILLISECONDS_IN_A_WEEK: s,
                     MILLISECONDS_IN_A_YEAR: 314496e5
                 };
-            t.TIME_CONVERSIONS = s;
+            t.TIME_CONVERSIONS = a;
             var r = {
                 TIME_UNITS: n,
-                TIME_CONVERSIONS: s
+                TIME_CONVERSIONS: a
             };
             t.default = r
         }, (e, t) => {
@@ -2258,9 +2258,9 @@
             var i = n(1),
                 o = n(9);
             const {
-                RunMixin: a
+                RunMixin: s
             } = i.EmberAddons.EmberLifeline;
-            e.exports = i.Ember.Object.extend(a, {
+            e.exports = i.Ember.Object.extend(s, {
                 queues: null,
                 animationLock: !1,
                 isCreatingCustomGame: !1,
@@ -2337,20 +2337,20 @@
             "use strict";
             var i = n(1);
             const o = "party",
-                a = "gameselect";
+                s = "gameselect";
             e.exports = i.Ember.Object.extend({
                 showVerticalAnimation: !1,
                 showing: null,
                 isShowingLeagueBanner: !1,
                 isShowingParty: i.Ember.computed.equal("showing", o),
-                isShowingGameSelect: i.Ember.computed.equal("showing", a),
+                isShowingGameSelect: i.Ember.computed.equal("showing", s),
                 isInViewport: !1,
                 showPartyStartTimeMs: performance.now(),
                 showParty: function() {
                     this.set("showPartyStartTimeMs", performance.now()), this.set("showing", o)
                 },
                 showGameSelect: function() {
-                    this.set("showing", a), i.Navigation.sendTFTScreenLoadTelemetryEvent({
+                    this.set("showing", s), i.Navigation.sendTFTScreenLoadTelemetryEvent({
                         path: "/rcp-fe-lol-parties/root-component/parties-game-select-screen",
                         screen: "mode-select",
                         subScreen: "mode-select-screen"
@@ -2370,10 +2370,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 };
-            const s = (0, o.emberDataBinding)({
+            const a = (0, o.emberDataBinding)({
                 Ember: o.Ember,
                 websocket: (0, o.getProvider)().getSocket(),
                 logPrefix: "service:game-select",
@@ -2397,7 +2397,7 @@
                     }
                 }
             });
-            e.exports = o.Ember.Object.extend(s, a.default, {
+            e.exports = o.Ember.Object.extend(a, s.default, {
                 gameflowPhase: o.Ember.computed.alias("gameflowSession.phase"),
                 currentSummonerId: o.Ember.computed.alias("currentSummoner.summonerId"),
                 _inLobby: !1,
@@ -2478,8 +2478,8 @@
                     const n = e.get("ready"),
                         i = this._lookupInMemberCache(t),
                         o = !i && n,
-                        a = i && !i.ready && n;
-                    (o || a) && this.get("_shouldPlay").push(t)
+                        s = i && !i.ready && n;
+                    (o || s) && this.get("_shouldPlay").push(t)
                 },
                 _checkIfDidPlayForMember(e) {
                     return this.get("_didPlay").indexOf(e) > -1
@@ -2494,15 +2494,15 @@
                     if (!t || !t.length) return;
                     const n = this.get("_didPlay"),
                         i = o.Ember.A(),
-                        a = {};
+                        s = {};
                     for (let e = 0; e < t.length; e++) {
                         const o = this._castId(t[e].get("summonerId")),
-                            s = t[e].get("ready");
-                        a[o] = {
-                            ready: s
+                            a = t[e].get("ready");
+                        s[o] = {
+                            ready: a
                         }, n.indexOf(o) > -1 && i.push(o)
                     }
-                    this.set("_lobbyMembers", a), this.set("_didPlay", i)
+                    this.set("_lobbyMembers", s), this.set("_didPlay", i)
                 },
                 _lookupInMemberCache: function(e) {
                     const t = this.get("_lobbyMembers");
@@ -2603,11 +2603,11 @@
                 var n = o(t);
                 if (n && n.has(e)) return n.get(e);
                 var i = {},
-                    a = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                for (var s in e)
-                    if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
-                        var r = a ? Object.getOwnPropertyDescriptor(e, s) : null;
-                        r && (r.get || r.set) ? Object.defineProperty(i, s, r) : i[s] = e[s]
+                    s = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                for (var a in e)
+                    if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
+                        var r = s ? Object.getOwnPropertyDescriptor(e, a) : null;
+                        r && (r.get || r.set) ? Object.defineProperty(i, a, r) : i[a] = e[a]
                     } i.default = e, n && n.set(e, i);
                 return i
             }(n(1));
@@ -2621,8 +2621,8 @@
                 })(e)
             }
             i.default.getProvider().getSocket();
-            const a = i.UIKit.getModalManager(),
-                s = i.UIKit.getToastManager(),
+            const s = i.UIKit.getModalManager(),
+                a = i.UIKit.getToastManager(),
                 r = i.UIKit.getTemplateHelper();
             e.exports.alertPartyEnded = function(e, t) {
                 return i.tra.ready().then((() => {
@@ -2630,14 +2630,14 @@
                         o = r.contentBlockNotification(n);
                     if (t) {
                         const e = i.tra.get(t);
-                        a.add({
+                        s.add({
                             type: "DialogAlert",
                             data: {
                                 contents: n,
                                 okText: e
                             }
                         })
-                    } else s.add({
+                    } else a.add({
                         type: "DialogToast",
                         data: {
                             contents: o
@@ -2670,7 +2670,7 @@
             }), t.default = void 0;
             var i = n(1);
             const o = (0, i.getProvider)().getSocket();
-            var a = class {
+            var s = class {
                 constructor() {
                     this.hasProcessedNotifications = !1, this.toastManager = i.UIKit.getToastManager(), this.templateHelper = i.UIKit.getTemplateHelper(), this.modalManager = i.UIKit.getModalManager(), this.playerNames = i.playerNames, this.handleReadyCheckData = this.handleReadyCheckData.bind(this), this.matchMakingBinding = (0, i.dataBinding)("/lol-matchmaking", o), this.matchMakingBinding.observe("/v1/ready-check", this.handleReadyCheckData)
                 }
@@ -2744,7 +2744,7 @@
                     })
                 }
             };
-            t.default = a
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2753,8 +2753,8 @@
             var i = n(1);
             n(51);
             const o = "/v1/account/lol-leagues",
-                a = "hasSeenFlexRestrictionModal",
-                s = i.UIKit.getModalManager(),
+                s = "hasSeenFlexRestrictionModal",
+                a = i.UIKit.getModalManager(),
                 r = n(52);
             t.default = class {
                 constructor() {
@@ -2768,15 +2768,15 @@
                     Promise.all([e.get("/v2/ready"), e.get(o, {
                         skipCache: !0
                     }), t.get("/v1/current-summoner"), n.get("/v1/namespaces/LeagueConfig/FlexRestrictionModalEnabled"), n.get("/v1/namespaces/LeagueConfig/FlexRestrictionModalMinLevel")]).then((t => {
-                        const [n, i, s, r, l] = t;
-                        if (!(n && r && i && s)) return;
-                        const c = i.data && i.data[a],
-                            m = s.summonerLevel || 0;
+                        const [n, i, a, r, l] = t;
+                        if (!(n && r && i && a)) return;
+                        const c = i.data && i.data[s],
+                            m = a.summonerLevel || 0;
                         if (!c && m >= (l || 30)) {
                             this._createFlexRestrictionModal().okPromise.then((() => {
                                 this._hasShownThisSession = !0;
                                 const t = {};
-                                return t[a] = !0, e.patch(o, {
+                                return t[s] = !0, e.patch(o, {
                                     data: t,
                                     schemaVersion: 1
                                 })
@@ -2789,7 +2789,7 @@
                     return e.innerHTML = r({
                         title: i.tra.get("game_select_flex_restrictions_disabled_title"),
                         description: i.tra.get("game_select_flex_restrictions_disabled_body")
-                    }), e = e.firstChild, s.add({
+                    }), e = e.firstChild, a.add({
                         type: "DialogAlert",
                         data: {
                             contents: e,
@@ -2808,19 +2808,19 @@
             e.exports = (i.default || i).template({
                 compiler: [7, ">= 4.0.0"],
                 main: function(e, t, n, i, o) {
-                    var a, s = null != t ? t : e.nullContext || {},
+                    var s, a = null != t ? t : e.nullContext || {},
                         r = n.helperMissing,
                         l = "function",
                         c = e.escapeExpression;
-                    return '<lol-uikit-dialog-frame>\r\n  <lol-uikit-content-block type="dialog-large" class="flex-restriction-modal">\r\n    <div class="flex-restriction-modal-title">' + c(typeof(a = null != (a = n.title || (null != t ? t.title : t)) ? a : r) === l ? a.call(s, {
+                    return '<lol-uikit-dialog-frame>\r\n  <lol-uikit-content-block type="dialog-large" class="flex-restriction-modal">\r\n    <div class="flex-restriction-modal-title">' + c(typeof(s = null != (s = n.title || (null != t ? t.title : t)) ? s : r) === l ? s.call(a, {
                         name: "title",
                         hash: {},
                         data: o
-                    }) : a) + '</div>\r\n    <div class="flex-restriction-modal-body">' + c(typeof(a = null != (a = n.description || (null != t ? t.description : t)) ? a : r) === l ? a.call(s, {
+                    }) : s) + '</div>\r\n    <div class="flex-restriction-modal-body">' + c(typeof(s = null != (s = n.description || (null != t ? t.description : t)) ? s : r) === l ? s.call(a, {
                         name: "description",
                         hash: {},
                         data: o
-                    }) : a) + "</div>\r\n  </lol-uikit-content-block>\r\n</lol-uikit-dialog-frame>"
+                    }) : s) + "</div>\r\n  </lol-uikit-content-block>\r\n</lol-uikit-dialog-frame>"
                 },
                 useData: !0
             })
@@ -2843,16 +2843,16 @@
                 return t.default = e, t
             }
             t.__esModule = !0;
-            var a = o(n(55)),
-                s = i(n(69)),
+            var s = o(n(55)),
+                a = i(n(69)),
                 r = i(n(57)),
                 l = o(n(56)),
                 c = o(n(70)),
                 m = i(n(71));
 
             function u() {
-                var e = new a.HandlebarsEnvironment;
-                return l.extend(e, a), e.SafeString = s.default, e.Exception = r.default, e.Utils = l, e.escapeExpression = l.escapeExpression, e.VM = c, e.template = function(t) {
+                var e = new s.HandlebarsEnvironment;
+                return l.extend(e, s), e.SafeString = a.default, e.Exception = r.default, e.Utils = l, e.escapeExpression = l.escapeExpression, e.VM = c, e.template = function(t) {
                     return c.template(t, e)
                 }, e
             }
@@ -2868,8 +2868,8 @@
             }
             t.__esModule = !0, t.HandlebarsEnvironment = m;
             var o = n(56),
-                a = i(n(57)),
-                s = n(58),
+                s = i(n(57)),
+                a = n(58),
                 r = n(66),
                 l = i(n(68));
             t.VERSION = "4.1.2";
@@ -2886,7 +2886,7 @@
             var c = "[object Object]";
 
             function m(e, t, n) {
-                this.helpers = e || {}, this.partials = t || {}, this.decorators = n || {}, s.registerDefaultHelpers(this), r.registerDefaultDecorators(this)
+                this.helpers = e || {}, this.partials = t || {}, this.decorators = n || {}, a.registerDefaultHelpers(this), r.registerDefaultDecorators(this)
             }
             m.prototype = {
                 constructor: m,
@@ -2894,7 +2894,7 @@
                 log: l.default.log,
                 registerHelper: function(e, t) {
                     if (o.toString.call(e) === c) {
-                        if (t) throw new a.default("Arg not supported with multiple helpers");
+                        if (t) throw new s.default("Arg not supported with multiple helpers");
                         o.extend(this.helpers, e)
                     } else this.helpers[e] = t
                 },
@@ -2904,7 +2904,7 @@
                 registerPartial: function(e, t) {
                     if (o.toString.call(e) === c) o.extend(this.partials, e);
                     else {
-                        if (void 0 === t) throw new a.default('Attempting to register a partial called "' + e + '" as undefined');
+                        if (void 0 === t) throw new s.default('Attempting to register a partial called "' + e + '" as undefined');
                         this.partials[e] = t
                     }
                 },
@@ -2913,7 +2913,7 @@
                 },
                 registerDecorator: function(e, t) {
                     if (o.toString.call(e) === c) {
-                        if (t) throw new a.default("Arg not supported with multiple decorators");
+                        if (t) throw new s.default("Arg not supported with multiple decorators");
                         o.extend(this.decorators, e)
                     } else this.decorators[e] = t
                 },
@@ -2925,7 +2925,7 @@
             t.log = u, t.createFrame = o.createFrame, t.logger = l.default
         }, (e, t) => {
             "use strict";
-            t.__esModule = !0, t.extend = s, t.indexOf = function(e, t) {
+            t.__esModule = !0, t.extend = a, t.indexOf = function(e, t) {
                 for (var n = 0, i = e.length; n < i; n++)
                     if (e[n] === t) return n;
                 return -1
@@ -2937,11 +2937,11 @@
                     e = "" + e
                 }
                 if (!o.test(e)) return e;
-                return e.replace(i, a)
+                return e.replace(i, s)
             }, t.isEmpty = function(e) {
                 return !e && 0 !== e || !(!c(e) || 0 !== e.length)
             }, t.createFrame = function(e) {
-                var t = s({}, e);
+                var t = a({}, e);
                 return t._parent = e, t
             }, t.blockParams = function(e, t) {
                 return e.path = t, e
@@ -2960,11 +2960,11 @@
                 i = /[&<>"'`=]/g,
                 o = /[&<>"'`=]/;
 
-            function a(e) {
+            function s(e) {
                 return n[e]
             }
 
-            function s(e) {
+            function a(e) {
                 for (var t = 1; t < arguments.length; t++)
                     for (var n in arguments[t]) Object.prototype.hasOwnProperty.call(arguments[t], n) && (e[n] = arguments[t][n]);
                 return e
@@ -2988,16 +2988,16 @@
 
             function i(e, t) {
                 var o = t && t.loc,
-                    a = void 0,
-                    s = void 0;
-                o && (e += " - " + (a = o.start.line) + ":" + (s = o.start.column));
+                    s = void 0,
+                    a = void 0;
+                o && (e += " - " + (s = o.start.line) + ":" + (a = o.start.column));
                 for (var r = Error.prototype.constructor.call(this, e), l = 0; l < n.length; l++) this[n[l]] = r[n[l]];
                 Error.captureStackTrace && Error.captureStackTrace(this, i);
                 try {
-                    o && (this.lineNumber = a, Object.defineProperty ? Object.defineProperty(this, "column", {
-                        value: s,
+                    o && (this.lineNumber = s, Object.defineProperty ? Object.defineProperty(this, "column", {
+                        value: a,
                         enumerable: !0
-                    }) : this.column = s)
+                    }) : this.column = a)
                 } catch (e) {}
             }
             i.prototype = new Error, t.default = i, e.exports = t.default
@@ -3010,11 +3010,11 @@
                 }
             }
             t.__esModule = !0, t.registerDefaultHelpers = function(e) {
-                o.default(e), a.default(e), s.default(e), r.default(e), l.default(e), c.default(e), m.default(e)
+                o.default(e), s.default(e), a.default(e), r.default(e), l.default(e), c.default(e), m.default(e)
             };
             var o = i(n(59)),
-                a = i(n(60)),
-                s = i(n(61)),
+                s = i(n(60)),
+                a = i(n(61)),
                 r = i(n(62)),
                 l = i(n(63)),
                 c = i(n(64)),
@@ -3026,63 +3026,63 @@
             t.default = function(e) {
                 e.registerHelper("blockHelperMissing", (function(t, n) {
                     var o = n.inverse,
-                        a = n.fn;
-                    if (!0 === t) return a(this);
+                        s = n.fn;
+                    if (!0 === t) return s(this);
                     if (!1 === t || null == t) return o(this);
                     if (i.isArray(t)) return t.length > 0 ? (n.ids && (n.ids = [n.name]), e.helpers.each(t, n)) : o(this);
                     if (n.data && n.ids) {
-                        var s = i.createFrame(n.data);
-                        s.contextPath = i.appendContextPath(n.data.contextPath, n.name), n = {
-                            data: s
+                        var a = i.createFrame(n.data);
+                        a.contextPath = i.appendContextPath(n.data.contextPath, n.name), n = {
+                            data: a
                         }
                     }
-                    return a(t, n)
+                    return s(t, n)
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
             var i, o = n(56),
-                a = n(57),
-                s = (i = a) && i.__esModule ? i : {
+                s = n(57),
+                a = (i = s) && i.__esModule ? i : {
                     default: i
                 };
             t.default = function(e) {
                 e.registerHelper("each", (function(e, t) {
-                    if (!t) throw new s.default("Must pass iterator to #each");
+                    if (!t) throw new a.default("Must pass iterator to #each");
                     var n = t.fn,
                         i = t.inverse,
-                        a = 0,
+                        s = 0,
                         r = "",
                         l = void 0,
                         c = void 0;
 
-                    function m(t, i, a) {
-                        l && (l.key = t, l.index = i, l.first = 0 === i, l.last = !!a, c && (l.contextPath = c + t)), r += n(e[t], {
+                    function m(t, i, s) {
+                        l && (l.key = t, l.index = i, l.first = 0 === i, l.last = !!s, c && (l.contextPath = c + t)), r += n(e[t], {
                             data: l,
                             blockParams: o.blockParams([e[t], t], [c + t, null])
                         })
                     }
                     if (t.data && t.ids && (c = o.appendContextPath(t.data.contextPath, t.ids[0]) + "."), o.isFunction(e) && (e = e.call(this)), t.data && (l = o.createFrame(t.data)), e && "object" == typeof e)
                         if (o.isArray(e))
-                            for (var u = e.length; a < u; a++) a in e && m(a, a, a === e.length - 1);
+                            for (var u = e.length; s < u; s++) s in e && m(s, s, s === e.length - 1);
                         else {
                             var d = void 0;
-                            for (var p in e) e.hasOwnProperty(p) && (void 0 !== d && m(d, a - 1), d = p, a++);
-                            void 0 !== d && m(d, a - 1, !0)
-                        } return 0 === a && (r = i(this)), r
+                            for (var p in e) e.hasOwnProperty(p) && (void 0 !== d && m(d, s - 1), d = p, s++);
+                            void 0 !== d && m(d, s - 1, !0)
+                        } return 0 === s && (r = i(this)), r
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
             var i, o = n(57),
-                a = (i = o) && i.__esModule ? i : {
+                s = (i = o) && i.__esModule ? i : {
                     default: i
                 };
             t.default = function(e) {
                 e.registerHelper("helperMissing", (function() {
-                    if (1 !== arguments.length) throw new a.default('Missing helper: "' + arguments[arguments.length - 1].name + '"')
+                    if (1 !== arguments.length) throw new s.default('Missing helper: "' + arguments[arguments.length - 1].name + '"')
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
@@ -3135,10 +3135,10 @@
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0, t.registerDefaultDecorators = function(e) {
-                a.default(e)
+                s.default(e)
             };
             var i, o = n(67),
-                a = (i = o) && i.__esModule ? i : {
+                s = (i = o) && i.__esModule ? i : {
                     default: i
                 }
         }, (e, t, n) => {
@@ -3147,13 +3147,13 @@
             var i = n(56);
             t.default = function(e) {
                 e.registerDecorator("inline", (function(e, t, n, o) {
-                    var a = e;
-                    return t.partials || (t.partials = {}, a = function(o, a) {
-                        var s = n.partials;
-                        n.partials = i.extend({}, s, t.partials);
-                        var r = e(o, a);
-                        return n.partials = s, r
-                    }), t.partials[o.args[0]] = o.fn, a
+                    var s = e;
+                    return t.partials || (t.partials = {}, s = function(o, s) {
+                        var a = n.partials;
+                        n.partials = i.extend({}, a, t.partials);
+                        var r = e(o, s);
+                        return n.partials = a, r
+                    }), t.partials[o.args[0]] = o.fn, s
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
@@ -3174,7 +3174,7 @@
                         if (e = o.lookupLevel(e), "undefined" != typeof console && o.lookupLevel(o.level) <= e) {
                             var t = o.methodMap[e];
                             console[t] || (t = "log");
-                            for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++) i[a - 1] = arguments[a];
+                            for (var n = arguments.length, i = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) i[s - 1] = arguments[s];
                             console[t].apply(console, i)
                         }
                     }
@@ -3198,17 +3198,17 @@
                     if (t < n) {
                         var i = r.REVISION_CHANGES[n],
                             o = r.REVISION_CHANGES[t];
-                        throw new s.default("Template was precompiled with an older version of Handlebars than the current runtime. Please update your precompiler to a newer version (" + i + ") or downgrade your runtime to an older version (" + o + ").")
+                        throw new a.default("Template was precompiled with an older version of Handlebars than the current runtime. Please update your precompiler to a newer version (" + i + ") or downgrade your runtime to an older version (" + o + ").")
                     }
-                    throw new s.default("Template was precompiled with a newer version of Handlebars than the current runtime. Please update your runtime to a newer version (" + e[1] + ").")
+                    throw new a.default("Template was precompiled with a newer version of Handlebars than the current runtime. Please update your runtime to a newer version (" + e[1] + ").")
                 }
             }, t.template = function(e, t) {
-                if (!t) throw new s.default("No environment passed to template");
-                if (!e || !e.main) throw new s.default("Unknown template object: " + typeof e);
+                if (!t) throw new a.default("No environment passed to template");
+                if (!e || !e.main) throw new a.default("Unknown template object: " + typeof e);
                 e.main.decorator = e.main_d, t.VM.checkRevision(e.compiler);
                 var n = {
                     strict: function(e, t) {
-                        if (!(t in e)) throw new s.default('"' + t + '" not defined in ' + e);
+                        if (!(t in e)) throw new a.default('"' + t + '" not defined in ' + e);
                         return e[t]
                     },
                     lookup: function(e, t) {
@@ -3219,17 +3219,17 @@
                         return "function" == typeof e ? e.call(t) : e
                     },
                     escapeExpression: o.escapeExpression,
-                    invokePartial: function(n, i, a) {
-                        a.hash && (i = o.extend({}, i, a.hash), a.ids && (a.ids[0] = !0)), n = t.VM.resolvePartial.call(this, n, i, a);
-                        var r = t.VM.invokePartial.call(this, n, i, a);
-                        if (null == r && t.compile && (a.partials[a.name] = t.compile(n, e.compilerOptions, t), r = a.partials[a.name](i, a)), null != r) {
-                            if (a.indent) {
-                                for (var l = r.split("\n"), c = 0, m = l.length; c < m && (l[c] || c + 1 !== m); c++) l[c] = a.indent + l[c];
+                    invokePartial: function(n, i, s) {
+                        s.hash && (i = o.extend({}, i, s.hash), s.ids && (s.ids[0] = !0)), n = t.VM.resolvePartial.call(this, n, i, s);
+                        var r = t.VM.invokePartial.call(this, n, i, s);
+                        if (null == r && t.compile && (s.partials[s.name] = t.compile(n, e.compilerOptions, t), r = s.partials[s.name](i, s)), null != r) {
+                            if (s.indent) {
+                                for (var l = r.split("\n"), c = 0, m = l.length; c < m && (l[c] || c + 1 !== m); c++) l[c] = s.indent + l[c];
                                 r = l.join("\n")
                             }
                             return r
                         }
-                        throw new s.default("The partial " + a.name + " could not be compiled when running in runtime-only mode")
+                        throw new a.default("The partial " + s.name + " could not be compiled when running in runtime-only mode")
                     },
                     fn: function(t) {
                         var n = e[t];
@@ -3237,9 +3237,9 @@
                     },
                     programs: [],
                     program: function(e, t, n, i, o) {
-                        var a = this.programs[e],
-                            s = this.fn(e);
-                        return t || o || i || n ? a = l(this, e, s, t, n, i, o) : a || (a = this.programs[e] = l(this, e, s)), a
+                        var s = this.programs[e],
+                            a = this.fn(e);
+                        return t || o || i || n ? s = l(this, e, a, t, n, i, o) : s || (s = this.programs[e] = l(this, e, a)), s
                     },
                     data: function(e, t) {
                         for (; e && t--;) e = e._parent;
@@ -3256,25 +3256,25 @@
 
                 function i(t) {
                     var o = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
-                        a = o.data;
-                    i._setup(o), !o.partial && e.useData && (a = function(e, t) {
+                        s = o.data;
+                    i._setup(o), !o.partial && e.useData && (s = function(e, t) {
                         t && "root" in t || ((t = t ? r.createFrame(t) : {}).root = e);
                         return t
-                    }(t, a));
-                    var s = void 0,
+                    }(t, s));
+                    var a = void 0,
                         l = e.useBlockParams ? [] : void 0;
 
                     function c(t) {
-                        return "" + e.main(n, t, n.helpers, n.partials, a, l, s)
+                        return "" + e.main(n, t, n.helpers, n.partials, s, l, a)
                     }
-                    return e.useDepths && (s = o.depths ? t != o.depths[0] ? [t].concat(o.depths) : o.depths : [t]), (c = m(e.main, c, n, o.depths || [], a, l))(t, o)
+                    return e.useDepths && (a = o.depths ? t != o.depths[0] ? [t].concat(o.depths) : o.depths : [t]), (c = m(e.main, c, n, o.depths || [], s, l))(t, o)
                 }
                 return i.isTop = !0, i._setup = function(i) {
                     i.partial ? (n.helpers = i.helpers, n.partials = i.partials, n.decorators = i.decorators) : (n.helpers = n.merge(i.helpers, t.helpers), e.usePartial && (n.partials = n.merge(i.partials, t.partials)), (e.usePartial || e.useDecorators) && (n.decorators = n.merge(i.decorators, t.decorators)))
-                }, i._child = function(t, i, o, a) {
-                    if (e.useBlockParams && !o) throw new s.default("must pass block params");
-                    if (e.useDepths && !a) throw new s.default("must pass parent depths");
-                    return l(n, t, e[t], i, 0, o, a)
+                }, i._child = function(t, i, o, s) {
+                    if (e.useBlockParams && !o) throw new a.default("must pass block params");
+                    if (e.useDepths && !s) throw new a.default("must pass parent depths");
+                    return l(n, t, e[t], i, 0, o, s)
                 }, i
             }, t.wrapProgram = l, t.resolvePartial = function(e, t, n) {
                 e ? e.call || n.name || (n.name = e, e = n.partials[e]) : e = "@partial-block" === n.name ? n.data["partial-block"] : n.partials[n.name];
@@ -3282,17 +3282,17 @@
             }, t.invokePartial = function(e, t, n) {
                 var i = n.data && n.data["partial-block"];
                 n.partial = !0, n.ids && (n.data.contextPath = n.ids[0] || n.data.contextPath);
-                var a = void 0;
+                var s = void 0;
                 n.fn && n.fn !== c && function() {
                     n.data = r.createFrame(n.data);
                     var e = n.fn;
-                    a = n.data["partial-block"] = function(t) {
+                    s = n.data["partial-block"] = function(t) {
                         var n = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1];
                         return n.data = r.createFrame(n.data), n.data["partial-block"] = i, e(t, n)
                     }, e.partials && (n.partials = o.extend({}, n.partials, e.partials))
                 }();
-                void 0 === e && a && (e = a);
-                if (void 0 === e) throw new s.default("The partial " + n.name + " could not be found");
+                void 0 === e && s && (e = s);
+                if (void 0 === e) throw new a.default("The partial " + n.name + " could not be found");
                 if (e instanceof Function) return e(t, n)
             }, t.noop = c;
             var i, o = function(e) {
@@ -3302,29 +3302,29 @@
                         for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                     return t.default = e, t
                 }(n(56)),
-                a = n(57),
-                s = (i = a) && i.__esModule ? i : {
+                s = n(57),
+                a = (i = s) && i.__esModule ? i : {
                     default: i
                 },
                 r = n(55);
 
-            function l(e, t, n, i, o, a, s) {
+            function l(e, t, n, i, o, s, a) {
                 function r(t) {
                     var o = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
-                        r = s;
-                    return !s || t == s[0] || t === e.nullContext && null === s[0] || (r = [t].concat(s)), n(e, t, e.helpers, e.partials, o.data || i, a && [o.blockParams].concat(a), r)
+                        r = a;
+                    return !a || t == a[0] || t === e.nullContext && null === a[0] || (r = [t].concat(a)), n(e, t, e.helpers, e.partials, o.data || i, s && [o.blockParams].concat(s), r)
                 }
-                return (r = m(n, r, e, s, i, a)).program = t, r.depth = s ? s.length : 0, r.blockParams = o || 0, r
+                return (r = m(n, r, e, a, i, s)).program = t, r.depth = a ? a.length : 0, r.blockParams = o || 0, r
             }
 
             function c() {
                 return ""
             }
 
-            function m(e, t, n, i, a, s) {
+            function m(e, t, n, i, s, a) {
                 if (e.decorator) {
                     var r = {};
-                    t = e.decorator(t, r, n, i && i[0], a, s, i), o.extend(t, r)
+                    t = e.decorator(t, r, n, i && i[0], s, a, i), o.extend(t, r)
                 }
                 return t
             }
@@ -3350,11 +3350,11 @@
                 var n = o(t);
                 if (n && n.has(e)) return n.get(e);
                 var i = {},
-                    a = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                for (var s in e)
-                    if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
-                        var r = a ? Object.getOwnPropertyDescriptor(e, s) : null;
-                        r && (r.get || r.set) ? Object.defineProperty(i, s, r) : i[s] = e[s]
+                    s = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                for (var a in e)
+                    if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
+                        var r = s ? Object.getOwnPropertyDescriptor(e, a) : null;
+                        r && (r.get || r.set) ? Object.defineProperty(i, a, r) : i[a] = e[a]
                     } i.default = e, n && n.set(e, i);
                 return i
             }(n(1));
@@ -3367,7 +3367,7 @@
                     return e ? n : t
                 })(e)
             }
-            var a = new class {
+            var s = new class {
                 constructor() {
                     const e = i.default.getProvider().getSocket();
                     this._telemetryBinding = (0, i.dataBinding)("/telemetry", e), this._startSessionTime = !1
@@ -3404,7 +3404,7 @@
                     this._sendDetailedEvent("gamePanel", "gameInvite", "decline", "social_panel")
                 }
             };
-            t.default = a
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
@@ -3423,10 +3423,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(75)) && i.__esModule ? i : {
+                s = (i = n(75)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(76),
+                a = n(76),
                 r = n(79),
                 l = n(82),
                 c = n(85),
@@ -3436,7 +3436,7 @@
                 p = n(97);
 
             function h(e, t, i) {
-                const h = (0, a.default)(o.Ember, o.tra),
+                const h = (0, s.default)(o.Ember, o.tra),
                     {
                         EmberCollectionApi: g,
                         PlayerNameInputApi: b
@@ -3463,8 +3463,8 @@
                         SkinPurchaseButtonComponent: R,
                         SkinChromaButtonComponent: B,
                         SkinChromaModalComponent: D,
-                        SkinQuestFormModalComponent: N,
-                        WardSkinSelectComponent: O,
+                        SkinQuestFormModalComponent: O,
+                        WardSkinSelectComponent: N,
                         WardSkinPopupComponent: F,
                         WardSkinPopupButtonComponent: q,
                         WardSkinRendererComponent: G
@@ -3491,8 +3491,8 @@
                     ne = n(106),
                     ie = n(107),
                     oe = n(110),
-                    ae = n(113),
-                    se = n(114),
+                    se = n(113),
+                    ae = n(114),
                     re = n(115),
                     le = n(116),
                     ce = n(117),
@@ -3625,7 +3625,7 @@
                     MultiteamLobbyRootComponent: n(444).default,
                     MultiteamLobbySubteamComponent: n(451).default,
                     MultiteamLobbySubteamPlayerSlotComponent: n(454).default,
-                    CherryPlayerLevelDisplayComponent: s.CherryPlayerLevelDisplayComponent,
+                    CherryPlayerLevelDisplayComponent: a.CherryPlayerLevelDisplayComponent,
                     CherryProgressionChampionGridComponent: r.CherryProgressionChampionGridComponent,
                     CherryProgressionChampionItemComponent: l.CherryProgressionChampionItemComponent,
                     CherryProgressionLobbyComponent: c.CherryProgressionLobbyComponent,
@@ -3641,10 +3641,10 @@
                     SkinPurchaseButtonComponent: R,
                     SkinChromaButtonComponent: B,
                     SkinChromaModalComponent: D,
-                    SkinQuestFormModalComponent: N,
+                    SkinQuestFormModalComponent: O,
                     ...o.RewardTrackerEmberComponents,
                     ...o.PassProgressionWidgetComponents,
-                    WardSkinSelectComponent: O,
+                    WardSkinSelectComponent: N,
                     WardSkinPopupComponent: F,
                     WardSkinPopupButtonComponent: q,
                     WardSkinRendererComponent: G,
@@ -3668,7 +3668,7 @@
                     PartySettingsService: ce,
                     MatchmakingService: oe,
                     SummonerService: ne,
-                    QueueEligibilityService: se,
+                    QueueEligibilityService: ae,
                     GameflowService: re,
                     GameSelectQueuePipService: le,
                     CustomGamesService: me,
@@ -3676,7 +3676,7 @@
                     InventoryService: de,
                     PatcherService: pe,
                     InvitesService: he,
-                    EternalsService: ae,
+                    EternalsService: se,
                     TftCosmeticsService: be,
                     TftCosmeticsV2Service: fe,
                     TftEventsService: _e,
@@ -3738,7 +3738,7 @@
                     PartyQueueErrorDialogDisruptiveGameplayLockoutComponent: n(519),
                     LobbiesService: ie,
                     SummonerService: ne,
-                    QueueEligibilityService: se,
+                    QueueEligibilityService: ae,
                     MatchmakingService: oe
                 }), o.EmberApplicationFactory.setFactoryDefinition({
                     name: "PartiesInviteDialog",
@@ -3751,7 +3751,7 @@
                     DiscordIntegrationService: te,
                     MatchmakingService: oe,
                     SummonerService: ne,
-                    QueueEligibilityService: se,
+                    QueueEligibilityService: ae,
                     CustomGamesService: me,
                     InvitesService: he,
                     PlayerNameComponent: L,
@@ -3796,7 +3796,7 @@
                     HextechLoadingAnimationComponent: C,
                     LobbiesService: ie,
                     SummonerService: ne,
-                    QueueEligibilityService: se,
+                    QueueEligibilityService: ae,
                     MatchmakingService: oe,
                     ChatService: ee,
                     SocialLeaderboardService: ve,
@@ -3837,28 +3837,28 @@
                 const {
                     regions: i,
                     region: o,
-                    locale: a
+                    locale: s
                 } = e.metadata();
                 if ((n = n.get("metadata." + t)) && "region" === t && n.id !== o.id) {
                     const t = i[n.id],
                         o = t.defaultLocale ? t.defaultLocale.id : t.availableLocales[0].id;
                     e.setLocale(o, n.id)
-                } else n && "locale" === t && n.id !== a.id && e.setLocale(n.id)
+                } else n && "locale" === t && n.id !== s.id && e.setLocale(n.id)
             }
             e.exports = function(e, i, o) {
-                let a;
-                const s = {
+                let s;
+                const a = {
                     metadata: !0,
                     moment: !0
                 };
                 return i = i.observe((() => {
-                    if (a) {
+                    if (s) {
                         const e = t(i.metadata());
-                        a.set("metadata", e), a.beginPropertyChanges(), Object.keys(s).forEach((e => {
-                            a.propertyWillChange(e), a.propertyDidChange(e)
-                        })), a.endPropertyChanges()
+                        s.set("metadata", e), s.beginPropertyChanges(), Object.keys(a).forEach((e => {
+                            s.propertyWillChange(e), s.propertyDidChange(e)
+                        })), s.endPropertyChanges()
                     }
-                })), a = e.Service.extend({
+                })), s = e.Service.extend({
                     _tra: null,
                     init() {
                         this.wrapTra(i)
@@ -3867,7 +3867,7 @@
                         e && (this._tra = e, this.set("metadata", t(this._tra.metadata())), this.setLocale = this._tra.setLocale.bind(this._tra), this.formatString = this._tra.formatString.bind(this._tra), this.moment = this._tra.moment.bind(this._tra), this.ready = this._tra.ready.bind(this._tra), this.exists = this._tra.exists.bind(this._tra), this.getAsync = this._tra.getAsync.bind(this._tra), this.existsAsync = this._tra.existsAsync.bind(this._tra), this.numeral = this._tra.numeral.bind(this._tra))
                     },
                     unknownProperty(e) {
-                        return s[e] = !0, this._tra.get(e)
+                        return a[e] = !0, this._tra.get(e)
                     },
                     willDestroy: () => this._tra.unregister(),
                     addOverlays: function(e) {
@@ -3875,9 +3875,9 @@
                         for (const n of e) t = t.overlay(n);
                         t && this.wrapTra(t)
                     }
-                }).create(), a.set("service", a), a.addObserver("metadata.region", n.bind(null, i, "region")), a.addObserver("metadata.locale", n.bind(null, i, "locale")), o && (console.warning("deprecated: pass a traService as a property of your Ember application definition"), o.register("tra:main", a, {
+                }).create(), s.set("service", s), s.addObserver("metadata.region", n.bind(null, i, "region")), s.addObserver("metadata.locale", n.bind(null, i, "locale")), o && (console.warning("deprecated: pass a traService as a property of your Ember application definition"), o.register("tra:main", s, {
                     instantiate: !1
-                }), o.inject("component", "tra", "tra:main"), o.inject("controller", "tra", "tra:main"), o.inject("view", "tra", "tra:main"), o.inject("model", "tra", "tra:main"), o.inject("route", "tra", "tra:main"), o.inject("service", "tra", "tra:main")), a
+                }), o.inject("component", "tra", "tra:main"), o.inject("controller", "tra", "tra:main"), o.inject("view", "tra", "tra:main"), o.inject("model", "tra", "tra:main"), o.inject("route", "tra", "tra:main"), o.inject("service", "tra", "tra:main")), s
             }
         }, (e, t, n) => {
             "use strict";
@@ -3934,8 +3934,8 @@
             const i = n(1);
             n(80);
             const o = "Mastery",
-                a = "Name",
-                s = [{
+                s = "Name",
+                a = [{
                     label: "cherrylobby_progression_filter_class",
                     role: ""
                 }, {
@@ -3977,13 +3977,13 @@
                         e = n.map((e => t[e])).filter((e => !!e));
                         const i = this._getChampionsSortedByName().filter((e => !n.includes(e.id)));
                         e = e.concat(i)
-                    } else n === a && (e = this._getChampionsSortedByName());
+                    } else n === s && (e = this._getChampionsSortedByName());
                     const i = this.get("currentRoleFilter");
                     0 !== i.length && (e = e.filter((e => e.roles.includes(i))));
-                    const s = this.get("debouncedSearchText") || "";
-                    if (0 !== s.length) {
+                    const a = this.get("debouncedSearchText") || "";
+                    if (0 !== a.length) {
                         const t = document.documentElement.lang;
-                        e = e.filter((e => e.name.toLocaleLowerCase(t).includes(s)))
+                        e = e.filter((e => e.name.toLocaleLowerCase(t).includes(a)))
                     }
                     return e
                 })),
@@ -3997,7 +3997,7 @@
                 })),
                 classFilters: i.Ember.computed((function() {
                     const e = this.get("tra");
-                    return s.map((t => ({
+                    return a.map((t => ({
                         label: e.get(t.label),
                         role: t.role
                     })))
@@ -4321,8 +4321,8 @@
             }), t.CherryLobbyService = void 0;
             const i = n(1),
                 o = n(98),
-                a = n(99),
-                s = (0, i.getProvider)().getSocket();
+                s = n(99),
+                a = (0, i.getProvider)().getSocket();
             t.CherryLobbyService = i.Ember.Service.extend({
                 cherryLobbyData: {},
                 championSummaryMap: null,
@@ -4348,24 +4348,24 @@
                         this.set("progressTrack", t[0].ProgressTrack), this.set("championsCompletedTrack", t[0].ChampionsCompletedTrack), (0, i.dataBinding)("/lol-reward-track").get(`/register/${t[0].ProgressTrack.Id}`);
                         const n = e[1].reduce(((e, t) => (t.id >= 66600 && t.id <= 66699 || t.id > 0 && (e[t.id] = t), e)), {});
                         this.set("championSummaryMap", n);
-                        const s = e[2];
+                        const a = e[2];
                         let r;
-                        r = "01030e0d-e3e3-4034-93dc-44a88bcb8401" === t[0].ChampionsCompletedTrack.Id ? a.ChampionIdToSeriesUuidMapping : "7d0ef399-dd59-4005-bf1d-e0b98cda8acb" === t[0].ChampionsCompletedTrack.Id ? o.ChampionIdToSeriesUuidMapping : s.reduce(((e, t) => (e[t.itemId] = t.itemInstanceId, e)), {}), this.set("championUuidMap", r)
+                        r = "01030e0d-e3e3-4034-93dc-44a88bcb8401" === t[0].ChampionsCompletedTrack.Id ? s.ChampionIdToSeriesUuidMapping : "7d0ef399-dd59-4005-bf1d-e0b98cda8acb" === t[0].ChampionsCompletedTrack.Id ? o.ChampionIdToSeriesUuidMapping : a.reduce(((e, t) => (e[t.itemId] = t.itemInstanceId, e)), {}), this.set("championUuidMap", r)
                     }))
                 },
                 initObservedData() {
                     const e = this.get("progressTrack");
-                    (0, i.dataBinding)("/lol-progression", s).observe(`/v1/groups/${e.Id}/instanceData`, this, (e => {
+                    (0, i.dataBinding)("/lol-progression", a).observe(`/v1/groups/${e.Id}/instanceData`, this, (e => {
                         e && (this.set("countersPlayerState", e.counters), this.set("milestonesPlayerState", e.milestones))
                     }));
                     const t = this.get("championsCompletedTrack");
-                    (0, i.dataBinding)("/lol-progression", s).observe(`/v1/groups/${t.Id}/instanceData`, this, (e => {
+                    (0, i.dataBinding)("/lol-progression", a).observe(`/v1/groups/${t.Id}/instanceData`, this, (e => {
                         e && this.set("championsCompletedCounter", e.counters[0].counterValue)
-                    })), (0, i.dataBinding)("/lol-reward-track", s).observe(`${e.Id}/reward-track/items`, this, (e => {
+                    })), (0, i.dataBinding)("/lol-reward-track", a).observe(`${e.Id}/reward-track/items`, this, (e => {
                         e && this.set("rewardTrackItems", e)
-                    })), (0, i.dataBinding)("/lol-reward-track", s).observe(`${e.Id}/reward-track/progress`, this, (e => {
+                    })), (0, i.dataBinding)("/lol-reward-track", a).observe(`${e.Id}/reward-track/progress`, this, (e => {
                         e && (this.set("rewardTrackProgress", e), this.setCherryLevelLobbyMetadata("rewardTrackProgress"), this.set("isLoadingLobby", !1))
-                    })), (0, i.dataBinding)("/lol-champion-mastery", s).observe("/v1/local-player/champion-mastery", this, (e => {
+                    })), (0, i.dataBinding)("/lol-champion-mastery", a).observe("/v1/local-player/champion-mastery", this, (e => {
                         const t = (e || []).map((e => ({
                             championId: e.championId,
                             championPoints: e.championPoints
@@ -4373,7 +4373,7 @@
                         t.sort(((e, t) => t.championPoints - e.championPoints));
                         const n = t.map((e => e.championId));
                         this.set("championMasteryChampionIds", n)
-                    })), (0, i.dataBinding)("/lol-cap-missions", s).observe("/v1/invalidatecache", this, (e => {
+                    })), (0, i.dataBinding)("/lol-cap-missions", a).observe("/v1/invalidatecache", this, (e => {
                         e && e.payload && this.ensureChampMissionsCached(this.get("championsInView"), !0)
                     }))
                 },
@@ -4391,10 +4391,10 @@
                         o = t ? {} : {
                             ...this.get("championMissionCachedResults")
                         },
-                        a = this.get("championUuidMap");
+                        s = this.get("championUuidMap");
                     this.set("championsInView", e);
-                    const s = {};
-                    for (const t of e) t && t.id && (o[t.id] || (n.push(a[t.id]), s[a[t.id]] = t.id));
+                    const a = {};
+                    for (const t of e) t && t.id && (o[t.id] || (n.push(s[t.id]), a[s[t.id]] = t.id));
                     if (0 === n.length) return;
                     const r = n.map((e => `"${e}"`)).join(",");
                     (0, i.dataBinding)("/lol-cap-missions").get(`/v1/getmissions?Ids=[${r}]`, {
@@ -4402,7 +4402,7 @@
                     }).then((e => {
                         if (e && e.series) {
                             for (const t of e.series) {
-                                const e = s[t.configurationId];
+                                const e = a[t.configurationId];
                                 o[e] = t.missions
                             }
                             this.set("championMissionCachedResults", o)
@@ -4785,10 +4785,10 @@
             "use strict";
             var i = n(1),
                 o = n(101);
-            const a = (0, i.getProvider)().getSocket(),
-                s = (0, i.emberDataBinding)({
+            const s = (0, i.getProvider)().getSocket(),
+                a = (0, i.emberDataBinding)({
                     Ember: i.Ember,
-                    websocket: a,
+                    websocket: s,
                     logPrefix: "service:assets",
                     basePaths: {
                         gameflow: "/lol-gameflow",
@@ -4807,15 +4807,15 @@
                         regionLocale: "/riotclient/region-locale"
                     }
                 });
-            e.exports = i.Ember.Service.extend(s, {
+            e.exports = i.Ember.Service.extend(a, {
                 maps: [],
                 init() {
                     this._super(...arguments), this._initObservers()
                 },
                 _initObservers() {
-                    (0, i.dataBinding)("/lol-maps", a).observe("/v2/maps", this, (e => {
+                    (0, i.dataBinding)("/lol-maps", s).observe("/v2/maps", this, (e => {
                         e && this.set("maps", e)
-                    })), (0, i.dataBinding)("/lol-game-data", a).observe("/assets/v1/generic-assets.json", this, (e => {
+                    })), (0, i.dataBinding)("/lol-game-data", s).observe("/assets/v1/generic-assets.json", this, (e => {
                         e && this.set("teamPlannerButtonAssets", e["lcu-assets-tft-team-planner-button"])
                     }))
                 },
@@ -4826,15 +4826,15 @@
                     const e = i.Ember.A();
                     return this.get("availableMaps").forEach((t => {
                         if (t.assets) {
-                            let n, i, a, s;
-                            i = !1, s = o.SIDEBAR_BACKGROUND_COLORS.DEFAULT, t.assets["parties-background-video"] ? (n = !0, a = t.assets["parties-background-video"]) : (n = !1, a = t.assets["parties-background"]), a && (i = `/${a}`), a && o.SIDEBAR_BACKGROUND_COLORS[t.gameMode] && o.SIDEBAR_BACKGROUND_COLORS[t.gameMode][t.id] && (s = o.SIDEBAR_BACKGROUND_COLORS[t.gameMode][t.id]), e.pushObject({
+                            let n, i, s, a;
+                            i = !1, a = o.SIDEBAR_BACKGROUND_COLORS.DEFAULT, t.assets["parties-background-video"] ? (n = !0, s = t.assets["parties-background-video"]) : (n = !1, s = t.assets["parties-background"]), s && (i = `/${s}`), s && o.SIDEBAR_BACKGROUND_COLORS[t.gameMode] && o.SIDEBAR_BACKGROUND_COLORS[t.gameMode][t.id] && (a = o.SIDEBAR_BACKGROUND_COLORS[t.gameMode][t.id]), e.pushObject({
                                 id: t.id,
                                 isDefault: t.isDefault,
                                 gameMode: t.gameMode,
                                 gameMutator: t.gameMutator,
                                 url: i,
                                 isVideo: n,
-                                sidebarBackgroundColor: s
+                                sidebarBackgroundColor: a
                             })
                         }
                     })), e
@@ -4853,15 +4853,15 @@
                 },
                 _getMap: function(e, t, n, i) {
                     let o = !1,
-                        a = !1;
-                    for (const s of e)
-                        if (s.id === t && s.isDefault && (a = s), s.id !== t || s.gameMode !== n || s.gameMutator) {
-                            if (s.id === t && s.gameMode === n && i && s.gameMutator === i) {
-                                o = s;
+                        s = !1;
+                    for (const a of e)
+                        if (a.id === t && a.isDefault && (s = a), a.id !== t || a.gameMode !== n || a.gameMutator) {
+                            if (a.id === t && a.gameMode === n && i && a.gameMutator === i) {
+                                o = a;
                                 break
                             }
-                        } else o = s;
-                    return o || a
+                        } else o = a;
+                    return o || s
                 }
             })
         }, e => {
@@ -4978,10 +4978,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(104)) && i.__esModule ? i : {
+                s = (i = n(104)) && i.__esModule ? i : {
                     default: i
                 };
-            const s = (0, o.emberDataBinding)({
+            const a = (0, o.emberDataBinding)({
                 Ember: o.Ember,
                 websocket: (0, o.getProvider)().getSocket(),
                 logPrefix: "service:chat",
@@ -4997,7 +4997,7 @@
                         api: "chat",
                         path: "/v1/friends",
                         objectTypes: {
-                            "[]": a.default
+                            "[]": s.default
                         }
                     },
                     groups: {
@@ -5006,7 +5006,7 @@
                     }
                 }
             });
-            e.exports = o.Ember.Service.extend(s, {
+            e.exports = o.Ember.Service.extend(a, {
                 friends: o.Ember.A(),
                 isFriend: function(e) {
                     const t = this.get("friends");
@@ -5034,7 +5034,7 @@
             }), t.default = void 0;
             var i = n(1);
             const o = ["chat", "away"];
-            var a = i.Ember.Object.extend({
+            var s = i.Ember.Object.extend({
                 id: null,
                 puuid: null,
                 summonerId: null,
@@ -5082,7 +5082,7 @@
                     return n || t && e && i === e.platformId && o === e.product
                 }
             });
-            t.default = a
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -5090,8 +5090,8 @@
             }), t.default = void 0;
             var i = n(1);
             const o = "/lol-chat/v1/is-discord-integration-enabled",
-                a = "/lol-chat/v1/is-discord-link-available",
-                s = "/lol-chat/v1/is-discord-linked",
+                s = "/lol-chat/v1/is-discord-link-available",
+                a = "/lol-chat/v1/is-discord-linked",
                 r = e => `/lol-lobby/v2/ags/${e}/joinCode`;
             var l = i.Ember.Service.extend({
                 isEnabled: !1,
@@ -5101,9 +5101,9 @@
                 init: function() {
                     this._super(...arguments), i.db.observe(o, this, (e => {
                         this.set("isEnabled", Boolean(e))
-                    })), i.db.observe(a, this, (e => {
-                        this.set("isLinkAvailable", Boolean(e))
                     })), i.db.observe(s, this, (e => {
+                        this.set("isLinkAvailable", Boolean(e))
+                    })), i.db.observe(a, this, (e => {
                         this.set("isLinked", Boolean(e))
                     }))
                 },
@@ -5130,7 +5130,7 @@
                     e && i.db.delete(r(e))
                 },
                 willDestroy() {
-                    this._super(...arguments), this.deleteSmartUrl(), i.db.unobserve(o, this), i.db.unobserve(a, this), i.db.unobserve(s, this)
+                    this._super(...arguments), this.deleteSmartUrl(), i.db.unobserve(o, this), i.db.unobserve(s, this), i.db.unobserve(a, this)
                 }
             });
             t.default = l
@@ -5175,8 +5175,8 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = n(9),
-                s = n(15),
+                s = n(9),
+                a = n(15),
                 r = n(12),
                 l = n(108),
                 c = n(109),
@@ -5338,7 +5338,7 @@
                 isOpenPartyEnabled: o.Ember.computed.not("isOpenPartyDisabled"),
                 isMap21: o.Ember.computed.equal("lobby.gameConfig.mapId", 21),
                 isDoubleUp: o.Ember.computed("queueId", (function() {
-                    return a.PAIRS_QUEUE_IDS.includes(this.get("queueId"))
+                    return s.PAIRS_QUEUE_IDS.includes(this.get("queueId"))
                 })),
                 isTFT: o.Ember.computed.equal("gameMode", r.TFT_GAME_MODE),
                 isCherry: o.Ember.computed.equal("gameMode", r.CHERRY_GAME_MODE),
@@ -5477,7 +5477,7 @@
                 },
                 leaveLobby: function() {
                     const e = this.get("gameMode"),
-                        t = (0, s.getGameKeyFromGameMode)(e);
+                        t = (0, a.getGameKeyFromGameMode)(e);
                     return o.datadogRum.startOperation(o.datadogRum.XP_CGL_PREGAME_LOBBY_LEAVE, {
                         game: {
                             key: t
@@ -5562,7 +5562,7 @@
                 },
                 cancelMatchmakingSearch: function() {
                     const e = this.get("gameMode"),
-                        t = (0, s.getGameKeyFromGameMode)(e);
+                        t = (0, a.getGameKeyFromGameMode)(e);
                     return o.datadogRum.startOperation(o.datadogRum.XP_CGL_PREGAME_MATCHMAKING_CANCEL, {
                         game: {
                             key: t
@@ -5607,7 +5607,7 @@
                     this.set("doubleUpSwapCount", this.get("doubleUpSwapCount") + 1), this.set("doubleUpSwapTimerStart", new Date)
                 },
                 checkForDoubleUpTelemetryTrackers(e) {
-                    const t = a.PAIRS_QUEUE_IDS.includes(e?.gameConfig?.queueId),
+                    const t = s.PAIRS_QUEUE_IDS.includes(e?.gameConfig?.queueId),
                         n = !!this.get("doubleUpLobbyDurationStart"),
                         i = e?.localMember?.isLeader;
                     e && t && i ? t && i && !n && !this.get("isDoubleUpMatchmaking") && this.startDoubleUpTelemetryTrackers() : n && this.sendDoubleUpTelemetryEvent(!1)
@@ -5747,8 +5747,8 @@
             "use strict";
             var i = n(1),
                 o = n(111),
-                a = n(112);
-            const s = (0, i.emberDataBinding)({
+                s = n(112);
+            const a = (0, i.emberDataBinding)({
                 Ember: i.Ember,
                 websocket: (0, i.getProvider)().getSocket(),
                 logPrefix: "parties:service:matchmaking",
@@ -5768,7 +5768,7 @@
                     currentSummoner: "lol-summoner/v1/current-summoner"
                 }
             });
-            e.exports = i.Ember.Service.extend(s, {
+            e.exports = i.Ember.Service.extend(a, {
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 currentPartyMembers: i.Ember.computed.alias("lobbiesService.currentPartyMembers"),
                 matchmakingErrors: i.Ember.computed.alias("matchmakingSearchState.errors"),
@@ -5790,7 +5790,7 @@
                 })),
                 longestSearchErrorPenaltyTimeRemaining: i.Ember.computed.readOnly("longestSearchError.penaltyTimeRemaining"),
                 longestSearchErrorPenaltyTimeRemainingFormatted: i.Ember.computed("longestSearchErrorPenaltyTimeRemaining", (function() {
-                    return (0, a.formatThreeLargestUnits)(this.get("longestSearchErrorPenaltyTimeRemaining"))
+                    return (0, s.formatThreeLargestUnits)(this.get("longestSearchErrorPenaltyTimeRemaining"))
                 })),
                 searchState: i.Ember.computed.alias("matchmakingSearch.searchState"),
                 isSearching: i.Ember.computed.equal("searchState", o.MATCHMAKING_STATES.SEARCHING),
@@ -5849,8 +5849,8 @@
                     const t = Math.floor(e / 60 / 60 / 24 / 7);
                     let n = Math.floor(e / 60 / 60 / 24 % 7),
                         o = Math.floor(e / 60 / 60 % 24);
-                    const a = Math.floor(e / 60 % 60),
-                        s = ("0" + (Math.floor(e) % 60).toString()).slice(-2);
+                    const s = Math.floor(e / 60 % 60),
+                        a = ("0" + (Math.floor(e) % 60).toString()).slice(-2);
                     return t > 1 ? n > 0 ? o > 0 ? i.tra.formatString("queue_penalty_timer_wdh", {
                         weeks: t,
                         days: n,
@@ -5866,19 +5866,19 @@
                     }) : (n += 7 * t, n > 2 ? o > 0 ? i.tra.formatString("queue_penalty_timer_dhms", {
                         days: n,
                         hours: o,
-                        minutes: a,
-                        seconds: s
+                        minutes: s,
+                        seconds: a
                     }) : i.tra.formatString("queue_penalty_timer_dms", {
                         days: n,
-                        minutes: a,
-                        seconds: s
+                        minutes: s,
+                        seconds: a
                     }) : (o += 24 * n, o > 0 ? i.tra.formatString("queue_penalty_timer_hms", {
                         hours: o,
-                        minutes: a,
-                        seconds: s
+                        minutes: s,
+                        seconds: a
                     }) : i.tra.formatString("queue_penalty_timer_ms", {
-                        minutes: a,
-                        seconds: s
+                        minutes: s,
+                        seconds: a
                     })))
                 }
             }
@@ -5904,8 +5904,8 @@
             "use strict";
             var i = n(1),
                 o = l(n(5)),
-                a = n(9),
-                s = n(12),
+                s = n(9),
+                a = n(12),
                 r = l(n(7));
 
             function l(e) {
@@ -5946,15 +5946,15 @@
                 isSolo: i.Ember.computed.alias("lobbies.isSolo"),
                 isTFT: i.Ember.computed.alias("lobbies.isTFT"),
                 partyHasNewTFTPlayer: i.Ember.computed("eligibilities", (function() {
-                    return !!this.get("eligibilitiesEntity").getRestrictionForCode(a.TFT_NEW_PLAYER_RESTRICTION)
+                    return !!this.get("eligibilitiesEntity").getRestrictionForCode(s.TFT_NEW_PLAYER_RESTRICTION)
                 })),
                 newTFTPlayers: i.Ember.computed("eligibilities", (function() {
-                    const e = this.get("eligibilitiesEntity").getRestrictionForCode(a.TFT_NEW_PLAYER_RESTRICTION);
+                    const e = this.get("eligibilitiesEntity").getRestrictionForCode(s.TFT_NEW_PLAYER_RESTRICTION);
                     return e ? e.puuids : []
                 })),
                 isNewTFTPlayer: i.Ember.computed("localSummonerId", "eligibilities", (function() {
                     const e = this.get("localSummonerId"),
-                        t = this.get("eligibilitiesEntity").getRestrictionForCode(a.TFT_NEW_PLAYER_RESTRICTION);
+                        t = this.get("eligibilitiesEntity").getRestrictionForCode(s.TFT_NEW_PLAYER_RESTRICTION);
                     return !!t && -1 !== t.summonerIds.indexOf(e)
                 })),
                 hasRankedDivisionRestriction: i.Ember.computed("eligibilitiesEntity.restrictions", "lobbies.hasLobbyRestrictions", (function() {
@@ -5973,7 +5973,7 @@
                 })),
                 hasSeenAutoshowDoubleUpTooltip: !1,
                 shouldAutoshowDoubleUpTooltip: i.Ember.computed("eligibilitiesEntity.warnings.[]", "localSummonerId", "hasSeenAutoshowDoubleUpTooltip", (function() {
-                    return (this.get("eligibilitiesEntity.warnings") || []).reduce(((e, t) => (e || t.restrictionCode === a.DOUBLE_UP_PLAYER_RANK_DISPARITY_WARNING) && t.summonerIds.includes(this.get("localSummonerId")) && !this.get("hasSeenAutoshowDoubleUpTooltip")), !1)
+                    return (this.get("eligibilitiesEntity.warnings") || []).reduce(((e, t) => (e || t.restrictionCode === s.DOUBLE_UP_PLAYER_RANK_DISPARITY_WARNING) && t.summonerIds.includes(this.get("localSummonerId")) && !this.get("hasSeenAutoshowDoubleUpTooltip")), !1)
                 })),
                 markDUWarningAsSeen: function() {
                     this.set("hasSeenAutoshowDoubleUpTooltip", !0)
@@ -5993,7 +5993,7 @@
                         const n = [];
                         let i = !1;
                         this.applyRestrictionGroupRules(e.restrictions).forEach((t => {
-                            t.queueId = e.queueId, a.TENCENT_MINOR_RESTRICTIONS.includes(t.restrictionCode) ? i || (i = !0, n.push(this.generateRestrictionForParty(t))) : n.push(this.generateRestrictionForParty(t))
+                            t.queueId = e.queueId, s.TENCENT_MINOR_RESTRICTIONS.includes(t.restrictionCode) ? i || (i = !0, n.push(this.generateRestrictionForParty(t))) : n.push(this.generateRestrictionForParty(t))
                         })), Promise.all(n).then((e => {
                             t(e)
                         }))
@@ -6020,9 +6020,9 @@
                                 })) : i.push(n.getSummoner(e))
                             })), o = Promise.all(i)
                         } else o = Promise.resolve([]);
-                        const a = this.get("queues").getQueueById(e.queueId);
-                        let s = Promise.resolve([]);
-                        return a && a.isRanked && (s = i.LeagueTierNames.getTiersForQueue(a.type)), Promise.all([o, s]).then((n => {
+                        const s = this.get("queues").getQueueById(e.queueId);
+                        let a = Promise.resolve([]);
+                        return s && s.isRanked && (a = i.LeagueTierNames.getTiersForQueue(s.type)), Promise.all([o, a]).then((n => {
                             const i = n[0],
                                 o = n[1];
                             t(this._generateMessageForParty(e, i, ", ", o))
@@ -6039,26 +6039,26 @@
                     const m = this.get("queues"),
                         u = m.getQueueById(e.queueId);
                     let d = !1;
-                    if ("PlayerMinLevelRestriction" === e.restrictionCode || "PlayerAvailableChampionRestriction" === e.restrictionCode || "PrerequisiteQueuesNotPlayedRestriction" === e.restrictionCode || "PlayerTimePlayedRestriction" === e.restrictionCode || "PlayerMinorRestriction" === e.restrictionCode || e.restrictionCode === a.TFT_NEW_PLAYER_RESTRICTION || e.restrictionCode === a.LOL_NEW_PLAYER_RESTRICTION || e.restrictionCode === a.MIN_NORM_GAMES_RANKED_RESTRICTION) {
+                    if ("PlayerMinLevelRestriction" === e.restrictionCode || "PlayerAvailableChampionRestriction" === e.restrictionCode || "PrerequisiteQueuesNotPlayedRestriction" === e.restrictionCode || "PlayerTimePlayedRestriction" === e.restrictionCode || "PlayerMinorRestriction" === e.restrictionCode || e.restrictionCode === s.TFT_NEW_PLAYER_RESTRICTION || e.restrictionCode === s.LOL_NEW_PLAYER_RESTRICTION || e.restrictionCode === s.MIN_NORM_GAMES_RANKED_RESTRICTION) {
                         const t = m.getMapModeInfo(u.mapId, u.gameMode);
                         if ("PlayerTimePlayedRestriction" === e.restrictionCode || "PlayerMinorRestriction" === e.restrictionCode) d = `game_select_queue_restriction_party_${r.toLowerCase()}`;
-                        else if (e.restrictionCode === a.TFT_NEW_PLAYER_RESTRICTION) {
+                        else if (e.restrictionCode === s.TFT_NEW_PLAYER_RESTRICTION) {
                             e.summonerIds.length > 1 || !e.summonerIds.includes(this.get("localSummonerId")) ? (d = "game_select_queue_restriction_party_tftnewplayerrestrictionveteran", l = {
                                 ...l,
                                 gameMode: t.gameModeShortName
                             }) : (d = "game_select_queue_restriction_party_tftnewplayerrestriction", l = {
                                 gamesRemaining: l.gamesWonRemaining
                             })
-                        } else if (e.restrictionCode === a.LOL_NEW_PLAYER_RESTRICTION) {
+                        } else if (e.restrictionCode === s.LOL_NEW_PLAYER_RESTRICTION) {
                             e.summonerIds.length > 1 || !e.summonerIds.includes(this.get("localSummonerId")) ? d = "game_select_queue_restriction_party_lolnewplayerrestrictionveteran" : (d = "game_select_queue_restriction_party_lolnewplayerrestriction", l = {
                                 normalLolGamesRemaining: l.normalLolGamesPlayedRemaining
                             })
-                        } else if (e.restrictionCode === a.MIN_NORM_GAMES_RANKED_RESTRICTION) {
+                        } else if (e.restrictionCode === s.MIN_NORM_GAMES_RANKED_RESTRICTION) {
                             const t = e.summonerIds.length > 1 || !e.summonerIds.includes(this.get("localSummonerId"));
-                            a.SR_RANKED_SOLO_DUO_QUEUE_IDS.includes(e.queueId) ? t ? d = "game_select_queue_restriction_party_lolminnormalgamesforrankedrestrictionsoloduoveteran" : (d = "game_select_queue_restriction_party_lolminnormalgamesforrankedrestrictionsoloduo", l = {
+                            s.SR_RANKED_SOLO_DUO_QUEUE_IDS.includes(e.queueId) ? t ? d = "game_select_queue_restriction_party_lolminnormalgamesforrankedrestrictionsoloduoveteran" : (d = "game_select_queue_restriction_party_lolminnormalgamesforrankedrestrictionsoloduo", l = {
                                 normalLolGamesPlayed: l.normalLolGamesPlayed,
                                 normalLolGamesRequired: l.normalLolGamesRequired
-                            }) : a.SR_RANKED_FLEX_QUEUE_IDS.includes(e.queueId) && (t ? d = "game_select_queue_restriction_party_lolminnormalgamesforrankedrestrictionflexveteran" : (d = "game_select_queue_restriction_party_lolminnormalgamesforrankedrestrictionflex", l = {
+                            }) : s.SR_RANKED_FLEX_QUEUE_IDS.includes(e.queueId) && (t ? d = "game_select_queue_restriction_party_lolminnormalgamesforrankedrestrictionflexveteran" : (d = "game_select_queue_restriction_party_lolminnormalgamesforrankedrestrictionflex", l = {
                                 normalLolGamesPlayed: l.normalLolGamesPlayed,
                                 normalLolGamesRequired: l.normalLolGamesRequired
                             }))
@@ -6076,7 +6076,7 @@
                         const t = o.default.getLocInfoForPlayerRankSoloOnlyRestriction(e, i);
                         d = t.key, l = t.args
                     } else d = `game_select_queue_restriction_party_${r.toLowerCase()}`;
-                    if (u && u.gameMode === s.CHERRY_GAME_MODE) {
+                    if (u && u.gameMode === a.CHERRY_GAME_MODE) {
                         const t = 8100;
                         if ("TeamDivisionRestriction" === e.restrictionCode) {
                             d = "game_select_queue_restriction_party_cherrygladiatorratingdelta", l = {
@@ -6087,7 +6087,7 @@
                             ratingRestrictionThreshold: t
                         })
                     }
-                    e.restrictionCode === a.MULTIPLAYER_UNMATCHED_TEAMS_RESTRICTIONS && (d = this.get("isTFT") ? `${d}_TFT` : `${d}_LOL`);
+                    e.restrictionCode === s.MULTIPLAYER_UNMATCHED_TEAMS_RESTRICTIONS && (d = this.get("isTFT") ? `${d}_TFT` : `${d}_LOL`);
                     return this.get("tra.formatString")(d, l)
                 },
                 _arrayLength: function(e) {
@@ -6142,8 +6142,8 @@
                 isTutorialRestricted: function() {
                     const e = this.get("eligibilities");
                     if (e)
-                        for (let t = 0; t < a.TUTORIAL_QUEUE_IDS.length; t++) {
-                            const n = e[a.TUTORIAL_QUEUE_IDS[t]];
+                        for (let t = 0; t < s.TUTORIAL_QUEUE_IDS.length; t++) {
+                            const n = e[s.TUTORIAL_QUEUE_IDS[t]];
                             if (n && this.get("eligibilitiesEntity").hasMinorRestriction(n.restrictions)) return !0
                         }
                     return !1
@@ -6261,10 +6261,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(10)) && i.__esModule ? i : {
+                s = (i = n(10)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(9),
+                a = n(9),
                 r = n(12);
             const l = (0, o.emberDataBinding)({
                 Ember: o.Ember,
@@ -6290,7 +6290,7 @@
                 }
             });
             e.exports = o.Ember.Service.extend(l, {
-                platformConfigSingleton: a.default,
+                platformConfigSingleton: s.default,
                 uxSettings: null,
                 _bannerAnimationsEnabled: !0,
                 bannerAnimationsEnabled: o.Ember.computed.and("largeAreaAnimationsEnabled", "_bannerAnimationsEnabled"),
@@ -6305,7 +6305,7 @@
                     this._super(), o.UXSettings.removeObserver(this.get("uxSettingsListener")), o.db.unobserve(this)
                 },
                 _handleSettingsReady(e) {
-                    e && o.db.observe(`/lol-settings${s.SETTINGS_API.PATH}`, this, this._handleRoleSwapFtuxSeenConfig)
+                    e && o.db.observe(`/lol-settings${a.SETTINGS_API.PATH}`, this, this._handleRoleSwapFtuxSeenConfig)
                 },
                 _handleRoleSwapFtuxSeenConfig(e) {
                     const t = !(!e || !e.data) && e?.data[r.ROLE_SWAP_FTUX_MODAL_SEEN_CONFIG];
@@ -6356,8 +6356,8 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = n(109),
-                s = (i = n(10)) && i.__esModule ? i : {
+                s = n(109),
+                a = (i = n(10)) && i.__esModule ? i : {
                     default: i
                 },
                 r = n(9),
@@ -6442,7 +6442,7 @@
                 nameError: null,
                 isSwitchingTeamsOrSpectating: !1,
                 preventTeamChanges: !1,
-                platformConfigSingleton: s.default,
+                platformConfigSingleton: a.default,
                 playerNames: o.playerNames,
                 playerInputs: o.Ember.Object.create({
                     name: "",
@@ -6470,7 +6470,7 @@
                 spectatorPolicy: o.Ember.computed.alias("lobby.gameConfig.customSpectatorPolicy"),
                 isSpectatorCustom: o.Ember.computed("spectatorPolicy", (function() {
                     const e = this.get("spectatorPolicy");
-                    return e && e !== a.CUSTOM_GAME_SPECTATOR_VALUES.NotAllowed
+                    return e && e !== s.CUSTOM_GAME_SPECTATOR_VALUES.NotAllowed
                 })),
                 isCustom: o.Ember.computed.alias("lobby.gameConfig.isCustom"),
                 mutatorName: o.Ember.computed.alias("lobby.gameConfig.customMutatorName"),
@@ -6506,7 +6506,7 @@
                     const e = this.get("subcategories");
                     if (!e || e.length < 1) return;
                     const t = e[this.get("playerInputs.subcategoryIndex")];
-                    t && "available" === a.GAME_AVAILABILITY_TYPES[t.get("queueAvailability")] || this.resetSelectedSubcategory()
+                    t && "available" === s.GAME_AVAILABILITY_TYPES[t.get("queueAvailability")] || this.resetSelectedSubcategory()
                 })),
                 gameServerRegions: o.Ember.computed.alias("queues.gameServerRegions"),
                 updatePlayerInputServerRegionObserver: o.Ember.on("init", o.Ember.observer("queues.gameServerRegions.[]", (function() {
@@ -6543,14 +6543,14 @@
                         n = this.get("championSummary"),
                         i = this.get("recommendedPositions");
                     if (n && i) return e.forEach((e => {
-                        const a = n.findBy("id", e.id),
-                            s = a?.name,
-                            r = a?.squarePortraitPath,
+                        const s = n.findBy("id", e.id),
+                            a = s?.name,
+                            r = s?.squarePortraitPath,
                             l = i[e.id]?.recommendedPositions;
-                        if (!(r && s && l)) return;
+                        if (!(r && a && l)) return;
                         const c = {
                             id: e.id,
-                            name: s,
+                            name: a,
                             botDifficulties: o.Ember.A(),
                             selected: null,
                             botIconUrl: r,
@@ -6615,7 +6615,7 @@
                     const e = this.get("subcategories");
                     for (let t = 0; t < e.length; t++) {
                         const n = e[t].get("queueAvailability");
-                        if ("available" === a.GAME_AVAILABILITY_TYPES[n]) {
+                        if ("available" === s.GAME_AVAILABILITY_TYPES[n]) {
                             this.selectSubcategory(t);
                             break
                         }
@@ -6634,9 +6634,9 @@
                     if (!n) return !1;
                     const i = t[this.get("playerInputs.subcategoryIndex")],
                         o = this.get("playerInputs.numPlayersPerTeam"),
-                        a = i.get("numPlayersPerTeam"),
-                        s = n.get("numPlayersPerTeam");
-                    (o === a || o > s) && this.set("playerInputs.numPlayersPerTeam", s);
+                        s = i.get("numPlayersPerTeam"),
+                        a = n.get("numPlayersPerTeam");
+                    (o === s || o > a) && this.set("playerInputs.numPlayersPerTeam", a);
                     const r = n.get("mutators"),
                         l = this.get("playerInputs.mutatorId");
                     if (r.length > 0 && !r.findBy("id", l)) {
@@ -6725,7 +6725,7 @@
                 getErrorTypeFromCreateResponse: function(e) {
                     let t = 500;
                     e && e.status && (t = e.status);
-                    const n = a.CUSTOM_GAME_ERROR_CODES[t] ? a.CUSTOM_GAME_ERROR_CODES[t] : "UnknownException";
+                    const n = s.CUSTOM_GAME_ERROR_CODES[t] ? s.CUSTOM_GAME_ERROR_CODES[t] : "UnknownException";
                     return o.logger.error("Creating custom game received error:", {
                         errorType: n,
                         statusCode: t,
@@ -6789,18 +6789,18 @@
                     return 1
                 },
                 addBot: function(e, t, n, i) {
-                    const a = this.teamToStringId(e);
-                    if (0 !== a.length) {
+                    const s = this.teamToStringId(e);
+                    if (0 !== s.length) {
                         const e = n || "NONE";
-                        this._createTempBot(a, t, e);
-                        const s = {
+                        this._createTempBot(s, t, e);
+                        const a = {
                             botDifficulty: e,
                             championId: t,
-                            teamId: a,
+                            teamId: s,
                             position: i,
                             botUuid: c.v1()
                         };
-                        return this.get("api.lobby").post("/v1/lobby/custom/bots", s).catch((e => {
+                        return this.get("api.lobby").post("/v1/lobby/custom/bots", a).catch((e => {
                             e.text && o.logger.error("an error has occurred when adding a bot", JSON.parse(e.text)), this._removeTempBots()
                         }))
                     }
@@ -6810,21 +6810,21 @@
                     team: t,
                     championId: n,
                     botDifficulty: i,
-                    botPosition: a,
-                    botUuid: s
+                    botPosition: s,
+                    botUuid: a
                 }) {
-                    const r = `/v1/lobby/custom/bots/${e}/${s}`,
+                    const r = `/v1/lobby/custom/bots/${e}/${a}`,
                         l = this.teamToStringId(t);
                     if (0 !== l.length) {
                         const e = i || "NONE";
                         c.v1();
-                        this._removeBotByBotId(s), this._createTempBot(l, n, e);
+                        this._removeBotByBotId(a), this._createTempBot(l, n, e);
                         const t = {
                             botDifficulty: e,
                             championId: n,
                             teamId: l,
-                            position: a,
-                            botUuid: s
+                            position: s,
+                            botUuid: a
                         };
                         return this.get("api.lobby").post(r, t).catch((e => {
                             e.text && o.logger.error("an error has occurred when changing a bot", JSON.parse(e.text)), this._removeTempBots()
@@ -6882,11 +6882,11 @@
         }, (e, t, n) => {
             var i = n(120),
                 o = n(123),
-                a = o;
-            a.v1 = i, a.v4 = o, e.exports = a
+                s = o;
+            s.v1 = i, s.v4 = o, e.exports = s
         }, (e, t, n) => {
-            var i, o, a = n(121),
-                s = n(122),
+            var i, o, s = n(121),
+                a = n(122),
                 r = 0,
                 l = 0;
             e.exports = function(e, t, n) {
@@ -6895,7 +6895,7 @@
                     u = (e = e || {}).node || i,
                     d = void 0 !== e.clockseq ? e.clockseq : o;
                 if (null == u || null == d) {
-                    var p = a();
+                    var p = s();
                     null == u && (u = i = [1 | p[0], p[1], p[2], p[3], p[4], p[5]]), null == d && (d = o = 16383 & (p[6] << 8 | p[7]))
                 }
                 var h = void 0 !== e.msecs ? e.msecs : (new Date).getTime(),
@@ -6908,7 +6908,7 @@
                 var _ = h / 4294967296 * 1e4 & 268435455;
                 m[c++] = _ >>> 8 & 255, m[c++] = 255 & _, m[c++] = _ >>> 24 & 15 | 16, m[c++] = _ >>> 16 & 255, m[c++] = d >>> 8 | 128, m[c++] = 255 & d;
                 for (var y = 0; y < 6; ++y) m[c + y] = u[y];
-                return t || s(m)
+                return t || a(m)
             }
         }, e => {
             var t = "undefined" != typeof crypto && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || "undefined" != typeof msCrypto && "function" == typeof window.msCrypto.getRandomValues && msCrypto.getRandomValues.bind(msCrypto);
@@ -6935,20 +6935,20 @@
             var i = n(121),
                 o = n(122);
             e.exports = function(e, t, n) {
-                var a = t && n || 0;
+                var s = t && n || 0;
                 "string" == typeof e && (t = "binary" === e ? new Array(16) : null, e = null);
-                var s = (e = e || {}).random || (e.rng || i)();
-                if (s[6] = 15 & s[6] | 64, s[8] = 63 & s[8] | 128, t)
-                    for (var r = 0; r < 16; ++r) t[a + r] = s[r];
-                return t || o(s)
+                var a = (e = e || {}).random || (e.rng || i)();
+                if (a[6] = 15 & a[6] | 64, a[8] = 63 & a[8] | 128, t)
+                    for (var r = 0; r < 16; ++r) t[s + r] = a[r];
+                return t || o(a)
             }
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(125)),
-                a = s(n(126));
+                o = a(n(125)),
+                s = a(n(126));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -6987,12 +6987,12 @@
                     if (!e.id && !e.partyId) return void i.logger.error("joinCustomGame options needs to have an id defined");
                     const n = !e.partyId;
                     return t = e.hasPassword ? this.promptPasswordModal() : Promise.resolve(), t.then((t => {
-                        const a = {
+                        const s = {
                             asSpectator: !!e.spectator
                         };
-                        t && (n ? a.password = t : a.lobbyPassword = t), i.logger.warning(`JOINING CUSTOM GAME FROM LIST (${e.id?e.id:e.partyId})`);
-                        const s = n ? `/v1/custom-games/${e.id}/join` : `/v2/party/${e.partyId}/join`;
-                        return (0, i.dataBinding)("lol-lobby").post(s, a).catch((e => {
+                        t && (n ? s.password = t : s.lobbyPassword = t), i.logger.warning(`JOINING CUSTOM GAME FROM LIST (${e.id?e.id:e.partyId})`);
+                        const a = n ? `/v1/custom-games/${e.id}/join` : `/v2/party/${e.partyId}/join`;
+                        return (0, i.dataBinding)("lol-lobby").post(a, s).catch((e => {
                             let t = this.get("tra.custom_game_list_error_generic");
                             if (n) {
                                 t = [401, 403, 404, 432, 438, 500].includes(e.status) ? this.get(`tra.custom_game_list_error_${e.status}`) : this.get("tra.custom_game_list_error_generic")
@@ -7007,7 +7007,7 @@
                 createCustomListBind: function() {
                     const e = {
                         objectTypes: {
-                            "[]": a.default
+                            "[]": s.default
                         },
                         root: this
                     };
@@ -7140,10 +7140,10 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(130)),
-                a = s(n(44));
+                o = a(n(130)),
+                s = a(n(44));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -7158,7 +7158,7 @@
                 isLobbyFull: i.Ember.computed.alias("lobbiesService.isLobbyFull"),
                 isCustomUI: i.Ember.computed.alias("lobbiesService.isCustomUI"),
                 setupCallbacks: i.Ember.on("init", (function() {
-                    a.default._registerCanInviteCallback(this.canInvitePlayer.bind(this)), a.default._registerCanInviteByPuuidCallback(this.canInvitePlayerByPuuid.bind(this)), a.default._registerInviteCallback(this.invitePlayer.bind(this)), a.default._registerInviteDiscordCallback(this.invitePlayerDiscord.bind(this)), a.default._registerInviteRiotCallback(this.invitePlayerRiot.bind(this))
+                    s.default._registerCanInviteCallback(this.canInvitePlayer.bind(this)), s.default._registerCanInviteByPuuidCallback(this.canInvitePlayerByPuuid.bind(this)), s.default._registerInviteCallback(this.invitePlayer.bind(this)), s.default._registerInviteDiscordCallback(this.invitePlayerDiscord.bind(this)), s.default._registerInviteRiotCallback(this.invitePlayerRiot.bind(this))
                 })),
                 canInvitePlayer: function(e) {
                     return !(!e || !this.get("currentPlayerCanInvite")) && ((!this.get("isLobbyFull") || !this.get("isCustomUI")) && !this.playerInParty(e))
@@ -7167,12 +7167,12 @@
                     return !(!e || !this.get("currentPlayerCanInvite")) && ((!this.get("isLobbyFull") || !this.get("isCustomUI")) && !this.playerInPartyByPuuid(e))
                 },
                 invitePlayer: function(e, t = null, n = null) {
-                    return new Promise(((o, a) => {
-                        if (!this.get("currentPlayerCanInvite")) return void a(new Error("CANNOT_INVITE"));
-                        let s;
-                        this.playerInParty(e) && a(new Error("PLAYER_IN_PARTY")), s = t ? Promise.resolve({
+                    return new Promise(((o, s) => {
+                        if (!this.get("currentPlayerCanInvite")) return void s(new Error("CANNOT_INVITE"));
+                        let a;
+                        this.playerInParty(e) && s(new Error("PLAYER_IN_PARTY")), a = t ? Promise.resolve({
                             displayName: t
-                        }) : this.get("summonerService").getSummoner(e), s.then((n => (t = n.displayName, this.checkIfPlayerAvailable(e, t)))).then((() => this.get("lobbiesService").invitePlayer(e))).then((() => {
+                        }) : this.get("summonerService").getSummoner(e), a.then((n => (t = n.displayName, this.checkIfPlayerAvailable(e, t)))).then((() => this.get("lobbiesService").invitePlayer(e))).then((() => {
                             n && i.Telemetry.sendCustomData("parties-invitations-suggested-players", {
                                 partyId: this.get("lobbiesService.partyId"),
                                 fromSummonerId: this.get("lobbiesService.currentPlayer.summonerId"),
@@ -7180,7 +7180,7 @@
                                 reason: n
                             }), o()
                         })).catch((() => {
-                            a(new Error("COULD_NOT_INVITE"))
+                            s(new Error("COULD_NOT_INVITE"))
                         }))
                     }))
                 },
@@ -7223,8 +7223,8 @@
                         e || i();
                         const o = this.get("chatService");
                         if (!o.isFriend(e)) return void n();
-                        const a = o.getFriend(e);
-                        a && o.me && o.me.product === a.product && o.me.platformId === a.platformId && -1 !== ["chat", "away"].indexOf(a.availability) ? n() : (this.showFriendNotAvailableToast(t), i())
+                        const s = o.getFriend(e);
+                        s && o.me && o.me.product === s.product && o.me.platformId === s.platformId && -1 !== ["chat", "away"].indexOf(s.availability) ? n() : (this.showFriendNotAvailableToast(t), i())
                     }))
                 },
                 showFriendNotAvailableToast: function(e) {
@@ -7302,8 +7302,8 @@
             "use strict";
             var i = n(1),
                 o = n(9),
-                a = n(108),
-                s = n(132),
+                s = n(108),
+                a = n(132),
                 r = n(133),
                 l = n(134);
             const c = "/lol-settings/v2/ready",
@@ -7392,9 +7392,9 @@
                     e.forEach((e => {
                         const n = e.f2p,
                             o = e.owned,
-                            a = e.loyalty,
-                            s = e.rental,
-                            r = n || o || a || s,
+                            s = e.loyalty,
+                            a = e.rental,
+                            r = n || o || s || a,
                             l = t.find((t => t.id === e.itemId));
                         l && i.Ember.set(l, "unlocked", r)
                     }));
@@ -7406,8 +7406,8 @@
                     return ((this.get("tra").exists(i) ? this.get(`tra.${i}`) : t) || "").toLocaleLowerCase(n).trim()
                 },
                 setChampionProperty(e, t, n, o) {
-                    const a = o.get(e);
-                    a && i.Ember.set(a, t, n)
+                    const s = o.get(e);
+                    s && i.Ember.set(s, t, n)
                 },
                 _getCatalogSkinPurchaseInfo: e => i.db.get(`/lol-store/v1/catalog/CHAMPION_SKIN?itemIds=[${e}]`),
                 _setSkinsPurchaseEnabled(e) {
@@ -7417,8 +7417,8 @@
                     return this._getCatalogSkinPurchaseInfo(n).then((n => n?.length ? (n.forEach((n => {
                         if (!n) return;
                         const o = e.find((e => e.id === (n.id || n.itemId))),
-                            a = this._isSkinPurchasable(n) && !t;
-                        i.Ember.set(o, "purchaseEnabled", a)
+                            s = this._isSkinPurchasable(n) && !t;
+                        i.Ember.set(o, "purchaseEnabled", s)
                     })), Promise.resolve()) : Promise.resolve()))
                 },
                 _setSkinsOwnership(e = []) {
@@ -7428,9 +7428,9 @@
                         if (!e.ownership) return;
                         const n = e.ownership.owned,
                             o = e.ownership.loyaltyReward,
-                            a = e.ownership.rental.rented,
-                            s = e.ownership.xboxGPReward,
-                            r = t.includes(e.id) || n || o || a || s;
+                            s = e.ownership.rental.rented,
+                            a = e.ownership.xboxGPReward,
+                            r = t.includes(e.id) || n || o || s || a;
                         i.Ember.set(e, "unlocked", r)
                     }))
                 },
@@ -7471,19 +7471,19 @@
                             const {
                                 id: i,
                                 name: o,
-                                squarePortraitPath: a,
-                                skins: s
+                                squarePortraitPath: s,
+                                skins: a
                             } = e, r = this.getSearchMatchingTerms(i, o, t), l = this._getChampionMastery(i), c = this._getChampionFavorite(i), m = this._getChampionFavoritePositions(i);
                             n.set(i, {
                                 id: i,
                                 name: o,
-                                squarePortraitPath: a,
+                                squarePortraitPath: s,
                                 searchMatchingTerms: r,
-                                skins: s,
+                                skins: a,
                                 mastery: l,
                                 favorite: c,
                                 favoritePositions: m
-                            }), -1 === i && this.set("defaultSquarePortraitPath", a)
+                            }), -1 === i && this.set("defaultSquarePortraitPath", s)
                         }));
                         (this.get("currentQuickPlaySelections") || []).forEach((e => {
                             this.setChampionProperty(e.championId, "selectedPosition", e.positionPreference, n)
@@ -7549,13 +7549,13 @@
                     this.set("popularChampions", t);
                     const n = this.get("currentQuickPlaySelections") || [],
                         o = (e || {}).playerSlots || [],
-                        a = this.get("championByChampId") || new Map;
+                        s = this.get("championByChampId") || new Map;
                     n.forEach((e => {
                         const t = e.championId;
-                        this.setChampionProperty(t, "selectedPosition", "", a)
+                        this.setChampionProperty(t, "selectedPosition", "", s)
                     })), o.forEach((e => {
                         const t = e.championId;
-                        this.setChampionProperty(t, "selectedPosition", e.positionPreference, a)
+                        this.setChampionProperty(t, "selectedPosition", e.positionPreference, s)
                     })), this.set("currentQuickPlaySelections", o)
                 },
                 setChampionsDisabled() {
@@ -7568,9 +7568,9 @@
                     (this.get("disabledChampionIds") || []).forEach((e => {
                         this.setChampionProperty(e, "disabled", !1, o)
                     }));
-                    const a = (n || {})[e],
-                        s = (n || {})[t],
-                        r = [].concat(a || [], s || []);
+                    const s = (n || {})[e],
+                        a = (n || {})[t],
+                        r = [].concat(s || [], a || []);
                     r.forEach((e => {
                         this.setChampionProperty(e, "disabled", !0, o)
                     })), this.set("disabledChampionIds", r)
@@ -7620,15 +7620,15 @@
                     const n = this.get("settingsReady");
                     if (!n || !e || !t) return Promise.reject(new Error(`quick-play: saveLastSelectedSkinForChampion invalid params - settingsReady:${n} championId:${e} skinId:${t}`));
                     const o = this.get("champSelectSettings.data.skins") || {},
-                        a = this.get("champSelectSettings.data.spells") || {};
+                        s = this.get("champSelectSettings.data.spells") || {};
                     o[`${e}`] = t;
-                    const s = Object.assign({}, u, {
+                    const a = Object.assign({}, u, {
                         data: {
-                            spells: a,
+                            spells: s,
                             skins: o
                         }
                     });
-                    return i.db.put(m, s)
+                    return i.db.put(m, a)
                 },
                 getLastSelectedSkinForChampion(e) {
                     const t = `${e}`;
@@ -7667,31 +7667,31 @@
                 },
                 getQuickPlaySettingsSlotsForQueue(e, t, n) {
                     const i = o.QUICKPLAY_AND_SWIFTPLAY_QUEUE_IDS.includes(e),
-                        a = n[e];
-                    return a || (i && t || [])
+                        s = n[e];
+                    return s || (i && t || [])
                 },
                 quickPlayDefaultSelections: i.Ember.computed("settingsReady", "quickPlaySettingsData.slots", "quickPlaySettingsData.slotsByQueueId", "queueId", "quickPlaySettingsInitialized", "championMasteryChampionIds", "matchHistoryChampionIds", "ownedChampionIds", "entitledChampionIds", "scarcePositions", "isQuickPlayLobby", (function() {
                     const e = this.get("settingsReady"),
                         t = this.get("quickPlaySettingsData.slots") || [],
                         n = this.get("quickPlaySettingsData.slotsByQueueId") || {},
                         o = this.get("queueId"),
-                        a = this.get("quickPlaySettingsInitialized"),
-                        s = this.get("championMasteryChampionIds"),
+                        s = this.get("quickPlaySettingsInitialized"),
+                        a = this.get("championMasteryChampionIds"),
                         r = this.get("matchHistoryChampionIds"),
                         l = this.get("ownedChampionIds"),
                         c = this.get("entitledChampionIds"),
                         m = this.get("isQuickPlayLobby"),
                         u = this.get("scarcePositions"),
                         d = this.get("disabledChampionIds"),
-                        p = Boolean(r) && Boolean(l) && Boolean(c) && Boolean(u) && Boolean(s) && Boolean(d) && Boolean(o);
-                    if (!(e && a && m && p)) return [];
+                        p = Boolean(r) && Boolean(l) && Boolean(c) && Boolean(u) && Boolean(a) && Boolean(d) && Boolean(o);
+                    if (!(e && s && m && p)) return [];
                     const h = this.getQuickPlaySettingsSlotsForQueue(o, t, n);
                     if (h.length) {
                         return this.get("championAssetSubstitution").maybeSubstituteQuickplaySlotSkin(h)
                     }
                     const g = c.filter((e => !d.includes(e))),
                         b = i.lodash.shuffle(l),
-                        f = r.concat(s, b),
+                        f = r.concat(a, b),
                         _ = [...new Set(f)].filter((e => g.includes(e) && this.getChampionData(e).skins.length > 0));
                     let y = this.getValidChampPositionSelections([], _, u);
                     if (y.length < 2) {
@@ -7714,24 +7714,24 @@
                 })),
                 getSanitizedPreferredPosition(e) {
                     const t = i.ChampionStatistics.getPreferredPosition(e);
-                    return t === a.CHAMP_STATS_POSITION_UTILITY ? a.POSITIONS.UTILITY : t
+                    return t === s.CHAMP_STATS_POSITION_UTILITY ? s.POSITIONS.UTILITY : t
                 },
                 getValidChampPositionSelections(e = [], t, n) {
                     let i = (e[0] || {}).positionPreference,
                         o = 0;
                     for (; e.length < 2 && o < t.length;) {
-                        const a = t[o],
-                            s = this.getSanitizedPreferredPosition(a);
+                        const s = t[o],
+                            a = this.getSanitizedPreferredPosition(s);
                         if (i) {
                             const t = 0 !== n.length && !n.includes(i),
-                                o = n.includes(s);
-                            (t && o || !t) && s !== i && e.push({
-                                championId: a,
-                                positionPreference: s
+                                o = n.includes(a);
+                            (t && o || !t) && a !== i && e.push({
+                                championId: s,
+                                positionPreference: a
                             })
-                        } else i = s, e.push({
-                            championId: a,
-                            positionPreference: s
+                        } else i = a, e.push({
+                            championId: s,
+                            positionPreference: a
                         });
                         o++
                     }
@@ -7743,31 +7743,31 @@
                     if (0 === n.length) return [];
                     const i = h.map((e => t[e] || [])),
                         o = (0, l.getEligibleSpells)(n, r.DEFAULT_MOVEMENT_SPELLS)[0].id,
-                        a = [o, (0, l.getEligibleSpells)(n, [r.DEFAULT_NON_MOVEMENT_SPELL_BY_POSITION[e], r.DEFAULT_NON_MOVEMENT_SPELL], [o])[0].id],
-                        s = i.concat([a]).find((e => 2 === e.length && !e.includes(void 0)));
-                    return (0, l.getSpellIdsWithSmiteAssignedIfAppropriate)(s, e, n)
+                        s = [o, (0, l.getEligibleSpells)(n, [r.DEFAULT_NON_MOVEMENT_SPELL_BY_POSITION[e], r.DEFAULT_NON_MOVEMENT_SPELL], [o])[0].id],
+                        a = i.concat([s]).find((e => 2 === e.length && !e.includes(void 0)));
+                    return (0, l.getSpellIdsWithSmiteAssignedIfAppropriate)(a, e, n)
                 },
                 saveQuickPlaySelections(e) {
                     const t = this.get("settingsReady"),
                         n = this.get("queueId");
                     if (!t || !n) return Promise.resolve();
                     const o = this.get("quickPlaySettingsData.slotsByQueueId") || {},
-                        a = this.get("quickPlaySettingsData.slots");
+                        s = this.get("quickPlaySettingsData.slots");
                     o[n] = e;
-                    const s = {
+                    const a = {
                         data: {
-                            slots: a,
+                            slots: s,
                             slotsByQueueId: o
                         }
                     };
-                    return i.db.put(d, Object.assign({}, p, s))
+                    return i.db.put(d, Object.assign({}, p, a))
                 },
                 setWardSkinViaLoadouts(e, t, n) {
                     const o = {
                         id: t,
                         loadout: {
                             WARD_SKIN_SLOT: {
-                                inventoryType: s.INVENTORY_TYPES.WARD_SKIN,
+                                inventoryType: a.INVENTORY_TYPES.WARD_SKIN,
                                 itemId: e?.id
                             }
                         }
@@ -7812,10 +7812,10 @@
                 FLASH: 4
             };
             t.SPELL_IDS = o;
-            const a = {};
-            a[i.POSITIONS.TOP] = o.TELEPORT, a[i.POSITIONS.JUNGLE] = o.SMITE, a[i.POSITIONS.MIDDLE] = o.IGNITE, a[i.POSITIONS.BOTTOM] = o.HEAL, a[i.POSITIONS.UTILITY] = o.EXHAUST;
-            const s = a;
-            t.DEFAULT_NON_MOVEMENT_SPELL_BY_POSITION = s;
+            const s = {};
+            s[i.POSITIONS.TOP] = o.TELEPORT, s[i.POSITIONS.JUNGLE] = o.SMITE, s[i.POSITIONS.MIDDLE] = o.IGNITE, s[i.POSITIONS.BOTTOM] = o.HEAL, s[i.POSITIONS.UTILITY] = o.EXHAUST;
+            const a = s;
+            t.DEFAULT_NON_MOVEMENT_SPELL_BY_POSITION = a;
             const r = [o.FLASH, o.GHOST];
             t.DEFAULT_MOVEMENT_SPELLS = r;
             const l = o.HEAL;
@@ -7825,17 +7825,17 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.getEligibleSpells = function(e, t = [], n = []) {
-                return a(e, t, n)
-            }, t.getSpellIdsWithSmiteAssignedIfAppropriate = function(e = [], t, n, s = !1) {
+                return s(e, t, n)
+            }, t.getSpellIdsWithSmiteAssignedIfAppropriate = function(e = [], t, n, a = !1) {
                 const r = n.find((e => e.id === o.SPELL_IDS.SMITE));
                 return r && t === i.POSITIONS.JUNGLE && !r.isDisabled ? function(e = []) {
                     const t = [...e];
                     t[0] !== o.SPELL_IDS.SMITE && t[1] !== o.SPELL_IDS.SMITE && (t[0] === o.SPELL_IDS.FLASH ? t[1] = o.SPELL_IDS.SMITE : t[0] = o.SPELL_IDS.SMITE);
                     return t
-                }(e) : s || !r ? function(e = [], t, n) {
+                }(e) : a || !r ? function(e = [], t, n) {
                     const i = [...e],
-                        s = a(n, [o.DEFAULT_NON_MOVEMENT_SPELL_BY_POSITION[t], o.DEFAULT_NON_MOVEMENT_SPELL, ...o.DEFAULT_MOVEMENT_SPELLS], i),
-                        r = s.length && s[0].id,
+                        a = s(n, [o.DEFAULT_NON_MOVEMENT_SPELL_BY_POSITION[t], o.DEFAULT_NON_MOVEMENT_SPELL, ...o.DEFAULT_MOVEMENT_SPELLS], i),
+                        r = a.length && a[0].id,
                         l = i.indexOf(o.SPELL_IDS.SMITE); - 1 !== l && r && (i[l] = r);
                     return i
                 }(e, t, n) : e
@@ -7843,7 +7843,7 @@
             var i = n(108),
                 o = n(133);
 
-            function a(e, t = [], n = []) {
+            function s(e, t = [], n = []) {
                 const i = t.concat(e.map((e => e.id)));
                 return e.filter((e => !e.isDisabled && !n.includes(e.id))).sort(((e, t) => i.indexOf(e.id) - i.indexOf(t.id)))
             }
@@ -7851,7 +7851,7 @@
             "use strict";
             var i = n(1);
             const o = 1e4,
-                a = e => e.reduce(((e, t) => ({
+                s = e => e.reduce(((e, t) => ({
                     ...e,
                     ...t.items.reduce(((e, t) => ({
                         ...e,
@@ -7862,7 +7862,7 @@
                         [t.itemId]: t.loadoutsIcon
                     })), {})
                 })), {}),
-                s = e => e.groups.reduce(((e, t) => [...e, ...t.items.reduce(((e, t) => {
+                a = e => e.groups.reduce(((e, t) => [...e, ...t.items.reduce(((e, t) => {
                     if (t.owned || t.f2p || t.loyalty) {
                         let n = [...e, t];
                         if (t?.upgrades?.length) {
@@ -7900,22 +7900,22 @@
                     }))
                 },
                 companionIconUrls: i.Ember.computed("companions.groups", (function() {
-                    return a(this.get("companions.groups") || [])
+                    return s(this.get("companions.groups") || [])
                 })),
                 mapSkinIconUrls: i.Ember.computed("mapSkins.groups", (function() {
-                    return a(this.get("mapSkins.groups") || [])
+                    return s(this.get("mapSkins.groups") || [])
                 })),
                 damageSkinIconUrls: i.Ember.computed("damageSkins.groups", (function() {
-                    return a(this.get("damageSkins.groups") || [])
+                    return s(this.get("damageSkins.groups") || [])
                 })),
                 ownedCompanions: i.Ember.computed("companions", (function() {
-                    return s(this.get("companions"))
+                    return a(this.get("companions"))
                 })),
                 ownedMapSkins: i.Ember.computed("mapSkins", (function() {
-                    return s(this.get("mapSkins"))
+                    return a(this.get("mapSkins"))
                 })),
                 ownedDamageSkins: i.Ember.computed("damageSkins", (function() {
-                    return s(this.get("damageSkins"))
+                    return a(this.get("damageSkins"))
                 })),
                 equippedCompanion: i.Ember.computed("companions.selectedLoadoutItem.itemId", (function() {
                     return this.get("companions.selectedLoadoutItem")
@@ -7944,10 +7944,10 @@
                     e ? (t = this.get("favoriteCompanions").length ? this.get("favoriteCompanions") : this.get("ownedCompanions"), n = this.get("favoriteMapSkins").length ? this.get("favoriteMapSkins") : this.get("ownedMapSkins"), i = this.get("favoriteDamageSkins").length ? this.get("favoriteDamageSkins") : this.get("ownedDamageSkins")) : (t = this.get("ownedCompanions"), n = this.get("ownedMapSkins"), i = this.get("ownedDamageSkins")), this._randomSelections = this._getRandomLoadouts(t, n, i);
                     const {
                         randomCompanion: o,
-                        randomMapSkin: a,
-                        randomDamageSkin: s
+                        randomMapSkin: s,
+                        randomDamageSkin: a
                     } = this._randomSelections;
-                    this.set("companions.selectedLoadoutItem", o), this.set("mapSkins.selectedLoadoutItem", a), this.set("damageSkins.selectedLoadoutItem", s), this.commitRandomizedSelections(), this.startLoadoutsRandomizerCooldownTimer()
+                    this.set("companions.selectedLoadoutItem", o), this.set("mapSkins.selectedLoadoutItem", s), this.set("damageSkins.selectedLoadoutItem", a), this.commitRandomizedSelections(), this.startLoadoutsRandomizerCooldownTimer()
                 },
                 commitRandomizedSelections() {
                     if (!this._randomSelections) return;
@@ -7972,8 +7972,8 @@
             "use strict";
             var i = n(1);
             const o = 1e4,
-                a = "TFTRandomFavoritesToggle",
-                s = "/lol-settings/v2/account/LCUPreferences/lol-tft",
+                s = "TFTRandomFavoritesToggle",
+                a = "/lol-settings/v2/account/LCUPreferences/lol-tft",
                 r = e => e.reduce(((e, t) => ({
                     ...e,
                     ...t.items.reduce(((e, t) => ({
@@ -8040,8 +8040,8 @@
                         this.set("favoriteAugmentPillars", e?.favoriteItems || [])
                     })), i.db.get("/riotclient/region-locale").then((e => {
                         this.set("region", e)
-                    })), i.db.get(s, this, (e => {
-                        e && e.data && this.set("isFavoritesToggled", Boolean(e.data[a]))
+                    })), i.db.get(a, this, (e => {
+                        e && e.data && this.set("isFavoritesToggled", Boolean(e.data[s]))
                     }))
                 },
                 companionIconUrls: i.Ember.computed("companions.groups", (function() {
@@ -8103,8 +8103,8 @@
                     randomAugmentPillar: o[Math.floor(Math.random() * o.length)]
                 }),
                 randomizeAll: function(e = !1) {
-                    let t, n, i, o, a;
-                    if (e ? (t = this.get("favoriteCompanions").length ? this.get("favoriteCompanions") : this.get("ownedCompanions"), n = this.get("favoriteMapSkins").length ? this.get("favoriteMapSkins") : this.get("ownedMapSkins"), i = this.get("favoriteDamageSkins").length ? this.get("favoriteDamageSkins") : this.get("ownedDamageSkins"), o = this.get("favoriteZoomSkins").length ? this.get("favoriteZoomSkins") : this.get("ownedZoomSkins"), a = this.get("favoriteAugmentPillars").length ? this.get("favoriteAugmentPillars") : this.get("ownedAugmentPillars")) : (t = this.get("ownedCompanions"), n = this.get("ownedMapSkins"), i = this.get("ownedDamageSkins"), o = this.get("ownedZoomSkins"), a = this.get("ownedAugmentPillars")), !this._previousSelections) {
+                    let t, n, i, o, s;
+                    if (e ? (t = this.get("favoriteCompanions").length ? this.get("favoriteCompanions") : this.get("ownedCompanions"), n = this.get("favoriteMapSkins").length ? this.get("favoriteMapSkins") : this.get("ownedMapSkins"), i = this.get("favoriteDamageSkins").length ? this.get("favoriteDamageSkins") : this.get("ownedDamageSkins"), o = this.get("favoriteZoomSkins").length ? this.get("favoriteZoomSkins") : this.get("ownedZoomSkins"), s = this.get("favoriteAugmentPillars").length ? this.get("favoriteAugmentPillars") : this.get("ownedAugmentPillars")) : (t = this.get("ownedCompanions"), n = this.get("ownedMapSkins"), i = this.get("ownedDamageSkins"), o = this.get("ownedZoomSkins"), s = this.get("ownedAugmentPillars")), !this._previousSelections) {
                         const e = this.get("companions.selectedLoadoutItem"),
                             t = this.get("mapSkins.selectedLoadoutItem"),
                             n = this.get("damageSkins.selectedLoadoutItem"),
@@ -8118,23 +8118,23 @@
                             previousAugmentPillar: o
                         }
                     }
-                    this._randomSelections = this._getRandomLoadouts(t, n, i, o, a);
+                    this._randomSelections = this._getRandomLoadouts(t, n, i, o, s);
                     const {
-                        randomCompanion: s,
+                        randomCompanion: a,
                         randomMapSkin: r,
                         randomDamageSkin: l,
                         randomZoomSkin: c,
                         randomAugmentPillar: m
                     } = this._randomSelections;
-                    this.set("companions.selectedLoadoutItem", s), this.set("mapSkins.selectedLoadoutItem", r), this.set("damageSkins.selectedLoadoutItem", l), this.set("zoomSkins.selectedLoadoutItem", c), this.set("augmentPillars.selectedLoadoutItem", m)
+                    this.set("companions.selectedLoadoutItem", a), this.set("mapSkins.selectedLoadoutItem", r), this.set("damageSkins.selectedLoadoutItem", l), this.set("zoomSkins.selectedLoadoutItem", c), this.set("augmentPillars.selectedLoadoutItem", m)
                 },
                 saveFavorites() {
                     i.db.put("/lol-cosmetics/v1/favorites/tft/save")
                 },
                 saveRandomFavoritesToggle() {
-                    i.db.patch(s, {
+                    i.db.patch(a, {
                         data: {
-                            [a]: this.get("isFavoritesToggled")
+                            [s]: this.get("isFavoritesToggled")
                         },
                         schemaVersion: 1
                     })
@@ -8146,13 +8146,13 @@
                         randomMapSkin: t,
                         randomDamageSkin: n,
                         randomZoomSkin: o,
-                        randomAugmentPillar: a
-                    } = this._randomSelections, s = [i.db.put("/lol-cosmetics/v1/selection/companion", e.itemId), i.db.put("/lol-cosmetics/v1/selection/tft-map-skin", t.itemId), i.db.put("/lol-cosmetics/v1/selection/tft-damage-skin", n.itemId), i.db.put("/lol-cosmetics/v1/selection/tft-zoom-skin", o.itemId)];
-                    this.get("isAugmentPillarEnabled") && s.push(i.db.put("/lol-cosmetics/v1/selection/tft-augment-pillar", a.itemId)), i.Telemetry.sendCustomData("TFT_randomize_loadouts", {
+                        randomAugmentPillar: s
+                    } = this._randomSelections, a = [i.db.put("/lol-cosmetics/v1/selection/companion", e.itemId), i.db.put("/lol-cosmetics/v1/selection/tft-map-skin", t.itemId), i.db.put("/lol-cosmetics/v1/selection/tft-damage-skin", n.itemId), i.db.put("/lol-cosmetics/v1/selection/tft-zoom-skin", o.itemId)];
+                    this.get("isAugmentPillarEnabled") && a.push(i.db.put("/lol-cosmetics/v1/selection/tft-augment-pillar", s.itemId)), i.Telemetry.sendCustomData("TFT_randomize_loadouts", {
                         party_id: this.get("lobbiesService.partyId"),
                         shard_id: this.get("region.region"),
                         queue_id: this.get("lobbyState.selected.queueId")
-                    }), Promise.all(s).then((() => {
+                    }), Promise.all(a).then((() => {
                         this._randomSelections = null, this._previousSelections = null, this.set("serviceError", !1)
                     })).catch((() => {
                         this.rollbackRandomizedSelections(), this.set("serviceError", !0)
@@ -8169,8 +8169,8 @@
             "use strict";
             var i = n(1);
             const o = "/lol-tft-skill-tree/v1/skill-tree",
-                a = "/lol-game-data/assets/v1/generic-assets.json",
-                s = "/lol-client-config/v3/client-config/lol.client_settings.tft_skill_tree_enabled",
+                s = "/lol-game-data/assets/v1/generic-assets.json",
+                a = "/lol-client-config/v3/client-config/lol.client_settings.tft_skill_tree_enabled",
                 r = "/lol-tft-skill-tree/v1/skill-tree-rank/",
                 l = "/lol-tft/v1/tft/events";
             e.exports = i.Ember.Service.extend({
@@ -8192,7 +8192,7 @@
                     this._super(...arguments), this._binding = i.db, this._initObservers()
                 },
                 willDestroy: function() {
-                    this._binding.removeObserver(l, this), this._binding.removeObserver(r, this), this._binding.removeObserver(o, this), this._binding.removeObserver(s, this), this._binding.removeObserver(a, this), this._super(...arguments)
+                    this._binding.removeObserver(l, this), this._binding.removeObserver(r, this), this._binding.removeObserver(o, this), this._binding.removeObserver(a, this), this._binding.removeObserver(s, this), this._super(...arguments)
                 },
                 _initObservers() {
                     this._binding.addObserver(l, this, (e => {
@@ -8200,13 +8200,13 @@
                         this.set("tftEventsData", e.subNavTabs);
                         const t = e.subNavTabs.filter((e => e?.queueIds.length > 0));
                         t.length > 1 ? i.logger.error("Currently only displaying one skill tree event in the TFT Hub is supported - received " + t.length + " skill tree events.") : 1 === t.length && this.set("tftEvent", t[0])
-                    })), this._binding.addObserver(s, this, (e => {
+                    })), this._binding.addObserver(a, this, (e => {
                         e && (this.set("skillTreeEnabled", Boolean(e)), e && this._binding.addObserver(o, this, (e => {
                             e && (this.set("skillTreeData", e), e?.playerProgression?.rank && this._binding.addObserver(r + e.playerProgression.rank, this, (e => {
                                 e && this.set("skillTreeRankData", e)
                             })))
                         })))
-                    })), this._binding.addObserver(a, this, (e => {
+                    })), this._binding.addObserver(s, this, (e => {
                         e && this.set("skillTreeAssets", e["lcu-assets-tft-skill-tree"])
                     }))
                 },
@@ -8226,8 +8226,8 @@
             }), t.default = void 0;
             var i = n(1);
             const o = "/lol-settings/v2/account/LCUPreferences/lol-tft",
-                a = "shouldShowTFTNPEQueueUnlock";
-            var s = i.Ember.Service.extend({
+                s = "shouldShowTFTNPEQueueUnlock";
+            var a = i.Ember.Service.extend({
                 eligibilityService: i.Ember.inject.service("queue-eligibility"),
                 preferencesInitialized: !1,
                 shouldShowTFTNPEQueueUnlock: !1,
@@ -8239,14 +8239,14 @@
                 },
                 _handleTFTPreferences(e) {
                     if (!e || !e.data) return;
-                    const t = Boolean(e.data[a]);
+                    const t = Boolean(e.data[s]);
                     this.set("shouldShowTFTNPEQueueUnlock", t), this.set("preferencesInitialized", !0)
                 },
                 updateShouldShowTFTNPEQueueUnlock(e) {
                     const t = Boolean(e);
                     return i.db.patch(o, {
                         data: {
-                            [a]: t
+                            [s]: t
                         },
                         schemaVersion: 1
                     }).then((() => {
@@ -8254,7 +8254,7 @@
                     }))
                 }
             });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
@@ -8302,7 +8302,7 @@
             }), t.default = void 0;
             var i = n(1);
             const o = [];
-            var a = i.Ember.Service.extend({
+            var s = i.Ember.Service.extend({
                 init: function() {
                     this._super(...arguments), this.clientConfigDataBinding = (0, i.dataBinding)("/lol-client-config", (0, i.getProvider)().getSocket()), this.syncProperty = this.syncProperty.bind(this), o.forEach((e => {
                         const t = `v3/client-config/${e.path}`;
@@ -8323,7 +8323,7 @@
                     }))
                 }
             });
-            t.default = a
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
@@ -8348,8 +8348,8 @@
             "use strict";
             var i = n(1),
                 o = l(n(130)),
-                a = l(n(43)),
-                s = l(n(144)),
+                s = l(n(43)),
+                a = l(n(144)),
                 r = l(n(10));
 
             function l(e) {
@@ -8361,7 +8361,7 @@
             const {
                 RunMixin: c
             } = i.EmberAddons.EmberLifeline;
-            e.exports = i.Ember.Component.extend(c, s.default, o.default, a.default, {
+            e.exports = i.Ember.Component.extend(c, a.default, o.default, s.default, {
                 classNames: ["parties-view"],
                 classNameBindings: ["isInQueue:in-matchmaking-search", "gameflowObserver", "loginConnectedObserver", "invitesService.currentPlayerCanInvite"],
                 showingState: null,
@@ -8566,7 +8566,7 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(47)) && i.__esModule ? i : {
+                s = (i = n(47)) && i.__esModule ? i : {
                     default: i
                 };
             e.exports = o.Ember.Mixin.create({
@@ -8575,7 +8575,7 @@
                 },
                 hideOurselves: function(e = null) {
                     if (o.logger.info("reasons.parties.hideParties Close button clicked. Resetting party state and removing party UI."), this.set("selected.isUpdatingSelection", !1), this.notifyPropertyChange("selected.isUpdatingSelection"), this.get("showingState.isInViewport")) {
-                        const t = o.Viewport.main().getScreenRoot(a.default.get("viewportApiKey"), "rcp-fe-lol-parties");
+                        const t = o.Viewport.main().getScreenRoot(s.default.get("viewportApiKey"), "rcp-fe-lol-parties");
                         return e === 6130 ? o.Router.navigateTo("rcp-fe-lol-tft", {
                             page: "event-page"
                         }).then((() => t.release().then((() => {
@@ -8601,8 +8601,8 @@
             "use strict";
             var i = n(1),
                 o = r(n(43)),
-                a = r(n(148)),
-                s = r(n(47));
+                s = r(n(148)),
+                a = r(n(47));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -8622,7 +8622,7 @@
                     this.attachScreenRoot()
                 })),
                 attachScreenRoot: function() {
-                    i.Viewport.main().getScreenRoot(s.default.get("viewportApiKey"), "rcp-fe-lol-parties").on("show", (() => {
+                    i.Viewport.main().getScreenRoot(a.default.get("viewportApiKey"), "rcp-fe-lol-parties").on("show", (() => {
                         this.determineState()
                     }))
                 },
@@ -8639,14 +8639,14 @@
                     return this.determineState()
                 })),
                 determineState: function() {
-                    if (this.get("isChampSelect")) return a.default.stop(), "champSelect";
+                    if (this.get("isChampSelect")) return s.default.stop(), "champSelect";
                     if (this.get("isInQueue")) {
                         const e = this.get("matchmakingMusic");
-                        return e && a.default.playMusic(e), "queue"
+                        return e && s.default.playMusic(e), "queue"
                     }
                     if (this.get("isLobby")) {
                         const e = this.get("lobbyAmbience");
-                        return e && a.default.playAmbience(e), "lobby"
+                        return e && s.default.playAmbience(e), "lobby"
                     }
                 }
             })
@@ -8657,8 +8657,8 @@
             }), t.default = void 0;
             var i = n(1),
                 o = r(n(149)),
-                a = r(n(47)),
-                s = n(150);
+                s = r(n(47)),
+                a = n(150);
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -8670,22 +8670,22 @@
                     this.sfxChannel = new o.default("sfx-ambience"), this.musicChannel = new o.default("music-ambience"), this.isPlaying = null, this.attachToScreenRoot()
                 }
                 attachToScreenRoot() {
-                    i.Viewport.main().getScreenRoot(a.default.get("viewportApiKey"), "rcp-fe-lol-parties").on("hide", (() => {
-                        this.isPlaying === s.SOUND_TYPE_AMBIENCE && (this.sfxChannel.stop(), this.isPlaying = null)
+                    i.Viewport.main().getScreenRoot(s.default.get("viewportApiKey"), "rcp-fe-lol-parties").on("hide", (() => {
+                        this.isPlaying === a.SOUND_TYPE_AMBIENCE && (this.sfxChannel.stop(), this.isPlaying = null)
                     }))
                 }
                 playAmbience(e) {
-                    this.isPlaying === s.SOUND_TYPE_MUSIC && this.musicChannel.stop(), this.isPlaying = s.SOUND_TYPE_AMBIENCE, this.sfxChannel.play(e, {
+                    this.isPlaying === a.SOUND_TYPE_MUSIC && this.musicChannel.stop(), this.isPlaying = a.SOUND_TYPE_AMBIENCE, this.sfxChannel.play(e, {
                         allowConcurrency: !1
                     })
                 }
                 playMusic(e) {
-                    this.isPlaying === s.SOUND_TYPE_AMBIENCE && this.sfxChannel.stop(), this.isPlaying = s.SOUND_TYPE_MUSIC, this.musicChannel.play(e, {
+                    this.isPlaying === a.SOUND_TYPE_AMBIENCE && this.sfxChannel.stop(), this.isPlaying = a.SOUND_TYPE_MUSIC, this.musicChannel.play(e, {
                         allowConcurrency: !1
                     })
                 }
                 stop() {
-                    this.isPlaying === s.SOUND_TYPE_AMBIENCE ? this.sfxChannel.stop() : this.isPlaying === s.SOUND_TYPE_MUSIC && this.musicChannel.stop(), this.isPlaying = null
+                    this.isPlaying === a.SOUND_TYPE_AMBIENCE ? this.sfxChannel.stop() : this.isPlaying === a.SOUND_TYPE_MUSIC && this.musicChannel.stop(), this.isPlaying = null
                 }
             };
             t.default = l
@@ -8728,10 +8728,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 };
-            n(152), e.exports = o.Ember.Component.extend(a.default, {
+            n(152), e.exports = o.Ember.Component.extend(s.default, {
                 layout: n(153),
                 assets: o.Ember.inject.service(),
                 customGamesService: o.Ember.inject.service("custom-games"),
@@ -8770,8 +8770,8 @@
                     i || (i = this.get("backgroundAssets").find((t => t.id === e && t.isDefault)));
                     let o = "";
                     i && i.url && (o = i.url);
-                    let a = "";
-                    return i && i.sidebarBackgroundColor && (a = i.sidebarBackgroundColor), this.set("sidebarBackgroundColor", a), this._setSidebarBackground(), o
+                    let s = "";
+                    return i && i.sidebarBackgroundColor && (s = i.sidebarBackgroundColor), this.set("sidebarBackgroundColor", s), this._setSidebarBackground(), o
                 },
                 _setSidebarBackground: function() {
                     const e = o.Viewport.main().getCurrentScreenRoot();
@@ -8792,8 +8792,8 @@
             "use strict";
             var i = n(1),
                 o = m(n(43)),
-                a = m(n(155)),
-                s = n(109),
+                s = m(n(155)),
+                a = n(109),
                 r = n(156),
                 l = m(n(157)),
                 c = n(9);
@@ -8803,7 +8803,7 @@
                     default: e
                 }
             }
-            n(159), e.exports = i.Ember.Component.extend(a.default, o.default, {
+            n(159), e.exports = i.Ember.Component.extend(s.default, o.default, {
                 layout: n(160),
                 customGamesService: i.Ember.inject.service("custom-games"),
                 lobbiesService: i.Ember.inject.service("lobbies"),
@@ -8840,7 +8840,7 @@
                 customTeamSize: i.Ember.computed.alias("customGamesService.teamSize"),
                 customMutatorName: i.Ember.computed("customGamesService.mutatorName", "tra.ready", "tra.custom_game_mutator_type_blind", (function() {
                     const e = this.get("customGamesService.mutatorName");
-                    return s.CUSTOM_GAME_MUTATOR_NAMES[e] ? this.get(`tra.custom_game_mutator_type_${s.CUSTOM_GAME_MUTATOR_NAMES[e]}`) : e
+                    return a.CUSTOM_GAME_MUTATOR_NAMES[e] ? this.get(`tra.custom_game_mutator_type_${a.CUSTOM_GAME_MUTATOR_NAMES[e]}`) : e
                 })),
                 queueName: i.Ember.computed("queueId", "queues.platformJson", (function() {
                     const e = this.get("queueId"),
@@ -8938,16 +8938,16 @@
                 value: !0
             }), t.default = void 0;
             var i, o = n(1),
-                a = (i = n(7)) && i.__esModule ? i : {
+                s = (i = n(7)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(158);
+                a = n(158);
             var r = {
                 isGameInviteAcceptable: function(e, t, n, i, o) {
                     if (e && e.gameConfig && i) {
                         const i = !!n && "dnd" !== n.availability,
-                            a = !!t && t.bypassEligibilityCheck;
-                        return o && i && "Pending" === e.state && (a || e.canAcceptInvitation)
+                            s = !!t && t.bypassEligibilityCheck;
+                        return o && i && "Pending" === e.state && (s || e.canAcceptInvitation)
                     }
                     return !1
                 },
@@ -8959,18 +8959,18 @@
                 },
                 gameType: function(e) {
                     if (e) {
-                        if (s.PRACTICE_TOOL_GAME_MODES.includes(e.gameMode)) return o.tra.get("parties_game_type_practice_tool");
-                        if (s.CUSTOM_GAME_TYPES.includes(e.inviteGameType)) return o.tra.get("parties_game_type_practice");
-                        const t = a.default.getMapModeInfo(e.mapId, e.gameMode);
+                        if (a.PRACTICE_TOOL_GAME_MODES.includes(e.gameMode)) return o.tra.get("parties_game_type_practice_tool");
+                        if (a.CUSTOM_GAME_TYPES.includes(e.inviteGameType)) return o.tra.get("parties_game_type_practice");
+                        const t = s.default.getMapModeInfo(e.mapId, e.gameMode);
                         if (t && t.isRGM) return o.tra.get("parties_game_type_featured");
-                        const n = a.default.getQueueById(e.queueId);
-                        return n ? n.category === s.BOT_GAME_TYPE ? o.tra.get("parties_game_type_coop_vs_ai") : n.description : ""
+                        const n = s.default.getQueueById(e.queueId);
+                        return n ? n.category === a.BOT_GAME_TYPE ? o.tra.get("parties_game_type_coop_vs_ai") : n.description : ""
                     }
                 },
                 mapKey: function(e) {
                     if (e) {
-                        const t = a.default.getMapModeInfo(e.mapId, e.gameMode);
-                        return t && t.isRGM ? "game_map_rotating_game_mode" : s.MAP_TO_I18N_KEY[e.mapId]
+                        const t = s.default.getMapModeInfo(e.mapId, e.gameMode);
+                        return t && t.isRGM ? "game_map_rotating_game_mode" : a.MAP_TO_I18N_KEY[e.mapId]
                     }
                 }
             };
@@ -9049,17 +9049,17 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(10)) && i.__esModule ? i : {
+                s = (i = n(10)) && i.__esModule ? i : {
                     default: i
                 };
             n(165);
-            var s = n(166);
+            var a = n(166);
             e.exports = o.Ember.Component.extend({
                 layout: n(167),
                 classNames: ["parties-debug-custom-lobby"],
                 assetsService: o.Ember.inject.service("assets"),
                 customGamesService: o.Ember.inject.service("custom-games"),
-                platformConfigSingleton: a.default,
+                platformConfigSingleton: s.default,
                 availableMaps: o.Ember.computed.alias("assetsService.availableMaps"),
                 availableModes: o.Ember.computed.alias("platformConfigSingleton.enabledCustomGameModes"),
                 defaultGameName: o.Ember.computed.alias("customGamesService.defaultGameName"),
@@ -9068,15 +9068,15 @@
                         t = this.get("availableModes"),
                         n = this._mapsById(e),
                         i = o.Ember.A(this._reduceToMapSummaries(n, t)),
-                        a = this.get("selectedMapId"),
-                        s = this.get("selectedModeId");
+                        s = this.get("selectedMapId"),
+                        a = this.get("selectedModeId");
                     for (let e = i.length - 1; e >= 0; --e)
-                        if (i[e].mapId === a || 0 === e) {
+                        if (i[e].mapId === s || 0 === e) {
                             const t = i[e];
                             t.selected = !0, this.set("selectedMapId", t.mapId);
                             let n = t.supportedModes[0];
-                            if (s) {
-                                const e = t.supportedModes.find((e => e.id === s));
+                            if (a) {
+                                const e = t.supportedModes.find((e => e.id === a));
                                 e && (n = e)
                             }
                             n.selected = !0, this.set("selectedModeId", n.id);
@@ -9121,7 +9121,7 @@
                 champSelectStrategyOptions: o.Ember.computed("selectedChampSelectId", (function() {
                     const e = o.Ember.A(),
                         t = this.get("selectedChampSelectId");
-                    return s.DEBUG_CHAMP_SELECT_STRATEGIES.forEach((n => {
+                    return a.DEBUG_CHAMP_SELECT_STRATEGIES.forEach((n => {
                         const i = {
                             name: n.name,
                             id: n.id,
@@ -9147,10 +9147,10 @@
                     return Object.keys(e).forEach((i => {
                         let o = e[i];
                         o.sort(((e, t) => e.gameMutator ? 1 : t.gameMutator ? -1 : 0));
-                        const a = [];
-                        o = o.filter((e => !a.includes(e.gameMode) && (a.push(e.gameMode), !0)));
-                        const s = this._reduceToMapSummary(o, t);
-                        s && n.push(s)
+                        const s = [];
+                        o = o.filter((e => !s.includes(e.gameMode) && (s.push(e.gameMode), !0)));
+                        const a = this._reduceToMapSummary(o, t);
+                        a && n.push(a)
                     })), n
                 },
                 _reduceToMapSummary: function(e, t) {
@@ -9192,7 +9192,7 @@
                         n = this.get("selectedTeamSize"),
                         i = (this.get("selectedChampSelectId"), this.get("selectedGameServerRegion")),
                         o = this.getLobbyName(),
-                        a = {
+                        s = {
                             customGameLobby: {
                                 configuration: {
                                     gameMode: t.gameMode,
@@ -9204,7 +9204,7 @@
                             },
                             isCustom: !0
                         };
-                    return i && "default" !== i.toLowerCase() && (a.customGameLobby.configuration.gameServerRegion = i), a
+                    return i && "default" !== i.toLowerCase() && (s.customGameLobby.configuration.gameServerRegion = i), s
                 },
                 _createDebugCustomLobby: function() {
                     const e = this._buildV2LobbyPayload(),
@@ -9268,6 +9268,7 @@
                 layout: n(170),
                 classNames: ["parties-debug-queue-lobby"],
                 omitDisabledQueues: !0,
+                searchQuery: "",
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 queues: i.Ember.computed.alias("lobbiesService.queues"),
                 selectedQueueId: i.Ember.computed.alias("lobbiesService.queueId"),
@@ -9300,29 +9301,52 @@
                         if (!e.findBy("id", i.id)) {
                             const {
                                 description: o,
-                                id: a,
-                                isTeamBuilderManaged: s,
+                                id: s,
+                                isTeamBuilderManaged: a,
                                 numPlayersPerTeam: r,
                                 queueAvailability: l,
                                 type: c
                             } = i, m = "Available" !== l;
-                            if (!s || m && !t) continue;
+                            if (!a || m && !t) continue;
                             e.push({
                                 description: o,
                                 disabled: m,
-                                id: a,
-                                isTeamBuilderManaged: s,
+                                id: s,
+                                isTeamBuilderManaged: a,
                                 name: c,
                                 numPlayers: `${r}x${r}`,
-                                selected: n === a ? "selected" : null
+                                selected: n === s ? "selected" : null
                             })
                         } return e.sortBy("id")
                 })),
-                typesDropdownDisabled: i.Ember.computed("selectedMap", "debugTypes", (function() {
-                    return !this.get("selectedMap") || this.get("debugTypes").length < 1
+                _fuzzyMatch(e, t) {
+                    let n = 0;
+                    const i = e.toLowerCase();
+                    for (const e of t.toLowerCase()) {
+                        if (n = i.indexOf(e, n), -1 === n) return !1;
+                        n++
+                    }
+                    return !0
+                },
+                filteredDebugTypes: i.Ember.computed("debugTypes.[]", "searchQuery", (function() {
+                    const e = (this.get("searchQuery") || "").trim(),
+                        t = this.get("debugTypes");
+                    return e ? t.filter((t => {
+                        const n = `${t.numPlayers} - ${t.name} - (${t.id}) ${t.description||""}`;
+                        return this._fuzzyMatch(n, e)
+                    })) : t
                 })),
-                createButtonDisabled: i.Ember.computed("selectedMap", "debugTypes", "selectedType", (function() {
-                    return !this.get("selectedMap") || !this.get("selectedType") || this.get("debugTypes").length < 1
+                _autoSelectFirstFiltered: i.Ember.observer("searchQuery", (function() {
+                    i.Ember.run.scheduleOnce("afterRender", this, (function() {
+                        const e = this.get("filteredDebugTypes");
+                        e && e.length > 0 ? this.set("selectedType", e[0]) : this.set("selectedType", null)
+                    }))
+                })),
+                typesDropdownDisabled: i.Ember.computed("selectedMap", "filteredDebugTypes", (function() {
+                    return !this.get("selectedMap") || this.get("filteredDebugTypes").length < 1
+                })),
+                createButtonDisabled: i.Ember.computed("selectedMap", "filteredDebugTypes", "selectedType", (function() {
+                    return !this.get("selectedMap") || !this.get("selectedType") || this.get("filteredDebugTypes").length < 1
                 })),
                 getFirstEnabledQueue: function(e) {
                     let t = null;
@@ -9361,8 +9385,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "KoU0muT8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\debug-tools-component\\\\debug-queue-lobby-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\debug-tools-component\\\\debug-queue-lobby-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\debug-tools-component\\\\debug-queue-lobby-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-debug-queues-wrapper"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","parties-debug-show-disabled-queues"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","id","type","checked"],["input","parties-debug-show-disabled-queues-check","checkbox",["get",["omitDisabledQueues"]]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","parties-debug-show-disabled-queues-check"],["flush-element"],["text","Hide Disabled Queues"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","label",[]],["static-attr","for","parties-debug-maps-dropdown"],["flush-element"],["text","Map"],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","parties-debug-maps-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["debugMaps"]]],null,3],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","label",[]],["static-attr","for","parties-debug-types-dropdown"],["flush-element"],["text","Game Type"],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["dynamic-attr","disabled",["helper",["if"],[["get",["typesDropdownDisabled"]],true,null],null],null],["static-attr","id","parties-debug-types-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["debugTypes"]]],null,2],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","span",[]],["static-attr","class","parties-debug-selected-queue"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedType","id"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["helper",["if"],[["get",["createButtonDisabled"]],true,null],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"debugSetGameMode"],[["on"],["click"]]],null],["flush-element"],["text","Create Lobby"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      Selected QueueId:\\n      "],["append",["unknown",["selectedType","id"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","parties-debug-description"],["flush-element"],["append",["unknown",["type","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["type","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setDebugType",["get",["type"]]],[["on"],["click"]]],null],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","parties-debug-disabled"],["flush-element"],["append",["helper",["if"],[["get",["type","disabled"]],"DISABLED - "],null],false],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","parties-debug-tb"],["flush-element"],["append",["helper",["if"],[["get",["type","isTeamBuilderManaged"]],"TB - "],null],false],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","parties-debug-name"],["flush-element"],["append",["unknown",["type","numPlayers"]],false],["text"," - "],["append",["unknown",["type","name"]],false],["text"," - ("],["append",["unknown",["type","id"]],false],["text",")"],["close-element"],["text","\\n"],["block",["if"],[["get",["type","description"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":["type"]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["map","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setDebugMap",["get",["map"]]],[["on"],["click"]]],null],["flush-element"],["text","\\n        "],["append",["unknown",["map","name"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["map"]}],"hasPartials":false}',
+                id: "ZHSE4E45",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\debug-tools-component\\\\debug-queue-lobby-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\debug-tools-component\\\\debug-queue-lobby-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\debug-tools-component\\\\debug-queue-lobby-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-debug-queues-wrapper"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","parties-debug-show-disabled-queues"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","id","type","checked"],["input","parties-debug-show-disabled-queues-check","checkbox",["get",["omitDisabledQueues"]]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","parties-debug-show-disabled-queues-check"],["flush-element"],["text","Hide Disabled Queues"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","label",[]],["static-attr","for","parties-debug-maps-dropdown"],["flush-element"],["text","Map"],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","parties-debug-maps-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["debugMaps"]]],null,3],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","label",[]],["static-attr","for","parties-debug-queue-search"],["flush-element"],["text","Search Queues"],["close-element"],["text","\\n  "],["append",["helper",["input"],null,[["id","class","type","value","placeholder"],["parties-debug-queue-search","parties-debug-queue-search","text",["get",["searchQuery"]],"Fuzzy search queues..."]]],false],["text","\\n\\n  "],["open-element","label",[]],["static-attr","for","parties-debug-types-dropdown"],["flush-element"],["text","Game Type"],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["dynamic-attr","disabled",["helper",["if"],[["get",["typesDropdownDisabled"]],true,null],null],null],["static-attr","id","parties-debug-types-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["filteredDebugTypes"]]],null,2],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","span",[]],["static-attr","class","parties-debug-selected-queue"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedType","id"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["helper",["if"],[["get",["createButtonDisabled"]],true,null],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"debugSetGameMode"],[["on"],["click"]]],null],["flush-element"],["text","Create Lobby"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      Selected QueueId:\\n      "],["append",["unknown",["selectedType","id"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","parties-debug-description"],["flush-element"],["append",["unknown",["type","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["type","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setDebugType",["get",["type"]]],[["on"],["click"]]],null],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","parties-debug-disabled"],["flush-element"],["append",["helper",["if"],[["get",["type","disabled"]],"DISABLED - "],null],false],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","parties-debug-tb"],["flush-element"],["append",["helper",["if"],[["get",["type","isTeamBuilderManaged"]],"TB - "],null],false],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","parties-debug-name"],["flush-element"],["append",["unknown",["type","numPlayers"]],false],["text"," - "],["append",["unknown",["type","name"]],false],["text"," - ("],["append",["unknown",["type","id"]],false],["text",")"],["close-element"],["text","\\n"],["block",["if"],[["get",["type","description"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":["type"]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["map","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setDebugMap",["get",["map"]]],[["on"],["click"]]],null],["flush-element"],["text","\\n        "],["append",["unknown",["map","name"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["map"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -9383,9 +9407,9 @@
                             n = this.get("_notifiedSearchErrorIds"),
                             i = Object.prototype.hasOwnProperty.call(n, e.id),
                             o = e.errorType,
-                            a = "Error" === this.get("matchmakingService.matchmakingErrorState"),
-                            s = this.get("lobbiesService.inLobby");
-                        t > -1 && o && !i && a && s ? (n[e.get("id")] = !0, this.showQueueErrorModal(e.errorType, e.get("id"), e.penalizedSummonerId), this.set("_isTransitioningState", !1)) : this.hideVisibleExpiredErrors()
+                            s = "Error" === this.get("matchmakingService.matchmakingErrorState"),
+                            a = this.get("lobbiesService.inLobby");
+                        t > -1 && o && !i && s && a ? (n[e.get("id")] = !0, this.showQueueErrorModal(e.errorType, e.get("id"), e.penalizedSummonerId), this.set("_isTransitioningState", !1)) : this.hideVisibleExpiredErrors()
                     }))
                 }))),
                 hideVisibleExpiredErrors: function() {
@@ -9403,16 +9427,16 @@
                 },
                 showQueueErrorModal: function(e, t, n) {
                     const o = this.get("lobbiesService.isCurrentPlayerPartyLeader"),
-                        a = this.get("summonerService.localSummonerId") === n;
-                    if (this.isErrorHandledByOtherPlugin(e, o, a)) return;
-                    const s = {
+                        s = this.get("summonerService.localSummonerId") === n;
+                    if (this.isErrorHandledByOtherPlugin(e, o, s)) return;
+                    const a = {
                             penalizedSummonerId: n,
-                            isPenalizedSummoner: a
+                            isPenalizedSummoner: s
                         },
                         r = i.UIKit.getModalManager(),
                         l = i.ComponentFactory.create("PartyQueueErrorDialogComponent", {
                             errorType: e,
-                            errorData: s
+                            errorData: a
                         }),
                         {
                             domNode: c
@@ -9435,10 +9459,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(5)) && i.__esModule ? i : {
+                s = (i = n(5)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(9);
+                a = n(9);
             n(173);
             const {
                 RunMixin: r
@@ -9458,7 +9482,7 @@
                 disabledReasons: o.Ember.A(),
                 lobbiesService: o.Ember.inject.service("lobbies"),
                 eligibilityService: o.Ember.inject.service("queue-eligibility"),
-                eligibilitiesEntity: a.default,
+                eligibilitiesEntity: s.default,
                 restrictions: o.Ember.computed.alias("eligibilitiesEntity.restrictions"),
                 warnings: o.Ember.computed.alias("eligibilitiesEntity.warnings"),
                 hasLobbyRestrictions: o.Ember.computed.or("eligibilitiesEntity.hasLobbyRestrictions", "shouldShowPremadeSizeError"),
@@ -9466,7 +9490,7 @@
                     return this.get("restrictions").length > 1
                 })),
                 hasTFTNewPlayerRestriction: o.Ember.computed("restrictions", (function() {
-                    return !!this.get("restrictions").find((e => e.restrictionCode === s.TFT_NEW_PLAYER_RESTRICTION))
+                    return !!this.get("restrictions").find((e => e.restrictionCode === a.TFT_NEW_PLAYER_RESTRICTION))
                 })),
                 teamSizeRestrictionMembers: o.Ember.computed("restrictions", "restrictions.[]", (function() {
                     const e = this.get("restrictions");
@@ -9550,7 +9574,7 @@
                     if (this.get("shouldShowPremadeSizeError")) return this.get("premadeSizeErrorText");
                     if (this.get("teamSizeRestrictionMembers") > 0) {
                         const e = this.get("lobbiesService.queueId");
-                        return s.PAIRS_QUEUE_IDS.includes(e) ? this.get("tra.game_select_queue_restriction_party_doubleupteamsizerestriction") : this.get("tra.game_select_queue_restriction_party_notification")
+                        return a.PAIRS_QUEUE_IDS.includes(e) ? this.get("tra.game_select_queue_restriction_party_doubleupteamsizerestriction") : this.get("tra.game_select_queue_restriction_party_notification")
                     }
                     if (this.get("hasTFTNewPlayerRestriction") && this.get("eligibilityService.partyHasNewTFTPlayer")) return this.get("tftNewPlayerErrorText");
                     const e = this.get("disabledReasons");
@@ -9569,7 +9593,7 @@
                             const n = this.get("lobbiesService.queueId"),
                                 i = this.get("eligibilityService");
                             return i && i.generateRestrictionForParty ? (e.forEach((e => {
-                                e.restrictionCode !== s.TFT_NEW_PLAYER_RESTRICTION && (e.queueId = n, t.push(i.generateRestrictionForParty(e)))
+                                e.restrictionCode !== a.TFT_NEW_PLAYER_RESTRICTION && (e.queueId = n, t.push(i.generateRestrictionForParty(e)))
                             })), Promise.all(t).then((e => {
                                 this.set("disabledReasons", o.Ember.A(e))
                             }))) : Promise.resolve()
@@ -9722,15 +9746,15 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(43)),
-                a = s(n(130));
+                o = a(n(43)),
+                s = a(n(130));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(178), e.exports = i.Ember.Component.extend(o.default, a.default, {
+            n(178), e.exports = i.Ember.Component.extend(o.default, s.default, {
                 ModalManager: i.UIKit.getModalManager(),
                 classNames: ["parties-root"],
                 classNameBindings: ["isShowingParty:parties-show:parties-hide"],
@@ -9888,8 +9912,8 @@
             "use strict";
             var i = n(1),
                 o = u(n(43)),
-                a = u(n(130)),
-                s = u(n(155)),
+                s = u(n(130)),
+                a = u(n(155)),
                 r = u(n(144)),
                 l = u(n(10)),
                 c = u(n(72)),
@@ -9904,7 +9928,7 @@
             const {
                 RunMixin: d
             } = i.EmberAddons.EmberLifeline, p = "QUEUE_DODGER", h = "LEAVER_BUSTED", g = "LEAVER_BUSTER_QUEUE_LOCKOUT", b = i.Ember.Object.extend(i.Ember.PromiseProxyMixin);
-            e.exports = i.Ember.Component.extend(d, s.default, o.default, a.default, r.default, {
+            e.exports = i.Ember.Component.extend(d, a.default, o.default, s.default, r.default, {
                 classNames: ["parties-footer-container"],
                 layout: n(184),
                 init(...e) {
@@ -10072,17 +10096,17 @@
                         t = this.get("currentMapId"),
                         n = e.findMinPlayersForMap(t),
                         o = e.get("minPlayers"),
-                        a = e.get("currentNumPlayers"),
-                        s = n > o ? n : o;
+                        s = e.get("currentNumPlayers"),
+                        a = n > o ? n : o;
                     let r = "";
-                    a < n && (r = this.translate("custom_game_champ_select_error_min_map_player", {
-                        numPlayers: a,
+                    s < n && (r = this.translate("custom_game_champ_select_error_min_map_player", {
+                        numPlayers: s,
                         minRequired: n
-                    })), a < o && (r = this.translate("custom_game_champ_select_error_min_player", {
-                        minPlayers: s
+                    })), s < o && (r = this.translate("custom_game_champ_select_error_min_player", {
+                        minPlayers: a
                     }));
                     const l = i.tra.get("parties_kicked_confirmation_ok");
-                    return a < s ? (this.showModal({
+                    return s < a ? (this.showModal({
                         type: "DialogAlert",
                         data: {
                             contents: r,
@@ -10101,7 +10125,7 @@
                                 n = this.get(t);
                             n && n.length > 0 && o.push(n)
                         })), this.set("customGameRewardsDisabledReasons", i.Ember.A(o));
-                        const a = this.showModal({
+                        const s = this.showModal({
                             type: "DialogConfirm",
                             data: {
                                 contents: this.get("customGameRewardsDisabledModalElement"),
@@ -10115,9 +10139,9 @@
                                 }
                             }
                         });
-                        a.domNode.classList.add("parties-custom-game-rewards-disabled-modal");
-                        const s = a.domNode.querySelector(".button-accept");
-                        s && s.focus()
+                        s.domNode.classList.add("parties-custom-game-rewards-disabled-modal");
+                        const a = s.domNode.querySelector(".button-accept");
+                        a && a.focus()
                     }))
                 },
                 enterChampSelectLockTime: 300,
@@ -10247,13 +10271,13 @@
                 if (!e) return;
                 n = n || 35, i = i || 20;
                 let o = 0;
-                const a = function() {
+                const s = function() {
                     e.innerText = o
                 };
-                a();
-                const s = Math.max(1, Math.floor(t / n)),
+                s();
+                const a = Math.max(1, Math.floor(t / n)),
                     r = window.setInterval((function() {
-                        o += s, o >= t && (o = t, window.clearInterval(r)), a()
+                        o += a, o >= t && (o = t, window.clearInterval(r)), s()
                     }), i)
             }
         }, e => {
@@ -10285,8 +10309,8 @@
             "use strict";
             var i = n(1),
                 o = r(n(155)),
-                a = r(n(130)),
-                s = r(n(43));
+                s = r(n(130)),
+                a = r(n(43));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -10294,7 +10318,7 @@
                 }
             }
             n(186);
-            e.exports = i.Ember.Component.extend(i.EmberAddons.DroppableMixin, o.default, a.default, s.default, {
+            e.exports = i.Ember.Component.extend(i.EmberAddons.DroppableMixin, o.default, s.default, a.default, {
                 layout: n(187),
                 classNames: ["parties-lower-section"],
                 classNameBindings: ["haveCurrentPlayer:parties-lower-section-fade-in", "friendDropping:droppable-dropping", "friendDragging:droppable-available", "animationsEnabled:animations-enabled:animations-disabled"],
@@ -10345,10 +10369,10 @@
             "use strict";
             var i = n(1);
             n(189);
-            var o = s(n(130)),
-                a = s(n(43));
+            var o = a(n(130)),
+                s = a(n(43));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -10362,7 +10386,7 @@
                     chat: "/lol-chat"
                 }
             });
-            e.exports = i.Ember.Component.extend(r, o.default, a.default, {
+            e.exports = i.Ember.Component.extend(r, o.default, s.default, {
                 layout: n(190),
                 classNames: ["player-party-controls"],
                 classNameBindings: ["isMe:main-player-controls:other-player-controls", "isLeader:player-leader-controls"],
@@ -10527,8 +10551,8 @@
             "use strict";
             var i = n(1),
                 o = l(n(5)),
-                a = l(n(7)),
-                s = n(9),
+                s = l(n(7)),
+                a = n(9),
                 r = l(n(47));
 
             function l(e) {
@@ -10568,7 +10592,7 @@
                 didReceiveAttrs: function() {
                     this._super(...arguments);
                     const e = this.get("queueId"),
-                        t = a.default.getQueueById(e);
+                        t = s.default.getQueueById(e);
                     t && t.isRanked && e !== this.prevQueueId && i.LeagueTierNames.getTiersForQueue(t.type).then((e => {
                         this.set("rankedQueueTiers", e || [])
                     })), this.prevQueueId = e
@@ -10606,11 +10630,11 @@
                             restrictionCode: i,
                             restrictionArgs: o
                         } = t;
-                        let a = `game_select_queue_warning_player_${i.toLowerCase()}`;
-                        if (i === s.DOUBLE_UP_PLAYER_RANK_DISPARITY_WARNING) {
-                            a = `game_select_queue_warning_${n?"self":"player"}_${i.toLowerCase()}`
+                        let s = `game_select_queue_warning_player_${i.toLowerCase()}`;
+                        if (i === a.DOUBLE_UP_PLAYER_RANK_DISPARITY_WARNING) {
+                            s = `game_select_queue_warning_${n?"self":"player"}_${i.toLowerCase()}`
                         }
-                        this.get("tra").exists(a) && e.pushObject(this.get("tra").formatString(a, o))
+                        this.get("tra").exists(s) && e.pushObject(this.get("tra").formatString(s, o))
                     })), e
                 })),
                 doubleUpWarningTooltipText: i.Ember.computed("warningTooltipText", (function() {
@@ -10622,16 +10646,16 @@
                     const e = this.get("memberRestrictions"),
                         t = i.Ember.A(),
                         n = this.get("isMe");
-                    let a = !1;
+                    let s = !1;
                     for (let i = 0; i < e.length; i++) {
                         const r = e[i],
                             {
                                 restrictionCode: l
                             } = r;
                         let c = r.restrictionArgs;
-                        if (s.TENCENT_MINOR_RESTRICTIONS.includes(l)) {
-                            if (a) continue;
-                            a = !0
+                        if (a.TENCENT_MINOR_RESTRICTIONS.includes(l)) {
+                            if (s) continue;
+                            s = !0
                         }
                         let m = `game_select_queue_restriction_player_${l.toLowerCase()}`;
                         if ("MissingToken" === l)
@@ -10643,12 +10667,12 @@
                             const e = this.get("rankedQueueTiers"),
                                 t = o.default.getLocInfoForPlayerRankSoloOnlyRestriction(r, e);
                             m = t.key, c = t.args
-                        } else if (l === s.TFT_NEW_PLAYER_RESTRICTION) {
+                        } else if (l === a.TFT_NEW_PLAYER_RESTRICTION) {
                             const e = this.get("lobbiesService.currentQueue");
                             c = {
                                 gameMode: e ? e.description : ""
                             }
-                        } else l === s.MULTIPLAYER_UNMATCHED_TEAMS_RESTRICTIONS && (m = this.get("lobbiesService.isTFT") ? `${m}_TFT` : `${m}_LOL`);
+                        } else l === a.MULTIPLAYER_UNMATCHED_TEAMS_RESTRICTIONS && (m = this.get("lobbiesService.isTFT") ? `${m}_TFT` : `${m}_LOL`);
                         0, this.get("tra").exists(m) && t.pushObject(this.get("tra").formatString(m, c))
                     }
                     return t
@@ -10738,12 +10762,12 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(12);
+                a = n(12);
             n(197);
-            e.exports = o.Ember.Component.extend(a.default, {
+            e.exports = o.Ember.Component.extend(s.default, {
                 layout: n(198),
                 classNames: ["parties-invite-info-panel"],
                 currentPlayerCanInvite: !1,
@@ -10771,7 +10795,7 @@
                         i = o.Ember.A();
                     return e.forEach((e => {
                         const o = e.get("summonerId");
-                        t && t.indexOf(o) >= 0 || (e.get("reason") === s.SUGGESTED_TYPES.FRIEND ? n.push(e) : i.push(e))
+                        t && t.indexOf(o) >= 0 || (e.get("reason") === a.SUGGESTED_TYPES.FRIEND ? n.push(e) : i.push(e))
                     })), n = n.sortBy("summonerName"), i = i.sortBy("summonerName"), i.forEach((e => {
                         n.push(e)
                     })), this.get("isTFT") && n.length > 4 && (n = n.slice(0, 3)), n
@@ -10808,10 +10832,10 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(43)),
-                a = s(n(130));
+                o = a(n(43)),
+                s = a(n(130));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -10825,7 +10849,7 @@
                     lobby: "/lol-lobby"
                 }
             });
-            e.exports = i.Ember.Component.extend(r, o.default, a.default, {
+            e.exports = i.Ember.Component.extend(r, o.default, s.default, {
                 tagName: "li",
                 classNames: "parties-invite-info-panel-player",
                 classNameBindings: ["isSuggested:parties-suggested-player", "showPendingIndicator:parties-pending-invite", "isKicked:parties-kicked-invite", "isDeclined:parties-declined-invite", "isAccepted:parties-accepted-invite", "isError:parties-error-invite", "currentPlayerCanInvite:enabled:disabled"],
@@ -10953,13 +10977,13 @@
             "use strict";
             var i = n(1);
             n(206);
-            var o, a = (o = n(43)) && o.__esModule ? o : {
+            var o, s = (o = n(43)) && o.__esModule ? o : {
                 default: o
             };
             const {
-                RunMixin: s
+                RunMixin: a
             } = i.EmberAddons.EmberLifeline;
-            e.exports = i.Ember.Component.extend(s, a.default, {
+            e.exports = i.Ember.Component.extend(a, s.default, {
                 layout: n(207),
                 tagName: "button",
                 classNameBindings: ["typeClass"],
@@ -10991,15 +11015,15 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(10)),
-                a = s(n(43));
+                o = a(n(10)),
+                s = a(n(43));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(209), e.exports = i.Ember.Component.extend(a.default, {
+            n(209), e.exports = i.Ember.Component.extend(s.default, {
                 layout: n(210),
                 classNameBindings: ["isCustomGame:parties-point-eligibility-custom"],
                 platformConfig: o.default,
@@ -11133,15 +11157,15 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(12);
+                a = n(12);
             n(215);
             const {
                 RunMixin: r
             } = o.EmberAddons.EmberLifeline;
-            e.exports = o.Ember.Component.extend(r, a.default, {
+            e.exports = o.Ember.Component.extend(r, s.default, {
                 layout: n(216),
                 classNames: ["open-party-toggle"],
                 lobbiesService: o.Ember.inject.service("lobbies"),
@@ -11164,10 +11188,10 @@
                 isOpenParty: o.Ember.computed("partyType", (function() {
                     return this.runTask((function() {
                         this._checkIfShowFirstExperience()
-                    }), 1), this.get("partyType") === s.PARTY_TYPES.OPEN
+                    }), 1), this.get("partyType") === a.PARTY_TYPES.OPEN
                 })),
                 showPartyOpen: o.Ember.computed("isOpenParty", "requestedPartyType", (function() {
-                    return this.get("requestedPartyType") !== s.PARTY_TYPES.CLOSED && !(this.get("requestedPartyType") !== s.PARTY_TYPES.OPEN && !this.get("isOpenParty"))
+                    return this.get("requestedPartyType") !== a.PARTY_TYPES.CLOSED && !(this.get("requestedPartyType") !== a.PARTY_TYPES.OPEN && !this.get("isOpenParty"))
                 })),
                 initObserver: o.Ember.on("init", (function() {
                     o.Ember.run.once(this, (function() {
@@ -11192,13 +11216,13 @@
                     }), this.toggleDelayTime)
                 },
                 _toggle: function() {
-                    if (this.get("isPartyLeader") && !this.get("requestedPartyType")) return this.playSound("/fe/lol-parties/sfx-parties-button-toggle.ogg"), this.set("isToggleAnimating", !0), this.get("isOpenParty") ? (this.set("requestedPartyType", s.PARTY_TYPES.CLOSED), this.get("lobbiesService").setPartyType(s.PARTY_TYPES.CLOSED).then((() => {
+                    if (this.get("isPartyLeader") && !this.get("requestedPartyType")) return this.playSound("/fe/lol-parties/sfx-parties-button-toggle.ogg"), this.set("isToggleAnimating", !0), this.get("isOpenParty") ? (this.set("requestedPartyType", a.PARTY_TYPES.CLOSED), this.get("lobbiesService").setPartyType(a.PARTY_TYPES.CLOSED).then((() => {
                         this.set("requestedPartyType", null)
                     })).catch((() => {
                         this.set("requestedPartyType", null)
                     })).finally((() => {
                         this._setIsTogglingAnimationComplete()
-                    }))) : (this.set("requestedPartyType", s.PARTY_TYPES.OPEN), this.get("lobbiesService").setPartyType(s.PARTY_TYPES.OPEN).then((() => {
+                    }))) : (this.set("requestedPartyType", a.PARTY_TYPES.OPEN), this.get("lobbiesService").setPartyType(a.PARTY_TYPES.OPEN).then((() => {
                         this.set("requestedPartyType", null)
                     })).catch((() => {
                         this.set("requestedPartyType", null)
@@ -11303,8 +11327,8 @@
             "use strict";
             var i = n(1),
                 o = p(n(43)),
-                a = p(n(130)),
-                s = p(n(155)),
+                s = p(n(130)),
+                a = p(n(155)),
                 r = p(n(144)),
                 l = n(109),
                 c = n(180),
@@ -11318,7 +11342,7 @@
                     default: e
                 }
             }
-            e.exports = i.Ember.Component.extend(s.default, o.default, a.default, r.default, {
+            e.exports = i.Ember.Component.extend(a.default, o.default, s.default, r.default, {
                 classNames: ["game-select-footer-container"],
                 layout: n(222),
                 customGameListService: i.Ember.inject.service("custom-game-list"),
@@ -11396,15 +11420,15 @@
                     if (!t || !t[e]) return i.logger.info(`reasons.gameSelect.allQueuesForCategoryDisabled no available queues for category '${e}', skipping eligibility check`), !1;
                     const n = t[e];
                     let o = 0,
-                        a = 0;
+                        s = 0;
                     for (const e in n) {
                         const t = n[e];
                         if (!t?.queues) return i.logger.info(`reasons.gameSelect.allQueuesForCategoryDisabled no queues for game mode '${e}', skipping eligibility check`), !1;
-                        const s = t.queues;
-                        o += this.get("eligibilityService").getIneligibleQueues(s).length, a += s.length
+                        const a = t.queues;
+                        o += this.get("eligibilityService").getIneligibleQueues(a).length, s += a.length
                     }
-                    const s = o === a;
-                    return i.logger.info(`reasons.gameSelect.allQueuesForCategoryDisabled ineligibleForAllQueues=${s} eligibilityCount=${o} queueCount=${a}`), s
+                    const a = o === s;
+                    return i.logger.info(`reasons.gameSelect.allQueuesForCategoryDisabled ineligibleForAllQueues=${a} eligibilityCount=${o} queueCount=${s}`), a
                 })),
                 confirmButtonText: i.Ember.computed("tra.ready", "selected.isJoiningCustomGame", "customGameListService.confirmButtonText", "tra.parties_button_confirm", (function() {
                     return this.get("selected.isJoiningCustomGame") ? this.get("customGameListService.confirmButtonText") : this.get("tra.parties_button_confirm")
@@ -11542,12 +11566,12 @@
                         t = this.get("customGameListService.selectedCustomGame.partyId"),
                         n = this.get("customGameListService.isSelectedCustomGameFull"),
                         o = this.get("customGameListService.isSelectedCustomGameSpectatorsFull"),
-                        a = n && !o,
-                        s = this.get("customGameListService.selectedCustomGame.hasPassword");
+                        s = n && !o,
+                        a = this.get("customGameListService.selectedCustomGame.hasPassword");
                     this.set("selected.isUpdatingSelection", !0);
                     const r = {
-                        spectator: a,
-                        hasPassword: s
+                        spectator: s,
+                        hasPassword: a
                     };
                     e ? r.id = e : r.partyId = t, this.get("customGameListService").joinCustomGame(r).then((() => {
                         this.isDestroying || this.isDestroyed || (this.set("selected.isUpdatingSelection", !1), this.set("selected.isJoiningCustomGame", !1), i.Telemetry.recordCriticalFlow("UI_LOBBY_CREATED", !0, {
@@ -11581,15 +11605,15 @@
                                 this.showParty()
                             };
                             this.set("selected.isUpdatingSelection", !0);
-                            const a = this.get("selected.gameMode");
-                            let s;
-                            return s = this.changePartyGameConfig(), s.then((() => {
+                            const s = this.get("selected.gameMode");
+                            let a;
+                            return a = this.changePartyGameConfig(), a.then((() => {
                                 i.Telemetry.recordCriticalFlow("UI_LOBBY_CREATED", !0, {
-                                    lobbyType: a
+                                    lobbyType: s
                                 }), o(), i.datadogRum.stopOperationWithOk(i.datadogRum.XP_CGL_PREGAME_LOBBY_CREATE)
                             })).catch((e => {
                                 i.Telemetry.recordCriticalFlow("UI_LOBBY_CREATED", !1, {
-                                    lobbyType: a
+                                    lobbyType: s
                                 }), i.datadogRum.stopOperationWithError(i.datadogRum.XP_CGL_PREGAME_LOBBY_CREATE, e), this.gameSelectErrorHandler(e)
                             }))
                         }
@@ -11676,8 +11700,8 @@
             var i = n(1),
                 o = c(n(155));
             n(227);
-            var a = c(n(43)),
-                s = n(9),
+            var s = c(n(43)),
+                a = n(9),
                 r = c(n(10)),
                 l = n(101);
 
@@ -11686,7 +11710,7 @@
                     default: e
                 }
             }
-            e.exports = i.Ember.Component.extend(o.default, a.default, {
+            e.exports = i.Ember.Component.extend(o.default, s.default, {
                 classNames: ["game-type-card"],
                 classNameBindings: ["isDisabled:disabled", "isCurrentlySelected:selected", "animationLock:animation-lock", "compact"],
                 attributeBindings: ["mapId:data-map-id", "gameMode:data-game-mode"],
@@ -11718,7 +11742,7 @@
                 })),
                 isCurrentlySelected: i.Ember.computed("selectedMapId", "isTraining", "gameSelectModeGroup", "selectedGameModeGroup", "selectedTrainingGameMode", (function() {
                     if (this.get("isTraining")) {
-                        this.get("eligibilityService").isTutorialRestricted() && this.set("selectedTrainingGameMode", s.TRAINING_TYPES.PRACTICE_TOOL);
+                        this.get("eligibilityService").isTutorialRestricted() && this.set("selectedTrainingGameMode", a.TRAINING_TYPES.PRACTICE_TOOL);
                         return this.get("mapId") === this.get("selectedMapId") && this.get("gameMode") === this.get("selectedTrainingGameMode")
                     }
                     return this.get("gameSelectModeGroup") === this.get("selectedGameModeGroup")
@@ -11764,8 +11788,8 @@
                     if (this.get("eligibilityService.isSolo")) {
                         const e = this.get("gameTypeQueues");
                         if (this.get("isTraining")) {
-                            if (this.get("gameSelectModeGroup") === s.TRAINING_TYPES.PRACTICE_TOOL) return !this.get("customGameSubCategoryMinLevelEligible");
-                            if (this.get("gameSelectModeGroup") === s.TRAINING_TYPES.TUTORIAL) return this.get("eligibilityService").isTutorialRestricted()
+                            if (this.get("gameSelectModeGroup") === a.TRAINING_TYPES.PRACTICE_TOOL) return !this.get("customGameSubCategoryMinLevelEligible");
+                            if (this.get("gameSelectModeGroup") === a.TRAINING_TYPES.TUTORIAL) return this.get("eligibilityService").isTutorialRestricted()
                         } else if (e.length > 0) {
                             return this.get("eligibilityService").getSoloIneligibleQueues(e).length === this.get("gameTypeQueues.length") && this.get("gameTypeQueues.length") > 0
                         }
@@ -11789,30 +11813,30 @@
                 })),
                 _handleRestriction: function(e, t, n, i, o) {
                     const {
-                        restrictionCode: a
+                        restrictionCode: s
                     } = e;
                     let r = !1;
-                    if (s.TENCENT_MINOR_RESTRICTIONS.includes(a) && i) return !0;
-                    s.TENCENT_MINOR_RESTRICTIONS.includes(a) && (r = !0);
-                    let l = `${o}_${a.toLowerCase()}`;
-                    "TeamMaxSizeRestriction" === a && (l = "parties_premade_size_restriction");
+                    if (a.TENCENT_MINOR_RESTRICTIONS.includes(s) && i) return !0;
+                    a.TENCENT_MINOR_RESTRICTIONS.includes(s) && (r = !0);
+                    let l = `${o}_${s.toLowerCase()}`;
+                    "TeamMaxSizeRestriction" === s && (l = "parties_premade_size_restriction");
                     const c = this.get("tra").formatString(l, e.restrictionArgs);
-                    return t.push(a), n.push(c), r || i
+                    return t.push(s), n.push(c), r || i
                 },
                 getEligibilityStrings: function(e, t = !1, n = "game_select_queue_restriction_party") {
                     const i = [],
                         o = [],
-                        a = e && e.length || 0;
-                    for (let s = 0; s < a; s++) {
+                        s = e && e.length || 0;
+                    for (let a = 0; a < s; a++) {
                         let {
-                            restrictions: a
-                        } = e[s];
-                        a = this.get("eligibilityService").groupMissingTokenRestrictions(a);
-                        const r = a && a.length || 0;
+                            restrictions: s
+                        } = e[a];
+                        s = this.get("eligibilityService").groupMissingTokenRestrictions(s);
+                        const r = s && s.length || 0;
                         let l = !1;
                         for (let e = 0; e < r; e++) {
-                            const s = a[e];
-                            !s.restrictionCode || !s.restrictionArgs || t && -1 !== o.indexOf(s.restrictionCode) || (l = this._handleRestriction(s, o, i, l, n))
+                            const a = s[e];
+                            !a.restrictionCode || !a.restrictionArgs || t && -1 !== o.indexOf(a.restrictionCode) || (l = this._handleRestriction(a, o, i, l, n))
                         }
                     }
                     return i
@@ -11866,7 +11890,7 @@
                         assetMutator: n
                     }
                 })),
-                isTFT: i.Ember.computed.equal("gameSelectModeGroup", s.MODE_GROUP_NAMES.TFT),
+                isTFT: i.Ember.computed.equal("gameSelectModeGroup", a.MODE_GROUP_NAMES.TFT),
                 getGameDataModeNameFromQueue(e) {
                     const {
                         mapId: t,
@@ -11906,7 +11930,7 @@
                             assetMutator: i
                         } = this.get("queueDataToDisplay");
                     let o;
-                    if (e === s.CATEGORY_NAMES.PVP && (o = this.getGameDataModeName(t, n, i)), !o) {
+                    if (e === a.CATEGORY_NAMES.PVP && (o = this.getGameDataModeName(t, n, i)), !o) {
                         const e = `game_select_game_type_name_${t}_${n.toLowerCase()}`;
                         o = this.get(`tra.${e}`)
                     }
@@ -11923,23 +11947,23 @@
                             gameMode: i,
                             assetMutator: o
                         } = this.get("queueDataToDisplay");
-                    let a;
-                    if (e === s.CATEGORY_NAMES.PVP) {
+                    let s;
+                    if (e === a.CATEGORY_NAMES.PVP) {
                         const e = this.get("assets").getMap(n, i, o);
-                        e && e.gameModeDescription && (a = e.gameModeDescription)
+                        e && e.gameModeDescription && (s = e.gameModeDescription)
                     }
                     const r = (i || "").toLowerCase(),
                         l = (e || "").toLowerCase();
-                    if (!a) {
+                    if (!s) {
                         if (this.get("isDisabledFeaturedGameMode")) return "";
                         const e = `game_select_category_description_${l}_${n}_${r}`;
-                        a = this.get(`tra.${e}`)
+                        s = this.get(`tra.${e}`)
                     }
                     const c = `game_select_category_description_${e}_${n}_${i}_${t}`.toLowerCase();
-                    return this.get("tra").exists(c) && (a = this.get(`tra.${c}`)), a
+                    return this.get("tra").exists(c) && (s = this.get(`tra.${c}`)), s
                 })),
                 shouldShowGameTypeSecondaryDescription: i.Ember.computed("queueDataToDisplay.gameMode", (function() {
-                    return this.get("queueDataToDisplay.gameMode") === s.TRAINING_TYPES.PRACTICE_TOOL
+                    return this.get("queueDataToDisplay.gameMode") === a.TRAINING_TYPES.PRACTICE_TOOL
                 })),
                 gameTypeSecondaryDescriptionIconUrl: i.Ember.computed("isTraining", "queueDataToDisplay.gameMode", (function() {
                     const e = this.get("queueDataToDisplay.gameMode");
@@ -11951,18 +11975,18 @@
                 gameTypeSecondaryDescriptionText: i.Ember.computed("shouldShowGameTypeSecondaryDescription", (function() {
                     return this.get("tra.game_select_all_champions_unlocked_solo")
                 })),
-                isTraining: i.Ember.computed.equal("selectedCategory", s.CATEGORY_NAMES.TRAINING),
-                isAlternativeLeagueMode: i.Ember.computed.equal("gameSelectModeGroup", s.MODE_GROUP_NAMES.AlternativeLeagueModes),
+                isTraining: i.Ember.computed.equal("selectedCategory", a.CATEGORY_NAMES.TRAINING),
+                isAlternativeLeagueMode: i.Ember.computed.equal("gameSelectModeGroup", a.MODE_GROUP_NAMES.AlternativeLeagueModes),
                 isDisabledFeaturedGameMode: i.Ember.computed("mapId", "gameMode", (function() {
-                    return this.get("mapId") === s.DISABLED_RGM_GAME_TYPE.mapId && this.get("gameMode") === s.DISABLED_RGM_GAME_TYPE.gameMode
+                    return this.get("mapId") === a.DISABLED_RGM_GAME_TYPE.mapId && this.get("gameMode") === a.DISABLED_RGM_GAME_TYPE.gameMode
                 })),
                 mapTeamSize: i.Ember.computed("defaultQueue.numPlayersPerTeam", "selectedQueue.numPlayersPerTeam", "gameSelectModeGroup", "selectedGameSelectModeGroup", (function() {
                     return this.get("gameSelectModeGroup") === this.get("selectedGameSelectModeGroup") ? this.get("selectedQueue.numPlayersPerTeam") : this.get("defaultQueue.numPlayersPerTeam")
                 })),
                 mapVersus: i.Ember.computed("queueDataToDisplay.gameMode", "isTraining", "isDisabledFeaturedGameMode", "mapTeamSize", "tra.ready", "tra.game_select_team_size", (function() {
                     const e = this.get("queueDataToDisplay.gameMode");
-                    if (e === s.GAME_MODES.TFT) return this.get("tra.game_select_team_size_free_for_all_acronym");
-                    if (e === s.GAME_MODES.CHERRY) return this.get("tra.game_select_team_size_multiteam");
+                    if (e === a.GAME_MODES.TFT) return this.get("tra.game_select_team_size_free_for_all_acronym");
+                    if (e === a.GAME_MODES.CHERRY) return this.get("tra.game_select_team_size_multiteam");
                     const t = this.get("mapTeamSize");
                     return this.get("isTraining") || this.get("isDisabledFeaturedGameMode") || 0 === t ? null : this.translate("game_select_team_size", {
                         size: t
@@ -12026,7 +12050,7 @@
                         t = this.get("gameMode"),
                         n = this.get("isCurrentlySelected"),
                         i = this.get("eligibilityService.isNewTFTPlayer");
-                    return !!e && (!(t !== s.GAME_MODES.TFT || !n) && !i)
+                    return !!e && (!(t !== a.GAME_MODES.TFT || !n) && !i)
                 })),
                 seedTFTNPEQueueUnlock: i.Ember.observer("eligibilityService.isNewTFTPlayer", "tftNPEService.preferencesInitialized", "tftNPEService.shouldShowTFTNPEQueueUnlock", (function() {
                     const e = this.get("eligibilityService.isNewTFTPlayer"),
@@ -12086,8 +12110,8 @@
                 value: !0
             }), t.default = void 0;
             var i, o = n(1),
-                a = n(101),
-                s = (i = n(47)) && i.__esModule ? i : {
+                s = n(101),
+                a = (i = n(47)) && i.__esModule ? i : {
                     default: i
                 },
                 r = n(9);
@@ -12137,7 +12161,7 @@
                 },
                 _getTrainingAssetUrl: function(e) {
                     const t = this.get("gameMode");
-                    return a.TUTORIAL_ASSETS[t][e]
+                    return s.TUTORIAL_ASSETS[t][e]
                 },
                 activeVideoUrl: o.Ember.computed("isTraining", "mapId", "assets.availableMaps", (function() {
                     return this._getAssetUrl("game-select-icon-active-video")
@@ -12195,7 +12219,7 @@
                 _screenRootShowListener: null,
                 _screenRootHideListener: null,
                 _attachViewportListeners: function() {
-                    const e = o.Viewport.main().getScreenRoot(s.default.get("viewportApiKey"), "rcp-fe-lol-parties");
+                    const e = o.Viewport.main().getScreenRoot(a.default.get("viewportApiKey"), "rcp-fe-lol-parties");
                     this._screenRootShowListener = function() {
                         this._initialLoad = !0, this.set("viewportStateIsShow", !0)
                     }.bind(this), this._screenRootHideListener = function() {
@@ -12203,7 +12227,7 @@
                     }.bind(this), e.on("show", this._screenRootShowListener), e.on("hide", this._screenRootHideListener)
                 },
                 _detachViewportListeners: function() {
-                    const e = o.Viewport.main().getScreenRoot(s.default.get("viewportApiKey"), "rcp-fe-lol-parties");
+                    const e = o.Viewport.main().getScreenRoot(a.default.get("viewportApiKey"), "rcp-fe-lol-parties");
                     this._screenRootShowListener && (e.off("show", this._screenRootShowListener), this._screenRootShowListener = null), this._screenRootHideListener && (e.off("hide", this._screenRootHideListener), this._screenRootHideListener = null)
                 },
                 didInsertElement: function() {
@@ -12228,8 +12252,8 @@
             "use strict";
             var i = n(1),
                 o = r(n(43)),
-                a = r(n(10)),
-                s = n(9);
+                s = r(n(10)),
+                a = n(9);
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -12243,7 +12267,7 @@
                 classNameBindings: ["isSelected:selected", "isDisabled:disabled"],
                 eligibilityService: i.Ember.inject.service("queue-eligibility"),
                 summonerService: i.Ember.inject.service("summoner"),
-                platformConfigSingleton: a.default,
+                platformConfigSingleton: s.default,
                 layout: n(238),
                 summonerId: i.Ember.computed.alias("summonerService.localSummonerId"),
                 hasPip: i.Ember.computed("shouldShowPipQueueIds.[]", "queueId", (function() {
@@ -12324,7 +12348,7 @@
                     return 440 === this.get("queueId")
                 })),
                 isSwiftPlay: i.Ember.computed("queueId", (function() {
-                    return !!s.SWIFTPLAY_QUEUES_MAP[this.get("queueId")]
+                    return !!a.SWIFTPLAY_QUEUES_MAP[this.get("queueId")]
                 })),
                 allowablePremadeSizesString: i.Ember.computed("tra", "tra.ready", "tra.game_select_flex_premade_size_any", "tra.game_select_flex_premade_size_fours_disabled", "tra.game_select_flex_premade_size_fives_only", "shouldShowAllowablePremadeSizes", "allowablePremadeSizesForQueue440", (function() {
                     if (!this.get("shouldShowAllowablePremadeSizes") || !this.get("platformConfigSingleton")) return "";
@@ -12333,7 +12357,7 @@
                 })),
                 shouldShowUnlockVideo: i.Ember.computed("queueId", "queueGameMode", (function() {
                     const e = this.get("queueId");
-                    return "TFT" === this.get("queueGameMode") && !s.TFT_AVAILABLE_NPE_QUEUE_IDS.includes(e)
+                    return "TFT" === this.get("queueGameMode") && !a.TFT_AVAILABLE_NPE_QUEUE_IDS.includes(e)
                 })),
                 unlockVideo: i.Ember.computed("queueId", (function() {
                     const e = this.get("queueId");
@@ -12365,17 +12389,17 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(10)) && i.__esModule ? i : {
+                s = (i = n(10)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(9);
+                a = n(9);
             e.exports = o.Ember.Component.extend({
                 classNames: ["parties-game-navs"],
                 classNameBindings: ["hasAlphaQueues"],
                 layout: n(240),
                 customGamesService: o.Ember.inject.service("custom-games"),
                 eligibilityService: o.Ember.inject.service("queue-eligibility"),
-                platformConfigSingleton: a.default,
+                platformConfigSingleton: s.default,
                 categories: o.Ember.computed("queues.queuesByCategory", (function() {
                     return this.convertCategories("primary")
                 })),
@@ -12383,7 +12407,7 @@
                     return this.convertCategories("secondary")
                 })),
                 selectedIndex: o.Ember.computed("categories", "selected.category", (function() {
-                    const e = [].concat(s.CATEGORIES_DISPLAY_ORDER.primary, s.CATEGORIES_DISPLAY_ORDER.secondary),
+                    const e = [].concat(a.CATEGORIES_DISPLAY_ORDER.primary, a.CATEGORIES_DISPLAY_ORDER.secondary),
                         t = this.get("selected.category"),
                         n = e.indexOf(t);
                     return Math.max(n, 0)
@@ -12394,12 +12418,12 @@
                     }
                 },
                 setCategory: function(e) {
-                    if (this.set("selected.category", e), this.set("selected.needsAdditionalGameConfig", !1), this.set("selected.isCreatingCustomGame", !1), this.set("selected.isJoiningCustomGame", !1), this.set("selected.isTrainingGame", !1), this.set("selected.queueId", null), e === s.CATEGORY_NAMES.CREATE_CUSTOM) {
+                    if (this.set("selected.category", e), this.set("selected.needsAdditionalGameConfig", !1), this.set("selected.isCreatingCustomGame", !1), this.set("selected.isJoiningCustomGame", !1), this.set("selected.isTrainingGame", !1), this.set("selected.queueId", null), e === a.CATEGORY_NAMES.CREATE_CUSTOM) {
                         this.get("customGamesService").resetSelectedSubcategory(), this.set("selected.isCreatingCustomGame", !0), this.set("selected.needsAdditionalGameConfig", !0);
                         const e = this.get("customGamesService.selectedSubcategory.mapId");
                         this.set("selected.mapId", e)
-                    } else if (e === s.CATEGORY_NAMES.JOIN_CUSTOM) this.set("selected.isJoiningCustomGame", !0);
-                    else if (e === s.CATEGORY_NAMES.TRAINING) {
+                    } else if (e === a.CATEGORY_NAMES.JOIN_CUSTOM) this.set("selected.isJoiningCustomGame", !0);
+                    else if (e === a.CATEGORY_NAMES.TRAINING) {
                         this.set("selected.isTrainingGame", !0);
                         const e = this.get("queues").getTutorialQueues();
                         e && e.length > 0 && (this.get("eligibilityService").isTutorialRestricted() && e.length > 1 ? (this.set("selected.trainingGameMode", e[1].gameMode), this.set("selected.isCreatingCustomGame", !0)) : this.set("selected.trainingGameMode", e[0].gameMode))
@@ -12421,7 +12445,7 @@
                 convertCategories: function(e) {
                     const t = [],
                         n = this.get("queues");
-                    return s.CATEGORIES_DISPLAY_ORDER[e].forEach((e => {
+                    return a.CATEGORIES_DISPLAY_ORDER[e].forEach((e => {
                         const i = n.categoryHasQueues(e);
                         t.push(o.Ember.Object.create({
                             name: e,
@@ -12440,23 +12464,23 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(10)) && i.__esModule ? i : {
+                s = (i = n(10)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(9);
+                a = n(9);
             e.exports = o.Ember.Component.extend({
                 tagName: "lol-uikit-navigation-item",
                 classNames: ["parties-game-navs-item"],
                 customGamesService: o.Ember.inject.service("custom-games"),
                 attributeBindings: ["disabled:disabled", "active:active", "category.name:data-category"],
                 layout: n(242),
-                platformConfigSingleton: a.default,
+                platformConfigSingleton: s.default,
                 active: o.Ember.computed("category.name", "selected.category", (function() {
                     return this.get("category.name") === this.get("selected.category")
                 })),
-                isCreateCustom: o.Ember.computed.equal("category.name", s.CATEGORY_NAMES.CREATE_CUSTOM),
-                isJoinCustom: o.Ember.computed.equal("category.name", s.CATEGORY_NAMES.JOIN_CUSTOM),
-                isTraining: o.Ember.computed.equal("category.name", s.CATEGORY_NAMES.TRAINING),
+                isCreateCustom: o.Ember.computed.equal("category.name", a.CATEGORY_NAMES.CREATE_CUSTOM),
+                isJoinCustom: o.Ember.computed.equal("category.name", a.CATEGORY_NAMES.JOIN_CUSTOM),
+                isTraining: o.Ember.computed.equal("category.name", a.CATEGORY_NAMES.TRAINING),
                 disabled: o.Ember.computed("category.hasQueues", "isCreateCustom", "isJoinCustom", "isTraining", "customGamesService.available", "platformConfigSingleton.tutorialEnabled", (function() {
                     return this.get("isTraining") ? !this.get("platformConfigSingleton.tutorialEnabled") : this.get("isCreateCustom") || this.get("isJoinCustom") ? !this.get("customGamesService.available") : !this.get("category.hasQueues")
                 })),
@@ -12536,8 +12560,8 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = n(109),
-                s = n(12),
+                s = n(109),
+                a = n(12),
                 r = (i = n(130)) && i.__esModule ? i : {
                     default: i
                 };
@@ -12577,7 +12601,7 @@
                     return e
                 })),
                 getSubteamSizeForMutator: function(e) {
-                    return s.QUEUE_ID_TO_MULTITEAM_LOBBY_CONFIG[e]?.playerSlotCount || 0
+                    return a.QUEUE_ID_TO_MULTITEAM_LOBBY_CONFIG[e]?.playerSlotCount || 0
                 },
                 teamSizeOptions: o.Ember.computed("maxTeamSize", "minPlayersPerTeam", (function() {
                     const e = this.get("maxTeamSize"),
@@ -12585,15 +12609,15 @@
                         n = this.getSubteamSizeForMutator(t);
                     this.get("playerInputs.numPlayersPerTeam") > e && this.set("playerInputs.numPlayersPerTeam", e);
                     const i = this.get("playerInputs.numPlayersPerTeam"),
-                        a = [];
+                        s = [];
                     for (let t = this.get("minPlayersPerTeam"); t <= e; t++)
                         if (0 === n || t % n == 0) {
                             const e = t === i;
-                            a.push({
+                            s.push({
                                 value: t,
                                 isSelected: e
                             })
-                        } return o.Ember.A(a)
+                        } return o.Ember.A(s)
                 })),
                 minPlayersPerTeam: o.Ember.computed("customGamesService.gameMapMinPlayers.[]", "customGamesService.gameMapMinPlayers.@each.minPlayers", "customGamesService.minPlayers", "selected.mapId", (function() {
                     let e = 1;
@@ -12611,13 +12635,13 @@
                         n = this.get("playerInputs.mutatorId");
                     for (let i = 0; i < e.length; i++) {
                         const o = e[i].get("name");
-                        let a = e[i].get("id");
-                        a = parseInt(a, 10);
-                        const s = this.get(`tra.custom_game_mutator_type_${o}`),
-                            r = a === n;
+                        let s = e[i].get("id");
+                        s = parseInt(s, 10);
+                        const a = this.get(`tra.custom_game_mutator_type_${o}`),
+                            r = s === n;
                         t.push({
-                            value: a,
-                            label: s,
+                            value: s,
+                            label: a,
                             isSelected: r
                         })
                     }
@@ -12632,13 +12656,13 @@
                     let o = !1;
                     return t.forEach((t => {
                         let n = t;
-                        a.CUSTOM_GAME_SPECTATOR_TYPES[t] && (n = this.get(`tra.custom_game_setup_spectator_type_${a.CUSTOM_GAME_SPECTATOR_TYPES[t]}`));
-                        const s = t === e;
-                        s && (o = !0);
+                        s.CUSTOM_GAME_SPECTATOR_TYPES[t] && (n = this.get(`tra.custom_game_setup_spectator_type_${s.CUSTOM_GAME_SPECTATOR_TYPES[t]}`));
+                        const a = t === e;
+                        a && (o = !0);
                         const r = {
                             value: t,
                             label: n,
-                            isSelected: s
+                            isSelected: a
                         };
                         i.push(r)
                     })), o || (i[0].isSelected = !0, this.set("playerInputs.spectatorType", i[0].value)), i
@@ -12647,15 +12671,15 @@
                     const e = this.get("playerInputs.spectatorDelay"),
                         t = [];
                     let n = !1;
-                    for (const i in a.CUSTOM_GAME_SPECTATOR_DELAY_OPTIONS) {
+                    for (const i in s.CUSTOM_GAME_SPECTATOR_DELAY_OPTIONS) {
                         const o = i === e;
                         o && (n = !0);
-                        const s = {
+                        const a = {
                             value: i,
-                            label: this.get(`tra.custom_game_setup_spectator_delay_${a.CUSTOM_GAME_SPECTATOR_DELAY_OPTIONS[i]}`),
+                            label: this.get(`tra.custom_game_setup_spectator_delay_${s.CUSTOM_GAME_SPECTATOR_DELAY_OPTIONS[i]}`),
                             isSelected: o
                         };
-                        t.push(s)
+                        t.push(a)
                     }
                     return n || (t[0].isSelected = !0, this.set("playerInputs.spectatorDelay", t[0].value)), t
                 })),
@@ -12665,15 +12689,15 @@
                     if (12 !== this.get("selected.mapId")) return [];
                     const t = [];
                     let n = !1;
-                    for (const i in a.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS) {
+                    for (const i in s.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS) {
                         const o = i === e;
                         o && (n = !0);
-                        const s = {
+                        const a = {
                             value: i,
-                            label: this.get(`tra.custom_game_setup_aram_map_mutator_${a.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS[i]}`),
+                            label: this.get(`tra.custom_game_setup_aram_map_mutator_${s.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS[i]}`),
                             isSelected: o
                         };
-                        t.push(s)
+                        t.push(a)
                     }
                     return n || (t[0].isSelected = !0, this.set("playerInputs.aramMapMutator", t[0].value)), t
                 })),
@@ -12767,8 +12791,8 @@
                         e && this.set("playerInputs.spectatorDelay", e.getAttribute("value"))
                     },
                     aramMapMutatorChanged: function(e) {
-                        if (a.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS[e] === a.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS.RANDOM_MAP_SELECTION) {
-                            const t = Object.keys(a.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS).filter((t => t !== e));
+                        if (s.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS[e] === s.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS.RANDOM_MAP_SELECTION) {
+                            const t = Object.keys(s.CUSTOM_GAME_ARAM_MAP_MUTATOR_OPTIONS).filter((t => t !== e));
                             e = t[t.length * Math.random() << 0]
                         }
                         this.set("playerInputs.aramMapMutator", e)
@@ -12794,11 +12818,11 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(109);
-            e.exports = o.Ember.Component.extend(a.default, {
+                a = n(109);
+            e.exports = o.Ember.Component.extend(s.default, {
                 classNames: ["parties-custom-game-subcategory-card"],
                 classNameBindings: ["currentlySelected:selected", "unavailable:disabled", "animationLock:animation-lock", "compact"],
                 attributeBindings: ["mapId:data-map-id"],
@@ -12811,7 +12835,7 @@
                 mapId: o.Ember.computed.alias("subcategory.mapId"),
                 availability: o.Ember.computed("subcategory.queueAvailability", (function() {
                     const e = this.get("subcategory.queueAvailability");
-                    return !!s.GAME_AVAILABILITY_TYPES[e] && s.GAME_AVAILABILITY_TYPES[e]
+                    return !!a.GAME_AVAILABILITY_TYPES[e] && a.GAME_AVAILABILITY_TYPES[e]
                 })),
                 available: o.Ember.computed.equal("availability", "available"),
                 unavailable: o.Ember.computed.not("available"),
@@ -12911,10 +12935,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 };
-            n(257), e.exports = o.Ember.Component.extend(a.default, {
+            n(257), e.exports = o.Ember.Component.extend(s.default, {
                 classNames: ["custom-game-spectator-info"],
                 layout: n(258),
                 customGamesService: o.Ember.inject.service("custom-games"),
@@ -12990,10 +13014,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(130)) && i.__esModule ? i : {
+                s = (i = n(130)) && i.__esModule ? i : {
                     default: i
                 };
-            n(260), e.exports = o.Ember.Component.extend(a.default, {
+            n(260), e.exports = o.Ember.Component.extend(s.default, {
                 layout: n(261),
                 tagName: "li",
                 classNames: ["spectator-info-spectators-list-item"],
@@ -13102,9 +13126,9 @@
                 o = n(263);
             n(264);
             const {
-                RunMixin: a
+                RunMixin: s
             } = i.EmberAddons.EmberLifeline;
-            e.exports = i.Ember.Component.extend(a, {
+            e.exports = i.Ember.Component.extend(s, {
                 classNames: ["custom-game-teams"],
                 layout: n(265),
                 customGameService: i.Ember.inject.service("custom-games"),
@@ -13138,15 +13162,15 @@
                         n = this.get("riotscriptInCustoms"),
                         {
                             botIds: i,
-                            hasDuplicates: a,
-                            duplicateBotIds: s
+                            hasDuplicates: s,
+                            duplicateBotIds: a
                         } = (0, o.getBotIdsAndCheckDuplicates)(e),
                         {
                             botIds: r,
                             hasDuplicates: l,
                             duplicateBotIds: c
                         } = (0, o.getBotIdsAndCheckDuplicates)(t);
-                    return this.set("team100DupBots", s), this.set("team200DupBots", c), n && (a || l)
+                    return this.set("team100DupBots", a), this.set("team200DupBots", c), n && (s || l)
                 })),
                 _getAvailableBotsForTeam: function(e) {
                     const t = this.get("customGameService.availableBotDetails"),
@@ -13169,8 +13193,8 @@
                     const t = i.Ember.A(),
                         n = this.get("teamSize"),
                         o = this.get("lobbiesService.subteamDataToSummonerIdMap");
-                    for (let a = 0; a < n; a++) {
-                        const n = this._getSubteamForIndex(a);
+                    for (let s = 0; s < n; s++) {
+                        const n = this._getSubteamForIndex(s);
                         if (o[n]) {
                             const i = e.find((e => e.summonerId === o[n]));
                             t.push({
@@ -13262,8 +13286,8 @@
             "use strict";
             var i = n(1),
                 o = c(n(130)),
-                a = c(n(43)),
-                s = c(n(267));
+                s = c(n(43)),
+                a = c(n(267));
             n(268);
             var r = n(109),
                 l = n(263);
@@ -13299,7 +13323,7 @@
                     }
                 }
             });
-            e.exports = i.Ember.Component.extend(m, d, o.default, a.default, s.default, {
+            e.exports = i.Ember.Component.extend(m, d, o.default, s.default, a.default, {
                 playerNames: i.playerNames,
                 tagName: "li",
                 classNames: ["custom-game-team-member"],
@@ -13543,10 +13567,10 @@
                             }) => e)),
                             i = Object.values(r.CUSTOM_GAME_BOT_POSITIONS).filter((e => !n.includes(e))),
                             o = e.filter((e => e.recommendedPositions.some((e => i.includes(e))))),
-                            a = o[Math.floor(Math.random() * o.length)],
-                            s = this.get("botPosition") ?? a?.recommendedPositions.find((e => i.includes(e))) ?? a?.recommendedPositions[0] ?? r.CUSTOM_GAME_BOT_POSITIONS.TOP,
-                            l = this._getDefaultDifficulty(a);
-                        this.get("customGameService").addBot(this.get("team"), a.id, l, s)
+                            s = o[Math.floor(Math.random() * o.length)],
+                            a = this.get("botPosition") ?? s?.recommendedPositions.find((e => i.includes(e))) ?? s?.recommendedPositions[0] ?? r.CUSTOM_GAME_BOT_POSITIONS.TOP,
+                            l = this._getDefaultDifficulty(s);
+                        this.get("customGameService").addBot(this.get("team"), s.id, l, a)
                     },
                     changeBotChampion: function(e) {
                         if (!e || e.id === this.get("botChampionId") || this.get("updatingBotDisabled")) return;
@@ -13713,16 +13737,16 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(43)),
-                a = s(n(271));
+                o = a(n(43)),
+                s = a(n(271));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             n(272);
-            const r = new a.default([], {
+            const r = new s.default([], {
                 keys: [{
                     name: "lobbyName",
                     weight: "1"
@@ -13768,8 +13792,8 @@
                         n = this.get("customGames");
                     if (!n) return;
                     const o = n.filter((n => !(t && !n.get("hasPassword")) && !(e && !n.get("maxSpectatorSlots")))),
-                        a = this.get("searchString");
-                    return a ? (r.list !== o && r.set(o), i.Ember.A(r.search(a))) : i.Ember.A(o)
+                        s = this.get("searchString");
+                    return s ? (r.list !== o && r.set(o), i.Ember.A(r.search(s))) : i.Ember.A(o)
                 })),
                 sortedFilteredCustomGames: i.Ember.computed.sort("filteredCustomGames", "sortDefinition"),
                 customGameRenderList: i.Ember.computed("filteredCustomGames", "sortedFilteredCustomGames", "searchString", (function() {
@@ -13826,18 +13850,18 @@
                     caseSensitive: !1,
                     include: [],
                     shouldSort: !0,
-                    searchFn: s,
+                    searchFn: a,
                     sortFn: function(e, t) {
                         return e.score - t.score
                     },
                     getFn: function e(t, n, i) {
-                        var o, s, r, l, c, m;
+                        var o, a, r, l, c, m;
                         if (n) {
-                            if (-1 !== (r = n.indexOf(".")) ? (o = n.slice(0, r), s = n.slice(r + 1)) : o = n, null != (l = t[o]))
-                                if (s || "string" != typeof l && "number" != typeof l)
-                                    if (a(l))
-                                        for (c = 0, m = l.length; c < m; c++) e(l[c], s, i);
-                                    else s && e(l, s, i);
+                            if (-1 !== (r = n.indexOf(".")) ? (o = n.slice(0, r), a = n.slice(r + 1)) : o = n, null != (l = t[o]))
+                                if (a || "string" != typeof l && "number" != typeof l)
+                                    if (s(l))
+                                        for (c = 0, m = l.length; c < m; c++) e(l[c], a, i);
+                                    else a && e(l, a, i);
                             else i.push(l)
                         } else i.push(t);
                         return i
@@ -13856,12 +13880,12 @@
                     for (n in this.list = e, this.options = t = t || {}, i) i.hasOwnProperty(n) && ("boolean" == typeof i[n] ? this.options[n] = n in t ? t[n] : i[n] : this.options[n] = t[n] || i[n])
                 }
 
-                function a(e) {
+                function s(e) {
                     return "[object Array]" === Object.prototype.toString.call(e)
                 }
 
-                function s(e, t) {
-                    t = t || {}, this.options = t, this.options.location = t.location || s.defaultOptions.location, this.options.distance = "distance" in t ? t.distance : s.defaultOptions.distance, this.options.threshold = "threshold" in t ? t.threshold : s.defaultOptions.threshold, this.options.maxPatternLength = t.maxPatternLength || s.defaultOptions.maxPatternLength, this.pattern = t.caseSensitive ? e : e.toLowerCase(), this.patternLen = e.length, this.patternLen <= this.options.maxPatternLength && (this.matchmask = 1 << this.patternLen - 1, this.patternAlphabet = this._calculatePatternAlphabet())
+                function a(e, t) {
+                    t = t || {}, this.options = t, this.options.location = t.location || a.defaultOptions.location, this.options.distance = "distance" in t ? t.distance : a.defaultOptions.distance, this.options.threshold = "threshold" in t ? t.threshold : a.defaultOptions.threshold, this.options.maxPatternLength = t.maxPatternLength || a.defaultOptions.maxPatternLength, this.pattern = t.caseSensitive ? e : e.toLowerCase(), this.patternLen = e.length, this.patternLen <= this.options.maxPatternLength && (this.matchmask = 1 << this.patternLen - 1, this.patternAlphabet = this._calculatePatternAlphabet())
                 }
                 o.VERSION = "2.7.3", o.prototype.set = function(e) {
                     return this.list = e, e
@@ -13873,22 +13897,22 @@
                         n = e.searchFn,
                         i = t.split(e.tokenSeparator),
                         o = 0,
-                        a = i.length;
+                        s = i.length;
                     if (this.options.tokenize)
-                        for (this.tokenSearchers = []; o < a; o++) this.tokenSearchers.push(new n(i[o], e));
+                        for (this.tokenSearchers = []; o < s; o++) this.tokenSearchers.push(new n(i[o], e));
                     this.fullSeacher = new n(t, e)
                 }, o.prototype._startSearch = function() {
                     var e, t, n, i, o = this.options.getFn,
-                        a = this.list,
-                        s = a.length,
+                        s = this.list,
+                        a = s.length,
                         r = this.options.keys,
                         l = r.length,
                         c = null;
-                    if ("string" == typeof a[0])
-                        for (n = 0; n < s; n++) this._analyze("", a[n], n, n);
+                    if ("string" == typeof s[0])
+                        for (n = 0; n < a; n++) this._analyze("", s[n], n, n);
                     else
-                        for (this._keyMap = {}, n = 0; n < s; n++)
-                            for (c = a[n], i = 0; i < l; i++) {
+                        for (this._keyMap = {}, n = 0; n < a; n++)
+                            for (c = s[n], i = 0; i < l; i++) {
                                 if ("string" != typeof(e = r[i])) {
                                     if (t = 1 - e.weight || 1, this._keyMap[e.name] = {
                                             weight: t
@@ -13900,16 +13924,16 @@
                                 this._analyze(e, o(c, e, []), c, n)
                             }
                 }, o.prototype._analyze = function(e, t, i, o) {
-                    var s, r, l, c, m, u, d, p, h, g, b, f, _, y, v, E = this.options,
+                    var a, r, l, c, m, u, d, p, h, g, b, f, _, y, v, E = this.options,
                         S = !1;
                     if (null != t) {
                         r = [];
                         var x = 0;
                         if ("string" == typeof t) {
-                            if (s = t.split(E.tokenSeparator), E.verbose && n("---------\nKey:", e), this.options.tokenize) {
+                            if (a = t.split(E.tokenSeparator), E.verbose && n("---------\nKey:", e), this.options.tokenize) {
                                 for (y = 0; y < this.tokenSearchers.length; y++) {
-                                    for (p = this.tokenSearchers[y], E.verbose && n("Pattern:", p.pattern), h = [], f = !1, v = 0; v < s.length; v++) {
-                                        g = s[v];
+                                    for (p = this.tokenSearchers[y], E.verbose && n("Pattern:", p.pattern), h = [], f = !1, v = 0; v < a.length; v++) {
+                                        g = a[v];
                                         var k = {};
                                         (b = p.search(g)).isMatch ? (k[g] = b.score, S = !0, f = !0, r.push(b.score)) : (k[g] = 1, this.options.matchAllTokens || r.push(1)), h.push(k)
                                     }
@@ -13930,57 +13954,57 @@
                                     matchedIndices: d.matchedIndices
                                 }]
                             }, this.results.push(this.resultMap[o])))
-                        } else if (a(t))
+                        } else if (s(t))
                             for (y = 0; y < t.length; y++) this._analyze(e, t[y], i, o)
                     }
                 }, o.prototype._computeScore = function() {
-                    var e, t, i, o, a, s, r, l, c = this._keyMap,
+                    var e, t, i, o, s, a, r, l, c = this._keyMap,
                         m = this.results;
                     for (this.options.verbose && n("\n\nComputing score:\n"), e = 0; e < m.length; e++) {
-                        for (i = 0, a = (o = m[e].output).length, r = 1, t = 0; t < a; t++) l = o[t].score * (s = c ? c[o[t].key].weight : 1), 1 !== s ? r = Math.min(r, l) : (i += l, o[t].nScore = l);
-                        m[e].score = 1 === r ? i / a : r, this.options.verbose && n(m[e])
+                        for (i = 0, s = (o = m[e].output).length, r = 1, t = 0; t < s; t++) l = o[t].score * (a = c ? c[o[t].key].weight : 1), 1 !== a ? r = Math.min(r, l) : (i += l, o[t].nScore = l);
+                        m[e].score = 1 === r ? i / s : r, this.options.verbose && n(m[e])
                     }
                 }, o.prototype._sort = function() {
                     var e = this.options;
                     e.shouldSort && (e.verbose && n("\n\nSorting...."), this.results.sort(e.sortFn))
                 }, o.prototype._format = function() {
-                    var e, t, i, o, a = this.options,
-                        s = a.getFn,
+                    var e, t, i, o, s = this.options,
+                        a = s.getFn,
                         r = [],
                         l = this.results,
-                        c = a.include;
-                    for (a.verbose && n("\n\nOutput:\n\n", l), i = a.id ? function(e) {
-                            l[e].item = s(l[e].item, a.id, [])[0]
+                        c = s.include;
+                    for (s.verbose && n("\n\nOutput:\n\n", l), i = s.id ? function(e) {
+                            l[e].item = a(l[e].item, s.id, [])[0]
                         } : function() {}, o = function(e) {
-                            var t, n, i, o, a, s = l[e];
+                            var t, n, i, o, s, a = l[e];
                             if (c.length > 0) {
                                 if (t = {
-                                        item: s.item
+                                        item: a.item
                                     }, -1 !== c.indexOf("matches"))
-                                    for (i = s.output, t.matches = [], n = 0; n < i.length; n++) a = {
+                                    for (i = a.output, t.matches = [], n = 0; n < i.length; n++) s = {
                                         indices: (o = i[n]).matchedIndices
-                                    }, o.key && (a.key = o.key), t.matches.push(a); - 1 !== c.indexOf("score") && (t.score = l[e].score)
-                            } else t = s.item;
+                                    }, o.key && (s.key = o.key), t.matches.push(s); - 1 !== c.indexOf("score") && (t.score = l[e].score)
+                            } else t = a.item;
                             return t
                         }, e = 0, t = l.length; e < t; e++) i(e), r.push(o(e));
                     return r
-                }, s.defaultOptions = {
+                }, a.defaultOptions = {
                     location: 0,
                     distance: 100,
                     threshold: .6,
                     maxPatternLength: 32
-                }, s.prototype._calculatePatternAlphabet = function() {
+                }, a.prototype._calculatePatternAlphabet = function() {
                     var e = {},
                         t = 0;
                     for (t = 0; t < this.patternLen; t++) e[this.pattern.charAt(t)] = 0;
                     for (t = 0; t < this.patternLen; t++) e[this.pattern.charAt(t)] |= 1 << this.pattern.length - t - 1;
                     return e
-                }, s.prototype._bitapScore = function(e, t) {
+                }, a.prototype._bitapScore = function(e, t) {
                     var n = e / this.patternLen,
                         i = Math.abs(this.options.location - t);
                     return this.options.distance ? n + i / this.options.distance : i ? 1 : n
-                }, s.prototype.search = function(e) {
-                    var t, n, i, o, a, s, r, l, c, m, u, d, p, h, g, b, f, _, y, v, E, S, x, k = this.options;
+                }, a.prototype.search = function(e) {
+                    var t, n, i, o, s, a, r, l, c, m, u, d, p, h, g, b, f, _, y, v, E, S, x, k = this.options;
                     if (e = k.caseSensitive ? e : e.toLowerCase(), this.pattern === e) return {
                         isMatch: !0,
                         score: 0,
@@ -13997,14 +14021,14 @@
                             matchedIndices: E
                         }
                     }
-                    for (o = k.findAllMatches, a = k.location, i = e.length, s = k.threshold, r = e.indexOf(this.pattern, a), v = [], t = 0; t < i; t++) v[t] = 0;
-                    for (-1 != r && (s = Math.min(this._bitapScore(0, r), s), -1 != (r = e.lastIndexOf(this.pattern, a + this.patternLen)) && (s = Math.min(this._bitapScore(0, r), s))), r = -1, b = 1, f = [], m = this.patternLen + i, t = 0; t < this.patternLen; t++) {
-                        for (l = 0, c = m; l < c;) this._bitapScore(t, a + c) <= s ? l = c : m = c, c = Math.floor((m - l) / 2 + l);
-                        for (m = c, u = Math.max(1, a - c + 1), d = o ? i : Math.min(a + c, i) + this.patternLen, (p = Array(d + 2))[d + 1] = (1 << t) - 1, n = d; n >= u; n--)
-                            if ((g = this.patternAlphabet[e.charAt(n - 1)]) && (v[n - 1] = 1), p[n] = (p[n + 1] << 1 | 1) & g, 0 !== t && (p[n] |= (h[n + 1] | h[n]) << 1 | 1 | h[n + 1]), p[n] & this.matchmask && (b = this._bitapScore(t, n - 1)) <= s) {
-                                if (s = b, r = n - 1, f.push(r), r <= a) break;
-                                u = Math.max(1, 2 * a - r)
-                            } if (this._bitapScore(t + 1, a) > s) break;
+                    for (o = k.findAllMatches, s = k.location, i = e.length, a = k.threshold, r = e.indexOf(this.pattern, s), v = [], t = 0; t < i; t++) v[t] = 0;
+                    for (-1 != r && (a = Math.min(this._bitapScore(0, r), a), -1 != (r = e.lastIndexOf(this.pattern, s + this.patternLen)) && (a = Math.min(this._bitapScore(0, r), a))), r = -1, b = 1, f = [], m = this.patternLen + i, t = 0; t < this.patternLen; t++) {
+                        for (l = 0, c = m; l < c;) this._bitapScore(t, s + c) <= a ? l = c : m = c, c = Math.floor((m - l) / 2 + l);
+                        for (m = c, u = Math.max(1, s - c + 1), d = o ? i : Math.min(s + c, i) + this.patternLen, (p = Array(d + 2))[d + 1] = (1 << t) - 1, n = d; n >= u; n--)
+                            if ((g = this.patternAlphabet[e.charAt(n - 1)]) && (v[n - 1] = 1), p[n] = (p[n + 1] << 1 | 1) & g, 0 !== t && (p[n] |= (h[n + 1] | h[n]) << 1 | 1 | h[n + 1]), p[n] & this.matchmask && (b = this._bitapScore(t, n - 1)) <= a) {
+                                if (a = b, r = n - 1, f.push(r), r <= s) break;
+                                u = Math.max(1, 2 * s - r)
+                            } if (this._bitapScore(t + 1, s) > a) break;
                         h = p
                     }
                     return {
@@ -14012,9 +14036,9 @@
                         score: 0 === b ? .001 : b,
                         matchedIndices: E = this._getMatchedIndices(v)
                     }
-                }, s.prototype._getMatchedIndices = function(e) {
-                    for (var t, n = [], i = -1, o = -1, a = 0, s = e.length; a < s; a++)(t = e[a]) && -1 === i ? i = a : t || -1 === i || ((o = a - 1) - i + 1 >= this.options.minMatchCharLength && n.push([i, o]), i = -1);
-                    return e[a - 1] && a - 1 - i + 1 >= this.options.minMatchCharLength && n.push([i, a - 1]), n
+                }, a.prototype._getMatchedIndices = function(e) {
+                    for (var t, n = [], i = -1, o = -1, s = 0, a = e.length; s < a; s++)(t = e[s]) && -1 === i ? i = s : t || -1 === i || ((o = s - 1) - i + 1 >= this.options.minMatchCharLength && n.push([i, o]), i = -1);
+                    return e[s - 1] && s - 1 - i + 1 >= this.options.minMatchCharLength && n.push([i, s - 1]), n
                 }, e.exports = o
             }()
         }, (e, t, n) => {
@@ -14030,10 +14054,10 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(43)),
-                a = s(n(125));
+                o = a(n(43)),
+                s = a(n(125));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -14110,7 +14134,7 @@
                 showTournamentCodeError: function(e) {
                     this.resetInputValue();
                     const t = 438 === e.status ? this.get("tra.custom_game_list_error_438") : this.get("tra.custom_game_list_tournament_code_error_body");
-                    a.default.promptJoinErrorModal(t)
+                    s.default.promptJoinErrorModal(t)
                 }
             })
         }, (e, t, n) => {
@@ -14194,8 +14218,8 @@
             "use strict";
             var i = n(1),
                 o = r(n(177)),
-                a = (n(12), n(9)),
-                s = r(n(10));
+                s = (n(12), n(9)),
+                a = r(n(10));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -14206,7 +14230,7 @@
                 classNames: ["tft-lobby"],
                 classNameBindings: ["isPair:tft-lobby-pair"],
                 layout: n(281),
-                platformConfigSingleton: s.default,
+                platformConfigSingleton: a.default,
                 playbookEnabled: !1,
                 init() {
                     this._super(...arguments), this.set("playbook", i.Ember.inject.service("tft-playbook")), this.set("playbookEnabled", i.Ember.computed.alias("playbook.playbookEnabled"))
@@ -14220,7 +14244,7 @@
                 patchNotesUrl: i.Ember.computed.alias("platformConfigSingleton.TftPatchNotesUrl"),
                 hasNoPatchNotes: i.Ember.computed.empty("patchNotesUrl"),
                 isPair: i.Ember.computed("lobbiesService.queueId", (function() {
-                    return a.PAIRS_QUEUE_IDS.includes(this.get("lobbiesService.queueId"))
+                    return s.PAIRS_QUEUE_IDS.includes(this.get("lobbiesService.queueId"))
                 })),
                 isPromethiumEnabled: i.Ember.computed("queueId", "promethiumManagerService.isReady", (function() {
                     const e = this.get("promethiumManagerService");
@@ -14236,16 +14260,16 @@
                         });
                     let o = this.get("isPair") ? 1 : 0;
 
-                    function a(e) {
+                    function s(e) {
                         o > 3 ? n.get("bottom").push(e) : o % 2 == 0 ? n.get("left").push(e) : n.get("right").push(e), o++
                     }
                     if (e && e.length > 0)
-                        for (let t = 0; t < e.length; t++) a(e[t]);
-                    let s = this.get("pendingInviteCount");
-                    if (i.lodash.isNumber(s) || (s = 0), t && t.length > 0)
-                        for (let e = 0; e < t.length; e++) s > 0 ? (a(i.Ember.Object.create({
+                        for (let t = 0; t < e.length; t++) s(e[t]);
+                    let a = this.get("pendingInviteCount");
+                    if (i.lodash.isNumber(a) || (a = 0), t && t.length > 0)
+                        for (let e = 0; e < t.length; e++) a > 0 ? (s(i.Ember.Object.create({
                             isInvited: !0
-                        })), s--) : a(t[e]);
+                        })), a--) : s(t[e]);
                     return n
                 }))
             })
@@ -14263,8 +14287,8 @@
             "use strict";
             var i = n(1),
                 o = u(n(43)),
-                a = u(n(130)),
-                s = u(n(155)),
+                s = u(n(130)),
+                a = u(n(155)),
                 r = u(n(144)),
                 l = u(n(10)),
                 c = u(n(72)),
@@ -14279,7 +14303,7 @@
             const {
                 RunMixin: d
             } = i.EmberAddons.EmberLifeline, p = "QUEUE_DODGER", h = "LEAVER_BUSTED", g = "LEAVER_BUSTER_QUEUE_LOCKOUT", b = i.Ember.Object.extend(i.Ember.PromiseProxyMixin);
-            e.exports = i.Ember.Component.extend(d, s.default, o.default, a.default, r.default, {
+            e.exports = i.Ember.Component.extend(d, a.default, o.default, s.default, r.default, {
                 classNames: ["tft-footer-container"],
                 layout: n(284),
                 _notifiedSearchErrorIds: i.Ember.A(),
@@ -14459,17 +14483,17 @@
                         t = this.get("currentMapId"),
                         n = e.findMinPlayersForMap(t),
                         o = e.get("minPlayers"),
-                        a = e.get("currentNumPlayers"),
-                        s = n > o ? n : o;
+                        s = e.get("currentNumPlayers"),
+                        a = n > o ? n : o;
                     let r = "";
-                    a < n && (r = this.translate("custom_game_champ_select_error_min_map_player", {
-                        numPlayers: a,
+                    s < n && (r = this.translate("custom_game_champ_select_error_min_map_player", {
+                        numPlayers: s,
                         minRequired: n
-                    })), a < o && (r = this.translate("custom_game_champ_select_error_min_player", {
-                        minPlayers: s
+                    })), s < o && (r = this.translate("custom_game_champ_select_error_min_player", {
+                        minPlayers: a
                     }));
                     const l = i.tra.get("parties_kicked_confirmation_ok");
-                    return a < s ? (this.showModal({
+                    return s < a ? (this.showModal({
                         type: "DialogAlert",
                         data: {
                             contents: r,
@@ -14488,7 +14512,7 @@
                                 n = this.get(t);
                             n && n.length > 0 && o.push(n)
                         })), this.set("customGameRewardsDisabledReasons", i.Ember.A(o));
-                        const a = this.showModal({
+                        const s = this.showModal({
                             type: "DialogConfirm",
                             data: {
                                 contents: this.get("customGameRewardsDisabledModalElement"),
@@ -14502,9 +14526,9 @@
                                 }
                             }
                         });
-                        a.domNode.classList.add("parties-custom-game-rewards-disabled-modal");
-                        const s = a.domNode.querySelector(".button-accept");
-                        s && s.focus()
+                        s.domNode.classList.add("parties-custom-game-rewards-disabled-modal");
+                        const a = s.domNode.querySelector(".button-accept");
+                        a && a.focus()
                     }))
                 },
                 enterChampSelectLockTime: 300,
@@ -14641,9 +14665,9 @@
             "use strict";
             var i = n(1),
                 o = n(15),
-                a = r(n(267));
+                s = r(n(267));
             n(286);
-            var s = r(n(156));
+            var a = r(n(156));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -14687,7 +14711,7 @@
                         }
                     }
                 });
-            e.exports = i.Ember.Component.extend(m, a.default, {
+            e.exports = i.Ember.Component.extend(m, s.default, {
                 layout: n(287),
                 classNames: ["tft-player-card"],
                 classNameBindings: ["isMe:tft-player-card-self", "isPlaceholder:tft-player-placeholder", "isInvited:tft-player-invited", "isNotReady:tft-player-not-ready", "isFullCard:tft-player-card-full", "isDoubleUp:tft-player-card-du", "shouldShowSelfCardBackground: tft-player-card-bg-self"],
@@ -14843,12 +14867,12 @@
                         this.get("partyInvitesAllowed") && this.sendAction("showInviteModal")
                     },
                     handleMouseOver: function() {
-                        this.get("hasSummonerIcon") && this.get("isMe") && i.Audio.getChannel(s.default.SFX_CHANNEL).playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER)
+                        this.get("hasSummonerIcon") && this.get("isMe") && i.Audio.getChannel(a.default.SFX_CHANNEL).playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER)
                     },
                     iconClick: function() {
                         if (this.get("hasSummonerIcon") && this.get("isMe")) {
                             const e = this.get("iconOverride");
-                            switch (i.Audio.getChannel(s.default.SFX_CHANNEL).playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_CLICK), e) {
+                            switch (i.Audio.getChannel(a.default.SFX_CHANNEL).playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_CLICK), e) {
                                 case l:
                                     this.setIconOverride(c);
                                     break;
@@ -14991,16 +15015,16 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(295)) && i.__esModule ? i : {
+                s = (i = n(295)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(9),
+                a = n(9),
                 r = n(296);
             n(297);
             const {
                 RunMixin: l
             } = o.EmberAddons.EmberLifeline;
-            e.exports = o.Ember.Component.extend(l, a.default, {
+            e.exports = o.Ember.Component.extend(l, s.default, {
                 classNames: ["social-leaderboard-button"],
                 layout: n(298),
                 isPipShown: !1,
@@ -15087,7 +15111,7 @@
                     const e = this.get("timer");
                     e && (o.Ember.run.cancel(e), this.set("timer", null))
                 },
-                isQueueEnabledForSocialLeaderboard: e => e === s.QUEUE_TYPE.RANKED_FLEX_SR || e === s.QUEUE_TYPE.RANKED_SOLO_5x5,
+                isQueueEnabledForSocialLeaderboard: e => e === a.QUEUE_TYPE.RANKED_FLEX_SR || e === a.QUEUE_TYPE.RANKED_SOLO_5x5,
                 toggleSocialLeaderboardFlyoutHelper() {
                     this.get("isFlyoutOpen") ? this.closeSocialLeaderboard() : (o.Telemetry.sendEvent("social-leaderboard-open-on-button-click"), this.set("isPipShown", !1), this.createFlyout(), o.FlyoutManager.sendEvent(this.element, "show"), this.set("isFlyoutOpen", !0))
                 },
@@ -15150,13 +15174,13 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(300)) && i.__esModule ? i : {
+                s = (i = n(300)) && i.__esModule ? i : {
                     default: i
                 };
             n(301);
-            var s = n(12);
+            var a = n(12);
             e.exports = o.Ember.Component.extend({
-                layout: a.default,
+                layout: s.default,
                 classNames: ["autofill-notification-component"],
                 rankedAssetsService: o.Ember.inject.service("ranked-assets"),
                 gameflowService: o.Ember.inject.service("gameflow"),
@@ -15189,7 +15213,7 @@
                 autoFillProtectedForRemedy: o.Ember.computed.alias("autoFillDataForQueue.autoFillProtectedForRemedy"),
                 autoFillProtectedForScarcePosition: o.Ember.computed("scarcePositions", "currentPlayer.firstPositionPreference", "currentPlayer.secondPositionPreference", (function() {
                     const e = [this.get("currentPlayer.firstPositionPreference"), this.get("currentPlayer.secondPositionPreference")];
-                    return !!e.includes(s.POSITION_ROLES.FILL) || (this.get("scarcePositions") ? e.some((e => this.get("scarcePositions").includes(e))) : void 0)
+                    return !!e.includes(a.POSITION_ROLES.FILL) || (this.get("scarcePositions") ? e.some((e => this.get("scarcePositions").includes(e))) : void 0)
                 })),
                 autoFillProtected: o.Ember.computed.or("autoFillProtectedForPromos", "autoFillProtectedForSoloing", "autoFillProtectedForStreaking", "autoFillProtectedForScarcePosition", "autoFillProtectedForRemedy"),
                 autofillWarningTooltipText: o.Ember.computed("tra.parties_autofill_force_scarce_position_protection", "hideWarning", "autoFillDisabled", "autoFillEligible", "overridePositionSelectionsWithFill", "autoFillProtected", "rankedAssetsService.assets.autofillProtectedTooltipLoc", "rankedAssetsService.assets.autofillEnabledTooltipLoc", "isRanked", (function() {
@@ -15209,13 +15233,13 @@
                     return n || {}
                 })),
                 init() {
-                    this._super(...arguments), o.db.observe(s.AUTOFILL_GET_PATH, this, (e => {
+                    this._super(...arguments), o.db.observe(a.AUTOFILL_GET_PATH, this, (e => {
                         if (!e) return this.set("autofillData", []);
                         this.set("autofillData", e || [])
                     }))
                 },
                 willDestroyElement() {
-                    this._super(...arguments), o.db.unobserve(s.AUTOFILL_GET_PATH, this)
+                    this._super(...arguments), o.db.unobserve(a.AUTOFILL_GET_PATH, this)
                 }
             })
         }, (e, t, n) => {
@@ -15232,10 +15256,10 @@
             "use strict";
             var i = n(1),
                 o = n(108),
-                a = n(303);
+                s = n(303);
             n(304);
-            var s, r = (s = n(10)) && s.__esModule ? s : {
-                default: s
+            var a, r = (a = n(10)) && a.__esModule ? a : {
+                default: a
             };
             const l = Object.freeze({
                     NONE: "none",
@@ -15324,7 +15348,7 @@
                     return !!e && e.isLeader
                 })),
                 memberType: i.Ember.computed("isLocalPlayer", (function() {
-                    return this.get("isLocalPlayer") ? a.BANNER_TYPES.CURRENT_PLAYER : a.BANNER_TYPES.OTHER_PLAYER
+                    return this.get("isLocalPlayer") ? s.BANNER_TYPES.CURRENT_PLAYER : s.BANNER_TYPES.OTHER_PLAYER
                 })),
                 primaryTooltipConfig: {
                     targetAnchor: {
@@ -15473,8 +15497,8 @@
             var i = n(1);
             n(307);
             var o = n(108),
-                a = n(12),
-                s = n(156),
+                s = n(12),
+                a = n(156),
                 r = n(180),
                 l = d(n(72)),
                 c = n(15),
@@ -15514,10 +15538,10 @@
                 })),
                 penalizedSummonerDisplayName: i.Ember.computed.alias("penalizedSummonerNameProxy.content.playerNameFull"),
                 buttonSounds: {
-                    closeHover: s.SFX_URLS.SFX_LOBBY_QUIT_HOVER,
-                    closeClick: s.SFX_URLS.SFX_LOBBY_QUIT_CLICK,
-                    confirmHover: s.SFX_URLS.SFX_FIND_MATCH_HOVER,
-                    confirmClick: s.SFX_URLS.SFX_FIND_MATCH_CLICK
+                    closeHover: a.SFX_URLS.SFX_LOBBY_QUIT_HOVER,
+                    closeClick: a.SFX_URLS.SFX_LOBBY_QUIT_CLICK,
+                    confirmHover: a.SFX_URLS.SFX_FIND_MATCH_HOVER,
+                    confirmClick: a.SFX_URLS.SFX_FIND_MATCH_CLICK
                 },
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 gameflowService: i.Ember.inject.service("gameflow"),
@@ -15575,17 +15599,17 @@
                         n = this.get("currentTeamIsFull"),
                         i = this.get("shouldForceScarcePositionSelection");
                     return !t.some((function(t) {
-                        const a = t.firstPositionPreference,
-                            s = !a || a === o.POSITIONS.UNSELECTED;
+                        const s = t.firstPositionPreference,
+                            a = !s || s === o.POSITIONS.UNSELECTED;
                         let r = !1;
-                        if (!n && a !== o.POSITIONS.FILL) {
+                        if (!n && s !== o.POSITIONS.FILL) {
                             const n = t.secondPositionPreference,
-                                s = !n || n === o.POSITIONS.UNSELECTED;
+                                a = !n || n === o.POSITIONS.UNSELECTED;
                             if (i) {
-                                r = !e.isPositionAScarcePosition(a) && s
-                            } else r = s
+                                r = !e.isPositionAScarcePosition(s) && a
+                            } else r = a
                         }
-                        return s || r
+                        return a || r
                     }))
                 })),
                 readyWarning: i.Ember.computed("readyWarningTooltip", "tra.ready", "tra.parties_ready_warning", (function() {
@@ -15646,7 +15670,7 @@
                 cannotStartMatchmaking: i.Ember.computed.not("lobbiesService.canStartMatchmaking"),
                 showingPartyButCannotStartMatchmaking: i.Ember.computed.and("showingState.isShowingParty", "isLeader", "cannotStartMatchmaking"),
                 strawberryConfirmButtonDisabled: i.Ember.computed("selected.queue.gameMode", "strawberryService.isQueueButtonDisabled", (function() {
-                    return this.get("selected.queue.gameMode") === a.STRAWBERRY_GAME_MODE && this.get("strawberryService.isQueueButtonDisabled")
+                    return this.get("selected.queue.gameMode") === s.STRAWBERRY_GAME_MODE && this.get("strawberryService.isQueueButtonDisabled")
                 })),
                 confirmButtonDisabled: i.Ember.computed("animationLock", "patcherDisconnected", "selected.isUpdatingSelection", "lobbiesService.hasLobbyRestrictions", "showingPartyButNotLeader", "showingPartyButThrottled", "showingPartyAndRankedDivisionRestriction", "showingPartyAndInQueue", "showingPartyAndPenaltyTime", "showingPartyButCannotStartMatchmaking", "hasQueueAvailabilityWarning", "strawberryConfirmButtonDisabled", "quickplayReadyButtonDisabled", (function() {
                     const e = {
@@ -15791,8 +15815,8 @@
             var i = n(1),
                 o = l(n(5));
             n(310);
-            var a = l(n(7)),
-                s = n(12),
+            var s = l(n(7)),
+                a = n(12),
                 r = n(9);
 
             function l(e) {
@@ -15814,7 +15838,7 @@
                 strawberryService: i.Ember.inject.service("strawberry"),
                 quickPlayService: i.Ember.inject.service("quick-play"),
                 eligibilitiesEntity: o.default,
-                queuesEntity: a.default,
+                queuesEntity: s.default,
                 restrictions: i.Ember.computed.alias("eligibilitiesEntity.restrictions"),
                 warnings: i.Ember.computed.alias("eligibilitiesEntity.warnings"),
                 currentPlayer: i.Ember.computed.alias("lobbiesService.currentPlayer"),
@@ -15886,10 +15910,10 @@
                     if (Boolean(i) && i.summonerIds.includes(this.get("currentPlayer.summonerId"))) return this.get("tra.game_select_queue_restriction_party_qpnonuniqueprimaryslotpositionrestriction");
                     const o = e.find((e => e.restrictionCode === h));
                     if (Boolean(o) && o.summonerIds.includes(this.get("currentPlayer.summonerId"))) return this.get("tra.game_select_queue_restriction_party_qpnonuniqueprimaryslotchampionrestriction");
-                    const a = e.find((e => "QPPartyPositionCoverageRestriction" === e.restrictionCode));
-                    if (Boolean(a) && a.summonerIds.includes(this.get("currentPlayer.summonerId"))) return this.get("tra.game_select_queue_restriction_party_qppartypositioncoveragerestriction");
-                    const s = e.find((e => e.restrictionCode === b));
-                    if (Boolean(s) && s.summonerIds.includes(this.get("currentPlayer.summonerId"))) return this.get("tra.game_select_queue_restriction_party_qppartychampioncoveragerestriction");
+                    const s = e.find((e => "QPPartyPositionCoverageRestriction" === e.restrictionCode));
+                    if (Boolean(s) && s.summonerIds.includes(this.get("currentPlayer.summonerId"))) return this.get("tra.game_select_queue_restriction_party_qppartypositioncoveragerestriction");
+                    const a = e.find((e => e.restrictionCode === b));
+                    if (Boolean(a) && a.summonerIds.includes(this.get("currentPlayer.summonerId"))) return this.get("tra.game_select_queue_restriction_party_qppartychampioncoveragerestriction");
                     const r = e.find((e => "QPInvalidChampionSelectionRestriction" === e.restrictionCode));
                     if (Boolean(r) && r.summonerIds.includes(this.get("currentPlayer.summonerId"))) return this.get("tra.game_select_queue_restriction_party_qpinvalidchampionselectionrestriction");
                     const l = e.find((e => "QPInsufficientPlayerChampionCoveragePopularChampion" === e.restrictionCode));
@@ -15978,7 +16002,7 @@
                         const e = this.get("queuesEntity"),
                             t = this.get("lobbiesService.queueId"),
                             n = e.getQueueById(t);
-                        return n && n.gameMode === s.CHERRY_GAME_MODE ? this.get("tra.game_select_queue_restriction_party_cherrypartyineligiblesize") : this.get("tra.game_select_queue_restriction_party_notification")
+                        return n && n.gameMode === a.CHERRY_GAME_MODE ? this.get("tra.game_select_queue_restriction_party_cherrypartyineligiblesize") : this.get("tra.game_select_queue_restriction_party_notification")
                     }
                     if (this.get("hasTFTNewPlayerRestriction") && this.get("eligibilityService.partyHasNewTFTPlayer")) return this.get("tftNewPlayerErrorText");
                     const t = this.get("disabledReasons");
@@ -16024,10 +16048,10 @@
                     } else m.unassign(e)
                 },
                 strawberryIsQueueButtonDisabled: i.Ember.computed("strawberryService.isQueueButtonDisabled", "selected.queue.gameMode", (function() {
-                    return this.get("selected.queue.gameMode") === s.STRAWBERRY_GAME_MODE && this.get("strawberryService.isQueueButtonDisabled")
+                    return this.get("selected.queue.gameMode") === a.STRAWBERRY_GAME_MODE && this.get("strawberryService.isQueueButtonDisabled")
                 })),
                 strawberryShowPingWarning: i.Ember.computed("strawberryService.showPingWarning", "selected.queue.gameMode", (function() {
-                    return this.get("selected.queue.gameMode") === s.STRAWBERRY_GAME_MODE && this.get("strawberryService.showPingWarning")
+                    return this.get("selected.queue.gameMode") === a.STRAWBERRY_GAME_MODE && this.get("strawberryService.showPingWarning")
                 }))
             })
         }, (e, t, n) => {
@@ -16044,8 +16068,8 @@
             "use strict";
             var i = n(1),
                 o = l(n(43)),
-                a = l(n(157)),
-                s = l(n(10)),
+                s = l(n(157)),
+                a = l(n(10)),
                 r = n(156);
 
             function l(e) {
@@ -16057,7 +16081,7 @@
                 layout: n(314),
                 classNames: ["v2-header-component"],
                 classNameBindings: ["willAnimate:hidden"],
-                platformConfigSingleton: s.default,
+                platformConfigSingleton: a.default,
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 assets: i.Ember.inject.service("assets"),
                 discordIntegrationService: i.Ember.inject.service("discord-integration"),
@@ -16100,7 +16124,7 @@
                 })),
                 mapBackgroundClass: i.Ember.computed("mapId", "gameMode", "assets.availableMaps", "assetMutator", (function() {
                     const e = this.get("assets").getMap(this.get("mapId"), this.get("gameMode"), this.get("assetMutator"));
-                    return e ? a.default.mapKey({
+                    return e ? s.default.mapKey({
                         mapId: e.id,
                         gameMode: e.gameMode
                     }) : ""
@@ -16165,9 +16189,9 @@
             "use strict";
             var i = n(1),
                 o = m(n(43)),
-                a = m(n(130));
+                s = m(n(130));
             n(316);
-            var s = n(108),
+            var a = n(108),
                 r = n(156),
                 l = n(12),
                 c = m(n(13));
@@ -16180,7 +16204,7 @@
             const {
                 RunMixin: u
             } = i.EmberAddons.EmberLifeline;
-            e.exports = i.Ember.Component.extend(u, o.default, a.default, {
+            e.exports = i.Ember.Component.extend(u, o.default, s.default, {
                 layout: n(317),
                 classNames: ["v2-lobby-root-component"],
                 classNameBindings: ["willAnimate:hidden"],
@@ -16323,8 +16347,8 @@
                         t = this.element.querySelectorAll(".invite-button-container"),
                         n = this.element.querySelector(".footer-container"),
                         o = this.element.querySelector(".lobby-footer-notifications-container"),
-                        a = this.element.querySelector("#lottie-intro-anim"),
-                        s = this.element.querySelector("#player-banner-gem-intro"),
+                        s = this.element.querySelector("#lottie-intro-anim"),
+                        a = this.element.querySelector("#player-banner-gem-intro"),
                         r = new i.gsap.TimelineMax({
                             paused: !0
                         });
@@ -16332,10 +16356,10 @@
                         this.set("prevPartyId", this.get("partyId"))
                     }), "start"), r.add((() => {
                         this.set("introAnimationComplete", !0)
-                    }), "start+=2.5"), a && r.add((() => {
-                        a?.animation?.play()
-                    }), "start+=0.75"), s && r.add((() => {
-                        s && s.play(), this.playSound("/fe/lol-parties/sfx-lobby-banner-intro-flare.ogg")
+                    }), "start+=2.5"), s && r.add((() => {
+                        s?.animation?.play()
+                    }), "start+=0.75"), a && r.add((() => {
+                        a && a.play(), this.playSound("/fe/lol-parties/sfx-lobby-banner-intro-flare.ogg")
                     }), "start"), e && e.forEach((e => {
                         const t = e.querySelector(".lobby-banner-contents");
                         r.add((() => {
@@ -16457,15 +16481,15 @@
                 _setPositionPreferences(e, t) {
                     const n = this.get("primaryPosition"),
                         i = this.get("secondaryPosition");
-                    let o = e === s.POSITION_ROLES.PRIMARY ? t : n,
-                        a = e === s.POSITION_ROLES.SECONDARY ? t : i;
-                    if (o !== n || a !== i) return n !== t && i !== t || (o = i, a = i === s.POSITIONS.FILL ? s.POSITIONS.UNSELECTED : n), this.get("lobbiesService").shouldHideSecondaryPosition(o) && (a = s.POSITIONS.UNSELECTED), this.get("lobbiesService").setPositionPreferences({
+                    let o = e === a.POSITION_ROLES.PRIMARY ? t : n,
+                        s = e === a.POSITION_ROLES.SECONDARY ? t : i;
+                    if (o !== n || s !== i) return n !== t && i !== t || (o = i, s = i === a.POSITIONS.FILL ? a.POSITIONS.UNSELECTED : n), this.get("lobbiesService").shouldHideSecondaryPosition(o) && (s = a.POSITIONS.UNSELECTED), this.get("lobbiesService").setPositionPreferences({
                         firstPreference: o,
-                        secondPreference: a
+                        secondPreference: s
                     })
                 },
                 visibleSecondaryPosition: i.Ember.computed("shouldHideSecondaryPositionForLocalPlayer", "secondaryPosition", (function() {
-                    return this.get("shouldHideSecondaryPositionForLocalPlayer") ? s.POSITIONS.UNSELECTED : this.get("secondaryPosition")
+                    return this.get("shouldHideSecondaryPositionForLocalPlayer") ? a.POSITIONS.UNSELECTED : this.get("secondaryPosition")
                 })),
                 shouldHideSecondaryPositionForLocalPlayer: i.Ember.computed("primaryPosition", "scarcePositions", "shouldForceScarcePositionSelection", "currentTeamIsFull", "lobbiesService", (function() {
                     const e = this.get("lobbiesService");
@@ -16497,10 +16521,10 @@
                         this.sendAction("showInviteModal")
                     },
                     openOverlay(e, t) {
-                        e === s.POSITION_ROLES.PRIMARY ? (this.set("positionSelectorOverlayPrimaryPosition", t), this.set("positionSelectorOverlayPrimaryVisible", !0)) : e === s.POSITION_ROLES.SECONDARY && (this.set("positionSelectorOverlaySecondaryPosition", t), this.set("positionSelectorOverlaySecondaryVisible", !0))
+                        e === a.POSITION_ROLES.PRIMARY ? (this.set("positionSelectorOverlayPrimaryPosition", t), this.set("positionSelectorOverlayPrimaryVisible", !0)) : e === a.POSITION_ROLES.SECONDARY && (this.set("positionSelectorOverlaySecondaryPosition", t), this.set("positionSelectorOverlaySecondaryVisible", !0))
                     },
                     closeOverlay(e) {
-                        e === s.POSITION_ROLES.PRIMARY ? this.set("positionSelectorOverlayPrimaryVisible", !1) : e === s.POSITION_ROLES.SECONDARY && this.set("positionSelectorOverlaySecondaryVisible", !1)
+                        e === a.POSITION_ROLES.PRIMARY ? this.set("positionSelectorOverlayPrimaryVisible", !1) : e === a.POSITION_ROLES.SECONDARY && this.set("positionSelectorOverlaySecondaryVisible", !1)
                     },
                     setPositionPreferences(e, t) {
                         this._setPositionPreferences(e, t)
@@ -16523,14 +16547,14 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 };
             n(319);
             const {
-                RunMixin: s
+                RunMixin: a
             } = o.EmberAddons.EmberLifeline;
-            e.exports = o.Ember.Component.extend(s, a.default, {
+            e.exports = o.Ember.Component.extend(a, s.default, {
                 layout: n(320),
                 classNames: ["v2-player-management-button-component"],
                 tagName: "button",
@@ -16563,10 +16587,10 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(130)),
-                a = s(n(43));
+                o = a(n(130)),
+                s = a(n(43));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -16581,7 +16605,7 @@
                     chat: "/lol-chat"
                 }
             });
-            e.exports = i.Ember.Component.extend(r, o.default, a.default, {
+            e.exports = i.Ember.Component.extend(r, o.default, s.default, {
                 layout: n(323),
                 classNames: ["v2-player-party-controls"],
                 classNameBindings: ["isMe:main-player-controls:other-player-controls"],
@@ -16796,16 +16820,16 @@
             "use strict";
             var i = n(1),
                 o = r(n(10)),
-                a = r(n(43));
+                s = r(n(43));
             n(325);
-            var s = n(9);
+            var a = n(9);
 
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            e.exports = i.Ember.Component.extend(a.default, {
+            e.exports = i.Ember.Component.extend(s.default, {
                 layout: n(326),
                 classNames: ["v2-point-eligibility-component"],
                 classNameBindings: ["isCustomGame:parties-point-eligibility-custom"],
@@ -16847,10 +16871,10 @@
                     }
                 },
                 showTeamSize: i.Ember.computed("selected.gameMode", (function() {
-                    return !s.NO_TEAM_SIZE_GAME_MODES.includes(this.get("selected.gameMode"))
+                    return !a.NO_TEAM_SIZE_GAME_MODES.includes(this.get("selected.gameMode"))
                 })),
                 teamSize: i.Ember.computed("selected.maxPlaying", "selected.gameMode", (function() {
-                    if (s.MULTI_TEAM_GAME_MODES.includes(this.get("selected.gameMode"))) return this.get("tra.game_select_team_size_multiteam_lowercase");
+                    if (a.MULTI_TEAM_GAME_MODES.includes(this.get("selected.gameMode"))) return this.get("tra.game_select_team_size_multiteam_lowercase");
                     const e = this.get("selected.maxPlaying");
                     return this.get("tra").formatString("game_select_team_size", {
                         size: e
@@ -16940,15 +16964,15 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 };
             n(331);
-            var s = n(108),
+            var a = n(108),
                 r = n(156);
-            const l = [s.POSITIONS.TOP, s.POSITIONS.JUNGLE, s.POSITIONS.MIDDLE, s.POSITIONS.BOTTOM, s.POSITIONS.UTILITY],
-                c = [s.POSITIONS.JUNGLE, s.POSITIONS.BOTTOM];
-            e.exports = o.Ember.Component.extend(a.default, {
+            const l = [a.POSITIONS.TOP, a.POSITIONS.JUNGLE, a.POSITIONS.MIDDLE, a.POSITIONS.BOTTOM, a.POSITIONS.UTILITY],
+                c = [a.POSITIONS.JUNGLE, a.POSITIONS.BOTTOM];
+            e.exports = o.Ember.Component.extend(s.default, {
                 layout: n(332),
                 classNames: ["horizontal-options-showcase"],
                 classNameBindings: ["isQuickPlayModal:quick-play"],
@@ -16968,10 +16992,10 @@
                 },
                 selectedPosition: o.Ember.computed("selectingOrdinal", "primaryPosition", "secondaryPosition", (function() {
                     const e = this.get("selectingOrdinal");
-                    return e === s.POSITION_ROLES.PRIMARY ? this.get("primaryPosition") : e === s.POSITION_ROLES.SECONDARY ? this.get("secondaryPosition") : null
+                    return e === a.POSITION_ROLES.PRIMARY ? this.get("primaryPosition") : e === a.POSITION_ROLES.SECONDARY ? this.get("secondaryPosition") : null
                 })),
                 isPrimaryCentered: o.Ember.computed("selectingOrdinal", "primaryPosition", "currentPartyIsFull", (function() {
-                    return this.get("currentPartyIsFull") || this.get("selectingOrdinal") === s.POSITION_ROLES.PRIMARY && this.get("primaryPosition") === s.POSITIONS.FILL
+                    return this.get("currentPartyIsFull") || this.get("selectingOrdinal") === a.POSITION_ROLES.PRIMARY && this.get("primaryPosition") === a.POSITIONS.FILL
                 })),
                 isAnimatingIntroObserver: o.Ember.on("didInsertElement", o.Ember.observer("isAnimatingIntro", (function() {
                     this.get("isAnimatingIntro") && this._startIntroAnimation()
@@ -17018,7 +17042,7 @@
                         t = this.element.querySelector("#outro-base"),
                         n = this.element.querySelector("#outro-magic"),
                         i = this.element.querySelector(".horizontal-options-showcase-content"),
-                        a = this.element.querySelector(".horizontal-options-showcase-background"),
+                        s = this.element.querySelector(".horizontal-options-showcase-background"),
                         l = new o.gsap.TimelineMax({
                             paused: !0
                         });
@@ -17028,14 +17052,14 @@
                         n && n.play()
                     }), "start"), i && l.to(i, .2, {
                         opacity: 0
-                    }, "start"), a && l.to(a, .2, {
+                    }, "start"), s && l.to(s, .2, {
                         opacity: 0
                     }, "start"), l.add((() => {
                         t.pause(), n.pause(), this.sendAction("completeOutroAnimation")
                     }), "start+=0.5"), l.eventCallback("onComplete", (() => {
-                        i.removeAttribute("style"), a.removeAttribute("style")
+                        i.removeAttribute("style"), s.removeAttribute("style")
                     }));
-                    const c = e === s.POSITION_ROLES.PRIMARY ? r.SFX_URLS.SFX_RADIALMENU_PRIMARY_CLOSE : r.SFX_URLS.SFX_RADIALMENU_SECONDARY_CLOSE;
+                    const c = e === a.POSITION_ROLES.PRIMARY ? r.SFX_URLS.SFX_RADIALMENU_PRIMARY_CLOSE : r.SFX_URLS.SFX_RADIALMENU_SECONDARY_CLOSE;
                     l.add((() => {
                         this.playSound(c)
                     }), "start"), this.set("outroAnimation", l)
@@ -17121,16 +17145,16 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(43)) && i.__esModule ? i : {
+                s = (i = n(43)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(156);
+                a = n(156);
             n(340);
             var r = n(108);
             const {
                 RunMixin: l
             } = o.EmberAddons.EmberLifeline;
-            e.exports = o.Ember.Component.extend(l, a.default, {
+            e.exports = o.Ember.Component.extend(l, s.default, {
                 layout: n(341),
                 classNames: ["position-selector-button"],
                 classNameBindings: ["ordinal", "position", "disabled:disabled", "hidden:hidden"],
@@ -17150,10 +17174,10 @@
                 })),
                 actions: {
                     openOverlay: function(e) {
-                        this.get("handleClick")(e), this.playSound(s.SFX_URLS.SFX_RADIALMENU_OPEN)
+                        this.get("handleClick")(e), this.playSound(a.SFX_URLS.SFX_RADIALMENU_OPEN)
                     },
                     onHover() {
-                        this.playSound(s.SFX_URLS.SFX_GOLD_HOVER)
+                        this.playSound(a.SFX_URLS.SFX_GOLD_HOVER)
                     }
                 }
             })
@@ -17171,12 +17195,12 @@
             "use strict";
             var i = n(1);
             n(343);
-            var o, a = (o = n(43)) && o.__esModule ? o : {
+            var o, s = (o = n(43)) && o.__esModule ? o : {
                     default: o
                 },
-                s = n(156),
+                a = n(156),
                 r = n(108);
-            e.exports = i.Ember.Component.extend(a.default, {
+            e.exports = i.Ember.Component.extend(s.default, {
                 layout: n(344),
                 classNames: ["v2-position-selector-option"],
                 classNameBindings: ["position", "isPositionAlreadySelected:already-selected", "inDemand", "hovered", "showPositionText:show-text", "isFill:fill", "isQuickPlayModal:quick-play"],
@@ -17209,10 +17233,10 @@
                 })),
                 actions: {
                     handlePositionSelected(e, t) {
-                        this.get("selectPosition")(e, t), this.playSound(s.SFX_URLS.SFX_RADIALMENU_ROLE_SELECT)
+                        this.get("selectPosition")(e, t), this.playSound(a.SFX_URLS.SFX_RADIALMENU_ROLE_SELECT)
                     },
                     onHoverIn() {
-                        this.playSound(s.SFX_URLS.SFX_RADIALMENU_ROLE_HOVER), this.set("hovered", !0), this.sendAction("setIsPositionHovered", !0)
+                        this.playSound(a.SFX_URLS.SFX_RADIALMENU_ROLE_HOVER), this.set("hovered", !0), this.sendAction("setIsPositionHovered", !0)
                     },
                     onHoverOut() {
                         this.set("hovered", !1), this.sendAction("setIsPositionHovered", !1)
@@ -17287,8 +17311,8 @@
             "use strict";
             var i = n(1),
                 o = r(n(43)),
-                a = n(12),
-                s = r(n(10));
+                s = n(12),
+                a = r(n(10));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -17309,7 +17333,7 @@
                 gameMode: i.Ember.computed.alias("selected.queue.gameMode"),
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 tftService: i.Ember.inject.service("tft"),
-                platformConfig: s.default,
+                platformConfig: a.default,
                 activeMilestonesProgress: i.Ember.computed.alias("tftService.activeMilestonesProgress"),
                 honorSuggestionsEnabled: i.Ember.computed.alias("lobbiesService.honorSuggestionsEnabled"),
                 invitedPlayerIds: i.Ember.computed.alias("lobbiesService.invitedPlayerIds"),
@@ -17345,15 +17369,15 @@
                         t = this.get("invitedPlayerIds");
                     let n = i.Ember.A(),
                         o = i.Ember.A(),
-                        s = i.Ember.A();
+                        a = i.Ember.A();
                     return e.forEach((e => {
                         const i = e.get("summonerId");
-                        t && t.indexOf(i) >= 0 || (e.get("reason") === a.SUGGESTED_TYPES.FRIEND ? n.push(e) : e.get("reason") === a.SUGGESTED_TYPES.HONORED ? s.push(e) : o.push(e))
-                    })), n = n.sortBy("summonerName"), o = o.sortBy("summonerName"), s = s.sortBy("gameId").reverse().slice(0, 2), o.forEach((e => {
+                        t && t.indexOf(i) >= 0 || (e.get("reason") === s.SUGGESTED_TYPES.FRIEND ? n.push(e) : e.get("reason") === s.SUGGESTED_TYPES.HONORED ? a.push(e) : o.push(e))
+                    })), n = n.sortBy("summonerName"), o = o.sortBy("summonerName"), a = a.sortBy("gameId").reverse().slice(0, 2), o.forEach((e => {
                         n.push(e)
                     })), n.forEach((e => {
-                        s.push(e)
-                    })), this.get("isTFT") ? (n.length > 4 && (n = n.slice(0, 3)), n) : s
+                        a.push(e)
+                    })), this.get("isTFT") ? (n.length > 4 && (n = n.slice(0, 3)), n) : a
                 })),
                 noSuggestedInvites: i.Ember.computed.equal("suggestedInvites.length", 0),
                 currentPlayerCannotInvite: i.Ember.computed.not("currentPlayerCanInvite"),
@@ -17406,8 +17430,8 @@
             "use strict";
             var i = n(1),
                 o = r(n(43)),
-                a = r(n(130)),
-                s = n(12);
+                s = r(n(130)),
+                a = n(12);
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -17423,7 +17447,7 @@
                     lobby: "/lol-lobby"
                 }
             });
-            e.exports = i.Ember.Component.extend(l, o.default, a.default, {
+            e.exports = i.Ember.Component.extend(l, o.default, s.default, {
                 tagName: "li",
                 classNames: "v2-parties-invite-info-panel-player",
                 classNameBindings: ["isSuggested:parties-suggested-player", "showPendingIndicator:parties-pending-invite", "isKicked:parties-kicked-invite", "isDeclined:parties-declined-invite", "isAccepted:parties-accepted-invite", "isError:parties-error-invite", "currentPlayerCanInvite:enabled:disabled"],
@@ -17453,10 +17477,10 @@
                 name: i.Ember.computed("player.summonerName", "invitedPlayer.toSummonerName", (function() {
                     return this.get("player.summonerName") || this.get("invitedPlayer.toSummonerName") || ""
                 })),
-                isRecentlyHonored: i.Ember.computed.equal("player.reason", s.SUGGESTED_TYPES.HONORED),
-                isFriend: i.Ember.computed.equal("player.reason", s.SUGGESTED_TYPES.FRIEND),
-                isVictorious: i.Ember.computed.equal("player.reason", s.SUGGESTED_TYPES.VICTORIOUS),
-                isPremade: i.Ember.computed.equal("player.reason", s.SUGGESTED_TYPES.PREMADE),
+                isRecentlyHonored: i.Ember.computed.equal("player.reason", a.SUGGESTED_TYPES.HONORED),
+                isFriend: i.Ember.computed.equal("player.reason", a.SUGGESTED_TYPES.FRIEND),
+                isVictorious: i.Ember.computed.equal("player.reason", a.SUGGESTED_TYPES.VICTORIOUS),
+                isPremade: i.Ember.computed.equal("player.reason", a.SUGGESTED_TYPES.PREMADE),
                 isRecentlyPlayed: i.Ember.computed.or("isVictorious", "isPremade"),
                 isPending: i.Ember.computed.equal("invitedPlayer.state", "Pending"),
                 isAccepted: i.Ember.computed.equal("invitedPlayer.state", "Accepted"),
@@ -17655,7 +17679,7 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(47)) && i.__esModule ? i : {
+                s = (i = n(47)) && i.__esModule ? i : {
                     default: i
                 };
             n(364), e.exports = o.Ember.Component.extend({
@@ -17665,7 +17689,7 @@
                 partySettingsService: o.Ember.inject.service("party-settings"),
                 animationsEnabled: o.Ember.computed.alias("partySettingsService.bannerAnimationsEnabled"),
                 pendingInvites: o.Ember.computed.alias("lobbiesService.pendingInvites"),
-                partiesViewport: a.default,
+                partiesViewport: s.default,
                 partiesViewportIsShowing: o.Ember.computed.alias("partiesViewport.isShowing"),
                 placeholder: null,
                 isInQueue: !1,
@@ -17912,8 +17936,8 @@
             var i = n(1),
                 o = n(379);
             n(380);
-            const a = "sfx-ui",
-                s = i.Ember.Component.extend({
+            const s = "sfx-ui",
+                a = i.Ember.Component.extend({
                     classNames: ["generic-button"],
                     classNameBindings: ["matchHeight:match-h", "matchWidth:match-w", "isImgFlippedX:flip-x", "isImgFlippedY:flip-y"],
                     layout: n(381),
@@ -18001,7 +18025,7 @@
                     _changeState(e) {
                         const t = this.get("currentState"),
                             n = this.get("isClickTarget");
-                        e === o.ButtonState.OVER && (this.get("onHoverSound") && i.Audio.getChannel(a).playSound(this.get("onHoverSound")), n && (e = o.ButtonState.DOWN)), this.set("isState_" + t, !1), this.set("isState_" + e, !0), this.set("currentState", e)
+                        e === o.ButtonState.OVER && (this.get("onHoverSound") && i.Audio.getChannel(s).playSound(this.get("onHoverSound")), n && (e = o.ButtonState.DOWN)), this.set("isState_" + t, !1), this.set("isState_" + e, !0), this.set("currentState", e)
                     },
                     _processClick() {
                         this.attrs.onClick && this.attrs.onClick();
@@ -18015,7 +18039,7 @@
                         if (t !== e) {
                             if (e) {
                                 const e = this.get("selectionGroup");
-                                s.setSelection(e, this)
+                                a.setSelection(e, this)
                             }
                             t && this.attrs.onDeselected ? this.attrs.onDeselected() : e && this.attrs.onSelected && this.attrs.onSelected(), this.set("isSelected", e)
                         }
@@ -18026,7 +18050,7 @@
                         },
                         beginClick() {
                             if (this.get("currentState") === o.ButtonState.DISABLED) return;
-                            this.get("onClickSound") && i.Audio.getChannel(a).playSound(this.get("onClickSound")), this._changeState(o.ButtonState.DOWN), this.set("isClickTarget", !0);
+                            this.get("onClickSound") && i.Audio.getChannel(s).playSound(this.get("onClickSound")), this._changeState(o.ButtonState.DOWN), this.set("isClickTarget", !0);
                             const e = () => {
                                 this.set("isClickTarget", !1), document.removeEventListener("mouseup", e)
                             };
@@ -18034,7 +18058,7 @@
                         },
                         endClick() {
                             if (this.get("currentState") === o.ButtonState.DISABLED) return;
-                            this.get("isClickTarget") && (this.get("onClickReleaseSound") && i.Audio.getChannel(a).playSound(this.get("onClickReleaseSound")), this._processClick(), this.set("isClickTarget", !1), this._changeState(o.ButtonState.OVER))
+                            this.get("isClickTarget") && (this.get("onClickReleaseSound") && i.Audio.getChannel(s).playSound(this.get("onClickReleaseSound")), this._processClick(), this.set("isClickTarget", !1), this._changeState(o.ButtonState.OVER))
                         },
                         onHover() {
                             this.get("currentState") !== o.ButtonState.DISABLED && (this._changeState(o.ButtonState.OVER), this.attrs.onHover && this.attrs.onHover())
@@ -18044,14 +18068,14 @@
                         }
                     }
                 });
-            s.reopenClass({
+            a.reopenClass({
                 currentSelectionMap: {},
                 setSelection(e, t) {
                     if (!e || !t || !t.get("canBeSelected")) return;
-                    const n = s.currentSelectionMap[e];
-                    n && n._setSelected(!1), s.currentSelectionMap[e] = t
+                    const n = a.currentSelectionMap[e];
+                    n && n._setSelected(!1), a.currentSelectionMap[e] = t
                 }
-            }), e.exports = s
+            }), e.exports = a
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -18077,11 +18101,11 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(383)) && i.__esModule ? i : {
+                s = (i = n(383)) && i.__esModule ? i : {
                     default: i
                 };
             n(384);
-            var s = n(379);
+            var a = n(379);
             const r = "/fe/lol-static-assets/videos",
                 l = "sfx-ui",
                 c = "intro",
@@ -18090,7 +18114,7 @@
                 d = "idle",
                 p = "disabled";
             e.exports = o.Ember.Component.extend({
-                layout: a.default,
+                layout: s.default,
                 classNames: ["find-match-button-wrapper"],
                 videoSource: {
                     intro: `${r}/find-match-button-intro.webm`,
@@ -18100,20 +18124,20 @@
                 },
                 partySettingsService: o.Ember.inject.service("party-settings"),
                 videoStateMachine: null,
-                currentState: s.ButtonState.DISABLED,
+                currentState: a.ButtonState.DISABLED,
                 animationsEnabled: o.Ember.computed.alias("partySettingsService.animationsEnabled"),
                 hasPlayedIntroAnimation: !1,
                 isEnabled: !1,
                 currentImgPath: o.Ember.computed("currentState", "animationsEnabled", (function() {
                     const e = this.get("animationsEnabled");
                     switch (this.get("currentState")) {
-                        case s.ButtonState.UP:
+                        case a.ButtonState.UP:
                             return this.get("baseImgPath");
-                        case s.ButtonState.DOWN:
+                        case a.ButtonState.DOWN:
                             return this.get("downImgPath");
-                        case s.ButtonState.OVER:
+                        case a.ButtonState.OVER:
                             return e ? this.get("baseImgPath") : this.get("overImgPath");
-                        case s.ButtonState.DISABLED:
+                        case a.ButtonState.DISABLED:
                             return this.get("disabledImgPath");
                         default:
                             return this.get("baseImgPath")
@@ -18127,36 +18151,36 @@
                 },
                 didUpdateAttrs() {
                     this._super(...arguments);
-                    const e = this.get("currentState") !== s.ButtonState.DISABLED;
-                    this.get("isEnabled") ? e || (this.get("hasPlayedIntroAnimation") ? this._changeState(s.ButtonState.UP) : this._changeState()) : this._changeState(s.ButtonState.DISABLED)
+                    const e = this.get("currentState") !== a.ButtonState.DISABLED;
+                    this.get("isEnabled") ? e || (this.get("hasPlayedIntroAnimation") ? this._changeState(a.ButtonState.UP) : this._changeState()) : this._changeState(a.ButtonState.DISABLED)
                 },
                 mouseUp: function(e) {
                     e.preventDefault();
                     const t = this.get("currentState"),
                         n = this.get("isEnabled"),
                         i = this.get("onClickReleaseSound");
-                    t !== s.ButtonState.DISABLED && (i && o.Audio.getChannel(l).playSound(i), n && this.sendAction("confirmButton"), this.set("isClickTarget", !1))
+                    t !== a.ButtonState.DISABLED && (i && o.Audio.getChannel(l).playSound(i), n && this.sendAction("confirmButton"), this.set("isClickTarget", !1))
                 },
                 mouseDown: function(e) {
                     e.preventDefault();
                     const t = this.get("currentState"),
                         n = this.get("onClickSound");
-                    t !== s.ButtonState.DISABLED && (n && o.Audio.getChannel(l).playSound(n), this._changeState(s.ButtonState.DOWN), this.set("isClickTarget", !0))
+                    t !== a.ButtonState.DISABLED && (n && o.Audio.getChannel(l).playSound(n), this._changeState(a.ButtonState.DOWN), this.set("isClickTarget", !0))
                 },
                 mouseEnter() {
-                    if (this.get("currentState") === s.ButtonState.DISABLED) return;
+                    if (this.get("currentState") === a.ButtonState.DISABLED) return;
                     const e = this.get("onHoverSound");
-                    e && o.Audio.getChannel(l).playSound(e), this._changeState(s.ButtonState.OVER)
+                    e && o.Audio.getChannel(l).playSound(e), this._changeState(a.ButtonState.OVER)
                 },
                 mouseLeave() {
-                    this.get("currentState") !== s.ButtonState.DISABLED && this._changeState(s.ButtonState.UP)
+                    this.get("currentState") !== a.ButtonState.DISABLED && this._changeState(a.ButtonState.UP)
                 },
                 _changeState(e) {
                     e ? (this.set("currentState", e), this._dispatchButtonEvent(e)) : this._dispatchButtonEvent(e)
                 },
                 _dispatchButtonEvent(e) {
                     const t = this.get("videoStateMachine");
-                    t && (e ? e === s.ButtonState.UP ? t.dispatchEvent(new Event(d)) : e === s.ButtonState.OVER ? t.dispatchEvent(new Event(m)) : e === s.ButtonState.DOWN ? t.dispatchEvent(new Event(u)) : e === s.ButtonState.DISABLED && t.dispatchEvent(new Event(p)) : (t.dispatchEvent(new Event(c)), this.set("hasPlayedIntroAnimation", !0), this._changeState(s.ButtonState.UP)))
+                    t && (e ? e === a.ButtonState.UP ? t.dispatchEvent(new Event(d)) : e === a.ButtonState.OVER ? t.dispatchEvent(new Event(m)) : e === a.ButtonState.DOWN ? t.dispatchEvent(new Event(u)) : e === a.ButtonState.DISABLED && t.dispatchEvent(new Event(p)) : (t.dispatchEvent(new Event(c)), this.set("hasPlayedIntroAnimation", !0), this._changeState(a.ButtonState.UP)))
                 }
             })
         }, (e, t, n) => {
@@ -18222,8 +18246,8 @@
             var i = n(1),
                 o = n(108);
             n(389);
-            var a = n(134),
-                s = n(390),
+            var s = n(134),
+                a = n(390),
                 r = n(391),
                 l = n(9),
                 c = n(392);
@@ -18266,8 +18290,8 @@
                         n = this.get("localPlayer.playerSlots") || [],
                         i = 0 === n.length,
                         o = n.filter(this.isDefaultSlotState).length === n.length,
-                        a = Boolean(this.get("ongoingRequestedSlots"));
-                    return t && (i || o) && !a && 2 === e
+                        s = Boolean(this.get("ongoingRequestedSlots"));
+                    return t && (i || o) && !s && 2 === e
                 },
                 isDefaultSlotState: e => 0 === e.championId,
                 autoSelectQuickPlaySlots() {
@@ -18331,7 +18355,7 @@
                 },
                 updateQuickPlayPerksPage: function(e, t) {
                     const n = this.getPlayerSlotsSetRequestBase();
-                    return n[t] ? (n[t].perks = JSON.stringify((0, s.getPerkSettingsFromPage)(e)), this.putQuickPlaySlots(n)) : Promise.reject(`Unable to set perks page for Quickplay slotIndex: ${t} pageId: ${e.id}.`)
+                    return n[t] ? (n[t].perks = JSON.stringify((0, a.getPerkSettingsFromPage)(e)), this.putQuickPlaySlots(n)) : Promise.reject(`Unable to set perks page for Quickplay slotIndex: ${t} pageId: ${e.id}.`)
                 },
                 _setCurrentSelectedSkin(e) {
                     if (!e) return;
@@ -18348,9 +18372,9 @@
                 putQuickPlaySlots(e) {
                     const t = this.get("localPlayer.playerSlots") || [],
                         n = this.get("ongoingRequestedSlots") || [],
-                        o = (0, s.areQuickPlaySlotArraysEqual)(e, t),
-                        a = (0, s.areQuickPlaySlotArraysEqual)(e, n);
-                    return o || a ? Promise.reject(`Put slots request matches ${o?"current":"ongoing requested"} slots`) : (this.set("ongoingRequestedSlots", e), (0, i.dataBinding)("/lol-lobby").put(r.QUICKPLAY_SLOT_SET_PATH, e).then((() => this.get("quickPlayService").saveQuickPlaySelections(e))).finally((() => {
+                        o = (0, a.areQuickPlaySlotArraysEqual)(e, t),
+                        s = (0, a.areQuickPlaySlotArraysEqual)(e, n);
+                    return o || s ? Promise.reject(`Put slots request matches ${o?"current":"ongoing requested"} slots`) : (this.set("ongoingRequestedSlots", e), (0, i.dataBinding)("/lol-lobby").put(r.QUICKPLAY_SLOT_SET_PATH, e).then((() => this.get("quickPlayService").saveQuickPlaySelections(e))).finally((() => {
                         this.set("ongoingRequestedSlots", void 0)
                     })))
                 },
@@ -18359,12 +18383,12 @@
                     const t = this.get("selectingSlotIndex"),
                         n = this.getPlayerSlotsSetRequestBase(),
                         o = this.get("quickPlayService.popularChampions") || {};
-                    let a = !1;
-                    const s = this.get("lobbiesService.queueId");
-                    a = !!l.SWIFTPLAY_QUEUES_MAP[s] ? n.some((t => o[t.championId] && t.championId === e)) : n.map((e => e.championId)).includes(e);
+                    let s = !1;
+                    const a = this.get("lobbiesService.queueId");
+                    s = !!l.SWIFTPLAY_QUEUES_MAP[a] ? n.some((t => o[t.championId] && t.championId === e)) : n.map((e => e.championId)).includes(e);
                     const r = n[t];
                     if (r.championId !== e) {
-                        if (a) return this._handleSwapSlots();
+                        if (s) return this._handleSwapSlots();
                         {
                             const t = this.get("quickPlayService");
                             r.championId = e, r.skinId = t.getDefaultSkinForChampion(e)
@@ -18378,19 +18402,19 @@
                     if (!e) return;
                     const t = this.get("selectingSlotIndex"),
                         n = this.getPlayerSlotsSetRequestBase(),
-                        s = n.map((e => e.positionPreference)).includes(e),
+                        a = n.map((e => e.positionPreference)).includes(e),
                         r = n[t],
                         l = 0 === t;
                     let c = !1;
                     if (r.positionPreference === e) return;
-                    if (s) {
+                    if (a) {
                         const e = r.positionPreference;
                         n[l ? 0 : 1].positionPreference = n[l ? 1 : 0].positionPreference, n[l ? 1 : 0].positionPreference = e, c = !0
                     } else n[t].positionPreference = e, c = e !== o.POSITIONS.JUNGLE;
                     const m = this.get("quickPlayService.gameModeSummonerSpells") || [];
                     return (n || []).forEach((e => {
                         const t = [e.spell1, e.spell2],
-                            n = (0, a.getSpellIdsWithSmiteAssignedIfAppropriate)(t, e.positionPreference, m, c);
+                            n = (0, s.getSpellIdsWithSmiteAssignedIfAppropriate)(t, e.positionPreference, m, c);
                         e.spell1 = n[0], e.spell2 = n[1]
                     })), this.putQuickPlaySlots(n).catch((e => {
                         i.logger.error("Quickplay put slots error: ", e)
@@ -18398,7 +18422,7 @@
                 },
                 getPlayerSlotsSetRequestBase() {
                     const e = this.get("localPlayer.playerSlots") || [];
-                    return (0, s.copyArrayOfObjects)(e)
+                    return (0, a.copyArrayOfObjects)(e)
                 },
                 _handleSwapSlots() {
                     const e = this.getPlayerSlotsSetRequestBase();
@@ -18535,19 +18559,19 @@
             }) {
                 if (!(e || e.perks || t.length || n.length || i)) return;
                 const o = JSON.parse(e.perks || "{}"),
-                    a = o?.perkSubStyle,
-                    s = t.find((e => e?.id === a)),
+                    s = o?.perkSubStyle,
+                    a = t.find((e => e?.id === s)),
                     r = o?.perkIds?.[0],
                     l = n.find((e => e?.id === r));
-                if (!s || !l) return;
+                if (!a || !l) return;
                 return {
-                    primaryStyleId: s.id,
+                    primaryStyleId: a.id,
                     name: `${i} - ${l.name}`,
                     pageKeystone: {
                         iconPath: l.iconPath
                     },
-                    subStyleId: a,
-                    secondaryStyleIconPath: s.assetMap?.svg_icon_16
+                    subStyleId: s,
+                    secondaryStyleIconPath: a.assetMap?.svg_icon_16
                 }
             }, t.findCurrentPerk = function({
                 playerSlot: e,
@@ -18556,9 +18580,9 @@
                 const n = JSON.parse(e?.perks || "{}"),
                     i = n?.perkStyle,
                     o = n?.perkIds || [],
-                    a = n?.perkSubStyle;
+                    s = n?.perkSubStyle;
                 return t.find((e => {
-                    if (e?.primaryStyleId === i && e?.subStyleId === a) return e?.selectedPerkIds?.every?.(((e, t) => e === o[t]))
+                    if (e?.primaryStyleId === i && e?.subStyleId === s) return e?.selectedPerkIds?.every?.(((e, t) => e === o[t]))
                 }))
             }
         }, (e, t, n) => {
@@ -18573,8 +18597,8 @@
             var i = n(1),
                 o = n(108);
             n(395);
-            var a = n(134),
-                s = n(390),
+            var s = n(134),
+                a = n(390),
                 r = n(391),
                 l = n(392);
             e.exports = i.Ember.Component.extend({
@@ -18630,19 +18654,19 @@
                 _setPositionPreferences(e, t) {
                     if (!e) return;
                     const n = this.getPlayerSlotsSetRequestBase(),
-                        s = n.map((e => e.positionPreference)).includes(e),
+                        a = n.map((e => e.positionPreference)).includes(e),
                         r = n[t],
                         l = 0 === t;
                     let c = !1;
                     if (r.positionPreference === e) return;
-                    if (s) {
+                    if (a) {
                         const e = r.positionPreference;
                         n[l ? 0 : 1].positionPreference = n[l ? 1 : 0].positionPreference, n[l ? 1 : 0].positionPreference = e, c = !0
                     } else n[t].positionPreference = e, c = e !== o.POSITIONS.JUNGLE;
                     const m = this.get("quickPlayService.gameModeSummonerSpells") || [];
                     return (n || []).forEach((e => {
                         const t = [e.spell1, e.spell2],
-                            n = (0, a.getSpellIdsWithSmiteAssignedIfAppropriate)(t, e.positionPreference, m, c);
+                            n = (0, s.getSpellIdsWithSmiteAssignedIfAppropriate)(t, e.positionPreference, m, c);
                         e.spell1 = n[0], e.spell2 = n[1]
                     })), this.putQuickPlaySlots(n).catch((e => {
                         i.logger.error("Quickplay put slots error: ", e)
@@ -18651,15 +18675,15 @@
                 putQuickPlaySlots(e) {
                     const t = this.get("localPlayer.playerSlots") || [],
                         n = this.get("ongoingRequestedSlots") || [],
-                        o = (0, s.areQuickPlaySlotArraysEqual)(e, t),
-                        a = (0, s.areQuickPlaySlotArraysEqual)(e, n);
-                    return o || a ? Promise.reject(`Put slots request matches ${o?"current":"ongoing requested"} slots`) : (this.set("ongoingRequestedSlots", e), (0, i.dataBinding)("/lol-lobby").put(r.QUICKPLAY_SLOT_SET_PATH, e).then((() => this.get("quickPlayService").saveQuickPlaySelections(e))).finally((() => {
+                        o = (0, a.areQuickPlaySlotArraysEqual)(e, t),
+                        s = (0, a.areQuickPlaySlotArraysEqual)(e, n);
+                    return o || s ? Promise.reject(`Put slots request matches ${o?"current":"ongoing requested"} slots`) : (this.set("ongoingRequestedSlots", e), (0, i.dataBinding)("/lol-lobby").put(r.QUICKPLAY_SLOT_SET_PATH, e).then((() => this.get("quickPlayService").saveQuickPlaySelections(e))).finally((() => {
                         this.set("ongoingRequestedSlots", void 0)
                     })))
                 },
                 getPlayerSlotsSetRequestBase() {
                     const e = this.get("localPlayer.playerSlots") || [];
-                    return (0, s.copyArrayOfObjects)(e)
+                    return (0, a.copyArrayOfObjects)(e)
                 },
                 actions: {
                     selectChampionSlot() {
@@ -18744,7 +18768,7 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(401)) && i.__esModule ? i : {
+                s = (i = n(401)) && i.__esModule ? i : {
                     default: i
                 };
             n(402);
@@ -18759,7 +18783,7 @@
                         t = this.get("gridCellHeight") || 125,
                         n = this.get("gridEstimatedWidth") || 570,
                         i = this.get("gridEstimatedHeight") || 400;
-                    this.set("gridChampionLayout", new a.default(e, t)), this.set("gridEstimatedClientWidth", n), this.set("gridEstimatedClientHeight", i)
+                    this.set("gridChampionLayout", new s.default(e, t)), this.set("gridEstimatedClientWidth", n), this.set("gridEstimatedClientHeight", i)
                 },
                 actions: {
                     handleItemClick(e) {
@@ -18826,10 +18850,10 @@
                         n = e.find((e => e.isSelected)),
                         i = e.find((e => e.isPrimary)),
                         o = e.find((e => !e.isPrimary)),
-                        a = this.get("quickPlayService.popularChampions") || {},
-                        s = !!n && n.championId === t,
-                        r = !!a?.[t];
-                    this.set("isChampionSelected", s), this.set("isChampionPrimary", i.championId === t), this.set("isChampionSecondary", o.championId === t), this.set("championIsInDemand", r)
+                        s = this.get("quickPlayService.popularChampions") || {},
+                        a = !!n && n.championId === t,
+                        r = !!s?.[t];
+                    this.set("isChampionSelected", a), this.set("isChampionPrimary", i.championId === t), this.set("isChampionSecondary", o.championId === t), this.set("championIsInDemand", r)
                 },
                 playSound: function(e) {
                     return i.Audio.getChannel(o.SFX_CHANNEL).playSound(e)
@@ -18858,11 +18882,11 @@
             var i = n(1);
             n(408);
             var o = n(108),
-                a = n(391);
+                s = n(391);
             const {
-                RunMixin: s
+                RunMixin: a
             } = i.EmberAddons.EmberLifeline, r = i.ChampionStatistics.getPlayRates(), l = document.documentElement.lang;
-            e.exports = i.Ember.Component.extend(s, {
+            e.exports = i.Ember.Component.extend(a, {
                 layout: n(409),
                 classNames: ["quick-play-champion-selector-component"],
                 playerSlots: [],
@@ -18875,7 +18899,7 @@
                 championPositionFilters: i.Ember.computed("playablePositions", "activeFilter.name", "scarcePositions", (function() {
                     const e = this.get("scarcePositions"),
                         t = this.get("activeFilter.name");
-                    return (this.get("playablePositions") || a.DEFAULT_PLAYABLE_POSITIONS).map((n => {
+                    return (this.get("playablePositions") || s.DEFAULT_PLAYABLE_POSITIONS).map((n => {
                         const i = n === o.POSITIONS.UTILITY ? o.CHAMP_STATS_POSITION_UTILITY : n;
                         return {
                             name: n,
@@ -18887,7 +18911,7 @@
                     }))
                 })),
                 sortOptions: i.Ember.computed("tra", (function() {
-                    return a.SORT_OPTIONS.map((e => i.Ember.Object.create(Object.assign({
+                    return s.SORT_OPTIONS.map((e => i.Ember.Object.create(Object.assign({
                         displayName: this.get("tra").get(e.traKey),
                         selected: !1
                     }, e))))
@@ -18902,7 +18926,7 @@
                     let i = [];
                     t && (i = n.sort(((e, n) => {
                         let i = 0;
-                        return e.id === a.NONE_CHAMP_ID && (i = -1), n.id === a.NONE_CHAMP_ID && (i = 1), i = t === this.get("sortOptions.0.field") ? e[t].localeCompare(n[t]) : n[t] - e[t], i
+                        return e.id === s.NONE_CHAMP_ID && (i = -1), n.id === s.NONE_CHAMP_ID && (i = 1), i = t === this.get("sortOptions.0.field") ? e[t].localeCompare(n[t]) : n[t] - e[t], i
                     }))), e && (i = i.length > 0 ? i.filter(e.matches) : n.filter(e.matches));
                     const o = this.get("sanitizedSearchText") || "";
                     return o && (i = n.filter((e => (e.searchMatchingTerms || "").includes(o)))), i
@@ -18942,7 +18966,7 @@
             var i = n(1);
             n(411);
             var o = n(412),
-                a = n(390);
+                s = n(390);
             e.exports = i.Ember.Component.extend({
                 layout: n(413),
                 classNames: ["quick-play-perks-selector-component"],
@@ -18974,7 +18998,7 @@
                     }))
                 },
                 _setRecommendedPage(e, t, n) {
-                    const i = (0, a.copyArrayOfObjects)(this.get("playerSlots") || []);
+                    const i = (0, s.copyArrayOfObjects)(this.get("playerSlots") || []);
                     t && 2 === t.length && (i[n].spell1 = t[0], i[n].spell2 = t[1]);
                     const o = JSON.stringify(e);
                     return i[n].perks = o, this.get("setQuickPlaySlots")(i)
@@ -19022,11 +19046,11 @@
                 var n = o(t);
                 if (n && n.has(e)) return n.get(e);
                 var i = {},
-                    a = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                for (var s in e)
-                    if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
-                        var r = a ? Object.getOwnPropertyDescriptor(e, s) : null;
-                        r && (r.get || r.set) ? Object.defineProperty(i, s, r) : i[s] = e[s]
+                    s = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                for (var a in e)
+                    if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
+                        var r = s ? Object.getOwnPropertyDescriptor(e, a) : null;
+                        r && (r.get || r.set) ? Object.defineProperty(i, a, r) : i[a] = e[a]
                     } i.default = e, n && n.set(e, i);
                 return i
             }(n(1));
@@ -19110,9 +19134,9 @@
                 o = n(15);
             n(421);
             const {
-                RunMixin: a
-            } = i.EmberAddons.EmberLifeline, s = "skinsViewer", r = "quest-skin";
-            e.exports = i.Ember.Component.extend(a, {
+                RunMixin: s
+            } = i.EmberAddons.EmberLifeline, a = "skinsViewer", r = "quest-skin";
+            e.exports = i.Ember.Component.extend(s, {
                 layout: n(422),
                 classNames: ["quick-play-skin-carousel-component"],
                 selectingSkinIndex: 0,
@@ -19164,7 +19188,7 @@
                             templateType: o.PAW.TEMPLATE_TYPES.LARGE_TWO_COLUMN_LANDSCAPE
                         },
                         n = () => this._getSkinPurchaseCallback(e && (e.itemId || e.id), !1);
-                    return i.pawApi.createPawTemplateModalAsync(e.offerId, t, s).then((() => {
+                    return i.pawApi.createPawTemplateModalAsync(e.offerId, t, a).then((() => {
                         i.pawApi.getBaseSkinLineData(e.offerId).then((e => {
                             e.onPurchaseComplete = n, i.pawApi.populatePawTemplateModal(e)
                         }))
@@ -19174,16 +19198,16 @@
                     const {
                         item: t,
                         inventoryType: n,
-                        modalType: a,
+                        modalType: s,
                         ownerElement: l
                     } = e;
                     let c = !1;
-                    const m = a === o.PAW.MODAL_TYPES.CHROMA_MODAL,
+                    const m = s === o.PAW.MODAL_TYPES.CHROMA_MODAL,
                         u = () => this._getSkinPurchaseCallback(t && (t.itemId || t.id), m);
                     c = t.tags && t.tags.includes(r) ? this._createTemplatePaw(t) : i.pawApi.createPAWModal({
                         itemId: t.itemId || t.id,
                         inventoryType: n
-                    }, s, a, l, u), c && this.set("pawModalOpening", !0)
+                    }, a, s, l, u), c && this.set("pawModalOpening", !0)
                 },
                 _setCarouselOffset(e) {
                     if (this.get("showArrows")) {
@@ -19419,11 +19443,11 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(156)) && i.__esModule ? i : {
+                s = (i = n(156)) && i.__esModule ? i : {
                     default: i
                 };
             n(433);
-            var s = n(133);
+            var a = n(133);
             e.exports = o.Ember.Component.extend({
                 layout: n(434),
                 classNames: ["quick-play-summoner-spell-select-component"],
@@ -19450,7 +19474,7 @@
                 allowedSpells: o.Ember.computed("quickPlayService.gameModeSummonerSpells", "isSmiteLocked", (function() {
                     const e = this.get("isSmiteLocked"),
                         t = this.get("quickPlayService.gameModeSummonerSpells");
-                    return e ? t : t.filter((e => e.id !== s.SPELL_IDS.SMITE))
+                    return e ? t : t.filter((e => e.id !== a.SPELL_IDS.SMITE))
                 })),
                 selectingSlotSummonerSpells: o.Ember.computed("selectingSlot.spell1", "selectingSlot.spell2", "quickPlayService.gameModeSummonerSpells.[]", (function() {
                     const e = this.get("selectingSlot.spell1") || 0,
@@ -19462,7 +19486,7 @@
                     void 0 !== e ? this.set("isFlyoutOpen", e) : this.set("isFlyoutOpen", !this.get("isFlyoutOpen"))
                 },
                 playSpellSelectSound(e) {
-                    o.Audio.getChannel(a.default.SFX_CHANNEL).playSound(e.sfxPath)
+                    o.Audio.getChannel(s.default.SFX_CHANNEL).playSound(e.sfxPath)
                 },
                 actions: {
                     toggleFlyout: function(e) {
@@ -19530,11 +19554,11 @@
                         if (t.id === n) return t;
                         const o = t.questSkinInfo?.tiers.find((e => e.id === n));
                         if (o) return o;
-                        const a = t.chromas.find((e => e.id === n));
-                        if (a) return {
-                            name: a.name || t.name,
+                        const s = t.chromas.find((e => e.id === n));
+                        if (s) return {
+                            name: s.name || t.name,
                             splashPath: t.splashPath,
-                            skinAugments: a.skinAugments
+                            skinAugments: s.skinAugments
                         }
                     }
                 })),
@@ -19543,14 +19567,14 @@
                         t = this.get("playerSlot"),
                         n = this.get("quickPlayService")?.getChampionData(t?.championId)?.name,
                         i = this.get("quickPlayService.perks") || [],
-                        a = this.get("quickPlayService.perkStyles") || [],
-                        s = this.get("quickPlayService.perksPages") || [];
+                        s = this.get("quickPlayService.perkStyles") || [],
+                        a = this.get("quickPlayService.perksPages") || [];
                     return e ? (0, o.findCurrentPerk)({
                         playerSlot: t,
-                        perksPages: s
+                        perksPages: a
                     }) : (0, o.buildPerk)({
                         playerSlot: t,
-                        perkStyles: a,
+                        perkStyles: s,
                         perks: i,
                         championName: n
                     })
@@ -19612,7 +19636,7 @@
                             t = this.get("tra.quick_play_tooltip_exit_queue_close_button"),
                             n = i.UIKit.getContextualNotificationManager(),
                             o = i.UIKit.getTemplateHelper().contentBlockTooltip(e, t, "tooltip-system", "exit-queue-to-edit-loadout-quick-play-tooltip"),
-                            a = n.add(o, {
+                            s = n.add(o, {
                                 target: {
                                     domNode: document.querySelector(".close-button"),
                                     anchor: {
@@ -19631,7 +19655,7 @@
                                 },
                                 dismissable: !1
                             });
-                        this.set("_exitToEditContextualNotification", a), this.set("contextualNotificationActive", !0), setTimeout((() => {
+                        this.set("_exitToEditContextualNotification", s), this.set("contextualNotificationActive", !0), setTimeout((() => {
                             this._hideExitQueueToEditContextualNofication()
                         }), 3e3)
                     }
@@ -19732,11 +19756,11 @@
                 value: !0
             }), t.default = void 0;
             var i, o = n(1),
-                a = (i = n(315)) && i.__esModule ? i : {
+                s = (i = n(315)) && i.__esModule ? i : {
                     default: i
                 };
             n(445);
-            const s = 3e3,
+            const a = 3e3,
                 r = o.Audio.getChannel("sfx-ui"),
                 l = {
                     SELF_TO_EMPTY: {
@@ -19760,7 +19784,7 @@
                         duration: 250
                     }
                 };
-            var c = a.default.extend({
+            var c = s.default.extend({
                 layout: n(450),
                 classNames: ["multiteam-lobby-root-component"],
                 classNameBindings: ["useCompactGridLayout:compact-layout:", "isTFT:multiteam-lobby-root-component-tft"],
@@ -19784,7 +19808,7 @@
                 })),
                 setSwapButtonOnCooldown: function() {
                     this.set("isSwapButtonOnCooldown", !0);
-                    const e = this.get("isTFT") ? s : 4e3;
+                    const e = this.get("isTFT") ? a : 4e3;
                     this.runTask((() => {
                         this.set("isSwapButtonOnCooldown", !1)
                     }), e)
@@ -19804,8 +19828,8 @@
                 },
                 updateTFTSubteamCooldownPercentage: function() {
                     const e = new Date - this.get("tftSubteamCooldownStart"),
-                        t = s - e;
-                    t > 0 ? (this.set("tftSubteamCooldownPercentage", 100 - t / s * 100), o.Ember.run.later((() => this.updateTFTSubteamCooldownPercentage()), 50)) : (this.set("tftSubteamCooldownPercentage", 0), this.set("tftSubteamOnCooldown", null))
+                        t = a - e;
+                    t > 0 ? (this.set("tftSubteamCooldownPercentage", 100 - t / a * 100), o.Ember.run.later((() => this.updateTFTSubteamCooldownPercentage()), 50)) : (this.set("tftSubteamCooldownPercentage", 0), this.set("tftSubteamOnCooldown", null))
                 },
                 isSameAsCurrentBannerTooltip: function(e, t) {
                     return this._currentBannerTooltip && this._currentBannerTooltip.subteamIndex === e && this._currentBannerTooltip.intraSubteamPosition === t
@@ -19951,8 +19975,8 @@
             var i = n(1);
             n(455);
             const o = ".player-slot__container",
-                a = "lol-uikit-tooltip",
-                s = ":hover",
+                s = "lol-uikit-tooltip",
+                a = ":hover",
                 r = [
                     [20, 103],
                     [1200, 600]
@@ -20095,19 +20119,19 @@
                     const e = this.element.querySelector(o),
                         t = this.element.querySelector(".player-slot__banner-container");
                     if (!e || !t) return;
-                    const n = document.createElement(a);
+                    const n = document.createElement(s);
                     n.appendChild(t);
-                    let s = "right",
+                    let a = "right",
                         l = 216;
                     const c = this.get("subteamIndex") || 1;
-                    this.get("lobbiesService.multiteamLobbySubteamCount") > 4 && (this.get("lobbiesService.isCherry") ? (c + 1) % 3 == 0 && (s = "left", l = -216) : c % 3 == 0 && (s = "left", l = -216)), i.UIKit.getTooltipManager().assign(e, n, null, {
+                    this.get("lobbiesService.multiteamLobbySubteamCount") > 4 && (this.get("lobbiesService.isCherry") ? (c + 1) % 3 == 0 && (a = "left", l = -216) : c % 3 == 0 && (a = "left", l = -216)), i.UIKit.getTooltipManager().assign(e, n, null, {
                         type: "banner",
                         targetAnchor: {
-                            x: s,
+                            x: a,
                             y: "center"
                         },
                         tooltipAnchor: {
-                            x: s,
+                            x: a,
                             y: "center"
                         },
                         offset: {
@@ -20140,10 +20164,10 @@
                     e && i.UIKit.getTooltipManager().hide(e)
                 },
                 isHoveringPlayerSlot: function() {
-                    return !!this.element.querySelector(o + s)
+                    return !!this.element.querySelector(o + a)
                 },
                 isHoveringBannerTooltip: function() {
-                    return !!document.querySelector(a + s)
+                    return !!document.querySelector(s + a)
                 },
                 actions: {
                     onSwapButtonClicked: function() {
@@ -20183,11 +20207,11 @@
                 value: !0
             }), t.default = void 0;
             var i, o = n(1),
-                a = (i = n(315)) && i.__esModule ? i : {
+                s = (i = n(315)) && i.__esModule ? i : {
                     default: i
                 };
             n(458);
-            var s = a.default.extend({
+            var a = s.default.extend({
                 layout: n(459),
                 classNames: ["strawberry-lobby-root-component"],
                 selected: null,
@@ -20200,7 +20224,7 @@
                     }
                 }
             });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -20225,10 +20249,10 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(43)),
-                a = s(n(156));
+                o = a(n(43)),
+                s = a(n(156));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -20273,7 +20297,7 @@
                     return !0
                 })),
                 click() {
-                    this.get("isMe") && (this.set("isLoadoutMenuOpen", !0), this.playSound(a.default.SFX_URLS.SFX_UIKIT_CLICK_SMALL))
+                    this.get("isMe") && (this.set("isLoadoutMenuOpen", !0), this.playSound(s.default.SFX_URLS.SFX_UIKIT_CLICK_SMALL))
                 },
                 actions: {
                     openLoadoutMenu() {
@@ -20299,10 +20323,10 @@
             "use strict";
             var i = n(1);
             n(465);
-            var o, a = (o = n(461)) && o.__esModule ? o : {
+            var o, s = (o = n(461)) && o.__esModule ? o : {
                 default: o
             };
-            e.exports = a.default.extend({
+            e.exports = s.default.extend({
                 companionIconId: null,
                 mapSkinIconId: null,
                 isMe: null,
@@ -20377,10 +20401,10 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = s(n(43)),
-                a = s(n(156));
+                o = a(n(43)),
+                s = a(n(156));
 
-            function s(e) {
+            function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -20415,10 +20439,10 @@
                 })),
                 actions: {
                     onMouseEnter: function() {
-                        this.playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER)
+                        this.playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER)
                     },
                     openLoadoutsModalRoot() {
-                        this.playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_CLICK);
+                        this.playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_CLICK);
                         const e = this.get("openLoadoutsModalRoot"),
                             t = this.get("type");
                         e && e(t)
@@ -20439,8 +20463,8 @@
             "use strict";
             var i = n(1);
             const o = "Map23_Playbook_TutorialSeen",
-                a = "Playbook_CTASeen_TFT9",
-                s = {
+                s = "Playbook_CTASeen_TFT9",
+                a = {
                     tftPlaybook: "/lol-client-config/v3/client-config/lol.client_settings.tft.tft_playbook",
                     tftPlaybookData: "/lol-cosmetics/v1/inventories/tft/playbooks",
                     selectPlaybookItem: "/lol-cosmetics/v1/selection/playbook",
@@ -20467,17 +20491,17 @@
                     this._super(...arguments), this._binding = i.db, this._initObservers()
                 },
                 willDestroy: function() {
-                    this.get("playbookFeatureEnabled") && (this._binding.removeObserver(s.tftPlaybookData, this), this._binding.removeObserver(s.currentQueueId, this)), this._binding.removeObserver(s.tftPlaybook, this), this._binding.removeObserver(s.genericAssets, this), this._super(...arguments)
+                    this.get("playbookFeatureEnabled") && (this._binding.removeObserver(a.tftPlaybookData, this), this._binding.removeObserver(a.currentQueueId, this)), this._binding.removeObserver(a.tftPlaybook, this), this._binding.removeObserver(a.genericAssets, this), this._super(...arguments)
                 },
                 _initObservers() {
-                    this._binding.addObserver(s.tftPlaybook, this, (e => {
+                    this._binding.addObserver(a.tftPlaybook, this, (e => {
                         if (!e || !("enabled" in e)) return this.set("playbookFeatureEnabled", Boolean(!1)), void this.set("enabledQueues", []);
-                        this.set("playbookFeatureEnabled", Boolean(e.enabled)), this.set("enabledQueues", Array.isArray(e.queues) ? e.queues : []), this.get("playbookFeatureEnabled") && (this._binding.addObserver(s.tftPlaybookData, this, (e => {
+                        this.set("playbookFeatureEnabled", Boolean(e.enabled)), this.set("enabledQueues", Array.isArray(e.queues) ? e.queues : []), this.get("playbookFeatureEnabled") && (this._binding.addObserver(a.tftPlaybookData, this, (e => {
                             e && (this.set("playbookData", e.groups[0]), this.set("defaultPlaybookIcon", e.groups[0].items.find((t => t.itemId === e.defaultItemId)).iconPathSmall), this.sortPlaybookItems(), this.set("playbookSelectedItem", e.selectedLoadoutItem), this.set("playbookViewItem", e.selectedLoadoutItem))
-                        })), this._binding.addObserver(s.session, this, (e => {
+                        })), this._binding.addObserver(a.session, this, (e => {
                             e && e.gameData && e.gameData.queue && e.gameData.queue.id && this.set("inPlaybookEnabledQueue", this.enabledQueues.includes(e.gameData.queue.id))
                         })))
-                    })), this._binding.addObserver(s.genericAssets, this, (e => {
+                    })), this._binding.addObserver(a.genericAssets, this, (e => {
                         e && this.set("playbookAssets", e["lcu-assets-tft-playbook"])
                     }))
                 },
@@ -20500,17 +20524,17 @@
                     this.set("displayItemDetails", !1)
                 },
                 updateSelectedItem: function(e) {
-                    this._binding.put(s.selectPlaybookItem, e.itemId).then((() => {
+                    this._binding.put(a.selectPlaybookItem, e.itemId).then((() => {
                         this.set("playbookSelectedItem", e), this.hidePlaybookMenu(), this.hideItemDetailsMenu()
                     })).catch((() => {
-                        i.logger.error("Unable to update playbook item", s.selectPlaybookItem)
+                        i.logger.error("Unable to update playbook item", a.selectPlaybookItem)
                     }))
                 },
                 checkForFirstViewing: function() {
                     const e = (e = {}, t) => e.data && e.data[t];
-                    this._binding.get(s.tutorialModal).then((t => {
-                        if (e(t, o) || (this.set("autoShowTutorial", !0), this.set("shouldDisplayPlaybookTutorial", !0)), !e(t, a)) {
-                            if (1 !== (this.get("playbookSelectedItem") || {}).itemId) return void this._updateSeenKey(a);
+                    this._binding.get(a.tutorialModal).then((t => {
+                        if (e(t, o) || (this.set("autoShowTutorial", !0), this.set("shouldDisplayPlaybookTutorial", !0)), !e(t, s)) {
+                            if (1 !== (this.get("playbookSelectedItem") || {}).itemId) return void this._updateSeenKey(s);
                             this.set("shouldShowCta", !0)
                         }
                     }))
@@ -20519,7 +20543,7 @@
                     this.get("autoShowTutorial") && this._updateSeenKey(o), this.set("autoShowTutorial", !1)
                 },
                 _updateSeenKey: function(e) {
-                    const t = s.tutorialModal;
+                    const t = a.tutorialModal;
                     this._binding.get(t).then((n => {
                         if (!n) return;
                         const i = n.data || {};
@@ -20533,7 +20557,7 @@
                     this.set("shouldShowCta", !1)
                 },
                 markCtaAsSeen: function() {
-                    this.get("shouldShowCta") && this._updateSeenKey(a), this.closeCta()
+                    this.get("shouldShowCta") && this._updateSeenKey(s), this.closeCta()
                 },
                 sortPlaybookItems: function() {
                     this.get("playbookData.items").sort((function(e, t) {
@@ -20546,8 +20570,8 @@
             var i = n(1),
                 o = n(9);
             n(475);
-            const a = i.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg"),
-                s = i.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg");
+            const s = i.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg"),
+                a = i.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg");
             e.exports = i.Ember.Component.extend({
                 layout: n(476),
                 classNames: ["tft-playbook-icon"],
@@ -20570,10 +20594,10 @@
                 })),
                 actions: {
                     showPlaybook: function() {
-                        this.get("playbook").showPlaybookMenu(), s.play()
+                        this.get("playbook").showPlaybookMenu(), a.play()
                     },
                     hover: function() {
-                        a.play()
+                        s.play()
                     },
                     hideCta: function() {
                         this.get("playbook").closeCta()
@@ -20669,8 +20693,8 @@
             var i = n(1);
             n(481);
             var o = n(9);
-            const a = "playbook-equipped-icon",
-                s = i.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg"),
+            const s = "playbook-equipped-icon",
+                a = i.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg"),
                 r = i.Audio.getChannel("sfx-ui").createSound("/fe/lol-static-assets/sounds/sfx-uikit-button-generic-click.ogg");
             e.exports = i.Ember.Component.extend({
                 layout: n(482),
@@ -20689,7 +20713,7 @@
                 })),
                 equippedIcon: i.Ember.computed("playbook.playbookAssets", (function() {
                     const e = this.get("playbook.playbookAssets");
-                    return e && e[a] ? e[a] : ""
+                    return e && e[s] ? e[s] : ""
                 })),
                 isSelected: i.Ember.computed("item", "viewItemId", (function() {
                     const e = this.get("item"),
@@ -20707,7 +20731,7 @@
                         this.get("onSelectItem")(e), r.play()
                     },
                     hover: function() {
-                        s.play()
+                        a.play()
                     }
                 }
             })
@@ -20846,7 +20870,7 @@
             var i = n(1);
             n(496);
             const o = i.UIKit.getVignetteCelebrationManager();
-            var a = i.Ember.Component.extend({
+            var s = i.Ember.Component.extend({
                 classNames: ["rcp-fe-lol-parties-reward-celebration"],
                 layout: n(497),
                 selectedReward: null,
@@ -20865,7 +20889,7 @@
                     }
                 }
             });
-            t.default = a
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -20880,7 +20904,7 @@
             "use strict";
             var i = n(1),
                 o = n(111);
-            const a = i.Ember.Component.extend({
+            const s = i.Ember.Component.extend({
                 layout: n(499),
                 classNames: ["parties-queue-error-dialog"],
                 lobbiesService: i.Ember.inject.service("lobbies"),
@@ -20909,7 +20933,7 @@
                     }
                 }))
             });
-            e.exports = a
+            e.exports = s
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
@@ -20961,8 +20985,8 @@
             var i = n(1),
                 o = n(112);
             n(507);
-            const a = i.Ember.Object.extend(i.Ember.PromiseProxyMixin),
-                s = i.Ember.Object.extend({
+            const s = i.Ember.Object.extend(i.Ember.PromiseProxyMixin),
+                a = i.Ember.Object.extend({
                     penalizedSummonerId: 0,
                     penaltyTimeRemaining: 0,
                     formattedTimeRemaining: i.Ember.computed("penaltyTimeRemaining", (function() {
@@ -20985,7 +21009,7 @@
                 penalizedAliases: i.Ember.computed.alias("penalizedAliasesProxy.content"),
                 penalizedAliasesProxy: i.Ember.computed("penalizedSummoners.@each.penalizedSummonerId", (function() {
                     const e = this.get("penalizedSummoners");
-                    return e.length && a.create({
+                    return e.length && s.create({
                         promise: Promise.all(e.map((async e => {
                             const t = e.get("penalizedSummonerId"),
                                 {
@@ -21011,7 +21035,7 @@
                         of n) {
                         if ("LEAVER_BUSTER_QUEUE_LOCKOUT" !== e) continue;
                         const n = t.findBy("penalizedSummonerId", i);
-                        n ? n.set("penaltyTimeRemaining", o) : t.addObject(s.create({
+                        n ? n.set("penaltyTimeRemaining", o) : t.addObject(a.create({
                             penalizedSummonerId: i,
                             penaltyTimeRemaining: o
                         })), t.sortBy("penaltyTimeRemaining").reverseObjects()
@@ -21072,11 +21096,11 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(112)) && i.__esModule ? i : {
+                s = (i = n(112)) && i.__esModule ? i : {
                     default: i
                 };
             n(512);
-            const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin),
+            const a = o.Ember.Object.extend(o.Ember.PromiseProxyMixin),
                 r = (0, o.emberDataBinding)({
                     Ember: o.Ember,
                     websocket: (0, o.getProvider)().getSocket(),
@@ -21113,7 +21137,7 @@
                 timeRemaining: o.Ember.computed.readOnly("searchError.penaltyTimeRemaining"),
                 hasTimeRemaining: o.Ember.computed.gt("timeRemaining", 0),
                 timeRemainingFormatted: o.Ember.computed("timeRemaining", (function() {
-                    return a.default.formatSeconds(this.get("timeRemaining"))
+                    return s.default.formatSeconds(this.get("timeRemaining"))
                 })),
                 penalizedSummonerIsMe: o.Ember.computed("searchError.penalizedSummonerId", "currentSummoner.summonerId", (function() {
                     return this.get("searchError.penalizedSummonerId") === this.get("currentSummoner.summonerId")
@@ -21121,7 +21145,7 @@
                 penalizedSummonerDisplayName: o.Ember.computed.alias("penalizedSummonerNameProxy.content.playerNameFull"),
                 penalizedSummonerNameProxy: o.Ember.computed("searchError.penalizedSummonerId", (function() {
                     const e = this.get("searchError.penalizedSummonerId");
-                    return e && s.create({
+                    return e && a.create({
                         promise: this._playerNames.getDisplayNameBySummonerId(e)
                     })
                 })),
@@ -21157,11 +21181,11 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(112)) && i.__esModule ? i : {
+                s = (i = n(112)) && i.__esModule ? i : {
                     default: i
                 };
             n(517);
-            const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
+            const a = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             e.exports = o.Ember.Component.extend({
                 layout: n(518),
                 classNames: ["ready-check-failer-error-dialog"],
@@ -21172,13 +21196,13 @@
                 timeRemaining: o.Ember.computed.readOnly("matchmakingService.longestSearchErrorPenaltyTimeRemaining"),
                 hasTimeRemaining: o.Ember.computed.gt("timeRemaining", 0),
                 timeRemainingFormatted: o.Ember.computed("timeRemaining", (function() {
-                    return a.default.formatSeconds(this.get("timeRemaining"))
+                    return s.default.formatSeconds(this.get("timeRemaining"))
                 })),
                 penalizedSummonerIsMe: o.Ember.computed.alias("errorData.isPenalizedSummoner"),
                 penalizedSummonerDisplayName: o.Ember.computed.alias("penalizedSummonerNameProxy.content.playerNameFull"),
                 penalizedSummonerNameProxy: o.Ember.computed("errorData.penalizedSummonerId", (function() {
                     const e = this.get("errorData.penalizedSummonerId");
-                    return e && s.create({
+                    return e && a.create({
                         promise: this._playerNames.getDisplayNameBySummonerId(e)
                     })
                 })),
@@ -21201,11 +21225,11 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(112)) && i.__esModule ? i : {
+                s = (i = n(112)) && i.__esModule ? i : {
                     default: i
                 };
             n(520);
-            const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
+            const a = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             e.exports = o.Ember.Component.extend({
                 layout: n(521),
                 classNames: ["disruptive-gameplay-lockout-error-dialog"],
@@ -21216,13 +21240,13 @@
                 timeRemaining: o.Ember.computed.readOnly("matchmakingService.longestSearchErrorPenaltyTimeRemaining"),
                 hasTimeRemaining: o.Ember.computed.gt("timeRemaining", 0),
                 timeRemainingFormatted: o.Ember.computed("timeRemaining", (function() {
-                    return a.default.formatSeconds(this.get("timeRemaining"))
+                    return s.default.formatSeconds(this.get("timeRemaining"))
                 })),
                 penalizedSummonerIsMe: o.Ember.computed.alias("errorData.isPenalizedSummoner"),
                 penalizedSummonerDisplayName: o.Ember.computed.alias("penalizedSummonerNameProxy.content.playerNameFull"),
                 penalizedSummonerNameProxy: o.Ember.computed("errorData.penalizedSummonerId", (function() {
                     const e = this.get("errorData.penalizedSummonerId");
-                    return e && s.create({
+                    return e && a.create({
                         promise: this._playerNames.getDisplayNameBySummonerId(e)
                     })
                 })),
@@ -21247,8 +21271,8 @@
             var i = n(1);
             n(523);
             var o = m(n(104)),
-                a = m(n(155)),
-                s = m(n(130)),
+                s = m(n(155)),
+                a = m(n(130)),
                 r = m(n(43)),
                 l = n(524),
                 c = n(158);
@@ -21265,7 +21289,7 @@
             function d(e, t) {
                 return e.isHonorRecognized && t.isHonorRecognized ? t.gameId - e.gameId : e.isHonorRecognized && t.isRecentlyPlayed ? -1 : e.isRecentlyPlayed && t.isHonorRecognized ? 1 : e.isRecentlyPlayed && t.isRecentlyPlayed ? t.gameId - e.gameId : void 0
             }
-            e.exports = i.Ember.Component.extend(u, s.default, r.default, a.default, {
+            e.exports = i.Ember.Component.extend(u, a.default, r.default, s.default, {
                 layout: n(525),
                 classNames: ["parties-invite-dialog"],
                 chatService: i.Ember.inject.service("chat"),
@@ -21345,11 +21369,11 @@
                         n = this.get("recentGroup") ? this.get("recentGroup").friends : [];
                     if (!t) return i.Ember.A([...n]);
                     const o = i.Ember.A(t.filter((t => t?.canBeInvitedBy(e) || t?.get("isDiscordInviteFlow")))),
-                        a = this.get("currentPartyMemberIds") || i.Ember.A(),
-                        s = o.reject((function(e) {
-                            return -1 !== a.indexOf(e.summonerId)
+                        s = this.get("currentPartyMemberIds") || i.Ember.A(),
+                        a = o.reject((function(e) {
+                            return -1 !== s.indexOf(e.summonerId)
                         }));
-                    return i.Ember.A([...s, ...n])
+                    return i.Ember.A([...a, ...n])
                 })),
                 discordInviteableFriends: i.Ember.computed("inviteableFriends.[]", (function() {
                     return i.Ember.A(this.get("inviteableFriends")?.filter((e => e?.get("isDiscordInviteFlow"))))
@@ -21637,10 +21661,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(112)) && i.__esModule ? i : {
+                s = (i = n(112)) && i.__esModule ? i : {
                     default: i
                 };
-            const s = (0, o.emberDataBinding)({
+            const a = (0, o.emberDataBinding)({
                 Ember: o.Ember,
                 websocket: (0, o.getProvider)().getSocket(),
                 logPrefix: "party:self-low-priority-dialog",
@@ -21654,12 +21678,12 @@
                     }
                 }
             });
-            e.exports = o.Ember.Component.extend(s, {
+            e.exports = o.Ember.Component.extend(a, {
                 layout: n(533),
                 classNames: ["low-priority-dialog"],
                 lowPrioritytimeRemaining: o.Ember.computed.readOnly("search.lowPriorityData.penaltyTimeRemaining"),
                 timeRemainingFormatted: o.Ember.computed("lowPrioritytimeRemaining", (function() {
-                    return a.default.formatSeconds(this.get("lowPrioritytimeRemaining"))
+                    return s.default.formatSeconds(this.get("lowPrioritytimeRemaining"))
                 }))
             })
         }, (e, t, n) => {
@@ -21673,20 +21697,20 @@
             "use strict";
             var i = n(1),
                 o = r(n(43)),
-                a = r(n(155)),
-                s = n(156);
+                s = r(n(155)),
+                a = n(156);
 
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(535), e.exports = i.Ember.Component.extend(a.default, o.default, {
+            n(535), e.exports = i.Ember.Component.extend(s.default, o.default, {
                 layout: n(536),
                 classNames: ["game-mode-tutorial"],
                 currentIndex: null,
                 tutorialCards: [],
-                carouselSfxUrl: s.SFX_URLS.SFX_UIKIT_CLICK_AND_SLIDE,
+                carouselSfxUrl: a.SFX_URLS.SFX_UIKIT_CLICK_AND_SLIDE,
                 tutorialItems: i.Ember.computed("tutorialCards.[]", (function() {
                     const e = this.get("tutorialCards");
                     if (!e || 0 === e.length) return i.Ember.A([]);
@@ -21712,10 +21736,10 @@
                         n = t.children,
                         i = n[e],
                         o = i.offsetLeft,
-                        a = (t.offsetWidth - i.offsetWidth) / 2;
-                    t.style.transform = `translateX(${a-o}px)`, this._setSelectedClass(e, n);
-                    const s = this.element.querySelectorAll(".navigation-pip");
-                    this._setSelectedClass(e, s), this.set("currentIndex", e)
+                        s = (t.offsetWidth - i.offsetWidth) / 2;
+                    t.style.transform = `translateX(${s-o}px)`, this._setSelectedClass(e, n);
+                    const a = this.element.querySelectorAll(".navigation-pip");
+                    this._setSelectedClass(e, a), this.set("currentIndex", e)
                 },
                 actions: {
                     selectItem: function(e) {
@@ -21839,18 +21863,18 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(295)) && i.__esModule ? i : {
+                s = (i = n(295)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(9);
-            n(544), e.exports = o.Ember.Component.extend(a.default, {
+                a = n(9);
+            n(544), e.exports = o.Ember.Component.extend(s.default, {
                 classNames: ["social-leaderboard-header"],
                 layout: n(545),
                 countdownLabel: o.Ember.computed.alias("tra.social_leaderboard_next_ladder_update_countdown_label"),
                 socialLeaderboardQueueText: o.Ember.computed("tra", "selected.queue.name", (function() {
                     const e = this.get("selected.queue.type"),
                         t = this.get("tra");
-                    return e === s.QUEUE_TYPE.RANKED_FLEX_SR ? t.get("social_leaderboard_ranked_flex_sr_text") : t.get("social_leaderboard_ranked_solo_5x5_text")
+                    return e === a.QUEUE_TYPE.RANKED_FLEX_SR ? t.get("social_leaderboard_ranked_flex_sr_text") : t.get("social_leaderboard_ranked_solo_5x5_text")
                 })),
                 actions: {}
             })
@@ -21869,7 +21893,7 @@
             var i = n(1),
                 o = n(547);
 
-            function a(e) {
+            function s(e) {
                 return e < 10 ? "0" + e : e
             }
             n(548), e.exports = i.Ember.Component.extend({
@@ -21886,7 +21910,7 @@
                 countdownTimeLeft: i.Ember.computed("remainingTime", (function() {
                     const e = this.get("remainingTime"),
                         t = i.moment.duration(e);
-                    return `${a(t.hours())}:${a(t.minutes())}:${a(t.seconds())}`
+                    return `${s(t.hours())}:${s(t.minutes())}:${s(t.seconds())}`
                 })),
                 hasFinished: i.Ember.computed("remainingTime", (function() {
                     return 0 === this.get("remainingTime")
@@ -22144,10 +22168,10 @@
         }, (e, t, n) => {
             "use strict";
             var i, o = n(1),
-                a = (i = n(295)) && i.__esModule ? i : {
+                s = (i = n(295)) && i.__esModule ? i : {
                     default: i
                 };
-            n(563), e.exports = o.Ember.Component.extend(a.default, {
+            n(563), e.exports = o.Ember.Component.extend(s.default, {
                 classNames: ["not-enough-friends"],
                 layout: n(564),
                 notEnoughFriendsDescription: o.Ember.computed("tra.social_leaderboard_add_friends_description", "minFriendCount", (function() {
@@ -22192,8 +22216,8 @@
             "use strict";
             var i = g(n(569)),
                 o = g(n(575)),
-                a = g(n(578)),
-                s = g(n(581)),
+                s = g(n(578)),
+                a = g(n(581)),
                 r = g(n(587)),
                 l = g(n(590)),
                 c = g(n(594)),
@@ -22211,7 +22235,7 @@
             e.exports = function(e = document) {
                 if (e.partiesElementsRegistered) return;
                 const t = h.webComponents.registerCustomElementV1;
-                t(i.default), t(s.default), t(a.default), t(o.default), t(r.default), t(l.default), t(c.default), t(m.default), t(u.default), t(d.default), t(p.default), e.partiesElementsRegistered = !0
+                t(i.default), t(a.default), t(s.default), t(o.default), t(r.default), t(l.default), t(c.default), t(m.default), t(u.default), t(d.default), t(p.default), e.partiesElementsRegistered = !0
             }
         }, (e, t, n) => {
             "use strict";
@@ -22223,26 +22247,26 @@
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
                         default: e
                     };
-                    var n = s(t);
+                    var n = a(t);
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var a in e)
-                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var r = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            r && (r.get || r.set) ? Object.defineProperty(i, a, r) : i[a] = e[a]
+                    for (var s in e)
+                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                            var r = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                            r && (r.get || r.set) ? Object.defineProperty(i, s, r) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = (i = n(156)) && i.__esModule ? i : {
+                s = (i = n(156)) && i.__esModule ? i : {
                     default: i
                 };
 
-            function s(e) {
+            function a(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (s = function(e) {
+                return (a = function(e) {
                     return e ? n : t
                 })(e)
             }
@@ -22335,13 +22359,13 @@
                     } else t.style.backgroundImage = "url(" + e.loadoutsIcon + ")", t.classList.remove("none-icon")
                 }
                 _handleMouseOver() {
-                    this._playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER)
+                    this._playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER)
                 }
                 _handleIconClick() {
-                    this._playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_CLICK)
+                    this._playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_CLICK)
                 }
                 _playSound(e) {
-                    o.Audio.getChannel(a.default.SFX_CHANNEL).playSound(e)
+                    o.Audio.getChannel(s.default.SFX_CHANNEL).playSound(e)
                 }
                 _selectCompanion(e) {
                     this._updateSelectedCompanion(e), 0 === e.itemId || e.itemId === this._inventory.defaultItemId ? this._dataBinding.delete(g[this._type], e.itemId) : this._dataBinding.put(g[this._type], e.itemId)
@@ -22376,8 +22400,8 @@
                 if ("function" == typeof btoa) {
                     var i = btoa(unescape(encodeURIComponent(JSON.stringify(n)))),
                         o = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(i),
-                        a = "/*# ".concat(o, " */");
-                    return [t].concat([a]).join("\n")
+                        s = "/*# ".concat(o, " */");
+                    return [t].concat([s]).join("\n")
                 }
                 return [t].join("\n")
             }
@@ -22391,19 +22415,19 @@
                             i = void 0 !== t[5];
                         return t[4] && (n += "@supports (".concat(t[4], ") {")), t[2] && (n += "@media ".concat(t[2], " {")), i && (n += "@layer".concat(t[5].length > 0 ? " ".concat(t[5]) : "", " {")), n += e(t), i && (n += "}"), t[2] && (n += "}"), t[4] && (n += "}"), n
                     })).join("")
-                }, t.i = function(e, n, i, o, a) {
+                }, t.i = function(e, n, i, o, s) {
                     "string" == typeof e && (e = [
                         [null, e, void 0]
                     ]);
-                    var s = {};
+                    var a = {};
                     if (i)
                         for (var r = 0; r < this.length; r++) {
                             var l = this[r][0];
-                            null != l && (s[l] = !0)
+                            null != l && (a[l] = !0)
                         }
                     for (var c = 0; c < e.length; c++) {
                         var m = [].concat(e[c]);
-                        i && s[m[0]] || (void 0 !== a && (void 0 === m[5] || (m[1] = "@layer".concat(m[5].length > 0 ? " ".concat(m[5]) : "", " {").concat(m[1], "}")), m[5] = a), n && (m[2] ? (m[1] = "@media ".concat(m[2], " {").concat(m[1], "}"), m[2] = n) : m[2] = n), o && (m[4] ? (m[1] = "@supports (".concat(m[4], ") {").concat(m[1], "}"), m[4] = o) : m[4] = "".concat(o)), t.push(m))
+                        i && a[m[0]] || (void 0 !== s && (void 0 === m[5] || (m[1] = "@layer".concat(m[5].length > 0 ? " ".concat(m[5]) : "", " {").concat(m[1], "}")), m[5] = s), n && (m[2] ? (m[1] = "@media ".concat(m[2], " {").concat(m[1], "}"), m[2] = n) : m[2] = n), o && (m[4] ? (m[1] = "@supports (".concat(m[4], ") {").concat(m[1], "}"), m[4] = o) : m[4] = "".concat(o)), t.push(m))
                     }
                 }, t
             }
@@ -22420,26 +22444,26 @@
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
                         default: e
                     };
-                    var n = s(t);
+                    var n = a(t);
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var a in e)
-                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var r = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            r && (r.get || r.set) ? Object.defineProperty(i, a, r) : i[a] = e[a]
+                    for (var s in e)
+                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                            var r = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                            r && (r.get || r.set) ? Object.defineProperty(i, s, r) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = (i = n(157)) && i.__esModule ? i : {
+                s = (i = n(157)) && i.__esModule ? i : {
                     default: i
                 };
 
-            function s(e) {
+            function a(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (s = function(e) {
+                return (a = function(e) {
                     return e ? n : t
                 })(e)
             }
@@ -22569,13 +22593,13 @@
                     return e.reduce(((e, t) => (t.invitationId && e.push(t.invitationId), e)), [])
                 }
                 _gameInviteSort(e, t) {
-                    const n = a.default.isReadyForGame(this._patcherState),
+                    const n = s.default.isReadyForGame(this._patcherState),
                         i = this._gameInviteAcceptable(e, n),
-                        s = this._gameInviteAcceptable(t, n) - i;
-                    return s || o.tra.moment(t.timestamp) - o.tra.moment(e.timestamp)
+                        a = this._gameInviteAcceptable(t, n) - i;
+                    return a || o.tra.moment(t.timestamp) - o.tra.moment(e.timestamp)
                 }
                 _gameInviteAcceptable(e, t) {
-                    return a.default.isGameInviteAcceptable(e, this._chatSettings, this._currentPlayerChat, this._patcherConnected, t)
+                    return s.default.isGameInviteAcceptable(e, this._chatSettings, this._currentPlayerChat, this._patcherConnected, t)
                 }
                 _gameInvitesById(e) {
                     let t = {};
@@ -22618,10 +22642,10 @@
                         const t = o.UIKit.getTooltipManager(),
                             n = document.createElement("lol-uikit-tooltip"),
                             i = o.tra.get("parties_tooltip_decline_all"),
-                            a = document.createElement("lol-uikit-content-block");
-                        a.setAttribute("type", "tooltip-system");
-                        const s = document.createElement("p");
-                        s.innerHTML = i, a.appendChild(s), n.setAttribute("position", "left"), n.appendChild(a);
+                            s = document.createElement("lol-uikit-content-block");
+                        s.setAttribute("type", "tooltip-system");
+                        const a = document.createElement("p");
+                        a.innerHTML = i, s.appendChild(a), n.setAttribute("position", "left"), n.appendChild(s);
                         const r = {
                             type: "dialog-small",
                             showDelay: 0,
@@ -22693,16 +22717,16 @@
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var a in e)
-                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            s && (s.get || s.set) ? Object.defineProperty(i, a, s) : i[a] = e[a]
+                    for (var s in e)
+                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                            var a = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                            a && (a.get || a.set) ? Object.defineProperty(i, s, a) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
                 o = r(n(157)),
-                a = r(n(7)),
-                s = r(n(72));
+                s = r(n(7)),
+                a = r(n(72));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -22774,7 +22798,7 @@
                 _gameName(e) {
                     let t = "";
                     if (e) {
-                        const n = a.default.getMapModeInfo(e.mapId, e.gameMode, e.queueId);
+                        const n = s.default.getMapModeInfo(e.mapId, e.gameMode, e.queueId);
                         t = n && n.isRGM && n.gameModeShortName ? n.gameModeShortName : n && n.locStrings && n.locStrings.map_name_override ? n.locStrings.map_name_override : n ? n.name : e.gameMode
                     }
                     return t
@@ -22946,9 +22970,9 @@
                         this._playClickSound();
                         const e = this._gameInvite.invitationId;
                         this._lobbyBinding.post(`/v2/received-invitations/${e}/decline`).then((() => {
-                            s.default.gameInviteDecline()
+                            a.default.gameInviteDecline()
                         })).catch((t => {
-                            i.logger.error(`Error declining game invite, id: ${e} error: ${t}`), s.default.logError("declineGameInvite", t.translationKey, t.translationKey)
+                            i.logger.error(`Error declining game invite, id: ${e} error: ${t}`), a.default.logError("declineGameInvite", t.translationKey, t.translationKey)
                         }))
                     }
                 }
@@ -23039,15 +23063,15 @@
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var a in e)
-                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            s && (s.get || s.set) ? Object.defineProperty(i, a, s) : i[a] = e[a]
+                    for (var s in e)
+                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                            var a = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                            a && (a.get || a.set) ? Object.defineProperty(i, s, a) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = n(15),
-                s = (i = n(582)) && i.__esModule ? i : {
+                s = n(15),
+                a = (i = n(582)) && i.__esModule ? i : {
                     default: i
                 },
                 r = n(111);
@@ -23069,7 +23093,7 @@
                     return n(586)
                 }
                 constructor() {
-                    super(), this._animationsEnabled = !0, this._gameflowAvailable = !1, this._gameflowPhase = a.GAMEFLOW_PHASES.NONE, this._gameflowSession = null, this._haveGameInvites = !1, this._haveGameSearch = !1, this._isInQueueDelay = !1, this._previousGameflowPhase = a.GAMEFLOW_PHASES.NONE, this._searchCount = 0, this._searchState = void 0, this._listeners = {}, this._listeners.onUXSettingsChange = this._updateUXSettings.bind(this), this._matchmakingBinding = (0, o.dataBinding)("/lol-matchmaking", c), this._lobbyBinding = (0, o.dataBinding)("/lol-lobby", c), this._gameflowBinding = (0, o.dataBinding)("/lol-gameflow", c), this._templateHelper = o.UIKit.getTemplateHelper(), this._toastManager = o.UIKit.getToastManager()
+                    super(), this._animationsEnabled = !0, this._gameflowAvailable = !1, this._gameflowPhase = s.GAMEFLOW_PHASES.NONE, this._gameflowSession = null, this._haveGameInvites = !1, this._haveGameSearch = !1, this._isInQueueDelay = !1, this._previousGameflowPhase = s.GAMEFLOW_PHASES.NONE, this._searchCount = 0, this._searchState = void 0, this._listeners = {}, this._listeners.onUXSettingsChange = this._updateUXSettings.bind(this), this._matchmakingBinding = (0, o.dataBinding)("/lol-matchmaking", c), this._lobbyBinding = (0, o.dataBinding)("/lol-lobby", c), this._gameflowBinding = (0, o.dataBinding)("/lol-gameflow", c), this._templateHelper = o.UIKit.getTemplateHelper(), this._toastManager = o.UIKit.getToastManager()
                 }
                 connectedCallback() {
                     super.connectedCallback(), this.addEventListener("gameInviteAdded", this._listeners.onGameInviteAdded), this._observeGameflowAvailability(), this._observeGameflowPhase(), this._observeGameflowSession(), this._observeUXSettings(), this._observeSearch(), this.shadowRoot.querySelector("lol-parties-status-card").addEventListener("click", (() => this._showLobby()))
@@ -23105,19 +23129,19 @@
                         n = this._searchState;
                     if (this._searchState = e?.searchState || void 0, e && !this._gameSearchIsError(e)) {
                         this._haveGameSearch = !0, this._updateGameInvitesElement(e, "updateGameSearch");
-                        const i = n === a.GAME_SEARCH_STATES.FOUND && e.searchState === a.GAME_SEARCH_STATES.SEARCHING;
-                        !t || i ? this._onGameSearchStarted(e, this._searchCount++) : e.searchState === a.GAME_SEARCH_STATES.FOUND && this._onGameSearchFound(e)
+                        const i = n === s.GAME_SEARCH_STATES.FOUND && e.searchState === s.GAME_SEARCH_STATES.SEARCHING;
+                        !t || i ? this._onGameSearchStarted(e, this._searchCount++) : e.searchState === s.GAME_SEARCH_STATES.FOUND && this._onGameSearchFound(e)
                     } else {
                         this._haveGameSearch = !1, this._searchCount = 0, this._updateGameInvitesElement(null, "updateGameSearch");
-                        const n = this._previousGameflowPhase === a.GAMEFLOW_PHASES.MATCHMAKING && this._gameflowPhase === a.GAMEFLOW_PHASES.LOBBY;
-                        t && (e && this._gameSearchIsError(e) ? this._onGameSearchError(e) : (this._gameflowPhase === a.GAMEFLOW_PHASES.MATCHMAKING || n) && this._onGameSearchCanceled())
+                        const n = this._previousGameflowPhase === s.GAMEFLOW_PHASES.MATCHMAKING && this._gameflowPhase === s.GAMEFLOW_PHASES.LOBBY;
+                        t && (e && this._gameSearchIsError(e) ? this._onGameSearchError(e) : (this._gameflowPhase === s.GAMEFLOW_PHASES.MATCHMAKING || n) && this._onGameSearchCanceled())
                     }
                     const i = this._isInQueueDelay;
                     e && e.lowPriorityData ? this._isInQueueDelay = e.lowPriorityData.reason === r.LOW_PRIORITY_REASONS.QUEUE_DELAY : this._isInQueueDelay = !1, t === this._haveGameSearch && i === this._isInQueueDelay || (this._toggleQueueDelayClass(), this._checkIfMagicShouldPlay()), this._updateGameSearchElement(e, "updateGameSearch"), this._updatePartyCardShow(!this._haveGameSearch)
                 }
                 _onGameSearchStarted(e, t) {
                     const n = this._gameflowSession?.gameData?.queue?.gameMode,
-                        i = (0, a.getGameKeyFromGameMode)(n);
+                        i = (0, s.getGameKeyFromGameMode)(n);
                     o.datadogRum.startOperation(o.datadogRum.XP_CGL_PREGAME_MATCHMAKING, {
                         game: {
                             key: i
@@ -23231,7 +23255,7 @@
                     })) : []
                 }
                 _gameSearchIsError(e) {
-                    return !(!e.searchState || e.searchState !== a.GAME_SEARCH_STATES.ERROR)
+                    return !(!e.searchState || e.searchState !== s.GAME_SEARCH_STATES.ERROR)
                 }
                 _checkIfMagicShouldPlay() {
                     const e = this._haveGameInvites || this._haveGameSearch;
@@ -23258,7 +23282,7 @@
                     this._videoPlayPromise ? this._videoPlayPromise.then((() => e())) : e()
                 }
                 playMagic(e) {
-                    const t = this._isInQueueDelay ? s.default.queueDelayVideo : s.default.backgroundVideo;
+                    const t = this._isInQueueDelay ? a.default.queueDelayVideo : a.default.backgroundVideo;
                     this._videoElement && (e ? this._videoElement.src ? this._videoElement.src !== t && this._restartVideo(t) : (this._videoElement.setAttribute("src", t), this._playVideo()) : this._pauseVideo())
                 }
                 _toastErrorMessage(e) {
@@ -23316,15 +23340,15 @@
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var a in e)
-                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            s && (s.get || s.set) ? Object.defineProperty(i, a, s) : i[a] = e[a]
+                    for (var s in e)
+                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                            var a = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                            a && (a.get || a.set) ? Object.defineProperty(i, s, a) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = n(158),
-                s = n(111),
+                s = n(158),
+                a = n(111),
                 r = (i = n(7)) && i.__esModule ? i : {
                     default: i
                 },
@@ -23407,7 +23431,7 @@
                     const {
                         lowPriorityData: t
                     } = e, n = t ? t.penaltyTime : null;
-                    if (t && t.reason === s.LOW_PRIORITY_REASONS.LEAVER_BUSTED && n) {
+                    if (t && t.reason === a.LOW_PRIORITY_REASONS.LEAVER_BUSTED && n) {
                         this._removeClass("priority-max-alert", ".parties-game-search-elapsed"), this._removeClass("priority-alert", ".parties-game-search-elapsed"), this._removeClass("priority-warning", ".parties-game-search-elapsed");
                         let e = null;
                         n >= 1200 ? e = "priority-max-alert" : n >= 600 && n < 1200 ? e = "priority-alert" : n > 0 && n < 600 && (e = "priority-warning"), e && this._addClass(e, ".parties-game-search-elapsed")
@@ -23415,7 +23439,7 @@
                 }
                 _updateQueueDelayMessaging(e) {
                     const t = this._isInQueueDelay;
-                    this._isInQueueDelay = e && e.lowPriorityData && e.lowPriorityData.reason && e.lowPriorityData.reason === s.LOW_PRIORITY_REASONS.QUEUE_DELAY, t !== this._isInQueueDelay && (this._isInQueueDelay ? (this._addClass("queue-delay", ".parties-game-search-status"), this._setElementText(".parties-game-search-info", o.tra.get("low_priority_queue_delay_search_info"))) : (this._removeClass("queue-delay", ".parties-game-search-status"), this._setElementText(".parties-game-search-info", ""), this._removeTooltip(this._lowPriorityTooltipTarget)))
+                    this._isInQueueDelay = e && e.lowPriorityData && e.lowPriorityData.reason && e.lowPriorityData.reason === a.LOW_PRIORITY_REASONS.QUEUE_DELAY, t !== this._isInQueueDelay && (this._isInQueueDelay ? (this._addClass("queue-delay", ".parties-game-search-status"), this._setElementText(".parties-game-search-info", o.tra.get("low_priority_queue_delay_search_info"))) : (this._removeClass("queue-delay", ".parties-game-search-status"), this._setElementText(".parties-game-search-info", ""), this._removeTooltip(this._lowPriorityTooltipTarget)))
                 }
                 _clearLowPriorityAlert() {
                     this._removeClass("priority-max-alert", ".parties-game-search-elapsed"), this._removeClass("priority-alert", ".parties-game-search-elapsed"), this._removeClass("priority-warning", ".parties-game-search-elapsed")
@@ -23424,7 +23448,7 @@
                     const {
                         lowPriorityData: t
                     } = e, n = t ? t.penalizedSummonerIds : [];
-                    t && t.reason === s.LOW_PRIORITY_REASONS.LEAVER_BUSTED ? this._assignLowPriorityQueueTooltip(n, e) : t && t.reason === s.LOW_PRIORITY_REASONS.QUEUE_DELAY ? this._assignQueueDelayTooltip() : this._removeTooltip(this._lowPriorityTooltipTarget)
+                    t && t.reason === a.LOW_PRIORITY_REASONS.LEAVER_BUSTED ? this._assignLowPriorityQueueTooltip(n, e) : t && t.reason === a.LOW_PRIORITY_REASONS.QUEUE_DELAY ? this._assignQueueDelayTooltip() : this._removeTooltip(this._lowPriorityTooltipTarget)
                 }
                 _updateDivider(e) {
                     e && e.invitations && e.invitations.length > 0 ? this._removeClass("parties-game-search-hide", ".parties-game-search-divider") : this._addClass("parties-game-search-hide", ".parties-game-search-divider")
@@ -23443,7 +23467,7 @@
                     } = e.gameConfig;
                     if (t && n) {
                         const e = r.default.getMapModeInfo(n, t);
-                        return e && e.isRGM ? "game_map_rotating_game_mode" : a.MAP_TO_I18N_KEY[n]
+                        return e && e.isRGM ? "game_map_rotating_game_mode" : s.MAP_TO_I18N_KEY[n]
                     }
                     return ""
                 }
@@ -23566,17 +23590,17 @@
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var a in e)
-                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            s && (s.get || s.set) ? Object.defineProperty(i, a, s) : i[a] = e[a]
+                    for (var s in e)
+                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                            var a = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                            a && (a.get || a.set) ? Object.defineProperty(i, s, a) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = (i = n(157)) && i.__esModule ? i : {
+                s = (i = n(157)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(109),
+                a = n(109),
                 r = n(9);
 
             function l(e) {
@@ -23624,7 +23648,7 @@
                 }
                 _updateMapImage(e) {
                     if (!e) return;
-                    const t = a.default.mapKey(e && e.gameConfig);
+                    const t = s.default.mapKey(e && e.gameConfig);
                     this._lastMapKey && this._removeClass(this._lastMapKey, ".parties-status-card-map"), t && this._addClass(t, ".parties-status-card-map"), this._lastMapKey = t
                 }
                 _setPlayBackground(e) {
@@ -23637,7 +23661,7 @@
                     } else this._videoElement && this._videoElement.pause(), this._videoElement && this._videoElement.remove(), this._videoElement = null
                 }
                 _isTFTCustom(e) {
-                    return e.gameMode === r.GAME_MODES.TFT && e.customSpectatorPolicy !== s.CUSTOM_GAME_SPECTATOR_VALUES.NotAllowed
+                    return e.gameMode === r.GAME_MODES.TFT && e.customSpectatorPolicy !== a.CUSTOM_GAME_SPECTATOR_VALUES.NotAllowed
                 }
                 _updateRosterIcons(e) {
                     if (!this._canUpdateRosterIcons(e)) return "";
@@ -23646,8 +23670,8 @@
                         maxLobbySpectatorCount: n,
                         customSpectatorPolicy: i
                     } = e.gameConfig, o = e.members.length;
-                    let a = t;
-                    if (i && i !== s.CUSTOM_GAME_SPECTATOR_VALUES.NotAllowed && (a = t - n), a > 8) return this._generatePartySizeNumberCounterDisplay(o, a);
+                    let s = t;
+                    if (i && i !== a.CUSTOM_GAME_SPECTATOR_VALUES.NotAllowed && (s = t - n), s > 8) return this._generatePartySizeNumberCounterDisplay(o, s);
                     const r = [];
                     for (let e = 0; e < t; e++) e < o ? r.push('<div class="parties-status-member-joined"></div>') : r.push('<div class="parties-status-member-empty"></div>');
                     return r.join("")
@@ -23670,7 +23694,7 @@
                             this._removeClass("open", ".parties-status-card"), this._addClass("closed", ".parties-status-card")
                     } else this._addClass("parties-status-card-hide", ".parties-status-card"), this._setPlayBackground(null);
                     this._updateMapImage(this._lobby);
-                    const e = this._lobby && a.default.gameType(this._lobby.gameConfig) || "";
+                    const e = this._lobby && s.default.gameType(this._lobby.gameConfig) || "";
                     this._setElementText(".parties-status-mode-text", e), this._setElementText(".parties-status-member-icons", this._updateRosterIcons(this._lobby))
                 }
                 _setElementText(e, t) {
@@ -23711,14 +23735,14 @@
                         const t = o.UIKit.getTooltipManager(),
                             n = document.createElement("lol-uikit-tooltip"),
                             i = o.tra.get("parties_open_party_overview_header"),
-                            a = o.tra.get("parties_open_party_overview"),
-                            s = o.UIKit.getTemplateHelper().contentBlockTooltip(i, a, "dialog-medium", "parties-status-card-info"),
-                            r = s.querySelector("h6"),
+                            s = o.tra.get("parties_open_party_overview"),
+                            a = o.UIKit.getTemplateHelper().contentBlockTooltip(i, s, "dialog-medium", "parties-status-card-info"),
+                            r = a.querySelector("h6"),
                             l = '<div class="parties-status-card-header-icon"></div>',
                             c = '<div class="parties-status-card-header-text">';
                         r.innerHTML = l + c + r.innerHTML + "</div>", this._getOpenPartyTooltipSetting().then((i => {
                             if (!i) {
-                                n.appendChild(s);
+                                n.appendChild(a);
                                 const i = {
                                     type: "dialog-medium",
                                     showDelay: 0,
@@ -23813,8 +23837,8 @@
                 }
             }
             o.tagName = "lol-parties-loadouts-purchase-dialog-content";
-            var a = o;
-            t.default = a
+            var s = o;
+            t.default = s
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-loadouts-purchase-dialog-content">\r\n  <div class="loadouts-purchase-dialog-content-wrapper">\r\n    <div class="loadouts-purchase-dialog-body-title"></div>\r\n    <div class="little-legend-container">\r\n      <img class="little-legend-img" />\r\n      <div class="little-legend-overlay"></div>\r\n      <lol-uikit-lottie\r\n        class="lottie-animation"\r\n        image-path="/fe/lol-parties/lottie/LLUpgradeConfirm_StarIcons/images/"\r\n        loop="true"\r\n        autoplay="true"\r\n      >\r\n      </lol-uikit-lottie>\r\n    </div>\r\n    <div class="loadouts-purchase-dialog-body-content"></div>\r\n    <div class="lol-parties-purchase-dialog-error-message"></div>\r\n  </div>\r\n</template>\r\n'
@@ -23843,17 +23867,17 @@
                     if (n && n.has(e)) return n.get(e);
                     var i = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                    for (var a in e)
-                        if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            s && (s.get || s.set) ? Object.defineProperty(i, a, s) : i[a] = e[a]
+                    for (var s in e)
+                        if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
+                            var a = o ? Object.getOwnPropertyDescriptor(e, s) : null;
+                            a && (a.get || a.set) ? Object.defineProperty(i, s, a) : i[s] = e[s]
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = (i = n(156)) && i.__esModule ? i : {
+                s = (i = n(156)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(598),
+                a = n(598),
                 r = n(132);
 
             function l(e) {
@@ -23891,12 +23915,12 @@
                 _defineCosmeticItems() {
                     const e = this._querySelector(".cosmetic-upgrade-container[data-type=star]").getElementsByClassName("cosmetic-upgrade-bounding-container");
                     for (let t = 0; t < e.length; t++) e[t].addEventListener("mouseenter", (e => {
-                        const n = (0, s.getBaseLayoutItem)(this._clickedItem, this._inventory);
-                        0 === t ? (this._setFocusedItem(n), this._playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER)) : (this._setFocusedItem(n.upgrades[t - 1]), this._playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER))
+                        const n = (0, a.getBaseLayoutItem)(this._clickedItem, this._inventory);
+                        0 === t ? (this._setFocusedItem(n), this._playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER)) : (this._setFocusedItem(n.upgrades[t - 1]), this._playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER))
                     }), !0), e[t].addEventListener("mouseleave", (e => {
                         this._setFocusedItem(this._clickedItem), this._resetSelected()
                     })), e[t].addEventListener("click", (e => {
-                        const n = (0, s.getBaseLayoutItem)(this._hoveredUpgrades, this._inventory);
+                        const n = (0, a.getBaseLayoutItem)(this._hoveredUpgrades, this._inventory);
                         let i = n;
                         3 !== n.level && 0 !== t && (i = n.upgrades[t - 1]), this._setFocusedItem(i), this._clickedItem = i, this._playClickSoundForItem(i), i.isRecentItem && (this._removeRecentHighlight(i), this._recentlyViewedContentIdsToClear()), this._updateActionButton(), this._updateFavoriteButton()
                     }))
@@ -23960,8 +23984,8 @@
                         content: i,
                         disabledState: !t.owned || e.contentId === t.contentId
                     };
-                    const a = (0, s.getBaseLayoutItem)(t, this._inventory),
-                        r = this._getItemUpgradePath(a),
+                    const s = (0, a.getBaseLayoutItem)(t, this._inventory),
+                        r = this._getItemUpgradePath(s),
                         l = r.findIndex((e => e.contentId === t.contentId)),
                         c = l > 0 && r[l - 1].owned,
                         m = t?.starShardsPrice?.price,
@@ -23978,8 +24002,8 @@
                     if (!this._favoritesEnabled) return;
                     const e = this._favoriteButton;
                     if (e.hasAttribute("disabled") || e.classList.contains("hasMaxFavorites")) return;
-                    this._playSound(a.default.SFX_URLS.SFX_LOADOUT_FAVORITES_CLICK), e.setAttribute("disabled", "");
-                    const t = (0, s.getBaseLayoutItem)(this._clickedItem, this._inventory);
+                    this._playSound(s.default.SFX_URLS.SFX_LOADOUT_FAVORITES_CLICK), e.setAttribute("disabled", "");
+                    const t = (0, a.getBaseLayoutItem)(this._clickedItem, this._inventory);
                     this.dispatchEvent(new CustomEvent("lol-parties-cosmetics-item-favorite-event", {
                         detail: {
                             item: t,
@@ -23995,7 +24019,7 @@
                     }))
                 }
                 _handleSortDropDownSelected() {
-                    this._playSound(a.default.SFX_URLS.SFX_DROPDOWN_CLICK);
+                    this._playSound(s.default.SFX_URLS.SFX_DROPDOWN_CLICK);
                     const e = this._sortDropDown.selected.id,
                         t = this._sortDropDown.selected;
                     if (e !== this._sortType) {
@@ -24021,22 +24045,22 @@
                         content: t,
                         disabledState: n,
                         prereqOwned: i
-                    } = this._createActionButtonState(), a = this._actionButton, s = this._querySelector(".star-shards-label");
-                    this._addClass("hidden", ".star-shards-label-wrapper"), e === u && (s.innerHTML = o.tra.get("parties_loadouts_remaining_star_shards_label"), this._toggleClass("purchasable", ".star-shards-label-wrapper", !n), n && !i ? s.innerHTML = o.tra.get("parties_loadouts_prereq_not_owned_label") : n && (s.innerHTML = o.tra.formatString("parties_loadouts_not_enough_shards_label", {
+                    } = this._createActionButtonState(), s = this._actionButton, a = this._querySelector(".star-shards-label");
+                    this._addClass("hidden", ".star-shards-label-wrapper"), e === u && (a.innerHTML = o.tra.get("parties_loadouts_remaining_star_shards_label"), this._toggleClass("purchasable", ".star-shards-label-wrapper", !n), n && !i ? a.innerHTML = o.tra.get("parties_loadouts_prereq_not_owned_label") : n && (a.innerHTML = o.tra.formatString("parties_loadouts_not_enough_shards_label", {
                         shardImage: '<img class="star-shards-icon" src="/fe/lol-static-assets/images/icon-star-shards-36.png"/>'
-                    })), this._toggleClass("hidden", ".star-shards-amount", n), this._removeClass("hidden", ".star-shards-label-wrapper")), a.setAttribute("type", e), a.setAttribute("behavior", e), a.innerHTML = t, a.toggleAttribute("disabled", n), a.toggleAttribute("primary", !n)
+                    })), this._toggleClass("hidden", ".star-shards-amount", n), this._removeClass("hidden", ".star-shards-label-wrapper")), s.setAttribute("type", e), s.setAttribute("behavior", e), s.innerHTML = t, s.toggleAttribute("disabled", n), s.toggleAttribute("primary", !n)
                 }
                 _updateFavoriteButton() {
                     if (!(this._hoveredUpgrades && this._favoriteButton && this._favorites && this._inventory)) return;
                     const e = this._favoriteButton,
-                        t = (0, s.getBaseLayoutItem)(this._hoveredUpgrades, this._inventory),
+                        t = (0, a.getBaseLayoutItem)(this._hoveredUpgrades, this._inventory),
                         n = this._maxFavorites <= this._favorites.length,
                         i = this._favorites?.some((e => e.contentId === t.contentId));
                     this._toggleClass("favorited", ".cosmetic-group-favorite-button", i);
                     const o = !n || i;
                     this._toggleClass("hasMaxFavorites", ".cosmetic-group-favorite-button", !o), o ? this._tooltipManager.disable(this._favoriteButton) : this._tooltipManager.enable(this._favoriteButton), e.toggleAttribute("disabled", !1);
-                    const a = this._favoritesEnabled && (this._isItemOwned(this._hoveredUpgrades) || i);
-                    this._toggleClass("hidden", ".cosmetic-group-favorite-button", !a)
+                    const s = this._favoritesEnabled && (this._isItemOwned(this._hoveredUpgrades) || i);
+                    this._toggleClass("hidden", ".cosmetic-group-favorite-button", !s)
                 }
                 _updateSortDropDown() {
                     this._toggleClass("hidden", ".cosmetic-sorting-dropdown", !this._configAllowsSortByLastAcquired), this._toggleClass("extended", ".search-container", !this._configAllowsSortByLastAcquired), this._configAllowsSortByLastAcquired || (this._sortType = r.SORTING_TYPES.DEFAULT, this._updateInventory(), this._updateFavorites(this._favorites))
@@ -24047,7 +24071,7 @@
                             SFX_LOADOUT_RARITY_CLICK: t,
                             SFX_COMPANION_PICKER_CLICK: n
                         }
-                    } = a.default, i = e.owned ? t : n;
+                    } = s.default, i = e.owned ? t : n;
                     this._playSound(i)
                 }
                 _updateFilter() {
@@ -24069,7 +24093,7 @@
                 }
                 _selectItem(e, t = !1) {
                     if (this._clickedItem) {
-                        const e = (0, s.getBaseLayoutItem)(this._clickedItem, this._inventory);
+                        const e = (0, a.getBaseLayoutItem)(this._clickedItem, this._inventory);
                         if (!e) return;
                         const t = this._querySelectorAll(`[content-id="${e.contentId}"]`);
                         t && t.forEach((e => {
@@ -24077,7 +24101,7 @@
                         }))
                     }
                     this._setFocusedItem(e), this._clickedItem = e;
-                    const n = (0, s.getBaseLayoutItem)(e, this._inventory);
+                    const n = (0, a.getBaseLayoutItem)(e, this._inventory);
                     if (!n) return;
                     (t ? this._getFavoritesSection() : this._getOptionsSection()).querySelectorAll(`[content-id="${n.contentId}"]`).forEach((e => {
                         e.setAttribute("highlighted", !0)
@@ -24091,7 +24115,7 @@
                 }
                 _updateUpgrades(e) {
                     if (!this._inventory || !this._clickedItem) return;
-                    const t = (0, s.getBaseLayoutItem)(e, this._inventory);
+                    const t = (0, a.getBaseLayoutItem)(e, this._inventory);
                     if (t)
                         if (this._showMoon(t)) {
                             this._addClass("norender", ".cosmetic-upgrade-container[data-type=star]"), this._removeClass("norender", ".cosmetic-upgrade-container[data-type=moon]"), this._toggleClass("hidden", ".cosmetic-upgrade-container[data-type=moon]", !t?.companionType);
@@ -24104,13 +24128,13 @@
                             let n = 0;
                             for (let i = 0; i < e.length; i++) {
                                 const o = e[i],
-                                    a = o.starShardsPrice ? o.starShardsPrice.price : 0,
-                                    s = o.starShardsPrice && !!o.starShardsPrice.offerId,
+                                    s = o.starShardsPrice ? o.starShardsPrice.price : 0,
+                                    a = o.starShardsPrice && !!o.starShardsPrice.offerId,
                                     r = this._starShardsAmount,
                                     l = i > 0 && e[i - 1].owned,
                                     c = `.cosmetic-upgrade-${o.level}`,
                                     m = t.owned;
-                                o.isRecentItem && n++, i > 0 && (this._toggleClass("not-enough-shards", c, !o.owned && s && l && a > r), this._toggleClass("upgradeable", c, !o.owned && m && s && a <= r), this._toggleClass("purchasable", c, !o.owned && s && l && a <= r)), this._toggleClass("unowned", c, !o.owned), this._toggleClass("selected", c, o.selected), this._toggleClass("intended", c, o.contentId === this._clickedItem.contentId), this._toggleClass("recent", c, o.isRecentItem), this._toggleClass("hidden", c, !1), this._toggleClass("equipped", c, o.contentId === this._inventory.selectedLoadoutItem.contentId)
+                                o.isRecentItem && n++, i > 0 && (this._toggleClass("not-enough-shards", c, !o.owned && a && l && s > r), this._toggleClass("upgradeable", c, !o.owned && m && a && s <= r), this._toggleClass("purchasable", c, !o.owned && a && l && s <= r)), this._toggleClass("unowned", c, !o.owned), this._toggleClass("selected", c, o.selected), this._toggleClass("intended", c, o.contentId === this._clickedItem.contentId), this._toggleClass("recent", c, o.isRecentItem), this._toggleClass("hidden", c, !1), this._toggleClass("equipped", c, o.contentId === this._inventory.selectedLoadoutItem.contentId)
                             }
                             n > 1 && (this._removeRecentHighlight(t), this._toggleClass("recent", ".cosmetic-upgrade-1", !1))
                         }
@@ -24119,7 +24143,7 @@
                     this._querySelectorAll(`[content-id="${e.contentId}"]`).forEach((e => {
                         e.setAttribute("is-recent-item", !1)
                     })), e.isRecentItem = !1;
-                    const t = (0, s.getBaseLayoutItem)(e, this._inventory);
+                    const t = (0, a.getBaseLayoutItem)(e, this._inventory);
                     if (!t) return;
                     let n = t.isRecentItem;
                     if (t.upgrades && t.upgrades.length > 0)
@@ -24229,7 +24253,7 @@
                     const t = this._getOptionsSection();
                     t.innerHTML = "";
                     const i = o.tra.get("tft_companions_none_label");
-                    let a;
+                    let s;
                     t.appendChild(this._createCosmeticOption({
                         itemId: 0,
                         loadoutsIcon: n(574),
@@ -24238,8 +24262,8 @@
                         name: i,
                         owned: !0
                     }));
-                    for (const e of this._inventory.groups) a = this._createCosmeticOptionGroup(e), t.appendChild(a);
-                    this._clickedItem ? this._clickedItem = (0, s.getLayoutItemById)(this._clickedItem.itemId, this._inventory) : this._clickedItem = (0, s.getLayoutItemById)(this._inventory.selectedLoadoutItem.itemId, this._inventory), this._hoveredUpgrades = this._hoveredUpgrades ? this._hoveredUpgrades : this._clickedItem, this._setFocusedItem(this._hoveredUpgrades)
+                    for (const e of this._inventory.groups) s = this._createCosmeticOptionGroup(e), t.appendChild(s);
+                    this._clickedItem ? this._clickedItem = (0, a.getLayoutItemById)(this._clickedItem.itemId, this._inventory) : this._clickedItem = (0, a.getLayoutItemById)(this._inventory.selectedLoadoutItem.itemId, this._inventory), this._hoveredUpgrades = this._hoveredUpgrades ? this._hoveredUpgrades : this._clickedItem, this._setFocusedItem(this._hoveredUpgrades)
                 }
                 _formatStarShardsAmount(e) {
                     return isNaN(e) ? "0" : e < 1e5 ? e.toString() : (e = 1e3 * Math.floor(e / 1e3), o.tra.numeral(e).format("0a"))
@@ -24279,7 +24303,7 @@
                     if (!e) return;
                     this._querySelector(".selected-cosmetic").setAttribute("content-id", e.contentId);
                     const t = this._querySelector(".selected-cosmetic-header-group"),
-                        n = (0, s.getBaseLayoutItem)(e, this._inventory);
+                        n = (0, a.getBaseLayoutItem)(e, this._inventory);
                     n.upgrades && n.upgrades.length;
                     this._toggleClass("locked", ".selected-cosmetic-header-group", !e.owned), t.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(1, 10, 19, .80) 85%, rgba(1, 10, 19, 1) 100%), center/cover no-repeat url(${e.loadoutsIcon})`;
                     const i = this._querySelector(".selected-cosmetic-title"),
@@ -24310,15 +24334,15 @@
                     i.className = "cosmetic-option-list", t.appendChild(i), i.addEventListener("mouseleave", (e => {
                         e.stopPropagation(), this._resetSelected()
                     }));
-                    let a = !1;
+                    let s = !1;
                     for (const t of e) {
                         const e = this._isItemShown(t);
-                        if (a = a || e, this._isItemRendered(t)) {
+                        if (s = s || e, this._isItemRendered(t)) {
                             const n = this._createCosmeticOption(t, !1, e);
                             n.toggleFavoriteIcon(!0), i.appendChild(n)
                         }
                     }
-                    return t.setAttribute("group-shown", a), t
+                    return t.setAttribute("group-shown", s), t
                 }
                 _createCosmeticOptionGroup(e) {
                     const t = document.createElement("div");
@@ -24336,17 +24360,17 @@
                     i.className = "cosmetic-option-list", t.appendChild(i), i.addEventListener("mouseleave", (e => {
                         e.stopPropagation(), this._resetSelected()
                     }));
-                    let a = !1;
-                    e.groupId === m && (a = !0);
                     let s = !1;
+                    e.groupId === m && (s = !0);
+                    let a = !1;
                     for (const t of e.items) {
                         const e = this._isItemShown(t);
-                        if (s = s || e, this._isItemRendered(t)) {
-                            const n = this._createCosmeticOption(t, a, e);
+                        if (a = a || e, this._isItemRendered(t)) {
+                            const n = this._createCosmeticOption(t, s, e);
                             i.appendChild(n)
                         }
                     }
-                    return t.setAttribute("group-shown", s), t
+                    return t.setAttribute("group-shown", a), t
                 }
                 _createCosmeticOption(e, t, n) {
                     const i = document.createElement("lol-parties-cosmetics-renderer");
@@ -24397,7 +24421,7 @@
                     }
                 }
                 _playSound(e) {
-                    o.Audio.getChannel(a.default.SFX_CHANNEL).playSound(e)
+                    o.Audio.getChannel(s.default.SFX_CHANNEL).playSound(e)
                 }
                 _setElementText(e, t) {
                     const n = this._querySelector(e);
@@ -24439,9 +24463,9 @@
                         n = e.substr(4, 2),
                         i = e.substr(6, 2),
                         o = e.substr(9, 2),
-                        a = e.substr(11, 2),
-                        s = e.substr(13, 2);
-                    return new Date(`${t}-${n}-${i}T${o}:${a}:${s}Z`)
+                        s = e.substr(11, 2),
+                        a = e.substr(13, 2);
+                    return new Date(`${t}-${n}-${i}T${o}:${s}:${a}Z`)
                 }
             }
             p.tagName = "lol-parties-cosmetics-panel";
@@ -24493,10 +24517,10 @@
                 value: !0
             }), t.default = void 0;
             var i, o = n(1),
-                a = (i = n(156)) && i.__esModule ? i : {
+                s = (i = n(156)) && i.__esModule ? i : {
                     default: i
                 },
-                s = n(132);
+                a = n(132);
             class r extends o.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(602)
@@ -24505,7 +24529,7 @@
                     return n(603)
                 }
                 constructor() {
-                    super(), this._onClickBinding = this._onClicked.bind(this), this._onMouseInBinding = this._onMouseIn.bind(this), this._eventPreventDefaultCallback = e => e.preventDefault(), this._fallback = !0, this.isRewardsProgramEnabled = s.REWARDS_PROGRAM_STATUS.UNSET
+                    super(), this._onClickBinding = this._onClicked.bind(this), this._onMouseInBinding = this._onMouseIn.bind(this), this._eventPreventDefaultCallback = e => e.preventDefault(), this._fallback = !0, this.isRewardsProgramEnabled = a.REWARDS_PROGRAM_STATUS.UNSET
                 }
                 connectedCallback() {
                     super.connectedCallback(), this.addEventListener("click", this._onClickBinding), this.addEventListener("mouseenter", this._onMouseInBinding), this.addEventListener("mousedown", this._eventPreventDefaultCallback)
@@ -24520,7 +24544,7 @@
                     return this._data?.contentId
                 }
                 _onClicked() {
-                    this._playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_CLICK), this.dispatchEvent(new CustomEvent("lol-parties-cosmetics-item-click", {
+                    this._playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_CLICK), this.dispatchEvent(new CustomEvent("lol-parties-cosmetics-item-click", {
                         composed: !0,
                         bubbles: !0,
                         detail: {
@@ -24529,7 +24553,7 @@
                     }))
                 }
                 _onMouseIn() {
-                    this._playSound(a.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER), this.dispatchEvent(new CustomEvent("lol-parties-cosmetics-item-hover", {
+                    this._playSound(s.default.SFX_URLS.SFX_COMPANION_PICKER_HOVER), this.dispatchEvent(new CustomEvent("lol-parties-cosmetics-item-hover", {
                         composed: !0,
                         bubbles: !0,
                         detail: {
@@ -24538,7 +24562,7 @@
                     }))
                 }
                 _playSound(e) {
-                    o.Audio.getChannel(a.default.SFX_CHANNEL).playSound(e)
+                    o.Audio.getChannel(s.default.SFX_CHANNEL).playSound(e)
                 }
                 disableFallback() {
                     this._fallback = !1
@@ -24563,7 +24587,7 @@
                     e ? this._addClass("selected", ".cosmetics-renderer") : this._removeClass("selected", ".cosmetics-renderer")
                 }
                 _setLoyalty(e) {
-                    e ? this.isRewardsProgramEnabled === s.REWARDS_PROGRAM_STATUS.ENABLED ? this._removeClass("hidden", ".cosmetics-renderer-rewards-program") : this.isRewardsProgramEnabled === s.REWARDS_PROGRAM_STATUS.DISABLED && this._removeClass("hidden", ".cosmetics-renderer-loyalty") : this.isRewardsProgramEnabled === s.REWARDS_PROGRAM_STATUS.ENABLED ? this._addClass("hidden", ".cosmetics-renderer-rewards-program") : this.isRewardsProgramEnabled === s.REWARDS_PROGRAM_STATUS.DISABLED && this._addClass("hidden", ".cosmetics-renderer-loyalty")
+                    e ? this.isRewardsProgramEnabled === a.REWARDS_PROGRAM_STATUS.ENABLED ? this._removeClass("hidden", ".cosmetics-renderer-rewards-program") : this.isRewardsProgramEnabled === a.REWARDS_PROGRAM_STATUS.DISABLED && this._removeClass("hidden", ".cosmetics-renderer-loyalty") : this.isRewardsProgramEnabled === a.REWARDS_PROGRAM_STATUS.ENABLED ? this._addClass("hidden", ".cosmetics-renderer-rewards-program") : this.isRewardsProgramEnabled === a.REWARDS_PROGRAM_STATUS.DISABLED && this._addClass("hidden", ".cosmetics-renderer-loyalty")
                 }
                 _addOwned() {
                     this._addClass("owned", ".cosmetics-renderer"), this._addClass("owned", ".cosmetics-renderer-filter")
@@ -24625,10 +24649,10 @@
                 value: !0
             }), t.default = void 0;
             var i, o = n(1),
-                a = (i = n(156)) && i.__esModule ? i : {
+                s = (i = n(156)) && i.__esModule ? i : {
                     default: i
                 };
-            class s extends o.webComponents.ShadowElement {
+            class a extends o.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(605)
                 }
@@ -24645,7 +24669,7 @@
                     super.connectedCallback();
                     const e = this.shadowRoot.querySelector("#bg-particles-intro");
                     this._animationPlaybackStarted || (e.onAnimationStart = () => {
-                        o.Audio.getChannel(a.default.SFX_CHANNEL).playSound(a.default.SFX_URLS.SFX_STAR_SHARDS_CELEBRATION);
+                        o.Audio.getChannel(s.default.SFX_CHANNEL).playSound(s.default.SFX_URLS.SFX_STAR_SHARDS_CELEBRATION);
                         this.shadowRoot.querySelector("#bg-particles-stars").play();
                         const e = this.shadowRoot.querySelector(".bg-video-intro");
                         e.play(), e.addEventListener("done", (() => {
@@ -24687,8 +24711,8 @@
                     i && i.style.setProperty(e, t)
                 }
             }
-            s.tagName = "lol-parties-cosmetics-upgrade-celebration";
-            var r = s;
+            a.tagName = "lol-parties-cosmetics-upgrade-celebration";
+            var r = a;
             t.default = r
         }, e => {
             "use strict";
@@ -24711,7 +24735,7 @@
             }), t.default = void 0;
             var i = n(1);
             const o = (0, i.getProvider)().getSocket();
-            class a extends i.webComponents.ShadowElement {
+            class s extends i.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(608)
                 }
@@ -24778,9 +24802,9 @@
                     i && i.removeEventListener(t, n)
                 }
             }
-            a.tagName = "lol-parties-series-button";
-            var s = a;
-            t.default = s
+            s.tagName = "lol-parties-series-button";
+            var a = s;
+            t.default = a
         }, e => {
             "use strict";
             e.exports = '\ufeff\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-series-button">\r\n  <div class="series-button-container">\r\n    <div class="series-tracker-label"></div>\r\n    <div class="series-tracker-button"></div>\r\n    <div class="series-tracker-reminder-label hidden"></div>\r\n  </div>\r\n</template>\r\n'
@@ -24834,10 +24858,10 @@
         }
         const i = "rcp-fe-lol-parties",
             o = document.currentScript.ownerDocument;
-        const a = window.getPluginAnnounceEventName(i);
-        o.addEventListener(a, (function(n) {
-            const a = n.registrationHandler;
-            t.default.set(o), a((t => e.default.init(t, {
+        const s = window.getPluginAnnounceEventName(i);
+        o.addEventListener(s, (function(n) {
+            const s = n.registrationHandler;
+            t.default.set(o), s((t => e.default.init(t, {
                 Audio: e => e.get("rcp-fe-audio"),
                 bluebird: e => e.get("rcp-fe-common-libs").getBluebird(3),
                 ChampionStatistics: e => e.get("rcp-fe-lol-champion-statistics"),

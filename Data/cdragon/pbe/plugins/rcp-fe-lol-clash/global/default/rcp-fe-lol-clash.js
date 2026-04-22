@@ -487,6 +487,7 @@
                         InviteDialogSuggestedGroupComponent: n(67),
                         InviteDialogPendingGroupComponent: n(70),
                         InviteDialogSummonerDisplayComponent: n(73),
+                        DiscordIntegrationService: n(77).default,
                         ...o.fetchPlayerNameInputAndDependencies()
                     }
                 }
@@ -749,25 +750,25 @@
                     }
                 }
                 _createStartupEmberApplicationDefinitions() {
-                    const e = n(77);
+                    const e = n(78);
                     a.emberApplicationFactory.setFactoryDefinition({
                         name: "LoginModalComponent",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        LoginModalComponent: n(81),
+                        LoginModalComponent: n(82),
                         GenericButtonComponent: e
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "RewardsModalComponent",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        RewardsModalComponent: n(84),
-                        ClashService: n(87),
+                        RewardsModalComponent: n(85),
+                        ClashService: n(88),
                         GenericButtonComponent: e
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "ClashStartModalComponent",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        ClashStartModalComponent: n(100),
+                        ClashStartModalComponent: n(101),
                         GenericButtonComponent: e
                     })
                 }
@@ -775,134 +776,134 @@
                     const {
                         ArrowFooterComponent: e,
                         PlayerNameComponent: t
-                    } = a.SharedComponents.getSharedEmberComponents(), s = n(103), i = n(104), o = n(77), r = n(105), l = n(106), c = n(109), d = n(112), m = {
+                    } = a.SharedComponents.getSharedEmberComponents(), s = n(104), i = n(105), o = n(78), r = n(106), l = n(107), c = n(110), d = n(113), m = {
                         GenericButtonComponent: o,
-                        TicketDisplayComponent: n(115),
-                        TicketOfferComponent: n(119),
+                        TicketDisplayComponent: n(116),
+                        TicketOfferComponent: n(120),
                         PendingIndicatorComponent: l
                     }, u = {
-                        RosterDetailsVisualComponent: n(123),
-                        RosterDetailsVisualTeamComponent: n(126),
-                        OpenTeamToggleComponent: n(129),
+                        RosterDetailsVisualComponent: n(124),
+                        RosterDetailsVisualTeamComponent: n(127),
+                        OpenTeamToggleComponent: n(130),
                         PipCounterComponent: d
                     }, p = {
-                        StateCountdownComponent: n(132),
+                        StateCountdownComponent: n(133),
                         ClashTimerManagementService: i
                     }, h = {
-                        BracketLayoutComponent: n(135),
-                        BracketLayout16Component: n(184),
-                        BracketMatchComponent: n(194),
-                        BracketMatchRosterComponent: n(197),
-                        DashCircleSpinnerComponent: n(200),
-                        SpectateButtonComponent: n(203)
+                        BracketLayoutComponent: n(136),
+                        BracketLayout16Component: n(185),
+                        BracketMatchComponent: n(195),
+                        BracketMatchRosterComponent: n(198),
+                        DashCircleSpinnerComponent: n(201),
+                        SpectateButtonComponent: n(204)
                     };
                     a.emberApplicationFactory.setFactoryDefinition(a._.assign({
                         name: "ClashPersistent",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        AppRootComponent: n(208),
-                        ClashService: n(87),
+                        AppRootComponent: n(209),
+                        ClashService: n(88),
                         TelemetryService: s,
-                        GdsService: n(210),
-                        SummonerService: n(211),
-                        TutorialService: n(212),
-                        ClashEventObserverComponent: n(216),
-                        SocialPersistentComponent: n(223),
-                        SectionHeaderComponent: n(226),
-                        TournamentScheduleComponent: n(229),
-                        TournamentInvitePanelComponent: n(234),
-                        TournamentInviteComponent: n(237),
-                        WithdrawStatusPanelComponent: n(240),
-                        ArrowToggleComponent: n(244),
-                        GenericButtonComponent: n(77),
+                        GdsService: n(211),
+                        SummonerService: n(212),
+                        TutorialService: n(213),
+                        ClashEventObserverComponent: n(217),
+                        SocialPersistentComponent: n(224),
+                        SectionHeaderComponent: n(227),
+                        TournamentScheduleComponent: n(230),
+                        TournamentInvitePanelComponent: n(235),
+                        TournamentInviteComponent: n(238),
+                        WithdrawStatusPanelComponent: n(241),
+                        ArrowToggleComponent: n(245),
+                        GenericButtonComponent: n(78),
                         PipCounterComponent: d,
                         PendingIndicatorComponent: l
                     }, p)), a.emberApplicationFactory.setFactoryDefinition({
                         name: "ClashScoutingIntroFlow",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        ScoutingIntroFlowComponent: n(247),
-                        ClashService: n(87),
+                        ScoutingIntroFlowComponent: n(248),
+                        ClashService: n(88),
                         TelemetryService: s,
-                        GdsService: n(210),
+                        GdsService: n(211),
                         GenericButtonComponent: o,
                         ArrowFooterComponent: e
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "TournamentEndOfGameFlow",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        TournamentEndOfGameFlowComponent: n(250),
-                        ClashService: n(87),
+                        TournamentEndOfGameFlowComponent: n(251),
+                        ClashService: n(88),
                         TelemetryService: s,
-                        GdsService: n(210),
+                        GdsService: n(211),
                         GenericButtonComponent: o
                     }), a.emberApplicationFactory.setFactoryDefinition(a._.assign({
                         name: "BracketCelebration",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        BracketCelebrationComponent: n(254),
-                        BracketCelebrationViewComponent: n(257),
-                        GdsService: n(210),
+                        BracketCelebrationComponent: n(255),
+                        BracketCelebrationViewComponent: n(258),
+                        GdsService: n(211),
                         TelemetryService: s
                     }, h)), a.emberApplicationFactory.setFactoryDefinition({
                         name: "CapsuleGrantCelebration",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        CapsuleGrantCelebrationComponent: n(260)
+                        CapsuleGrantCelebrationComponent: n(261)
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "CapsuleUpgradeCelebration",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        CapsuleUpgradeCelebrationComponent: n(263)
+                        CapsuleUpgradeCelebrationComponent: n(264)
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "VpGrantCelebration",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        VpGrantCelebrationComponent: n(266),
-                        RewardGrantCelebrationComponent: n(271),
-                        GdsService: n(210)
+                        VpGrantCelebrationComponent: n(267),
+                        RewardGrantCelebrationComponent: n(272),
+                        GdsService: n(211)
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "RewardGrantCelebration",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        RewardGrantCelebrationComponent: n(271)
+                        RewardGrantCelebrationComponent: n(272)
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "ClashEosCelebration",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        EosCelebrationComponent: n(274),
-                        ClashService: n(87),
-                        GdsService: n(210),
+                        EosCelebrationComponent: n(275),
+                        ClashService: n(88),
+                        GdsService: n(211),
                         GenericButtonComponent: o
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "TicketOfferNotification",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        TicketOfferNotificationComponent: n(277),
+                        TicketOfferNotificationComponent: n(278),
                         GenericButtonComponent: o,
                         PlayerNameComponent: t
                     }), a.emberApplicationFactory.setFactoryDefinition(a._.assign({
                         name: "ViewRosterModal",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        ViewRosterModalComponent: n(280),
-                        RosterLayoutComponent: n(283),
-                        ChatService: n(286),
-                        ClashService: n(87),
+                        ViewRosterModalComponent: n(281),
+                        RosterLayoutComponent: n(284),
+                        ChatService: n(287),
+                        ClashService: n(88),
                         TelemetryService: s,
-                        GdsService: n(210),
-                        ClashNavService: n(287),
-                        SummonerService: n(211),
-                        TutorialService: n(212),
+                        GdsService: n(211),
+                        ClashNavService: n(288),
+                        SummonerService: n(212),
+                        TutorialService: n(213),
                         ClientSettingsService: r,
                         GenericButtonComponent: o,
-                        TierPlacementComponent: n(288),
+                        TierPlacementComponent: n(289),
                         TierPlacementVisualComponent: c,
-                        RosterDetailsComponent: n(291),
-                        RosterMemberListComponent: n(296),
-                        RosterMemberComponent: n(299),
-                        PositionSelectorComponent: n(304),
-                        PositionSelectorModalComponent: n(307),
+                        RosterDetailsComponent: n(292),
+                        RosterMemberListComponent: n(297),
+                        RosterMemberComponent: n(300),
+                        PositionSelectorComponent: n(305),
+                        PositionSelectorModalComponent: n(308),
                         PlayerNameComponent: t
                     }, m, u, p, this.clashInviteDialogComponents))
                 }
@@ -910,106 +911,106 @@
                     const {
                         ArrowFooterComponent: e,
                         PlayerNameComponent: t
-                    } = a.SharedComponents.getSharedEmberComponents(), s = n(103), i = n(104), o = n(77), r = n(105), l = n(106), c = n(109), d = n(112), m = {
-                        BracketLayoutComponent: n(135),
-                        BracketLayout16Component: n(184),
-                        BracketMatchComponent: n(194),
-                        BracketMatchRosterComponent: n(197),
-                        DashCircleSpinnerComponent: n(200),
-                        SpectateButtonComponent: n(203)
+                    } = a.SharedComponents.getSharedEmberComponents(), s = n(104), i = n(105), o = n(78), r = n(106), l = n(107), c = n(110), d = n(113), m = {
+                        BracketLayoutComponent: n(136),
+                        BracketLayout16Component: n(185),
+                        BracketMatchComponent: n(195),
+                        BracketMatchRosterComponent: n(198),
+                        DashCircleSpinnerComponent: n(201),
+                        SpectateButtonComponent: n(204)
                     }, u = {
                         GenericButtonComponent: o,
-                        TicketDisplayComponent: n(115),
-                        TicketOfferComponent: n(119),
+                        TicketDisplayComponent: n(116),
+                        TicketOfferComponent: n(120),
                         PendingIndicatorComponent: l
                     }, p = {
-                        RosterDetailsVisualComponent: n(123),
-                        RosterDetailsVisualTeamComponent: n(126),
-                        OpenTeamToggleComponent: n(129),
+                        RosterDetailsVisualComponent: n(124),
+                        RosterDetailsVisualTeamComponent: n(127),
+                        OpenTeamToggleComponent: n(130),
                         PipCounterComponent: d
                     }, h = {
-                        StateCountdownComponent: n(132),
+                        StateCountdownComponent: n(133),
                         ClashTimerManagementService: i
                     };
                     a.emberApplicationFactory.setFactoryDefinition(a._.assign({
                         name: v,
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        AppRootComponent: n(310),
-                        ClashService: n(87),
+                        AppRootComponent: n(311),
+                        ClashService: n(88),
                         TelemetryService: s,
-                        GdsService: n(210),
-                        ClashNavService: n(287),
+                        GdsService: n(211),
+                        ClashNavService: n(288),
                         ClashTimerManagementService: i,
-                        ClientConfigService: n(314).default,
-                        SummonerService: n(211),
-                        ChatService: n(286),
-                        TutorialService: n(212),
+                        ClientConfigService: n(315).default,
+                        SummonerService: n(212),
+                        ChatService: n(287),
+                        TutorialService: n(213),
                         ClientSettingsService: r,
-                        ClashTabHubComponent: n(315),
-                        ClashTabTeamComponent: n(318),
-                        ClashTabBracketComponent: n(325),
-                        ClashTabWinnersComponent: n(328),
-                        ClashTabAwardsComponent: n(331),
+                        ClashTabHubComponent: n(316),
+                        ClashTabTeamComponent: n(319),
+                        ClashTabBracketComponent: n(326),
+                        ClashTabWinnersComponent: n(329),
+                        ClashTabAwardsComponent: n(332),
                         GenericButtonComponent: o,
-                        IsLastHelper: n(334).helper,
-                        ClashLandingComponent: n(335),
-                        TournamentInfoComponent: n(338),
-                        LftToggleComponent: n(341),
-                        OpenTeamToggleComponent: n(129),
-                        TierPlacementComponent: n(288),
-                        ClashTrophyComponent: n(344),
+                        IsLastHelper: n(335).helper,
+                        ClashLandingComponent: n(336),
+                        TournamentInfoComponent: n(339),
+                        LftToggleComponent: n(342),
+                        OpenTeamToggleComponent: n(130),
+                        TierPlacementComponent: n(289),
+                        ClashTrophyComponent: n(345),
                         TierPlacementVisualComponent: c,
-                        RosterDetailsComponent: n(291),
-                        RosterMemberListComponent: n(296),
-                        RosterMemberComponent: n(299),
-                        RosterLobbyViewComponent: n(347),
-                        RosterLobbyMemberComponent: n(350),
-                        MatchInfoComponent: n(353),
-                        ClashFaqComponent: n(356),
-                        PositionSelectorComponent: n(304),
-                        PositionSelectorModalComponent: n(307),
-                        ClashHubComponent: n(359),
-                        ParallaxBackgroundComponent: n(362),
-                        BracketHeaderComponent: n(365),
-                        BracketNavComponent: n(368),
-                        BracketNav16Component: n(371),
-                        ActionTimelineComponent: n(374),
+                        RosterDetailsComponent: n(292),
+                        RosterMemberListComponent: n(297),
+                        RosterMemberComponent: n(300),
+                        RosterLobbyViewComponent: n(348),
+                        RosterLobbyMemberComponent: n(351),
+                        MatchInfoComponent: n(354),
+                        ClashFaqComponent: n(357),
+                        PositionSelectorComponent: n(305),
+                        PositionSelectorModalComponent: n(308),
+                        ClashHubComponent: n(360),
+                        ParallaxBackgroundComponent: n(363),
+                        BracketHeaderComponent: n(366),
+                        BracketNavComponent: n(369),
+                        BracketNav16Component: n(372),
+                        ActionTimelineComponent: n(375),
                         ArrowFooterComponent: e,
-                        TournamentSelectorComponent: n(428),
-                        WinnersRosterComponent: n(431),
-                        CapsuleProgressComponent: n(434),
+                        TournamentSelectorComponent: n(429),
+                        WinnersRosterComponent: n(432),
+                        CapsuleProgressComponent: n(435),
                         PendingIndicatorComponent: l,
-                        RosterLayoutComponent: n(283),
-                        UnderlinedSelectorComponent: n(437),
-                        VpProgressComponent: n(440),
-                        ClashCarouselComponent: n(443),
-                        ClashCarouselButtonComponent: n(447),
-                        HubRosterComponent: n(450),
-                        HubRosterDetailsComponent: n(453),
-                        HubRosterRecordDayComponent: n(456),
-                        DayPlannerComponent: n(459),
-                        DayPlannerNodeComponent: n(462),
-                        HubRosterCurrentComponent: n(466),
-                        SeasonVpDisplayComponent: n(469),
-                        MyTicketsContainerComponent: n(472),
-                        CapacityIndicatorComponent: n(475),
-                        ShuffleTextComponent: n(478),
-                        HubContentComponent: n(481),
-                        ScheduleViewComponent: n(484),
-                        HistoryViewComponent: n(487),
-                        UpcomingTournamentEntryComponent: n(490),
-                        ScheduleGraphComponent: n(493),
-                        ClashAwardsRootComponent: n(496),
-                        ClashAwardsGridComponent: n(540),
-                        ClashAwardsControlPanelComponent: n(544),
-                        FindTeamViewComponent: n(551),
-                        FindTeamEntryComponent: n(554),
-                        AramIntroModalComponent: n(557),
-                        ArurfIntroModalComponent: n(560),
-                        MemberSummonerComponent: n(563),
+                        RosterLayoutComponent: n(284),
+                        UnderlinedSelectorComponent: n(438),
+                        VpProgressComponent: n(441),
+                        ClashCarouselComponent: n(444),
+                        ClashCarouselButtonComponent: n(448),
+                        HubRosterComponent: n(451),
+                        HubRosterDetailsComponent: n(454),
+                        HubRosterRecordDayComponent: n(457),
+                        DayPlannerComponent: n(460),
+                        DayPlannerNodeComponent: n(463),
+                        HubRosterCurrentComponent: n(467),
+                        SeasonVpDisplayComponent: n(470),
+                        MyTicketsContainerComponent: n(473),
+                        CapacityIndicatorComponent: n(476),
+                        ShuffleTextComponent: n(479),
+                        HubContentComponent: n(482),
+                        ScheduleViewComponent: n(485),
+                        HistoryViewComponent: n(488),
+                        UpcomingTournamentEntryComponent: n(491),
+                        ScheduleGraphComponent: n(494),
+                        ClashAwardsRootComponent: n(497),
+                        ClashAwardsGridComponent: n(541),
+                        ClashAwardsControlPanelComponent: n(545),
+                        FindTeamViewComponent: n(552),
+                        FindTeamEntryComponent: n(555),
+                        AramIntroModalComponent: n(558),
+                        ArurfIntroModalComponent: n(561),
+                        MemberSummonerComponent: n(564),
                         ...a.Social.getHovercardComponent(),
-                        ViewRosterModalComponent: n(280),
+                        ViewRosterModalComponent: n(281),
                         PlayerNameComponent: t,
                         TEMPLATES: {
                             ...a.Social.getHovercardTemplates()
@@ -1018,79 +1019,79 @@
                         name: "RosterDetailsSelectorComponent",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        RosterDetailsSelectorComponent: n(566),
-                        SanitizerService: n(569),
-                        TutorialService: n(212),
-                        GdsService: n(210),
+                        RosterDetailsSelectorComponent: n(567),
+                        SanitizerService: n(570),
+                        TutorialService: n(213),
+                        GdsService: n(211),
                         GenericButtonComponent: o,
                         PipCounterComponent: d,
-                        AsyncTextFieldComponent: n(570)
+                        AsyncTextFieldComponent: n(571)
                     }), a.emberApplicationFactory.setFactoryDefinition(a._.assign({
                         name: "TicketSelectComponent",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        TicketSelectModalComponent: n(574),
-                        TicketSelectModalElementComponent: n(577),
-                        ClashService: n(87),
+                        TicketSelectModalComponent: n(575),
+                        TicketSelectModalElementComponent: n(578),
+                        ClashService: n(88),
                         ClientSettingsService: r,
                         GenericButtonComponent: o
                     }, u)), a.emberApplicationFactory.setFactoryDefinition({
                         name: "PositionSelectorModal",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        PositionSelectorComponent: n(307)
+                        PositionSelectorComponent: n(308)
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "SelectorPaletteComponent",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        SelectorPaletteComponent: n(580)
+                        SelectorPaletteComponent: n(581)
                     }), a.emberApplicationFactory.setFactoryDefinition(a._.assign({
                         name: "TournamentScouting",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        ScoutingComponent: n(583),
+                        ScoutingComponent: n(584),
                         GenericButtonComponent: o,
-                        ScoutingNavComponent: n(588),
-                        ScoutingFillerRowComponent: n(591),
-                        ScoutingMemberRankedComponent: n(594),
-                        TopChampionComponent: n(597),
-                        ScoutingMemberMasteryComponent: n(600),
-                        TopMasteryComponent: n(603),
-                        ScoutingMemberHistoryComponent: n(606),
-                        LastMatchesComponent: n(609),
+                        ScoutingNavComponent: n(589),
+                        ScoutingFillerRowComponent: n(592),
+                        ScoutingMemberRankedComponent: n(595),
+                        TopChampionComponent: n(598),
+                        ScoutingMemberMasteryComponent: n(601),
+                        TopMasteryComponent: n(604),
+                        ScoutingMemberHistoryComponent: n(607),
+                        LastMatchesComponent: n(610),
                         PendingIndicatorComponent: l,
-                        TierPlacementComponent: n(288),
+                        TierPlacementComponent: n(289),
                         TierPlacementVisualComponent: c,
-                        IsLastHelper: n(334).helper,
-                        ClashService: n(87),
+                        IsLastHelper: n(335).helper,
+                        ClashService: n(88),
                         TelemetryService: s,
-                        GdsService: n(210),
-                        SummonerService: n(211),
-                        ScoutingService: n(612),
-                        ClientConfigService: n(314).default,
+                        GdsService: n(211),
+                        SummonerService: n(212),
+                        ScoutingService: n(613),
+                        ClientConfigService: n(315).default,
                         PlayerNameComponent: t
                     }, p)), a.emberApplicationFactory.setFactoryDefinition(a._.assign({
                         name: "TournamentOverview",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        OverviewComponent: n(614),
-                        ClashCarouselComponent: n(443),
-                        ClashCarouselButtonComponent: n(447),
-                        TierPlacementComponent: n(288),
-                        ClashTrophyComponent: n(344),
+                        OverviewComponent: n(615),
+                        ClashCarouselComponent: n(444),
+                        ClashCarouselButtonComponent: n(448),
+                        TierPlacementComponent: n(289),
+                        ClashTrophyComponent: n(345),
                         TierPlacementVisualComponent: c,
-                        OverviewPeriodComponent: n(617),
-                        OverviewMatchComponent: n(620),
-                        OverviewGameComponent: n(623),
-                        OverviewStatsCarouselComponent: n(626),
-                        OverviewStatComponent: n(630),
-                        MemberSummonerComponent: n(563),
+                        OverviewPeriodComponent: n(618),
+                        OverviewMatchComponent: n(621),
+                        OverviewGameComponent: n(624),
+                        OverviewStatsCarouselComponent: n(627),
+                        OverviewStatComponent: n(631),
+                        MemberSummonerComponent: n(564),
                         ...a.Social.getHovercardComponent(),
                         GenericButtonComponent: o,
-                        ChatService: n(286),
-                        ClashService: n(87),
+                        ChatService: n(287),
+                        ClashService: n(88),
                         TelemetryService: s,
-                        GdsService: n(210),
+                        GdsService: n(211),
                         TEMPLATES: {
                             ...a.Social.getHovercardTemplates()
                         }
@@ -1098,35 +1099,35 @@
                         name: "MissedLockinModal",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        MissedLockinModalComponent: n(633),
-                        DayPlannerComponent: n(459),
-                        DayPlannerNodeComponent: n(462)
+                        MissedLockinModalComponent: n(634),
+                        DayPlannerComponent: n(460),
+                        DayPlannerNodeComponent: n(463)
                     }), a.emberApplicationFactory.setFactoryDefinition(a._.assign({
                         name: "TicketSelector",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        TicketSelectorComponent: n(636),
-                        TicketSelectorElementComponent: n(639),
+                        TicketSelectorComponent: n(637),
+                        TicketSelectorElementComponent: n(640),
                         ClientSettingsService: r,
-                        ClashService: n(87),
+                        ClashService: n(88),
                         GenericButtonComponent: o
                     })), a.emberApplicationFactory.setFactoryDefinition({
                         name: "ClashAwardsTooltip",
                         ComponentFactory: a.componentFactory,
                         tra: this._tra,
-                        ClashAwardsTooltipComponent: n(642),
+                        ClashAwardsTooltipComponent: n(643),
                         TierPlacementVisualComponent: c
                     }), a.emberApplicationFactory.setFactoryDefinition({
                         name: "PendingLftRequestsModal",
                         tra: this._tra,
                         ComponentFactory: a.componentFactory,
-                        PendingLftRequestsModalComponent: n(645),
-                        PendingLftRequestsEntryComponent: n(648),
-                        TierPlacementComponent: n(288),
+                        PendingLftRequestsModalComponent: n(646),
+                        PendingLftRequestsEntryComponent: n(649),
+                        TierPlacementComponent: n(289),
                         TierPlacementVisualComponent: c,
                         GenericButtonComponent: o,
-                        ClashService: n(87),
-                        GdsService: n(210)
+                        ClashService: n(88),
+                        GdsService: n(211)
                     })
                 }
                 _showBrackets() {
@@ -4387,6 +4388,7 @@
             e.exports = a.Ember.Component.extend({
                 layout: n(76),
                 classNames: ["clash-summoner-display"],
+                discordIntegrationService: a.Ember.inject.service("discord-integration"),
                 hasAcceptButton: !0,
                 hasDeclineButton: !1,
                 shouldDisplayStatusInsteadOfAcceptButton: !1,
@@ -4403,6 +4405,10 @@
                 friend: null,
                 summonerId: a.Ember.computed.alias("friend.summonerId"),
                 puuid: a.Ember.computed.alias("friend.puuid"),
+                shouldShowDiscordInfo: a.Ember.computed("discordIntegrationService.isEnabled", "friend.discordInfo", (function() {
+                    return this.get("discordIntegrationService.isEnabled") && this.get("friend.discordInfo")
+                })),
+                discordInfo: a.Ember.computed.alias("friend.discordInfo"),
                 gameName: a.Ember.computed("friend.gameName", (function() {
                     return this.get("friend.gameName") || null
                 })),
@@ -4425,9 +4431,6 @@
                         x: 0,
                         y: -3
                     }
-                },
-                didInsertElement() {
-                    this._super(...arguments)
                 },
                 isAlreadyInvited: a.Ember.computed("currentInvitedSummonerIds.[]", "summonerId", (function() {
                     return this.get("currentInvitedSummonerIds").includes(this.get("summonerId"))
@@ -4533,19 +4536,38 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "tkTSnG2B",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-clash\\\\src\\\\app\\\\components\\\\invite-dialog\\\\summoner-display\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-clash\\\\src\\\\app\\\\components\\\\invite-dialog\\\\summoner-display\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-clash\\\\src\\\\app\\\\components\\\\invite-dialog\\\\summoner-display\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-position-and-icon-container"],["flush-element"],["text","\\n  "],["append",["helper",["hovercard-component"],null,[["options","puuid","summonerId"],[["get",["hoverCardOptions"]],["get",["puuid"]],["get",["summonerId"]]]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","position-roles-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPrimaryPositionVisible"]]],null,20],["block",["if"],[["get",["isSecondaryPositionVisible"]]],null,19],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-icon-container"],["flush-element"],["text","\\n    "],["block",["uikit-framed-icon"],null,[["borderwidth"],[2]],18],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-details-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-name-and-tier-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summoner-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerId","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerId"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["tierString"]]],null,17],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["subtitleText"]]],null,16],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","buttons-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplayStatusInsteadOfAcceptButton"]]],null,14,10],["block",["if"],[["get",["hasDeclineButton"]]],null,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["declineButtonTooltipText"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["class","tooltipPosition","type"],["clash-invite-decline-tooltip","top","system"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","clash-invite-decline-button"],["flush-element"],["text","\\n      "],["append",["helper",["generic-button"],null,[["onClick","onClickSound","baseImgPath","overImgPath","downImgPath"],[["helper",["action"],[["get",[null]],"decline",["get",["friend","summonerId"]]],null],"generic-click-small","/fe/lol-clash/assets/images/buttons/icon-x.png","/fe/lol-clash/assets/images/buttons/icon-x-over.png","/fe/lol-clash/assets/images/buttons/icon-x-down.png"]]],false],["text","\\n"],["block",["if"],[["get",["declineButtonTooltipText"]]],null,1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["acceptButtonTooltipText"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],3]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","clash-invite-accept-text"],["flush-element"],["append",["unknown",["acceptButtonText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["static-attr","width","20px"],["static-attr","height","20px"],["static-attr","src","/fe/lol-clash/assets/images/buttons/icon-check-over.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","clash-invite-accept-text gray"],["flush-element"],["append",["unknown",["acceptButtonText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["acceptButtonText"]]],null,7,6]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","clash-invite-accept-button"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button-secondary",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"accept",["get",["friend","summonerId"]]],null],null],["dynamic-attr","disabled",["unknown",["isAcceptButtonDisabled"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["isAcceptButtonDisabled"]]],null,8,5],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["acceptButtonTooltipText"]]],null,4],["text","    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAcceptButton"]]],null,9]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","clash-vertical-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","clash-status-icon red"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","clash-status-text declined"],["flush-element"],["append",["unknown",["tra","clash_invite_dialog_status_declined"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","clash-status-icon yellow"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","clash-status-text"],["flush-element"],["append",["unknown",["tra","clash_invite_dialog_status_pending"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["friend","isPending"]]],null,13,12],["block",["if"],[["get",["hasDeclineButton"]]],null,11]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","summoner-subtitle highlight"],["flush-element"],["text","\\n          "],["append",["helper",["player-name"],null,[["format","puuid","summonerId","summonerName","gameName","tagLine"],["tooltip",["get",["friend","suggesterPuuid"]],["get",["friend","suggesterSummonerId"]],["get",["friend","suggesterName"]],["get",["friend","suggesterGameName"]],["get",["friend","suggesterTagLine"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","summoner-subtitle-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","summoner-subtitle"],["flush-element"],["append",["unknown",["subtitleText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplaySubtitleHighlightText"]]],null,15],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","clash-tier"],["flush-element"],["append",["unknown",["tierString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["summonerIconPath"]]]]],["flush-element"],["close-element"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","position-icon"],["dynamic-attr","data-position",["concat",[["unknown",["secondaryPosition"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","position-icon"],["dynamic-attr","data-position",["concat",[["unknown",["primaryPosition"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "b0SpapHD",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-clash\\\\src\\\\app\\\\components\\\\invite-dialog\\\\summoner-display\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-clash\\\\src\\\\app\\\\components\\\\invite-dialog\\\\summoner-display\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-clash\\\\src\\\\app\\\\components\\\\invite-dialog\\\\summoner-display\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-position-and-icon-container"],["flush-element"],["text","\\n  "],["append",["helper",["hovercard-component"],null,[["options","puuid","summonerId"],[["get",["hoverCardOptions"]],["get",["puuid"]],["get",["summonerId"]]]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","position-roles-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPrimaryPositionVisible"]]],null,21],["block",["if"],[["get",["isSecondaryPositionVisible"]]],null,20],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-icon-container"],["flush-element"],["text","\\n    "],["block",["uikit-framed-icon"],null,[["borderwidth"],[2]],19],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-details-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-name-and-tier-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summoner-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerId","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerId"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["tierString"]]],null,18],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["subtitleText"]]],null,17],["block",["if"],[["get",["shouldShowDiscordInfo"]]],null,15],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","buttons-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplayStatusInsteadOfAcceptButton"]]],null,14,10],["block",["if"],[["get",["hasDeclineButton"]]],null,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["declineButtonTooltipText"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["class","tooltipPosition","type"],["clash-invite-decline-tooltip","top","system"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","clash-invite-decline-button"],["flush-element"],["text","\\n      "],["append",["helper",["generic-button"],null,[["onClick","onClickSound","baseImgPath","overImgPath","downImgPath"],[["helper",["action"],[["get",[null]],"decline",["get",["friend","summonerId"]]],null],"generic-click-small","/fe/lol-clash/assets/images/buttons/icon-x.png","/fe/lol-clash/assets/images/buttons/icon-x-over.png","/fe/lol-clash/assets/images/buttons/icon-x-down.png"]]],false],["text","\\n"],["block",["if"],[["get",["declineButtonTooltipText"]]],null,1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["acceptButtonTooltipText"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],3]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","clash-invite-accept-text"],["flush-element"],["append",["unknown",["acceptButtonText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["static-attr","width","20px"],["static-attr","height","20px"],["static-attr","src","/fe/lol-clash/assets/images/buttons/icon-check-over.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","clash-invite-accept-text gray"],["flush-element"],["append",["unknown",["acceptButtonText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["acceptButtonText"]]],null,7,6]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","clash-invite-accept-button"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button-secondary",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"accept",["get",["friend","summonerId"]]],null],null],["dynamic-attr","disabled",["unknown",["isAcceptButtonDisabled"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["isAcceptButtonDisabled"]]],null,8,5],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["acceptButtonTooltipText"]]],null,4],["text","    "],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAcceptButton"]]],null,9]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","clash-vertical-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","clash-status-icon red"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","clash-status-text declined"],["flush-element"],["append",["unknown",["tra","clash_invite_dialog_status_declined"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","clash-status-icon yellow"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","clash-status-text"],["flush-element"],["append",["unknown",["tra","clash_invite_dialog_status_pending"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["friend","isPending"]]],null,13,12],["block",["if"],[["get",["hasDeclineButton"]]],null,11]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","summoner-discord-info"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/discord-logo-blurple.svg"],["static-attr","class","summoner-discord-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","summoner-discord-name"],["flush-element"],["append",["unknown",["discordInfo","displayName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","summoner-subtitle highlight"],["flush-element"],["text","\\n          "],["append",["helper",["player-name"],null,[["format","puuid","summonerId","summonerName","gameName","tagLine"],["tooltip",["get",["friend","suggesterPuuid"]],["get",["friend","suggesterSummonerId"]],["get",["friend","suggesterName"]],["get",["friend","suggesterGameName"]],["get",["friend","suggesterTagLine"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","summoner-subtitle-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","summoner-subtitle"],["flush-element"],["append",["unknown",["subtitleText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplaySubtitleHighlightText"]]],null,16],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","clash-tier"],["flush-element"],["append",["unknown",["tierString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["summonerIconPath"]]]]],["flush-element"],["close-element"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","position-icon"],["dynamic-attr","data-position",["concat",[["unknown",["secondaryPosition"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","position-icon"],["dynamic-attr","data-position",["concat",[["unknown",["primaryPosition"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a = n(1);
+            const s = "/lol-chat/v1/is-discord-integration-enabled";
+            var i = a.Ember.Service.extend({
+                isEnabled: !1,
+                init: function() {
+                    this._super(...arguments), a.db.observe(s, this, (e => {
+                        this.set("isEnabled", Boolean(e))
+                    }))
+                },
+                willDestroy() {
+                    this._super(...arguments), a.db.unobserve(s, this)
+                }
+            });
+            t.default = i
+        }, (e, t, n) => {
+            "use strict";
             var a = n(1),
-                s = n(78);
-            n(79);
+                s = n(79);
+            n(80);
             const i = a.Ember.Component.extend({
                 classNames: ["clash-generic-button"],
                 classNameBindings: ["matchHeight:match-h", "matchWidth:match-w", "isImgFlippedX:flip-x", "isImgFlippedY:flip-y"],
-                layout: n(80),
+                layout: n(81),
                 canBeSelected: !1,
                 triggerSelected: !1,
                 selectionGroup: null,
@@ -4706,8 +4728,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(82), e.exports = a.Ember.Component.extend({
-                layout: n(83),
+            n(83), e.exports = a.Ember.Component.extend({
+                layout: n(84),
                 closeCallback: null,
                 actions: {
                     close() {
@@ -4729,7 +4751,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(85);
+            n(86);
             const s = {
                     0: 0,
                     1: 100,
@@ -4766,7 +4788,7 @@
                 });
             e.exports = a.Ember.Component.extend(i, {
                 classNames: ["clash-rewards-modal-display"],
-                layout: n(86),
+                layout: n(87),
                 clashNav: a.Ember.inject.service("clash-nav"),
                 clashService: a.Ember.inject.service("clash"),
                 localPlayer: a.Ember.computed.alias("clashService.localPlayer"),
@@ -4980,10 +5002,10 @@
             var a = n(1),
                 s = n(15),
                 i = n(9),
-                o = d(n(88)),
-                r = d(n(89)),
-                l = d(n(92)),
-                c = d(n(99));
+                o = d(n(89)),
+                r = d(n(90)),
+                l = d(n(93)),
+                c = d(n(100));
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -5357,9 +5379,9 @@
             "use strict";
             var a = n(1),
                 s = n(9),
-                i = l(n(88)),
+                i = l(n(89)),
                 o = l(n(10)),
-                r = l(n(90));
+                r = l(n(91));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -5384,7 +5406,7 @@
                             scoutingDurationMs: 0
                         },
                         objectTypes: {
-                            "phases[]": n(91)
+                            "phases[]": n(92)
                         }
                     },
                     tournamentStateInfo: {
@@ -5606,8 +5628,8 @@
             "use strict";
             var a = n(1),
                 s = n(9),
-                i = r(n(93)),
-                o = r(n(96));
+                i = r(n(94)),
+                o = r(n(97));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -5745,7 +5767,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(94)) && a.__esModule ? a : {
+                i = (a = n(95)) && a.__esModule ? a : {
                     default: a
                 },
                 o = n(9);
@@ -5812,7 +5834,7 @@
             "use strict";
             var a, s = n(1),
                 i = n(9),
-                o = (a = n(95)) && a.__esModule ? a : {
+                o = (a = n(96)) && a.__esModule ? a : {
                     default: a
                 };
             e.exports = o.default.extend({
@@ -5892,8 +5914,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = r(n(97)),
-                i = r(n(98)),
+                s = r(n(98)),
+                i = r(n(99)),
                 o = n(9);
 
             function r(e) {
@@ -6140,8 +6162,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(101), e.exports = a.Ember.Component.extend({
-                layout: n(102),
+            n(102), e.exports = a.Ember.Component.extend({
+                layout: n(103),
                 closeCallback: null,
                 actions: {
                     close() {
@@ -6276,9 +6298,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(107), e.exports = a.Ember.Component.extend({
+            n(108), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-lol-pending-indicator"],
-                layout: n(108),
+                layout: n(109),
                 width: 16,
                 dotHeight: 4,
                 dotWidth: 4
@@ -6297,9 +6319,9 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(110), e.exports = a.Ember.Component.extend({
+            n(111), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-tier-placement-visual"],
-                layout: n(111),
+                layout: n(112),
                 tier: s.INVALID_TIER,
                 tierDisplay: a.Ember.computed("tier", (function() {
                     const e = this.get("tier");
@@ -6323,10 +6345,10 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(113), e.exports = a.Ember.Component.extend({
+            n(114), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-pip-counter"],
                 classNameBindings: ["hasPips:has-pips"],
-                layout: n(114),
+                layout: n(115),
                 pipCount: 0,
                 hasPips: a.Ember.computed.gt("pipCount", 0)
             })
@@ -6343,7 +6365,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = r(n(116)),
+                s = r(n(117)),
                 i = r(n(10)),
                 o = n(9);
 
@@ -6352,10 +6374,10 @@
                     default: e
                 }
             }
-            n(117), e.exports = a.Ember.Component.extend({
+            n(118), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-ticket-display"],
                 classNameBindings: ["isLocalPlayer:ticket-display-local:ticket-display-remote"],
-                layout: n(118),
+                layout: n(119),
                 clientSettings: a.Ember.inject.service("client-settings"),
                 clashService: a.Ember.inject.service("clash"),
                 premiumTicketsEnabled: a.Ember.computed.alias("clashService.premiumTicketsEnabled"),
@@ -6580,14 +6602,14 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(120)) && a.__esModule ? a : {
+                i = (a = n(121)) && a.__esModule ? a : {
                     default: a
                 };
-            n(121);
+            n(122);
             var o = n(9);
             let r = null;
             e.exports = s.Ember.Component.extend({
-                layout: n(122),
+                layout: n(123),
                 classNames: ["clash-ticket-offer"],
                 rosterId: "",
                 rosterMember: null,
@@ -6868,9 +6890,9 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(124), e.exports = a.Ember.Component.extend({
+            n(125), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-roster-details-visual"],
-                layout: n(125),
+                layout: n(126),
                 name: null,
                 shortName: null,
                 logoId: s.INVALID_LOGO_ID,
@@ -6950,9 +6972,9 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(127), e.exports = a.Ember.Component.extend({
+            n(128), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-roster-details-visual-team"],
-                layout: n(128),
+                layout: n(129),
                 pickOrder: 0,
                 isDetailsEditable: !1,
                 hasClosedRosterDetailsDialog: !1,
@@ -7000,14 +7022,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(130);
+            n(131);
             var s = n(55);
             const {
                 RunMixin: i
             } = a.EmberAddons.EmberLifeline, o = "/v2/account/LCUPreferences/lol-clash", r = "openTeamToggleTooltipSeen", l = "clash-open-team-tooltip-icon";
             e.exports = a.Ember.Component.extend(i, {
                 classNames: ["clash-open-team-toggle"],
-                layout: n(131),
+                layout: n(132),
                 hasClosedRosterDetailsDialog: !1,
                 roster: null,
                 clashService: a.Ember.inject.service("clash"),
@@ -7135,7 +7157,7 @@
                 i = (a = n(10)) && a.__esModule ? a : {
                     default: a
                 };
-            n(133);
+            n(134);
             var o = n(9);
             const r = 1e3,
                 l = 6e4,
@@ -7149,7 +7171,7 @@
                 });
             e.exports = s.Ember.Component.extend(d, {
                 classNames: ["clash-state-countdown"],
-                layout: n(134),
+                layout: n(135),
                 clashService: s.Ember.inject.service("clash"),
                 clashTimerManagementService: s.Ember.inject.service("clash-timer-management"),
                 localPlayerState: s.Ember.computed.alias("clashService.localPlayer.state"),
@@ -7373,12 +7395,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = d(n(136)),
-                i = d(n(153)),
+                s = d(n(137)),
+                i = d(n(154)),
                 o = d(n(3)),
-                r = d(n(97)),
-                l = d(n(154));
-            n(176), n(177);
+                r = d(n(98)),
+                l = d(n(155));
+            n(177), n(178);
             var c = n(9);
 
             function d(e) {
@@ -7386,11 +7408,11 @@
                     default: e
                 }
             }
-            const m = n(178),
-                u = n(179),
-                p = n(180),
-                h = n(181),
-                g = n(182),
+            const m = n(179),
+                u = n(180),
+                p = n(181),
+                h = n(182),
+                g = n(183),
                 f = {
                     x: 1055,
                     y: 522
@@ -7425,7 +7447,7 @@
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-bracket-layout"],
                 classNameBindings: ["isScrollAnimating:force-visible", "isEog::is-bracket-tab"],
-                layout: n(183),
+                layout: n(184),
                 oldBracket: null,
                 bracket: null,
                 targetRound: -1,
@@ -8306,7 +8328,7 @@
             }), t.default = void 0;
             var a = n(1),
                 s = n(9),
-                i = r(n(97)),
+                i = r(n(98)),
                 o = r(n(3));
 
             function r(e) {
@@ -8315,22 +8337,22 @@
                 }
             }
             const l = {
-                    currentConsolation: n(137),
-                    currentLose: n(138),
-                    currentWin: n(139),
-                    currentWinFinals: n(140),
-                    extraEmpty: n(141),
-                    extraOtherTeams: n(142),
-                    extraPastRound: n(143),
-                    finalsLoss: n(144),
-                    finalsOppKnown: n(145),
-                    finalsOppUnknown: n(146),
-                    nextOppKnown: n(147),
-                    nextOppUnknown: n(148),
-                    matchupIntroWin: n(149),
-                    matchupIntroLoss: n(150),
-                    dashes: n(151),
-                    trophyAppear: n(152)
+                    currentConsolation: n(138),
+                    currentLose: n(139),
+                    currentWin: n(140),
+                    currentWinFinals: n(141),
+                    extraEmpty: n(142),
+                    extraOtherTeams: n(143),
+                    extraPastRound: n(144),
+                    finalsLoss: n(145),
+                    finalsOppKnown: n(146),
+                    finalsOppUnknown: n(147),
+                    nextOppKnown: n(148),
+                    nextOppUnknown: n(149),
+                    matchupIntroWin: n(150),
+                    matchupIntroLoss: n(151),
+                    dashes: n(152),
+                    trophyAppear: n(153)
                 },
                 c = "brackets-checkmark",
                 d = "brackets-xmark",
@@ -9112,11 +9134,11 @@
             t.default = m
         }, (e, t, n) => {
             "use strict";
-            e.exports = n(155)
+            e.exports = n(156)
         }, (e, t, n) => {
             "use strict";
-            var a = n(156),
-                s = n(161);
+            var a = n(157),
+                s = n(162);
 
             function i(e) {
                 e.fn.perfectScrollbar = function(e) {
@@ -9135,9 +9157,9 @@
             void 0 !== o && i(o), e.exports = i
         }, (e, t, n) => {
             "use strict";
-            var a = n(157),
-                s = n(165),
-                i = n(175);
+            var a = n(158),
+                s = n(166),
+                i = n(176);
             e.exports = {
                 initialize: s,
                 update: i,
@@ -9145,17 +9167,17 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(160),
-                i = n(161);
+            var a = n(159),
+                s = n(161),
+                i = n(162);
             e.exports = function(e) {
                 var t = i.get(e);
                 t && (t.event.unbindAll(), s.remove(t.scrollbarX), s.remove(t.scrollbarY), s.remove(t.scrollbarXRail), s.remove(t.scrollbarYRail), a.removePsClasses(e), i.remove(e))
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(159),
-                s = n(160),
+            var a = n(160),
+                s = n(161),
                 i = t.toInt = function(e) {
                     return parseInt(e, 10) || 0
                 },
@@ -9240,12 +9262,12 @@
             }, e.exports = t
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(159),
-                i = n(162),
-                o = n(160),
-                r = n(163),
-                l = n(164),
+            var a = n(159),
+                s = n(160),
+                i = n(163),
+                o = n(161),
+                r = n(164),
+                l = n(165),
                 c = {};
 
             function d(e) {
@@ -9341,19 +9363,19 @@
             }()
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(159),
-                i = n(161),
-                o = n(166),
+            var a = n(159),
+                s = n(160),
+                i = n(162),
+                o = n(167),
                 r = {
-                    "click-rail": n(168),
-                    "drag-scrollbar": n(169),
-                    keyboard: n(170),
-                    wheel: n(171),
-                    touch: n(172),
-                    selection: n(173)
+                    "click-rail": n(169),
+                    "drag-scrollbar": n(170),
+                    keyboard: n(171),
+                    wheel: n(172),
+                    touch: n(173),
+                    selection: n(174)
                 },
-                l = n(174);
+                l = n(175);
             e.exports = function(e, t) {
                 t = "object" == typeof t ? t : {}, s.add(e, "ps-container");
                 var n = i.add(e);
@@ -9363,11 +9385,11 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(159),
-                i = n(160),
-                o = n(161),
-                r = n(167);
+            var a = n(159),
+                s = n(160),
+                i = n(161),
+                o = n(162),
+                r = n(168);
 
             function l(e, t) {
                 return e.settings.minScrollbarLength && (t = Math.max(t, e.settings.minScrollbarLength)), e.settings.maxScrollbarLength && (t = Math.min(t, e.settings.maxScrollbarLength)), t
@@ -9399,7 +9421,7 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a, s, i = n(161),
+            var a, s, i = n(162),
                 o = function(e) {
                     var t = document.createEvent("Event");
                     return t.initEvent(e, !0, !0), t
@@ -9414,9 +9436,9 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(161),
-                s = n(166),
-                i = n(167);
+            var a = n(162),
+                s = n(167),
+                i = n(168);
             e.exports = function(e) {
                 ! function(e, t) {
                     function n(e) {
@@ -9436,11 +9458,11 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(160),
-                i = n(161),
-                o = n(166),
-                r = n(167);
+            var a = n(159),
+                s = n(161),
+                i = n(162),
+                o = n(167),
+                r = n(168);
 
             function l(e, t) {
                 var n = null,
@@ -9487,11 +9509,11 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(160),
-                i = n(161),
-                o = n(166),
-                r = n(167);
+            var a = n(159),
+                s = n(161),
+                i = n(162),
+                o = n(167),
+                r = n(168);
 
             function l(e, t) {
                 var n = !1;
@@ -9567,9 +9589,9 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(161),
-                s = n(166),
-                i = n(167);
+            var a = n(162),
+                s = n(167),
+                i = n(168);
 
             function o(e, t) {
                 var n = !1;
@@ -9613,10 +9635,10 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(161),
-                i = n(166),
-                o = n(167);
+            var a = n(159),
+                s = n(162),
+                i = n(167),
+                o = n(168);
 
             function r(e, t, n, a) {
                 function r(t, n) {
@@ -9691,10 +9713,10 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(161),
-                i = n(166),
-                o = n(167);
+            var a = n(159),
+                s = n(162),
+                i = n(167),
+                o = n(168);
 
             function r(e, t) {
                 var n = null,
@@ -9737,8 +9759,8 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(161),
-                s = n(166);
+            var a = n(162),
+                s = n(167);
             e.exports = function(e) {
                 ! function(e, t) {
                     t.event.bind(e, "scroll", (function() {
@@ -9748,11 +9770,11 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(158),
-                s = n(160),
-                i = n(161),
-                o = n(166),
-                r = n(167);
+            var a = n(159),
+                s = n(161),
+                i = n(162),
+                o = n(167),
+                r = n(168);
             e.exports = function(e) {
                 var t = i.get(e);
                 t && (t.negativeScrollAdjustment = t.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, s.css(t.scrollbarXRail, "display", "block"), s.css(t.scrollbarYRail, "display", "block"), t.railXMarginWidth = a.toInt(s.css(t.scrollbarXRail, "marginLeft")) + a.toInt(s.css(t.scrollbarXRail, "marginRight")), t.railYMarginHeight = a.toInt(s.css(t.scrollbarYRail, "marginTop")) + a.toInt(s.css(t.scrollbarYRail, "marginBottom")), s.css(t.scrollbarXRail, "display", "none"), s.css(t.scrollbarYRail, "display", "none"), o(e), r(e, "top", e.scrollTop), r(e, "left", e.scrollLeft), s.css(t.scrollbarXRail, "display", ""), s.css(t.scrollbarYRail, "display", ""))
@@ -9871,12 +9893,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = d(n(185)),
-                i = d(n(186)),
+                s = d(n(186)),
+                i = d(n(187)),
                 o = d(n(3)),
-                r = d(n(97)),
-                l = d(n(154));
-            n(176), n(187);
+                r = d(n(98)),
+                l = d(n(155));
+            n(177), n(188);
             var c = n(9);
 
             function d(e) {
@@ -9884,11 +9906,11 @@
                     default: e
                 }
             }
-            const m = n(188),
-                u = n(189),
-                p = n(190),
-                h = n(191),
-                g = n(192),
+            const m = n(189),
+                u = n(190),
+                p = n(191),
+                h = n(192),
+                g = n(193),
                 f = {
                     x: 1055,
                     y: 522
@@ -9946,7 +9968,7 @@
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-bracket-layout-16"],
                 classNameBindings: ["isScrollAnimating:force-visible", "isEog::is-bracket-tab"],
-                layout: n(193),
+                layout: n(194),
                 oldBracket: null,
                 bracket: null,
                 targetRound: -1,
@@ -10929,7 +10951,7 @@
             }), t.default = void 0;
             var a = n(1),
                 s = n(9),
-                i = (o(n(97)), o(n(3)));
+                i = (o(n(98)), o(n(3)));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -10937,22 +10959,22 @@
                 }
             }
             const r = {
-                    currentConsolation: n(137),
-                    currentLose: n(138),
-                    currentWin: n(139),
-                    currentWinFinals: n(140),
-                    extraEmpty: n(141),
-                    extraOtherTeams: n(142),
-                    extraPastRound: n(143),
-                    finalsLoss: n(144),
-                    finalsOppKnown: n(145),
-                    finalsOppUnknown: n(146),
-                    nextOppKnown: n(147),
-                    nextOppUnknown: n(148),
-                    matchupIntroWin: n(149),
-                    matchupIntroLoss: n(150),
-                    dashes: n(151),
-                    trophyAppear: n(152)
+                    currentConsolation: n(138),
+                    currentLose: n(139),
+                    currentWin: n(140),
+                    currentWinFinals: n(141),
+                    extraEmpty: n(142),
+                    extraOtherTeams: n(143),
+                    extraPastRound: n(144),
+                    finalsLoss: n(145),
+                    finalsOppKnown: n(146),
+                    finalsOppUnknown: n(147),
+                    nextOppKnown: n(148),
+                    nextOppUnknown: n(149),
+                    matchupIntroWin: n(150),
+                    matchupIntroLoss: n(151),
+                    dashes: n(152),
+                    trophyAppear: n(153)
                 },
                 l = "brackets-checkmark",
                 c = "brackets-xmark",
@@ -11820,10 +11842,10 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(195), e.exports = a.Ember.Component.extend({
+            n(196), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-bracket-match"],
                 classNameBindings: ["isLocal:is-local", "showAsFinals:finals", "hasRoster:has-roster", "match.hasBracketAnim:hidden"],
-                layout: n(196),
+                layout: n(197),
                 summonerService: a.Ember.inject.service("summoner"),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
@@ -11921,11 +11943,11 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(198), e.exports = a.Ember.Component.extend({
+            n(199), e.exports = a.Ember.Component.extend({
                 telemetryService: a.Ember.inject.service("telemetry"),
                 classNames: ["clash-bracket-match-roster"],
                 classNameBindings: ["isLocal:local", "isFinals:finals", "hasAndIsWinner:winner", "isLoserOrForfeit:loser", "isMirrored:mirrored", "hasRoster:has-roster", "isReplaced:is-replaced", "wasReplaced:was-replaced"],
-                layout: n(199),
+                layout: n(200),
                 roster: null,
                 rosterId: s.INVALID_ROSTER_ID,
                 forfeitRosterId: s.INVALID_ROSTER_ID,
@@ -12003,9 +12025,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(201), e.exports = a.Ember.Component.extend({
+            n(202), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-dash-circle-spinner"],
-                layout: n(202)
+                layout: n(203)
             })
         }, (e, t, n) => {
             "use strict";
@@ -12021,15 +12043,15 @@
             "use strict";
             var a = n(1),
                 s = r(n(2)),
-                i = r(n(204)),
-                o = r(n(205));
+                i = r(n(205)),
+                o = r(n(206));
 
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(206);
+            n(207);
             const l = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -12049,7 +12071,7 @@
             }
             e.exports = a.Ember.Component.extend(l, {
                 classNames: ["clash-spectate-button"],
-                layout: n(207),
+                layout: n(208),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
                 spectatorService: a.Ember.inject.service("spectator"),
@@ -12156,7 +12178,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(93)) && a.__esModule ? a : {
+                i = (a = n(94)) && a.__esModule ? a : {
                     default: a
                 };
             const o = (0, s.emberDataBinding)({
@@ -12269,7 +12291,7 @@
             var a = n(1);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-persistence-root"],
-                layout: n(209),
+                layout: n(210),
                 clashApi: null,
                 shared: null,
                 setSocialPanelComponent: null
@@ -12389,9 +12411,9 @@
                 }),
                 o = ["captainRosterScreenTutorialFlow", "captainTutorialFlow"],
                 r = ["memberTutorialFlow"],
-                l = n(213),
-                c = n(214),
-                d = n(215);
+                l = n(214),
+                c = n(215),
+                d = n(216);
             e.exports = a.Ember.Service.extend(s, {
                 onInit: a.Ember.on("init", (function() {
                     this._postClashTutorialUpdate("initialized", !0)
@@ -12572,11 +12594,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(217);
+            n(218);
             var s = n(9),
                 i = l(n(11)),
                 o = l(n(44)),
-                r = l(n(218));
+                r = l(n(219));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -12585,9 +12607,9 @@
             }
             const c = "clash",
                 d = "BRACKET_STATUS_COMPLETE_TOURNAMENT_OVER",
-                m = n(219),
-                u = n(220),
-                p = n(221),
+                m = n(220),
+                u = n(221),
+                p = n(222),
                 h = ["UPDATE_TOURNAMENT", "CANCEL_TOURNAMENT", "CANCEL_PERIOD", "ADD_PHASE", "UPDATE_PHASE", "REVERT_PHASE", "CR_TOURNAMENT_LOCK_IN_OPEN", "CR_TOURNAMENT_REGISTRATION_OPEN"],
                 g = (0, a.emberDataBinding)({
                     Ember: a.Ember,
@@ -12667,7 +12689,7 @@
             }
             e.exports = a.Ember.Component.extend(g, {
                 classNames: ["clash-event-observer"],
-                layout: n(222),
+                layout: n(223),
                 localSummonerId: a.Ember.computed.alias("summoner.summonerId"),
                 tournamentId: a.Ember.computed.alias("eogPlayerUpdate.tournamentId"),
                 earnedVp: a.Ember.computed.alias("eogPlayerUpdate.earnedVp"),
@@ -13207,7 +13229,7 @@
                 o = (a = n(10)) && a.__esModule ? a : {
                     default: a
                 };
-            n(224);
+            n(225);
             const r = (0, s.emberDataBinding)({
                 Ember: s.Ember,
                 websocket: (0, s.getProvider)().getSocket(),
@@ -13231,7 +13253,7 @@
             });
             e.exports = s.Ember.Component.extend(r, {
                 classNames: ["clash-social-persistent"],
-                layout: n(225),
+                layout: n(226),
                 clashService: s.Ember.inject.service("clash"),
                 localPlayer: s.Ember.computed.alias("clashService.localPlayer"),
                 tournament: s.Ember.computed.alias("clashService.tournament"),
@@ -13319,9 +13341,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(227), e.exports = a.Ember.Component.extend({
+            n(228), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-section-header"],
-                layout: n(228),
+                layout: n(229),
                 headerText: "",
                 isCollapsible: !1,
                 pipCount: 0,
@@ -13346,8 +13368,8 @@
             "use strict";
             var a = n(1),
                 s = r(n(10)),
-                i = r(n(230));
-            n(231);
+                i = r(n(231));
+            n(232);
             var o = n(9);
 
             function r(e) {
@@ -13355,7 +13377,7 @@
                     default: e
                 }
             }
-            const l = n(232),
+            const l = n(233),
                 c = (0, a.emberDataBinding)({
                     Ember: a.Ember,
                     websocket: (0, a.getProvider)().getSocket(),
@@ -13376,7 +13398,7 @@
             e.exports = a.Ember.Component.extend(c, {
                 classNames: ["clash-tournament-schedule"],
                 classNameBindings: ["isVisible:is-schedule-visible"],
-                layout: n(233),
+                layout: n(234),
                 isPlaymodeRestricted: !1,
                 clashService: a.Ember.inject.service("clash"),
                 gdsService: a.Ember.inject.service("gds"),
@@ -13637,7 +13659,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(235);
+            n(236);
             const s = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -13651,7 +13673,7 @@
             e.exports = a.Ember.Component.extend(s, {
                 classNames: ["clash-tournament-invite-panel"],
                 classNameBindings: ["isContentVisible:is-content-visible"],
-                layout: n(236),
+                layout: n(237),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
                 clashApi: null,
@@ -13756,7 +13778,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(238);
+            n(239);
             const s = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -13767,7 +13789,7 @@
             e.exports = a.Ember.Component.extend(s, {
                 classNames: ["clash-tournament-invite"],
                 classNameBindings: ["invite.isVisible:is-invite-visible"],
-                layout: n(239),
+                layout: n(240),
                 summonerService: a.Ember.inject.service("summoner"),
                 clashService: a.Ember.inject.service("clash"),
                 gdsService: a.Ember.inject.service("gds"),
@@ -13837,11 +13859,11 @@
                 i = (a = n(10)) && a.__esModule ? a : {
                     default: a
                 };
-            n(241);
-            const o = n(242);
+            n(242);
+            const o = n(243);
             e.exports = s.Ember.Component.extend({
                 classNames: ["clash-withdraw-status-panel"],
-                layout: n(243),
+                layout: n(244),
                 clashService: s.Ember.inject.service("clash"),
                 localPlayer: s.Ember.computed.alias("clashService.localPlayer"),
                 tournament: s.Ember.computed.alias("clashService.tournament"),
@@ -13931,9 +13953,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(245), e.exports = a.Ember.Component.extend({
+            n(246), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-arrow-toggle"],
-                layout: n(246),
+                layout: n(247),
                 isOpen: !1,
                 useAnimation: !0,
                 arrowStyle: "medium"
@@ -13951,9 +13973,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = d(n(89)),
-                i = d(n(92)),
-                o = d(n(218)),
+                s = d(n(90)),
+                i = d(n(93)),
+                o = d(n(219)),
                 r = d(n(44)),
                 l = d(n(11)),
                 c = n(9);
@@ -13963,7 +13985,7 @@
                     default: e
                 }
             }
-            n(248);
+            n(249);
             const m = (0, a.emberDataBinding)({
                     Ember: a.Ember,
                     websocket: (0, a.getProvider)().getSocket(),
@@ -13975,7 +13997,7 @@
             e.exports = a.Ember.Component.extend(m, {
                 telemetryService: a.Ember.inject.service("telemetry"),
                 classNames: ["clash-scouting-intro-flow"],
-                layout: n(249),
+                layout: n(250),
                 closeModalCallback: null,
                 tournamentId: -1,
                 bracketId: -1,
@@ -14202,15 +14224,15 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = o(n(251)),
-                i = o(n(218));
+                s = o(n(252)),
+                i = o(n(219));
 
             function o(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(252);
+            n(253);
             const r = (0, a.emberDataBinding)({
                     Ember: a.Ember,
                     websocket: (0, a.getProvider)().getSocket(),
@@ -14232,7 +14254,7 @@
                 d = ["FLAG", "VP", "LOGO", "TROPHY"];
             e.exports = a.Ember.Component.extend(r, {
                 classNames: ["tournament-end-of-game-flow"],
-                layout: n(253),
+                layout: n(254),
                 isPreEog: !1,
                 isWithdraw: !1,
                 startCeremony: !1,
@@ -14574,10 +14596,10 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(96)) && a.__esModule ? a : {
+                i = (a = n(97)) && a.__esModule ? a : {
                     default: a
                 };
-            n(255);
+            n(256);
             const o = (0, s.emberDataBinding)({
                 Ember: s.Ember,
                 websocket: (0, s.getProvider)().getSocket(),
@@ -14597,7 +14619,7 @@
             });
             e.exports = s.Ember.Component.extend(o, {
                 classNames: ["bracket-celebration"],
-                layout: n(256),
+                layout: n(257),
                 totalDuration: 18,
                 localPlayerRosterId: s.Ember.computed("playerTournamentData.rosterId", (function() {
                     const e = this.get("playerTournamentData.rosterId");
@@ -14635,9 +14657,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(258), e.exports = a.Ember.Component.extend({
+            n(259), e.exports = a.Ember.Component.extend({
                 classNames: ["bracket-celebration-view"],
-                layout: n(259),
+                layout: n(260),
                 gameEnd: null,
                 bracket: null,
                 localPlayerRosterId: null,
@@ -14660,13 +14682,13 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(251)) && a.__esModule ? a : {
+                i = (a = n(252)) && a.__esModule ? a : {
                     default: a
                 };
-            n(261);
+            n(262);
             e.exports = s.Ember.Component.extend({
                 classNames: ["capsule-grant-celebration"],
-                layout: n(262),
+                layout: n(263),
                 isInitialized: !1,
                 capsuleVideoObserver: s.Ember.computed("rewardSpec", "bracketSize", "lowestPosition", (function() {
                     const e = this.get("bracketSize"),
@@ -14728,11 +14750,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(264);
+            n(265);
             const s = "capsule";
             e.exports = a.Ember.Component.extend({
                 classNames: ["capsule-upgrade-celebration"],
-                layout: n(265),
+                layout: n(266),
                 rewardSpec: {},
                 isInitialized: !1,
                 onDidInsertElement: a.Ember.on("didInsertElement", (function() {
@@ -14794,7 +14816,7 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(267);
+            n(268);
             const i = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -14811,7 +14833,7 @@
             });
             e.exports = a.Ember.Component.extend(i, {
                 classNames: ["vp-grant-celebration"],
-                layout: n(268),
+                layout: n(269),
                 gdsService: a.Ember.inject.service("gds"),
                 vpLoop: null,
                 regularVp: 0,
@@ -14915,9 +14937,9 @@
                 _animateMeterFill(e, t, s, i, o) {
                     const r = e + t > 0,
                         l = s > 0,
-                        c = n(269);
+                        c = n(270);
                     c.layers[0].shapes[0].it[1].o.k = Math.max(0, e + t - 4.5), c.layers[0].shapes[0].it[1].e.k[0].e = [Math.min(100, s)];
-                    const d = n(270);
+                    const d = n(271);
                     d.layers[0].shapes[1].s.k = e, d.layers[0].shapes[1].e.k[0].e = [e + t];
                     const m = a.lottie.loadAnimation({
                             container: document.getElementById("clash-vp-meter-regular"),
@@ -15064,12 +15086,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(272);
+            n(273);
             const s = "FRAME",
                 i = "SUMMONER_ICON_";
             e.exports = a.Ember.Component.extend({
                 classNames: ["reward-grant-celebration"],
-                layout: n(273),
+                layout: n(274),
                 reward: null,
                 showBackground: !1,
                 showRewardImage: !1,
@@ -15133,14 +15155,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(275);
+            n(276);
             var s = n(9);
             const i = 0,
                 o = 2e3,
                 r = 5e3;
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-eos-celebration"],
-                layout: n(276),
+                layout: n(277),
                 gdsService: a.Ember.inject.service("gds"),
                 closeModalCallback: null,
                 data: {},
@@ -15236,11 +15258,11 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(116)) && a.__esModule ? a : {
+                i = (a = n(117)) && a.__esModule ? a : {
                     default: a
                 },
                 o = n(9);
-            n(278);
+            n(279);
             const r = (0, s.emberDataBinding)({
                 Ember: s.Ember,
                 websocket: (0, s.getProvider)().getSocket(),
@@ -15253,7 +15275,7 @@
             });
             e.exports = s.Ember.Component.extend(r, {
                 classNames: ["clash-ticket-offer-notification"],
-                layout: n(279),
+                layout: n(280),
                 rosterMember: null,
                 summoner: null,
                 offer: null,
@@ -15308,7 +15330,7 @@
             "use strict";
             var a = n(1),
                 s = n(9),
-                i = r(n(93)),
+                i = r(n(94)),
                 o = r(n(11));
 
             function r(e) {
@@ -15316,7 +15338,7 @@
                     default: e
                 }
             }
-            n(281);
+            n(282);
             const l = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -15338,7 +15360,7 @@
             });
             e.exports = a.Ember.Component.extend(l, {
                 classNames: ["clash-view-roster-modal"],
-                layout: n(282),
+                layout: n(283),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
                 localPlayer: a.Ember.computed.alias("clashService.localPlayer"),
@@ -15415,11 +15437,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(284);
+            n(285);
             const s = a.UIKit.getContextualNotificationManager();
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-roster-layout"],
-                layout: n(285),
+                layout: n(286),
                 tournament: null,
                 roster: null,
                 isViewRosterModal: !1,
@@ -15558,9 +15580,9 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(289), e.exports = a.Ember.Component.extend({
+            n(290), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-tier-placement"],
-                layout: n(290),
+                layout: n(291),
                 rosterTier: s.INVALID_TIER,
                 rosterMemberTiers: [],
                 customTooltipTitle: null,
@@ -15602,15 +15624,15 @@
             "use strict";
             var a = n(1),
                 s = n(9),
-                i = r(n(292)),
-                o = r(n(293));
+                i = r(n(293)),
+                o = r(n(294));
 
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(294);
+            n(295);
             const l = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -15624,7 +15646,7 @@
             e.exports = a.Ember.Component.extend(l, {
                 classNames: ["clash-roster-details"],
                 classNameBindings: ["isLocalPlayerCaptain:is-captain:is-member", "isDetailsEditable:is-roster-details-editable"],
-                layout: n(295),
+                layout: n(296),
                 clashService: a.Ember.inject.service("clash"),
                 gdsService: a.Ember.inject.service("gds"),
                 roster: null,
@@ -15915,14 +15937,14 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(230)) && a.__esModule ? a : {
+                i = (a = n(231)) && a.__esModule ? a : {
                     default: a
                 };
-            n(297);
+            n(298);
             const o = s.UIKit.getContextualNotificationManager();
             e.exports = s.Ember.Component.extend({
                 classNames: ["clash-roster-member-list"],
-                layout: n(298),
+                layout: n(299),
                 clashService: s.Ember.inject.service("clash"),
                 tutorialService: s.Ember.inject.service("tutorial"),
                 localPlayer: s.Ember.computed.alias("clashService.localPlayer"),
@@ -16003,9 +16025,9 @@
             var a = n(1),
                 s = n(9),
                 i = n(75),
-                o = l(n(300));
-            n(301);
-            var r = l(n(302));
+                o = l(n(301));
+            n(302);
+            var r = l(n(303));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -16016,7 +16038,7 @@
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-roster-member"],
                 classNameBindings: ["isLocalPlayer:clash-roster-member-local:clash-roster-member-remote", "isRosterBeingViewed:is-being-viewed"],
-                layout: n(303),
+                layout: n(304),
                 clashService: a.Ember.inject.service("clash"),
                 telemetryService: a.Ember.inject.service("telemetry"),
                 chatService: a.Ember.inject.service("chat"),
@@ -16766,10 +16788,10 @@
             "use strict";
             var a = n(1),
                 s = n(75);
-            n(305);
+            n(306);
             const i = ".clash-position-selector-background";
             e.exports = a.Ember.Component.extend({
-                layout: n(306),
+                layout: n(307),
                 classNames: ["clash-player-positions"],
                 classNameBindings: ["isCurrentPlayer:is-current-player:is-member", "showSingleSelector:single-selector"],
                 screenRoot: a.Viewport.fullScreen().getScreenRoot(a.Viewport.getApiKey("rcp-fe-lol-clash_apikey"), "rcp-fe-lol-clash"),
@@ -16866,8 +16888,8 @@
             "use strict";
             var a = n(1),
                 s = n(75);
-            n(308), e.exports = a.Ember.Component.extend({
-                layout: n(309),
+            n(309), e.exports = a.Ember.Component.extend({
+                layout: n(310),
                 classNames: ["clash-position-selector-modal"],
                 playerPositionData: null,
                 selectorId: a.Ember.computed.alias("playerPositionData.selectorId"),
@@ -16999,7 +17021,7 @@
             "use strict";
             var a = n(1),
                 s = n(9),
-                i = r(n(311)),
+                i = r(n(312)),
                 o = r(n(10));
 
             function r(e) {
@@ -17007,7 +17029,7 @@
                     default: e
                 }
             }
-            n(312);
+            n(313);
             const l = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -17020,7 +17042,7 @@
             });
             e.exports = a.Ember.Component.extend(i.default, l, {
                 classNames: ["clash-root"],
-                layout: n(313),
+                layout: n(314),
                 appData: null,
                 clashNav: a.Ember.inject.service("clash-nav"),
                 clashService: a.Ember.inject.service("clash"),
@@ -17145,9 +17167,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(316), e.exports = a.Ember.Component.extend({
+            n(317), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-tab-hub"],
-                layout: n(317),
+                layout: n(318),
                 clashService: a.Ember.inject.service("clash"),
                 localPlayer: a.Ember.computed.alias("clashService.localPlayer"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
@@ -17187,8 +17209,8 @@
                 s = n(9),
                 i = l(n(10)),
                 o = l(n(44));
-            n(319);
-            var r = l(n(302));
+            n(320);
+            var r = l(n(303));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -17209,13 +17231,13 @@
                         }
                     }
                 }),
-                d = n(320),
-                m = n(321),
-                u = n(322),
-                p = n(323);
+                d = n(321),
+                m = n(322),
+                u = n(323),
+                p = n(324);
             e.exports = a.Ember.Component.extend(c, {
                 classNames: ["clash-tab-team"],
-                layout: n(324),
+                layout: n(325),
                 clashService: a.Ember.inject.service("clash"),
                 gdsService: a.Ember.inject.service("gds"),
                 localPlayer: a.Ember.computed.alias("clashService.localPlayer"),
@@ -17638,7 +17660,7 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(326);
+            n(327);
             const i = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -17655,7 +17677,7 @@
             });
             e.exports = a.Ember.Component.extend(i, {
                 classNames: ["clash-tab-bracket"],
-                layout: n(327),
+                layout: n(328),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
                 localPlayer: a.Ember.computed.alias("clashService.localPlayer"),
@@ -17730,13 +17752,13 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(329);
-            var i, o = (i = n(90)) && i.__esModule ? i : {
+            n(330);
+            var i, o = (i = n(91)) && i.__esModule ? i : {
                 default: i
             };
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-tab-winners"],
-                layout: n(330),
+                layout: n(331),
                 clashService: a.Ember.inject.service("clash"),
                 chatService: a.Ember.inject.service("chat"),
                 friends: a.Ember.computed.alias("chatService.friends"),
@@ -17869,12 +17891,12 @@
             "use strict";
             var a = n(1);
             n(9);
-            n(332);
+            n(333);
             var s;
-            (s = n(90)) && s.__esModule;
+            (s = n(91)) && s.__esModule;
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-tab-awards"],
-                layout: n(333),
+                layout: n(334),
                 clashService: a.Ember.inject.service("clash"),
                 loadingRoot: !0,
                 localPlayerSummonerId: a.Ember.computed.alias("summoner.summonerId"),
@@ -17920,10 +17942,10 @@
                     default: a
                 },
                 o = n(9);
-            n(336);
+            n(337);
             e.exports = s.Ember.Component.extend({
                 classNames: ["clash-landing"],
-                layout: n(337),
+                layout: n(338),
                 clashNav: s.Ember.inject.service("clash-nav"),
                 clashService: s.Ember.inject.service("clash"),
                 isCreatingRoster: !1,
@@ -18032,11 +18054,11 @@
                     default: e
                 }
             }
-            n(339);
+            n(340);
             const r = a.UIKit.getContextualNotificationManager();
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-tournament-info"],
-                layout: n(340),
+                layout: n(341),
                 tournament: null,
                 localPlayer: null,
                 titleOverride: null,
@@ -18165,13 +18187,13 @@
             var a = n(1),
                 s = n(75),
                 i = n(55);
-            n(342);
+            n(343);
             const {
                 RunMixin: o
             } = a.EmberAddons.EmberLifeline, r = "PRIMARY", l = "SECONDARY", c = "/v2/account/LCUPreferences/lol-clash", d = "lftPlayerToggleTooltipSeen", m = "clash-lft-tooltip-icon";
             e.exports = a.Ember.Component.extend(o, {
                 classNames: ["clash-lft-toggle"],
-                layout: n(343),
+                layout: n(344),
                 clashService: a.Ember.inject.service("clash"),
                 localPlayer: a.Ember.computed.alias("clashService.localPlayer"),
                 lftEnabled: a.Ember.computed.alias("localPlayer.lft"),
@@ -18284,9 +18306,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(345), e.exports = a.Ember.Component.extend({
+            n(346), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-trophy"],
-                layout: n(346),
+                layout: n(347),
                 tier: null,
                 theme: null,
                 bracketSize: null,
@@ -18341,13 +18363,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(348);
-            var s, i = (s = n(218)) && s.__esModule ? s : {
+            n(349);
+            var s, i = (s = n(219)) && s.__esModule ? s : {
                 default: s
             };
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-roster-lobby-view"],
-                layout: n(349),
+                layout: n(350),
                 hasMatchInfo: !1,
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
@@ -18396,11 +18418,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(351);
+            n(352);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-roster-lobby-member"],
                 classNameBindings: ["isCenter:local:remote"],
-                layout: n(352),
+                layout: n(353),
                 clashService: a.Ember.inject.service("clash"),
                 telemetryService: a.Ember.inject.service("telemetry"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
@@ -18490,9 +18512,9 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(354), e.exports = a.Ember.Component.extend({
+            n(355), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-match-info"],
-                layout: n(355),
+                layout: n(356),
                 clashService: a.Ember.inject.service("clash"),
                 gdsService: a.Ember.inject.service("gds"),
                 localPlayer: a.Ember.computed.alias("clashService.localPlayer"),
@@ -18542,7 +18564,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(357);
+            n(358);
             const s = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -18556,7 +18578,7 @@
             e.exports = a.Ember.Component.extend(s, {
                 telemetryService: a.Ember.inject.service("telemetry"),
                 classNames: ["clash-faq"],
-                layout: n(358),
+                layout: n(359),
                 clashFaqLink: a.Ember.computed("faqLinkOverride", (function() {
                     return this.get("faqLinkOverride") || this.get("tra.clash_faq_external_link")
                 })),
@@ -18585,9 +18607,9 @@
                 i = (a = n(10)) && a.__esModule ? a : {
                     default: a
                 };
-            n(360), e.exports = s.Ember.Component.extend({
+            n(361), e.exports = s.Ember.Component.extend({
                 classNames: ["clash-hub"],
-                layout: n(361),
+                layout: n(362),
                 clashService: s.Ember.inject.service("clash"),
                 tournament: s.Ember.computed.alias("clashService.tournament"),
                 localPlayer: s.Ember.computed.alias("clashService.localPlayer"),
@@ -18618,9 +18640,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(363), e.exports = a.Ember.Component.extend({
+            n(364), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-parallax-background"],
-                layout: n(364),
+                layout: n(365),
                 imgPath: "",
                 parallaxScale: 1,
                 parallax: 0,
@@ -18661,10 +18683,10 @@
                 i = (a = n(10)) && a.__esModule ? a : {
                     default: a
                 };
-            n(366);
+            n(367);
             e.exports = s.Ember.Component.extend({
                 classNames: ["clash-bracket-header"],
-                layout: n(367),
+                layout: n(368),
                 clashService: s.Ember.inject.service("clash"),
                 tournament: s.Ember.computed.alias("clashService.tournament"),
                 bracket: null,
@@ -18746,9 +18768,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(369), e.exports = a.Ember.Component.extend({
+            n(370), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-bracket-nav"],
-                layout: n(370),
+                layout: n(371),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
                 bracket: null,
@@ -18805,9 +18827,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(372), e.exports = a.Ember.Component.extend({
+            n(373), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-bracket-nav-16"],
-                layout: n(373),
+                layout: n(374),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
                 bracket: null,
@@ -18865,17 +18887,17 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(375),
+                s = n(376),
                 i = n(9),
                 o = l(n(10)),
-                r = l(n(311));
+                r = l(n(312));
 
             function l(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(398);
+            n(399);
             const c = Object.freeze(["lockin", "matchmaking_future", "scouting_future"]),
                 d = Object.freeze(["matchmaking", "scouting_future", "in_queue_future"]),
                 m = Object.freeze(["scouting", "in_queue_future"]),
@@ -18889,7 +18911,7 @@
                 x = "/lol-vanguard/v1/session";
             e.exports = a.Ember.Component.extend(r.default, {
                 classNames: ["clash-action-timeline"],
-                layout: n(399),
+                layout: n(400),
                 clashNav: a.Ember.inject.service("clash-nav"),
                 clashService: a.Ember.inject.service("clash"),
                 clientConfigService: a.Ember.inject.service("client-config"),
@@ -18958,7 +18980,7 @@
                     const t = this.get("_actionTimelinesDef");
                     if (t && t.timelinesDef) {
                         e = [];
-                        for (const a of t.timelinesDef) e.push(n(400)(`./${a}`).create({
+                        for (const a of t.timelinesDef) e.push(n(401)(`./${a}`).create({
                             root: this
                         }))
                     }
@@ -18967,7 +18989,7 @@
                 actionData: a.Ember.computed("_actionTimelinesDef", "_actionTimelinesDef.actionDef", "_actionTimelinesDef.timelinesDef", (function() {
                     let e = null;
                     const t = this.get("_actionTimelinesDef");
-                    return t && t.actionDef && (e = n(412)(`./${t.actionDef}`).create({
+                    return t && t.actionDef && (e = n(413)(`./${t.actionDef}`).create({
                         root: this
                     }), this.set("previousActionData", e)), e
                 })),
@@ -19099,19 +19121,19 @@
                     return i.getGameKeyFromGameMode
                 }
             });
-            var a = f(n(376)),
-                s = f(n(377)),
-                i = n(378),
-                o = f(n(379)),
-                r = f(n(380)),
-                l = f(n(391)),
-                c = f(n(392)),
-                d = f(n(393)),
-                m = f(n(394)),
-                u = f(n(395)),
-                p = f(n(396)),
+            var a = f(n(377)),
+                s = f(n(378)),
+                i = n(379),
+                o = f(n(380)),
+                r = f(n(381)),
+                l = f(n(392)),
+                c = f(n(393)),
+                d = f(n(394)),
+                m = f(n(395)),
+                u = f(n(396)),
+                p = f(n(397)),
                 h = f(n(52)),
-                g = f(n(397));
+                g = f(n(398));
 
             function f(e) {
                 return e && e.__esModule ? e : {
@@ -19158,7 +19180,7 @@
             }), t.default = t.GAME_CONTEXT_KEYS = void 0, t.getGameKeyFromGameMode = function(e) {
                 return e === s.default.TFT ? i.TFT : i.LEAGUE_OF_LEGENDS
             };
-            var a, s = (a = n(379)) && a.__esModule ? a : {
+            var a, s = (a = n(380)) && a.__esModule ? a : {
                 default: a
             };
             const i = {
@@ -19186,16 +19208,16 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = p(n(381)),
-                s = p(n(382)),
-                i = p(n(383)),
-                o = p(n(384)),
-                r = p(n(385)),
-                l = p(n(386)),
-                c = p(n(387)),
-                d = p(n(388)),
-                m = p(n(389)),
-                u = p(n(390));
+            var a = p(n(382)),
+                s = p(n(383)),
+                i = p(n(384)),
+                o = p(n(385)),
+                r = p(n(386)),
+                l = p(n(387)),
+                c = p(n(388)),
+                d = p(n(389)),
+                m = p(n(390)),
+                u = p(n(391));
 
             function p(e) {
                 return e && e.__esModule ? e : {
@@ -19548,28 +19570,28 @@
             })
         }, (e, t, n) => {
             var a = {
-                "./_base_timeline": 401,
-                "./_base_timeline.js": 401,
-                "./in_queue": 402,
-                "./in_queue.js": 402,
-                "./in_queue_future": 403,
-                "./in_queue_future.js": 403,
-                "./lockin": 404,
-                "./lockin.js": 404,
-                "./matchmaking": 405,
-                "./matchmaking.js": 405,
-                "./matchmaking_future": 406,
-                "./matchmaking_future.js": 406,
-                "./paused": 407,
-                "./paused.js": 407,
-                "./resuming": 408,
-                "./resuming.js": 408,
-                "./scouting": 409,
-                "./scouting.js": 409,
-                "./scouting_future": 410,
-                "./scouting_future.js": 410,
-                "./scouting_waiting": 411,
-                "./scouting_waiting.js": 411
+                "./_base_timeline": 402,
+                "./_base_timeline.js": 402,
+                "./in_queue": 403,
+                "./in_queue.js": 403,
+                "./in_queue_future": 404,
+                "./in_queue_future.js": 404,
+                "./lockin": 405,
+                "./lockin.js": 405,
+                "./matchmaking": 406,
+                "./matchmaking.js": 406,
+                "./matchmaking_future": 407,
+                "./matchmaking_future.js": 407,
+                "./paused": 408,
+                "./paused.js": 408,
+                "./resuming": 409,
+                "./resuming.js": 409,
+                "./scouting": 410,
+                "./scouting.js": 410,
+                "./scouting_future": 411,
+                "./scouting_future.js": 411,
+                "./scouting_waiting": 412,
+                "./scouting_waiting.js": 412
             };
 
             function s(e) {
@@ -19586,7 +19608,7 @@
             }
             s.keys = function() {
                 return Object.keys(a)
-            }, s.resolve = i, e.exports = s, s.id = 400
+            }, s.resolve = i, e.exports = s, s.id = 401
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
@@ -19625,7 +19647,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(401)) && a.__esModule ? a : {
+                i = (a = n(402)) && a.__esModule ? a : {
                     default: a
                 };
             e.exports = i.default.extend({
@@ -19641,7 +19663,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = r(n(401)),
+                s = r(n(402)),
                 i = r(n(10)),
                 o = n(9);
 
@@ -19697,7 +19719,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = o(n(401)),
+                s = o(n(402)),
                 i = o(n(10));
 
             function o(e) {
@@ -19729,7 +19751,7 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = (a = n(401)) && a.__esModule ? a : {
+            var a, s = (a = n(402)) && a.__esModule ? a : {
                 default: a
             };
             e.exports = s.default.extend({
@@ -19740,7 +19762,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = o(n(401)),
+                s = o(n(402)),
                 i = (o(n(10)), n(9));
 
             function o(e) {
@@ -19770,7 +19792,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = i(n(401));
+                s = i(n(402));
             i(n(10));
 
             function i(e) {
@@ -19791,7 +19813,7 @@
         }, (e, t, n) => {
             "use strict";
             n(1);
-            var a = s(n(401));
+            var a = s(n(402));
             s(n(10));
 
             function s(e) {
@@ -19807,7 +19829,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = r(n(401)),
+                s = r(n(402)),
                 i = r(n(10)),
                 o = n(9);
 
@@ -19829,7 +19851,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(401)) && a.__esModule ? a : {
+                i = (a = n(402)) && a.__esModule ? a : {
                     default: a
                 },
                 o = n(9);
@@ -19854,7 +19876,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = o(n(401)),
+                s = o(n(402)),
                 i = o(n(10));
 
             function o(e) {
@@ -19873,30 +19895,30 @@
             })
         }, (e, t, n) => {
             var a = {
-                "./_base_action": 413,
-                "./_base_action.js": 413,
-                "./create_or_find_team": 414,
-                "./create_or_find_team.js": 414,
-                "./create_team": 415,
-                "./create_team.js": 415,
-                "./find_team": 416,
-                "./find_team.js": 416,
-                "./in_queue": 417,
-                "./in_queue.js": 417,
-                "./lockin": 418,
-                "./lockin.js": 418,
-                "./matchmaking": 422,
-                "./matchmaking.js": 422,
-                "./paused": 423,
-                "./paused.js": 423,
-                "./resuming": 424,
-                "./resuming.js": 424,
-                "./scouting": 425,
-                "./scouting.js": 425,
-                "./scouting_waiting": 426,
-                "./scouting_waiting.js": 426,
-                "./view_team": 427,
-                "./view_team.js": 427
+                "./_base_action": 414,
+                "./_base_action.js": 414,
+                "./create_or_find_team": 415,
+                "./create_or_find_team.js": 415,
+                "./create_team": 416,
+                "./create_team.js": 416,
+                "./find_team": 417,
+                "./find_team.js": 417,
+                "./in_queue": 418,
+                "./in_queue.js": 418,
+                "./lockin": 419,
+                "./lockin.js": 419,
+                "./matchmaking": 423,
+                "./matchmaking.js": 423,
+                "./paused": 424,
+                "./paused.js": 424,
+                "./resuming": 425,
+                "./resuming.js": 425,
+                "./scouting": 426,
+                "./scouting.js": 426,
+                "./scouting_waiting": 427,
+                "./scouting_waiting.js": 427,
+                "./view_team": 428,
+                "./view_team.js": 428
             };
 
             function s(e) {
@@ -19913,7 +19935,7 @@
             }
             s.keys = function() {
                 return Object.keys(a)
-            }, s.resolve = i, e.exports = s, s.id = 412
+            }, s.resolve = i, e.exports = s, s.id = 413
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
@@ -19982,8 +20004,8 @@
             "use strict";
             var a = n(1),
                 s = n(9),
-                i = r(n(413)),
-                o = r(n(311));
+                i = r(n(414)),
+                o = r(n(312));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -20042,8 +20064,8 @@
             "use strict";
             var a = n(1),
                 s = n(9),
-                i = r(n(413)),
-                o = r(n(311));
+                i = r(n(414)),
+                o = r(n(312));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -20091,8 +20113,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = o(n(413)),
-                i = o(n(311));
+                s = o(n(414)),
+                i = o(n(312));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -20127,7 +20149,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(413)) && a.__esModule ? a : {
+                i = (a = n(414)) && a.__esModule ? a : {
                     default: a
                 };
             e.exports = i.default.extend({
@@ -20145,10 +20167,10 @@
             var a = n(1),
                 s = n(9),
                 i = n(75),
-                o = d(n(413)),
-                r = d(n(293)),
+                o = d(n(414)),
+                r = d(n(294)),
                 l = d(n(10)),
-                c = d(n(311));
+                c = d(n(312));
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -20165,9 +20187,9 @@
                     }
                 }),
                 u = "abc";
-            const p = n(419),
-                h = n(420),
-                g = n(421);
+            const p = n(420),
+                h = n(421),
+                g = n(422);
             e.exports = o.default.extend(c.default, m, {
                 name: "lockin",
                 isCallInProgress: !1,
@@ -20529,7 +20551,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(413)) && a.__esModule ? a : {
+                i = (a = n(414)) && a.__esModule ? a : {
                     default: a
                 };
             e.exports = i.default.extend({
@@ -20556,7 +20578,7 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(413)) && a.__esModule ? a : {
+                i = (a = n(414)) && a.__esModule ? a : {
                     default: a
                 };
             e.exports = i.default.extend({
@@ -20570,7 +20592,7 @@
         }, (e, t, n) => {
             "use strict";
             n(1);
-            var a, s = (a = n(413)) && a.__esModule ? a : {
+            var a, s = (a = n(414)) && a.__esModule ? a : {
                 default: a
             };
             e.exports = s.default.extend({
@@ -20582,7 +20604,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = r(n(413)),
+                s = r(n(414)),
                 i = r(n(10)),
                 o = n(9);
 
@@ -20619,7 +20641,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = r(n(413)),
+                s = r(n(414)),
                 i = r(n(10)),
                 o = n(9);
 
@@ -20644,7 +20666,7 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = (a = n(413)) && a.__esModule ? a : {
+            var a, s = (a = n(414)) && a.__esModule ? a : {
                     default: a
                 },
                 i = n(9);
@@ -20660,9 +20682,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(429), e.exports = a.Ember.Component.extend({
+            n(430), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-tournament-selector"],
-                layout: n(430),
+                layout: n(431),
                 clashService: a.Ember.inject.service("clash"),
                 tournamentInfos: a.Ember.computed("clashService.currentTournamentIds.[]", (function() {
                     const e = this.get("clashService.currentTournamentIds");
@@ -20694,9 +20716,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(432), e.exports = a.Ember.Component.extend({
+            n(433), e.exports = a.Ember.Component.extend({
                 classNames: ["winners-roster-component"],
-                layout: n(433),
+                layout: n(434),
                 clashService: a.Ember.inject.service("clash"),
                 gdsService: a.Ember.inject.service("gds"),
                 winnerData: null,
@@ -20770,11 +20792,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(435);
+            n(436);
             var s = n(9);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-capsule-progress"],
-                layout: n(436),
+                layout: n(437),
                 tournament: null,
                 localPlayer: null,
                 clashService: a.Ember.inject.service("clash"),
@@ -20853,9 +20875,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(438), e.exports = a.Ember.Component.extend({
+            n(439), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-underlined-selector"],
-                layout: n(439),
+                layout: n(440),
                 title: null,
                 options: [],
                 elements: [],
@@ -20886,7 +20908,7 @@
                 i = (a = n(2)) && a.__esModule ? a : {
                     default: a
                 };
-            n(441);
+            n(442);
             const o = (0, s.emberDataBinding)({
                 Ember: s.Ember,
                 websocket: (0, s.getProvider)().getSocket(),
@@ -20903,7 +20925,7 @@
             });
             e.exports = s.Ember.Component.extend(o, {
                 classNames: ["clash-vp-progress"],
-                layout: n(442),
+                layout: n(443),
                 clashService: s.Ember.inject.service("clash"),
                 tournament: s.Ember.computed.alias("clashService.tournament"),
                 localPlayer: s.Ember.computed.alias("clashService.localPlayer"),
@@ -21049,12 +21071,12 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(444)) && a.__esModule ? a : {
+                i = (a = n(445)) && a.__esModule ? a : {
                     default: a
                 };
-            n(445), e.exports = s.Ember.Component.extend({
+            n(446), e.exports = s.Ember.Component.extend({
                 classNames: ["clash-carousel"],
-                layout: n(446),
+                layout: n(447),
                 itemData: [],
                 wrapStyle: i.default.DISABLE,
                 useButtonsOnContent: !1,
@@ -21138,10 +21160,10 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(448), e.exports = a.Ember.Component.extend({
+            n(449), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-carousel-button"],
                 classNameBindings: ["isButtonVisible:clash-carousel-button-is-visible"],
-                layout: n(449),
+                layout: n(450),
                 isLeft: !0,
                 isEnabled: !0,
                 isButtonVisible: !0,
@@ -21162,8 +21184,8 @@
             var a = n(1),
                 s = n(9),
                 i = r(n(2));
-            n(451);
-            var o = r(n(90));
+            n(452);
+            var o = r(n(91));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -21172,7 +21194,7 @@
             }
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-hub-roster"],
-                layout: n(452),
+                layout: n(453),
                 clashNav: a.Ember.inject.service("clash-nav"),
                 rosterStats: null,
                 roster: null,
@@ -21308,9 +21330,9 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(454), e.exports = a.Ember.Component.extend({
+            n(455), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-hub-roster-details"],
-                layout: n(455),
+                layout: n(456),
                 name: null,
                 shortName: null,
                 logoId: s.INVALID_LOGO_ID,
@@ -21340,9 +21362,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(457), e.exports = a.Ember.Component.extend({
+            n(458), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-hub-roster-record-day"],
-                layout: n(458),
+                layout: n(459),
                 dayData: null,
                 isParticipant: a.Ember.computed.bool("dayData.isParticipant"),
                 isUpcoming: a.Ember.computed.bool("dayData.isUpcoming"),
@@ -21388,9 +21410,9 @@
                 i = (a = n(11)) && a.__esModule ? a : {
                     default: a
                 };
-            n(460), e.exports = s.Ember.Component.extend({
+            n(461), e.exports = s.Ember.Component.extend({
                 classNames: ["clash-day-planner"],
-                layout: n(461),
+                layout: n(462),
                 tournament: null,
                 isRosterEliminated: !1,
                 warningPhaseId: -1,
@@ -21425,19 +21447,19 @@
             var a = n(1),
                 s = r(n(11)),
                 i = r(n(10)),
-                o = r(n(92));
+                o = r(n(93));
 
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(463);
-            const l = n(464);
+            n(464);
+            const l = n(465);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-day-planner-node"],
                 classNameBindings: ["isActive:active", "isInteractive:interactive"],
-                layout: n(465),
+                layout: n(466),
                 tournament: null,
                 isRosterEliminated: !1,
                 warningPhaseId: -1,
@@ -21618,9 +21640,9 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(467), e.exports = a.Ember.Component.extend({
+            n(468), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-hub-roster-current"],
-                layout: n(468),
+                layout: n(469),
                 clashService: a.Ember.inject.service("clash"),
                 clashNav: a.Ember.inject.service("clash-nav"),
                 roster: null,
@@ -21646,7 +21668,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(470);
+            n(471);
             const s = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -21664,7 +21686,7 @@
             });
             e.exports = a.Ember.Component.extend(s, {
                 classNames: ["clash-season-vp-display"],
-                layout: n(471),
+                layout: n(472),
                 clashService: a.Ember.inject.service("clash"),
                 isClashRewardsModalEnabled: a.Ember.computed.alias("clashService.isClashRewardsModalEnabled"),
                 seasonVp: a.Ember.computed.alias("playerRewards.seasonVp"),
@@ -21687,7 +21709,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(473);
+            n(474);
             var s = n(9);
             const i = (0, a.emberDataBinding)({
                 Ember: a.Ember,
@@ -21711,7 +21733,7 @@
             });
             e.exports = a.Ember.Component.extend(i, {
                 classNames: ["clash-my-tickets-container"],
-                layout: n(474),
+                layout: n(475),
                 telemetryService: a.Ember.inject.service("telemetry"),
                 isTicketPurchaseButtonEnabled: a.Ember.computed.not("areTicketPurchasesDisabled"),
                 tickets: a.Ember.computed.alias("playerData.tickets"),
@@ -21750,9 +21772,9 @@
                     default: a
                 },
                 o = n(9);
-            n(476), e.exports = s.Ember.Component.extend({
+            n(477), e.exports = s.Ember.Component.extend({
                 classNames: ["clash-capacity-indicator"],
-                layout: n(477),
+                layout: n(478),
                 tournament: null,
                 roster: null,
                 showCapacityIndicator: s.Ember.computed("tournament.currentPhase", "tournament.state", "roster.isActiveInCurrentPhase", (function() {
@@ -21788,9 +21810,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(479), e.exports = a.Ember.Component.extend({
+            n(480), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-shuffle-text"],
-                layout: n(480),
+                layout: n(481),
                 locName: "",
                 locPrefix: "in-queue",
                 isEnabled: !1,
@@ -21838,10 +21860,10 @@
             var a = n(1),
                 s = n(9),
                 i = l(n(10)),
-                o = l(n(311));
-            l(n(90));
-            n(482);
-            var r = l(n(88));
+                o = l(n(312));
+            l(n(91));
+            n(483);
+            var r = l(n(89));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -21866,7 +21888,7 @@
                 }];
             e.exports = a.Ember.Component.extend(c, o.default, r.default, {
                 classNames: ["clash-hub-content"],
-                layout: n(483),
+                layout: n(484),
                 appData: null,
                 history: [],
                 clashService: a.Ember.inject.service("clash"),
@@ -22000,10 +22022,10 @@
             "use strict";
             var a = n(1),
                 s = n(9),
-                i = c(n(311));
-            n(485);
-            var o = c(n(88)),
-                r = c(n(89)),
+                i = c(n(312));
+            n(486);
+            var o = c(n(89)),
+                r = c(n(90)),
                 l = c(n(10));
 
             function c(e) {
@@ -22013,7 +22035,7 @@
             }
             e.exports = a.Ember.Component.extend(i.default, o.default, {
                 classNames: ["clash-schedule-view"],
-                layout: n(486),
+                layout: n(487),
                 appData: null,
                 history: [],
                 isRosterCurrent: !1,
@@ -22114,9 +22136,9 @@
                 o = (a = n(10)) && a.__esModule ? a : {
                     default: a
                 };
-            n(488), e.exports = s.Ember.Component.extend({
+            n(489), e.exports = s.Ember.Component.extend({
                 classNames: ["clash-history-view"],
-                layout: n(489),
+                layout: n(490),
                 appData: null,
                 history: [],
                 clashService: s.Ember.inject.service("clash"),
@@ -22165,9 +22187,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = o(n(90));
-            n(491);
-            var i = o(n(88));
+                s = o(n(91));
+            n(492);
+            var i = o(n(89));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -22176,7 +22198,7 @@
             }
             e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["clash-upcoming-tournament-entry"],
-                layout: n(492),
+                layout: n(493),
                 tournament: null,
                 tournamentName: a.Ember.computed("tournament", "tournament.nameLocKey", (function() {
                     const e = this.get("tra"),
@@ -22220,9 +22242,9 @@
             "use strict";
             var a = n(1),
                 s = n(9);
-            n(494);
-            var i = r(n(90)),
-                o = r(n(88));
+            n(495);
+            var i = r(n(91)),
+                o = r(n(89));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -22231,7 +22253,7 @@
             }
             e.exports = a.Ember.Component.extend(o.default, {
                 classNames: ["clash-schedule-graph"],
-                layout: n(495),
+                layout: n(496),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: null,
                 showTournamentName: !1,
@@ -22370,15 +22392,15 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = p(n(497)),
+                s = p(n(498)),
                 i = n(9),
-                o = n(517),
-                r = n(525),
-                l = n(530),
-                c = n(502),
-                d = n(499),
-                m = p(n(506)),
-                u = n(524);
+                o = n(518),
+                r = n(526),
+                l = n(531),
+                c = n(503),
+                d = n(500),
+                m = p(n(507)),
+                u = n(525);
 
             function p(e) {
                 return e && e.__esModule ? e : {
@@ -22408,8 +22430,8 @@
             });
             e.exports = s.default.extend(h, {
                 classNames: ["clash-awards-root"],
-                layout: n(538),
-                style: n(539),
+                layout: n(539),
+                style: n(540),
                 clashService: a.Ember.inject.service("clash"),
                 logoConfig: a.Ember.computed.alias("clashService.logoConfig"),
                 gdsService: a.Ember.inject.service("gds"),
@@ -22643,14 +22665,14 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(498),
-                s = n(499),
-                i = n(500),
+            var a = n(499),
+                s = n(500),
+                i = n(501),
                 o = n(1),
-                r = n(503),
-                l = n(501),
-                c = n(502),
-                d = _(n(506)),
+                r = n(504),
+                l = n(502),
+                c = n(503),
+                d = _(n(507)),
                 m = function(e, t) {
                     if (!t && e && e.__esModule) return e;
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
@@ -22666,11 +22688,11 @@
                             o && (o.get || o.set) ? Object.defineProperty(a, i, o) : a[i] = e[i]
                         } a.default = e, n && n.set(e, a);
                     return a
-                }(n(507)),
-                u = _(n(511)),
-                p = _(n(510)),
-                h = _(n(512)),
-                g = _(n(515));
+                }(n(508)),
+                u = _(n(512)),
+                p = _(n(511)),
+                h = _(n(513)),
+                g = _(n(516));
 
             function f(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -23080,8 +23102,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.EMPTY_GROUPING_CONFIG = t.CONTROL_PANEL_DROPDOWN_GROUP_OPTIONS_PLACEHOLDER = t.BASE_COLLECTIBLES_DEFAULT_SORTING_OPTION = t.BASE_COLLECTIBLES_DEFAULT_GROUPING_OPTION = void 0;
-            var a = n(501),
-                s = n(502);
+            var a = n(502),
+                s = n(503);
             const i = {
                     groupingType: a.GROUPING_TYPES.EMPTY_GROUPING,
                     getGroupKeys: () => [1],
@@ -23301,7 +23323,7 @@
                     return (0, s.default)(e, o, t, n)
                 }
             };
-            var a, s = (a = n(504)) && a.__esModule ? a : {
+            var a, s = (a = n(505)) && a.__esModule ? a : {
                 default: a
             }
         }, (e, t, n) => {
@@ -23309,7 +23331,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(505)) && a.__esModule ? a : {
+            var a, s = (a = n(506)) && a.__esModule ? a : {
                 default: a
             };
             var i = function(e, t, n, a = !1) {
@@ -23425,9 +23447,9 @@
                     }
                 }))
             };
-            var a = n(508),
-                s = o(n(510)),
-                i = o(n(511));
+            var a = n(509),
+                s = o(n(511)),
+                i = o(n(512));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -23440,7 +23462,7 @@
                 value: !0
             }), t.EMPTY_GROUPING_STRATEGY = void 0;
             const a = {
-                groupingType: n(509).EMPTY_GROUPING_TYPE,
+                groupingType: n(510).EMPTY_GROUPING_TYPE,
                 getGroupKeys: () => [1],
                 getGroupMetaData: () => ({})
             };
@@ -23489,8 +23511,8 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                i = n(513),
-                o = (a = n(514)) && a.__esModule ? a : {
+                i = n(514),
+                o = (a = n(515)) && a.__esModule ? a : {
                     default: a
                 };
             class r {
@@ -23644,7 +23666,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(516);
+            var a = n(517);
             const s = new Set([a.LOOT_ITEM_TYPES.SKIN, a.LOOT_ITEM_TYPES.SUMMONER_ICON, a.LOOT_ITEM_TYPES.WARD_SKIN]);
             class i {
                 static isAvailableLootItem(e) {
@@ -23706,12 +23728,12 @@
                 }
                 return e.get(t)
             };
-            var a = c(n(518)),
-                s = c(n(520)),
-                i = c(n(521)),
-                o = c(n(522)),
-                r = c(n(523)),
-                l = n(524);
+            var a = c(n(519)),
+                s = c(n(521)),
+                i = c(n(522)),
+                o = c(n(523)),
+                r = c(n(524)),
+                l = n(525);
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -23740,7 +23762,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(519)) && a.__esModule ? a : {
+            var a, s = (a = n(520)) && a.__esModule ? a : {
                 default: a
             };
             class i extends s.default {
@@ -23798,7 +23820,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(519)) && a.__esModule ? a : {
+            var a, s = (a = n(520)) && a.__esModule ? a : {
                 default: a
             };
             const i = "clash-award";
@@ -23875,7 +23897,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(519)) && a.__esModule ? a : {
+            var a, s = (a = n(520)) && a.__esModule ? a : {
                 default: a
             };
             const i = "clash-award";
@@ -23962,7 +23984,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(519)) && a.__esModule ? a : {
+            var a, s = (a = n(520)) && a.__esModule ? a : {
                 default: a
             };
             const i = "clash-award";
@@ -24049,7 +24071,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(519)) && a.__esModule ? a : {
+            var a, s = (a = n(520)) && a.__esModule ? a : {
                 default: a
             };
             class i extends s.default {
@@ -24110,11 +24132,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.generateRowDataFromGroupingResult = m;
-            var a, s = n(526),
-                i = n(524),
-                o = n(527),
-                r = n(529),
-                l = (a = n(528)) && a.__esModule ? a : {
+            var a, s = n(527),
+                i = n(525),
+                o = n(528),
+                r = n(530),
+                l = (a = n(529)) && a.__esModule ? a : {
                     default: a
                 };
             const c = {
@@ -24218,8 +24240,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.GROUP_SEPARATOR_ROW_DATA = void 0;
-            var a, s = n(526);
-            const i = new(((a = n(528)) && a.__esModule ? a : {
+            var a, s = n(527);
+            const i = new(((a = n(529)) && a.__esModule ? a : {
                 default: a
             }).default)({
                 type: s.COLLECTION_GRID_ROW_TYPES.SEPARATOR.id,
@@ -24262,7 +24284,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.START_COLLECTING_SORTING_CONFIG = t.START_COLLECTING_GROUPING_CONFIG = t.DEFAULT_PANEL_SORTING = t.DEFAULT_PANEL_DROPDOWN_OPTION = t.AWARDS_DROPDOWN_GROUP_OPTIONS = void 0;
-            const a = n(531).CLASH_AWARDS_GROUPING_CONFIGS,
+            const a = n(532).CLASH_AWARDS_GROUPING_CONFIGS,
                 s = {
                     groupingByTypeSortByAcquiredDateAscending: {
                         name: "groupingByTypeSortByAcquiredDateAscending",
@@ -24425,12 +24447,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.CLASH_AWARDS_GROUPING_CONFIGS = void 0;
-            var a, s = (a = n(532)) && a.__esModule ? a : {
+            var a, s = (a = n(533)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(533),
-                o = n(537),
-                r = n(502);
+                i = n(534),
+                o = n(538),
+                r = n(503);
             const {
                 CLASH_AWARDS_GROUPING_STRATEGIES: l
             } = s.default, c = {
@@ -24485,8 +24507,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(529),
-                s = n(524);
+            var a = n(530),
+                s = n(525);
             var i = {
                 CLASH_AWARDS_GROUPING_STRATEGIES: {
                     BY_TYPE: {
@@ -24505,7 +24527,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.CLASH_AWARDS_SORTING_CONFIGS = void 0;
-            var a = n(534);
+            var a = n(535);
             const s = {
                 ACQUIRED_ASCENDING: {
                     groupSortingStrategy: a.CLASH_AWARDS_GROUP_SORTING_STRATEGIES.TYPE_ASCENDING,
@@ -24530,7 +24552,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.CLASH_AWARDS_GROUP_SORTING_STRATEGIES = t.CLASH_AWARDS_CONTENT_SORTING_STRATEGIES = void 0;
-            var a = n(535);
+            var a = n(536);
             const s = {
                 TYPE_DESCENDING: (0, a.getPropertiesSortingStrategy)([{
                     property: "groupMetaData.groupId",
@@ -24595,7 +24617,7 @@
                             r && (r.get || r.set) ? Object.defineProperty(a, o, r) : a[o] = e[o]
                         } a.default = e, n && n.set(e, a);
                     return a
-                }(n(536));
+                }(n(537));
 
             function i(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -24653,7 +24675,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.GROUPING_FILTER_TROPHIES = t.GROUPING_FILTER_LOGOS = t.GROUPING_FILTER_BANNERS = void 0;
-            var a = n(524);
+            var a = n(525);
             t.GROUPING_FILTER_TROPHIES = e => e && e.awardType === a.CLASH_AWARDS_ROW_CONFIG.TROPHY.id;
             t.GROUPING_FILTER_BANNERS = e => e && e.awardType === a.CLASH_AWARDS_ROW_CONFIG.BANNER.id;
             t.GROUPING_FILTER_LOGOS = e => e && e.awardType === a.CLASH_AWARDS_ROW_CONFIG.LOGO.id
@@ -24670,20 +24692,20 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(541)) && a.__esModule ? a : {
+                i = (a = n(542)) && a.__esModule ? a : {
                     default: a
                 };
             e.exports = i.default.extend({
                 classNames: ["clash-awards-grid"],
-                layout: n(542),
-                style: n(543),
+                layout: n(543),
+                style: n(544),
                 noMatchedCollectiblesLocText: s.Ember.computed("collectibleNameLoc", (function() {
                     return this.get("tra.clash_awards_no_matching_awards")
                 }))
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(526),
+            var a = n(527),
                 s = n(1);
             const {
                 Component: i,
@@ -24856,14 +24878,14 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(545)) && a.__esModule ? a : {
+                i = (a = n(546)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(530);
+                o = n(531);
             e.exports = i.default.extend({
                 classNames: ["clash-awards-control-panel"],
-                layout: n(549),
-                style: n(550),
+                layout: n(550),
+                style: n(551),
                 availableGroupList: o.AWARDS_DROPDOWN_GROUP_OPTIONS,
                 totalSummaryNumDesc: s.Ember.computed.alias("tra.clash_awards_control_panel_total_count"),
                 showBottomPart: !1,
@@ -24883,9 +24905,9 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(500),
+            var a = n(501),
                 s = n(1),
-                i = n(546);
+                i = n(547);
             const {
                 computed: o,
                 Component: r,
@@ -25102,8 +25124,8 @@
         }, (e, t, n) => {
             "use strict";
             e.exports = {
-                CountingElement: n(547),
-                shallowEquals: n(548)
+                CountingElement: n(548),
+                shallowEquals: n(549)
             }
         }, e => {
             "use strict";
@@ -25148,11 +25170,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(552);
+            n(553);
             const s = "/v1/lft/team/requests";
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-find-team-view"],
-                layout: n(553),
+                layout: n(554),
                 clashService: a.Ember.inject.service("clash"),
                 tournament: a.Ember.computed.alias("clashService.tournament"),
                 tournamentId: a.Ember.computed.alias("tournament.id"),
@@ -25205,12 +25227,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(555);
+            n(556);
             var s;
-            (s = n(218)) && s.__esModule;
+            (s = n(219)) && s.__esModule;
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-find-team-entry"],
-                layout: n(556),
+                layout: n(557),
                 team: {},
                 pendingRequestList: [],
                 gdsService: a.Ember.inject.service("gds"),
@@ -25259,12 +25281,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(558);
+            n(559);
             const s = "/lol-settings/v2/account/LCUPreferences/lol-clash",
                 i = "/lol-platform-config/v1/namespaces/ClashConfig/AramIntroModalEnabled",
                 o = "clash-aram2022-modal-shown";
             e.exports = a.Ember.Component.extend({
-                layout: n(559),
+                layout: n(560),
                 classNames: ["clash-aram-intro-modal"],
                 tournament: null,
                 isEnabled: !1,
@@ -25313,11 +25335,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(561);
+            n(562);
             const s = "/lol-settings/v2/account/LCUPreferences/lol-clash",
                 i = "clash-arurf2025-modal-shown";
             e.exports = a.Ember.Component.extend({
-                layout: n(562),
+                layout: n(563),
                 classNames: ["clash-arurf-intro-modal"],
                 tournament: null,
                 isSettingsReady: !1,
@@ -25362,10 +25384,10 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(300)) && a.__esModule ? a : {
+                i = (a = n(301)) && a.__esModule ? a : {
                     default: a
                 };
-            n(564);
+            n(565);
             const o = (0, s.emberDataBinding)({
                 Ember: s.Ember,
                 websocket: (0, s.getProvider)().getSocket(),
@@ -25384,7 +25406,7 @@
             });
             e.exports = s.Ember.Component.extend(o, {
                 classNames: ["clash-member-summoner"],
-                layout: n(565),
+                layout: n(566),
                 shouldShowFriendIcon: !1,
                 chatService: s.Ember.inject.service("chat"),
                 friends: s.Ember.computed.alias("chatService.friends"),
@@ -25509,8 +25531,8 @@
                         } a.default = e, n && n.set(e, a);
                     return a
                 }(n(9));
-            n(567);
-            var i, o = (i = n(293)) && i.__esModule ? i : {
+            n(568);
+            var i, o = (i = n(294)) && i.__esModule ? i : {
                 default: i
             };
 
@@ -25525,7 +25547,7 @@
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-roster-details-selector"],
                 classNameBindings: ["isSaveAllowed:is-save-allowed"],
-                layout: n(568),
+                layout: n(569),
                 sharedData: {},
                 isSaveAllowed: !0,
                 initialName: "",
@@ -25785,12 +25807,12 @@
             "use strict";
             var a, s = n(1),
                 i = n(9),
-                o = (a = n(571)) && a.__esModule ? a : {
+                o = (a = n(572)) && a.__esModule ? a : {
                     default: a
                 };
-            n(572), e.exports = s.Ember.Component.extend({
+            n(573), e.exports = s.Ember.Component.extend({
                 classNames: ["clash-async-text-field"],
-                layout: n(573),
+                layout: n(574),
                 sanitizerService: s.Ember.inject.service("sanitizer"),
                 sourceTxt: "",
                 placeholderTxt: "",
@@ -28055,11 +28077,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(575);
+            n(576);
             var s = n(9);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-ticket-select-modal"],
-                layout: n(576),
+                layout: n(577),
                 clashService: a.Ember.inject.service("clash"),
                 premiumTicketsEnabled: a.Ember.computed.alias("clashService.premiumTicketsEnabled"),
                 currentBuyin: 0,
@@ -28128,11 +28150,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(578);
+            n(579);
             var s = n(9);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-ticket-select-modal-element"],
-                layout: n(579),
+                layout: n(580),
                 ticketQuantity: null,
                 ticketType: s.TicketType.BASIC,
                 selectedQuantity: null,
@@ -28213,10 +28235,10 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(581);
+            n(582);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-selector-palette"],
-                layout: n(582),
+                layout: n(583),
                 target: null,
                 targetOffset: null,
                 caretPlacement: .5,
@@ -28271,14 +28293,14 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(584)) && a.__esModule ? a : {
+                i = (a = n(585)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(585),
+                o = n(586),
                 r = n(9);
-            n(586), e.exports = s.Ember.Component.extend(i.default, {
+            n(587), e.exports = s.Ember.Component.extend(i.default, {
                 classNames: ["tournament-scouting"],
-                layout: n(587),
+                layout: n(588),
                 clashService: s.Ember.inject.service("clash"),
                 telemetryService: s.Ember.inject.service("telemetry"),
                 summonerService: s.Ember.inject.service("summoner"),
@@ -28396,7 +28418,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(585);
+                s = n(586);
             const i = function(e) {
                     e.get("isDataCompleted") || function(e) {
                         const {
@@ -28498,9 +28520,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(589), e.exports = a.Ember.Component.extend({
+            n(590), e.exports = a.Ember.Component.extend({
                 classNames: ["tournament-scouting-nav"],
-                layout: n(590),
+                layout: n(591),
                 selectedMode: null,
                 modeInfos: [],
                 selectedModeObserver: a.Ember.computed("selectedMode", "modeInfos", (function() {
@@ -28535,9 +28557,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(592), e.exports = a.Ember.Component.extend({
+            n(593), e.exports = a.Ember.Component.extend({
                 classNames: ["util-tournament-scouting-subitem"],
-                layout: n(593)
+                layout: n(594)
             })
         }, (e, t, n) => {
             "use strict";
@@ -28552,13 +28574,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(585),
+                s = n(586),
                 i = n(9);
-            n(595);
+            n(596);
             const o = [s.LEAGUE_QUEUE_SOLO, s.LEAGUE_QUEUE_FLEX];
             e.exports = a.Ember.Component.extend({
                 classNames: ["util-tournament-scouting-member"],
-                layout: n(596),
+                layout: n(597),
                 clashService: a.Ember.inject.service("clash"),
                 rosterMember: null,
                 puuid: a.Ember.computed.alias("rosterMember.puuid"),
@@ -28636,9 +28658,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(598), e.exports = a.Ember.Component.extend({
+            n(599), e.exports = a.Ember.Component.extend({
                 classNames: ["util-tournament-scouting-subitem"],
-                layout: n(599),
+                layout: n(600),
                 championInfo: a.Ember.computed("champion.championInfo", (function() {
                     const e = this.get("champion.championInfo");
                     return e || {
@@ -28688,9 +28710,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(601), e.exports = a.Ember.Component.extend({
+            n(602), e.exports = a.Ember.Component.extend({
                 classNames: ["util-tournament-scouting-member"],
-                layout: n(602),
+                layout: n(603),
                 rosterMember: null,
                 puuid: a.Ember.computed.alias("rosterMember.puuid"),
                 gameName: a.Ember.computed("rosterMember.gameName", (function() {
@@ -28736,9 +28758,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(604), e.exports = a.Ember.Component.extend({
+            n(605), e.exports = a.Ember.Component.extend({
                 classNames: ["util-tournament-scouting-subitem"],
-                layout: n(605),
+                layout: n(606),
                 championInfo: a.Ember.computed("mastery.championInfo", (function() {
                     const e = this.get("mastery.championInfo");
                     return e || {
@@ -28773,11 +28795,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(607);
+            n(608);
             var s = n(9);
             e.exports = a.Ember.Component.extend({
                 classNames: ["util-tournament-scouting-member"],
-                layout: n(608),
+                layout: n(609),
                 rosterMember: null,
                 puuid: a.Ember.computed.alias("rosterMember.puuid"),
                 gameName: a.Ember.computed("rosterMember.gameName", (function() {
@@ -28832,11 +28854,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(610);
+            n(611);
             var s = n(9);
             e.exports = a.Ember.Component.extend({
                 classNames: ["tournament-scouting-subitem"],
-                layout: n(611),
+                layout: n(612),
                 onWillDestroyElement: a.Ember.on("willDestroyElement", (function() {
                     (0, a.getProvider)().getOptional("rcp-fe-lol-match-history").then((e => {
                         e.hideMatchDetails()
@@ -28899,10 +28921,10 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(613)) && a.__esModule ? a : {
+                i = (a = n(614)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(585);
+                o = n(586);
             const r = "rankedQueuesStep",
                 l = "allChampionsStep",
                 c = "matchHistory",
@@ -29077,8 +29099,8 @@
             var a = n(1),
                 s = n(9),
                 i = r(n(11));
-            n(615);
-            var o = r(n(90));
+            n(616);
+            var o = r(n(91));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -29102,7 +29124,7 @@
             });
             e.exports = a.Ember.Component.extend(l, {
                 classNames: ["clash-tournament-overview"],
-                layout: n(616),
+                layout: n(617),
                 gdsService: a.Ember.inject.service("gds"),
                 rosterStats: a.Ember.computed.alias("overviewParams.rosterStats"),
                 tournament: a.Ember.computed.alias("overviewParams.tournament"),
@@ -29245,7 +29267,7 @@
                 i = (a = n(10)) && a.__esModule ? a : {
                     default: a
                 };
-            n(618);
+            n(619);
             const o = (0, s.emberDataBinding)({
                 Ember: s.Ember,
                 websocket: (0, s.getProvider)().getSocket(),
@@ -29255,7 +29277,7 @@
             });
             e.exports = s.Ember.Component.extend(o, {
                 classNames: ["clash-overview-period"],
-                layout: n(619),
+                layout: n(620),
                 index: -1,
                 rosterStats: null,
                 tournament: null,
@@ -29521,9 +29543,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(621), e.exports = a.Ember.Component.extend({
+            n(622), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-overview-match"],
-                layout: n(622),
+                layout: n(623),
                 rosterStats: null,
                 matchStats: null,
                 bracketSize: 16,
@@ -29596,9 +29618,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(624), e.exports = a.Ember.Component.extend({
+            n(625), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-overview-game"],
-                layout: n(625),
+                layout: n(626),
                 index: -1,
                 rosterStats: {},
                 matchStats: {},
@@ -29700,8 +29722,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(627);
-            var s = n(628);
+            n(628);
+            var s = n(629);
             const i = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -29718,7 +29740,7 @@
             });
             e.exports = a.Ember.Component.extend(i, {
                 classNames: ["clash-overview-stats-carousel"],
-                layout: n(629),
+                layout: n(630),
                 onInit: a.Ember.on("init", (function() {
                     const e = this.get("playerStats"),
                         t = [{
@@ -29827,7 +29849,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(631);
+            n(632);
             const s = (0, a.emberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -29845,7 +29867,7 @@
             });
             e.exports = a.Ember.Component.extend(s, {
                 classNames: ["clash-overview-stat"],
-                layout: n(632),
+                layout: n(633),
                 clashService: a.Ember.inject.service("clash"),
                 chatParticipants: a.Ember.computed.alias("clashService.localPlayer.chatParticipants"),
                 showSummoner: !1,
@@ -29917,12 +29939,12 @@
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(89)) && a.__esModule ? a : {
+                i = (a = n(90)) && a.__esModule ? a : {
                     default: a
                 };
-            n(634), e.exports = s.Ember.Component.extend({
+            n(635), e.exports = s.Ember.Component.extend({
                 classNames: ["clash-missed-lockin-modal"],
-                layout: n(635),
+                layout: n(636),
                 tournamentId: null,
                 phaseId: null,
                 tournament: s.Ember.computed("tournamentId", (function() {
@@ -30010,7 +30032,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(637);
+            n(638);
             var s = n(9);
             const i = (0, a.emberDataBinding)({
                 Ember: a.Ember,
@@ -30024,7 +30046,7 @@
             });
             e.exports = a.Ember.Component.extend(i, {
                 classNames: ["clash-ticket-selector"],
-                layout: n(638),
+                layout: n(639),
                 clashService: a.Ember.inject.service("clash"),
                 premiumTicketsEnabled: a.Ember.computed.alias("clashService.premiumTicketsEnabled"),
                 tournament: null,
@@ -30240,11 +30262,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(640);
+            n(641);
             var s = n(9);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-ticket-selector-element"],
-                layout: n(641),
+                layout: n(642),
                 clashService: a.Ember.inject.service("clash"),
                 premiumTicketsEnabled: a.Ember.computed.alias("clashService.premiumTicketsEnabled"),
                 ticketQuantity: null,
@@ -30361,12 +30383,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(524),
+                s = n(525),
                 i = n(9);
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-awards-tooltip"],
-                layout: n(643),
-                style: n(644),
+                layout: n(644),
+                style: n(645),
                 locale: a.Ember.computed("regionLocale", "collectibleItem", (function() {
                     return (this.get("regionLocale") || "en_US").replace("_", "-")
                 })),
@@ -30422,11 +30444,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(646);
+            n(647);
             const s = "/v1/lft/team/requests";
             e.exports = a.Ember.Component.extend({
                 classNames: ["clash-pending-lft-requests-modal"],
-                layout: n(647),
+                layout: n(648),
                 clashService: {},
                 pendingRequestList: [],
                 tournament: a.Ember.computed.alias("clashService.tournament"),
@@ -30472,9 +30494,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(649), e.exports = a.Ember.Component.extend({
+            n(650), e.exports = a.Ember.Component.extend({
                 classNames: ["clash-pending-lft-requests-entry"],
-                layout: n(650),
+                layout: n(651),
                 team: {},
                 gdsService: a.Ember.inject.service("gds"),
                 logoId: a.Ember.computed.alias("team.logo"),
@@ -30530,7 +30552,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                i = (a = n(653)) && a.__esModule ? a : {
+                i = (a = n(654)) && a.__esModule ? a : {
                     default: a
                 };
             class o extends i.default {
@@ -30615,7 +30637,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                i = (a = n(655)) && a.__esModule ? a : {
+                i = (a = n(656)) && a.__esModule ? a : {
                     default: a
                 };
             const o = "clash_subsection_none";
@@ -30686,8 +30708,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                s = n(656);
-            n(670), e.exports = function(e, t) {
+                s = n(657);
+            n(671), e.exports = function(e, t) {
                 const n = a.Navigation.getNavBarMenuItemId("CLASH"),
                     i = new s.MainNavigationMediator({
                         Navigation: a.Navigation,
@@ -30720,12 +30742,12 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = c(n(657)),
-                s = c(n(663)),
-                i = c(n(664)),
-                o = c(n(667)),
-                r = c(n(668)),
-                l = c(n(669));
+            var a = c(n(658)),
+                s = c(n(664)),
+                i = c(n(665)),
+                o = c(n(668)),
+                r = c(n(669)),
+                l = c(n(670));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -30745,11 +30767,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = l(n(658)),
-                s = l(n(659)),
-                i = l(n(661)),
-                o = n(662),
-                r = n(660);
+            var a = l(n(659)),
+                s = l(n(660)),
+                i = l(n(662)),
+                o = n(663),
+                r = n(661);
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -30857,10 +30879,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(658)) && a.__esModule ? a : {
+            var a, s = (a = n(659)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(660);
+                i = n(661);
             t.default = class {
                 constructor(e) {
                     if (e && !(e instanceof Element)) throw new Error("Mediator expects the component to be an instance of Element");
@@ -30920,9 +30942,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = o(n(658)),
-                s = o(n(657)),
-                i = n(660);
+            var a = o(n(659)),
+                s = o(n(658)),
+                i = n(661);
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -31005,11 +31027,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.NAVIGATION_ITEM_ATTR_PRIORITY = t.NAVIGATION_ITEM_ATTR_ID = t.NAVIGATION_ITEM_ATTR_DISABLED = t.NAVIGATION_ITEM_ATTR_ALERT = t.NAVIGATION_BAR_INDEX_ATTR = t.EVENT_NAVIGATION_CLICKED = void 0;
-            var a, s = (a = n(659)) && a.__esModule ? a : {
+            var a, s = (a = n(660)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(660),
-                o = n(662);
+                i = n(661),
+                o = n(663);
             const r = "lol-uikit-navigation-item-click-event";
             t.EVENT_NAVIGATION_CLICKED = r;
             const l = "item-id";
@@ -31109,9 +31131,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.SECTION_CONTROLLER_ATTR_SELECTED_ITEM = t.SECTION_ATTR_ID = t.SECTION_ATTR_DISABLED = t.EVENT_SECTION_WILL_SHOW = t.EVENT_SECTION_WILL_HIDE = t.EVENT_SECTION_SHOW = t.EVENT_SECTION_HIDE = void 0;
-            var a = o(n(659)),
-                s = o(n(665)),
-                i = n(660);
+            var a = o(n(660)),
+                s = o(n(666)),
+                i = n(661);
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -31188,7 +31210,7 @@
             t.default = h
         }, (e, t, n) => {
             "use strict";
-            const a = n(666),
+            const a = n(667),
                 s = new a;
             s.constructorClass = a, e.exports = s
         }, e => {
@@ -31270,10 +31292,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(659)) && a.__esModule ? a : {
+            var a, s = (a = n(660)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(660);
+                i = n(661);
             const o = ["Navigation"];
             class r extends s.default {
                 constructor(e = {}) {
@@ -31314,10 +31336,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(659)) && a.__esModule ? a : {
+            var a, s = (a = n(660)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(660);
+                i = n(661);
             const o = ["UIKit"];
             class r extends s.default {
                 constructor(e = {}) {
@@ -31356,10 +31378,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(659)) && a.__esModule ? a : {
+            var a, s = (a = n(660)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(660);
+                i = n(661);
             const o = ["screenName", "displayPriority", "displayNameLocKey", "Viewport", "Navigation"];
             class r extends s.default {
                 constructor(e = {}) {
@@ -31509,9 +31531,9 @@
                 }), await t.default.tra.ready();
                 const m = n(7).default,
                     u = n(8).default,
-                    p = n(651).default,
-                    h = n(652).default,
-                    g = new(0, n(654).default),
+                    p = n(652).default,
+                    h = n(653).default,
+                    g = new(0, n(655).default),
                     f = new u(g, d),
                     _ = new m(f);
                 return await t.default.add({

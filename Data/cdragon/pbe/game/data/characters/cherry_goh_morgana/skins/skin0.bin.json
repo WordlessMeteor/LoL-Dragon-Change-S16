@@ -27,7 +27,6 @@
                 145.0,
                 100.0
             ],
-            "Material": "Characters/Cherry_GoH_Morgana/Skins/Skin0/Materials/BushDiffuseTexture_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
@@ -73392,81 +73391,6 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "TextureName": "ASSETS/Characters/Cherry_GoH_Morgana/Skins/Base/Cherry_GoH_Morgana_Base_Wings_UltDiffuse.Arena_2026_S2.tex",
-                            "__type": "DynamicMaterialTextureSwapOption"
-                        }
-                    ],
-                    "__type": "DynamicMaterialTextureSwapDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
-    "Characters/Cherry_GoH_Morgana/Skins/Skin0/Materials/BushDiffuseTexture_inst": {
-        "name": "Characters/Cherry_GoH_Morgana/Skins/Skin0/Materials/BushDiffuseTexture_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Cherry_GoH_Morgana/Skins/Base/Cherry_GoH_Morgana_Base_TX_CM.Arena_2026_S2.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "Alpha",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha",
-                        "blendEnable": true,
-                        "cullEnable": false,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "textures": [
-                {
-                    "name": "Diffuse_Texture",
-                    "options": [
-                        {
-                            "driver": {
-                                "__type": "IsInGrassDynamicMaterialBoolDriver"
-                            },
-                            "TextureName": "ASSETS/Characters/Cherry_GoH_Morgana/Skins/Base/Cherry_GoH_Morgana_Base_Bush_TX_CM.Arena_2026_S2.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],

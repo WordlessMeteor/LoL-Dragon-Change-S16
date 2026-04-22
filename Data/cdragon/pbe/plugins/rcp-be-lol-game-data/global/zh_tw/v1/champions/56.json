@@ -815,7 +815,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "夜曲擲出影之刃造成傷害，同時於地面留下暗影軌跡，遭到影之刃擊中的英雄同時也會留下相同的軌跡。於軌跡的路線上面時，夜曲可以不受阻礙地在目標間自由移動，同時提高跑速和物理攻擊。",
-            "dynamicDescription": "Spell_NocturneQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "夜曲擲出影之刃造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>，同時在地面留下持續@TrailDuration@秒的暗影軌跡。遭影之刃擊中的敵方英雄也會留下軌跡。<br><br>在軌跡上移動時，夜曲會進入鬼步狀態並獲得<speed>@MoveSpeed@%跑速</speed>和<physicalDamage>@BonusTrailAD@物攻</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -965,7 +965,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "夜曲強化他的雙刃，被動的獲得攻擊速度強化。啟動夜幕庇護後，夜曲將可以融入影子之中，建立一層魔法護盾。此護盾可抵擋單次敵方技能，並在成功的阻擋敵方攻擊後，加倍他的攻擊速度。",
-            "dynamicDescription": "Spell_NocturneW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>夜曲增加<attackSpeed>@ActiveAS@%攻速</attackSpeed>。<br><br><spellActive>主動：</spellActive>夜曲生成持續1.5秒的暗影屏障，可格擋下一次敵方技能。擋下技能後，此技能的被動效果會增加至<attackSpeed>@ActiveAS*2@%攻速</attackSpeed>，持續@DoubleASDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1115,7 +1115,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "夜曲將噩夢植入目標的心中，每秒造成傷害。如果目標沒有在持續時間內離開範圍，則會被進一步恐懼。",
-            "dynamicDescription": "Spell_NocturneE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>夜曲朝陷入<status>恐懼</status>的敵軍移動時，獲得<speed>@TooltipFearMS*100@%跑速</speed>。<br><br><spellActive>主動：</spellActive>夜曲將噩夢連結植入目標，在@LeashDuration@秒內造成<magicDamage>@TotalDamage@魔法傷害</magicDamage> 。如果連結未斷開，目標會被<status>恐懼</status>@CCDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,

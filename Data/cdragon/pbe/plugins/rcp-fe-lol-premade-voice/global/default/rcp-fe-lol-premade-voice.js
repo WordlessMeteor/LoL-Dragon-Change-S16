@@ -454,7 +454,7 @@
                     }, this._initDataBinding()
                 }
                 connectedCallback() {
-                    super.connectedCallback(), this._attachSliderTooltipDelegate(), this._refreshConnectionState(), this._applyConnectionStateText(), this._teamVoicePluginEnabled && (this._updateToggleState(this._selectors.partyToggle, this._connectionState), this._refreshTeamConnectionState(), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._updateTeamToggleState()), this._updateConnectionBarVisibility(), this._setupHeader(), this.addInnerHtml(i.tra.get("parties_comm_panel_party_header"), this._selectors.partyHeaderText), this.addInnerHtml(i.tra.get("parties_comm_panel_team_header"), this._selectors.teamHeaderText), this.attachListener("change", this._listeners.micLevelSlideChange, this._selectors.currentPlayerVolume), this.attachListener("slideEnd", this._listeners.micLevelSlideEnd, this._selectors.currentPlayerVolume), this.attachListener("slideStart", this._listeners.micLevelSlideStart, this._selectors.currentPlayerVolume), this.attachListener("click", this._listeners.micLevelClick, this._selectors.currentPlayerVolume), this.attachListener("click", this._listeners.mute, this._selectors.currentPlayerMic), this.attachListener("click", this._listeners.connectionToggleClick, this._selectors.connectionToggle), this.attachListener("click", this._listeners.connectionBarClick, this._selectors.connectionBar), this.attachListener("click", this._listeners.partyToggleClick, this._selectors.partyToggle), this.attachListener("click", this._listeners.teamToggleClick, this._selectors.teamToggle), this._currentPlayerPuuid && this._updateCurrentPlayerName(), this.attachListener("click", this._listeners.settingsClicked, this._selectors.settingsButton), this.addEventListener("willShowVoicePanel", this._listeners.willShow), this.addEventListener("willHideVoicePanel", this._listeners.willHide), this.addEventListener("voiceButtonEnabled", this._listeners.voiceButtonEnabled), this.addEventListener("keybind-set-click", this._listeners.settingsClicked)
+                    super.connectedCallback(), this._attachSliderTooltipDelegate(), this._refreshConnectionState(), this._applyConnectionStateText(), this._teamVoicePluginEnabled && (this._updateToggleState(this._selectors.partyToggle, this._connectionState), this._updatePartyToggleState(), this._refreshTeamConnectionState(), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._updateTeamToggleState(), this._updateTeamUnavailableStatus()), this._updateConnectionBarVisibility(), this._setupHeader(), this.addInnerHtml(i.tra.get("parties_comm_panel_party_header"), this._selectors.partyHeaderText), this.addInnerHtml(i.tra.get("parties_comm_panel_team_header"), this._selectors.teamHeaderText), this.attachListener("change", this._listeners.micLevelSlideChange, this._selectors.currentPlayerVolume), this.attachListener("slideEnd", this._listeners.micLevelSlideEnd, this._selectors.currentPlayerVolume), this.attachListener("slideStart", this._listeners.micLevelSlideStart, this._selectors.currentPlayerVolume), this.attachListener("click", this._listeners.micLevelClick, this._selectors.currentPlayerVolume), this.attachListener("click", this._listeners.mute, this._selectors.currentPlayerMic), this.attachListener("click", this._listeners.connectionToggleClick, this._selectors.connectionToggle), this.attachListener("click", this._listeners.connectionBarClick, this._selectors.connectionBar), this.attachListener("click", this._listeners.partyToggleClick, this._selectors.partyToggle), this.attachListener("click", this._listeners.teamToggleClick, this._selectors.teamToggle), this._currentPlayerPuuid && this._updateCurrentPlayerName(), this.attachListener("click", this._listeners.settingsClicked, this._selectors.settingsButton), this.addEventListener("willShowVoicePanel", this._listeners.willShow), this.addEventListener("willHideVoicePanel", this._listeners.willHide), this.addEventListener("voiceButtonEnabled", this._listeners.voiceButtonEnabled), this.addEventListener("keybind-set-click", this._listeners.settingsClicked)
                 }
                 _setupHeader() {
                     this.hide(this._selectors.headerClash), this.hide(this._selectors.headerDefault), this._headerType === C.HEADER_CLASH && this._clashRoster ? (this.addImg(this._clashRoster.logoUrl, this._selectors.headerClashLogo), this.addInnerHtml(this._clashRoster.shortName, this._selectors.headerClashShortName), this.addInnerHtml(this._clashRoster.name, this._selectors.headerClashName), this.show(this._selectors.headerClash)) : (this.addInnerHtml(i.tra.get("parties_comm_panel_header_text_party_only"), this._selectors.headerText), this.show(this._selectors.headerDefault))
@@ -502,13 +502,13 @@
                     this._participants = e || [], this._participantMap = new Map(this._participants.map((e => [e.puuid, e]))), this._removeOldParticipants(), this._updateParticipants(), this._refreshConnectionState()
                 }
                 teamVoicePluginEnabledUpdate(e) {
-                    this._teamVoicePluginEnabled = e, this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), this._updateKeyBindIndicators()
+                    this._teamVoicePluginEnabled = e, this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), this._updateKeyBindIndicators(), this._updatePartyToggleState(), this._updateTeamToggleState()
                 }
                 teamVoiceEnabledUpdated(e) {
                     this._teamVoiceEnabled = e
                 }
                 teamVoiceAvailabilityUpdated(e) {
-                    this._teamVoiceAvailability = e && e.available, this._teamVoiceAvailabilityReason = e && e.reason || null, this._updateTeamToggleState(), this._updateTeamUnavailableStatus()
+                    e && (this._teamVoiceAvailability = e.available, this._teamVoiceAvailabilityReason = e.reason || null, this._updateTeamToggleState(), this._updateTeamUnavailableStatus())
                 }
                 teamVoiceSessionUpdated(e) {
                     this._teamVoicePluginEnabled && (this._teamSession = e, this._teamParticipants = e && e.participants || [], this._teamParticipantMap = new Map(this._teamParticipants.map((e => [e.puuid, e]))), this._updateTeamParticipants(), this._refreshTeamConnectionState())
@@ -589,12 +589,12 @@
                 }
                 _applyConnectionStateText() {
                     const e = this._teamVoicePluginEnabled ? this._selectors.connectionStatus : this._selectors.connectionState;
-                    this.addClass(this._connectionState, e), this.addInnerHtml(i.tra.get(`parties_comm_panel_state_${this._connectionState}`), e), this._updateToggleState(this._selectors.connectionToggle, this._connectionState), this._teamVoicePluginEnabled && this._updateToggleState(this._selectors.partyToggle, this._connectionState)
+                    this.addClass(this._connectionState, e), this.addInnerHtml(i.tra.get(`parties_comm_panel_state_${this._connectionState}`), e), this._updateToggleState(this._selectors.connectionToggle, this._connectionState), this._teamVoicePluginEnabled && (this._updateToggleState(this._selectors.partyToggle, this._connectionState), this._updatePartyToggleState())
                 }
                 _updateConnectionState(e) {
                     const t = this._connectionState;
                     if (t !== e) {
-                        this._connectionState = e, this._updateToggleState(this._selectors.connectionToggle, e), this._teamVoicePluginEnabled && this._updateToggleState(this._selectors.partyToggle, e);
+                        this._connectionState = e, this._updateToggleState(this._selectors.connectionToggle, e), this._teamVoicePluginEnabled && (this._updateToggleState(this._selectors.partyToggle, e), this._updatePartyToggleState());
                         const n = this._teamVoicePluginEnabled ? this._selectors.connectionStatus : this._selectors.connectionState;
                         this.removeClass(t, n), this.addClass(this._connectionState, n), this.addInnerHtml(i.tra.get(`parties_comm_panel_state_${this._connectionState}`), n)
                     }
@@ -603,7 +603,7 @@
                     this._teamVoicePluginEnabled ? (this.removeClass("hide", this._selectors.sectionDivider), this.removeClass("hide", this._selectors.teamHeader)) : (this.addClass("hide", this._selectors.sectionDivider), this.addClass("hide", this._selectors.teamHeader)), this._updateTeamUnavailableStatus()
                 }
                 _updateTeamUnavailableStatus() {
-                    this._teamVoicePluginEnabled && (this._teamVoiceAvailability || this._teamConnectionState === f.VOICE_CONNECTED_STATE ? (this.addClass("hide", this._selectors.teamUnavailable), this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !1), this._removeTeamToggleRestrictionTooltip()) : this._teamVoiceAvailabilityReason === w ? (this.addClass("hide", this._selectors.teamUnavailable), this.addClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), this._attachTeamToggleRestrictionTooltip()) : (this.addClass("hide", this._selectors.teamUnavailable), this.addClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), this._removeTeamToggleRestrictionTooltip()))
+                    this._teamVoicePluginEnabled && (this._teamVoiceAvailability || this._teamConnectionState === f.VOICE_CONNECTED_STATE ? (this.addClass("hide", this._selectors.teamUnavailable), this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._removeTeamToggleRestrictionTooltip()) : this._teamVoiceAvailabilityReason === w ? (this.addClass("hide", this._selectors.teamUnavailable), this.addClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), this._attachTeamToggleRestrictionTooltip()) : (this.addClass("hide", this._selectors.teamUnavailable), this.addClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), this._removeTeamToggleRestrictionTooltip()))
                 }
                 _updateConnectionBarVisibility() {
                     const e = this.shadowRoot.querySelector(this._selectors.connectionBar),
@@ -613,7 +613,7 @@
                     this._teamVoicePluginEnabled ? (e && (e.style.display = "none"), t && (t.style.display = "none"), n && (n.style.display = ""), r && (r.style.display = "")) : (e && (e.style.display = "", e.classList.remove("connected", "disconnected", "connecting"), e.classList.add(this._connectionState)), t && (t.style.display = "none"), n && (n.style.display = "none"), r && (r.style.display = "none"))
                 }
                 _updateTeamConnectionState(e) {
-                    this._teamConnectionState !== e && (this._teamConnectionState = e, this._updatingTeamToggle = !0, this._updateToggleState(this._selectors.teamToggle, e), this._updatingTeamToggle = !1, this._updateTeamToggleState(), e === f.VOICE_CONNECTED_STATE && this._updateTeamUnavailableStatus())
+                    this._teamConnectionState !== e && (this._teamConnectionState = e, this._updatingTeamToggle = !0, this._updateToggleState(this._selectors.teamToggle, e), this._updatingTeamToggle = !1, this._updateTeamToggleState(), this._updateTeamUnavailableStatus())
                 }
                 _updateTeamToggleState() {
                     if (this._teamVoiceAvailabilityReason === w) return void this._setTeamToggleRestricted(!0);
@@ -923,7 +923,7 @@
                 }
                 _updatePartyToggleState() {
                     if (!this._teamVoicePluginEnabled) return;
-                    this._availability && this._availability.voiceChannelAvailable || this._connectionState === f.VOICE_CONNECTED_STATE ? this._setToggleRestricted(this._selectors.partyToggle, !1) : this._setToggleRestricted(this._selectors.partyToggle, !0)
+                    this._availability && this._availability.voiceChannelAvailable || this._connectionState === f.VOICE_CONNECTED_STATE ? this._updateToggleState(this._selectors.partyToggle, this._connectionState) : this._setToggleRestricted(this._selectors.partyToggle, !0)
                 }
                 _attachTeamToggleRestrictionTooltip() {
                     const e = this.shadowRoot.querySelector(this._selectors.teamToggle);
@@ -1748,12 +1748,12 @@
                         r = "PLUGIN_DISABLED" === n || "NOT_IN_ACTIVE_GAME_PHASE" === n;
                     this._teamVoiceAvailability = t || !r, this._updateCombinedAvailability()
                 }
-                _updateCombinedAvailability() {
-                    const e = this._premadeVoiceAvailability,
-                        t = this._teamVoiceAvailability;
-                    this._voiceDisabled = !(e && e.showUI || t), this._handleVoiceDisabled(), this._disabledAfterLogin = e && e.disabledAfterLogin;
-                    const n = e && e.voiceChannelAvailable || t || this._connectionState === b.VOICE_CONNECTED_STATE || this._teamConnectionState === b.VOICE_CONNECTED_STATE;
-                    !this._disabledAfterLogin && n || this._buttonDisabled ? n && this._buttonDisabled && (this._buttonDisabled = !1, this.removeClass("button-disabled", this._elements.voiceButton), this._voicePanelElement && this._voicePanelElement.dispatchEvent(new Event("voiceButtonEnabled")), this.__updateCombinedAvailabilitydetachDisabledTooltip()) : (this._buttonDisabled = !0, this.addClass("button-disabled", this._elements.voiceButton), this._checkIfTooltipNeeded(), this._hidePanel())
+                _updateCombinedAvailability(e) {
+                    const t = this._premadeVoiceAvailability,
+                        n = this._teamVoiceAvailability;
+                    e || (this._voiceDisabled = !(t && t.showUI || n), this._handleVoiceDisabled(), this._disabledAfterLogin = t && t.disabledAfterLogin);
+                    const r = t && t.voiceChannelAvailable || n || this._connectionState === b.VOICE_CONNECTED_STATE || this._teamConnectionState === b.VOICE_CONNECTED_STATE;
+                    e || !this._disabledAfterLogin && r || this._buttonDisabled ? r && this._buttonDisabled && (this._buttonDisabled = !1, this.removeClass("button-disabled", this._elements.voiceButton), this._voicePanelElement && this._voicePanelElement.dispatchEvent(new Event("voiceButtonEnabled")), this._detachDisabledTooltip()) : (this._buttonDisabled = !0, this.addClass("button-disabled", this._elements.voiceButton), this._checkIfTooltipNeeded(), this._hidePanel())
                 }
                 lobbyUpdated(e) {
                     const t = e && e.gameConfig,
@@ -1853,14 +1853,14 @@
                         this._lockOutMemberJoinSound = !1
                     }), 500)) : this._connectionState === b.VOICE_CONNECTED_STATE && t === b.VOICE_DISCONNECTED_STATE || this._connectionState === b.VOICE_CONNECTED_STATE && n < this._previousParticipantCount ? this._playLeaveSound() : this._connectionState === b.VOICE_CONNECTED_STATE && n > this._previousParticipantCount && !this._lockOutMemberJoinSound && this._playDelayedJoinSound();
                     const r = this._connectionState !== t;
-                    this._connectionState = t, this._previousParticipantCount = n, r && t === b.VOICE_CONNECTED_STATE && this._updateCombinedAvailability()
+                    this._connectionState = t, this._previousParticipantCount = n, r && this._updateCombinedAvailability(!0)
                 }
                 teamVoiceSessionUpdated(e) {
                     const t = e && e.participants && e.participants.length > 0,
                         n = t ? b.VOICE_CONNECTED_STATE : b.VOICE_DISCONNECTED_STATE;
                     this._teamVoicePluginEnabled && (!this._previousTeamSessionActive && t ? this._playTeamToggleOnSound() : this._previousTeamSessionActive && !t && this._playTeamToggleOffSound());
                     const r = this._teamConnectionState !== n;
-                    this._teamConnectionState = n, this._previousTeamSessionActive = t, r && n === b.VOICE_CONNECTED_STATE && this._updateCombinedAvailability()
+                    this._teamConnectionState = n, this._previousTeamSessionActive = t, r && this._updateCombinedAvailability(!0)
                 }
                 _handleKeyDown(e) {
                     this._teamVoicePluginEnabled && (this._pttTeamKey && this._teamConnectionState === b.VOICE_CONNECTED_STATE && e.key === this._pttTeamKey && !e.repeat && (this._teamPttReleaseSound.stop(), this._teamPttClickSound.play()), this._pttKey && this._connectionState === b.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && !e.repeat && (this._partyPttReleaseSound.stop(), this._partyPttClickSound.play()))

@@ -1524,13 +1524,13 @@
                 {
                     "name": "DamageAPRatio",
                     "values": [
+                        0.550000011920929,
+                        0.6000000238418579,
+                        0.6499999761581421,
                         0.699999988079071,
                         0.75,
                         0.800000011920929,
-                        0.8500000238418579,
-                        0.8999999761581421,
-                        0.949999988079071,
-                        1.0
+                        0.8500000238418579
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1605,7 +1605,7 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mNumber": 0.5,
+                            "mNumber": 0.4000000059604645,
                             "__type": "NumberCalculationPart"
                         }
                     ],
@@ -3287,6 +3287,7 @@
     "{1005fb08}": {
         "mOverrides": [
             {
+                "mForceOverride": true,
                 "mOverrideContexts": [
                     {
                         "mMapID": 11,
@@ -3297,90 +3298,18 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "Items/1103",
-                            "Items/2003"
-                        ],
-                        "__type": "ItemRecommendationOverrideStartingItemBundle"
-                    },
-                    {
-                        "items": [
-                            "Items/1055",
-                            "Items/2003"
-                        ],
-                        "__type": "ItemRecommendationOverrideStartingItemBundle"
-                    },
-                    {
-                        "items": [
                             "Items/1101",
                             "Items/2003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
-                    }
-                ],
-                "mRecItemRanges": [
-                    {
-                        "items": [
-                            "Items/2510",
-                            "Items/3078",
-                            "Items/6610"
-                        ],
-                        "MaxCompletedItems": 0,
-                        "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "Items/3047",
-                            "Items/3111"
+                            "Items/1102",
+                            "Items/2003"
                         ],
-                        "MaxCompletedItems": 1,
-                        "__type": "ItemRecOverrideRange"
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
-                    {
-                        "items": [
-                            "Items/4633",
-                            "Items/6653",
-                            "Items/3053"
-                        ],
-                        "MaxCompletedItems": 2,
-                        "__type": "ItemRecOverrideRange"
-                    },
-                    {
-                        "items": [
-                            "Items/6333",
-                            "Items/6665",
-                            "Items/8010"
-                        ],
-                        "MaxCompletedItems": 3,
-                        "__type": "ItemRecOverrideRange"
-                    },
-                    {
-                        "items": [
-                            "Items/3161",
-                            "Items/6665",
-                            "Items/3157",
-                            "Items/3115",
-                            "Items/3074",
-                            "Items/3748",
-                            "Items/6631",
-                            "Items/6675",
-                            "Items/3089",
-                            "Items/2517",
-                            "Items/8010"
-                        ],
-                        "__type": "ItemRecOverrideRange"
-                    }
-                ],
-                "__type": "ItemRecommendationOverride"
-            },
-            {
-                "mOverrideContexts": [
-                    {
-                        "mMapID": 12,
-                        "mModeNameStringId": "ARAM",
-                        "__type": "ItemRecommendationOverrideContext"
-                    }
-                ],
-                "StartingItemBundles": [
                     {
                         "items": [
                             "Items/1103",
@@ -3397,7 +3326,7 @@
                     },
                     {
                         "items": [
-                            "Items/1101",
+                            "Items/1054",
                             "Items/2003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
@@ -3406,9 +3335,9 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "Items/2510",
-                            "Items/3078",
-                            "Items/6610"
+                            "Items/3115",
+                            "Items/3073",
+                            "Items/3078"
                         ],
                         "MaxCompletedItems": 0,
                         "__type": "ItemRecOverrideRange"
@@ -3416,128 +3345,40 @@
                     {
                         "items": [
                             "Items/3047",
-                            "Items/3111"
+                            "Items/3111",
+                            "Items/3158"
                         ],
-                        "MaxCompletedItems": 1,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
                             "Items/4633",
-                            "Items/6653",
-                            "Items/3053"
-                        ],
-                        "MaxCompletedItems": 2,
-                        "__type": "ItemRecOverrideRange"
-                    },
-                    {
-                        "items": [
-                            "Items/6333",
-                            "Items/6665",
-                            "Items/8010"
-                        ],
-                        "MaxCompletedItems": 3,
-                        "__type": "ItemRecOverrideRange"
-                    },
-                    {
-                        "items": [
                             "Items/3161",
-                            "Items/6665",
-                            "Items/3157",
-                            "Items/3115",
-                            "Items/3074",
-                            "Items/3748",
-                            "Items/6631",
-                            "Items/6675",
-                            "Items/3089",
-                            "Items/2517",
-                            "Items/8010"
-                        ],
-                        "__type": "ItemRecOverrideRange"
-                    }
-                ],
-                "__type": "ItemRecommendationOverride"
-            },
-            {
-                "mOverrideContexts": [
-                    {
-                        "mMapID": 30,
-                        "mModeNameStringId": "cherry",
-                        "__type": "ItemRecommendationOverrideContext"
-                    }
-                ],
-                "StartingItemBundles": [
-                    {
-                        "items": [
-                            "Items/1103",
-                            "Items/2003"
-                        ],
-                        "__type": "ItemRecommendationOverrideStartingItemBundle"
-                    },
-                    {
-                        "items": [
-                            "Items/1055",
-                            "Items/2003"
-                        ],
-                        "__type": "ItemRecommendationOverrideStartingItemBundle"
-                    },
-                    {
-                        "items": [
-                            "Items/1101",
-                            "Items/2003"
-                        ],
-                        "__type": "ItemRecommendationOverrideStartingItemBundle"
-                    }
-                ],
-                "mRecItemRanges": [
-                    {
-                        "items": [
-                            "Items/2510",
-                            "Items/3078",
                             "Items/6610"
                         ],
-                        "MaxCompletedItems": 0,
-                        "__type": "ItemRecOverrideRange"
-                    },
-                    {
-                        "items": [
-                            "Items/3047",
-                            "Items/3111"
-                        ],
                         "MaxCompletedItems": 1,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "Items/4633",
+                            "Items/6610",
+                            "Items/3161",
+                            "Items/4010",
                             "Items/6653",
-                            "Items/3053"
+                            "Items/3053",
+                            "Items/6333"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "Items/6333",
-                            "Items/6665",
-                            "Items/8010"
-                        ],
-                        "MaxCompletedItems": 3,
-                        "__type": "ItemRecOverrideRange"
-                    },
-                    {
-                        "items": [
-                            "Items/3161",
-                            "Items/6665",
-                            "Items/3157",
-                            "Items/3115",
-                            "Items/3074",
-                            "Items/3748",
-                            "Items/6631",
-                            "Items/6675",
                             "Items/3089",
-                            "Items/2517",
-                            "Items/8010"
+                            "Items/3157",
+                            "Items/3135",
+                            "Items/4010",
+                            "Items/6665",
+                            "Items/3161"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -3583,23 +3424,6 @@
                     0,
                     2,
                     1,
-                    0
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
-                "MapId": 11,
-                "Position": "Top",
-                "mDefaultPriority": [
-                    3,
-                    0,
-                    2,
-                    1
-                ],
-                "mEarlyLevelOverrides": [
-                    0,
-                    1,
-                    2,
                     0
                 ],
                 "__type": "RecSpellRankUpInfo"

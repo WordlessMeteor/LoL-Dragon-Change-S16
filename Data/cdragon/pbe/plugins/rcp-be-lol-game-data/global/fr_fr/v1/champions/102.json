@@ -772,7 +772,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Shyvana gagne un bouclier, de la vitesse de déplacement et, après un court délai, la zone autour d'elle explose.  Lorsqu'elle est en forme de dragon, l'explosion lui octroie des soins si elle touche un champion ennemi.",
-            "dynamicDescription": "Spell_ShyvanaW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana s'enveloppe de flammes pendant @Duration@ sec, gagnant un <shield>bouclier de @Calc_Shield@</shield>, augmenté de <shield>@Calc_Shield_Per_Nearby_Champion@</shield> PV par champion ennemi à proximité et <speed>@MoveSpeed@ de vitesse de déplacement</speed>, augmentée à <speed>@MoveSpeedTowardsEnemies@</speed> lorsqu'elle se dirige vers des champions ennemis.<br><br>Lorsque l'effet prend fin, que le <shield>bouclier</shield> se brise ou lorsqu'elle <recast>réactive</recast> la compétence, la zone autour d'elle explose, infligeant <magicDamage>@Damage@ pts de dégâts magiques</magicDamage>.<br><br><keywordMajor>Forme de dragon</keywordMajor> : si la détonation touche un champion ennemi, Shyvana <healing> @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ PV manquants</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -922,7 +922,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Shyvana lance une boule de feu qui explose en touchant un grand ennemi et le ralentit. En forme de dragon, la boule de feu traverse et explose au contact des grands ennemis, laissant derrière elle une traînée de feu.",
-            "dynamicDescription": "Spell_ShyvanaE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana lance une boule de feu vers l'endroit ciblé, infligeant <magicDamage>@Damage@ + @Calc_Max_Health_Damage@ des PV max en dégâts magiques</magicDamage> et <status>ralentissant les ennemis de @Calc_Slow@ pendant @SlowDuration@ sec</status>. La boule de feu explose au contact d'un ennemi ou lorsqu'elle atteint sa distance maximum.<br><br><keywordMajor>Forme de dragon :</keywordMajor> la boule de feu de Shyvana est plus grande et transperce les ennemis. Lorsque la boule de feu touche un champion, un grand monstre ou qu'elle atteint sa distance maximum, elle déclenche une impulsion de feu qui inflige <magicDamage>@Calc_Dragon_Damage@ + @Calc_Max_Health_Dragon_Damage@ des PV max en dégâts magiques</magicDamage> et <status>ralentit les ennemis de @Calc_Slow_Dragon@ pendant @SlowDuration@ sec</status>. La boule de feu laisse une traînée derrière elle pendant @GroundLingerDuration@ sec, infligeant <magicDamage>@DamagePerSecond@ pts de dégâts magiques par seconde</magicDamage>. @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

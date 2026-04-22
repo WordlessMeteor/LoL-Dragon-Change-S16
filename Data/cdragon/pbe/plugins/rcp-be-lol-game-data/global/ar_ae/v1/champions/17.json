@@ -1446,23 +1446,23 @@
         }
     ],
     "passive": {
-        "name": "Buff_TeemoPassive_Name",
+        "name": "حرب العصابات",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.png",
         "abilityVideoPath": "champion-abilities/0017/ability_0017_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0017/ability_0017_P1.jpg",
-        "description": "Buff_TeemoPassive_Summary"
+        "description": "إذا بقي تيمو ساكنًا ولم يقم بأي إجراء لفترة قصيرة، يصبح غير مرئي بشكل دائم. وإن كان بين الأعشاب، يستطيع تيمو الدخول في طور غير مرئي والحفاظ عليه أثناء الحركة. بعد خروجه من الطور غير المرئي، يكسب تيمو عنصر المفاجأة، مما يزيد سرعة هجومه لبضع ثوانٍ."
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "Spell_TeemoQ_Name",
+            "name": "سهم العمى",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_TeemoQ_Summary",
-            "dynamicDescription": "Spell_TeemoQ_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "يحجب رؤية العدو بسم قوي التأثير، مما يلحق الضرر بالوحدة المستهدفة ويعميها طوال فترة التأثير.",
+            "dynamicDescription": "يطلق تيمو سهمًا <status>يعمي</status> هدفه لمدة @BlindDuration@ث ويلحق <magicDamage>@CalculatedDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 680.0,
                 680.0,
@@ -1605,13 +1605,13 @@
         },
         {
             "spellKey": "w",
-            "name": "Spell_TeemoW_Name",
+            "name": "التحرك السريع",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_TeemoW_Summary",
+            "description": "يركض تيمو في الأرجاء، مما يزيد سرعة حركته بشكل تلقائي إلى أن يتعرض إلى إصابة من قبل بطل معادٍ أو برج حماية. يمكن لتيمو الجري لكسب سرعة حركة إضافية لا تتوقف عند تلقيه الضرر لفترة قصيرة.",
             "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> يكسب تيمو <speed>@PassiveMoveSpeedBonus*100@% سرعة حركة</speed> إذا لم يتلقَ الضرر على يد بطل أو برج حماية معادٍ في آخر @PassiveCooldownOnDamageTaken@ث.<br><br><spellActive>تأثير نشط:</spellActive> يجري تيمو، فيكسب <speed>@ActiveMoveSpeedBonus*100@% سرعة حركة</speed> لا يفقدها لدى التعرض لإصابة لمدة @ActiveMoveSpeedBuffDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
@@ -1755,7 +1755,7 @@
         },
         {
             "spellKey": "e",
-            "name": "Spell_TeemoE_Name",
+            "name": "الرمية السامة",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_E1.jpg",
@@ -1905,14 +1905,14 @@
         },
         {
             "spellKey": "r",
-            "name": "Spell_TeemoR_Name",
+            "name": "الفخ الزعاف",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.png",
             "abilityVideoPath": "champion-abilities/0017/ability_0017_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0017/ability_0017_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "Spell_TeemoR_Summary",
-            "dynamicDescription": "Spell_TeemoR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "يرمي تيمو فخًا مسمومًا متفجرًا باستخدام أحد الفطور المخزنة في جعبته. إذا خطا أحد الأعداء فوق الفخ، تنطلق منه سحابة سامة، مما يبطئ الأعداء ويلحق الضرر بهم بمرور الوقت. إذا رمى تيمو بفطر على فطر آخر، يرتد عنه، فيكسب مدى إضافيًا.",
+            "dynamicDescription": "يرمي تيمو فخًا على شكل فطر ينفجر عند الدوس عليه. تتسبب الفخاخ في <status>الإبطاء</status> بنسبة @SlowAmount@% وتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> طيلة @DebuffDuration@ث. يتم كشف الأعداء لنفس المدة.<br><br>تستمر الفخاخ لمدة @MushroomDuration@د وتكون خفية. يرتد الفِطر عند إلقائه على فطر آخر قبل الوصول إلى موقعه. تمتلك هذه القدرة @MaxAmmo@ من الشحنات (تبلغ فترة التجديد @AmmoRechargeTime@ث).<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 750.0,

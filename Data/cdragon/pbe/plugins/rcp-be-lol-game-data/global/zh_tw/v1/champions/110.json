@@ -1528,7 +1528,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "法洛士匯聚能量射出一發極強力的箭擊，根據聚氣的時間來決定額外增加的射程與傷害。",
-            "dynamicDescription": "Spell_VarusQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>開始蓄力：</attention>法洛士拉滿弓預備下一次射擊，使自身<status>緩速</status>@MoveSpeedMod*-100@%。@MaxChannelDuration@秒後，若沒有將箭射出，法洛士會取消此技能並返還@ManaRefund*100@%魔力消耗。<br><br><attention>放箭：</attention>法洛士將箭射出，造成<physicalDamage>@TotalDamageMinTooltip@物理傷害</physicalDamage>，每命中一位敵軍便會降低@FalloffPercent*100@%(最低降為@MinDamagePercent*100@%)。根據蓄力時間，傷害和<keywordMajor>衰竭</keywordMajor>的觸發效果最多提升@MaxChargeAmp*100@%(最高<physicalDamage>@TotalDamageMax@</physicalDamage>物理傷害)。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1678,7 +1678,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "被動：法洛士的普攻額外造成魔法傷害並附加衰竭效果。法洛士的其他技能可觸發衰竭效果，根據目標的最大生命造成魔法傷害。主動：法洛士強化他下一次的破甲箭。",
-            "dynamicDescription": "Spell_VarusW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>法洛士的普攻造成額外<magicDamage>@OnHitDamage@魔法傷害</magicDamage>，並附加一層<keywordMajor>衰竭</keywordMajor>，持續@DebuffDuration@秒(最多@MaxStacks@層)。<br><br>法洛士的其他技能可引爆<keywordMajor>衰竭</keywordMajor>堆層，每層造成<magicDamage>@PercentHPPerStack@最大生命的魔法傷害</magicDamage>(最高<magicDamage>@MaxPercentHPPerStack@最大生命的傷害</magicDamage>)。引爆英雄以及史詩級野怪的<keywordMajor>衰竭</keywordMajor>堆層時，還會縮短基礎技能的冷卻時間，每層縮短@CDRPerBlightStack*100@%最大冷卻時間。<br><br><spellActive>主動：</spellActive>法洛士的下一個<spellName>破甲箭</spellName>造成額外<magicDamage>@QEmpowerPercentHP@已損失生命的魔法傷害</magicDamage>，傷害會根據蓄力時間提升，最多增加<magicDamage>@MaxQEmpowerPercentHP@已損失生命的傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 750.0,
                 750.0,
@@ -1828,7 +1828,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "法洛士對目標地點施放箭雨，造成物理傷害並褻瀆該區域。遭受污染的區域將會降低敵人的跑速、自我治療與生命恢復能力。",
-            "dynamicDescription": "Spell_VarusE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "法洛士發射一陣箭雨，造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>，並汙染目標區域@GroundDuration@秒，<status>緩速</status>敵軍@SlowPercent*-100@%，並附加@GrievousAmount*100@%重創效果。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1978,7 +1978,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "法洛士發射出捲鬚般的墮落能量，纏繞住首個命中的敵方英雄，使其受到硬控場效果影響，此效果同時再擴散至周圍尚未受到感染的英雄。",
-            "dynamicDescription": "Spell_VarusR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "法洛士發射扭曲的墮落能量，<status>定身</status>首位命中的英雄@RootDuration@秒，並造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。遭<status>定身</status>的敵軍會在持續時間內獲得@PassiveStacks@層<keywordMajor>衰竭</keywordMajor>。<br><br>墮落能量會從目標擴散到未受感染的敵方英雄。若受到感染，他們會受到相同的傷害並遭<status>定身</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

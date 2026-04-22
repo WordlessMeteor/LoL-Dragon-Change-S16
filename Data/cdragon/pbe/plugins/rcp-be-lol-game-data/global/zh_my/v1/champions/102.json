@@ -772,7 +772,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "希瓦娜获得护盾和移动速度，短暂延迟后，她周围的区域会发生爆炸。圣龙形态：爆炸命中敌方英雄时会治疗希瓦娜。",
-            "dynamicDescription": "Spell_ShyvanaW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "希瓦娜在@Duration@秒内被烈焰包裹，获得<shield>@Calc_Shield@护盾</shield>，附近每有一名敌方英雄，护盾值就会提升<shield>@Calc_Shield_Per_Nearby_Champion@</shield>，并获得<speed>@MoveSpeed@移动速度</speed>，朝敌方英雄移动时提升至<speed>@MoveSpeedTowardsEnemies@</speed>。<br><br>当效果结束、<shield>护盾</shield>破裂或<recast>重施技能</recast>时，她周围的区域会发生爆炸，造成<magicDamage>@Damage@魔法伤害</magicDamage>。<br><br><keywordMajor>圣龙形态：</keywordMajor>如果爆炸命中敌方英雄，希瓦娜会回复<healing>@Calc_Base_Heal@ + @Calc_Missing_Health_Heal@已损失生命值</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -922,7 +922,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "希瓦娜发射一枚火球，在命中大型目标时会引发爆炸并造成减速效果。圣龙形态：火球会穿透敌人，并在命中大型敌人时引发爆炸，留下一条烈焰轨迹。",
-            "dynamicDescription": "Spell_ShyvanaE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "希瓦娜朝目标位置发射一颗火球，造成<magicDamage>@Damage@ + @Calc_Max_Health_Damage@最大生命值的魔法伤害</magicDamage>和<status>@Calc_Slow@减速效果，持续@SlowDuration@秒</status>。火球在命中敌人或抵达终点时会爆炸。<br><br><keywordMajor>圣龙形态</keywordMajor>希瓦娜的火球会变得更大，且能够穿透敌人。当命中英雄、大型野怪或抵达终点时，火球会触发一道火焰冲击波，造成<magicDamage>@Calc_Dragon_Damage@ + @Calc_Max_Health_Dragon_Damage@最大生命值的魔法伤害</magicDamage>和<status>@Calc_Slow_Dragon@减速效果，持续@SlowDuration@秒</status>。火球会在其路径上留下持续@GroundLingerDuration@秒的轨迹，每秒造成<magicDamage>@DamagePerSecond@魔法伤害</magicDamage>。 @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
