@@ -1839,7 +1839,7 @@
                     0.4000000059604645
                 ]
             },
-            "desc": "<keywordMajor>Lanzamiento automático</keywordMajor><br>Obtienes <speed>velocidad de movimiento</speed> y creas tres llamas que orbitan a tu alrededor y atacan al enemigo visible más cercano dentro de su alcance para infligirle <magicDamage>daño mágico</magicDamage>.",
+            "desc": "<keywordMajor>Lanzamiento automático</keywordMajor>:<br>Obtienes <speed>velocidad de movimiento</speed> y creas tres llamas que orbitan a tu alrededor y atacan al enemigo visible más cercano dentro de su alcance para infligirle <magicDamage>daño mágico</magicDamage>.",
             "iconLarge": "assets/ux/cherry/augments/icons/firfox_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/firfox_small.png",
             "id": 308,
@@ -7781,10 +7781,10 @@
                     0.0,
                     0.0,
                     0.0,
-                    0.029999999329447746,
-                    0.029999999329447746,
-                    0.029999999329447746,
-                    0.029999999329447746
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ],
                 "BaseDamageMax": [
                     100.0,
@@ -7825,11 +7825,11 @@
                 "MaxBeeStacks": [
                     8.0,
                     8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    12.0,
+                    16.0,
+                    99.0,
+                    99.0,
+                    99.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -7839,6 +7839,15 @@
                     3.0,
                     3.0,
                     3.0
+                ],
+                "SpellCooldown": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "StartingBees": [
                     0.0,
@@ -8612,13 +8621,13 @@
                     0.800000011920929
                 ]
             },
-            "desc": "Otorga @BonusLives@ <attention>resurrecciones</attention> adicionales y empiezas a reanimarte tras morir.<br><br>Al <attention>revivir</attention>, <status>empujas</status> a los enemigos cercanos y revives con un tamaño reducido y menos <scaleHealth>vida máxima</scaleHealth>.",
+            "desc": "Otorga @BonusLives@ <attention>resurrección(es)</attention> adicional(es) y empiezas a reanimarte tras morir.<br><br>Al <attention>revivir</attention>, <status>empujas</status> a los enemigos cercanos y revives con un tamaño reducido y menos <scaleHealth>vida máxima</scaleHealth>.",
             "iconLarge": "assets/ux/cherry/augments/icons/nesting_doll.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nesting_doll_small.png",
             "id": 177,
             "name": "Muñecas matrioska",
             "rarity": 1,
-            "tooltip": "Comienzas a <attention>revivir</attention> de forma automática tras @ReviveArmTime@ s. Además, puedes volver a <attention>revivir</attention> @BonusLives@ veces más. Cada vez que mueres, <attention>revives</attention> con un tamaño reducido y un <scaleHealth>@ReviveMod*100@% de vida máxima</scaleHealth>.<br><br>Al <attention>revivir</attention>, <status>empujas</status> a los enemigos a tu alrededor."
+            "tooltip": "Comienzas a <attention>revivir</attention> de forma automática tras @ReviveArmTime@ s. Además, puedes volver a <attention>revivir</attention> @BonusLives@ vez/veces más. Cada vez que mueres, <attention>revives</attention> con un tamaño reducido y un <scaleHealth>@ReviveMod*100@% de vida máxima</scaleHealth>.<br><br>Al <attention>revivir</attention>, <status>empujas</status> a los enemigos a tu alrededor."
         },
         {
             "apiName": "TapDancer",
@@ -8748,13 +8757,13 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Al atacar, disparas @AdditionalBolts@ proyectiles que infligen <physicalDamage>daño físico</physicalDamage> cada uno y aplican tus {{ Item_Keyword_OnHit }}.",
+            "desc": "Al atacar, disparas @AdditionalBolts@ proyectiles que infligen <physicalDamage>daño físico</physicalDamage> cada uno y aplican tus efectos {{ Item_Keyword_OnHit }}.",
             "iconLarge": "assets/ux/cherry/augments/icons/fanthehammer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fanthehammer_small.png",
             "id": 220,
             "name": "Martillazo de dispersión",
             "rarity": 2,
-            "tooltip": "Al atacar, disparas @AdditionalBolts@ proyectiles que infligen <physicalDamage>@DamagePerBolt@ de daño físico</physicalDamage> cada uno. Cada dirección cardinal tiene un enfriamiento de @Cooldown@ s.<br><br>Cada proyectil puede asestar <crit>impactos críticos</crit> y aplica {{ Item_Keyword_OnHit }} con un @OnHitRatio*100@% de efectividad."
+            "tooltip": "Al atacar, disparas @AdditionalBolts@ proyectiles que infligen <physicalDamage>@DamagePerBolt@ de daño físico</physicalDamage> cada uno. Cada dirección cardinal tiene un enfriamiento de @Cooldown@ s.<br><br>Cada proyectil puede asestar <crit>impactos críticos</crit> y aplica efectos {{ Item_Keyword_OnHit }} con un @OnHitRatio*100@% de efectividad."
         },
         {
             "apiName": "ReplaceAugment",
@@ -11023,7 +11032,7 @@
                     5.0
                 ]
             },
-            "desc": "Tus <healing>curaciones</healing> y <shield>escudos</shield> pueden asestar <crit>impactos críticos</crit> que infligen @CriticalHealCalc@ adicional.<br><br>Obtienes un <crit>%i:scaleCrit% @CritChance*100@% de probabilidad de crítico</crit>. ",
+            "desc": "Tus <healing>curaciones</healing> y <shield>escudos</shield> pueden realizar <crit>impactos críticos</crit> que otorgan un @CriticalHealCalc@ de valor adicional.<br><br>Obtienes un <crit>%i:scaleCrit% @CritChance*100@% de probabilidad de crítico</crit>.",
             "iconLarge": "assets/ux/cherry/augments/icons/criticalhealing_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/criticalhealing_small.png",
             "id": 118,
@@ -12565,7 +12574,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/gain_stat_anvil.png",
             "iconSmall": "assets/ux/cherry/augments/icons/gain_stat_anvil_small.png",
             "id": 355,
-            "name": "Obtienes 1 yunque de estadísticas.",
+            "name": "Obtienes 1 yunque de estadísticas",
             "rarity": 4,
             "tooltip": "Obtienes 1 %i:StatAnvil% yunque de estadísticas aleatorio."
         },
@@ -12679,13 +12688,13 @@
                     5.0
                 ]
             },
-            "desc": "<healing>Restaura un @HealthRestorePercent@% de la vida</healing> que hayas sacrificado a Tahm Kench.<br><br>Otorga un <keywordMajor>@AnvilsGranted@ yunque de estadísticas de plata</keywordMajor>.",
+            "desc": "<healing>Restaura un @HealthRestorePercent@% de la vida</healing> que hayas sacrificado a Tahm Kench.<br><br>Otorga <keywordMajor>@AnvilsGranted@ yunque de estadísticas de plata</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/power_large.arena_2026_s2.png",
             "iconSmall": "assets/ux/cherry/augments/icons/power_small.arena_2026_s2.png",
             "id": 366,
             "name": "Abstención del poder",
             "rarity": 4,
-            "tooltip": "<healing>Restaura un @HealthRestorePercent@% de la vida</healing> que hayas sacrificado a Tahm Kench.<br><br>Otorga un <keywordMajor>@AnvilsGranted@ yunque de estadísticas de plata</keywordMajor>."
+            "tooltip": "<healing>Restaura un @HealthRestorePercent@% de la vida</healing> que hayas sacrificado a Tahm Kench.<br><br>Otorga <keywordMajor>@AnvilsGranted@ yunque de estadísticas de plata</keywordMajor>."
         },
         {
             "apiName": "SummonersRoulette",
@@ -13759,11 +13768,11 @@
                 "BaseDamage": [
                     60.0,
                     60.0,
-                    100.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    180.0,
+                    270.0,
+                    270.0,
+                    270.0,
+                    270.0
                 ],
                 "CDIfPickedUp": [
                     1.5,
@@ -13802,13 +13811,13 @@
                     2.0
                 ],
                 "PerLevelDamage": [
-                    10.0,
-                    10.0,
-                    12.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "ShredAmount": [
                     0.20000000298023224,
@@ -13822,11 +13831,11 @@
                 "SlowAmount": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
                     0.44999998807907104,
-                    0.44999998807907104,
-                    0.44999998807907104,
-                    0.44999998807907104
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "SlowDuration": [
                     1.5,

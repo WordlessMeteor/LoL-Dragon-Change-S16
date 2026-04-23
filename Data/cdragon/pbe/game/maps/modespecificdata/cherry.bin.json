@@ -4223,7 +4223,8 @@
             "{85ddcca9}",
             "{4c29ec64}",
             "{36feb9ca}",
-            "{e3a324ce}"
+            "{e3a324ce}",
+            "{22da0526}"
         ],
         "__type": "InputControlSet"
     },
@@ -4462,7 +4463,6 @@
             "{b467f7b3}",
             "{adb9f8cd}",
             "{828cb1ba}",
-            "{22da0526}",
             "{ba0d244c}",
             "{cb62b8cb}",
             "{856400d8}",
@@ -5823,11 +5823,6 @@
                 "__type": "{79292790}"
             },
             {
-                "{f248d989}": "{22da0526}",
-                "{ca251ff3}": 2,
-                "__type": "{97aed032}"
-            },
-            {
                 "{f248d989}": "{ba0d244c}",
                 "{bcd3fffb}": 3,
                 "__type": "{79292790}"
@@ -6145,6 +6140,36 @@
             },
             {
                 "{f248d989}": "{69d9e2b4}",
+                "{5ff6cd50}": [
+                    {
+                        "{5ff6cd50}": [
+                            {
+                                "{fd36c650}": true,
+                                "{5e3d5ec0}": [
+                                    2,
+                                    6
+                                ],
+                                "__type": "{2152c2a1}"
+                            },
+                            {
+                                "{5ff6cd50}": [
+                                    {
+                                        "{5e3d5ec0}": [
+                                            2,
+                                            6
+                                        ],
+                                        "__type": "{2152c2a1}"
+                                    },
+                                    {
+                                        "__type": "{090ff6ef}"
+                                    }
+                                ],
+                                "__type": "{707d57b1}"
+                            }
+                        ],
+                        "__type": "{68067fa5}"
+                    }
+                ],
                 "{a9a0eb58}": false,
                 "__type": "{0a3412af}"
             },
@@ -6187,6 +6212,41 @@
             {
                 "{f248d989}": "{36feb9ca}",
                 "__type": "{4146f732}"
+            },
+            {
+                "{f248d989}": "{22da0526}",
+                "{5ff6cd50}": [
+                    {
+                        "{5ff6cd50}": [
+                            {
+                                "{fd36c650}": true,
+                                "{5e3d5ec0}": [
+                                    2,
+                                    6
+                                ],
+                                "__type": "{2152c2a1}"
+                            },
+                            {
+                                "{5ff6cd50}": [
+                                    {
+                                        "{5e3d5ec0}": [
+                                            2,
+                                            6
+                                        ],
+                                        "__type": "{2152c2a1}"
+                                    },
+                                    {
+                                        "__type": "{090ff6ef}"
+                                    }
+                                ],
+                                "__type": "{707d57b1}"
+                            }
+                        ],
+                        "__type": "{68067fa5}"
+                    }
+                ],
+                "{ca251ff3}": 2,
+                "__type": "{97aed032}"
             }
         ],
         "{5ff6cd50}": [
@@ -43580,9 +43640,9 @@
     },
     "{0c1b3876}": {
         "resourceMap": {
-            "{7445bbab}": "{a2024c93}",
-            "{91eb3210}": "{a9f632d8}",
-            "{6785f50f}": "{e79e2937}"
+            "Augment_TwinFire_Mis": "Maps/ModeSpecificData/Augments/TwinFire/Particles/Augment_TwinFire_Mis",
+            "Augment_TwinFire_Mis_Enemy": "Maps/ModeSpecificData/Augments/TwinFire/Particles/Augment_TwinFire_Mis_Enemy",
+            "Augment_TwinFire_Tar": "Maps/ModeSpecificData/Augments/TwinFire/Particles/Augment_TwinFire_Tar"
         },
         "__type": "ResourceResolver"
     },
@@ -43660,12 +43720,12 @@
             },
             "mCastType": 1,
             "castFrame": 7.960000038146973,
-            "mMissileEffectKey": "{7445bbab}",
-            "mMissileEffectEnemyKey": "{91eb3210}",
+            "mMissileEffectKey": "Augment_TwinFire_Mis",
+            "mMissileEffectEnemyKey": "Augment_TwinFire_Mis_Enemy",
             "mResourceResolvers": [
                 "{91c152af}"
             ],
-            "mHitEffectKey": "{6785f50f}",
+            "mHitEffectKey": "Augment_TwinFire_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
             "mFloatVarsDecimals": [
@@ -43701,7 +43761,7 @@
         },
         "__type": "SpellObject"
     },
-    "{a2024c93}": {
+    "Maps/ModeSpecificData/Augments/TwinFire/Particles/Augment_TwinFire_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -47068,7 +47128,7 @@
         "particlePath": "Maps/ModeSpecificData/Augments/TwinFire/Particles/Augment_TwinFire_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a9f632d8}": {
+    "Maps/ModeSpecificData/Augments/TwinFire/Particles/Augment_TwinFire_Mis_Enemy": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -50510,7 +50570,7 @@
         "soundPersistentDefault": "Play_sfx_Augment_TwinFire_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e79e2937}": {
+    "Maps/ModeSpecificData/Augments/TwinFire/Particles/Augment_TwinFire_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.029999999329447746,
@@ -53010,13 +53070,13 @@
             },
             "mCastType": 1,
             "castFrame": 7.960000038146973,
-            "mMissileEffectKey": "{7445bbab}",
-            "mMissileEffectEnemyKey": "{91eb3210}",
+            "mMissileEffectKey": "Augment_TwinFire_Mis",
+            "mMissileEffectEnemyKey": "Augment_TwinFire_Mis_Enemy",
             "mResourceResolvers": [
                 "{f72bb8df}",
                 "{91c152af}"
             ],
-            "mHitEffectKey": "{6785f50f}",
+            "mHitEffectKey": "Augment_TwinFire_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
             "mFloatVarsDecimals": [

@@ -362,7 +362,7 @@
             "id": 323,
             "name": "地獄三頭犬",
             "rarity": 2,
-            "tooltip": "獲得<spellName>刀鋒之雹</spellName>及<spellName>強攻</spellName>關鍵符文。<br><li><spellName>刀鋒之雹</spellName>：你的前3次普攻擁有大幅提升的<attackSpeed>攻速</attackSpeed>。<br><li><spellName>強攻</spellName>：對同一敵人進行3次普攻可造成爆發傷害，並提高傷害，直到你離開戰鬥。"
+            "tooltip": "獲得<spellName>刀鋒之雹</spellName>及<spellName>強攻</spellName>關鍵符文。<br><li><spellName>刀鋒之雹</spellName>：你的前3次普攻擁有大幅提升的<attackSpeed>攻速</attackSpeed>。<br><li><spellName>強攻</spellName>：對同一敵人進行3次普攻可造成一次爆發傷害，並提高你的傷害，直到你離開戰鬥。"
         },
         {
             "apiName": "CraftingPrisStatAnvil",
@@ -1181,7 +1181,7 @@
                     2.5
                 ]
             },
-            "desc": "獲得召喚師技能「<spellName>防禦行動</spellName>」。<br><br><rules>施放<spellName>防禦行動</spellName>後，對你的隊伍施放召喚師技能<spellName>光盾</spellName>及<spellName>治療</spellName>。</rules>",
+            "desc": "獲得召喚師技能「<spellName>防禦行動</spellName>」。<br><br><rules><spellName>防禦行動</spellName>會對你的隊伍施放召喚師技能<spellName>光盾</spellName>及<spellName>治療</spellName>。</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/defensivemaneuvers_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/defensivemaneuvers_small.png",
             "id": 21,
@@ -1505,7 +1505,7 @@
                     0.029999999329447746
                 ]
             },
-            "desc": "條件：在戰鬥結束時戴著@QuestThreshold@頂帽子。<br><br>獎勵：每頂帽子賦予<scaleAF>適性之力</scaleAF>，<scaleArmor>物防</scaleArmor>及<scaleMR>魔防</scaleMR>，<scaleTenacity>%韌性</scaleTenacity>及<speed>跑速</speed>。",
+            "desc": "條件：在戰鬥結束時戴著@QuestThreshold@頂帽子。<br><br>獎勵：每頂帽子賦予<scaleAF>適性之力</scaleAF>，<scaleArmor>物防</scaleArmor>，<scaleMR>魔防</scaleMR>，<scaleTenacity>韌性</scaleTenacity>及<speed>跑速</speed>。",
             "iconLarge": "assets/ux/cherry/augments/icons/mad_hatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mad_hatter_small.png",
             "id": 318,
@@ -5378,13 +5378,13 @@
                     0.6000000238418579
                 ]
             },
-            "desc": "你每回合開局將無法動彈。期間，獲得大量傷害減免，並隨時間體型變大，力量增強。<br><br>當你逃脫時，<status>擊退</status>敵軍並獲得<shield>護盾</shield>。",
+            "desc": "你每回合以被囚禁的姿態開局。在被囚禁期間獲得大量傷害減免，並隨時間積累體型和力量。<br><br>當你逃脫時，<status>擊退</status>敵軍並獲得<shield>護盾</shield>。",
             "iconLarge": "assets/ux/cherry/augments/icons/raidboss_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/raidboss_small.png",
             "id": 125,
             "name": "突襲頭目",
             "rarity": 2,
-            "tooltip": "每回合開始時，你會被困在競技場中間，無法行動。期間，獲得最多@DamageReductionMax*100@%傷害減免，並隨時間體型變大、增加<scaleHealth>生命</scaleHealth>、<physicalDamage>物攻</physicalDamage>，以及<scaleAP>魔攻</scaleAP>(最大@StatIncrease*100@%)。<br><br>@ImprisonDuration@秒後或達到<scaleHealth>@BreakoutHealthThreshold*100@%生命</scaleHealth>時，你會掙脫束縛，<status>擊退</status>敵軍並獲得等同於<shield>@ShieldHealthRatio*100@%最大生命的護盾</shield>。"
+            "tooltip": "每回合開始時，你會被困在競技場中間，無法行動。期間，獲得最多@DamageReductionMax*100@%傷害減免，並隨時間增加體型、<scaleHealth>生命</scaleHealth>、<physicalDamage>物攻</physicalDamage>，以及<scaleAP>魔攻</scaleAP>(最大@StatIncrease*100@%)。<br><br>@ImprisonDuration@秒後或達到<scaleHealth>@BreakoutHealthThreshold*100@%生命</scaleHealth>時，你會掙脫束縛，<status>擊退</status>敵軍並獲得等同於<shield>@ShieldHealthRatio*100@%最大生命的護盾</shield>。"
         },
         {
             "apiName": "OutlawsGrit",
@@ -5917,7 +5917,7 @@
             "id": 4,
             "name": "基本功夫",
             "rarity": 2,
-            "tooltip": "無法使用大絕。增加@DamageAmp*100@%技能傷害、<healing>治療</healing>、<scaleAbilityHaste>@Haste@技能加速</scaleAbilityHaste>，並獲得<shield>護盾</shield>。"
+            "tooltip": "無法使用大絕。增加@DamageAmp*100@%技能傷害、<healing>治療</healing>、<shield>護盾</shield>，和<scaleAbilityHaste>@Haste@技能加速</scaleAbilityHaste>。"
         },
         {
             "apiName": "PrismaticEgg",
@@ -6322,7 +6322,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.png",
             "id": 234,
-            "name": "甘巴鐵砧",
+            "name": "鐵砧賭博",
             "rarity": 2,
             "tooltip": "獲得<gold>+%i:goldCoins%@GoldBonus@金錢</gold>，並降低所有鐵砧的價格<br>。<br><attention>稜鏡鐵砧</attention>：<gold>-%i:goldCoins%@PrismaticCostReduction@金錢</gold><br><attention>傳奇鐵砧</attention>：<gold>-%i:goldCoins%@LegendaryCostReduction@金錢</gold><br><attention>屬性鐵砧</attention>：<gold>-%i:goldCoins%@StatCostReduction@金錢</gold><br><br><rules>從鐵砧獲得的物品轉售價格減少<gold>%i:goldCoins%500金錢</gold>。</rules>"
         },
@@ -7453,7 +7453,7 @@
             "id": 330,
             "name": "洗劫",
             "rarity": 0,
-            "tooltip": "如果附近有敵人，衝刺或閃現會賦予你<keywordMajor>@CurseCounter@詛咒之力</keywordMajor>。獲得會隨著你的<keywordMajor>詛咒之力</keywordMajor>增加的<speed>跑速</speed>。<br><br>增加<speed>@f1@跑速</speed>(相當於自身@MSRatio*100@%<keywordMajor>詛咒之力</keywordMajor>)。<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "如果附近有敵人，衝刺或閃現會賦予你<keywordMajor>@CurseCounter@詛個咒之力</keywordMajor>。獲得會隨著你的<keywordMajor>詛咒之力</keywordMajor>增加的<speed>跑速</speed>。<br><br>增加<speed>@f1@跑速</speed>(相當於自身@MSRatio*100@%<keywordMajor>詛咒之力</keywordMajor>)。<br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "WellBeRightBack",
@@ -7781,10 +7781,10 @@
                     0.0,
                     0.0,
                     0.0,
-                    0.029999999329447746,
-                    0.029999999329447746,
-                    0.029999999329447746,
-                    0.029999999329447746
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ],
                 "BaseDamageMax": [
                     100.0,
@@ -7825,11 +7825,11 @@
                 "MaxBeeStacks": [
                     8.0,
                     8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    12.0,
+                    16.0,
+                    99.0,
+                    99.0,
+                    99.0
                 ],
                 "MaxLevel": [
                     3.0,
@@ -7839,6 +7839,15 @@
                     3.0,
                     3.0,
                     3.0
+                ],
+                "SpellCooldown": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "StartingBees": [
                     0.0,
@@ -7856,7 +7865,7 @@
             "id": 338,
             "name": "蜂群意識",
             "rarity": 2,
-            "tooltip": "每回合開始時獲得@StartingBees@隻蜜蜂，可藉由採集花朵獲得額外的蜜蜂。對敵方英雄造成傷害時，會派出一隻蜜蜂，在抵達時造成<magicDamage>@BeeDamage@魔法傷害</magicDamage>，持續@DebuffDuration@秒，然後回到你身邊。"
+            "tooltip": "每回合開始時獲得@StartingBees@隻蜜蜂，可藉由採集花朵獲得額外的蜜蜂。對敵方英雄造成傷害時，會派出一隻蜜蜂，抵達後造成<magicDamage>@BeeDamage@魔法傷害</magicDamage>，持續@DebuffDuration@秒，然後回到你身邊。"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -8754,7 +8763,7 @@
             "id": 220,
             "name": "旋風鎚",
             "rarity": 2,
-            "tooltip": "普攻時，發射@AdditionalBolts@支箭矢，每支箭矢造成<physicalDamage>@DamagePerBolt@物理傷害</physicalDamage>。每個方向有@Cooldown@秒冷卻時間。<br><br>箭矢可以<crit>暴擊</crit>，且造成@OnHitRatio*100@%的{{ Item_Keyword_OnHit }}效果。"
+            "tooltip": "普攻時，發射@AdditionalBolts@支箭矢，每支箭矢造成<physicalDamage>@DamagePerBolt@物理傷害</physicalDamage>。每個方向有@Cooldown@秒冷卻時間。<br><br>箭矢可以<crit>暴擊</crit>，且造成@OnHitRatio*100@%的{{ Item_Keyword_OnHit }}。"
         },
         {
             "apiName": "ReplaceAugment",
@@ -11391,7 +11400,7 @@
                     0.05000000074505806
                 ]
             },
-            "desc": "<status>硬控場</status>敵方英雄時永久獲得<keywordMajor>詛咒之力</keywordMajor>。根據你的<keywordMajor>詛咒之力</keywordMajor>增加<scaleArmor>物防</scaleArmor>和<scaleMR>魔防</scaleMR>。",
+            "desc": "<status>硬控場</status>敵方英雄時永久獲得<keywordMajor>個詛咒之力</keywordMajor>。根據你的<keywordMajor>詛咒之力</keywordMajor>增加<scaleArmor>物防</scaleArmor>和<scaleMR>魔防</scaleMR>。",
             "iconLarge": "assets/ux/cherry/augments/icons/desecrator_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/desecrator_small.png",
             "id": 218,
@@ -12459,7 +12468,7 @@
                     0.4000000059604645
                 ]
             },
-            "desc": "增加@AbilityHaste@技能加速。<br><br>施放技能會獲得@MoveSpeedAmp*100@%，持續@MSDuration@秒。",
+            "desc": "增加@AbilityHaste@技能加速。<br><br>施放技能會獲得@MoveSpeedAmp*100@%跑速，持續@MSDuration@秒。",
             "iconLarge": "assets/ux/cherry/augments/icons/bread_sandwhich.png",
             "iconSmall": "assets/ux/cherry/augments/icons/bread_sandwhich_small.png",
             "id": 346,
@@ -13759,11 +13768,11 @@
                 "BaseDamage": [
                     60.0,
                     60.0,
-                    100.0,
-                    140.0,
-                    140.0,
-                    140.0,
-                    140.0
+                    180.0,
+                    270.0,
+                    270.0,
+                    270.0,
+                    270.0
                 ],
                 "CDIfPickedUp": [
                     1.5,
@@ -13802,13 +13811,13 @@
                     2.0
                 ],
                 "PerLevelDamage": [
-                    10.0,
-                    10.0,
-                    12.0,
-                    14.0,
-                    14.0,
-                    14.0,
-                    14.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "ShredAmount": [
                     0.20000000298023224,
@@ -13822,11 +13831,11 @@
                 "SlowAmount": [
                     0.25,
                     0.25,
-                    0.3499999940395355,
                     0.44999998807907104,
-                    0.44999998807907104,
-                    0.44999998807907104,
-                    0.44999998807907104
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "SlowDuration": [
                     1.5,
