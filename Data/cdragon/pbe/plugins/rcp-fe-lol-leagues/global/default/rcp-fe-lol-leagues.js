@@ -6,24 +6,24 @@
             function n() {
                 return t || (console.error("The `provider` object has not been set, please do so by calling the `init` method."), null)
             }
-            const a = {
+            const s = {
                 init: function(e, n) {
                     return t = e, this.add(n)
                 },
                 _getValue: function(e, n) {
-                    let a;
-                    return "function" == typeof n ? (a = n(t), a || console.warn("The function for key " + e + " returned a falsy value: ", a)) : "string" == typeof n ? (a = t.get(n), a || console.warn("The provider `get` invocation for the key " + e + " returned a falsy value: ", a)) : "object" == typeof n && (a = n), a
+                    let s;
+                    return "function" == typeof n ? (s = n(t), s || console.warn("The function for key " + e + " returned a falsy value: ", s)) : "string" == typeof n ? (s = t.get(n), s || console.warn("The provider `get` invocation for the key " + e + " returned a falsy value: ", s)) : "object" == typeof n && (s = n), s
                 },
                 add: function(e) {
                     e = e || {};
                     const t = [],
                         n = this;
-                    return Object.keys(e).forEach((function(a) {
-                        const s = e[a],
-                            i = n._getValue(a, s);
+                    return Object.keys(e).forEach((function(s) {
+                        const a = e[s],
+                            i = n._getValue(s, a);
                         i && i.then ? (i.then((function(e) {
-                            e || console.warn("The promise for the key " + a + " resolved with a falsy value: ", e), n._addValue(a, e)
-                        })), t.push(i)) : n._addValue(a, i)
+                            e || console.warn("The promise for the key " + s + " resolved with a falsy value: ", e), n._addValue(s, e)
+                        })), t.push(i)) : n._addValue(s, i)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -36,37 +36,37 @@
                     return n()
                 }
             };
-            e.exports = a
+            e.exports = s
         }, e => {
             "use strict";
 
             function t(e) {
                 const n = {};
-                for (const a in e) "object" == typeof e[a] ? n[a] = t(e[a]) : n[a] = e[a];
+                for (const s in e) "object" == typeof e[s] ? n[s] = t(e[s]) : n[s] = e[s];
                 return n
             }
 
             function n(e, t, n) {
                 const {
-                    regions: a,
-                    region: s,
+                    regions: s,
+                    region: a,
                     locale: i
                 } = e.metadata();
-                if ((n = n.get("metadata." + t)) && "region" === t && n.id !== s.id) {
-                    const t = a[n.id],
-                        s = t.defaultLocale ? t.defaultLocale.id : t.availableLocales[0].id;
-                    e.setLocale(s, n.id)
+                if ((n = n.get("metadata." + t)) && "region" === t && n.id !== a.id) {
+                    const t = s[n.id],
+                        a = t.defaultLocale ? t.defaultLocale.id : t.availableLocales[0].id;
+                    e.setLocale(a, n.id)
                 } else n && "locale" === t && n.id !== i.id && e.setLocale(n.id)
             }
-            e.exports = function(e, a, s) {
+            e.exports = function(e, s, a) {
                 let i;
                 const o = {
                     metadata: !0,
                     moment: !0
                 };
-                return a = a.observe((() => {
+                return s = s.observe((() => {
                     if (i) {
-                        const e = t(a.metadata());
+                        const e = t(s.metadata());
                         i.set("metadata", e), i.beginPropertyChanges(), Object.keys(o).forEach((e => {
                             i.propertyWillChange(e), i.propertyDidChange(e)
                         })), i.endPropertyChanges()
@@ -74,7 +74,7 @@
                 })), i = e.Service.extend({
                     _tra: null,
                     init() {
-                        this.wrapTra(a)
+                        this.wrapTra(s)
                     },
                     wrapTra(e) {
                         e && (this._tra = e, this.set("metadata", t(this._tra.metadata())), this.setLocale = this._tra.setLocale.bind(this._tra), this.formatString = this._tra.formatString.bind(this._tra), this.moment = this._tra.moment.bind(this._tra), this.ready = this._tra.ready.bind(this._tra), this.exists = this._tra.exists.bind(this._tra), this.getAsync = this._tra.getAsync.bind(this._tra), this.existsAsync = this._tra.existsAsync.bind(this._tra), this.numeral = this._tra.numeral.bind(this._tra))
@@ -88,25 +88,25 @@
                         for (const n of e) t = t.overlay(n);
                         t && this.wrapTra(t)
                     }
-                }).create(), i.set("service", i), i.addObserver("metadata.region", n.bind(null, a, "region")), i.addObserver("metadata.locale", n.bind(null, a, "locale")), s && (console.warning("deprecated: pass a traService as a property of your Ember application definition"), s.register("tra:main", i, {
+                }).create(), i.set("service", i), i.addObserver("metadata.region", n.bind(null, s, "region")), i.addObserver("metadata.locale", n.bind(null, s, "locale")), a && (console.warning("deprecated: pass a traService as a property of your Ember application definition"), a.register("tra:main", i, {
                     instantiate: !1
-                }), s.inject("component", "tra", "tra:main"), s.inject("controller", "tra", "tra:main"), s.inject("view", "tra", "tra:main"), s.inject("model", "tra", "tra:main"), s.inject("route", "tra", "tra:main"), s.inject("service", "tra", "tra:main")), i
+                }), a.inject("component", "tra", "tra:main"), a.inject("controller", "tra", "tra:main"), a.inject("view", "tra", "tra:main"), a.inject("model", "tra", "tra:main"), a.inject("route", "tra", "tra:main"), a.inject("service", "tra", "tra:main")), i
             }
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = function(e, t, a) {
+            }), t.default = function(e, t, s) {
                 const {
                     SharedEmberComponents: i,
                     ProfilesAPI: o,
                     RewardTrackerEmberComponents: l
-                } = s.default, r = o.getRankedReferenceButton(), {
+                } = a.default, r = o.getRankedReferenceButton(), {
                     PlayerNameComponent: c
                 } = i;
                 t.setFactoryDefinition({
                     name: "LeaguesRootComponent",
-                    tra: a,
+                    tra: s,
                     ComponentFactory: e,
                     LeaguesRootComponent: n(4),
                     LeaguesCountdownsComponent: n(34),
@@ -128,28 +128,28 @@
                     RankedReferenceModalButtonComponent: r.RankedReferenceModalButtonComponent
                 }), t.setFactoryDefinition({
                     name: "LeaguesPromotionVignetteV2Component",
-                    tra: a,
+                    tra: s,
                     ComponentFactory: e,
                     LeaguesPromotionVignetteV2Component: n(90),
                     PlayerNameComponent: c
                 }), t.setFactoryDefinition({
                     name: "LeaguesRewardVignetteComponent",
-                    tra: a,
+                    tra: s,
                     ComponentFactory: e,
                     LeaguesRewardVignetteComponent: n(94)
                 }), t.setFactoryDefinition({
                     name: "RatedPromotionVignetteComponent",
-                    tra: a,
+                    tra: s,
                     ComponentFactory: e,
                     LeaguesPromotionVignetteComponent: n(97)
                 }), t.setFactoryDefinition({
                     name: "CherryRatedPromotionVignetteComponent",
-                    tra: a,
+                    tra: s,
                     ComponentFactory: e,
                     LeaguesPromotionVignetteComponent: n(100)
                 }), t.setFactoryDefinition({
                     name: "LeaguesNotificationsApp",
-                    tra: a,
+                    tra: s,
                     ComponentFactory: e,
                     NotificationsRootComponent: n(112),
                     SeasonStartModalComponent: n(114),
@@ -159,13 +159,13 @@
                     LeaguesDialogsComponent: n(126)
                 })
             };
-            var a, s = (a = n(1)) && a.__esModule ? a : {
-                default: a
+            var s, a = (s = n(1)) && s.__esModule ? s : {
+                default: s
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 i = function(e, t) {
                     if (!t && e && e.__esModule) return e;
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
@@ -173,14 +173,14 @@
                     };
                     var n = r(t);
                     if (n && n.has(e)) return n.get(e);
-                    var a = {},
-                        s = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                    var s = {},
+                        a = Object.defineProperty && Object.getOwnPropertyDescriptor;
                     for (var i in e)
                         if ("default" !== i && Object.prototype.hasOwnProperty.call(e, i)) {
-                            var o = s ? Object.getOwnPropertyDescriptor(e, i) : null;
-                            o && (o.get || o.set) ? Object.defineProperty(a, i, o) : a[i] = e[i]
-                        } a.default = e, n && n.set(e, a);
-                    return a
+                            var o = a ? Object.getOwnPropertyDescriptor(e, i) : null;
+                            o && (o.get || o.set) ? Object.defineProperty(s, i, o) : s[i] = e[i]
+                        } s.default = e, n && n.set(e, s);
+                    return s
                 }(n(29)),
                 o = n(30);
             n(31);
@@ -196,9 +196,9 @@
             }
             const c = 864e5,
                 u = 36e5,
-                d = (0, a.emberDataBinding)({
-                    Ember: a.Ember,
-                    websocket: (0, a.getProvider)().getSocket(),
+                d = (0, s.emberDataBinding)({
+                    Ember: s.Ember,
+                    websocket: (0, s.getProvider)().getSocket(),
                     basePaths: {
                         summoner: "/lol-summoner",
                         ranked: "/lol-ranked",
@@ -243,25 +243,25 @@
                         }
                     }
                 });
-            e.exports = a.Ember.Component.extend(d, {
+            e.exports = s.Ember.Component.extend(d, {
                 classNames: ["leagues-root-component"],
                 layout: n(33),
                 leagues: null,
                 leaguesQueueOrders: i.SUMMONER_QUEUE_ORDER,
-                leaguesQueues: s.QUEUES.ALL_RANKED_AND_RATED_QUEUE_TYPES,
+                leaguesQueues: a.QUEUES.ALL_RANKED_AND_RATED_QUEUE_TYPES,
                 isLoading: !0,
                 selectedState: null,
-                leagueTierNames: a.LeagueTierNames,
+                leagueTierNames: s.LeagueTierNames,
                 leagueTypeSelected: "summoner",
                 honorLevel: 0,
-                rankedService: (0, a.dataBinding)("/lol-ranked", (0, a.getProvider)().getSocket()),
-                chatService: (0, a.dataBinding)("/lol-chat", (0, a.getProvider)().getSocket()),
+                rankedService: (0, s.dataBinding)("/lol-ranked", (0, s.getProvider)().getSocket()),
+                chatService: (0, s.dataBinding)("/lol-chat", (0, s.getProvider)().getSocket()),
                 init: function() {
                     this._super(...arguments);
                     const e = this.get("chatService");
-                    this.set("leagues", a.Ember.Object.create({
+                    this.set("leagues", s.Ember.Object.create({
                         apexQueueInfoByQueueAndTier: {}
-                    })), this.set("ratedLadderByQueueType", a.Ember.Object.create({})), this.set("selectedState", a.Ember.Object.create()), e.observe("/v1/friends", this, this._handleFriendsData), this._dataBinding = a.dataBinding.bindTo((0, a.getProvider)().getSocket()), this._dataBinding.observe("/lol-seasons/v1/season/product/LOL", this, this._handleCurrentLoLSeason), a.TelemetryService.startTelemetryTimerEvent("profile_ranked")
+                    })), this.set("ratedLadderByQueueType", s.Ember.Object.create({})), this.set("selectedState", s.Ember.Object.create()), e.observe("/v1/friends", this, this._handleFriendsData), this._dataBinding = s.dataBinding.bindTo((0, s.getProvider)().getSocket()), this._dataBinding.observe("/lol-seasons/v1/season/product/LOL", this, this._handleCurrentLoLSeason), s.TelemetryService.startTelemetryTimerEvent("profile_ranked")
                 },
                 didInsertElement: function() {
                     this._super(...arguments), this.set("animationClass", "popup");
@@ -272,28 +272,28 @@
                     this._super(...arguments);
                     const e = this.get("rankedService"),
                         t = this.get("chatService");
-                    e.unobserve(this), t.unobserve(this), a.TelemetryService.stopTelemetryTimerEvent("profile_ranked", "timeSpent", "profile")
+                    e.unobserve(this), t.unobserve(this), s.TelemetryService.stopTelemetryTimerEvent("profile_ranked", "timeSpent", "profile")
                 },
-                summonerReadyChanged: a.Ember.observer("summonerReady", "currentSummoner", (function() {
+                summonerReadyChanged: s.Ember.observer("summonerReady", "currentSummoner", (function() {
                     const e = this.get("summonerReady"),
                         t = this.get("currentSummoner");
                     if (!e || !t) return;
                     const n = this.get("summonerId"),
-                        a = this.get("honorProfile"),
-                        s = this.get("puuid"),
+                        s = this.get("honorProfile"),
+                        a = this.get("puuid"),
                         i = this.get("rankedService"),
-                        o = `/v1/league-ladders/${s}`;
-                    this.set("viewerId", t.summonerId), a && this.set("honorLevel", a.honorLevel), n && t.summonerId !== n ? i.observe(o, this, this._handleSummonerLeaguesData) : (this.set("summonerId", t.summonerId), this.set("puuid", t.puuid), i.observe("/v1/current-ranked-stats", this, this._handleCurrentRankedStatsUpdate))
+                        o = `/v1/league-ladders/${a}`;
+                    this.set("viewerId", t.summonerId), s && this.set("honorLevel", s.honorLevel), n && t.summonerId !== n ? i.observe(o, this, this._handleSummonerLeaguesData) : (this.set("summonerId", t.summonerId), this.set("puuid", t.puuid), i.observe("/v1/current-ranked-stats", this, this._handleCurrentRankedStatsUpdate))
                 })),
                 _handleCurrentRankedStatsUpdate: function(e) {
                     if (!e) return;
                     const t = this.get("rankedService"),
                         n = `/v1/league-ladders/${this.get("puuid")}`,
-                        a = this._handleSummonerLeaguesData.bind(this);
+                        s = this._handleSummonerLeaguesData.bind(this);
                     t.get(n, {
                         skipCache: !0
                     }).then((e => {
-                        a(e)
+                        s(e)
                     }))
                 },
                 _handleCurrentLoLSeason(e) {
@@ -315,8 +315,8 @@
                 _cacheApexQueueInfo: function(e, t, n) {
                     if (this.get(`leagues.apexQueueInfoByQueueAndTier.${t}`)) this.set(`leagues.apexQueueInfoByQueueAndTier.${t}.${n}`, e);
                     else {
-                        const a = {};
-                        a[n] = e, this.set(`leagues.apexQueueInfoByQueueAndTier.${t}`, a)
+                        const s = {};
+                        s[n] = e, this.set(`leagues.apexQueueInfoByQueueAndTier.${t}`, s)
                     }
                 },
                 _getCachedApexLeagues: function(e) {
@@ -324,25 +324,25 @@
                     return Object.keys(t).map((e => (t[e].divisions || []).find((t => t && t.tier === e))))
                 },
                 _handleFriendsData: function(e) {
-                    e && this.set("friendsIdSet", new Set(a.Lodash.map(e, (e => e.summonerId))))
+                    e && this.set("friendsIdSet", new Set(s.Lodash.map(e, (e => e.summonerId))))
                 },
-                defaultLeagueObserver: a.Ember.observer("isLoading", "leagues.summonerLeagues", (function() {
+                defaultLeagueObserver: s.Ember.observer("isLoading", "leagues.summonerLeagues", (function() {
                     if (this.get("isLoading")) return;
                     const e = this.get("leagues.summonerLeagues"),
                         t = this.get("highestRankedQueueType") || this.get("leaguesQueues.0"),
-                        n = a.Lodash.find(e, {
+                        n = s.Lodash.find(e, {
                             queueType: t
                         });
                     n && this._selectLeague(n)
                 })),
                 _selectLeague: function(e, t) {
                     const n = e && this.leagueTierNames.isApexForQueue(e),
-                        a = this._selectDivisionFromLeague(e, n),
-                        s = this._selectStandingFromDivision(a);
+                        s = this._selectDivisionFromLeague(e, n),
+                        a = this._selectStandingFromDivision(s);
                     this.get("selectedState").setProperties({
                         league: e,
-                        division: a,
-                        standing: s,
+                        division: s,
+                        standing: a,
                         isViewingTopPlayers: t || n && !this.get("isViewingLocalSummoner"),
                         isViewingApexTier: n,
                         isViewingRatedLadder: !1
@@ -350,22 +350,22 @@
                 },
                 _selectDivisionFromLeague: function(e, t) {
                     let n;
-                    return n = t ? a.Lodash.find(e.divisions, {
+                    return n = t ? s.Lodash.find(e.divisions, {
                         tier: e.requestedRankedEntry && e.requestedRankedEntry.tier || e.tier
-                    }) : a.Lodash.find(e.divisions, {
+                    }) : s.Lodash.find(e.divisions, {
                         division: e.requestedRankedEntry && e.requestedRankedEntry.division
                     }), n || (n = e.divisions[0]), n
                 },
                 _selectStandingFromDivision: function(e) {
                     if (!e || !e.standings) return null;
                     const t = this.get("summonerId"),
-                        n = a.Lodash.find(e.standings, (e => e.summonerId === t));
+                        n = s.Lodash.find(e.standings, (e => e.summonerId === t));
                     return n || e.standings[0]
                 },
                 _applyRelationshipsToQueuesStandings: function(e) {
-                    e && a.Lodash.forEach(e, (e => {
-                        a.Lodash.forEach(e.divisions, (e => {
-                            a.Lodash.forEach(e.standings, (e => {
+                    e && s.Lodash.forEach(e, (e => {
+                        s.Lodash.forEach(e.divisions, (e => {
+                            s.Lodash.forEach(e.standings, (e => {
                                 this._applyRelationship(e)
                             }))
                         }))
@@ -374,16 +374,16 @@
                 _applyRelationship: function(e) {
                     const t = e.summonerId,
                         n = this.get("viewerId"),
-                        a = this.get("friendsIdSet");
-                    let s = null;
-                    a && a.has(t) && (s = i.StandingRelationship.FRIEND), e.set("relationship", n === t ? i.StandingRelationship.SELF : s)
+                        s = this.get("friendsIdSet");
+                    let a = null;
+                    s && s.has(t) && (a = i.StandingRelationship.FRIEND), e.set("relationship", n === t ? i.StandingRelationship.SELF : a)
                 },
                 _fillInDivisions: function(e, t) {
                     const n = [];
-                    let s, i;
-                    return t ? (s = a.LeaguesConsts.APEX_TIERS.slice(), i = "tier") : (s = a.LeaguesConsts.DIVISIONS.slice(), i = "division"), s.forEach((s => {
-                        let o, l, r = a.Lodash.filter(e.divisions, (e => e && e[i] === s))[0];
-                        t ? (l = s, o = "I") : (l = e.tier, o = s), r || (r = {
+                    let a, i;
+                    return t ? (a = s.LeaguesConsts.APEX_TIERS.slice(), i = "tier") : (a = s.LeaguesConsts.DIVISIONS.slice(), i = "division"), a.forEach((a => {
+                        let o, l, r = s.Lodash.filter(e.divisions, (e => e && e[i] === a))[0];
+                        t ? (l = a, o = "I") : (l = e.tier, o = a), r || (r = {
                             division: o,
                             tier: l,
                             standings: []
@@ -392,8 +392,8 @@
                 },
                 enrichSummonerLeaguesData: function(e, t) {
                     const n = this.get("leaguesQueueOrders"),
-                        s = a.Lodash.sortBy(e, (e => n[e.queueType])),
-                        i = a.Lodash.each(s, (e => {
+                        a = s.Lodash.sortBy(e, (e => n[e.queueType])),
+                        i = s.Lodash.each(a, (e => {
                             const n = this.leagueTierNames.isApexForQueue(e);
                             if (e.queueTypeDisplay = t ? this.get("tra").formatString("LEAGUES_DROPDOWN_APEX", {
                                     queueType: this.leagueTierNames.getRankedQueueName(e.queueType)
@@ -409,7 +409,7 @@
                         }));
                     return this._applyRelationshipsToQueuesStandings(e), i
                 },
-                arrayToEmberObjects: e => a.Lodash.map(e, (e => a.Ember.Object.create(e))),
+                arrayToEmberObjects: e => s.Lodash.map(e, (e => s.Ember.Object.create(e))),
                 _translate: function(e, t) {
                     return this.get("tra.formatString")(e, t)
                 },
@@ -419,10 +419,10 @@
                         e.off("animationend"), this.set("animationClass", "")
                     })))
                 },
-                isAnimationEnabled: a.Ember.computed("uxSettings.data.potatoModeEnabled", (function() {
+                isAnimationEnabled: s.Ember.computed("uxSettings.data.potatoModeEnabled", (function() {
                     return !this.get("uxSettings.data.potatoModeEnabled")
                 })),
-                bannerProperties: a.Ember.computed("selectedState.standing.puuid", "selectedState.league.queueType", "selectedState.standing.wins", "selectedState.standing.losses", "selectedState.division.division", "selectedState.division.tier", "selectedState.standing.division", "selectedState.standing.tier", "selectedState.league.tier", "selectedState.league.provisionalGameThreshold", "selectedState.standing.provisionalGamesRemaining", "selectedState.standing.isProvisional", "selectedState.standing.points", "selectedState.standing.position", (function() {
+                bannerProperties: s.Ember.computed("selectedState.standing.puuid", "selectedState.league.queueType", "selectedState.standing.wins", "selectedState.standing.losses", "selectedState.division.division", "selectedState.division.tier", "selectedState.standing.division", "selectedState.standing.tier", "selectedState.league.tier", "selectedState.league.provisionalGameThreshold", "selectedState.standing.provisionalGamesRemaining", "selectedState.standing.isProvisional", "selectedState.standing.points", "selectedState.standing.position", (function() {
                     const e = this.get("selectedState.standing.wins") + this.get("selectedState.standing.losses"),
                         t = this.get("selectedState.standing.isProvisional"),
                         n = this.get("selectedState.standing.tier") || this.get("selectedState.division.tier") || this.get("selectedState.league.tier");
@@ -440,49 +440,49 @@
                         provisionalGamesRemaining: this.get("selectedState.standing.provisionalGamesRemaining")
                     }
                 })),
-                showingPlayerNotRanked: a.Ember.computed("selectedState.league", "selectedState.isViewingTopPlayers", "selectedState.isViewingRatedLadder", (function() {
+                showingPlayerNotRanked: s.Ember.computed("selectedState.league", "selectedState.isViewingTopPlayers", "selectedState.isViewingRatedLadder", (function() {
                     if (this.get("selectedState.isViewingRatedLadder")) return !1;
                     const e = this.get("selectedState.league"),
                         t = this.get("selectedState.isViewingTopPlayers");
                     return !e || !this.get("selectedState.league.requestedRankedEntry") && !t
                 })),
-                isShowingLol: a.Ember.computed("isViewingTft", "isViewingCherry", (function() {
+                isShowingLol: s.Ember.computed("isViewingTft", "isViewingCherry", (function() {
                     return !this.get("isViewingTft") && !this.get("isViewingCherry")
                 })),
-                isShowingSplitEndCountdown: a.Ember.computed("isViewingLocalSummoner", "activeLoLSeason", "isShowingLol", (function() {
+                isShowingSplitEndCountdown: s.Ember.computed("isViewingLocalSummoner", "activeLoLSeason", "isShowingLol", (function() {
                     const e = this.get("activeLoLSeason");
                     return this.get("isShowingLol") && this.get("isViewingLocalSummoner") && e
                 })),
-                splitTimeRemainingText: a.Ember.computed("activeLoLSeason.seasonEnd", (function() {
+                splitTimeRemainingText: s.Ember.computed("activeLoLSeason.seasonEnd", (function() {
                     const e = this.get("activeLoLSeason.seasonEnd") - Date.now(),
                         t = this.get("tra");
                     if (!t) return "";
                     const n = Math.floor(e / c),
-                        a = Math.floor(e % c / u),
-                        s = Math.floor(e % u / 6e4);
+                        s = Math.floor(e % c / u),
+                        a = Math.floor(e % u / 6e4);
                     return t.formatString("RANK_REWARDS_SPLIT_COUNTDOWN", {
                         daysRemaining: n,
-                        hoursRemaining: a,
-                        minutesRemaining: s
+                        hoursRemaining: s,
+                        minutesRemaining: a
                     })
                 })),
-                isViewingTft: a.Ember.computed("selectedState.league", (function() {
+                isViewingTft: s.Ember.computed("selectedState.league", (function() {
                     return (0, o.isTftQueueType)(this.get("selectedState.league.queueType"))
                 })),
-                isViewingCherry: a.Ember.computed("selectedState.league", (function() {
+                isViewingCherry: s.Ember.computed("selectedState.league", (function() {
                     return "CHERRY" === this.get("selectedState.league.queueType")
                 })),
-                nextUpdateMillis: a.Ember.computed("selectedState.league.nextApexUpdateMillis", "selectedState.league.nextRatedUpdateMillis", (function() {
+                nextUpdateMillis: s.Ember.computed("selectedState.league.nextApexUpdateMillis", "selectedState.league.nextRatedUpdateMillis", (function() {
                     const e = this.get("selectedState.league") || {};
                     return e.nextApexUpdateMillis || e.nextRatedUpdateMillis
                 })),
-                currentSeasonYear: a.Ember.computed("activeLoLSeason.seasonStart", (function() {
+                currentSeasonYear: s.Ember.computed("activeLoLSeason.seasonStart", (function() {
                     const e = this.get("activeLoLSeason.seasonStart");
                     return e ? (0, l.convertDateMillisToString)(e, this.get("regionLocale"), {
                         year: "numeric"
                     }) : (new Date).getFullYear()
                 })),
-                seasonNameText: a.Ember.computed("isViewingCherry", "isViewingTft", "tftSets", "currentSeasonYear", "activeLoLSeason.metadata.currentSplit", (function() {
+                seasonNameText: s.Ember.computed("isViewingCherry", "isViewingTft", "tftSets", "currentSeasonYear", "activeLoLSeason.metadata.currentSplit", (function() {
                     const e = this.get("tra");
                     if (this.get("isViewingCherry")) return this.get("tra.QUEUE_NAME_CHERRY");
                     if (this.get("isViewingTft")) return this.get("tftSets").LCTFTModeData.mDefaultSet.SetDisplayName;
@@ -497,10 +497,10 @@
                         })
                     }
                 })),
-                viewedSummonerId: a.Ember.computed("summonerId", "currentSummoner.summonerId", (function() {
+                viewedSummonerId: s.Ember.computed("summonerId", "currentSummoner.summonerId", (function() {
                     return this.get("summonerId") || this.get("currentSummoner.summonerId")
                 })),
-                isViewingLocalSummoner: a.Ember.computed("currentSummoner.summonerId", "summonerId", (function() {
+                isViewingLocalSummoner: s.Ember.computed("currentSummoner.summonerId", "summonerId", (function() {
                     return this.get("currentSummoner.summonerId") === this.get("summonerId")
                 })),
                 _selectStanding: function(e) {
@@ -548,7 +548,7 @@
                 },
                 _requestAndSelectApexLeague: function(e = "RANKED_SOLO_5x5", t = "CHALLENGER") {
                     return this._requestApexData(e, t).then((t => {
-                        const n = a.Lodash.find(t, (t => t.queueType === e));
+                        const n = s.Lodash.find(t, (t => t.queueType === e));
                         this._selectLeague(n, !0)
                     }))
                 },
@@ -577,10 +577,10 @@
                 _selectRated: function(e) {
                     this._requestRatedLadderInfo(e)
                 },
-                faqText: a.Ember.computed("isViewingTft", (function() {
+                faqText: s.Ember.computed("isViewingTft", (function() {
                     return this.get("isViewingTft") ? this.get("tra.LEAGUES_FAQ_LINK_LABEL_TFT") : this.get("tra.LEAGUES_FAQ_LINK_LABEL")
                 })),
-                faqUrl: a.Ember.computed("isViewingTft", (function() {
+                faqUrl: s.Ember.computed("isViewingTft", (function() {
                     return this.get("isViewingTft") ? this.get("tra.LEAGUES_FAQ_LINK_URL_TFT") : this.get("tra.LEAGUES_FAQ_LINK_URL")
                 })),
                 actions: {
@@ -610,7 +610,7 @@
             }), Object.defineProperty(t, "GAMEFLOW_PHASES", {
                 enumerable: !0,
                 get: function() {
-                    return a.default
+                    return s.default
                 }
             }), Object.defineProperty(t, "GAME_CONTEXT_KEYS", {
                 enumerable: !0,
@@ -625,7 +625,7 @@
             }), Object.defineProperty(t, "GAME_SEARCH_STATES", {
                 enumerable: !0,
                 get: function() {
-                    return s.default
+                    return a.default
                 }
             }), Object.defineProperty(t, "PAW", {
                 enumerable: !0,
@@ -678,8 +678,8 @@
                     return i.getGameKeyFromGameMode
                 }
             });
-            var a = h(n(6)),
-                s = h(n(7)),
+            var s = h(n(6)),
+                a = h(n(7)),
                 i = n(8),
                 o = h(n(9)),
                 l = h(n(10)),
@@ -735,10 +735,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.GAME_CONTEXT_KEYS = void 0, t.getGameKeyFromGameMode = function(e) {
-                return e === s.default.TFT ? i.TFT : i.LEAGUE_OF_LEGENDS
+                return e === a.default.TFT ? i.TFT : i.LEAGUE_OF_LEGENDS
             };
-            var a, s = (a = n(9)) && a.__esModule ? a : {
-                default: a
+            var s, a = (s = n(9)) && s.__esModule ? s : {
+                default: s
             };
             const i = {
                 TFT: "tft",
@@ -765,8 +765,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = p(n(11)),
-                s = p(n(12)),
+            var s = p(n(11)),
+                a = p(n(12)),
                 i = p(n(13)),
                 o = p(n(14)),
                 l = p(n(15)),
@@ -782,8 +782,8 @@
                 }
             }
             var g = {
-                COMPONENT_TYPES: a.default,
-                CURRENCY_TYPES: s.default,
+                COMPONENT_TYPES: s.default,
+                CURRENCY_TYPES: a.default,
                 INVENTORY_TYPES: i.default,
                 MEDIA_TYPES: o.default,
                 MEDIA_LOAD_TYPES: l.default,
@@ -943,34 +943,34 @@
                     ENABLED: "ENABLED",
                     DISABLED: "DISABLED"
                 },
-                a = {
+                s = {
                     PRIVATE: "PRIVATE",
                     PUBLIC: "PUBLIC"
                 };
-            var s = {
+            var a = {
                 ProfilePrivacyEnabledState: n,
-                ProfilePrivacySetting: a,
+                ProfilePrivacySetting: s,
                 DEFAULT_PROFILE_PRIVACY: {
                     enabledState: n.UNKNOWN,
-                    setting: a.PUBLIC
+                    setting: s.PUBLIC
                 }
             };
-            t.default = s
+            t.default = a
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             const n = "RANKED_SOLO_5x5",
-                a = "RANKED_FLEX_SR",
-                s = "RANKED_FLEX_TT",
+                s = "RANKED_FLEX_SR",
+                a = "RANKED_FLEX_TT",
                 i = "CHERRY",
                 o = "RANKED_TFT",
                 l = "RANKED_TFT_DOUBLE_UP",
                 r = "RANKED_TFT_TURBO",
                 c = "RANKED_TFT_PAIRS",
-                u = [n, a],
-                d = [...u, s],
+                u = [n, s],
+                d = [...u, a],
                 m = [i],
                 p = [o, l],
                 g = [r, c],
@@ -979,8 +979,8 @@
                 E = [...g, ...m];
             var _ = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
-                RANKED_FLEX_SR_QUEUE_TYPE: a,
-                RANKED_FLEX_TT_QUEUE_TYPE: s,
+                RANKED_FLEX_SR_QUEUE_TYPE: s,
+                RANKED_FLEX_TT_QUEUE_TYPE: a,
                 RANKED_CHERRY_QUEUE_TYPE: i,
                 RANKED_TFT_QUEUE_TYPE: o,
                 RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: l,
@@ -1002,8 +1002,8 @@
                 value: !0
             }), t.default = void 0;
             const n = "UNRANKED",
-                a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
-                s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
+                a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 i = ["IV", "III", "II", "I"],
                 o = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
@@ -1020,17 +1020,17 @@
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
                 DIVISION_NAME_NONE: "NA",
                 APEX_TIERS: ["MASTER", "GRANDMASTER", "CHALLENGER"],
-                REGULAR_TIERS: a,
-                TIERS: s,
+                REGULAR_TIERS: s,
+                TIERS: a,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: a[a.length - 1],
-                LOWEST_TIER: a[0],
+                HIGHEST_TIER: s[s.length - 1],
+                LOWEST_TIER: s[0],
                 DIVISIONS: i,
                 HIGHEST_DIVISION: i[i.length - 1],
                 LOWEST_DIVISION: i[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: l(s),
+                TIER_NAME_TO_ORDINAL: l(a),
                 DIVISION_TO_ORDINAL: l(i),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
@@ -1121,14 +1121,14 @@
                 YEARS: "years"
             };
             t.TIME_UNITS = n;
-            const a = 36e5,
-                s = 864e5,
+            const s = 36e5,
+                a = 864e5,
                 i = 6048e5,
                 o = {
                     MILLISECONDS_IN_A_SECOND: 1e3,
                     MILLISECONDS_IN_A_MINUTE: 6e4,
-                    MILLISECONDS_IN_A_HOUR: a,
-                    MILLISECONDS_IN_A_DAY: s,
+                    MILLISECONDS_IN_A_HOUR: s,
+                    MILLISECONDS_IN_A_DAY: a,
                     MILLISECONDS_IN_A_WEEK: i,
                     MILLISECONDS_IN_A_YEAR: 314496e5
                 };
@@ -1153,20 +1153,20 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.StandingRelationship = t.SUMMONER_QUEUE_ORDER = t.RATED_LADDER_REFRESH_TIME_MILLIS = t.PROMOTE_COUNTDOWN_INTERVAL_MS = t.PROFILE_RANKED_SUBSECTION_ID = t.LP_SPLASH_LOSS_SCORE_REASON = t.LP_SPLASH_BONUS_REASONS = t.LOTTIE_JSON_PATH = t.INVENTORY_TYPES = t.EOS_REWARD_TYPE_TO_SIMPLE_INVENTORY_TYPE = t.EOS_REWARD_TYPES = t.EOS_NOTIFICATION_TYPES = t.ASSET_PATH = void 0;
-            var a = n(5);
+            var s = n(5);
             t.ASSET_PATH = "fe/lol-static-assets/";
             t.LOTTIE_JSON_PATH = "fe/lol-leagues/";
             t.PROMOTE_COUNTDOWN_INTERVAL_MS = 1e3;
-            const s = {
-                [a.QUEUES.RANKED_SOLO_5x5_QUEUE_TYPE]: 10,
-                [a.QUEUES.RANKED_FLEX_SR_QUEUE_TYPE]: 20,
-                [a.QUEUES.RANKED_FLEX_TT_QUEUE_TYPE]: 30,
-                [a.QUEUES.RANKED_TFT_QUEUE_TYPE]: 40,
-                [a.QUEUES.RANKED_TFT_DOUBLE_UP_QUEUE_TYPE]: 50,
-                [a.QUEUES.RANKED_TFT_TURBO_QUEUE_TYPE]: 60,
-                [a.QUEUES.RANKED_TFT_PAIRS_QUEUE_TYPE]: 70
+            const a = {
+                [s.QUEUES.RANKED_SOLO_5x5_QUEUE_TYPE]: 10,
+                [s.QUEUES.RANKED_FLEX_SR_QUEUE_TYPE]: 20,
+                [s.QUEUES.RANKED_FLEX_TT_QUEUE_TYPE]: 30,
+                [s.QUEUES.RANKED_TFT_QUEUE_TYPE]: 40,
+                [s.QUEUES.RANKED_TFT_DOUBLE_UP_QUEUE_TYPE]: 50,
+                [s.QUEUES.RANKED_TFT_TURBO_QUEUE_TYPE]: 60,
+                [s.QUEUES.RANKED_TFT_PAIRS_QUEUE_TYPE]: 70
             };
-            t.SUMMONER_QUEUE_ORDER = s;
+            t.SUMMONER_QUEUE_ORDER = a;
             t.RATED_LADDER_REFRESH_TIME_MILLIS = 3e5;
             t.StandingRelationship = {
                 NONE: "NONE",
@@ -1207,9 +1207,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.isTftQueueType = function(e) {
-                return a.QUEUES.RANKED_AND_RATED_TFT_QUEUE_TYPES.includes(e)
+                return s.QUEUES.RANKED_AND_RATED_TFT_QUEUE_TYPES.includes(e)
             };
-            var a = n(5)
+            var s = n(5)
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -1222,8 +1222,8 @@
                 day: "numeric",
                 year: "numeric"
             }) {
-                const a = (t && t.locale || "en_US").replace("_", "-");
-                return new Date(e).toLocaleString(a, n)
+                const s = (t && t.locale || "en_US").replace("_", "-");
+                return new Date(e).toLocaleString(s, n)
             }, t.getDaysBetweenDateMillis = function(e, t) {
                 return (t - e) / n
             }, t.timeInMillisToDays = function(e) {
@@ -1232,91 +1232,91 @@
             };
             const n = 864e5
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "YpjLJ132",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["loading-spinner ",["helper",["unless"],[["get",["isLoading"]],"loading-fade-out"],null]]]],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["smoke-background-container ",["helper",["if"],[["get",["showingPlayerNotRanked"]],"removed"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["ranked-intro-background ",["helper",["unless"],[["get",["showingPlayerNotRanked"]],"removed"],null]]]],["flush-element"],["close-element"],["text","\\n"],["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-ranked-rendered"]],6]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["append",["helper",["ranked-banner"],null,[["puuid","queueType","tier","division","ladderRank","leaguePoints","miniseries","games","isAnimationEnabled","provisionalGameThreshold","provisionalGamesRemaining","isProvisional"],[["get",["bannerProperties","puuid"]],["get",["bannerProperties","queueType"]],["get",["bannerProperties","tier"]],["get",["bannerProperties","division"]],["get",["bannerProperties","ladderRank"]],["get",["bannerProperties","leaguePoints"]],["get",["bannerProperties","miniseries"]],["get",["bannerProperties","games"]],["get",["isAnimationEnabled"]],["get",["bannerProperties","provisionalGameThreshold"]],["get",["bannerProperties","provisionalGamesRemaining"]],["get",["bannerProperties","isProvisional"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["helper",["rated-badge"],null,[["puuid","summoner","queueType"],[["get",["puuid"]],["get",["currentSummoner"]],["get",["selectedState","league","queueType"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-left-container"],["flush-element"],["text","\\n            "],["append",["helper",["rank-standing"],null,[["selectedState","selectDivision","selectStanding","onSelectApexLeague"],[["get",["selectedState"]],"selectDivision",["helper",["action"],[["get",[null]],"selectStanding"],null],["helper",["action"],[["get",[null]],"selectApexLeague"],null]]]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-right-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingRatedLadder"]]],null,1,0],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["ranked-intro"],null,[["league"],[["get",["selectedState","league"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time-icon"],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time"],["flush-element"],["append",["unknown",["splitTimeRemainingText"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","ranked-reference-modal-button-container"],["flush-element"],["text","\\n                "],["append",["helper",["ranked-reference-modal-button"],null,[["queueType"],[["get",["selectedState","league","queueType"]]]]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-container ",["helper",["if"],[["get",["isLoading"]],"loading-hidden","loading-fade-in"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-display-area ",["unknown",["animationClass"]]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-leagues-info-header-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-info-season-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-season-info-container"],["flush-element"],["text","\\n            "],["append",["unknown",["seasonNameText"]],false],["text","\\n"],["block",["if"],[["get",["isShowingLol"]]],null,5],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["isShowingSplitEndCountdown"]]],null,4],["text","        "],["close-element"],["text","\\n        "],["append",["helper",["leagues-countdowns"],null,[["league","myRankedStats","nextUpdateMillis","isViewingApexTier","isViewingRatedLadder","onRefresh"],[["get",["selectedState","league"]],["get",["myRankedStats"]],["get",["nextUpdateMillis"]],["get",["selectedState","isViewingApexTier"]],["get",["selectedState","isViewingRatedLadder"]],["helper",["action"],[["get",[null]],"refreshRankings"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["showingPlayerNotRanked"]]],null,3,2],["text","    "],["close-element"],["text","\\n    "],["append",["helper",["rank-queue-dropdown"],null,[["overlayMode","selectedLeague","leagues","leagueTypeSelected","challengerLaddersEnabled","topRatedLaddersEnabled","tooltipMessages","onSelectLeagueType"],[["get",["overlayMode"]],["get",["selectedState","league"]],["get",["leagues"]],["get",["leagueTypeSelected"]],["get",["challengerLaddersEnabled"]],["get",["topRatedLaddersEnabled"]],["get",["tooltipMessages"]],"selectLeagueType"]]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-faq-right"],["flush-element"],["text","\\n      "],["open-element","a",[]],["dynamic-attr","href",["concat",[["unknown",["faqUrl"]]]]],["static-attr","target","_new"],["static-attr","class","lol-leagues-faq-btn"],["flush-element"],["append",["unknown",["faqText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "OrYlkQMv",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["loading-spinner ",["helper",["unless"],[["get",["isLoading"]],"loading-fade-out"],null]]]],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["smoke-background-container ",["helper",["if"],[["get",["showingPlayerNotRanked"]],"removed"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["ranked-intro-background ",["helper",["unless"],[["get",["showingPlayerNotRanked"]],"removed"],null]]]],["flush-element"],["close-element"],["text","\\n"],["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-ranked-rendered"]],6]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["append",["helper",["ranked-banner"],null,[["puuid","queueType","tier","division","ladderRank","leaguePoints","miniseries","games","isAnimationEnabled","provisionalGameThreshold","provisionalGamesRemaining","isProvisional"],[["get",["bannerProperties","puuid"]],["get",["bannerProperties","queueType"]],["get",["bannerProperties","tier"]],["get",["bannerProperties","division"]],["get",["bannerProperties","ladderRank"]],["get",["bannerProperties","leaguePoints"]],["get",["bannerProperties","miniseries"]],["get",["bannerProperties","games"]],["get",["isAnimationEnabled"]],["get",["bannerProperties","provisionalGameThreshold"]],["get",["bannerProperties","provisionalGamesRemaining"]],["get",["bannerProperties","isProvisional"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["helper",["rated-badge"],null,[["puuid","summoner","queueType"],[["get",["puuid"]],["get",["currentSummoner"]],["get",["selectedState","league","queueType"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-left-container"],["flush-element"],["text","\\n            "],["append",["helper",["rank-standing"],null,[["selectedState","selectDivision","selectStanding","onSelectApexLeague"],[["get",["selectedState"]],"selectDivision",["helper",["action"],[["get",[null]],"selectStanding"],null],["helper",["action"],[["get",[null]],"selectApexLeague"],null]]]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-right-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingRatedLadder"]]],null,1,0],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["ranked-intro"],null,[["league"],[["get",["selectedState","league"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time-icon"],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time"],["flush-element"],["append",["unknown",["splitTimeRemainingText"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","ranked-reference-modal-button-container"],["flush-element"],["text","\\n                "],["append",["helper",["ranked-reference-modal-button"],null,[["queueType"],[["get",["selectedState","league","queueType"]]]]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-container ",["helper",["if"],[["get",["isLoading"]],"loading-hidden","loading-fade-in"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-display-area ",["unknown",["animationClass"]]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-leagues-info-header-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-info-season-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-season-info-container"],["flush-element"],["text","\\n            "],["append",["unknown",["seasonNameText"]],false],["text","\\n"],["block",["if"],[["get",["isShowingLol"]]],null,5],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["isShowingSplitEndCountdown"]]],null,4],["text","        "],["close-element"],["text","\\n        "],["append",["helper",["leagues-countdowns"],null,[["league","myRankedStats","nextUpdateMillis","isViewingApexTier","isViewingRatedLadder","onRefresh"],[["get",["selectedState","league"]],["get",["myRankedStats"]],["get",["nextUpdateMillis"]],["get",["selectedState","isViewingApexTier"]],["get",["selectedState","isViewingRatedLadder"]],["helper",["action"],[["get",[null]],"refreshRankings"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["showingPlayerNotRanked"]]],null,3,2],["text","    "],["close-element"],["text","\\n    "],["append",["helper",["rank-queue-dropdown"],null,[["overlayMode","selectedLeague","leagues","leagueTypeSelected","challengerLaddersEnabled","topRatedLaddersEnabled","tooltipMessages","onSelectLeagueType"],[["get",["overlayMode"]],["get",["selectedState","league"]],["get",["leagues"]],["get",["leagueTypeSelected"]],["get",["challengerLaddersEnabled"]],["get",["topRatedLaddersEnabled"]],["get",["tooltipMessages"]],"selectLeagueType"]]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-faq-right"],["flush-element"],["text","\\n      "],["open-element","a",[]],["dynamic-attr","href",["concat",[["unknown",["faqUrl"]]]]],["static-attr","target","_new"],["static-attr","class","lol-leagues-faq-btn"],["flush-element"],["append",["unknown",["faqText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            n(35), e.exports = a.Ember.Component.extend({
+            var s = n(1);
+            n(35), e.exports = s.Ember.Component.extend({
                 classNames: ["leagues-countdowns-component"],
                 layout: n(36),
-                leagueTierNames: a.LeagueTierNames,
-                isValidDaysUntilDecay: a.Ember.computed("daysUntilDecay", (function() {
+                leagueTierNames: s.LeagueTierNames,
+                isValidDaysUntilDecay: s.Ember.computed("daysUntilDecay", (function() {
                     const e = this.get("daysUntilDecay");
                     return null != e && e >= -1
                 })),
-                daysUntilDecay: a.Ember.computed("league", "myRankedStats", "isViewingApexTier", (function() {
+                daysUntilDecay: s.Ember.computed("league", "myRankedStats", "isViewingApexTier", (function() {
                     const e = this.get("league"),
                         t = this.get("myRankedStats"),
                         n = this.get("isViewingApexTier");
                     if (!e || !t || !t.queues) return null;
                     const {
-                        queueType: a
+                        queueType: s
                     } = e;
                     for (const e of t.queues)
-                        if (e.queueType === a && this.leagueTierNames.isApexForQueue(e) === n && e.warnings) return e.warnings.daysUntilDecay;
+                        if (e.queueType === s && this.leagueTierNames.isApexForQueue(e) === n && e.warnings) return e.warnings.daysUntilDecay;
                     return null
                 })),
-                shouldDisplayDecayWarningInDays: a.Ember.computed("isValidDaysUntilDecay", "shouldDisplayDecayWarningInCountdownTimer", (function() {
+                shouldDisplayDecayWarningInDays: s.Ember.computed("isValidDaysUntilDecay", "shouldDisplayDecayWarningInCountdownTimer", (function() {
                     const e = this.get("isValidDaysUntilDecay"),
                         t = this.get("shouldDisplayDecayWarningInCountdownTimer");
                     return e && !t
                 })),
-                decayWarningText: a.Ember.computed("daysUntilDecay", "isViewingApexTier", (function() {
+                decayWarningText: s.Ember.computed("daysUntilDecay", "isViewingApexTier", (function() {
                     const e = this.get("daysUntilDecay");
                     return this.get("isViewingApexTier") && e <= 0 ? this.get("tra.RANKED_DECAY_NEXT_UPDATE") : this.get("tra.RANKED_DECAY_GENERIC")
                 })),
-                decayWarningDaysRemaining: a.Ember.computed("daysUntilDecay", (function() {
+                decayWarningDaysRemaining: s.Ember.computed("daysUntilDecay", (function() {
                     const e = this.get("daysUntilDecay");
                     return e > 0 ? this.get("tra").formatString("RANKED_DAYS", {
                         days: e
                     }) : ""
                 })),
-                shouldDisplayDecayWarningInCountdownTimer: a.Ember.computed("isValidDaysUntilDecay", "daysUntilDecay", "isViewingApexTier", (function() {
+                shouldDisplayDecayWarningInCountdownTimer: s.Ember.computed("isValidDaysUntilDecay", "daysUntilDecay", "isViewingApexTier", (function() {
                     const e = this.get("isValidDaysUntilDecay"),
                         t = this.get("daysUntilDecay"),
                         n = this.get("isViewingApexTier");
                     return e && !n && (0 === t || -1 === t)
                 })),
-                countdownLabel: a.Ember.computed("shouldDisplayDecayWarningInCountdownTimer", "decayWarningText", (function() {
+                countdownLabel: s.Ember.computed("shouldDisplayDecayWarningInCountdownTimer", "decayWarningText", (function() {
                     return this.get("shouldDisplayDecayWarningInCountdownTimer") ? this.get("decayWarningText") : this.get("tra.RANKED_NEXT_LADDER_UPDATE_COUNTDOWN_LABEL")
                 })),
-                isDecayUrgent: a.Ember.computed("isValidDaysUntilDecay", "daysUntilDecay", (function() {
+                isDecayUrgent: s.Ember.computed("isValidDaysUntilDecay", "daysUntilDecay", (function() {
                     const e = this.get("isValidDaysUntilDecay"),
                         t = this.get("daysUntilDecay");
                     return e && t <= 0
                 })),
-                shouldCountdownTimerBeUrgent: a.Ember.computed("isDecayUrgent", "shouldDisplayDecayWarningInCountdownTimer", (function() {
+                shouldCountdownTimerBeUrgent: s.Ember.computed("isDecayUrgent", "shouldDisplayDecayWarningInCountdownTimer", (function() {
                     const e = this.get("isDecayUrgent"),
                         t = this.get("shouldDisplayDecayWarningInCountdownTimer");
                     return e && t
                 })),
-                shouldDisplayCountdownTimer: a.Ember.computed("isViewingApexTier", "isViewingRatedLadder", "shouldDisplayDecayWarningInCountdownTimer", "nextUpdateMillis", (function() {
+                shouldDisplayCountdownTimer: s.Ember.computed("isViewingApexTier", "isViewingRatedLadder", "shouldDisplayDecayWarningInCountdownTimer", "nextUpdateMillis", (function() {
                     const e = this.get("isViewingApexTier"),
                         t = this.get("isViewingRatedLadder"),
                         n = this.get("shouldDisplayDecayWarningInCountdownTimer"),
-                        a = this.get("nextUpdateMillis");
-                    return (n || e || t) && a > 0
+                        s = this.get("nextUpdateMillis");
+                    return (n || e || t) && s > 0
                 }))
             })
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "M5BenqoQ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-leagues-info-leagues-countdowns-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplayDecayWarningInDays"]]],null,5],["block",["if"],[["get",["shouldDisplayCountdownTimer"]]],null,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","RANKED_DECAY_TOOLTIP"]]],null],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["flush-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-countdown-timer-wrapper"],["flush-element"],["text","\\n      "],["append",["helper",["countdown-timer"],null,[["countdownLabel","countdownToTime","isUrgent","onRefresh"],[["get",["countdownLabel"]],["get",["nextUpdateMillis"]],["get",["shouldCountdownTimerBeUrgent"]],["helper",["action"],[["get",[null]],["get",["onRefresh"]]],null]]]],false],["text","\\n"],["block",["if"],[["get",["shouldDisplayDecayWarningInCountdownTimer"]]],null,1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["helper",["sanitize"],[["get",["tra","RANKED_DECAY_TOOLTIP"]]],null],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","         \\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-decay-warning-countdown ",["helper",["if"],[["get",["isDecayUrgent"]],"decay-urgent"],null]]]],["flush-element"],["text","\\n          "],["append",["unknown",["decayWarningDaysRemaining"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-decay-warning ",["helper",["if"],[["get",["isDecayUrgent"]],"decay-urgent"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["decayWarningText"]],false],["text","\\n"],["block",["if"],[["get",["decayWarningDaysRemaining"]]],null,4],["text","      "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],3],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "Da3A8gDz",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-leagues-info-leagues-countdowns-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplayDecayWarningInDays"]]],null,5],["block",["if"],[["get",["shouldDisplayCountdownTimer"]]],null,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","RANKED_DECAY_TOOLTIP"]]],null],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["flush-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-countdown-timer-wrapper"],["flush-element"],["text","\\n      "],["append",["helper",["countdown-timer"],null,[["countdownLabel","countdownToTime","isUrgent","onRefresh"],[["get",["countdownLabel"]],["get",["nextUpdateMillis"]],["get",["shouldCountdownTimerBeUrgent"]],["helper",["action"],[["get",[null]],["get",["onRefresh"]]],null]]]],false],["text","\\n"],["block",["if"],[["get",["shouldDisplayDecayWarningInCountdownTimer"]]],null,1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["helper",["sanitize"],[["get",["tra","RANKED_DECAY_TOOLTIP"]]],null],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","         \\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-decay-warning-countdown ",["helper",["if"],[["get",["isDecayUrgent"]],"decay-urgent"],null]]]],["flush-element"],["text","\\n          "],["append",["unknown",["decayWarningDaysRemaining"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-decay-warning ",["helper",["if"],[["get",["isDecayUrgent"]],"decay-urgent"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["decayWarningText"]],false],["text","\\n"],["block",["if"],[["get",["decayWarningDaysRemaining"]]],null,4],["text","      "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],3],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            n(38), e.exports = a.Ember.Component.extend({
+            var s = n(1);
+            n(38), e.exports = s.Ember.Component.extend({
                 classNames: ["miniseries-results-component"],
                 layout: n(39)
             })
@@ -1324,26 +1324,26 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "3S93KV1T",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\index.js\\" "],["text","\\n"],["open-element","ul",[]],["static-attr","class","lol-leagues-miniseries-status-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["results"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","li",[]],["dynamic-attr","class",["concat",["lol-leagues-miniseries-status-item ",["get",["result"]]," ",["unknown",["showingAsSelf"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["result"]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "JwpfAXGN",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\index.js\\" "],["text","\\n"],["open-element","ul",[]],["static-attr","class","lol-leagues-miniseries-status-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["results"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","li",[]],["dynamic-attr","class",["concat",["lol-leagues-miniseries-status-item ",["get",["result"]]," ",["unknown",["showingAsSelf"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["result"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            n(41), e.exports = a.Ember.Component.extend({
+            var s = n(1);
+            n(41), e.exports = s.Ember.Component.extend({
                 classNames: ["ranked-banner-component"],
                 classNameBindings: ["isProvisional:provisional", "isAnimationEnabled::low-spec"],
-                leagueTierNames: a.LeagueTierNames,
+                leagueTierNames: s.LeagueTierNames,
                 displayedPuuid: null,
                 displayedQueueType: null,
                 displayedTier: null,
                 displayedDivision: null,
                 displayedRegaliaLevel: 0,
                 displayedPreviousTier: "",
-                rankedService: (0, a.dataBinding)("/lol-ranked", (0, a.getProvider)().getSocket()),
+                rankedService: (0, s.dataBinding)("/lol-ranked", (0, s.getProvider)().getSocket()),
                 init: function() {
                     this._super(...arguments);
                     this.get("rankedService").observe("/v1/current-ranked-stats", this, this.fetchRankedData)
@@ -1361,28 +1361,28 @@
                 fetchRankedData() {
                     const e = this.get("displayedPuuid"),
                         t = this.get("displayedQueueType");
-                    e && t && (0, a.dataBinding)("lol-ranked").get(`/v1/ranked-stats/${e}`, {
+                    e && t && (0, s.dataBinding)("lol-ranked").get(`/v1/ranked-stats/${e}`, {
                         skipCache: !0
                     }).then((n => {
                         this.setRankedData(e, t, n)
                     }))
                 },
                 setRankedData(e, t, n) {
-                    e && t && n && this.get("displayedPuuid") === e && this.get("displayedQueueType") === t && (n && n.rankedRegaliaLevel ? this.set("displayedRegaliaLevel", n.rankedRegaliaLevel) : this.set("displayedRegaliaLevel", 0), n.queueMap && n.queueMap[t] && n.queueMap[t].previousSeasonEndTier && n.queueMap[t].previousSeasonEndTier !== a.LeaguesConsts.TIER_NAME_NONE ? this.set("displayedPreviousTier", n.queueMap[t].previousSeasonEndTier) : this.set("displayedPreviousTier", ""), n.queueMap && n.queueMap[t] && n.queueMap[t].tier && n.queueMap[t].tier !== a.LeaguesConsts.TIER_NAME_NONE ? this.set("displayedTier", n.queueMap[t].tier) : this.set("displayedTier", ""), n.queueMap && n.queueMap[t] && n.queueMap[t].division ? this.set("displayedDivision", n.queueMap[t].division) : this.set("displayedDivision", ""))
+                    e && t && n && this.get("displayedPuuid") === e && this.get("displayedQueueType") === t && (n && n.rankedRegaliaLevel ? this.set("displayedRegaliaLevel", n.rankedRegaliaLevel) : this.set("displayedRegaliaLevel", 0), n.queueMap && n.queueMap[t] && n.queueMap[t].previousSeasonEndTier && n.queueMap[t].previousSeasonEndTier !== s.LeaguesConsts.TIER_NAME_NONE ? this.set("displayedPreviousTier", n.queueMap[t].previousSeasonEndTier) : this.set("displayedPreviousTier", ""), n.queueMap && n.queueMap[t] && n.queueMap[t].tier && n.queueMap[t].tier !== s.LeaguesConsts.TIER_NAME_NONE ? this.set("displayedTier", n.queueMap[t].tier) : this.set("displayedTier", ""), n.queueMap && n.queueMap[t] && n.queueMap[t].division ? this.set("displayedDivision", n.queueMap[t].division) : this.set("displayedDivision", ""))
                 },
                 layout: n(42),
-                unranked: a.Ember.computed("tier", "displayedTier", (function() {
+                unranked: s.Ember.computed("tier", "displayedTier", (function() {
                     const e = this.get("tier"),
                         t = this.get("displayedTier");
-                    return !e || e === a.LeaguesConsts.TIER_NAME_UNRANKED || e === a.LeaguesConsts.TIER_NAME_NONE || !t || t === a.LeaguesConsts.TIER_NAME_UNRANKED || t === a.LeaguesConsts.TIER_NAME_NONE
+                    return !e || e === s.LeaguesConsts.TIER_NAME_UNRANKED || e === s.LeaguesConsts.TIER_NAME_NONE || !t || t === s.LeaguesConsts.TIER_NAME_UNRANKED || t === s.LeaguesConsts.TIER_NAME_NONE
                 })),
-                hasApexLadderRank: a.Ember.computed("tier", "ladderRank", (function() {
-                    return a.LeaguesConsts.APEX_TIERS.includes(this.get("tier")) && this.get("ladderRank")
+                hasApexLadderRank: s.Ember.computed("tier", "ladderRank", (function() {
+                    return s.LeaguesConsts.APEX_TIERS.includes(this.get("tier")) && this.get("ladderRank")
                 })),
-                isProvisional: a.Ember.computed("isProvisional", (function() {
+                isProvisional: s.Ember.computed("isProvisional", (function() {
                     return this.get("isProvisional")
                 })),
-                provisionalGamesProgressText: a.Ember.computed("provisionalGameThreshold", "provisionalGamesRemaining", (function() {
+                provisionalGamesProgressText: s.Ember.computed("provisionalGameThreshold", "provisionalGamesRemaining", (function() {
                     const e = this.get("tra");
                     if (e) {
                         const t = this.get("provisionalGamesRemaining"),
@@ -1394,19 +1394,19 @@
                     }
                     return ""
                 })),
-                apexLadderRank: a.Ember.computed("tra", "hasApexLadderRank", "ladderRank", (function() {
+                apexLadderRank: s.Ember.computed("tra", "hasApexLadderRank", "ladderRank", (function() {
                     return this.get("tra").formatString("LEAGUES_BANNER_APEX_LADDER_RANK", {
                         ladderRank: this.get("ladderRank")
                     })
                 })),
-                showLeaguePoints: a.Ember.computed("unranked", "leaguePoints", (function() {
+                showLeaguePoints: s.Ember.computed("unranked", "leaguePoints", (function() {
                     return "number" == typeof this.get("leaguePoints") && !this.get("unranked")
                 })),
-                leaguePointsString: a.Ember.computed("leaguePoints", "tier", (function() {
-                    const e = a.LeaguesConsts.APEX_TIERS.includes(this.get("tier")) ? this.get("leaguePoints") : Math.min(100, this.get("leaguePoints"));
+                leaguePointsString: s.Ember.computed("leaguePoints", "tier", (function() {
+                    const e = s.LeaguesConsts.APEX_TIERS.includes(this.get("tier")) ? this.get("leaguePoints") : Math.min(100, this.get("leaguePoints"));
                     return this.leagueTierNames.getLpLoc(e)
                 })),
-                tierDivisionLabel: a.Ember.computed("tier", "division", (function() {
+                tierDivisionLabel: s.Ember.computed("tier", "division", (function() {
                     const e = this.get("tier"),
                         t = this.get("division");
                     return this.leagueTierNames.getFullTierDivisionName(e, t)
@@ -1416,52 +1416,52 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "mUdP3rAd",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isProvisional"]]],null,7],["text","\\n"],["open-element","lol-regalia-ranked-banner-v2-element",[]],["static-attr","animations","false"],["static-attr","banner-type","lastSeasonHighestRank"],["dynamic-attr","banner-rank",["concat",[["unknown",["displayedPreviousTier"]]]]],["static-attr","animation-config","{\\"topFadeEnd\\": 1, \\"topFadeStart\\": 0.15}"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","ranked-banner-contents-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","banner-ranked-emblem-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","banner-regalia-crest-sizer"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["unranked"]],"unranked",["get",["displayedTier"]]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isProvisional"]]],null,4,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-tier-division-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["banner-league-points-display ",["helper",["unless"],[["get",["showLeaguePoints"]],"hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["leaguePointsString"]],false],["text","\\n    "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-apex-ladder-rank"],["flush-element"],["text","\\n        "],["append",["unknown",["apexLadderRank"]],false],["text","\\n      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasApexLadderRank"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-miniseries-progress"],["flush-element"],["text","\\n        "],["append",["helper",["miniseries-results"],null,[["results","showingAsSelf"],[["get",["miniseries"]],true]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["miniseries"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-provisional-text-container"],["flush-element"],["text","\\n        "],["append",["unknown",["provisionalGamesProgressText"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","provisional-banner-static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","id","provisional-banner-loop"],["static-attr","src","/fe/lol-static-assets/videos/provisional-banner-loop.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isAnimationEnabled"]]],null,6,5]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "Bx2iXzER",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isProvisional"]]],null,7],["text","\\n"],["open-element","lol-regalia-ranked-banner-v2-element",[]],["static-attr","animations","false"],["static-attr","banner-type","lastSeasonHighestRank"],["dynamic-attr","banner-rank",["concat",[["unknown",["displayedPreviousTier"]]]]],["static-attr","animation-config","{\\"topFadeEnd\\": 1, \\"topFadeStart\\": 0.15}"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","ranked-banner-contents-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","banner-ranked-emblem-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","banner-regalia-crest-sizer"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["unranked"]],"unranked",["get",["displayedTier"]]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isProvisional"]]],null,4,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-tier-division-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["banner-league-points-display ",["helper",["unless"],[["get",["showLeaguePoints"]],"hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["leaguePointsString"]],false],["text","\\n    "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-apex-ladder-rank"],["flush-element"],["text","\\n        "],["append",["unknown",["apexLadderRank"]],false],["text","\\n      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasApexLadderRank"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-miniseries-progress"],["flush-element"],["text","\\n        "],["append",["helper",["miniseries-results"],null,[["results","showingAsSelf"],[["get",["miniseries"]],true]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["miniseries"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-provisional-text-container"],["flush-element"],["text","\\n        "],["append",["unknown",["provisionalGamesProgressText"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","provisional-banner-static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","id","provisional-banner-loop"],["static-attr","src","/fe/lol-static-assets/videos/provisional-banner-loop.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isAnimationEnabled"]]],null,6,5]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(29);
+            var s = n(1),
+                a = n(29);
             n(44);
             const i = {
                 RANKED_SOLO_5x5: 420,
                 RANKED_FLEX_SR: 440,
                 RANKED_FLEX_TT: 470
             };
-            e.exports = a.Ember.Component.extend({
+            e.exports = s.Ember.Component.extend({
                 classNames: ["ranked-intro-component"],
                 layout: n(45),
-                parties: a.Parties,
-                queueType: a.Ember.computed("league.queueType", (function() {
+                parties: s.Parties,
+                queueType: s.Ember.computed("league.queueType", (function() {
                     return this.get("league.queueType")
                 })),
-                queueTypeQueueId: a.Ember.computed("queueType", (function() {
+                queueTypeQueueId: s.Ember.computed("queueType", (function() {
                     return i[this.get("queueType")] || 0
                 })),
-                hideQueueUpButton: a.Ember.computed("queueTypeQueueId", (function() {
+                hideQueueUpButton: s.Ember.computed("queueTypeQueueId", (function() {
                     return 0 === this.get("queueTypeQueueId")
                 })),
-                rankedIntroSections: a.Ember.computed("queueType", "league.isPositionRanks", "tra", "tra.RANKED_INTRO_RANKED_SOLO_5x5_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_SOLO_5x5_SECTION_1_BODY", "tra.RANKED_INTRO_RANKED_FLEX_SR_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_FLEX_SR_SECTION_1_BODY", "tra.RANKED_INTRO_RANKED_FLEX_TT_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_FLEX_TT_SECTION_1_BODY", "tra.RANKED_INTRO_SECTION_2_TITLE", "tra.RANKED_INTRO_SECTION_2_BODY", "tra.RANKED_INTRO_SECTION_3_TITLE", "tra.RANKED_INTRO_SECTION_3_BODY", (function() {
+                rankedIntroSections: s.Ember.computed("queueType", "league.isPositionRanks", "tra", "tra.RANKED_INTRO_RANKED_SOLO_5x5_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_SOLO_5x5_SECTION_1_BODY", "tra.RANKED_INTRO_RANKED_FLEX_SR_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_FLEX_SR_SECTION_1_BODY", "tra.RANKED_INTRO_RANKED_FLEX_TT_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_FLEX_TT_SECTION_1_BODY", "tra.RANKED_INTRO_SECTION_2_TITLE", "tra.RANKED_INTRO_SECTION_2_BODY", "tra.RANKED_INTRO_SECTION_3_TITLE", "tra.RANKED_INTRO_SECTION_3_BODY", (function() {
                     const e = this.get("queueType");
                     return [{
                         titleString: this.get(`tra.RANKED_INTRO_${e}_SECTION_1_TITLE`),
                         bodyString: this.get(`tra.RANKED_INTRO_${e}_SECTION_1_BODY`),
-                        imageSource: s.ASSET_PATH + "images/ranked-intro-squad-up.jpg"
+                        imageSource: a.ASSET_PATH + "images/ranked-intro-squad-up.jpg"
                     }, {
                         titleString: this.get("tra.RANKED_INTRO_SECTION_2_TITLE"),
                         bodyString: this.get("tra.RANKED_INTRO_SECTION_2_BODY"),
-                        imageSource: s.ASSET_PATH + "images/ranked-intro-earn-rank.png"
+                        imageSource: a.ASSET_PATH + "images/ranked-intro-earn-rank.png"
                     }, {
                         titleString: this.get("tra.RANKED_INTRO_SECTION_3_TITLE"),
                         bodyString: this.get("tra.RANKED_INTRO_SECTION_3_BODY"),
-                        imageSource: s.ASSET_PATH + "images/ranked-intro-epic-loot.jpg"
+                        imageSource: a.ASSET_PATH + "images/ranked-intro-epic-loot.jpg"
                     }]
                 })),
-                queueUpButtonText: a.Ember.computed("tra", (function() {
+                queueUpButtonText: s.Ember.computed("tra", (function() {
                     return this.get("tra.RANKED_INTRO_QUEUE_UP")
                 })),
                 actions: {
@@ -1474,28 +1474,28 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "JtxslNU4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-intro-page-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-intro-section-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rankedIntroSections"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["ranked-intro-footer-container ",["helper",["if"],[["get",["hideQueueUpButton"]],"hidden"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-up-hype left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","class","queue-up-button-container"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","type","next"],["static-attr","class","queue-up-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"createPartyLobby"],null],null],["flush-element"],["append",["unknown",["queueUpButtonText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-up-hype right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","ranked-intro-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-image-frame"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","ranked-intro-section-image"],["dynamic-attr","src",["unknown",["section","imageSource"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-title"],["flush-element"],["append",["unknown",["section","titleString"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-body"],["flush-element"],["append",["unknown",["section","bodyString"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["section"]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "kReepx6u",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-intro-page-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-intro-section-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rankedIntroSections"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["ranked-intro-footer-container ",["helper",["if"],[["get",["hideQueueUpButton"]],"hidden"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-up-hype left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","class","queue-up-button-container"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","type","next"],["static-attr","class","queue-up-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"createPartyLobby"],null],null],["flush-element"],["append",["unknown",["queueUpButtonText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-up-hype right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","ranked-intro-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-image-frame"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","ranked-intro-section-image"],["dynamic-attr","src",["unknown",["section","imageSource"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-title"],["flush-element"],["append",["unknown",["section","titleString"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-body"],["flush-element"],["append",["unknown",["section","bodyString"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["section"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            n(47), e.exports = a.Ember.Component.extend({
+            var s = n(1);
+            n(47), e.exports = s.Ember.Component.extend({
                 classNames: ["rank-standing-component"],
                 layout: n(48),
                 selectedState: null,
-                league: a.Ember.computed.alias("selectedState.league"),
-                activeTabIndex: a.Ember.computed("selectedState.division.position", (function() {
+                league: s.Ember.computed.alias("selectedState.league"),
+                activeTabIndex: s.Ember.computed("selectedState.division.position", (function() {
                     const e = this.get("selectedState.division.position");
                     return e || 0
                 })),
-                leagueStandings: a.Ember.computed.readOnly("selectedState.division.standings"),
-                isViewingRatedLadder: a.Ember.computed.readOnly("selectedState.isViewingRatedLadder"),
-                ratedLadderStandings: a.Ember.computed.readOnly("selectedState.league.standings"),
-                displayedStandings: a.Ember.computed("leagueStandings", "isViewingRatedLadder", "ratedLadderStandings", (function() {
+                leagueStandings: s.Ember.computed.readOnly("selectedState.division.standings"),
+                isViewingRatedLadder: s.Ember.computed.readOnly("selectedState.isViewingRatedLadder"),
+                ratedLadderStandings: s.Ember.computed.readOnly("selectedState.league.standings"),
+                displayedStandings: s.Ember.computed("leagueStandings", "isViewingRatedLadder", "ratedLadderStandings", (function() {
                     return this.get("isViewingRatedLadder") ? this.get("ratedLadderStandings") : this.get("leagueStandings")
                 })),
                 _divisionAtIndex: function(e) {
@@ -1513,8 +1513,8 @@
                     if (t !== e) {
                         const n = this.$(".rank-standing-list-container").last();
                         this.set("animationClass", t > e ? "left-to-right-fade-out" : "right-to-left-fade-out"), n.on("animationend", (() => {
-                            const a = this._divisionAtIndex(e);
-                            this.sendAction("selectDivision", a), n.off("animationend"), this.set("animationClass", t > e ? "left-to-right-fade-in" : "right-to-left-fade-in")
+                            const s = this._divisionAtIndex(e);
+                            this.sendAction("selectDivision", s), n.off("animationend"), this.set("animationClass", t > e ? "left-to-right-fade-in" : "right-to-left-fade-in")
                         }))
                     }
                 },
@@ -1528,40 +1528,40 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "OYqKBWw4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\index.js\\" "],["text","\\n"],["append",["helper",["rank-standing-header"],null,[["league","activateTab","selectedState","onSelectApexLeague"],[["get",["league"]],["helper",["action"],[["get",[null]],"activateTab"],null],["get",["selectedState"]],["get",["onSelectApexLeague"]]]]],false],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["rank-standing-list-container ",["unknown",["animationClass"]]]]],["flush-element"],["text","\\n  "],["append",["helper",["rank-standing-list"],null,[["leagueContext","selectedState","standings","selectStanding"],[["get",["selectedState","league"]],["get",["selectedState"]],["get",["displayedStandings"]],["get",["selectStanding"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "A0vBcmBb",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\index.js\\" "],["text","\\n"],["append",["helper",["rank-standing-header"],null,[["league","activateTab","selectedState","onSelectApexLeague"],[["get",["league"]],["helper",["action"],[["get",[null]],"activateTab"],null],["get",["selectedState"]],["get",["onSelectApexLeague"]]]]],false],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["rank-standing-list-container ",["unknown",["animationClass"]]]]],["flush-element"],["text","\\n  "],["append",["helper",["rank-standing-list"],null,[["leagueContext","selectedState","standings","selectStanding"],[["get",["selectedState","league"]],["get",["selectedState"]],["get",["displayedStandings"]],["get",["selectStanding"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(29);
-            n(50), e.exports = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(29);
+            n(50), e.exports = s.Ember.Component.extend({
                 tagName: "li",
                 classNames: ["lol-leagues-division-item"],
                 layout: n(51),
-                containsPlayer: a.Ember.computed("leagueDivisionInfo.standings", (function() {
-                    return !a.Lodash.isEmpty(a.Lodash.find(this.get("leagueDivisionInfo.standings"), {
-                        relationship: s.StandingRelationship.SELF
+                containsPlayer: s.Ember.computed("leagueDivisionInfo.standings", (function() {
+                    return !s.Lodash.isEmpty(s.Lodash.find(this.get("leagueDivisionInfo.standings"), {
+                        relationship: a.StandingRelationship.SELF
                     }))
                 })),
                 activeIndex: null,
                 selectedDivision: null,
-                text: a.Ember.computed("tra", "leagueDivisionInfo.tier", "leagueDivisionInfo.division", (function() {
-                    return a.LeaguesConsts.APEX_TIERS.includes(this.get("leagueDivisionInfo.tier")) ? a.LeagueTierNames.getTierName(this.get("leagueDivisionInfo.tier")) : a.LeagueTierNames.getDivisionName(this.get("leagueDivisionInfo.division"))
+                text: s.Ember.computed("tra", "leagueDivisionInfo.tier", "leagueDivisionInfo.division", (function() {
+                    return s.LeaguesConsts.APEX_TIERS.includes(this.get("leagueDivisionInfo.tier")) ? s.LeagueTierNames.getTierName(this.get("leagueDivisionInfo.tier")) : s.LeagueTierNames.getDivisionName(this.get("leagueDivisionInfo.division"))
                 })),
-                isActive: a.Ember.computed("activeIndex", "btnIndex", (function() {
+                isActive: s.Ember.computed("activeIndex", "btnIndex", (function() {
                     return this.get("activeIndex") === this.get("btnIndex")
                 })),
-                activeStyle: a.Ember.computed("isActive", (function() {
+                activeStyle: s.Ember.computed("isActive", (function() {
                     return this.get("isActive") ? "active" : null
                 })),
-                playerDivisionStyle: a.Ember.computed("containsPlayer", (function() {
+                playerDivisionStyle: s.Ember.computed("containsPlayer", (function() {
                     return this.get("containsPlayer") ? "player-division" : null
                 })),
-                selectedStateDidChange: a.Ember.on("init", a.Ember.observer("selectedDivision", (function() {
+                selectedStateDidChange: s.Ember.on("init", s.Ember.observer("selectedDivision", (function() {
                     this.get("leagueDivisionInfo") && this.set("activeIndex", this.get("selectedDivision.position"))
                 }))),
                 click: function() {
@@ -1572,38 +1572,38 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "0GFRqb2A",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-division-btn division-",["unknown",["leagueDivisionInfo","division"]]," ",["unknown",["activeStyle"]]," ",["unknown",["playerDivisionStyle"]]]]],["flush-element"],["append",["unknown",["text"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "dv9qAkZL",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-division-btn division-",["unknown",["leagueDivisionInfo","division"]]," ",["unknown",["activeStyle"]]," ",["unknown",["playerDivisionStyle"]]]]],["flush-element"],["append",["unknown",["text"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(29);
+            var s = n(1),
+                a = n(29);
             n(53);
             let i = null;
-            if (a.AudioPlugin) {
-                const e = a.AudioPlugin.getChannel("sfx-ui");
-                i = e.createSound(`${s.ASSET_PATH}sounds/sfx-uikit-button-text-click.ogg`)
+            if (s.AudioPlugin) {
+                const e = s.AudioPlugin.getChannel("sfx-ui");
+                i = e.createSound(`${a.ASSET_PATH}sounds/sfx-uikit-button-text-click.ogg`)
             }
-            e.exports = a.Ember.Component.extend({
+            e.exports = s.Ember.Component.extend({
                 classNames: ["rank-standing-header-component", "lol-leagues-division-wrapper"],
                 layout: n(54),
                 activeIndex: null,
-                hasDivision: a.Ember.computed("league.tier", (function() {
-                    return !a.LeaguesConsts.APEX_TIERS.includes(this.get("league.tier"))
+                hasDivision: s.Ember.computed("league.tier", (function() {
+                    return !s.LeaguesConsts.APEX_TIERS.includes(this.get("league.tier"))
                 })),
-                divisionExistenceObserver: a.Ember.observer("hasDivision", (function() {
+                divisionExistenceObserver: s.Ember.observer("hasDivision", (function() {
                     this.get("hasDivision") || this._activateButton(0)
                 })),
-                topRatedTier: a.Ember.computed("league.queueType", (function() {
+                topRatedTier: s.Ember.computed("league.queueType", (function() {
                     const e = this.get("league.queueType");
                     return this.get(`tra.${e}_tier_label_ORANGE`)
                 })),
-                localizedTier: a.Ember.computed("selectedState.league.tier", (function() {
-                    return a.LeagueTierNames.getTierName(this.get("selectedState.league.tier"))
+                localizedTier: s.Ember.computed("selectedState.league.tier", (function() {
+                    return s.LeagueTierNames.getTierName(this.get("selectedState.league.tier"))
                 })),
                 _activateButton: function(e) {
                     this.set("activeIndex", e), this.attrs.activateTab(e)
@@ -1621,48 +1621,48 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "o9Af/Hst",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-division-tier ",["helper",["if"],[["get",["selectedState","isViewingApexTier"]],"removed"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingRatedLadder"]]],null,2,1],["close-element"],["text","\\n"],["open-element","ul",[]],["dynamic-attr","class",["concat",["lol-leagues-division-list ",["helper",["if"],[["get",["selectedState","isViewingRatedLadder"]],"removed"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["league","divisions"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["rank-standing-header-button"],null,[["leagueDivisionInfo","btnIndex","activeIndex","onBtnClick","selectedDivision","contentSize","isViewingTopPlayers","queueType","onSelectApexLeague","playClickAudio"],[["get",["l"]],["get",["l","position"]],["get",["activeIndex"]],"activateButton",["get",["selectedState","division"]],["get",["league","divisions","length"]],["get",["selectedState","isViewingTopPlayers"]],["get",["league","queueType"]],["get",["onSelectApexLeague"]],"playClickAudio"]]],false],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","    "],["append",["unknown",["localizedTier"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["topRatedTier"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "mm7SU9QG",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-division-tier ",["helper",["if"],[["get",["selectedState","isViewingApexTier"]],"removed"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingRatedLadder"]]],null,2,1],["close-element"],["text","\\n"],["open-element","ul",[]],["dynamic-attr","class",["concat",["lol-leagues-division-list ",["helper",["if"],[["get",["selectedState","isViewingRatedLadder"]],"removed"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["league","divisions"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["rank-standing-header-button"],null,[["leagueDivisionInfo","btnIndex","activeIndex","onBtnClick","selectedDivision","contentSize","isViewingTopPlayers","queueType","onSelectApexLeague","playClickAudio"],[["get",["l"]],["get",["l","position"]],["get",["activeIndex"]],"activateButton",["get",["selectedState","division"]],["get",["league","divisions","length"]],["get",["selectedState","isViewingTopPlayers"]],["get",["league","queueType"]],["get",["onSelectApexLeague"]],"playClickAudio"]]],false],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","    "],["append",["unknown",["localizedTier"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["topRatedTier"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
+            var s = n(1);
             n(56);
-            var s = n(32),
+            var a = n(32),
                 i = n(30),
                 o = n(5);
-            e.exports = a.Ember.Component.extend({
+            e.exports = s.Ember.Component.extend({
                 classNames: ["rank-standing-list-component", "lol-leagues-list-wrapper"],
                 layout: n(57),
-                hasFirstHeader: a.Ember.computed.bool("headerData"),
-                hasSecondHeader: a.Ember.computed.bool("secondaryHeaderData"),
+                hasFirstHeader: s.Ember.computed.bool("headerData"),
+                hasSecondHeader: s.Ember.computed.bool("secondaryHeaderData"),
                 scrollTop: 0,
                 ROW_WIDTH: 606,
                 ROW_HEIGHT: 32,
                 OFFSET_TO_CENTER_PLAYER: 160,
-                isRatedQueue: a.Ember.computed("selectedState.league.queueType", (function() {
+                isRatedQueue: s.Ember.computed("selectedState.league.queueType", (function() {
                     return o.QUEUES.ALL_RATED_QUEUE_TYPES.includes(this.get("selectedState.league.queueType"))
                 })),
                 didReceiveAttrs: function() {
                     this._super(...arguments), this.scrollToPlayerStanding()
                 },
-                divisionIsEmpty: a.Ember.computed("standings", (function() {
+                divisionIsEmpty: s.Ember.computed("standings", (function() {
                     return 0 === this.get("standings.length")
                 })),
-                isApexTierNotMaxSize: a.Ember.computed("selectedState.isViewingApexTier", "standings.[]", "selectedState.division.maxLeagueSize", (function() {
+                isApexTierNotMaxSize: s.Ember.computed("selectedState.isViewingApexTier", "standings.[]", "selectedState.division.maxLeagueSize", (function() {
                     const e = this.get("selectedState.isViewingApexTier"),
                         t = this.get("selectedState.division.topNumberOfPlayers") > 0,
                         n = this.get("standings.length") < this.get("selectedState.division.maxLeagueSize");
                     return e && t && n
                 })),
-                isEmptyDivisionOrNotFullApexTier: a.Ember.computed.or("divisionIsEmpty", "isApexTierNotMaxSize"),
-                hasApexUnlockTimeInTheFuture: a.Ember.computed("selectedState.division.apexUnlockTimeMillis", (function() {
+                isEmptyDivisionOrNotFullApexTier: s.Ember.computed.or("divisionIsEmpty", "isApexTierNotMaxSize"),
+                hasApexUnlockTimeInTheFuture: s.Ember.computed("selectedState.division.apexUnlockTimeMillis", (function() {
                     return this.get("selectedState.division.apexUnlockTimeMillis") > Date.now()
                 })),
-                divisionOrTierEmptyText: a.Ember.computed("divisionIsEmpty", "selectedState.isViewingApexTier", "selectedState.division.tier", "selectedState.division.apexUnlockTimeMillis", "selectedState.division.minLpForApexTier", "selectedState.division.topNumberOfPlayers", (function() {
+                divisionOrTierEmptyText: s.Ember.computed("divisionIsEmpty", "selectedState.isViewingApexTier", "selectedState.division.tier", "selectedState.division.apexUnlockTimeMillis", "selectedState.division.minLpForApexTier", "selectedState.division.topNumberOfPlayers", (function() {
                     if (!this.get("selectedState.isViewingApexTier")) return this.get("tra.LEAGUES_DIVISION_EMPTY_MSG");
                     const e = this.get("selectedState.division.apexUnlockTimeMillis"),
                         t = this.get("selectedState.division.minLpForApexTier"),
@@ -1670,9 +1670,9 @@
                         i = Date.now(),
                         o = this.get("tra"),
                         l = this.get("selectedState.division.tier"),
-                        r = a.LeagueTierNames.getTierName(l);
+                        r = s.LeagueTierNames.getTierName(l);
                     if (e > i) {
-                        const t = (0, s.timeInMillisToDays)(e - i);
+                        const t = (0, a.timeInMillisToDays)(e - i);
                         return o.formatString("LEAGUES_APEX_TIER_LOCKED_UNTIL", {
                             tier: r,
                             daysUntilUnlock: t
@@ -1687,21 +1687,21 @@
                         tier: r
                     })
                 })),
-                rows: a.Ember.computed("standings", "downOneTierStandings", "upOneTierStandings", "leagueContext.tier", "selectedState.division.division", "selectedState.isViewingApexTier", (function() {
+                rows: s.Ember.computed("standings", "downOneTierStandings", "upOneTierStandings", "leagueContext.tier", "selectedState.division.division", "selectedState.isViewingApexTier", (function() {
                     const e = this.get("selectedState.isViewingApexTier");
                     let t = this.get("standings").slice();
-                    if (e) t = this.addPromotionDemotionCutoffs(t), t.splice(0, 0, a.Ember.Object.create({
+                    if (e) t = this.addPromotionDemotionCutoffs(t), t.splice(0, 0, s.Ember.Object.create({
                         isHeader: !0
                     }));
                     else {
-                        const e = a.Lodash.findIndex(t, (e => !a.Lodash.get(e, "miniseriesResults.length") > 0));
-                        e < 0 ? t.splice(0, 0, a.Ember.Object.create({
+                        const e = s.Lodash.findIndex(t, (e => !s.Lodash.get(e, "miniseriesResults.length") > 0));
+                        e < 0 ? t.splice(0, 0, s.Ember.Object.create({
                             isHeader: !0
-                        })) : 0 === e ? t.splice(0, 0, a.Ember.Object.create({
+                        })) : 0 === e ? t.splice(0, 0, s.Ember.Object.create({
                             isSecondHeader: !0
-                        })) : (t.splice(0, 0, a.Ember.Object.create({
+                        })) : (t.splice(0, 0, s.Ember.Object.create({
                             isHeader: !0
-                        })), t.splice(e + 1, 0, a.Ember.Object.create({
+                        })), t.splice(e + 1, 0, s.Ember.Object.create({
                             isSecondHeader: !0
                         })))
                     }
@@ -1714,18 +1714,18 @@
                     } = this.findPromotionCutoffIndex(e);
                     if (t) {
                         const t = this.get("tra.LEAGUES_PROFILE_TABLE_HEADER_PROMOTION_CUTOFF");
-                        e.splice(n + 1, 0, a.Ember.Object.create({
+                        e.splice(n + 1, 0, s.Ember.Object.create({
                             isApexTierCutoff: !0,
                             apexCutoffText: t
                         }))
                     }
                     const {
-                        hasDemotionCutoff: s,
+                        hasDemotionCutoff: a,
                         demotionCutoffIndex: i
                     } = this.findDemotionCutoffIndex(e);
-                    if (s) {
+                    if (a) {
                         const t = this.get("tra.LEAGUES_PROFILE_TABLE_HEADER_DEMOTION_CUTOFF");
-                        e.splice(i, 0, a.Ember.Object.create({
+                        e.splice(i, 0, s.Ember.Object.create({
                             isApexTierCutoff: !0,
                             apexCutoffText: t
                         }))
@@ -1735,7 +1735,7 @@
                 findPromotionCutoffIndex(e) {
                     let t = !1,
                         n = 0;
-                    for (let a = 0; a < e.length && e[a].pendingPromotion; a++) t = !0, n = a;
+                    for (let s = 0; s < e.length && e[s].pendingPromotion; s++) t = !0, n = s;
                     return {
                         hasPromotionCutoff: t,
                         promotionCutoffIndex: n
@@ -1744,32 +1744,32 @@
                 findDemotionCutoffIndex(e) {
                     let t = !1,
                         n = e.length;
-                    for (let a = e.length - 1; a >= 0 && e[a].pendingDemotion; a--) t = !0, n = a;
+                    for (let s = e.length - 1; s >= 0 && e[s].pendingDemotion; s--) t = !0, n = s;
                     return {
                         hasDemotionCutoff: t,
                         demotionCutoffIndex: n
                     }
                 },
-                displayedRows: a.Ember.computed("rows", (function() {
+                displayedRows: s.Ember.computed("rows", (function() {
                     return this.get("rows").slice(1)
                 })),
-                hasRowsToDisplay: a.Ember.computed("displayedRows", (function() {
+                hasRowsToDisplay: s.Ember.computed("displayedRows", (function() {
                     return this.get("displayedRows")?.length > 0
                 })),
-                headerData: a.Ember.computed("rows", (function() {
-                    return a.Lodash.find(this.get("rows"), {
+                headerData: s.Ember.computed("rows", (function() {
+                    return s.Lodash.find(this.get("rows"), {
                         isHeader: !0
                     })
                 })),
-                secondaryHeaderData: a.Ember.computed("rows", (function() {
-                    return a.Lodash.find(this.get("rows"), {
+                secondaryHeaderData: s.Ember.computed("rows", (function() {
+                    return s.Lodash.find(this.get("rows"), {
                         isSecondHeader: !0
                     })
                 })),
-                playerHeaderText: a.Ember.computed("isTft", (function() {
+                playerHeaderText: s.Ember.computed("isTft", (function() {
                     return this.get("isTft") ? this.get("tra.LEAGUES_PROFILE_TABLE_HEADER_TACTICIANS") : this.get("tra.LEAGUES_PROFILE_TABLE_HEADER_PLAYERS")
                 })),
-                isTft: a.Ember.computed("leagueContext.queueType", (function() {
+                isTft: s.Ember.computed("leagueContext.queueType", (function() {
                     return (0, i.isTftQueueType)(this.get("leagueContext.queueType"))
                 })),
                 scrollToPlayerStanding: function() {
@@ -1780,8 +1780,8 @@
                     if (!t?.length) return;
                     if (this.get("leagueContext.tier") !== e.tier) return;
                     const n = e.position - t[0].position,
-                        a = this.ROW_HEIGHT * n - this.OFFSET_TO_CENTER_PLAYER;
-                    this.set("scrollTop", a)
+                        s = this.ROW_HEIGHT * n - this.OFFSET_TO_CENTER_PLAYER;
+                    this.set("scrollTop", s)
                 },
                 actions: {
                     onRowClick: function(e) {
@@ -1793,30 +1793,30 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "5IdISI37",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-leagues-headers-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasFirstHeader"]]],null,22],["text","\\n"],["block",["if"],[["get",["hasSecondHeader"]]],null,15],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-list-container ",["helper",["if"],[["get",["isEmptyDivisionOrNotFullApexTier"]],"show-division-or-tier-message"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasRowsToDisplay"]]],null,6],["block",["if"],[["get",["isEmptyDivisionOrNotFullApexTier"]]],null,4],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","LEAGUES_APEX_TIER_UNLOCKED_NOT_FULL"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","shocked-poro-icon"],["flush-element"],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","LEAGUES_APEX_TIER_UNLOCKED_EMPTY_CHECK_BACK_LATER"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["divisionIsEmpty"]]],null,1,0],["text","          "],["open-element","p",[]],["flush-element"],["append",["helper",["if"],[["get",["selectedState","division","topNumberOfPlayers"]],["get",["divisionOrTierEmptyText"]]],null],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty-content locked"],["flush-element"],["text","\\n          "],["append",["unknown",["divisionOrTierEmptyText"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","lol-leagues-list-apex-locked-check-back"],["flush-element"],["append",["unknown",["tra","LEAGUE_APEX_TIER_LOCKED_CHECK_BACK"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasApexUnlockTimeInTheFuture"]]],null,3,2],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["rank-standing-row"],null,[["data","leagueContext","leagueDivisionInfo","rowIndex","onRowClick","summonerId","selectedStanding"],[["get",["row"]],["get",["leagueContext"]],["get",["selectedState","division"]],["get",["index"]],["helper",["action"],[["get",[null]],"onRowClick"],null],["get",["selectedState","summonerId"]],["get",["selectedState","standing"]]]]],false],["text","\\n"]],"locals":["row","index"]},{"statements":[["block",["ember-collection"],null,[["class","items","cell-layout","scroll-top"],["lol-leagues-list",["get",["displayedRows"]],["helper",["fixed-grid-layout"],[["get",["ROW_WIDTH"]],["get",["ROW_HEIGHT"]]],null],["get",["scrollTop"]]]],5]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_RATING"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["playerHeaderText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,10,9],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isRatedQueue"]]],null,8,7],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["secondaryHeaderData","headerText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,13,12],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-header second-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["secondaryHeaderData","isApexTier"]]],null,14,11],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_UP_FOR_PROMO"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,17,16],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["miniseriesLengthDisplay"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["playerHeaderText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,20,19],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingApexTier"]]],null,21,18],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "a5QogH5Y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-leagues-headers-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasFirstHeader"]]],null,22],["text","\\n"],["block",["if"],[["get",["hasSecondHeader"]]],null,15],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-list-container ",["helper",["if"],[["get",["isEmptyDivisionOrNotFullApexTier"]],"show-division-or-tier-message"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasRowsToDisplay"]]],null,6],["block",["if"],[["get",["isEmptyDivisionOrNotFullApexTier"]]],null,4],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","LEAGUES_APEX_TIER_UNLOCKED_NOT_FULL"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","shocked-poro-icon"],["flush-element"],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","LEAGUES_APEX_TIER_UNLOCKED_EMPTY_CHECK_BACK_LATER"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["divisionIsEmpty"]]],null,1,0],["text","          "],["open-element","p",[]],["flush-element"],["append",["helper",["if"],[["get",["selectedState","division","topNumberOfPlayers"]],["get",["divisionOrTierEmptyText"]]],null],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty-content locked"],["flush-element"],["text","\\n          "],["append",["unknown",["divisionOrTierEmptyText"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","lol-leagues-list-apex-locked-check-back"],["flush-element"],["append",["unknown",["tra","LEAGUE_APEX_TIER_LOCKED_CHECK_BACK"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasApexUnlockTimeInTheFuture"]]],null,3,2],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["rank-standing-row"],null,[["data","leagueContext","leagueDivisionInfo","rowIndex","onRowClick","summonerId","selectedStanding"],[["get",["row"]],["get",["leagueContext"]],["get",["selectedState","division"]],["get",["index"]],["helper",["action"],[["get",[null]],"onRowClick"],null],["get",["selectedState","summonerId"]],["get",["selectedState","standing"]]]]],false],["text","\\n"]],"locals":["row","index"]},{"statements":[["block",["ember-collection"],null,[["class","items","cell-layout","scroll-top"],["lol-leagues-list",["get",["displayedRows"]],["helper",["fixed-grid-layout"],[["get",["ROW_WIDTH"]],["get",["ROW_HEIGHT"]]],null],["get",["scrollTop"]]]],5]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_RATING"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["playerHeaderText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,10,9],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isRatedQueue"]]],null,8,7],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["secondaryHeaderData","headerText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,13,12],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-header second-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["secondaryHeaderData","isApexTier"]]],null,14,11],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_UP_FOR_PROMO"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,17,16],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["miniseriesLengthDisplay"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["playerHeaderText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,20,19],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingApexTier"]]],null,21,18],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(29),
+            var s = n(1),
+                a = n(29),
                 i = n(30);
             n(59);
             n(60);
             let o = null;
-            if (a.AudioPlugin) {
-                const e = a.AudioPlugin.getChannel("sfx-ui");
-                o = e.createSound(`${s.ASSET_PATH}sounds/sfx-uikit-click-generic.ogg`)
+            if (s.AudioPlugin) {
+                const e = s.AudioPlugin.getChannel("sfx-ui");
+                o = e.createSound(`${a.ASSET_PATH}sounds/sfx-uikit-click-generic.ogg`)
             }
-            e.exports = a.Ember.Component.extend({
+            e.exports = s.Ember.Component.extend({
                 tagName: "li",
                 classNames: ["rank-standing-row-component", "lol-leagues-list-item"],
                 classNameBindings: ["headerStyle", "secondaryHeaderStyle", "selfStyle", "currentStyle", "data.isApexTierCutoff:apex-cutoff"],
-                tooltipManager: a.TooltipManager,
-                contextMenuManager: a.ContextMenuManager,
+                tooltipManager: s.TooltipManager,
+                contextMenuManager: s.ContextMenuManager,
                 layout: n(80),
                 data: null,
                 rowIndex: null,
@@ -1827,68 +1827,68 @@
                 didInsertElement: function() {
                     this._super(...arguments), this._setupContextMenu()
                 },
-                isHeader: a.Ember.computed("data.isHeader", (function() {
+                isHeader: s.Ember.computed("data.isHeader", (function() {
                     return Boolean(this.get("data.isHeader"))
                 })),
-                headerStyle: a.Ember.computed("isHeader", (function() {
+                headerStyle: s.Ember.computed("isHeader", (function() {
                     return this.get("isHeader") ? "lol-leagues-list-header" : null
                 })),
-                isSecondaryHeader: a.Ember.computed("data.isSecondHeader", (function() {
+                isSecondaryHeader: s.Ember.computed("data.isSecondHeader", (function() {
                     return Boolean(this.get("data.isSecondHeader"))
                 })),
-                secondaryHeaderStyle: a.Ember.computed("isSecondaryHeader", (function() {
+                secondaryHeaderStyle: s.Ember.computed("isSecondaryHeader", (function() {
                     return this.get("isSecondaryHeader") ? "lol-leagues-list-header second-header" : null
                 })),
-                shouldShowMiniseries: a.Ember.computed("isTopSummoner", (function() {
+                shouldShowMiniseries: s.Ember.computed("isTopSummoner", (function() {
                     return this.get("isTopSummoner")
                 })),
-                currentStyle: a.Ember.computed("selectedStanding.summonerId", "data.summonerId", (function() {
+                currentStyle: s.Ember.computed("selectedStanding.summonerId", "data.summonerId", (function() {
                     if (this.get("selectedStanding.summonerId") === this.get("data.summonerId")) return "current"
                 })),
-                isTopSummoner: a.Ember.computed("data.miniseriesResults", "data.summonerName", "isViewingApexTier", (function() {
+                isTopSummoner: s.Ember.computed("data.miniseriesResults", "data.summonerName", "isViewingApexTier", (function() {
                     return this.get("data.miniseriesResults.length") > 0 && Boolean(this.get("data.summonerName")) && !this.get("isViewingApexTier")
                 })),
-                isViewingApexTier: a.Ember.computed("leagueDivisionInfo.tier", (function() {
-                    return a.LeaguesConsts.APEX_TIERS.includes(this.get("leagueDivisionInfo.tier"))
+                isViewingApexTier: s.Ember.computed("leagueDivisionInfo.tier", (function() {
+                    return s.LeaguesConsts.APEX_TIERS.includes(this.get("leagueDivisionInfo.tier"))
                 })),
-                isTopTierStandingRow: a.Ember.computed("isViewingApexTier", "isHeader", "isSecondaryHeader", "data.isApexTierCutoff", (function() {
+                isTopTierStandingRow: s.Ember.computed("isViewingApexTier", "isHeader", "isSecondaryHeader", "data.isApexTierCutoff", (function() {
                     return this.get("isViewingApexTier") && !this.get("isHeader") && !this.get("isSecondaryHeader") && !this.get("data.isApexTierCutoff")
                 })),
-                isNonTopTierStandingRow: a.Ember.computed("data.puuid", "isTopSummoner", "isViewingApexTier", (function() {
+                isNonTopTierStandingRow: s.Ember.computed("data.puuid", "isTopSummoner", "isViewingApexTier", (function() {
                     return Boolean(this.get("data.puuid")) && !this.get("isTopSummoner") && !this.get("isViewingApexTier")
                 })),
-                showContextMenu: a.Ember.computed("data.summonerId", (function() {
+                showContextMenu: s.Ember.computed("data.summonerId", (function() {
                     return this.get("data.summonerId")
                 })),
-                hasPositionDelta: a.Ember.computed("data.positionDelta", (function() {
+                hasPositionDelta: s.Ember.computed("data.positionDelta", (function() {
                     return this.get("data.positionDelta") && 0 !== this.get("data.positionDelta")
                 })),
-                divisionChangeStyle: a.Ember.computed("data.pendingDemotion", "data.pendingPromotion", (function() {
+                divisionChangeStyle: s.Ember.computed("data.pendingDemotion", "data.pendingPromotion", (function() {
                     return this.get("data.pendingDemotion") ? "lol-leagues-icon-demotion" : this.get("data.pendingPromotion") ? "lol-leagues-icon-promotion" : ""
                 })),
-                positionDeltaStyle: a.Ember.computed("data.positionDelta", (function() {
+                positionDeltaStyle: s.Ember.computed("data.positionDelta", (function() {
                     return this.get("data.positionDelta") > 0 ? "lol-leagues-list-up" : this.get("data.positionDelta") < 0 ? "lol-leagues-list-down" : void 0
                 })),
-                positionDeltaAbs: a.Ember.computed("data.positionDelta", (function() {
+                positionDeltaAbs: s.Ember.computed("data.positionDelta", (function() {
                     return Math.abs(this.get("data.positionDelta"))
                 })),
-                isFriend: a.Ember.computed("data.relationship", (function() {
-                    return this.get("data.relationship") === s.StandingRelationship.FRIEND
+                isFriend: s.Ember.computed("data.relationship", (function() {
+                    return this.get("data.relationship") === a.StandingRelationship.FRIEND
                 })),
-                isSelf: a.Ember.computed("data.relationship", (function() {
-                    return this.get("data.relationship") === s.StandingRelationship.SELF
+                isSelf: s.Ember.computed("data.relationship", (function() {
+                    return this.get("data.relationship") === a.StandingRelationship.SELF
                 })),
-                isSelectedSummoner: a.Ember.computed("data.summonerId", "summonerId", (function() {
+                isSelectedSummoner: s.Ember.computed("data.summonerId", "summonerId", (function() {
                     const e = this.get("summonerId");
                     return this.get("data.summonerId") === e
                 })),
-                selfStyle: a.Ember.computed("data.relationship", (function() {
-                    if (this.get("data.relationship") === s.StandingRelationship.SELF) return "me"
+                selfStyle: s.Ember.computed("data.relationship", (function() {
+                    if (this.get("data.relationship") === a.StandingRelationship.SELF) return "me"
                 })),
-                miniseriesStyles: a.Ember.computed("data.miniseriesResults", (function() {
-                    return a.Lodash.map(this.get("data.miniseriesResults"), (e => `lol-leagues-list-best-${e}`))
+                miniseriesStyles: s.Ember.computed("data.miniseriesResults", (function() {
+                    return s.Lodash.map(this.get("data.miniseriesResults"), (e => `lol-leagues-list-best-${e}`))
                 })),
-                isTft: a.Ember.computed("leagueContext.queueType", (function() {
+                isTft: s.Ember.computed("leagueContext.queueType", (function() {
                     return (0, i.isTftQueueType)(this.get("leagueContext.queueType"))
                 })),
                 click: function() {
@@ -1902,7 +1902,7 @@
                             disabled: this.get("isFriend") || this.get("isSelf"),
                             target: this,
                             action: function() {
-                                (0, a.dataBinding)("/lol-chat").post("/v2/friend-requests", {
+                                (0, s.dataBinding)("/lol-chat").post("/v2/friend-requests", {
                                     puuid: this.get("data.puuid")
                                 })
                             }
@@ -1911,7 +1911,7 @@
                             target: this,
                             disabled: this.get("isSelf") || this.get("isSelectedSummoner"),
                             action: function() {
-                                a.ProfilesAPI.showOverlay({
+                                s.ProfilesAPI.showOverlay({
                                     puuid: this.get("data.puuid")
                                 })
                             }
@@ -1920,7 +1920,7 @@
                             target: this,
                             disabled: this.get("isSelf") || this.get("isSelectedSummoner"),
                             action: function() {
-                                a.ProfilesAPI.showOverlay({
+                                s.ProfilesAPI.showOverlay({
                                     puuid: this.get("data.puuid"),
                                     showMatchHistory: !0
                                 })
@@ -1933,10 +1933,10 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            var a = n(61);
-            e.exports = (a.default || a).template({
+            var s = n(61);
+            e.exports = (s.default || s).template({
                 compiler: [7, ">= 4.0.0"],
-                main: function(e, t, n, a, s) {
+                main: function(e, t, n, s, a) {
                     var i, o = null != t ? t : e.nullContext || {},
                         l = n.helperMissing,
                         r = "function",
@@ -1944,11 +1944,11 @@
                     return "<div>\r\n  <h4>" + c(typeof(i = null != (i = n.title || (null != t ? t.title : t)) ? i : l) === r ? i.call(o, {
                         name: "title",
                         hash: {},
-                        data: s
+                        data: a
                     }) : i) + '</h4>\r\n  <hr class="heading-spacer" />\r\n  <p>' + c(typeof(i = null != (i = n.message || (null != t ? t.message : t)) ? i : l) === r ? i.call(o, {
                         name: "message",
                         hash: {},
-                        data: s
+                        data: a
                     }) : i) + "</p>\r\n</div>\r\n\r\n"
                 },
                 useData: !0
@@ -1958,13 +1958,13 @@
         }, (e, t, n) => {
             "use strict";
 
-            function a(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
 
-            function s(e) {
+            function a(e) {
                 if (e && e.__esModule) return e;
                 var t = {};
                 if (null != e)
@@ -1972,12 +1972,12 @@
                 return t.default = e, t
             }
             t.__esModule = !0;
-            var i = s(n(63)),
-                o = a(n(77)),
-                l = a(n(65)),
-                r = s(n(64)),
-                c = s(n(78)),
-                u = a(n(79));
+            var i = a(n(63)),
+                o = s(n(77)),
+                l = s(n(65)),
+                r = a(n(64)),
+                c = a(n(78)),
+                u = s(n(79));
 
             function d() {
                 var e = new i.HandlebarsEnvironment;
@@ -1990,17 +1990,17 @@
         }, (e, t, n) => {
             "use strict";
 
-            function a(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             t.__esModule = !0, t.HandlebarsEnvironment = u;
-            var s = n(64),
-                i = a(n(65)),
+            var a = n(64),
+                i = s(n(65)),
                 o = n(66),
                 l = n(74),
-                r = a(n(76));
+                r = s(n(76));
             t.VERSION = "4.1.2";
             t.COMPILER_REVISION = 7;
             t.REVISION_CHANGES = {
@@ -2022,16 +2022,16 @@
                 logger: r.default,
                 log: r.default.log,
                 registerHelper: function(e, t) {
-                    if (s.toString.call(e) === c) {
+                    if (a.toString.call(e) === c) {
                         if (t) throw new i.default("Arg not supported with multiple helpers");
-                        s.extend(this.helpers, e)
+                        a.extend(this.helpers, e)
                     } else this.helpers[e] = t
                 },
                 unregisterHelper: function(e) {
                     delete this.helpers[e]
                 },
                 registerPartial: function(e, t) {
-                    if (s.toString.call(e) === c) s.extend(this.partials, e);
+                    if (a.toString.call(e) === c) a.extend(this.partials, e);
                     else {
                         if (void 0 === t) throw new i.default('Attempting to register a partial called "' + e + '" as undefined');
                         this.partials[e] = t
@@ -2041,9 +2041,9 @@
                     delete this.partials[e]
                 },
                 registerDecorator: function(e, t) {
-                    if (s.toString.call(e) === c) {
+                    if (a.toString.call(e) === c) {
                         if (t) throw new i.default("Arg not supported with multiple decorators");
-                        s.extend(this.decorators, e)
+                        a.extend(this.decorators, e)
                     } else this.decorators[e] = t
                 },
                 unregisterDecorator: function(e) {
@@ -2051,11 +2051,11 @@
                 }
             };
             var d = r.default.log;
-            t.log = d, t.createFrame = s.createFrame, t.logger = r.default
+            t.log = d, t.createFrame = a.createFrame, t.logger = r.default
         }, (e, t) => {
             "use strict";
             t.__esModule = !0, t.extend = o, t.indexOf = function(e, t) {
-                for (var n = 0, a = e.length; n < a; n++)
+                for (var n = 0, s = e.length; n < s; n++)
                     if (e[n] === t) return n;
                 return -1
             }, t.escapeExpression = function(e) {
@@ -2065,8 +2065,8 @@
                     if (!e) return e + "";
                     e = "" + e
                 }
-                if (!s.test(e)) return e;
-                return e.replace(a, i)
+                if (!a.test(e)) return e;
+                return e.replace(s, i)
             }, t.isEmpty = function(e) {
                 return !e && 0 !== e || !(!c(e) || 0 !== e.length)
             }, t.createFrame = function(e) {
@@ -2086,8 +2086,8 @@
                     "`": "&#x60;",
                     "=": "&#x3D;"
                 },
-                a = /[&<>"'`=]/g,
-                s = /[&<>"'`=]/;
+                s = /[&<>"'`=]/g,
+                a = /[&<>"'`=]/;
 
             function i(e) {
                 return n[e]
@@ -2115,53 +2115,53 @@
             t.__esModule = !0;
             var n = ["description", "fileName", "lineNumber", "message", "name", "number", "stack"];
 
-            function a(e, t) {
-                var s = t && t.loc,
+            function s(e, t) {
+                var a = t && t.loc,
                     i = void 0,
                     o = void 0;
-                s && (e += " - " + (i = s.start.line) + ":" + (o = s.start.column));
+                a && (e += " - " + (i = a.start.line) + ":" + (o = a.start.column));
                 for (var l = Error.prototype.constructor.call(this, e), r = 0; r < n.length; r++) this[n[r]] = l[n[r]];
-                Error.captureStackTrace && Error.captureStackTrace(this, a);
+                Error.captureStackTrace && Error.captureStackTrace(this, s);
                 try {
-                    s && (this.lineNumber = i, Object.defineProperty ? Object.defineProperty(this, "column", {
+                    a && (this.lineNumber = i, Object.defineProperty ? Object.defineProperty(this, "column", {
                         value: o,
                         enumerable: !0
                     }) : this.column = o)
                 } catch (e) {}
             }
-            a.prototype = new Error, t.default = a, e.exports = t.default
+            s.prototype = new Error, t.default = s, e.exports = t.default
         }, (e, t, n) => {
             "use strict";
 
-            function a(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             t.__esModule = !0, t.registerDefaultHelpers = function(e) {
-                s.default(e), i.default(e), o.default(e), l.default(e), r.default(e), c.default(e), u.default(e)
+                a.default(e), i.default(e), o.default(e), l.default(e), r.default(e), c.default(e), u.default(e)
             };
-            var s = a(n(67)),
-                i = a(n(68)),
-                o = a(n(69)),
-                l = a(n(70)),
-                r = a(n(71)),
-                c = a(n(72)),
-                u = a(n(73))
+            var a = s(n(67)),
+                i = s(n(68)),
+                o = s(n(69)),
+                l = s(n(70)),
+                r = s(n(71)),
+                c = s(n(72)),
+                u = s(n(73))
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(64);
+            var s = n(64);
             t.default = function(e) {
                 e.registerHelper("blockHelperMissing", (function(t, n) {
-                    var s = n.inverse,
+                    var a = n.inverse,
                         i = n.fn;
                     if (!0 === t) return i(this);
-                    if (!1 === t || null == t) return s(this);
-                    if (a.isArray(t)) return t.length > 0 ? (n.ids && (n.ids = [n.name]), e.helpers.each(t, n)) : s(this);
+                    if (!1 === t || null == t) return a(this);
+                    if (s.isArray(t)) return t.length > 0 ? (n.ids && (n.ids = [n.name]), e.helpers.each(t, n)) : a(this);
                     if (n.data && n.ids) {
-                        var o = a.createFrame(n.data);
-                        o.contextPath = a.appendContextPath(n.data.contextPath, n.name), n = {
+                        var o = s.createFrame(n.data);
+                        o.contextPath = s.appendContextPath(n.data.contextPath, n.name), n = {
                             data: o
                         }
                     }
@@ -2171,43 +2171,43 @@
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a, s = n(64),
+            var s, a = n(64),
                 i = n(65),
-                o = (a = i) && a.__esModule ? a : {
-                    default: a
+                o = (s = i) && s.__esModule ? s : {
+                    default: s
                 };
             t.default = function(e) {
                 e.registerHelper("each", (function(e, t) {
                     if (!t) throw new o.default("Must pass iterator to #each");
                     var n = t.fn,
-                        a = t.inverse,
+                        s = t.inverse,
                         i = 0,
                         l = "",
                         r = void 0,
                         c = void 0;
 
-                    function u(t, a, i) {
-                        r && (r.key = t, r.index = a, r.first = 0 === a, r.last = !!i, c && (r.contextPath = c + t)), l += n(e[t], {
+                    function u(t, s, i) {
+                        r && (r.key = t, r.index = s, r.first = 0 === s, r.last = !!i, c && (r.contextPath = c + t)), l += n(e[t], {
                             data: r,
-                            blockParams: s.blockParams([e[t], t], [c + t, null])
+                            blockParams: a.blockParams([e[t], t], [c + t, null])
                         })
                     }
-                    if (t.data && t.ids && (c = s.appendContextPath(t.data.contextPath, t.ids[0]) + "."), s.isFunction(e) && (e = e.call(this)), t.data && (r = s.createFrame(t.data)), e && "object" == typeof e)
-                        if (s.isArray(e))
+                    if (t.data && t.ids && (c = a.appendContextPath(t.data.contextPath, t.ids[0]) + "."), a.isFunction(e) && (e = e.call(this)), t.data && (r = a.createFrame(t.data)), e && "object" == typeof e)
+                        if (a.isArray(e))
                             for (var d = e.length; i < d; i++) i in e && u(i, i, i === e.length - 1);
                         else {
                             var m = void 0;
                             for (var p in e) e.hasOwnProperty(p) && (void 0 !== m && u(m, i - 1), m = p, i++);
                             void 0 !== m && u(m, i - 1, !0)
-                        } return 0 === i && (l = a(this)), l
+                        } return 0 === i && (l = s(this)), l
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a, s = n(65),
-                i = (a = s) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(65),
+                i = (s = a) && s.__esModule ? s : {
+                    default: s
                 };
             t.default = function(e) {
                 e.registerHelper("helperMissing", (function() {
@@ -2217,10 +2217,10 @@
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(64);
+            var s = n(64);
             t.default = function(e) {
                 e.registerHelper("if", (function(e, t) {
-                    return a.isFunction(e) && (e = e.call(this)), !t.hash.includeZero && !e || a.isEmpty(e) ? t.inverse(this) : t.fn(this)
+                    return s.isFunction(e) && (e = e.call(this)), !t.hash.includeZero && !e || s.isEmpty(e) ? t.inverse(this) : t.fn(this)
                 })), e.registerHelper("unless", (function(t, n) {
                     return e.helpers.if.call(this, t, {
                         fn: n.inverse,
@@ -2233,9 +2233,9 @@
             "use strict";
             t.__esModule = !0, t.default = function(e) {
                 e.registerHelper("log", (function() {
-                    for (var t = [void 0], n = arguments[arguments.length - 1], a = 0; a < arguments.length - 1; a++) t.push(arguments[a]);
-                    var s = 1;
-                    null != n.hash.level ? s = n.hash.level : n.data && null != n.data.level && (s = n.data.level), t[0] = s, e.log.apply(e, t)
+                    for (var t = [void 0], n = arguments[arguments.length - 1], s = 0; s < arguments.length - 1; s++) t.push(arguments[s]);
+                    var a = 1;
+                    null != n.hash.level ? a = n.hash.level : n.data && null != n.data.level && (a = n.data.level), t[0] = a, e.log.apply(e, t)
                 }))
             }, e.exports = t.default
         }, (e, t) => {
@@ -2248,16 +2248,16 @@
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(64);
+            var s = n(64);
             t.default = function(e) {
                 e.registerHelper("with", (function(e, t) {
-                    a.isFunction(e) && (e = e.call(this));
+                    s.isFunction(e) && (e = e.call(this));
                     var n = t.fn;
-                    if (a.isEmpty(e)) return t.inverse(this);
-                    var s = t.data;
-                    return t.data && t.ids && ((s = a.createFrame(t.data)).contextPath = a.appendContextPath(t.data.contextPath, t.ids[0])), n(e, {
-                        data: s,
-                        blockParams: a.blockParams([e], [s && s.contextPath])
+                    if (s.isEmpty(e)) return t.inverse(this);
+                    var a = t.data;
+                    return t.data && t.ids && ((a = s.createFrame(t.data)).contextPath = s.appendContextPath(t.data.contextPath, t.ids[0])), n(e, {
+                        data: a,
+                        blockParams: s.blockParams([e], [a && a.contextPath])
                     })
                 }))
             }, e.exports = t.default
@@ -2266,49 +2266,49 @@
             t.__esModule = !0, t.registerDefaultDecorators = function(e) {
                 i.default(e)
             };
-            var a, s = n(75),
-                i = (a = s) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(75),
+                i = (s = a) && s.__esModule ? s : {
+                    default: s
                 }
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(64);
+            var s = n(64);
             t.default = function(e) {
-                e.registerDecorator("inline", (function(e, t, n, s) {
+                e.registerDecorator("inline", (function(e, t, n, a) {
                     var i = e;
-                    return t.partials || (t.partials = {}, i = function(s, i) {
+                    return t.partials || (t.partials = {}, i = function(a, i) {
                         var o = n.partials;
-                        n.partials = a.extend({}, o, t.partials);
-                        var l = e(s, i);
+                        n.partials = s.extend({}, o, t.partials);
+                        var l = e(a, i);
                         return n.partials = o, l
-                    }), t.partials[s.args[0]] = s.fn, i
+                    }), t.partials[a.args[0]] = a.fn, i
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(64),
-                s = {
+            var s = n(64),
+                a = {
                     methodMap: ["debug", "info", "warn", "error"],
                     level: "info",
                     lookupLevel: function(e) {
                         if ("string" == typeof e) {
-                            var t = a.indexOf(s.methodMap, e.toLowerCase());
+                            var t = s.indexOf(a.methodMap, e.toLowerCase());
                             e = t >= 0 ? t : parseInt(e, 10)
                         }
                         return e
                     },
                     log: function(e) {
-                        if (e = s.lookupLevel(e), "undefined" != typeof console && s.lookupLevel(s.level) <= e) {
-                            var t = s.methodMap[e];
+                        if (e = a.lookupLevel(e), "undefined" != typeof console && a.lookupLevel(a.level) <= e) {
+                            var t = a.methodMap[e];
                             console[t] || (t = "log");
-                            for (var n = arguments.length, a = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) a[i - 1] = arguments[i];
-                            console[t].apply(console, a)
+                            for (var n = arguments.length, s = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) s[i - 1] = arguments[i];
+                            console[t].apply(console, s)
                         }
                     }
                 };
-            t.default = s, e.exports = t.default
+            t.default = a, e.exports = t.default
         }, (e, t) => {
             "use strict";
 
@@ -2325,9 +2325,9 @@
                     n = l.COMPILER_REVISION;
                 if (t !== n) {
                     if (t < n) {
-                        var a = l.REVISION_CHANGES[n],
-                            s = l.REVISION_CHANGES[t];
-                        throw new o.default("Template was precompiled with an older version of Handlebars than the current runtime. Please update your precompiler to a newer version (" + a + ") or downgrade your runtime to an older version (" + s + ").")
+                        var s = l.REVISION_CHANGES[n],
+                            a = l.REVISION_CHANGES[t];
+                        throw new o.default("Template was precompiled with an older version of Handlebars than the current runtime. Please update your precompiler to a newer version (" + s + ") or downgrade your runtime to an older version (" + a + ").")
                     }
                     throw new o.default("Template was precompiled with a newer version of Handlebars than the current runtime. Please update your runtime to a newer version (" + e[1] + ").")
                 }
@@ -2341,17 +2341,17 @@
                         return e[t]
                     },
                     lookup: function(e, t) {
-                        for (var n = e.length, a = 0; a < n; a++)
-                            if (e[a] && null != e[a][t]) return e[a][t]
+                        for (var n = e.length, s = 0; s < n; s++)
+                            if (e[s] && null != e[s][t]) return e[s][t]
                     },
                     lambda: function(e, t) {
                         return "function" == typeof e ? e.call(t) : e
                     },
-                    escapeExpression: s.escapeExpression,
-                    invokePartial: function(n, a, i) {
-                        i.hash && (a = s.extend({}, a, i.hash), i.ids && (i.ids[0] = !0)), n = t.VM.resolvePartial.call(this, n, a, i);
-                        var l = t.VM.invokePartial.call(this, n, a, i);
-                        if (null == l && t.compile && (i.partials[i.name] = t.compile(n, e.compilerOptions, t), l = i.partials[i.name](a, i)), null != l) {
+                    escapeExpression: a.escapeExpression,
+                    invokePartial: function(n, s, i) {
+                        i.hash && (s = a.extend({}, s, i.hash), i.ids && (i.ids[0] = !0)), n = t.VM.resolvePartial.call(this, n, s, i);
+                        var l = t.VM.invokePartial.call(this, n, s, i);
+                        if (null == l && t.compile && (i.partials[i.name] = t.compile(n, e.compilerOptions, t), l = i.partials[i.name](s, i)), null != l) {
                             if (i.indent) {
                                 for (var r = l.split("\n"), c = 0, u = r.length; c < u && (r[c] || c + 1 !== u); c++) r[c] = i.indent + r[c];
                                 l = r.join("\n")
@@ -2365,10 +2365,10 @@
                         return n.decorator = e[t + "_d"], n
                     },
                     programs: [],
-                    program: function(e, t, n, a, s) {
+                    program: function(e, t, n, s, a) {
                         var i = this.programs[e],
                             o = this.fn(e);
-                        return t || s || a || n ? i = r(this, e, o, t, n, a, s) : i || (i = this.programs[e] = r(this, e, o)), i
+                        return t || a || s || n ? i = r(this, e, o, t, n, s, a) : i || (i = this.programs[e] = r(this, e, o)), i
                     },
                     data: function(e, t) {
                         for (; e && t--;) e = e._parent;
@@ -2376,17 +2376,17 @@
                     },
                     merge: function(e, t) {
                         var n = e || t;
-                        return e && t && e !== t && (n = s.extend({}, t, e)), n
+                        return e && t && e !== t && (n = a.extend({}, t, e)), n
                     },
                     nullContext: Object.seal({}),
                     noop: t.VM.noop,
                     compilerInfo: e.compiler
                 };
 
-                function a(t) {
-                    var s = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
-                        i = s.data;
-                    a._setup(s), !s.partial && e.useData && (i = function(e, t) {
+                function s(t) {
+                    var a = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
+                        i = a.data;
+                    s._setup(a), !a.partial && e.useData && (i = function(e, t) {
                         t && "root" in t || ((t = t ? l.createFrame(t) : {}).root = e);
                         return t
                     }(t, i));
@@ -2396,20 +2396,20 @@
                     function c(t) {
                         return "" + e.main(n, t, n.helpers, n.partials, i, r, o)
                     }
-                    return e.useDepths && (o = s.depths ? t != s.depths[0] ? [t].concat(s.depths) : s.depths : [t]), (c = u(e.main, c, n, s.depths || [], i, r))(t, s)
+                    return e.useDepths && (o = a.depths ? t != a.depths[0] ? [t].concat(a.depths) : a.depths : [t]), (c = u(e.main, c, n, a.depths || [], i, r))(t, a)
                 }
-                return a.isTop = !0, a._setup = function(a) {
-                    a.partial ? (n.helpers = a.helpers, n.partials = a.partials, n.decorators = a.decorators) : (n.helpers = n.merge(a.helpers, t.helpers), e.usePartial && (n.partials = n.merge(a.partials, t.partials)), (e.usePartial || e.useDecorators) && (n.decorators = n.merge(a.decorators, t.decorators)))
-                }, a._child = function(t, a, s, i) {
-                    if (e.useBlockParams && !s) throw new o.default("must pass block params");
+                return s.isTop = !0, s._setup = function(s) {
+                    s.partial ? (n.helpers = s.helpers, n.partials = s.partials, n.decorators = s.decorators) : (n.helpers = n.merge(s.helpers, t.helpers), e.usePartial && (n.partials = n.merge(s.partials, t.partials)), (e.usePartial || e.useDecorators) && (n.decorators = n.merge(s.decorators, t.decorators)))
+                }, s._child = function(t, s, a, i) {
+                    if (e.useBlockParams && !a) throw new o.default("must pass block params");
                     if (e.useDepths && !i) throw new o.default("must pass parent depths");
-                    return r(n, t, e[t], a, 0, s, i)
-                }, a
+                    return r(n, t, e[t], s, 0, a, i)
+                }, s
             }, t.wrapProgram = r, t.resolvePartial = function(e, t, n) {
                 e ? e.call || n.name || (n.name = e, e = n.partials[e]) : e = "@partial-block" === n.name ? n.data["partial-block"] : n.partials[n.name];
                 return e
             }, t.invokePartial = function(e, t, n) {
-                var a = n.data && n.data["partial-block"];
+                var s = n.data && n.data["partial-block"];
                 n.partial = !0, n.ids && (n.data.contextPath = n.ids[0] || n.data.contextPath);
                 var i = void 0;
                 n.fn && n.fn !== c && function() {
@@ -2417,14 +2417,14 @@
                     var e = n.fn;
                     i = n.data["partial-block"] = function(t) {
                         var n = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1];
-                        return n.data = l.createFrame(n.data), n.data["partial-block"] = a, e(t, n)
-                    }, e.partials && (n.partials = s.extend({}, n.partials, e.partials))
+                        return n.data = l.createFrame(n.data), n.data["partial-block"] = s, e(t, n)
+                    }, e.partials && (n.partials = a.extend({}, n.partials, e.partials))
                 }();
                 void 0 === e && i && (e = i);
                 if (void 0 === e) throw new o.default("The partial " + n.name + " could not be found");
                 if (e instanceof Function) return e(t, n)
             }, t.noop = c;
-            var a, s = function(e) {
+            var s, a = function(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e)
@@ -2432,28 +2432,28 @@
                     return t.default = e, t
                 }(n(64)),
                 i = n(65),
-                o = (a = i) && a.__esModule ? a : {
-                    default: a
+                o = (s = i) && s.__esModule ? s : {
+                    default: s
                 },
                 l = n(63);
 
-            function r(e, t, n, a, s, i, o) {
+            function r(e, t, n, s, a, i, o) {
                 function l(t) {
-                    var s = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
+                    var a = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
                         l = o;
-                    return !o || t == o[0] || t === e.nullContext && null === o[0] || (l = [t].concat(o)), n(e, t, e.helpers, e.partials, s.data || a, i && [s.blockParams].concat(i), l)
+                    return !o || t == o[0] || t === e.nullContext && null === o[0] || (l = [t].concat(o)), n(e, t, e.helpers, e.partials, a.data || s, i && [a.blockParams].concat(i), l)
                 }
-                return (l = u(n, l, e, o, a, i)).program = t, l.depth = o ? o.length : 0, l.blockParams = s || 0, l
+                return (l = u(n, l, e, o, s, i)).program = t, l.depth = o ? o.length : 0, l.blockParams = a || 0, l
             }
 
             function c() {
                 return ""
             }
 
-            function u(e, t, n, a, i, o) {
+            function u(e, t, n, s, i, o) {
                 if (e.decorator) {
                     var l = {};
-                    t = e.decorator(t, l, n, a && a[0], i, o, a), s.extend(t, l)
+                    t = e.decorator(t, l, n, s && s[0], i, o, s), a.extend(t, l)
                 }
                 return t
             }
@@ -2461,28 +2461,28 @@
             "use strict";
             t.__esModule = !0, t.default = function(e) {
                 var t = void 0 !== n.g ? n.g : window,
-                    a = t.Handlebars;
+                    s = t.Handlebars;
                 e.noConflict = function() {
-                    return t.Handlebars === e && (t.Handlebars = a), e
+                    return t.Handlebars === e && (t.Handlebars = s), e
                 }
             }, e.exports = t.default
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "ywmbpqMC",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowMiniseries"]]],null,16],["text","\\n"],["block",["if"],[["get",["isSecondaryHeader"]]],null,13],["text","\\n"],["block",["if"],[["get",["data","isApexTierCutoff"]]],null,6],["text","\\n"],["block",["if"],[["get",["isNonTopTierStandingRow"]]],null,5],["text","\\n"],["block",["if"],[["get",["isTopTierStandingRow"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["text","/"],["append",["unknown",["data","losses"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,2],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-summoner-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,1,0],["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-league-points"],["flush-element"],["text","\\n      "],["append",["unknown",["data","leaguePoints"]],false],["open-element","div",[]],["dynamic-attr","class",["concat",[["unknown",["divisionChangeStyle"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,4],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["unknown",["data","leaguePoints"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-apex-cutoff-container"],["flush-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","lol-leagues-apex-cutoff-hr"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-apex-cutoff-title"],["flush-element"],["append",["unknown",["data","apexCutoffText"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","lol-leagues-apex-cutoff-hr"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_PLAYERS"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,8,7],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","headerText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,11,10],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["data","isApexTier"]]],null,12,9]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["lol-leagues-list-best-status ",["get",["msStyle"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["msStyle","index"]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,15],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["each"],[["get",["miniseriesStyles"]]],null,14],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "SA4JHzrX",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowMiniseries"]]],null,16],["text","\\n"],["block",["if"],[["get",["isSecondaryHeader"]]],null,13],["text","\\n"],["block",["if"],[["get",["data","isApexTierCutoff"]]],null,6],["text","\\n"],["block",["if"],[["get",["isNonTopTierStandingRow"]]],null,5],["text","\\n"],["block",["if"],[["get",["isTopTierStandingRow"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["text","/"],["append",["unknown",["data","losses"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,2],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-summoner-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,1,0],["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-league-points"],["flush-element"],["text","\\n      "],["append",["unknown",["data","leaguePoints"]],false],["open-element","div",[]],["dynamic-attr","class",["concat",[["unknown",["divisionChangeStyle"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,4],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["unknown",["data","leaguePoints"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-apex-cutoff-container"],["flush-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","lol-leagues-apex-cutoff-hr"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-apex-cutoff-title"],["flush-element"],["append",["unknown",["data","apexCutoffText"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","lol-leagues-apex-cutoff-hr"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_PLAYERS"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,8,7],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","headerText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,11,10],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["data","isApexTier"]]],null,12,9]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["lol-leagues-list-best-status ",["get",["msStyle"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["msStyle","index"]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,15],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["each"],[["get",["miniseriesStyles"]]],null,14],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(30);
-            n(82), e.exports = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(30);
+            n(82), e.exports = s.Ember.Component.extend({
                 classNames: ["rank-queue-dropdown-component"],
                 classNameBindings: ["wrapperStyle"],
                 layout: n(83),
-                leagues: a.Ember.A(),
-                wrapperStyle: a.Ember.computed("isPlayerUnranked", (function() {
+                leagues: s.Ember.A(),
+                wrapperStyle: s.Ember.computed("isPlayerUnranked", (function() {
                     return this.get("isPlayerUnranked") ? "lol-leagues-empty-filter-wrapper" : "lol-leagues-filter-wrapper"
                 })),
                 didInsertElement: function() {
@@ -2490,37 +2490,37 @@
                         this._onSelected(e)
                     }))
                 },
-                challengerQueues: a.Ember.computed("challengerLaddersEnabled", (function() {
+                challengerQueues: s.Ember.computed("challengerLaddersEnabled", (function() {
                     const e = this,
                         t = e.get("challengerLaddersEnabled");
-                    if (!t) return a.Ember.A([]);
-                    return a.Lodash.map(t, (t => ({
+                    if (!t) return s.Ember.A([]);
+                    return s.Lodash.map(t, (t => ({
                         queueType: t,
                         queueTypeDisplay: e.get("tra").formatString("LEAGUES_DROPDOWN_APEX", {
-                            queueType: a.LeagueTierNames.getRankedQueueName(t)
+                            queueType: s.LeagueTierNames.getRankedQueueName(t)
                         })
                     })))
                 })),
-                summonerLeagues: a.Ember.computed("selectedLeague.queueType", "leagues", (function() {
+                summonerLeagues: s.Ember.computed("selectedLeague.queueType", "leagues", (function() {
                     const e = this.get("leagues.summonerLeagues"),
                         t = this.get("selectedLeague.queueType");
                     if (!e) return null;
-                    return a.Lodash.map(e, (e => ({
+                    return s.Lodash.map(e, (e => ({
                         queue: e,
                         isSelected: "summoner" === this.get("leagueTypeSelected") && t === e.queueType
                     }))).filter((function(e) {
-                        const t = e.tier && e.tier !== a.LeaguesConsts.TIER_NAME_NONE;
-                        return !(0, s.isTftQueueType)(e.queueType) || t
+                        const t = e.tier && e.tier !== s.LeaguesConsts.TIER_NAME_NONE;
+                        return !(0, a.isTftQueueType)(e.queueType) || t
                     }))
                 })),
-                topRatedLadderQueues: a.Ember.computed("topRatedLaddersEnabled", (function() {
+                topRatedLadderQueues: s.Ember.computed("topRatedLaddersEnabled", (function() {
                     const e = this,
                         t = e.get("topRatedLaddersEnabled");
-                    if (!t) return a.Ember.A([]);
-                    return a.Lodash.map(t, (t => ({
+                    if (!t) return s.Ember.A([]);
+                    return s.Lodash.map(t, (t => ({
                         queueType: t,
                         queueTypeDisplay: e.get("tra").formatString("LEAGUES_DROPDOWN_APEX", {
-                            queueType: a.LeagueTierNames.getRankedQueueName(t)
+                            queueType: s.LeagueTierNames.getRankedQueueName(t)
                         })
                     })))
                 })),
@@ -2534,22 +2534,22 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "oPieXV/T",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-dropdown",[]],["static-attr","class","rank-queue-dropdown-container"],["static-attr","direction","downwards"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dropdown-optgroup",[]],["static-attr","slot","lol-uikit-dropdown-optgroup"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-uikit-dropdown-optgroup-header"],["static-attr","slot","lol-uikit-dropdown-optgroup-header"],["flush-element"],["append",["unknown",["tra","LEAGUES_DROPDOWN_GROUP_MY_LEAGUES"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["leagues","summonerLeagues"]]],null,5,3],["text","  "],["close-element"],["text","\\n"],["block",["unless"],[["get",["overlayMode"]]],null,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","data-leaguetype","rated"],["dynamic-attr","data-queuetype",["unknown",["l","queueType"]],null],["flush-element"],["append",["unknown",["l","queueTypeDisplay"]],false],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","data-leaguetype","apex"],["dynamic-attr","data-queuetype",["unknown",["l","queueType"]],null],["flush-element"],["append",["unknown",["l","queueTypeDisplay"]],false],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","    "],["open-element","lol-uikit-dropdown-optgroup",[]],["static-attr","slot","lol-uikit-dropdown-optgroup"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-uikit-dropdown-optgroup-header"],["static-attr","slot","lol-uikit-dropdown-optgroup-header"],["flush-element"],["append",["unknown",["tra","LEAGUES_DROPDOWN_GROUP_CHALLENGER_TIER"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["challengerQueues"]]],null,1],["block",["each"],[["get",["topRatedLadderQueues"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","data-leaguetype","unranked"],["flush-element"],["append",["unknown",["tra","LEAGUES_QUEUE_NAME_UNRANKED"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["l","isSelected"]],null],["static-attr","data-leaguetype","summoner"],["dynamic-attr","data-queuetype",["concat",[["unknown",["l","queue","queueType"]]]]],["flush-element"],["text","\\n          "],["append",["unknown",["l","queue","queueTypeDisplay"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["block",["each"],[["get",["summonerLeagues"]]],null,4]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "BKM0Hu5I",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-dropdown",[]],["static-attr","class","rank-queue-dropdown-container"],["static-attr","direction","downwards"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dropdown-optgroup",[]],["static-attr","slot","lol-uikit-dropdown-optgroup"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-uikit-dropdown-optgroup-header"],["static-attr","slot","lol-uikit-dropdown-optgroup-header"],["flush-element"],["append",["unknown",["tra","LEAGUES_DROPDOWN_GROUP_MY_LEAGUES"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["leagues","summonerLeagues"]]],null,5,3],["text","  "],["close-element"],["text","\\n"],["block",["unless"],[["get",["overlayMode"]]],null,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","data-leaguetype","rated"],["dynamic-attr","data-queuetype",["unknown",["l","queueType"]],null],["flush-element"],["append",["unknown",["l","queueTypeDisplay"]],false],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","data-leaguetype","apex"],["dynamic-attr","data-queuetype",["unknown",["l","queueType"]],null],["flush-element"],["append",["unknown",["l","queueTypeDisplay"]],false],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","    "],["open-element","lol-uikit-dropdown-optgroup",[]],["static-attr","slot","lol-uikit-dropdown-optgroup"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-uikit-dropdown-optgroup-header"],["static-attr","slot","lol-uikit-dropdown-optgroup-header"],["flush-element"],["append",["unknown",["tra","LEAGUES_DROPDOWN_GROUP_CHALLENGER_TIER"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["challengerQueues"]]],null,1],["block",["each"],[["get",["topRatedLadderQueues"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","data-leaguetype","unranked"],["flush-element"],["append",["unknown",["tra","LEAGUES_QUEUE_NAME_UNRANKED"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["l","isSelected"]],null],["static-attr","data-leaguetype","summoner"],["dynamic-attr","data-queuetype",["concat",[["unknown",["l","queue","queueType"]]]]],["flush-element"],["text","\\n          "],["append",["unknown",["l","queue","queueTypeDisplay"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["block",["each"],[["get",["summonerLeagues"]]],null,4]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(30);
-            n(85), e.exports = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(30);
+            n(85), e.exports = s.Ember.Component.extend({
                 classNames: ["rated-badge-component"],
                 layout: n(86),
                 queue: null,
                 summoner: null,
-                rankedService: (0, a.dataBinding)("/lol-ranked", (0, a.getProvider)().getSocket()),
+                rankedService: (0, s.dataBinding)("/lol-ranked", (0, s.getProvider)().getSocket()),
                 init: function() {
                     this._super(...arguments);
                     this.get("rankedService").observe("/v1/current-ranked-stats", this, this.fetchRatedData)
@@ -2561,23 +2561,23 @@
                     this._super(...arguments);
                     this.get("rankedService").unobserve(this)
                 },
-                isTft: a.Ember.computed("queueType", (function() {
-                    return (0, s.isTftQueueType)(this.get("queueType"))
+                isTft: s.Ember.computed("queueType", (function() {
+                    return (0, a.isTftQueueType)(this.get("queueType"))
                 })),
-                ratedTier: a.Ember.computed("queue", "isTft", (function() {
+                ratedTier: s.Ember.computed("queue", "isTft", (function() {
                     const e = this.get("isTft"),
                         t = this.get("queue");
-                    return t && t.ratedTier ? t.ratedTier : e ? a.LeagueTierNames.getConstants().LOWEST_TFT_RATED_TIER : a.LeagueTierNames.getConstants().LOWEST_CHERRY_RATED_TIER
+                    return t && t.ratedTier ? t.ratedTier : e ? s.LeagueTierNames.getConstants().LOWEST_TFT_RATED_TIER : s.LeagueTierNames.getConstants().LOWEST_CHERRY_RATED_TIER
                 })),
-                isUnrated: a.Ember.computed("ratedTier", (function() {
-                    return a.LeagueTierNames.isUnrated(this.get("ratedTier"))
+                isUnrated: s.Ember.computed("ratedTier", (function() {
+                    return s.LeagueTierNames.isUnrated(this.get("ratedTier"))
                 })),
-                ratedTierImagePath: a.Ember.computed("ratedTier", "queueType", (function() {
+                ratedTierImagePath: s.Ember.computed("ratedTier", "queueType", (function() {
                     const e = this.get("ratedTier"),
                         t = this.get("queueType");
-                    return e ? a.LeagueTierNames.getRatedPostgameBadge(e, t) : ""
+                    return e ? s.LeagueTierNames.getRatedPostgameBadge(e, t) : ""
                 })),
-                displayedRatedRating: a.Ember.computed("queue", "ratedTier", "isUnrated", (function() {
+                displayedRatedRating: s.Ember.computed("queue", "ratedTier", "isUnrated", (function() {
                     const e = this.get("ratedTier"),
                         t = this.get("isUnrated"),
                         n = this.get("queue");
@@ -2586,7 +2586,7 @@
                 fetchRatedData() {
                     const e = this.get("summoner.puuid"),
                         t = this.get("queueType");
-                    e && t && (0, a.dataBinding)("lol-ranked").get(`/v1/ranked-stats/${e}`, {
+                    e && t && (0, s.dataBinding)("lol-ranked").get(`/v1/ranked-stats/${e}`, {
                         skipCache: !0
                     }).then((e => {
                         this._setRatedData(e, t)
@@ -2601,40 +2601,40 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "5pupy4im",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rated-badge-container"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","rated-badge-icon"],["dynamic-attr","src",["concat",[["unknown",["ratedTierImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,0],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-rating-text"],["flush-element"],["text","\\n    "],["append",["unknown",["displayedRatedRating"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-divider"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-player-container"],["flush-element"],["text","\\n    "],["open-element","lol-social-avatar-icon",[]],["dynamic-attr","icon-id",["unknown",["summoner","profileIconId"]],null],["static-attr","availability","online"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","rated-badge-player-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid"],["short",["get",["summoner","puuid"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-lottie",[]],["static-attr","class","rated-badge-highlight"],["static-attr","image-path","/fe/lol-static-assets/lottie/tft-rated/images/"],["static-attr","src","/fe/lol-static-assets/lottie/tft-rated/Badge_Highlight_EOG.json"],["static-attr","resize-to-fit","true"],["static-attr","loop","true"],["static-attr","autoplay","true"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "oNp3TUlu",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rated-badge-container"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","rated-badge-icon"],["dynamic-attr","src",["concat",[["unknown",["ratedTierImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,0],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-rating-text"],["flush-element"],["text","\\n    "],["append",["unknown",["displayedRatedRating"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-divider"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-player-container"],["flush-element"],["text","\\n    "],["open-element","lol-social-avatar-icon",[]],["dynamic-attr","icon-id",["unknown",["summoner","profileIconId"]],null],["static-attr","availability","online"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","rated-badge-player-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid"],["short",["get",["summoner","puuid"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-lottie",[]],["static-attr","class","rated-badge-highlight"],["static-attr","image-path","/fe/lol-static-assets/lottie/tft-rated/images/"],["static-attr","src","/fe/lol-static-assets/lottie/tft-rated/Badge_Highlight_EOG.json"],["static-attr","resize-to-fit","true"],["static-attr","loop","true"],["static-attr","autoplay","true"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(29);
+            var s = n(1),
+                a = n(29);
 
             function i(e) {
                 return e < 10 ? "0" + e : e
             }
-            n(88), e.exports = a.Ember.Component.extend({
+            n(88), e.exports = s.Ember.Component.extend({
                 classNames: ["countdown-timer-component"],
                 layout: n(89),
                 getCurrentTime: function() {
                     return (new Date).getTime()
                 },
-                hasTimeLeft: a.Ember.computed("nextCountdown", (function() {
+                hasTimeLeft: s.Ember.computed("nextCountdown", (function() {
                     return this.get("nextCountdown") >= 1e3
                 })),
-                countdownChanged: a.Ember.observer("countdownToTime", (function() {
+                countdownChanged: s.Ember.observer("countdownToTime", (function() {
                     const e = this.get("countdownToTime") - this.getCurrentTime();
                     var t;
                     this.set("nextCountdown", Math.max(e, 0)), this.clearTimer(), this.set("countdownTimer", setInterval((t = this, () => {
                         let e = t.get("nextCountdown");
-                        e >= s.PROMOTE_COUNTDOWN_INTERVAL_MS ? (e -= s.PROMOTE_COUNTDOWN_INTERVAL_MS, t.set("nextCountdown", e)) : t.clearTimer()
-                    }), s.PROMOTE_COUNTDOWN_INTERVAL_MS))
+                        e >= a.PROMOTE_COUNTDOWN_INTERVAL_MS ? (e -= a.PROMOTE_COUNTDOWN_INTERVAL_MS, t.set("nextCountdown", e)) : t.clearTimer()
+                    }), a.PROMOTE_COUNTDOWN_INTERVAL_MS))
                 })),
-                countdownTimeLeft: a.Ember.computed("nextCountdown", (function() {
+                countdownTimeLeft: s.Ember.computed("nextCountdown", (function() {
                     const e = this.get("nextCountdown"),
-                        t = a.moment.duration(e);
+                        t = s.moment.duration(e);
                     return `${i(t.hours())}:${i(t.minutes())}:${i(t.seconds())}`
                 })),
                 clearTimer: function() {
@@ -2649,35 +2649,35 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "vevzDvKh",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["countdown-label ",["helper",["if"],[["get",["isUrgent"]],"urgent"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["countdownLabel"]],false],["text"," \\n"],["close-element"],["text","\\n \\n"],["block",["if"],[["get",["hasTimeLeft"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["unknown",["onRefresh"]],null],["static-attr","class","countdown-refresh-button"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","RANKED_REFRESH_LABEL"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["countdown-time-left ",["helper",["if"],[["get",["isUrgent"]],"urgent"],null]]]],["flush-element"],["text","\\n    "],["append",["unknown",["countdownTimeLeft"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "ayliMDcK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["countdown-label ",["helper",["if"],[["get",["isUrgent"]],"urgent"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["countdownLabel"]],false],["text"," \\n"],["close-element"],["text","\\n \\n"],["block",["if"],[["get",["hasTimeLeft"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["unknown",["onRefresh"]],null],["static-attr","class","countdown-refresh-button"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","RANKED_REFRESH_LABEL"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["countdown-time-left ",["helper",["if"],[["get",["isUrgent"]],"urgent"],null]]]],["flush-element"],["text","\\n    "],["append",["unknown",["countdownTimeLeft"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
+            var s, a = n(1),
                 i = n(29),
-                o = (a = n(91)) && a.__esModule ? a : {
-                    default: a
+                o = (s = n(91)) && s.__esModule ? s : {
+                    default: s
                 };
             n(92);
-            const l = (0, s.emberDataBinding)({
-                Ember: s.Ember,
-                websocket: (0, s.getProvider)().getSocket(),
+            const l = (0, a.emberDataBinding)({
+                Ember: a.Ember,
+                websocket: (0, a.getProvider)().getSocket(),
                 boundProperties: {
                     currentSummoner: "/lol-summoner/v1/current-summoner"
                 }
             });
-            e.exports = s.Ember.Component.extend(l, o.default, {
+            e.exports = a.Ember.Component.extend(l, o.default, {
                 classNames: ["leagues-promotion-vignette-v2-component"],
                 layout: n(93),
                 animationStarted: !1,
                 audioObject: null,
-                queueType: s.Ember.computed.alias("notification.queueType"),
-                currentTier: s.Ember.computed.alias("notification.tier"),
-                previousTier: s.Ember.computed("currentTier", "isTierPromotion", "tiers.[]", (function() {
+                queueType: a.Ember.computed.alias("notification.queueType"),
+                currentTier: a.Ember.computed.alias("notification.tier"),
+                previousTier: a.Ember.computed("currentTier", "isTierPromotion", "tiers.[]", (function() {
                     const e = this.get("currentTier");
                     if (!this.get("isTierPromotion")) return e;
                     const t = this.get("tiers") || [],
@@ -2694,31 +2694,31 @@
                         stop: !0
                     })
                 },
-                isAnimationEnabled: s.Ember.computed("isLowSpec", (function() {
+                isAnimationEnabled: a.Ember.computed("isLowSpec", (function() {
                     return !this.get("isLowSpec")
                 })),
-                shouldAnimate: s.Ember.computed("isLowSpec", "isShowing", "animationStarted", (function() {
+                shouldAnimate: a.Ember.computed("isLowSpec", "isShowing", "animationStarted", (function() {
                     return !this.get("isLowSpec") && this.get("isShowing") && !this.get("animationStarted")
                 })),
-                introVideoPath: s.Ember.computed("previousTier", "isCompletedProvisionals", (function() {
+                introVideoPath: a.Ember.computed("previousTier", "isCompletedProvisionals", (function() {
                     if (this.get("isCompletedProvisionals")) return `${i.ASSET_PATH}videos/ranked/tier-promotion-from-unranked.webm`;
                     const e = this.get("previousTier");
                     return e ? `${i.ASSET_PATH}videos/ranked/tier-promotion-from-${e.toLowerCase()}.webm` : ""
                 })),
-                outroVideoPath: s.Ember.computed("currentTier", (function() {
+                outroVideoPath: a.Ember.computed("currentTier", (function() {
                     const e = this.get("currentTier");
                     return e ? `${i.ASSET_PATH}videos/ranked/tier-promotion-to-${e.toLowerCase()}.webm` : ""
                 })),
-                introAudioPath: s.Ember.computed("previousTier", "isCompletedProvisionals", (function() {
+                introAudioPath: a.Ember.computed("previousTier", "isCompletedProvisionals", (function() {
                     if (this.get("isCompletedProvisionals")) return `${i.ASSET_PATH}sounds/ranked/sfx-tier-wings-promotion-from-unranked.ogg`;
                     const e = this.get("previousTier");
                     return e ? `${i.ASSET_PATH}sounds/ranked/sfx-tier-wings-promotion-from-${e.toLowerCase()}.ogg` : ""
                 })),
-                outroAudioPath: s.Ember.computed("currentTier", (function() {
+                outroAudioPath: a.Ember.computed("currentTier", (function() {
                     const e = this.get("currentTier");
                     return e ? `${i.ASSET_PATH}sounds/ranked/sfx-tier-wings-promotion-to-${e.toLowerCase()}.ogg` : ""
                 })),
-                outroImagePath: s.Ember.computed("currentTier", (function() {
+                outroImagePath: a.Ember.computed("currentTier", (function() {
                     const e = this.get("currentTier");
                     return e ? `${i.ASSET_PATH}images/ranked-emblem/emblem-${e.toLowerCase()}.png` : ""
                 })),
@@ -2727,78 +2727,78 @@
                         t = document.getElementById("ceremony-outro"),
                         n = document.querySelector(".leagues-promotion-emblem");
                     if (!e || !t) return;
-                    const a = this.get("introAudioPath"),
-                        s = this.createSound(a),
+                    const s = this.get("introAudioPath"),
+                        a = this.createSound(s),
                         i = this.get("outroAudioPath"),
                         o = this.createSound(i);
                     this.set("animationStarted", !0), e.addEventListener("signal", (() => {
                         t.play(), this.playAudio(o)
                     })), t.addEventListener("signal", (() => {
                         n.classList.remove("hidden")
-                    })), e.play(), this.playAudio(s)
+                    })), e.play(), this.playAudio(a)
                 },
                 playAudio: function(e) {
                     !this.get("isLowSpec") && e && (e.play(), this.set("audioObject", e))
                 },
-                division: s.Ember.computed.alias("notification.division"),
-                leaguePoints: s.Ember.computed.alias("notification.leaguePoints"),
-                isApex: s.Ember.computed("tierUpperCase", (function() {
-                    return s.LeaguesConsts.APEX_TIERS.includes(this.get("tierUpperCase"))
+                division: a.Ember.computed.alias("notification.division"),
+                leaguePoints: a.Ember.computed.alias("notification.leaguePoints"),
+                isApex: a.Ember.computed("tierUpperCase", (function() {
+                    return a.LeaguesConsts.APEX_TIERS.includes(this.get("tierUpperCase"))
                 })),
-                isTierPromotion: s.Ember.computed("isCompletedProvisionals", "isApex", "division", (function() {
+                isTierPromotion: a.Ember.computed("isCompletedProvisionals", "isApex", "division", (function() {
                     const e = this.get("isCompletedProvisionals"),
                         t = this.get("isApex"),
                         n = this.get("division");
-                    return !e && (t || n === s.LeaguesConsts.DIVISIONS[0])
+                    return !e && (t || n === a.LeaguesConsts.DIVISIONS[0])
                 })),
-                isCompletedProvisionals: s.Ember.computed("notification.notifyReason", (function() {
+                isCompletedProvisionals: a.Ember.computed("notification.notifyReason", (function() {
                     return "COMPLETED_PROVISIONALS" === this.get("notification.notifyReason")
                 })),
-                tierUpperCase: s.Ember.computed("notification.tier", (function() {
+                tierUpperCase: a.Ember.computed("notification.tier", (function() {
                     const e = this.get("notification.tier");
                     return e ? e.toUpperCase() : ""
                 })),
-                tierLowerCase: s.Ember.computed("notification.tier", (function() {
+                tierLowerCase: a.Ember.computed("notification.tier", (function() {
                     const e = this.get("notification.tier");
                     return e ? e.toLowerCase() : ""
                 })),
-                headerText: s.Ember.computed("isCompletedProvisionals", "fullTierLoc", "tierUpperCase", "division", "leaguePoints", (function() {
+                headerText: a.Ember.computed("isCompletedProvisionals", "fullTierLoc", "tierUpperCase", "division", "leaguePoints", (function() {
                     return this.get("isCompletedProvisionals") ? this.get("tra").formatString("LEAGUES_COMPLETED_PROVISIONALS_VIGNETTE_HEADER", {
-                        tierDivisionLpLoc: s.LeagueTierNames.getTierDivisionLpLoc(this.get("tierUpperCase"), this.get("division"), this.get("leaguePoints"))
+                        tierDivisionLpLoc: a.LeagueTierNames.getTierDivisionLpLoc(this.get("tierUpperCase"), this.get("division"), this.get("leaguePoints"))
                     }) : this.get("tra").formatString("LEAGUES_PROMOTION_VIGNETTE_HEADER", {
-                        tierDivisionLoc: s.LeagueTierNames.getFullTierDivisionName(this.get("tierUpperCase"), this.get("division"))
+                        tierDivisionLoc: a.LeagueTierNames.getFullTierDivisionName(this.get("tierUpperCase"), this.get("division"))
                     })
                 })),
-                subheaderText: s.Ember.computed("isCompletedProvisionals", "queueType", (function() {
+                subheaderText: a.Ember.computed("isCompletedProvisionals", "queueType", (function() {
                     const e = this.get("queueType"),
-                        t = s.LeagueTierNames.getRankedQueueName(e);
+                        t = a.LeagueTierNames.getRankedQueueName(e);
                     return this.get("isCompletedProvisionals") ? this.get("tra").formatString("LEAGUES_COMPLETED_PROVISIONALS_VIGNETTE_SUBHEADER", {
                         queueType: t
                     }) : this.get("tra").formatString("LEAGUES_PROMOTION_VIGNETTE_SUBHEADER", {
                         queueType: t
                     })
                 })),
-                shouldShowProfileIcon: s.Ember.computed("profileIconPath", (function() {
+                shouldShowProfileIcon: a.Ember.computed("profileIconPath", (function() {
                     return !!this.get("profileIconPath")
                 })),
-                profileIconPath: s.Ember.computed("currentSummoner.profileIconId", (function() {
+                profileIconPath: a.Ember.computed("currentSummoner.profileIconId", (function() {
                     const e = this.get("currentSummoner.profileIconId");
                     return e ? `/lol-game-data/assets/v1/profile-icons/${e}.jpg` : null
                 }))
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            const s = "sfx-ui",
+            var s = n(1);
+            const a = "sfx-ui",
                 i = "music-ambience";
-            e.exports = a.Ember.Mixin.create({
+            e.exports = s.Ember.Mixin.create({
                 createSound: function(e) {
                     if (!1 === e) return;
-                    return a.AudioPlugin.getChannel(s).createSound(e)
+                    return s.AudioPlugin.getChannel(a).createSound(e)
                 },
                 createAmbience: function(e) {
                     if (!1 === e) return;
-                    return a.AudioPlugin.getChannel(i).createSound(e, {
+                    return s.AudioPlugin.getChannel(i).createSound(e, {
                         isLoop: !0,
                         fadeIn: !0
                     })
@@ -2808,27 +2808,27 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "6lZovg16",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-vignette-parallax-background ",["unknown",["vignetteSize"]]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["headerText"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-promotion-vignette-subheader"],["flush-element"],["text","\\n  "],["append",["helper",["sanitize"],[["get",["subheaderText"]]],null],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-promotion-vignette-label\\n    ",["helper",["unless"],[["get",["isLowSpec"]],"animated"],null],"\\n    ",["helper",["if"],[["get",["isCompletedProvisionals"]],"provisional"],null],"\\n    ",["helper",["if"],[["get",["isTierPromotion"]],"tier"],null],"\\n    ",["unknown",["tierLowerCase"]],"\\n    ",["helper",["if"],[["get",["animationStarted"]],"fadeIn"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowProfileIcon"]]],null,2],["text","  "],["append",["helper",["player-name"],null,[["format"],["full"]]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLowSpec"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","\\n  "],["open-element","img",[]],["static-attr","class","leagues-promotion-emblem hidden"],["dynamic-attr","src",["unknown",["outroImagePath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","class","ceremony-video"],["static-attr","id","ceremony-intro"],["static-attr","fade-in","250"],["static-attr","fade-out","0"],["static-attr","signal-before-end","0.1"],["dynamic-attr","src",["unknown",["introVideoPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","class","ceremony-video"],["static-attr","id","ceremony-outro"],["static-attr","fade-in","0"],["static-attr","fade-out","0"],["static-attr","signal-before-end","0.15"],["dynamic-attr","src",["unknown",["outroVideoPath"]],null],["flush-element"],["close-element"],["text","\\n\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","leagues-promotion-emblem"],["dynamic-attr","src",["unknown",["outroImagePath"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","leagues-promotion-vignette-profile-icon-border"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["profileIconPath"]]]]],["static-attr","class","leagues-promotion-vignette-profile-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "SbGQPK7C",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-vignette-parallax-background ",["unknown",["vignetteSize"]]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["headerText"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-promotion-vignette-subheader"],["flush-element"],["text","\\n  "],["append",["helper",["sanitize"],[["get",["subheaderText"]]],null],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-promotion-vignette-label\\n    ",["helper",["unless"],[["get",["isLowSpec"]],"animated"],null],"\\n    ",["helper",["if"],[["get",["isCompletedProvisionals"]],"provisional"],null],"\\n    ",["helper",["if"],[["get",["isTierPromotion"]],"tier"],null],"\\n    ",["unknown",["tierLowerCase"]],"\\n    ",["helper",["if"],[["get",["animationStarted"]],"fadeIn"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowProfileIcon"]]],null,2],["text","  "],["append",["helper",["player-name"],null,[["format"],["full"]]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLowSpec"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","\\n  "],["open-element","img",[]],["static-attr","class","leagues-promotion-emblem hidden"],["dynamic-attr","src",["unknown",["outroImagePath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","class","ceremony-video"],["static-attr","id","ceremony-intro"],["static-attr","fade-in","250"],["static-attr","fade-out","0"],["static-attr","signal-before-end","0.1"],["dynamic-attr","src",["unknown",["introVideoPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","class","ceremony-video"],["static-attr","id","ceremony-outro"],["static-attr","fade-in","0"],["static-attr","fade-out","0"],["static-attr","signal-before-end","0.15"],["dynamic-attr","src",["unknown",["outroVideoPath"]],null],["flush-element"],["close-element"],["text","\\n\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","leagues-promotion-emblem"],["dynamic-attr","src",["unknown",["outroImagePath"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","leagues-promotion-vignette-profile-icon-border"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["profileIconPath"]]]]],["static-attr","class","leagues-promotion-vignette-profile-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            n(95), e.exports = a.Ember.Component.extend({
+            var s = n(1);
+            n(95), e.exports = s.Ember.Component.extend({
                 classNames: ["leagues-reward-vignette-component"],
                 layout: n(96),
-                isAnimationEnabled: a.Ember.computed("isLowSpec", (function() {
+                isAnimationEnabled: s.Ember.computed("isLowSpec", (function() {
                     return !this.get("isLowSpec")
                 })),
-                showChromaBackground: a.Ember.computed("notification.rewardEarnedType", (function() {
-                    return this.get("notification.rewardEarnedType") === a.LeagueTierNames.getConstants().REWARD_TYPES.CHAMPION_SKIN_CHROMA
+                showChromaBackground: s.Ember.computed("notification.rewardEarnedType", (function() {
+                    return this.get("notification.rewardEarnedType") === s.LeagueTierNames.getConstants().REWARD_TYPES.CHAMPION_SKIN_CHROMA
                 })),
-                showGoldBackgroundGlow: a.Ember.computed("notification.rewardEarnedType", (function() {
+                showGoldBackgroundGlow: s.Ember.computed("notification.rewardEarnedType", (function() {
                     const e = this.get("notification.rewardEarnedType"),
-                        t = a.LeagueTierNames.getConstants().REWARD_TYPES;
+                        t = s.LeagueTierNames.getConstants().REWARD_TYPES;
                     return e === t.SUMMONER_ICON || e === t.CHAMPION_TOKEN
                 }))
             })
@@ -2836,18 +2836,18 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "+8ykeLfm",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-vignette-parallax-background ",["unknown",["vignetteSize"]]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-reward-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","LEAGUES_REWARD_VIGNETTE_HEADER"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-reward-vignette-subheader"],["flush-element"],["text","\\n  "],["append",["helper",["sanitize"],[["get",["notification","rewardEarnedTitle"]]],null],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-reward-vignette-container\\n    ",["unknown",["notification","rewardEarnedType"]],"\\n    ",["helper",["if"],[["get",["showChromaBackground"]],"chromabackground"],null],"\\n    ",["helper",["if"],[["get",["showGoldBackgroundGlow"]],"glow"],null]]]],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","leagues-reward-vignette-image"],["dynamic-attr","src",["concat",[["unknown",["rewardImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "7dnfJFM8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-vignette-parallax-background ",["unknown",["vignetteSize"]]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-reward-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","LEAGUES_REWARD_VIGNETTE_HEADER"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-reward-vignette-subheader"],["flush-element"],["text","\\n  "],["append",["helper",["sanitize"],[["get",["notification","rewardEarnedTitle"]]],null],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-reward-vignette-container\\n    ",["unknown",["notification","rewardEarnedType"]],"\\n    ",["helper",["if"],[["get",["showChromaBackground"]],"chromabackground"],null],"\\n    ",["helper",["if"],[["get",["showGoldBackgroundGlow"]],"glow"],null]]]],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","leagues-reward-vignette-image"],["dynamic-attr","src",["concat",[["unknown",["rewardImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
+            var s, a = n(1),
                 i = n(29),
-                o = (a = n(91)) && a.__esModule ? a : {
-                    default: a
+                o = (s = n(91)) && s.__esModule ? s : {
+                    default: s
                 };
             n(98);
             const l = {
@@ -2857,7 +2857,7 @@
                 PURPLE: "04-BlueToPurple",
                 ORANGE: "05-PurpleToOrange"
             };
-            e.exports = s.Ember.Component.extend(o.default, {
+            e.exports = a.Ember.Component.extend(o.default, {
                 classNames: ["rated-promotion-vignette-component"],
                 layout: n(99),
                 animationStarted: !1,
@@ -2867,16 +2867,16 @@
                         this.set("animationStarted", !0), e && e.play()
                     }
                 },
-                ratedTier: s.Ember.computed.readOnly("notification.ratedTier"),
-                tierText: s.Ember.computed("ratedTier", "notification.queueType", (function() {
+                ratedTier: a.Ember.computed.readOnly("notification.ratedTier"),
+                tierText: a.Ember.computed("ratedTier", "notification.queueType", (function() {
                     const e = this.get("ratedTier"),
                         t = this.get("notification.queueType");
                     return this.get(`tra.${t}_tier_label_${e}`)
                 })),
-                audioPath: s.Ember.computed("ratedTier", (function() {
+                audioPath: a.Ember.computed("ratedTier", (function() {
                     return "GRAY" === this.get("ratedTier") ? `${i.ASSET_PATH}sounds/tft-rated/sfx-celebrate-tft-rated-grayrating.ogg` : `${i.ASSET_PATH}sounds/tft-rated/sfx-celebrate-tft-rated-promote.ogg`
                 })),
-                lottiePath: s.Ember.computed("ratedTier", "notification.queueType", (function() {
+                lottiePath: a.Ember.computed("ratedTier", "notification.queueType", (function() {
                     const e = l[this.get("ratedTier")],
                         t = this.get("notification.queueType");
                     return `${i.ASSET_PATH}lottie/tft-rated/${e}-${t}.json`
@@ -2887,17 +2887,17 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "ovXVJf/4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rated-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","rated_promotion_vignette_header"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","rated-vignette-lottie-frame"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-vignette-lottie-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-lottie",[]],["dynamic-attr","src",["concat",[["unknown",["lottiePath"]]]]],["dynamic-attr","image-path",["concat",[["unknown",["lottieImagePath"]]]]],["dynamic-attr","text-tierlabel",["concat",[["unknown",["tierText"]]]]],["static-attr","autoplay","true"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "g4wYJyJ4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rated-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","rated_promotion_vignette_header"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","rated-vignette-lottie-frame"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-vignette-lottie-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-lottie",[]],["dynamic-attr","src",["concat",[["unknown",["lottiePath"]]]]],["dynamic-attr","image-path",["concat",[["unknown",["lottieImagePath"]]]]],["dynamic-attr","text-tierlabel",["concat",[["unknown",["tierText"]]]]],["static-attr","autoplay","true"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(91)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(91)) && s.__esModule ? s : {
+                    default: s
                 };
             n(101);
             const o = {
@@ -2914,7 +2914,7 @@
                     PURPLE: n(108),
                     ORANGE: n(109)
                 };
-            e.exports = s.Ember.Component.extend(i.default, {
+            e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["cherry-rated-promotion-vignette-component"],
                 layout: n(110),
                 videoStarted: !1,
@@ -2929,11 +2929,11 @@
                         this.set("videoStarted", !0), e && setTimeout((() => e.play()), 500)
                     }
                 },
-                cherryRatingVideoSrc: s.Ember.computed("ratedTier", "notification.queueType", (function() {
+                cherryRatingVideoSrc: a.Ember.computed("ratedTier", "notification.queueType", (function() {
                     return o[this.get("ratedTier")]
                 })),
-                ratedTier: s.Ember.computed.readOnly("notification.ratedTier"),
-                tierText: s.Ember.computed("ratedTier", (function() {
+                ratedTier: a.Ember.computed.readOnly("notification.ratedTier"),
+                tierText: a.Ember.computed("ratedTier", (function() {
                     const e = {
                         GREEN: "tra.CHERRY_tier_label_GREEN",
                         BLUE: "tra.CHERRY_tier_label_BLUE",
@@ -2942,7 +2942,7 @@
                     } [this.get("ratedTier")];
                     return e ? this.get(e) : ""
                 })),
-                audioPath: s.Ember.computed("ratedTier", (function() {
+                audioPath: a.Ember.computed("ratedTier", (function() {
                     return l[this.get("ratedTier")]
                 }))
             })
@@ -2974,10 +2974,10 @@
             "use strict";
             e.exports = n.p + "sfx-promotion-arena-gladiator.ogg"
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "0Ab+8Bqg",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","cherry-rated-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","rated_promotion_vignette_header"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","cherry-promotion-vignette-body"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","cherry-promotion-vignette-video-container"],["flush-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","preload",""],["dynamic-attr","src",["unknown",["cherryRatingVideoSrc"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","cherry-promotion-vignette-background"],["dynamic-attr","src",["concat",[["unknown",["backgroundSrc"]]]]],["static-attr","alt",""],["static-attr","role","presentation"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","cherry-rated-promotion-tier-text"],["flush-element"],["text","\\n  "],["append",["unknown",["tierText"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "QwG9x17x",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","cherry-rated-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","rated_promotion_vignette_header"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","cherry-promotion-vignette-body"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","cherry-promotion-vignette-video-container"],["flush-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","preload",""],["dynamic-attr","src",["unknown",["cherryRatingVideoSrc"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","cherry-promotion-vignette-background"],["dynamic-attr","src",["concat",[["unknown",["backgroundSrc"]]]]],["static-attr","alt",""],["static-attr","role","presentation"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","cherry-rated-promotion-tier-text"],["flush-element"],["text","\\n  "],["append",["unknown",["tierText"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2985,17 +2985,17 @@
             e.exports = n.p + "cherry-promotion-vignette-background.png"
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
+            var s = n(1);
             n(5);
-            const s = ["Matchmaking", "ReadyCheck", "ChampSelect", "GameStart", "FailedToLaunch", "InProgress", "Reconnect", "WaitingForStats", "PreEndOfGame", "EndOfGame", "TerminatedInError"];
-            e.exports = a.Ember.Component.extend({
+            const a = ["Matchmaking", "ReadyCheck", "ChampSelect", "GameStart", "FailedToLaunch", "InProgress", "Reconnect", "WaitingForStats", "PreEndOfGame", "EndOfGame", "TerminatedInError"];
+            e.exports = s.Ember.Component.extend({
                 classNames: ["notifications-root"],
                 layout: n(113),
                 init() {
-                    this._super(...arguments), this.seasonMemorialEnabledDefault = true, a.db.observe("/lol-login/v1/session", this, this.handleLoginSession), a.db.observe("/lol-settings/v2/ready", this, this.handleSettingsReady), a.db.observe("/lol-ranked/v1/current-ranked-stats", this, this.handleRankedStats), a.db.observe("/riotclient/region-locale", this, this.handleRegionLocale), a.db.observe("/lol-summoner/v1/current-summoner", this, this.handleCurrentSummoner), a.db.observe("/lol-gameflow/v1/session", this, this.handleGameflowSession), a.db.observe("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.season_memorial_modal_enabled", this, this.handleSeasonMemorialEnabled), a.db.observe("/lol-ranked/v1/eos-memorial", this, this.handleSeasonMemorialDebugModel)
+                    this._super(...arguments), this.seasonMemorialEnabledDefault = true, s.db.observe("/lol-login/v1/session", this, this.handleLoginSession), s.db.observe("/lol-settings/v2/ready", this, this.handleSettingsReady), s.db.observe("/lol-ranked/v1/current-ranked-stats", this, this.handleRankedStats), s.db.observe("/riotclient/region-locale", this, this.handleRegionLocale), s.db.observe("/lol-summoner/v1/current-summoner", this, this.handleCurrentSummoner), s.db.observe("/lol-gameflow/v1/session", this, this.handleGameflowSession), s.db.observe("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.season_memorial_modal_enabled", this, this.handleSeasonMemorialEnabled), s.db.observe("/lol-ranked/v1/eos-memorial", this, this.handleSeasonMemorialDebugModel)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), a.db.unobserve(this)
+                    this._super(...arguments), s.db.unobserve(this)
                 },
                 handleAccountLeaguesSettings(e) {
                     this.set("accountLeaguesSettings", e)
@@ -3004,10 +3004,10 @@
                     this.set("session", e)
                 },
                 handleSettingsReady(e) {
-                    e && a.db.observe("/lol-settings/v2/account/LCUPreferences/lol-leagues", this, this.handleAccountLeaguesSettings), this.set("settingsReady", e)
+                    e && s.db.observe("/lol-settings/v2/account/LCUPreferences/lol-leagues", this, this.handleAccountLeaguesSettings), this.set("settingsReady", e)
                 },
                 handleRankedStats(e) {
-                    this.set("currentRankedStats", e), this.get("recentSeasons") || a.db.post("/lol-seasons/v1/allSeasons/product/LOL", {
+                    this.set("currentRankedStats", e), this.get("recentSeasons") || s.db.post("/lol-seasons/v1/allSeasons/product/LOL", {
                         lastNYears: 2
                     }).then((e => {
                         this.set("recentSeasons", e)
@@ -3028,66 +3028,66 @@
                 handleSeasonMemorialDebugModel(e) {
                     e && this.setProperties(e)
                 },
-                hasSeenSeasonMemorialModal: a.Ember.computed("previousSeason.seasonId", "accountLeaguesSettings.data.season-memorial-modal", (function() {
+                hasSeenSeasonMemorialModal: s.Ember.computed("previousSeason.seasonId", "accountLeaguesSettings.data.season-memorial-modal", (function() {
                     const e = this.get("previousSeason.seasonId");
                     return (this.get("accountLeaguesSettings.data.season-memorial-modal") || 0) >= e
                 })),
-                isGameflowPhaseValid: a.Ember.computed("gameflowSession.phase", (function() {
+                isGameflowPhaseValid: s.Ember.computed("gameflowSession.phase", (function() {
                     const e = this.get("gameflowSession.phase");
-                    return !s.includes(e)
+                    return !a.includes(e)
                 })),
-                shouldShowSeasonMemorialModal: a.Ember.computed("hasSeenSeasonMemorialModal", "isGameflowPhaseValid", "isSeasonMemorialModalEnabled", "activeSeason", (function() {
+                shouldShowSeasonMemorialModal: s.Ember.computed("hasSeenSeasonMemorialModal", "isGameflowPhaseValid", "isSeasonMemorialModalEnabled", "activeSeason", (function() {
                     const e = this.get("hasSeenSeasonMemorialModal"),
                         t = this.get("isGameflowPhaseValid"),
                         n = this.get("isSeasonMemorialModalEnabled"),
-                        a = Boolean(this.get("activeSeason"));
-                    return !e && t && n && a
+                        s = Boolean(this.get("activeSeason"));
+                    return !e && t && n && s
                 })),
-                activeSeason: a.Ember.computed("recentSeasons.@each.seasonStart", "recentSeasons.@each.seasonEnd", (function() {
+                activeSeason: s.Ember.computed("recentSeasons.@each.seasonStart", "recentSeasons.@each.seasonEnd", (function() {
                     const e = this.get("recentSeasons") || [],
                         t = Date.now();
                     return e.find((e => t >= e.seasonStart && t < e.seasonEnd))
                 })),
-                previousSeason: a.Ember.computed("recentSeasons.@each.seasonEnd", (function() {
+                previousSeason: s.Ember.computed("recentSeasons.@each.seasonEnd", (function() {
                     const e = this.get("recentSeasons") || [];
                     e.sort(((e, t) => t.seasonEnd - e.seasonEnd));
                     const t = Date.now();
                     return e.find((e => t > e.seasonEnd))
                 })),
-                isDependenciesInitialized: a.Ember.computed("session.state", "currentSummoner.unnamed", "currentSummoner.nameChangeFlag", "activeSeason", "previousSeason", "currentRankedStats", "settingsReady", "accountLeaguesSettings", "regionLocale", (function() {
+                isDependenciesInitialized: s.Ember.computed("session.state", "currentSummoner.unnamed", "currentSummoner.nameChangeFlag", "activeSeason", "previousSeason", "currentRankedStats", "settingsReady", "accountLeaguesSettings", "regionLocale", (function() {
                     const e = this.get("session.state"),
                         t = this.get("currentSummoner"),
                         n = Boolean(this.get("activeSeason")),
-                        a = Boolean(this.get("previousSeason")),
-                        s = Boolean(this.get("currentRankedStats")),
+                        s = Boolean(this.get("previousSeason")),
+                        a = Boolean(this.get("currentRankedStats")),
                         i = Boolean(this.get("settingsReady")),
                         o = Boolean(this.get("accountLeaguesSettings")),
                         l = Boolean(this.get("regionLocale"));
-                    return !this._isLoginSessionInvalid(e) && this._isNamedSummoner(t) && n && a && s && i && o && l
+                    return !this._isLoginSessionInvalid(e) && this._isNamedSummoner(t) && n && s && a && i && o && l
                 })),
                 _isLoginSessionInvalid: e => "SUCCEEDED" !== e,
                 _isNamedSummoner: e => e && !e.unnamed && !e.nameChangeFlag
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "12EdctQ3",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isDependenciesInitialized"]]],null,2],["text","\\n"],["block",["if"],[["get",["previousSeason"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["leagues-dialogs"],null,[["previousSeason","activeSeason"],[["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["season-memorial-modal"],null,[["accountLeaguesSettings","activeSeason","previousSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["activeSeason"]],["get",["previousSeason"]],["get",["regionLocale"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["split-notifications"],null,[["accountLeaguesSettings","currentSummoner","currentRankedStats","activeSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["currentSummoner"]],["get",["currentRankedStats"]],["get",["activeSeason"]],["get",["regionLocale"]]]]],false],["text","\\n  "],["append",["helper",["eos-notifications"],null,[["regionLocale","previousSeason","activeSeason"],[["get",["regionLocale"]],["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowSeasonMemorialModal"]]],null,1],["text","\\n  "],["append",["helper",["season-start-modal"],null,[["activeSeason","accountLeaguesSettings"],[["get",["activeSeason"]],["get",["accountLeaguesSettings"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "0JlBXLOf",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isDependenciesInitialized"]]],null,2],["text","\\n"],["block",["if"],[["get",["previousSeason"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["leagues-dialogs"],null,[["previousSeason","activeSeason"],[["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["season-memorial-modal"],null,[["accountLeaguesSettings","activeSeason","previousSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["activeSeason"]],["get",["previousSeason"]],["get",["regionLocale"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["split-notifications"],null,[["accountLeaguesSettings","currentSummoner","currentRankedStats","activeSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["currentSummoner"]],["get",["currentRankedStats"]],["get",["activeSeason"]],["get",["regionLocale"]]]]],false],["text","\\n  "],["append",["helper",["eos-notifications"],null,[["regionLocale","previousSeason","activeSeason"],[["get",["regionLocale"]],["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowSeasonMemorialModal"]]],null,1],["text","\\n  "],["append",["helper",["season-start-modal"],null,[["activeSeason","accountLeaguesSettings"],[["get",["activeSeason"]],["get",["accountLeaguesSettings"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(115)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(115)) && s.__esModule ? s : {
+                    default: s
                 };
             n(116);
             var o = n(32);
             const l = "season-start-takeover";
-            e.exports = s.Ember.Component.extend({
+            e.exports = a.Ember.Component.extend({
                 activeSeason: {},
-                activeSeasonId: s.Ember.computed.alias("activeSeason.seasonId"),
-                notificationData: s.Ember.computed("activeSeason.seasonStart", "activeSeason.metadata.currentSplit", (function() {
+                activeSeasonId: a.Ember.computed.alias("activeSeason.seasonId"),
+                notificationData: a.Ember.computed("activeSeason.seasonStart", "activeSeason.metadata.currentSplit", (function() {
                     const e = this.get("activeSeason.seasonStart"),
                         t = this.get("activeSeason.metadata.currentSplit");
                     return {
@@ -3110,12 +3110,12 @@
                 _displayTakeovers(e) {
                     const t = l,
                         n = e && e.data ? e.data[t] : null,
-                        a = this.get("activeSeasonId");
-                    n && a <= n.season || this._showSeasonStartToast()
+                        s = this.get("activeSeasonId");
+                    n && s <= n.season || this._showSeasonStartToast()
                 },
                 _showSeasonStartToast() {
                     const e = this.get("notificationData");
-                    (0, s.dataBinding)("/player-notifications").post("/v1/notifications", e);
+                    (0, a.dataBinding)("/player-notifications").post("/v1/notifications", e);
                     const t = this.get("activeSeasonId");
                     i.default.saveAccountSetting(l, {
                         season: t
@@ -3127,13 +3127,13 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
-            var s = {
+            var s = n(1);
+            var a = {
                 saveLocalSetting: (e, t) => {
                     const n = {
                         [e]: t
                     };
-                    return (0, a.dataBinding)("/lol-settings").patch("/v1/local/lol-leagues", {
+                    return (0, s.dataBinding)("/lol-settings").patch("/v1/local/lol-leagues", {
                         data: n,
                         schemaVersion: 1
                     })
@@ -3142,29 +3142,29 @@
                     const n = {
                         [e]: t
                     };
-                    return (0, a.dataBinding)("/lol-settings").patch("/v2/account/LCUPreferences/lol-leagues", {
+                    return (0, s.dataBinding)("/lol-settings").patch("/v2/account/LCUPreferences/lol-leagues", {
                         data: n,
                         schemaVersion: 1
                     })
                 }
             };
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
+            var s, a = n(1),
                 i = n(29),
                 o = n(32),
-                l = (a = n(115)) && a.__esModule ? a : {
-                    default: a
+                l = (s = n(115)) && s.__esModule ? s : {
+                    default: s
                 };
             n(118);
             const r = n(119),
-                c = (0, s.emberDataBinding)({
-                    Ember: s.Ember,
-                    websocket: (0, s.getProvider)().getSocket(),
+                c = (0, a.emberDataBinding)({
+                    Ember: a.Ember,
+                    websocket: (0, a.getProvider)().getSocket(),
                     basePaths: {
                         careerStats: "/lol-career-stats",
                         gameData: "/lol-game-data",
@@ -3184,7 +3184,7 @@
                 m = "ranked_notification_splits_split_end_title",
                 p = "ranked_notification_splits_split_end_detail",
                 g = "last-split-end-notification";
-            e.exports = s.Ember.Component.extend(c, {
+            e.exports = a.Ember.Component.extend(c, {
                 classNames: ["split-notifications"],
                 accountLeaguesSettings: null,
                 currentSummoner: {},
@@ -3199,27 +3199,27 @@
                     this._super(...arguments);
                     this.get("isPlayerNotificationsInitialized") || this._initPlayerNotifications()
                 },
-                platformConfigObserver: s.Ember.observer("activeSeason", "activeSeason.seasonId", "activeSeason.seasonEnd", "activeSeason.metadata.currentSplit", "currentRankedStats", "currentRankedStats.queues", "EosNotificationsEnabled", (function() {
+                platformConfigObserver: a.Ember.observer("activeSeason", "activeSeason.seasonId", "activeSeason.seasonEnd", "activeSeason.metadata.currentSplit", "currentRankedStats", "currentRankedStats.queues", "EosNotificationsEnabled", (function() {
                     const e = this.get("accountLeaguesSettings"),
                         t = this.get("regionLocale"),
                         n = this.get("hasSplitEndNotificationSentThisSession"),
-                        a = this.get("EosNotificationsEnabled"),
-                        s = this.get("activeSeason.seasonId"),
+                        s = this.get("EosNotificationsEnabled"),
+                        a = this.get("activeSeason.seasonId"),
                         i = this.get("activeSeason");
-                    if (!i || !a) return;
+                    if (!i || !s) return;
                     const l = this.get("activeSeason.seasonEnd"),
                         r = (0, o.getDaysBetweenDateMillis)(Date.now(), l);
-                    this._shouldDisplaySplitEndNotification(s, r, e, n) && this._displaySplitEndNotification(i, t)
+                    this._shouldDisplaySplitEndNotification(a, r, e, n) && this._displaySplitEndNotification(i, t)
                 })),
-                _shouldDisplaySplitEndNotification: function(e, t, n, a) {
-                    const s = n.data && n.data[g] >= e;
-                    return !a && !s && !(t <= 0) && t <= 14
+                _shouldDisplaySplitEndNotification: function(e, t, n, s) {
+                    const a = n.data && n.data[g] >= e;
+                    return !s && !a && !(t <= 0) && t <= 14
                 },
                 _displaySplitEndNotification: function(e, t) {
                     const n = e ? (0, o.convertDateMillisToString)(e.seasonStart, t, {
                             year: "numeric"
                         }) : (new Date).getFullYear(),
-                        a = {
+                        s = {
                             source: u,
                             type: d,
                             titleKey: m,
@@ -3234,42 +3234,42 @@
                                 })
                             }
                         };
-                    (0, s.dataBinding)("player-notifications").post("/v1/notifications", a), l.default.saveAccountSetting(g, e.seasonId), this.set("hasSplitEndNotificationSentThisSession", !0)
+                    (0, a.dataBinding)("player-notifications").post("/v1/notifications", s), l.default.saveAccountSetting(g, e.seasonId), this.set("hasSplitEndNotificationSentThisSession", !0)
                 },
                 _renderSplitEndNotification: function(e) {
                     const t = document.createElement("div"),
                         n = this.get("regionLocale"),
-                        a = isNaN(e.data.endDate) ? e.data.endDate : (0, o.convertDateMillisToString)(e.data.endDate - 1, n, {
+                        s = isNaN(e.data.endDate) ? e.data.endDate : (0, o.convertDateMillisToString)(e.data.endDate - 1, n, {
                             month: "long",
                             day: "numeric"
                         }),
-                        s = r({
+                        a = r({
                             title: this.get("tra").formatString(m, {
                                 year: e.data.year,
                                 split: e.data.split,
-                                endDate: a
+                                endDate: s
                             }),
                             detail: this.get("tra").formatString(p, {
-                                endDate: a
+                                endDate: s
                             })
                         });
-                    return t.innerHTML = s, t.classList.add("split-end-notification"), t
+                    return t.innerHTML = a, t.classList.add("split-end-notification"), t
                 },
                 _initPlayerNotifications() {
-                    s.Social.playerNotifications().registerToastRenderer(u, d, this._renderSplitEndNotification.bind(this)), s.Social.playerNotifications().on(u, d, "click", this._navigateToProfileSubsection.bind(this, i.PROFILE_RANKED_SUBSECTION_ID)), this.set("isPlayerNotificationsInitialized", !0)
+                    a.Social.playerNotifications().registerToastRenderer(u, d, this._renderSplitEndNotification.bind(this)), a.Social.playerNotifications().on(u, d, "click", this._navigateToProfileSubsection.bind(this, i.PROFILE_RANKED_SUBSECTION_ID)), this.set("isPlayerNotificationsInitialized", !0)
                 },
                 _navigateToProfileSubsection: function(e) {
-                    return s.ProfilesAPI.setActive(!0), s.ProfilesAPI.mainSection().show(e), !0
+                    return a.ProfilesAPI.setActive(!0), a.ProfilesAPI.mainSection().show(e), !0
                 }
             })
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            var a = n(61);
-            e.exports = (a.default || a).template({
+            var s = n(61);
+            e.exports = (s.default || s).template({
                 compiler: [7, ">= 4.0.0"],
-                main: function(e, t, n, a, s) {
+                main: function(e, t, n, s, a) {
                     var i, o = null != t ? t : e.nullContext || {},
                         l = n.helperMissing,
                         r = "function",
@@ -3277,25 +3277,25 @@
                     return '<div class="title">' + c(typeof(i = null != (i = n.title || (null != t ? t.title : t)) ? i : l) === r ? i.call(o, {
                         name: "title",
                         hash: {},
-                        data: s
+                        data: a
                     }) : i) + '</div>\r\n<div class="detail">' + c(typeof(i = null != (i = n.detail || (null != t ? t.detail : t)) ? i : l) === r ? i.call(o, {
                         name: "detail",
                         hash: {},
-                        data: s
+                        data: a
                     }) : i) + "</div>"
                 },
                 useData: !0
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
+            var s = n(1);
             n(121);
-            var s = n(32),
+            var a = n(32),
                 i = n(30),
                 o = n(29);
             const l = n(122),
                 r = "ranked-eos";
-            e.exports = a.Ember.Component.extend({
+            e.exports = s.Ember.Component.extend({
                 classNames: ["eos-notifications"],
                 regionLocale: {},
                 activeSeason: {},
@@ -3309,10 +3309,10 @@
                     this._super(...arguments), this.rankedDataBinding.unobserve("/lol-ranked/v1/eos-notifications", this)
                 },
                 _initPlayerNotifications() {
-                    a.Social.playerNotifications().registerToastRenderer(r, "eos", this._renderEosNotification.bind(this)), this.set("isPlayerNotificationsInitialized", !0)
+                    s.Social.playerNotifications().registerToastRenderer(r, "eos", this._renderEosNotification.bind(this)), this.set("isPlayerNotificationsInitialized", !0)
                 },
                 _initDataBindings() {
-                    this.rankedDataBinding = (0, a.dataBinding)("/lol-ranked", (0, a.getProvider)().getSocket()), this.rankedDataBinding.observe("/v1/eos-notifications", this._handleEoSNotifications.bind(this))
+                    this.rankedDataBinding = (0, s.dataBinding)("/lol-ranked", (0, s.getProvider)().getSocket()), this.rankedDataBinding.observe("/v1/eos-notifications", this._handleEoSNotifications.bind(this))
                 },
                 _handleEoSNotifications(e) {
                     e && e.length && e.forEach((e => {
@@ -3355,31 +3355,31 @@
                             detailKey: g,
                             iconUrl: "/fe/lol-static-assets/images/ranked-emblem.png",
                             data: {
-                                date: (0, s.convertDateMillisToString)(S, l, {
+                                date: (0, a.convertDateMillisToString)(S, l, {
                                     month: "long",
                                     day: "numeric"
                                 }),
-                                year: (0, s.convertDateMillisToString)(_, l, {
+                                year: (0, a.convertDateMillisToString)(_, l, {
                                     year: "numeric"
                                 }),
                                 split: E ? E.toString() : "",
-                                rank: a.LeagueTierNames.getFullTierDivisionName(d, m),
-                                queue: a.LeagueTierNames.getRankedQueueName(u)
+                                rank: s.LeagueTierNames.getFullTierDivisionName(d, m),
+                                queue: s.LeagueTierNames.getRankedQueueName(u)
                             }
                         };
-                    n.push(t), (0, a.dataBinding)("player-notifications").post("/v1/notifications", T), (0, a.dataBinding)("lol-ranked").post(`/v1/eos-notifications/${t}/acknowledge`, {})
+                    n.push(t), (0, s.dataBinding)("player-notifications").post("/v1/notifications", T), (0, s.dataBinding)("lol-ranked").post(`/v1/eos-notifications/${t}/acknowledge`, {})
                 },
                 _renderEosNotification(e) {
                     const t = document.createElement("div"),
                         n = e.queue || "DEFAULT";
-                    let a = "";
-                    return a = (0, i.isTftQueueType)(n) ? this.get("tra").formatString(e.titleKey, {
+                    let s = "";
+                    return s = (0, i.isTftQueueType)(n) ? this.get("tra").formatString(e.titleKey, {
                         year: e.data.year
                     }) : this.get("tra").formatString(e.titleKey, {
                         year: e.data.year,
                         split: e.data.split
                     }), t.innerHTML = l({
-                        title: a,
+                        title: s,
                         detail: this.get("tra").formatString(e.detailKey, {
                             date: e.data.date,
                             rank: e.data.rank,
@@ -3392,10 +3392,10 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            var a = n(61);
-            e.exports = (a.default || a).template({
+            var s = n(61);
+            e.exports = (s.default || s).template({
                 compiler: [7, ">= 4.0.0"],
-                main: function(e, t, n, a, s) {
+                main: function(e, t, n, s, a) {
                     var i, o = null != t ? t : e.nullContext || {},
                         l = n.helperMissing,
                         r = "function",
@@ -3403,11 +3403,11 @@
                     return '<div class="title">' + c(typeof(i = null != (i = n.title || (null != t ? t.title : t)) ? i : l) === r ? i.call(o, {
                         name: "title",
                         hash: {},
-                        data: s
+                        data: a
                     }) : i) + '</div>\r\n<div class="detail">' + c(typeof(i = null != (i = n.detail || (null != t ? t.detail : t)) ? i : l) === r ? i.call(o, {
                         name: "detail",
                         hash: {},
-                        data: s
+                        data: a
                     }) : i) + "</div>"
                 },
                 useData: !0
@@ -3417,11 +3417,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
+            var s, a = n(1),
                 i = n(5),
                 o = n(32),
-                l = (a = n(115)) && a.__esModule ? a : {
-                    default: a
+                l = (s = n(115)) && s.__esModule ? s : {
+                    default: s
                 };
             n(124);
             var r = n(29);
@@ -3430,7 +3430,7 @@
                     420: i.QUEUES.RANKED_SOLO_5x5_QUEUE_TYPE,
                     440: i.QUEUES.RANKED_FLEX_SR_QUEUE_TYPE
                 };
-            var d = s.Ember.Component.extend({
+            var d = a.Ember.Component.extend({
                 classNames: ["season-memorial-modal"],
                 layout: c,
                 previousSeason: {},
@@ -3438,10 +3438,10 @@
                 init() {
                     this._super(...arguments);
                     const e = this.get("previousSeason.seasonId");
-                    s.db.observe(`/lol-ranked/v1/eos-rewards/${e}`, this, this.handleEoSRewardsConfig), s.db.observe("/lol-summoner-profiles/v1/get-lol-eos-rewards-view", this, this.handleEoSRewardsView)
+                    a.db.observe(`/lol-ranked/v1/eos-rewards/${e}`, this, this.handleEoSRewardsConfig), a.db.observe("/lol-summoner-profiles/v1/get-lol-eos-rewards-view", this, this.handleEoSRewardsView)
                 },
                 willDestroy() {
-                    this._super(...arguments), s.db.unobserve(this, this.handleEoSRewards)
+                    this._super(...arguments), a.db.unobserve(this, this.handleEoSRewards)
                 },
                 handleEoSRewardsConfig(e) {
                     this.set("rewardsConfig", e), this.createRewardItems()
@@ -3450,7 +3450,7 @@
                     const t = this.get("previousSeason.seasonId");
                     t && t && e?.seasonId && (this.set("eosRewardsView", e), this.createRewardItems())
                 },
-                highestRankQueue: s.Ember.computed("eosRewardsView.highestRankPerQueueId", (function() {
+                highestRankQueue: a.Ember.computed("eosRewardsView.highestRankPerQueueId", (function() {
                     const e = this.get("eosRewardsView.highestRankPerQueueId") || {},
                         t = Object.keys(e).map((t => {
                             const n = e[t];
@@ -3460,9 +3460,9 @@
                                 division: n?.division
                             }
                         }));
-                    return t.sort(((e, t) => s.LeagueTierNames.compareTierDivision(e.tier, e.division, t.tier, t.division, i.RANKED.TIERS))).reverse(), t[0] || {}
+                    return t.sort(((e, t) => a.LeagueTierNames.compareTierDivision(e.tier, e.division, t.tier, t.division, i.RANKED.TIERS))).reverse(), t[0] || {}
                 })),
-                isHonorEligible: s.Ember.computed("eosRewardsView.eligibility.honorLevel", "eosRewardsView.eligibility.minHonorLevelForRewards", "eosRewardsView.eligibility.honorRequirementEnabled", (function() {
+                isHonorEligible: a.Ember.computed("eosRewardsView.eligibility.honorLevel", "eosRewardsView.eligibility.minHonorLevelForRewards", "eosRewardsView.eligibility.honorRequirementEnabled", (function() {
                     const e = this.get("eosRewardsView.eligibility.honorLevel"),
                         t = this.get("eosRewardsView.eligibility.minHonorLevelForRewards");
                     return !this.get("eosRewardsView.eligibility.minHonorLevelForRewards") || e >= t
@@ -3475,13 +3475,13 @@
                             const n = e?.rewardGroups?.find((e => e.id === t));
                             return (n?.rewardNames || []).map((t => (e?.rewards || []).find((e => e.name === t))))
                         }))).filter((e => e && e.type !== r.EOS_REWARD_TYPES.CHAMPION)),
-                        a = n.map(this.createSeasonMemorialRewardFromRewardData.bind(this));
+                        s = n.map(this.createSeasonMemorialRewardFromRewardData.bind(this));
                     return Promise.all(n.map(this._getRewardImageInfoPromise.bind(this))).then((e => {
                         (e || []).forEach(((e, t) => {
-                            a[t] && (a[t].imagePath = e)
+                            s[t] && (s[t].imagePath = e)
                         }))
                     })).finally((() => {
-                        this.set("seasonAndSplitRewards", a)
+                        this.set("seasonAndSplitRewards", s)
                     }))
                 },
                 createSeasonMemorialRewardFromRewardData(e) {
@@ -3494,41 +3494,41 @@
                         id: e?.id
                     }
                 },
-                showSeasonMemorialModal: s.Ember.computed("haveSeasonMemorialModalRewardsData", "isHonorEligible", (function() {
+                showSeasonMemorialModal: a.Ember.computed("haveSeasonMemorialModalRewardsData", "isHonorEligible", (function() {
                     return this.get("haveSeasonMemorialModalRewardsData") || !this.get("isHonorEligible")
                 })),
-                haveSeasonMemorialModalRewardsData: s.Ember.computed("seasonAndSplitRewards.[]", (function() {
+                haveSeasonMemorialModalRewardsData: a.Ember.computed("seasonAndSplitRewards.[]", (function() {
                     return (this.get("seasonAndSplitRewards") || []).length > 0
                 })),
-                seasonTitle: s.Ember.computed("previousSeason.seasonStart", "previousSeason.metadata.currentSplit", "regionLocale", (function() {
+                seasonTitle: a.Ember.computed("previousSeason.seasonStart", "previousSeason.metadata.currentSplit", "regionLocale", (function() {
                     const e = this.get("regionLocale") || "en_US",
                         t = this.get("tra"),
                         n = this.get("previousSeason.seasonStart"),
-                        a = this.get("previousSeason.metadata.currentSplit");
+                        s = this.get("previousSeason.metadata.currentSplit");
                     return t.formatString("LEAGUES_PROFILE_SEASON_NAME_HEADER", {
                         currentSeasonYear: (0, o.convertDateMillisToString)(n, e, {
                             year: "numeric"
                         }),
-                        splitNumber: a
+                        splitNumber: s
                     })
                 })),
-                splitDurationTitle: s.Ember.computed("previousSeason.seasonStart", "previousSeason.seasonEnd", "regionLocale", (function() {
+                splitDurationTitle: a.Ember.computed("previousSeason.seasonStart", "previousSeason.seasonEnd", "regionLocale", (function() {
                     const e = this.get("regionLocale") || "en_US",
                         t = this.get("tra"),
                         n = this.get("previousSeason.seasonStart"),
-                        a = this.get("previousSeason.seasonEnd");
+                        s = this.get("previousSeason.seasonEnd");
                     return t.formatString("SPLIT_START_TAKEOVER_SPLIT_DURATION_TITLE", {
                         splitStartString: (0, o.convertDateMillisToString)(n, e),
-                        splitEndString: (0, o.convertDateMillisToString)(a - 1, e)
+                        splitEndString: (0, o.convertDateMillisToString)(s - 1, e)
                     })
                 })),
-                honorIneligibleText: s.Ember.computed("eosRewardsView.eligibility.minHonorLevelForRewards", (function() {
+                honorIneligibleText: a.Ember.computed("eosRewardsView.eligibility.minHonorLevelForRewards", (function() {
                     const e = this.get("eosRewardsView.eligibility.minHonorLevelForRewards");
                     return this.get("tra").formatString("SEASON_MEMORIAL_TAKEOVER_HONOR_INELIGIBLE", {
                         level: e
                     })
                 })),
-                seasonRewardsTitleText: s.Ember.computed("previousSeason.seasonStart", "regionLocale", (function() {
+                seasonRewardsTitleText: a.Ember.computed("previousSeason.seasonStart", "regionLocale", (function() {
                     const e = this.get("tra"),
                         t = this.get("previousSeason.seasonStart"),
                         n = this.get("regionLocale") || "en_US";
@@ -3545,17 +3545,17 @@
                     if (e.overrideImagePath) return Promise.resolve(e.overrideImagePath);
                     {
                         const t = this.getSimpleInventoryTypeFromEosRewardType(e.type);
-                        return s.LeagueTierNames.asyncGetRewardImage(e.id, t)
+                        return a.LeagueTierNames.asyncGetRewardImage(e.id, t)
                     }
                 },
-                previousSeasonHighestRankText: s.Ember.computed("highestRankQueue.tier", "highestRankQueue.division", (function() {
+                previousSeasonHighestRankText: a.Ember.computed("highestRankQueue.tier", "highestRankQueue.division", (function() {
                     const e = this.get("highestRankQueue.tier"),
                         t = this.get("highestRankQueue.division");
-                    return s.LeagueTierNames.getFullTierDivisionName(e, t)
+                    return a.LeagueTierNames.getFullTierDivisionName(e, t)
                 })),
-                previousSeasonRankedQueueText: s.Ember.computed("highestRankQueue.queueType", (function() {
+                previousSeasonRankedQueueText: a.Ember.computed("highestRankQueue.queueType", (function() {
                     const e = this.get("highestRankQueue.queueType");
-                    return s.LeagueTierNames.getRankedQueueName(e)
+                    return a.LeagueTierNames.getRankedQueueName(e)
                 })),
                 _saveSeasonMemorialModalSeen() {
                     const e = this.get("previousSeason.seasonId");
@@ -3572,25 +3572,25 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "uaY69wPH",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","closeButton","dismissibleType","okText","onClose"],[["get",["showSeasonMemorialModal"]],"DialogAlert",true,true,"inside",["get",["tra","SPLIT_START_TAKEOVER_CLOSE_BUTTON_TEXT"]],["helper",["action"],[["get",[null]],"closeSeasonMemorialModal"],null]]],2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","rewards-container-restricted"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","honor-ineligible-panel"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","honor-ineligible-text"],["flush-element"],["append",["unknown",["honorIneligibleText"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","honor-ineligible-crest"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","reward-container-column"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-image-container"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["rewardItem","imagePath"]]]]],["dynamic-attr","class",["concat",["rewards-image ",["unknown",["rewardItem","cssClass"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-description"],["flush-element"],["append",["unknown",["rewardItem","description"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["rewardItem"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","season-memorial-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-background"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-title-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-metalwork left"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-season-title"],["flush-element"],["append",["unknown",["seasonTitle"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-metalwork right"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-season-duration"],["flush-element"],["append",["unknown",["splitDurationTitle"]],false],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-container"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","season-rewards-pending-disclaimer-info-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-spacer"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-text"],["flush-element"],["append",["unknown",["tra","SEASON_MEMORIAL_MODAL_REWARDS_PENDING_DISCLAIMER"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-header-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-content-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-details"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-title-text"],["flush-element"],["append",["unknown",["tra","SEASON_MEMORIAL_TAKEOVER_FINAL_RANK_TEXT"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-text"],["flush-element"],["append",["unknown",["previousSeasonHighestRankText"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-ranked-queue-text"],["flush-element"],["append",["unknown",["previousSeasonRankedQueueText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-emblem-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rank-crest-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","crest"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","crest-sizer"],["flush-element"],["text","\\n                "],["open-element","lol-regalia-emblem-element",[]],["static-attr","animations","false"],["dynamic-attr","ranked-tier",["concat",[["unknown",["highestRankQueue","tier"]]]]],["flush-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["season-memorial-modal-content-separator-pike ",["helper",["unless"],[["get",["isHonorEligible"]],"hidden"],null]]]],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-bg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-title-text"],["flush-element"],["append",["unknown",["seasonRewardsTitleText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-content-spacer"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","scrollable-container"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","class",["concat",["season-memorial-rewards-scroller-container ",["helper",["unless"],[["get",["isHonorEligible"]],"restricted"],null]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rewards-images-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["seasonAndSplitRewards"]]],null,1],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["unless"],[["get",["isHonorEligible"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "hdf0Hx2P",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","closeButton","dismissibleType","okText","onClose"],[["get",["showSeasonMemorialModal"]],"DialogAlert",true,true,"inside",["get",["tra","SPLIT_START_TAKEOVER_CLOSE_BUTTON_TEXT"]],["helper",["action"],[["get",[null]],"closeSeasonMemorialModal"],null]]],2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","rewards-container-restricted"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","honor-ineligible-panel"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","honor-ineligible-text"],["flush-element"],["append",["unknown",["honorIneligibleText"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","honor-ineligible-crest"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","reward-container-column"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-image-container"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["rewardItem","imagePath"]]]]],["dynamic-attr","class",["concat",["rewards-image ",["unknown",["rewardItem","cssClass"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-description"],["flush-element"],["append",["unknown",["rewardItem","description"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["rewardItem"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","season-memorial-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-background"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-title-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-metalwork left"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-season-title"],["flush-element"],["append",["unknown",["seasonTitle"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-metalwork right"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-season-duration"],["flush-element"],["append",["unknown",["splitDurationTitle"]],false],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-container"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","season-rewards-pending-disclaimer-info-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-spacer"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-text"],["flush-element"],["append",["unknown",["tra","SEASON_MEMORIAL_MODAL_REWARDS_PENDING_DISCLAIMER"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-header-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-content-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-details"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-title-text"],["flush-element"],["append",["unknown",["tra","SEASON_MEMORIAL_TAKEOVER_FINAL_RANK_TEXT"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-text"],["flush-element"],["append",["unknown",["previousSeasonHighestRankText"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-ranked-queue-text"],["flush-element"],["append",["unknown",["previousSeasonRankedQueueText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-emblem-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rank-crest-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","crest"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","crest-sizer"],["flush-element"],["text","\\n                "],["open-element","lol-regalia-emblem-element",[]],["static-attr","animations","false"],["dynamic-attr","ranked-tier",["concat",[["unknown",["highestRankQueue","tier"]]]]],["flush-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["season-memorial-modal-content-separator-pike ",["helper",["unless"],[["get",["isHonorEligible"]],"hidden"],null]]]],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-bg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-title-text"],["flush-element"],["append",["unknown",["seasonRewardsTitleText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-content-spacer"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","scrollable-container"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","class",["concat",["season-memorial-rewards-scroller-container ",["helper",["unless"],[["get",["isHonorEligible"]],"restricted"],null]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rewards-images-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["seasonAndSplitRewards"]]],null,1],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["unless"],[["get",["isHonorEligible"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 i = n(32);
             n(127);
             var o, l = (o = n(115)) && o.__esModule ? o : {
                 default: o
             };
             const r = n(128),
-                c = (0, a.emberDataBinding)({
-                    Ember: a.Ember,
-                    websocket: (0, a.getProvider)().getSocket(),
+                c = (0, s.emberDataBinding)({
+                    Ember: s.Ember,
+                    websocket: (0, s.getProvider)().getSocket(),
                     basePaths: {
                         platformConfig: "/lol-platform-config",
                         summoner: "/lol-summoner",
@@ -3631,14 +3631,14 @@
                     [_]: "LARGE",
                     [S]: "LARGE"
                 };
-            e.exports = a.Ember.Component.extend(c, {
+            e.exports = s.Ember.Component.extend(c, {
                 displayedNotificationsIds: new Set,
                 displayedGlobalNotifications: new Set,
                 classNames: ["leagues-dialogs-spawner"],
-                rankedService: (0, a.dataBinding)("/lol-ranked", (0, a.getProvider)().getSocket()),
-                settingsService: (0, a.dataBinding)("/lol-settings", (0, a.getProvider)().getSocket()),
-                modalManager: a.ModalManager,
-                toastCelebrationManager: a.ToastCelebrationManager,
+                rankedService: (0, s.dataBinding)("/lol-ranked", (0, s.getProvider)().getSocket()),
+                settingsService: (0, s.dataBinding)("/lol-settings", (0, s.getProvider)().getSocket()),
+                modalManager: s.ModalManager,
+                toastCelebrationManager: s.ToastCelebrationManager,
                 loadedRankedStats: !1,
                 previousSeason: {},
                 activeSeason: {},
@@ -3662,37 +3662,37 @@
                     if (e)
                         for (let t = 0; t < e.length; t++) {
                             const n = e[t],
-                                a = this.get("displayedNotificationsIds");
-                            a.has(n.id) || (a.add(n.id), this._waitForUnlock(this._showNotification, n)), this.set("displayedNotificationsIds", a)
+                                s = this.get("displayedNotificationsIds");
+                            s.has(n.id) || (s.add(n.id), this._waitForUnlock(this._showNotification, n)), this.set("displayedNotificationsIds", s)
                         }
                 },
                 _processGlobalNotifications: function(e) {
                     if (!e) return;
                     const t = this.get("accountLeaguesSettings"),
                         n = this.get("displayedGlobalNotifications");
-                    for (let a = 0; a < e.length; a++) {
-                        const s = e[a],
-                            i = this._getSeasonId(s.queueType, s.notifyReason);
-                        if (!i || !s.notifyReason || !s.queueType) continue;
-                        const o = `${s.notifyReason}-${s.queueType}`;
-                        n.has(o) || t.data[o] && !(t.data[o] < i) || (n.add(o), l.default.saveAccountSetting(o, i), this._waitForUnlock(this._showGlobalNotification, s)), this.set("displayedGlobalNotifications", n)
+                    for (let s = 0; s < e.length; s++) {
+                        const a = e[s],
+                            i = this._getSeasonId(a.queueType, a.notifyReason);
+                        if (!i || !a.notifyReason || !a.queueType) continue;
+                        const o = `${a.notifyReason}-${a.queueType}`;
+                        n.has(o) || t.data[o] && !(t.data[o] < i) || (n.add(o), l.default.saveAccountSetting(o, i), this._waitForUnlock(this._showGlobalNotification, a)), this.set("displayedGlobalNotifications", n)
                     }
                 },
                 _showGlobalNotification: function(e) {
                     const t = document.createElement("div");
                     t.style.height = "100%", t.style.width = "100%", t.style.transform = "scale(1)";
                     const n = document.createElement("lol-regalia-emblem-element");
-                    n.setAttribute("ranked-tier", e.tier), t.appendChild(n), a.Ember.run.later((() => {
+                    n.setAttribute("ranked-tier", e.tier), t.appendChild(n), s.Ember.run.later((() => {
                         this._getDisplayNames([e.participantId]).then((n => {
-                            let a = "";
+                            let s = "";
                             if (Array.isArray(n) && n[0]) {
                                 const e = n[0];
-                                a = `${e.gameName} #${e.tagLine}`
+                                s = `${e.gameName} #${e.tagLine}`
                             }
-                            const [s, i] = this._getGlobalNotificationText(e, a);
+                            const [a, i] = this._getGlobalNotificationText(e, s);
                             this.toastCelebrationManager.add({
                                 data: {
-                                    title: s,
+                                    title: a,
                                     details: i,
                                     iconElement: t
                                 },
@@ -3704,38 +3704,38 @@
                 },
                 _getGlobalNotificationText(e, t) {
                     let n = "",
-                        a = "";
+                        s = "";
                     const o = this.get("tra"),
-                        l = e.queueType || s.QUEUES.RANKED_SOLO_5x5_QUEUE_TYPE;
+                        l = e.queueType || a.QUEUES.RANKED_SOLO_5x5_QUEUE_TYPE;
                     if (e.notifyReason === f) n = o.formatString("TOAST_FIRST_CHALLENGER_HEADER", {
                         name: t
-                    }), a = o.formatString("TOAST_FIRST_CHALLENGER_BODY", {
+                    }), s = o.formatString("TOAST_FIRST_CHALLENGER_BODY", {
                         queue: o.get(`QUEUE_NAME_${l}`),
                         name: t
                     });
                     else if (e.notifyReason === h) {
                         const e = this.get("previousSeason.metadata.currentSplit"),
-                            s = this.get("previousSeason.seasonStart");
-                        if (Boolean(e) && Boolean(s)) {
-                            const r = (0, i.convertDateMillisToString)(s, this.get("regionLocale"), {
+                            a = this.get("previousSeason.seasonStart");
+                        if (Boolean(e) && Boolean(a)) {
+                            const r = (0, i.convertDateMillisToString)(a, this.get("regionLocale"), {
                                 year: "numeric"
                             });
                             n = o.formatString("TOAST_FINAL_RANK_ONE_HEADER", {
                                 seasonYear: r,
                                 seasonSplit: e
-                            }), a = o.formatString("TOAST_FINAL_RANK_ONE_BODY", {
+                            }), s = o.formatString("TOAST_FINAL_RANK_ONE_BODY", {
                                 queue: o.get(`QUEUE_NAME_${l}`),
                                 name: t
                             })
                         }
                     }
-                    return [n, a]
+                    return [n, s]
                 },
                 _handleGlobalNotificationClicked(e) {
-                    e.notifyReason === f ? a.Telemetry.sendEvent("leagues-first-challenger-toast-clicked") : e.notifyReason === h && a.Telemetry.sendEvent("leagues-final-rank-one-toast-clicked")
+                    e.notifyReason === f ? s.Telemetry.sendEvent("leagues-first-challenger-toast-clicked") : e.notifyReason === h && s.Telemetry.sendEvent("leagues-final-rank-one-toast-clicked")
                 },
                 _sendGlobalNotificationShownTelemetry(e) {
-                    e.notifyReason === f ? a.Telemetry.sendEvent("leagues-first-challenger-toast-shown") : e.notifyReason === h && a.Telemetry.sendEvent("leagues-final-rank-one-toast-shown")
+                    e.notifyReason === f ? s.Telemetry.sendEvent("leagues-first-challenger-toast-shown") : e.notifyReason === h && s.Telemetry.sendEvent("leagues-final-rank-one-toast-shown")
                 },
                 _showNotification: function(e) {
                     "TOAST" === e.displayType ? this._showToastNotification(e) : "VIGNETTE" === e.displayType ? e.notifyReason === d && e.rewardEarnedId ? this._showVignetteNotificationAfterLoadingRewardAssets(e) : this._showVignetteNotification(e) : "MODAL" === e.displayType && this._showModalNotification(e)
@@ -3744,8 +3744,8 @@
                     const {
                         rewardEarnedId: t,
                         rewardEarnedType: n
-                    } = e, s = e.rewardOverrideImagePath;
-                    s ? this._showVignetteNotification(e, s) : a.LeagueTierNames.asyncGetRewardImage(t, n).then((t => {
+                    } = e, a = e.rewardOverrideImagePath;
+                    a ? this._showVignetteNotification(e, a) : s.LeagueTierNames.asyncGetRewardImage(t, n).then((t => {
                         this._showVignetteNotification(e, t)
                     }))
                 },
@@ -3755,8 +3755,8 @@
                         o = i.notifyReason,
                         l = this._acknowledgeNotification.bind(this),
                         r = R[o];
-                    return a.LeagueTierNames.getTiersForQueue(e.queueType).then((c => {
-                        const u = a.Ember.Object.create({
+                    return s.LeagueTierNames.getTiersForQueue(e.queueType).then((c => {
+                        const u = s.Ember.Object.create({
                                 notification: i,
                                 rewardImagePath: t,
                                 vignetteSize: r,
@@ -3765,10 +3765,10 @@
                                 rankedStats: this.get("rankedStats"),
                                 tiers: c
                             }),
-                            d = e.notifyReason === _ && e.queueType === s.QUEUES.RANKED_CHERRY_QUEUE_TYPE;
-                        if (e.notifyReason === E && e.queueType === s.QUEUES.RANKED_CHERRY_QUEUE_TYPE) return void l(e);
+                            d = e.notifyReason === _ && e.queueType === a.QUEUES.RANKED_CHERRY_QUEUE_TYPE;
+                        if (e.notifyReason === E && e.queueType === a.QUEUES.RANKED_CHERRY_QUEUE_TYPE) return void l(e);
                         const m = d ? T.CHERRY_RATED_TIER_PROMOTED : T[o],
-                            p = a.componentFactory.create({
+                            p = s.componentFactory.create({
                                 type: m,
                                 data: u
                             }),
@@ -3781,36 +3781,36 @@
                                 timing: "INFINITE",
                                 content: p,
                                 onClick: function() {
-                                    a.VignetteCelebrationManager.remove(this), a.Ember.run.later((() => {
+                                    s.VignetteCelebrationManager.remove(this), s.Ember.run.later((() => {
                                         l(e)
                                     }), 1e3)
                                 },
                                 onRemove: function() {
-                                    a.Ember.run.later((() => {
+                                    s.Ember.run.later((() => {
                                         p && p.onRemove && p.onRemove()
                                     }), 500)
                                 },
                                 onShow: function() {
-                                    a.Ember.run.later((() => {
+                                    s.Ember.run.later((() => {
                                         u.set("isShowing", !0)
                                     }), v[o])
                                 }
                             };
-                        a.VignetteCelebrationManager.add(g)
+                        s.VignetteCelebrationManager.add(g)
                     }))
                 },
                 _showModalNotification: function(e) {
-                    const [t, n, a] = this._getModalNotificationText(e);
+                    const [t, n, s] = this._getModalNotificationText(e);
                     if (!t && !n) return void this._acknowledgeNotification(e);
-                    const s = r({
+                    const a = r({
                             header: t,
                             body: n
                         }),
                         i = document.createElement("div");
-                    i.classList.add("leagues-modal-notification"), i.innerHTML = s;
+                    i.classList.add("leagues-modal-notification"), i.innerHTML = a;
                     const o = {
                         contents: i.outerHTML,
-                        okText: a
+                        okText: s
                     };
                     this.get("modalManager").add({
                         type: "DialogAlert",
@@ -3822,66 +3822,66 @@
                 _getModalNotificationText: function(e) {
                     const t = this.get("tra");
                     let n = "",
-                        a = "",
-                        s = t.get("lib_ui_dialog_alert_ok");
+                        s = "",
+                        a = t.get("lib_ui_dialog_alert_ok");
                     const o = e.notifyReason,
                         l = e.changeReason,
                         r = this._getQueueLoc(e);
-                    if (o === p) l === g ? (n = t.get("LEAGUES_SYSTEM_DECAY_DEMOTION_TITLE"), a = t.formatString("LEAGUES_SYSTEM_DECAY_DEMOTION", {
+                    if (o === p) l === g ? (n = t.get("LEAGUES_SYSTEM_DECAY_DEMOTION_TITLE"), s = t.formatString("LEAGUES_SYSTEM_DECAY_DEMOTION", {
                         tierDivisionLoc: this._getTierDivisionLoc(e),
                         queueType: r
-                    })) : !0 === e.eligibleForPromoHelper ? (n = t.get("LEAGUES_GENERAL_LEAGUE_UPDATE_TITLE"), a = t.formatString("LEAGUES_MESSAGE_PROMOHELPER_LEAGUE_DEMOTED", {
+                    })) : !0 === e.eligibleForPromoHelper ? (n = t.get("LEAGUES_GENERAL_LEAGUE_UPDATE_TITLE"), s = t.formatString("LEAGUES_MESSAGE_PROMOHELPER_LEAGUE_DEMOTED", {
                         tierDivisionLoc: this._getTierDivisionLoc(e),
                         queueType: r
-                    })) : (n = t.get("LEAGUES_GENERAL_LEAGUE_UPDATE_TITLE"), a = t.formatString("LEAGUES_MESSAGE_LEAGUE_DEMOTED", {
+                    })) : (n = t.get("LEAGUES_GENERAL_LEAGUE_UPDATE_TITLE"), s = t.formatString("LEAGUES_MESSAGE_LEAGUE_DEMOTED", {
                         tierDivisionLoc: this._getTierDivisionLoc(e),
                         queueType: r
                     }));
-                    else if ("MINISERIES_START" === o) n = t.get("LEAGUES_GENERAL_LEAGUE_MINISERIES_TITLE"), a = t.formatString("LEAGUES_MESSAGE_MINISERIES_START", {
+                    else if ("MINISERIES_START" === o) n = t.get("LEAGUES_GENERAL_LEAGUE_MINISERIES_TITLE"), s = t.formatString("LEAGUES_MESSAGE_MINISERIES_START", {
                         miniseriesWins: e.miniseriesWins,
                         queueType: r
                     });
-                    else if ("MINISERIES_LOST" === o) !0 === e.eligibleForPromoHelper ? (n = t.get("LEAGUES_GENERAL_LEAGUE_MINISERIES_TITLE"), a = t.formatString("LEAGUES_MESSAGE_PROMOHELPER_MINISERIES_LOST", {
+                    else if ("MINISERIES_LOST" === o) !0 === e.eligibleForPromoHelper ? (n = t.get("LEAGUES_GENERAL_LEAGUE_MINISERIES_TITLE"), s = t.formatString("LEAGUES_MESSAGE_PROMOHELPER_MINISERIES_LOST", {
                         queueType: r
-                    })) : (n = t.get("LEAGUES_GENERAL_LEAGUE_MINISERIES_TITLE"), a = t.formatString("LEAGUES_MESSAGE_MINISERIES_LOST", {
-                        queueType: r
-                    }));
-                    else if ("MINISERIES_CANCEL" === o) l === g ? (n = t.get("LEAGUES_SYSTEM_SERIES_ENDED_TITLE"), a = t.formatString("LEAGUES_SYSTEM_SERIES_ENDED_DECAY", {
-                        queueType: r
-                    })) : (n = t.get("LEAGUES_SYSTEM_SERIES_ENDED_TITLE"), a = t.formatString("LEAGUES_SYSTEM_SERIES_ENDED", {
+                    })) : (n = t.get("LEAGUES_GENERAL_LEAGUE_MINISERIES_TITLE"), s = t.formatString("LEAGUES_MESSAGE_MINISERIES_LOST", {
                         queueType: r
                     }));
-                    else if ("LEAGUE_DECAY_WARNING" === o) n = t.get("LEAGUES_SYSTEM_DECAY_SOON_TITLE"), a = t.formatString("LEAGUES_SYSTEM_DECAY_SOON", {
+                    else if ("MINISERIES_CANCEL" === o) l === g ? (n = t.get("LEAGUES_SYSTEM_SERIES_ENDED_TITLE"), s = t.formatString("LEAGUES_SYSTEM_SERIES_ENDED_DECAY", {
+                        queueType: r
+                    })) : (n = t.get("LEAGUES_SYSTEM_SERIES_ENDED_TITLE"), s = t.formatString("LEAGUES_SYSTEM_SERIES_ENDED", {
+                        queueType: r
+                    }));
+                    else if ("LEAGUE_DECAY_WARNING" === o) n = t.get("LEAGUES_SYSTEM_DECAY_SOON_TITLE"), s = t.formatString("LEAGUES_SYSTEM_DECAY_SOON", {
                         timeUntilInactivityStatusChangesDays: (0, i.timeInMillisToDays)(e.timeUntilInactivityStatusChanges),
                         queueType: r
                     });
-                    else if ("MINISERIES_DECAY_WARNING" === o) n = t.get("LEAGUES_SYSTEM_PROMOTION_SERIES_DECAY_SOON_TITLE"), a = t.formatString("LEAGUES_SYSTEM_SERIES_INACTIVITY", {
+                    else if ("MINISERIES_DECAY_WARNING" === o) n = t.get("LEAGUES_SYSTEM_PROMOTION_SERIES_DECAY_SOON_TITLE"), s = t.formatString("LEAGUES_SYSTEM_SERIES_INACTIVITY", {
                         timeUntilInactivityStatusChangesDays: (0, i.timeInMillisToDays)(e.timeUntilInactivityStatusChanges),
                         queueType: r
                     });
-                    else if (l === g) n = t.get("LEAGUES_SYSTEM_DECAY_TITLE"), a = t.formatString("LEAGUES_SYSTEM_DECAY", {
+                    else if (l === g) n = t.get("LEAGUES_SYSTEM_DECAY_TITLE"), s = t.formatString("LEAGUES_SYSTEM_DECAY", {
                         queueType: r
                     });
                     else {
                         const i = e.afkLpPenaltyAmount,
                             o = e.afkLpPenaltyLevel;
-                        e.wasAfkOrLeaver && i < 0 && o > 0 && (n = t.get("player_behavior_afk_lp_penalty_notification_header"), a = o > 1 ? t.formatString("player_behavior_afk_lp_penalty_notification_body", {
+                        e.wasAfkOrLeaver && i < 0 && o > 0 && (n = t.get("player_behavior_afk_lp_penalty_notification_header"), s = o > 1 ? t.formatString("player_behavior_afk_lp_penalty_notification_body", {
                             numGamesRemaining: o - 1
-                        }) : this.get("tra.player_behavior_afk_lp_penalty_notification_no_games_remaining_body"), s = t.get("player_behavior_afk_lp_penalty_notification_cta"))
+                        }) : this.get("tra.player_behavior_afk_lp_penalty_notification_no_games_remaining_body"), a = t.get("player_behavior_afk_lp_penalty_notification_cta"))
                     }
-                    return [n, a, s]
+                    return [n, s, a]
                 },
                 _showToastNotification: function(e) {
-                    const [t, n] = this._getToastNotificationText(e), s = this._isToastMuted(e), i = document.createElement("div");
+                    const [t, n] = this._getToastNotificationText(e), a = this._isToastMuted(e), i = document.createElement("div");
                     i.style.height = "100%", i.style.width = "100%", i.style.transform = "scale(1)";
                     const o = document.createElement("lol-regalia-emblem-element");
-                    o.setAttribute("ranked-tier", e.tier), i.appendChild(o), a.Ember.run.later((() => {
+                    o.setAttribute("ranked-tier", e.tier), i.appendChild(o), s.Ember.run.later((() => {
                         this.toastCelebrationManager.add({
                             data: {
                                 title: t,
                                 details: n,
                                 iconElement: i,
-                                isMuted: s
+                                isMuted: a
                             },
                             timing: "slow"
                         })
@@ -3890,18 +3890,18 @@
                 _getToastNotificationText: function(e) {
                     let t = "",
                         n = "";
-                    const a = this.get("tra"),
-                        s = e.notifyReason,
+                    const s = this.get("tra"),
+                        a = e.notifyReason,
                         i = this._getQueueLoc(e);
-                    return "LEAGUE_SEEDED" === s ? (t = this._getTierDivisionLpLoc(e), n = a.formatString("TOAST_PROVISIONAL_START_BODY", {
+                    return "LEAGUE_SEEDED" === a ? (t = this._getTierDivisionLpLoc(e), n = s.formatString("TOAST_PROVISIONAL_START_BODY", {
                         queueType: i
-                    })) : s === m ? (t = a.formatString("TOAST_DIVISION_PROMOTION_HEADER", {
+                    })) : a === m ? (t = s.formatString("TOAST_DIVISION_PROMOTION_HEADER", {
                         tierDivisionLoc: this._getTierDivisionLoc(e)
-                    }), n = a.formatString("TOAST_DIVISION_PROMOTION_BODY", {
+                    }), n = s.formatString("TOAST_DIVISION_PROMOTION_BODY", {
                         queueType: i
-                    })) : s === p && (t = a.formatString("TOAST_DEMOTION_HEADER", {
+                    })) : a === p && (t = s.formatString("TOAST_DEMOTION_HEADER", {
                         tierDivisionLoc: this._getTierDivisionLoc(e)
-                    }), n = a.formatString("TOAST_DEMOTION_BODY", {
+                    }), n = s.formatString("TOAST_DEMOTION_BODY", {
                         queueType: i,
                         leaguePoints: e.leaguePoints
                     })), [t, n]
@@ -3914,9 +3914,9 @@
                     const t = this.get("displayedNotificationsIds");
                     t.delete(e.id), this.set("displayedNotificationsIds", t)
                 },
-                _getTierDivisionLoc: e => a.LeagueTierNames.getFullTierDivisionName(e.tier, e.division),
-                _getTierDivisionLpLoc: e => a.LeagueTierNames.getTierDivisionLpLoc(e.tier, e.division, e.leaguePoints),
-                _getQueueLoc: e => a.LeagueTierNames.getRankedQueueName(e.queueType),
+                _getTierDivisionLoc: e => s.LeagueTierNames.getFullTierDivisionName(e.tier, e.division),
+                _getTierDivisionLpLoc: e => s.LeagueTierNames.getTierDivisionLpLoc(e.tier, e.division, e.leaguePoints),
+                _getQueueLoc: e => s.LeagueTierNames.getRankedQueueName(e.queueType),
                 _getSeasonId(e, t) {
                     if (t && t === h) {
                         return this.get("previousSeason.seasonId")
@@ -3931,18 +3931,18 @@
                 _translate: function(e, t) {
                     return this.get("tra.formatString")(e, t)
                 },
-                isLowSpec: a.Ember.computed("uxSettings", "uxSettings.data", "uxSettings.data.potatoModeEnabled", (function() {
+                isLowSpec: s.Ember.computed("uxSettings", "uxSettings.data", "uxSettings.data.potatoModeEnabled", (function() {
                     return !!this.get("uxSettings.data.potatoModeEnabled")
                 })),
                 _waitForUnlock: function(e, t) {
                     const n = e.bind(this);
-                    if (a.LockAndLoad.getLockState()) {
+                    if (s.LockAndLoad.getLockState()) {
                         const e = function() {
-                            a.LockAndLoad.removeEventListener("unlock", e), setTimeout((function() {
+                            s.LockAndLoad.removeEventListener("unlock", e), setTimeout((function() {
                                 n(t)
                             }), 5e3)
                         };
-                        a.LockAndLoad.addEventListener("unlock", e)
+                        s.LockAndLoad.addEventListener("unlock", e)
                     } else n(t)
                 }
             })
@@ -3950,10 +3950,10 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            var a = n(61);
-            e.exports = (a.default || a).template({
+            var s = n(61);
+            e.exports = (s.default || s).template({
                 compiler: [7, ">= 4.0.0"],
-                main: function(e, t, n, a, s) {
+                main: function(e, t, n, s, a) {
                     var i, o = null != t ? t : e.nullContext || {},
                         l = n.helperMissing,
                         r = "function",
@@ -3961,11 +3961,11 @@
                     return "<h4>" + c(typeof(i = null != (i = n.header || (null != t ? t.header : t)) ? i : l) === r ? i.call(o, {
                         name: "header",
                         hash: {},
-                        data: s
+                        data: a
                     }) : i) + '</h4>\r\n<hr class="heading-spacer" />\r\n<p>' + c(typeof(i = null != (i = n.body || (null != t ? t.body : t)) ? i : l) === r ? i.call(o, {
                         name: "body",
                         hash: {},
-                        data: s
+                        data: a
                     }) : i) + "</p>\r\n"
                 },
                 useData: !0
@@ -3975,46 +3975,46 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = function(e, t, n) {
-                const s = document.createElement("div");
-                s.className = "lol-leagues lol-leagues-full", s.type = "LeaguesRootComponent";
+                const a = document.createElement("div");
+                a.className = "lol-leagues lol-leagues-full", a.type = "LeaguesRootComponent";
                 const u = document.createElement("div");
                 u.className = "lol-leagues lol-leagues-modal", u.type = "LeaguesRootComponent";
                 const d = e.get("rcp-fe-lol-profiles").mainSection(),
                     m = e.get("rcp-fe-lol-profiles").overlaySection(),
-                    p = c(d, s, n),
+                    p = c(d, a, n),
                     g = c(m, u, n),
-                    f = a.Ember.Object.create();
-                r(p, s, t, !1, null, f), r(g, u, t, !0), h = m, E = g, h.addEventListener("showSubsection", ((e, t) => {
+                    f = s.Ember.Object.create();
+                r(p, a, t, !1, null, f), r(g, u, t, !0), h = m, E = g, h.addEventListener("showSubsection", ((e, t) => {
                     if (!t || !t.puuid) return;
                     const n = o + t.puuid;
-                    (0, a.dataBinding)(i, (0, a.getProvider)().getSocket()).get(n).then((e => {
+                    (0, s.dataBinding)(i, (0, s.getProvider)().getSocket()).get(n).then((e => {
                         const t = null !== e && e.length > 0;
-                        E.setEnabled(t), E.setTooltip(t ? null : a.Tra.get(l))
+                        E.setEnabled(t), E.setTooltip(t ? null : s.Tra.get(l))
                     }))
-                })), a.Tra.getAsync(l).then((e => {
+                })), s.Tra.getAsync(l).then((e => {
                     E.tooltip && E.setTooltip(e)
                 })), t.create("LeaguesNotificationsApp");
                 var h, E
             };
-            var a = n(1),
-                s = n(29);
+            var s = n(1),
+                a = n(29);
             const i = "/lol-ranked",
                 o = "/v1/league-ladders/",
                 l = "LEAGUES_UNRANKED_FRIEND";
 
-            function r(e, t, n, s, i, o) {
+            function r(e, t, n, a, i, o) {
                 e.addEventListener("selected", (l => {
                     let r = null,
                         c = null;
-                    if (a.Telemetry.startTracingEvent("profile-ranked-rendered"), !l || !l.summonerId) return o && o.set("refreshTopChamps", !0), i || (i = n.create("LeaguesRootComponent", o)), void i.componentPromise.then((() => {
+                    if (s.Telemetry.startTracingEvent("profile-ranked-rendered"), !l || !l.summonerId) return o && o.set("refreshTopChamps", !0), i || (i = n.create("LeaguesRootComponent", o)), void i.componentPromise.then((() => {
                         t.appendChild(i.domNode)
                     }));
                     r = l.summonerId, c = l.puuid;
-                    const u = n.create("LeaguesRootComponent", l ? a.Ember.Object.create({
+                    const u = n.create("LeaguesRootComponent", l ? s.Ember.Object.create({
                         summonerId: r,
                         puuid: c,
-                        overlayMode: s
-                    }) : a.Ember.Object.create());
+                        overlayMode: a
+                    }) : s.Ember.Object.create());
                     t.appendChild(u.domNode), e.lastDisplayedLeagueComponent = u
                 })), e.addEventListener("deselected", (() => function(e, t) {
                     if (e.lastDisplayedLeagueComponent) {
@@ -4029,7 +4029,7 @@
             function c(e, t, n) {
                 const i = () => n.get("LEAGUES_PROFILE_SECTION_NAME"),
                     o = e.registerSection({
-                        id: s.PROFILE_RANKED_SUBSECTION_ID,
+                        id: a.PROFILE_RANKED_SUBSECTION_ID,
                         title: i(),
                         priority: 3,
                         render: () => t,
@@ -4040,28 +4040,28 @@
                 }));
                 let l = !1,
                     r = !1;
-                (0, a.dataBinding)("/lol-platform-config", (0, a.getProvider)().getSocket()).observe("v1/namespaces/LeagueConfig", (e => {
+                (0, s.dataBinding)("/lol-platform-config", (0, s.getProvider)().getSocket()).observe("v1/namespaces/LeagueConfig", (e => {
                     l = e && !1 !== e.LeagueServiceEnabled, u(o, l, r, n)
                 }));
-                return (0, a.dataBinding)("/lol-ranked", (0, a.getProvider)().getSocket()).observe("v1/signed-ranked-stats", (e => {
+                return (0, s.dataBinding)("/lol-ranked", (0, s.getProvider)().getSocket()).observe("v1/signed-ranked-stats", (e => {
                     r = Boolean(e), u(o, l, r, n)
                 })), o
             }
 
-            function u(e, t, n, a) {
-                const s = t && n;
-                e && (e.setEnabled(s), e.setTooltip(s ? null : a.get("LEAGUES_SERVICE_UNAVAILABLE")))
+            function u(e, t, n, s) {
+                const a = t && n;
+                e && (e.setEnabled(a), e.setTooltip(a ? null : s.get("LEAGUES_SERVICE_UNAVAILABLE")))
             }
         }],
         t = {};
 
-    function n(a) {
-        var s = t[a];
-        if (void 0 !== s) return s.exports;
-        var i = t[a] = {
+    function n(s) {
+        var a = t[s];
+        if (void 0 !== a) return a.exports;
+        var i = t[s] = {
             exports: {}
         };
-        return e[a](i, i.exports, n), i.exports
+        return e[s](i, i.exports, n), i.exports
     }
     n.g = function() {
         if ("object" == typeof globalThis) return globalThis;
@@ -4078,21 +4078,21 @@
         })
     }, n.p = "/fe/lol-leagues/", (() => {
         "use strict";
-        var e = a(n(1)),
-            t = a(n(2));
+        var e = s(n(1)),
+            t = s(n(2));
 
-        function a(e) {
+        function s(e) {
             return e && e.__esModule ? e : {
                 default: e
             }
         }
-        const s = "rcp-fe-lol-leagues",
+        const a = "rcp-fe-lol-leagues",
             i = document.currentScript.ownerDocument;
-        const o = window.getPluginAnnounceEventName(s);
-        i.addEventListener(o, (function(a) {
-            (0, a.registrationHandler)((function(a) {
-                const i = a.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-leagues/trans.json").overlay("/fe/lol-social/trans.json");
-                return e.default.init(a, {
+        const o = window.getPluginAnnounceEventName(a);
+        i.addEventListener(o, (function(s) {
+            (0, s.registrationHandler)((function(s) {
+                const i = s.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-leagues/trans.json").overlay("/fe/lol-social/trans.json");
+                return e.default.init(s, {
                     AudioPlugin: e => e.get("rcp-fe-audio"),
                     componentFactory: e => e.get("rcp-fe-common-libs").getComponentFactory("1"),
                     ContextMenuManager: e => e.get("rcp-fe-lol-uikit").getContextMenuManager(),
@@ -4104,7 +4104,7 @@
                     LeagueTierNames: e => e.get("rcp-fe-lol-shared-components").getApi_LeagueTierNames(),
                     LockAndLoad: e => e.get("rcp-fe-lol-lock-and-load"),
                     Lodash: e => e.get("rcp-fe-common-libs").getLodash("4"),
-                    logger: e => e.get("rcp-fe-common-libs").logging.create(s),
+                    logger: e => e.get("rcp-fe-common-libs").logging.create(a),
                     lottie: e => e.get("rcp-fe-common-libs").getLottie("1"),
                     ModalManager: e => e.get("rcp-fe-lol-uikit").getModalManager(),
                     moment: e => e.get("rcp-fe-lol-l10n").moment(),
@@ -4128,15 +4128,15 @@
                     db: e.default.dataBinding.bindTo(e.default.socket)
                 }))).then((() => {
                     const {
-                        Ember: a
+                        Ember: s
                     } = e.default, {
-                        emberApplicationFactory: s,
+                        emberApplicationFactory: a,
                         componentFactory: o
-                    } = e.default, l = (0, t.default)(a, i);
+                    } = e.default, l = (0, t.default)(s, i);
                     e.default.tra = i;
                     const r = n(3).default,
                         c = n(129).default;
-                    return r(o, s, l), c(e.default.getProvider(), o, i), {}
+                    return r(o, a, l), c(e.default.getProvider(), o, i), {}
                 }))
             }))
         }), {
