@@ -1331,6 +1331,71 @@
                         175.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RecastWindow",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Cooldown",
+                    "values": [
+                        20.0,
+                        20.0,
+                        18.0,
+                        16.0,
+                        14.0,
+                        12.0,
+                        12.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusDashSpeed",
+                    "values": [
+                        1150.0,
+                        1150.0,
+                        1150.0,
+                        1150.0,
+                        1150.0,
+                        1150.0,
+                        1150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "XayahBonusDashSpeed",
+                    "values": [
+                        1250.0,
+                        1250.0,
+                        1250.0,
+                        1250.0,
+                        1250.0,
+                        1250.0,
+                        1250.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1496,13 +1561,13 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "Cooldown",
                                     "typeIndex": 4,
                                     "nameOverride": "Spell_ListType_Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "Cost",
                                     "typeIndex": 5,
                                     "nameOverride": "Spell_ListType_Cost",
                                     "__type": "TooltipInstanceListElement"
@@ -2806,12 +2871,105 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        100.0,
+                        100.0,
+                        200.0,
+                        300.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CharmDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.25,
+                        1.5,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffExtensionDuration",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InitialCastSpeed",
+                    "values": [
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TouchSpeed",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TouchRadius",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamageTooltip": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.5,
@@ -2887,14 +3045,12 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "CharmDuration",
                                     "nameOverride": "Spell_ListType_CharmDuration",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },

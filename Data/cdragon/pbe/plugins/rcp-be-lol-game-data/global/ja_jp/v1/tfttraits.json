@@ -5220,7 +5220,7 @@
         "trait_id": "TFT15_BattleAcademia",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_BattleClub.TFT_Set15.png",
-        "tooltip_text": "「バトルアカデミア」チャンピオンが自身のスキルをアップグレードし、ポテンシャル%i:set14AmpIcon%を獲得する。ポテンシャルはスキル効果を上昇させる。<br><ShowIf.TFT15_BattleAcademia_NoPrismatic><br><rules>プリズム: 「バトルアカデミア」チャンピオンを7体配置すると、チャンピオンにアイテムを装備させるごとに@PrismaticItemRequirement@ポイントを獲得する。</rules><br></ShowIf.TFT15_BattleAcademia_NoPrismatic><ShowIf.TFT15_BattleAcademia_PrismaticPending><br><TFTRadiantItemBonus>プリズム: </TFTRadiantItemBonus>チャンピオンが戦闘で完成アイテムを使用するごとに1ポイント獲得する。@PrismaticItemRequirement@ポイントで卒業(@TFTUnitProperty.trait:TFT15_BattleAcademia_PrismaticNumItems@/@PrismaticItemRequirement@)。<br></ShowIf.TFT15_BattleAcademia_PrismaticPending><ShowIf.TFT15_BattleAcademia_PrismaticActive><br><TFTRadiantItemBonus><br>真のポテンシャル解放: +@UltimateNumPotential@ %i:set14AmpIcon%</TFTRadiantItemBonus><br></ShowIf.TFT15_BattleAcademia_PrismaticActive><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row>",
+        "tooltip_text": "「バトルアカデミア」チャンピオンが自身のスキルをアップグレードし、ポテンシャル%i:set14AmpIcon%を獲得する。ポテンシャルはスキル効果を上昇させる。<br><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) 真の力を解き放て</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -5292,8 +5292,28 @@
                     }
                 ],
                 "min_units": 7,
+                "max_units": 8,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DA",
+                        "value": 0.75
+                    },
+                    {
+                        "name": "DR",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumPotential",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -6741,7 +6761,7 @@
         "trait_id": "TFT15_SoulFighter",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_SoulFighter.TFT_Set15.png",
-        "tooltip_text": "「ソウルファイター」の体力が増加し、攻撃力と魔力が毎秒増加する(最大@MaxStacks@スタック)。最大スタックになると追加確定ダメージを与える。<br><ShowIf.TFT15_SoulFighter_NoPrismatic><br><rules>プリズム: ユニットを8体配置した後、戦闘に@PlayerDamageToPrismatic@回勝利する。</rules><br></ShowIf.TFT15_SoulFighter_NoPrismatic><ShowIf.TFT15_SoulFighter_PrismaticPending><br><TFTRadiantItemBonus>プリズム: </TFTRadiantItemBonus>戦闘でプレイヤー@PlayerDamageToPrismatic@人に勝利する(@TFTUnitProperty.trait:TFT15_SoulFighter_PlayerDamageDealt@)<br></ShowIf.TFT15_SoulFighter_PrismaticPending><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>ソウルパワー最大。<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%、@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%、ダメージ+@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%、@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%、ダメージ+@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%、@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%、ダメージ+@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%、@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%、ダメージ+@BonusTrueDamage*100@%</row>",
+        "tooltip_text": "「ソウルファイター」の体力が増加し、攻撃力と魔力が毎秒増加する(最大@MaxStacks@スタック)。最大スタック時、追加確定ダメージを与える。<br><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>ソウルパワー最大<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%、 @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%、 + ダメージの@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%、 @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%、 + ダメージの@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%、 @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%、 + ダメージの@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%、 @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%、 + ダメージの@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) ソウルパワー最大</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -6845,8 +6865,32 @@
                     }
                 ],
                 "min_units": 8,
+                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusTrueDamage",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "FlatHealth",
+                        "value": 700.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "StatsPerSecond",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -6936,7 +6980,7 @@
         "trait_id": "TFT15_StarGuardian",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_StarGuardian.png",
-        "tooltip_text": "「スターガーディアン」にはユニークなチームワークボーナスがあり、全「スターガーディアン」が獲得する。配置された「スターガーディアン」1体につきボーナスが増加する！<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>プリズム: ユニットを8体配置した後、@ManaToPrismatic@マナを使用する。</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>プリズム:</TFTRadiantItemBonus> @ManaToPrismatic@マナ(@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive>を使用<br><br><TFTRadiantItemBonus>星々が目覚めた。</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>レル: </status>@TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@のシールドを獲得</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>レル: シールドを獲得</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>シンドラ: </status>@SyndraTimer@秒ごとに魔力が@TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@%増加</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>シンドラ: 魔力が増加</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>ザヤ: </status>通常攻撃3回ごとに<magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@(ステージごとに増加)</magicDamage>の魔法ダメージを与える</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>ザヤ: 通常攻撃で魔法ダメージを与える</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>アーリ: </status>スキルの使用後、@AhriDuration@秒かけて@TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@のマナを獲得</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>アーリ: スキルの使用時、マナを獲得</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>ニーコ: </status>回復とシールドが+@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@%</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>ニーコ: 回復＆シールドが増加</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>ポッピー: </status>体力が40%になると、%i:scaleHealth%の@TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@%を回復</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>ポッピー: 体力が低下すると回復</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>ジンクス: </status>キルまたはアシスト後、攻撃速度が+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@%増加する。%i:scaleAS%が+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@%増加する。3秒かけて減衰する。</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>ジンクス: 攻撃速度が増加</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>セラフィーン: </status>%i:scaleArmor%%i:scaleMR%%i:scaleHealth%が@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@増加し、%i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%が@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@%増加</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>セラフィーン: 各ステータスが増加</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>紋章: </status>ボーナスが@EmblemBonus*100@%増加！</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>紋章: 他のボーナスが増加</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
+        "tooltip_text": "「スターガーディアン」にはユニークなチームワークボーナスがあり、全「スターガーディアン」が獲得する。配置された「スターガーディアン」1体につきボーナスが増加する！<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>プリズム: 「スターガーディアン」を10体配置すると星々が覚醒する！</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>プリズム:</TFTRadiantItemBonus> @ManaToPrismatic@マナ(@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)を使用</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>星々が覚醒した。</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>レル:</status> 耐久値@TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@のシールドを獲得する</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>レル: シールドを獲得する</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>シンドラ:</status> @SyndraTimer@秒ごとに魔力が@TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@%増加する</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>シンドラ: 魔力が増加する</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>ザヤ:</status> 通常攻撃3回ごとに<magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@(ステージごとに増加)</magicDamage>の魔法ダメージを与える</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>ザヤ: 通常攻撃で魔法ダメージ</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>アーリ:</status> スキルの使用後、@AhriDuration@秒かけて@TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@のマナを獲得する</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>アーリ: スキルの使用時、マナを獲得する</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>ニーコ:</status> 回復とシールドが@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@%増加する</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>ニーコ: 回復＆シールドが増加する</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>ポッピー:</status> 体力が40%になると、@TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@% %i:scaleHealth%を回復する</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>ポッピー: 体力が低下すると回復する</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>ジンクス:</status> キルまたはアシスト後、攻撃速度が+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@%増加する。%i:scaleAS%が+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@%増加する。3秒かけて減衰する</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>ジンクス: 攻撃速度が増加する</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>セラフィーン:</status> @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth%、@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@% %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%が増加する</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>セラフィーン: すべてのステータスが上昇する</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>紋章:</status> ボーナスが@EmblemBonus*100@%増加する！</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>紋章: その他のボーナスが増加する</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -7108,18 +7152,6 @@
                 "constants": [
                     {
                         "name": "Multiplier",
-                        "value": 1.18
-                    }
-                ],
-                "min_units": 8,
-                "max_units": 8,
-                "style_idx": 6,
-                "style_name": "kChromatic"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
                         "value": 1.2
                     }
                 ],
@@ -7133,29 +7165,6 @@
                     {
                         "name": "Multiplier",
                         "value": 1.2
-                    }
-                ],
-                "min_units": 9,
-                "max_units": 9,
-                "style_idx": 6,
-                "style_name": "kChromatic"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
-                        "value": 1.5
-                    }
-                ],
-                "min_units": 10,
-                "style_idx": 5,
-                "style_name": "kGold"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
-                        "value": 2.0
                     }
                 ],
                 "min_units": 10,
@@ -7347,7 +7356,7 @@
                     },
                     {
                         "name": "StatBonus",
-                        "value": 0.05
+                        "value": 0.1
                     },
                     {
                         "name": "XPPerReroll",
@@ -15068,7 +15077,7 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "対人戦に敗北すると「テック」を@TechPerCombat@獲得し、さらに連敗数x@TechPerLoss@の「テック」を追加で獲得する。さらに、「アニマ」がキルまたはアシストを獲得するたびに、「テック」を@TechPerKill@獲得する。<br><br>「アニマ」が「テック」を@TechBreakpoint@獲得するたびに、新たな「アニマ武器」が試作される。その武器を獲得するか、「テック」を温存して次回により強力な武器を得ることも可能。<br><br><row>(@MinUnits@) 研究開始！</row><br><row>(@MinUnits@) 対人戦に勝利後、戦利品を獲得！</row>",
+        "tooltip_text": "対人戦に敗北すると「テック」を@TechPerCombat@獲得し、さらに連敗数x@TechPerLoss@の「テック」を追加で獲得する。さらに、「アニマ」がキルまたはアシストを獲得するたびに、「テック」を@TechPerKill@獲得する。<br><br>「アニマ」が「テック」を@TechBreakpoint@獲得するたびに、新たな「アニマ武器」が試作される。その武器を獲得するか、「テック」を温存して次回により強力な武器を得ることも可能。<br><br><row>(@MinUnits@) 研究開始！</row><br><row>(@MinUnits@) 対人戦に勝利後、戦利品を獲得！</row><br><br><ShowIf.TFT17_AnimaSquad_IsDoubleUp><rules>「ダブルアップ」で自分が敗北しても、パートナーが戦闘に勝利した場合は@PairsPartnerWinMultiplier*100@%のテックを獲得する。</rules></ShowIf.TFT17_AnimaSquad_IsDoubleUp>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15384,7 +15393,7 @@
         "trait_id": "TFT17_DarkStar",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) 「ダークスター」が最大体力@ExecuteHPPercent*100@%以下の敵を飲み込むブラックホールを生成する。</row><br><row>(@MinUnits@) さらに、@ADAP@% %i:scaleAD%%i:scaleAP%を獲得する。</row><br><row>(@MinUnits@) さらに、最も強い「ダークスター」ユニットがスーパーマッシブ状態になり、受ける「ダークスター」の効果が@SupermassivePercentBonus*100@%増加し、2つのミニブラックホールを生成する。</row><br><row>(@MinUnits@) すべての「ダークスター」がスーパーマッシブ状態になる。レベル10で全員を飲み込む。 </row>",
+        "tooltip_text": "<row>(@MinUnits@) 「ダークスター」が最大体力の<ShowIf.TFT17_DarkStar_HasNeutronStar><TFTBonus>@TFTUnitProperty.trait:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@%</TFTBonus></ShowIf.TFT17_DarkStar_HasNeutronStar><ShowIfNot.TFT17_DarkStar_HasNeutronStar>@ExecuteHPPercent*100@%</ShowIfNot.TFT17_DarkStar_HasNeutronStar>以下の敵を飲み込むブラックホールを生成する。</row><br><row>(@MinUnits@) さらに、@ADAP@%の%i:scaleAD%%i:scaleAP%を獲得する。</row><br><row>(@MinUnits@) さらに、最も強い「ダークスター」ユニットがスーパーマッシブ状態になり、受ける「ダークスター」の効果が@SupermassivePercentBonus*100@%増加し、2つのミニブラックホールを生成する。</row><br><row>(@MinUnits@) すべての「ダークスター」がスーパーマッシブ状態になる。レベル10で全員を飲み込む。 </row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16015,17 +16024,17 @@
         "trait_id": "TFT17_MorganaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
-        "tooltip_text": "味方はスキルから受けるダメージが@UntransformedAbilityDA*100@%低下し、モルガナの「闇の形態」中は@TransformedAbilityDA*100@%低下する。",
+        "tooltip_text": "味方チームの耐久力%i:scaleDurability%が@Durability*100@%増加する。モルガナが「闇の形態」中は、この効果が@TransformedDurability*100@%に増加する。",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "TransformedAbilityDA",
-                        "value": 0.1
+                        "name": "Durability",
+                        "value": 0.05
                     },
                     {
-                        "name": "UntransformedAbilityDA",
-                        "value": 0.05
+                        "name": "TransformedDurability",
+                        "value": 0.1
                     }
                 ]
             }
@@ -16598,12 +16607,20 @@
                         "value": 0.1
                     },
                     {
-                        "name": "Fountain_ManaRegen_Teamwide",
-                        "value": 1.0
+                        "name": "Fountain_HealthRegen",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Fountain_HealthRegen_Teamwide",
+                        "value": 0.02
                     },
                     {
                         "name": "Huntress_AS_Teamwide",
                         "value": 0.15
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 0.0
                     },
                     {
                         "name": "Medallion_DA_Teamwide",
@@ -16692,12 +16709,8 @@
                         "value": 10.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.18
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 3.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 2.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -16788,11 +16801,7 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.25
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
+                        "name": "Fountain_StackingADAP",
                         "value": 4.0
                     },
                     {
@@ -16880,12 +16889,8 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.2
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 5.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 4.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -17100,13 +17105,25 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>泉</TFTStargazer>。<br><br>強化マスにいる味方はマナ自動回復が@Fountain_ManaRegen_Teamwide@増加する。強化マスにいる「星の観測者」はさらに増加量が多くなり、スキルで体力が最も低い味方を回復できる。<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%、スキルダメージの@Fountain_HealPercent*100@%分回復</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%、スキルダメージの@Fountain_HealPercent*100@%分回復</row><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>泉</TFTStargazer>。<br><br>強化マスにいる味方は、@Fountain_Interval@秒ごとに最大体力の@Fountain_HealthRegen_Teamwide*100@%を回復する。強化マスにいる「星の観測者」は、追加で体力を@Fountain_HealthRegen*100@%回復し、@Fountain_Interval@秒ごとに攻撃力と魔力が累積しながら増加する。<br><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><br><rules>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "Fountain_ManaRegen_Teamwide",
-                        "value": 1.0
+                        "name": "Fountain_HealthRegen",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Fountain_HealthRegen_Teamwide",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "Fountain_Interval",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 0.0
                     }
                 ]
             }
@@ -17115,12 +17132,8 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.18
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 1.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 2.0
                     }
                 ],
                 "min_units": 3,
@@ -17131,12 +17144,8 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.25
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 5.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 4.0
                     }
                 ],
                 "min_units": 5,
@@ -17774,7 +17783,7 @@
         "trait_id": "TFT17_Timebreaker",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) 味方の攻撃速度が@AttackSpeed*100@%増加する。</row><br><row>(@MinUnits@) さらに、敗北時に無料のリロールを獲得する。勝利時には「時空の核」にXPを蓄積する(ステージに応じて増加)。</row><br><row>(@MinUnits@) さらに、「タイムブレーカー」の攻撃速度が@TimebreakerAdditionalAS*100@%増加する。</row><br><br><rules>敗北時のリロール: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>勝利時のXP: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "tooltip_text": "<row>(@MinUnits@) 味方の攻撃速度が@AttackSpeed*100@%増加する。</row><br><row>(@MinUnits@) さらに、敗北時に無料のリロールを獲得する。勝利時には「時空の核」にXPを蓄積する(ステージに応じて増加)。</row><br><row>(@MinUnits@) さらに、「タイムブレーカー」の攻撃速度が追加で@TimebreakerAdditionalAS*100@%増加する。</row><br><br><rules>敗北時のリロール: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>勝利時のXP: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -24808,7 +24817,7 @@
                     },
                     {
                         "name": "Tier1Heal",
-                        "value": 2.0
+                        "value": 1.0
                     },
                     {
                         "name": "Tier1HealDU",

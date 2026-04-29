@@ -582,7 +582,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Taliyah melempar rentetan batu ke arah target, bergerak bebas saat cast. Ini memunculkan Worked Ground di bawahnya. Jika Taliyah cast Threaded Volley di Worked Ground, dia mengonsumsi ground untuk melempar boulder yang lebih kuat dan menerapkan slow pada musuh.",
-            "dynamicDescription": "Taliyah melempar 5 batu, masing-masing menghasilkan <magicDamage>@RockDamage@ magic damage</magicDamage> dalam 1 area di sekitar musuh pertama yang terkena sambil membuat Worked Ground di area tersebut. Serangan berikutnya terhadap musuh yang sama menghasilkan damage @ExtraMissileReducedDamagePercent@% lebih sedikit.<br><br>Cast di Worked Ground memerlukan @Effect7Amount@ Mana dan Cooldown-nya berkurang @WorkedGroundCDR*100@%, mengonsumsi Worked Ground, dan melempar boulder yang menerapkan <status>Slow</status> pada musuh yang terkena olehnya sebesar @SlowPercent*100@% selama @SlowDuration@ detik, menghasilkan <magicDamage>@BigRockDamage@ magic damage</magicDamage> pada target utama. Monster yang tertimpa boulder akan terkena <status>Stun</status> selama @MonsterStunDuration@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah melempar 5 batu, masing-masing menghasilkan <magicDamage>@RockDamage@ magic damage</magicDamage> dalam 1 area di sekitar musuh pertama yang terkena sambil membuat Worked Ground di area tersebut. Serangan berikutnya ke musuh yang sama akan menghasilkan @ExtraMissileReducedDamagePercent@% lebih sedikit damage.<br><br>Cast di Worked Ground memerlukan @BigRockManaCost@ Mana dan Cooldown-nya berkurang @WorkedGroundCDR*100@%, mengonsumsi Worked Ground, dan melempar batu besar yang menerapkan <status>Slow</status> pada musuh yang terkena sebesar @SlowPercent*100@% selama @SlowDuration@ detik, menghasilkan <magicDamage>@BigRockDamage@ magic damage</magicDamage> pada target utama. Monster yang tertimpa batu besar akan terkena <status>Stun</status> selama @MonsterStunDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Taliyah menciptakan dinding yang sangat panjang dan kemudian meluncur di atasnya.",
-            "dynamicDescription": "Taliyah menciptakan dinding tanah yang sangat besar selama @Effect1Amount@ detik. Jika dia langsung <recast>Recast</recast>, dia akan ikut meluncur di sepanjang dinding saat terurai. Dia akan berhenti meluncur jika berpindah atau terkena immobilize.<br><br>Ability tidak bisa di-cast jika Taliyah menerima damage dari Champion atau bangunan dalam @DamageLockoutTime@ detik terakhir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah menciptakan dinding tanah yang sangat besar selama @WallDuration@ detik. Jika dia langsung <recast>Recast</recast>, dia akan ikut meluncur di sepanjang dinding saat terurai. Bergerak atau terkena efek immobilize akan mengakhiri luncuran.<br><br>Ability ini tidak bisa di-cast jika Taliyah menerima damage dari Champion atau bangunan dalam @DamageLockoutTime@ detik terakhir.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

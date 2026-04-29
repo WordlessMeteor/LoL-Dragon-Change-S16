@@ -74,7 +74,7 @@
         "constants": {
             "{df085b93}": {
                 "PlayerHealth": {
-                    "mValue": 10,
+                    "mValue": 5,
                     "__type": "GameModeConstantInteger"
                 }
             },
@@ -3438,6 +3438,97 @@
         ],
         "__type": "TftItemData"
     },
+    "{11cd46bf}": {
+        "mName": "TFT17_Consumable_BlessingWealth",
+        "constants": {
+            "{df085b93}": {
+                "ADAP": {
+                    "mValue": 8.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "GoldChance": {
+                    "mValue": 12.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "Gold": {
+                    "mValue": 1,
+                    "__type": "GameModeConstantInteger"
+                }
+            },
+            "__type": "{d65315ee}"
+        },
+        "ItemTags": [
+            "Consumable"
+        ],
+        "mDisplayNameTra": "TFT17_MarketOffering_Name_BlessingWealth",
+        "mDescriptionNameTra": "TFT17_MarketOffering_LongDesc_BlessingWealth",
+        "mIconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BlessingWealth.TFT_17_3.tex",
+        "mColor": [
+            15,
+            199,
+            196,
+            251
+        ],
+        "__type": "TftItemData"
+    },
+    "{8592750f}": {
+        "mName": "TFT17_Consumable_BlessingProsperityPlus",
+        "constants": {
+            "{df085b93}": {
+                "BaseHealth": {
+                    "mValue": 100.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "{30221825}": {
+                    "mValue": 8.0,
+                    "__type": "GameModeConstantFloat"
+                }
+            },
+            "__type": "{d65315ee}"
+        },
+        "ItemTags": [
+            "Consumable"
+        ],
+        "mDisplayNameTra": "TFT17_MarketOffering_Name_BlessingProsperityPlus",
+        "mDescriptionNameTra": "TFT17_MarketOffering_LongDesc_BlessingProsperity",
+        "mIconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BlessingProsperity.TFT_17_3.tex",
+        "mColor": [
+            15,
+            199,
+            196,
+            251
+        ],
+        "__type": "TftItemData"
+    },
+    "{b70d540b}": {
+        "mName": "TFT17_Consumable_BlessingProsperity",
+        "constants": {
+            "{df085b93}": {
+                "BaseHealth": {
+                    "mValue": 100.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "{30221825}": {
+                    "mValue": 5.0,
+                    "__type": "GameModeConstantFloat"
+                }
+            },
+            "__type": "{d65315ee}"
+        },
+        "ItemTags": [
+            "Consumable"
+        ],
+        "mDisplayNameTra": "TFT17_MarketOffering_Name_BlessingProsperity",
+        "mDescriptionNameTra": "TFT17_MarketOffering_LongDesc_BlessingProsperity",
+        "mIconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BlessingProsperity.TFT_17_3.tex",
+        "mColor": [
+            15,
+            199,
+            196,
+            251
+        ],
+        "__type": "TftItemData"
+    },
     "{20dd683b}": {
         "mName": "TFT14_Augment_Syndicate_KeepYourFriendsClose",
         "MutuallyExclusiveItems": [
@@ -4332,7 +4423,10 @@
             "{7589a6d1}",
             "{3058cc1c}",
             "{3158cdaf}",
-            "{2e58c8f6}"
+            "{2e58c8f6}",
+            "{47844dcf}",
+            "{4313e23b}",
+            "{28062c9f}"
         ],
         "__type": "{6a215e04}"
     },
@@ -4355,6 +4449,40 @@
             false
         ],
         "{cf5a2bea}": 8,
+        "__type": "{19ff61ac}"
+    },
+    "{28062c9f}": {
+        "name": "TFT17_Benefit_BlessingProsperityPlus",
+        "{8557faf0}": 10,
+        "category": 2,
+        "NameTra": "TFT17_MarketOffering_Name_BlessingProsperityPlus",
+        "LongDescriptionTra": "TFT17_MarketOffering_LongDesc_BlessingProsperity",
+        "IconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BlessingProsperity.TFT_17_3.tex",
+        "{2dae73a9}": "TFT_Fear",
+        "constants": {
+            "{df085b93}": {
+                "BaseHealth": {
+                    "mValue": 100.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "{30221825}": {
+                    "mValue": 8.0,
+                    "__type": "GameModeConstantFloat"
+                }
+            },
+            "__type": "{d65315ee}"
+        },
+        "{e123a9db}": "{8592750f}",
+        "{4dfeefaf}": [
+            false,
+            false,
+            false,
+            true
+        ],
+        "{f5e72861}": [
+            "{47844dcf}",
+            "{4313e23b}"
+        ],
         "__type": "{19ff61ac}"
     },
     "{29dbfa5d}": {
@@ -4439,6 +4567,78 @@
         "{f5e72861}": [
             "{3058cc1c}",
             "{2e58c8f6}"
+        ],
+        "__type": "{19ff61ac}"
+    },
+    "{4313e23b}": {
+        "name": "TFT17_Benefit_BlessingProsperity",
+        "{8557faf0}": 10,
+        "category": 2,
+        "NameTra": "TFT17_MarketOffering_Name_BlessingProsperity",
+        "LongDescriptionTra": "TFT17_MarketOffering_LongDesc_BlessingProsperity",
+        "IconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BlessingProsperity.TFT_17_3.tex",
+        "{2dae73a9}": "TFT_Fear",
+        "constants": {
+            "{df085b93}": {
+                "BaseHealth": {
+                    "mValue": 100.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "{30221825}": {
+                    "mValue": 5.0,
+                    "__type": "GameModeConstantFloat"
+                }
+            },
+            "__type": "{d65315ee}"
+        },
+        "{e123a9db}": "{b70d540b}",
+        "{4dfeefaf}": [
+            false,
+            false,
+            true,
+            false
+        ],
+        "{f5e72861}": [
+            "{47844dcf}",
+            "{28062c9f}"
+        ],
+        "__type": "{19ff61ac}"
+    },
+    "{47844dcf}": {
+        "name": "TFT17_Benefit_BlessingWealth",
+        "{8557faf0}": 10,
+        "category": 2,
+        "NameTra": "TFT17_MarketOffering_Name_BlessingWealth",
+        "LongDescriptionTra": "TFT17_MarketOffering_LongDesc_BlessingWealth",
+        "IconPath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/TFT17_CarouselMarket_BlessingWealth.TFT_17_3.tex",
+        "{2dae73a9}": "TFT_Fear",
+        "constants": {
+            "{df085b93}": {
+                "ADAP": {
+                    "mValue": 8.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "GoldChance": {
+                    "mValue": 12.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "Gold": {
+                    "mValue": 1,
+                    "__type": "GameModeConstantInteger"
+                }
+            },
+            "__type": "{d65315ee}"
+        },
+        "{e123a9db}": "{11cd46bf}",
+        "{4dfeefaf}": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "{f5e72861}": [
+            "{4313e23b}",
+            "{28062c9f}"
         ],
         "__type": "{19ff61ac}"
     },
@@ -8849,7 +9049,7 @@
         "constants": {
             "{df085b93}": {
                 "Heal": {
-                    "mValue": 30.0,
+                    "mValue": 20.0,
                     "__type": "GameModeConstantFloat"
                 }
             },
@@ -60558,163 +60758,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/TFT/Set17_Carousel/Materials/Default/Set17_Godprop_Yasuo_PortalTrim_inst_R": {
-        "name": "Maps/KitPieces/TFT/Set17_Carousel/Materials/Default/Set17_Godprop_Yasuo_PortalTrim_inst_R",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "WPO_Texture",
-                "texturePath": "ASSETS/Shared/Materials/Water_Wave_small.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Maps/KitPieces/TFT/Set17_Carousel/Textures/Set17_Godprop_Yasuo_A.TFT_Set17.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Effects_Mask",
-                "texturePath": "ASSETS/Maps/KitPieces/TFT/Set17_Carousel/Textures/Set17_Godprop_Yasuo_EffectMask.TFT_Set17.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "Diffuse_ScrollSpeed",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Diffuse_Scale",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Amount_",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "WPO_Amount",
-                "value": [
-                    50.0,
-                    10.0,
-                    50.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Flow_Scroll_Speed",
-                "value": [
-                    0.05000000074505806,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "WPO_Scale",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "WPO_ScrollSpeed",
-                "value": [
-                    2.0,
-                    2.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Flow_Tiling",
-                "value": [
-                    2.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Flow_Direction_Intensity",
-                "value": [
-                    1.0,
-                    -0.5,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Flow_Intensity",
-                "value": [
-                    0.04749999940395355,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Flow_Speed",
-                "value": [
-                    0.1599999964237213,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_WPO",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "FLOWDIRECTIONSWITCH",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/TFT_FlowMap_Masked",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/TFT/Set17_Carousel/Materials/Default/Set17_GodProp_Yasuo_Float_inst": {
         "name": "Maps/KitPieces/TFT/Set17_Carousel/Materials/Default/Set17_GodProp_Yasuo_Float_inst",
         "type": 0,
@@ -60916,6 +60959,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "WPO_Offset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_ScrollSpeed",
                 "__type": "StaticMaterialShaderParamDef"
@@ -61139,6 +61186,10 @@
         ],
         "paramValues": [
             {
+                "name": "WPO_Offset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Screenspace_Foreground_Intensity",
                 "value": [
                     2.0,
@@ -61232,7 +61283,7 @@
                 "name": "WPO_Amount",
                 "value": [
                     50.0,
-                    -10.0,
+                    0.0,
                     30.0,
                     0.0
                 ],
@@ -61241,8 +61292,8 @@
             {
                 "name": "Screenspace_Background_Scale",
                 "value": [
-                    9.0,
-                    9.0,
+                    6.0,
+                    6.0,
                     0.0,
                     0.0
                 ],
@@ -61282,6 +61333,174 @@
                 "passes": [
                     {
                         "shader": "Shaders/StaticMesh/TFT_Screenspace_Masked_WPO",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{9e403975}": {
+        "name": "Maps/KitPieces/TFT/Set17_Carousel/Materials/Default/Set17_GodProp_FlowMap_Masked_YasuoPortal_R",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "WPO_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Water_Wave_small.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Maps/KitPieces/TFT/Set17_Carousel/Textures/Set17_Godprop_Yasuo_A.TFT_Set17.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Effects_Mask",
+                "texturePath": "ASSETS/Maps/KitPieces/TFT/Set17_Carousel/Textures/Set17_Godprop_Yasuo_Flow.TFT_Set17.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "WPO_Offset",
+                "value": [
+                    0.0,
+                    15.0,
+                    15.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_ScrollSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Scale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Amount_",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WPO_Amount",
+                "value": [
+                    50.0,
+                    0.0,
+                    50.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flow_Scroll_Speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WPO_Scale",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WPO_ScrollSpeed",
+                "value": [
+                    2.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flow_Tiling",
+                "value": [
+                    3.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flow_Direction_Intensity",
+                "value": [
+                    1.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flow_Intensity",
+                "value": [
+                    0.03999999910593033,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flow_Speed",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_WPO",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FLOWDIRECTIONSWITCH",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/TFT_FlowMap_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
                         "__type": "StaticMaterialPassDef"
                     }
                 ],
@@ -61972,6 +62191,10 @@
         ],
         "paramValues": [
             {
+                "name": "WPO_Offset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Screenspace_Foreground_Intensity",
                 "value": [
                     2.0,
@@ -62005,7 +62228,7 @@
                 "name": "Screenspace_Foreground_Mask_Speed",
                 "value": [
                     -0.5,
-                    0.25,
+                    2.0,
                     0.0,
                     0.0
                 ],
@@ -62065,8 +62288,8 @@
                 "name": "WPO_Amount",
                 "value": [
                     50.0,
-                    -10.0,
-                    20.0,
+                    0.0,
+                    30.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -62084,8 +62307,8 @@
             {
                 "name": "Screenspace_Background_Speed_1",
                 "value": [
-                    -0.25,
-                    -0.15000000596046448,
+                    1.0,
+                    -1.0,
                     0.0,
                     0.0
                 ],
@@ -62418,6 +62641,16 @@
         ],
         "paramValues": [
             {
+                "name": "WPO_Offset",
+                "value": [
+                    0.0,
+                    15.0,
+                    15.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Diffuse_ScrollSpeed",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -62575,6 +62808,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "WPO_Offset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_ScrollSpeed",
                 "value": [

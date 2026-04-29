@@ -4758,11 +4758,11 @@
                 "GoldAmount": [
                     750.0,
                     750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -5528,13 +5528,13 @@
                     10.0
                 ],
                 "AnvilsGranted": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -6291,13 +6291,13 @@
                     2.0
                 ],
                 "PrismaticCostReduction": [
-                    -1500.0,
-                    -1500.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0
+                    1500.0,
+                    1500.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0
                 ],
                 "PrismaticGoldBasisDiscount": [
                     1250.0,
@@ -7752,6 +7752,122 @@
             "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>스킬을 사용할 때마다 기본 공격이 1회 강화됩니다.</rules>"
         },
         {
+            "apiName": "HiveMind",
+            "calculations": {
+                "BeeDamage": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ],
+                    "{72c5c2a8}": 1
+                }
+            },
+            "dataValues": {
+                "ASReduction": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
+                "BaseDamageMax": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "BaseDamageMin": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "BeeRange": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "DebuffDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "MaxBeeStacks": [
+                    8.0,
+                    8.0,
+                    12.0,
+                    16.0,
+                    99.0,
+                    99.0,
+                    99.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "SpellCooldown": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "StartingBees": [
+                    0.0,
+                    1.0,
+                    2.0,
+                    3.0,
+                    4.0,
+                    5.0,
+                    6.0
+                ]
+            },
+            "desc": "매 라운드를 벌 @StartingBees@마리와 함께 시작합니다. 꽃을 수확하면 추가로 벌을 얻습니다. 적 챔피언에게 피해를 입히면 벌을 보냅니다. 벌은 대상에 다다르면 @DebuffDuration@초 동안 <magicDamage>@BeeDamage@의 마법 피해</magicDamage>를 입히고 다시 돌아옵니다.<br>",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "군체 의식",
+            "rarity": 2,
+            "tooltip": "매 라운드를 벌 @StartingBees@마리와 함께 시작합니다. 꽃을 수확하면 추가로 벌을 얻습니다. 적 챔피언에게 피해를 입히면 벌을 보냅니다. 벌은 대상에 다다르면 @DebuffDuration@초 동안 <magicDamage>@BeeDamage@의 마법 피해</magicDamage>를 입히고 다시 돌아옵니다."
+        },
+        {
             "apiName": "Quest_ThreeSacredTreasures",
             "calculations": {
                 "Calc_Magic_Damage": {
@@ -8426,11 +8542,11 @@
                 "BonusLives": [
                     1.0,
                     1.0,
+                    2.0,
                     3.0,
                     4.0,
-                    5.0,
-                    6.0,
-                    7.0
+                    4.0,
+                    4.0
                 ],
                 "CapstoneAllyBonusLives": [
                     1.0,
@@ -8442,13 +8558,13 @@
                     1.0
                 ],
                 "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
                 ],
                 "ReviveArmTime": [
                     2.0,
@@ -8887,18 +9003,18 @@
                     1.0,
                     2.0,
                     3.0,
+                    4.0,
+                    4.0,
+                    4.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
                     3.0,
                     3.0,
                     3.0
-                ],
-                "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
                 ]
             },
             "desc": "스킬 사용 시 {{ Item_Keyword_OnHit }} 효과를 적용합니다.",
@@ -9901,13 +10017,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "탐 켄치에게 바친 <healing>체력의 @HealthRestorePercent@%를 회복</healing>합니다.<br><br>즉시 <keywordMajor>%i:Augment% 실버 증강</keywordMajor>을 획득합니다.",
@@ -10273,13 +10389,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "탐 켄치에게 바친 <healing>체력의 @HealthRestorePercent@%를 회복</healing>합니다.<br><br><gold>+%i:goldCoins% @GoldToGrant@골드</gold>를 획득합니다.",
@@ -10756,13 +10872,13 @@
             },
             "dataValues": {
                 "GoldToGrant": [
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -11743,6 +11859,15 @@
                     3750.0,
                     3750.0
                 ],
+                "RemovalGoalGainPercentage": [
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
                 "SellValueTooltip": [
                     100.0,
                     100.0,
@@ -11753,13 +11878,13 @@
                     100.0
                 ]
             },
-            "desc": "보유한 모든 퀘스트 아이템이 아닌 아이템을 구매한 가격의 @SellValueTooltip@%로 즉시 판매합니다. 할인된 모루에 적격입니다.",
+            "desc": "Cherry_FireSale_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/firesale_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/firesale_small.png",
             "id": 229,
             "name": "폭탄 세일",
             "rarity": 0,
-            "tooltip": "보유한 모든 퀘스트 아이템이 아닌 아이템을 구매한 가격의 @SellValueTooltip@%로 즉시 판매합니다. 할인된 모루에 적격입니다."
+            "tooltip": "Cherry_FireSale_Tooltip"
         },
         {
             "apiName": "LightningStrikes",
@@ -12563,13 +12688,13 @@
                     1.0
                 ],
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "탐 켄치에게 바친 <healing>체력의 @HealthRestorePercent@%를 회복</healing>합니다.<br><br><keywordMajor>실버 능력치 모루 @AnvilsGranted@개</keywordMajor>를 획득합니다.",

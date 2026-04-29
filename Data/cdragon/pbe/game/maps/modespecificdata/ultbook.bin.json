@@ -14872,12 +14872,10 @@
             "{3b6b4b98}",
             "{c2a012a2}",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRCastRoot",
-            "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRCurve",
             "{714a372d}",
             "{ec1c4da4}",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRPreMis",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRSuperPassive",
-            "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRTerrainProto",
             "{e2af45e4}"
         ],
         "mLifetimeManuallyManaged": true,
@@ -78125,91 +78123,6 @@
         },
         "__type": "SpellObject"
     },
-    "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRTerrainProto": {
-        "ObjectName": "TaliyahRTerrainProto",
-        "mScriptName": "TaliyahRTerrainProto",
-        "mSpell": {
-            "flags": 4,
-            "mAffectsTypeFlags": 6154,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        0.0,
-                        10.0,
-                        20.0,
-                        30.0,
-                        0.0,
-                        0.0,
-                        10.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "mImgIconName": [
-                "ASSETS/Characters/Taliyah/HUD/Icons2D/Taliyah_R.dds"
-            ],
-            "cooldownTime": [
-                110.0,
-                100.0,
-                90.0,
-                80.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "mCantCancelWhileWindingUp": true,
-            "bIsToggleSpell": true,
-            "castRange": [
-                625.0,
-                625.0,
-                625.0,
-                625.0,
-                625.0,
-                625.0,
-                625.0
-            ],
-            "mana": [
-                100.0,
-                100.0,
-                100.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "mTargetingTypeData": {
-                "__type": "LocationClamped"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRCastRoot": {
         "ObjectName": "TaliyahRCastRoot",
         "mScriptName": "TaliyahRCastRoot",
@@ -78428,74 +78341,6 @@
         "mScriptName": "TaliyahRSuperPassive",
         "mBuff": {
             "mDescription": "game_buff_tooltip_",
-            "__type": "BuffData"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRCurve": {
-        "ObjectName": "TaliyahRCurve",
-        "mScriptName": "TaliyahRCurve",
-        "mSpell": {
-            "flags": 4,
-            "mAffectsTypeFlags": 6154,
-            "mCoefficient": 1.0,
-            "mAnimationName": "Spell3",
-            "mImgIconName": [
-                "ASSETS/Characters/Taliyah/HUD/Icons2D/Taliyah_R.dds"
-            ],
-            "mCastTime": 0.25,
-            "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "mCantCancelWhileWindingUp": true,
-            "castRange": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
-            ],
-            "castRadius": [
-                2600.0,
-                2600.0,
-                2600.0,
-                2600.0,
-                2600.0,
-                2600.0,
-                2600.0
-            ],
-            "luaOnMissileUpdateDistanceInterval": 100.0,
-            "castFrame": 7.5,
-            "mTargetingTypeData": {
-                "__type": "AreaClamped"
-            },
-            "mClientData": {
-                "mTargeterDefinitions": [
-                    {
-                        "__type": "TargeterDefinitionRange"
-                    },
-                    {
-                        "centerLocator": {
-                            "basePosition": 3,
-                            "__type": "DrawablePositionLocator"
-                        },
-                        "__type": "TargeterDefinitionAoe"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "mBuff": {
-            "mDescription": "game_spell_tooltip_TaliyahR",
             "__type": "BuffData"
         },
         "__type": "SpellObject"

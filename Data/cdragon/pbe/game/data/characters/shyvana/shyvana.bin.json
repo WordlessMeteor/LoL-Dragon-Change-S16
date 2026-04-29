@@ -3396,11 +3396,17 @@
             {
                 "MapId": 12,
                 "Position": "{ada7afdb}",
-                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
                 "mEarlyLevelOverrides": [
                     0,
                     1,
-                    2
+                    2,
+                    0
                 ],
                 "__type": "RecSpellRankUpInfo"
             },
@@ -3408,20 +3414,17 @@
                 "MapId": 11,
                 "Position": "jungle",
                 "IsDefaultRecommendation": true,
-                "mEarlyLevelOverrides": [
+                "mDefaultPriority": [
+                    3,
                     0,
                     2,
                     1
                 ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
-                "MapId": 11,
-                "Position": "Top",
                 "mEarlyLevelOverrides": [
                     0,
+                    2,
                     1,
-                    2
+                    0
                 ],
                 "__type": "RecSpellRankUpInfo"
             }
@@ -3431,14 +3434,11 @@
     "{f77ff49e}": {
         "OrderJunglePath": [
             {
-                "Camp": 1,
+                "Camp": 4,
                 "__type": "TakeCamp"
             },
             {
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 2,
+                "Camp": 5,
                 "__type": "TakeCamp"
             },
             {
@@ -3446,11 +3446,14 @@
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 4,
+                "Camp": 2,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 5,
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
                 "__type": "TakeCamp"
             },
             {

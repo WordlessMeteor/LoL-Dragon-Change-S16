@@ -1,62 +1,4 @@
 {
-    "{05666202}": {
-        "ObjectName": "TFT17_MorganaMis",
-        "mScriptName": "TFT17_MorganaMis",
-        "mSpell": {
-            "flags": 4,
-            "mAffectsTypeFlags": 22538,
-            "mAnimationName": "",
-            "{11704a2b}": 25.0,
-            "{f26881a0}": 25.0,
-            "bHaveHitEffect": true,
-            "castRange": [
-                2500.0,
-                2500.0,
-                2500.0,
-                2500.0,
-                2500.0,
-                2500.0,
-                2500.0
-            ],
-            "mMissileSpec": {
-                "movementComponent": {
-                    "mTargetHeightAugment": 150.0,
-                    "mOffsetInitialTargetHeight": 150.0,
-                    "mStartBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
-                    "mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
-                    "mSpeed": 2200.0,
-                    "__type": "FixedSpeedMovement"
-                },
-                "heightSolver": {
-                    "__type": "BlendedLinearHeightSolver"
-                },
-                "verticalFacing": {
-                    "__type": "VeritcalFacingMatchVelocity"
-                },
-                "behaviors": [
-                    {
-                        "__type": "CastOnMovementComplete"
-                    },
-                    {
-                        "__type": "DestroyOnMovementComplete"
-                    }
-                ],
-                "__type": "MissileSpecification"
-            },
-            "mCastType": 1,
-            "mHitEffectKey": "TFT17_Morgana_R_Tar",
-            "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "TFT17_MorganaMis",
-                    "mFormat": "{fffee0e7}",
-                    "__type": "TooltipInstanceSpell"
-                },
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Characters/TFT17_Morgana/Spells/TFT17_MorganaSpell": {
         "ObjectName": "TFT17_MorganaSpell",
         "mScriptName": "TFT17_MorganaSpell",
@@ -67,28 +9,41 @@
             ],
             "DataValues": [
                 {
-                    "name": "Shield",
+                    "name": "APHealthGain",
                     "values": [
-                        300.0,
-                        250.0,
-                        300.0,
-                        4000.0,
-                        4000.0,
-                        4000.0,
-                        300.0
+                        0.0,
+                        600.0,
+                        700.0,
+                        2500.0,
+                        2500.0,
+                        2500.0,
+                        2500.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "TetherDamagePerSecond",
+                    "name": "PercentHPHealthGain",
                     "values": [
                         0.0,
-                        50.0,
-                        75.0,
-                        1500.0,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.5,
                         3000.0,
                         0.0,
                         0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthGainDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -106,52 +61,81 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "FinalDamage",
+                    "name": "NumAllies",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APDamage",
                     "values": [
                         0.0,
-                        240.0,
-                        360.0,
-                        4000.0,
-                        4000.0,
+                        100.0,
+                        150.0,
+                        3000.0,
+                        0.0,
                         0.0,
                         0.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "OmnivampPercent",
+                    "name": "APHealing",
                     "values": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Duration",
-                    "values": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
+                        0.0,
+                        100.0,
+                        150.0,
+                        3000.0,
+                        0.0,
+                        0.0,
+                        0.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "ModifiedDamagePerSecond": {
+                "ModifiedHealthGain": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
+                            "mSubparts": [
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "{760046fb}",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 1.0,
+                                    "mStat": 12,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "{fe34d385}",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
                             "mSubpart": {
-                                "mDataValue": "TetherDamagePerSecond",
+                                "mDataValue": "APDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -160,26 +144,13 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "ModifiedFinalDamage": {
+                "ModifiedHeal": {
                     "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "FinalDamage",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mRatio": 0.009999999776482582,
-                            "__type": "SubPartScaledProportionalToStat"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "ModifiedShield": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mFormulaParts": [
-                        {
-                            "mSubpart": {
-                                "mDataValue": "Shield",
+                                "mDataValue": "APHealing",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -189,8 +160,7 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mAnimationName": "",
-            "mCastTime": 0.30000001192092896,
+            "mAnimationName": "Transform",
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -221,7 +191,7 @@
                 625.0
             ],
             "castConeDistance": 100.0,
-            "castFrame": 20.0,
+            "castFrame": 40.0,
             "missileSpeed": 20.0,
             "mFloatVarsDecimals": [
                 0,
@@ -258,18 +228,18 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Shield",
-                                    "nameOverride": "Spell_TFT17_MorganaSpell_",
+                                    "type": "APHealthGain",
+                                    "nameOverride": "Spell_TFT17_MorganaSpell_HealthGain",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "TetherDamagePerSecond",
-                                    "nameOverride": "TFT_AP_MagicDamage_PerSecond",
+                                    "type": "APDamage",
+                                    "nameOverride": "TFT_AP_MagicDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "FinalDamage",
-                                    "nameOverride": "Spell_TFT17_MorganaSpell_FinalDamage",
+                                    "type": "APHealing",
+                                    "nameOverride": "TFT_AP_Heal",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -511,7 +481,7 @@
     "Characters/TFT17_Morgana/CharacterRecords/Root": {
         "mCharacterName": "TFT17_Morgana",
         "baseHPModifiable": {
-            "baseValue": 1000.0,
+            "baseValue": 1300.0,
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {
@@ -522,10 +492,6 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "{726ee5cd}": {
-                "baseValue": 60.0,
-                "__type": "ModifiableFloat"
-            },
             "{c4ab3550}": {
                 "baseValue": 0.0,
                 "__type": "ModifiableFloat"
@@ -534,15 +500,15 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 50.0,
+            "baseValue": 60.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 50.0,
+            "baseValue": 70.0,
             "__type": "ModifiableFloat"
         },
         "baseMR": {
-            "baseValue": 50.0,
+            "baseValue": 70.0,
             "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
@@ -556,7 +522,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.8999999761581421,
+            "baseValue": 0.6499999761581421,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -599,19 +565,19 @@
         "selectionRadius": 150.0,
         "unitTagsString": "Champion",
         "flags": 9446656,
-        "tier": 5,
+        "tier": 4,
         "mLinkedTraits": [
             {
                 "TraitData": "Maps/Shipping/Map22/Sets/TFTSet17/Traits/TFT17_MorganaUniqueTrait",
                 "__type": "TFTTraitContributionData"
             }
         ],
-        "CharacterRole": "{44de5928}",
+        "CharacterRole": "{2ccf900f}",
         "mMoveInterval": -0.25,
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 20.0,
+        "mInitialMana": 40.0,
         "mShopData": "{e692c185}",
         "MobileHealthBarHeightOverride": 200.0,
         "mManaPerAttack": 5.0,

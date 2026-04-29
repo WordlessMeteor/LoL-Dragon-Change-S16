@@ -4758,11 +4758,11 @@
                 "GoldAmount": [
                     750.0,
                     750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -5528,13 +5528,13 @@
                     10.0
                 ],
                 "AnvilsGranted": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -6291,13 +6291,13 @@
                     2.0
                 ],
                 "PrismaticCostReduction": [
-                    -1500.0,
-                    -1500.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0
+                    1500.0,
+                    1500.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0
                 ],
                 "PrismaticGoldBasisDiscount": [
                     1250.0,
@@ -6731,7 +6731,7 @@
             "id": 149,
             "name": "لا تُعْبَر",
             "rarity": 1,
-            "tooltip": "تكسب رونز أحجار الأساس <spellName>الصدمة الارتدادية</spellName> و<spellName>التحسين الجليدي</spellName>.<br><li><spellName>الصدمة الارتدادية</spellName>: يمنحك تأثير <status>شل حركة</status> بطلٍ معادٍ <scaleArmor>دروعًا</scaleArmor> و<scaleMR>مقاومة سحر</scaleMR> لمدة @DelayBeforeBurst@ُ، ثم تنفجر بعدها ملحقةً ضررًا بالأعداء في الجوار بناءً على <scaleHealth>صحتك القصوى</scaleHealth>.<br><li><spellName>التحسين الجليدي</spellName> - يؤدي <status>شل حركة</status> الأبطال إلى إنشاء جليدٍ تحتهم يسبب <status>إبطاء</status> الأعداء في داخله ويخفض ضررهم."
+            "tooltip": "تكسب رونز أحجار الأساس <spellName>الصدمة الارتدادية</spellName> و<spellName>التحسين الجليدي</spellName>.<br><li><spellName>الصدمة الارتدادية</spellName>: يمنحك تأثير <status>شل حركة</status> بطلٍ معادٍ <scaleArmor>دروعًا</scaleArmor> و<scaleMR>مقاومة سحر</scaleMR> لمدة @DelayBeforeBurst@، ثم تنفجر بعدها ملحقةً ضررًا بالأعداء في الجوار بناءً على <scaleHealth>صحتك القصوى</scaleHealth>.<br><li><spellName>التحسين الجليدي</spellName> - يؤدي <status>شل حركة</status> الأبطال إلى إنشاء جليدٍ تحتهم يسبب <status>إبطاء</status> الأعداء في داخله ويخفض ضررهم."
         },
         {
             "apiName": "PandorasBox",
@@ -7752,6 +7752,122 @@
             "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>تمنح القدرات تعزيزًا لهجومٍ واحدٍ لكل إلقاء.</rules>"
         },
         {
+            "apiName": "HiveMind",
+            "calculations": {
+                "BeeDamage": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ],
+                    "{72c5c2a8}": 1
+                }
+            },
+            "dataValues": {
+                "ASReduction": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
+                "BaseDamageMax": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "BaseDamageMin": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "BeeRange": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "DebuffDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "MaxBeeStacks": [
+                    8.0,
+                    8.0,
+                    12.0,
+                    16.0,
+                    99.0,
+                    99.0,
+                    99.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "SpellCooldown": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "StartingBees": [
+                    0.0,
+                    1.0,
+                    2.0,
+                    3.0,
+                    4.0,
+                    5.0,
+                    6.0
+                ]
+            },
+            "desc": "تبدأ كل جولة ومعك @StartingBees@ من النحل، وتكسب نحلًا إضافيًا من خلال حصاد الزهور. يتسبب إلحاق ضرر ببطل عدو في إرسال نحلة تُلحق <magicDamage>@BeeDamage@ ضرر سحر</magicDamage> خلال @DebuffDuration@ث عند وصولها، قبل عودتها إليك.<br>",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "العقل الجمعي",
+            "rarity": 2,
+            "tooltip": "تبدأ كل جولة ومعك @StartingBees@ من النحل، وتكسب نحلًا إضافيًا من خلال حصاد الزهور. يتسبب إلحاق ضرر ببطل عدو في إرسال نحلة تُلحق <magicDamage>@BeeDamage@ ضرر سحر</magicDamage> على مدار @DebuffDuration@ث عند وصولها، قبل عودتها إليك."
+        },
+        {
             "apiName": "Quest_ThreeSacredTreasures",
             "calculations": {
                 "Calc_Magic_Damage": {
@@ -8426,11 +8542,11 @@
                 "BonusLives": [
                     1.0,
                     1.0,
+                    2.0,
                     3.0,
                     4.0,
-                    5.0,
-                    6.0,
-                    7.0
+                    4.0,
+                    4.0
                 ],
                 "CapstoneAllyBonusLives": [
                     1.0,
@@ -8442,13 +8558,13 @@
                     1.0
                 ],
                 "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
                 ],
                 "ReviveArmTime": [
                     2.0,
@@ -8887,18 +9003,18 @@
                     1.0,
                     2.0,
                     3.0,
+                    4.0,
+                    4.0,
+                    4.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
                     3.0,
                     3.0,
                     3.0
-                ],
-                "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
                 ]
             },
             "desc": "تُطبق قدراتك تأثيرات {{ Item_Keyword_OnHit }}.",
@@ -9901,13 +10017,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>تستعيد @HealthRestorePercent@% من الصحة</healing> التي ضحيت بها من أجل تام كينش.<br><br>تكسب بشكل فوري <keywordMajor>%i:Augment% تحسينًا فضيًا</keywordMajor>.",
@@ -10273,13 +10389,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>تستعيد @HealthRestorePercent@% من الصحة</healing> التي ضحيت بها من أجل تام كينش.<br><br>تكسب <gold>+%i:goldCoins% @GoldToGrant@ ذهب</gold>.",
@@ -10756,13 +10872,13 @@
             },
             "dataValues": {
                 "GoldToGrant": [
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -11743,6 +11859,15 @@
                     3750.0,
                     3750.0
                 ],
+                "RemovalGoalGainPercentage": [
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
                 "SellValueTooltip": [
                     100.0,
                     100.0,
@@ -11753,13 +11878,13 @@
                     100.0
                 ]
             },
-            "desc": "تبيع جميع العناصر غير المرتبطة بالمهام على الفور مقابل @SellValueTooltip@% من سعر شرائها المباشر. عرض مثالي للسنادين ذات السعر المخفض.",
+            "desc": "Cherry_FireSale_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/firesale_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/firesale_small.png",
             "id": 229,
             "name": "البيع السريع",
             "rarity": 0,
-            "tooltip": "تبيع جميع العناصر غير المرتبطة بالمهام على الفور مقابل @SellValueTooltip@% من سعر شرائها المباشر. عرض مثالي للسنادين ذات السعر المخفض."
+            "tooltip": "Cherry_FireSale_Tooltip"
         },
         {
             "apiName": "LightningStrikes",
@@ -12563,13 +12688,13 @@
                     1.0
                 ],
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>تستعيد @HealthRestorePercent@% من الصحة</healing> التي ضحيت بها من أجل تام كينش.<br><br>تكسب <keywordMajor>@AnvilsGranted@ من سنادين الإحصاءات الفضية</keywordMajor>.",

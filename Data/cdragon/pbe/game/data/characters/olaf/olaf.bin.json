@@ -628,15 +628,79 @@
                         125.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseHealthCost",
+                    "values": [
+                        10.0,
+                        28.0,
+                        46.0,
+                        64.0,
+                        82.0,
+                        100.0,
+                        118.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthCostADRatio",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        70.0,
+                        115.0,
+                        160.0,
+                        205.0,
+                        250.0,
+                        295.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthCostPercent",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "TotalDamage": {
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
@@ -645,6 +709,28 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{fcf1daee}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{6318e36f}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mDataValue": "{fa4c3946}",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{30412ba3}": {
+                    "mMultiplier": {
+                        "mDataValue": "{60aa666f}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalDamage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mCoefficient": 0.5,

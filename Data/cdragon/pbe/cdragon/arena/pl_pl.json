@@ -1511,7 +1511,7 @@
             "id": 318,
             "name": "Zadanie: Szalony Kapelusznik",
             "rarity": 1,
-            "tooltip": "Wymaganie: Miej na zakończenie walki następującą liczbę kapeluszy: @QuestThreshold@.<br><br>Nagroda: Zyskujesz <scaleAF>@AFPerHat@ pkt. siły adaptacyjnej</scaleAF>, @ArmorMRPerHat@ pkt. <scaleArmor>pancerza</scaleArmor> i <scaleMR>odporności na magię</scaleMR>, <scaleTenacity>@TenacityPerHat*100@% nieustępliwości</scaleTenacity> i <speed>@MSPerHat@ jedn. prędkości ruchu</speed> za każdy kapelusz.<br><br>Obecnie zapewnia:<scaleAF>@f1@ pkt. siły adaptacyjnej</scaleAF>, @f2@ pkt. <scaleArmor>pancerza</scaleArmor> i <scaleMR>odporności na magię</scaleMR>, <scaleTenacity>@f3*100@% nieustępliwości</scaleTenacity> i <speed>@f4@ jedn. prędkości ruchu</speed>.<br><br><rules>Tracisz połowę kapeluszy, gdy przegrywasz rundę.</rules>"
+            "tooltip": "Wymaganie: Miej na zakończenie walki następującą liczbę kapeluszy: @QuestThreshold@.<br><br>Nagroda: Zyskujesz <scaleAF>@AFPerHat@ pkt. siły adaptacyjnej</scaleAF>, @ArmorMRPerHat@ pkt. <scaleArmor>pancerza</scaleArmor> i <scaleMR>odporności na magię</scaleMR>, <scaleTenacity>@TenacityPerHat*100@% nieustępliwości</scaleTenacity> i <speed>@MSPerHat@ jedn. prędkości ruchu</speed> za każdy kapelusz.<br><br>Obecnie zapewnia: <scaleAF>@f1@ pkt. siły adaptacyjnej</scaleAF>, @f2@ pkt. <scaleArmor>pancerza</scaleArmor> i <scaleMR>odporności na magię</scaleMR>, <scaleTenacity>@f3*100@% nieustępliwości</scaleTenacity> i <speed>@f4@ jedn. prędkości ruchu</speed>.<br><br><rules>Tracisz połowę kapeluszy, gdy przegrywasz rundę.</rules>"
         },
         {
             "apiName": "BladeWaltz",
@@ -4758,11 +4758,11 @@
                 "GoldAmount": [
                     750.0,
                     750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -5528,13 +5528,13 @@
                     10.0
                 ],
                 "AnvilsGranted": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -6291,13 +6291,13 @@
                     2.0
                 ],
                 "PrismaticCostReduction": [
-                    -1500.0,
-                    -1500.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0
+                    1500.0,
+                    1500.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0
                 ],
                 "PrismaticGoldBasisDiscount": [
                     1250.0,
@@ -7752,6 +7752,122 @@
             "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Umiejętności wzmacniają jeden atak na użycie.</rules>"
         },
         {
+            "apiName": "HiveMind",
+            "calculations": {
+                "BeeDamage": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ],
+                    "{72c5c2a8}": 1
+                }
+            },
+            "dataValues": {
+                "ASReduction": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
+                "BaseDamageMax": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "BaseDamageMin": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "BeeRange": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "DebuffDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "MaxBeeStacks": [
+                    8.0,
+                    8.0,
+                    12.0,
+                    16.0,
+                    99.0,
+                    99.0,
+                    99.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "SpellCooldown": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "StartingBees": [
+                    0.0,
+                    1.0,
+                    2.0,
+                    3.0,
+                    4.0,
+                    5.0,
+                    6.0
+                ]
+            },
+            "desc": "Rozpocznij każdą rundę z @StartingBees@ Pszczołą. Zyskujesz dodatkowe Pszczoły za zbieranie kwiatów. Zadawanie obrażeń wrogiemu bohaterowi wypuszcza Pszczołę, która zadaje <magicDamage>@BeeDamage@ pkt. obrażeń magicznych</magicDamage> w ciągu @DebuffDuration@ sek. po przybyciu, a potem wraca do ciebie.<br>",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Umysł Roju",
+            "rarity": 2,
+            "tooltip": "Rozpocznij każdą rundę z @StartingBees@ Pszczołą. Zyskujesz dodatkowe Pszczoły za zbieranie kwiatów. Zadawanie obrażeń wrogiemu bohaterowi wypuszcza Pszczołę, która zadaje <magicDamage>@BeeDamage@ pkt. obrażeń magicznych</magicDamage> w ciągu @DebuffDuration@ sek. po przybyciu, a potem wraca do ciebie."
+        },
+        {
             "apiName": "Quest_ThreeSacredTreasures",
             "calculations": {
                 "Calc_Magic_Damage": {
@@ -8426,11 +8542,11 @@
                 "BonusLives": [
                     1.0,
                     1.0,
+                    2.0,
                     3.0,
                     4.0,
-                    5.0,
-                    6.0,
-                    7.0
+                    4.0,
+                    4.0
                 ],
                 "CapstoneAllyBonusLives": [
                     1.0,
@@ -8442,13 +8558,13 @@
                     1.0
                 ],
                 "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
                 ],
                 "ReviveArmTime": [
                     2.0,
@@ -8505,13 +8621,13 @@
                     0.800000011920929
                 ]
             },
-            "desc": "Zyskaj @BonusLives@ dodatkowe <attention>wskrzeszenia</attention> i zacznij się wskrzeszać po śmierci.<br><br>Gdy się <attention>odradzasz</attention>, <status>odrzucasz</status> wrogów wokół siebie i powracasz w mniejszej postaci ze zmniejszonym <scaleHealth>maks. zdrowiem</scaleHealth>.",
+            "desc": "Zyskaj @BonusLives@ dodatkowe <attention>wskrzeszenie</attention> i zacznij się wskrzeszać po śmierci.<br><br>Gdy się <attention>odradzasz</attention>, <status>odrzucasz</status> wrogów wokół siebie i powracasz w mniejszej postaci ze zmniejszonym <scaleHealth>maks. zdrowiem</scaleHealth>.",
             "iconLarge": "assets/ux/cherry/augments/icons/nesting_doll.png",
             "iconSmall": "assets/ux/cherry/augments/icons/nesting_doll_small.png",
             "id": 177,
             "name": "Matrioszka",
             "rarity": 1,
-            "tooltip": "Automatycznie zaczynasz się <attention>wskrzeszać</attention> po @ReviveArmTime@ sek. Oprócz tego można cię <attention>wskrzesić</attention> dodatkowo @BonusLives@ razy. Przy każdym <attention>wskrzeszeniu</attention> odradzasz się w mniejszej postaci i z <scaleHealth>@ReviveMod*100@% maksymalnego zdrowia</scaleHealth>.<br><br>Gdy się <attention>odrodzisz</attention>, <status>odrzucasz</status> otaczających cię wrogów."
+            "tooltip": "Automatycznie zaczynasz się <attention>wskrzeszać</attention> po @ReviveArmTime@ sek. Oprócz tego można cię <attention>wskrzesić</attention> dodatkowo @BonusLives@ raz. Przy każdym <attention>wskrzeszeniu</attention> odradzasz się w mniejszej postaci i z <scaleHealth>@ReviveMod*100@% maksymalnego zdrowia</scaleHealth>.<br><br>Gdy się <attention>odrodzisz</attention>, <status>odrzucasz</status> otaczających cię wrogów."
         },
         {
             "apiName": "TapDancer",
@@ -8887,18 +9003,18 @@
                     1.0,
                     2.0,
                     3.0,
+                    4.0,
+                    4.0,
+                    4.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
                     3.0,
                     3.0,
                     3.0
-                ],
-                "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
                 ]
             },
             "desc": "Twoje umiejętności nakładają efekty {{ Item_Keyword_OnHit }}.",
@@ -9901,13 +10017,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>Przywraca @HealthRestorePercent@% zdrowia</healing> poświęconego Tahmowi Kenchowi.<br><br>Natychmiast zdobywasz <keywordMajor>%i:Augment% srebrne ulepszenie</keywordMajor>.",
@@ -10256,7 +10372,7 @@
             "id": 344,
             "name": "Energiczność",
             "rarity": 0,
-            "tooltip": "Zyskuj <keyword>Naładowanie</keyword> @EnergizeAmpMovementCharge*100@% szybciej. Aktywowanie <keyword>Naładowania</keyword> wystrzeliwuje <keywordMajor>Magiczny Pocisk</keywordMajor>, który zadaje <trueDamage>obrażenia nieuchronne równe do %@MaxHealthDamagePerMissile*100@ maksymalnego zdrowia</trueDamage> w zależności od przebytego dystansu.<br><br>Obrażenia zadane Magicznym Pociskiem w tej rundzie: @f1@ pkt.<br>Całkowite obrażenia zadane Magicznym Pociskiem: @f2@ pkt."
+            "tooltip": "Zyskuj <keyword>Naładowanie</keyword> @EnergizeAmpMovementCharge*100@% szybciej. Aktywowanie <keyword>Naładowania</keyword> wystrzeliwuje <keywordMajor>Magiczny Pocisk</keywordMajor>, który zadaje <trueDamage>obrażenia nieuchronne równe do @MaxHealthDamagePerMissile*100@% maksymalnego zdrowia</trueDamage> w zależności od przebytego dystansu.<br><br>Obrażenia zadane Magicznym Pociskiem w tej rundzie: @f1@ pkt.<br>Całkowite obrażenia zadane Magicznym Pociskiem: @f2@ pkt."
         },
         {
             "apiName": "GoHAbstainFromWealth",
@@ -10273,13 +10389,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>Przywraca @HealthRestorePercent@% zdrowia</healing> poświęconego Tahmowi Kenchowi.<br><br>Zyskujesz <gold>+%i:goldCoins% @GoldToGrant@ szt. złota</gold>.",
@@ -10756,13 +10872,13 @@
             },
             "dataValues": {
                 "GoldToGrant": [
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -11472,7 +11588,7 @@
                     0.3499999940395355
                 ]
             },
-            "desc": "Zyskujesz runy kluczowe <spellName>Przywołanie Aery</spellName> i <spellName>Ezoteryczna Kometa</spellName>.",
+            "desc": "Zyskujesz runy kluczowe: <spellName>Przywołanie Aery</spellName> i <spellName>Ezoteryczna Kometa</spellName>.",
             "iconLarge": "assets/ux/cherry/augments/icons/keystoneconjurer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/keystoneconjurer_small.png",
             "id": 50,
@@ -11743,6 +11859,15 @@
                     3750.0,
                     3750.0
                 ],
+                "RemovalGoalGainPercentage": [
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
                 "SellValueTooltip": [
                     100.0,
                     100.0,
@@ -11753,13 +11878,13 @@
                     100.0
                 ]
             },
-            "desc": "Natychmiastowo sprzedajesz wszystkie swoje przedmioty niebędące przedmiotami zadania za @SellValueTooltip@% ich bezpośredniej wartości przy zakupie. Świetnie się sprawdza przy wszystkich tych przecenionych kowadłach.",
+            "desc": "Cherry_FireSale_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/firesale_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/firesale_small.png",
             "id": 229,
             "name": "Gorąca Wyprzedaż",
             "rarity": 0,
-            "tooltip": "Natychmiastowo sprzedajesz wszystkie swoje przedmioty niebędące przedmiotami zadania za @SellValueTooltip@% ich bezpośredniej wartości przy zakupie. Świetnie się sprawdza przy wszystkich tych przecenionych kowadłach."
+            "tooltip": "Cherry_FireSale_Tooltip"
         },
         {
             "apiName": "LightningStrikes",
@@ -12563,13 +12688,13 @@
                     1.0
                 ],
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>Przywraca @HealthRestorePercent@% zdrowia</healing> poświęconego Tahmowi Kenchowi.<br><br>Zdobywasz <keywordMajor>@AnvilsGranted@ Srebrne Kowadło Statystyk</keywordMajor>.",

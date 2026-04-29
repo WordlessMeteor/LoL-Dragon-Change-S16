@@ -4758,11 +4758,11 @@
                 "GoldAmount": [
                     750.0,
                     750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -5528,13 +5528,13 @@
                     10.0
                 ],
                 "AnvilsGranted": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -6291,13 +6291,13 @@
                     2.0
                 ],
                 "PrismaticCostReduction": [
-                    -1500.0,
-                    -1500.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0
+                    1500.0,
+                    1500.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0
                 ],
                 "PrismaticGoldBasisDiscount": [
                     1250.0,
@@ -7752,6 +7752,122 @@
             "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Abilities empower one Attack per cast.</rules>"
         },
         {
+            "apiName": "HiveMind",
+            "calculations": {
+                "BeeDamage": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ],
+                    "{72c5c2a8}": 1
+                }
+            },
+            "dataValues": {
+                "ASReduction": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
+                "BaseDamageMax": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "BaseDamageMin": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "BeeRange": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "DebuffDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "MaxBeeStacks": [
+                    8.0,
+                    8.0,
+                    12.0,
+                    16.0,
+                    99.0,
+                    99.0,
+                    99.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "SpellCooldown": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "StartingBees": [
+                    0.0,
+                    1.0,
+                    2.0,
+                    3.0,
+                    4.0,
+                    5.0,
+                    6.0
+                ]
+            },
+            "desc": "Start each round with @StartingBees@ Bee, gain additonal Bees by harvesting flowers. Damaging an enemy champion sends a Bee dealing <magicDamage>@BeeDamage@ magic damage</magicDamage> over @DebuffDuration@ seconds on arrival, before returning to you.<br>",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Hive Mind",
+            "rarity": 2,
+            "tooltip": "Start each round with @StartingBees@ Bee, gain additonal Bees by harvesting flowers. Damaging an enemy champion sends a Bee dealing <magicDamage>@BeeDamage@ magic damage</magicDamage> over @DebuffDuration@ seconds on arrival, before returning to you."
+        },
+        {
             "apiName": "Quest_ThreeSacredTreasures",
             "calculations": {
                 "Calc_Magic_Damage": {
@@ -8426,11 +8542,11 @@
                 "BonusLives": [
                     1.0,
                     1.0,
+                    2.0,
                     3.0,
                     4.0,
-                    5.0,
-                    6.0,
-                    7.0
+                    4.0,
+                    4.0
                 ],
                 "CapstoneAllyBonusLives": [
                     1.0,
@@ -8442,13 +8558,13 @@
                     1.0
                 ],
                 "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
                 ],
                 "ReviveArmTime": [
                     2.0,
@@ -8887,18 +9003,18 @@
                     1.0,
                     2.0,
                     3.0,
+                    4.0,
+                    4.0,
+                    4.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
                     3.0,
                     3.0,
                     3.0
-                ],
-                "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
                 ]
             },
             "desc": "Your Abilities apply {{ Item_Keyword_OnHit }} effects.",
@@ -9901,13 +10017,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>Restore @HealthRestorePercent@% of of the health</healing> you've sacrificed to Tahm Kench.<br><br>Instantly gain a <keywordMajor>%i:Augment% Silver Augment</keywordMajor>.",
@@ -10273,13 +10389,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>Restore @HealthRestorePercent@% of of the health</healing> you've sacrificed to Tahm Kench.<br><br>Gain <gold>+%i:goldCoins% @GoldToGrant@ gold</gold>.",
@@ -10756,13 +10872,13 @@
             },
             "dataValues": {
                 "GoldToGrant": [
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -11743,6 +11859,15 @@
                     3750.0,
                     3750.0
                 ],
+                "RemovalGoalGainPercentage": [
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
                 "SellValueTooltip": [
                     100.0,
                     100.0,
@@ -11753,13 +11878,13 @@
                     100.0
                 ]
             },
-            "desc": "Instantly sell all your non-quest items for @SellValueTooltip@% of their direct buy price. Great for all those discounted anvils.",
+            "desc": "Instantly sell all your non-quest items for @SellValueTooltip@% of their direct buy price. <br><br>Great for all those discounted anvils.",
             "iconLarge": "assets/ux/cherry/augments/icons/firesale_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/firesale_small.png",
             "id": 229,
             "name": "Fire Sale",
             "rarity": 0,
-            "tooltip": "Instantly sell all your non-quest items for @SellValueTooltip@% of their direct buy price. Great for all those discounted anvils."
+            "tooltip": "Instantly sell all your non-quest items for @SellValueTooltip@% of their direct buy price. Great for all those discounted anvils.<br><br>When removed or replaced gain <gold>+%i:goldCoins% @f1@ gold</gold> equal to @RemovalGoalGainPercentage*100@% of the gold gained from <keywordMajor>FireSale</keywordMajor>."
         },
         {
             "apiName": "LightningStrikes",
@@ -12563,13 +12688,13 @@
                     1.0
                 ],
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "<healing>Restore @HealthRestorePercent@% of of the health</healing> you've sacrificed to Tahm Kench.<br><br>Gain <keywordMajor>@AnvilsGranted@ Silver Stat Anvil</keywordMajor>.",

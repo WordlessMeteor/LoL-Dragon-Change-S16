@@ -112,13 +112,67 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "ShieldAmount",
+                    "values": [
+                        20.0,
+                        55.0,
+                        90.0,
+                        125.0,
+                        160.0,
+                        195.0,
+                        230.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DefenseBonus",
+                    "values": [
+                        0.0,
+                        6.0,
+                        12.0,
+                        18.0,
+                        24.0,
+                        30.0,
+                        36.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        60.0,
+                        90.0,
+                        120.0,
+                        150.0,
+                        180.0,
+                        210.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamageTooltip": {
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 3,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.30000001192092896,
@@ -131,8 +185,8 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "ShieldAmount",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.44999998807907104,
@@ -250,25 +304,25 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseDamage",
                                     "typeIndex": 3,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "DefenseBonus",
                                     "typeIndex": 2,
                                     "nameOverride": "Spell_ListType_ArmorBonus",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "DefenseBonus",
                                     "typeIndex": 2,
                                     "nameOverride": "Spell_ListType_MagicResistBonus",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "ShieldAmount",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"
@@ -1194,12 +1248,53 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        60.0,
+                        90.0,
+                        120.0,
+                        150.0,
+                        180.0,
+                        210.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ReducedDamagePercent",
+                    "values": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinimumDamagePercent",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamageTooltip": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.550000011920929,
@@ -1215,8 +1310,8 @@
                             "__type": "NumberCalculationPart"
                         },
                         "mPart2": {
-                            "mEffectIndex": 3,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "{2af22d8f}",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         "__type": "ProductOfSubPartsCalculationPart"
                     },
@@ -1325,7 +1420,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"

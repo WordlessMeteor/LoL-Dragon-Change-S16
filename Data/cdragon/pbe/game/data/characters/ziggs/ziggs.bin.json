@@ -671,6 +671,45 @@
                         225.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BombTriggerRange",
+                    "values": [
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ExplosionRadius",
+                    "values": [
+                        240.0,
+                        240.0,
+                        240.0,
+                        240.0,
+                        240.0,
+                        240.0,
+                        240.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BoundingBoxTrigger",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2477,6 +2516,58 @@
                         10.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SubsequentMineDamageMod",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TriggerRange",
+                    "values": [
+                        135.0,
+                        135.0,
+                        135.0,
+                        135.0,
+                        135.0,
+                        135.0,
+                        135.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinePerceptionBubbleSize",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2604,8 +2695,8 @@
                 },
                 "ReducedDamage": {
                     "mMultiplier": {
-                        "mEffectIndex": 5,
-                        "__type": "EffectValueCalculationPart"
+                        "mDataValue": "{86159046}",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 6,
                     "tooltipOnly": true,
@@ -3944,8 +4035,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -4006,8 +4096,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "KnockbackDistance",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

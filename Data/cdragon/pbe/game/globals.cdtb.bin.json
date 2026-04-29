@@ -8252,6 +8252,16 @@
         "name": "SLIMEDraftRacingGoalScored",
         "__type": "DesignerEvent"
     },
+    "{0506bc69}": {
+        "name": "TFTInterestGained",
+        "EventParameters": {
+            "InterestAmount": {
+                "Var": "{534b6cc4}",
+                "__type": "ScriptTableGet"
+            }
+        },
+        "__type": "DesignerEvent"
+    },
     "{05470b0e}": {
         "name": "TFTArmoryRefresh",
         "EventParameters": {
@@ -18967,6 +18977,16 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{29ae8a80}": {
+        "mExpandedMutator": "TFT_Set7_Stage2_Revival_CT",
+        "mMutators": [
+            "AudioFeature(TFTSet15)",
+            "TFTSetOverride(TFTSet7_Stage2_CT)",
+            "TFT_RolesRevamped(1)",
+            "TFT_EventSkill(1)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{2a5c5b96}": {
         "mExpandedMutator": "TFT_Cosmetics_Asset_Viewer",
         "mMutators": [
@@ -23365,9 +23385,9 @@
             "{7aacbbbc}": true,
             "{90ede9a7}": true,
             "{4ed93bd7}": true,
-            "{01947bf4}": true,
             "{2da5d839}": true,
             "{067b280d}": true,
+            "{80e296cb}": true,
             "__type": "LoLFeatureToggles"
         },
         "mGameplayToggles": {

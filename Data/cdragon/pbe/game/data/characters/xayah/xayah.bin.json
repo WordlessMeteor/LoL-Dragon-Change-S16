@@ -919,6 +919,58 @@
                         0.07000000029802322
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Missile1DelayTime",
+                    "values": [
+                        0.33399999141693115,
+                        0.33399999141693115,
+                        0.33399999141693115,
+                        0.33399999141693115,
+                        0.33399999141693115,
+                        0.33399999141693115,
+                        0.33399999141693115
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Missile2DelayTime",
+                    "values": [
+                        0.5839999914169312,
+                        0.5839999914169312,
+                        0.5839999914169312,
+                        0.5839999914169312,
+                        0.5839999914169312,
+                        0.5839999914169312,
+                        0.5839999914169312
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Missile1DelaySpeed",
+                    "values": [
+                        3500.0,
+                        3500.0,
+                        3500.0,
+                        3500.0,
+                        3500.0,
+                        3500.0,
+                        3500.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Missile2DelaySpeed",
+                    "values": [
+                        3500.0,
+                        3500.0,
+                        3500.0,
+                        3500.0,
+                        3500.0,
+                        3500.0,
+                        3500.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "{f9c2333e}": {
@@ -1778,6 +1830,71 @@
                         25.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WAttackSpeedAmount",
+                    "values": [
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WAttackSpeedDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WMoveSpeedAmount",
+                    "values": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WMoveSpeedDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WRakanSeekDistance",
+                    "values": [
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1878,8 +1995,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "WAttackSpeedAmount",
                                     "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -1937,8 +2053,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "{821f5ea2}",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2530,6 +2646,10 @@
                         1.25
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RMovementSlow",
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2964,6 +3084,125 @@
                 },
                 {
                     "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "PFeatherDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PFeatherSpacingMin",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PFeatherSpacingMax",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PDamageFalloffMax",
+                    "values": [
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PEmpoweredDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PStacksPerCast",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PStackMax",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PDamageFalloffMin",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PDamageFalloffMid",
+                    "values": [
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mImgIconName": [

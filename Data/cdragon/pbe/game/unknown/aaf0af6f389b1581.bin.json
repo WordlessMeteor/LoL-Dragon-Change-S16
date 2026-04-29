@@ -1,0 +1,244 @@
+{
+    "{c1a71dfb}": {
+        "duration": 10.0,
+        "Entries": [
+            {
+                "TriggerTime": 0.30000001192092896,
+                "duration": 7.0,
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "LightingOverride": [
+                    0.9215686321258545,
+                    0.9215686321258545,
+                    0.9215686321258545,
+                    1.0
+                ],
+                "__type": "{c057ee47}"
+            },
+            {
+                "TriggerTime": 0.30000001192092896,
+                "priority": 10,
+                "duration": 7.0,
+                "BlackboardGameObjectOriginal": "PlayerSource",
+                "BlackboardGameObjectProxy": "SourceProxy",
+                "__type": "TftCutsceneProxyClip"
+            },
+            {
+                "TriggerTime": 0.30000001192092896,
+                "priority": 9,
+                "GameObjectBlackboardName": "SourceProxy",
+                "PositionBlackboardName": "FinisherPos",
+                "__type": "TftCutsceneSetPositionAction"
+            },
+            {
+                "TriggerTime": 0.30000001192092896,
+                "priority": 9,
+                "duration": 7.0,
+                "BlackboardGameObjectName": "SourceProxy",
+                "Animation": "Finisher",
+                "PauseOnEnd": true,
+                "ReportBone": [
+                    {
+                        "boneName": "GameCamera",
+                        "BlackboardName": "CamXform1",
+                        "__type": "TftCutsceneReportBone"
+                    },
+                    {
+                        "boneName": "GameFov",
+                        "BlackboardName": "CamFov1",
+                        "__type": "TftCutsceneReportBone"
+                    },
+                    {
+                        "boneName": "GameTarget",
+                        "BlackboardName": "TargetXform",
+                        "__type": "TftCutsceneReportBone"
+                    }
+                ],
+                "__type": "TftCutsceneAnimClip"
+            },
+            {
+                "TriggerTime": 0.30000001192092896,
+                "priority": 8,
+                "duration": 7.0,
+                "BlackboardCameraBone": "CamXform1",
+                "OverrideFov": true,
+                "{07a57b83}": "CamXform1",
+                "BlackboardFovBone": "CamFov1",
+                "AssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "{24271739}": true,
+                "{fb8cc774}": 1.777999997138977,
+                "__type": "TftCutsceneTftCamClip"
+            },
+            {
+                "duration": 7.800000190734863,
+                "BlackboardPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "__type": "TftCutsceneInputClip"
+            },
+            {
+                "duration": 7.800000190734863,
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "UiHideShop": 1,
+                "UiHideTraitTracker": 1,
+                "UiHideScoreboard": 1,
+                "UiHideStage": 1,
+                "UiHideMinimap": 1,
+                "UiMobileHideShopButton": 1,
+                "UiMobileHideHeaderButtons": 1,
+                "__type": "TftCutsceneUiToggleClip"
+            },
+            {
+                "duration": 7.800000190734863,
+                "EnablePillarBox": true,
+                "EnableLetterBox": true,
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "__type": "TftCutsceneCinematicBarsClip"
+            },
+            {
+                "TriggerTime": 0.30000001192092896,
+                "priority": 10,
+                "duration": 7.0,
+                "BlackboardGameObjectOriginal": "PlayerTarget",
+                "BlackboardGameObjectProxy": "TargetProxy",
+                "__type": "TftCutsceneProxyClip"
+            },
+            {
+                "TriggerTime": 0.30000001192092896,
+                "priority": 8,
+                "duration": 7.0,
+                "BlackboardGameObjectName": "TargetProxy",
+                "BlackboardTransformName": "TargetXform",
+                "__type": "TftCutsceneAttachClip"
+            },
+            {
+                "TriggerTime": 0.30000001192092896,
+                "duration": 7.0,
+                "BlackboardGameObjectName": "TargetProxy",
+                "Animation": "Idle1",
+                "Loop": true,
+                "PostStartModifiers": [
+                    {
+                        "Animation": "Idle01",
+                        "__type": "TftAnimClipOverrideModifier"
+                    }
+                ],
+                "__type": "TftCutsceneAnimClip"
+            },
+            {
+                "TriggerTime": 0.019999999552965164,
+                "duration": 0.10000000149011612,
+                "BlackboardVfxSource": "PlayerSource",
+                "effectKey": "PetChibiBriar_Skin3_Finisher_Intro",
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "__type": "TftCutsceneCamVfxClip"
+            },
+            {
+                "priority": 10,
+                "duration": 0.30000001192092896,
+                "BlackboardGameObjectOriginal": "PlayerSource",
+                "BlackboardGameObjectProxy": "SourceProxyIntro",
+                "__type": "TftCutsceneProxyClip"
+            },
+            {
+                "priority": 8,
+                "duration": 0.30000001192092896,
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "GameObjectBlackboardName": "SourceProxyIntro",
+                "{8e150514}": true,
+                "__type": "{75fb2c62}"
+            },
+            {
+                "priority": 7,
+                "duration": 0.30000001192092896,
+                "GameObjectBlackboardName": "SourceProxyIntro",
+                "Position": [
+                    0.0,
+                    0.0,
+                    -160.0
+                ],
+                "pitch": 90.0,
+                "{16ff3d1e}": 180.0,
+                "__type": "{806955f3}"
+            },
+            {
+                "duration": 0.30000001192092896,
+                "BlackboardGameObjectName": "SourceProxyIntro",
+                "Animation": "FinisherIntro",
+                "PauseOnEnd": true,
+                "__type": "TftCutsceneAnimClip"
+            },
+            {
+                "TriggerTime": 6.800000190734863,
+                "duration": 2.0,
+                "BlackboardVfxSource": "PlayerSource",
+                "effectKey": "PetChibiBriar_Skin3_Finisher_Outro",
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "__type": "TftCutsceneCamVfxClip"
+            },
+            {
+                "duration": 10.0,
+                "StartAudioEvent": "Play_sfx_Pet_ChibiBriar_BloodMoon_finisher_01",
+                "StopAudioEvent": "Stop_sfx_Pet_ChibiBriar_BloodMoon_finisher_01",
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "__type": "TftCutsceneCamSfxClip"
+            },
+            {
+                "duration": 3.0,
+                "StartAudioEvent": "Play_sfx_tft_finisher_transition_global_in",
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "__type": "TftCutsceneCamSfxClip"
+            },
+            {
+                "TriggerTime": 2.7300000190734863,
+                "BlackboardVfxSource": "PlayerSource",
+                "effectKey": "PetChibiBriar_Skin3_Finisher_Sc4_Cam",
+                "BlackboardAssociatedPlayers": [
+                    "PlayerSource",
+                    "PlayerTarget"
+                ],
+                "__type": "TftCutsceneCamVfxClip"
+            }
+        ],
+        "initializer": {
+            "LocatorBlackboardName": "FinisherPos",
+            "CutscenePositionLocatorName": "FinisherLocator",
+            "ArenaLocatorBlackboardName": "ArenaPos",
+            "ArenaPositionLocatorName": "IslandLocator",
+            "BlackboardFinisherSource": "PlayerSource",
+            "BlackboardFinisherTarget": "PlayerTarget",
+            "__type": "TftCutsceneFinisherInitializer"
+        },
+        "GameplayDuration": 7.5,
+        "ScriptName": "TFT_Finisher_Trigger",
+        "__type": "TftFinisherCutscene"
+    },
+    "__linked": []
+}

@@ -582,7 +582,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Taliyah lance une rafale de pierres dans une direction ciblée tout en se déplaçant librement. Cela crée un sol ouvragé sous ses pieds. Si Taliyah lance Rafale filée en se trouvant sur un sol ouvragé, elle consomme ce sol et lance un rocher plus puissant qui ralentit les ennemis.",
-            "dynamicDescription": "Taliyah lance 5 pierres, chacune infligeant <magicDamage>@RockDamage@ pts de dégâts magiques</magicDamage> dans une zone autour du premier ennemi touché et créant un sol ouvragé dans cette même zone. Les coups subséquents contre un même ennemi infligent @ExtraMissileReducedDamagePercent@% de dégâts en moins.<br><br>Si elle est utilisée sur un sol ouvragé, cette compétence coûte @Effect7Amount@ pts de mana, a un délai de récupération réduit de @WorkedGroundCDR*100@%, dissipe le sol ouvragé et lance un rocher qui <status>ralentit</status> les ennemis touchés de @SlowPercent*100@% pendant @SlowDuration@ sec et qui inflige <magicDamage>@BigRockDamage@ pts de dégâts magiques</magicDamage> à la cible principale. Les monstres touchés par le rocher sont <status>étourdis</status> pendant @MonsterStunDuration@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah lance 5 pierres, chacune infligeant <magicDamage>@RockDamage@ pts de dégâts magiques</magicDamage> dans une zone autour du premier ennemi touché et créant un sol ouvragé dans cette même zone. Les coups suivants contre la même cible infligent @ExtraMissileReducedDamagePercent@% de dégâts en moins.<br><br>Si elle est utilisée sur un sol ouvragé, cette compétence coûte @BigRockManaCost@ pts de mana, a un délai de récupération réduit de @WorkedGroundCDR*100@%, dissipe le sol ouvragé et lance un rocher qui <status>ralentit</status> les ennemis touchés de @SlowPercent*100@% pendant @SlowDuration@ sec et qui inflige <magicDamage>@BigRockDamage@ pts de dégâts magiques</magicDamage> à la cible principale. Les monstres touchés par le rocher sont <status>étourdis</status> pendant @MonsterStunDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Taliyah crée un très long mur et surfe ensuite dessus.",
-            "dynamicDescription": "Taliyah crée un très long mur de terre pendant @Effect1Amount@ sec. Si elle <recast>réactive</recast> immédiatement cette compétence, elle peut surfer sur le mur pendant qu'il s'étend. Si elle se déplace ou si elle est immobilisée, le surf prend fin.<br><br>Cette compétence ne peut pas être utilisée si des champions ou des bâtiments ont blessé Taliyah il y a moins de @DamageLockoutTime@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah crée un très long mur de terre pendant @WallDuration@ sec. Si elle <recast>réactive</recast> immédiatement cette compétence, elle peut surfer sur le mur pendant qu'il s'étend. Si elle se déplace ou si elle est immobilisée, le surf prend fin.<br><br>Cette compétence ne peut pas être utilisée si des champions ou des bâtiments ont blessé Taliyah il y a moins de @DamageLockoutTime@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

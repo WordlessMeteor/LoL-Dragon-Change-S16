@@ -5220,7 +5220,7 @@
         "trait_id": "TFT15_BattleAcademia",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_BattleClub.TFT_Set15.png",
-        "tooltip_text": "戰爭學院英雄升級技能並獲得潛能%i:set14AmpIcon%。潛能會強化他們的技能。<br><ShowIf.TFT15_BattleAcademia_NoPrismatic><br><rules>稜鏡：部署7位戰爭學院英雄，接著為英雄裝備道具來獲得@PrismaticItemRequirement@學分。</rules><br></ShowIf.TFT15_BattleAcademia_NoPrismatic><ShowIf.TFT15_BattleAcademia_PrismaticPending><br><TFTRadiantItemBonus>稜鏡：</TFTRadiantItemBonus>英雄於戰鬥中每使用1件完整道具，即獲得1學分。獲得@PrismaticItemRequirement@學分後畢業。(@TFTUnitProperty.trait:TFT15_BattleAcademia_PrismaticNumItems@/@PrismaticItemRequirement@)。<br></ShowIf.TFT15_BattleAcademia_PrismaticPending><ShowIf.TFT15_BattleAcademia_PrismaticActive><br><TFTRadiantItemBonus><br>解放真正潛能：+@UltimateNumPotential@ %i:set14AmpIcon%</TFTRadiantItemBonus><br></ShowIf.TFT15_BattleAcademia_PrismaticActive><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row>",
+        "tooltip_text": "戰爭學院英雄升級技能並獲得潛能%i:set14AmpIcon%。潛能會強化他們的技能。<br><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) 解放真正潛能</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -5292,8 +5292,28 @@
                     }
                 ],
                 "min_units": 7,
+                "max_units": 8,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DA",
+                        "value": 0.75
+                    },
+                    {
+                        "name": "DR",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumPotential",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -6741,7 +6761,7 @@
         "trait_id": "TFT15_SoulFighter",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_SoulFighter.TFT_Set15.png",
-        "tooltip_text": "戰魂鬥士每秒增加額外生命、物攻與魔攻，最多@MaxStacks@層。滿層時，會造成額外真實傷害。<br><ShowIf.TFT15_SoulFighter_NoPrismatic><br><rules>稜鏡：部署8個單位，接著贏得@PlayerDamageToPrismatic@場戰鬥。</rules><br></ShowIf.TFT15_SoulFighter_NoPrismatic><ShowIf.TFT15_SoulFighter_PrismaticPending><br><TFTRadiantItemBonus>稜鏡：</TFTRadiantItemBonus>在對戰中擊敗@PlayerDamageToPrismatic@名玩家。(@TFTUnitProperty.trait:TFT15_SoulFighter_PlayerDamageDealt@)<br></ShowIf.TFT15_SoulFighter_PrismaticPending><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>戰魂之力爆滿。<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@ %i:scaleHealth%、@StatsPerSecond*100@% %i:scaleAD%%i:scaleAP% +@BonusTrueDamage*100@%傷害</row><br><row>(@MinUnits@) @FlatHealth@ %i:scaleHealth%、@StatsPerSecond*100@% %i:scaleAD%%i:scaleAP% +@BonusTrueDamage*100@%傷害</row><br><row>(@MinUnits@) @FlatHealth@ %i:scaleHealth%、@StatsPerSecond*100@% %i:scaleAD%%i:scaleAP% +@BonusTrueDamage*100@%傷害</row><br><row>(@MinUnits@) @FlatHealth@ %i:scaleHealth%、@StatsPerSecond*100@% %i:scaleAD%%i:scaleAP% +@BonusTrueDamage*100@%傷害</row>",
+        "tooltip_text": "戰魂鬥士每秒增加額外生命、物攻與魔攻，最多@MaxStacks@層。滿層時，造成額外真實傷害。<br><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>戰魂之力爆滿。<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@ %i:scaleHealth%、@StatsPerSecond*100@% %i:scaleAD%%i:scaleAP%、+@BonusTrueDamage*100@%傷害</row><br><row>(@MinUnits@) @FlatHealth@ %i:scaleHealth%、@StatsPerSecond*100@% %i:scaleAD%%i:scaleAP%、+@BonusTrueDamage*100@%傷害</row><br><row>(@MinUnits@) @FlatHealth@ %i:scaleHealth%、@StatsPerSecond*100@% %i:scaleAD%%i:scaleAP%、+@BonusTrueDamage*100@%傷害</row><br><row>(@MinUnits@) @FlatHealth@ %i:scaleHealth%、@StatsPerSecond*100@% %i:scaleAD%%i:scaleAP%、+@BonusTrueDamage*100@%傷害</row><br><row>(@MinUnits@)戰魂之力爆滿</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -6845,8 +6865,32 @@
                     }
                 ],
                 "min_units": 8,
+                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusTrueDamage",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "FlatHealth",
+                        "value": 700.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "StatsPerSecond",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -6936,7 +6980,7 @@
         "trait_id": "TFT15_StarGuardian",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_StarGuardian.png",
-        "tooltip_text": "星光戰士有專屬團隊合作加成，所有星光戰士皆可獲益。部署越多星光戰士，效果越大！<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>稜鏡：部署8個單位，接著消耗@ManaToPrismatic@魔力。</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>稜鏡：</TFTRadiantItemBonus>消耗@ManaToPrismatic@魔力(@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>星光戰士覺醒。</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>銳兒：</status>獲得@TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@護盾</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>銳兒：獲得護盾</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>星朵拉：</status>戰鬥中每@SyndraTimer@秒獲得@TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@%魔法攻擊。</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>星朵拉：增加魔攻</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>剎雅：</status>每3次普攻造成<magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@(隨階段增加)</magicDamage>魔法傷害</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>剎雅：普攻附加魔法傷害</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>阿璃：</status>施放技能後，在@AhriDuration@秒內獲得@TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@魔力</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>阿璃：施放技能後獲得魔力</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>妮可：</status>+@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@%治療與護盾量</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>妮可：增加治療和護盾量</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>波比：</status>生命降至40%時，回復@TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@% %i:scaleHealth%</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>波比：生命低落時回復生命</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>吉茵珂絲：</status>+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@%攻速。參與擊殺後增加@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@% %i:scaleAS%，在3秒內衰減至失效</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>吉茵珂絲：增加攻速</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>瑟菈紛：</status>獲得@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth%及@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@% %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>瑟菈紛：所有能力值增加</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>徽章：</status>加成增加@EmblemBonus*100@%！</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>徽章：其他加成增加</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
+        "tooltip_text": "星光戰士有專屬團隊合作加成，所有星光戰士皆可獲益。部署越多星光戰士，效果越大！<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>稜鏡：派上10位星光戰士，喚醒群星！</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>稜鏡：</TFTRadiantItemBonus>消耗@ManaToPrismatic@魔力 (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>星光戰士覺醒。</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>銳兒：</status>獲得@TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@護盾</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>銳兒：獲得護盾</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>星朵拉：</status>每@SyndraTimer@秒增加@TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@%魔攻</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>星朵拉：增加魔攻</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>剎雅：</status>每第3次攻擊造成<magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@ (每階段提升)</magicDamage>魔法傷害</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>剎雅：普攻時造成魔法傷害</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>阿璃：</status>施放技能後，在@AhriDuration@秒內增加@TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@魔力</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>阿璃：施放技能時增加魔力</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>妮可：</status>+@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@%治療與護盾</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>妮可：提升治療、護盾</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>波比：</status>生命低於40%時，治療@TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@% %i:scaleHealth%</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>波比：低生命時治療</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>吉茵珂絲：</status>+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@%攻速。參與擊殺後再+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@% %i:scaleAS%，在3秒內逐漸衰減至失效</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>吉茵珂絲：增加攻速</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>瑟菈紛：</status>增加@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth%與@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@% %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>瑟菈紛：增加全能力值</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>徽章：</status>提升加成@EmblemBonus*100@%！</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>徽章：提升其他加成</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -7108,18 +7152,6 @@
                 "constants": [
                     {
                         "name": "Multiplier",
-                        "value": 1.18
-                    }
-                ],
-                "min_units": 8,
-                "max_units": 8,
-                "style_idx": 6,
-                "style_name": "kChromatic"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
                         "value": 1.2
                     }
                 ],
@@ -7133,29 +7165,6 @@
                     {
                         "name": "Multiplier",
                         "value": 1.2
-                    }
-                ],
-                "min_units": 9,
-                "max_units": 9,
-                "style_idx": 6,
-                "style_name": "kChromatic"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
-                        "value": 1.5
-                    }
-                ],
-                "min_units": 10,
-                "style_idx": 5,
-                "style_name": "kGold"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
-                        "value": 2.0
                     }
                 ],
                 "min_units": 10,
@@ -7347,7 +7356,7 @@
                     },
                     {
                         "name": "StatBonus",
-                        "value": 0.05
+                        "value": 0.1
                     },
                     {
                         "name": "XPPerReroll",
@@ -15068,7 +15077,7 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "玩家戰鬥落敗後，獲得@TechPerCombat@科技，並額外獲得@TechPerLoss@乘以連敗場數的科技。此外，百獸每參與擊殺1次，都會獲得@TechPerKill@科技。<br><br>每當百獸獲得@TechBreakpoint@科技，就會研發全新百獸武器。你可以領取武器或保留科技，以利下次換取更強大的武器。<br><br><row>(@MinUnits@)開始研究！</row><br><row>(@MinUnits@)贏得玩家戰鬥後獲得戰利品！</row>",
+        "tooltip_text": "玩家戰鬥落敗後，獲得@TechPerCombat@點科技，並額外獲得@TechPerLoss@乘以連敗場數的科技。此外，百獸特攻隊每參與1次擊殺，獲得@TechPerKill@點科技。<br><br>每當百獸特攻隊獲得@TechBreakpoint@點科技，就會研發全新百獸特攻隊武器。你可以領取武器或保留科技，以利下次換取更強大的武器。<br><br><row>(@MinUnits@)開始研究！</row><br><row>(@MinUnits@)贏得玩家戰鬥後獲得戰利品！</row><br><br><ShowIf.TFT17_AnimaSquad_IsDoubleUp><rules>雙人搭檔模式中，如果你的夥伴在一場戰鬥中獲勝，而你落敗，你會獲得@PairsPartnerWinMultiplier*100@%科技。</rules></ShowIf.TFT17_AnimaSquad_IsDoubleUp>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15384,7 +15393,7 @@
         "trait_id": "TFT17_DarkStar",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@)幽冥煞星會創造黑洞，吞噬最大生命降至@ExecuteHPPercent*100@%的敵軍。</row><br><row>(@MinUnits@)外加獲得@ADAP@%%i:scaleAD%%i:scaleAP%。</row><br><row>(@MinUnits@)外加最強的幽冥煞星單位會進入超質量狀態，從幽冥煞星獲得@SupermassivePercentBonus*100@%效果，並創造2個微型黑洞。</row><br><row>(@MinUnits@)所有幽冥煞星進入超質量狀態。達10等時，吞噬萬物。</row>",
+        "tooltip_text": "<row>(@MinUnits@)幽冥煞星創造黑洞，吞噬最大生命降至<ShowIf.TFT17_DarkStar_HasNeutronStar><TFTBonus>@TFTUnitProperty.trait:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@%</TFTBonus></ShowIf.TFT17_DarkStar_HasNeutronStar><ShowIfNot.TFT17_DarkStar_HasNeutronStar>@ExecuteHPPercent*100@%</ShowIfNot.TFT17_DarkStar_HasNeutronStar>的敵軍。</row><br><row>(@MinUnits@)外加增加@ADAP@% %i:scaleAD%%i:scaleAP%。</row><br><row>(@MinUnits@)外加最強大的幽冥煞星單位進入超質量狀態，從幽冥煞星獲得@SupermassivePercentBonus*100@%效果，並創造2個微型黑洞。</row><br><row>(@MinUnits@)所有幽冥煞星進入超質量狀態。達10等時，吞噬萬物。</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16015,17 +16024,17 @@
         "trait_id": "TFT17_MorganaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
-        "tooltip_text": "友軍受到的技能傷害減少@UntransformedAbilityDA*100@%，魔甘娜處於綻放闇翼型態時，提升至@TransformedAbilityDA*100@%。",
+        "tooltip_text": "我方隊伍獲得@Durability*100@%續戰力%i:scaleDurability%，魔甘娜綻放闇翼期間增加至@TransformedDurability*100@%。",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "TransformedAbilityDA",
-                        "value": 0.1
+                        "name": "Durability",
+                        "value": 0.05
                     },
                     {
-                        "name": "UntransformedAbilityDA",
-                        "value": 0.05
+                        "name": "TransformedDurability",
+                        "value": 0.1
                     }
                 ]
             }
@@ -16598,12 +16607,20 @@
                         "value": 0.1
                     },
                     {
-                        "name": "Fountain_ManaRegen_Teamwide",
-                        "value": 1.0
+                        "name": "Fountain_HealthRegen",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Fountain_HealthRegen_Teamwide",
+                        "value": 0.02
                     },
                     {
                         "name": "Huntress_AS_Teamwide",
                         "value": 0.15
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 0.0
                     },
                     {
                         "name": "Medallion_DA_Teamwide",
@@ -16692,12 +16709,8 @@
                         "value": 10.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.18
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 3.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 2.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -16788,11 +16801,7 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.25
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
+                        "name": "Fountain_StackingADAP",
                         "value": 4.0
                     },
                     {
@@ -16880,12 +16889,8 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.2
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 5.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 4.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -17100,13 +17105,25 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "占星師每局都會描繪不同的星圖。本局星圖：<TFTStargazer>甘泉座</TFTStargazer>。<br><br>強化棋格內的友軍獲得@Fountain_ManaRegen_Teamwide@魔力回復。強化棋格內的占星師獲得更多，並能以技能治療生命最低的友軍。<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%，@Fountain_HealPercent*100@%技能傷害治療</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%，@Fountain_HealPercent*100@%技能傷害治療</row><br><br><rules>提升玩家等級會揭露更多棋格。</rules>",
+        "tooltip_text": "占星師每局都會描繪不同的星圖。本局星圖：<TFTStargazer>甘泉座</TFTStargazer>。<br><br>位於強化棋格的友軍每@Fountain_Interval@秒回復@Fountain_HealthRegen_Teamwide*100@%最大生命。位於強化棋格的占星師會額外回復@Fountain_HealthRegen*100@%，並且每@Fountain_Interval@秒獲得可累加的物攻與魔攻。<br><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><br><rules>提升玩家等級會揭露更多棋格。</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "Fountain_ManaRegen_Teamwide",
-                        "value": 1.0
+                        "name": "Fountain_HealthRegen",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Fountain_HealthRegen_Teamwide",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "Fountain_Interval",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 0.0
                     }
                 ]
             }
@@ -17115,12 +17132,8 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.18
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 1.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 2.0
                     }
                 ],
                 "min_units": 3,
@@ -17131,12 +17144,8 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.25
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 5.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 4.0
                     }
                 ],
                 "min_units": 5,
@@ -24808,7 +24817,7 @@
                     },
                     {
                         "name": "Tier1Heal",
-                        "value": 2.0
+                        "value": 1.0
                     },
                     {
                         "name": "Tier1HealDU",

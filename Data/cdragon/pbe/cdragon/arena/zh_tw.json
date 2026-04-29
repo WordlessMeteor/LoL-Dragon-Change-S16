@@ -3170,7 +3170,7 @@
             "id": 233,
             "name": "大絕轉盤",
             "rarity": 2,
-            "tooltip": "將<spellName>逃亡</spellName>換成隨機<attention>大絕</attention>。施放<attention>大絕<attention>後，換成新的隨機</attention>大絕</attention>。<br><br><br><rules>這些召喚師技能仍是大絕。</rules>"
+            "tooltip": "將<spellName>逃亡</spellName>換成隨機<attention>大絕</attention>。施放<attention>大絕</attention>後，換成新的隨機<attention>大絕</attention>。<br><br><br><rules>這些技能仍被視為大絕。</rules>"
         },
         {
             "apiName": "ClownCollege",
@@ -4681,13 +4681,13 @@
                     2.0
                 ]
             },
-            "desc": "每@ProcCadence@次普攻會觸發第二次{{ Item_Keyword_OnHit }}效果。",
+            "desc": "每@ProcCadence@次普攻會觸發第二次{{ Item_Keyword_OnHit }}。",
             "iconLarge": "assets/ux/cherry/augments/icons/twicethrice_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/twicethrice_small.png",
             "id": 107,
             "name": "二次三次",
             "rarity": 1,
-            "tooltip": "每@ProcCadence@次普攻會觸發第二次{{ Item_Keyword_OnHit }}效果。"
+            "tooltip": "每@ProcCadence@次普攻會觸發第二次{{ Item_Keyword_OnHit }}。"
         },
         {
             "apiName": "SymbioticMutation",
@@ -4758,11 +4758,11 @@
                 "GoldAmount": [
                     750.0,
                     750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0,
-                    750.0
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -5528,13 +5528,13 @@
                     10.0
                 ],
                 "AnvilsGranted": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -6242,7 +6242,7 @@
                     2.0
                 ]
             },
-            "desc": "根據友軍造成<crit>暴擊</crit>傷害，<lifeSteal>自身回復@HealPercentage*100@%的生命</lifeSteal>。<br><br>增加<crit>%i:scaleCrit% @CritChance*100@%暴擊率</crit>。",
+            "desc": "獲得等同於<crit>暴擊</crit>造成傷害的<lifeSteal>@HealPercentage*100@%的治療</lifeSteal>。<br><br>增加<crit>%i:scaleCrit% @CritChance*100@%暴擊率</crit>。",
             "iconLarge": "assets/ux/cherry/augments/icons/soulsiphon_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/soulsiphon_small.png",
             "id": 77,
@@ -6291,13 +6291,13 @@
                     2.0
                 ],
                 "PrismaticCostReduction": [
-                    -1500.0,
-                    -1500.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0,
-                    -2000.0
+                    1500.0,
+                    1500.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0,
+                    2000.0
                 ],
                 "PrismaticGoldBasisDiscount": [
                     1250.0,
@@ -7694,13 +7694,13 @@
                     2.0
                 ]
             },
-            "desc": "每@Cooldown@秒<keywordMajor>自動</keywordMajor>對鄰近敵軍發射回力鏢。",
+            "desc": "每@Cooldown@秒<keywordMajor>自動施放</keywordMajor>對鄰近敵軍發射回力鏢。",
             "iconLarge": "assets/ux/cherry/augments/icons/okboomerang_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/okboomerang_small.png",
             "id": 61,
             "name": "棒棒回力鏢",
             "rarity": 1,
-            "tooltip": "每@Cooldown@秒<keywordMajor>自動</keywordMajor>對鄰近敵軍發射回力鏢，對命中的敵軍造成<physicalDamage>@Damage@物理傷害</physicalDamage>。<br><br>本回合造成傷害：@f1@<br>總輸出傷害：@f2@"
+            "tooltip": "每@Cooldown@秒<keywordMajor>自動施放</keywordMajor>對鄰近敵軍發射回力鏢，對命中的敵軍造成<physicalDamage>@Damage@物理傷害</physicalDamage>。<br><br>本回合造成傷害：@f1@<br>總輸出傷害：@f2@"
         },
         {
             "apiName": "Hybrid",
@@ -7750,6 +7750,122 @@
             "name": "混傷",
             "rarity": 1,
             "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>每次施放技能可強化一次普攻。</rules>"
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "BeeDamage": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.20000000298023224,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ],
+                    "{72c5c2a8}": 1
+                }
+            },
+            "dataValues": {
+                "ASReduction": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
+                "BaseDamageMax": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "BaseDamageMin": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "BeeRange": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "DebuffDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "MaxBeeStacks": [
+                    8.0,
+                    8.0,
+                    12.0,
+                    16.0,
+                    99.0,
+                    99.0,
+                    99.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "SpellCooldown": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "StartingBees": [
+                    0.0,
+                    1.0,
+                    2.0,
+                    3.0,
+                    4.0,
+                    5.0,
+                    6.0
+                ]
+            },
+            "desc": "每回合開始時獲得@StartingBees@隻蜜蜂，可藉由採集花朵獲得額外的蜜蜂。對敵方英雄造成傷害時，會派出一隻蜜蜂，在抵達時造成<magicDamage>@BeeDamage@魔法傷害</magicDamage>，持續@DebuffDuration@秒，然後回到你身邊。<br>",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "蜂群意識",
+            "rarity": 2,
+            "tooltip": "每回合開始時獲得@StartingBees@隻蜜蜂，可藉由採集花朵獲得額外的蜜蜂。對敵方英雄造成傷害時，會派出一隻蜜蜂，抵達後造成<magicDamage>@BeeDamage@魔法傷害</magicDamage>，持續@DebuffDuration@秒，然後回到你身邊。"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -8426,11 +8542,11 @@
                 "BonusLives": [
                     1.0,
                     1.0,
+                    2.0,
                     3.0,
                     4.0,
-                    5.0,
-                    6.0,
-                    7.0
+                    4.0,
+                    4.0
                 ],
                 "CapstoneAllyBonusLives": [
                     1.0,
@@ -8442,13 +8558,13 @@
                     1.0
                 ],
                 "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
                 ],
                 "ReviveArmTime": [
                     2.0,
@@ -8557,13 +8673,13 @@
                     3.0
                 ]
             },
-            "desc": "普攻{{ Item_Keyword_OnHit }}時可增加<speed>@MSPerHit@跑速</speed>。<br><br>提升相當於@MSToASConversion*10000@%<speed>跑速</speed>的<attackSpeed>攻速</attackSpeed>。",
+            "desc": "普攻{{ Item_Keyword_OnHit }}增加<speed>@MSPerHit@跑速</speed>。<br><br>提升相當於@MSToASConversion*10000@%<speed>跑速</speed>的<attackSpeed>攻速</attackSpeed>。",
             "iconLarge": "assets/ux/cherry/augments/icons/tapdancer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/tapdancer_small.png",
             "id": 81,
             "name": "輕舞飛揚",
             "rarity": 2,
-            "tooltip": "普攻{{ Item_Keyword_OnHit }}時可增加<speed>@MSPerHit@跑速</speed>。<br><br>增加<attackSpeed>@MSToASConversionCalc@攻速</attackSpeed>。"
+            "tooltip": "普攻{{ Item_Keyword_OnHit }}增加<speed>@MSPerHit@跑速</speed>。<br><br>增加<attackSpeed>@MSToASConversionCalc@攻速</attackSpeed>。"
         },
         {
             "apiName": "FanTheHammer",
@@ -8887,27 +9003,27 @@
                     1.0,
                     2.0,
                     3.0,
+                    4.0,
+                    4.0,
+                    4.0
+                ],
+                "MaxLevel": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
                     3.0,
                     3.0,
                     3.0
-                ],
-                "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
                 ]
             },
-            "desc": "技能會施加{{ Item_Keyword_OnHit }}效果。",
+            "desc": "技能會施加{{ Item_Keyword_OnHit }}。",
             "iconLarge": "assets/ux/cherry/augments/icons/etherealweapon_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/etherealweapon_small.png",
             "id": 29,
             "name": "幻影武器",
             "rarity": 1,
-            "tooltip": "你的技能會造成{{ Item_Keyword_OnHit }}效果@HitCount@次。每個目標有@Cooldown@秒冷卻時間。<br><br>本回合觸發次數：@f1@<br>總觸發次數：@f2@"
+            "tooltip": "你的技能會造成{{ Item_Keyword_OnHit }}@HitCount@次。每個目標有@Cooldown@秒冷卻時間。<br><br>本回合觸發次數：@f1@<br>總觸發次數：@f2@"
         },
         {
             "apiName": "OmniSoul",
@@ -9901,13 +10017,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "你獻給貪啃奇的<healing>生命恢復@HealthRestorePercent@%</healing>。<br><br>立即獲得1件<keywordMajor>%i:Augment%銀級增幅裝置</keywordMajor>。",
@@ -10088,13 +10204,13 @@
                     0.07999999821186066
                 ]
             },
-            "desc": "使用<healing>治療</healing>或<shield>護盾</shield>時，技能傷害提升@SpellDamagePerStack*100@%，效果能在該回合無限累加。",
+            "desc": "使用<healing>治療</healing>或<shield>護盾</shield>時，技能傷害提升@SpellDamagePerStack*100@%，此效果在該回合內無限累加。",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
             "id": 343,
             "name": "正義之怒",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@每次施放技能、增幅裝置和道具，冷卻時間為秒。"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>每個技能、增幅裝置和道具都有@Cooldown@秒冷卻。"
         },
         {
             "apiName": "OrbitalLaser",
@@ -10273,13 +10389,13 @@
                 ],
                 "HealthCost": 0,
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "你獻給貪啃奇的<healing>生命恢復@HealthRestorePercent@%</healing>。<br><br>獲得<gold>+%i:goldCoins% @GoldToGrant@金錢</gold>。",
@@ -10756,13 +10872,13 @@
             },
             "dataValues": {
                 "GoldToGrant": [
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0,
-                    3000.0
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0
                 ],
                 "HealthReductionPercent": [
                     15.0,
@@ -11743,6 +11859,15 @@
                     3750.0,
                     3750.0
                 ],
+                "RemovalGoalGainPercentage": [
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
+                ],
                 "SellValueTooltip": [
                     100.0,
                     100.0,
@@ -11753,13 +11878,13 @@
                     100.0
                 ]
             },
-            "desc": "立即以@SellValueTooltip@%直購價賣掉所有非任務道具。最適合拿來賣打過折的鐵砧。",
+            "desc": "Cherry_FireSale_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/firesale_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/firesale_small.png",
             "id": 229,
             "name": "火速賣裝",
             "rarity": 0,
-            "tooltip": "立即以@SellValueTooltip@%直購價賣掉所有非任務道具。最適合拿來賣打過折的鐵砧。"
+            "tooltip": "Cherry_FireSale_Tooltip"
         },
         {
             "apiName": "LightningStrikes",
@@ -12374,13 +12499,13 @@
                     1.0
                 ]
             },
-            "desc": "將<spellName>逃亡</spellName>換為<spellName>命運呼喚</spellName>。<br><br><rules><spellName>命運呼喚</spellName>使友軍進入無法被指定的狀態，最多持續4秒。友軍可釋放自身，<status>擊退</status>敵軍。</rules><br>",
+            "desc": "將<spellName>逃亡</spellName>換為<spellName>命運呼喚</spellName>。<br><br><rules><spellName>命運呼喚</spellName>使友軍進入無法被指定的狀態，最多持續4秒。友軍可將自身投射出去，<status>擊退</status>敵軍。</rules><br>",
             "iconLarge": "assets/ux/cherry/augments/icons/oathsworn_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/oathsworn_small.png",
             "id": 109,
             "name": "血誓同盟",
             "rarity": 1,
-            "tooltip": "將<spellName>逃亡</spellName>換為<spellName>命運呼喚</spellName>。<br><br><rules><spellName>命運呼喚</spellName>使友軍進入無法被指定的狀態，最多持續4秒。友軍可釋放自身，<status>擊退</status>敵軍。</rules><br>"
+            "tooltip": "將<spellName>逃亡</spellName>換為<spellName>命運呼喚</spellName>。<br><br><rules><spellName>命運呼喚</spellName>使友軍進入無法被指定的狀態，最多持續4秒。友軍可將自身投射出去，<status>擊退</status>敵軍。</rules><br>"
         },
         {
             "apiName": "AimForTheHead",
@@ -12563,13 +12688,13 @@
                     1.0
                 ],
                 "HealthRestorePercent": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "你獻給貪啃奇的<healing>生命恢復@HealthRestorePercent@%</healing>。<br><br>獲得<keywordMajor>@AnvilsGranted@個銀級能力值鐵砧</keywordMajor>。",
@@ -13003,7 +13128,7 @@
                     2.0
                 ]
             },
-            "desc": "力量之花對自身效果提升@AmpAmount*100@%，友方英雄也可分享此效果。",
+            "desc": "力量之花對自身效果提升@AmpAmount*100@%，且其效果也會分享給友方英雄。",
             "iconLarge": "assets/ux/cherry/augments/icons/fruitarian_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fruitarian_small.png",
             "id": 222,
@@ -13353,7 +13478,7 @@
             "id": 211,
             "name": "殺戮時間",
             "rarity": 1,
-            "tooltip": "施放<keywordMajor>大絕</keywordMajor>後，對所有敵方英雄附加死亡標記。此標記會儲存@DamageStorePercentage*100@%對其造成的傷害，儲存的傷害會在@MarkDuration@秒後引爆(冷卻時間@Cooldown@秒)。"
+            "tooltip": "施放<keywordMajor>大絕</keywordMajor>後，對所有敵方英雄附加死亡標記。此標記會儲存@DamageStorePercentage*100@%對其造成的傷害，並在@MarkDuration@秒後引爆，對其造成儲存的傷害(冷卻時間@Cooldown@秒)。"
         },
         {
             "apiName": "WisdomofAges",
@@ -13549,7 +13674,7 @@
             "id": 64,
             "name": "剛毅",
             "rarity": 1,
-            "tooltip": "獲得<healing>@BaseRegen*100@%基礎生命回復</healing>，生命低於<scaleHealth>@AmpedHPThreshold*100@%</scaleHealth>時，提升至<healing>@AmpedRegen*100@%基礎生命回復</healing>。<br><br>本回合總治療量：@f1@<br>總治療量：@f2@"
+            "tooltip": "獲得<healing>@BaseRegen*100@%基礎生命回復</healing>，生命低於<scaleHealth>@AmpedHPThreshold*100@%</scaleHealth>時，提升至<healing>@AmpedRegen*100@%基礎生命回復</healing>。<br><br>本回合治療量：@f1@<br>總治療量：@f2@"
         },
         {
             "apiName": "JeweledGauntlet",

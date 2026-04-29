@@ -286,6 +286,32 @@
                         0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MineLifetime",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MineRadius",
+                    "values": [
+                        85.0,
+                        85.0,
+                        85.0,
+                        85.0,
+                        85.0,
+                        85.0,
+                        85.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "{f9c2333e}": {
@@ -1071,6 +1097,45 @@
                         0.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GroundExhaustDuration",
+                    "values": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BigRockManaCost",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GroundExhaustRadius",
+                    "values": [
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1459,12 +1524,10 @@
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRBlowUp",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRBlowUpSoundMis",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRCastRoot",
-            "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRCurve",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRKnockAside",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRMis",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRPreMis",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRSuperPassive",
-            "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRTerrainProto",
             "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRPassiveCDManager",
             "{a97af482}",
             "{edf6b3c0}",
@@ -1671,91 +1734,6 @@
                     }
                 ],
                 "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRTerrainProto": {
-        "ObjectName": "TaliyahRTerrainProto",
-        "mScriptName": "TaliyahRTerrainProto",
-        "mSpell": {
-            "flags": 4,
-            "mAffectsTypeFlags": 6154,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        0.0,
-                        10.0,
-                        20.0,
-                        30.0,
-                        0.0,
-                        0.0,
-                        10.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "mImgIconName": [
-                "ASSETS/Characters/Taliyah/HUD/Icons2D/Taliyah_R.dds"
-            ],
-            "cooldownTime": [
-                110.0,
-                100.0,
-                90.0,
-                80.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "mCantCancelWhileWindingUp": true,
-            "bIsToggleSpell": true,
-            "castRange": [
-                625.0,
-                625.0,
-                625.0,
-                625.0,
-                625.0,
-                625.0,
-                625.0
-            ],
-            "mana": [
-                100.0,
-                100.0,
-                100.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "mTargetingTypeData": {
-                "__type": "LocationClamped"
             },
             "__type": "SpellDataResource"
         },
@@ -2328,74 +2306,6 @@
         "mScriptName": "TaliyahRSuperPassive",
         "mBuff": {
             "mDescription": "game_buff_tooltip_",
-            "__type": "BuffData"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRCurve": {
-        "ObjectName": "TaliyahRCurve",
-        "mScriptName": "TaliyahRCurve",
-        "mSpell": {
-            "flags": 4,
-            "mAffectsTypeFlags": 6154,
-            "mCoefficient": 1.0,
-            "mAnimationName": "Spell3",
-            "mImgIconName": [
-                "ASSETS/Characters/Taliyah/HUD/Icons2D/Taliyah_R.dds"
-            ],
-            "mCastTime": 0.25,
-            "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "mCantCancelWhileWindingUp": true,
-            "castRange": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
-            ],
-            "castRadius": [
-                2600.0,
-                2600.0,
-                2600.0,
-                2600.0,
-                2600.0,
-                2600.0,
-                2600.0
-            ],
-            "luaOnMissileUpdateDistanceInterval": 100.0,
-            "castFrame": 7.5,
-            "mTargetingTypeData": {
-                "__type": "AreaClamped"
-            },
-            "mClientData": {
-                "mTargeterDefinitions": [
-                    {
-                        "__type": "TargeterDefinitionRange"
-                    },
-                    {
-                        "centerLocator": {
-                            "basePosition": 3,
-                            "__type": "DrawablePositionLocator"
-                        },
-                        "__type": "TargeterDefinitionAoe"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "mBuff": {
-            "mDescription": "game_spell_tooltip_TaliyahR",
             "__type": "BuffData"
         },
         "__type": "SpellObject"
@@ -3350,6 +3260,34 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "KnockupDelay",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ThrowDistance",
+                    "values": [
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -3496,8 +3434,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "ThrowDistance",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

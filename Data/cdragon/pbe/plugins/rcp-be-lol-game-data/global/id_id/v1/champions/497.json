@@ -1537,7 +1537,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @f2@ dtk ",
             "description": "Terbang menuju champion sekutu, memberi mereka shield. Bisa recast gratis untuk durasi singkat.",
-            "dynamicDescription": "Rakan dash ke arah champion sekutu, memberikan <shield>@TotalShield@ Shield</shield> pada mereka selama @Effect3Amount@ detik.<br><br>Rakan bisa <recast>Recast</recast> Ability ini sekali dalam @Effect2Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan dash ke arah champion sekutu, memberi mereka <shield>@TotalShield@ Shield</shield> selama @Duration@ detik.<br><br>Rakan bisa <recast>Recast</recast> Ability ini sekali lagi dalam waktu @RecastWindow@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Mendapatkan Move Speed, menerapkan charm dan menghasilkan magic damage pada musuh yang disentuh.",
-            "dynamicDescription": "Rakan mendapatkan <speed>@Effect5Amount@% Move Speed</speed> selama @Effect2Amount@ detik. Rakan menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> dan menerapkan <status>Charm</status> pada musuh selama @Effect3Amount@ detik saat dia menyentuh mereka pertama kalinya. Champion pertama yang dia sentuh memberi Rakan <speed>@Effect6Amount@% Move Speed</speed> yang akan berkurang seiring waktu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan mendapatkan <speed>@InitialCastSpeed@% Move Speed</speed> selama @Duration@ detik. Rakan menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> dan menerapkan <status>Charm</status> pada musuh selama @CharmDuration@ detik saat dia menyentuh mereka pertama kalinya. Champion pertama yang dia sentuh memberi Rakan <speed>@TouchSpeed@% Move Speed</speed> yang akan berkurang seiring waktu.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,
