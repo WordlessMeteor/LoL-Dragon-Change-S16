@@ -1,5 +1,6 @@
 {
     "id": 56,
+    "contentId": "3795a4c7-9400-4719-a493-598b6315b006",
     "name": "Nocturne",
     "alias": "Nocturne",
     "title": "Ác Mộng Vĩnh Cửu",
@@ -814,7 +815,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nocturne phóng ra một thanh gươm bóng tối gây sát thương và tạo ra một Vệt Bóng Tối. Các tướng địch trúng chiêu cũng để lại một Vệt Bóng Tối. Khi đứng trên vệt đen đó, Nocturne có thể chạy xuyên vật thể đồng thời được tăng Tốc độ Di chuyển và Sát thương Vật lí.",
-            "dynamicDescription": "Nocturne phóng ra một đường gươm bóng tối, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> và để lại một vệt bóng tối trong @Effect3Amount@ giây. Tướng địch trúng chiêu cũng sẽ để lại vệt bóng tối. <br><br>Khi ở trên vệt bóng tối, Nocturne có thể đi xuyên vật thể, đồng thời nhận thêm <speed>@MoveSpeed@% Tốc Độ Di Chuyển</speed> và <physicalDamage>@BonusTrailAD@ Sức Mạnh Công Kích</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nocturne phóng ra một đường gươm bóng tối, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> và để lại một vệt bóng tối trong @TrailDuration@ giây. Tướng địch trúng chiêu cũng sẽ để lại vệt bóng tối. <br><br>Khi ở trên vệt bóng tối, Nocturne có thể đi xuyên vật thể, đồng thời nhận thêm <speed>@MoveSpeed@% Tốc Độ Di Chuyển</speed> và <physicalDamage>@BonusTrailAD@ Sức Mạnh Công Kích</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -964,7 +965,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nocturne cường hóa thanh gươm của mình, gia tăng Tốc độ Đánh nội tại. Kích hoạt Bóng Đen Bao Phủ cho phép Nocturne tạo ra một chiếc khiên chặn một kỹ năng công kích của đối phương và gia tăng gấp đôi Tốc độ Đánh nội tại nếu thành công. ",
-            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Nocturne được tăng <attackSpeed>@Effect1Amount@% Tốc độ Đánh</attackSpeed>.<br><br><spellActive>Kích hoạt:</spellActive> Nocturne tạo ra một khiên bóng tối trong 1.5 giây cho phép chặn Kỹ năng kế tiếp của kẻ địch. Nếu chặn được một Kỹ năng, chỉ số cộng thêm từ nội tại của nó tăng lên <attackSpeed>@Effect1Amount*2@% Tốc độ Đánh</attackSpeed> trong @Effect4Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Nocturne nhận thêm <attackSpeed>@ActiveAS@% Tốc Độ Đánh</attackSpeed>.<br><br><spellActive>Kích Hoạt:</spellActive> Nocturne tạo một khiên chắn bóng tối trong 1,5 giây giúp chặn Kỹ Năng tiếp theo của kẻ địch. Nếu một Kỹ Năng bị chặn, hiệu ứng nội tại của Kỹ Năng này sẽ được tăng lên thành <attackSpeed>@ActiveAS*2@% Tốc Độ Đánh</attackSpeed> trong @DoubleASDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1114,7 +1115,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nocturne tạo ra một cơn ác mộng lên mục tiêu, gây sát thương mỗi giây đồng thời tạo trạng thái hoảng loạn nếu nạn nhân không thoát ra khỏi tầm hoạt động của kĩ năng khi hết thời gian.",
-            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Nocturne được tăng <speed>@TooltipFearMS*100@% Tốc độ Di chuyển</speed> khi hướng về phía kẻ địch <status>Hoảng Sợ</status>.<br><br><spellActive>Kích hoạt:</spellActive> Nocturne gieo rắc ác mộng lên mục tiêu của mình, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong @Effect3Amount@ giây. Nếu sợi dây ác mộng không bị phá vỡ, mục tiêu sẽ bị <status>Hoảng Sợ</status> trong @Effect2Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Nocturne nhận thêm <speed>@TooltipFearMS*100@% Tốc Độ Di Chuyển</speed> khi hướng về phía kẻ địch bị <status>Hoảng Sợ</status>.<br><br><spellActive>Kích Hoạt:</spellActive> Nocturne đặt một cơn ác mộng vào mục tiêu, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trong vòng @LeashDuration@ giây. Nếu kết nối không bị đứt, mục tiêu sẽ bị <status>Hoảng Sợ</status> trong @CCDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,

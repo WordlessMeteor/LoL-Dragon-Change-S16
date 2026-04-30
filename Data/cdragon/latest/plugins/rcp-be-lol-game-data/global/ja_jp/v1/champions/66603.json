@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "ドゥームボット ラックス",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "ドゥームボット ラックス",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "イルミネーション",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "攻撃スキルが命中した対象を数秒間「イルミネーション」でマークする。マークした対象にラックスの攻撃が命中すると、エネルギーが爆発して追加魔法ダメージを与える(追加ダメージの量はラックスのレベルに比例する)。"
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "ライトバインド",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "光の玉を発射し、最大2体までの敵にダメージを与えてスネア効果を付与する。",
-            "dynamicDescription": "光の玉を発射し、最初に命中した2体の敵に<magicDamage>@TotalDamageTT@の魔法ダメージ</magicDamage>と@Effect3Amount@秒間の<status>スネア効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "光の玉を発射し、最初に命中した2体の敵に<magicDamage>@TotalDamageTT@の魔法ダメージ</magicDamage>と@RootDuration@秒間の<status>スネア効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "プリズムバリア",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定方向に杖を投げ、自身と杖に触れた味方チャンピオンに光を屈折させたシールドを付与する。杖は最大距離に達するとラックスのもとへ戻り、触れた味方チャンピオンと杖をキャッチしたラックスに再びシールドを付与する。",
-            "dynamicDescription": "杖を投げて、それに触れた味方に@Effect3Amount@秒間、<shield>耐久値@TotalShieldTT@のシールド</shield>を付与する。杖が戻ってくる際も同量の<shield>シールド</shield>を付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "杖を投げて、それに触れた味方に@ShieldDuration@秒間<shield>@TotalShieldTT@のシールド</shield>を付与する。杖が戻ってくる際も同量の<shield>シールド</shield>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "シンギュラリティ",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点に特異な光の玉を放ち、範囲内の敵にスロウ効果を付与する。効果時間内に再度発動すると光の玉が爆発し、範囲内の敵にダメージを与える。",
-            "dynamicDescription": "光の領域を作り出し、範囲内の敵に@Effect1Amount@%の<status>スロウ効果</status>を与えて視界を得る。@Effect3Amount@秒経過するか<recast>再発動</recast>で爆発し、<magicDamage>@TotalDamageTT@の魔法ダメージ</magicDamage>を与えて<status>スロウ効果</status>を追加で@SlowLingerDuration@秒間付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "光の領域を作り出し、範囲内の敵に@SlowPercent@%の<status>スロウ効果</status>を与えて視界を得る。@SlowZoneDuration@秒経過するか<recast>再発動</recast>で爆発し、<magicDamage>@TotalDamageTT@の魔法ダメージ</magicDamage>を与えて<status>スロウ効果</status>を追加で@SlowLingerDuration@秒間付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "ファイナルスパーク",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",

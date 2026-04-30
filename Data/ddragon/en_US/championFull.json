@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -4890,7 +4890,7 @@
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}",
-                            "{{ e1 }} -> {{ e1NL }}"
+                            "{{ trampledamage }} -> {{ trampledamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -5811,7 +5811,7 @@
                 "name": "Drakehound's Step",
                 "description": "Entering an attack or movement command while casting an ability will cause Ambessa to dash a short distance once the ability is cast, granting her next attack bonus range, damage, and attack speed, and refunding energy.",
                 "image": {
-                    "full": "Icon_Ambessa_Passive.Domina.png",
+                    "full": "Icon_Ambessa_Passive.png",
                     "sprite": "passive0.png",
                     "group": "passive",
                     "x": 240,
@@ -8256,6 +8256,12 @@
                     "name": "Battle Princess Annie (Obsidian)",
                     "chromas": false,
                     "parentSkin": 50
+                },
+                {
+                    "id": "1059",
+                    "num": 59,
+                    "name": "Pandemonium Annie",
+                    "chromas": false
                 }
             ],
             "lore": "Dangerous, yet disarmingly precocious, Annie is a child mage with immense pyromantic power. Even in the shadows of the mountains north of Noxus, she is a magical outlier. Her natural affinity for fire manifested early in life through unpredictable, emotional outbursts, though she eventually learned to control these “playful tricks.” Her favorite includes the summoning of her beloved teddy bear, Tibbers, as a fiery protector. Lost in the perpetual innocence of childhood, Annie wanders the dark forests, always looking for someone to play with.",
@@ -12636,7 +12642,7 @@
                 "name": "Spirit Abjuration",
                 "description": "Aurora's spells and attacks exorcise spirits from the enemies she damages. Exorcised spirits follow Aurora around and heal her.",
                 "image": {
-                    "full": "AuroraPassive.Aurora.png",
+                    "full": "AuroraPassive.png",
                     "sprite": "passive0.png",
                     "group": "passive",
                     "x": 96,
@@ -18090,8 +18096,8 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e3 }}% -> {{ e3NL }}%",
+                            "{{ shieldholdduration }} -> {{ shieldholddurationNL }}",
+                            "{{ shieldfacingdramount }}% -> {{ shieldfacingdramountNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -18589,7 +18595,7 @@
             },
             "stats": {
                 "hp": 625,
-                "hpperlevel": 100,
+                "hpperlevel": 95,
                 "mp": 0,
                 "mpperlevel": 0,
                 "movespeed": 340,
@@ -29760,7 +29766,7 @@
                     "id": "EliseHumanE",
                     "name": "Cocoon / Rappel",
                     "description": "Human Form: Stuns the first enemy unit hit and reveals them if they are not stealthed.<br><br>Spider Form: Elise and her Spiderlings ascend into the air and then descend upon target enemy. After descending on an enemy target, Elise's bonus damage and healing from Spider Queen is increased.",
-                    "tooltip": "<keywordMajor>Human Form</keywordMajor>: Elise fires a cocoon, <status>Stunning</status> and revealing the first enemy hit for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>Human Form</keywordMajor>: Elise fires a cocoon, <status>Stunning</status> and revealing the first enemy hit for {{ totalstunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Stun Duration:",
@@ -29769,10 +29775,10 @@
                             "Damage and Healing Increase"
                         ],
                         "effect": [
-                            "{{ e5 }} -> {{ e5NL }}",
+                            "{{ basestunduration }} -> {{ basestundurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e6 }}% -> {{ e6NL }}%"
+                            "{{ rappelcooldown }} -> {{ rappelcooldownNL }}",
+                            "{{ rappeldamageamp }}% -> {{ rappeldamageampNL }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -29824,11 +29830,11 @@
                             2
                         ],
                         [
-                            1.6,
-                            1.8,
-                            2,
-                            2.2,
-                            2.4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             40,
@@ -29872,7 +29878,7 @@
                         "15/20/25/30/35",
                         "22/21/20/19/18",
                         "2",
-                        "1.6/1.8/2/2.2/2.4",
+                        "0",
                         "40/55/70/85/100",
                         "250",
                         "0",
@@ -29917,9 +29923,9 @@
                         "effect": [
                             "{{ passivebonusdamage }} -> {{ passivebonusdamageNL }}",
                             "{{ spiderlingbasedamage }} -> {{ spiderlingbasedamageNL }}",
-                            "{{ spiderlingsstored }} -> {{ spiderlingsstoredNL }}",
-                            "{{ e6 }} -> {{ e6NL }}",
-                            "{{ e7 }} -> {{ e7NL }}"
+                            "{{ basespiderlingsstored }} -> {{ basespiderlingsstoredNL }}",
+                            "{{ spiderlingarmor }} -> {{ spiderlingarmorNL }}",
+                            "{{ spiderlingmagicresist }} -> {{ spiderlingmagicresistNL }}"
                         ]
                     },
                     "maxrank": 4,
@@ -31836,12 +31842,10 @@
                     "tooltip": "Ezreal fires a magical orb that sticks to the first champion, structure, or epic jungle monster hit for {{ detonationtimeout }} seconds. If Ezreal hits that target with an Attack or Ability, it detonates, dealing <magicDamage>{{ damage }} magic damage</magicDamage>. Detonating with an Ability refunds the Mana cost of that Ability plus <scaleMana>{{ manareturn }} Mana</scaleMana>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Damage",
-                            "Total AP Ratio"
+                            "Damage"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ apratio*100.000000 }}% -> {{ aprationl*100.000000 }}%"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -32115,14 +32119,16 @@
                     "id": "EzrealR",
                     "name": "Trueshot Barrage",
                     "description": "Ezreal winds up before firing a powerful barrage of energy that deals massive damage to each unit it passes through (damage is reduced for minions and non-epic monsters).",
-                    "tooltip": "Ezreal fires a massive energy arc that deals <magicDamage>{{ damage }} magic damage</magicDamage>. The arc deals {{ damagereductionwaveclear.0*100 }}% damage to minions and non-epic jungle monsters.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Ezreal fires a massive energy arc that deals <magicDamage>{{ damage }} magic damage</magicDamage>. Damage to minions and non-epic jungle monsters is reduced to <magicDamage>{{ damageminionmonster }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
+                            "Non Champion Damage",
                             "Cooldown"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ basedamageminionmonster }} -> {{ basedamageminionmonsterNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -35987,7 +35993,7 @@
                     "id": "GalioW",
                     "name": "Shield of Durand",
                     "description": "Galio charges a defensive stance, moving slowly. Upon releasing the charge, Galio will taunt and damage nearby enemies.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Galio gains a <shield>{{ totalpassiveshield }} Magic Shield</shield> after not taking damage for {{ passiveshieldooctimer }} seconds.<br /><br /><charge>Begin Charging:</charge> Galio reduces incoming magic damage by {{ magicdamagereduction }} and incoming physical damage by {{ physicaldamagereduction }} and <status>Slows</status> himself by {{ e3 }}%.<br /><br /><release>Release:</release> Galio <status>Taunts</status> enemy champions for between {{ e4 }} to {{ e7 }} seconds, deals between <magicDamage>{{ mintotaldamage }}</magicDamage> and <magicDamage>{{ maxtotaldamage }} magic damage</magicDamage>, and refreshes the damage reduction for {{ e8 }} seconds. Taunt duration, damage, and range increase with charge time.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Galio gains a <shield>{{ totalpassiveshield }} Magic Shield</shield> after not taking damage for {{ passiveshieldooctimer }} seconds.<br /><br /><charge>Begin Charging:</charge> Galio reduces incoming magic damage by {{ magicdamagereduction }} and incoming physical damage by {{ physicaldamagereduction }} and <status>Slows</status> himself by {{ selfslowpercent }}%.<br /><br /><release>Release:</release> Galio <status>Taunts</status> enemy champions for between {{ ccdurationmin }} to {{ ccdurationmax }} seconds, deals between <magicDamage>{{ mintotaldamage }}</magicDamage> and <magicDamage>{{ maxtotaldamage }} magic damage</magicDamage>, and refreshes the damage reduction for {{ drlingerduration }} seconds. Taunt duration, damage, and range increase with charge time.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Shield Health Ratio",
@@ -35998,8 +36004,8 @@
                         ],
                         "effect": [
                             "{{ passiveshieldhealthratio*100.000000 }}% -> {{ passiveshieldhealthrationl*100.000000 }}%",
-                            "{{ e1 }}% -> {{ e1NL }}%",
-                            "{{ effect1amount*0.500000 }}% -> {{ effect1amountnl*0.500000 }}%",
+                            "{{ damagereductionbase*100.000000 }}% -> {{ damagereductionbasenl*100.000000 }}%",
+                            "{{ damagereductionbase*50.000000 }}% -> {{ damagereductionbasenl*50.000000 }}%",
                             "{{ maximumwbasedamage }} -> {{ maximumwbasedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
@@ -36025,32 +36031,11 @@
                     "effect": [
                         null,
                         [
-                            25,
-                            30,
-                            35,
-                            40,
-                            45
-                        ],
-                        [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
-                        ],
-                        [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
-                        ],
-                        [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -36060,53 +36045,74 @@
                             0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.25,
-                            1.25,
-                            1.25,
-                            1.25,
-                            1.25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "25/30/35/40/45",
-                        "2",
-                        "15",
-                        "0.5",
                         "0",
-                        "1",
-                        "1.5",
-                        "2",
-                        "1.25",
-                        "4"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -36759,8 +36765,8 @@
                         ],
                         "effect": [
                             "{{ spelldamage }} -> {{ spelldamageNL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e5 }} -> {{ e5NL }}",
+                            "{{ goldproc }} -> {{ goldprocNL }}",
+                            "{{ ssproc }} -> {{ ssprocNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
@@ -36894,7 +36900,7 @@
                     "id": "GangplankW",
                     "name": "Remove Scurvy",
                     "description": "Eats citrus to cure crowd control effects and restore Health.",
-                    "tooltip": "Gangplank consumes a large amount of citrus fruit, removing all <status>Disabling</status> effects and restoring <healing>{{ basehealth }} plus {{ e2 }}% missing Health</healing>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Gangplank consumes a large amount of citrus fruit, removing all <status>Disabling</status> effects and restoring <healing>{{ basehealth }} plus {{ percentheal }}% missing Health</healing>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Healing",
@@ -36902,7 +36908,7 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ baseheal }} -> {{ basehealNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -37037,7 +37043,7 @@
                     "id": "GangplankE",
                     "name": "Powder Keg",
                     "description": "Gangplank uncovers a powder keg at target location. If he attacks it, it explodes, spreading the attack's damage to enemies in the area, slowing them.",
-                    "tooltip": "Gangplank places a powder keg that can be attacked by Gangplank and enemy champions for {{ e5 }} seconds. When an enemy destroys it, the keg is defused. When Gangplank destroys it, it explodes, <status>Slowing</status> by {{ finalslowamount }}% for {{ e2 }} seconds and dealing the <physicalDamage>Attack's damage</physicalDamage>, ignoring {{ e0 }}% Armor. Champions take an additional <physicalDamage>{{ e3 }} physical damage</physicalDamage>.<br /><br />Keg health decays every {{ barreldecaytime }} seconds. Keg explosions detonate other kegs with overlapping blast zones, but don't deal damage to the same target more than once. Keg explosions triggered by <spellName>Parrrley</spellName> will grant the bonus gold for targets killed.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Gangplank places a powder keg that can be attacked by Gangplank and enemy champions for {{ barrelduration }} seconds. When an enemy destroys it, the keg is defused. When Gangplank destroys it, it explodes, <status>Slowing</status> by {{ finalslowamount }}% for {{ debuffduration }} seconds and dealing the <physicalDamage>Attack's damage</physicalDamage>, ignoring {{ barrelarmorpenetration }}% Armor. Champions take an additional <physicalDamage>{{ bonusdamagetochampions }} physical damage</physicalDamage>.<br /><br />Keg health decays every {{ barreldecaytime }} seconds. Keg explosions detonate other kegs with overlapping blast zones, but don't deal damage to the same target more than once. Keg explosions triggered by <spellName>Parrrley</spellName> will grant the bonus gold for targets killed.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Damage Against Champions",
@@ -37046,8 +37052,8 @@
                             "Recharge Time"
                         ],
                         "effect": [
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ bonusdamagetochampions }} -> {{ bonusdamagetochampionsNL }}",
+                            "{{ maxbarrels }} -> {{ maxbarrelsNL }}",
                             "{{ barrelslow }}% -> {{ barrelslowNL }}%",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}"
                         ]
@@ -37611,12 +37617,6 @@
                     "parentSkin": 33
                 },
                 {
-                    "id": "86043",
-                    "num": 43,
-                    "name": "Pengu Garen",
-                    "chromas": false
-                },
-                {
                     "id": "86044",
                     "num": 44,
                     "name": "Fallen God-King Garen",
@@ -37633,13 +37633,13 @@
                     "id": "86046",
                     "num": 46,
                     "name": "Visions of the Fallen Garen",
-                    "chromas": true
+                    "chromas": false
                 },
                 {
                     "id": "86047",
                     "num": 47,
                     "name": "Visions of the Fallen Garen (Ruby)",
-                    "chromas": false,
+                    "chromas": true,
                     "parentSkin": 46
                 },
                 {
@@ -48922,7 +48922,7 @@
                     "id": "JarvanIVDragonStrike",
                     "name": "Dragon Strike",
                     "description": "Jarvan IV extends his lance, dealing physical damage and lowering the Armor of enemies in its path. Additionally, this will pull Jarvan to his Demacian Standard, knocking up enemies in his path.",
-                    "tooltip": "Jarvan extends his lance, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and removing <scaleArmor>{{ e2 }}% Armor</scaleArmor> for {{ e3 }} seconds.<br /><br />If the lance connects with <spellName>Demacian Standard</spellName>, Jarvan will pull himself to it, <status>Knocking Up</status> those in his path for 0.75 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Jarvan extends his lance, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and removing <scaleArmor>{{ basearshred*100 }}% Armor</scaleArmor> for {{ e3 }} seconds.<br /><br />If the lance connects with <spellName>Demacian Standard</spellName>, Jarvan will pull himself to it, <status>Knocking Up</status> those in his path for 0.75 seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -48932,7 +48932,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basearshred*100.000000 }}% -> {{ basearshrednl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -48965,11 +48965,11 @@
                             240
                         ],
                         [
-                            10,
-                            14,
-                            18,
-                            22,
-                            26
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             3,
@@ -49031,7 +49031,7 @@
                     "effectBurn": [
                         null,
                         "80/120/160/200/240",
-                        "10/14/18/22/26",
+                        "0",
                         "3",
                         "0",
                         "0",
@@ -49067,7 +49067,7 @@
                     "id": "JarvanIVGoldenAegis",
                     "name": "Golden Aegis",
                     "description": "Jarvan IV calls upon the ancient kings of Demacia to shield him from harm and slow surrounding enemies.",
-                    "tooltip": "Jarvan summons an aegis, <status>Slowing</status> nearby enemies by {{ e2 }}% for {{ e5 }} seconds and granting him a <shield>{{ baseshield }} Shield</shield>, increased by <shield>{{ bonusshield }}</shield> for each enemy champion hit.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Jarvan summons an aegis, <status>Slowing</status> nearby enemies by {{ baseslowamount*100 }}% for {{ e5 }} seconds and granting him a <shield>{{ totalshield }} Shield</shield>, increased by <shield>{{ bonusshield }}</shield> for each enemy champion hit.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Shield Amount",
@@ -49075,7 +49075,7 @@
                         ],
                         "effect": [
                             "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%"
+                            "{{ baseslowamount*100.000000 }}% -> {{ baseslowamountnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -49106,11 +49106,11 @@
                             140
                         ],
                         [
-                            15,
-                            20,
-                            25,
-                            30,
-                            35
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             10,
@@ -49172,7 +49172,7 @@
                     "effectBurn": [
                         null,
                         "60/80/100/120/140",
-                        "15/20/25/30/35",
+                        "0",
                         "10/20/30/40/50",
                         "4",
                         "2",
@@ -49208,7 +49208,7 @@
                     "id": "JarvanIVDemacianStandard",
                     "name": "Demacian Standard",
                     "description": "Jarvan IV carries the pride of Demacia, passively granting him bonus Attack Speed. Activating Demacian Standard allows Jarvan IV to place a Demacian flag that deals magic damage on impact and grants Attack Speed to nearby allied champions.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Jarvan gains <attackSpeed>{{ permanentattackspeed*100 }}% Attack Speed</attackSpeed>.<br /><br /><spellActive>Active:</spellActive> Jarvan throws a standard into the ground, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and granting allies near the standard <attackSpeed>{{ e3 }}% Attack Speed</attackSpeed> for {{ e4 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Jarvan gains <attackSpeed>{{ permanentattackspeed*100 }}% Attack Speed</attackSpeed>.<br /><br /><spellActive>Active:</spellActive> Jarvan throws a standard into the ground, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and granting allies near the standard <attackSpeed>{{ baseauraas*100 }}% Attack Speed</attackSpeed> for {{ e4 }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -49219,7 +49219,7 @@
                         "effect": [
                             "{{ e2 }} -> {{ e2NL }}",
                             "{{ permanentattackspeed*100.000000 }}% -> {{ permanentattackspeednl*100.000000 }}%",
-                            "{{ effect3amount*100.000000 }}% -> {{ effect3amountnl*100.000000 }}%",
+                            "{{ baseauraas*100.000000 }}% -> {{ baseauraasnl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -49258,11 +49258,11 @@
                             240
                         ],
                         [
-                            20,
-                            22.5,
-                            25,
-                            27.5,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             8,
@@ -49318,7 +49318,7 @@
                         null,
                         "10/13/16/19/22",
                         "80/120/160/200/240",
-                        "20/22.5/25/27.5/30",
+                        "0",
                         "8",
                         "0",
                         "0",
@@ -61778,7 +61778,7 @@
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}",
-                            "{{ e1 }} -> {{ e1NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -61802,11 +61802,11 @@
                     "effect": [
                         null,
                         [
-                            75,
-                            125,
-                            175,
-                            225,
-                            275
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -61874,7 +61874,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "75/125/175/225/275",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -61911,7 +61911,7 @@
                     "id": "KennenBringTheLight",
                     "name": "Electrical Surge",
                     "description": "Kennen passively deals extra damage and adds a Mark of the Storm to his target every few attacks, and he can activate this ability to damage and add another Mark of the Storm to targets who are already marked.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Every 5th Attack deals an additional <magicDamage>{{ totaldamagepassive }} magic damage</magicDamage>.<br /><br /><spellActive>Active:</spellActive> Kennen sends out a blast of electricity, dealing <magicDamage>{{ totaldamageactive }} magic damage</magicDamage> to nearby enemies affected by <spellName>Mark of the Storm</spellName>.<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Every 5th Attack deals an additional <magicDamage>{{ totaldamagepassive }} magic damage</magicDamage> %i:OnHit% <OnHit>On-Hit</OnHit>.<br /><br /><spellActive>Active:</spellActive> Kennen sends out a blast of electricity, dealing <magicDamage>{{ totaldamageactive }} magic damage</magicDamage> to nearby enemies affected by <spellName>Mark of the Storm</spellName>.<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -62056,7 +62056,7 @@
                     "id": "KennenLightningRush",
                     "name": "Lightning Rush",
                     "description": "Kennen morphs into a lightning form, enabling him to pass through units and apply a Mark of the Storm. Kennen gains Move Speed when entering this form, and attack speed when leaving it.",
-                    "tooltip": "Kennen turns into a ball of lightning, gaining <speed>{{ movementspeed*100 }}% Move Speed</speed>, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to enemies he passes through, and becoming Ghosted for {{ durationasball }} seconds. If Kennen damages at least one enemy, he gains {{ energyrefund }} Energy. <br /><br />After this ability ends, Kennen gains <attackSpeed>{{ attackspeed*100 }}% Attack Speed</attackSpeed> for {{ durationafterball }} seconds. Kennen can <recast>Recast</recast> to end this Ability early.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Kennen turns into a ball of lightning, gaining <speed>{{ movementspeed*100 }}% Move Speed</speed>, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to enemies he passes through, and becoming Ghosted for {{ durationasball }} seconds. If Kennen damages at least one enemy, he gains {{ energyrefund }} Energy. <br /><br />After this ability ends, Kennen gains <attackSpeed>{{ totalas*100 }}% Attack Speed</attackSpeed> for {{ durationafterball }} seconds. Critical Strikes extend this duration by {{ critdurationbonus }} second(s). Kennen can <recast>Recast</recast> to end this Ability early.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -62066,7 +62066,7 @@
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ attackspeed*100.000000 }}% -> {{ attackspeednl*100.000000 }}%"
+                            "{{ totalas*100.000000 }}% -> {{ totalasnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -63645,6 +63645,12 @@
                     "name": "Chosen of the Wolf Kindred (Pearl)",
                     "chromas": false,
                     "parentSkin": 34
+                },
+                {
+                    "id": "203045",
+                    "num": 45,
+                    "name": "Pandemonium Kindred",
+                    "chromas": false
                 }
             ],
             "lore": "Separate, but never parted, Kindred represents the twin essences of death. Lamb's bow offers a swift release from the mortal realm for those who accept their fate. Wolf hunts down those who run from their end, delivering violent finality within his crushing jaws. Though interpretations of Kindred's nature vary across Runeterra, every mortal must choose the true face of their death.",
@@ -65703,8 +65709,8 @@
                 {
                     "id": "KogMawBioArcaneBarrage",
                     "name": "Bio-Arcane Barrage",
-                    "description": "Kog'Maw's attacks gain range and deal a percent of the target's maximum health as magic damage.",
-                    "tooltip": "Kog'Maw gains {{ range }} Attack Range and his Attacks deal an additional <magicDamage>{{ totalhealthdamage }} max Health magic damage</magicDamage> for {{ duration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "description": "Kog'Maw's attacks gain range and deal a percent of the target's maximum health as magic damage %i:OnHit% <OnHit>On-Hit</OnHit>.",
+                    "tooltip": "Kog'Maw gains {{ range }} Attack Range and his Attacks deal an additional <magicDamage>{{ totalhealthdamage }} max Health magic damage</magicDamage> %i:OnHit% <OnHit>On-Hit</OnHit> for {{ duration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Range",
@@ -67876,7 +67882,7 @@
                 "name": "Mirror Image",
                 "description": "When LeBlanc drops below 40% Health, she becomes invisible for 1 second and creates a Mirror Image that deals no damage and lasts for up to 8 seconds.",
                 "image": {
-                    "full": "LeblancP.Leblanc_Rework.png",
+                    "full": "LeblancP.png",
                     "sprite": "passive2.png",
                     "group": "passive",
                     "x": 432,
@@ -74776,7 +74782,7 @@
                     "id": "LuxLightBinding",
                     "name": "Light Binding",
                     "description": "Lux releases a sphere of light that binds and deals damage to up to two enemy units.",
-                    "tooltip": "Lux fires a ball of light, <status>Rooting</status> the first two enemies for {{ e3 }} seconds and dealing <magicDamage>{{ totaldamagett }} magic damage</magicDamage> to each.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Lux fires a ball of light, <status>Rooting</status> the first two enemies for {{ rootduration }} seconds and dealing <magicDamage>{{ totaldamagett }} magic damage</magicDamage> to each.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage"
@@ -74915,7 +74921,7 @@
                     "id": "LuxPrismaticWave",
                     "name": "Prismatic Barrier",
                     "description": "Lux throws her wand and bends the light around any friendly target it touches, protecting them from enemy damage.",
-                    "tooltip": "Lux throws her wand, granting <shield>{{ totalshieldtt }} Shield</shield> for {{ e3 }} seconds to allies it passes through. Then it returns, granting the same <shield>Shield</shield> on its return.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Lux throws her wand, granting <shield>{{ totalshieldtt }} Shield</shield> for {{ shieldduration }} seconds to allies it passes through. Then it returns, granting the same <shield>Shield</shield> on its return.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Shield Amount",
@@ -75058,7 +75064,7 @@
                     "id": "LuxLightStrikeKugel",
                     "name": "Lucent Singularity",
                     "description": "Fires an anomaly of twisted light to an area, which slows nearby enemies. Lux can detonate it to damage enemies in the area of effect.",
-                    "tooltip": "Lux creates a light zone that <status>Slows</status> by {{ e1 }}% and reveals the area. After {{ e3 }} seconds or on <recast>Recasting</recast> this Ability, it detonates, dealing <magicDamage>{{ totaldamagett }} magic damage</magicDamage> and <status>Slowing</status> for an additional {{ slowlingerduration }} second.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Lux creates a light zone that <status>Slows</status> by {{ slowpercent }}% and reveals the area. After {{ slowzoneduration }} seconds or on <recast>Recasting</recast> this Ability, it detonates, dealing <magicDamage>{{ totaldamagett }} magic damage</magicDamage> and <status>Slowing</status> for an additional {{ slowlingerduration }} second.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -75067,7 +75073,7 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ slowpercent }}% -> {{ slowpercentNL }}%",
                             "{{ cost }} -> {{ costNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
@@ -75921,7 +75927,7 @@
                     "id": "Obduracy",
                     "name": "Thunderclap",
                     "description": "Malphite attacks with such force that it creates a sonic boom. For the next few seconds, his attacks create aftershocks in front of him.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Malphite gains <scaleArmor>{{ bonusarmorpassive*100 }}% Armor (%i:scaleArmor%{{ f1 }})</scaleArmor>. This effect is increased to <scaleArmor>{{ bonusarmorpassive*300 }}% (%i:scaleArmor%{{ f2 }})</scaleArmor> while <spellName>Granite Shield</spellName> is active.<br /><br /><spellPassive>Active: </spellPassive>Malphite's next Attack deals an additional <physicalDamage>{{ totalbonusdamage }} physical damage</physicalDamage> and creates an aftershock which deals <physicalDamage>{{ thunderclapsplash }} physical damage</physicalDamage> in their direction. His Attacks continue to create aftershocks for the next {{ thunderclapbuffduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Malphite gains <scaleArmor>{{ bonusarmorpassive*100 }}% Armor (%i:scaleArmor%{{ f1 }})</scaleArmor>. This effect is increased to <scaleArmor>{{ bonusarmorpassive*300 }}% (%i:scaleArmor%{{ f2 }})</scaleArmor> while <spellName>Granite Shield</spellName> is active.<br /><br /><spellPassive>Active: </spellPassive>Malphite's next Attack deals an additional <physicalDamage>{{ totalbonusdamage }} physical damage</physicalDamage> and creates an aftershock which deals <physicalDamage>{{ thunderclapsplash }} physical damage</physicalDamage> %i:OnHit% <OnHit>On-Hit</OnHit> in their direction. His Attacks continue to create aftershocks %i:OnHit% <OnHit>On-Hit</OnHit> for the next {{ thunderclapbuffduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "@AbilityResourceName@ Cost",
@@ -76803,8 +76809,8 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ silenceduration }} -> {{ silencedurationNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
@@ -77804,7 +77810,7 @@
                     "id": "MaokaiW",
                     "name": "Twisted Advance",
                     "description": "Maokai contorts into a mass of moving roots, becoming untargetable and dashing to the target. Upon arrival, he roots the target.",
-                    "tooltip": "Maokai transforms into a moving mass of roots, becoming Untargetable and dashing to an enemy. Upon arrival, he <status>Roots</status> the enemy for {{ e2 }} second(s) and deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>. {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Maokai transforms into a moving mass of roots, becoming Untargetable and dashing to an enemy. Upon arrival, he <status>Roots</status> the enemy for {{ rootduration }} second(s) and deals <magicDamage>{{ totaldamage }} magic damage</magicDamage>. {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -77813,7 +77819,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ rootduration }} -> {{ rootdurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -83668,7 +83674,7 @@
                     "id": "MordekaiserE",
                     "name": "Death's Grasp",
                     "description": "Mordekaiser pulls all enemies in an area.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Mordekaiser gains {{ magicpen*100 }}% Magic Penetration.<br /><br /><spellActive>Active:</spellActive> Mordekaiser pulls enemies in his direction, dealing <magicDamage>{{ totaldamage }} magic damage.</magicDamage>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellActive>Active:</spellActive> Pulls enemies in his direction, dealing <magicDamage>{{ totaldamage }} magic damage.</magicDamage>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Percent Magic Penetration",
@@ -92250,7 +92256,7 @@
                     "id": "NocturneDuskbringer",
                     "name": "Duskbringer",
                     "description": "Nocturne throws a shadow blade that deals damage, leaves a Dusk Trail, and causes champions to leave a Dusk Trail. While on the trail, Nocturne can move through units and has increased Move Speed and Attack Damage.",
-                    "tooltip": "Nocturne throws a shadow blade, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and leaving a dusk trail for {{ e3 }} seconds. Enemy champions hit also leave a trail. <br /><br />While on the trail, Nocturne is Ghosted and gains <speed>{{ movespeed }}% Move Speed</speed> and <physicalDamage>{{ bonustrailad }} Attack Damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Nocturne throws a shadow blade, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and leaving a dusk trail for {{ trailduration }} seconds. Enemy champions hit also leave a trail. <br /><br />While on the trail, Nocturne is Ghosted and gains <speed>{{ movespeed }}% Move Speed</speed> and <physicalDamage>{{ bonustrailad }} Attack Damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -92395,14 +92401,14 @@
                     "id": "NocturneShroudofDarkness",
                     "name": "Shroud of Darkness",
                     "description": "Nocturne empowers his blades, passively gaining Attack Speed. Activating Shroud of Darkness allows Nocturne to fade into the shadows, creating a magical barrier which blocks a single enemy ability and doubles his passive Attack Speed if successful.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Nocturne gains <attackSpeed>{{ e1 }}% Attack Speed</attackSpeed>.<br /><br /><spellActive>Active:</spellActive> Nocturne creates a shadow barrier for 1.5 seconds that blocks the next enemy Ability. If an Ability is blocked, this Ability's passive effect is increased to <attackSpeed>{{ e1 }}% Attack Speed</attackSpeed> for {{ e4 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Nocturne gains <attackSpeed>{{ activeas }}% Attack Speed</attackSpeed>.<br /><br /><spellActive>Active:</spellActive> Nocturne creates a shadow barrier for 1.5 seconds that blocks the next enemy Ability. If an Ability is blocked, this Ability's passive effect is increased to <attackSpeed>{{ activeas*2 }}% Attack Speed</attackSpeed> for {{ doubleasduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Attack Speed",
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }}% -> {{ e1NL }}%",
+                            "{{ activeas }}% -> {{ activeasNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -92427,11 +92433,11 @@
                     "effect": [
                         null,
                         [
-                            60,
-                            70,
-                            80,
-                            90,
-                            100
+                            30,
+                            35,
+                            40,
+                            45,
+                            50
                         ],
                         [
                             0.3,
@@ -92499,7 +92505,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "60/70/80/90/100",
+                        "30/35/40/45/50",
                         "0.3/0.05/0.05/0.05/0.05",
                         "1.5",
                         "5",
@@ -92536,7 +92542,7 @@
                     "id": "NocturneUnspeakableHorror",
                     "name": "Unspeakable Horror",
                     "description": "Nocturne plants a nightmare into his target's mind, dealing damage each second and applying fear to the target if they do not get out of range by the end of the duration.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Nocturne gains <speed>{{ tooltipfearms*100 }}% Move Speed</speed> toward <status>Feared</status> enemies.<br /><br /><spellActive>Active:</spellActive> Nocturne plants a nightmare tether into his target, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> over {{ e3 }} seconds. If the tether remains unbroken, the target is <status>Feared</status> for {{ e2 }} second(s).{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Nocturne gains <speed>{{ tooltipfearms*100 }}% Move Speed</speed> toward <status>Feared</status> enemies.<br /><br /><spellActive>Active:</spellActive> Nocturne plants a nightmare tether into his target, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> over {{ leashduration }} seconds. If the tether remains unbroken, the target is <status>Feared</status> for {{ ccduration }} second(s).{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -92545,8 +92551,8 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ damagetodeal }} -> {{ damagetodealNL }}",
+                            "{{ ccduration }} -> {{ ccdurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -95999,7 +96005,7 @@
                     "id": "OrnnQ",
                     "name": "Volcanic Rupture",
                     "description": "Ornn slams the ground, sending out a fissure dealing damage and slowing enemies hit. After a small delay, a magma pillar forms at the end location.",
-                    "tooltip": "Ornn slams the ground, creating a fissure dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and <status>Slowing</status> by {{ e5 }}% for {{ e6 }} seconds. A pillar of rock forms at the fissure's end for {{ e3 }} seconds. {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Ornn slams the ground, creating a fissure dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and <status>Slowing</status> by {{ slowamount }}% for {{ slowduration }} seconds. A pillar of rock forms at the fissure's end for {{ pillarduration }} seconds. {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -97912,11 +97918,11 @@
                             "Monster Cap"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e3 }}% -> {{ e3NL }}%",
+                            "{{ basedamagevalue }} -> {{ basedamagevalueNL }}",
+                            "{{ slow_ }}% -> {{ slow_NL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}",
-                            "{{ e6 }} -> {{ e6NL }}"
+                            "{{ maxhealthdamagetononheroes }} -> {{ maxhealthdamagetononheroesNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -98057,7 +98063,7 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e5 }} -> {{ e5NL }}"
+                            "{{ damagevalue }} -> {{ damagevalueNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -98199,9 +98205,9 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e3 }} -> {{ e3NL }}",
+                            "{{ basedamagevalue }} -> {{ basedamagevalueNL }}",
+                            "{{ walldamage }} -> {{ walldamageNL }}",
+                            "{{ stunduration }} -> {{ stundurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -100846,7 +100852,7 @@
                     "id": "QuinnQ",
                     "name": "Blinding Assault",
                     "description": "Quinn calls Valor to mark an enemy and hinder its vision before damaging all enemies in the immediate area.",
-                    "tooltip": "Quinn orders Valor to dive, making the first enemy hit <keywordMajor>Vulnerable</keywordMajor>, reducing their vision radius for {{ e3 }} seconds and dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to all surrounding enemies.<br /><br />If the first enemy struck is not a champion, it is <status>Disarmed</status> for {{ e3 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Quinn orders Valor to dive, making the first enemy hit <keywordMajor>Vulnerable</keywordMajor>, reducing their vision radius for {{ visionreductionduration }} seconds and dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to all surrounding enemies.<br /><br />If the first enemy struck is not a champion, it is <status>Disarmed</status> for {{ visionreductionduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -100991,7 +100997,7 @@
                     "id": "QuinnW",
                     "name": "Heightened Senses",
                     "description": "Passively grants Quinn Attack Speed and Move Speed after she attacks a <font color='#FFF673'>Vulnerable</font> target. Activate to have Valor reveal a large area nearby.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Attacking a <keywordMajor>Vulnerable</keywordMajor> target grants Quinn <attackSpeed>{{ attackspeedbonus*100 }}% Attack Speed</attackSpeed> and <speed>{{ e3 }}% Move Speed</speed> for {{ e1 }} seconds.<br /><br /><spellActive>Active:</spellActive> Valor reveals a large area nearby for {{ e5 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Attacking a <keywordMajor>Vulnerable</keywordMajor> target grants Quinn <attackSpeed>{{ attackspeedbonus*100 }}% Attack Speed</attackSpeed> and <speed>{{ movespeedamount*100 }}% Move Speed</speed> for {{ buffduration }} seconds.<br /><br /><spellActive>Active:</spellActive> Valor reveals a large area nearby for {{ visionduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Attack Speed",
@@ -101000,7 +101006,7 @@
                         ],
                         "effect": [
                             "{{ attackspeedbonus*100.000000 }}% -> {{ attackspeedbonusnl*100.000000 }}%",
-                            "{{ effect3amount*100.000000 }}% -> {{ effect3amountnl*100.000000 }}%",
+                            "{{ movespeedamount*100.000000 }}% -> {{ movespeedamountnl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -101039,11 +101045,11 @@
                             0
                         ],
                         [
-                            20,
-                            25,
-                            30,
-                            35,
-                            40
+                            0.2,
+                            0.25,
+                            0.3,
+                            0.35,
+                            0.4
                         ],
                         [
                             2100,
@@ -101099,7 +101105,7 @@
                         null,
                         "2",
                         "0",
-                        "20/25/30/35/40",
+                        "0.2/0.25/0.3/0.35/0.4",
                         "2100",
                         "2",
                         "0",
@@ -101134,14 +101140,14 @@
                     "id": "QuinnE",
                     "name": "Vault",
                     "description": "Quinn dashes to an enemy, dealing physical damage and slowing the target's Move Speed. Upon reaching the target, she leaps off the target, briefly interrupting it, and lands near her maximum Attack Range away from the target.",
-                    "tooltip": "Quinn dashes to an enemy, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and marking them <keywordMajor>Vulnerable</keywordMajor>. Quinn then leaps backwards from the target, slightly <status>Knocking</status> them <status>Back</status> and <status>Slowing</status> them by {{ e1 }}%, decaying over {{ e3 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Quinn dashes to an enemy, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and marking them <keywordMajor>Vulnerable</keywordMajor>. Quinn then leaps backwards from the target, slightly <status>Knocking</status> them <status>Back</status> and <status>Slowing</status> them by {{ slowamount*100 }}%, decaying over {{ slowdecaytime }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -101166,11 +101172,11 @@
                     "effect": [
                         null,
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0.5,
+                            0.5,
+                            0.5,
+                            0.5,
+                            0.5
                         ],
                         [
                             40,
@@ -101238,7 +101244,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "50",
+                        "0.5",
                         "40/65/90/115/140",
                         "1.5",
                         "0",
@@ -116362,6 +116368,19 @@
                     "name": "Cat-in-the-Box Shaco (Obsidian)",
                     "chromas": false,
                     "parentSkin": 64
+                },
+                {
+                    "id": "35071",
+                    "num": 71,
+                    "name": "Prestige Pandemonium Shaco",
+                    "chromas": true
+                },
+                {
+                    "id": "35072",
+                    "num": 72,
+                    "name": "Prestige Pandemonium Shaco (Vivid)",
+                    "chromas": false,
+                    "parentSkin": 71
                 }
             ],
             "lore": "Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in murder and mayhem. Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only in the misery of the poor souls he torments. He uses toys and simple tricks to deadly effect, finding the results of his bloody “games” hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have marked them as his next plaything.",
@@ -118182,7 +118201,7 @@
                 "attackdamage": 62,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 2,
-                "attackspeed": 0.625
+                "attackspeed": 0.638
             },
             "spells": [
                 {
@@ -118330,7 +118349,7 @@
                     "id": "ShyvanaW",
                     "name": "Inferno Aegis",
                     "description": "Shyvana gains a shield, movement speed, and after a short delay, the area around her detonates.  While in Dragon Form, the explosion will heal her if it strikes an enemy champion.",
-                    "tooltip": "Shyvana wraps herself in flames for {{ duration }} seconds, gaining <shield>{{ calc_shield }} Shield</shield>, increased by <shield>{{ calc_shield_per_nearby_champion }}</shield> per nearby enemy champion and <speed>{{ movespeed }} Move Speed</speed>, increased to <speed>{{ movespeedtowardsenemies }}</speed> when moving towards enemy champions.<br /><br />When the effect ends, the <shield>Shield</shield> is broken, or upon <recast>Recast</recast> the area around her detonates, dealing <magicDamage>{{ damage }} magic damage</magicDamage>.<br /><br /><keywordMajor>Dragon Form:</keywordMajor> If the detonation hits an enemy champion Shyvana <healing>restores from {{ calc_heal_min }} to {{ calc_heal_max }} Health</healing> based on her missing Health.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Shyvana wraps herself in flames for {{ duration }} seconds, gaining <shield>{{ calc_shield }} Shield</shield>, increased by <shield>{{ calc_shield_per_nearby_champion }}</shield> per nearby enemy champion and <speed>{{ movespeed }} Move Speed</speed>, increased to <speed>{{ movespeedtowardsenemies }}</speed> when moving towards enemy champions.<br /><br />When the effect ends, the <shield>Shield</shield> is broken, or upon <recast>Recast</recast> the area around her detonates, dealing <magicDamage>{{ damage }} magic damage</magicDamage>.<br /><br /><keywordMajor>Dragon Form:</keywordMajor> If the detonation hits an enemy champion Shyvana <healing> {{ calc_base_heal }} + {{ calc_missing_health_heal }} Missing Health</healing>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -118345,13 +118364,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        14,
-                        13.5,
                         13,
-                        12.5,
-                        12
+                        12,
+                        11,
+                        10,
+                        9
                     ],
-                    "cooldownBurn": "14/13.5/13/12.5/12",
+                    "cooldownBurn": "13/12/11/10/9",
                     "cost": [
                         0,
                         0,
@@ -118473,28 +118492,28 @@
                     "id": "ShyvanaE",
                     "name": "Molten Burst",
                     "description": "Shyvana launches a fireball that explodes upon striking a large target and slows them. In Dragon Form, it passes through and explodes upon striking large enemies, leaving behind a trail of fire.",
-                    "tooltip": "Shyvana launches a fireball at the target location dealing <magicDamage>{{ damage }} magic damage</magicDamage> and <status>Slowing by {{ calc_slow }} for {{ slowduration }} seconds</status>. It explodes upon striking an enemy or reaching its terminus.<br /><br /><keywordMajor>Dragon Form:</keywordMajor> Shyvana's fireball is larger and pierces through enemies. Upon striking a champion, large monster, or reaching its terminus it triggers a pulse of fire that deals <magicDamage>{{ calc_dragon_damage }} magic damage</magicDamage> and <status>Slows by {{ calc_slow_dragon }} for {{ slowduration }} seconds</status>. The fireball leaves behind a trail for {{ groundlingerduration }} seconds that deals <magicDamage>{{ damagepersecond }} magic damage per second</magicDamage>. {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Shyvana launches a fireball at the target location dealing <magicDamage>{{ damage }} + {{ calc_max_health_damage }} Max health magic damage</magicDamage> and <status>Slowing by {{ calc_slow }} for {{ slowduration }} seconds</status>. It explodes upon striking an enemy or reaching its terminus.<br /><br /><keywordMajor>Dragon Form:</keywordMajor> Shyvana's fireball is larger and pierces through enemies. Upon striking a champion, large monster, or reaching its terminus it triggers a pulse of fire that deals <magicDamage>{{ calc_dragon_damage }}  + {{ calc_max_health_dragon_damage }} Max Health magic damage</magicDamage> and <status>Slows by {{ calc_slow_dragon }} for {{ slowduration }} seconds</status>. The fireball leaves behind a trail for {{ groundlingerduration }} seconds that deals <magicDamage>{{ damagepersecond }} magic damage per second</magicDamage>. {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
                             "Damage",
-                            "Slow"
+                            "Total AP Ratio"
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ slowamount*100.000000 }}% -> {{ slowamountnl*100.000000 }}%"
+                            "{{ damageapratio*100.000000 }}% -> {{ damageaprationl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
                         12,
-                        11.5,
                         11,
-                        10.5,
-                        10
+                        10,
+                        9,
+                        8
                     ],
-                    "cooldownBurn": "12/11.5/11/10.5/10",
+                    "cooldownBurn": "12/11/10/9/8",
                     "cost": [
                         0,
                         0,
@@ -119297,9 +119316,9 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e3 }}% -> {{ e3NL }}%",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamagevalue }} -> {{ basedamagevalueNL }}",
+                            "{{ maxhpdamage }}% -> {{ maxhpdamageNL }}%",
+                            "{{ rootduration }} -> {{ rootdurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -132851,8 +132870,8 @@
                 {
                     "id": "TeemoE",
                     "name": "Toxic Shot",
-                    "description": "Each of Teemo's attacks will poison the target, dealing damage on impact and each second after for 4 seconds.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Teemo's Attacks apply poison, dealing an additional <magicDamage>{{ impactcalculateddamage }} magic damage</magicDamage> plus <magicDamage>{{ totaldotdamage }} magic damage</magicDamage> over {{ poisonduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "description": "Each of Teemo's attacks will poison the target %i:OnHit% <OnHit>On-Hit</OnHit>, dealing damage on impact and each second after for 4 seconds.",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Teemo's Attacks apply poison %i:OnHit% <OnHit>On-Hit</OnHit>, dealing an additional <magicDamage>{{ impactcalculateddamage }} magic damage</magicDamage> plus <magicDamage>{{ totaldotdamage }} magic damage</magicDamage> over {{ poisonduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Impact Damage",
@@ -133117,7 +133136,7 @@
                 "name": "Guerrilla Warfare",
                 "description": "If Teemo stands still and takes no actions for a short duration, he becomes Invisible indefinitely. If he's in brush, Teemo can enter and maintain his Invisibility while moving. After leaving Invisibility, Teemo gains the Element of Surprise, increasing his Attack Speed for a few seconds.",
                 "image": {
-                    "full": "TeemoPassive.ASU_Teemo.png",
+                    "full": "TeemoPassive.png",
                     "sprite": "passive4.png",
                     "group": "passive",
                     "x": 288,
@@ -135783,7 +135802,7 @@
                     "id": "trundledesecrate",
                     "name": "Frozen Domain",
                     "description": "Trundle turns target location into his domain, gaining Attack Speed, Move Speed, and increased healing from all sources while on it.",
-                    "tooltip": "Trundle freezes an area for {{ e4 }} seconds. While inside he gains <speed>{{ e1 }}% Move Speed</speed>, <attackSpeed>{{ e2 }}% Attack Speed</attackSpeed>, and {{ e3 }}% increased healing.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Trundle freezes an area for {{ duration }} seconds. While inside he gains <speed>{{ msbonus*100 }}% Move Speed</speed>, <attackSpeed>{{ asbonus*100 }}% Attack Speed</attackSpeed>, and {{ healingbonus*100 }}% increased healing.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Move Speed",
@@ -135791,8 +135810,8 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ effect1amount*100.000000 }}% -> {{ effect1amountnl*100.000000 }}%",
-                            "{{ effect2amount*100.000000 }}% -> {{ effect2amountnl*100.000000 }}%",
+                            "{{ msbonus*100.000000 }}% -> {{ msbonusnl*100.000000 }}%",
+                            "{{ asbonus*100.000000 }}% -> {{ asbonusnl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -135817,25 +135836,25 @@
                     "effect": [
                         null,
                         [
-                            20,
-                            28,
-                            36,
-                            44,
-                            52
+                            0.2,
+                            0.28,
+                            0.36,
+                            0.44,
+                            0.52
                         ],
                         [
-                            30,
-                            45,
-                            60,
-                            75,
-                            90
+                            0.3,
+                            0.45,
+                            0.6,
+                            0.75,
+                            0.9
                         ],
                         [
-                            25,
-                            25,
-                            25,
-                            25,
-                            25
+                            0.25,
+                            0.25,
+                            0.25,
+                            0.25,
+                            0.25
                         ],
                         [
                             8,
@@ -135889,9 +135908,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "20/28/36/44/52",
-                        "30/45/60/75/90",
-                        "25",
+                        "0.2/0.28/0.36/0.44/0.52",
+                        "0.3/0.45/0.6/0.75/0.9",
+                        "0.25",
                         "8",
                         "775",
                         "0",
@@ -135926,7 +135945,7 @@
                     "id": "TrundleCircle",
                     "name": "Pillar of Ice",
                     "description": "Trundle creates an ice pillar at target location, becoming impassable terrain and slowing all nearby enemy units.",
-                    "tooltip": "Trundle creates an icy pillar for {{ e1 }} seconds, briefly <status>Knocking Back</status> enemies directly over it and <status>Slowing</status> nearby enemies by {{ e2 }}%.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Trundle creates an icy pillar for {{ pillarduration }} seconds, briefly <status>Knocking Back</status> enemies directly over it and <status>Slowing</status> nearby enemies by {{ slowamount }}%.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -135934,7 +135953,7 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%"
+                            "{{ slowamount }}% -> {{ slowamountNL }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -137000,7 +137019,7 @@
                     "id": "UndyingRage",
                     "name": "Undying Rage",
                     "description": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
-                    "tooltip": "Tryndamere becomes completely immune to death for {{ e3 }} seconds, refusing to be reduced below {{ e2 }} Health, and instantly gains <keywordMajor>{{ e1 }} Fury</keywordMajor>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Tryndamere becomes completely immune to death for {{ tryndrduration }} seconds, refusing to be reduced below {{ tryndrminhealth }} Health, and instantly gains <keywordMajor>{{ tryndrfurygain }} Fury</keywordMajor>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -137009,8 +137028,8 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }} -> {{ e1NL }}"
+                            "{{ tryndrminhealth }} -> {{ tryndrminhealthNL }}",
+                            "{{ tryndrfurygain }} -> {{ tryndrfurygainNL }}"
                         ]
                     },
                     "maxrank": 3,
@@ -139118,7 +139137,7 @@
             ],
             "passive": {
                 "name": "Deadly Venom",
-                "description": "Twitch's basic attacks infect the target, dealing true damage each second.",
+                "description": "Twitch's basic attacks infect the target %i:OnHit% <OnHit>On-Hit</OnHit>, dealing true damage each second.",
                 "image": {
                     "full": "Twitch_Passive.png",
                     "sprite": "passive4.png",
@@ -139277,12 +139296,14 @@
                         "label": [
                             "Attack Speed",
                             "% Max Health Damage",
-                            "On-Hit Damage"
+                            "On-Hit Damage",
+                            "On-Hit Damage Bonus HP Ratio"
                         ],
                         "effect": [
                             "{{ attackspeedbase*100.000000 }}% -> {{ attackspeedbasenl*100.000000 }}%",
                             "{{ maxhponhitbase*100.000000 }}% -> {{ maxhponhitbasenl*100.000000 }}%",
-                            "{{ basedamage }} -> {{ basedamageNL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ onhitbonushpratio*100.000000 }}% -> {{ onhitbonushprationl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 6,
@@ -139584,14 +139605,14 @@
                     "id": "UdyrE",
                     "name": "Blazing Stampede",
                     "description": "Udyr gains movement speed and his first attack against each target will Stun them. Recast: Gain even more movement speed and immunity to immobilizing effects for a couple seconds. ",
-                    "tooltip": "<spellActive>Stampede Stance:</spellActive> Udyr gains <speed>{{ movespeed*100 }}% Move Speed</speed>, decaying over {{ movespeedduration }} seconds. Additionally, Udyr's Attacks dash him to the target and <status>Stun</status> for {{ stunduration }} seconds ({{ icd }} second Cooldown per target).<br /><br /><keywordMajor>Awaken:</keywordMajor> Grants immunity to <status>Immobilizing</status> and <status>Disabling</status> effects and an additional <speed>{{ movespeedbonus }} Move Speed</speed> for {{ unstoppableduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellActive>Stampede Stance:</spellActive> Udyr gains <speed>{{ movespeed }} Move Speed</speed>, decaying over {{ movespeedduration }} seconds. Additionally, Udyr's Attacks dash him to the target and <status>Stun</status> for {{ stunduration }} seconds ({{ icd }} second Cooldown per target).<br /><br /><keywordMajor>Awaken:</keywordMajor> Grants immunity to <status>Immobilizing</status> and <status>Disabling</status> effects and an additional <speed>{{ movespeedbonus }} Move Speed</speed> for {{ unstoppableduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Move Speed",
                             "Per Unit Cooldown"
                         ],
                         "effect": [
-                            "{{ movespeed*100.000000 }}% -> {{ movespeednl*100.000000 }}%",
+                            "{{ basemovespeed*100.000000 }}% -> {{ basemovespeednl*100.000000 }}%",
                             "{{ icd }} -> {{ icdNL }}"
                         ]
                     },
@@ -141354,7 +141375,7 @@
                     "id": "VarusQ",
                     "name": "Piercing Arrow",
                     "description": "Varus readies and then fires a powerful shot that gains extra range and damage the longer he spends preparing to fire.",
-                    "tooltip": "<attention>Begin Charging:</attention> Varus draws back his next shot, <status>Slowing</status> himself by {{ e7 }}%. After {{ e5 }} seconds, if not fired, Varus will cancel the Ability and refund {{ e4 }}% of its Mana cost.<br /><br /><attention>Release:</attention> Varus releases the arrow, dealing <physicalDamage>{{ totaldamagemintooltip }} physical damage</physicalDamage>, reduced by {{ e3 }}% per enemy hit (minimum {{ e9 }}%). Damage and <keywordMajor>Blight</keywordMajor> detonation effects are increased by up to {{ maxchargeamp*100 }}% based on charge time (maximum <physicalDamage>{{ totaldamagemax }}</physicalDamage>) .{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<attention>Begin Charging:</attention> Varus draws back his next shot, <status>Slowing</status> himself by {{ movespeedmod*-100 }}%. After {{ maxchannelduration }} seconds, if not fired, Varus will cancel the Ability and refund {{ manarefund*100 }}% of its Mana cost.<br /><br /><attention>Release:</attention> Varus releases the arrow, dealing <physicalDamage>{{ totaldamagemintooltip }} physical damage</physicalDamage>, reduced by {{ falloffpercent*100 }}% per enemy hit (minimum {{ mindamagepercent*100 }}%). Damage and <keywordMajor>Blight</keywordMajor> detonation effects are increased by up to {{ maxchargeamp*100 }}% based on charge time (maximum <physicalDamage>{{ totaldamagemax }}</physicalDamage>) .{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Maximum Damage",
@@ -141402,18 +141423,18 @@
                             0
                         ],
                         [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
+                            0.15,
+                            0.15,
+                            0.15,
+                            0.15,
+                            0.15
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0.5,
+                            0.5,
+                            0.5,
+                            0.5,
+                            0.5
                         ],
                         [
                             4,
@@ -141430,11 +141451,11 @@
                             3
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
+                            -0.2,
+                            -0.2,
+                            -0.2,
+                            -0.2,
+                            -0.2
                         ],
                         [
                             0,
@@ -141444,11 +141465,11 @@
                             0
                         ],
                         [
-                            33,
-                            33,
-                            33,
-                            33,
-                            33
+                            0.33,
+                            0.33,
+                            0.33,
+                            0.33,
+                            0.33
                         ],
                         [
                             0,
@@ -141462,13 +141483,13 @@
                         null,
                         "0",
                         "0",
-                        "15",
-                        "50",
+                        "0.15",
+                        "0.5",
                         "4",
                         "3",
-                        "20",
+                        "-0.2",
                         "0",
-                        "33",
+                        "0.33",
                         "0"
                     ],
                     "vars": [],
@@ -141497,7 +141518,7 @@
                     "id": "VarusW",
                     "name": "Blighted Quiver",
                     "description": "Passive: Varus' basic attacks deal bonus magic damage and apply Blight. Varus' other abilities detonate Blight, dealing magic damage based on the target's maximum Health. Active: Varus empowers his next Piercing Arrow.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Varus' Attacks deal an additional <magicDamage>{{ onhitdamage }} magic damage</magicDamage> and apply a <keywordMajor>Blight</keywordMajor> stack for {{ e3 }} seconds (max {{ e4 }} stacks).<br /><br />Varus' other Abilities detonate <keywordMajor>Blight</keywordMajor> stacks dealing <magicDamage>{{ percenthpperstack }} max Health magic damage</magicDamage> per stack (max <magicDamage>{{ maxpercenthpperstack }} max Health damage</magicDamage>). Detonating <keywordMajor>Blight</keywordMajor> on champions and epic monsters also reduces his basic Abilities' Cooldowns by {{ cdrperblightstack*100 }}% of their Maximum per stack.<br /><br /><spellActive>Active:</spellActive> Varus' next <spellName>Piercing Arrow</spellName> deals an additional <magicDamage>{{ qempowerpercenthp }} missing Health magic damage</magicDamage>, increased up to <magicDamage>{{ maxqempowerpercenthp }} missing Health damage</magicDamage> based on charge time.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Varus' Attacks deal an additional <magicDamage>{{ onhitdamage }} magic damage</magicDamage> and apply a <keywordMajor>Blight</keywordMajor> stack for {{ debuffduration }} seconds (max {{ maxstacks }} stacks).<br /><br />Varus' other Abilities detonate <keywordMajor>Blight</keywordMajor> stacks dealing <magicDamage>{{ percenthpperstack }} max Health magic damage</magicDamage> per stack (max <magicDamage>{{ maxpercenthpperstack }} max Health damage</magicDamage>). Detonating <keywordMajor>Blight</keywordMajor> on champions and epic monsters also reduces his basic Abilities' Cooldowns by {{ cdrperblightstack*100 }}% of their Maximum per stack.<br /><br /><spellActive>Active:</spellActive> Varus' next <spellName>Piercing Arrow</spellName> deals an additional <magicDamage>{{ qempowerpercenthp }} missing Health magic damage</magicDamage>, increased up to <magicDamage>{{ maxqempowerpercenthp }} missing Health damage</magicDamage> based on charge time.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage on Attack",
@@ -141640,7 +141661,7 @@
                     "id": "VarusE",
                     "name": "Hail of Arrows",
                     "description": "Varus fires a hail of arrows that deal physical damage and desecrate the ground. Desecrated ground slows enemies' Move Speed and reduces their self healing and regeneration.",
-                    "tooltip": "Varus fires a hail of arrows that deals <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and desecrates the ground for {{ e3 }} seconds, <status>Slowing</status> enemies by {{ slowpercent*-100 }}% and applying {{ grievousamount*100 }}% Grievous Wounds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Varus fires a hail of arrows that deals <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and desecrates the ground for {{ groundduration }} seconds, <status>Slowing</status> enemies by {{ slowpercent*-100 }}% and applying {{ grievousamount*100 }}% Grievous Wounds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -141783,14 +141804,14 @@
                     "id": "VarusR",
                     "name": "Chain of Corruption",
                     "description": "Varus flings out a damaging tendril of corruption that immobilizes the first enemy champion hit and then spreads towards nearby uninfected champions, immobilizing them too on contact.",
-                    "tooltip": "Varus flings out a tendril of corruption, <status>Rooting</status> the first champion hit for {{ e2 }} seconds and dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>. <status>Rooted</status> enemies gain {{ e4 }} <keywordMajor>Blight</keywordMajor> stacks over the duration.<br /><br />The corruption spreads from its target to uninfected enemy champions. If it reaches them, they take the same damage and <status>Root</status>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Varus flings out a tendril of corruption, <status>Rooting</status> the first champion hit for {{ rootduration }} seconds and dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>. <status>Rooted</status> enemies gain {{ passivestacks }} <keywordMajor>Blight</keywordMajor> stacks over the duration.<br /><br />The corruption spreads from its target to uninfected enemy champions. If it reaches them, they take the same damage and <status>Root</status>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -142374,6 +142395,54 @@
                     "name": "Risen Legend Vayne (Mythclimber)",
                     "chromas": false,
                     "parentSkin": 64
+                },
+                {
+                    "id": "67067",
+                    "num": 67,
+                    "name": "Demoncursed Vayne",
+                    "chromas": true
+                },
+                {
+                    "id": "67068",
+                    "num": 68,
+                    "name": "Demoncursed Vayne (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 67
+                },
+                {
+                    "id": "67069",
+                    "num": 69,
+                    "name": "Demoncursed Vayne (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 67
+                },
+                {
+                    "id": "67070",
+                    "num": 70,
+                    "name": "Demoncursed Vayne (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 67
+                },
+                {
+                    "id": "67071",
+                    "num": 71,
+                    "name": "Demoncursed Vayne (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 67
+                },
+                {
+                    "id": "67072",
+                    "num": 72,
+                    "name": "Demoncursed Vayne (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 67
+                },
+                {
+                    "id": "67073",
+                    "num": 73,
+                    "name": "Demoncursed Vayne (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 67
                 }
             ],
             "lore": "Shauna Vayne is a deadly, remorseless Demacian monster hunter, who has dedicated her life to finding and destroying the demon that murdered her family. Armed with a wrist-mounted crossbow and a heart full of vengeance, she is only truly happy when slaying practitioners or creations of the dark arts, striking from the shadows with a flurry of silver bolts.",
@@ -143787,7 +143856,7 @@
                     "id": "VeigarEventHorizon",
                     "name": "Event Horizon",
                     "description": "Veigar twists the edges of space, creating a cage that Stuns enemies that pass through.",
-                    "tooltip": "Veigar twists the edges of space, creating a cage that <status>Stuns</status> enemies that pass through for {{ e1 }} seconds. The cage lasts for 3 seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Veigar twists the edges of space, creating a cage that <status>Stuns</status> enemies that pass through for {{ stunduration }} seconds. The cage lasts for 3 seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Stun Duration:",
@@ -143795,7 +143864,7 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ stunduration }} -> {{ stundurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -148468,7 +148537,7 @@
                 "name": "Glorious Evolution",
                 "description": "Viktor gains Hex Fragments whenever he kills an enemy. With every 100 Hex Fragments he obtains, Viktor permanently augments an active ability. After upgrading all of his basic abilities, he can gather 100 Hex Fragments to augment his ultimate ability.",
                 "image": {
-                    "full": "Viktor_Passive.ViktorVGU.png",
+                    "full": "Viktor_Passive.png",
                     "sprite": "passive5.png",
                     "group": "passive",
                     "x": 96,
@@ -153854,7 +153923,7 @@
                     "id": "XinZhaoW",
                     "name": "Wind Becomes Lightning",
                     "description": "Xin Zhao slashes in front of himself with his spear, then thrusts it forward, slowing affected enemies and marking them as Challenged.",
-                    "tooltip": "Xin Zhao slashes, dealing <physicalDamage>{{ slashdamage }} physical damage</physicalDamage>, then thrusts, dealing <physicalDamage>{{ thrustdamage }}</physicalDamage>. Enemies hit by the thrust are <status>Slowed</status> by {{ e6 }}% for {{ e7 }} seconds. <br /><br />Champions and Large Monsters hit by the thrust are marked as <keywordMajor>Challenged</keywordMajor> for {{ markduration }} seconds and revealed unless <keywordStealth>Stealthed</keywordStealth>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Xin Zhao slashes, dealing <physicalDamage>{{ slashdamage }} physical damage</physicalDamage>, then thrusts, dealing <physicalDamage>{{ thrustdamage }}</physicalDamage>. Enemies hit by the thrust are <status>Slowed</status> by {{ e6 }}% for {{ totalslowduration }} seconds. <br /><br />Champions and Large Monsters hit by the thrust are marked as <keywordMajor>Challenged</keywordMajor> for {{ markduration }} seconds and revealed unless <keywordStealth>Stealthed</keywordStealth>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Slash Damage",
@@ -153932,11 +154001,11 @@
                             50
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             140,
@@ -153968,7 +154037,7 @@
                         "0.5",
                         "0.5",
                         "50",
-                        "1.5",
+                        "0",
                         "140",
                         "200",
                         "0"
@@ -153999,15 +154068,15 @@
                     "id": "XinZhaoE",
                     "name": "Audacious Charge",
                     "description": "Xin Zhao charges to an enemy, gaining increased Attack Speed and dealing damage to all enemies in the area, slowing them briefly. This Ability gains increased range against Challenged targets.",
-                    "tooltip": "Xin Zhao charges an enemy, dealing <magicDamage>{{ chargedamage }} magic damage</magicDamage> to nearby enemies and <status>Slowing</status> them by {{ baseslowamount }}% for {{ e6 }} seconds.<br /><br />Xin Zhao also grants himself <attackSpeed>{{ e3 }}% Attack Speed</attackSpeed> for {{ e4 }} seconds.<br /><br />This Ability's range is increased on enemies that are <keywordMajor>Challenged</keywordMajor>. <br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Xin Zhao charges an enemy, dealing <magicDamage>{{ chargedamage }} magic damage</magicDamage> to nearby enemies and <status>Slowing</status> them by {{ slowamount }}% for {{ slowduration }} seconds.<br /><br />Xin Zhao grants himself <attackSpeed>{{ f1 }}% (%i:scaleAS%%i:scaleAP%) Attack Speed</attackSpeed> for {{ asduration }} seconds.<br /><br />This Ability's range is increased on enemies that are <keywordMajor>Challenged</keywordMajor>.<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
                             "Attack Speed"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ effect3amount*100.000000 }}% -> {{ effect3amountnl*100.000000 }}%"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ asmod*100.000000 }}% -> {{ asmodnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -154031,32 +154100,32 @@
                     "effect": [
                         null,
                         [
-                            50,
-                            75,
-                            100,
-                            125,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            -0.3,
-                            -0.3,
-                            -0.3,
-                            -0.3,
-                            -0.3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            50,
-                            60,
-                            70,
-                            80
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             250,
@@ -154066,11 +154135,11 @@
                             250
                         ],
                         [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -154103,12 +154172,12 @@
                     ],
                     "effectBurn": [
                         null,
-                        "50/75/100/125/150",
-                        "-0.3",
-                        "40/50/60/70/80",
-                        "5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "250",
-                        "0.5",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -154256,7 +154325,7 @@
                 "name": "Determination",
                 "description": "Every third attack deals bonus damage and heals Xin Zhao.",
                 "image": {
-                    "full": "XinZhaoReworkP.XinZhaoRework.png",
+                    "full": "XinZhaoReworkP.png",
                     "sprite": "passive5.png",
                     "group": "passive",
                     "x": 384,
@@ -158369,7 +158438,7 @@
                 "name": "Vow of the First Lands",
                 "description": "Yunara's Critical Strikes deal bonus magic damage.",
                 "image": {
-                    "full": "Yunara_Passive.Yunara.png",
+                    "full": "Yunara_Passive.png",
                     "sprite": "passive5.png",
                     "group": "passive",
                     "x": 96,
@@ -160234,7 +160303,7 @@
                 "name": "Cultivation of War",
                 "description": "Zaahen's attacks and abilities against enemy champions  grant him stacks of Determination, gaining bonus Attack Damage per stack. When filled with Determination, Zaahen gains increased Attack Damage and can revive.",
                 "image": {
-                    "full": "ZaahenP.Zaahen.png",
+                    "full": "ZaahenP.png",
                     "sprite": "passive5.png",
                     "group": "passive",
                     "x": 192,
@@ -162612,7 +162681,7 @@
                 "armorperlevel": 4.2,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
-                "attackrange": 500,
+                "attackrange": 550,
                 "hpregen": 3.25,
                 "hpregenperlevel": 0.7,
                 "mpregen": 6,
@@ -162914,8 +162983,8 @@
                 {
                     "id": "ZeriE",
                     "name": "Spark Surge",
-                    "description": "Zeri dashes a short distance and energizes her next 3 shots of Burst Fire, causing them to pierce through enemies. She will vault and grind over any terrain she touches.",
-                    "tooltip": "Zeri dashes a short distance and vaults over any terrain she touches, greatly extending the dash range. For the next {{ buffduration }} seconds, her shots of <spellName>Burst Fire</spellName> pierce dealing {{ pendamagepercent*100 }}% damage to enemies after the first and an additional <magicDamage>{{ bonusdamagetotal }} magic damage</magicDamage> On-Hit to the first target struck. <br /><br />Hitting an enemy champion with an Attack or Ability reduces this Ability's cooldown by {{ cdreductionperhit }} seconds. Critical strikes reduce the cooldown by {{ critcdreductionperhit }} seconds instead.{{ spellmodifierdescriptionappend }}",
+                    "description": "Zeri dashes a short distance and energizes Burst Fire to pierce through enemies. She will vault and grind over any terrain she touches.",
+                    "tooltip": "Zeri dashes a short distance and vaults over any terrain she touches, greatly extending the dash range. For the next {{ buffduration }} seconds, her shots of <spellName>Burst Fire</spellName> pierce dealing {{ pendamagepercent*100 }}% damage to enemies after the first and an additional <magicDamage>{{ bonusdamagetotal }} magic damage</magicDamage> On-Hit to the first target struck. <br /><br />Hitting an enemy with an Attack reduces this Ability's cooldown by {{ cdreductionperhit }} seconds. Critical strikes reduce the cooldown by {{ critcdreductionperhit }} seconds instead.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Percentage Damage",
@@ -162932,13 +163001,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        22,
+                        24,
+                        22.5,
                         21,
-                        20,
-                        19,
+                        19.5,
                         18
                     ],
-                    "cooldownBurn": "22/21/20/19/18",
+                    "cooldownBurn": "24/22.5/21/19.5/18",
                     "cost": [
                         90,
                         85,
@@ -163064,10 +163133,12 @@
                     "leveltip": {
                         "label": [
                             "Damage",
+                            "Move Speed",
                             "Cooldown"
                         ],
                         "effect": [
                             "{{ activedamage }} -> {{ activedamageNL }}",
+                            "{{ mspercent*100.000000 }}% -> {{ mspercentnl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -164452,7 +164523,7 @@
                     "id": "ZileanQ",
                     "name": "Time Bomb",
                     "description": "Tosses a bomb to target area that sticks to units that come near it (prioritizes Champions). It detonates after 3 seconds, dealing area of effect damage. If a Time Bomb is detonated early by another Time Bomb, it also stuns enemies.",
-                    "tooltip": "Zilean tosses a time-delayed bomb that sticks to the first unit which comes within a small area around it. After {{ e2 }} seconds it detonates, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>.<br /><br />Placing a second bomb on a unit that already has one detonates the first bomb immediately and <status>Stuns</status> enemies in the blast for {{ e4 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Zilean tosses a time-delayed bomb that sticks to the first unit which comes within a small area around it. After {{ fuseduration }} seconds it detonates, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>.<br /><br />Placing a second bomb on a unit that already has one detonates the first bomb immediately and <status>Stuns</status> enemies in the blast for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -164597,7 +164668,7 @@
                     "id": "ZileanW",
                     "name": "Rewind",
                     "description": "Zilean can prepare himself for future confrontations, reducing the cooldowns of his other basic abilities.",
-                    "tooltip": "Zilean turns time, reducing his other basic Ability Cooldowns by {{ e2 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Zilean turns time, reducing his other basic Ability Cooldowns by {{ cooldownreduction }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown"
@@ -164634,11 +164705,11 @@
                             60
                         ],
                         [
-                            10,
-                            10,
-                            10,
-                            10,
-                            10
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             35,
@@ -164700,7 +164771,7 @@
                     "effectBurn": [
                         null,
                         "20/30/40/50/60",
-                        "10",
+                        "0",
                         "35",
                         "0",
                         "0",
@@ -164730,21 +164801,21 @@
                         "w": 48,
                         "h": 48
                     },
-                    "resource": "{{ e3 }} Mana"
+                    "resource": "{{ manacost }} Mana"
                 },
                 {
                     "id": "TimeWarp",
                     "name": "Time Warp",
                     "description": "Zilean bends time around any unit, decreasing an enemy's Move Speed or increasing an ally's Move Speed for a short time.",
-                    "tooltip": "Zilean <status>Slows</status> an enemy champion by {{ e2 }}% or grants an allied champion <speed>{{ e2 }}% Move Speed</speed> for {{ e1 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Zilean <status>Slows</status> an enemy champion by {{ speedamount }}% or grants an allied champion <speed>{{ speedamount }}% Move Speed</speed> for {{ duration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Slow",
                             "Move Speed"
                         ],
                         "effect": [
-                            "{{ e2 }}% -> {{ e2NL }}%",
-                            "{{ e2 }}% -> {{ e2NL }}%"
+                            "{{ speedamount }}% -> {{ speedamountNL }}%",
+                            "{{ speedamount }}% -> {{ speedamountNL }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -165662,28 +165733,30 @@
                     "id": "ZoeE",
                     "name": "Sleepy Trouble Bubble",
                     "description": "Causes the target to become drowsy, then fall asleep. While asleep, the target's Magic Resist is reduced. The first source of damage that breaks the sleep is doubled, up to a cap.",
-                    "tooltip": "Zoe dropkicks a bubble that deals <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage>, lingering as a trap if it hits nothing. The bubble's range is extended when flying over terrain.<br /><br />After a delay, the victim falls <status>Asleep</status> and have their <scaleMR>Magic Resist</scaleMR> reduced by {{ percentpen*100 }}% for 2 seconds. Attacks and Ability hits wake them up but deal double damage, up to <trueDamage>{{ breakdamagetooltip }} true damage</trueDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Zoe dropkicks a bubble that deals <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage>, lingering as a trap if it hits nothing. The bubble's range is extended when flying over terrain.<br /><br />If either the bubble or trap hits an enemy champion she refreshes {{ cooldownrefresh*100 }}% of her cooldown.<br /><br />After a delay, the victim falls <status>Asleep</status> and have their <scaleMR>Magic Resist</scaleMR> reduced by {{ percentpen*100 }}% for 2 seconds. Attacks and Ability hits wake them up but deal double damage, up to <trueDamage>{{ breakdamagetooltip }} true damage</trueDamage>.<br /><br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
                             "Bonus Damage Cap",
-                            "Cooldown"
+                            "Cooldown",
+                            "Cooldown Refresh"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cooldownrefresh*100.000000 }}% -> {{ cooldownrefreshnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
+                        18,
+                        17,
                         16,
                         15,
-                        14,
-                        13,
-                        12
+                        14
                     ],
-                    "cooldownBurn": "16/15/14/13/12",
+                    "cooldownBurn": "18/17/16/15/14",
                     "cost": [
                         80,
                         80,

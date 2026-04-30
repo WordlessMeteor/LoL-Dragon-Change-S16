@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Chronokeeper กักเก็บ XP <TFTBonus>@XPPerCast@</TFTBonus> หน่วย เมื่อร่ายสกิลครบทุก @CastsToGainXP@ ครั้ง จากนั้นหากกักเก็บไว้มากพอ ที่คุณจะอัปเลเวล&nbsp;เขาจะมอบ XP ส่วนที่เหลือให้ <br><br>โดยหากไปถึงเลเวล 10 แล้ว เขาจะได้รับการคูณความเสียหาย <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;แทน<br><br><rules>กักเก็บ XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@ หน่วย</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>ใน Choncc's Treasure จำนวนครั้งที่ต้องร่ายเพื่อกักเก็บ XP เพิ่มขึ้นเป็น @CastsToGainXPCT@ ครั้ง ไปจนถึงด่าน 3-5</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Chronokeeper กักเก็บ XP <TFTBonus>@XPPerCast@</TFTBonus> หน่วย เมื่อร่ายสกิลครบทุก @CastsToGainXP@ ครั้ง จากนั้นหากกักเก็บไว้มากพอ ที่คุณจะอัปเลเวล&nbsp;เขาจะมอบ XP ส่วนที่เหลือให้ <br><br>โดยหากไปถึงเลเวล 10 แล้ว เขาจะได้รับการคูณความเสียหาย <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;แทน<br><br><rules>กักเก็บ XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@ หน่วย</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,10 +12270,6 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
-                    },
-                    {
-                        "name": "CastsToGainXPCT",
-                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13774,7 +13770,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "แชมเปี้ยน Shurima ได้รับความเร็วโจมตี @ASPerSecond*100@% และฟื้นฟูพลังชีวิต @HealthRestorePerSecond@ หน่วยในทุก ๆ วินาที อีกทั้งได้รับเอฟเฟกต์เพิ่มเติม เมื่อเริ่มการต่อสู้<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatic: ปลดล็อก Nasus, Renekton และ Xerath จากนั้นใช้งาน Shurima 4 ตัว</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) พลังชีวิตสูงสุด @BonusHealth*100@%</row><br><row>(@MinUnits@) เกราะและต้านทานเวท @ArmorMR@ หน่วย</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>แชมเปี้ยน Shurima จุติ กลายเป็นทวยเทพในทุก ๆ @GodhoodCadence@ วินาที </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>เปิดใช้งานเมื่อปลดล็อก Nasus, Renekton และ Xerath แล้วเท่านั้น</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
+        "tooltip_text": "แชมเปี้ยน Shurima ได้รับความเร็วโจมตี @ASPerSecond*100@% และฟื้นฟูพลังชีวิต @HealthRestorePerSecond@ หน่วยในทุก ๆ วินาที อีกทั้งได้รับเอฟเฟกต์เพิ่มเติม เมื่อเริ่มการต่อสู้<br><br><row> (@MinUnits@) พลังชีวิตสูงสุด @BonusHealth*100@% </row><br><row>(@MinUnits@) เกราะและต้านทานเวท @ArmorMR@ หน่วย</row><br><row>(@MinUnits@) แชมเปี้ยน Shurima จุติกลายเป็นทวยเทพในทุก ๆ @GodhoodCadence@ วินาที</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13854,7 +13850,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 0.0
+                        "value": 1.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13862,7 +13858,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 0.0
+                        "value": 3.0
                     },
                     {
                         "name": "SkinScale",
@@ -13870,8 +13866,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -14574,7 +14570,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Ascendant Charm จะปรากฏในร้านค้า หลังจบทุกรอบการต่อสู้ และสามารถใช้ทองซื้อ เพื่อรับเอฟเฟกต์แสนทรงพลัง@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>ใน Choncc's Treasure คุณไม่สามารถเจอ Faithful Followers Charm ได้จนกว่าจะไปถึงเลเวล 7</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Ascendant Charm จะปรากฏขึ้นมาในร้านค้า หลังจบทุกรอบการต่อสู้ และสามารถใช้ทอง ซื้อเพื่อรับเอฟเฟกต์แสนทรงพลัง@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15038,7 +15034,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.36
+                        "value": 0.4
                     },
                     {
                         "name": "DamageReduction",
@@ -15054,7 +15050,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.48
+                        "value": 0.55
                     },
                     {
                         "name": "DamageReduction",
@@ -15078,7 +15074,7 @@
                 "constants": [
                     {
                         "name": "PairsPartnerWinMultiplier",
-                        "value": 0.5
+                        "value": 0.85
                     },
                     {
                         "name": "TechBreakpoint",
@@ -15090,7 +15086,7 @@
                     },
                     {
                         "name": "TechPerCombat_DU",
-                        "value": 15.0
+                        "value": 20.0
                     },
                     {
                         "name": "TechPerDeath_PVE",
@@ -15336,7 +15332,7 @@
         "trait_id": "TFT17_DRX",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_NOVA.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) มอบพลังงานให้พันธมิตรทั้งหมด ขึ้นอยู่กับแชมเปี้ยน N.O.V.A. หลังการต่อสู้ผ่านไป @TeamAttackDelay@ วินาที</row><br><row>(@MinUnits@) ได้รับ Striker Selector โดย N.O.V.A. จะเปิดใช้งานสกิล Strike เมื่อพลังเต็มพิกัด</row><br><ShowIf.TFT17_DRX_HasAatrox><status>Aatrox:</status> ความเสียหายจากพันธมิตร จะ<TFTKeyword>ฉีกกระชาก</TFTKeyword>และ<TFTKeyword>สะบั้น</TFTKeyword>ศัตรู @ShredAndSunder*100@%</ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>Aatrox: ฉีกกระชากและสะบั้นศัตรู</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>Caitlyn:</status> มอบความเร็วโจมตี @AS*100@% ให้พันธมิตร</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>Caitlyn: มอบความเร็วโจมตี</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>Akali:</status> พันธมิตรได้รับสถานะ<TFTKeyword>แม่นยำ</TFTKeyword></ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>Akali: พันธมิตรได้รับสถานะแม่นยำ</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>Maokai:</status> พันธมิตรฮีล @Heal*100@% จากพลังชีวิตสูงสุด</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>Maokai: ฮีลพลังชีวิตพันธมิตร</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>Kindred:</status> มอบโล่ให้แทงค์ที่แกร่งที่สุด <TFTBonus>@ShieldValue@</TFTBonus> หน่วย</ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>Kindred: มอบโล่ให้พันธมิตร</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>Emblem:</status> พันธมิตรสร้างโบนัสความเสียหายจริง @BonusTrueDamage*100@% ที่สแตคซ้อนทับกันได้</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>Emblem: สร้างโบนัสความเสียหายจริง</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
+        "tooltip_text": "<row>(@MinUnits@) มอบพลังงานให้พันธมิตรทั้งหมด ขึ้นอยู่กับแชมเปี้ยน N.O.V.A. หลังการต่อสู้ผ่านไป @TeamAttackDelay@ วินาที</row><br><row>(@MinUnits@) ได้รับ Striker Selector โดย N.O.V.A. ที่เลือกจะเปิดใช้สกิล Strike เมื่อมอบพลังงานให้กับทีม</row><br><ShowIf.TFT17_DRX_HasAatrox><status>Aatrox:</status> ความเสียหายจากพันธมิตร จะ<TFTKeyword>ฉีกกระชาก</TFTKeyword>และ<TFTKeyword>สะบั้น</TFTKeyword>ศัตรู @ShredAndSunder*100@%</ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>Aatrox: ฉีกกระชากและสะบั้นศัตรู</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>Caitlyn:</status> มอบความเร็วโจมตี @AS*100@% ให้พันธมิตร</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>Caitlyn: มอบความเร็วโจมตี</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>Akali:</status> พันธมิตรได้รับสถานะ<TFTKeyword>แม่นยำ</TFTKeyword></ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>Akali: พันธมิตรได้รับสถานะแม่นยำ</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>Maokai:</status> พันธมิตรฮีล @Heal*100@% จากพลังชีวิตสูงสุด</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>Maokai: ฮีลพลังชีวิตพันธมิตร</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>Kindred:</status> มอบโล่ให้แทงค์ที่แกร่งที่สุด <TFTBonus>@ShieldValue@</TFTBonus> หน่วย</ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>Kindred: มอบโล่ให้พันธมิตร</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>Emblem:</status> พันธมิตรสร้างโบนัสความเสียหายจริง @BonusTrueDamage*100@% ที่สแตคซ้อนทับกันได้</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>Emblem: สร้างโบนัสความเสียหายจริง</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15487,7 +15483,7 @@
         "trait_id": "TFT17_FioraUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DivineDuelist.TFT_Set17.png",
-        "tooltip_text": "ฮีลพลังชีวิตนักวางแผน @PlayerOmnivamp*100@% จากความเสียหายที่ทำแก่ผู้เล่นอื่น เมื่อชนะ<br><br>และ Fiora ชนะการดวลแบบตัวต่อตัวเสมอ",
+        "tooltip_text": "ฮีลพลังชีวิตนักวางแผน @PlayerOmnivamp*100@% จากความเสียหายที่ทำแก่ผู้เล่นอื่น เมื่อชนะ<br><br>Fiora ชนะการดวลแบบตัวต่อตัวเสมอ",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15638,7 +15634,7 @@
         "trait_id": "TFT17_GravesTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_FactoryNew.TFT_Set17.png",
-        "tooltip_text": "เปิดคลังอาวุธเพื่อซื้ออัปเกรดถาวร ให้กับ Graves ที่แข็งแกร่งที่สุด หลังจบรอบการต่อสู้<br><br>โดยเมื่ออัปเกรดครบทุก @NumberOfUpgradesBeforeRoundCostIncrease@ ครั้ง อัปเกรดครั้งถัดไป จะต้องรอเพิ่มอีกหนึ่งรอบ<br><br><rules>อัปเกรดครั้งถัดไป: @TFTUnitProperty.trait:TFT17_GravesTrait_RoundsUntilUpgrade@ รอบ</rules>",
+        "tooltip_text": "เปิดคลังอาวุธเพื่อซื้ออัปเกรดถาวร ให้กับ Graves ที่แข็งแกร่งที่สุด หลังจบรอบการต่อสู้<br><br>เมื่ออัปเกรดครบทุก @NumberOfUpgradesBeforeRoundCostIncrease@ ครั้ง อัปเกรดครั้งถัดไป จะต้องรอเพิ่มอีกหนึ่งรอบ<br><br><rules>อัปเกรดครั้งถัดไป: @TFTUnitProperty.trait:TFT17_GravesTrait_RoundsUntilUpgrade@ รอบ</rules>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15675,7 +15671,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.2
+                        "value": 0.25
                     }
                 ],
                 "min_units": 2,
@@ -15687,7 +15683,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.4
+                        "value": 0.45
                     }
                 ],
                 "min_units": 4,
@@ -15699,7 +15695,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.6
+                        "value": 0.65
                     }
                 ],
                 "min_units": 6,
@@ -15841,11 +15837,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.2
+                        "value": 0.25
                     },
                     {
                         "name": "AP",
-                        "value": 20.0
+                        "value": 25.0
                     }
                 ],
                 "min_units": 3,
@@ -15857,11 +15853,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.45
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 45.0
                     }
                 ],
                 "min_units": 4,
@@ -16634,6 +16630,10 @@
                         "value": 0.08
                     },
                     {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    },
+                    {
                         "name": "Serpent_DR_Teamwide",
                         "value": 0.08
                     },
@@ -16642,12 +16642,24 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Duration",
                         "value": 10.0
                     },
                     {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Interval",
                         "value": 1.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
                     },
                     {
                         "name": "Shield_Shield_Teamwide",
@@ -16660,6 +16672,10 @@
                     {
                         "name": "Wolf_HealthThreshold",
                         "value": 0.5
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
                     }
                 ]
             }
@@ -16677,7 +16693,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.1
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16708,6 +16724,10 @@
                         "value": 0.2
                     },
                     {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
                         "name": "Serpent_DR",
                         "value": 0.15
                     },
@@ -16720,12 +16740,32 @@
                         "value": 0.02
                     },
                     {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
                         "name": "Shield_Shield",
                         "value": 0.15
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16749,7 +16789,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16772,12 +16812,20 @@
                         "value": 30.0
                     },
                     {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
                         "name": "Mountain_APPerHealthThreshold",
                         "value": 2.0
                     },
                     {
                         "name": "Mountain_Health",
                         "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16796,8 +16844,20 @@
                         "value": 0.25
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16848,6 +16908,14 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
                         "name": "Mountain_DamageAmpPercent",
                         "value": 0.01
                     },
@@ -16858,6 +16926,18 @@
                     {
                         "name": "Mountain_HexesToReveal_TOOLTIPONLY",
                         "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16876,8 +16956,20 @@
                         "value": 0.35
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16885,6 +16977,119 @@
                     }
                 ],
                 "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 10,
                 "style_idx": 5,
                 "style_name": "kGold"
             }
@@ -16895,7 +17100,7 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Stargazer เปิดเผยกลุ่มดาวที่แตกต่างกันในทุก ๆ เกม กลุ่มดาวเกมนี้: <TFTStargazer>The Fountain</TFTStargazer><br><br>พันธมิตรในช่องเสริมพลังได้รับ ฟื้นฟูมานา @Fountain_ManaRegen_Teamwide@ หน่วย โดย Stargazer จะได้รับมากขึ้น และสกิลของพวกเขาจะฮีลพันธมิตร ที่มีพลังชีวิตน้อยที่สุดด้วย<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen% หน่วย, ฮีล @Fountain_HealPercent*100@% จากความเสียหายสกิล</expandRow><br><br><rules>ช่องจะเปิดเผยมากขึ้น ตามเลเวลของผู้เล่น</rules>",
+        "tooltip_text": "Stargazer เปิดเผยกลุ่มดาวที่แตกต่างกันในทุก ๆ เกม กลุ่มดาวเกมนี้: <TFTStargazer>The Fountain</TFTStargazer><br><br>พันธมิตรในช่องเสริมพลังได้รับ ฟื้นฟูมานา @Fountain_ManaRegen_Teamwide@ หน่วย โดย Stargazer จะได้รับมากขึ้น และสกิลของพวกเขาจะฮีลพันธมิตร ที่มีพลังชีวิตน้อยที่สุดด้วย<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen% หน่วย, ฮีล @Fountain_HealPercent*100@% จากความเสียหายสกิล</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen% หน่วย, ฮีล @Fountain_HealPercent*100@% จากความเสียหายสกิล</row><br><br><rules>ช่องจะเปิดเผยมากขึ้น ตามเลเวลของผู้เล่น</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16955,7 +17160,7 @@
                     },
                     {
                         "name": "Huntress_Heal",
-                        "value": 0.1
+                        "value": 0.15
                     }
                 ]
             }
@@ -16965,7 +17170,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.1
+                        "value": 0.12
                     },
                     {
                         "name": "NumMarks",
@@ -16981,7 +17186,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.3
+                        "value": 0.35
                     },
                     {
                         "name": "NumMarks",
@@ -16997,7 +17202,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.45
+                        "value": 0.55
                     },
                     {
                         "name": "NumMarks",
@@ -17025,7 +17230,7 @@
                     },
                     {
                         "name": "Medallion_IncreasePer3Star",
-                        "value": 6.5
+                        "value": 5.0
                     },
                     {
                         "name": "Medallion_Resists_Teamwide",
@@ -17093,7 +17298,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17113,7 +17318,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
@@ -17129,7 +17334,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17149,7 +17354,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
@@ -17165,11 +17370,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17185,11 +17390,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17201,11 +17406,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17221,11 +17426,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17237,11 +17442,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17257,11 +17462,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17273,11 +17478,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17569,7 +17774,7 @@
         "trait_id": "TFT17_Timebreaker",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) ได้รับแต้มสุ่มใหม่ฟรีเมื่อพ่ายแพ้ แต่หากชนะจะกักเก็บ XP ไว้ใน Temporal Core (เพิ่มขึ้นตามด่าน)</row><br><row>(@MinUnits@) และพันธมิตรได้รับความเร็วโจมตี @AttackSpeed*100@%</row><br><row>(@MinUnits@) และ Timebreaker ได้รับความเร็วโจมตีเพิ่มเติม @TimebreakerAdditionalAS*100@%</row><br><br><rules>แต้มสุ่มใหม่เมื่อแพ้: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@ ครั้ง<br>XP เมื่อชนะ: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@ หน่วย</rules>",
+        "tooltip_text": "<row>(@MinUnits@) พันธมิตรได้รับความเร็วโจมตี @AttackSpeed*100@%</row><br><row>(@MinUnits@) และเมื่อคุณแพ้ จะได้รับแต้มสุ่มใหม่ฟรี แต่หากชนะจะกักเก็บ XP ไว้ใน Temporal Core (เพิ่มขึ้นตามด่าน)</row><br><row>(@MinUnits@) และ Timebreaker ได้รับความเร็วโจมตีเพิ่มเติม @TimebreakerAdditionalAS*100@%</row><br><br><rules>แต้มสุ่มใหม่เมื่อแพ้: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@ ครั้ง<br>XP เมื่อชนะ: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@ หน่วย</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -17580,11 +17785,11 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.0
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
@@ -17600,7 +17805,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.25
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17620,7 +17825,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.25
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17628,7 +17833,7 @@
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
-                        "value": 0.4
+                        "value": 0.5
                     }
                 ],
                 "min_units": 4,

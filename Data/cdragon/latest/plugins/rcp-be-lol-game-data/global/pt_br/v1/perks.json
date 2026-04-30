@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Ritmo Fatal",
         "majorChangePatchVersion": "",
-        "tooltip": "Atacar um Campeão inimigo concede a você %i:scaleAS%@ASPerStack@ de Velocidade de Ataque por 6s, até 6. Com o máximo de acúmulos, causa @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>de Dano Adaptativo adicional</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>ao contato</OnHit>.<br><br>Duração do máximo de acúmulos: @f1@s<br>Dano causado: @f2@<br><br>Essa runa também monitora a porcentagem dos seus ataques básicos contra Campeões que são desferidos dentro de 0.25s após o seu ataque estar pronto depois de atacar um Campeão anteriormente: @f3@% (@f4@ de @f5@)",
+        "tooltip": "Atacar um Campeão inimigo concede a você %i:scaleAS%@ASPerStack@ de Velocidade de Ataque por 6s, até 6. Com o máximo de acúmulos, causa @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>de Dano Adaptativo adicional</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>ao atacar</OnHit>.<br><br>Duração do máximo de acúmulos: @f1@s<br>Dano causado: @f2@<br><br>Esta runa também monitora a porcentagem dos seus ataques básicos contra Campeões que são desferidos dentro de 0.25s após seu ataque estar pronto depois de atacar um Campeão: @f3@% (@f4@ de @f5@)",
         "shortDesc": "Atacar um Campeão inimigo concede a você Velocidade de Ataque, até 6 acúmulos. Com o máximo de acúmulos, causa <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Dano Adaptativo adicional</font></lol-uikit-tooltipped-keyword> ao contato.",
         "longDesc": "Atacar um Campeão inimigo concede a você [6% para atacantes corpo a corpo || 4% para atacantes à distância] de Velocidade de Ataque por 6s, até 6. Com o máximo de acúmulos, causa [9 - 30 para atacantes corpo a corpo || 6 - 24 para atacantes à distância] de <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>Dano Adaptativo adicional ao contato, aumentado em 1% a cada 1% de Velocidade de Ataque adicional</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Velocidade de Ataque crescente",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Ímpeto Gradual",
-        "majorChangePatchVersion": "",
-        "tooltip": "Atingir um Campeão inimigo com 3 Ataques ou Habilidades <b>diferentes</b> dentro de 4s concede <speed>@MoveSpeedCalc@ de Velocidade de Movimento</speed> e <status>50% de Resistência a Lentidão</status> por 3s.<br><br>Tempo de Recarga: <attention>@CooldownCalc@s</attention><br><br>Total de ativações: <attention>@f1@</attention>",
-        "shortDesc": "Atingir um Campeão inimigo com 3 Ataques ou Habilidades <b>diferentes</b> concede um impulso de <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>VdM</lol-uikit-tooltipped-keyword> e Resistência a Lentidão. ",
-        "longDesc": "Atingir um Campeão inimigo com 3 Ataques ou Habilidades <b>diferentes</b> dentro de 4s concede <speed>25% - 50% de Velocidade de Movimento</speed> com base no nível e <status>50% de Resistência a Lentidão</status> por 3s. A Velocidade de Movimento tem 50% de eficácia para Campeões de ataque à distância.<br>Tempo de Recarga: 30s - 10s",
+        "name": "Avanço da Tempestade",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Causar 25% da Vida máxima de um Campeão como dano dentro de 3s concede <speed>@MoveSpeedCalc@ de Velocidade de Movimento</speed> e <status>50% de Resistência a Lentidão</status> por 3s.<br><br>Tempo de Recarga: <attention>@CooldownCalc@s</attention><br><br>Total de ativações: <attention>@f1@</attention>",
+        "shortDesc": "Causar dano equivalente a 25% da Vida máxima de um Campeão concede um impulso de <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>VdM</lol-uikit-tooltipped-keyword> e Resistência a Lentidão. ",
+        "longDesc": "Causar 25% da Vida máxima de um Campeão como dano dentro de 3s concede <speed>40% de Velocidade de Movimento</speed> e <status>50% de Resistência a Lentidão</status> por 3s. A Velocidade de Movimento tem 75% de eficácia para Campeões de ataque à distância.<br>Tempo de Recarga: 20s - 10s",
         "recommendationDescriptor": "Ímpeto de movimento",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Total de ativações: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "Toque Ígneo",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Causar dano a um Campeão com uma habilidade o queima, causando @DamageCalc@ de Dano Adaptativo por segundo. Após queimar por 3s, o dano da Queimadura aumenta em 100% enquanto o alvo permanecer em chamas.<br><rules><br>Duração:<br>Alvo único: 4s<br>Área de ação: 2s<br>Dano ao longo do tempo: 1s<br></rules><br>Você causou @f1@ de dano a Campeões com queimadura de Toque Ígneo.",
+        "shortDesc": "Causar dano a um Campeão com uma habilidade o queima ao longo do tempo.",
+        "longDesc": "Causar dano a um Campeão com uma habilidade o queima, causando 1 - 10 com base no nível (+<scaleAP>0.03 de PdH</scaleAP>) (+<scaleAD>0.08 de DdA adicional</scaleAD>) de Dano Adaptativo por segundo. Após queimar por 3s, o dano da Queimadura aumenta em 100% enquanto o alvo permanecer em chamas.<br><rules><br>Duração:<br>Alvo único: 4s<br>Área de ação: 2s<br>Dano ao longo do tempo: 1s<br></rules>",
+        "recommendationDescriptor": "Dano de Habilidade contínuo",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            "Dano de Queimadura causado: @eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Guardião",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Chuva de Lâminas",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Recebe {{ Item_Melee_Ranged_Split }}% de Velocidade de Ataque ao atacar um Campeão inimigo por até @NumHits@ ataques. <br><br>Tempo de Recarga: @Cooldown@s.<br><hr><br>Ataques com Chuva de Lâminas: @f1@<br>Porcentagem de ataques certeiros com Chuva de Lâminas: @f2@%<br><br><rules>Reinicializações de Ataques Básicos aumentam o limite de ataques em 1.<br>Permite exceder temporariamente o limite de Velocidade de Ataque.</rules>",
-        "shortDesc": "Concede uma grande quantidade de Velocidade de Ataque pelos primeiros 3 ataques contra Campeões inimigos.",
-        "longDesc": "Recebe 160% (80% para Campeões de ataque à distância) de Velocidade de Ataque ao atacar um Campeão inimigo por até 3 ataques.<br><br>O efeito acabará caso passe mais de 3s entre os ataques.<br><br>Tempo de Recarga: 10s.<br><br><rules>Reinicializações de ataques aumentam o limite de ataques em 1.<br>Permite exceder temporariamente o limite de Velocidade de Ataque.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Recebe {{ Item_Melee_Ranged_Split }}% de Velocidade de Ataque e causa <font color='#48C4B7'>@BonusDamage@</font> de <trueDamage>Dano Verdadeiro adicional</trueDamage> ao atacar um Campeão inimigo por até @NumHits@ ataques. <br><br>Tempo de Recarga: @Cooldown@s.<br><hr><br>Ataques com Chuva de Lâminas: @f1@<br>Dano causado: @f2@<br>Porcentagem de ataques certeiros com Chuva de Lâminas: @f3@%<br><br><rules>Reinicializações de Ataques Básicos aumentam o limite de ataques em +1, até +@MaxBonusHits@.<br>Permite exceder temporariamente o limite de Velocidade de Ataque.</rules>",
+        "shortDesc": "Recebe uma grande quantidade de Velocidade de Ataque e <trueDamage>Dano Verdadeiro</trueDamage> adicional pelos primeiros 3 ataques contra Campeões inimigos.",
+        "longDesc": "Recebe 120% (60% para Campeões de ataque à distância) de Velocidade de Ataque e <trueDamage>Dano Verdadeiro adicional</trueDamage> ao atacar um Campeão inimigo por até 3 ataques.<br><br>O efeito acabará caso passe mais de 3s entre os ataques.<br><br>Tempo de Recarga: 10s.<br>Dano ao contato: 4 - 20 (+0.08 de DdA adicional, +0.06 de PdH) de dano.<br><br><rules>Reinicializações de ataques aumentam o limite de ataques em 1.<br>Permite exceder temporariamente o limite de Velocidade de Ataque.</rules>",
         "recommendationDescriptor": "Turbilhão de ataques",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Ataques feitos com Velocidade de Ataque adicional: @eogvar1@",
-            "Porcentagem de ataques certeiros com Chuva de Lâminas: @eogvar2@%"
+            "Dano causado: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Cometa Arcano",
         "majorChangePatchVersion": "",
-        "tooltip": "Ao causar dano a um Campeão com uma Habilidade, um cometa é lançado onde ele estiver. Se Cometa Arcano estiver em Tempo de Recarga, o tempo é reduzido.<br><br>Dano: @DamageCalc@<br>Tempo de Recarga: @CooldownCalc@s<br><rules><br>Redução do Tempo de Recarga:<br>Alvo único: 20%.<br>Área de ação: 10%.<br>Dano ao longo do tempo: 5%.<br></rules><br>Você acertou @f3@% dos cometas arremessados, causando um total de @f1@ de dano a Campeões.",
+        "tooltip": "Ao causar dano a um Campeão com uma Habilidade, um cometa é lançado onde ele estiver, causando mais dano com base na distância que o alvo está de você.<br><br>Dano: @DamageCalc@<br>Tempo de Recarga: @CooldownCalc@s<br><rules><br>A Amplificação de Dano escala até 100% a 750 de alcance.<br></rules><br>Você acertou @f3@% dos cometas disparados, causando um total de @f1@ de dano a Campeões.",
         "shortDesc": "Ao causar dano a um Campeão com uma habilidade, um cometa é lançado onde ele estiver.",
-        "longDesc": "Ao causar dano a um Campeão com uma habilidade, um cometa é lançado onde ele estiver ou, se Cometa Arcano estiver em Tempo de Recarga, seu tempo é reduzido.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Dano Adaptativo</font></lol-uikit-tooltipped-keyword>: de 30 a 130 com base no nível (<scaleAP>+0.05 de PdH</scaleAP> e <scaleAD>+0.1 de DdA adicional</scaleAD>)<br>Tempo de Recarga: 20s a 8s<br><rules><br>Redução do Tempo de Recarga:<br>Alvo único: 20%.<br>Área de ação: 10%.<br>Dano ao longo do tempo: 5%.<br></rules>",
+        "longDesc": "Ao causar dano a um Campeão com uma Habilidade, um cometa é lançado onde ele estiver, causando dano aumentado com base na distância.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Dano Adaptativo</font></lol-uikit-tooltipped-keyword>: 15 - 100 com base no nível (<scaleAP>+0.05 de PdH</scaleAP> e <scaleAD>+0.1 de DdA adicional</scaleAD>)<br>Tempo de Recarga: 20 - 8s<br><rules><br>A Amplificação de Dano escala até 100% 750 de alcance.<br></rules>",
         "recommendationDescriptor": "Dano de Habilidade",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

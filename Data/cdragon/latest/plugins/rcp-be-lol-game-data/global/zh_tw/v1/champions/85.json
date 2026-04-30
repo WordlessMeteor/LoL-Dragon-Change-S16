@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "凱能",
     "alias": "Kennen",
     "title": "狂暴之心",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "凱能連續攻擊附加額外傷害並對目標造成一層風暴印記，主動釋放會對所有帶有風暴印記的敵人造成閃電傷害，並附加額外一層風暴印記。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive> 凱能每 5 下普攻會造成額外<magicDamage>@TotalDamagePassive@魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive> 釋放一道電能力場，對鄰近所有帶有<spellName>風暴印記</spellName>的敵人造成<magicDamage>@TotalDamageActive@ 魔法傷害</magicDamage>。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>每第5次普攻%i:OnHit% <OnHit>命中</OnHit>時會額外造成<magicDamage>@TotalDamagePassive@魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>釋放一道電能力場，對鄰近所有帶有<spellName>風暴印記</spellName>的敵軍造成<magicDamage>@TotalDamageActive@魔法傷害</magicDamage>。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "凱能變身為高速移動的球形閃電數秒，使他可以穿越單位並造成風暴印記。凱能進入此狀態時會提高跑速，並在解除此狀態時提高攻擊速度。",
-            "dynamicDescription": "凱能變身成球形閃電，增加<speed>@MovementSpeed*100@%跑速</speed>，進入鬼步狀態@DurationAsBall@秒，並對他穿過的敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。如果凱能傷害至少一位敵軍，將會回復@EnergyRefund@能量<br>。<br>此技能結束後，凱能將獲得<attackSpeed>@AttackSpeed*100@%攻速</attackSpeed>，持續@DurationAfterBall@秒。<recast>重施技能</recast>可提前結束此技能。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "凱能變身成球形閃電，增加<speed>@MovementSpeed*100@%跑速</speed>，進入鬼步狀態@DurationAsBall@秒，並對他穿過的敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。如果凱能傷害至少一位敵軍，將會回復@EnergyRefund@能量<br>。<br>此技能結束後，凱能將獲得<attackSpeed>@TotalAS*100@%攻速</attackSpeed>，持續@DurationAfterBall@秒。暴擊可延長此技能的持續時間@CritDurationBonus@秒。<recast>重施技能</recast>可提前結束此技能。@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

@@ -1501,6 +1501,49 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GoldProc",
+                    "values": [
+                        2.0,
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SSProc",
+                    "values": [
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ManaRefundPercent",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PlunderThreshold",
+                    "values": [
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1645,14 +1688,12 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "GoldProc",
                                     "nameOverride": "Spell_ListType_GangplankQPlunderGold",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 5,
+                                    "type": "SSProc",
                                     "nameOverride": "Spell_ListType_GangplankQPlunderSilverSerpents",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1838,6 +1879,34 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "ChampionBonusDamage",
+                    "values": [
+                        80.0,
+                        80.0,
+                        105.0,
+                        130.0,
+                        155.0,
+                        180.0,
+                        205.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mCoefficient": 0.4000000059604645,
             "mAnimationName": "Spell3",
             "mImgIconName": [
@@ -1929,15 +1998,13 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 4,
+                                    "type": "SlowAmount",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "ChampionBonusDamage",
                                     "nameOverride": "Spell_ListType_BonusDamageAgainstChampions",
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -2294,6 +2361,123 @@
                         90.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxBarrels",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        4.0,
+                        4.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusDamageToChampions",
+                    "values": [
+                        55.0,
+                        75.0,
+                        95.0,
+                        115.0,
+                        135.0,
+                        155.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BarrelDuration",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BarrelBaseDecay",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BarrelEnemyGoldBounty",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinionDamagePercentage",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CooldownBetweenBarrels",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BarrelArmorPenetration",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2425,14 +2609,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "BonusDamageToChampions",
                                     "nameOverride": "Spell_ListType_BonusDamageAgainstChampions",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "MaxBarrels",
                                     "nameOverride": "Spell_ListType_TaricMaxCharges",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2481,8 +2663,8 @@
                                 "__type": "StatByCoefficientCalculationPart"
                             },
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "BonusDamageToChampions",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "SumOfSubPartsCalculationPart"
@@ -2624,13 +2806,80 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseHeal",
+                    "values": [
+                        20.0,
+                        45.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        145.0,
+                        170.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PercentHeal",
+                    "values": [
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration_unused",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HasteAmount",
+                    "values": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SteroidAmount_unused",
+                    "values": [
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "BaseHealth": {
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseHeal",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.8999999761581421,
@@ -2703,8 +2952,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseHeal",
                                     "nameOverride": "Spell_ListType_Healing",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2745,8 +2993,8 @@
                                     {
                                         "mStat": 15,
                                         "mSubpart": {
-                                            "mEffectIndex": 2,
-                                            "__type": "EffectValueCalculationPart"
+                                            "mDataValue": "PercentHeal",
+                                            "__type": "NamedDataValueCalculationPart"
                                         },
                                         "__type": "StatBySubPartCalculationPart"
                                     }

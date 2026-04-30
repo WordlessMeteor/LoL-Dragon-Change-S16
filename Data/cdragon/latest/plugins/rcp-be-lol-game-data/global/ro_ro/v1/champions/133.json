@@ -1,5 +1,6 @@
 {
     "id": 133,
+    "contentId": "911a5633-b453-4848-886d-8cb3b7d61ac0",
     "name": "Quinn",
     "alias": "Quinn",
     "title": "aripile Demaciei",
@@ -549,7 +550,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Quinn îl cheamă pe Valor, care însemnează un inamic și-i reduce raza de viziune, iar apoi le provoacă daune tuturor inamicilor din zonă.",
-            "dynamicDescription": "Quinn îi ordonă lui Valor să coboare, marcând primul inamic lovit ca <keywordMajor>''vulnerabil''</keywordMajor>, reducându-i raza de viziune timp de @Effect3Amount@ secunde și provocându-le <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> tuturor inamicilor din jur.<br><br>Dacă primul inamic lovit nu este un campion, acesta este <status>dezarmat</status> timp de @Effect3Amount@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn îi ordonă lui Valor să coboare, marcând primul inamic lovit ca <keywordMajor>''vulnerabil''</keywordMajor>, reducându-i raza de viziune timp de @VisionReductionDuration@ secunde și provocându-le <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> tuturor inamicilor din jur.<br><br>Dacă primul inamic lovit nu este un campion, acesta este <status>dezarmat</status> timp de @VisionReductionDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -699,7 +700,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Quinn primește în mod pasiv viteză de atac și viteză de mișcare după ce atacă o țintă <font color='#FFF673'>''vulnerabilă''</font>. La activare, Valor dezvăluie o zonă întinsă din apropiere.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> dacă atacă o țintă <keywordMajor>''vulnerabilă''</keywordMajor>, Quinn primește <attackSpeed>@AttackSpeedBonus*100@% viteză de atac</attackSpeed> și <speed>@Effect3Amount*100@% viteză de mișcare</speed> timp de @Effect1Amount@ secunde.<br><br><spellActive>Activă:</spellActive> timp de @Effect5Amount@ secunde, Valor dezvăluie o zonă întinsă din apropiere.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> dacă atacă o țintă <keywordMajor>''vulnerabilă''</keywordMajor>, Quinn primește <attackSpeed>@AttackSpeedBonus*100@% viteză de atac</attackSpeed> și <speed>@MovespeedAmount*100@% viteză de mișcare</speed> timp de @BuffDuration@ secunde.<br><br><spellActive>Activă:</spellActive> timp de @VisionDuration@ secunde, Valor dezvăluie o zonă întinsă din apropiere.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -849,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Quinn se năpustește asupra unui inamic, provocându-i daune fizice și scăzându-i viteza de mișcare. Când ajunge la țintă, se aruncă asupra ei, întrerupând-o pentru scurt timp, după care sare înapoi la o distanță aproape egală cu raza maximă de atac.",
-            "dynamicDescription": "Quinn se năpustește către un inamic, îi provoacă <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și îl însemnează ca fiind <keywordMajor>''vulnerabil''</keywordMajor>. Apoi Quinn sare în spate dinspre țintă, <status>aruncând-o</status> puțin <status>în spate</status> și <status>încetinind-o</status> cu @Effect1Amount*100@%, valoare ce scade de-a lungul a @Effect3Amount@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn se năpustește către un inamic, îi provoacă <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și îl însemnează ca fiind <keywordMajor>''vulnerabil''</keywordMajor>. Apoi Quinn sare în spate dinspre țintă, <status>aruncând-o</status> puțin <status>în spate</status> și <status>încetinind-o</status> cu @SlowAmount*100@%, valoare ce scade de-a lungul a @SlowDecayTime@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,

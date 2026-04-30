@@ -160,7 +160,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MoveSpeed",
+                    "name": "BaseMoveSpeed",
                     "values": [
                         0.1899999976158142,
                         0.25,
@@ -252,6 +252,12 @@
                             "mStartValue": 0.30000001192092896,
                             "mEndValue": 0.4000000059604645,
                             "__type": "ByCharLevelInterpolationCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.0010000000474974513,
+                            "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -288,6 +294,22 @@
                             "__type": "ClampSubPartsCalculationPart"
                         }
                     ],
+                    "__type": "GameCalculation"
+                },
+                "MoveSpeed": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseMoveSpeed",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.0005000000237487257,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 }
             },
@@ -374,7 +396,7 @@
                             "levelCount": 6,
                             "Elements": [
                                 {
-                                    "type": "MoveSpeed",
+                                    "type": "BaseMoveSpeed",
                                     "typeIndex": 1,
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_MovementSpeed",
@@ -1557,13 +1579,13 @@
                 {
                     "name": "LightningAPRatio",
                     "values": [
-                        7.999999797903001e-05,
-                        7.999999797903001e-05,
-                        7.999999797903001e-05,
-                        7.999999797903001e-05,
-                        7.999999797903001e-05,
-                        7.999999797903001e-05,
-                        7.999999797903001e-05
+                        5.999999848427251e-05,
+                        5.999999848427251e-05,
+                        5.999999848427251e-05,
+                        5.999999848427251e-05,
+                        5.999999848427251e-05,
+                        5.999999848427251e-05,
+                        5.999999848427251e-05
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1596,39 +1618,39 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        -3.0,
-                        5.0,
-                        13.0,
-                        21.0,
-                        29.0,
-                        37.0,
-                        45.0
+                        -0.0,
+                        6.0,
+                        12.0,
+                        18.0,
+                        24.0,
+                        30.0,
+                        36.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "MaxHPADRatio",
                     "values": [
-                        0.00039999998989515007,
-                        0.00039999998989515007,
-                        0.00039999998989515007,
-                        0.00039999998989515007,
-                        0.00039999998989515007,
-                        0.00039999998989515007,
-                        0.00039999998989515007
+                        0.0003499999875202775,
+                        0.0003499999875202775,
+                        0.0003499999875202775,
+                        0.0003499999875202775,
+                        0.0003499999875202775,
+                        0.0003499999875202775,
+                        0.0003499999875202775
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "Q2MaxHPADRatio",
                     "values": [
-                        0.000699999975040555,
-                        0.000699999975040555,
-                        0.000699999975040555,
-                        0.000699999975040555,
-                        0.000699999975040555,
-                        0.000699999975040555,
-                        0.000699999975040555
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1694,6 +1716,19 @@
                         0.699999988079071,
                         0.699999988079071,
                         0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "OnHitBonusHPRatio",
+                    "values": [
+                        0.00800000037997961,
+                        0.009999999776482582,
+                        0.012000000104308128,
+                        0.014000000432133675,
+                        0.01600000075995922,
+                        0.017999999225139618,
+                        0.019999999552965164
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1840,7 +1875,6 @@
                             "__type": "{ee18a47b}"
                         },
                         {
-                            "mStatFormula": 2,
                             "mDataValue": "LightningAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
@@ -1888,9 +1922,9 @@
                                         "__type": "StatByNamedDataValueCalculationPart"
                                     },
                                     {
-                                        "mStartValue": 0.014999999664723873,
-                                        "mEndValue": 0.029999999329447746,
-                                        "__type": "ByCharLevelInterpolationCalculationPart"
+                                        "{0589a59c}": "LightningDamageLevel1",
+                                        "{0b65bc23}": "LightningDamageLevel18",
+                                        "__type": "{ee18a47b}"
                                     }
                                 ],
                                 "__type": "SumOfSubPartsCalculationPart"
@@ -1948,8 +1982,14 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.25,
+                            "mCoefficient": 0.20000000298023224,
                             "__type": "StatByCoefficientCalculationPart"
+                        },
+                        {
+                            "mStat": 12,
+                            "mStatFormula": 2,
+                            "mDataValue": "{877e2117}",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1970,6 +2010,12 @@
                             "mStatFormula": 2,
                             "mDataValue": "Q2MaxHPADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 12,
+                            "mStatFormula": 2,
+                            "mCoefficient": 9.999999747378752e-06,
+                            "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -2083,6 +2129,13 @@
                                 {
                                     "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_OnHitDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "OnHitBonusHPRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_UdyrQ_OnHit_BonusHPRatio",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2908,6 +2961,12 @@
                         {
                             "mDataValue": "ShieldAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.5,
+                            "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2984,6 +3043,12 @@
                         {
                             "mStat": 12,
                             "mCoefficient": 0.07999999821186066,
+                            "__type": "StatByCoefficientCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 1.0,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],

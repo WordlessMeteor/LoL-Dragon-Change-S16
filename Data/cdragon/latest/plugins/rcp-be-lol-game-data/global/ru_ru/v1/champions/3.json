@@ -1,5 +1,6 @@
 {
     "id": 3,
+    "contentId": "cbe8e557-6b38-4478-ae6f-9b03f10fb4d5",
     "name": "Галио",
     "alias": "Galio",
     "title": "Колосс",
@@ -970,11 +971,11 @@
             "isBase": false,
             "name": "Галио из Робо-Эгиды",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_centered_40.SKINS_Galio_Skin40.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_uncentered_40.SKINS_Galio_Skin40.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_tile_40.SKINS_Galio_Skin40.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/GalioLoadScreen_40.SKINS_Galio_Skin40.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/GalioLoadScreen_40_LE.SKINS_Galio_Skin40.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_centered_40.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_uncentered_40.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_tile_40.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/GalioLoadScreen_40.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/GalioLoadScreen_40_LE.jpg",
             "skinType": "",
             "rarity": "kLegendary",
             "isLegacy": false,
@@ -1264,7 +1265,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Галио уменьшает свою скорость передвижения, подготавливая защитную стойку. После окончания подготовки Галио провоцирует всех ближайших врагов и наносит им урон.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> если Галио не получает урон в течение @PassiveShieldOOCTimer@ сек., он накладывает на себя <shield>магический щит прочностью @TotalPassiveShield@</shield>.<br><br><charge>Начало подготовки:</charge> Галио уменьшает входящий магический урон на @MagicDamageReduction@ и физический урон на @PhysicalDamageReduction@, а также <status>замедляет</status> себя на @Effect3Amount@%.<br><br><release>Применение:</release> Галио <status>провоцирует</status> вражеских чемпионов на @Effect4Amount@-@Effect7Amount@ сек., наносит им <magicDamage>от @MinTotalDamage@ до @MaxTotalDamage@ магического урона</magicDamage> и продлевает уменьшение урона на @Effect8Amount@ сек. Продолжительность, урон и радиус провокации зависят от времени подготовки.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> если Галио не получает урон в течение @PassiveShieldOOCTimer@ сек., он накладывает на себя <shield>магический щит прочностью @TotalPassiveShield@</shield>.<br><br><charge>Начало подготовки:</charge> Галио снижает получаемый магический урон на @MagicDamageReduction@ и физический урон на @PhysicalDamageReduction@, а также <status>замедляет</status> себя на @SelfSlowPercent@%.<br><br><release>Применение:</release> Галио <status>провоцирует</status> вражеских чемпионов на @CCDurationMin@–@CCDurationMax@ сек., наносит им <magicDamage>@MinTotalDamage@</magicDamage>–<magicDamage>@MaxTotalDamage@ ед. магического урона</magicDamage> и продлевает снижение урона на @DRLingerDuration@ сек. Продолжительность, урон и радиус провокации зависят от времени подготовки.@SpellModifierDescriptionAppend@",
             "range": [
                 275.0,
                 275.0,
@@ -1290,45 +1291,45 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.08,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1340,49 +1341,49 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {

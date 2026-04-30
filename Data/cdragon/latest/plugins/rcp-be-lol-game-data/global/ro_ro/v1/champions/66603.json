@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "Lux Doom Bot",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "Lux Doom Bot",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "Iluminare",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "Vrăjile lui Lux care provoacă daune încarcă ținta cu energie timp de câteva secunde. Următorul atac al lui Lux aprinde energia, provocându-i țintei daune magice bonus (în funcție de nivelul lui Lux)."
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "Capcană de lumină",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Lux lansează o sferă de lumină care imobilizează maximum două unități inamice și le provoacă daune.",
-            "dynamicDescription": "Lux lansează o sferă de lumină, <status>țintuind</status> primii doi inamici timp de @Effect3Amount@ secunde și provocându-le <magicDamage>@TotalDamageTT@ daune magice</magicDamage> fiecăruia.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux lansează o sferă de lumină, <status>țintuind</status> primii doi inamici timp de @RootDuration@ secunde și provocându-le <magicDamage>@TotalDamageTT@ daune magice</magicDamage> fiecăruia.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "Barieră prismatică",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Lux își aruncă bagheta și curbează lumina din jurul tuturor țintelor aliate atinse, protejând-o de daunele suferite din partea inamicilor.",
-            "dynamicDescription": "Lux își aruncă bagheta, oferindu-le un <shield>scut în valoare de @TotalShieldTT@</shield> timp de @Effect3Amount@ secunde aliaților prin care trece. Bagheta revine apoi, oferind același <shield>scut</shield> la întoarcere.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux își aruncă bagheta, oferindu-le un <shield>@TotalShieldTT@scut în valoare de </shield> timp de @ShieldDuration@ secunde aliaților prin care trece. Bagheta revine apoi, oferind același <shield>scut</shield> la întoarcere.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "Singularitate translucidă",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Lansează o anomalie de lumină cristalizată către o zonă, încetinind inamicii din apropiere. Lux poate detona anomalia pentru a provoca daune AoE inamicilor din zonă.",
-            "dynamicDescription": "Lux creează o zonă de lumină care <status>încetinește</status> inamicii cu @Effect1Amount@% și dezvăluie zona. După @Effect3Amount@ secunde sau la <recast>refolosirea</recast> abilității, zona explodează, provocându-le <magicDamage>@TotalDamageTT@ daune magice</magicDamage> inamicilor și <status>încetinindu-i</status> pentru încă @SlowLingerDuration@ secundă.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux creează o zonă de lumină care <status>încetinește</status> inamicii cu @SlowPercent@% și dezvăluie zona. După @SlowZoneDuration@ secunde sau la <recast>refolosirea</recast> abilității, zona explodează, provocându-le <magicDamage>@TotalDamageTT@ daune magice</magicDamage> inamicilor și <status>încetinindu-i</status> pentru încă @SlowLingerDuration@ secundă.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "Lumină infinită",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",

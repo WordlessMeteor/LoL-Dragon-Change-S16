@@ -3393,6 +3393,19 @@
                     "__type": "SpellDataValueVector"
                 }
             },
+            "mSpellCalculations": {
+                "{7325018d}": {
+                    "mFormulaParts": [
+                        {
+                            "mStartValue": 90.0,
+                            "mEndValue": 10.0,
+                            "mScalePastDefaultMaxLevel": false,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
             "mAnimationName": "Forge",
             "mImgIconName": [
                 "ASSETS/Characters/Ornn/HUD/Icons2D/OrnnP.dds"
@@ -4115,6 +4128,45 @@
                         145.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PillarDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -4328,8 +4380,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 5,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

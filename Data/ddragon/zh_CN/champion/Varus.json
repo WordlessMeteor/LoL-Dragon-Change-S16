@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Varus": {
             "id": "Varus",
@@ -550,7 +550,7 @@
                     "id": "VarusQ",
                     "name": "穿刺之箭",
                     "description": "韦鲁斯开始蓄力，随后进行一次远距离的强力射击，蓄力时间越长，伤害越高。",
-                    "tooltip": "<attention>开始蓄力</attention>：韦鲁斯为一次强力射击深深挽弓，自我<status>减速</status>{{ e7 }}%。在{{ e5 }}秒后，如果未将箭射出去，则韦鲁斯会取消这个技能并返还其{{ e4 }}%法力消耗。<br /><br /><attention>释放：</attention>韦鲁斯将箭射出，造成<physicalDamage>{{ totaldamagemintooltip }}物理伤害</physicalDamage>，每命中一个敌人就会降低{{ e3 }}%(最低降至{{ e9 }}%)。伤害和<keywordMajor>枯萎</keywordMajor>的引爆效果会基于蓄力时间至多提升至{{ maxchargeamp*100 }}%(最大值为<physicalDamage>{{ totaldamagemax }}</physicalDamage>) 。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<attention>开始蓄力：</attention>韦鲁斯为一次强力射击深深挽弓，自我<status>减速</status>{{ movespeedmod*-100 }}%。在{{ maxchannelduration }}秒后，如果未将箭射出去，则韦鲁斯会取消这个技能并返还其{{ manarefund*100 }}%法力消耗。<br /><br /><attention>释放：</attention>韦鲁斯将箭射出，造成<physicalDamage>{{ totaldamagemintooltip }}物理伤害</physicalDamage>，每命中一个敌人就会降低{{ falloffpercent*100 }}%(最低降至{{ mindamagepercent*100 }}%)。伤害和<keywordMajor>枯萎</keywordMajor>的引爆效果会基于蓄力时间至多提升至{{ maxchargeamp*100 }}%(最大值为<physicalDamage>{{ totaldamagemax }}</physicalDamage>) 。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "最大伤害",
@@ -598,18 +598,18 @@
                             0
                         ],
                         [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
+                            0.15,
+                            0.15,
+                            0.15,
+                            0.15,
+                            0.15
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0.5,
+                            0.5,
+                            0.5,
+                            0.5,
+                            0.5
                         ],
                         [
                             4,
@@ -626,11 +626,11 @@
                             3
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
+                            -0.2,
+                            -0.2,
+                            -0.2,
+                            -0.2,
+                            -0.2
                         ],
                         [
                             0,
@@ -640,11 +640,11 @@
                             0
                         ],
                         [
-                            33,
-                            33,
-                            33,
-                            33,
-                            33
+                            0.33,
+                            0.33,
+                            0.33,
+                            0.33,
+                            0.33
                         ],
                         [
                             0,
@@ -658,13 +658,13 @@
                         null,
                         "0",
                         "0",
-                        "15",
-                        "50",
+                        "0.15",
+                        "0.5",
                         "4",
                         "3",
-                        "20",
+                        "-0.2",
                         "0",
-                        "33",
+                        "0.33",
                         "0"
                     ],
                     "vars": [],
@@ -693,7 +693,7 @@
                     "id": "VarusW",
                     "name": "枯萎箭袋",
                     "description": "被动：韦鲁斯的普通攻击会造成额外的伤害，并附加枯萎效果。韦鲁斯的其它技能会引爆枯萎效果，造成基于目标最大生命值的魔法伤害。主动：韦鲁斯增强他的下一个【穿刺之箭】。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>韦鲁斯的攻击造成额外的<magicDamage>{{ onhitdamage }}魔法伤害</magicDamage>并施加一层持续{{ e3 }}秒的<keywordMajor>枯萎</keywordMajor>(最多至{{ e4 }}层)。<br /><br />韦鲁斯的其它技能会引爆<keywordMajor>枯萎</keywordMajor>层数来造成每层<magicDamage>{{ percenthpperstack }}最大生命值伤害</magicDamage>(最大值为<magicDamage>{{ maxpercenthpperstack }}最大生命值伤害</magicDamage>)。引爆英雄和史诗级野怪身上的<keywordMajor>枯萎</keywordMajor>时也会使他基础技能的冷却时间缩短，数额为每层{{ cdrperblightstack*100 }}%基础冷却时间。<br /><br /><spellActive>主动：</spellActive>韦鲁斯的下一个<spellName>穿刺之箭</spellName>会造成额外的<magicDamage>{{ qempowerpercenthp }}已损失生命值的魔法伤害</magicDamage>，并且基于蓄力时间不断提升，至多可达<magicDamage>{{ maxqempowerpercenthp }}已损失生命值伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>韦鲁斯的攻击造成额外的<magicDamage>{{ onhitdamage }}魔法伤害</magicDamage>并施加一层持续{{ debuffduration }}秒的<keywordMajor>枯萎</keywordMajor>(最多至{{ maxstacks }}层)。<br /><br />韦鲁斯的其它技能会引爆<keywordMajor>枯萎</keywordMajor>层数来造成每层<magicDamage>{{ percenthpperstack }}最大生命值伤害</magicDamage>(最大值为<magicDamage>{{ maxpercenthpperstack }}最大生命值伤害</magicDamage>)。引爆英雄和史诗级野怪身上的<keywordMajor>枯萎</keywordMajor>时也会使他基础技能的冷却时间缩短，数额为每层{{ cdrperblightstack*100 }}%基础冷却时间。<br /><br /><spellActive>主动：</spellActive>韦鲁斯的下一个<spellName>穿刺之箭</spellName>会造成额外的<magicDamage>{{ qempowerpercenthp }}已损失生命值的魔法伤害</magicDamage>，并且基于蓄力时间不断提升，至多可达<magicDamage>{{ maxqempowerpercenthp }}已损失生命值伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "攻击附加的伤害",
@@ -836,7 +836,7 @@
                     "id": "VarusE",
                     "name": "恶灵箭雨",
                     "description": "韦鲁斯射出一阵箭雨，造成物理伤害并污染地面。被污染的地面将会减慢敌人的移动速度，并降低他们的自我治疗效果和回复效果。",
-                    "tooltip": "韦鲁斯射出一阵箭雨，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，并污染地面{{ e3 }}秒，<status>减速</status>敌人{{ slowpercent*-100 }}%并施加{{ grievousamount*100 }}%重伤。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "韦鲁斯射出一阵箭雨，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，并污染地面{{ groundduration }}秒，<status>减速</status>敌人{{ slowpercent*-100 }}%并施加{{ grievousamount*100 }}%重伤。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -979,14 +979,14 @@
                     "id": "VarusR",
                     "name": "腐败锁链",
                     "description": "韦鲁斯投掷出一个腐败藤蔓，来禁锢命中的第一个敌方英雄，随后向附近没有被感染的英雄蔓延，并在碰到后将他们也禁锢。",
-                    "tooltip": "韦鲁斯猛射出一根腐败藤蔓，<status>禁锢</status>命中的第一个敌方英雄{{ e2 }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。被<status>禁锢</status>的敌人们会在此期间持续获得{{ e4 }}层<keywordMajor>枯萎</keywordMajor>。<br /><br />随后腐败藤蔓会从它的目标处向附近未被感染的英雄蔓延。如果它接触到了未被感染的英雄，就会使其承受相同的伤害并被<status>禁锢</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "韦鲁斯猛射出一根腐败藤蔓，<status>禁锢</status>命中的第一个敌方英雄{{ rootduration }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。被<status>禁锢</status>的敌人们会在此期间持续获得{{ passivestacks }}层<keywordMajor>枯萎</keywordMajor>。<br /><br />随后腐败藤蔓会从它的目标处向附近未被感染的英雄蔓延。如果它接触到了未被感染的英雄，就会使其承受相同的伤害和<status>禁锢</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },

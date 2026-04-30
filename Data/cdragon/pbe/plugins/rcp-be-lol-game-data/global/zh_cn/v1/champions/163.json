@@ -627,7 +627,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "塔莉垭朝目标方向扔出一串岩石，同时自身可自由移动。这个技能会在她脚下生成【掘石场】。如果塔莉垭在【掘石场】上使用【Q石穿】，她将消耗掉【掘石场】来投掷一颗更强大的岩石来减速敌人。",
-            "dynamicDescription": "塔莉垭挥出5块石头，每块会在命中的第一个敌人的附近区域内造成<magicDamage>@RockDamage@魔法伤害</magicDamage>并在该区域生成【掘石场】。对相同敌人的后续命中造成的伤害降低@ExtraMissileReducedDamagePercent@%。<br><br>在【掘石场】上施放时会消耗@BigRockManaCost@法力并且冷却时间缩短@WorkedGroundCDR*100@%，消耗掉【掘石场】，并挥出一块巨石来对命中的敌人们造成持续@SlowDuration@秒的 @SlowPercent*100@%<status>减速</status>，对首要目标造成<magicDamage>@BigRockDamage@魔法伤害</magicDamage>。巨石对命中的野怪们造成@MonsterStunDuration@秒<status>晕眩</status>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔莉垭挥出5块石头，每块会在命中的第一个敌人的附近区域内造成<magicDamage>@RockDamage@魔法伤害</magicDamage>并在该区域生成【掘石场】。对相同敌人的后续命中造成的伤害降低@ExtraMissileReducedDamagePercent@%。<br><br>在掘石场上施放时会消耗@Effect7Amount@法力并且冷却时间缩短@WorkedGroundCDR*100@%，消耗掉【掘石场】，并挥出一块巨石来对命中的敌人们造成持续@SlowDuration@秒的@SlowPercent*100@%<status>减速</status>，对首要目标造成<magicDamage>@BigRockDamage@魔法伤害</magicDamage>。被巨石命中的野怪会被<status>晕眩</status>@MonsterStunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1077,7 +1077,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "塔莉垭创造出一个非常长的石墙，然后在石墙上冲浪。",
-            "dynamicDescription": "塔莉垭生成一道巨型土墙，持续@WallDuration@秒。如果她立刻<recast>再次施放</recast>，那么她将踏上土墙随其一路骑行。移动或受到定身都将结束这段骑行。<br><br>如果塔莉垭在@DamageLockoutTime@秒内曾受到过来自英雄或建筑物的伤害，那么她将不能施放这个技能。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔莉垭生成一道巨型土墙，持续@Effect1Amount@秒。如果她立刻<recast>再次施放</recast>，那么她将踏上土墙随其一路骑行。移动或受到定身都将结束这段骑行。<br><br>如果塔莉垭在@DamageLockoutTime@秒内曾受到过来自英雄或建筑物的伤害，那么她将不能施放这个技能。@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

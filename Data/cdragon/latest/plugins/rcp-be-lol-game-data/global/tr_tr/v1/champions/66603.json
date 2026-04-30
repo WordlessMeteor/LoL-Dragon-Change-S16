@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "Felaket Botu Lux",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "Felaket Botu Lux",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "Aydınlanma",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "Lux'ın hasar veren yetenekleri birkaç saniyeliğine hedefi enerjiyle yükler. Lux'ın bir sonraki saldırısı enerjiyi ateşler ve (Lux'ın seviyesine bağlı olarak) ilave büyü hasarı verir."
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "Işık Bağı",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Lux en fazla iki rakip birimini bağlayan ve onlara hasar veren bir ışık küresi gönderir.",
-            "dynamicDescription": "Lux'ın fırlattığı ışık topu, isabet ettiği ilk iki rakibi @Effect3Amount@ saniyeliğine <status>sabitler</status> ve her birine <magicDamage>@TotalDamageTT@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux'ın fırlattığı ışık topu, isabet ettiği ilk iki rakibi @RootDuration@ saniyeliğine <status>sabitler</status> ve her birine <magicDamage>@TotalDamageTT@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "Prizmatik Bariyer",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Lux değneğini fırlatır ve dokunduğu bütün dost hedeflerin etrafındaki ışığı bükerek, onların rakip hasarından korunmalarını sağlar.",
-            "dynamicDescription": "Lux'ın fırlattığı değnek, üstünden geçtiği takım arkadaşlarına @Effect3Amount@ saniyeliğine <shield>@TotalShieldTT@ Kalkan</shield> verir. Daha sonra geri dönerek aynı <shield>kalkanı</shield> yeniden uygular.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux'ın fırlattığı değnek, üstünden geçtiği takım arkadaşlarına @ShieldDuration@ saniyeliğine <shield>@TotalShieldTT@ Kalkan</shield> verir. Daha sonra geri dönerek aynı <shield>kalkanı</shield> yeniden uygular.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "Işık Patlaması",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Belli bir bölgeye, yakındaki rakipleri yavaşlatan tuhaf bir ışık gönderir. Lux ışığın patlamasını sağlayarak etki alanındaki rakiplere hasar verebilir.",
-            "dynamicDescription": "Lux rakipleri %@Effect1Amount@ <status>yavaşlatan</status> ve bölgeyi açığa çıkaran bir ışık alanı oluşturur. Alan @Effect3Amount@ saniye sonra veya yetenek <recast>yeniden kullanıldığında</recast> infilak ederek rakiplere <magicDamage>@TotalDamageTT@ Büyü Hasarı</magicDamage> verir ve onları fazladan @SlowLingerDuration@ saniyeliğine <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux rakipleri %@SlowPercent@ <status>yavaşlatan</status> ve bölgeyi açığa çıkaran bir ışık alanı oluşturur. Alan @SlowZoneDuration@ saniye sonra veya yetenek <recast>yeniden kullanıldığında</recast> infilak ederek rakiplere <magicDamage>@TotalDamageTT@ Büyü Hasarı</magicDamage> verir ve onları fazladan @SlowLingerDuration@ saniyeliğine <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "Son Parıltı",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",

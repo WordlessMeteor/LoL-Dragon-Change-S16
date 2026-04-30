@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "Lux Apocalíptica",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "Lux Apocalíptica",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "Iluminación",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "Los hechizos dañinos de Lux cargan de energía al objetivo durante algunos segundos. Su siguiente ataque desata la energía e inflige daño mágico adicional al objetivo (según el nivel de Lux)."
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "Hechizo Luminoso",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Lux desata una esfera de luz que atrapa e inflige daño hasta a dos unidades enemigas.",
-            "dynamicDescription": "Lux lanza una esfera de luz que <status>inmoviliza</status> a los dos primeros enemigos que alcance durante @Effect3Amount@ seg y les inflige <magicDamage>@TotalDamageTT@ de daño mágico</magicDamage> a cada uno.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux lanza una esfera de luz que <status>inmoviliza</status> a los dos primeros enemigos alcanzados durante @RootDuration@ seg y les inflige <magicDamage>@TotalDamageTT@ de daño mágico</magicDamage> a cada uno.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "Barrera Prismática",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Lux lanza su vara y deforma la luz alrededor de cualquier objetivo aliado que alcanza, lo que los protege del daño enemigo.",
-            "dynamicDescription": "Lux lanza su vara, lo que otorga <shield>@TotalShieldTT@ de Escudo</shield> por @Effect3Amount@ seg a todos los aliados que atraviese. Luego vuelve y otorga el mismo <shield>Escudo</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux lanza su vara, lo que otorga <shield>@TotalShieldTT@ de Escudo</shield> por @ShieldDuration@ seg a todos los aliados que atraviese. Luego vuelve y otorga el mismo <shield>Escudo</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "Singularidad Brillante",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Dispara una anomalía de luz retorcida en una zona que ralentiza a los enemigos cercanos. Lux puede detonarla para infligir daño a los enemigos en el área de efecto.",
-            "dynamicDescription": "Lux crea una zona de luz que <status>ralentiza</status> un @Effect1Amount@% y revela la zona. Tras @Effect3Amount@ seg o al <recast>volver a lanzar</recast> esta habilidad, se detona, lo que inflige <magicDamage>@TotalDamageTT@ de daño mágico</magicDamage> y <status>ralentiza</status> durante @SlowLingerDuration@ seg adicionales.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux crea una zona luminosa que <status>ralentiza</status> un @SlowPercent@% y revela el área. Tras @SlowZoneDuration@ seg o al <recast>volver a lanzar</recast> esta habilidad, la zona luminosa explota, lo que inflige <magicDamage>@TotalDamageTT@ de daño mágico</magicDamage> y <status>ralentiza</status> durante @SlowLingerDuration@ seg más.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "Chispa Final",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",

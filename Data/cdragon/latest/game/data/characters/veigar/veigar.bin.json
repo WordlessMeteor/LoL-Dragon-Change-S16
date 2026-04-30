@@ -896,6 +896,34 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25,
+                        2.5,
+                        2.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CageDelay",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "{f9c2333e}": {
                 "ARAM": {
                     "value": [
@@ -1042,8 +1070,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "StunDuration",
                                     "nameOverride": "Spell_ListType_StunDuration",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1084,8 +1111,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1097,8 +1124,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1108,11 +1135,6 @@
                 {
                     "EffectTag": 2048,
                     "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "__type": "EffectValueCalculationPart"
-                            }
-                        ],
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
@@ -1324,6 +1346,32 @@
                         250.0,
                         305.0,
                         360.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ImpactDelay",
+                    "values": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseCooldown",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
                     ],
                     "__type": "SpellDataValue"
                 }

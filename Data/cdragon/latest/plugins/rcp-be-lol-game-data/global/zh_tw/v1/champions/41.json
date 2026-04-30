@@ -1,5 +1,6 @@
 {
     "id": 41,
+    "contentId": "338fd36d-e4b2-4c6f-8cc4-99d194165e20",
     "name": "剛普朗克",
     "alias": "Gangplank",
     "title": "海洋之災",
@@ -1108,7 +1109,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "吃下柑橘以解除群體控制效果並回復生命。",
-            "dynamicDescription": "剛普朗克吃掉大量柑橘類水果，來移除所有<status>限制</status>效果並回復<healing>@BaseHealth@加上@Effect2Amount@%已損失生命</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "剛普朗克吃掉大量柑橘類水果，移除所有<status>限制</status>效果並回復<healing>@BaseHealth@加上@PercentHeal@%已損失生命</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1258,7 +1259,7 @@
             "cost": "無消耗",
             "cooldown": "@AmmoRechargeTime@ 秒充能 (最大：@MaxAmmo@)",
             "description": "剛普朗克在目標處挖掘一桶火藥，如果他攻擊木桶會造成爆炸，並將攻擊傷害擴散到範圍內的敵軍、造成緩速。",
-            "dynamicDescription": "剛普朗克放置一個火藥桶，可被剛普朗克和敵方英雄攻擊，持續@Effect5Amount@秒。當敵人摧毀火藥桶時，它會被解除。當剛普朗克摧毀火藥桶時，它會爆炸，<status>緩速</status>@FinalSlowAmount@%，持續@Effect2Amount@秒，並造成<physicalDamage>該次普攻的傷害</physicalDamage>，無視@Effect10Amount@%物防。英雄會受到額外<physicalDamage>@Effect3Amount@物理傷害</physicalDamage>。<br><br>火藥桶的生命每@BarrelDecayTime@秒衰減一次。火藥桶的爆炸會引爆其他爆炸範圍重疊的火藥桶，但不會對同一個目標造成多次傷害。由<spellName>槍火談判</spellName>觸發的火藥桶爆炸，會給予擊殺目標的額外金錢。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "剛普朗克放置一個火藥桶，可被剛普朗克和敵方英雄攻擊，持續@BarrelDuration@秒。當敵軍摧毀火藥桶，拆除火藥引信。當剛普朗克摧毀火藥桶，它會爆炸，<status>緩速</status>@FinalSlowAmount@%，持續@DebuffDuration@秒，並造成<physicalDamage>該次普攻的傷害</physicalDamage>，無視@BarrelArmorPenetration@%物防。英雄會受到額外<physicalDamage>@BonusDamageToChampions@物理傷害</physicalDamage>。<br><br>火藥桶的生命每@BarrelDecayTime@秒衰減一次。火藥桶爆炸會引爆其他爆炸範圍重疊的火藥桶，但不會對同一個目標造成多次傷害。由<spellName>槍火談判</spellName>觸發的火藥桶爆炸，會在擊殺目標時賦予額外金錢。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

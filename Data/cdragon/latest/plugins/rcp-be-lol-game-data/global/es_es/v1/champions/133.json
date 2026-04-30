@@ -1,5 +1,6 @@
 {
     "id": 133,
+    "contentId": "911a5633-b453-4848-886d-8cb3b7d61ac0",
     "name": "Quinn",
     "alias": "Quinn",
     "title": "Las Alas de Demacia",
@@ -549,7 +550,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Quinn ordena a Valor que marque a un enemigo y entorpezca su visión, para a continuación dañar a todos los enemigos de la zona circundante.",
-            "dynamicDescription": "Quinn ordena a Valor que ataque y vuelve al primer enemigo golpeado <keywordMajor>vulnerable</keywordMajor>, lo que reduce su radio de visión durante @Effect3Amount@ s e inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> a todos los enemigos cercanos.<br><br>Si el primer enemigo golpeado no es un campeón, queda <status>desarmado</status> durante @Effect3Amount@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn ordena a Valor que ataque, lo que vuelve al primer enemigo golpeado <keywordMajor>vulnerable</keywordMajor>. Esto reduce su radio de visión durante @VisionReductionDuration@ s e inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> a todos los enemigos cercanos.<br><br>Si el primer enemigo golpeado no es un campeón, queda <status>desarmado</status> durante @VisionReductionDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -699,7 +700,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Otorga pasivamente velocidad de ataque y velocidad de movimiento a Quinn después de atacar a un objetivo <font color='#FFF673'>vulnerable</font>. Al activarla, Valor revela una amplia zona alrededor.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Atacar a un objetivo <keywordMajor>vulnerable</keywordMajor> aumenta la velocidad de ataque de Quinn un <attackSpeed>@AttackSpeedBonus*100@%</attackSpeed> y la velocidad de movimiento un <speed>@Effect3Amount*100@%</speed> durante @Effect1Amount@ s.<br><br><spellActive>Activa:</spellActive> Valor revela una amplia zona a su alrededor durante @Effect5Amount@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Cuando Quinn ataca a un objetivo <keywordMajor>vulnerable</keywordMajor>, obtiene un <attackSpeed>@AttackSpeedBonus*100@% de velocidad de ataque</attackSpeed> y un <speed>@MovespeedAmount*100@% de velocidad de movimiento</speed> durante @BuffDuration@ s.<br><br><spellActive>Activa:</spellActive> Valor revela una amplia zona cerca durante @VisionDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -849,7 +850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Quinn se abalanza sobre un enemigo infligiéndole daño físico y ralentizando su velocidad de movimiento. Una vez que lo alcanza lo interrumpe brevemente y retrocede de un salto aterrizando cerca de su alcance de ataque máximo, lejos del objetivo.",
-            "dynamicDescription": "Quinn embiste a un enemigo, le inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y lo marca como <keywordMajor>vulnerable</keywordMajor>. Quinn luego salta hacia atrás desde el objetivo, lo que lo <status>empuja</status> ligeramente hacia <status>atrás</status> y lo <status>ralentiza</status> un @Effect1Amount*100@% que disminuye a lo largo de @Effect3Amount@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn embiste a un enemigo, le inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y lo marca como <keywordMajor>vulnerable</keywordMajor>. Quinn luego salta hacia atrás desde el objetivo, lo que lo <status>empuja</status> ligeramente hacia <status>atrás</status> y lo <status>ralentiza</status> un @SlowAmount*100@%, cantidad que disminuye a lo largo de @SlowDecayTime@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,

@@ -1,5 +1,6 @@
 {
     "id": 133,
+    "contentId": "911a5633-b453-4848-886d-8cb3b7d61ac0",
     "name": "德玛西亚之翼",
     "alias": "Quinn",
     "title": "奎因",
@@ -576,7 +577,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "奎因唤出华洛，来标记一名敌人并遮蔽其视野，然后对目标附近区域内的所有敌人造成伤害。",
-            "dynamicDescription": "奎因命令华洛进行俯冲，将命中的第一个敌人标记为<keywordMajor>易损</keywordMajor>、降低其视野半径@Effect3Amount@秒并对所有周围的敌人们造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>如果命中的第一个敌人不是英雄，那么该敌人会还会被<status>缴械</status>@Effect3Amount@秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "奎因命令华洛进行俯冲，将命中的第一个敌人标记为<keywordMajor>易损</keywordMajor>、降低其视野半径@VisionReductionDuration@秒并对所有周围的敌人们造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>如果命中的第一个敌人不是英雄，那么该敌人会还会被<status>缴械</status>@VisionReductionDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -726,7 +727,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "在奎因攻击了一名<font color='#FFF673'>易损</font>目标后，被动地为奎因提供攻击速度和移动速度加成。主动激活可以让华洛驱散周围一大片区域的战争迷雾。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>攻击一名<keywordMajor>易损</keywordMajor>目标会为奎因提供<attackSpeed>@AttackSpeedBonus*100@%攻击速度</attackSpeed>和<speed>@Effect3Amount*100@%移动速度</speed>，持续@Effect1Amount@秒。<br><br><spellActive>主动：</spellActive>华洛显形附近的一大片区域，持续@Effect5Amount@秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>攻击一名<keywordMajor>易损</keywordMajor>目标会为奎因提供<attackSpeed>@AttackSpeedBonus*100@%攻击速度</attackSpeed>和<speed>@MovespeedAmount*100@%移动速度</speed>，持续@BuffDuration@秒。<br><br><spellActive>主动：</spellActive>华洛显形附近的一大片区域，持续@VisionDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -876,7 +877,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "奎因冲向一名敌人，造成物理伤害，并减少目标的移动速度。在接触到目标的同时，她会向后空翻，暂时打断目标的行动，并在接近她最大攻击距离的地方着陆。",
-            "dynamicDescription": "奎因冲刺向一名敌人，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>并将其标记为<keywordMajor>易损</keywordMajor>状态。奎因随后会从目标处向后跳开，将其<status>击退</status>并对其造成在@Effect3Amount@秒里持续衰减的@Effect1Amount*100@%<status>减速</status>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "奎因冲刺向一名敌人，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>并将其标记为<keywordMajor>易损</keywordMajor>状态。奎因随后会从目标处向后跳开，将其<status>击</status><status>退</status>并对其造成在@SlowDecayTime@秒里持续衰减的@SlowAmount*100@%<status>减速</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,

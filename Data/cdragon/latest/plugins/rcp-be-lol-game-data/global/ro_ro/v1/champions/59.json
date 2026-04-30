@@ -1,5 +1,6 @@
 {
     "id": 59,
+    "contentId": "88432534-0298-4cbc-8f0a-94d84b6efefd",
     "name": "Jarvan IV",
     "alias": "JarvanIV",
     "title": "prințul Demaciei",
@@ -1070,10 +1071,10 @@
             "isBase": false,
             "name": "Jarvan IV creator de mituri",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_centered_44.SKINS_JarvanIV_Skin44.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_uncentered_44.SKINS_JarvanIV_Skin44.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_tile_44.SKINS_JarvanIV_Skin44.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/JarvanIVLoadScreen_44.SKINS_JarvanIV_Skin44.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_centered_44.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_uncentered_44.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_tile_44.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/JarvanIVLoadScreen_44.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -1241,11 +1242,11 @@
             "isBase": false,
             "name": "Jarvan IV viziuni ale celor căzuți (Prestigiu)",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_centered_54.SKINS_JarvanIV_Skin54.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_uncentered_54.SKINS_JarvanIV_Skin54.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_tile_54.SKINS_JarvanIV_Skin54.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54.SKINS_JarvanIV_Skin54.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54_LE.SKINS_JarvanIV_Skin54.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_centered_54.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_uncentered_54.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_tile_54.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54_LE.jpg",
             "skinType": "",
             "rarity": "kMythic",
             "isLegacy": true,
@@ -1305,7 +1306,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Jarvan IV își întinde lancea, provocând daune fizice și reducând armura tuturor inamicilor aflați pe traiectoria armei. În plus, lancea îl aduce pe Jarvan lângă stindardul său demacian, aruncând în sus toți inamicii din calea sa.",
-            "dynamicDescription": "Jarvan își prelungește lancea, provocând <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și reducând cu <scaleArmor>@Effect2Amount@% armura</scaleArmor> inamicilor timp de @Effect3Amount@ secunde.<br><br>Dacă lancea întâlnește <spellName>''Stindard demacian''</spellName>, Jarvan se trage lângă ea, <status>aruncând în sus</status> inamicii de pe traiectorie timp de 0,75 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan își prelungește lancea, provocând <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și reducând cu <scaleArmor>@BaseARShred*100@% armura</scaleArmor> inamicilor timp de @Effect3Amount@ secunde.<br><br>Dacă lancea întâlnește ''<spellName>Stindard demacian</spellName>'', Jarvan se trage lângă ea, <status>aruncând în sus</status> inamicii de pe traiectorie timp de 0,75 secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1332,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1346,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1456,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Jarvan IV îi invocă pe regii străbuni ai Demaciei ca să-l apere de rău și încetinește inamicii din jur.",
-            "dynamicDescription": "Jarvan invocă un scut, <status>încetinește</status> inamicii din apropiere cu @Effect2Amount@% timp de @Effect5Amount@ secunde și primește un <shield>scut în valoare de @BaseShield@</shield>, valoare ce crește cu <shield>@BonusShield@</shield> pentru fiecare campion inamic lovit.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan invocă un scut, <status>încetinește</status> inamicii din apropiere cu @BaseSlowAmount*100@% timp de @Effect5Amount@ secunde și primește un <shield>scut în valoare de @TotalShield@</shield>, valoare ce crește cu <shield>@BonusShield@</shield> pentru fiecare campion inamic lovit.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1482,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1496,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1606,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Jarvan IV poartă mândria Demaciei, care îi acordă în mod pasiv viteză de atac bonus. Activarea ''Stindardului demacian'' îi permite lui Jarvan IV să ridice un drapel demacian care provoacă daune magice la impact și oferă viteză de atac campionilor aliați din apropiere.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Jarvan primește <attackSpeed>@PermanentAttackSpeed*100@% viteză de atac</attackSpeed>.<br><br><spellActive>Activă:</spellActive> Jarvan înfige un stindard în pământ, provocând <magicDamage>@TotalDamage@ daune magice</magicDamage> și oferindu-le aliaților din apropierea stindardului <attackSpeed>@Effect3Amount*100@% viteză de atac</attackSpeed> timp de @Effect4Amount@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Jarvan primește <attackSpeed>@PermanentAttackSpeed*100@% viteză de atac</attackSpeed>.<br><br><spellActive>Activă:</spellActive> Jarvan înfige un stindard în pământ, provocând <magicDamage>@TotalDamage@ daune magice</magicDamage> și oferindu-le aliaților din apropierea stindardului <attackSpeed>@BaseAuraAS*100@% viteză de atac</attackSpeed> timp de @Effect4Amount@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1632,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1655,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

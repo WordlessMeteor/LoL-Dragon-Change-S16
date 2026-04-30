@@ -748,6 +748,19 @@
                         2.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RootDuration",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1656,6 +1669,36 @@
                         185.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RootDuration",
+                    "values": [
+                        0.8999999761581421,
+                        1.0,
+                        1.100000023841858,
+                        1.2000000476837158,
+                        1.2999999523162842,
+                        1.399999976158142,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashSpeed",
+                    "values": [
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashAcceleration",
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1762,8 +1805,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "RootDuration",
                                     "nameOverride": "Spell_ListType_RootDuration",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1810,8 +1852,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "RootDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3669,15 +3711,11 @@
         ],
         "ChaosJunglePath": [
             {
-                "Camp": 7,
+                "Camp": 10,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 6,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 8,
+                "Camp": 11,
                 "__type": "TakeCamp"
             },
             {
@@ -3685,11 +3723,15 @@
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 10,
+                "Camp": 8,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 11,
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 7,
                 "__type": "TakeCamp"
             },
             {

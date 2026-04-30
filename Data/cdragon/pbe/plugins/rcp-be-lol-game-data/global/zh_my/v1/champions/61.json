@@ -922,7 +922,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "奥莉安娜朝着目标地点发射球体，造成路径途中所有目标魔法伤害（伤害随着目标数递减）。使用招数后球体会停留在目标地点。",
-            "dynamicDescription": "奥莉安娜指挥她的<keywordMajor>球体</keywordMajor>移动至一个区域，对附近敌人和路径上的敌人造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。每命中一名敌人，造成的伤害就减少@ReducedDamagePercent@%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "奥莉安娜指挥她的<keywordMajor>球体</keywordMajor>移动至一个区域，对附近敌人和路径上的敌人造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。对第一个敌人之后的所有敌人造成的伤害减少@Effect2Amount@%。@SpellModifierDescriptionAppend@",
             "range": [
                 815.0,
                 815.0,
@@ -1222,7 +1222,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "奥莉安娜指挥球体附着于友军英雄身上，展开防护罩并且对于飞行路径途中所遇到之敌方造成魔法伤害。此外，被球体附着的英雄获得额外的物理防御和魔法防御强化。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive><keywordMajor>球体</keywordMajor>能为其依附的英雄增加<scaleArmor>@DefenseBonus@物理防御</scaleArmor>和<scaleMR>@DefenseBonus@魔法防御</scaleMR>。<br><br><spellActive>主动：</spellActive>奥莉安娜指挥<keywordMajor>球体</keywordMajor>附着于友军英雄身上，为其提供<shield>@TotalShieldTooltip@护盾</shield>，持续@ShieldDuration@秒。被 <keywordMajor>球体</keywordMajor> 穿过的敌人会受到<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive><keywordMajor>球体</keywordMajor>为附着的友方英雄增加 <scaleArmor>@Effect2Amount@ 物理防御</scaleArmor>和 <scaleMR>@Effect2Amount@ 魔法防御</scaleMR>。<br><br><spellActive>主动：</spellActive>奥莉安娜指挥她的<keywordMajor>球体</keywordMajor>附着于一名友方英雄身上，为其提供 <shield>@TotalShieldTooltip@ 护盾值</shield>，持续 @Effect5Amount@ 秒。<keywordMajor>球体</keywordMajor>动作路径上的敌方单位都会受到 <magicDamage>@TotalDamageTooltip@ 魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1095.0,
                 1095.0,

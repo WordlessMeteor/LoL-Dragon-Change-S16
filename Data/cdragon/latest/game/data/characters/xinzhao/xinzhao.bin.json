@@ -58,7 +58,7 @@
             "mCoefficient": 0.699999988079071,
             "mAnimationName": "Spell1_Attack2",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.dds"
             ],
             "{11704a2b}": 0.17500001192092896,
             "{f26881a0}": 1.399999976158142,
@@ -176,7 +176,7 @@
             "mCoefficient": 0.4000000059604645,
             "mAnimationName": "Spell1_Attack3",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.dds"
             ],
             "{11704a2b}": 0.17500001192092896,
             "{f26881a0}": 1.399999976158142,
@@ -277,7 +277,7 @@
             "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell1_Attack1",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.dds"
             ],
             "{11704a2b}": 0.17500001192092896,
             "{f26881a0}": 1.399999976158142,
@@ -404,7 +404,8 @@
     "Characters/XinZhao/Spells/XinZhaoEAbility": {
         "mRootSpell": "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoE",
         "mChildSpells": [
-            "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoE"
+            "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoE",
+            "{80a34ef0}"
         ],
         "mName": "XinZhaoEAbility",
         "__type": "AbilityObject"
@@ -463,6 +464,14 @@
         },
         "__type": "SpellObject"
     },
+    "{80a34ef0}": {
+        "ObjectName": "XinZhaoEPassive",
+        "mScriptName": "XinZhaoEPassive",
+        "mBuff": {
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/XinZhao/Spells/XinZhaoEAbility/XinZhaoE": {
         "ObjectName": "XinZhaoE",
         "mScriptName": "XinZhaoE",
@@ -475,51 +484,15 @@
             ],
             "mEffectAmount": [
                 {
-                    "value": [
-                        20.0,
-                        50.0,
-                        75.0,
-                        100.0,
-                        125.0,
-                        150.0,
-                        225.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        -0.30000001192092896,
-                        -0.30000001192092896,
-                        -0.30000001192092896,
-                        -0.30000001192092896,
-                        -0.30000001192092896,
-                        -0.30000001192092896,
-                        -0.30000001192092896
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.5,
-                        0.6000000238418579,
-                        0.699999988079071,
-                        0.800000011920929,
-                        0.8999999761581421
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -535,15 +508,6 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -561,7 +525,72 @@
             ],
             "DataValues": [
                 {
-                    "name": "BaseSlowAmount",
+                    "name": "APRatio",
+                    "values": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ASMod",
+                    "values": [
+                        0.3799999952316284,
+                        0.3799999952316284,
+                        0.46000000834465027,
+                        0.5400000214576721,
+                        0.6200000047683716,
+                        0.699999988079071,
+                        0.7799999713897705
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ASDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
                     "values": [
                         30.0,
                         30.0,
@@ -574,15 +603,41 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "APRatio",
+                    "name": "APToASRatio",
                     "values": [
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        0.6000000238418579
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PermanentASToASRatio",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AoERadius",
+                    "values": [
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -611,8 +666,8 @@
                 "ChargeDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mDataValue": "APRatio",
@@ -622,10 +677,9 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkE.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkE.dds"
             ],
             "{11704a2b}": 0.0,
             "cooldownTime": [
@@ -717,20 +771,21 @@
                     "mLocKeys": {
                         "keyName": "Spell_XinZhaoE_Name",
                         "keySummary": "Spell_XinZhaoE_Summary",
-                        "keyTooltip": "Spell_XinZhaoE_Tooltip"
+                        "keyTooltip": "Spell_XinZhaoE_Tooltip",
+                        "keyTooltipExtended": "Spell_XinZhaoE_TooltipExtended"
                     },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "ASMod",
                                     "typeIndex": 3,
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_AttackSpeed",
@@ -793,7 +848,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "BaseSlowAmount",
+                                "mDataValue": "SlowAmount",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -838,7 +893,7 @@
             "mCoefficient2": 0.20000000298023224,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.dds"
             ],
             "{11704a2b}": 0.3812499940395355,
             "{f26881a0}": 1.5399999618530273,
@@ -1173,15 +1228,6 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -1290,6 +1336,19 @@
                         0.05000000074505806
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseSlowDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1358,14 +1417,26 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "TotalSlowDuration": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseSlowDuration",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.004999999888241291,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.30000001192092896,
-            "mCoefficient2": 0.8999999761581421,
             "mAnimationName": "Spell2_SlashStab",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkW.XinZhaoRework.dds",
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkW.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkW.dds",
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkW.dds"
             ],
             "mCastTime": 0.6000000238418579,
             "{11704a2b}": 0.25,
@@ -1517,7 +1588,7 @@
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
                         },
-                        "textureBaseOverrideName": "ASSETS/Characters/XinZhao/HUD/Textures/SemiCircleMeleeIndicator.XinZhaoRework.tex",
+                        "textureBaseOverrideName": "ASSETS/Characters/XinZhao/HUD/Textures/SemiCircleMeleeIndicator.tex",
                         "textureTargetOverrideName": "ASSETS/Spells/Textures/blank.tex",
                         "__type": "TargeterDefinitionLine"
                     },
@@ -1827,7 +1898,7 @@
             "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Attack_Passive",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.dds"
             ],
             "{11704a2b}": 0.17500001192092896,
             "{f26881a0}": 1.399999976158142,
@@ -1990,7 +2061,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkR.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkR.dds"
             ],
             "{11704a2b}": 0.32499998807907104,
             "{f26881a0}": 1.2999999523162842,
@@ -2256,7 +2327,7 @@
             "mCoefficient": 0.4000000059604645,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2398,41 +2469,6 @@
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 9221,
-            "DataValues": [
-                {
-                    "name": "HealAPRatio",
-                    "values": [
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "HealAPRatio",
-                            "values": [
-                                0.8500000238418579,
-                                0.8500000238418579,
-                                0.8500000238418579,
-                                0.8500000238418579,
-                                0.8500000238418579,
-                                0.8500000238418579,
-                                0.8500000238418579
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
@@ -2499,8 +2535,53 @@
                             "__type": "StatBySubPartCalculationPart"
                         },
                         {
-                            "mDataValue": "HealAPRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
+                            "mSubpart": {
+                                "mSpellCalculationKey": "HealAPRatio",
+                                "__type": "{f3cbe7b2}"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "HealHPRatio": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 0.029999999329447746,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "HealAPRatio": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 0.5,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 0.15000000596046448,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 0.25,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2508,7 +2589,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.dds"
             ],
             "{11704a2b}": 0.3812499940395355,
             "{f26881a0}": 1.5399999618530273,
@@ -2593,7 +2674,7 @@
             "mCoefficient2": 0.20000000298023224,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkR.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkR.dds"
             ],
             "{11704a2b}": 0.3812499940395355,
             "{f26881a0}": 1.5399999618530273,
@@ -2679,7 +2760,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.dds"
             ],
             "{11704a2b}": 0.3812499940395355,
             "{f26881a0}": 1.5399999618530273,
@@ -2859,7 +2940,7 @@
             "mCoefficient2": 0.20000000298023224,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkE.XinZhaoRework.dds"
+                "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkE.dds"
             ],
             "{11704a2b}": 0.3812499940395355,
             "{f26881a0}": 1.5399999618530273,
@@ -3156,7 +3237,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "Spell_XinZhaoP_Summary",
         "passiveSpell": "XinZhaoP",
-        "passive1IconName": "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.XinZhaoRework.dds",
+        "passive1IconName": "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkP.dds",
         "name": "game_character_displayname_XinZhao",
         "weaponMaterials": [
             "XenZhaoBasicAttack"

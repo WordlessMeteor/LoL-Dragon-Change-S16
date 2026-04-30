@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Udyr": {
             "id": "Udyr",
@@ -149,12 +149,14 @@
                         "label": [
                             "攻击速度",
                             "%最大生命值伤害",
-                            "命中附伤"
+                            "命中附伤",
+                            "攻击特效伤害的额外生命值收益率"
                         ],
                         "effect": [
                             "{{ attackspeedbase*100.000000 }}% -> {{ attackspeedbasenl*100.000000 }}%",
                             "{{ maxhponhitbase*100.000000 }}% -> {{ maxhponhitbasenl*100.000000 }}%",
-                            "{{ basedamage }} -> {{ basedamageNL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ onhitbonushpratio*100.000000 }}% -> {{ onhitbonushprationl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 6,
@@ -456,14 +458,14 @@
                     "id": "UdyrE",
                     "name": "踏火蛮冲",
                     "description": "乌迪尔获得移动速度并且他对每个目标打出的第一次攻击将造成晕眩。再次施放：获得更多移动速度并在若干秒里免疫定身效果。 ",
-                    "tooltip": "<spellActive>蛮冲姿态：</spellActive>乌迪尔获得在{{ movespeedduration }}秒里持续衰减的<speed>{{ movespeed*100 }}%移动速度</speed>。此外，乌迪尔的攻击会使他冲刺到目标处并造成{{ stunduration }}秒<status>晕眩</status>。(对每个目标各有{{ icd }}秒冷却时间)。<br /><br /><keywordMajor>觉醒：</keywordMajor>免疫<status>定身</status>和<status>限制</status>效果，并额外提供持续{{ unstoppableduration }}秒的<speed>{{ movespeedbonus }}移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellActive>蛮冲姿态：</spellActive>乌迪尔获得在{{ movespeedduration }}秒里持续衰减的<speed>{{ movespeed }}移动速度</speed>。此外，乌迪尔的攻击会使他冲刺到目标处并造成{{ stunduration }}秒<status>晕眩</status>。(对每个目标各有{{ icd }}秒冷却时间)。<br /><br /><keywordMajor>觉醒：</keywordMajor>免疫<status>定身</status>和<status>限制</status>效果，并额外提供持续{{ unstoppableduration }}秒的<speed>{{ movespeedbonus }}移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "移动速度",
                             "每单位的冷却时间"
                         ],
                         "effect": [
-                            "{{ movespeed*100.000000 }}% -> {{ movespeednl*100.000000 }}%",
+                            "{{ basemovespeed*100.000000 }}% -> {{ basemovespeednl*100.000000 }}%",
                             "{{ icd }} -> {{ icdNL }}"
                         ]
                     },

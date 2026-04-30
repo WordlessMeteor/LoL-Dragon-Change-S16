@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "致命節奏",
         "majorChangePatchVersion": "",
-        "tooltip": "對敵方英雄進行普攻可增加%i:scaleAS%@ASPerStack@攻速6秒，最多6層。滿層時，%i:OnHit% <OnHit>進行普攻</OnHit>可造成@NoteDamage@<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>額外適性傷害</font></lol-uikit-tooltipped-keyword>。<br><br>滿層時間：@f1@秒<br>造成傷害：@f2@<br><br>此符文亦會追蹤以下數據：對英雄進行普攻後，普攻再次就緒後0.25秒內對英雄進行普攻之百分比：@f3@% (@f4@/@f5@)",
+        "tooltip": "對敵方英雄發動普攻可增加%i:scaleAS%@ASPerStack@攻速，效果持續6秒，最多6層。滿層時，%i:OnHit%<OnHit>普攻命中</OnHit>時造成@NoteDamage@ (%i:scaleAS%)<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>額外適性傷害</font></lol-uikit-tooltipped-keyword>。<br><br>滿層時間：@f1@秒<br>造成傷害：@f2@<br><br>此符文亦會追蹤以下數據：對敵方英雄發動普攻後，普攻再次就緒後0.25秒內對英雄進行普攻之百分比：@f3@% (@f4@/@f5@)",
         "shortDesc": "對敵方英雄進行普攻可增加攻速，最多6層。滿層時，進行普攻可造成<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>額外適性傷害</font></lol-uikit-tooltipped-keyword>。",
         "longDesc": "對敵方英雄進行普攻可增加[6%近戰 || 4%遠攻] 攻速6秒，最多6層。滿層時，進行普攻可造成[9 - 30 近戰 || 6 - 24遠攻] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>額外適性傷害，每有1%額外攻速便增加1%</lol-uikit-tooltipped-keyword>。",
         "recommendationDescriptor": "逐漸提升攻速",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "相位衝擊",
-        "majorChangePatchVersion": "",
-        "tooltip": "在4秒內以3次普攻或<b>獨立</b>的技能命中敵方英雄時，將增加<speed>@MoveSpeedCalc@跑速</speed>及<status>50%緩速抗性</status>，持續3秒。<br><br>冷卻時間：<attention>@CooldownCalc@秒</attention><br><br>發動次數合計：<attention>@f1@</attention>",
-        "shortDesc": "以3次<b>獨立</b>的普攻或技能命中敵方英雄時，將大幅增加<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>跑速</lol-uikit-tooltipped-keyword>和緩速抗性。 ",
-        "longDesc": "在4秒內以3次普攻或<b>獨立</b>的技能命中敵方英雄時，將根據等級增加<speed>25 - 50%跑速</speed>及<status>50%緩速抗性</status>，持續3秒。若為遠攻英雄，跑速增益只有近戰英雄的50%。<br>冷卻時間：30 - 10秒",
+        "name": "風暴浪湧",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "如在3秒內對敵方英雄造成其最大生命25%的傷害，可獲得<speed>@MoveSpeedCalc@跑速</speed>和<status>50%緩速抗性</status>，持續3秒。<br><br>冷卻時間：<attention>@CooldownCalc@秒</attention><br><br>總發動次數：<attention>@f1@</attention>",
+        "shortDesc": "對敵方英雄造成25%最大生命傷害時，會將大幅增加<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>跑速</lol-uikit-tooltipped-keyword>和緩速抗性。 ",
+        "longDesc": "如在3秒內對敵方英雄造成其最大生命25%的傷害，可獲得<speed>40%跑速</speed>和<status>50%緩速抗性</status>，持續3秒。跑速對遠程英雄的效果為原本的75%。<br>冷卻時間：20秒 - 10秒",
         "recommendationDescriptor": "瞬間加速",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "發動次數合計：@eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "冥火之觸",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "使用技能傷害敵方英雄時將使其燃燒，每秒造成@DamageCalc@適性傷害。燃燒3秒後，只要仍處於燃燒狀態，燃燒傷害會提升100%。<br><rules><br>持續時間：<br>單一目標：4秒。<br>範圍效果：2秒<br>持續傷害：1秒<br></rules><br>你用冥火之觸對敵方英雄造成@f1@燃燒傷害。",
+        "shortDesc": "使用技能傷害敵方英雄時，會使其持續燃燒。",
+        "longDesc": "使用技能傷害敵方英雄時將使其燃燒，取決於等級，每秒造成1 - 10適性傷害(+<scaleAP>0.03魔攻</scaleAP>) (+<scaleAD>0.08額外物攻</scaleAD>)。燃燒3秒後，只要仍處於燃燒狀態，燃燒傷害會提升100%。<br><rules><br>持續時間：<br>單一目標：4秒。<br>範圍效果：2秒<br>持續傷害：1秒<br></rules>",
+        "recommendationDescriptor": "持續技能傷害：",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            "燃燒傷害量：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "神聖守護",
         "majorChangePatchVersion": "",
@@ -1264,7 +1278,7 @@
         "recommendationDescriptor": "",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png",
         "endOfGameStatDescs": [
-            "已獲得乾糧：@eogvar1@",
+            "已獲得乾糧：@eogvar1@ ",
             "總治療量：@eogvar3@"
         ],
         "recommendationDescriptorAttributes": {
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "刀鋒之雹",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "普攻敵方英雄時獲得{{ Item_Melee_Ranged_Split }}%攻速，效果最多持續@NumHits@次普攻。<br><br>冷卻時間：@Cooldown@秒。<br><hr><br>刀鋒之雹普攻：@f1@<br>已觸發刀鋒之雹的普攻佔比：@f2@%<br><br><rules>普攻重置可提升普攻次數上限1次。<br>可讓你暫時突破攻速上限。</rules>",
-        "shortDesc": "在攻擊敵方英雄時，於最一開始的 3 次攻擊獲得大量攻速。",
-        "longDesc": "普攻敵方英雄時增加160%攻速(遠攻英雄則為80%)，效果最多持續3次普攻。<br><br>普攻間隔不得超過3秒，否則此效果將結束。<br><br>冷卻時間：10秒。<br><br><rules>普攻重置可提升普攻次數上限1次。<br>可讓你暫時突破攻速上限。</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "對敵方英雄發動普攻時增加{{ Item_Melee_Ranged_Split }}%攻速，並造成<font color='#48C4B7'>@BonusDamage@</font><trueDamage>額外真實傷害</trueDamage>，效果最多持續@NumHits@次普攻。<br><br>冷卻時間：@Cooldown@秒。<br><hr><br>刀鋒之雹普攻次數：@f1@<br>造成傷害：@f2@<br>已觸發刀鋒之雹的普攻佔比：@f3@%<br><br><rules>普攻重置可提升普攻次數上限1次，最多+@MaxBonusHits@次。<br>可讓你暫時突破攻速上限。</rules>",
+        "shortDesc": "對敵方英雄的前3次普攻會獲得大量攻速及<trueDamage>額外真實傷害</trueDamage>。",
+        "longDesc": "對敵方英雄發動普攻時增加120%攻速(遠程英雄則為60%)和<trueDamage>額外真實傷害</trueDamage>，效果最多持續3次普攻。<br><br>普攻間隔不得超過3秒，否則此效果將結束。<br><br>冷卻時間：10秒。<br>命中傷害：4 - 20(+0.08額外物攻、+0.06魔攻)傷害。<br><br><rules>普攻重置可提升普攻次數上限1次。<br>可讓你暫時突破攻速上限。</rules>",
         "recommendationDescriptor": "短暫的快速普攻",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "額外攻速的普攻次數：@eogvar1@",
-            "已觸發刀鋒之雹的攻擊佔比：@eogvar2@%"
+            "造成傷害：@eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "奧術彗星",
         "majorChangePatchVersion": "",
-        "tooltip": "使用技能傷害敵方英雄時，召喚一顆彗星至他們的位置，若奧術彗星處於冷卻狀態，則改為減少剩餘冷卻時間。<br><br>傷害：@DamageCalc@<br>冷卻時間：@CooldownCalc@秒<br><rules><br>冷卻時間縮短：<br>單體傷害：20%。<br>範圍傷害：10%。<br>持續傷害：5%。<br></rules><br>彗星命中率：@f3@%，對英雄造成傷害合計：@f1@。",
+        "tooltip": "使用技能傷害敵方英雄時，召喚一顆彗星至對方的位置，根據敵我之間的距離造成額外傷害。<br><br>傷害：@DamageCalc@<br>冷卻時間：@CooldownCalc@秒<br><rules><br>傷害增幅最多可隨距離提升至100%，於距離750單位時達到最大值。<br></rules><br>你召喚的彗星有@f3@%命中目標，對英雄造成傷害總計@f1@。",
         "shortDesc": "使用技能傷害一名敵方英雄時召喚一枚彗星至他們的位置。",
-        "longDesc": "使用技能傷害一名敵方英雄時召喚一枚彗星到他們的位置。奧術彗星進入冷卻後，使用技能傷害敵方英雄將縮減剩餘冷卻時間。<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>適性傷害</font></lol-uikit-tooltipped-keyword>：30 - 130，隨等級提升 (<scaleAP>+0.05魔法攻擊</scaleAP>、<scaleAD>+0.1額外物理攻擊</scaleAD>)<br>冷卻時間：20 - 8秒<br><rules><br>冷卻時間減免：<br>單體傷害：20%<br>範圍傷害：10%<br>持續傷害：5%<br></rules>",
+        "longDesc": "使用技能傷害敵方英雄時，召喚一顆彗星至對方的位置，造成依距離增加的傷害。<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>適性傷害</font></lol-uikit-tooltipped-keyword>：15 - 100，取決於等級(<scaleAP>+0.05魔攻</scaleAP>及<scaleAD>+0.1額外物攻</scaleAD>)<br>冷卻時間：20 - 8秒<br><rules><br>傷害增幅最多可隨距離提升至100%，於距離750單位時達到最大值。<br></rules>",
         "recommendationDescriptor": "技能傷害",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

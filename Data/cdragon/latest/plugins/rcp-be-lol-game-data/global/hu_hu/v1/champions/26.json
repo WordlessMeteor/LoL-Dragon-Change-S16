@@ -1,5 +1,6 @@
 {
     "id": 26,
+    "contentId": "829f170b-4fcf-413b-9ff5-e598fd4412e9",
     "name": "Zilean",
     "alias": "Zilean",
     "title": "az idő őre",
@@ -573,10 +574,10 @@
             "isBase": false,
             "name": "Arcana Zilean",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.SKINS_Zilean_Skin24.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.SKINS_Zilean_Skin24.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.SKINS_Zilean_Skin24.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.SKINS_Zilean_Skin24.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -751,7 +752,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Egy bombát dob a kijelölt területre, amely hozzátapad a hozzá közel kerülő első egységhez (hősök előnyben). 3 másodperc után felrobban, és területre ható sebzést okoz. Ha egy Időzített bomba idő előtt felrobbant egy másikat, el is kábítja az ellenfeleket.",
-            "dynamicDescription": "Zilean elhajít egy késleltetett hatású bombát, amely hozzátapad az első egységhez, amely közel kerül hozzá. A bomba @Effect2Amount@ másodperccel később felrobban, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.<br><br>Ha egy második bomba tapad egy olyan célpontra, amelyen már van egy, az első töltet azonnal felrobban, és a robbanás hatósugarában lévő ellenfelek @Effect4Amount@ másodpercre <status>elkábulnak</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean elhajít egy késleltetett hatású bombát, amely hozzátapad a hozzá közel kerülő első egységhez. A bomba @FuseDuration@ másodperccel később felrobban, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz.<br><br>Ha egy második bomba tapad egy olyan célpontra, amelyen már van egy, az első töltet azonnal felrobban, és a robbanás hatósugarában lévő ellenfelek @StunDuration@ másodpercre <status>elkábulnak</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +899,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ mana",
+            "cost": "@ManaCost@ mana",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Zilean képes felkészülni az eljövendő összecsapásokra azzal, hogy a többi alapképességének töltési idejét csökkenti.",
-            "dynamicDescription": "Zilean felgyorsítja az időt, @Effect2Amount@ másodperccel csökkentve a többi alapképessége töltési idejét.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean felgyorsítja az időt, @CooldownReduction@ másodperccel csökkentve a többi alapképessége töltési idejét.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +942,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Zilean bármely egység körül meggörbíti az időt, így egy rövid időre csökkenti egy ellenség mozgási sebességét, vagy növeli egy szövetséges mozgási sebességét.",
-            "dynamicDescription": "Zilean @Effect1Amount@ másodpercre @Effect2Amount@%-kal <status>lelassít</status> egy ellenséges hőst, és <speed>@Effect2Amount@% mozgási sebességet</speed> biztosít egy szövetséges hősnek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean @Duration@ másodpercre @SpeedAmount@%-kal <status>lelassít</status> egy ellenséges hőst, és <speed>@SpeedAmount@% mozgási sebességet</speed> biztosít egy szövetséges hősnek.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

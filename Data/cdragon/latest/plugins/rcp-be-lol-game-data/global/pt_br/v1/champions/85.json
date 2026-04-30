@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "Kennen",
     "alias": "Kennen",
     "title": "o Coração da Tempestade",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kennen passivamente causa dano adicional e adiciona uma Marca da Tormenta a seu alvo a cada certo número de ataques. Ele pode ativar essa habilidade para causar dano e adicionar outra Marca da Tormenta a alvos que já estão marcados.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> cada 5º Ataque causa <magicDamage>@TotalDamagePassive@ de Dano Mágico</magicDamage> adicional.<br><br><spellActive>Ativo:</spellActive> Kennen envia uma onda de eletricidade, causando <magicDamage>@TotalDamageActive@ de Dano Mágico</magicDamage> a inimigos próximos afetados por <spellName>Marca da Tormenta</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> a cada 5º Ataque, causa <magicDamage>@TotalDamagePassive@ de Dano Mágico</magicDamage> adicional %i:OnHit% <OnHit>ao contato</OnHit>.<br><br><spellActive>Ativo:</spellActive> Kennen envia uma onda de eletricidade, causando <magicDamage>@TotalDamageActive@ de Dano Mágico</magicDamage> a inimigos próximos afetados por <spellName>Marca da Tormenta</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kennen assume uma forma de relâmpago, permitindo que passe por unidades e aplique a Marca da Tormenta. Ele também ganha Velocidade de Movimento ao assumir essa forma e Velocidade de Ataque ao sair dela.",
-            "dynamicDescription": "Kennen vira uma esfera de raios, recebendo <speed>@MovementSpeed*100@% de Velocidade de Movimento</speed>, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> aos inimigos atravessados e ganhando efeito Fantasma por @DurationAsBall@s. Se Kennen causar dano a pelo menos um inimigo, ele recebe @EnergyRefund@ de Energia. <br><br>Depois que a Habilidade termina, Kennen recebe <attackSpeed>@AttackSpeed*100@% de Velocidade de Ataque</attackSpeed> por @DurationAfterBall@s. É possível <recast>Reconjurar</recast> para finalizar a Habilidade antecipadamente.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen vira uma esfera de raios, recebendo <speed>@MovementSpeed*100@% de Velocidade de Movimento</speed>, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> aos inimigos atravessados e ganhando efeito Fantasma por @DurationAsBall@s. Se Kennen causar dano a pelo menos um inimigo, ele recebe @EnergyRefund@ de Energia. <br><br>Depois que a Habilidade termina, Kennen recebe <attackSpeed>@TotalAS*100@% de Velocidade de Ataque</attackSpeed> por @DurationAfterBall@s. Acertos Críticos prolongam a duração do efeito em @CritDurationBonus@s. É possível <recast>Reconjurar</recast> para finalizar a Habilidade antecipadamente.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

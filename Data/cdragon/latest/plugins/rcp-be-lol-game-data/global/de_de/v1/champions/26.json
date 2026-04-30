@@ -1,5 +1,6 @@
 {
     "id": 26,
+    "contentId": "829f170b-4fcf-413b-9ff5-e598fd4412e9",
     "name": "Zilean",
     "alias": "Zilean",
     "title": "der Zeitwächter",
@@ -573,10 +574,10 @@
             "isBase": false,
             "name": "Arkana-Zilean",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.SKINS_Zilean_Skin24.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.SKINS_Zilean_Skin24.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.SKINS_Zilean_Skin24.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.SKINS_Zilean_Skin24.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -751,7 +752,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Wirft eine Bombe auf ein Zielgebiet. Diese haftet an Einheiten, die sich ihr nähern (Champions werden priorisiert). Sie detoniert nach 3 Sekunden und verursacht Flächenschaden. Falls eine Zeitbombe von einer anderen Zeitbombe frühzeitig zum Explodieren gebracht wird, werden Gegner zudem betäubt.",
-            "dynamicDescription": "Zilean wirft eine zeitverzögerte Bombe, die an der ersten Einheit hängen bleibt, die einen kleinen Bereich um sie herum betritt. Nach @Effect2Amount@&nbsp;Sekunden explodiert sie und verursacht <magicDamage>@TotalDamage@&nbsp;magischen Schaden</magicDamage>.<br><br>Wenn Zilean eine zweite Bombe auf eine Einheit wirft, die bereits eine aufgesammelt hat, explodiert die erste Bombe sofort und <status>betäubt</status> Gegner im Explosionsbereich @Effect4Amount@&nbsp;Sekunden lang.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean wirft eine zeitverzögerte Bombe, die an der ersten Einheit hängen bleibt, die einen kleinen Bereich um sie herum betritt. Nach @FuseDuration@&nbsp;Sekunden detoniert sie und verursacht <magicDamage>@TotalDamage@&nbsp;magischen Schaden</magicDamage>.<br><br>Wenn Zilean eine zweite Bombe auf eine Einheit wirft, auf der sich bereits eine befindet, explodiert die erste Bombe sofort und <status>betäubt</status> Gegner im Explosionsbereich für @StunDuration@&nbsp;Sekunden.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +899,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@&nbsp;Mana",
+            "cost": "@ManaCost@ Mana",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Zilean kann sich auf bevorstehende Konfrontationen vorbereiten, wodurch die Abklingzeit seiner normalen Fähigkeiten reduziert wird.",
-            "dynamicDescription": "Zilean manipuliert die Zeit und verringert die Abklingzeiten seiner anderen Grundfähigkeiten um @Effect2Amount@&nbsp;Sekunden.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean manipuliert die Zeit und verringert die Abklingzeiten seiner anderen Grundfähigkeiten um @CooldownReduction@&nbsp;Sekunden.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +942,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Zilean krümmt die Zeit um eine Einheit herum, wodurch er entweder das Lauftempo eines Gegners verringert oder für kurze Zeit das Lauftempo einer verbündeten Einheit erhöht.",
-            "dynamicDescription": "Zilean <status>verlangsamt</status> einen gegnerischen Champion um @Effect2Amount@&nbsp;% oder gewährt einem verbündeten Champion @Effect1Amount@&nbsp;Sekunden lang <speed>@Effect2Amount@&nbsp;% Lauftempo</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean <status>verlangsamt</status> einen gegnerischen Champion um @SpeedAmount@&nbsp;% oder gewährt einem verbündeten Champion @Duration@&nbsp;Sekunden lang <speed>@SpeedAmount@&nbsp;% Lauftempo</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

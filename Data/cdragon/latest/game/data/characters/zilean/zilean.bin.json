@@ -1259,6 +1259,19 @@
                         1.600000023841858
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FuseDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -3105,15 +3118,6 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -3148,6 +3152,38 @@
                 },
                 {
                     "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "CooldownReduction",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "UNUSED",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ManaCost",
+                    "values": [
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "{f9c2333e}": {
@@ -3445,6 +3481,34 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "Duration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SpeedAmount",
+                    "values": [
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        99.0,
+                        114.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "{f9c2333e}": {
                 "ARAM": {
                     "value": [
@@ -3544,15 +3608,13 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SpeedAmount",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SpeedAmount",
                                     "nameOverride": "Spell_ListType_MovementSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -3586,8 +3648,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SpeedAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3599,8 +3661,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SpeedAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3612,8 +3674,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SpeedAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -4108,6 +4170,23 @@
             {
                 "MapId": 12,
                 "Position": "{ada7afdb}",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "middle",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
                 "mEarlyLevelOverrides": [
                     0,
                     1,

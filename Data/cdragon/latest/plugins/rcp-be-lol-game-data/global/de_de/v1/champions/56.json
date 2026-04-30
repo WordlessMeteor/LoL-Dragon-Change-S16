@@ -1,5 +1,6 @@
 {
     "id": 56,
+    "contentId": "3795a4c7-9400-4719-a493-598b6315b006",
     "name": "Nocturne",
     "alias": "Nocturne",
     "title": "der ewige Albtraum",
@@ -814,7 +815,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Nocturne wirft eine Schattenklinge, die Schaden verursacht, eine Dämmerspur hinterlässt und Champions ebenfalls eine Dämmerspur hinterlassen lässt. Befindet sich Nocturne auf einer Dämmerspur, kann er sich durch Einheiten hindurchbewegen und er erhält zusätzliches Lauftempo und Angriffsschaden.",
-            "dynamicDescription": "Nocturne wirft eine Schattenklinge, die <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> verursacht und @Effect3Amount@&nbsp;Sekunden lang eine Dämmerspur hinterlässt. Getroffene gegnerische Champions hinterlassen ebenfalls eine Spur. <br><br>Während sich Nocturne auf der Dämmerspur bewegt, erhält er „Geist“ sowie <speed>@MoveSpeed@&nbsp;% Lauftempo</speed> und <physicalDamage>@BonusTrailAD@&nbsp;Angriffsschaden</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nocturne wirft eine Schattenklinge, die <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> verursacht und @TrailDuration@&nbsp;Sekunden lang eine Dämmerspur hinterlässt. Getroffene gegnerische Champions hinterlassen ebenfalls eine Spur. <br><br>Während sich Nocturne auf der Dämmerspur bewegt, erhält er „Geist“ sowie <speed>@MoveSpeed@&nbsp;% Lauftempo</speed> und <physicalDamage>@BonusTrailAD@&nbsp;Angriffsschaden</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -964,7 +965,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Nocturne verstärkt seine Klingen und erhält so passiv zusätzliches Angriffstempo. Benutzt er „Tuch der Dunkelheit“, kann er in die Schatten abtauchen und so eine magische Barriere erschaffen, die eine einzelne gegnerische Fähigkeit abfängt und sein passives Angriffstempo bei Erfolg verdoppelt.",
-            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Nocturne erhält <attackSpeed>@Effect1Amount@&nbsp;% Angriffstempo</attackSpeed>.<br><br><spellActive>Aktiv:</spellActive> Nocturne erzeugt 1,5&nbsp;Sekunden lang eine Schattenbarriere, die die nächste gegnerische Fähigkeit abwehrt. Wenn eine Fähigkeit blockiert wird, wird der passive Effekt der Fähigkeit @Effect4Amount@&nbsp;Sekunden lang auf <attackSpeed>@Effect1Amount*2@&nbsp;% Angriffstempo</attackSpeed> erhöht.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Nocturne erhält <attackSpeed>@ActiveAS@&nbsp;% Angriffstempo</attackSpeed>.<br><br><spellActive>Aktiv:</spellActive> Nocturne erzeugt 1,5&nbsp;Sekunden lang eine Schattenbarriere, die die nächste gegnerische Fähigkeit blockiert. Wenn eine Fähigkeit blockiert wird, wird der passive Effekt der Fähigkeit @DoubleASDuration@&nbsp;Sekunden lang auf <attackSpeed>@ActiveAS*2@&nbsp;% Angriffstempo</attackSpeed> erhöht.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1114,7 +1115,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Nocturne schickt seinem Ziel einen Albtraum, wodurch dieses jede Sekunde Schaden und schließlich „Furcht“ erleidet, sollte es nach dem Ende der Wirkdauer noch in Reichweite sein.",
-            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Nocturne erhält <speed>@TooltipFearMS*100@&nbsp;% Lauftempo</speed>, wenn er sich auf in <status>Furcht</status> versetzte Gegner zubewegt.<br><br><spellActive>Aktiv:</spellActive> Nocturne lässt eine albtraumartige Verbindung entstehen, die dem Gegner @Effect3Amount@&nbsp;Sekunden lang <magicDamage>@TotalDamage@&nbsp;magischen Schaden</magicDamage> zufügt. Wenn die Verbindung nicht getrennt wird, wird das Ziel @Effect2Amount@&nbsp;Sekunden lang in <status>Furcht</status> versetzt.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Nocturne erhält <speed>@TooltipFearMS*100@&nbsp;% Lauftempo</speed>, wenn er sich auf in <status>Furcht</status> versetzte Gegner zubewegt.<br><br><spellActive>Aktiv:</spellActive> Nocturne schickt seinem Ziel einen Albtraum, der ihm @LeashDuration@&nbsp;Sekunden lang <magicDamage>@TotalDamage@&nbsp;magischen Schaden</magicDamage> zufügt. Wenn die Verbindung nicht getrennt wird, wird das Ziel @CCDuration@&nbsp;Sekunde(n) lang in <status>Furcht</status> versetzt.@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,

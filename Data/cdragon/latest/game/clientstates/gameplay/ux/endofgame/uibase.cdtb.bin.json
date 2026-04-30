@@ -685,42 +685,6 @@
         },
         "__type": "UiElementIconData"
     },
-    "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene/Vanguard_VFXGroup": {
-        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene/Vanguard_VFXGroup",
-        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene",
-        "Elements": [
-            "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene/Vanguard_VFXGroup/Vanguard_VFX"
-        ],
-        "__type": "UiElementGroupData"
-    },
-    "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene/Vanguard_VFXGroup/Vanguard_VFX": {
-        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene/Vanguard_VFXGroup/Vanguard_VFX",
-        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene",
-        "Enabled": true,
-        "Layer": 1,
-        "Position": {
-            "UIRect": {
-                "Size": [
-                    1600.0,
-                    1200.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    0.5,
-                    0.5
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "VfxSystem": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Vanguard_VFX",
-        "__type": "UiElementParticleSystemData"
-    },
     "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene/Vanguard_ExplanationText": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene/Vanguard_ExplanationText",
         "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardScene",
@@ -791,6 +755,137 @@
         "TextAlignmentHorizontal": 1,
         "__type": "UiElementTextData"
     },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene",
+        "Layer": 999,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.30000001192092896,
+            "EasingType": 8,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_VFXGroup": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_VFXGroup",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene",
+        "Elements": [
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_VFXGroup/IGNB_VFX"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_VFXGroup/IGNB_VFX": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_VFXGroup/IGNB_VFX",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Size": [
+                    1600.0,
+                    1200.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_IGNB_VFX",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_Background": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene/IGNB_Background",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBBGScene",
+        "Enabled": true,
+        "BlockInputEvents": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -800.0,
+                    -600.0
+                ],
+                "Size": [
+                    3200.0,
+                    2400.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            210
+        ],
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EoG_GradientMap.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 16,
+            "mTextureUV": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene/Vanguard_VFXGroup": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene/Vanguard_VFXGroup",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene",
+        "Elements": [
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene/Vanguard_VFXGroup/Vanguard_VFX"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene/Vanguard_VFXGroup/Vanguard_VFX": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene/Vanguard_VFXGroup/Vanguard_VFX",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Size": [
+                    1600.0,
+                    1200.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Vanguard_VFX",
+        "__type": "UiElementParticleSystemData"
+    },
     "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene/Vanguard_Background": {
         "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene/Vanguard_Background",
         "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/VanguardBGScene",
@@ -835,6 +930,359 @@
                 1.0,
                 1.0,
                 1.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Layer": 1000,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.30000001192092896,
+            "TransitionStartDelaySecs": 0.6499999761581421,
+            "EasingType": 8,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Elements": [
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Clicked",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Default",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Disabled",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Hover",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
+            "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Region"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Default"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Hover"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Clicked"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Disabled"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_TerminationText": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_TerminationText",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    307.0,
+                    550.0
+                ],
+                "Size": [
+                    1000.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "IGNB_gameTerminated",
+        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Title",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_DetectedText": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_DetectedText",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    300.0,
+                    610.0
+                ],
+                "Size": [
+                    1000.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "IGNB_disruptiveBehaviorDetected",
+        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Subtitle",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Clicked": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Clicked",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                110.0,
+                190.0,
+                163.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Region": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Region",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Text",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Enabled": true,
+        "Layer": 15,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    769.0,
+                    723.0
+                ],
+                "Size": [
+                    66.0,
+                    9.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "IGNB_continue",
+        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Continue",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Disabled": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Disabled",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Layer": 13,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                164.0,
+                190.0,
+                217.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Hover": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Hover",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                56.0,
+                190.0,
+                109.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Default": {
+        "name": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene/IGNB_ContinueButton/IGNB_ContinueButton_Default",
+        "Scene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/IGNBScene",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                2.0,
+                190.0,
+                55.0
             ],
             "__type": "AtlasData"
         },

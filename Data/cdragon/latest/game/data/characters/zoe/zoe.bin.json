@@ -2025,6 +2025,19 @@
                         270.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CooldownRefresh",
+                    "values": [
+                        0.125,
+                        0.1599999964237213,
+                        0.19499999284744263,
+                        0.23000000417232513,
+                        0.26499998569488525,
+                        0.30000001192092896,
+                        0.33500000834465027
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2099,13 +2112,13 @@
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
             "cooldownTime": [
-                16.0,
+                18.0,
+                18.0,
+                17.0,
                 16.0,
                 15.0,
                 14.0,
-                13.0,
-                12.0,
-                11.0
+                14.0
             ],
             "mCantCancelWhileWindingUp": true,
             "mProjectTargetToCastRange": true,
@@ -2229,6 +2242,13 @@
                                 },
                                 {
                                     "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "CooldownRefresh",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_ECooldownRefresh",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -3783,26 +3803,26 @@
                 {
                     "name": "TotalBaseDamage",
                     "values": [
-                        10.0,
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0,
-                        70.0
+                        5.0,
+                        15.0,
+                        25.0,
+                        35.0,
+                        45.0,
+                        55.0,
+                        65.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "TotalAPRatio",
                     "values": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -8654,7 +8674,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8681,7 +8704,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8694,7 +8720,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -8749,7 +8778,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8777,7 +8809,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8805,7 +8840,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8819,7 +8857,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -8843,7 +8884,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],

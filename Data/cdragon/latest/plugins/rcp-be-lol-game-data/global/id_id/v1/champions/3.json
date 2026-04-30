@@ -1,5 +1,6 @@
 {
     "id": 3,
+    "contentId": "cbe8e557-6b38-4478-ae6f-9b03f10fb4d5",
     "name": "Galio",
     "alias": "Galio",
     "title": "the Colossus",
@@ -970,11 +971,11 @@
             "isBase": false,
             "name": "Aegis Frame Galio",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_centered_40.SKINS_Galio_Skin40.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_uncentered_40.SKINS_Galio_Skin40.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_tile_40.SKINS_Galio_Skin40.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/GalioLoadScreen_40.SKINS_Galio_Skin40.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/GalioLoadScreen_40_LE.SKINS_Galio_Skin40.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_centered_40.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_uncentered_40.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/Images/galio_splash_tile_40.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/GalioLoadScreen_40.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Galio/Skins/Skin40/GalioLoadScreen_40_LE.jpg",
             "skinType": "",
             "rarity": "kLegendary",
             "isLegacy": false,
@@ -1264,7 +1265,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Galio melakukan charge sambil mengaktifkan mode bertahan, bergerak lambat. Saat melepaskan charge, Galio akan menerapkan taunt dan memberikan damage pada musuh di sekitar.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Galio mendapatkan <shield>@TotalPassiveShield@ Magic Shield</shield> setelah tidak menerima damage selama @PassiveShieldOOCTimer@ detik.<br><br><charge>Memulai Charge:</charge> Galio mengurangi magic damage yang datang sebesar @MagicDamageReduction@, physical damage yang datang sebesar @PhysicalDamageReduction@, dan menerapkan <status>Slow</status> pada diri sendiri sebesar @Effect3Amount@%.<br><br><release>Release:</release> Galio menerapkan <status>Taunt</status> pada champion musuh selama @Effect4Amount@ hingga @Effect7Amount@ detik, menghasilkan antara <magicDamage>@MinTotalDamage@</magicDamage> dan <magicDamage>@MaxTotalDamage@ magic damage</magicDamage>, sekaligus me-refresh pengurangan damage selama @Effect8Amount@ detik. Durasi, damage, dan range Taunt meningkat dengan durasi charge.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Galio mendapatkan <shield>@TotalPassiveShield@ Magic Shield</shield> setelah tidak menerima damage selama @PassiveShieldOOCTimer@ detik.<br><br><charge>Mulai Charging:</charge> Galio mengurangi magic damage yang datang sebesar @MagicDamageReduction@, physical damage yang datang sebesar @PhysicalDamageReduction@, dan menerapkan <status>Slow</status> pada diri sendiri sebesar @SelfSlowPercent@%.<br><br><release>Release:</release> Galio menerapkan <status>Taunt</status> pada champion musuh selama @CCDurationMin@ hingga @CCDurationMax@ detik, menghasilkan antara <magicDamage>@MinTotalDamage@</magicDamage> dan <magicDamage>@MaxTotalDamage@ magic damage</magicDamage>, sekaligus me-refresh pengurangan damage selama @DRLingerDuration@ detik. Durasi, damage, dan range Taunt meningkat dengan durasi charge.@SpellModifierDescriptionAppend@",
             "range": [
                 275.0,
                 275.0,
@@ -1290,45 +1291,45 @@
                 14.0
             ],
             "coefficients": {
-                "coefficient1": 0.08,
-                "coefficient2": 0.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    25.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
                     0.0,
@@ -1340,49 +1341,49 @@
                     0.0
                 ],
                 "Effect6Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect9Amount": [
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25,
-                    1.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ]
             },
             "ammo": {

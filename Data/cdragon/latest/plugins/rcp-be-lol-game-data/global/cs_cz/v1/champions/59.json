@@ -1,5 +1,6 @@
 {
     "id": 59,
+    "contentId": "88432534-0298-4cbc-8f0a-94d84b6efefd",
     "name": "Jarvan IV.",
     "alias": "JarvanIV",
     "title": "Vzor Demacie",
@@ -1070,10 +1071,10 @@
             "isBase": false,
             "name": "Tvůrce mýtů Jarvan IV.",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_centered_44.SKINS_JarvanIV_Skin44.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_uncentered_44.SKINS_JarvanIV_Skin44.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_tile_44.SKINS_JarvanIV_Skin44.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/JarvanIVLoadScreen_44.SKINS_JarvanIV_Skin44.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_centered_44.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_uncentered_44.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_tile_44.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/JarvanIVLoadScreen_44.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -1241,11 +1242,11 @@
             "isBase": false,
             "name": "Prestižní Vidiny padlých Jarvan IV.",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_centered_54.SKINS_JarvanIV_Skin54.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_uncentered_54.SKINS_JarvanIV_Skin54.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_tile_54.SKINS_JarvanIV_Skin54.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54.SKINS_JarvanIV_Skin54.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54_LE.SKINS_JarvanIV_Skin54.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_centered_54.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_uncentered_54.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_tile_54.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54_LE.jpg",
             "skinType": "",
             "rarity": "kMythic",
             "isLegacy": true,
@@ -1305,7 +1306,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Jarvan IV. prodlouží své kopí, čímž způsobí fyzické poškození nepřátelům v cestě a sníží jim hodnotu brnění. Navíc se tím Jarvan přitáhne k Demacijské standartě, přičemž odhodí všechny nepřátele v cestě.",
-            "dynamicDescription": "Jarvan prodlouží své kopí, nepřátelům tak způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage> a na @Effect3Amount@&nbsp;sek. je připraví o <scaleArmor>@Effect2Amount@&nbsp;% brnění</scaleArmor>.<br><br>Pokud se kopí a <spellName>Demacijská standarta</spellName> dotknou, Jarvan se k ní přitáhne a jednotky, se kterými se při tom srazí, vyhodí na 0,75&nbsp;sek. <status>do vzduchu</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan prodlouží své kopí, nepřátelům tak způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage> a na @Effect3Amount@&nbsp;sek. je připraví o <scaleArmor>@BaseARShred*100@&nbsp;% brnění</scaleArmor>.<br><br>Pokud se kopí a <spellName>Demacijská standarta</spellName> dotknou, Jarvan se k ní přitáhne a jednotky, se kterými se při tom srazí, vyhodí na 0,75&nbsp;sek. <status>do vzduchu</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1332,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1346,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1456,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Jarvan IV. povolá pradávné krále Demacie, aby ho zaštítili před újmou a zpomalili okolní nepřátele.",
-            "dynamicDescription": "Jarvan vyvolá ochrannou bariéru, která na @Effect5Amount@&nbsp;sek. <status>zpomalí</status> okolní nepřátele o @Effect2Amount@&nbsp;% a jemu poskytne <shield>štít o síle @BaseShield@ bodů</shield>, tato hodnota se zvyšuje o <shield>@BonusShield@</shield> za každého zasaženého nepřátelského šampiona.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan vyvolá ochrannou bariéru, která na @Effect5Amount@&nbsp;sek. <status>zpomalí</status> okolní nepřátele o @BaseSlowAmount*100@&nbsp;% a jemu poskytne <shield>štít o síle @TotalShield@ bodů</shield>, tato hodnota se zvyšuje o <shield>@BonusShield@</shield> za každého zasaženého nepřátelského šampiona.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1482,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1496,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1606,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Jarvan IV. nosí zástavu Demacie, čímž získává pasivní bonus k rychlosti útoků. Po aktivaci Demacijské standarty může na zem umístit demacijskou vlajku, která okamžitě způsobí magické poškození a okolním spojeneckým šampionům zvýší rychlost útoků.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Jarvan získá <attackSpeed>@PermanentAttackSpeed*100@&nbsp;% k rychlosti útoků</attackSpeed>.<br><br><spellActive>Aktivace:</spellActive> Jarvan hodí svou standartu na zvolenou pozici, způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a spojencům v její blízkosti poskytne na @Effect4Amount@&nbsp;sek. <attackSpeed>@Effect3Amount*100@&nbsp;% k rychlosti útoků</attackSpeed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Jarvan získá <attackSpeed>@PermanentAttackSpeed*100@&nbsp;% k rychlosti útoků</attackSpeed>.<br><br><spellActive>Aktivace:</spellActive> Jarvan hodí svou standartu na zvolenou pozici, způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a spojencům v její blízkosti poskytne na @Effect4Amount@&nbsp;sek. <attackSpeed>@BaseAuraAS*100@&nbsp;% k rychlosti útoků</attackSpeed>.@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1632,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1655,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

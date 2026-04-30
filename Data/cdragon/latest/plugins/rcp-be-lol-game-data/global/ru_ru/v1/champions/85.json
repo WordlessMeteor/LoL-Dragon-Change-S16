@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "Кеннен",
     "alias": "Kennen",
     "title": "Сердце бури",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Кеннен пассивно наносит дополнительный урон и накладывает на цель Знак бури при каждой пятой автоатаке. Активация этого умения накладывает еще один Знак бури на всех уже отмеченных врагов неподалеку и наносит им урон.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> каждая 5-я автоатака дополнительно наносит <magicDamage>@TotalDamagePassive@ магического урона</magicDamage>.<br><br><spellActive>Активно:</spellActive> Кеннен выпускает заряд электричества, нанося <magicDamage>@TotalDamageActive@ магического урона</magicDamage> ближайшим врагам, на которых наложен <spellName>Знак бури</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> каждая 5-я автоатака дополнительно наносит <magicDamage>@TotalDamagePassive@ ед. маг. урона</magicDamage> %i:OnHit% <OnHit>при попадании</OnHit>.<br><br><spellActive>Активно:</spellActive> Кеннен выпускает заряд электричества, нанося <magicDamage>@TotalDamageActive@ ед. маг. урона</magicDamage> ближайшим врагам, на которых наложен <spellName>Знак бури</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Кеннен превращается в молнию, получая возможность проходить сквозь бойцов и накладывать Знак бури. В этой форме у Кеннена увеличивается скорость передвижения, а после выхода из нее – скорость атаки.",
-            "dynamicDescription": "Кеннен превращается в шаровую молнию, увеличивает свою <speed>скорость передвижения на @MovementSpeed*100@%</speed>, наносит <magicDamage>@TotalDamage@ магического урона</magicDamage> врагам, которых коснется, и становится призрачным на @DurationAsBall@ сек. Если Кеннен наносит урон хотя бы одному врагу, он получает @EnergyRefund@ энергии. <br><br>По окончании действия умения Кеннен получает <attackSpeed>@AttackSpeed*100@% скорости атаки</attackSpeed> на @DurationAfterBall@ сек. Кеннен может <recast>повторно применить</recast> это умение, чтобы преждевременно прекратить его действие.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Кеннен превращается в шаровую молнию, получает <speed>@MovementSpeed*100@% скорости передвижения</speed> и наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> врагам, которых коснется, и получает призрачность на @DurationAsBall@ сек. Если Кеннен наносит урон хотя бы 1 врагу, он получает @EnergyRefund@ энергии. <br><br>По окончании действия умения Кеннен получает <attackSpeed>@TotalAS*100@% скорости атаки</attackSpeed> на @DurationAfterBall@ сек. Крит. удары повышают длительность эффекта на @CritDurationBonus@ сек. Кеннен может <recast>повторно применить</recast> это умение, чтобы досрочно прекратить его действие.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

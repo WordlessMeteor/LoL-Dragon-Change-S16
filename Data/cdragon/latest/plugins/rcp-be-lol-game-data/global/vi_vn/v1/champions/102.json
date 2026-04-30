@@ -1,5 +1,6 @@
 {
     "id": 102,
+    "contentId": "0b591b96-6840-4c00-a1c6-e087550d903a",
     "name": "Shyvana",
     "alias": "Shyvana",
     "title": "Long Nữ",
@@ -771,7 +772,7 @@
             "cost": "Không Tiêu Hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Shyvana nhận một lá chắn, tăng tốc độ di chuyển, và sau một khoảng thời gian ngắn, khu vực xung quanh cô sẽ phát nổ.  Khi ở Dạng Rồng, vụ nổ sẽ hồi máu cho cô nếu trúng tướng địch.",
-            "dynamicDescription": "Shyvana bao phủ bản thân bằng ngọn lửa trong @Duration@ giây, nhận được <shield>@Calc_Shield@ Lá Chắn</shield>, tăng thêm <shield>@Calc_Shield_Per_Nearby_Champion@</shield> cho mỗi tướng địch ở gần và <speed>@MoveSpeed@ Tốc Độ Di Chuyển</speed>, tăng lên <speed>@MoveSpeedTowardsEnemies@</speed> khi di chuyển về phía tướng địch.<br><br>Khi hiệu ứng kết thúc, <shield>Lá Chắn</shield> bị phá vỡ, hoặc khi <recast>Tái Kích Hoạt</recast>, khu vực xung quanh cô ấy phát nổ, gây <magicDamage>@Damage@ sát thương phép</magicDamage>.<br><br><keywordMajor>Dạng Rồng:</keywordMajor> Nếu vụ nổ trúng một tướng địch, Shyvana <healing>hồi từ @Calc_Heal_Min@ đến @Calc_Heal_Max@ Máu</healing> dựa trên lượng Máu đã mất.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana bao phủ bản thân bằng ngọn lửa trong @Duration@ giây, nhận được <shield>@Calc_Shield@ Lá Chắn</shield>, tăng thêm <shield>@Calc_Shield_Per_Nearby_Champion@</shield> cho mỗi tướng địch ở gần và <speed>@MoveSpeed@ Tốc Độ Di Chuyển</speed>, tăng lên <speed>@MoveSpeedTowardsEnemies@</speed> khi di chuyển về phía tướng địch.<br><br>Khi hiệu ứng kết thúc, <shield>Lá Chắn</shield> bị phá vỡ, hoặc khi <recast>Tái Kích Hoạt</recast>, khu vực xung quanh cô ấy phát nổ, gây <magicDamage>@Damage@ sát thương phép</magicDamage>.<br><br><keywordMajor>Dạng Rồng:</keywordMajor> Nếu vụ nổ trúng một tướng địch, Shyvana <healing>được hồi @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ Máu Đã Mất</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -789,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -921,7 +922,7 @@
             "cost": "Không Tiêu Hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Shyvana phóng ra một quả cầu lửa, phát nổ khi trúng mục tiêu lớn và làm chậm chúng. Ở Dạng Rồng, nó xuyên qua và phát nổ khi trúng kẻ địch lớn, để lại một vệt lửa phía sau.",
-            "dynamicDescription": "Shyvana phóng ra một quả cầu lửa tới vị trí chỉ định, gây <magicDamage>@Damage@ sát thương phép</magicDamage> và <status>Làm Chậm @Calc_Slow@ trong @SlowDuration@ giây</status>. Nó sẽ phát nổ khi va chạm với kẻ địch hoặc khi chạm tới điểm cuối của đường bay.<br><br><keywordMajor>Dạng Rồng:</keywordMajor> Quả cầu lửa của Shyvana trở nên lớn hơn và bay xuyên qua kẻ địch. Khi trúng tướng, quái lớn hoặc khi chạm đến điểm cuối, nó sẽ kích hoạt một luồng xung lửa gây <magicDamage>@Calc_Dragon_Damage@ sát thương phép</magicDamage> và <status>Làm Chậm @Calc_Slow_Dragon@ trong @SlowDuration@ giây</status>. Quả cầu để lại một vệt lửa trong @GroundLingerDuration@ giây, gây <magicDamage>@DamagePerSecond@ sát thương phép mỗi giây</magicDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana phóng ra một quả cầu lửa tới vị trí chỉ định, gây <magicDamage>sát thương phép bằng @Damage@ + @Calc_Max_Health_Damage@ Máu tối đa</magicDamage> và <status>Làm Chậm @Calc_Slow@ trong @SlowDuration@ giây</status>. Nó sẽ phát nổ khi va chạm với kẻ địch hoặc khi chạm tới điểm cuối của đường bay.<br><br><keywordMajor>Dạng Rồng:</keywordMajor> Quả cầu lửa của Shyvana trở nên lớn hơn và bay xuyên qua kẻ địch. Khi trúng tướng, quái lớn hoặc khi chạm đến điểm cuối, nó sẽ kích hoạt một luồng xung lửa gây <magicDamage>sát thương phép bằng @Calc_Dragon_Damage@ + @Calc_Max_Health_Dragon_Damage@ Máu Tối Đa</magicDamage> và <status>Làm Chậm @Calc_Slow_Dragon@ trong @SlowDuration@ giây</status>. Quả cầu để lại một vệt lửa trong @GroundLingerDuration@ giây, gây <magicDamage>@DamagePerSecond@ sát thương phép mỗi giây</magicDamage>. @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -940,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

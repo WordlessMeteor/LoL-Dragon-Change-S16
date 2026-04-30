@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Elise": {
             "id": "Elise",
@@ -597,7 +597,7 @@
                     "id": "EliseHumanE",
                     "name": "结茧 / 盘丝",
                     "description": "人类形态：将命中的第一个敌人晕眩，如敌方未处于潜行状态则将其暴露在己方视野中。<br><br>蜘蛛形态：伊莉丝和她的小蜘蛛们拉升至半空中，随后降落到目标敌人身上。在降落到目标敌方处时，伊莉丝的来自蜘蛛形态的额外伤害和治疗效果都会提升。",
-                    "tooltip": "<keywordMajor>人类形态</keywordMajor>：伊莉丝发射一颗蜘蛛茧，<status>晕眩</status>并使命中的第一个敌人显形{{ stunduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>人类形态</keywordMajor>：伊莉丝发射一颗蜘蛛茧，<status>晕眩</status>并使命中的第一个敌人显形{{ totalstunduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "晕眩时长：",
@@ -606,10 +606,10 @@
                             "伤害和治疗提升"
                         ],
                         "effect": [
-                            "{{ e5 }} -> {{ e5NL }}",
+                            "{{ basestunduration }} -> {{ basestundurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e6 }}% -> {{ e6NL }}%"
+                            "{{ rappelcooldown }} -> {{ rappelcooldownNL }}",
+                            "{{ rappeldamageamp }}% -> {{ rappeldamageampNL }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -661,11 +661,11 @@
                             2
                         ],
                         [
-                            1.6,
-                            1.8,
-                            2,
-                            2.2,
-                            2.4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             40,
@@ -709,7 +709,7 @@
                         "15/20/25/30/35",
                         "22/21/20/19/18",
                         "2",
-                        "1.6/1.8/2/2.2/2.4",
+                        "0",
                         "40/55/70/85/100",
                         "250",
                         "0",
@@ -754,9 +754,9 @@
                         "effect": [
                             "{{ passivebonusdamage }} -> {{ passivebonusdamageNL }}",
                             "{{ spiderlingbasedamage }} -> {{ spiderlingbasedamageNL }}",
-                            "{{ spiderlingsstored }} -> {{ spiderlingsstoredNL }}",
-                            "{{ e6 }} -> {{ e6NL }}",
-                            "{{ e7 }} -> {{ e7NL }}"
+                            "{{ basespiderlingsstored }} -> {{ basespiderlingsstoredNL }}",
+                            "{{ spiderlingarmor }} -> {{ spiderlingarmorNL }}",
+                            "{{ spiderlingmagicresist }} -> {{ spiderlingmagicresistNL }}"
                         ]
                     },
                     "maxrank": 4,

@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "Lux Bot da Condenação",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "Lux Bot da Condenação",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "Iluminação",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "As habilidades de dano de Lux carregam o alvo com energia por alguns segundos. O próximo ataque de Lux incendeia a energia, causando Dano Mágico adicional (com base no nível de Lux) ao alvo."
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "Ligação da Luz",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Lux atira uma esfera de luz que se prende e causa dano em até duas unidades inimigas.",
-            "dynamicDescription": "Lux dispara uma esfera de luz que <status>Enraíza</status> os dois primeiros inimigos que atingir por @Effect3Amount@s e causa <magicDamage>@TotalDamageTT@ de Dano Mágico</magicDamage> a cada um.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux dispara uma esfera de luz que <status>Enraíza</status> os dois primeiros inimigos atingidos por @RootDuration@s e causa <magicDamage>@TotalDamageTT@ de Dano Mágico</magicDamage> a cada um.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "Barreira Prismática",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Lux lança sua varinha e uma luz envolve todos os aliados atingidos, protegendo-os contra dano inimigo.",
-            "dynamicDescription": "Lux arremessa o báculo e concede <shield>@TotalShieldTT@ de Escudo</shield> por @Effect3Amount@s aos aliados pelos quais ele passar. Depois, o báculo retorna, concedendo na volta a mesma quantidade de <shield>Escudo</shield> que concedeu na ida.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux arremessa o báculo e concede <shield>@TotalShieldTT@ de Escudo</shield> por @ShieldDuration@s aos aliados atravessados. Depois, o báculo retorna, concedendo na volta a mesma quantidade de <shield>Escudo</shield> que concedeu na ida.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "Singularidade Lucente",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Dispara uma luz irregular em uma área, reduzindo a velocidade de inimigos próximos. Lux pode detoná-la para causar dano aos inimigos na área de ação.",
-            "dynamicDescription": "Lux cria uma zona iluminada que causa @Effect1Amount@% de <status>Lentidão</status> e revela a área. Depois de @Effect3Amount@s ou ao <recast>Reconjurar</recast> a Habilidade, a zona é detonada e causa <magicDamage>@TotalDamageTT@ de Dano Mágico</magicDamage> e <status>Lentidão</status> por mais @SlowLingerDuration@s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux cria uma zona iluminada que causa @SlowPercent@% de <status>Lentidão</status> e revela a área. Depois de @SlowZoneDuration@s ou ao <recast>Reconjurar</recast> a Habilidade, a zona é detonada e causa <magicDamage>@TotalDamageTT@ de Dano Mágico</magicDamage> e <status>Lentidão</status> por mais @SlowLingerDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "Centelha Final",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",

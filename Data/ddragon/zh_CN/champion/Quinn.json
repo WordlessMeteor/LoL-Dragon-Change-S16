@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Quinn": {
             "id": "Quinn",
@@ -232,7 +232,7 @@
                     "id": "QuinnQ",
                     "name": "炫目攻势",
                     "description": "奎因唤出华洛，来标记一名敌人并遮蔽其视野，然后对目标附近区域内的所有敌人造成伤害。",
-                    "tooltip": "奎因命令华洛进行俯冲，将命中的第一个敌人标记为<keywordMajor>易损</keywordMajor>、降低其视野半径{{ e3 }}秒并对所有周围的敌人们造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。<br /><br />如果命中的第一个敌人不是英雄，那么该敌人会还会被<status>缴械</status>{{ e3 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "奎因命令华洛进行俯冲，将命中的第一个敌人标记为<keywordMajor>易损</keywordMajor>、降低其视野半径{{ visionreductionduration }}秒并对所有周围的敌人们造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。<br /><br />如果命中的第一个敌人不是英雄，那么该敌人会还会被<status>缴械</status>{{ visionreductionduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -377,7 +377,7 @@
                     "id": "QuinnW",
                     "name": "敏锐感知",
                     "description": "在奎因攻击了一名<font color='#FFF673'>易损</font>目标后，被动地为奎因提供攻击速度和移动速度加成。主动激活可以让华洛驱散周围一大片区域的战争迷雾。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>攻击一名<keywordMajor>易损</keywordMajor>目标会为奎因提供<attackSpeed>{{ attackspeedbonus*100 }}%攻击速度</attackSpeed>和<speed>{{ e3 }}%移动速度</speed>，持续{{ e1 }}秒。<br /><br /><spellActive>主动：</spellActive>华洛显形附近的一大片区域，持续{{ e5 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>攻击一名<keywordMajor>易损</keywordMajor>目标会为奎因提供<attackSpeed>{{ attackspeedbonus*100 }}%攻击速度</attackSpeed>和<speed>{{ movespeedamount*100 }}%移动速度</speed>，持续{{ buffduration }}秒。<br /><br /><spellActive>主动：</spellActive>华洛显形附近的一大片区域，持续{{ visionduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "攻击速度",
@@ -386,7 +386,7 @@
                         ],
                         "effect": [
                             "{{ attackspeedbonus*100.000000 }}% -> {{ attackspeedbonusnl*100.000000 }}%",
-                            "{{ effect3amount*100.000000 }}% -> {{ effect3amountnl*100.000000 }}%",
+                            "{{ movespeedamount*100.000000 }}% -> {{ movespeedamountnl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -425,11 +425,11 @@
                             0
                         ],
                         [
-                            20,
-                            25,
-                            30,
-                            35,
-                            40
+                            0.2,
+                            0.25,
+                            0.3,
+                            0.35,
+                            0.4
                         ],
                         [
                             2100,
@@ -485,7 +485,7 @@
                         null,
                         "2",
                         "0",
-                        "20/25/30/35/40",
+                        "0.2/0.25/0.3/0.35/0.4",
                         "2100",
                         "2",
                         "0",
@@ -520,14 +520,14 @@
                     "id": "QuinnE",
                     "name": "旋翔掠杀",
                     "description": "奎因冲向一名敌人，造成物理伤害，并减少目标的移动速度。在接触到目标的同时，她会向后空翻，暂时打断目标的行动，并在接近她最大攻击距离的地方着陆。",
-                    "tooltip": "奎因冲刺向一名敌人，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并将其标记为<keywordMajor>易损</keywordMajor>状态。奎因随后会从目标处向后跳开，将其<status>击退</status>并对其造成在{{ e3 }}秒里持续衰减的{{ e1 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "奎因冲刺向一名敌人，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并将其标记为<keywordMajor>易损</keywordMajor>状态。奎因随后会从目标处向后跳开，将其<status>击</status><status>退</status>并对其造成在{{ slowdecaytime }}秒里持续衰减的{{ slowamount*100 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -552,11 +552,11 @@
                     "effect": [
                         null,
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0.5,
+                            0.5,
+                            0.5,
+                            0.5,
+                            0.5
                         ],
                         [
                             40,
@@ -624,7 +624,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "50",
+                        "0.5",
                         "40/65/90/115/140",
                         "1.5",
                         "0",

@@ -1,5 +1,6 @@
 {
     "id": 41,
+    "contentId": "338fd36d-e4b2-4c6f-8cc4-99d194165e20",
     "name": "Гангпланк",
     "alias": "Gangplank",
     "title": "Гроза морей",
@@ -1108,7 +1109,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Гангпланк ест цитрусовые, восстанавливая себе здоровье и снимая эффекты контроля.",
-            "dynamicDescription": "Гангпланк поглощает большое количество цитрусовых, снимая с себя все <status>нейтрализующие</status> эффекты и восстанавливая себе здоровье в размере <healing>@BaseHealth@ плюс @Effect2Amount@% от недостающего здоровья</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Гангпланк поглощает большое число цитрусовых, снимая с себя все <status>нейтрализующие</status> эффекты и восстанавливая <healing>@BaseHealth@ плюс @PercentHeal@% от недост. здоровья</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1258,7 +1259,7 @@
             "cost": "Без стоимости",
             "cooldown": "Новая бочка раз в @AmmoRechargeTime@ сек. (максимум – @MaxAmmo@)",
             "description": "Гангпланк откапывает в указанной точке спрятанную пороховую бочку. Если он атакует ее, та взрывается, нанося всем врагам вокруг урон, равный силе атаки Гангпланка, и замедляя их.",
-            "dynamicDescription": "Гангпланк на @Effect5Amount@ сек. устанавливает пороховую бочку, которую могут атаковать вражеские чемпионы и он сам. Если бочку уничтожает враг, она исчезает. Если бочку уничтожает Гангпланк, она взрывается, <status>замедляет</status> врагов на @FinalSlowAmount@% на @Effect2Amount@ сек. и наносит им <physicalDamage>урон автоатаки</physicalDamage>, игнорируя @Effect10Amount@% брони. Чемпионы дополнительно получают <physicalDamage>@Effect3Amount@ ед. физического урона</physicalDamage>.<br><br>Здоровье бочки уменьшается раз в @BarrelDecayTime@ сек. Если в области взрыва находятся другие бочки, они также взрываются, но враг может получить урон лишь от одной бочки за раз. Гангпланк может взрывать бочки с помощью умения <spellName>Аррргумент</spellName>, получая дополнительное золото при убийстве целей.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Гангпланк на @BarrelDuration@ сек. ставит пороховую бочку – ее могут атаковать вражеские чемпионы и он сам. Если бочку уничтожает враг, она исчезает. Если бочку уничтожает Гангпланк, она взрывается, <status>замедляет</status> врагов на @FinalSlowAmount@% на @DebuffDuration@ сек. и наносит им <physicalDamage>урон автоатаки</physicalDamage>, игнорируя @BarrelArmorPenetration@% брони. Чемпионы дополнительно получают <physicalDamage>@BonusDamageToChampions@ ед. физ. урона</physicalDamage>.<br><br>Здоровье бочки снижается раз в @BarrelDecayTime@ сек. Если в области взрыва есть другие бочки, они тоже взрываются, но враг может получить урон лишь от 1 бочки за раз. Гангпланк может взрывать бочки с помощью умения <spellName>Аррргумент</spellName>, получая доп. золото при убийстве целей.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

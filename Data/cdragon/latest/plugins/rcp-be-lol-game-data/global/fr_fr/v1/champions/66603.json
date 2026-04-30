@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "Lux bot du chaos",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "Lux bot du chaos",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "Illumination",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "Les compétences de Lux infligeant des dégâts chargent la cible en énergie pendant quelques secondes. La prochaine attaque de Lux embrase l'énergie, infligeant des dégâts magiques supplémentaires à la cible (en fonction du niveau de Lux)."
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "Entrave de lumière",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Lux projette une sphère de lumière qui immobilise et blesse jusqu'à deux unités ennemies.",
-            "dynamicDescription": "Lux projette une sphère de lumière, <status>immobilisant</status> les deux premiers ennemis touchés pendant @Effect3Amount@ sec et leur infligeant <magicDamage>@TotalDamageTT@ pts de dégâts magiques</magicDamage> à chacun.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux projette une sphère de lumière, <status>immobilisant</status> les deux premiers ennemis touchés pendant @RootDuration@ sec et leur infligeant <magicDamage>@TotalDamageTT@ pts de dégâts magiques</magicDamage> à chacun.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "Barrière prismatique",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Lux lance son bâton et courbe la lumière autour des cibles alliées touchées, les protégeant contre les dégâts.",
-            "dynamicDescription": "Lux lance son bâton, octroyant un <shield>bouclier de @TotalShieldTT@ PV</shield> pendant @Effect3Amount@ sec aux alliés touchés. Puis le bâton revient, octroyant le même <shield>bouclier</shield> au retour.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux lance son bâton, octroyant un <shield>bouclier de @TotalShieldTT@ PV</shield> pendant @ShieldDuration@ sec aux alliés touchés. Puis le bâton revient, octroyant le même <shield>bouclier</shield> au retour.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "Anomalie radieuse",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Crée une anomalie composée de lumière dans une zone, ralentissant les ennemis proches. Lux peut la faire exploser pour blesser les ennemis dans la zone d'effet.",
-            "dynamicDescription": "Lux crée une zone de lumière qui <status>ralentit</status> de @Effect1Amount@% et révèle la zone. Après @Effect3Amount@ sec ou en cas de <recast>réactivation</recast> de cette compétence, la zone explose, infligeant <magicDamage>@TotalDamageTT@ pts de dégâts magiques</magicDamage> et <status>ralentissant</status> pendant @SlowLingerDuration@ sec de plus.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux crée une zone de lumière qui <status>ralentit</status> de @SlowPercent@% et révèle la zone. Après @SlowZoneDuration@ sec ou en cas de <recast>réactivation</recast> de cette compétence, la zone explose, infligeant <magicDamage>@TotalDamageTT@ pts de dégâts magiques</magicDamage> et <status>ralentissant</status> pendant @SlowLingerDuration@ sec de plus.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "Éclat final",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",

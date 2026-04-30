@@ -1,5 +1,6 @@
 {
     "id": 102,
+    "contentId": "0b591b96-6840-4c00-a1c6-e087550d903a",
     "name": "Шивана",
     "alias": "Shyvana",
     "title": "Полудракон",
@@ -771,7 +772,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Шивана получает щит и скорость передвижения, а после небольшой задержки происходит взрыв, который поражает врагов рядом с ней. Когда Шивана в форме дракона, она восстанавливает здоровье, если взрыв поражает вражеского чемпиона.",
-            "dynamicDescription": "Шивана окружает себя пламенем на @Duration@ сек., получая щит прочностью <shield>@Calc_Shield@</shield>, которая растет на <shield>@Calc_Shield_Per_Nearby_Champion@</shield> за каждого вражеского чемпиона поблизости, и <speed>@MoveSpeed@ скорости передвижения</speed>. Бонус растет до <speed>@MoveSpeedTowardsEnemies@</speed> при перемещении в сторону вражеских чемпионов.<br><br>Когда подходит к концу действие эффекта, уничтожается <shield>щит</shield> или умение <recast>применяют повторно</recast>, рядом с Шиваной происходит взрыв, наносящий <magicDamage>@Damage@ ед. магического урона</magicDamage>.<br><br><keywordMajor>Форма дракона:</keywordMajor> если взрыв поражает вражеского чемпиона, Шивана <healing>восстанавливает @Calc_Heal_Min@–@Calc_Heal_Max@ здоровья</healing> (в зависимости от недостающего здоровья).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Шивана окружает себя пламенем на @Duration@ сек., получая щит прочностью <shield>@Calc_Shield@</shield>, растущей на <shield>@Calc_Shield_Per_Nearby_Champion@</shield> за каждого вражеского чемпиона поблизости, и <speed>@MoveSpeed@ скорости передвижения</speed>. Бонус растет до <speed>@MoveSpeedTowardsEnemies@</speed> при перемещении в сторону вражеских чемпионов.<br><br>Когда подходит к концу действие эффекта, уничтожается <shield>щит</shield> или умение <recast>применяют повторно</recast>, рядом с Шиваной происходит взрыв, наносящий <magicDamage>@Damage@ ед. маг. урона</magicDamage>.<br><br><keywordMajor>Форма дракона:</keywordMajor> если взрыв поражает вражеского чемпиона, Шивана <healing>восстанавливает @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ от недост. здоровья</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -789,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -921,7 +922,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Шивана выпускает огненный шар, который взрывается при попадании в крупную цель и замедляет ее. Когда Шивана в форме дракона, шар проходит сквозь врагов, оставляя огненный след, и взрывается при попадании в крупные цели.",
-            "dynamicDescription": "Шивана выпускает в выбранную точку огненный шар, наносящий <magicDamage>@Damage@ ед. магического урона</magicDamage> и <status>замедляющий пораженные цели на @Calc_Slow@ на @SlowDuration@ сек.</status> Шар взрывается при столкновении с врагом или при достижении конечной точки.<br><br>В <keywordMajor>форме дракона</keywordMajor> размер шара увеличивается, и он проходит сквозь врагов. При столкновении с чемпионом или большим монстром либо при достижении конечной точки шар взрывается, нанося <magicDamage>@Calc_Dragon_Damage@ ед. магического урона</magicDamage> и <status>замедляя пораженные цели на @Calc_Slow_Dragon@ на @SlowDuration@ сек.</status> Также в течение @GroundLingerDuration@ сек. он оставляет след, наносящий <magicDamage>@DamagePerSecond@ ед. магического урона в секунду</magicDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Шивана выпускает в выбранную точку огненный шар, наносящий <magicDamage>маг. урон в размере @Damage@ + @Calc_Max_Health_Damage@ от макс. здоровья</magicDamage> и <status>замедляющий пораженные цели на @Calc_Slow@ на @SlowDuration@ сек.</status> Шар взрывается, сталкиваясь с врагом или достигая конечной точки.<br><br><keywordMajor>В форме дракона</keywordMajor> размер шара больше, он проходит сквозь врагов. Сталкиваясь с чемпионом или большим монстром либо достигая конечной точки, шар взрывается, нанося <magicDamage>маг. урон в размере @Calc_Dragon_Damage@ + @Calc_Max_Health_Dragon_Damage@ от макс. здоровья</magicDamage> и <status>замедляя пораженные цели на @Calc_Slow_Dragon@ на @SlowDuration@ сек.</status> Также в течение @GroundLingerDuration@ сек. он оставляет след, наносящий <magicDamage>@DamagePerSecond@ ед. маг. урона в секунду</magicDamage>. @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -940,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

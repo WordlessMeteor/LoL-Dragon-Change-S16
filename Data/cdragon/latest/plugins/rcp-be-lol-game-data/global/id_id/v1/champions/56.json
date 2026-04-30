@@ -1,5 +1,6 @@
 {
     "id": 56,
+    "contentId": "3795a4c7-9400-4719-a493-598b6315b006",
     "name": "Nocturne",
     "alias": "Nocturne",
     "title": "the Eternal Nightmare",
@@ -814,7 +815,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nocturne melemparkan pedang bayangan yang menghasilkan damage, meninggalkan Dusk Trail, dan menyebabkan champion meninggalkan Dusk Trail. Saat di trail, Nocturne dapat bergerak melewati unit dan memiliki Move Speed dan Attack Damage yang meningkat.",
-            "dynamicDescription": "Nocturne melemparkan pedang bayangan, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan meninggalkan dusk trail selama @Effect3Amount@ detik. Champion musuh yang terkena juga meninggalkan trail. <br><br>Saat di trail, Nocturne terkena efek Ghost dan mendapatkan <speed>@MoveSpeed@% Move Speed</speed> dan <physicalDamage>@BonusTrailAD@ Attack Damage</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nocturne melemparkan pedang bayangan, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan meninggalkan dusk trail selama @TrailDuration@ detik. Champion musuh yang terkena juga meninggalkan trail. <br><br>Saat di trail, Nocturne terkena efek Ghost dan mendapatkan <speed>@MoveSpeed@% Move Speed</speed> dan <physicalDamage>@BonusTrailAD@ Attack Damage</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -964,7 +965,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nocturne memperkuat pedangnya, secara pasif memperoleh Attack Speed. Mengaktifkan Shroud of Darkness memungkinkan Nocturne menghilang ke dalam bayangan, menciptakan penghalang sihir yang memblokir satu ability musuh dan menggandakan Attack Speed pasifnya jika berhasil.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Nocturne mendapatkan <attackSpeed>@Effect1Amount@% Attack Speed</attackSpeed>.<br><br><spellActive>Aktif:</spellActive> Nocturne menciptakan penghalang bayangan selama 1,5 detik yang memblokir Ability musuh berikutnya. Jika suatu Ability diblokir, efek pasif Ability ini meningkat menjadi <attackSpeed>@Effect1Amount*2@% Attack Speed</attackSpeed> selama @Effect4Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Nocturne mendapatkan <attackSpeed>@ActiveAS@% Attack Speed</attackSpeed>.<br><br><spellActive>Aktif:</spellActive> Nocturne menciptakan penghalang bayangan selama 1,5 detik yang menahan Ability berikutnya dari musuh. Jika suatu Ability ditahan, efek pasif Ability ini meningkat menjadi <attackSpeed>@ActiveAS*2@% Attack Speed</attackSpeed> selama @DoubleASDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1114,7 +1115,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Nocturne menanamkan mimpi buruk ke dalam pikiran targetnya, menghasilkan damage setiap detik dan menerapkan efek fear ke target jika mereka tidak keluar dari range pada akhir durasi.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Nocturne mendapatkan <speed>@TooltipFearMS*100@% Move Speed</speed> ke arah musuh yang terkena efek <status>Fear</status>.<br><br><spellActive>Aktif:</spellActive> Nocturne menanamkan tether mimpi buruk ke targetnya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> selama @Effect3Amount@ detik. Jika tether-nya tidak terputus, target akan terkena efek <status>Fear</status> selama @Effect2Amount@ dtk.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Nocturne mendapatkan <speed>@TooltipFearMS*100@% Move Speed</speed> ke arah musuh yang terkena efek <status>Fear</status>.<br><br><spellActive>Aktif:</spellActive> Nocturne menanamkan tether mimpi buruk ke targetnya, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> selama @LeashDuration@ detik. Jika tether-nya tidak terputus, target akan terkena efek <status>Fear</status> selama @CCDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,

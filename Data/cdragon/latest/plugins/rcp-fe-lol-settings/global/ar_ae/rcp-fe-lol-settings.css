@@ -3,6 +3,7 @@
 .lol-settings-account-verification-verified-label,
 .lol-settings-chat-section-title,
 .lol-settings-general-section-title,
+.lol-settings-hotkeys_content__label,
 .lol-settings-ingame-hotkeys-castall-text,
 .lol-settings-ingame-hotkeys-keybinding-button-content,
 .lol-settings-ingame-keybind-dialog-key-label,
@@ -36,6 +37,7 @@
 .lol-settings-code-of-conduct-link a:link,
 .lol-settings-general-subtitle,
 .lol-settings-general-title,
+.lol-settings-hotkeys_content__description,
 .lol-settings-ingame-dropdown-title,
 .lol-settings-ingame-interface-title,
 .lol-settings-ingame-keybind-dialog-unbind-button,
@@ -96,6 +98,8 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-general-section-title,
 .lol-settings-general-subtitle,
 .lol-settings-general-title,
+.lol-settings-hotkeys_content__description,
+.lol-settings-hotkeys_content__label,
 .lol-settings-ingame-dropdown-title,
 .lol-settings-ingame-hotkeys-castall-text,
 .lol-settings-ingame-hotkeys-keybinding-button-content,
@@ -152,6 +156,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-account-verification-verified-label,
 .lol-settings-chat-section-title,
 .lol-settings-general-section-title,
+.lol-settings-hotkeys_content__label,
 .lol-settings-ingame-hotkeys-castall-text,
 .lol-settings-ingame-hotkeys-keybinding-button-content,
 .lol-settings-ingame-keybind-dialog-key-label,
@@ -195,6 +200,12 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-general-section-title:lang(th-th),
 .lol-settings-general-section-title:lang(tr-tr),
 .lol-settings-general-section-title:lang(zh-tw),
+.lol-settings-hotkeys_content__label:lang(el-gr),
+.lol-settings-hotkeys_content__label:lang(ja-jp),
+.lol-settings-hotkeys_content__label:lang(ko-kr),
+.lol-settings-hotkeys_content__label:lang(th-th),
+.lol-settings-hotkeys_content__label:lang(tr-tr),
+.lol-settings-hotkeys_content__label:lang(zh-tw),
 .lol-settings-ingame-hotkeys-castall-text,
 .lol-settings-ingame-hotkeys-castall-text:lang(el-gr),
 .lol-settings-ingame-hotkeys-castall-text:lang(ja-jp),
@@ -271,6 +282,7 @@ lol-settings-code-of-conduct-link a:visited {
     letter-spacing: 0
 }
 
+.lol-settings-hotkeys_content__label,
 .lol-settings-ingame-hotkeys-keybinding-button-content {
     color: #f0e6d2;
     font-size: 30px;
@@ -279,6 +291,7 @@ lol-settings-code-of-conduct-link a:visited {
     line-height: 32px
 }
 
+.lol-settings-hotkeys_content__label:lang(ar-ae),
 .lol-settings-ingame-hotkeys-keybinding-button-content:lang(ar-ae) {
     letter-spacing: 0
 }
@@ -369,6 +382,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-checkbox-title,
 .lol-settings-general-subtitle,
 .lol-settings-general-title,
+.lol-settings-hotkeys_content__description,
 .lol-settings-ingame-dropdown-title,
 .lol-settings-ingame-interface-title,
 .lol-settings-ingame-keybind-dialog-unbind-button,
@@ -415,6 +429,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-checkbox-title:lang(ja-jp),
 .lol-settings-general-subtitle:lang(ja-jp),
 .lol-settings-general-title:lang(ja-jp),
+.lol-settings-hotkeys_content__description:lang(ja-jp),
 .lol-settings-ingame-dropdown-title:lang(ja-jp),
 .lol-settings-ingame-interface-title:lang(ja-jp),
 .lol-settings-ingame-keybind-dialog-unbind-button:lang(ja-jp),
@@ -456,6 +471,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-checkbox-title:lang(ar-ae),
 .lol-settings-general-subtitle:lang(ar-ae),
 .lol-settings-general-title:lang(ar-ae),
+.lol-settings-hotkeys_content__description:lang(ar-ae),
 .lol-settings-ingame-dropdown-title:lang(ar-ae),
 .lol-settings-ingame-interface-title:lang(ar-ae),
 .lol-settings-ingame-keybind-dialog-unbind-button:lang(ar-ae),
@@ -1202,10 +1218,6 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
     margin-bottom: 10px
 }
 
-.lol-settings-voice-row.indented {
-    margin-left: 20px
-}
-
 .lol-settings-voice-input,
 .lol-settings-voice-party-join {
     display: flex;
@@ -1688,6 +1700,33 @@ lol-uikit-content-block.voice-settings-push-to-talk-alert b {
 .additional-hotkeys-tb .td-column-header {
     padding-left: 8px;
     text-align: right
+}
+
+.lol-settings-hotkeys_content {
+    padding: 10px
+}
+
+.lol-settings-hotkeys_content__label {
+    color: #f0e6d2;
+    margin-bottom: 12px;
+    text-transform: uppercase
+}
+
+.lol-settings-hotkeys_content__description {
+    color: #a09b8c;
+    margin-bottom: 36px
+}
+
+.lol-settings-hotkeys_content__button-container {
+    align-items: center;
+    display: flex;
+    gap: 36px;
+    justify-content: center
+}
+
+.lol-settings-hotkeys__button--league,
+.lol-settings-hotkeys__button--practice {
+    min-width: 155px
 }
 
 .lol-settings-game-sound-content-component {

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Maokai": {
             "id": "Maokai",
@@ -454,7 +454,7 @@
                     "id": "MaokaiW",
                     "name": "扭曲突刺",
                     "description": "茂凯扭曲为一团移动根须，不可被选取并且向目标突进。在抵达后，他会禁锢住目标。",
-                    "tooltip": "茂凯扭曲为一团移动根须，无法被选取并且向目标突进。在抵达后，他会<status>禁锢</status>该敌人{{ e2 }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。 {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "茂凯扭曲为一团移动根须，无法被选取并且向目标突进。在抵达后，他会<status>禁锢</status>该敌人{{ rootduration }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。 {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -463,7 +463,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ rootduration }} -> {{ rootdurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },

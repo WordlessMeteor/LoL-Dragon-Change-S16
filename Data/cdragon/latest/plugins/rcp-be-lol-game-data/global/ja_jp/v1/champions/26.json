@@ -1,5 +1,6 @@
 {
     "id": 26,
+    "contentId": "829f170b-4fcf-413b-9ff5-e598fd4412e9",
     "name": "ジリアン",
     "alias": "Zilean",
     "title": "時の番人",
@@ -573,10 +574,10 @@
             "isBase": false,
             "name": "アルカナ ジリアン",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.SKINS_Zilean_Skin24.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.SKINS_Zilean_Skin24.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.SKINS_Zilean_Skin24.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.SKINS_Zilean_Skin24.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -751,7 +752,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点に爆弾を投げ、近付いたユニットに付着させる(チャンピオン優先)。付着した爆弾は3秒後に爆発し、範囲ダメージを与える。爆発前にもう一つ「タイムボム」を仕掛けられると即時に爆発し、敵にスタン効果を与える。",
-            "dynamicDescription": "時限式の爆弾を投げる。爆弾は範囲の中心部に入った最初のユニットに付着する。爆弾は@Effect2Amount@秒後に爆発し、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>同じユニットに2個目の爆弾をつけると1個目の爆弾がすぐに爆発し、爆風範囲内にいる敵に@Effect4Amount@秒間<status>スタン効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "時限式の爆弾を投げる。爆弾は範囲の中心部に入った最初のユニットに付着する。爆弾は@FuseDuration@秒後に爆発し、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>同じユニットに2個目の爆弾をつけると1個目の爆弾がすぐに爆発し、爆風範囲内にいる敵に@StunDuration@秒間<status>スタン効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +899,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@マナ",
+            "cost": "@ManaCost@マナ",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ジリアンは近い未来の戦いに備え、通常スキルのクールダウンを短縮することができる。",
-            "dynamicDescription": "時間を進めて、他の通常スキルのクールダウンを@Effect2Amount@秒短縮する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "時間を進めて、他の通常スキルのクールダウンを@CooldownReduction@秒短縮する。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +942,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1052,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "対象ユニット周辺の時間軸を短時間ねじ曲げ、対象が敵の場合はスロウを与え、味方の場合は移動速度を増加させる。",
-            "dynamicDescription": "@Effect1Amount@秒間、敵チャンピオンに@Effect2Amount@%の<status>スロウ効果</status>を与えるか、味方チャンピオンの<speed>移動速度を@Effect2Amount@%</speed>増加させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、敵チャンピオンに@SpeedAmount@%の<status>スロウ効果</status>を与えるか、味方チャンピオンの<speed>移動速度を@SpeedAmount@%</speed>増加させる。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

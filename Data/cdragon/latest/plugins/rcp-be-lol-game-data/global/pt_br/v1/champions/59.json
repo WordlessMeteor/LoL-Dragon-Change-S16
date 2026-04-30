@@ -1,5 +1,6 @@
 {
     "id": 59,
+    "contentId": "88432534-0298-4cbc-8f0a-94d84b6efefd",
     "name": "Jarvan IV",
     "alias": "JarvanIV",
     "title": "o Exemplo de Demacia",
@@ -1070,10 +1071,10 @@
             "isBase": false,
             "name": "Jarvan IV Criador Mítico",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_centered_44.SKINS_JarvanIV_Skin44.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_uncentered_44.SKINS_JarvanIV_Skin44.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_tile_44.SKINS_JarvanIV_Skin44.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/JarvanIVLoadScreen_44.SKINS_JarvanIV_Skin44.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_centered_44.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_uncentered_44.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_tile_44.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/JarvanIVLoadScreen_44.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -1241,11 +1242,11 @@
             "isBase": false,
             "name": "Jarvan IV Visões dos Caídos de Prestígio",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_centered_54.SKINS_JarvanIV_Skin54.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_uncentered_54.SKINS_JarvanIV_Skin54.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_tile_54.SKINS_JarvanIV_Skin54.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54.SKINS_JarvanIV_Skin54.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54_LE.SKINS_JarvanIV_Skin54.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_centered_54.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_uncentered_54.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_tile_54.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54_LE.jpg",
             "skinType": "",
             "rarity": "kMythic",
             "isLegacy": true,
@@ -1305,7 +1306,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV estende sua lança, causando Dano Físico e reduzindo a Armadura de inimigos atingidos. Além disto, ela puxará Jarvan na direção de seu Estandarte Demaciano, arremessando inimigos em seu trajeto ao ar.",
-            "dynamicDescription": "Jarvan expande sua lança, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> e removendo <scaleArmor>@Effect2Amount@% de Armadura</scaleArmor> por @Effect3Amount@s.<br><br>Se a lança se conectar com <spellName>Estandarte Demaciano</spellName>, Jarvan se impulsiona até ele, <status>Arremessando ao ar</status> os inimigos no trajeto por 0,75s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan expande sua lança, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> e removendo <scaleArmor>@BaseARShred*100@% de Armadura</scaleArmor> por @Effect3Amount@s.<br><br>Se a lança se conectar com <spellName>Estandarte Demaciano</spellName>, Jarvan se impulsiona até ele, <status>Arremessando ao ar</status> os inimigos no trajeto por 0,75s.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1332,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1346,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1456,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV invoca os antigos reis de Demacia para protegê-lo do perigo e atrasar os inimigos próximos.",
-            "dynamicDescription": "Jarvan invoca uma égide, causando @Effect2Amount@% de <status>Lentidão</status> aos inimigos próximos por @Effect5Amount@s e concedendo a si mesmo <shield>@BaseShield@ de Escudo</shield>, aumentado em <shield>@BonusShield@</shield> para cada Campeão inimigo atingido.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan invoca uma égide, causando @BaseSlowAmount*100@% de <status>Lentidão</status> aos inimigos próximos por @Effect5Amount@s e concedendo a si mesmo <shield>@TotalShield@ de Escudo</shield>, aumentado em <shield>@BonusShield@</shield> para cada Campeão inimigo atingido.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1482,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1496,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1606,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Jarvan IV carrega o orgulho de Demacia, recebendo passivamente Velocidade de Ataque adicional. Ativar o Estandarte Demaciano permite a Jarvan IV posicionar uma bandeira demaciana que causa Dano Mágico e concede Velocidade de Ataque a campeões aliados próximos.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Jarvan recebe <attackSpeed>@PermanentAttackSpeed*100@% de Velocidade de Ataque</attackSpeed>.<br><br><spellActive>Ativo:</spellActive> Jarvan arremessa um estandarte no chão, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e concedendo aos aliados próximos <attackSpeed>@Effect3Amount*100@% de Velocidade de Ataque</attackSpeed> por @Effect4Amount@s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Jarvan recebe <attackSpeed>@PermanentAttackSpeed*100@% de Velocidade de Ataque</attackSpeed>.<br><br><spellActive>Ativo:</spellActive> Jarvan arremessa um estandarte no chão, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e concedendo aos aliados próximos <attackSpeed>@BaseAuraAS*100@% de Velocidade de Ataque</attackSpeed> por @Effect4Amount@s.@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1632,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1655,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

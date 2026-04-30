@@ -1,5 +1,6 @@
 {
     "id": 59,
+    "contentId": "88432534-0298-4cbc-8f0a-94d84b6efefd",
     "name": "Jarvan IV",
     "alias": "JarvanIV",
     "title": "the Exemplar of Demacia",
@@ -1070,10 +1071,10 @@
             "isBase": false,
             "name": "Mythmaker Jarvan IV",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_centered_44.SKINS_JarvanIV_Skin44.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_uncentered_44.SKINS_JarvanIV_Skin44.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_tile_44.SKINS_JarvanIV_Skin44.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/JarvanIVLoadScreen_44.SKINS_JarvanIV_Skin44.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_centered_44.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_uncentered_44.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/Images/jarvaniv_splash_tile_44.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin44/JarvanIVLoadScreen_44.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -1241,11 +1242,11 @@
             "isBase": false,
             "name": "Prestige Visions of the Fallen Jarvan IV",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_centered_54.SKINS_JarvanIV_Skin54.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_uncentered_54.SKINS_JarvanIV_Skin54.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_tile_54.SKINS_JarvanIV_Skin54.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54.SKINS_JarvanIV_Skin54.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54_LE.SKINS_JarvanIV_Skin54.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_centered_54.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_uncentered_54.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/Images/jarvaniv_splash_tile_54.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/JarvanIV/Skins/Skin54/JarvanIVLoadScreen_54_LE.jpg",
             "skinType": "",
             "rarity": "kMythic",
             "isLegacy": true,
@@ -1305,7 +1306,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Jarvan IV memanjangkan tombaknya, menghasilkan physical damage, dan menurunkan Armor musuh yang dilewatinya. Selain itu, ability ini akan menarik Jarvan ke arah Demacian Standard dan mengempaskan musuh yang dilewatinya.",
-            "dynamicDescription": "Jarvan memanjangkan tombaknya, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan mengurangi <scaleArmor>@Effect2Amount@% Armor</scaleArmor> selama @Effect3Amount@ detik.<br><br>Jika tombaknya terhubung dengan <spellName>Demacian Standard</spellName>, Jarvan akan menarik diri ke arahnya, <status>Knock Up</status> semua yang dilewatinya selama 0,75 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan mengayunkan tombaknya, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan mengurangi <scaleArmor>@BaseARShred*100@% Armor</scaleArmor> selama @Effect3Amount@ detik.<br><br>Jika tombaknya terhubung dengan <spellName>Demacian Standard</spellName>, Jarvan akan menarik diri ke arahnya, <status>Knock Up</status> semua yang dilewatinya selama 0,75 detik.@SpellModifierDescriptionAppend@",
             "range": [
                 770.0,
                 770.0,
@@ -1331,7 +1332,7 @@
                 6.0
             ],
             "coefficients": {
-                "coefficient1": 1.45,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1345,13 +1346,13 @@
                     250.0
                 ],
                 "Effect2Amount": [
-                    6.0,
-                    10.0,
-                    14.0,
-                    18.0,
-                    22.0,
-                    26.0,
-                    30.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     3.0,
@@ -1455,7 +1456,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Jarvan IV memanggil raja-raja kuno Demacia untuk memberinya shield dan menerapkan slow pada musuh di sekitar.",
-            "dynamicDescription": "Jarvan memanggil aegis, menerapkan <status>Slow</status> pada musuh di sekitar sebesar @Effect2Amount@% selama @Effect5Amount@ detik dan memberinya <shield>@BaseShield@ Shield</shield>, meningkat sebesar <shield>@BonusShield@</shield> untuk setiap champion musuh yang terkena.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Jarvan men-summon aegis, menerapkan <status>Slow</status> pada musuh di sekitar sebesar @BaseSlowAmount*100@% selama @Effect5Amount@ detik dan memberinya <shield>@TotalShield@ Shield</shield>, meningkat sebesar <shield>@BonusShield@</shield> untuk setiap champion musuh yang terkena.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,
@@ -1481,7 +1482,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1495,13 +1496,13 @@
                     160.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
@@ -1605,7 +1606,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Jarvan IV membawa bendera kebanggaan Demacia yang secara pasif memberinya Attack Speed bonus. Dengan mengaktifkan Demacian Standard, Jarvan IV akan bisa menempatkan bendera Demacia yang menghasilkan magic damage saat menghantam dan memberikan Attack Speed pada champion sekutu di sekitar.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Jarvan mendapatkan <attackSpeed>@PermanentAttackSpeed*100@% Attack Speed</attackSpeed>.<br><br><spellActive>Aktif:</spellActive> Jarvan melemparkan Standard ke tanah, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan memberi <attackSpeed>@Effect3Amount*100@% Attack Speed</attackSpeed> kepada sekutu yang berada di dekat Standard selama @Effect4Amount@ beberapa detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Jarvan mendapatkan <attackSpeed>@PermanentAttackSpeed*100@% Attack Speed</attackSpeed>.<br><br><spellActive>Aktif:</spellActive> Jarvan melemparkan Standard ke tanah, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan memberi <attackSpeed>@BaseAuraAS*100@% Attack Speed</attackSpeed> kepada sekutu yang berada di dekat Standard selama @Effect4Amount@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 860.0,
                 860.0,
@@ -1631,7 +1632,7 @@
                 10.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1654,13 +1655,13 @@
                     280.0
                 ],
                 "Effect3Amount": [
-                    0.175,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.325
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     8.0,

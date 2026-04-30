@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "Horror-Bot-Lux",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "Horror-Bot-Lux",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "Erleuchtung",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "Lux' Schadenszauber laden das Ziel einige Sekunden lang mit Lichtenergie auf. Ihr nächster Angriff entzündet diese Energie und fügt so dem Ziel abhängig von Lux' Stufe zusätzlichen magischen Schaden zu."
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "Lichtfessel",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Lux schleudert eine Kugel aus Licht, die bis zu 2 gegnerische Einheiten festhält und diesen Schaden zufügt.",
-            "dynamicDescription": "Lux feuert eine Kugel aus Licht, welche die ersten beiden Gegner @Effect3Amount@&nbsp;Sekunden lang <status>festhält</status> und jeweils <magicDamage>@TotalDamageTT@&nbsp;magischen Schaden</magicDamage> verursacht.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux feuert eine Kugel aus Licht, welche die ersten beiden Gegner @RootDuration@&nbsp;Sekunden lang <status>festhält</status> und jeweils <magicDamage>@TotalDamageTT@&nbsp;magischen Schaden</magicDamage> verursacht.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "Prismatische Barriere",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Lux wirft ihren Zauberstab und krümmt so das Licht um alle getroffenen verbündeten Ziele, wodurch diese vor gegnerischem Schaden geschützt werden.",
-            "dynamicDescription": "Lux wirft ihren Stab und verleiht allen Verbündeten, die er berührt, @Effect3Amount@&nbsp;Sekunden lang einen <shield>Schild</shield> in Höhe von @TotalShieldTT@. Danach kehrt der Stab zurück und gewährt dabei einen genauso starken <shield>Schild</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux wirft ihren Stab und verleiht allen Verbündeten, die er berührt, @ShieldDuration@&nbsp;Sekunden lang einen <shield>Schild</shield> in Höhe von @TotalShieldTT@. Danach kehrt der Stab zurück und gewährt dabei einen genauso starken <shield>Schild</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "Schillernde Singularität",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Schleudert eine Anomalie aus verwirbeltem Licht in ein Gebiet, das Gegner in der Nähe verlangsamt. Lux kann sie sprengen, um an Gegnern im Wirkbereich Schaden zu verursachen.",
-            "dynamicDescription": "Lux erschafft eine Lichtzone, die um @Effect1Amount@&nbsp;% <status>verlangsamt</status> und die Umgebung aufdeckt. Nach @Effect3Amount@&nbsp;Sekunden oder bei der <recast>Reaktivierung</recast> dieser Fähigkeit explodiert sie, verursacht <magicDamage>@TotalDamageTT@&nbsp;magischen Schaden</magicDamage> und <status>verlangsamt</status> um zusätzlich @SlowLingerDuration@&nbsp;Sekunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux erschafft eine Lichtzone, die um @SlowPercent@&nbsp;% <status>verlangsamt</status> und die Umgebung aufdeckt. Nach @SlowZoneDuration@&nbsp;Sekunden oder bei der <recast>Reaktivierung</recast> dieser Fähigkeit explodiert sie, verursacht <magicDamage>@TotalDamageTT@&nbsp;magischen Schaden</magicDamage> und <status>verlangsamt</status> um zusätzlich @SlowLingerDuration@&nbsp;Sekunde.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "Finales Funkeln",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",

@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "치명적 속도",
         "majorChangePatchVersion": "",
-        "tooltip": "적 챔피언을 기본 공격하면 6초 동안 공격 속도가 %i:scaleAS%@ASPerStack@, 최대 6까지 증가합니다. 최대 중첩 시 %i:OnHit% <OnHit>기본 공격</OnHit>을 하면 @NoteDamage@의 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>추가 적응형 피해</font></lol-uikit-tooltipped-keyword>를 입힙니다.<br><br>최대 중첩 지속시간: @f1@초<br>적에게 입힌 피해량: @f2@<br><br>이 룬은 또한 한 챔피언을 공격한 후 공격이 준비된 시점에서 0.25초 내에 챔피언에게 발사한 기본 공격의 비율 추적: @f3@% (@f4@/@f5@)",
+        "tooltip": "적 챔피언을 기본 공격하면 6초 동안 공격 속도가 %i:scaleAS%@ASPerStack@ 증가합니다. 이 효과는 6회까지 중첩됩니다. 최대로 중첩되면 %i:OnHit% <OnHit>적중 시</OnHit> @NoteDamage@(%i:scaleAS%)의 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>추가 적응형 피해</font></lol-uikit-tooltipped-keyword>를 입힙니다.<br><br>최대 중첩 지속시간: @f1@초<br>입힌 피해량: @f2@<br><br>이 룬은 또한 한 챔피언을 공격한 후 공격이 준비된 시점에서 0.25초 내에 챔피언에게 발사한 기본 공격의 비율 추적: @f3@% (@f4@/@f5@)",
         "shortDesc": "적 챔피언을 기본 공격하면 공격 속도가 최대 6까지 증가. 최대 중첩 시 기본 공격을 하면 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>추가 적응형 피해</font></lol-uikit-tooltipped-keyword>를 입힘",
         "longDesc": "적 챔피언을 기본 공격하면 6초 동안 공격 속도가 [근접 챔피언은 6% || 원거리 챔피언은 4%], 최대 6까지 증가합니다. 최대 중첩 시 기본 공격을 하면 [근접 챔피언은 9~30 || 원거리 챔피언은 6~24]의 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>추가 적응형 피해를 입힙니다. 이 피해는 추가 공격 속도 1%당 1%씩 증가합니다</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "공격 속도 점차 상승",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "난입",
-        "majorChangePatchVersion": "",
-        "tooltip": "4초 안에 한 챔피언에게 기본 공격 또는 <b>개별</b> 스킬 3회를 적중시키면 3초 동안 <speed>@MoveSpeedCalc@의 이동 속도</speed>와 <status>50%의 둔화 저항</status> 효과를 얻습니다.<br><br>재사용 대기시간: <attention>@CooldownCalc@초</attention><br><br>총 활성화 횟수: <attention>@f1@</attention>",
-        "shortDesc": "한 챔피언에게 기본 공격 또는 <b>개별</b> 스킬 3회 적중 시 일시적으로 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>이동 속도</lol-uikit-tooltipped-keyword> 및 둔화 저항 증가 ",
-        "longDesc": "4초 안에 한 챔피언에게 기본 공격 또는 <b>개별</b> 스킬 3회를 적중시키면 3초 동안 레벨에 비례하여 <speed>25~50%의 이동 속도</speed>와 <status>50%의 둔화 저항</status> 효과를 얻습니다. 원거리 챔피언의 경우 이동 속도가 50%만 적용됩니다.<br>재사용 대기시간: 30초~10초",
+        "name": "폭풍전사의 포효",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "3초 안에 챔피언 최대 체력의 25%에 해당하는 피해를 입히면 3초 동안 <speed>이동 속도가 @MoveSpeedCalc@</speed>, <status>둔화 저항이 50%</status> 증가합니다.<br><br>재사용 대기시간: <attention>@CooldownCalc@초</attention><br><br>활성화 횟수: 총 <attention>@f1@</attention>",
+        "shortDesc": "챔피언 최대 체력의 25%에 해당하는 피해를 입힐 시 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>이동 속도</lol-uikit-tooltipped-keyword> 및 둔화 저항 대폭 증가 ",
+        "longDesc": "3초 안에 챔피언 최대 체력의 25%에 해당하는 피해를 입히면 3초 동안 <speed>이동 속도가 40%</speed>, <status>둔화 저항이 50%</status> 증가합니다. 원거리 챔피언은 이동 속도 증가 효과가 75%만 적용됩니다.<br>재사용 대기시간: 20~10초",
         "recommendationDescriptor": "돌진 이동",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "총 활성화 횟수: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "죽음불꽃 손길",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "챔피언에게 스킬로 피해를 입히면 화상을 적용해 초당 @DamageCalc@의 적응형 피해를 입힙니다. 3초 동안 화상 피해를 입으면 불이 붙어 있는 동안 화상 피해량이 100% 증가합니다.<br><rules><br>지속시간:<br>단일 대상: 4초<br>광역: 2초<br>지속 피해: 1초<br></rules><br>죽음불꽃 손길 화상으로 챔피언에게 @f1@의 피해를 입혔습니다.",
+        "shortDesc": "챔피언에게 스킬로 피해를 입히면 지속적으로 화상 적용",
+        "longDesc": "챔피언에게 스킬로 피해를 입히면 화상을 적용해 레벨에 따라 초당 1~10(+<scaleAP>주문력의 0.03</scaleAP>)(+<scaleAD>추가 공격력의 0.08</scaleAD>)의 적응형 피해를 입힙니다. 3초 동안 화상 피해를 입으면 불이 붙어 있는 동안 화상 피해량이 100% 증가합니다.<br><rules><br>지속시간:<br>단일 대상: 4초<br>광역: 2초<br>지속 피해: 1초<br></rules>",
+        "recommendationDescriptor": "지속 스킬 피해",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            "화상으로 입힌 피해량: @eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "수호자",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "칼날비",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "적 챔피언에 대한 @NumHits@번째 공격까지 공격 속도가 {{ Item_Melee_Ranged_Split }}% 증가합니다.<br><br>재사용 대기시간: @Cooldown@초<br><hr><br>칼날비 공격 횟수: @f1@<br>칼날비 공격 적중률: @f2@%<br><br><rules>기본 공격 모션이 취소될 경우 공격 속도 증가 효과가 적용되는 공격 횟수가 1회 늘어납니다.<br>일시적으로 최고 공격 속도 제한을 초과할 수 있습니다.</rules>",
-        "shortDesc": "적 챔피언에 대한 첫 공격 3회 동안 공격 속도 대폭 증가",
-        "longDesc": "적 챔피언에 대한 3번째 공격까지 공격 속도가 160% (원거리 챔피언은 80%) 증가합니다.<br><br>3초 안에 다음 공격을 가하지 못하면 효과가 사라집니다.<br><br>재사용 대기시간: 10초<br><br><rules>기본 공격 모션이 취소될 경우 공격 속도 증가 효과가 적용되는 공격 횟수가 1회 늘어납니다.<br>일시적으로 최고 공격 속도 제한을 초과할 수 있습니다.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "적 챔피언에 대한 @NumHits@번째 공격까지 공격 속도가 {{ Item_Melee_Ranged_Split }}% 증가하고 <font color='#48C4B7'>@BonusDamage@</font>의 <trueDamage>추가 고정 피해</trueDamage>를 입힙니다. <br><br>재사용 대기시간: @Cooldown@초<br><hr><br>칼날비 공격 횟수: @f1@<br>입힌 피해량: @f2@<br>칼날비 공격 적중률: @f3@%<br><br><rules>기본 공격 모션이 취소될 경우 공격 속도 증가 효과가 적용되는 공격 횟수가 +1회, 최대 +@MaxBonusHits@회 늘어납니다.<br>일시적으로 최고 공격 속도 제한을 초과할 수 있습니다.</rules>",
+        "shortDesc": "적 챔피언에 대한 첫 기본 공격 3회 동안 공격 속도 대폭 증가 및 <trueDamage>추가 고정 피해</trueDamage> 입힘",
+        "longDesc": "적 챔피언에 대한 3번째 공격까지 공격 속도가 120% (원거리 챔피언은 60%) 증가하고 <trueDamage>추가 고정 피해</trueDamage>를 입힙니다.<br><br>3초 안에 다음 공격을 가하지 못하면 효과가 사라집니다.<br><br>재사용 대기시간: 10초<br>적중 시 피해량: 4~20(+추가 공격력의 0.08, +주문력의 0.06)의 피해<br><br><rules>기본 공격 모션이 취소될 경우 공격 속도 증가 효과가 적용되는 공격 횟수가 1회 늘어납니다.<br>일시적으로 최고 공격 속도 제한을 초과할 수 있습니다.</rules>",
         "recommendationDescriptor": "폭발적인 공격",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "추가 공격 속도로 가한 공격 횟수: @eogvar1@",
-            "칼날비 공격 적중률: @eogvar2@%"
+            "입힌 피해량: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "신비로운 유성",
         "majorChangePatchVersion": "",
-        "tooltip": "챔피언에게 스킬로 피해를 주면 해당 위치에 유성을 불러옵니다. 신비로운 유성이 재사용 대기 중일 경우 남은 재사용 대기시간이 감소합니다.<br><br>피해량: @DamageCalc@<br>재사용 대기시간: @CooldownCalc@초<br><rules><br>재사용 대기시간 감소:<br>단일 대상 스킬: 20%<br>광역 스킬: 10%<br>지속 피해 스킬: 5%<br></rules><br>소환한 유성의 @f3@%를 적중시키고 적 챔피언에게 총 @f1@의 피해를 가했습니다.",
+        "tooltip": "챔피언에게 스킬로 피해를 입히면 해당 위치에 유성을 불러옵니다. 유성이 이동한 거리에 따라 피해량이 증가합니다.<br><br>피해량: @DamageCalc@<br>재사용 대기시간: @CooldownCalc@초<br><rules><br>750거리일 때 피해량이 최대 100% 증폭됩니다.<br></rules><br>소환한 유성의 @f3@%를 적 챔피언에게 적중시켜 총 @f1@의 피해를 입혔습니다.",
         "shortDesc": "챔피언에게 스킬로 피해를 주면 해당 위치에 피해를 가하는 유성 소환",
-        "longDesc": "챔피언에게 스킬로 피해를 주면 해당 위치에 유성을 불러옵니다. 신비로운 유성이 재사용 대기 중일 경우 남은 재사용 대기시간이 감소합니다.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>적응형 피해</font></lol-uikit-tooltipped-keyword>: 레벨에 따라 30 ~ 130 (<scaleAP>+주문력의 0.05</scaleAP> 및 <scaleAD>+추가 공격력의 0.1</scaleAD>)<br>재사용 대기시간: 20 ~ 8초<br><rules><br>재사용 대기시간 감소:<br>단일 대상 스킬: 20%<br>광역 스킬: 10%<br>지속 피해 스킬: 5%<br></rules>",
+        "longDesc": "챔피언에게 스킬로 피해를 입히면 해당 위치에 유성을 불러옵니다. 유성이 이동한 거리에 따라 피해량이 증가합니다.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>적응형 피해</font></lol-uikit-tooltipped-keyword>: 레벨에 따라 15~100 (<scaleAP>+주문력의 0.05</scaleAP> 및 <scaleAD>+추가 공격력의 0.1</scaleAD>)<br>재사용 대기시간: 20~8초<br><rules><br>750거리일 때 피해량이 최대 100% 증폭됩니다.<br></rules>",
         "recommendationDescriptor": "스킬 피해량",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

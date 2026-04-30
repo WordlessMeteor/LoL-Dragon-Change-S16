@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Каждые несколько (@CastsToGainXP@) применений умения Хранитель времени сохраняет <TFTBonus>@XPPerCast@</TFTBonus> ед. опыта. Если сохранено достаточно опыта для повышения уровня, он передает вам требуемое количество&nbsp;опыта. <br><br>Если вы достигли 10-го уровня, вместо этого он получает <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;убийственности.<br><br><rules>Сохраненный опыт: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>В ''Сокровище брюхача'' число применений умения, требуемое для получения опыта, повышено до @CastsToGainXPCT@ до стадии 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Каждые несколько (@CastsToGainXP@) применений умения Хранитель времени сохраняет <TFTBonus>@XPPerCast@</TFTBonus> ед. опыта. Если сохранено достаточно опыта для повышения уровня, он передает вам требуемое количество&nbsp;опыта. <br><br>Если вы достигли 10-го уровня, вместо этого он получает <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;убийственности.<br><br><rules>Сохраненный опыт: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,10 +12270,6 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
-                    },
-                    {
-                        "name": "CastsToGainXPCT",
-                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13774,7 +13770,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Каждую секунду бойцы из Шуримы получают @ASPerSecond*100@% скорости атаки и восстанавливают @HealthRestorePerSecond@ здоровья. В начале боя они получают дополнительные бонусы.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Призматич.: разблокируйте Насуса, Ренектона и Зерата и выставьте на поле 4 бойцов из Шуримы</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) Максимальный запас здоровья повышается на @BonusHealth*100@%</row><br><row>(@MinUnits@) @ArmorMR@ брони и сопротивления магии</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Один боец из Шуримы становится БОЖЕСТВОМ каждые @GodhoodCadence@ сек.</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic> Доступно, только если разблокированы Насус, Ренектон и Зерат.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
+        "tooltip_text": "Каждую секунду бойцы из Шуримы получают @ASPerSecond*100@% скорости атаки и восстанавливают @HealthRestorePerSecond@ здоровья. В начале боя они получают дополнительные бонусы.<br><br><row>(@MinUnits@) Максимальный запас здоровья повышается на @BonusHealth*100@% </row><br><row>(@MinUnits@) @ArmorMR@ брони и сопротивления магии</row><br><row>(@MinUnits@) Один боец из Шуримы становится БОЖЕСТВОМ каждые @GodhoodCadence@ сек.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13854,7 +13850,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 0.0
+                        "value": 1.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13862,7 +13858,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 0.0
+                        "value": 3.0
                     },
                     {
                         "name": "SkinScale",
@@ -13870,8 +13866,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -14574,7 +14570,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "После каждого боя в магазине появляется зачарование вознесенного. У этих зачарований могучие эффекты, и их можно купить за золото.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>В ''Сокровище брюхача'' зачарование ''Верные служители'' может появиться только после того, как вы достигнете 7-го уровня.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "После каждого боя в магазине появляется зачарование вознесшегося. У этих зачарований могучие эффекты, и их можно купить за золото.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15038,7 +15034,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.36
+                        "value": 0.4
                     },
                     {
                         "name": "DamageReduction",
@@ -15054,7 +15050,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.48
+                        "value": 0.55
                     },
                     {
                         "name": "DamageReduction",
@@ -15078,7 +15074,7 @@
                 "constants": [
                     {
                         "name": "PairsPartnerWinMultiplier",
-                        "value": 0.5
+                        "value": 0.85
                     },
                     {
                         "name": "TechBreakpoint",
@@ -15090,7 +15086,7 @@
                     },
                     {
                         "name": "TechPerCombat_DU",
-                        "value": 15.0
+                        "value": 20.0
                     },
                     {
                         "name": "TechPerDeath_PVE",
@@ -15336,7 +15332,7 @@
         "trait_id": "TFT17_DRX",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_NOVA.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) Через @TeamAttackDelay@ сек. боя Н.О.В.А. дает скачок мощности, его эффекты зависят от чемпионов.</row><br><row>(@MinUnits@) Выбранный боец Н.О.В.А. активирует удар Н.О.В.А. в ходе скачка</row><br><ShowIf.TFT17_DRX_HasAatrox><status>Атрокс:</status> урон союзников <TFTKeyword>истощает</TFTKeyword> и <TFTKeyword>раскалывает</TFTKeyword> броню врагов на @ShredAndSunder*100@% </ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>Атрокс: истощает и раскалывает броню врагов</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>Кейтлин:</status> дает союзникам @AS*100@% скорости атаки</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>Кейтлин: дает скорость атаки</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>Акали:</status> дает союзникам <TFTKeyword>Точность</TFTKeyword></ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>Акали: союзники получают Точность</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>Маокай:</status> союзники восстанавливают @Heal*100@% от макс. запаса здоровья</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>Маокай: лечит союзников</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>Киндред:</status> дают сильнейшему танку щит прочностью <TFTBonus>@ShieldValue@</TFTBonus></ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>Киндред: дают союзнику щит</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>Эмблема:</status> союзники доп. наносят @BonusTrueDamage*100@% чистого урона (бонус суммируется)</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>Эмблема: доп. чистый урон</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
+        "tooltip_text": "<row>(@MinUnits@) Через @TeamAttackDelay@ сек. боя Н.О.В.А. дает скачок мощности, его эффекты зависят от чемпионов.</row>(@MinUnits@) Выбранный боец Н.О.В.А. делает удар Н.О.В.А. в ходе скачка<br><ShowIf.TFT17_DRX_HasAatrox><status>Атрокс:</status> урон союзников <TFTKeyword>истощает</TFTKeyword> и <TFTKeyword>раскалывает</TFTKeyword> броню врагов на @ShredAndSunder*100@% </ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>Атрокс: истощает и раскалывает броню врагов</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>Кейтлин:</status> дает союзникам @AS*100@% скорости атаки</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>Кейтлин: дает скорость атаки</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>Акали:</status> дает союзникам <TFTKeyword>Точность</TFTKeyword></ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>Акали: дает Точность</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>Маокай:</status> союзники лечатся на @Heal*100@% от макс. здоровья</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>Маокай: лечит союзников</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>Киндред:</status> дают сильнейшему танку щит прочностью <TFTBonus>@ShieldValue@</TFTBonus></ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>Киндред: дают союзнику щит</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>Эмблема:</status> союзники доп. наносят @BonusTrueDamage*100@% чистого урона (суммируется)</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>Эмблема: доп. чистый урон</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15675,7 +15671,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.2
+                        "value": 0.25
                     }
                 ],
                 "min_units": 2,
@@ -15687,7 +15683,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.4
+                        "value": 0.45
                     }
                 ],
                 "min_units": 4,
@@ -15699,7 +15695,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.6
+                        "value": 0.65
                     }
                 ],
                 "min_units": 6,
@@ -15841,11 +15837,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.2
+                        "value": 0.25
                     },
                     {
                         "name": "AP",
-                        "value": 20.0
+                        "value": 25.0
                     }
                 ],
                 "min_units": 3,
@@ -15857,11 +15853,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.45
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 45.0
                     }
                 ],
                 "min_units": 4,
@@ -16634,6 +16630,10 @@
                         "value": 0.08
                     },
                     {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    },
+                    {
                         "name": "Serpent_DR_Teamwide",
                         "value": 0.08
                     },
@@ -16642,12 +16642,24 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Duration",
                         "value": 10.0
                     },
                     {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Interval",
                         "value": 1.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
                     },
                     {
                         "name": "Shield_Shield_Teamwide",
@@ -16660,6 +16672,10 @@
                     {
                         "name": "Wolf_HealthThreshold",
                         "value": 0.5
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
                     }
                 ]
             }
@@ -16677,7 +16693,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.1
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16708,6 +16724,10 @@
                         "value": 0.2
                     },
                     {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
                         "name": "Serpent_DR",
                         "value": 0.15
                     },
@@ -16720,12 +16740,32 @@
                         "value": 0.02
                     },
                     {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
                         "name": "Shield_Shield",
                         "value": 0.15
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16749,7 +16789,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16772,12 +16812,20 @@
                         "value": 30.0
                     },
                     {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
                         "name": "Mountain_APPerHealthThreshold",
                         "value": 2.0
                     },
                     {
                         "name": "Mountain_Health",
                         "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16796,8 +16844,20 @@
                         "value": 0.25
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16848,6 +16908,14 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
                         "name": "Mountain_DamageAmpPercent",
                         "value": 0.01
                     },
@@ -16858,6 +16926,18 @@
                     {
                         "name": "Mountain_HexesToReveal_TOOLTIPONLY",
                         "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16876,8 +16956,20 @@
                         "value": 0.35
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16885,6 +16977,119 @@
                     }
                 ],
                 "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 10,
                 "style_idx": 5,
                 "style_name": "kGold"
             }
@@ -16895,7 +17100,7 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "В каждом матче звездочеты чертят карту нового созвездия. В этом матче: <TFTStargazer>Фонтан</TFTStargazer>.<br>Бойцы в усиленных ячейках получают @Fountain_ManaRegen_Teamwide@ восстановления маны. Для звездочетов бонус повышен, при применении умений они лечат союзника с самым низким здоровьем.<br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, восстановление здоровья в размере @Fountain_HealPercent*100@% от силы умений</expandRow><br><br><rules>С каждым уровнем игрока открывается больше ячеек.</rules>",
+        "tooltip_text": "В каждом матче звездочеты чертят карту нового созвездия. В этом матче: <TFTStargazer>Фонтан</TFTStargazer>.<br><br>Бойцы в усил. ячейках получают @Fountain_ManaRegen_Teamwide@ восст. маны. Для звездочетов бонус выше, при применении умений они лечат союзника с наименьшим здоровьем.<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% восст. здоровья от урона умения</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% восст. здоровья от урона умения</row><br><br><rules>С каждым уровнем игрока открывается больше ячеек</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16945,7 +17150,7 @@
         "trait_id": "TFT17_Stargazer_Huntress",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "В каждом матче звездочеты чертят карту нового созвездия. В этом матче: <TFTStargazer>Охотница</TFTStargazer>.<br>Начало боя: ставит метку на врагов с наивысшим здоровьем.<br>Бойцы в усиленных ячейках получают @Huntress_AS_Teamwide*100@% скорости атаки. Для звездочетов бонус повышен, они восстанавливают @Huntress_Heal*100@% от макс. запаса здоровья при гибели врага с меткой.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, метки – @NumMarks@</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, метки – @NumMarks@</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, метки – @NumMarks@</row><br><br><rules>С каждым уровнем игрока открывается больше ячеек.</rules>",
+        "tooltip_text": "В каждом матче звездочеты чертят карту нового созвездия. В этом матче: <TFTStargazer>Охотница</TFTStargazer>. Начало боя: ставит метку на врагов с наивысшим здоровьем.<br>Бойцы в усиленных ячейках получают @Huntress_AS_Teamwide*100@% скорости атаки. Для звездочетов бонус повышен, они восстанавливают @Huntress_Heal*100@% от макс. запаса здоровья при гибели врага с меткой.<br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, метки – @NumMarks@</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, метки – @NumMarks@</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, метки – @NumMarks@</row><br><rules>С каждым уровнем игрока открывается больше ячеек.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16955,7 +17160,7 @@
                     },
                     {
                         "name": "Huntress_Heal",
-                        "value": 0.1
+                        "value": 0.15
                     }
                 ]
             }
@@ -16965,7 +17170,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.1
+                        "value": 0.12
                     },
                     {
                         "name": "NumMarks",
@@ -16981,7 +17186,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.3
+                        "value": 0.35
                     },
                     {
                         "name": "NumMarks",
@@ -16997,7 +17202,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.45
+                        "value": 0.55
                     },
                     {
                         "name": "NumMarks",
@@ -17025,7 +17230,7 @@
                     },
                     {
                         "name": "Medallion_IncreasePer3Star",
-                        "value": 6.5
+                        "value": 5.0
                     },
                     {
                         "name": "Medallion_Resists_Teamwide",
@@ -17057,7 +17262,7 @@
         "trait_id": "TFT17_Stargazer_Mountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "В каждом матче звездочеты чертят карту нового созвездия. В этом матче: <TFTStargazer>Гора</TFTStargazer><br>Каждые несколько (@Mountain_RoundsPerEmblem@) боев против игроков вы получаете эмблему звездочетов. Звездочеты в усиленных ячейках получают различные бонусы.<br>(Осталось боев: &nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><row>(@MinUnits@) Получают @Mountain_Health*100@% здоровья</row><br><row>(@MinUnits@) И @Mountain_ADAP*100@% силы атаки и силы умений</row><br><row>(@MinUnits@) И @Mountain_Resists@ брони и сопротивления магии</row><br><row>(@MinUnits@) И @Mountain_AS*100@% скорости атаки</row><br><row>(@MinUnits@) И @Mountain_DR*100@% выносливости</row><br><row>(@MinUnits@) И все прочие бонусы растут на @Mountain_StatIncrease*100@%</row><br><br><rules>С каждым уровнем игрока открывается больше ячеек.</rules>",
+        "tooltip_text": "В каждом матче звездочеты чертят карту нового созвездия. В этом матче: <TFTStargazer>Гора</TFTStargazer><br>Каждые несколько (@Mountain_RoundsPerEmblem@) боев против игроков вы получаете эмблему звездочетов. Звездочеты в усиленных ячейках получают различные бонусы.<br>(Осталось боев: &nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><row>(@MinUnits@) Получают @Mountain_Health*100@% здоровья</row><br><row>(@MinUnits@) И @Mountain_ADAP*100@% силы атаки и силы умений</row><br><row>(@MinUnits@) И @Mountain_Resists@ брони и сопротивления магии</row><br><row>(@MinUnits@) И @Mountain_AS*100@% скорости атаки</row><br><row>(@MinUnits@) И @Mountain_DR*100@% выносливости</row><br><row>(@MinUnits@) И все прочие бонусы растут на @Mountain_StatIncrease*100@%</row><br><rules>С каждым уровнем игрока открывается больше ячеек.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17093,7 +17298,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17113,7 +17318,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
@@ -17129,7 +17334,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17149,7 +17354,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
@@ -17165,11 +17370,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17185,11 +17390,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17201,11 +17406,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17221,11 +17426,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17237,11 +17442,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17257,11 +17462,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17273,11 +17478,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17408,7 +17613,7 @@
         "trait_id": "TFT17_Stargazer_Wolf",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "В каждом матче звездочеты чертят карту нового созвездия. В этом матче: <TFTStargazer>Кабан</TFTStargazer>.<br>Вы получаете золото после каждой победы в бою против игрока. Бойцы в усиленных ячейках получают @Wolf_Health_Teamwide*100@% здоровья, силы атаки и силы умений. Для звездочетов бонусы выше.<br>(Золота получено: @TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@ золота, @Wolf_Health*100@% %i:scaleHealth%, @Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><br><rules>С каждым уровнем игрока открывается больше ячеек.</rules>",
+        "tooltip_text": "В каждом матче звездочеты чертят карту нового созвездия. В этом матче: <TFTStargazer>Кабан</TFTStargazer>.<br>Вы получаете золото после каждой победы в бою против игрока. Бойцы в усиленных ячейках получают @Wolf_Health_Teamwide*100@% здоровья, силы атаки и силы умений. Для звездочетов бонусы выше.<br>(Золота получено: @TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><expandRow>(@MinUnits@) @Wolf_Gold@ золота, @Wolf_Health*100@% %i:scaleHealth%, @Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><rules>С каждым уровнем игрока открывается больше ячеек.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17569,7 +17774,7 @@
         "trait_id": "TFT17_Timebreaker",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) При поражении в бою вы получаете бесплатные обновления магазина. При победе вы сохраняете в темпоральном ядре опыт (зависит от стадии).</row><br><row>(@MinUnits@) И ваши бойцы получают @AttackSpeed*100@% скорости атаки.</row><br><row>(@MinUnits@) И разрушители времени дополнительно получают @TimebreakerAdditionalAS*100@% скорости атаки</row><br><br><rules>Обновления магазина при поражении: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>Опыт при победе: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "tooltip_text": "<row>(@MinUnits@) Ваши бойцы получают @AttackSpeed*100@% скорости атаки.</row><br><row>(@MinUnits@) И при поражении в бою вы получаете беспл. обновления магазина. При победе вы сохраняете в темпоральном ядре опыт (зависит от стадии).</row><br><row>(@MinUnits@) И разрушители времени дополнительно получают @TimebreakerAdditionalAS*100@% скорости атаки</row><br><br><rules>Обновления магазина при поражении: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>Опыт при победе: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -17580,11 +17785,11 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.0
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
@@ -17600,7 +17805,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.25
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17620,7 +17825,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.25
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17628,7 +17833,7 @@
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
-                        "value": 0.4
+                        "value": 0.5
                     }
                 ],
                 "min_units": 4,

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Lux": {
             "id": "Lux",
@@ -612,7 +612,7 @@
                     "id": "LuxLightBinding",
                     "name": "光之束缚",
                     "description": "拉克丝释放一个光球，束缚并伤害最多两个敌方单位。",
-                    "tooltip": "拉克丝朝目标地点发射一团光球，<status>束缚</status>前2名敌人{{ e3 }}秒并对每个敌人造<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "拉克丝朝目标地点发射一团光球，<status>束缚</status>前2名敌人{{ rootduration }}秒并对每个敌人造<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"
@@ -751,7 +751,7 @@
                     "id": "LuxPrismaticWave",
                     "name": "曲光屏障",
                     "description": "拉克丝掷出她的魔杖，魔杖所触及的友方单位会有光环环绕，保护他们免受敌方伤害。",
-                    "tooltip": "拉克丝扔出她的魔杖，为它途经的友军提供持续{{ e3 }}秒的<shield>{{ totalshieldtt }}护盾</shield>。随后它会折返，为它途经的友军提供等额的<shield>护盾</shield>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "拉克丝扔出她的魔杖，为它途经的友军提供持续{{ shieldduration }}秒的<shield>{{ totalshieldtt }}护盾</shield>。随后它会折返，为它途经的友军提供等额的<shield>护盾</shield>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -894,7 +894,7 @@
                     "id": "LuxLightStrikeKugel",
                     "name": "透光奇点",
                     "description": "朝一个区域发射一个不规则的扭曲之光，减速附近敌人。拉克丝可以引爆它，对敌人造成区域性伤害。",
-                    "tooltip": "拉克丝创造一个光明地带，显形该区域并使区域中的敌人<status>减速</status>{{ e1 }}%。在{{ e3 }}秒后或<recast>再次施放</recast>这个技能后，它会爆炸，造成<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>并<status>减速</status>额外的{{ slowlingerduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "拉克丝创造一个光明地带，显形该区域并使区域中的敌人<status>减速</status>{{ slowpercent }}%。在{{ slowzoneduration }}秒后或<recast>再次施放</recast>这个技能后，它会爆炸，造成<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>并<status>减速</status>额外的{{ slowlingerduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -903,7 +903,7 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ slowpercent }}% -> {{ slowpercentNL }}%",
                             "{{ cost }} -> {{ costNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"

@@ -6,11 +6,10 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/TurretOvergrowth/Skins/Base/TurretOvergrowth_Base.2026_S1_SRT_LanePushGameplay.skl",
-            "simpleSkin": "ASSETS/Characters/TurretOvergrowth/Skins/Base/TurretOvergrowth_Base.2026_S1_SRT_LanePushGameplay.skn",
-            "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Skin48/TurretOvergrowth_Skin48_TX_CM.2026_S1_SRT_LanePushGameplay.tex",
+            "skeleton": "ASSETS/Characters/TurretOvergrowth/Skins/Base/TurretOvergrowth_Base.skl",
+            "simpleSkin": "ASSETS/Characters/TurretOvergrowth/Skins/Base/TurretOvergrowth_Base.skn",
+            "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Skin48/TurretOvergrowth_Skin48_TX_CM.tex",
             "selfIllumination": 3.0,
-            "Material": "Characters/TurretOvergrowth/Skins/Skin0/Materials/TurretOvergrowth_M_Blue_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
@@ -101,7 +100,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Noise_Caustic.2026_S1_SRT_LanePushGameplay.tex",
+                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Noise_Caustic.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -387,7 +386,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Spark1_01.2026_S1_SRT_LanePushGameplay.tex",
+                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Spark1_01.tex",
                 "birthFrameRate": {
                     "constantValue": 0.0,
                     "__type": "ValueFloat"
@@ -438,7 +437,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Swirl2_Idle.2026_S1_SRT_LanePushGameplay.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Swirl2_Idle.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -606,7 +605,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Trail01.2026_S1_SRT_LanePushGameplay.tex",
+                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Trail01.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.30000001192092896,
@@ -713,287 +712,6 @@
             "TurretOvergrowth_Idle_Phase3_Child": "Characters/TurretOvergrowth/Skins/Skin0/Particles/TurretOvergrowth_Base_Idle_Phase3_Child"
         },
         "__type": "ResourceResolver"
-    },
-    "Characters/TurretOvergrowth/Skins/Skin0/Materials/TurretOvergrowth_M_Blue_inst": {
-        "name": "Characters/TurretOvergrowth/Skins/Skin0/Materials/TurretOvergrowth_M_Blue_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Vertex_Deform_Tex",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "BloomMask_Texture",
-                "texturePath": "ASSETS/Characters/TurretOvergrowth/Skins/Base/TurretOvergrowth_Base_Mask_White.2026_S1_SRT_LanePushGameplay.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/Camille/skins/Skin32/Camille_Skin32_DiamondColorA_TX_CM.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/TurretOvergrowth/Skins/Base/TurretOvergrowth_Base_Order_TX_CM.2026_S1_SRT_LanePushGameplay.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "OutlineMask_Texture",
-                "texturePath": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Turret_Overgrowth_Base_Mask.2026_S1_SRT_LanePushGameplay.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Shared/Materials/white.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "Bloom_Color",
-                "value": [
-                    0.6901960968971252,
-                    0.8549019694328308,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomValue",
-                "value": [
-                    0.07999999821186066,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TintColor",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineColor",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "SpecularTintColor",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineController",
-                "value": [
-                    0.10000000149011612,
-                    0.5,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "SpecularPower",
-                "value": [
-                    5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "WaveController",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "WaveStrength",
-                "value": [
-                    0.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "MainTexUV_Tile",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FlipbookSize",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Flipbook_NumberSpeed",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "MatCap_Strength",
-                "value": [
-                    0.699999988079071,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineBlendValue",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "EmissionValue",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineMask_Strength",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "IridescentControl",
-                "value": [
-                    1.0,
-                    0.5,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "VERTEX_DEFORM_TEX_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "BLOOM_ON",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "MATCAP_ON",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "OUTLINE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DEFORM_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "TWO_D_DEFORM_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ANIMATION_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "OUTLINE_MASK_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "MATCAP_MASK_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "IRIDESCENCE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_R_MASK_ON_DEFORM",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Outline_MatCap_RMA_VertexDeform",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
     },
     "__linked": [
         "DATA/Characters/TurretOvergrowth/TurretOvergrowth.bin",

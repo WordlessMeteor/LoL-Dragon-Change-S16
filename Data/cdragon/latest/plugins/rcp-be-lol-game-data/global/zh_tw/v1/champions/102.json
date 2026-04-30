@@ -1,5 +1,6 @@
 {
     "id": 102,
+    "contentId": "0b591b96-6840-4c00-a1c6-e087550d903a",
     "name": "希瓦娜",
     "alias": "Shyvana",
     "title": "半龍少女",
@@ -771,7 +772,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "希瓦娜獲得護盾與跑速，短暫延遲後，她周圍的區域將產生爆炸。處於聖龍型態時，若爆炸命中敵方英雄，將為她回復生命。",
-            "dynamicDescription": "希瓦娜將自己包覆在烈焰中，持續@Duration@秒，獲得<shield>@Calc_Shield@護盾</shield>，附近每有一名敵方英雄則額外增加<shield>@Calc_Shield_Per_Nearby_Champion@</shield>，並獲得<speed>@MoveSpeed@跑速</speed>，朝敵方英雄移動時提升至<speed>@MoveSpeedTowardsEnemies@</speed>。<br><br>效果結束、<shield>護盾</shield>被打破，或<recast>重施技能</recast>時，她周圍的區域會爆炸，造成<magicDamage>@Damage@魔法傷害</magicDamage>。<br><br><keywordMajor>聖龍型態：</keywordMajor>若爆炸命中敵方英雄，則希瓦娜根據自身已損失生命，<healing>回復@Calc_Heal_Min@至@Calc_Heal_Max@生命</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "希瓦娜將自己包覆在烈焰中，持續@Duration@秒，獲得<shield>@Calc_Shield@護盾</shield>，附近每有一名敵方英雄則額外增加<shield>@Calc_Shield_Per_Nearby_Champion@</shield>，並獲得<speed>@MoveSpeed@跑速</speed>，朝敵方英雄移動時提升至<speed>@MoveSpeedTowardsEnemies@</speed>。<br><br>效果結束、<shield>護盾</shield>被打破，或<recast>重施技能</recast>時，她周圍的區域會爆炸，造成<magicDamage>@Damage@魔法傷害</magicDamage>。<br><br><keywordMajor>聖龍型態：</keywordMajor>若爆炸命中敵方英雄，則希瓦娜<healing> @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@已損失生命</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -789,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -921,7 +922,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "希瓦娜發射一顆火球，命中大型目標時會爆炸並使其緩速。處於聖龍型態時，此技能會穿透並在命中大型敵軍時爆炸，留下一條火痕。",
-            "dynamicDescription": "希瓦娜朝目標發射火球，造成<magicDamage>@Damage@魔法傷害</magicDamage>與<status>@Calc_Slow@緩速，持續@SlowDuration@秒</status>。火球在命中敵軍或抵達終點時會爆炸。<br><br><keywordMajor>聖龍型態：</keywordMajor>希瓦娜的火球變大，且能貫穿敵軍。命中英雄、大型野怪或抵達終點時，會觸發一道火焰脈衝，造成<magicDamage>@Calc_Dragon_Damage@魔法傷害</magicDamage>並<status>減速@Calc_Slow_Dragon@，持續@SlowDuration@秒</status>。火球會在@GroundLingerDuration@秒內留下一條火痕，每秒造成<magicDamage>@DamagePerSecond@魔法傷害</magicDamage>。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "希瓦娜朝目標發射火球，造成<magicDamage>@Damage@ + @Calc_Max_Health_Damage@最大生命魔法傷害</magicDamage>與<status>@Calc_Slow@緩速，持續@SlowDuration@秒</status>。火球在命中敵軍或抵達終點時會爆炸。<br><br><keywordMajor>聖龍型態：</keywordMajor>希瓦娜的火球變大，且能貫穿敵軍。命中英雄、大型野怪或抵達終點時，會觸發一道火焰脈衝，造成<magicDamage>@Calc_Dragon_Damage@ + @Calc_Max_Health_Dragon_Damage@最大生命魔法傷害</magicDamage>並<status>減速@Calc_Slow_Dragon@，持續@SlowDuration@秒</status>。火球會在@GroundLingerDuration@秒內留下一條火痕，每秒造成<magicDamage>@DamagePerSecond@魔法傷害</magicDamage>。 @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -940,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

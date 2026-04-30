@@ -1,5 +1,6 @@
 {
     "id": 56,
+    "contentId": "3795a4c7-9400-4719-a493-598b6315b006",
     "name": "نوكتورن",
     "alias": "Nocturne",
     "title": "الكابوس الأبدي",
@@ -814,7 +815,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يلقي نوكتورن نصل ظل يلحق الضرر، ويترك أثر غسق، ويجعل الأبطال يتركون أثر غسق. لدى وجوده على الأثر، يستطيع نوكتورن التحرك عبر الوحدات ويمتلك زيادة في سرعة الحركة وضرر الهجوم.",
-            "dynamicDescription": "يلقي نوكتورن بنصل ظل، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> ويترك أثر غسق لمدة @Effect3Amount@ث. تترك إصابة الأبطال المعادين أثرًا أيضًا. <br><br>أثناء تواجده على الأثر، يصبح نوكتورن شبحيًا، ويكسب <speed>@MoveSpeed@% سرعة حركة</speed> و <physicalDamage>@BonusTrailAD@ ضرر هجوم</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يلقي نوكتورن بنصل ظل، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> ويترك أثر غسق لمدة @TrailDuration@ث. تترك إصابة الأبطال المعادين أثرًا أيضًا. <br><br>أثناء تواجده على الأثر، يصبح نوكتورن شبحيًا، ويكسب <speed>@MoveSpeed@% سرعة حركة</speed> و <physicalDamage>@BonusTrailAD@ ضرر هجوم</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -964,7 +965,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يعزز نوكتورن نصاله، فيكسب سرعة هجومٍ بشكلٍ كامن. يسمح تفعيل ستار الظلام لنوكتورن بالاختفاء بين الظلال، مما ينشئُ حاجزًا سحريًا يصد قدرة عدو واحدة ويضاعف سرعة هجوم تأثيره الكامن في حال النجاح.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> يكسب نوكتورن <attackSpeed>@Effect1Amount@% سرعة هجوم</attackSpeed>.<br><br><spellActive>التأثير النشط:</spellActive> ينشئ نوكتورن حاجزًا من الظل لمدة 1.5 ثانية يقوم بصد قدرة العدو التالية. إذا تم صد قدرة ما، يتزايد التأثير الكامن لقدرته إلى <attackSpeed>@Effect1Amount*2@% من سرعة الهجوم</attackSpeed> لمدة @Effect4Amount@ ثوان.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> يكسب نوكتورن <attackSpeed>@ActiveAS@% سرعة هجوم</attackSpeed>.<br><br><spellActive>تأثير نشط:</spellActive> ينشئ نوكتورن حاجزًا من الظل لمدة 1.5 ثانية يصد قدرة العدو التالية. إذا تم صد قدرة ما، يزداد التأثير الكامن لقدرته ليبلغ <attackSpeed>@ActiveAS*2@% سرعة هجوم</attackSpeed> لمدة @DoubleASDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1114,7 +1115,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يزرع نوكتورن كابوسًا في ذهن هدفه، فيلحق الضرر كل ثانية ويطبق تأثير الخوف على الهدف إذا لم يخرج من مداه بنهاية المدة.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> يكسب نوكتورن <speed>@TooltipFearMS*100@% سرعة حركة</speed> تجاه الأعداء <status>الخائفين</status>.<br><br><spellActive>التأثير النشط:</spellActive> يزرع نوكتورن حبًلا كابوسيًا في هدفه فيلحق به <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> خلال @Effect3Amount@ ثوان. إذا لم ينقطع الحبل، يصبح الهدف <status>خائفًا</status> لمدة @Effect2Amount@ ثوان.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> يكسب نوكتورن <speed>@TooltipFearMS*100@% سرعة حركة</speed> باتجاه الأعداء الخاضعين لتأثير <status>الخوف</status>.<br><br><spellActive>تأثير نشط:</spellActive> يغرس نوكتورن قيدًا كابوسيًا في هدفه، فيُلحق به <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> لمدة @LeashDuration@ث. إذا لم ينقطع القيد، يخضع الهدف لتأثير <status>الخوف</status> لمدة @CCDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,

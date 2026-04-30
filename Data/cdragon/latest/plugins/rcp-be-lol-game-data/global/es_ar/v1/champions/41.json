@@ -1,5 +1,6 @@
 {
     "id": 41,
+    "contentId": "338fd36d-e4b2-4c6f-8cc4-99d194165e20",
     "name": "Gangplank",
     "alias": "Gangplank",
     "title": "el Azote de los Mares",
@@ -1108,7 +1109,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Come cítricos para curar los efectos de control de masas y recuperar vida.",
-            "dynamicDescription": "Gangplank consume una gran cantidad de cítricos para eliminar todos los efectos <status>inhabilitantes</status> y restaurar <healing>@BaseHealth@ más un @Effect2Amount@% de su Vida faltante</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank consume una gran cantidad de cítricos, lo que elimina todos los efectos <status>incapacitantes</status> que le hayan aplicado y restaura <healing>@BaseHealth@ más un @PercentHeal@% de la Vida faltante</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1258,7 +1259,7 @@
             "cost": "Sin costo",
             "cooldown": "@AmmoRechargeTime@ seg de recarga (máx.: @MaxAmmo@)",
             "description": "Gangplank coloca un barril de pólvora en la ubicación objetivo. Si lo ataca, explota y esparce el daño de ataque a los enemigos en la zona, además de ralentizarlos.",
-            "dynamicDescription": "Gangplank coloca un barril de pólvora que él y los campeones enemigos pueden atacar durante @Effect5Amount@ seg. El barril de pólvora se desactiva cuando un enemigo lo destruye. Si Gangplank lo destruye, explotará, <status>ralentizará</status> un @FinalSlowAmount@% durante @Effect2Amount@ seg, infligirá el <physicalDamage>daño del ataque</physicalDamage> e ignorará un @Effect10Amount@% de Armadura. Los campeones reciben <physicalDamage>@Effect3Amount@ de daño físico</physicalDamage> adicional.<br><br>La vida del barril decae cada @BarrelDecayTime@ seg. Las explosiones de los barriles detonan otros barriles con zonas de explosión conectadas, pero no le infligirán daño al mismo objetivo más de una vez. Las explosiones de los barriles activadas por <spellName>Parrrlamentar</spellName> otorgarán oro adicional por asesinatos de objetivos.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank coloca un barril de pólvora que él y los campeones enemigos pueden atacar durante @BarrelDuration@ seg. El barril de pólvora se desactiva cuando un enemigo lo destruye. Si Gangplank lo destruye, explotará, <status>ralentizará</status> un @FinalSlowAmount@% durante @DebuffDuration@ seg, infligirá el <physicalDamage>daño del ataque</physicalDamage> e ignorará un @BarrelArmorPenetration@% de Armadura. Los campeones reciben <physicalDamage>@BonusDamageToChampions@ de daño físico</physicalDamage> adicional.<br><br>La vida del barril decae cada @BarrelDecayTime@ seg. Las explosiones de los barriles detonan otros barriles con zonas de explosión conectadas, pero no le infligirán daño al mismo objetivo más de una vez. Las explosiones de los barriles activadas por <spellName>Parrrlamentar</spellName> otorgarán oro adicional por asesinatos de objetivos.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

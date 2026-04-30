@@ -1,5 +1,6 @@
 {
     "id": 102,
+    "contentId": "0b591b96-6840-4c00-a1c6-e087550d903a",
     "name": "شيفانا",
     "alias": "Shyvana",
     "title": "نصف التنينة",
@@ -771,7 +772,7 @@
             "cost": "بلا تكلفة",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تكسب شيفانا درعًا وسرعة حركة، وبعد فترة قصيرة، تنفجر المنطقة المحيطة بها.  أثناء وجودها في هيئة التنين، يعالجها الانفجار عند إصابته بطلًا معاديًا.",
-            "dynamicDescription": "تحيط شيفانا نفسها باللهب لمدة @Duration@ث، فتكسب <shield>@Calc_Shield@ درع</shield>، يزداد بمقدار <shield>@Calc_Shield_Per_Nearby_Champion@</shield> لكل بطل معادٍ في الجوار و <speed>@MoveSpeed@ سرعة حركة</speed>، تزداد إلى <speed>@MoveSpeedTowardsEnemies@</speed> عند التحرك باتجاه أبطال العدو.<br><br>عند انتهاء التأثير أو تحطم <shield>الدرع</shield> أو <recast>إعادة الإلقاء</recast>، تنفجر المنطقة من حولها، فتلحق <magicDamage>@Damage@ ضرر سحر</magicDamage>.<br><br><keywordMajor>هيئة التنين:</keywordMajor> إذا أصابت موجة الانفجار بطلًا معاديًا، <healing>تستعيد شيفانا من @Calc_Heal_Min@ إلى @Calc_Heal_Max@ صحة</healing> بناءً على صحتها الناقصة.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تحيط شيفانا نفسها باللهب لمدة @Duration@ث، فتكسب <shield>@Calc_Shield@ درع</shield>، يزداد بمقدار <shield>@Calc_Shield_Per_Nearby_Champion@</shield> لكل بطل معادٍ في الجوار و <speed>@MoveSpeed@ سرعة حركة</speed>، تزداد إلى <speed>@MoveSpeedTowardsEnemies@</speed> عند التحرك باتجاه أبطال العدو.<br><br>عند انتهاء التأثير أو تحطم <shield>الدرع</shield> أو <recast>إعادة الإلقاء</recast>، تنفجر المنطقة من حولها، فتلحق <magicDamage>@Damage@ ضرر سحر</magicDamage>.<br><br><keywordMajor>هيئة التنين:</keywordMajor> إذا أصابت موجة الانفجار بطلًا معاديًا، تستعيد شيفانا <healing> @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ من الصحة الناقصة</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -789,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -921,7 +922,7 @@
             "cost": "بلا تكلفة",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق شيفانا كرة نارية تنفجر عند إصابتها هدفًا كبيرًا وتبطئه. في هيئة التنين، تعبر عبر الأعداء الكبار وتنفجر عند إصابتهم تاركةً خلفها أثرًا من النار.",
-            "dynamicDescription": "تطلق شيفانا كرة نارية نحو الموقع المستهدف، فتلحق <magicDamage>@Damage@ ضرر سحر</magicDamage> و<status>تبطئ الأعداء بنسبة @Calc_Slow@ لمدة @SlowDuration@ث.</status>. تنفجر عند اصطدامها بعدو أو عند وصولها إلى نهاية طريقها.<br><br><keywordMajor>هيئة التنين:</keywordMajor> تصبح كرة شيفانا النارية أكبر حجمًا وتخترق الأعداء. عند إصابة بطل أو وحش ضخم أو عند بلوغها نهاية طريقها، تطلق نبضة نارية تلحق <magicDamage>@Calc_Dragon_Damage@ ضرر سحر</magicDamage> و<status>تبطئ الأعداء بنسبة @Calc_Slow_Dragon@ لمدة @SlowDuration@ث</status>. تترك الكرة النارية أثرًا خلفها لمدة @GroundLingerDuration@ث، يلحق <magicDamage>@DamagePerSecond@ ضرر سحر كل ثانية</magicDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تطلق شيفانا كرة نارية نحو الموقع المستهدف، فتلحق <magicDamage>@Damage@ + @Calc_Max_Health_Damage@ من الصحة القصوى على شكل ضرر سحر</magicDamage> و<status>تبطئ الأعداء بنسبة @Calc_Slow@ لمدة @SlowDuration@ث.</status>. تنفجر عند اصطدامها بعدو أو عند وصولها إلى نهاية طريقها.<br><br><keywordMajor>هيئة التنين:</keywordMajor> تصبح كرة شيفانا النارية أكبر حجمًا وتخترق الأعداء. عند إصابة بطل أو وحش ضخم أو عند بلوغها نهاية طريقها، تطلق نبضة نارية تلحق <magicDamage>@Calc_Dragon_Damage@ + @Calc_Max_Health_Dragon_Damage@ من الصحة القصوى على شكل ضرر سحر</magicDamage> و<status>تبطئ الأعداء بنسبة @Calc_Slow_Dragon@ لمدة @SlowDuration@ث</status>. تترك الكرة النارية أثرًا خلفها لمدة @GroundLingerDuration@ث، يلحق <magicDamage>@DamagePerSecond@ ضرر سحر كل ثانية</magicDamage>. @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -940,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

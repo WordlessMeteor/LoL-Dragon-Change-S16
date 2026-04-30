@@ -1,5 +1,6 @@
 {
     "id": 102,
+    "contentId": "0b591b96-6840-4c00-a1c6-e087550d903a",
     "name": "Shyvana",
     "alias": "Shyvana",
     "title": "fiica dragonului",
@@ -771,7 +772,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Shyvana primește un scut, viteză de mișcare, iar după o scurtă întârziere, zona din jurul ei detonează.  Cât timp este în forma de dragon, explozia îi oferă vindecare dacă lovește un campion inamic.",
-            "dynamicDescription": "Shyvana se învăluie în flăcări timp de @Duration@ secunde, primind un <shield>scut în valoare de @Calc_Shield@</shield>, crescut cu <shield>@Calc_Shield_Per_Nearby_Champion@</shield> pentru fiecare campion inamic din apropiere și <speed>@MoveSpeed@ viteză de mișcare</speed>, valoare ce crește la <speed>@MoveSpeedTowardsEnemies@</speed> când te deplasezi către campionii inamici.<br><br>Când efectul se termină, <shield>scutul</shield> este distrus. La <recast>refolosire</recast>, zona din jurul ei se detonează, provocând <magicDamage>@Damage@ daune magice</magicDamage>.<br><br><keywordMajor>Formă de dragon:</keywordMajor> dacă detonarea lovește un campion inamic, Shyvana <healing>își regenerează de la @Calc_Heal_Min@ până la @Calc_Heal_Max@ viață</healing> în funcție de viața lipsă.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana se învăluie în flăcări timp de @Duration@ secunde, primind un <shield>scut în valoare de @Calc_Shield@</shield>, crescut cu <shield>@Calc_Shield_Per_Nearby_Champion@</shield> pentru fiecare campion inamic din apropiere și <speed>@MoveSpeed@ viteză de mișcare</speed>, valoare ce crește la <speed>@MoveSpeedTowardsEnemies@</speed> când te deplasezi către campionii inamici.<br><br>Când efectul se termină, <shield>scutul</shield> este distrus. La <recast>refolosire</recast>, zona din jurul ei se detonează, provocând <magicDamage>@Damage@ daune magice</magicDamage>.<br><br><keywordMajor>Formă de dragon:</keywordMajor> dacă detonarea lovește un campion inamic, Shyvana <healing>își reface @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ din viața lipsă</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -789,12 +790,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                14.0,
-                13.5,
                 13.0,
-                12.5,
                 12.0,
-                12.0
+                11.0,
+                10.0,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -921,7 +922,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Shyvana lansează o minge de foc care explodează când lovește o țintă mare, încetinind-o. În forma de dragon, mingea trece prin inamici mari și explodează la impactul cu aceștia, lăsând în urmă o dâră de foc.",
-            "dynamicDescription": "Shyvana lansează o minge de foc către locația țintă, provocând <magicDamage>@Damage@ daune magice</magicDamage> și <status>încetinind inamicii cu @Calc_Slow@ timp de @SlowDuration@ secunde</status>. Aceasta explodează când lovește un inamic sau când ajunge la capătul traiectoriei.<br><br><keywordMajor>Formă de dragon:</keywordMajor> mingea de foc a Shyvanei e mai mare și străpunge inamicii. Când lovește un campion, un monstru mare sau când ajunge la capătul traiectoriei, declanșează o undă de foc care provoacă <magicDamage>@Calc_Dragon_Damage@ daune magice</magicDamage> și <status>încetinește inamicii cu @Calc_Slow_Dragon@ timp de @SlowDuration@ secunde</status>. Focul lasă o urmă timp de @GroundLingerDuration@ secunde, care provoacă <magicDamage>@DamagePerSecond@ daune magice pe secundă</magicDamage>. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana lansează o minge de foc către locația țintă, provocând <magicDamage>daune magice în valoare de @Damage@ + @Calc_Max_Health_Damage@ din viața maximă</magicDamage> și <status>încetinind inamicii cu @Calc_Slow@ timp de @SlowDuration@ secunde</status>. Aceasta explodează când lovește un inamic sau când ajunge la capătul traiectoriei.<br><br><keywordMajor>Formă de dragon:</keywordMajor> mingea de foc a Shyvanei e mai mare și străpunge inamicii. Când lovește un campion, un monstru mare sau când ajunge la capătul traiectoriei, declanșează o undă de foc care provoacă <magicDamage>daune magice în valoare de @Calc_Dragon_Damage@ + @Calc_Max_Health_Dragon_Damage@ din viața maximă</magicDamage> și <status>încetinește inamicii cu @Calc_Slow_Dragon@ timp de @SlowDuration@ secunde</status>. Focul lasă o urmă timp de @GroundLingerDuration@ secunde, care provoacă <magicDamage>@DamagePerSecond@ daune magice pe secundă</magicDamage>. @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -940,11 +941,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
-                11.5,
                 11.0,
-                10.5,
                 10.0,
-                10.0
+                9.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

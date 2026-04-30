@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Tous les @CastsToGainXP@ lancements de compétence, le Gardien du temps stocke <TFTBonus>@XPPerCast@</TFTBonus> XP. S'il en a suffisamment en stock pour vous permettre de passer au niveau supérieur, il vous transfère l'XP&nbsp;nécessaire. <br><br>Si vous êtes au niveau 10, il gagne <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;d'amplification des dégâts à la place.<br><br><rules>XP stockée : @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>Dans le Trésor de Crocc, le nombre d'utilisations de compétences nécessaires pour gagner de l'XP a été augmenté à @CastsToGainXPCT@ jusqu'à la phase 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Tous les @CastsToGainXP@ lancements de compétence, le Gardien du temps stocke <TFTBonus>@XPPerCast@</TFTBonus> XP. S'il en a suffisamment en stock pour vous permettre de passer au niveau supérieur, il vous transfère l'XP&nbsp;nécessaire. <br><br>Si vous êtes au niveau 10, il gagne <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;d'amplification des dégâts à la place.<br><br><rules>XP stockée : @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,10 +12270,6 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
-                    },
-                    {
-                        "name": "CastsToGainXPCT",
-                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13774,7 +13770,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Toutes les secondes, les Shurimiens gagnent @ASPerSecond*100@% de vitesse d'attaque et récupèrent @HealthRestorePerSecond@ PV. Au début du combat, ils gagnent des effets supplémentaires.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatique : débloquez Nasus, Renekton et Xerath, puis placez 4 champions Shurima sur votre plateau</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% de PV max</row><br><row>(@MinUnits@) @ArmorMR@ d'armure et résistance magique</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Un Shurimien se transcende toutes les @GodhoodCadence@ sec.</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Uniquement disponible lorsque Nasus, Renekton et Xerath sont débloqués.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
+        "tooltip_text": "Toutes les secondes, les Shurimiens gagnent @ASPerSecond*100@% de vitesse d'attaque et récupèrent @HealthRestorePerSecond@ PV. Au début du combat, ils gagnent des effets supplémentaires.<br><br><row>(@MinUnits@) @BonusHealth*100@% de PV max</row><br><row>(@MinUnits@) @ArmorMR@ d'armure et résistance magique</row><br><row>(@MinUnits@) Un Shurimien se transcende toutes les @GodhoodCadence@ sec.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13854,7 +13850,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 0.0
+                        "value": 1.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13862,7 +13858,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 0.0
+                        "value": 3.0
                     },
                     {
                         "name": "SkinScale",
@@ -13870,8 +13866,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -14574,7 +14570,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Après chaque combat, une breloque d'Ascendant apparaît dans votre boutique. Ces breloques d'Ascendant sont des effets puissants que vous pouvez acheter avec des PO.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>Dans le Trésor de Crocc, la breloque Fidèles disciples ne peut pas apparaître avant le niveau 7.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Après chaque combat, une breloque d'Ascendant apparaît dans votre boutique. Ces breloques d'Ascendant sont des effets puissants que vous pouvez acheter avec des PO.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15038,7 +15034,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.36
+                        "value": 0.4
                     },
                     {
                         "name": "DamageReduction",
@@ -15054,7 +15050,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.48
+                        "value": 0.55
                     },
                     {
                         "name": "DamageReduction",
@@ -15072,13 +15068,13 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "Après avoir perdu un combat de joueur, vos unités de la Section Anima gagnent @TechPerCombat@ de tech, plus un montant équivalent à @TechPerLoss@ fois la durée de votre série de défaites. Vous gagnez également @TechPerKill@ de tech à chaque fois qu'une unité de la Section Anima participe à une élimination.<br><br>Lorsque vos unités de la Section Anima cumulent @TechBreakpoint@ de tech, elles vous proposent des armes de la Section Anima. Vous pouvez acheter ces armes avec votre tech, ou vous pouvez décider d'économiser votre tech pour acheter des armes plus puissantes plus tard dans la partie.<br><br><row>(@MinUnits@) Commencez vos recherches ! </row><br><row>(@MinUnits@) Après avoir remporté un combat contre un autre joueur, vous obtenez du butin !</row>",
+        "tooltip_text": "Après avoir perdu un combat contre un joueur, vos unités de la Section Anima gagnent @TechPerCombat@ de tech, plus un montant équivalent à @TechPerLoss@ fois la durée de votre série de défaites. Vous gagnez également @TechPerKill@ de tech à chaque fois qu'une unité de la Section Anima participe à une élimination.<br><br>Lorsque vos unités de la Section Anima cumulent @TechBreakpoint@ de tech, elles vous proposent des armes de la Section Anima. Vous pouvez acheter ces armes avec votre tech, ou vous pouvez décider d'économiser votre tech pour acheter des armes plus puissantes plus tard dans la partie.<br><br><row>(@MinUnits@) Commencez vos recherches ! </row><br><row>(@MinUnits@) Après avoir remporté un combat contre un autre joueur, vous obtenez du butin !</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "PairsPartnerWinMultiplier",
-                        "value": 0.5
+                        "value": 0.85
                     },
                     {
                         "name": "TechBreakpoint",
@@ -15090,7 +15086,7 @@
                     },
                     {
                         "name": "TechPerCombat_DU",
-                        "value": 15.0
+                        "value": 20.0
                     },
                     {
                         "name": "TechPerDeath_PVE",
@@ -15307,7 +15303,7 @@
         "trait_id": "TFT17_BlitzcrankUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PartyAnimal.TFT_Set17.png",
-        "tooltip_text": "Une fois par combat, après être tombé sous @HealthThreshold*100@% de PV, Blitzcrank devient impossible à cibler et régénère @PercentHealthHeal*100@% de ses PV max par seconde. Lorsqu'il atteint ses PV maximum, ou lorsqu'il ne reste aucun autre allié, il retourne au combat. S'il est entièrement soigné, pour le reste du combat, Blitzcrank est dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> et le passif de La fête est finie tire des projectiles quatre fois plus vite.",
+        "tooltip_text": "Une fois par combat, après être tombé sous @HealthThreshold*100@% de PV, Blitzcrank devient impossible à cibler et régénère @PercentHealthHeal*100@% de ses PV max par seconde. Lorsqu'il atteint ses PV maximum, ou lorsqu'il ne reste aucun autre allié, il retourne au combat. S'il est entièrement soigné, pour le reste du combat, Blitzcrank est dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> et le passif de La fête est finie tire des projectiles quatre fois plus vite.",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15675,7 +15671,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.2
+                        "value": 0.25
                     }
                 ],
                 "min_units": 2,
@@ -15687,7 +15683,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.4
+                        "value": 0.45
                     }
                 ],
                 "min_units": 4,
@@ -15699,7 +15695,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.6
+                        "value": 0.65
                     }
                 ],
                 "min_units": 6,
@@ -15841,11 +15837,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.2
+                        "value": 0.25
                     },
                     {
                         "name": "AP",
-                        "value": 20.0
+                        "value": 25.0
                     }
                 ],
                 "min_units": 3,
@@ -15857,11 +15853,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.45
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 45.0
                     }
                 ],
                 "min_units": 4,
@@ -16472,7 +16468,7 @@
         "trait_id": "TFT17_SpaceGroove",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_SpaceGroove.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) Les Grooviens peuvent entrer dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font>. Lorsqu'ils sont dans le Groove, ils gagnent de la vitesse d'attaque et de la régénération de PV max. Ce bonus augmente pour chaque Groovien dans votre équipe.</row><br><row>(@MinUnits@) Tous les Grooviens commencent le combat dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> pendant @StartOfCombatDuration@ sec.</row><br><row>(@MinUnits@) Chaque seconde passée dans <font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> confère @ADAPPerSecond@% de dégâts d'attaque et de puissance cumulables.</row><br><row>(@MinUnits@) Ces effets augmentent de @EffectBonus@% !</row><br><row>(@MinUnits@) <font color='#F39B9B'>E</font><font color='#F3D59B'>n</font><font color='#D5F39B'>t</font><font color='#9BF39B'>r</font><font color='#9BF3D5'>e</font><font color='#9BD5F3'>z</font> <font color='#9B9BF3'>d</font><font color='#D59BF3'>a</font><font color='#F39BD5'>n</font><font color='#F39B9B'>s</font> <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>g</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9BF39B'>o</font><font color='#9BF3D5'>v</font><font color='#9BD5F3'>e</font> <font color='#9BD5F3'>!</font></row><br><br><font color='#F3D59B'>L</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> : @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%, @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
+        "tooltip_text": "<row>(@MinUnits@) Les Grooviens peuvent entrer dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font>. Lorsqu'ils sont dans le Groove, ils gagnent de la vitesse d'attaque et de la régénération de PV max. Ce bonus augmente pour chaque Groovien dans votre équipe.</row><br><row>(@MinUnits@) Tous les Grooviens commencent le combat dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> pendant @StartOfCombatDuration@ sec.</row><br><row>(@MinUnits@) Chaque seconde passée dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> confère @ADAPPerSecond@% de dégâts d'attaque et de puissance cumulables.</row><br><row>(@MinUnits@) Ces effets augmentent de @EffectBonus@% !</row><br><row>(@MinUnits@) <font color='#F39B9B'>E</font><font color='#F3D59B'>n</font><font color='#D5F39B'>t</font><font color='#9BF39B'>r</font><font color='#9BF3D5'>e</font><font color='#9BD5F3'>z</font> <font color='#9B9BF3'>d</font><font color='#D59BF3'>a</font><font color='#F39BD5'>n</font><font color='#F39B9B'>s</font> <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9BF39B'>o</font><font color='#9BF3D5'>v</font><font color='#9BD5F3'>e</font> <font color='#9BD5F3'>!</font></row><br><br>Stats dans <font color='#F3D59B'>l</font><font color='#D5F39B'>e</font> <font color='#9BF39B'>G</font><font color='#9BF3D5'>r</font><font color='#9BD5F3'>o</font><font color='#9B9BF3'>o</font><font color='#D59BF3'>v</font><font color='#F39BD5'>e</font> : @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%, @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -16634,6 +16630,10 @@
                         "value": 0.08
                     },
                     {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    },
+                    {
                         "name": "Serpent_DR_Teamwide",
                         "value": 0.08
                     },
@@ -16642,12 +16642,24 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Duration",
                         "value": 10.0
                     },
                     {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Interval",
                         "value": 1.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
                     },
                     {
                         "name": "Shield_Shield_Teamwide",
@@ -16660,6 +16672,10 @@
                     {
                         "name": "Wolf_HealthThreshold",
                         "value": 0.5
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
                     }
                 ]
             }
@@ -16677,7 +16693,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.1
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16708,6 +16724,10 @@
                         "value": 0.2
                     },
                     {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
                         "name": "Serpent_DR",
                         "value": 0.15
                     },
@@ -16720,12 +16740,32 @@
                         "value": 0.02
                     },
                     {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
                         "name": "Shield_Shield",
                         "value": 0.15
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16749,7 +16789,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16772,12 +16812,20 @@
                         "value": 30.0
                     },
                     {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
                         "name": "Mountain_APPerHealthThreshold",
                         "value": 2.0
                     },
                     {
                         "name": "Mountain_Health",
                         "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16796,8 +16844,20 @@
                         "value": 0.25
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16848,6 +16908,14 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
                         "name": "Mountain_DamageAmpPercent",
                         "value": 0.01
                     },
@@ -16858,6 +16926,18 @@
                     {
                         "name": "Mountain_HexesToReveal_TOOLTIPONLY",
                         "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16876,8 +16956,20 @@
                         "value": 0.35
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16885,6 +16977,119 @@
                     }
                 ],
                 "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 10,
                 "style_idx": 5,
                 "style_name": "kGold"
             }
@@ -16895,7 +17100,7 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Fontaine</TFTStargazer>.<br><br>Les alliés se trouvant sur des hexagones renforcés gagnent @Fountain_ManaRegen_Teamwide@ régénération de mana. Les Visionnaires sur des hexagones renforcés gagnent davantage et soignent l'allié ayant le moins de PV avec leurs compétences.<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% de soins des dégâts de compétence</expandRow><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Fontaine</TFTStargazer>.<br><br>Les alliés se trouvant sur des hexagones renforcés gagnent @Fountain_ManaRegen_Teamwide@ régénération de mana. Les Visionnaires sur des hexagones renforcés gagnent davantage et soignent l'allié ayant le moins de PV avec leurs compétences.<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% de soins via les dégâts de compétence.</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% de soins via les dégâts de compétence.</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16945,7 +17150,7 @@
         "trait_id": "TFT17_Stargazer_Huntress",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Chasseresse</TFTStargazer>.<br><br>Début du combat : vous marquez les ennemis ayant le plus de PV. <br><br>Les alliés dans les hexagones renforcés gagnent @Huntress_AS_Teamwide*100@% de vitesse d'attaque. Les Visionnaires sur des hexagones renforcés gagnent davantage et sont soignés de @Huntress_Heal*100@% de leurs PV max lorsqu'un ennemi marqué meurt.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Chasseresse</TFTStargazer>.<br><br>Début du combat : vous marquez les ennemis ayant le plus de PV. <br><br>Les alliés dans les hexagones renforcés gagnent @Huntress_AS_Teamwide*100@% de vitesse d'attaque. Les Visionnaires sur des hexagones renforcés gagnent davantage et sont soignés de @Huntress_Heal*100@% de leurs PV max lorsqu'un ennemi marqué meurt.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques.</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques.</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marques.</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16955,7 +17160,7 @@
                     },
                     {
                         "name": "Huntress_Heal",
-                        "value": 0.1
+                        "value": 0.15
                     }
                 ]
             }
@@ -16965,7 +17170,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.1
+                        "value": 0.12
                     },
                     {
                         "name": "NumMarks",
@@ -16981,7 +17186,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.3
+                        "value": 0.35
                     },
                     {
                         "name": "NumMarks",
@@ -16997,7 +17202,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.45
+                        "value": 0.55
                     },
                     {
                         "name": "NumMarks",
@@ -17025,7 +17230,7 @@
                     },
                     {
                         "name": "Medallion_IncreasePer3Star",
-                        "value": 6.5
+                        "value": 5.0
                     },
                     {
                         "name": "Medallion_Resists_Teamwide",
@@ -17057,7 +17262,7 @@
         "trait_id": "TFT17_Stargazer_Mountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Montagne</TFTStargazer>.<br><br>Tous les @Mountain_RoundsPerEmblem@ combats contre un joueur, vous obtenez un Emblème de Visionnaire. Les Visionnaires sur des hexagones renforcés bénéficient de divers bonus.<br><br>(Combats restants :&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) Ils gagnent @Mountain_Health*100@% de PV</row><br><row>(@MinUnits@) ET @Mountain_ADAP*100@% de dégâts d'attaque et de puissance</row><br><row>(@MinUnits@) ET @Mountain_Resists@ d'armure et de résistance magique</row><br><row>(@MinUnits@) ET @Mountain_AS*100@% de vitesse d'attaque</row><br><row>(@MinUnits@) ET @Mountain_DR*100@% de durabilité</row><br><row>(@MinUnits@) ET tous les autres bonus augmentent de @Mountain_StatIncrease*100@%</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de Tacticien.</rules>",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>La Montagne</TFTStargazer>.<br><br>Tous les @Mountain_RoundsPerEmblem@ combats contre un joueur, vous obtenez un Emblème de Visionnaire. Les Visionnaires sur des hexagones renforcés bénéficient de divers bonus.<br><br>(Combats restants :&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) Ils gagnent @Mountain_Health*100@% de PV.</row><br><row>(@MinUnits@) ET @Mountain_ADAP*100@% de dégâts d'attaque et de puissance.</row><br><row>(@MinUnits@) ET @Mountain_Resists@ d'armure et de résistance magique.</row><br><row>(@MinUnits@) ET @Mountain_AS*100@% de vitesse d'attaque.</row><br><row>(@MinUnits@) ET @Mountain_DR*100@% de durabilité.</row><br><row>(@MinUnits@) ET tous les autres bonus augmentent de @Mountain_StatIncrease*100@%.</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de Tacticien.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17093,7 +17298,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17113,7 +17318,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
@@ -17129,7 +17334,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17149,7 +17354,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
@@ -17165,11 +17370,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17185,11 +17390,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17201,11 +17406,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17221,11 +17426,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17237,11 +17442,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17257,11 +17462,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17273,11 +17478,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17296,7 +17501,7 @@
         "trait_id": "TFT17_Stargazer_Serpent",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>Le Serpent</TFTStargazer>.<br><br>Les alliés sur les hexagones renforcés gagnent @Serpent_DR_Teamwide*100@% de durabilité. Les Visionnaires sur des hexagones renforcés gagnent davantage et empoisonnent les ennemis, répétant une partie des dégâts infligés sous forme de dégâts magiques en @Serpent_Duration@ sec.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, @Serpent_Poison*100@% de dégâts de poison</expandRow><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>Le Serpent</TFTStargazer>.<br><br>Les alliés sur les hexagones renforcés gagnent @Serpent_DR_Teamwide*100@% de durabilité. Les Visionnaires sur des hexagones renforcés gagnent davantage et empoisonnent les ennemis, répétant une partie des dégâts infligés sous forme de dégâts magiques en @Serpent_Duration@ sec.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, @Serpent_Poison*100@% de dégâts de poison.</expandRow><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de joueur.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17366,7 +17571,7 @@
         "trait_id": "TFT17_Stargazer_Shield",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>L'Autel</TFTStargazer>.<br><br><row>(@MinUnits@) Lorsque N'IMPORTE QUEL CHAMPION MEURT, il est sacrifié sur l'autel. Les alliés sur les hexagones renforcés gagnent @Shield_Health_Teamwide@% de PV et @Shield_AS_Teamwide@% de vitesse d'attaque.<br><br>Après @Shield_NumDeaths@ sacrifices, les Visionnaires sur les hexagones renforcés gagnent @Shield_CashoutHP@% de %i:scaleHealth% bonus et @Shield_CashoutAS@% de %i:scaleAS% bonus.<br><br>Sacrifices : (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de Tacticien.</rules>",
+        "tooltip_text": "Les Visionnaires tracent une constellation différente à chaque partie. Cette partie : <TFTStargazer>L'Autel</TFTStargazer>.<br><br><row>(@MinUnits@) Lorsque N'IMPORTE QUEL CHAMPION MEURT, il est sacrifié sur l'autel. Les alliés sur les hexagones renforcés gagnent @Shield_Health_Teamwide@% de PV et @Shield_AS_Teamwide@% de vitesse d'attaque.<br><br>Après @Shield_NumDeaths@ sacrifices, les Visionnaires sur les hexagones renforcés gagnent @Shield_CashoutHP@% de %i:scaleHealth% bonus et @Shield_CashoutAS@% de %i:scaleAS% bonus.<br><br>Sacrifices : (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@).</row><br><br><rules>Plus d'hexagones sont révélés à chaque niveau de Tacticien.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17569,7 +17774,7 @@
         "trait_id": "TFT17_Timebreaker",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) À chaque défaite, vous gagnez des relances gratuites. À chaque victoire, vous stockez de l'XP dans un Noyau temporel (évolue selon la phase).</row><br><row>(@MinUnits@) ET les alliés gagnent @AttackSpeed*100@% de vitesse d'attaque.</row><br><row>(@MinUnits@) ET les Brise-Temps gagnent @TimebreakerAdditionalAS*100@% de vitesse d'attaque bonus.</row><br><br><rules>Relances en cas de défaite : @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>XP en cas de victoire : @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "tooltip_text": "<row>(@MinUnits@) Les alliés gagnent @AttackSpeed*100@% de vitesse d'attaque.</row><br><row>(@MinUnits@) ET lorsque vous perdez, vous obtenez des relances gratuites. À chaque victoire, vous stockez de l'XP dans un Noyau temporel (évolue selon la phase).</row><br><row>(@MinUnits@) ET les Brise-Temps gagnent @TimebreakerAdditionalAS*100@% de vitesse d'attaque bonus.</row><br><br><rules>Relances en cas de défaite : @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@.<br>XP en cas de victoire : @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@.</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -17580,11 +17785,11 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.0
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
@@ -17600,7 +17805,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.25
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17620,7 +17825,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.25
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17628,7 +17833,7 @@
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
-                        "value": 0.4
+                        "value": 0.5
                     }
                 ],
                 "min_units": 4,

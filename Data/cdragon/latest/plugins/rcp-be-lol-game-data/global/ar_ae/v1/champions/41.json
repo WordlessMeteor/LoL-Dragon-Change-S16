@@ -1,5 +1,6 @@
 {
     "id": 41,
+    "contentId": "338fd36d-e4b2-4c6f-8cc4-99d194165e20",
     "name": "غانغ بلانك",
     "alias": "Gangplank",
     "title": "وباء المياه المالحة",
@@ -1108,7 +1109,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تأكل الليمون للتعافي من تأثيرات إعاقة التحكم واستعادة الصحة.",
-            "dynamicDescription": "يستهلك غانغ بلانك كمية كبيرة من فاكهة الليمون، مما يزيل كل تأثيرات <status>الإعاقة</status> ويستعيد <healing>@BaseHealth@ بالإضافة إلى @Effect2Amount@% من الصحة الناقصة</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يستهلك غانغ بلانك كمية كبيرة من فاكهة الليمون، مما يزيل كل تأثيرات <status>الإعاقة</status> ويستعيد <healing>@BaseHealth@ بالإضافة إلى @PercentHeal@% من الصحة الناقصة</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1258,7 +1259,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@AmmoRechargeTime@ث إعادة شحن (حد أقصى: @MaxAmmo@)",
             "description": "يكشف غانغ بلانك برميل بارود في الموقع المستهدف. إذا هاجمه، ينفجر، مما ينشر ضرر الهجوم إلى الأعداء في المنطقة، ويبطئهم.",
-            "dynamicDescription": "يضع غانغ بلانك برميل بارود يمكن مهاجمته من قبل غانغ بلانك والأبطال المعادين لمدة @Effect5Amount@ث. عندما يدمر عدو البرميل، يزال فتيله. عندما يدمره غانغ بلانك، فإنه ينفجر مما يتسبب في أثر <status>إبطاء</status> بنسبة @FinalSlowAmount@% لمدة @Effect2Amount@ث وإلحاق <physicalDamage>ضرر هجوم</physicalDamage>، مع تجاهل نسبة @Effect10Amount@% من الدروع. يتلقّى الأبطال <physicalDamage>@Effect3Amount@ ضرر مادي</physicalDamage> إضافيًا.<br><br>تتلاشى صحة البرميل تدريجيًا كل @BarrelDecayTime@ث. تتسبب انفجارات البراميل في تفجير البراميل الأخرى ويكون مدى انفجاراتها متداخلًا، لكنها لا تلحق الضرر ضد نفس الهدف أكثر من مرة. إن تفعيل انفجارات البراميل باستخدام <spellName>مفاوضة قتالية</spellName> يمنح ذهبًا إضافيًا عن الأهداف المقتولة.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يضع غانغ بلانك برميل بارود يمكن مهاجمته من قبل غانغ بلانك والأبطال المعادين لمدة @BarrelDuration@ث. عندما يدمر عدو البرميل، يزال فتيله. عندما يدمره غانغ بلانك، فإنه ينفجر مما يتسبب في أثر <status>إبطاء</status> بنسبة @FinalSlowAmount@% لمدة @DebuffDuration@ث وإلحاق <physicalDamage>ضرر هجوم</physicalDamage>، مع تجاهل نسبة @BarrelArmorPenetration@% من الدروع. يتلقّى الأبطال <physicalDamage>@BonusDamageToChampions@ ضرر مادي</physicalDamage> إضافي.<br><br>تتلاشى صحة البرميل تدريجيًا كل @BarrelDecayTime@ث. تتسبب انفجارات البراميل في تفجير البراميل الأخرى ويكون مدى انفجاراتها متداخلًا، لكنها لا تلحق الضرر ضد نفس الهدف أكثر من مرة. إن تفعيل انفجارات البراميل باستخدام <spellName>مفاوضة قتالية</spellName> يمنح ذهبًا إضافيًا عن الأهداف المقتولة.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

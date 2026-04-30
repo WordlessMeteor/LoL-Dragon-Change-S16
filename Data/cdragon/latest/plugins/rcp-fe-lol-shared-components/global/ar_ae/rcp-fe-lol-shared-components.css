@@ -2328,6 +2328,7 @@ div.preload-watch {
 
 .discord-popup-content {
     align-items: center;
+    direction: rtl;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -2503,6 +2504,7 @@ div.preload-watch {
     background-image: url(/fe/lol-static-assets/images/discord_popup_bg.png);
     background-repeat: no-repeat;
     background-size: contain;
+    direction: rtl;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8645,6 +8647,49 @@ div.player-name-input__split-inputs-wrapper {
     height: 20px;
     text-align: center;
     width: 40px
+}
+
+.single-mission-widget_container {
+    background: #0c151f;
+    border: 1px solid #263039;
+    cursor: pointer;
+    height: calc(100% - 12px);
+    padding: 5px
+}
+
+.single-mission-widget_container .objectives-card-v2 {
+    box-sizing: border-box
+}
+
+.single-mission-widget_container .objectives-card-v2__description {
+    font-size: 12px;
+    padding-right: 5px
+}
+
+.single-mission-widget_container .objectives-card-v2__reward-container {
+    box-sizing: border-box;
+    min-width: 60px
+}
+
+.single-mission-widget_container .objectives-card-v2__reward-item {
+    margin-top: -5px
+}
+
+.single-mission-widget_container .objectives-card-v2__reward-count {
+    bottom: 63px;
+    right: 1px
+}
+
+.single-mission-widget_container .objectives-card-v2__reward-count-box {
+    bottom: 59px;
+    height: 23px;
+    width: 23px
+}
+
+.single-mission-widget_container .objectives-card-v2__reward-item_image {
+    height: 32px;
+    margin-top: -5px;
+    width: 32px
 }
 
 .multi-purchase-slider {

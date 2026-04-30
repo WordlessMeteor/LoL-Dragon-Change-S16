@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "케넨",
     "alias": "Kennen",
     "title": "폭풍의 심장",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "케넨이 기본 공격을 몇 번 하면 힘을 충전하여 다음 기본 공격 대상에게 폭풍의 표식을 남깁니다. 스킬 활성화시 이미 표식이 있는 대상에게 피해를 주며 또 다른 폭풍의 표식을 남길 수 있습니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 5번째 기본 공격마다 <magicDamage>@TotalDamagePassive@의 마법 피해</magicDamage>를 추가로 입힙니다.<br><br><spellActive>사용 시:</spellActive> 케넨이 전기 폭발을 일으켜 <spellName>폭풍의 표식</spellName>이 있는 주변 적에게 <magicDamage>@TotalDamageActive@의 마법 피해</magicDamage>를 입힙니다.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 5번째 기본 공격마다 %i:OnHit% <OnHit>적중 시</OnHit> <magicDamage>@TotalDamagePassive@의 마법 피해</magicDamage>를 추가로 입힙니다.<br><br><spellActive>사용 시:</spellActive> 케넨이 전기 폭발을 일으켜 <spellName>폭풍의 표식</spellName>이 있는 주변 적에게 <magicDamage>@TotalDamageActive@의 마법 피해</magicDamage>를 입힙니다.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "케넨이 번개로 변신하여 유닛을 뚫고 지나가며 폭풍의 표식을 남깁니다. 번개로 변신하면 이동 속도가 증가하며, 원래 모습으로 돌아오면 공격 속도가 증가합니다.",
-            "dynamicDescription": "케넨이 @DurationAsBall@초 동안 번개 구체로 변신해 유체화 상태가 되어 <speed>@MovementSpeed*100@%의 이동 속도</speed>를 얻고 충돌하는 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 한 명 이상의 적에게 피해를 입힐 경우 @EnergyRefund@의 기력을 얻습니다. <br><br>이 스킬의 효과가 끝나면 @DurationAfterBall@초 동안 <attackSpeed>@AttackSpeed*100@%의 공격 속도</attackSpeed>를 얻습니다. <recast>재사용</recast>하면 스킬을 일찍 끝낼 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "케넨이 @DurationAsBall@초 동안 번개 구체로 변신해 유체화 상태가 되어 <speed>@MovementSpeed*100@%의 이동 속도</speed>를 얻고 충돌하는 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 한 명 이상의 적에게 피해를 입힐 경우 @EnergyRefund@의 기력을 얻습니다. <br><br>이 스킬의 효과가 끝나면 @DurationAfterBall@초 동안 <attackSpeed>@TotalAS*100@%의 공격 속도</attackSpeed>를 얻습니다. 치명타 발동 시 지속시간이 @CritDurationBonus@초 늘어납니다. <recast>재사용</recast>하면 스킬을 일찍 끝낼 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

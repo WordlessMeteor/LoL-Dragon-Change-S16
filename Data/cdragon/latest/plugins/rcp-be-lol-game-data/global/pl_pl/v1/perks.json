@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Zabójcze Tempo",
         "majorChangePatchVersion": "",
-        "tooltip": "Zaatakowanie wrogiego bohatera zapewnia ci %i:scaleAS%@ASPerStack@ prędkości ataku na 6 sek. Efekt kumuluje się do 6 razy. Przy maksymalnej liczbie zadajesz @NoteDamage@ pkt. <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>dodatkowych obrażeń adaptacyjnych</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>przy ataku</OnHit>.<br><br>Czas utrzymywania maksymalnej liczby ładunków: @f1@ sek.<br>Zadane obrażenia: @f2@ pkt.<br><br>Runa śledzi również odsetek wymierzonych w bohaterów ataków podstawowych wyprowadzonych w ciągu 0.25 sek. od momentu osiągnięcia gotowości do wyprowadzenia ataku po ostatnim ataku wymierzonym w bohatera: @f3@% (@f4@ z @f5@).",
+        "tooltip": "Zaatakowanie wrogiego bohatera zapewnia ci %i:scaleAS%@ASPerStack@ jedn. prędkości ataku na 6 sek. Efekt kumuluje się do 6 razy. Przy maksymalnej liczbie ładunków zadajesz @NoteDamage@ pkt. (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>dodatkowych obrażeń adaptacyjnych</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>przy ataku</OnHit>.<br><br>Czas utrzymywania maksymalnej liczby ładunków: @f1@ sek.<br>Zadane obrażenia: @f2@ pkt.<br><br>Runa śledzi również odsetek wymierzonych w bohaterów ataków podstawowych wyprowadzonych w ciągu 0.25 sek. od momentu osiągnięcia gotowości do wyprowadzenia ataku po ostatnim ataku wymierzonym w bohatera: @f3@% (@f4@ z @f5@).",
         "shortDesc": "Zaatakowanie wrogiego bohatera zapewnia ci prędkość ataku. Efekt kumuluje się do 6 razy. Przy maksymalnej liczbie ładunków ataki zadają <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>dodatkowe obrażenia adaptacyjne</font></lol-uikit-tooltipped-keyword> przy ataku.",
         "longDesc": "Zaatakowanie wrogiego bohatera zapewnia ci [6% dla bohaterów walczących w zwarciu || 4% dla bohaterów walczących z dystansu] prędkości ataku na 6 sek. Efekt kumuluje się do 6 razy. Przy maksymalnej liczbie ładunków ataki zadają [9-30 pkt. dla bohaterów walczących w zwarciu || 6-24 pkt. dla bohaterów walczących z dystansu] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>dodatkowych obrażeń adaptacyjnych przy ataku, zwiększonych o 1% za każdy 1% dodatkowej prędkości ataku.</lol-uikit-tooltipped-keyword>",
         "recommendationDescriptor": "Zwiększenie prędkości ataku",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Pęd Fazowy",
-        "majorChangePatchVersion": "",
-        "tooltip": "Trafienie wrogiego bohatera za pomocą 3 ataków lub <b>oddzielnych</b> umiejętności w ciągu 4 sek. zapewnia <speed>@MoveSpeedCalc@ jedn. prędkości ruchu</speed> i <status>50% odporności na spowolnienia</status> na 3 sek.<br><br>Czas odnowienia: <attention>@CooldownCalc@ sek.</attention><br><br>Łączna liczba aktywacji: <attention>@f1@</attention>",
-        "shortDesc": "Trafienie wrogiego bohatera za pomocą 3 <b>oddzielnych</b> ataków lub umiejętności daje krótkotrwałą premię do <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>prędkości ruchu</lol-uikit-tooltipped-keyword> i odporność na spowolnienia. ",
-        "longDesc": "Trafienie wrogiego bohatera za pomocą 3 ataków lub <b>oddzielnych</b> umiejętności w ciągu 4 sek. zapewnia <speed>25-50% prędkości ruchu</speed>, zależnie od poziomu, i <status>50% odporności na spowolnienia</status> na 3 sek. Wartość premii do prędkości ruchu wynosi 50% w przypadku bohaterów walczących z dystansu.<br>Czas odnowienia: 30-10 sek.",
+        "name": "Przypływ Jeźdźca Fal",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Zadanie obrażeń równych 25% maksymalnego zdrowia bohatera w ciągu 3 sek. zapewnia <speed>@MoveSpeedCalc@ jedn. prędkości ruchu</speed> i <status>50% odporności na spowolnienia</status> na 3 sek.<br><br>Czas odnowienia: <attention>@CooldownCalc@ sek.</attention><br><br>Liczba aktywacji: <attention>@f1@</attention>",
+        "shortDesc": "Zadanie obrażeń równych 25% maksymalnego zdrowia bohatera zapewnia zastrzyk <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>prędkości ruchu</lol-uikit-tooltipped-keyword> oraz odporność na spowolnienia. ",
+        "longDesc": "Zadanie obrażeń równych 25% maksymalnego zdrowia bohatera w ciągu 3 sek. zapewnia <speed>40% prędkości ruchu</speed> i <status>50% odporności na spowolnienia</status> na 3 sek. Prędkość ruchu jest skuteczna w 75% w przypadku bohaterów walczących z dystansu.<br>Czas odnowienia: 20-10 sek.",
         "recommendationDescriptor": "Przyspieszenie ruchu",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Liczba aktywacji: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "Ognisty Dotyk",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Zadanie bohaterowi obrażeń za pomocą umiejętności podpala go, zadając @DamageCalc@ pkt. obrażeń adaptacyjnych na sekundę. Po 3 sek. podpalenia obrażenia od niego wzrastają o 100% na pozostały czas trwania odpalenia.<br><rules><br>Czas działania:<br>Pojedynczy cel: 4 sek.<br>Obszarowo: 2 sek.<br>Obrażenia w czasie: 1 sek.<br></rules><br>Twój Ognisty Dotyk zadał @f1@ pkt. obrażeń bohaterom.",
+        "shortDesc": "Zadanie obrażeń bohaterowi umiejętnością podpala go, zadając mu obrażenia w czasie.",
+        "longDesc": "Zadanie bohaterowi obrażeń za pomocą umiejętności podpala go, zadając 1-10 pkt. obrażeń adaptacyjnych na sekundę zależnie od poziomu (+<scaleAP>0.03 pkt. mocy umiejętności</scaleAP>) (+<scaleAD>0.08 pkt. dodatkowych obrażeń od ataku</scaleAD>). Po 3 sek. podpalenia obrażenia od niego wzrastają o 100% na pozostały czas trwania odpalenia.<br><rules><br>Czas działania:<br>Pojedynczy cel: 4 sek.<br>Obszarowo: 2 sek.<br>Obrażenia w czasie: 1 sek.<br></rules>",
+        "recommendationDescriptor": "Ciągłe obrażenia od umiejętności",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            "Zadane obrażenia podpalenia: @eogvar1@ pkt."
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Opiekun",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Nawałnica Mieczy",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Zyskujesz {{ Item_Melee_Ranged_Split }}% prędkości ataku na maksymalnie następującą liczbę ataków: @NumHits@, kiedy zaatakujesz wrogiego bohatera.<br><br>Czas odnowienia: @Cooldown@ sek.<br><hr><br>Ataki Nawałnicy Mieczy: @f1@<br>Procent trafionych ataków Nawałnicy: @f2@%<br><br><rules>Resetowanie ataków podstawowych zwiększa limit ataków o 1.<br>Umożliwia tymczasowe przekroczenie limitu dla prędkości ataku.</rules>",
-        "shortDesc": "Zyskujesz znaczną premię do prędkości ataku na następującą liczbę ataków: 3 przeciwko wrogim bohaterom.",
-        "longDesc": "Zyskujesz 160% (80% dla bohaterów walczących z dystansu) prędkości ataku na maksymalnie następującą liczbę ataków: 3, kiedy zaatakujesz wrogiego bohatera.<br><br>Efekt zakończy się, jeśli pomiędzy atakami upłynie więcej niż 3 sek.<br><br>Czas odnowienia: 10 sek.<br><br><rules>Resetowanie ataków zwiększa limit ataków o 1.<br>Umożliwia tymczasowe przekroczenie limitu dla prędkości ataku.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Kiedy zaatakujesz wrogiego bohatera, zyskujesz {{ Item_Melee_Ranged_Split }}% prędkości ataku na maksymalnie następującą liczbę ataków: @NumHits@ i zadajesz <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>pkt. dodatkowych obrażeń nieuchronnych</trueDamage>.<br><br>Czas odnowienia: @Cooldown@ sek.<br><hr><br>Ataki Nawałnicy Mieczy: @f1@<br>Zadane obrażenia: @f2@ pkt.<br>Procent trafionych ataków Nawałnicy: @f3@%<br><br><rules>Resetowanie ataków podstawowych zwiększa limit ataków o 1, maks. do @MaxBonusHits@.<br>Umożliwia tymczasowe przekroczenie limitu dla prędkości ataku.</rules>",
+        "shortDesc": "Zyskujesz znaczną premię do prędkości ataku oraz <trueDamage>dodatkowe obrażenia nieuchronne</trueDamage> na kolejne ataki (3) przeciwko wrogim bohaterom.",
+        "longDesc": "Zyskujesz 120% (60% dla bohaterów walczących z dystansu) prędkości ataku i <trueDamage>dodatkowe obrażenia nieuchronne</trueDamage> na maksymalnie następującą liczbę ataków: 3, kiedy zaatakujesz wrogiego bohatera.<br><br>Efekt zakończy się, jeśli pomiędzy atakami upłynie więcej niż 3 sek.<br><br>Czas odnowienia: 10 sek.<br>Obrażenia przy trafieniu: 4-20 pkt. (+0.08 pkt. dodatkowych obrażeń od ataku, +0.06 pkt. mocy umiejętności).<br><br><rules>Resetowanie ataków zwiększa limit ataków o 1.<br>Umożliwia tymczasowe przekroczenie limitu dla prędkości ataku.</rules>",
         "recommendationDescriptor": "Grad ciosów",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Liczba ataków wyprowadzonych z dodatkową prędkością ataku: @eogvar1@",
-            "Procent trafionych ataków Nawałnicy: @eogvar2@%"
+            "Zadane obrażenia: @eogvar2@ pkt."
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Ezoteryczna Kometa",
         "majorChangePatchVersion": "",
-        "tooltip": "Zadawanie obrażeń bohaterom za pomocą umiejętności powoduje zrzucenie komety w dane miejsce lub, jeśli Ezoteryczna Kometa się odnawia, skraca jej czas odnowienia.<br><br>Obrażenia: @DamageCalc@ pkt.<br>Czas odnowienia: @CooldownCalc@ sek.<br><rules><br>Skrócenie czasu odnowienia:<br>Nieobszarowe: 20%.<br>Obszarowe: 10%.<br>Rozłożone w czasie: 5%.<br></rules><br>@f3@% twoich komet trafiło w cel, zadając @f1@ pkt. obrażeń bohaterom.",
+        "tooltip": "Zadawanie bohaterom obrażeń za pomocą umiejętności powoduje zrzucenie na cel komety, której obrażenia zależą od odległości, w jakiej znajduje się cel.<br><br>Obrażenia: @DamageCalc@ pkt.<br>Czas odnowienia: @CooldownCalc@ sek.<br><rules><br>Wzmocnienie obrażeń skaluje się do maks. 100% przy 750 jedn. zasięgu.<br></rules><br>@f3@% zrzuconych komet trafiło swój cel, zadając łącznie @f1@ pkt. obrażeń bohaterom.",
         "shortDesc": "Zadanie bohaterowi obrażeń za pomocą umiejętności powoduje zrzucenie zadającej obrażenia komety na miejsce, w którym on się znajduje.",
-        "longDesc": "Zadanie bohaterowi obrażeń za pomocą umiejętności powoduje zrzucenie zadającej obrażenia komety na miejsce, w którym on się znajduje lub, jeśli Ezoteryczna Kometa się odnawia, skraca jej czas odnowienia.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Obrażenia adaptacyjne</font></lol-uikit-tooltipped-keyword>: 30-130 pkt. zależnie od poziomu (<scaleAP>+0.05 pkt. mocy umiejętności</scaleAP> i <scaleAD>+0.1 pkt. dodatkowych obrażeń od ataku</scaleAD>)<br>Czas odnowienia: 20-8 sek.<br><rules><br>Skrócenie czasu odnowienia:<br>Nieobszarowe: 20%.<br>Obszarowe: 10%.<br>Rozłożone w czasie: 5%.<br></rules>",
+        "longDesc": "Zadawanie bohaterom obrażeń za pomocą umiejętności powoduje zrzucenie na cel komety, której obrażenia zależą od dystansu.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Obrażenia adaptacyjne</font></lol-uikit-tooltipped-keyword>: 15-100 pkt. zależnie od poziomu (<scaleAP>+0.05 pkt. mocy umiejętności</scaleAP> i <scaleAD>+0.1 pkt. dodatkowych obrażeń od ataku</scaleAD>)<br>Czas odnowienia: 20-8 sek.<br><rules><br>Wzmocnienie obrażeń skaluje się do maks. 100% przy 750 jedn. zasięgu.<br></rules>",
         "recommendationDescriptor": "Obrażenia umiejętności",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

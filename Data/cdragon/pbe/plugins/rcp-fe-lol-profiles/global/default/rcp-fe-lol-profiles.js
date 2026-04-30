@@ -6,24 +6,24 @@
             function n() {
                 return t || (console.error("The `provider` object has not been set, please do so by calling the `init` method."), null)
             }
-            const a = {
+            const s = {
                 init: function(e, n) {
                     return t = e, this.add(n)
                 },
                 _getValue: function(e, n) {
-                    let a;
-                    return "function" == typeof n ? (a = n(t), a || console.warn("The function for key " + e + " returned a falsy value: ", a)) : "string" == typeof n ? (a = t.get(n), a || console.warn("The provider `get` invocation for the key " + e + " returned a falsy value: ", a)) : "object" == typeof n && (a = n), a
+                    let s;
+                    return "function" == typeof n ? (s = n(t), s || console.warn("The function for key " + e + " returned a falsy value: ", s)) : "string" == typeof n ? (s = t.get(n), s || console.warn("The provider `get` invocation for the key " + e + " returned a falsy value: ", s)) : "object" == typeof n && (s = n), s
                 },
                 add: function(e) {
                     e = e || {};
                     const t = [],
                         n = this;
-                    return Object.keys(e).forEach((function(a) {
-                        const s = e[a],
-                            i = n._getValue(a, s);
+                    return Object.keys(e).forEach((function(s) {
+                        const a = e[s],
+                            i = n._getValue(s, a);
                         i && i.then ? (i.then((function(e) {
-                            e || console.warn("The promise for the key " + a + " resolved with a falsy value: ", e), n._addValue(a, e)
-                        })), t.push(i)) : n._addValue(a, i)
+                            e || console.warn("The promise for the key " + s + " resolved with a falsy value: ", e), n._addValue(s, e)
+                        })), t.push(i)) : n._addValue(s, i)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -36,14 +36,14 @@
                     return n()
                 }
             };
-            e.exports = a
+            e.exports = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = o(n(3)),
+            var s = n(1),
+                a = o(n(3)),
                 i = o(n(4)),
                 r = n(6);
 
@@ -58,23 +58,23 @@
             } = r.PROFILE_PRIVACY;
             t.default = class {
                 constructor() {
-                    this._profilesEnabled = !0, this._isMatchHistoryInitialized = !1, this._isChallengesCollectionInitialized = !1, this._componentRegistrations = {}, this._platformConfigListeners = new Set, this._isPrivacyEnabled = !1, this._platformConfigBinding = (0, a.DataBinding)("/lol-platform-config", (0, a.getProvider)().getSocket()), this._summonerBinding = (0, a.DataBinding)("/lol-summoner", (0, a.getProvider)().getSocket()), this._createComponents(), this._challengesManager = new i.default, this._matchHistoryManager = new s.default, this._registerProfilesEnabledListeners(), this._registerPrivacyEnabledListener()
+                    this._profilesEnabled = !0, this._isMatchHistoryInitialized = !1, this._isChallengesCollectionInitialized = !1, this._componentRegistrations = {}, this._platformConfigListeners = new Set, this._isPrivacyEnabled = !1, this._platformConfigBinding = (0, s.DataBinding)("/lol-platform-config", (0, s.getProvider)().getSocket()), this._summonerBinding = (0, s.DataBinding)("/lol-summoner", (0, s.getProvider)().getSocket()), this._createComponents(), this._challengesManager = new i.default, this._matchHistoryManager = new a.default, this._registerProfilesEnabledListeners(), this._registerPrivacyEnabledListener()
                 }
                 _createComponents() {
                     const e = n(30),
                         t = n(246),
-                        a = n(264);
-                    e(), this._modalProfile = t(), this._mainProfile = a(this)
+                        s = n(264);
+                    e(), this._modalProfile = t(), this._mainProfile = s(this)
                 }
                 _registerProfilesEnabledListeners() {
                     this._platformConfigBinding.observe("/v1/namespaces/LcuProfiles", (e => {
                         const t = Object.assign({}, e);
-                        t.Enabled = a.Lodash.isNil(e) || a.Lodash.isNil(e.Enabled) || e.Enabled, this._profilesEnabled = t.Enabled;
+                        t.Enabled = s.Lodash.isNil(e) || s.Lodash.isNil(e.Enabled) || e.Enabled, this._profilesEnabled = t.Enabled;
                         try {
-                            a.Navigation.setItemEnabled(this._mainProfile.mainNavigationItem, this._profilesEnabled), this._isMatchHistoryInitialized || (this._matchHistoryManager.init(), this._isMatchHistoryInitialized = !0), this._isChallengesCollectionInitialized || (this._challengesManager.init(), this._isChallengesCollectionInitialized = !0)
+                            s.Navigation.setItemEnabled(this._mainProfile.mainNavigationItem, this._profilesEnabled), this._isMatchHistoryInitialized || (this._matchHistoryManager.init(), this._isMatchHistoryInitialized = !0), this._isChallengesCollectionInitialized || (this._challengesManager.init(), this._isChallengesCollectionInitialized = !0)
                         } catch (e) {
                             const t = e && e.message ? e.message : "unknown";
-                            a.logger.error("PrivateAPI initialization error: " + t)
+                            s.logger.error("PrivateAPI initialization error: " + t)
                         }
                         for (const e of this._platformConfigListeners) e(t)
                     }))
@@ -102,8 +102,8 @@
                 }
                 registerComponent(e, t, n) {
                     if (!e || !t) return;
-                    let a = this._componentRegistrations[e];
-                    a || (a = {}), n ? a[t] = n : delete a[t], this._componentRegistrations[e] = a
+                    let s = this._componentRegistrations[e];
+                    s || (s = {}), n ? s[t] = n : delete s[t], this._componentRegistrations[e] = s
                 }
                 get mainProfile() {
                     return this._mainProfile
@@ -117,7 +117,7 @@
                     t = e.puuid ? this._summonerBinding.get("/v2/summoners/puuid/" + e.puuid) : this._summonerBinding.get("/v1/summoners/" + e.summonerId), t.then((t => {
                         this.showOverlayForSummoner(t, e.showMatchHistory)
                     })).catch((e => {
-                        a.logger.error("Error showing summoner profile", e)
+                        s.logger.error("Error showing summoner profile", e)
                     }))
                 }
                 showOverlayForSummoner(e, t = !1) {
@@ -127,14 +127,14 @@
                     return !!this._isPrivacyEnabled && e.privacy === l.PRIVATE
                 }
                 showAlertSummonerIsPrivate(e) {
-                    const t = a.playerNames.getPlayerNameFromPlayer(e),
-                        n = a.tra.get("profile_private_hint_text"),
-                        s = a.tra.formatString("profile_private_cannot_view", {
+                    const t = s.playerNames.getPlayerNameFromPlayer(e),
+                        n = s.tra.get("profile_private_hint_text"),
+                        a = s.tra.formatString("profile_private_cannot_view", {
                             name: t.playerNameFull
                         }),
-                        i = a.tra.get("lib_ui_dialog_alert_ok"),
-                        r = a.TemplateHelper.contentBlockDialog(n, s, "dialog-small", "profile-private-alert");
-                    a.ModalManager.add({
+                        i = s.tra.get("lib_ui_dialog_alert_ok"),
+                        r = s.TemplateHelper.contentBlockDialog(n, a, "dialog-small", "profile-private-alert");
+                    s.ModalManager.add({
                         type: "DialogAlert",
                         data: {
                             contents: r,
@@ -155,19 +155,19 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
-            const s = () => a.traService.get("profile_navigation_match_history");
+            var s = n(1);
+            const a = () => s.traService.get("profile_navigation_match_history");
             t.default = class {
                 constructor() {
                     this._isSectionRegistered = !1
                 }
                 init() {
-                    const e = (0, a.DataBinding)("/lol-platform-config", (0, a.getProvider)().getSocket());
+                    const e = (0, s.DataBinding)("/lol-platform-config", (0, s.getProvider)().getSocket());
                     e.addObserver("/v1/namespaces/NewMatchHistory/Enabled", this, (t => {
-                        t && (e.removeObserver("/v1/namespaces/NewMatchHistory/Enabled", this), this._isSectionRegistered || (this._registerSection("profile-main", a.PrivateAPI.mainProfile), this._registerSection("profile-overlay", a.PrivateAPI.modalProfile), a.PrivateAPI.modalProfile.subnavigationApi.addEventListener("showSubsection", ((e, t) => {
-                            (0, a.getProvider)().getOptional("rcp-fe-lol-match-history").then((n => {
-                                n.hideMatchDetails(), "profile-overlay-match-history" === e && a.PrivateAPI.modalProfile.subnavigationApi.dispatchEvent("sectionWillShow", e, t)
-                            }), (e => a.logger.error("Provider getOptional failure", e)))
+                        t && (e.removeObserver("/v1/namespaces/NewMatchHistory/Enabled", this), this._isSectionRegistered || (this._registerSection("profile-main", s.PrivateAPI.mainProfile), this._registerSection("profile-overlay", s.PrivateAPI.modalProfile), s.PrivateAPI.modalProfile.subnavigationApi.addEventListener("showSubsection", ((e, t) => {
+                            (0, s.getProvider)().getOptional("rcp-fe-lol-match-history").then((n => {
+                                n.hideMatchDetails(), "profile-overlay-match-history" === e && s.PrivateAPI.modalProfile.subnavigationApi.dispatchEvent("sectionWillShow", e, t)
+                            }), (e => s.logger.error("Provider getOptional failure", e)))
                         })), this._isSectionRegistered = !0))
                     }))
                 }
@@ -178,7 +178,7 @@
                         })(e),
                         i = t.subnavigationApi.registerSection({
                             id: e + "-match-history",
-                            title: s(),
+                            title: a(),
                             priority: 2,
                             render: () => n,
                             enabled: !0
@@ -189,13 +189,13 @@
                         },
                         o = e => (e = e || {}, Object.assign(e, r), e);
                     i.addEventListener("willShow", (e => {
-                        (0, a.getProvider)().getOptional("rcp-fe-lol-match-history").then((t => t.displayMatchSummary(o(e))), (e => a.logger.error("Provider getOptional failure", e)))
+                        (0, s.getProvider)().getOptional("rcp-fe-lol-match-history").then((t => t.displayMatchSummary(o(e))), (e => s.logger.error("Provider getOptional failure", e)))
                     })), i.addEventListener("hide", (e => {
-                        (0, a.getProvider)().getOptional("rcp-fe-lol-match-history").then((t => t.hideMatchSummary(o(e))), (e => a.logger.error("Provider getOptional failure", e)))
+                        (0, s.getProvider)().getOptional("rcp-fe-lol-match-history").then((t => t.hideMatchSummary(o(e))), (e => s.logger.error("Provider getOptional failure", e)))
                     })), t.subnavigationApi.addEventListener("screenHidden", (e => {
-                        (0, a.getProvider)().getOptional("rcp-fe-lol-match-history").then((t => t.hideMatchSummary(o(e))), (e => a.logger.error("Provider getOptional failure", e)))
-                    })), a.tra.observe((() => {
-                        i.set("title", s())
+                        (0, s.getProvider)().getOptional("rcp-fe-lol-match-history").then((t => t.hideMatchSummary(o(e))), (e => s.logger.error("Provider getOptional failure", e)))
+                    })), s.tra.observe((() => {
+                        i.set("title", a())
                     }))
                 }
             }
@@ -204,15 +204,15 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5);
-            const i = () => a.traService.get("profile_navigation_challenges"),
+            var s = n(1),
+                a = n(5);
+            const i = () => s.traService.get("profile_navigation_challenges"),
                 r = "/v2/account/LCUPreferences/lol-challenges",
                 o = "challenges-collection",
                 l = "seasonal-tooltip-";
             t.default = class {
                 constructor() {
-                    this._section = null, this._clientState = s.CHALLENGES_CLIENT_STATES.HIDDEN, this._tabEnabledState = !1, this._isSectionRegistered = !1, this._isObservingSettings = !1, this._application = null, this._seasonalTooltipEnabledState = !1, this._seasonalTooltipSeenState = !0, this._isSeasonalTooltipShowing = !1, this._currentChallengeSeason = null, this._platformConfigBinding = (0, a.DataBinding)("/lol-platform-config", (0, a.getProvider)().getSocket()), this._challengesBinding = (0, a.DataBinding)("/lol-challenges", (0, a.getProvider)().getSocket()), this._settingsBinding = (0, a.DataBinding)("/lol-settings", (0, a.getProvider)().getSocket()), this._lolseasonsBinding = (0, a.DataBinding)("/lol-seasons", (0, a.getProvider)().getSocket())
+                    this._section = null, this._clientState = a.CHALLENGES_CLIENT_STATES.HIDDEN, this._tabEnabledState = !1, this._isSectionRegistered = !1, this._isObservingSettings = !1, this._application = null, this._seasonalTooltipEnabledState = !1, this._seasonalTooltipSeenState = !0, this._isSeasonalTooltipShowing = !1, this._currentChallengeSeason = null, this._platformConfigBinding = (0, s.DataBinding)("/lol-platform-config", (0, s.getProvider)().getSocket()), this._challengesBinding = (0, s.DataBinding)("/lol-challenges", (0, s.getProvider)().getSocket()), this._settingsBinding = (0, s.DataBinding)("/lol-settings", (0, s.getProvider)().getSocket()), this._lolseasonsBinding = (0, s.DataBinding)("/lol-seasons", (0, s.getProvider)().getSocket())
                 }
                 init() {
                     this._platformConfigBinding.addObserver("/v1/namespaces/Challenges/CollectionEnabled", this, this.handleCollectionEnabled), this._challengesBinding.addObserver("/v1/client-state", this, this.handleChallengesClientState), this._platformConfigBinding.addObserver("/v1/namespaces/Challenges/SeasonalTooltipEnabled", this, this.handleSeasonalTooltipEnabled), this._settingsBinding.addObserver("/v2/ready", this, this.handleSettingsReady), this._lolseasonsBinding.get("/v1/season/recent-final-split").then((e => {
@@ -220,7 +220,7 @@
                     }))
                 }
                 handleCollectionEnabled(e) {
-                    this._tabEnabledState = a.SharedChallengesConstants.getFlagValueOrDefault(a.SharedChallengesConstants.CHALLENGE_FLAG_NAMES.COLLECTION_ENABLED, e), this._isSectionRegistered ? this.setSectionEnabled(this._tabEnabledState) : this._tryRegisterSection(o, a.PrivateAPI.mainProfile)
+                    this._tabEnabledState = s.SharedChallengesConstants.getFlagValueOrDefault(s.SharedChallengesConstants.CHALLENGE_FLAG_NAMES.COLLECTION_ENABLED, e), this._isSectionRegistered ? this.setSectionEnabled(this._tabEnabledState) : this._tryRegisterSection(o, s.PrivateAPI.mainProfile)
                 }
                 handleSeasonalTooltipEnabled(e) {
                     this._seasonalTooltipEnabledState = null != e && !!e, this._updateSeasonalTooltip()
@@ -228,9 +228,9 @@
                 handleChallengesClientState(e) {
                     if (null != e)
                         if (this._clientState = e, this._isSectionRegistered) {
-                            const e = this._clientState === s.CHALLENGES_CLIENT_STATES.DISABLED || this._clientState === s.CHALLENGES_CLIENT_STATES.HIDDEN;
+                            const e = this._clientState === a.CHALLENGES_CLIENT_STATES.DISABLED || this._clientState === a.CHALLENGES_CLIENT_STATES.HIDDEN;
                             this.setSectionEnabled(!e)
-                        } else this._tryRegisterSection(o, a.PrivateAPI.mainProfile)
+                        } else this._tryRegisterSection(o, s.PrivateAPI.mainProfile)
                 }
                 handleSettingsReady(e) {
                     this._isSettingsReady = Boolean(e), this._tryInitializeSettingsObserver()
@@ -242,7 +242,7 @@
                     null == e ? this._seasonalTooltipSeenState = !0 : this._currentChallengeSeason && (this._seasonalTooltipSeenState = !!e.data && !!e.data[l + this._currentChallengeSeason.seasonId]), this._isSeasonalTooltipShowing || this._updateSeasonalTooltip()
                 }
                 _tryRegisterSection(e, t) {
-                    !this._isSectionRegistered && this._clientState !== s.CHALLENGES_CLIENT_STATES.HIDDEN && this._tabEnabledState && (this._registerSection(e, t), this._isSectionRegistered = !0)
+                    !this._isSectionRegistered && this._clientState !== a.CHALLENGES_CLIENT_STATES.HIDDEN && this._tabEnabledState && (this._registerSection(e, t), this._isSectionRegistered = !0)
                 }
                 _registerSection(e, t) {
                     this._section = t.subnavigationApi.registerSection({
@@ -251,26 +251,26 @@
                         priority: 1,
                         render: () => {
                             if (this._destroyApp(), !this._application) {
-                                const e = a.SharedComponents.getApi_SharedChallengesApps().createCollectionApp();
+                                const e = s.SharedComponents.getApi_SharedChallengesApps().createCollectionApp();
                                 return e.componentPromise.then((e => {
                                     this._application = e
                                 })), e.domNode
                             }
                             return this._application.rootElement
                         },
-                        enabled: this._clientState !== s.CHALLENGES_CLIENT_STATES.DISABLED
+                        enabled: this._clientState !== a.CHALLENGES_CLIENT_STATES.DISABLED
                     }), t.subnavigationApi.addEventListener("screenHidden", (() => {
                         this._destroyApp()
                     })), t.subnavigationApi.addEventListener("screenShown", (() => {
                         this._isSeasonalTooltipShowing && this._disableSeasonalTooltip()
                     })), this._section.addEventListener("hide", (() => {
                         this._destroyApp()
-                    })), a.tra.observe((() => {
+                    })), s.tra.observe((() => {
                         this._section.set("title", i())
                     }))
                 }
                 setSectionEnabled(e) {
-                    this._section.setEnabled(e), e ? this._section.setTooltip("") : this._section.setTooltip(a.traService.get("profile_navigation_challenges_tooltip_disabled"))
+                    this._section.setEnabled(e), e ? this._section.setTooltip("") : this._section.setTooltip(s.traService.get("profile_navigation_challenges_tooltip_disabled"))
                 }
                 _updateSeasonalTooltip() {
                     !this._isSeasonalTooltipShowing && this._seasonalTooltipEnabledState && !this._seasonalTooltipSeenState && this._shouldShowSeasonalTooltip() ? this._enableSeasonalTooltip() : !this._isSeasonalTooltipShowing || !this._seasonalTooltipSeenState && this._seasonalTooltipEnabledState && this._shouldShowSeasonalTooltip() || this._disableSeasonalTooltip()
@@ -284,13 +284,13 @@
                     if (!(this._currentChallengeSeason && this._currentChallengeSeason.seasonId && this._currentChallengeSeason.seasonStart && this._currentChallengeSeason.seasonEnd)) return;
                     const {
                         year: e
-                    } = this._currentChallengeSeason.metadata, t = new Date(this._currentChallengeSeason.seasonEnd), n = new Date(this._currentChallengeSeason.seasonStart), s = e || n.getFullYear(), i = s + 1;
-                    a.Navigation.setItemAlert(a.PrivateAPI.mainProfile.mainNavigationItem, !0), a.Navigation.setAttentionTooltip(a.PrivateAPI.mainProfile.mainNavigationItem, {
-                        title: a.traService.formatString("profile_navigation_challenges_seasonal_attention_tooltip_title", {
-                            year: s
+                    } = this._currentChallengeSeason.metadata, t = new Date(this._currentChallengeSeason.seasonEnd), n = new Date(this._currentChallengeSeason.seasonStart), a = e || n.getFullYear(), i = a + 1;
+                    s.Navigation.setItemAlert(s.PrivateAPI.mainProfile.mainNavigationItem, !0), s.Navigation.setAttentionTooltip(s.PrivateAPI.mainProfile.mainNavigationItem, {
+                        title: s.traService.formatString("profile_navigation_challenges_seasonal_attention_tooltip_title", {
+                            year: a
                         }),
-                        description: a.traService.formatString("profile_navigation_challenges_seasonal_attention_tooltip_description", {
-                            currentYear: s,
+                        description: s.traService.formatString("profile_navigation_challenges_seasonal_attention_tooltip_description", {
+                            currentYear: a,
                             date: t.toLocaleDateString(),
                             nextYear: i
                         }),
@@ -303,7 +303,7 @@
                     })
                 }
                 _disableSeasonalTooltip() {
-                    a.Navigation.setItemAlert(a.PrivateAPI.mainProfile.mainNavigationItem, !1), a.Navigation.setAttentionTooltip(a.PrivateAPI.mainProfile.mainNavigationItem, {}, !1), this._isSeasonalTooltipShowing = !1
+                    s.Navigation.setItemAlert(s.PrivateAPI.mainProfile.mainNavigationItem, !1), s.Navigation.setAttentionTooltip(s.PrivateAPI.mainProfile.mainNavigationItem, {}, !1), this._isSeasonalTooltipShowing = !1
                 }
                 _destroyApp() {
                     this._application && this._application.app && (this._application.app.destroy(), this._application = null)
@@ -325,7 +325,7 @@
             }), Object.defineProperty(t, "GAMEFLOW_PHASES", {
                 enumerable: !0,
                 get: function() {
-                    return a.default
+                    return s.default
                 }
             }), Object.defineProperty(t, "GAME_CONTEXT_KEYS", {
                 enumerable: !0,
@@ -340,7 +340,7 @@
             }), Object.defineProperty(t, "GAME_SEARCH_STATES", {
                 enumerable: !0,
                 get: function() {
-                    return s.default
+                    return a.default
                 }
             }), Object.defineProperty(t, "PAW", {
                 enumerable: !0,
@@ -393,8 +393,8 @@
                     return i.getGameKeyFromGameMode
                 }
             });
-            var a = f(n(7)),
-                s = f(n(8)),
+            var s = f(n(7)),
+                a = f(n(8)),
                 i = n(9),
                 r = f(n(10)),
                 o = f(n(11)),
@@ -450,10 +450,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.GAME_CONTEXT_KEYS = void 0, t.getGameKeyFromGameMode = function(e) {
-                return e === s.default.TFT ? i.TFT : i.LEAGUE_OF_LEGENDS
+                return e === a.default.TFT ? i.TFT : i.LEAGUE_OF_LEGENDS
             };
-            var a, s = (a = n(10)) && a.__esModule ? a : {
-                default: a
+            var s, a = (s = n(10)) && s.__esModule ? s : {
+                default: s
             };
             const i = {
                 TFT: "tft",
@@ -468,14 +468,11 @@
                 value: !0
             }), t.default = void 0;
             var n = {
-                CHERRY: "CHERRY",
-                CLASSIC: "CLASSIC",
-                CUSTOM: "CUSTOM",
-                KIWI: "KIWI",
-                PRACTICETOOL: "PRACTICETOOL",
-                STRAWBERRY: "STRAWBERRY",
                 TFT: "TFT",
-                TUTORIAL: "TUTORIAL"
+                CLASSIC: "CLASSIC",
+                CHERRY: "CHERRY",
+                STRAWBERRY: "STRAWBERRY",
+                PRACTICETOOL: "PRACTICETOOL"
             };
             t.default = n
         }, (e, t, n) => {
@@ -483,8 +480,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = c(n(12)),
-                s = c(n(13)),
+            var s = c(n(12)),
+                a = c(n(13)),
                 i = c(n(14)),
                 r = c(n(15)),
                 o = c(n(16)),
@@ -500,8 +497,8 @@
                 }
             }
             var p = {
-                COMPONENT_TYPES: a.default,
-                CURRENCY_TYPES: s.default,
+                COMPONENT_TYPES: s.default,
+                CURRENCY_TYPES: a.default,
                 INVENTORY_TYPES: i.default,
                 MEDIA_TYPES: r.default,
                 MEDIA_LOAD_TYPES: o.default,
@@ -661,34 +658,34 @@
                     ENABLED: "ENABLED",
                     DISABLED: "DISABLED"
                 },
-                a = {
+                s = {
                     PRIVATE: "PRIVATE",
                     PUBLIC: "PUBLIC"
                 };
-            var s = {
+            var a = {
                 ProfilePrivacyEnabledState: n,
-                ProfilePrivacySetting: a,
+                ProfilePrivacySetting: s,
                 DEFAULT_PROFILE_PRIVACY: {
                     enabledState: n.UNKNOWN,
-                    setting: a.PUBLIC
+                    setting: s.PUBLIC
                 }
             };
-            t.default = s
+            t.default = a
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             const n = "RANKED_SOLO_5x5",
-                a = "RANKED_FLEX_SR",
-                s = "RANKED_FLEX_TT",
+                s = "RANKED_FLEX_SR",
+                a = "RANKED_FLEX_TT",
                 i = "CHERRY",
                 r = "RANKED_TFT",
                 o = "RANKED_TFT_DOUBLE_UP",
                 l = "RANKED_TFT_TURBO",
                 d = "RANKED_TFT_PAIRS",
-                m = [n, a],
-                _ = [...m, s],
+                m = [n, s],
+                _ = [...m, a],
                 u = [i],
                 c = [r, o],
                 p = [l, d],
@@ -697,8 +694,8 @@
                 M = [...p, ...u];
             var y = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
-                RANKED_FLEX_SR_QUEUE_TYPE: a,
-                RANKED_FLEX_TT_QUEUE_TYPE: s,
+                RANKED_FLEX_SR_QUEUE_TYPE: s,
+                RANKED_FLEX_TT_QUEUE_TYPE: a,
                 RANKED_CHERRY_QUEUE_TYPE: i,
                 RANKED_TFT_QUEUE_TYPE: r,
                 RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: o,
@@ -720,8 +717,8 @@
                 value: !0
             }), t.default = void 0;
             const n = "UNRANKED",
-                a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
-                s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
+                a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 i = ["IV", "III", "II", "I"],
                 r = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
@@ -738,17 +735,17 @@
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
                 DIVISION_NAME_NONE: "NA",
                 APEX_TIERS: ["MASTER", "GRANDMASTER", "CHALLENGER"],
-                REGULAR_TIERS: a,
-                TIERS: s,
+                REGULAR_TIERS: s,
+                TIERS: a,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: a[a.length - 1],
-                LOWEST_TIER: a[0],
+                HIGHEST_TIER: s[s.length - 1],
+                LOWEST_TIER: s[0],
                 DIVISIONS: i,
                 HIGHEST_DIVISION: i[i.length - 1],
                 LOWEST_DIVISION: i[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: o(s),
+                TIER_NAME_TO_ORDINAL: o(a),
                 DIVISION_TO_ORDINAL: o(i),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
@@ -839,14 +836,14 @@
                 YEARS: "years"
             };
             t.TIME_UNITS = n;
-            const a = 36e5,
-                s = 864e5,
+            const s = 36e5,
+                a = 864e5,
                 i = 6048e5,
                 r = {
                     MILLISECONDS_IN_A_SECOND: 1e3,
                     MILLISECONDS_IN_A_MINUTE: 6e4,
-                    MILLISECONDS_IN_A_HOUR: a,
-                    MILLISECONDS_IN_A_DAY: s,
+                    MILLISECONDS_IN_A_HOUR: s,
+                    MILLISECONDS_IN_A_DAY: a,
                     MILLISECONDS_IN_A_WEEK: i,
                     MILLISECONDS_IN_A_YEAR: 314496e5
                 };
@@ -868,15 +865,15 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
+            var s = n(1);
             e.exports = function() {
                 const {
                     PlayerNameInputApi: e
-                } = a.SharedEmberComponents;
-                a.EmberApplicationFactory.setFactoryDefinition({
+                } = s.SharedEmberComponents;
+                s.EmberApplicationFactory.setFactoryDefinition({
                     name: "rcp-fe-lol-profiles-overview",
-                    ComponentFactory: a.ComponentFactory,
-                    tra: a.traService,
+                    ComponentFactory: s.ComponentFactory,
+                    tra: s.traService,
                     ProfileWrapperComponent: n(31),
                     ProfileSummonerInfoComponent: n(35),
                     SummonerNamingsComponent: n(38),
@@ -895,152 +892,152 @@
                     ProfileEmblemClashBannerComponent: n(80).default,
                     EternalsTooltipComponent: n(85).default,
                     ProfileBoostsComponent: n(88),
-                    PlayerRestrictionInfoComponent: a.SharedEmberComponents.PlayerRestrictionInfoComponent,
-                    PlayerNameComponent: a.SharedEmberComponents.PlayerNameComponent,
-                    RenderTelemetrySenderComponent: a.SharedEmberComponents.RenderTelemetrySenderComponent,
-                    ChallengeBannerTitleComponent: a.SharedChallengesComponents.ChallengeBannerTitleComponent,
-                    ChallengeBannerTokenComponent: a.SharedChallengesComponents.ChallengeBannerTokenComponent,
-                    ChallengeBannerTokenContainerComponent: a.SharedChallengesComponents.ChallengeBannerTokenContainerComponent,
-                    ChallengeItemTooltipComponent: a.SharedChallengesComponents.ChallengeItemTooltipComponent,
-                    ChallengeItemFooterComponent: a.SharedChallengesComponents.ChallengeItemFooterComponent,
-                    MasteryCrestComponent: a.SharedChampionMasteryComponents.MasteryCrestComponent,
+                    PlayerRestrictionInfoComponent: s.SharedEmberComponents.PlayerRestrictionInfoComponent,
+                    PlayerNameComponent: s.SharedEmberComponents.PlayerNameComponent,
+                    RenderTelemetrySenderComponent: s.SharedEmberComponents.RenderTelemetrySenderComponent,
+                    ChallengeBannerTitleComponent: s.SharedChallengesComponents.ChallengeBannerTitleComponent,
+                    ChallengeBannerTokenComponent: s.SharedChallengesComponents.ChallengeBannerTokenComponent,
+                    ChallengeBannerTokenContainerComponent: s.SharedChallengesComponents.ChallengeBannerTokenContainerComponent,
+                    ChallengeItemTooltipComponent: s.SharedChallengesComponents.ChallengeItemTooltipComponent,
+                    ChallengeItemFooterComponent: s.SharedChallengesComponents.ChallengeItemFooterComponent,
+                    MasteryCrestComponent: s.SharedChampionMasteryComponents.MasteryCrestComponent,
                     ProfileService: n(220),
                     EternalsService: n(221),
                     NotificationsService: n(222),
-                    RiotclientService: a.SharedChallengesComponents.RiotclientService,
-                    GameDataService: a.SharedChallengesComponents.GameDataService,
-                    SharedNotificationsService: a.SharedChallengesComponents.SharedNotificationsService,
-                    SummonerService: a.SharedChallengesComponents.SummonerService,
-                    CallToActionPipComponent: a.SharedEmberComponents.CallToActionPipComponent,
+                    RiotclientService: s.SharedChallengesComponents.RiotclientService,
+                    GameDataService: s.SharedChallengesComponents.GameDataService,
+                    SharedNotificationsService: s.SharedChallengesComponents.SharedNotificationsService,
+                    SummonerService: s.SharedChallengesComponents.SummonerService,
+                    CallToActionPipComponent: s.SharedEmberComponents.CallToActionPipComponent,
                     RankedReferenceModalButtonComponent: n(223)
-                }), a.EmberApplicationFactory.setFactoryDefinition({
+                }), s.EmberApplicationFactory.setFactoryDefinition({
                     name: "RankedReferenceModalComponent",
-                    tra: a.traService,
-                    ComponentFactory: a.ComponentFactory,
+                    tra: s.traService,
+                    ComponentFactory: s.ComponentFactory,
                     RankedReferenceModalComponent: n(226)
-                }), a.EmberApplicationFactory.setFactoryDefinition({
-                    ComponentFactory: a.ComponentFactory,
+                }), s.EmberApplicationFactory.setFactoryDefinition({
+                    ComponentFactory: s.ComponentFactory,
                     name: "ClashBannerPickerComponent",
-                    tra: a.traService,
+                    tra: s.traService,
                     ClashBannerPickerComponent: n(231).default
-                }), a.EmberApplicationFactory.setFactoryDefinition({
-                    ComponentFactory: a.ComponentFactory,
+                }), s.EmberApplicationFactory.setFactoryDefinition({
+                    ComponentFactory: s.ComponentFactory,
                     name: "rcp-fe-lol-profiles-backdrop",
-                    tra: a.traService,
+                    tra: s.traService,
                     ProfileBackdropComponent: n(234),
                     ProfileService: n(220)
-                }), a.EmberApplicationFactory.setFactoryDefinition({
-                    ComponentFactory: a.ComponentFactory,
+                }), s.EmberApplicationFactory.setFactoryDefinition({
+                    ComponentFactory: s.ComponentFactory,
                     name: "rcp-fe-lol-profiles-backdrop-picker",
-                    tra: a.traService,
+                    tra: s.traService,
                     ProfileBackdropPickerComponent: n(237)
-                }), a.EmberApplicationFactory.setFactoryDefinition({
-                    ComponentFactory: a.ComponentFactory,
+                }), s.EmberApplicationFactory.setFactoryDefinition({
+                    ComponentFactory: s.ComponentFactory,
                     name: "rcp-fe-lol-profiles-search-input",
-                    tra: a.traService,
+                    tra: s.traService,
                     ProfileSearchInputComponent: n(240).default,
                     ...e.fetchPlayerNameInputAndDependencies()
-                }), a.EmberApplicationFactory.setFactoryDefinition({
-                    ComponentFactory: a.ComponentFactory,
+                }), s.EmberApplicationFactory.setFactoryDefinition({
+                    ComponentFactory: s.ComponentFactory,
                     name: "rcp-fe-lol-profiles-search-trail",
-                    tra: a.traService,
+                    tra: s.traService,
                     ProfileSearchTrailComponent: n(243),
                     ProfileService: n(220),
-                    PlayerNameComponent: a.SharedEmberComponents.PlayerNameComponent
+                    PlayerNameComponent: s.SharedEmberComponents.PlayerNameComponent
                 })
             }
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
-            n(33), e.exports = s.Ember.Component.extend(i.default, {
+            n(33), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-overview-component"],
                 classNameBindings: ["loadingComplete:loaded:loading"],
                 layout: n(34),
-                notificationsService: s.Ember.inject.service("notifications"),
-                profileService: s.Ember.inject.service("profile"),
-                loadingComplete: s.Ember.computed.alias("profileService.loadingComplete"),
-                shouldShowUnreadNotifications: s.Ember.computed("isSearched", "notificationsService.hasUnreadNotifications", (function() {
+                notificationsService: a.Ember.inject.service("notifications"),
+                profileService: a.Ember.inject.service("profile"),
+                loadingComplete: a.Ember.computed.alias("profileService.loadingComplete"),
+                shouldShowUnreadNotifications: a.Ember.computed("isSearched", "notificationsService.hasUnreadNotifications", (function() {
                     return !this.get("isSearched") && this.get("notificationsService.hasUnreadNotifications")
                 })),
                 init() {
-                    this._super(...arguments), s.TelemetryService.sendTelemetryEvent("profile", "navClick", "profile"), s.TelemetryService.startTelemetryTimerEvent("profile_overview")
+                    this._super(...arguments), a.TelemetryService.sendTelemetryEvent("profile", "navClick", "profile"), a.TelemetryService.startTelemetryTimerEvent("profile_overview")
                 },
                 willDestroyElement() {
-                    s.TelemetryService.stopTelemetryTimerEvent("profile_overview", "timeSpent", "profile")
+                    a.TelemetryService.stopTelemetryTimerEvent("profile_overview", "timeSpent", "profile")
                 }
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            e.exports = a.Ember.Mixin.create({
-                profileMode: a.Ember.computed.alias("profileService.profileMode"),
-                summoner: a.Ember.computed.alias("profileService.summoner"),
-                hasSummoner: a.Ember.computed.bool("summoner"),
-                isSearched: a.Ember.computed.alias("profileService.isSearched"),
-                isMe: a.Ember.computed.not("isSearched"),
+            var s = n(1);
+            e.exports = s.Ember.Mixin.create({
+                profileMode: s.Ember.computed.alias("profileService.profileMode"),
+                summoner: s.Ember.computed.alias("profileService.summoner"),
+                hasSummoner: s.Ember.computed.bool("summoner"),
+                isSearched: s.Ember.computed.alias("profileService.isSearched"),
+                isMe: s.Ember.computed.not("isSearched"),
                 setOnlyIfGet: function(e, t) {
                     const n = this.get(t),
-                        a = this.get(e);
-                    Boolean(n) && n !== a && this.set(e, n)
+                        s = this.get(e);
+                    Boolean(n) && n !== s && this.set(e, n)
                 },
-                onSummonerComponentInit: a.Ember.on("init", (function() {
-                    this.get("profileService") || a.logger.error("No profileService! Found Component failing to inject profile service!"), this.setOnlyIfGet("profileService.profileMode", "profileMode"), this.setOnlyIfGet("profileService.summonerId", "summonerId")
+                onSummonerComponentInit: s.Ember.on("init", (function() {
+                    this.get("profileService") || s.logger.error("No profileService! Found Component failing to inject profile service!"), this.setOnlyIfGet("profileService.profileMode", "profileMode"), this.setOnlyIfGet("profileService.summonerId", "summonerId")
                 }))
             })
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "ZqMUzy3n",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-loading-spinner"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-overview-content"],["flush-element"],["text","\\n"],["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-overview-rendered"]],1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-call-to-action"],["flush-element"],["text","\\n          "],["append",["unknown",["call-to-action-pip"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","\\n    "],["append",["helper",["profile-summoner-info"],null,[["isSearched"],[["get",["isSearched"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowUnreadNotifications"]]],null,0],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblems-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-ranked"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-honor"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-legendary-champion-mastery"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-clash-trophy"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-clash-banner"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "G20iur0d",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-loading-spinner"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-overview-content"],["flush-element"],["text","\\n"],["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-overview-rendered"]],1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-call-to-action"],["flush-element"],["text","\\n          "],["append",["unknown",["call-to-action-pip"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","\\n    "],["append",["helper",["profile-summoner-info"],null,[["isSearched"],[["get",["isSearched"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowUnreadNotifications"]]],null,0],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblems-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-ranked"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-honor"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-legendary-champion-mastery"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-clash-trophy"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-clash-banner"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
-            n(36), e.exports = s.Ember.Component.extend(i.default, {
+            n(36), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-summoner-info-component"],
                 layout: n(37),
-                profileService: s.Ember.inject.service("profile"),
-                isLocalPlayer: s.Ember.computed.not("isSearched"),
-                challengesConfig: s.Ember.computed.alias("profileService.challengesConfig")
+                profileService: a.Ember.inject.service("profile"),
+                isLocalPlayer: a.Ember.computed.not("isSearched"),
+                challengesConfig: a.Ember.computed.alias("profileService.challengesConfig")
             })
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "mCwsNETX",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["flush-element"],["text","\\n  "],["open-element","lol-regalia-profile-v2-element",[]],["dynamic-attr","summoner-id",["unknown",["summoner","summonerId"]],null],["dynamic-attr","is-searched",["concat",[["unknown",["isSearched"]]]]],["dynamic-attr","puuid",["concat",[["unknown",["summoner","puuid"]]]]],["flush-element"],["text","\\n    "],["append",["unknown",["summoner-namings"]],false],["text","\\n    "],["append",["unknown",["summoner-xp-radial"]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-summoner-status-icons"],["flush-element"],["block",["if"],[["get",["isLocalPlayer"]]],null,1],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-restriction-info-outer-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-restriction-info-inner-container"],["flush-element"],["text","\\n      "],["block",["if"],[["get",["isLocalPlayer"]]],null,0],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","profile-challenge-banner-tokens"],["flush-element"],["text","\\n    "],["append",["helper",["challenge-banner-token-container"],null,[["puuid","isLocalPlayer"],[["get",["summoner","puuid"]],true]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["append",["unknown",["player-restriction-info"]],false]],"locals":[]},{"statements":[["append",["unknown",["profile-boosts"]],false]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "bnFoQ8QZ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["flush-element"],["text","\\n  "],["open-element","lol-regalia-profile-v2-element",[]],["dynamic-attr","summoner-id",["unknown",["summoner","summonerId"]],null],["dynamic-attr","is-searched",["concat",[["unknown",["isSearched"]]]]],["dynamic-attr","puuid",["concat",[["unknown",["summoner","puuid"]]]]],["flush-element"],["text","\\n    "],["append",["unknown",["summoner-namings"]],false],["text","\\n    "],["append",["unknown",["summoner-xp-radial"]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-summoner-status-icons"],["flush-element"],["block",["if"],[["get",["isLocalPlayer"]]],null,1],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-restriction-info-outer-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-restriction-info-inner-container"],["flush-element"],["text","\\n      "],["block",["if"],[["get",["isLocalPlayer"]]],null,0],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","profile-challenge-banner-tokens"],["flush-element"],["text","\\n    "],["append",["helper",["challenge-banner-token-container"],null,[["puuid","isLocalPlayer"],[["get",["summoner","puuid"]],true]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["append",["unknown",["player-restriction-info"]],false]],"locals":[]},{"statements":[["append",["unknown",["profile-boosts"]],false]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
-            n(39), e.exports = s.Ember.Component.extend(i.default, {
+            n(39), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-summoner-namings-component"],
                 layout: n(40),
-                profileService: s.Ember.inject.service("profile"),
-                puuid: s.Ember.computed.alias("summoner.puuid"),
-                gameName: s.Ember.computed("summoner.gameName", (function() {
+                profileService: a.Ember.inject.service("profile"),
+                puuid: a.Ember.computed.alias("summoner.puuid"),
+                gameName: a.Ember.computed("summoner.gameName", (function() {
                     return this.get("summoner.gameName") || null
                 })),
-                tagLine: s.Ember.computed("summoner.tagLine", (function() {
+                tagLine: a.Ember.computed("summoner.tagLine", (function() {
                     return this.get("summoner.tagLine") || null
                 })),
-                summonerName: s.Ember.computed("summoner.displayName", (function() {
+                summonerName: a.Ember.computed("summoner.displayName", (function() {
                     return this.get("summoner.displayName") || null
                 }))
             })
@@ -1048,34 +1045,34 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "AC8Bfqop",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-resizing-text-field",[]],["static-attr","class","style-profile-summoner-name"],["static-attr","data-max-width","155"],["flush-element"],["text","\\n  "],["append",["helper",["player-name"],null,[["format","puuid","gameName","tagLine","summonerName","isCopyEnabled"],["tooltip",["get",["puuid"]],["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]],true]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "f2CB1P1o",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-resizing-text-field",[]],["static-attr","class","style-profile-summoner-name"],["static-attr","data-max-width","155"],["flush-element"],["text","\\n  "],["append",["helper",["player-name"],null,[["format","puuid","gameName","tagLine","summonerName","isCopyEnabled"],["tooltip",["get",["puuid"]],["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]],true]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 },
                 r = n(42);
-            n(43), e.exports = s.Ember.Component.extend(i.default, {
+            n(43), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-summoner-xp-radial-component"],
                 layout: n(44),
-                profileService: s.Ember.inject.service("profile"),
+                profileService: a.Ember.inject.service("profile"),
                 circlePercentFill: 2,
                 circleDiameter: 13,
                 circlePositionXY: 6.5,
                 circleRadius: 5,
-                circleCircumference: s.Ember.computed("circleRadius", (function() {
+                circleCircumference: a.Ember.computed("circleRadius", (function() {
                     return 2 * this.get("circleRadius") * Math.PI
                 })),
-                progressPercent: s.Ember.computed("circlePercentFill", "circleCircumference", (function() {
+                progressPercent: a.Ember.computed("circlePercentFill", "circleCircumference", (function() {
                     return this.get("circleCircumference") - this.get("circlePercentFill") / 100 * this.get("circleCircumference")
                 })),
-                xpProgressNumbersDisplay: s.Ember.computed("summoner.xpSinceLastLevel", "summoner.xpUntilNextLevel", (function() {
+                xpProgressNumbersDisplay: a.Ember.computed("summoner.xpSinceLastLevel", "summoner.xpUntilNextLevel", (function() {
                     const e = this.sanitizeInt(this.get("summoner.xpUntilNextLevel")),
                         t = this.sanitizeInt(this.get("summoner.xpSinceLastLevel"));
                     return (0, r.translate)(this, "profile_summoner_info_experience_progress_tooltip_message", {
@@ -1083,8 +1080,8 @@
                         xpUntilNextLevel: e
                     })
                 })),
-                onPercentCompleteForNextLevelChange: s.Ember.on("didInsertElement", s.Ember.observer("summoner.percentCompleteForNextLevel", (function() {
-                    s.Ember.run.once(this, "updateXpProgressBar")
+                onPercentCompleteForNextLevelChange: a.Ember.on("didInsertElement", a.Ember.observer("summoner.percentCompleteForNextLevel", (function() {
+                    a.Ember.run.once(this, "updateXpProgressBar")
                 }))),
                 updateXpProgressBar() {
                     let e = this.sanitizePercent(this.get("summoner.percentCompleteForNextLevel"));
@@ -1101,24 +1098,24 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.translate = function(e, t, n) {
-                const a = e.get("tra");
-                return a.get("formatString")(t, n)
+                const s = e.get("tra");
+                return s.get("formatString")(t, n)
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "4SoEZv9A",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-xp-radial-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-xp-radial"],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","class","summoner-xp-radial-progress"],["dynamic-attr","width",["concat",[["unknown",["circleDiameter"]]]]],["dynamic-attr","height",["concat",[["unknown",["circleDiameter"]]]]],["flush-element"],["text","\\n"],["text","      "],["open-element","circle",[]],["static-attr","class","summoner-xp-radial-progress-circle summoner-xp-radial-progress-circle-bg"],["static-attr","stroke-width","2"],["dynamic-attr","stroke-dasharray",["concat",[["unknown",["circleCircumference"]]," ",["unknown",["circleCircumference"]]]]],["static-attr","stroke-dashoffset","0"],["static-attr","fill","transparent"],["dynamic-attr","r",["concat",[["unknown",["circleRadius"]]]]],["dynamic-attr","cx",["concat",[["unknown",["circlePositionXY"]]]]],["dynamic-attr","cy",["concat",[["unknown",["circlePositionXY"]]]]],["flush-element"],["close-element"],["text","\\n"],["text","      "],["open-element","circle",[]],["static-attr","class","summoner-xp-radial-progress-circle"],["static-attr","stroke-width","2"],["dynamic-attr","stroke-dasharray",["concat",[["unknown",["circleCircumference"]]," ",["unknown",["circleCircumference"]]]]],["dynamic-attr","stroke-dashoffset",["concat",[["unknown",["progressPercent"]]]]],["static-attr","fill","transparent"],["dynamic-attr","r",["concat",[["unknown",["circleRadius"]]]]],["dynamic-attr","cx",["concat",[["unknown",["circlePositionXY"]]]]],["dynamic-attr","cy",["concat",[["unknown",["circlePositionXY"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","summoner-xp-radial-numbers"],["flush-element"],["append",["unknown",["summoner","summonerLevel"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summoner-xp-radial-hover-text"],["flush-element"],["append",["unknown",["xpProgressNumbersDisplay"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "ZT6LeiT4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-xp-radial-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-xp-radial"],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","class","summoner-xp-radial-progress"],["dynamic-attr","width",["concat",[["unknown",["circleDiameter"]]]]],["dynamic-attr","height",["concat",[["unknown",["circleDiameter"]]]]],["flush-element"],["text","\\n"],["text","      "],["open-element","circle",[]],["static-attr","class","summoner-xp-radial-progress-circle summoner-xp-radial-progress-circle-bg"],["static-attr","stroke-width","2"],["dynamic-attr","stroke-dasharray",["concat",[["unknown",["circleCircumference"]]," ",["unknown",["circleCircumference"]]]]],["static-attr","stroke-dashoffset","0"],["static-attr","fill","transparent"],["dynamic-attr","r",["concat",[["unknown",["circleRadius"]]]]],["dynamic-attr","cx",["concat",[["unknown",["circlePositionXY"]]]]],["dynamic-attr","cy",["concat",[["unknown",["circlePositionXY"]]]]],["flush-element"],["close-element"],["text","\\n"],["text","      "],["open-element","circle",[]],["static-attr","class","summoner-xp-radial-progress-circle"],["static-attr","stroke-width","2"],["dynamic-attr","stroke-dasharray",["concat",[["unknown",["circleCircumference"]]," ",["unknown",["circleCircumference"]]]]],["dynamic-attr","stroke-dashoffset",["concat",[["unknown",["progressPercent"]]]]],["static-attr","fill","transparent"],["dynamic-attr","r",["concat",[["unknown",["circleRadius"]]]]],["dynamic-attr","cx",["concat",[["unknown",["circlePositionXY"]]]]],["dynamic-attr","cy",["concat",[["unknown",["circlePositionXY"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","summoner-xp-radial-numbers"],["flush-element"],["append",["unknown",["summoner","summonerLevel"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summoner-xp-radial-hover-text"],["flush-element"],["append",["unknown",["xpProgressNumbersDisplay"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 },
                 r = n(42);
 
@@ -1127,16 +1124,16 @@
             }
 
             function l(e) {
-                return t = o(e), n = 0, a = 100, Math.min(Math.max(t, n), a);
-                var t, n, a
+                return t = o(e), n = 0, s = 100, Math.min(Math.max(t, n), s);
+                var t, n, s
             }
-            n(46), e.exports = s.Ember.Component.extend(i.default, {
+            n(46), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-summoner-level-bar-component"],
                 layout: n(47),
-                profileService: s.Ember.inject.service("profile"),
-                challengesConfig: s.Ember.computed.alias("profileService.challengesConfig"),
-                onPercentCompleteForNextLevelChange: s.Ember.on("didInsertElement", s.Ember.observer("summoner.percentCompleteForNextLevel", (function() {
-                    s.Ember.run.once(this, "updateXpProgressBar")
+                profileService: a.Ember.inject.service("profile"),
+                challengesConfig: a.Ember.computed.alias("profileService.challengesConfig"),
+                onPercentCompleteForNextLevelChange: a.Ember.on("didInsertElement", a.Ember.observer("summoner.percentCompleteForNextLevel", (function() {
+                    a.Ember.run.once(this, "updateXpProgressBar")
                 }))),
                 updateXpProgressBar() {
                     const e = this.get("element");
@@ -1146,7 +1143,7 @@
                     let n = l(this.get("summoner.percentCompleteForNextLevel"));
                     n > 0 && n < 2 && (n = 2), t.style.width = n + "%"
                 },
-                xpProgressNumbersDisplay: s.Ember.computed("summoner.xpSinceLastLevel", "summoner.xpUntilNextLevel", (function() {
+                xpProgressNumbersDisplay: a.Ember.computed("summoner.xpSinceLastLevel", "summoner.xpUntilNextLevel", (function() {
                     const e = o(this.get("summoner.xpUntilNextLevel")),
                         t = o(this.get("summoner.xpSinceLastLevel"));
                     return (0, r.translate)(this, "profile_summoner_info_experience_progress_tooltip_message", {
@@ -1159,10 +1156,10 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "WktC9NK5",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill-preloader"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-number-plate"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-number-value"],["flush-element"],["append",["unknown",["summoner","summonerLevel"]],false],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-numbers-display"],["flush-element"],["text","\\n  "],["append",["unknown",["xpProgressNumbersDisplay"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n    "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_message"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "jM027onh",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill-preloader"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-number-plate"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-number-value"],["flush-element"],["append",["unknown",["summoner","summonerLevel"]],false],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-numbers-display"],["flush-element"],["text","\\n  "],["append",["unknown",["xpProgressNumbersDisplay"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n    "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_message"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1170,10 +1167,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
+            var s, a = n(1),
                 i = n(42),
-                r = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+                r = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 },
                 o = function(e, t) {
                     if (!t && e && e.__esModule) return e;
@@ -1182,14 +1179,14 @@
                     };
                     var n = l(t);
                     if (n && n.has(e)) return n.get(e);
-                    var a = {},
-                        s = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                    var s = {},
+                        a = Object.defineProperty && Object.getOwnPropertyDescriptor;
                     for (var i in e)
                         if ("default" !== i && Object.prototype.hasOwnProperty.call(e, i)) {
-                            var r = s ? Object.getOwnPropertyDescriptor(e, i) : null;
-                            r && (r.get || r.set) ? Object.defineProperty(a, i, r) : a[i] = e[i]
-                        } a.default = e, n && n.set(e, a);
-                    return a
+                            var r = a ? Object.getOwnPropertyDescriptor(e, i) : null;
+                            r && (r.get || r.set) ? Object.defineProperty(s, i, r) : s[i] = e[i]
+                        } s.default = e, n && n.set(e, s);
+                    return s
                 }(n(49));
 
             function l(e) {
@@ -1202,20 +1199,20 @@
             }
             n(50);
             const d = "UNRANKED";
-            var m = s.Ember.Component.extend(r.default, {
+            var m = a.Ember.Component.extend(r.default, {
                 classNames: ["style-profile-ranked-component"],
                 layout: n(51),
-                profileService: s.Ember.inject.service("profile"),
-                rankedData: s.Ember.computed.alias("profileService.rankedData"),
-                challengesConfig: s.Ember.computed.alias("profileService.challengesConfig"),
-                computedQueueInfos: s.Ember.computed("summoner.puuid", "rankedData.queues", (function() {
+                profileService: a.Ember.inject.service("profile"),
+                rankedData: a.Ember.computed.alias("profileService.rankedData"),
+                challengesConfig: a.Ember.computed.alias("profileService.challengesConfig"),
+                computedQueueInfos: a.Ember.computed("summoner.puuid", "rankedData.queues", (function() {
                     const e = this.get("rankedData");
-                    if (s.Lodash.isNil(e)) return;
+                    if (a.Lodash.isNil(e)) return;
                     const t = e.queues ? e.queues : [],
                         n = o.getRankedQueues(t);
                     return this.buildQueueInfos(n)
                 })),
-                mostValuableQueueInfo: s.Ember.computed("computedQueueInfos", "computedQueueInfos.[]", (function() {
+                mostValuableQueueInfo: a.Ember.computed("computedQueueInfos", "computedQueueInfos.[]", (function() {
                     const e = this.get("computedQueueInfos");
                     if (e && e.length > 0) return e[0];
                     return {
@@ -1225,7 +1222,7 @@
                         }
                     }
                 })),
-                splitReward: s.Ember.computed("rankedData.rankedRegaliaLevel", (function() {
+                splitReward: a.Ember.computed("rankedData.rankedRegaliaLevel", (function() {
                     const e = this.get("rankedData.rankedRegaliaLevel");
                     return e || 0
                 })),
@@ -1239,17 +1236,17 @@
                     }
                     return t
                 },
-                buildQueueLabel: e => e ? s.LeagueTierNames.getRankedQueueName(e.queueType) : "",
+                buildQueueLabel: e => e ? a.LeagueTierNames.getRankedQueueName(e.queueType) : "",
                 buildTierDivisionLabel(e) {
                     if (!e) return "";
                     const {
                         tier: t,
                         division: n,
-                        isProvisional: a
-                    } = e, r = s.LeagueTierNames.getFullTierDivisionName(t, n);
-                    return a ? (0, i.translate)(this, "ranked_subtitle_provisional_rank", {
+                        isProvisional: s
+                    } = e, r = a.LeagueTierNames.getFullTierDivisionName(t, n);
+                    return s ? (0, i.translate)(this, "ranked_subtitle_provisional_rank", {
                         tierDivisionLoc: r
-                    }) : s.LeagueTierNames.getFullTierDivisionName(t, n)
+                    }) : a.LeagueTierNames.getFullTierDivisionName(t, n)
                 },
                 buildSubtitleLabel(e) {
                     return e.tier && e.tier !== d ? (0, i.translate)(this, "ranked_tooltip_wins_and_lp", {
@@ -1262,17 +1259,17 @@
                     for (const n of e) n.warnings && n.warnings.demotionWarning && (t = Math.max(t, n.warnings.demotionWarning));
                     return t
                 },
-                warningAnyQueue: s.Ember.computed("computedQueueInfos", "computedQueueInfos.[]", (function() {
+                warningAnyQueue: a.Ember.computed("computedQueueInfos", "computedQueueInfos.[]", (function() {
                     const e = this.get("computedQueueInfos");
                     return e ? this.getHighestWarning(e) : 0
                 })),
-                lastSeasonTier: s.Ember.computed("summoner.puuid", "rankedData.{highestPreviousSeasonEndTier,highestPreviousSeasonEndDivision}", (function() {
+                lastSeasonTier: a.Ember.computed("summoner.puuid", "rankedData.{highestPreviousSeasonEndTier,highestPreviousSeasonEndDivision}", (function() {
                     if (!this.get("summoner.puuid") || !this.get("rankedData")) return d;
                     let e = this.get("rankedData.highestPreviousSeasonEndTier");
                     return e && "NONE" !== e || (e = d), e
                 })),
-                lastSeasonTierText: s.Ember.computed("lastSeasonTier", (function() {
-                    return s.LeagueTierNames.getTierName(this.get("lastSeasonTier"))
+                lastSeasonTierText: a.Ember.computed("lastSeasonTier", (function() {
+                    return a.LeagueTierNames.getTierName(this.get("lastSeasonTier"))
                 }))
             });
             t.default = m
@@ -1284,25 +1281,25 @@
                 const t = [];
                 for (const n of e) {
                     const e = i(n);
-                    s.QUEUES.ALL_RATED_QUEUE_TYPES.includes(e.queueType) || t.push(e)
+                    a.QUEUES.ALL_RATED_QUEUE_TYPES.includes(e.queueType) || t.push(e)
                 }
                 return t
             };
-            var a = n(1),
-                s = n(6);
+            var s = n(1),
+                a = n(6);
 
             function i(e) {
                 const t = {};
-                return t.queueType = e.queueType, t.tier = a.Lodash.get(e, "tier", "UNRANKED"), "NONE" === t.tier && (t.tier = "UNRANKED"), t.isUnranked = "UNRANKED" === String(t.tier).toUpperCase(), t.leaguePoints = e.leaguePoints, t.division = a.Lodash.get(e, "division", "IV"), t.wins = e.wins, t.warnings = e.warnings, t.isProvisional = e.isProvisional, t
+                return t.queueType = e.queueType, t.tier = s.Lodash.get(e, "tier", "UNRANKED"), "NONE" === t.tier && (t.tier = "UNRANKED"), t.isUnranked = "UNRANKED" === String(t.tier).toUpperCase(), t.leaguePoints = e.leaguePoints, t.division = s.Lodash.get(e, "division", "IV"), t.wins = e.wins, t.warnings = e.warnings, t.isProvisional = e.isProvisional, t
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "kr6bbzoX",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["mostValuableQueueInfo","queueLabel"]],false],["close-element"],["text","\\n"],["block",["unless"],[["get",["mostValuableQueueInfo","isUnranked"]]],null,5],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n      "],["append",["helper",["ranked-icon"],null,[["queueInfo","splitReward"],[["get",["mostValuableQueueInfo"]],["get",["splitReward"]]]]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-ranked-reference-modal-button"],["flush-element"],["text","\\n        "],["append",["helper",["ranked-reference-modal-button"],null,[["queueType"],[["get",["mostValuableQueueInfo","queue","queueType"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-demotion-shield-warning"],["flush-element"],["text","\\n        "],["append",["helper",["ranked-demotion-warning"],null,[["computedQueueInfos","demotionWarning"],[["get",["computedQueueInfos"]],["get",["mostValuableQueueInfo","demotionWarning"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","positioningStrategy","offsetX"],["top","preserve",287]],3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-warning"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-ranked-emblem-tooltip-warning-icon icon-warning-",["unknown",["warningAnyQueue"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-warning-message"],["flush-element"],["append",["unknown",["tra","ranked_demotion_shield_expiring"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-ranked-emblem-tooltip-warning-icon icon-warning-",["unknown",["queueInfo","demotionWarning"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue"],["flush-element"],["text","\\n          "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["queue","isUnranked"]],"unranked",["get",["queueInfo","tier"]]],null],null],["flush-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-name"],["flush-element"],["append",["unknown",["queueInfo","queueLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-tier"],["flush-element"],["append",["unknown",["queueInfo","tierDivisionLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-lp"],["flush-element"],["append",["helper",["sanitize"],[["get",["queueInfo","subtitleLabel"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["queueInfo","demotionWarning"]]],null,1],["text","        "],["close-element"],["text","\\n"]],"locals":["queueInfo"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-queues"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedQueueInfos"]]],null,2],["text","      "],["open-element","div",[]],["static-attr","class","ranked-tooltip-last-season"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["unknown",["lastSeasonTier"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-name"],["flush-element"],["append",["unknown",["tra","ranked_tooltip_past_highest_rank"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-tier"],["flush-element"],["append",["unknown",["lastSeasonTierText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["warningAnyQueue"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-emblem-subheader-position"],["dynamic-attr","src",["concat",[["unknown",["mostValuablePositionIcon"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-subheader-ranked"],["flush-element"],["text","\\n"],["block",["if"],[["get",["mostValuablePositionIcon"]]],null,4],["text","        "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["mostValuableQueueInfo","tierDivisionLabel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "B0GYzzQ/",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["mostValuableQueueInfo","queueLabel"]],false],["close-element"],["text","\\n"],["block",["unless"],[["get",["mostValuableQueueInfo","isUnranked"]]],null,5],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n      "],["append",["helper",["ranked-icon"],null,[["queueInfo","splitReward"],[["get",["mostValuableQueueInfo"]],["get",["splitReward"]]]]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-ranked-reference-modal-button"],["flush-element"],["text","\\n        "],["append",["helper",["ranked-reference-modal-button"],null,[["queueType"],[["get",["mostValuableQueueInfo","queue","queueType"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-demotion-shield-warning"],["flush-element"],["text","\\n        "],["append",["helper",["ranked-demotion-warning"],null,[["computedQueueInfos","demotionWarning"],[["get",["computedQueueInfos"]],["get",["mostValuableQueueInfo","demotionWarning"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","positioningStrategy","offsetX"],["top","preserve",287]],3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-warning"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-ranked-emblem-tooltip-warning-icon icon-warning-",["unknown",["warningAnyQueue"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-warning-message"],["flush-element"],["append",["unknown",["tra","ranked_demotion_shield_expiring"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-ranked-emblem-tooltip-warning-icon icon-warning-",["unknown",["queueInfo","demotionWarning"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue"],["flush-element"],["text","\\n          "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["queue","isUnranked"]],"unranked",["get",["queueInfo","tier"]]],null],null],["flush-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-name"],["flush-element"],["append",["unknown",["queueInfo","queueLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-tier"],["flush-element"],["append",["unknown",["queueInfo","tierDivisionLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-lp"],["flush-element"],["append",["helper",["sanitize"],[["get",["queueInfo","subtitleLabel"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["queueInfo","demotionWarning"]]],null,1],["text","        "],["close-element"],["text","\\n"]],"locals":["queueInfo"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-queues"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedQueueInfos"]]],null,2],["text","      "],["open-element","div",[]],["static-attr","class","ranked-tooltip-last-season"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["unknown",["lastSeasonTier"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-name"],["flush-element"],["append",["unknown",["tra","ranked_tooltip_past_highest_rank"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-tier"],["flush-element"],["append",["unknown",["lastSeasonTierText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["warningAnyQueue"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-emblem-subheader-position"],["dynamic-attr","src",["concat",[["unknown",["mostValuablePositionIcon"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-subheader-ranked"],["flush-element"],["text","\\n"],["block",["if"],[["get",["mostValuablePositionIcon"]]],null,4],["text","        "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["mostValuableQueueInfo","tierDivisionLabel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1310,29 +1307,29 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
             n(53);
-            var r = s.Ember.Component.extend(i.default, {
+            var r = a.Ember.Component.extend(i.default, {
                 layout: n(54),
-                profileService: s.Ember.inject.service("profile"),
+                profileService: a.Ember.inject.service("profile"),
                 computedQueueInfos: null,
                 demotionWarning: null,
-                computedWarnings: s.Ember.computed("computedQueueInfos", (function() {
+                computedWarnings: a.Ember.computed("computedQueueInfos", (function() {
                     const e = {};
-                    return s.Lodash.toPairs(this.get("computedQueueInfos")).forEach((([t, n]) => {
-                        const a = [];
-                        n.demotionWarning > 0 && a.push({
+                    return a.Lodash.toPairs(this.get("computedQueueInfos")).forEach((([t, n]) => {
+                        const s = [];
+                        n.demotionWarning > 0 && s.push({
                             severity: n.demotionWarning
-                        }), a.length && (e[t] = a)
+                        }), s.length && (e[t] = s)
                     })), e
                 })),
-                computedWarningsMaxSeverity: s.Ember.computed("computedWarnings", (function() {
+                computedWarningsMaxSeverity: a.Ember.computed("computedWarnings", (function() {
                     const e = this.get("computedWarnings"),
-                        t = s.Lodash.flatMap(s.Lodash.values(e), (e => e.map((e => e.severity))));
-                    return t.length ? s.Lodash.max(t) : 0
+                        t = a.Lodash.flatMap(a.Lodash.values(e), (e => e.map((e => e.severity))));
+                    return t.length ? a.Lodash.max(t) : 0
                 }))
             });
             t.default = r
@@ -1340,10 +1337,10 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "ZjWIB2qO",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["computedWarningsMaxSeverity"]]],null,2,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-demotion-warning warning-",["unknown",["demotionWarning"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["demotionWarning"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-demotion-warning warning-",["unknown",["computedWarningsMaxSeverity"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "1WNKE45G",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["computedWarningsMaxSeverity"]]],null,2,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-demotion-warning warning-",["unknown",["demotionWarning"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["demotionWarning"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-demotion-warning warning-",["unknown",["computedWarningsMaxSeverity"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1351,30 +1348,30 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             n(56);
-            var s = a.Ember.Component.extend({
+            var a = s.Ember.Component.extend({
                 classNames: ["style-profile-ranked-icon-component"],
                 layout: n(57),
                 queueInfo: null,
                 splitReward: 0,
-                profileService: a.Ember.inject.service("profile"),
-                challengesConfig: a.Ember.computed.alias("profileService.challengesConfig"),
-                queue: a.Ember.computed.alias("queueInfo.queue"),
-                isUnranked: a.Ember.computed.alias("queue.isUnranked"),
-                isProvisional: a.Ember.computed.alias("queue.isProvisional"),
-                tier: a.Ember.computed.alias("queue.tier"),
-                division: a.Ember.computed.alias("queue.division")
+                profileService: s.Ember.inject.service("profile"),
+                challengesConfig: s.Ember.computed.alias("profileService.challengesConfig"),
+                queue: s.Ember.computed.alias("queueInfo.queue"),
+                isUnranked: s.Ember.computed.alias("queue.isUnranked"),
+                isProvisional: s.Ember.computed.alias("queue.isProvisional"),
+                tier: s.Ember.computed.alias("queue.tier"),
+                division: s.Ember.computed.alias("queue.division")
             });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "x0ifJJUY",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-ranked"],["flush-element"],["text","\\n    "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["isUnranked"]],"unranked",["get",["tier"]]],null],null],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "qyzqO0jE",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-ranked"],["flush-element"],["text","\\n    "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["isUnranked"]],"unranked",["get",["tier"]]],null],null],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1382,36 +1379,36 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
             n(59);
-            var r = s.Ember.Component.extend(i.default, {
+            var r = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-ranked-icon-tooltip-component"],
                 layout: n(60),
-                profileService: s.Ember.inject.service("profile"),
+                profileService: a.Ember.inject.service("profile"),
                 queueInfo: null,
                 splitReward: 0,
-                queue: s.Ember.computed.alias("queueInfo.queue"),
-                isUnranked: s.Ember.computed.alias("queue.isUnranked"),
-                isProvisional: s.Ember.computed.alias("queue.isProvisional"),
-                tier: s.Ember.computed.alias("queue.tier"),
-                division: s.Ember.computed.alias("queue.division"),
-                queueLabel: s.Ember.computed.alias("queueInfo.queueLabel"),
-                tierDivisionLabel: s.Ember.computed.alias("queueInfo.tierDivisionLabel"),
-                subtitleLabel: s.Ember.computed.alias("queueInfo.subtitleLabel"),
-                demotionWarning: s.Ember.computed.alias("queueInfo.demotionWarning")
+                queue: a.Ember.computed.alias("queueInfo.queue"),
+                isUnranked: a.Ember.computed.alias("queue.isUnranked"),
+                isProvisional: a.Ember.computed.alias("queue.isProvisional"),
+                tier: a.Ember.computed.alias("queue.tier"),
+                division: a.Ember.computed.alias("queue.division"),
+                queueLabel: a.Ember.computed.alias("queueInfo.queueLabel"),
+                tierDivisionLabel: a.Ember.computed.alias("queueInfo.tierDivisionLabel"),
+                subtitleLabel: a.Ember.computed.alias("queueInfo.subtitleLabel"),
+                demotionWarning: a.Ember.computed.alias("queueInfo.demotionWarning")
             });
             t.default = r
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "MTHIyayU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-crest-inner"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isUnranked"]]],null,2,1],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","style-profile-ranked-crest-tooltip-queue-and-division"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-queue ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["queueLabel"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-tier-division ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-crest-dividing-line ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","style-profile-ranked-crest-tooltip-stats-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-lp"],["flush-element"],["append",["helper",["sanitize"],[["get",["subtitleLabel"]]],null],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-warning-",["unknown",["demotionWarning"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-ranked ",["helper",["if"],[["get",["isProvisional"]],"provisional"],null]]]],["flush-element"],["text","\\n      "],["open-element","lol-regalia-crest-element",[]],["static-attr","animations","false"],["dynamic-attr","ranked-tier",["concat",[["unknown",["tier"]]]]],["dynamic-attr","ranked-division",["concat",[["unknown",["division"]]]]],["static-attr","visor-down","true"],["dynamic-attr","ranked-split-reward",["concat",[["unknown",["splitReward"]]]]],["static-attr","crest-type","ranked"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["demotionWarning"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-unranked"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "nxSXwgYA",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-crest-inner"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isUnranked"]]],null,2,1],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","style-profile-ranked-crest-tooltip-queue-and-division"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-queue ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["queueLabel"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-tier-division ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-crest-dividing-line ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","style-profile-ranked-crest-tooltip-stats-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-lp"],["flush-element"],["append",["helper",["sanitize"],[["get",["subtitleLabel"]]],null],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-warning-",["unknown",["demotionWarning"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-ranked ",["helper",["if"],[["get",["isProvisional"]],"provisional"],null]]]],["flush-element"],["text","\\n      "],["open-element","lol-regalia-crest-element",[]],["static-attr","animations","false"],["dynamic-attr","ranked-tier",["concat",[["unknown",["tier"]]]]],["dynamic-attr","ranked-division",["concat",[["unknown",["division"]]]]],["static-attr","visor-down","true"],["dynamic-attr","ranked-split-reward",["concat",[["unknown",["splitReward"]]]]],["static-attr","crest-type","ranked"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["demotionWarning"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-unranked"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1419,30 +1416,30 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
             n(62);
-            var r = s.Ember.Component.extend(i.default, {
+            var r = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-ranked-last-season-tooltip-component"],
                 layout: n(63),
-                profileService: s.Ember.inject.service("profile"),
+                profileService: a.Ember.inject.service("profile"),
                 rankedData: null,
-                lastSeasonTier: s.Ember.computed("summoner.puuid", "rankedData.{highestPreviousSeasonEndTier,highestPreviousSeasonEndDivision}", (function() {
+                lastSeasonTier: a.Ember.computed("summoner.puuid", "rankedData.{highestPreviousSeasonEndTier,highestPreviousSeasonEndDivision}", (function() {
                     if (!this.get("summoner.puuid") || !this.get("rankedData")) return;
                     let e = this.get("rankedData.highestPreviousSeasonEndTier");
                     return e && "NONE" !== e || (e = "UNRANKED"), e
                 })),
-                lastSeasonIsUnranked: s.Ember.computed("lastSeasonTier", (function() {
+                lastSeasonIsUnranked: a.Ember.computed("lastSeasonTier", (function() {
                     const e = this.get("lastSeasonTier");
                     return Boolean(!e || "UNRANKED" === e)
                 })),
-                tooltipLastSeasonLabel: s.Ember.computed("lastSeasonTier", "rankedData.{highestPreviousSeasonEndDivision}", (function() {
+                tooltipLastSeasonLabel: a.Ember.computed("lastSeasonTier", "rankedData.{highestPreviousSeasonEndDivision}", (function() {
                     const e = this.get("lastSeasonTier");
                     if (!e) return;
                     const t = this.get("rankedData.highestPreviousSeasonEndDivision");
-                    return s.LeagueTierNames.getFullTierDivisionName(e, t)
+                    return a.LeagueTierNames.getFullTierDivisionName(e, t)
                 }))
             });
             t.default = r
@@ -1450,10 +1447,10 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "qeer8P88",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-tooltip-last-trim"],["flush-element"],["text","\\n  "],["open-element","lol-regalia-banner-element",[]],["static-attr","animations","false"],["dynamic-attr","banner-rank",["concat",[["unknown",["lastSeasonTier"]]]]],["static-attr","banner-type","lastSeasonHighestRank"],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-tooltip-last-title ",["helper",["if"],[["get",["lastSeasonIsUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["tra","ranked_tooltip_past_highest_rank"]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-tooltip-last-rank ",["helper",["if"],[["get",["lastSeasonIsUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["tooltipLastSeasonLabel"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "uiN7Tg8F",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-tooltip-last-trim"],["flush-element"],["text","\\n  "],["open-element","lol-regalia-banner-element",[]],["static-attr","animations","false"],["dynamic-attr","banner-rank",["concat",[["unknown",["lastSeasonTier"]]]]],["static-attr","banner-type","lastSeasonHighestRank"],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-tooltip-last-title ",["helper",["if"],[["get",["lastSeasonIsUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["tra","ranked_tooltip_past_highest_rank"]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-tooltip-last-rank ",["helper",["if"],[["get",["lastSeasonIsUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["tooltipLastSeasonLabel"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1461,16 +1458,16 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
             n(65);
             var r = n(66);
-            var o = s.Ember.Component.extend(i.default, {
+            var o = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-honor-component"],
                 layout: n(67),
-                profileService: s.Ember.inject.service("profile"),
+                profileService: a.Ember.inject.service("profile"),
                 honorLockImageUrl: r.HONOR_LOCK_IMAGE_URL,
                 isReputationEnabled: !1,
                 init: function() {
@@ -1478,8 +1475,8 @@
                 },
                 initHonorConfig: function() {
                     this.set("shouldShowHonor", !1);
-                    const e = (0, s.DataBinding)("/lol-honor-v2", (0, s.getProvider)().getSocket()),
-                        t = (0, s.DataBinding)("/client-config/v2", (0, s.getProvider)().getSocket());
+                    const e = (0, a.DataBinding)("/lol-honor-v2", (0, a.getProvider)().getSocket()),
+                        t = (0, a.DataBinding)("/client-config/v2", (0, a.getProvider)().getSocket());
                     e.get("/v1/config").then((t => {
                         const n = t && t.Enabled;
                         n && this.get("isMe") && e.observe("/v1/profile", this, (e => {
@@ -1497,22 +1494,22 @@
                         t >= 0 && t <= 5 && (this.set("honorProfile", e), this.set("shouldShowHonor", !0))
                     }
                 },
-                shouldShowOtherSummonerTooltip: s.Ember.computed("honorEnabled", "isMe", (function() {
+                shouldShowOtherSummonerTooltip: a.Ember.computed("honorEnabled", "isMe", (function() {
                     if (!this.get("honorEnabled")) return !1;
                     return !this.get("isMe")
                 })),
-                honorV3ProfileImageUrl: s.Ember.computed("honorProfile.honorLevel", (function() {
+                honorV3ProfileImageUrl: a.Ember.computed("honorProfile.honorLevel", (function() {
                     return `/fe/lol-static-assets/images/honor/profile/Emblem_Level_${this.get("honorProfile.honorLevel")}.png`
                 })),
-                honorProfileImageUrl: s.Ember.computed("honorProfile.honorLevel", "honorProfile.checkpoint", "honorProfile.rewardsLocked", (function() {
+                honorProfileImageUrl: a.Ember.computed("honorProfile.honorLevel", "honorProfile.checkpoint", "honorProfile.rewardsLocked", (function() {
                     const e = this.get("honorProfile.honorLevel"),
                         t = Math.min(Math.max(this.get("honorProfile.checkpoint"), 0), 3),
                         n = this.get("honorProfile.rewardsLocked");
-                    let a;
-                    r.HONOR_IMAGES[e] && (a = n ? r.HONOR_IMAGES[e].LOCKED : 5 === e ? r.HONOR_IMAGES[e] : r.HONOR_IMAGES[e][t]), a || (a = r.HONOR_IMAGES.UNKNOWN);
-                    return `${r.HONOR_IMAGES_PATH}/${a}`
+                    let s;
+                    r.HONOR_IMAGES[e] && (s = n ? r.HONOR_IMAGES[e].LOCKED : 5 === e ? r.HONOR_IMAGES[e] : r.HONOR_IMAGES[e][t]), s || (s = r.HONOR_IMAGES.UNKNOWN);
+                    return `${r.HONOR_IMAGES_PATH}/${s}`
                 })),
-                honorProfileLevel: s.Ember.computed("honorProfile.honorLevel", "honorProfile.checkpoint", (function() {
+                honorProfileLevel: a.Ember.computed("honorProfile.honorLevel", "honorProfile.checkpoint", (function() {
                     const e = this.get("honorProfile.honorLevel"),
                         t = this.get("honorProfile.checkpoint");
                     return this.get("tra").formatString("honor_profile_level", {
@@ -1520,30 +1517,30 @@
                         honorCheckpoint: t
                     })
                 })),
-                shouldShowHonorLockIcon: s.Ember.computed("shouldShowHonor", "honorProfile.honorLevel", "honorProfile.rewardsLocked", "isReputationEnabled", (function() {
+                shouldShowHonorLockIcon: a.Ember.computed("shouldShowHonor", "honorProfile.honorLevel", "honorProfile.rewardsLocked", "isReputationEnabled", (function() {
                     if (this.get("isReputationEnabled")) return !1;
                     const e = this.get("shouldShowHonor"),
                         t = this.get("honorProfile.honorLevel"),
                         n = this.get("honorProfile.rewardsLocked");
                     return e && (n || 0 === t || 1 === t)
                 })),
-                profileTooltipText: s.Ember.computed("honorProfile.honorLevel", "honorProfile.checkpoint", "honorProfile.rewardsLocked", (function() {
+                profileTooltipText: a.Ember.computed("honorProfile.honorLevel", "honorProfile.checkpoint", "honorProfile.rewardsLocked", (function() {
                     const e = this.get("honorProfile.rewardsLocked"),
                         t = this.get("honorProfile.checkpoint"),
                         n = this.get("honorProfile.honorLevel");
-                    let a, s;
-                    if (e ? a = r.HONOR_TRA_KEYS.LOCKED : n >= 5 ? a = r.HONOR_TRA_KEYS.MAX_LEVEL : (a = r.HONOR_TRA_KEYS.CHECKPOINT[t], s = r.HONOR_TRA_KEYS.LEVEL_APPEND.NORMAL[n]), a) {
-                        let e = this.get("tra").formatString(a, {
+                    let s, a;
+                    if (e ? s = r.HONOR_TRA_KEYS.LOCKED : n >= 5 ? s = r.HONOR_TRA_KEYS.MAX_LEVEL : (s = r.HONOR_TRA_KEYS.CHECKPOINT[t], a = r.HONOR_TRA_KEYS.LEVEL_APPEND.NORMAL[n]), s) {
+                        let e = this.get("tra").formatString(s, {
                             nextLevel: n + 1,
                             honorCheckpoint: t
                         });
-                        return s && (e = e + " " + this.get("tra").get(s)), e
+                        return a && (e = e + " " + this.get("tra").get(a)), e
                     }
                     return ""
                 })),
                 actions: {
                     openHonorExplainerModal() {
-                        s.SharedPlayerBehaviorApps.showHonorV3ExplainerModal()
+                        a.SharedPlayerBehaviorApps.showHonorV3ExplainerModal()
                     }
                 }
             });
@@ -1558,8 +1555,8 @@
             }), t.HONOR_TRA_KEYS = t.HONOR_LOCK_IMAGE_URL = t.HONOR_IMAGES_PATH = t.HONOR_IMAGES = void 0;
             const n = "/fe/lol-static-assets/images/honor/profile";
             t.HONOR_IMAGES_PATH = n;
-            const a = n + "/Honor_Lock.png";
-            t.HONOR_LOCK_IMAGE_URL = a;
+            const s = n + "/Honor_Lock.png";
+            t.HONOR_LOCK_IMAGE_URL = s;
             t.HONOR_IMAGES = {
                 UNKNOWN: "Emblem_Generic.png",
                 0: {
@@ -1621,10 +1618,10 @@
                 }
             }
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "nzWR7y2p",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","honor_profile_header"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,12],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-honor-lock-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonorLockIcon"]]],null,11],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,10,7],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isReputationEnabled"]]],null,6],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","honor_profile_other_player_tooltip"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowOtherSummonerTooltip"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["profileTooltipText"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],3]],"locals":[]},{"statements":[["block",["unless"],[["get",["isReputationEnabled"]]],null,4]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","honor-explainer-modal-question-mark"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openHonorExplainerModal"],null],null],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-honor-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-honor-icon"],["dynamic-attr","src",["concat",[["unknown",["honorProfileImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-honor-icon-v3"],["dynamic-attr","src",["concat",[["unknown",["honorV3ProfileImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isReputationEnabled"]]],null,9,8]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","style-profile-honor-lock"],["dynamic-attr","src",["concat",[["unknown",["honorLockImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["honorProfileLevel"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "xcqB0uIT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","honor_profile_header"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,12],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-honor-lock-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonorLockIcon"]]],null,11],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,10,7],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isReputationEnabled"]]],null,6],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","honor_profile_other_player_tooltip"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowOtherSummonerTooltip"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["profileTooltipText"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],3]],"locals":[]},{"statements":[["block",["unless"],[["get",["isReputationEnabled"]]],null,4]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","honor-explainer-modal-question-mark"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openHonorExplainerModal"],null],null],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-honor-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-honor-icon"],["dynamic-attr","src",["concat",[["unknown",["honorProfileImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-honor-icon-v3"],["dynamic-attr","src",["concat",[["unknown",["honorV3ProfileImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isReputationEnabled"]]],null,9,8]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","style-profile-honor-lock"],["dynamic-attr","src",["concat",[["unknown",["honorLockImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["honorProfileLevel"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1632,22 +1629,22 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
             n(69);
-            var r = s.Ember.Component.extend(i.default, {
+            var r = a.Ember.Component.extend(i.default, {
                 classNames: ["profile-legendary-champion-mastery-component"],
                 layout: n(70),
-                profileService: s.Ember.inject.service("profile"),
-                eternalsService: s.Ember.inject.service("eternals"),
-                championMasteryData: s.Ember.computed.alias("profileService.championMasteries"),
-                championMasteryScore: s.Ember.computed.alias("championMasteryData.score"),
-                computedEternals: s.Ember.computed.alias("eternalsService.summary"),
-                shouldShowEternals: s.Ember.computed.and("eternalsEnabled", "computedEternals.length"),
-                eternalsEnabled: s.Ember.computed.alias("eternalsService.enabled"),
-                computedMasteries: s.Ember.computed("championMasteryData.masteries", (function() {
+                profileService: a.Ember.inject.service("profile"),
+                eternalsService: a.Ember.inject.service("eternals"),
+                championMasteryData: a.Ember.computed.alias("profileService.championMasteries"),
+                championMasteryScore: a.Ember.computed.alias("championMasteryData.score"),
+                computedEternals: a.Ember.computed.alias("eternalsService.summary"),
+                shouldShowEternals: a.Ember.computed.and("eternalsEnabled", "computedEternals.length"),
+                eternalsEnabled: a.Ember.computed.alias("eternalsService.enabled"),
+                computedMasteries: a.Ember.computed("championMasteryData.masteries", (function() {
                     const e = this.get("championMasteryData.masteries");
                     if (e) {
                         if (e.length < 3) {
@@ -1659,7 +1656,7 @@
                         return e
                     }
                 })),
-                totalScore: s.Ember.computed("championMasteryScore", (function() {
+                totalScore: a.Ember.computed("championMasteryScore", (function() {
                     const e = this.get("championMasteryScore") || 0,
                         t = (this.get("tra.metadata.locale.id") || "en_US").replace("_", "-");
                     return Intl.NumberFormat(t.toLowerCase(), {
@@ -1672,10 +1669,10 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "F5+khKsu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","champmastery_score_label"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-champion-mastery-score"],["flush-element"],["append",["unknown",["totalScore"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n      "],["append",["helper",["legendary-mastery-icon"],null,[["mastery","emphasis"],[["get",["computedMasteries","0"]],"primary"]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["helper",["eternals-tooltip"],null,[["eternal","index"],[["get",["eternal"]],["get",["index"]]]]],false],["text","\\n"]],"locals":["eternal","index"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","style-profile-tooltip-divider"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-eternals-section"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","style-profile-eternals-title"],["flush-element"],["append",["unknown",["tra","profile_mastery_tooltip_eternals_title"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","style-profile-eternals-tripple-tooltip"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedEternals"]]],null,0],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","profile-legendary-champion-mastery-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-mastery-section"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-mastery-title"],["flush-element"],["append",["unknown",["tra","profile_mastery_tooltip_mastery_title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-legendary-champion-mastery-triple-tooltip"],["flush-element"],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","1"]],"secondary"]]],false],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","0"]],"primary"]]],false],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","2"]],"secondary"]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowEternals"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","positioningStrategy","offsetX"],["top","preserve",0]],2]],"locals":[]},{"statements":[["block",["if"],[["get",["computedMasteries"]]],null,3]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "AP7YIlgf",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","champmastery_score_label"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-champion-mastery-score"],["flush-element"],["append",["unknown",["totalScore"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n      "],["append",["helper",["legendary-mastery-icon"],null,[["mastery","emphasis"],[["get",["computedMasteries","0"]],"primary"]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["helper",["eternals-tooltip"],null,[["eternal","index"],[["get",["eternal"]],["get",["index"]]]]],false],["text","\\n"]],"locals":["eternal","index"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","style-profile-tooltip-divider"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-eternals-section"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","style-profile-eternals-title"],["flush-element"],["append",["unknown",["tra","profile_mastery_tooltip_eternals_title"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","style-profile-eternals-tripple-tooltip"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedEternals"]]],null,0],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","profile-legendary-champion-mastery-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-mastery-section"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-mastery-title"],["flush-element"],["append",["unknown",["tra","profile_mastery_tooltip_mastery_title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-legendary-champion-mastery-triple-tooltip"],["flush-element"],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","1"]],"secondary"]]],false],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","0"]],"primary"]]],false],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","2"]],"secondary"]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowEternals"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","positioningStrategy","offsetX"],["top","preserve",0]],2]],"locals":[]},{"statements":[["block",["if"],[["get",["computedMasteries"]]],null,3]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1683,39 +1680,39 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             n(72);
-            var s = a.Ember.Component.extend({
+            var a = s.Ember.Component.extend({
                 classNames: ["style-profile-legendary-champion-mastery-icon-component"],
                 layout: n(73),
                 mastery: {},
                 emphasis: "",
-                masteryDisabled: a.Ember.computed.empty("mastery"),
-                masteryLevel: a.Ember.computed.alias("mastery.championLevel"),
-                championInfoObserver: a.Ember.on("init", a.Ember.observer("mastery.championId", (function() {
+                masteryDisabled: s.Ember.computed.empty("mastery"),
+                masteryLevel: s.Ember.computed.alias("mastery.championLevel"),
+                championInfoObserver: s.Ember.on("init", s.Ember.observer("mastery.championId", (function() {
                     const e = parseInt(this.get("mastery.championId"));
-                    e && a.GameDataChampionSummary.getChampionSummaryPromise(e).then((e => {
+                    e && s.GameDataChampionSummary.getChampionSummaryPromise(e).then((e => {
                         this.set("championInfo", e)
                     }))
                 }))),
-                masteryLevelCss: a.Ember.computed("masteryLevel", (function() {
-                    const e = this.get("masteryLevel") || a.SharedChampionMasteryConstants.MINIMUM_MASTERY_LEVEL;
-                    return Math.min(e, a.SharedChampionMasteryConstants.MASTERY_CREST_INFINITE_THRESHOLD)
+                masteryLevelCss: s.Ember.computed("masteryLevel", (function() {
+                    const e = this.get("masteryLevel") || s.SharedChampionMasteryConstants.MINIMUM_MASTERY_LEVEL;
+                    return Math.min(e, s.SharedChampionMasteryConstants.MASTERY_CREST_INFINITE_THRESHOLD)
                 })),
-                masteryBannerPath: a.Ember.computed("masteryLevel", (function() {
+                masteryBannerPath: s.Ember.computed("masteryLevel", (function() {
                     const e = this.get("masteryLevel");
-                    return a.SharedChampionMasteryConstants.getMasteryBannerAsset(e)
+                    return s.SharedChampionMasteryConstants.getMasteryBannerAsset(e)
                 }))
             });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "Ix7L/XF9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon-banner-layer ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","style-profile-banner-image"],["dynamic-attr","src",["unknown",["masteryBannerPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-layer"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-masked"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,2],["text","    "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,1],["text","  "],["close-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon-accent-layer ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-accent-image level-",["unknown",["masteryLevelCss"]]]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["mastery-crest"],null,[["masteryLevel"],[["get",["masteryLevel"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-top-frame"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["championInfo","squarePortraitPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "bZZ7O1+N",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon-banner-layer ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","style-profile-banner-image"],["dynamic-attr","src",["unknown",["masteryBannerPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-layer"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-masked"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,2],["text","    "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,1],["text","  "],["close-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon-accent-layer ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-accent-image level-",["unknown",["masteryLevelCss"]]]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["mastery-crest"],null,[["masteryLevel"],[["get",["masteryLevel"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-top-frame"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["championInfo","squarePortraitPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1723,44 +1720,44 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             n(75);
-            var s = a.Ember.Component.extend({
+            var a = s.Ember.Component.extend({
                 classNames: ["profile-legendary-champion-mastery-tooltip-component"],
                 layout: n(76),
                 mastery: {},
                 emphasis: "",
-                profileService: a.Ember.inject.service("profile"),
-                championMasteryConfig: a.Ember.computed.alias("profileService.championMasteryConfig"),
-                masteryDisabled: a.Ember.computed.empty("mastery"),
-                championInfoObserver: a.Ember.on("init", a.Ember.observer("mastery.championId", (function() {
+                profileService: s.Ember.inject.service("profile"),
+                championMasteryConfig: s.Ember.computed.alias("profileService.championMasteryConfig"),
+                masteryDisabled: s.Ember.computed.empty("mastery"),
+                championInfoObserver: s.Ember.on("init", s.Ember.observer("mastery.championId", (function() {
                     const e = parseInt(this.get("mastery.championId"));
-                    e && a.GameDataChampionSummary.getChampionSummaryPromise(e).then((e => {
+                    e && s.GameDataChampionSummary.getChampionSummaryPromise(e).then((e => {
                         this.set("championInfo", e)
                     }))
                 }))),
-                masteryLevelTxt: a.Ember.computed("mastery.championLevel", (function() {
+                masteryLevelTxt: s.Ember.computed("mastery.championLevel", (function() {
                     const e = this.get("mastery.championLevel");
                     return this.get("tra").formatString("champmastery_mastery_level", {
                         level: e
                     })
                 })),
-                highestGradeTxt: a.Ember.computed("mastery.highestGrade", (function() {
+                highestGradeTxt: s.Ember.computed("mastery.highestGrade", (function() {
                     const e = this.get("mastery.highestGrade") || this.get("tra.champmastery_season_no_grade");
                     return this.get("tra").formatString("champmastery_season_highest_grade", {
                         grade: e
                     })
                 }))
             });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "LYWmhWAv",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-champion-icon-inner-container ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-icon-container"],["flush-element"],["text","\\n    "],["append",["helper",["legendary-mastery-icon"],null,[["mastery","emphasis"],[["get",["mastery"]],["get",["emphasis"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,0],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-title"],["flush-element"],["text","\\n        "],["append",["unknown",["championInfo","name"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-hr"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-level"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","profile-lcm-tooltip-contents-level-icon"],["static-attr","src","/fe/lol-static-assets/images/champion-mastery/icon-mastery.svg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-level-text"],["flush-element"],["text","\\n          "],["append",["unknown",["masteryLevelTxt"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-best-grade"],["flush-element"],["text","\\n        "],["append",["unknown",["highestGradeTxt"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "Bwry7LAH",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-champion-icon-inner-container ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-icon-container"],["flush-element"],["text","\\n    "],["append",["helper",["legendary-mastery-icon"],null,[["mastery","emphasis"],[["get",["mastery"]],["get",["emphasis"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,0],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-title"],["flush-element"],["text","\\n        "],["append",["unknown",["championInfo","name"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-hr"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-level"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","profile-lcm-tooltip-contents-level-icon"],["static-attr","src","/fe/lol-static-assets/images/champion-mastery/icon-mastery.svg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-level-text"],["flush-element"],["text","\\n          "],["append",["unknown",["masteryLevelTxt"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-best-grade"],["flush-element"],["text","\\n        "],["append",["unknown",["highestGradeTxt"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1768,14 +1765,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0, t.validateTrophy = l;
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
             n(78);
-            const r = (0, s.EmberDataBinding)({
-                Ember: s.Ember,
-                websocket: (0, s.getProvider)().getSocket(),
+            const r = (0, a.EmberDataBinding)({
+                Ember: a.Ember,
+                websocket: (0, a.getProvider)().getSocket(),
                 basePaths: {
                     trophies: "/lol-trophies"
                 },
@@ -1783,65 +1780,65 @@
                     trophiesConfigNamespace: "/lol-platform-config/v1/namespaces/Trophies"
                 }
             });
-            var o = s.Ember.Component.extend(i.default, r, {
+            var o = a.Ember.Component.extend(i.default, r, {
                 classNames: ["style-profile-trophy-component"],
                 layout: n(79),
-                profileService: s.Ember.inject.service("profile"),
-                puuid: s.Ember.computed.alias("summoner.puuid"),
-                isEnabledOnProfile: s.Ember.computed.bool("trophiesConfigNamespace.IsEnabledOnProfile"),
-                hasTrophyImgAssets: s.Ember.computed.and("pedestalImgSrc", "cupgemImgSrc"),
-                hasNoTrophy: s.Ember.computed.equal("trophy", null),
-                hasTrophy: s.Ember.computed.not("hasNoTrophy"),
-                trophyImgObserver: s.Ember.on("init", s.Ember.observer("trophy", (function() {
+                profileService: a.Ember.inject.service("profile"),
+                puuid: a.Ember.computed.alias("summoner.puuid"),
+                isEnabledOnProfile: a.Ember.computed.bool("trophiesConfigNamespace.IsEnabledOnProfile"),
+                hasTrophyImgAssets: a.Ember.computed.and("pedestalImgSrc", "cupgemImgSrc"),
+                hasNoTrophy: a.Ember.computed.equal("trophy", null),
+                hasTrophy: a.Ember.computed.not("hasNoTrophy"),
+                trophyImgObserver: a.Ember.on("init", a.Ember.observer("trophy", (function() {
                     const e = this.get("trophy");
                     if (!(e && e.theme && e.tier && e.bracket)) return this.set("cupgemImgSrc", ""), void this.set("pedestalImgSrc", "");
-                    s.GameDataClashTrophies.getTrophyPromise(e.theme, e.bracket).then((e => {
+                    a.GameDataClashTrophies.getTrophyPromise(e.theme, e.bracket).then((e => {
                         let t = "";
                         e && e.profileIcon && (t = e.profileIcon), this.set("cupgemImgSrc", t)
-                    })), s.GameDataClashTrophies.getPedestalPromise(e.tier).then((e => {
+                    })), a.GameDataClashTrophies.getPedestalPromise(e.tier).then((e => {
                         let t = "";
                         e && e.profileIcon && (t = e.profileIcon), this.set("pedestalImgSrc", t)
                     }))
                 }))),
-                fetchTrophyProfileObserver: s.Ember.on("init", s.Ember.observer("isEnabledOnProfile", "isMe", "hasSummoner", "puuid", "trophiesConfigNamespace.IsOtherSummonersProfileEnabled", (function() {
-                    this.get("isEnabledOnProfile") && this.get("hasSummoner") && s.Ember.run.once(this, "fetchTrophyProfile")
+                fetchTrophyProfileObserver: a.Ember.on("init", a.Ember.observer("isEnabledOnProfile", "isMe", "hasSummoner", "puuid", "trophiesConfigNamespace.IsOtherSummonersProfileEnabled", (function() {
+                    this.get("isEnabledOnProfile") && this.get("hasSummoner") && a.Ember.run.once(this, "fetchTrophyProfile")
                 }))),
                 fetchTrophyProfile() {
                     const e = this.get("_getTrophyProfilePromise"),
                         t = this.get("trophy");
                     if (e || t) return;
                     const n = this.get("isMe");
-                    if (s.Lodash.isNil(n)) return;
+                    if (a.Lodash.isNil(n)) return;
                     if (!n) {
                         if (!this.get("trophiesConfigNamespace.IsOtherSummonersProfileEnabled")) return
                     }
-                    const a = this.get("api.trophies");
+                    const s = this.get("api.trophies");
                     let i;
-                    if (n) i = a.get("/v1/current-summoner/trophies/profile", {
+                    if (n) i = s.get("/v1/current-summoner/trophies/profile", {
                         skipCache: !0
                     }).catch((e => {
-                        404 === e.status ? s.logger.trace("Current summoner has no profile trophy", e) : s.logger.warning("Failed to get current summoner's profile trophy", e)
+                        404 === e.status ? a.logger.trace("Current summoner has no profile trophy", e) : a.logger.warning("Failed to get current summoner's profile trophy", e)
                     }));
                     else {
                         const e = this.get("puuid");
-                        if (s.Lodash.isNil(e)) return void s.logger.warning("No puuid passed in when requesting other player's profile trophy");
-                        i = a.get(`/v1/players/${e}/trophies/profile`, {
+                        if (a.Lodash.isNil(e)) return void a.logger.warning("No puuid passed in when requesting other player's profile trophy");
+                        i = s.get(`/v1/players/${e}/trophies/profile`, {
                             skipCache: !0
                         }).catch((t => {
                             const {
                                 message: n,
-                                status: a,
+                                status: s,
                                 text: i
                             } = t;
-                            404 === a ? s.logger.trace("Summoner has no profile trophy", {
+                            404 === s ? a.logger.trace("Summoner has no profile trophy", {
                                 puuid: e,
                                 message: n,
-                                status: a,
+                                status: s,
                                 text: i
-                            }) : s.logger.warning("Failed to get other player's profile trophy", {
+                            }) : a.logger.warning("Failed to get other player's profile trophy", {
                                 puuid: e,
                                 message: n,
-                                status: a,
+                                status: s,
                                 text: i
                             })
                         }))
@@ -1852,12 +1849,12 @@
                         this.isDestroyed || this.set("_getTrophyProfilePromise", null)
                     }))
                 },
-                tournamentHeader: s.Ember.computed("trophy", (function() {
+                tournamentHeader: a.Ember.computed("trophy", (function() {
                     let e = null;
                     const t = this.get("trophy");
                     return t && t.theme && (e = this.get("tra").get("clash_tournament_name_" + t.theme.toLowerCase())), e || this.get("tra").get("trophies_profile_header")
                 })),
-                tierText: s.Ember.computed("trophy", (function() {
+                tierText: a.Ember.computed("trophy", (function() {
                     const e = this.get("trophy");
                     if (!e || !e.tier) return "";
                     const t = this.get("tra").get("clash_roster_tier_name_" + e.tier);
@@ -1865,7 +1862,7 @@
                         tier: t
                     })
                 })),
-                bracketText: s.Ember.computed("trophy", (function() {
+                bracketText: a.Ember.computed("trophy", (function() {
                     const e = this.get("trophy");
                     return e && e.bracket ? this.get("tra").formatString("trophies_bracket_size_display", {
                         bracketSize: e.bracket
@@ -1874,17 +1871,17 @@
             });
 
             function l(e) {
-                return s.Lodash.isNil(e) || ["theme", "tier", "bracket", "seasonId"].some((t => !Object.prototype.hasOwnProperty.call(e, t))) ? null : e
+                return a.Lodash.isNil(e) || ["theme", "tier", "bracket", "seasonId"].some((t => !Object.prototype.hasOwnProperty.call(e, t))) ? null : e
             }
             t.default = o
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "u7rsh0r0",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tournamentHeader"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTrophy"]]],null,5],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasTrophyImgAssets"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEnabledOnProfile"]]],null,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","trophies_tournament_blank_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["hasNoTrophy"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-trophy-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-trophy-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","style-profile-trophy-pedestal"],["dynamic-attr","src",["concat",[["unknown",["pedestalImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","style-profile-trophy-cupgem"],["dynamic-attr","src",["concat",[["unknown",["cupgemImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["tierText"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["bracketText"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "xU1EBrw5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tournamentHeader"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTrophy"]]],null,5],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasTrophyImgAssets"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEnabledOnProfile"]]],null,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","trophies_tournament_blank_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["hasNoTrophy"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-trophy-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-trophy-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","style-profile-trophy-pedestal"],["dynamic-attr","src",["concat",[["unknown",["pedestalImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","style-profile-trophy-cupgem"],["dynamic-attr","src",["concat",[["unknown",["cupgemImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["tierText"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["bracketText"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1892,16 +1889,16 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0, t.validateFlag = m;
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 },
                 r = n(81);
             n(82);
             var o = n(83);
-            const l = (0, s.EmberDataBinding)({
-                Ember: s.Ember,
-                websocket: (0, s.getProvider)().getSocket(),
+            const l = (0, a.EmberDataBinding)({
+                Ember: a.Ember,
+                websocket: (0, a.getProvider)().getSocket(),
                 basePaths: {
                     banners: "/lol-banners"
                 },
@@ -1909,63 +1906,63 @@
                     bannersConfigNamespace: "/lol-platform-config/v1/namespaces/Banners"
                 }
             });
-            var d = s.Ember.Component.extend(i.default, l, {
+            var d = a.Ember.Component.extend(i.default, l, {
                 classNames: ["style-profile-clash-banner-component"],
                 classNameBindings: ["isBannerClickable:clickable", "isBannerPickDisabled:pick-disabled"],
                 layout: n(84),
-                profileService: s.Ember.inject.service("profile"),
-                puuid: s.Ember.computed.alias("summoner.puuid"),
-                isEnabledOnProfile: s.Ember.computed.bool("bannersConfigNamespace.IsEnabledOnProfile"),
-                bannerImgSrcObserver: s.Ember.on("init", s.Ember.observer("equippedFlag.{theme,level}", (function() {
+                profileService: a.Ember.inject.service("profile"),
+                puuid: a.Ember.computed.alias("summoner.puuid"),
+                isEnabledOnProfile: a.Ember.computed.bool("bannersConfigNamespace.IsEnabledOnProfile"),
+                bannerImgSrcObserver: a.Ember.on("init", a.Ember.observer("equippedFlag.{theme,level}", (function() {
                     const e = this.get("equippedFlag");
                     if (void 0 !== e) {
                         const t = !!e;
                         this.set("hasEquippedFlag", t), this.set("hasNoEquippedFlag", !t)
                     }
-                    e && e.theme && e.level ? (s.GameDataClashBanners.getDefaultBannerFramePromise().then((e => {
+                    e && e.theme && e.level ? (a.GameDataClashBanners.getDefaultBannerFramePromise().then((e => {
                         let t = "";
                         e && e.inventoryIcon && (t = e.inventoryIcon), this.set("frameImgSrc", t)
-                    })), s.GameDataClashBanners.getBannerFlagPromise(e.theme, e.level).then((e => {
+                    })), a.GameDataClashBanners.getBannerFlagPromise(e.theme, e.level).then((e => {
                         let t = "";
                         e && e.inventoryIcon && (t = e.inventoryIcon), this.set("bannerImgSrc", t)
                     }))) : this.set("bannerImgSrc", "")
                 }))),
                 _getEquippedFlag(e) {
-                    return s.Lodash.isNil(e) ? Promise.reject(new Error("Null parameter given to getEquippedFlag")) : this.get("api.banners").get(`v1/players/${e}/flags/equipped`, {
+                    return a.Lodash.isNil(e) ? Promise.reject(new Error("Null parameter given to getEquippedFlag")) : this.get("api.banners").get(`v1/players/${e}/flags/equipped`, {
                         skipCache: !0
                     })
                 },
-                fetchEquippedFlagObserver: s.Ember.on("init", s.Ember.observer("isEnabledOnProfile", "isMe", "hasSummoner", "puuid", "bannersConfigNamespace.IsOtherSummonersProfileEnabled", (function() {
-                    this.get("isEnabledOnProfile") && this.get("hasSummoner") && s.Ember.run.once(this, "fetchEquippedFlag")
+                fetchEquippedFlagObserver: a.Ember.on("init", a.Ember.observer("isEnabledOnProfile", "isMe", "hasSummoner", "puuid", "bannersConfigNamespace.IsOtherSummonersProfileEnabled", (function() {
+                    this.get("isEnabledOnProfile") && this.get("hasSummoner") && a.Ember.run.once(this, "fetchEquippedFlag")
                 }))),
                 fetchEquippedFlag() {
                     const e = this.get("_getEquippedFlagPromise"),
                         t = this.get("equippedFlag");
                     if (e || t) return;
                     const n = this.get("isMe");
-                    if (!s.Lodash.isNil(n)) {
+                    if (!a.Lodash.isNil(n)) {
                         if (!n) {
                             if (!this.get("bannersConfigNamespace.IsOtherSummonersProfileEnabled")) return
                         }
                         if (n) this.dataBindProperty("banners", "/v1/current-summoner/flags/equipped", "equippedFlag");
                         else {
                             const e = this.get("puuid");
-                            if (s.Lodash.isNil(e)) return void s.logger.warning("Fetching other summoner flag: no puuid");
+                            if (a.Lodash.isNil(e)) return void a.logger.warning("Fetching other summoner flag: no puuid");
                             const t = this._getEquippedFlag(e).catch((t => {
                                 const {
                                     message: n,
-                                    status: a,
+                                    status: s,
                                     text: i
                                 } = t;
-                                404 === a ? s.logger.trace("Summoner has no flag", {
+                                404 === s ? a.logger.trace("Summoner has no flag", {
                                     puuid: e,
                                     message: n,
-                                    status: a,
+                                    status: s,
                                     text: i
-                                }) : s.logger.warning("Failed to fetch other summoner flag", {
+                                }) : a.logger.warning("Failed to fetch other summoner flag", {
                                     puuid: e,
                                     message: n,
-                                    status: a,
+                                    status: s,
                                     text: i
                                 })
                             }));
@@ -1977,68 +1974,68 @@
                         }
                     }
                 },
-                bannerTournamentTitle: s.Ember.computed("equippedFlag.theme", (function() {
+                bannerTournamentTitle: a.Ember.computed("equippedFlag.theme", (function() {
                     const e = this.get("equippedFlag.theme");
                     return e ? this.get("tra").get("clash_tournament_simplename_" + e.toLowerCase()) : ""
                 })),
-                bannerTooltipTournamentText: s.Ember.computed("equippedFlag.theme", (function() {
+                bannerTooltipTournamentText: a.Ember.computed("equippedFlag.theme", (function() {
                     const e = this.get("equippedFlag.theme");
                     return e ? this.get("tra").get("clash_tournament_name_" + e.toLowerCase()) : ""
                 })),
-                bannerTooltipLevelText: s.Ember.computed("equippedFlag.level", "equippedFlag.theme", (function() {
+                bannerTooltipLevelText: a.Ember.computed("equippedFlag.level", "equippedFlag.theme", (function() {
                     const e = this.get("equippedFlag.level");
                     if (!e) return "";
                     let t = "banners_update_flag_level_" + e;
                     const n = this.get("equippedFlag.theme");
                     return t && o.CLASH_THEMES_EOS.includes(n) && (t += "_eos"), t ? this.get("tra").get(t) : ""
                 })),
-                bannerTooltipEarnedDateText: s.Ember.computed("equippedFlag.earnedDateIso8601", (function() {
+                bannerTooltipEarnedDateText: a.Ember.computed("equippedFlag.earnedDateIso8601", (function() {
                     const e = this.get("equippedFlag.earnedDateIso8601"),
                         t = this.get("tra.metadata.locale.id", "en-US");
                     return e ? this.get("tra").moment(e).locale(t).format("LL") : ""
                 })),
-                _isEquipEnabled: s.Ember.computed.bool("bannersConfigNamespace.IsEquipEnabled"),
-                _isEquipDisabled: s.Ember.computed.not("_isEquipEnabled"),
-                isBannerClickable: s.Ember.computed.and("_isEquipEnabled", "isMe", "hasEquippedFlag"),
-                isBannerPickDisabled: s.Ember.computed.and("_isEquipDisabled", "isMe", "hasEquippedFlag"),
+                _isEquipEnabled: a.Ember.computed.bool("bannersConfigNamespace.IsEquipEnabled"),
+                _isEquipDisabled: a.Ember.computed.not("_isEquipEnabled"),
+                isBannerClickable: a.Ember.computed.and("_isEquipEnabled", "isMe", "hasEquippedFlag"),
+                isBannerPickDisabled: a.Ember.computed.and("_isEquipDisabled", "isMe", "hasEquippedFlag"),
                 actions: {
                     clickBanner() {
-                        s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-uikit/sfx-uikit-click-generic.ogg"), s.logger.trace("Displaying banner update modal"), r.ClashBannerPickerHandler.showModal(), s.Telemetry.sendCustomData("profile-overview-events", {
+                        a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-uikit/sfx-uikit-click-generic.ogg"), a.logger.trace("Displaying banner update modal"), r.ClashBannerPickerHandler.showModal(), a.Telemetry.sendCustomData("profile-overview-events", {
                             event: "show-banners-update-modal"
                         })
                     }
                 },
-                onWillDestroyElement: s.Ember.on("willDestroyElement", (function() {
+                onWillDestroyElement: a.Ember.on("willDestroyElement", (function() {
                     this.get("isBannerClickable") && r.ClashBannerPickerHandler.hideModal()
                 }))
             });
 
             function m(e) {
-                return s.Lodash.isNil(e) || ["level", "theme", "seasonId"].some((t => !Object.prototype.hasOwnProperty.call(e, t))) ? null : e
+                return a.Lodash.isNil(e) || ["level", "theme", "seasonId"].some((t => !Object.prototype.hasOwnProperty.call(e, t))) ? null : e
             }
             t.default = d
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            const s = new class {
+            var s = n(1);
+            const a = new class {
                 constructor() {
                     this._bannerPickerModalInstance = null
                 }
                 showModal() {
-                    this._bannerPickerModalInstance = a.ModalManager.add({
+                    this._bannerPickerModalInstance = s.ModalManager.add({
                         type: "ClashBannerPickerComponent",
-                        ComponentFactory: a.ComponentFactory,
+                        ComponentFactory: s.ComponentFactory,
                         show: !0
                     })
                 }
                 hideModal() {
-                    this._bannerPickerModalInstance && a.ModalManager.remove(this._bannerPickerModalInstance, (() => {
+                    this._bannerPickerModalInstance && s.ModalManager.remove(this._bannerPickerModalInstance, (() => {
                         this._bannerPickerModalInstance = void 0
                     }))
                 }
             };
             e.exports = {
-                ClashBannerPickerHandler: s
+                ClashBannerPickerHandler: a
             }
         }, (e, t, n) => {
             "use strict";
@@ -2050,10 +2047,10 @@
             }), t.CLASH_THEMES_EOS = void 0;
             t.CLASH_THEMES_EOS = ["EOS2020", "EOS2021", "EOS2022", "EOS2023"]
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "LxC09A22",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["dynamic-attr","onclick",["helper",["if"],[["get",["isBannerClickable"]],["helper",["action"],[["get",[null]],"clickBanner"],null]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","banners_profile_header"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["bannerImgSrc"]]],null,8],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["bannerImgSrc"]]],null,7,6],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["comment"," This if/elseif pattern is used so that toooltip creation doesn\'t get confused on initialization, when it temporarily appears that there isn\'t a flag  "],["text","\\n"],["block",["if"],[["get",["hasEquippedFlag"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","banners_profile_blank_tooltip_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["hasNoEquippedFlag"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","style-profile-clash-banner-tooltip-call-to-action-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","banners_profile_tooltip_message"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-group"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-theme"],["flush-element"],["append",["unknown",["bannerTooltipTournamentText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-level"],["flush-element"],["append",["unknown",["bannerTooltipLevelText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-earned-date"],["flush-element"],["append",["unknown",["bannerTooltipEarnedDateText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isBannerClickable"]]],null,3],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],4]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-image"],["dynamic-attr","src",["concat",[["unknown",["bannerImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-frame"],["dynamic-attr","src",["concat",[["unknown",["frameImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-preloader"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-button"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["bannerTournamentTitle"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "JNabMlfg",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["dynamic-attr","onclick",["helper",["if"],[["get",["isBannerClickable"]],["helper",["action"],[["get",[null]],"clickBanner"],null]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","banners_profile_header"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["bannerImgSrc"]]],null,8],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["bannerImgSrc"]]],null,7,6],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["comment"," This if/elseif pattern is used so that toooltip creation doesn\'t get confused on initialization, when it temporarily appears that there isn\'t a flag  "],["text","\\n"],["block",["if"],[["get",["hasEquippedFlag"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","banners_profile_blank_tooltip_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["hasNoEquippedFlag"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","style-profile-clash-banner-tooltip-call-to-action-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","banners_profile_tooltip_message"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-group"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-theme"],["flush-element"],["append",["unknown",["bannerTooltipTournamentText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-level"],["flush-element"],["append",["unknown",["bannerTooltipLevelText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-earned-date"],["flush-element"],["append",["unknown",["bannerTooltipEarnedDateText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isBannerClickable"]]],null,3],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],4]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-image"],["dynamic-attr","src",["concat",[["unknown",["bannerImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-frame"],["dynamic-attr","src",["concat",[["unknown",["frameImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-preloader"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-button"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["bannerTournamentTitle"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2061,16 +2058,16 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             n(86);
-            var s = a.Ember.Component.extend({
+            var a = s.Ember.Component.extend({
                 classNames: ["style-profile-eternals-component"],
                 classNameBindings: ["emphasis"],
                 layout: n(87),
                 eternal: null,
                 index: null,
                 championInfo: null,
-                emphasis: a.Ember.computed("index", (function() {
+                emphasis: s.Ember.computed("index", (function() {
                     switch (this.get("index")) {
                         case 0:
                             return "primary";
@@ -2080,31 +2077,31 @@
                             return "tertiary"
                     }
                 })),
-                championId: a.Ember.computed("eternal.championId", (function() {
+                championId: s.Ember.computed("eternal.championId", (function() {
                     const e = this.get("eternal.championId");
-                    return e && a.GameDataChampionSummary.getChampionSummaryPromise(e).then((e => {
+                    return e && s.GameDataChampionSummary.getChampionSummaryPromise(e).then((e => {
                         this.set("championInfo", e)
                     })), e
                 })),
-                categoryLower: a.Ember.computed("eternal.category", (function() {
+                categoryLower: s.Ember.computed("eternal.category", (function() {
                     return this.get("eternal.category").toLowerCase()
                 }))
             });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "dkqOgT2M",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-eternals-image ",["unknown",["emphasis"]]]]],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["eternal","imageUrl"]],");"]]],["flush-element"],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","profile-eternals-value"],["flush-element"],["append",["unknown",["eternal","value"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","profile-eternals-name"],["flush-element"],["append",["unknown",["eternal","name"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-eternals-champion ",["unknown",["championId"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","profile-eternals-champion-framing"],["flush-element"],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","profile-eternals-champion-icon"],["dynamic-attr","src",["concat",[["unknown",["championInfo","squarePortraitPath"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "lX4xscu7",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-eternals-image ",["unknown",["emphasis"]]]]],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["eternal","imageUrl"]],");"]]],["flush-element"],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","profile-eternals-value"],["flush-element"],["append",["unknown",["eternal","value"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","profile-eternals-name"],["flush-element"],["append",["unknown",["eternal","name"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-eternals-champion ",["unknown",["championId"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","profile-eternals-champion-framing"],["flush-element"],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","profile-eternals-champion-icon"],["dynamic-attr","src",["concat",[["unknown",["championInfo","squarePortraitPath"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(42),
+            var s = n(1),
+                a = n(42),
                 i = o(n(89)),
                 r = o(n(32));
 
@@ -2116,10 +2113,10 @@
             n(218);
             const {
                 RunMixin: l
-            } = a.EmberAddons.EmberLifeline;
-            const d = (0, a.EmberDataBinding)({
-                Ember: a.Ember,
-                websocket: (0, a.getProvider)().getSocket(),
+            } = s.EmberAddons.EmberLifeline;
+            const d = (0, s.EmberDataBinding)({
+                Ember: s.Ember,
+                websocket: (0, s.getProvider)().getSocket(),
                 basePaths: {
                     honor: "/lol-honor-v2",
                     settings: "/lol-settings",
@@ -2140,46 +2137,46 @@
                     }
                 }
             });
-            e.exports = a.Ember.Component.extend(l, d, r.default, {
+            e.exports = s.Ember.Component.extend(l, d, r.default, {
                 classNames: ["style-profile-boosts-component"],
                 layout: n(219),
-                tooltipManager: a.TooltipManager,
-                profileService: a.Ember.inject.service("profile"),
-                boosts: a.Ember.computed.alias("profileService.boosts"),
-                honorEnabled: a.Ember.computed.bool("honorConfig.Enabled"),
-                shouldShowHonor: a.Ember.computed.and("honorEnabled", "isMe"),
-                boostActive: a.Ember.computed("xpBoostActive", "boosts", (function() {
+                tooltipManager: s.TooltipManager,
+                profileService: s.Ember.inject.service("profile"),
+                boosts: s.Ember.computed.alias("profileService.boosts"),
+                honorEnabled: s.Ember.computed.bool("honorConfig.Enabled"),
+                shouldShowHonor: s.Ember.computed.and("honorEnabled", "isMe"),
+                boostActive: s.Ember.computed("xpBoostActive", "boosts", (function() {
                     if (this.get("boosts")) {
                         if (this.get("xpBoostActive")) return !0;
-                        a.Ember.run.scheduleOnce("afterRender", this, (function() {
+                        s.Ember.run.scheduleOnce("afterRender", this, (function() {
                             this.$(".boost .boost-tooltip").addClass("inactive")
                         }))
                     }
                     return !1
                 })),
-                xpBoostActive: a.Ember.computed("boosts.xpBoostEndDate", "boosts.xpBoostPerWinCount", (function() {
+                xpBoostActive: s.Ember.computed("boosts.xpBoostEndDate", "boosts.xpBoostPerWinCount", (function() {
                     const e = this.get("boosts");
                     if (e) {
                         const t = Date.now(),
                             n = new Date(e.xpBoostEndDate).getTime() > t,
-                            a = e.xpBoostPerWinCount > 0;
-                        return n || a
+                            s = e.xpBoostPerWinCount > 0;
+                        return n || s
                     }
                     return !1
                 })),
-                xpBoostWinCountString: a.Ember.computed("boosts.xpBoostPerWinCount", "tra.profile_perks_boost_tooltip_message_xp_wins", "tra.profile_perks_boost_tooltip_message_xp_wins_single", (function() {
+                xpBoostWinCountString: s.Ember.computed("boosts.xpBoostPerWinCount", "tra.profile_perks_boost_tooltip_message_xp_wins", "tra.profile_perks_boost_tooltip_message_xp_wins_single", (function() {
                     const e = this.get("boosts");
                     if (e) {
                         const t = e.xpBoostPerWinCount;
-                        if (1 === t) return (0, s.translate)(this, "profile_perks_boost_tooltip_message_xp_wins_single", {
+                        if (1 === t) return (0, a.translate)(this, "profile_perks_boost_tooltip_message_xp_wins_single", {
                             xpBoostPerWinCount: t
                         });
-                        if (t > 1) return (0, s.translate)(this, "profile_perks_boost_tooltip_message_xp_wins", {
+                        if (t > 1) return (0, a.translate)(this, "profile_perks_boost_tooltip_message_xp_wins", {
                             xpBoostPerWinCount: t
                         })
                     }
                 })),
-                xpExpireString: a.Ember.computed("boosts.xpBoostEndDate", "tra.profile_perks_boost_tooltip_message_xp_time", "tra.profile_perks_boost_tooltip_message_xp_time_single", (function() {
+                xpExpireString: s.Ember.computed("boosts.xpBoostEndDate", "tra.profile_perks_boost_tooltip_message_xp_time", "tra.profile_perks_boost_tooltip_message_xp_time_single", (function() {
                     const e = this.get("boosts");
                     if (e) {
                         const t = function(e) {
@@ -2187,9 +2184,9 @@
                                 n = Math.ceil((0, i.default)(e).diff((0, i.default)(t), "days", !0));
                             return Math.max(n, 0)
                         }(e.xpBoostEndDate);
-                        return t < 1 ? "" : 1 === t ? (0, s.translate)(this, "profile_perks_boost_tooltip_message_xp_time_single", {
+                        return t < 1 ? "" : 1 === t ? (0, a.translate)(this, "profile_perks_boost_tooltip_message_xp_time_single", {
                             xpExpireDays: t
-                        }) : (0, s.translate)(this, "profile_perks_boost_tooltip_message_xp_time", {
+                        }) : (0, a.translate)(this, "profile_perks_boost_tooltip_message_xp_time", {
                             xpExpireDays: t
                         })
                     }
@@ -2199,9 +2196,9 @@
         }, function(e, t, n) {
             (e = n.nmd(e)).exports = function() {
                 "use strict";
-                var t, a;
+                var t, s;
 
-                function s() {
+                function a() {
                     return t.apply(null, arguments)
                 }
 
@@ -2238,9 +2235,9 @@
                 }
 
                 function u(e, t) {
-                    var n, a = [];
-                    for (n = 0; n < e.length; ++n) a.push(t(e[n], n));
-                    return a
+                    var n, s = [];
+                    for (n = 0; n < e.length; ++n) s.push(t(e[n], n));
+                    return s
                 }
 
                 function c(e, t) {
@@ -2252,8 +2249,8 @@
                     return c(t, "toString") && (e.toString = t.toString), c(t, "valueOf") && (e.valueOf = t.valueOf), e
                 }
 
-                function h(e, t, n, a) {
-                    return qn(e, t, n, a, !0).utc()
+                function h(e, t, n, s) {
+                    return qn(e, t, n, s, !0).utc()
                 }
 
                 function f() {
@@ -2282,12 +2279,12 @@
                 function y(e) {
                     if (null == e._isValid) {
                         var t = M(e),
-                            n = a.call(t.parsedDateParts, (function(e) {
+                            n = s.call(t.parsedDateParts, (function(e) {
                                 return null != e
                             })),
-                            s = !isNaN(e._d.getTime()) && t.overflow < 0 && !t.empty && !t.invalidMonth && !t.invalidWeekday && !t.weekdayMismatch && !t.nullInput && !t.invalidFormat && !t.userInvalidated && (!t.meridiem || t.meridiem && n);
-                        if (e._strict && (s = s && 0 === t.charsLeftOver && 0 === t.unusedTokens.length && void 0 === t.bigHour), null != Object.isFrozen && Object.isFrozen(e)) return s;
-                        e._isValid = s
+                            a = !isNaN(e._d.getTime()) && t.overflow < 0 && !t.empty && !t.invalidMonth && !t.invalidWeekday && !t.weekdayMismatch && !t.nullInput && !t.invalidFormat && !t.userInvalidated && (!t.meridiem || t.meridiem && n);
+                        if (e._strict && (a = a && 0 === t.charsLeftOver && 0 === t.unusedTokens.length && void 0 === t.bigHour), null != Object.isFrozen && Object.isFrozen(e)) return a;
+                        e._isValid = a
                     }
                     return e._isValid
                 }
@@ -2296,23 +2293,23 @@
                     var t = h(NaN);
                     return null != e ? p(M(t), e) : M(t).userInvalidated = !0, t
                 }
-                a = Array.prototype.some ? Array.prototype.some : function(e) {
-                    for (var t = Object(this), n = t.length >>> 0, a = 0; a < n; a++)
-                        if (a in t && e.call(this, t[a], a, t)) return !0;
+                s = Array.prototype.some ? Array.prototype.some : function(e) {
+                    for (var t = Object(this), n = t.length >>> 0, s = 0; s < n; s++)
+                        if (s in t && e.call(this, t[s], s, t)) return !0;
                     return !1
                 };
-                var g = s.momentProperties = [];
+                var g = a.momentProperties = [];
 
                 function k(e, t) {
-                    var n, a, s;
+                    var n, s, a;
                     if (d(t._isAMomentObject) || (e._isAMomentObject = t._isAMomentObject), d(t._i) || (e._i = t._i), d(t._f) || (e._f = t._f), d(t._l) || (e._l = t._l), d(t._strict) || (e._strict = t._strict), d(t._tzm) || (e._tzm = t._tzm), d(t._isUTC) || (e._isUTC = t._isUTC), d(t._offset) || (e._offset = t._offset), d(t._pf) || (e._pf = M(t)), d(t._locale) || (e._locale = t._locale), g.length > 0)
-                        for (n = 0; n < g.length; n++) d(s = t[a = g[n]]) || (e[a] = s);
+                        for (n = 0; n < g.length; n++) d(a = t[s = g[n]]) || (e[s] = a);
                     return e
                 }
                 var v = !1;
 
                 function b(e) {
-                    k(this, e), this._d = new Date(null != e._d ? e._d.getTime() : NaN), this.isValid() || (this._d = new Date(NaN)), !1 === v && (v = !0, s.updateOffset(this), v = !1)
+                    k(this, e), this._d = new Date(null != e._d ? e._d.getTime() : NaN), this.isValid() || (this._d = new Date(NaN)), !1 === v && (v = !0, a.updateOffset(this), v = !1)
                 }
 
                 function Y(e) {
@@ -2330,27 +2327,27 @@
                 }
 
                 function D(e, t, n) {
-                    var a, s = Math.min(e.length, t.length),
+                    var s, a = Math.min(e.length, t.length),
                         i = Math.abs(e.length - t.length),
                         r = 0;
-                    for (a = 0; a < s; a++)(n && e[a] !== t[a] || !n && S(e[a]) !== S(t[a])) && r++;
+                    for (s = 0; s < a; s++)(n && e[s] !== t[s] || !n && S(e[s]) !== S(t[s])) && r++;
                     return r + i
                 }
 
                 function E(e) {
-                    !1 === s.suppressDeprecationWarnings && "undefined" != typeof console && console.warn && console.warn("Deprecation warning: " + e)
+                    !1 === a.suppressDeprecationWarnings && "undefined" != typeof console && console.warn && console.warn("Deprecation warning: " + e)
                 }
 
                 function w(e, t) {
                     var n = !0;
                     return p((function() {
-                        if (null != s.deprecationHandler && s.deprecationHandler(null, e), n) {
-                            for (var a, i = [], r = 0; r < arguments.length; r++) {
-                                if (a = "", "object" == typeof arguments[r]) {
-                                    for (var o in a += "\n[" + r + "] ", arguments[0]) a += o + ": " + arguments[0][o] + ", ";
-                                    a = a.slice(0, -2)
-                                } else a = arguments[r];
-                                i.push(a)
+                        if (null != a.deprecationHandler && a.deprecationHandler(null, e), n) {
+                            for (var s, i = [], r = 0; r < arguments.length; r++) {
+                                if (s = "", "object" == typeof arguments[r]) {
+                                    for (var o in s += "\n[" + r + "] ", arguments[0]) s += o + ": " + arguments[0][o] + ", ";
+                                    s = s.slice(0, -2)
+                                } else s = arguments[r];
+                                i.push(s)
                             }
                             E(e + "\nArguments: " + Array.prototype.slice.call(i).join("") + "\n" + (new Error).stack), n = !1
                         }
@@ -2360,30 +2357,30 @@
                 var x, H = {};
 
                 function O(e, t) {
-                    null != s.deprecationHandler && s.deprecationHandler(e, t), H[e] || (E(t), H[e] = !0)
+                    null != a.deprecationHandler && a.deprecationHandler(e, t), H[e] || (E(t), H[e] = !0)
                 }
 
                 function P(e) {
                     return e instanceof Function || "[object Function]" === Object.prototype.toString.call(e)
                 }
 
-                function N(e) {
+                function C(e) {
                     var t, n;
                     for (n in e) P(t = e[n]) ? this[n] = t : this["_" + n] = t;
                     this._config = e, this._dayOfMonthOrdinalParseLenient = new RegExp((this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) + "|" + /\d{1,2}/.source)
                 }
 
-                function I(e, t) {
-                    var n, a = p({}, e);
-                    for (n in t) c(t, n) && (o(e[n]) && o(t[n]) ? (a[n] = {}, p(a[n], e[n]), p(a[n], t[n])) : null != t[n] ? a[n] = t[n] : delete a[n]);
-                    for (n in e) c(e, n) && !c(t, n) && o(e[n]) && (a[n] = p({}, a[n]));
-                    return a
+                function N(e, t) {
+                    var n, s = p({}, e);
+                    for (n in t) c(t, n) && (o(e[n]) && o(t[n]) ? (s[n] = {}, p(s[n], e[n]), p(s[n], t[n])) : null != t[n] ? s[n] = t[n] : delete s[n]);
+                    for (n in e) c(e, n) && !c(t, n) && o(e[n]) && (s[n] = p({}, s[n]));
+                    return s
                 }
 
-                function C(e) {
+                function I(e) {
                     null != e && this.set(e)
                 }
-                s.suppressDeprecationWarnings = !1, s.deprecationHandler = null, x = Object.keys ? Object.keys : function(e) {
+                a.suppressDeprecationWarnings = !1, a.deprecationHandler = null, x = Object.keys ? Object.keys : function(e) {
                     var t, n = [];
                     for (t in e) c(e, t) && n.push(t);
                     return n
@@ -2398,8 +2395,8 @@
                 };
 
                 function j(e, t, n) {
-                    var a = this._calendar[e] || this._calendar.sameElse;
-                    return P(a) ? a.call(t, n) : a
+                    var s = this._calendar[e] || this._calendar.sameElse;
+                    return P(s) ? s.call(t, n) : s
                 }
                 var R = {
                     LTS: "h:mm:ss A",
@@ -2419,10 +2416,10 @@
                 }
                 var F = "Invalid date";
 
-                function B() {
+                function U() {
                     return this._invalidDate
                 }
-                var U = "%d",
+                var B = "%d",
                     z = /\d{1,2}/;
 
                 function V(e) {
@@ -2445,9 +2442,9 @@
                     yy: "%d years"
                 };
 
-                function J(e, t, n, a) {
-                    var s = this._relativeTime[n];
-                    return P(s) ? s(e, t, n, a) : s.replace(/%d/i, e)
+                function J(e, t, n, s) {
+                    var a = this._relativeTime[n];
+                    return P(a) ? a(e, t, n, s) : a.replace(/%d/i, e)
                 }
 
                 function q(e, t) {
@@ -2466,9 +2463,9 @@
                 }
 
                 function X(e) {
-                    var t, n, a = {};
-                    for (n in e) c(e, n) && (t = $(n)) && (a[t] = e[n]);
-                    return a
+                    var t, n, s = {};
+                    for (n in e) c(e, n) && (t = $(n)) && (s[t] = e[n]);
+                    return s
                 }
                 var Z = {};
 
@@ -2488,23 +2485,23 @@
                 }
 
                 function ne(e, t, n) {
-                    var a = "" + Math.abs(e),
-                        s = t - a.length;
-                    return (e >= 0 ? n ? "+" : "" : "-") + Math.pow(10, Math.max(0, s)).toString().substr(1) + a
+                    var s = "" + Math.abs(e),
+                        a = t - s.length;
+                    return (e >= 0 ? n ? "+" : "" : "-") + Math.pow(10, Math.max(0, a)).toString().substr(1) + s
                 }
-                var ae = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
-                    se = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
+                var se = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
+                    ae = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
                     ie = {},
                     re = {};
 
-                function oe(e, t, n, a) {
-                    var s = a;
-                    "string" == typeof a && (s = function() {
-                        return this[a]()
-                    }), e && (re[e] = s), t && (re[t[0]] = function() {
-                        return ne(s.apply(this, arguments), t[1], t[2])
+                function oe(e, t, n, s) {
+                    var a = s;
+                    "string" == typeof s && (a = function() {
+                        return this[s]()
+                    }), e && (re[e] = a), t && (re[t[0]] = function() {
+                        return ne(a.apply(this, arguments), t[1], t[2])
                     }), n && (re[n] = function() {
-                        return this.localeData().ordinal(s.apply(this, arguments), e)
+                        return this.localeData().ordinal(a.apply(this, arguments), e)
                     })
                 }
 
@@ -2513,11 +2510,11 @@
                 }
 
                 function de(e) {
-                    var t, n, a = e.match(ae);
-                    for (t = 0, n = a.length; t < n; t++) re[a[t]] ? a[t] = re[a[t]] : a[t] = le(a[t]);
+                    var t, n, s = e.match(se);
+                    for (t = 0, n = s.length; t < n; t++) re[s[t]] ? s[t] = re[s[t]] : s[t] = le(s[t]);
                     return function(t) {
-                        var s, i = "";
-                        for (s = 0; s < n; s++) i += P(a[s]) ? a[s].call(t, e) : a[s];
+                        var a, i = "";
+                        for (a = 0; a < n; a++) i += P(s[a]) ? s[a].call(t, e) : s[a];
                         return i
                     }
                 }
@@ -2529,10 +2526,10 @@
                 function _e(e, t) {
                     var n = 5;
 
-                    function a(e) {
+                    function s(e) {
                         return t.longDateFormat(e) || e
                     }
-                    for (se.lastIndex = 0; n >= 0 && se.test(e);) e = e.replace(se, a), se.lastIndex = 0, n -= 1;
+                    for (ae.lastIndex = 0; n >= 0 && ae.test(e);) e = e.replace(ae, s), ae.lastIndex = 0, n -= 1;
                     return e
                 }
                 var ue = /\d/,
@@ -2555,7 +2552,7 @@
                     we = {};
 
                 function xe(e, t, n) {
-                    we[e] = P(t) ? t : function(e, a) {
+                    we[e] = P(t) ? t : function(e, s) {
                         return e && n ? n : t
                     }
                 }
@@ -2565,38 +2562,38 @@
                 }
 
                 function Oe(e) {
-                    return Pe(e.replace("\\", "").replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, (function(e, t, n, a, s) {
-                        return t || n || a || s
+                    return Pe(e.replace("\\", "").replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, (function(e, t, n, s, a) {
+                        return t || n || s || a
                     })))
                 }
 
                 function Pe(e) {
                     return e.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")
                 }
-                var Ne = {};
+                var Ce = {};
 
-                function Ie(e, t) {
-                    var n, a = t;
-                    for ("string" == typeof e && (e = [e]), m(t) && (a = function(e, n) {
+                function Ne(e, t) {
+                    var n, s = t;
+                    for ("string" == typeof e && (e = [e]), m(t) && (s = function(e, n) {
                             n[t] = S(e)
-                        }), n = 0; n < e.length; n++) Ne[e[n]] = a
+                        }), n = 0; n < e.length; n++) Ce[e[n]] = s
                 }
 
-                function Ce(e, t) {
-                    Ie(e, (function(e, n, a, s) {
-                        a._w = a._w || {}, t(e, a._w, a, s)
+                function Ie(e, t) {
+                    Ne(e, (function(e, n, s, a) {
+                        s._w = s._w || {}, t(e, s._w, s, a)
                     }))
                 }
 
                 function Ae(e, t, n) {
-                    null != t && c(Ne, e) && Ne[e](t, n._a, n, e)
+                    null != t && c(Ce, e) && Ce[e](t, n._a, n, e)
                 }
                 var je = 0,
                     Re = 1,
                     We = 2,
                     Fe = 3,
-                    Be = 4,
-                    Ue = 5,
+                    Ue = 4,
+                    Be = 5,
                     ze = 6,
                     Ve = 7,
                     Ge = 8;
@@ -2613,13 +2610,13 @@
                     return e <= 9999 ? "" + e : "+" + e
                 })), oe(0, ["YY", 2], 0, (function() {
                     return this.year() % 100
-                })), oe(0, ["YYYY", 4], 0, "year"), oe(0, ["YYYYY", 5], 0, "year"), oe(0, ["YYYYYY", 6, !0], 0, "year"), Q("year", "y"), ee("year", 1), xe("Y", Ye), xe("YY", Me, ce), xe("YYYY", ke, he), xe("YYYYY", ve, fe), xe("YYYYYY", ve, fe), Ie(["YYYYY", "YYYYYY"], je), Ie("YYYY", (function(e, t) {
-                    t[je] = 2 === e.length ? s.parseTwoDigitYear(e) : S(e)
-                })), Ie("YY", (function(e, t) {
-                    t[je] = s.parseTwoDigitYear(e)
-                })), Ie("Y", (function(e, t) {
+                })), oe(0, ["YYYY", 4], 0, "year"), oe(0, ["YYYYY", 5], 0, "year"), oe(0, ["YYYYYY", 6, !0], 0, "year"), Q("year", "y"), ee("year", 1), xe("Y", Ye), xe("YY", Me, ce), xe("YYYY", ke, he), xe("YYYYY", ve, fe), xe("YYYYYY", ve, fe), Ne(["YYYYY", "YYYYYY"], je), Ne("YYYY", (function(e, t) {
+                    t[je] = 2 === e.length ? a.parseTwoDigitYear(e) : S(e)
+                })), Ne("YY", (function(e, t) {
+                    t[je] = a.parseTwoDigitYear(e)
+                })), Ne("Y", (function(e, t) {
                     t[je] = parseInt(e, 10)
-                })), s.parseTwoDigitYear = function(e) {
+                })), a.parseTwoDigitYear = function(e) {
                     return S(e) + (S(e) > 68 ? 1900 : 2e3)
                 };
                 var Ke, Qe = Xe("FullYear", !0);
@@ -2630,7 +2627,7 @@
 
                 function Xe(e, t) {
                     return function(n) {
-                        return null != n ? (et(this, e, n), s.updateOffset(this, t), this) : Ze(this, e)
+                        return null != n ? (et(this, e, n), a.updateOffset(this, t), this) : Ze(this, e)
                     }
                 }
 
@@ -2639,7 +2636,7 @@
                 }
 
                 function et(e, t, n) {
-                    e.isValid() && !isNaN(n) && ("FullYear" === t && qe(e.year()) && 1 === e.month() && 29 === e.date() ? e._d["set" + (e._isUTC ? "UTC" : "") + t](n, e.month(), st(n, e.month())) : e._d["set" + (e._isUTC ? "UTC" : "") + t](n))
+                    e.isValid() && !isNaN(n) && ("FullYear" === t && qe(e.year()) && 1 === e.month() && 29 === e.date() ? e._d["set" + (e._isUTC ? "UTC" : "") + t](n, e.month(), at(n, e.month())) : e._d["set" + (e._isUTC ? "UTC" : "") + t](n))
                 }
 
                 function tt(e) {
@@ -2648,18 +2645,18 @@
 
                 function nt(e, t) {
                     if ("object" == typeof e)
-                        for (var n = te(e = X(e)), a = 0; a < n.length; a++) this[n[a].unit](e[n[a].unit]);
+                        for (var n = te(e = X(e)), s = 0; s < n.length; s++) this[n[s].unit](e[n[s].unit]);
                     else if (P(this[e = $(e)])) return this[e](t);
                     return this
                 }
 
-                function at(e, t) {
+                function st(e, t) {
                     return (e % t + t) % t
                 }
 
-                function st(e, t) {
+                function at(e, t) {
                     if (isNaN(e) || isNaN(t)) return NaN;
-                    var n = at(t, 12);
+                    var n = st(t, 12);
                     return e += (t - n) / 12, 1 === n ? qe(e) ? 29 : 28 : 31 - n % 7 % 2
                 }
                 Ke = Array.prototype.indexOf ? Array.prototype.indexOf : function(e) {
@@ -2677,11 +2674,11 @@
                     return t.monthsShortRegex(e)
                 })), xe("MMMM", (function(e, t) {
                     return t.monthsRegex(e)
-                })), Ie(["M", "MM"], (function(e, t) {
+                })), Ne(["M", "MM"], (function(e, t) {
                     t[Re] = S(e) - 1
-                })), Ie(["MMM", "MMMM"], (function(e, t, n, a) {
-                    var s = n._locale.monthsParse(e, a, n._strict);
-                    null != s ? t[Re] = s : M(n).invalidMonth = e
+                })), Ne(["MMM", "MMMM"], (function(e, t, n, s) {
+                    var a = n._locale.monthsParse(e, s, n._strict);
+                    null != a ? t[Re] = a : M(n).invalidMonth = e
                 }));
                 var it = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
                     rt = "January_February_March_April_May_June_July_August_September_October_November_December".split("_");
@@ -2696,19 +2693,19 @@
                 }
 
                 function mt(e, t, n) {
-                    var a, s, i, r = e.toLocaleLowerCase();
+                    var s, a, i, r = e.toLocaleLowerCase();
                     if (!this._monthsParse)
-                        for (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = [], a = 0; a < 12; ++a) i = h([2e3, a]), this._shortMonthsParse[a] = this.monthsShort(i, "").toLocaleLowerCase(), this._longMonthsParse[a] = this.months(i, "").toLocaleLowerCase();
-                    return n ? "MMM" === t ? -1 !== (s = Ke.call(this._shortMonthsParse, r)) ? s : null : -1 !== (s = Ke.call(this._longMonthsParse, r)) ? s : null : "MMM" === t ? -1 !== (s = Ke.call(this._shortMonthsParse, r)) || -1 !== (s = Ke.call(this._longMonthsParse, r)) ? s : null : -1 !== (s = Ke.call(this._longMonthsParse, r)) || -1 !== (s = Ke.call(this._shortMonthsParse, r)) ? s : null
+                        for (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = [], s = 0; s < 12; ++s) i = h([2e3, s]), this._shortMonthsParse[s] = this.monthsShort(i, "").toLocaleLowerCase(), this._longMonthsParse[s] = this.months(i, "").toLocaleLowerCase();
+                    return n ? "MMM" === t ? -1 !== (a = Ke.call(this._shortMonthsParse, r)) ? a : null : -1 !== (a = Ke.call(this._longMonthsParse, r)) ? a : null : "MMM" === t ? -1 !== (a = Ke.call(this._shortMonthsParse, r)) || -1 !== (a = Ke.call(this._longMonthsParse, r)) ? a : null : -1 !== (a = Ke.call(this._longMonthsParse, r)) || -1 !== (a = Ke.call(this._shortMonthsParse, r)) ? a : null
                 }
 
                 function _t(e, t, n) {
-                    var a, s, i;
+                    var s, a, i;
                     if (this._monthsParseExact) return mt.call(this, e, t, n);
-                    for (this._monthsParse || (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = []), a = 0; a < 12; a++) {
-                        if (s = h([2e3, a]), n && !this._longMonthsParse[a] && (this._longMonthsParse[a] = new RegExp("^" + this.months(s, "").replace(".", "") + "$", "i"), this._shortMonthsParse[a] = new RegExp("^" + this.monthsShort(s, "").replace(".", "") + "$", "i")), n || this._monthsParse[a] || (i = "^" + this.months(s, "") + "|^" + this.monthsShort(s, ""), this._monthsParse[a] = new RegExp(i.replace(".", ""), "i")), n && "MMMM" === t && this._longMonthsParse[a].test(e)) return a;
-                        if (n && "MMM" === t && this._shortMonthsParse[a].test(e)) return a;
-                        if (!n && this._monthsParse[a].test(e)) return a
+                    for (this._monthsParse || (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = []), s = 0; s < 12; s++) {
+                        if (a = h([2e3, s]), n && !this._longMonthsParse[s] && (this._longMonthsParse[s] = new RegExp("^" + this.months(a, "").replace(".", "") + "$", "i"), this._shortMonthsParse[s] = new RegExp("^" + this.monthsShort(a, "").replace(".", "") + "$", "i")), n || this._monthsParse[s] || (i = "^" + this.months(a, "") + "|^" + this.monthsShort(a, ""), this._monthsParse[s] = new RegExp(i.replace(".", ""), "i")), n && "MMMM" === t && this._longMonthsParse[s].test(e)) return s;
+                        if (n && "MMM" === t && this._shortMonthsParse[s].test(e)) return s;
+                        if (!n && this._monthsParse[s].test(e)) return s
                     }
                 }
 
@@ -2718,15 +2715,15 @@
                     if ("string" == typeof t)
                         if (/^\d+$/.test(t)) t = S(t);
                         else if (!m(t = e.localeData().monthsParse(t))) return e;
-                    return n = Math.min(e.date(), st(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, n), e
+                    return n = Math.min(e.date(), at(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, n), e
                 }
 
                 function ct(e) {
-                    return null != e ? (ut(this, e), s.updateOffset(this, !0), this) : Ze(this, "Month")
+                    return null != e ? (ut(this, e), a.updateOffset(this, !0), this) : Ze(this, "Month")
                 }
 
                 function pt() {
-                    return st(this.year(), this.month())
+                    return at(this.year(), this.month())
                 }
                 var ht = Ee;
 
@@ -2743,18 +2740,18 @@
                     function e(e, t) {
                         return t.length - e.length
                     }
-                    var t, n, a = [],
-                        s = [],
+                    var t, n, s = [],
+                        a = [],
                         i = [];
-                    for (t = 0; t < 12; t++) n = h([2e3, t]), a.push(this.monthsShort(n, "")), s.push(this.months(n, "")), i.push(this.months(n, "")), i.push(this.monthsShort(n, ""));
-                    for (a.sort(e), s.sort(e), i.sort(e), t = 0; t < 12; t++) a[t] = Pe(a[t]), s[t] = Pe(s[t]);
+                    for (t = 0; t < 12; t++) n = h([2e3, t]), s.push(this.monthsShort(n, "")), a.push(this.months(n, "")), i.push(this.months(n, "")), i.push(this.monthsShort(n, ""));
+                    for (s.sort(e), a.sort(e), i.sort(e), t = 0; t < 12; t++) s[t] = Pe(s[t]), a[t] = Pe(a[t]);
                     for (t = 0; t < 24; t++) i[t] = Pe(i[t]);
-                    this._monthsRegex = new RegExp("^(" + i.join("|") + ")", "i"), this._monthsShortRegex = this._monthsRegex, this._monthsStrictRegex = new RegExp("^(" + s.join("|") + ")", "i"), this._monthsShortStrictRegex = new RegExp("^(" + a.join("|") + ")", "i")
+                    this._monthsRegex = new RegExp("^(" + i.join("|") + ")", "i"), this._monthsShortRegex = this._monthsRegex, this._monthsStrictRegex = new RegExp("^(" + a.join("|") + ")", "i"), this._monthsShortStrictRegex = new RegExp("^(" + s.join("|") + ")", "i")
                 }
 
-                function gt(e, t, n, a, s, i, r) {
+                function gt(e, t, n, s, a, i, r) {
                     var o;
-                    return e < 100 && e >= 0 ? (o = new Date(e + 400, t, n, a, s, i, r), isFinite(o.getFullYear()) && o.setFullYear(e)) : o = new Date(e, t, n, a, s, i, r), o
+                    return e < 100 && e >= 0 ? (o = new Date(e + 400, t, n, s, a, i, r), isFinite(o.getFullYear()) && o.setFullYear(e)) : o = new Date(e, t, n, s, a, i, r), o
                 }
 
                 function kt(e) {
@@ -2767,12 +2764,12 @@
                 }
 
                 function vt(e, t, n) {
-                    var a = 7 + t - n;
-                    return -(7 + kt(e, 0, a).getUTCDay() - t) % 7 + a - 1
+                    var s = 7 + t - n;
+                    return -(7 + kt(e, 0, s).getUTCDay() - t) % 7 + s - 1
                 }
 
-                function bt(e, t, n, a, s) {
-                    var i, r, o = 1 + 7 * (t - 1) + (7 + n - a) % 7 + vt(e, a, s);
+                function bt(e, t, n, s, a) {
+                    var i, r, o = 1 + 7 * (t - 1) + (7 + n - s) % 7 + vt(e, s, a);
                     return o <= 0 ? r = Je(i = e - 1) + o : o > Je(e) ? (i = e + 1, r = o - Je(e)) : (i = e, r = o), {
                         year: i,
                         dayOfYear: r
@@ -2780,25 +2777,25 @@
                 }
 
                 function Yt(e, t, n) {
-                    var a, s, i = vt(e.year(), t, n),
+                    var s, a, i = vt(e.year(), t, n),
                         r = Math.floor((e.dayOfYear() - i - 1) / 7) + 1;
-                    return r < 1 ? a = r + Tt(s = e.year() - 1, t, n) : r > Tt(e.year(), t, n) ? (a = r - Tt(e.year(), t, n), s = e.year() + 1) : (s = e.year(), a = r), {
-                        week: a,
-                        year: s
+                    return r < 1 ? s = r + Tt(a = e.year() - 1, t, n) : r > Tt(e.year(), t, n) ? (s = r - Tt(e.year(), t, n), a = e.year() + 1) : (a = e.year(), s = r), {
+                        week: s,
+                        year: a
                     }
                 }
 
                 function Tt(e, t, n) {
-                    var a = vt(e, t, n),
-                        s = vt(e + 1, t, n);
-                    return (Je(e) - a + s) / 7
+                    var s = vt(e, t, n),
+                        a = vt(e + 1, t, n);
+                    return (Je(e) - s + a) / 7
                 }
 
                 function St(e) {
                     return Yt(e, this._week.dow, this._week.doy).week
                 }
-                oe("w", ["ww", 2], "wo", "week"), oe("W", ["WW", 2], "Wo", "isoWeek"), Q("week", "w"), Q("isoWeek", "W"), ee("week", 5), ee("isoWeek", 5), xe("w", Me), xe("ww", Me, ce), xe("W", Me), xe("WW", Me, ce), Ce(["w", "ww", "W", "WW"], (function(e, t, n, a) {
-                    t[a.substr(0, 1)] = S(e)
+                oe("w", ["ww", 2], "wo", "week"), oe("W", ["WW", 2], "Wo", "isoWeek"), Q("week", "w"), Q("isoWeek", "W"), ee("week", 5), ee("isoWeek", 5), xe("w", Me), xe("ww", Me, ce), xe("W", Me), xe("WW", Me, ce), Ie(["w", "ww", "W", "WW"], (function(e, t, n, s) {
+                    t[s.substr(0, 1)] = S(e)
                 }));
                 var Dt = {
                     dow: 0,
@@ -2831,7 +2828,7 @@
                     return "string" == typeof e ? t.weekdaysParse(e) % 7 || 7 : isNaN(e) ? null : e
                 }
 
-                function Nt(e, t) {
+                function Ct(e, t) {
                     return e.slice(t, 7).concat(e.slice(0, t))
                 }
                 oe("d", 0, "do", "day"), oe("dd", 0, 0, (function(e) {
@@ -2846,48 +2843,48 @@
                     return t.weekdaysShortRegex(e)
                 })), xe("dddd", (function(e, t) {
                     return t.weekdaysRegex(e)
-                })), Ce(["dd", "ddd", "dddd"], (function(e, t, n, a) {
-                    var s = n._locale.weekdaysParse(e, a, n._strict);
-                    null != s ? t.d = s : M(n).invalidWeekday = e
-                })), Ce(["d", "e", "E"], (function(e, t, n, a) {
-                    t[a] = S(e)
+                })), Ie(["dd", "ddd", "dddd"], (function(e, t, n, s) {
+                    var a = n._locale.weekdaysParse(e, s, n._strict);
+                    null != a ? t.d = a : M(n).invalidWeekday = e
+                })), Ie(["d", "e", "E"], (function(e, t, n, s) {
+                    t[s] = S(e)
                 }));
-                var It = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_");
+                var Nt = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_");
 
-                function Ct(e, t) {
+                function It(e, t) {
                     var n = r(this._weekdays) ? this._weekdays : this._weekdays[e && !0 !== e && this._weekdays.isFormat.test(t) ? "format" : "standalone"];
-                    return !0 === e ? Nt(n, this._week.dow) : e ? n[e.day()] : n
+                    return !0 === e ? Ct(n, this._week.dow) : e ? n[e.day()] : n
                 }
                 var At = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_");
 
                 function jt(e) {
-                    return !0 === e ? Nt(this._weekdaysShort, this._week.dow) : e ? this._weekdaysShort[e.day()] : this._weekdaysShort
+                    return !0 === e ? Ct(this._weekdaysShort, this._week.dow) : e ? this._weekdaysShort[e.day()] : this._weekdaysShort
                 }
                 var Rt = "Su_Mo_Tu_We_Th_Fr_Sa".split("_");
 
                 function Wt(e) {
-                    return !0 === e ? Nt(this._weekdaysMin, this._week.dow) : e ? this._weekdaysMin[e.day()] : this._weekdaysMin
+                    return !0 === e ? Ct(this._weekdaysMin, this._week.dow) : e ? this._weekdaysMin[e.day()] : this._weekdaysMin
                 }
 
                 function Ft(e, t, n) {
-                    var a, s, i, r = e.toLocaleLowerCase();
+                    var s, a, i, r = e.toLocaleLowerCase();
                     if (!this._weekdaysParse)
-                        for (this._weekdaysParse = [], this._shortWeekdaysParse = [], this._minWeekdaysParse = [], a = 0; a < 7; ++a) i = h([2e3, 1]).day(a), this._minWeekdaysParse[a] = this.weekdaysMin(i, "").toLocaleLowerCase(), this._shortWeekdaysParse[a] = this.weekdaysShort(i, "").toLocaleLowerCase(), this._weekdaysParse[a] = this.weekdays(i, "").toLocaleLowerCase();
-                    return n ? "dddd" === t ? -1 !== (s = Ke.call(this._weekdaysParse, r)) ? s : null : "ddd" === t ? -1 !== (s = Ke.call(this._shortWeekdaysParse, r)) ? s : null : -1 !== (s = Ke.call(this._minWeekdaysParse, r)) ? s : null : "dddd" === t ? -1 !== (s = Ke.call(this._weekdaysParse, r)) || -1 !== (s = Ke.call(this._shortWeekdaysParse, r)) || -1 !== (s = Ke.call(this._minWeekdaysParse, r)) ? s : null : "ddd" === t ? -1 !== (s = Ke.call(this._shortWeekdaysParse, r)) || -1 !== (s = Ke.call(this._weekdaysParse, r)) || -1 !== (s = Ke.call(this._minWeekdaysParse, r)) ? s : null : -1 !== (s = Ke.call(this._minWeekdaysParse, r)) || -1 !== (s = Ke.call(this._weekdaysParse, r)) || -1 !== (s = Ke.call(this._shortWeekdaysParse, r)) ? s : null
+                        for (this._weekdaysParse = [], this._shortWeekdaysParse = [], this._minWeekdaysParse = [], s = 0; s < 7; ++s) i = h([2e3, 1]).day(s), this._minWeekdaysParse[s] = this.weekdaysMin(i, "").toLocaleLowerCase(), this._shortWeekdaysParse[s] = this.weekdaysShort(i, "").toLocaleLowerCase(), this._weekdaysParse[s] = this.weekdays(i, "").toLocaleLowerCase();
+                    return n ? "dddd" === t ? -1 !== (a = Ke.call(this._weekdaysParse, r)) ? a : null : "ddd" === t ? -1 !== (a = Ke.call(this._shortWeekdaysParse, r)) ? a : null : -1 !== (a = Ke.call(this._minWeekdaysParse, r)) ? a : null : "dddd" === t ? -1 !== (a = Ke.call(this._weekdaysParse, r)) || -1 !== (a = Ke.call(this._shortWeekdaysParse, r)) || -1 !== (a = Ke.call(this._minWeekdaysParse, r)) ? a : null : "ddd" === t ? -1 !== (a = Ke.call(this._shortWeekdaysParse, r)) || -1 !== (a = Ke.call(this._weekdaysParse, r)) || -1 !== (a = Ke.call(this._minWeekdaysParse, r)) ? a : null : -1 !== (a = Ke.call(this._minWeekdaysParse, r)) || -1 !== (a = Ke.call(this._weekdaysParse, r)) || -1 !== (a = Ke.call(this._shortWeekdaysParse, r)) ? a : null
                 }
 
-                function Bt(e, t, n) {
-                    var a, s, i;
+                function Ut(e, t, n) {
+                    var s, a, i;
                     if (this._weekdaysParseExact) return Ft.call(this, e, t, n);
-                    for (this._weekdaysParse || (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), a = 0; a < 7; a++) {
-                        if (s = h([2e3, 1]).day(a), n && !this._fullWeekdaysParse[a] && (this._fullWeekdaysParse[a] = new RegExp("^" + this.weekdays(s, "").replace(".", "\\.?") + "$", "i"), this._shortWeekdaysParse[a] = new RegExp("^" + this.weekdaysShort(s, "").replace(".", "\\.?") + "$", "i"), this._minWeekdaysParse[a] = new RegExp("^" + this.weekdaysMin(s, "").replace(".", "\\.?") + "$", "i")), this._weekdaysParse[a] || (i = "^" + this.weekdays(s, "") + "|^" + this.weekdaysShort(s, "") + "|^" + this.weekdaysMin(s, ""), this._weekdaysParse[a] = new RegExp(i.replace(".", ""), "i")), n && "dddd" === t && this._fullWeekdaysParse[a].test(e)) return a;
-                        if (n && "ddd" === t && this._shortWeekdaysParse[a].test(e)) return a;
-                        if (n && "dd" === t && this._minWeekdaysParse[a].test(e)) return a;
-                        if (!n && this._weekdaysParse[a].test(e)) return a
+                    for (this._weekdaysParse || (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), s = 0; s < 7; s++) {
+                        if (a = h([2e3, 1]).day(s), n && !this._fullWeekdaysParse[s] && (this._fullWeekdaysParse[s] = new RegExp("^" + this.weekdays(a, "").replace(".", "\\.?") + "$", "i"), this._shortWeekdaysParse[s] = new RegExp("^" + this.weekdaysShort(a, "").replace(".", "\\.?") + "$", "i"), this._minWeekdaysParse[s] = new RegExp("^" + this.weekdaysMin(a, "").replace(".", "\\.?") + "$", "i")), this._weekdaysParse[s] || (i = "^" + this.weekdays(a, "") + "|^" + this.weekdaysShort(a, "") + "|^" + this.weekdaysMin(a, ""), this._weekdaysParse[s] = new RegExp(i.replace(".", ""), "i")), n && "dddd" === t && this._fullWeekdaysParse[s].test(e)) return s;
+                        if (n && "ddd" === t && this._shortWeekdaysParse[s].test(e)) return s;
+                        if (n && "dd" === t && this._minWeekdaysParse[s].test(e)) return s;
+                        if (!n && this._weekdaysParse[s].test(e)) return s
                     }
                 }
 
-                function Ut(e) {
+                function Bt(e) {
                     if (!this.isValid()) return null != e ? this : NaN;
                     var t = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
                     return null != e ? (e = Ot(e, this.localeData()), this.add(e - t, "d")) : t
@@ -2927,11 +2924,11 @@
                     function e(e, t) {
                         return t.length - e.length
                     }
-                    var t, n, a, s, i, r = [],
+                    var t, n, s, a, i, r = [],
                         o = [],
                         l = [],
                         d = [];
-                    for (t = 0; t < 7; t++) n = h([2e3, 1]).day(t), a = this.weekdaysMin(n, ""), s = this.weekdaysShort(n, ""), i = this.weekdays(n, ""), r.push(a), o.push(s), l.push(i), d.push(a), d.push(s), d.push(i);
+                    for (t = 0; t < 7; t++) n = h([2e3, 1]).day(t), s = this.weekdaysMin(n, ""), a = this.weekdaysShort(n, ""), i = this.weekdays(n, ""), r.push(s), o.push(a), l.push(i), d.push(s), d.push(a), d.push(i);
                     for (r.sort(e), o.sort(e), l.sort(e), d.sort(e), t = 0; t < 7; t++) o[t] = Pe(o[t]), l[t] = Pe(l[t]), d[t] = Pe(d[t]);
                     this._weekdaysRegex = new RegExp("^(" + d.join("|") + ")", "i"), this._weekdaysShortRegex = this._weekdaysRegex, this._weekdaysMinRegex = this._weekdaysRegex, this._weekdaysStrictRegex = new RegExp("^(" + l.join("|") + ")", "i"), this._weekdaysShortStrictRegex = new RegExp("^(" + o.join("|") + ")", "i"), this._weekdaysMinStrictRegex = new RegExp("^(" + r.join("|") + ")", "i")
                 }
@@ -2954,7 +2951,7 @@
                     return t._meridiemParse
                 }
 
-                function an(e) {
+                function sn(e) {
                     return "p" === (e + "").toLowerCase().charAt(0)
                 }
                 oe("H", ["HH", 2], 0, "hour"), oe("h", ["hh", 2], 0, Zt), oe("k", ["kk", 2], 0, en), oe("hmm", 0, 0, (function() {
@@ -2965,29 +2962,29 @@
                     return "" + this.hours() + ne(this.minutes(), 2)
                 })), oe("Hmmss", 0, 0, (function() {
                     return "" + this.hours() + ne(this.minutes(), 2) + ne(this.seconds(), 2)
-                })), tn("a", !0), tn("A", !1), Q("hour", "h"), ee("hour", 13), xe("a", nn), xe("A", nn), xe("H", Me), xe("h", Me), xe("k", Me), xe("HH", Me, ce), xe("hh", Me, ce), xe("kk", Me, ce), xe("hmm", ye), xe("hmmss", Le), xe("Hmm", ye), xe("Hmmss", Le), Ie(["H", "HH"], Fe), Ie(["k", "kk"], (function(e, t, n) {
-                    var a = S(e);
-                    t[Fe] = 24 === a ? 0 : a
-                })), Ie(["a", "A"], (function(e, t, n) {
+                })), tn("a", !0), tn("A", !1), Q("hour", "h"), ee("hour", 13), xe("a", nn), xe("A", nn), xe("H", Me), xe("h", Me), xe("k", Me), xe("HH", Me, ce), xe("hh", Me, ce), xe("kk", Me, ce), xe("hmm", ye), xe("hmmss", Le), xe("Hmm", ye), xe("Hmmss", Le), Ne(["H", "HH"], Fe), Ne(["k", "kk"], (function(e, t, n) {
+                    var s = S(e);
+                    t[Fe] = 24 === s ? 0 : s
+                })), Ne(["a", "A"], (function(e, t, n) {
                     n._isPm = n._locale.isPM(e), n._meridiem = e
-                })), Ie(["h", "hh"], (function(e, t, n) {
+                })), Ne(["h", "hh"], (function(e, t, n) {
                     t[Fe] = S(e), M(n).bigHour = !0
-                })), Ie("hmm", (function(e, t, n) {
-                    var a = e.length - 2;
-                    t[Fe] = S(e.substr(0, a)), t[Be] = S(e.substr(a)), M(n).bigHour = !0
-                })), Ie("hmmss", (function(e, t, n) {
-                    var a = e.length - 4,
-                        s = e.length - 2;
-                    t[Fe] = S(e.substr(0, a)), t[Be] = S(e.substr(a, 2)), t[Ue] = S(e.substr(s)), M(n).bigHour = !0
-                })), Ie("Hmm", (function(e, t, n) {
-                    var a = e.length - 2;
-                    t[Fe] = S(e.substr(0, a)), t[Be] = S(e.substr(a))
-                })), Ie("Hmmss", (function(e, t, n) {
-                    var a = e.length - 4,
-                        s = e.length - 2;
-                    t[Fe] = S(e.substr(0, a)), t[Be] = S(e.substr(a, 2)), t[Ue] = S(e.substr(s))
+                })), Ne("hmm", (function(e, t, n) {
+                    var s = e.length - 2;
+                    t[Fe] = S(e.substr(0, s)), t[Ue] = S(e.substr(s)), M(n).bigHour = !0
+                })), Ne("hmmss", (function(e, t, n) {
+                    var s = e.length - 4,
+                        a = e.length - 2;
+                    t[Fe] = S(e.substr(0, s)), t[Ue] = S(e.substr(s, 2)), t[Be] = S(e.substr(a)), M(n).bigHour = !0
+                })), Ne("Hmm", (function(e, t, n) {
+                    var s = e.length - 2;
+                    t[Fe] = S(e.substr(0, s)), t[Ue] = S(e.substr(s))
+                })), Ne("Hmmss", (function(e, t, n) {
+                    var s = e.length - 4,
+                        a = e.length - 2;
+                    t[Fe] = S(e.substr(0, s)), t[Ue] = S(e.substr(s, 2)), t[Be] = S(e.substr(a))
                 }));
-                var sn = /[ap]\.?m?\.?/i;
+                var an = /[ap]\.?m?\.?/i;
 
                 function rn(e, t, n) {
                     return e > 11 ? n ? "pm" : "PM" : n ? "am" : "AM"
@@ -2997,16 +2994,16 @@
                         calendar: A,
                         longDateFormat: R,
                         invalidDate: F,
-                        ordinal: U,
+                        ordinal: B,
                         dayOfMonthOrdinalParse: z,
                         relativeTime: G,
                         months: rt,
                         monthsShort: lt,
                         week: Dt,
-                        weekdays: It,
+                        weekdays: Nt,
                         weekdaysMin: Rt,
                         weekdaysShort: At,
-                        meridiemParse: sn
+                        meridiemParse: an
                     },
                     mn = {},
                     _n = {};
@@ -3016,10 +3013,10 @@
                 }
 
                 function cn(e) {
-                    for (var t, n, a, s, i = 0; i < e.length;) {
-                        for (t = (s = un(e[i]).split("-")).length, n = (n = un(e[i + 1])) ? n.split("-") : null; t > 0;) {
-                            if (a = pn(s.slice(0, t).join("-"))) return a;
-                            if (n && n.length >= t && D(s, n, !0) >= t - 1) break;
+                    for (var t, n, s, a, i = 0; i < e.length;) {
+                        for (t = (a = un(e[i]).split("-")).length, n = (n = un(e[i + 1])) ? n.split("-") : null; t > 0;) {
+                            if (s = pn(a.slice(0, t).join("-"))) return s;
+                            if (n && n.length >= t && D(a, n, !0) >= t - 1) break;
                             t--
                         }
                         i++
@@ -3028,9 +3025,9 @@
                 }
 
                 function pn(t) {
-                    var a = null;
+                    var s = null;
                     if (!mn[t] && e && e.exports) try {
-                        a = on._abbr, n(90)("./" + t), hn(a)
+                        s = on._abbr, n(90)("./" + t), hn(s)
                     } catch (e) {}
                     return mn[t]
                 }
@@ -3042,17 +3039,17 @@
 
                 function fn(e, t) {
                     if (null !== t) {
-                        var n, a = dn;
-                        if (t.abbr = e, null != mn[e]) O("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), a = mn[e]._config;
+                        var n, s = dn;
+                        if (t.abbr = e, null != mn[e]) O("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), s = mn[e]._config;
                         else if (null != t.parentLocale)
-                            if (null != mn[t.parentLocale]) a = mn[t.parentLocale]._config;
+                            if (null != mn[t.parentLocale]) s = mn[t.parentLocale]._config;
                             else {
                                 if (null == (n = pn(t.parentLocale))) return _n[t.parentLocale] || (_n[t.parentLocale] = []), _n[t.parentLocale].push({
                                     name: e,
                                     config: t
                                 }), null;
-                                a = n._config
-                            } return mn[e] = new C(I(a, t)), _n[e] && _n[e].forEach((function(e) {
+                                s = n._config
+                            } return mn[e] = new I(N(s, t)), _n[e] && _n[e].forEach((function(e) {
                             fn(e.name, e.config)
                         })), hn(e), mn[e]
                     }
@@ -3061,8 +3058,8 @@
 
                 function Mn(e, t) {
                     if (null != t) {
-                        var n, a, s = dn;
-                        null != (a = pn(e)) && (s = a._config), (n = new C(t = I(s, t))).parentLocale = mn[e], mn[e] = n, hn(e)
+                        var n, s, a = dn;
+                        null != (s = pn(e)) && (a = s._config), (n = new I(t = N(a, t))).parentLocale = mn[e], mn[e] = n, hn(e)
                     } else null != mn[e] && (null != mn[e].parentLocale ? mn[e] = mn[e].parentLocale : null != mn[e] && delete mn[e]);
                     return mn[e]
                 }
@@ -3083,7 +3080,7 @@
 
                 function gn(e) {
                     var t, n = e._a;
-                    return n && -2 === M(e).overflow && (t = n[Re] < 0 || n[Re] > 11 ? Re : n[We] < 1 || n[We] > st(n[je], n[Re]) ? We : n[Fe] < 0 || n[Fe] > 24 || 24 === n[Fe] && (0 !== n[Be] || 0 !== n[Ue] || 0 !== n[ze]) ? Fe : n[Be] < 0 || n[Be] > 59 ? Be : n[Ue] < 0 || n[Ue] > 59 ? Ue : n[ze] < 0 || n[ze] > 999 ? ze : -1, M(e)._overflowDayOfYear && (t < je || t > We) && (t = We), M(e)._overflowWeeks && -1 === t && (t = Ve), M(e)._overflowWeekday && -1 === t && (t = Ge), M(e).overflow = t), e
+                    return n && -2 === M(e).overflow && (t = n[Re] < 0 || n[Re] > 11 ? Re : n[We] < 1 || n[We] > at(n[je], n[Re]) ? We : n[Fe] < 0 || n[Fe] > 24 || 24 === n[Fe] && (0 !== n[Ue] || 0 !== n[Be] || 0 !== n[ze]) ? Fe : n[Ue] < 0 || n[Ue] > 59 ? Ue : n[Be] < 0 || n[Be] > 59 ? Be : n[ze] < 0 || n[ze] > 999 ? ze : -1, M(e)._overflowDayOfYear && (t < je || t > We) && (t = We), M(e)._overflowWeeks && -1 === t && (t = Ve), M(e)._overflowWeekday && -1 === t && (t = Ge), M(e).overflow = t), e
                 }
 
                 function kn(e, t, n) {
@@ -3091,28 +3088,28 @@
                 }
 
                 function vn(e) {
-                    var t = new Date(s.now());
+                    var t = new Date(a.now());
                     return e._useUTC ? [t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate()] : [t.getFullYear(), t.getMonth(), t.getDate()]
                 }
 
                 function bn(e) {
-                    var t, n, a, s, i, r = [];
+                    var t, n, s, a, i, r = [];
                     if (!e._d) {
-                        for (a = vn(e), e._w && null == e._a[We] && null == e._a[Re] && Yn(e), null != e._dayOfYear && (i = kn(e._a[je], a[je]), (e._dayOfYear > Je(i) || 0 === e._dayOfYear) && (M(e)._overflowDayOfYear = !0), n = kt(i, 0, e._dayOfYear), e._a[Re] = n.getUTCMonth(), e._a[We] = n.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) e._a[t] = r[t] = a[t];
+                        for (s = vn(e), e._w && null == e._a[We] && null == e._a[Re] && Yn(e), null != e._dayOfYear && (i = kn(e._a[je], s[je]), (e._dayOfYear > Je(i) || 0 === e._dayOfYear) && (M(e)._overflowDayOfYear = !0), n = kt(i, 0, e._dayOfYear), e._a[Re] = n.getUTCMonth(), e._a[We] = n.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) e._a[t] = r[t] = s[t];
                         for (; t < 7; t++) e._a[t] = r[t] = null == e._a[t] ? 2 === t ? 1 : 0 : e._a[t];
-                        24 === e._a[Fe] && 0 === e._a[Be] && 0 === e._a[Ue] && 0 === e._a[ze] && (e._nextDay = !0, e._a[Fe] = 0), e._d = (e._useUTC ? kt : gt).apply(null, r), s = e._useUTC ? e._d.getUTCDay() : e._d.getDay(), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[Fe] = 24), e._w && void 0 !== e._w.d && e._w.d !== s && (M(e).weekdayMismatch = !0)
+                        24 === e._a[Fe] && 0 === e._a[Ue] && 0 === e._a[Be] && 0 === e._a[ze] && (e._nextDay = !0, e._a[Fe] = 0), e._d = (e._useUTC ? kt : gt).apply(null, r), a = e._useUTC ? e._d.getUTCDay() : e._d.getDay(), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[Fe] = 24), e._w && void 0 !== e._w.d && e._w.d !== a && (M(e).weekdayMismatch = !0)
                     }
                 }
 
                 function Yn(e) {
-                    var t, n, a, s, i, r, o, l;
-                    if (null != (t = e._w).GG || null != t.W || null != t.E) i = 1, r = 4, n = kn(t.GG, e._a[je], Yt(Kn(), 1, 4).year), a = kn(t.W, 1), ((s = kn(t.E, 1)) < 1 || s > 7) && (l = !0);
+                    var t, n, s, a, i, r, o, l;
+                    if (null != (t = e._w).GG || null != t.W || null != t.E) i = 1, r = 4, n = kn(t.GG, e._a[je], Yt(Kn(), 1, 4).year), s = kn(t.W, 1), ((a = kn(t.E, 1)) < 1 || a > 7) && (l = !0);
                     else {
                         i = e._locale._week.dow, r = e._locale._week.doy;
                         var d = Yt(Kn(), i, r);
-                        n = kn(t.gg, e._a[je], d.year), a = kn(t.w, d.week), null != t.d ? ((s = t.d) < 0 || s > 6) && (l = !0) : null != t.e ? (s = t.e + i, (t.e < 0 || t.e > 6) && (l = !0)) : s = i
+                        n = kn(t.gg, e._a[je], d.year), s = kn(t.w, d.week), null != t.d ? ((a = t.d) < 0 || a > 6) && (l = !0) : null != t.e ? (a = t.e + i, (t.e < 0 || t.e > 6) && (l = !0)) : a = i
                     }
-                    a < 1 || a > Tt(n, i, r) ? M(e)._overflowWeeks = !0 : null != l ? M(e)._overflowWeekday = !0 : (o = bt(n, a, s, i, r), e._a[je] = o.year, e._dayOfYear = o.dayOfYear)
+                    s < 1 || s > Tt(n, i, r) ? M(e)._overflowWeeks = !0 : null != l ? M(e)._overflowWeekday = !0 : (o = bt(n, s, a, i, r), e._a[je] = o.year, e._dayOfYear = o.dayOfYear)
                 }
                 var Tn = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
                     Sn = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
@@ -3144,14 +3141,14 @@
                     xn = /^\/?Date\((\-?\d+)/i;
 
                 function Hn(e) {
-                    var t, n, a, s, i, r, o = e._i,
+                    var t, n, s, a, i, r, o = e._i,
                         l = Tn.exec(o) || Sn.exec(o);
                     if (l) {
                         for (M(e).iso = !0, t = 0, n = En.length; t < n; t++)
                             if (En[t][1].exec(l[1])) {
-                                s = En[t][0], a = !1 !== En[t][2];
+                                a = En[t][0], s = !1 !== En[t][2];
                                 break
-                            } if (null == s) return void(e._isValid = !1);
+                            } if (null == a) return void(e._isValid = !1);
                         if (l[3]) {
                             for (t = 0, n = wn.length; t < n; t++)
                                 if (wn[t][1].exec(l[3])) {
@@ -3159,31 +3156,31 @@
                                     break
                                 } if (null == i) return void(e._isValid = !1)
                         }
-                        if (!a && null != i) return void(e._isValid = !1);
+                        if (!s && null != i) return void(e._isValid = !1);
                         if (l[4]) {
                             if (!Dn.exec(l[4])) return void(e._isValid = !1);
                             r = "Z"
                         }
-                        e._f = s + (i || "") + (r || ""), Fn(e)
+                        e._f = a + (i || "") + (r || ""), Fn(e)
                     } else e._isValid = !1
                 }
                 var On = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/;
 
-                function Pn(e, t, n, a, s, i) {
-                    var r = [Nn(e), lt.indexOf(t), parseInt(n, 10), parseInt(a, 10), parseInt(s, 10)];
+                function Pn(e, t, n, s, a, i) {
+                    var r = [Cn(e), lt.indexOf(t), parseInt(n, 10), parseInt(s, 10), parseInt(a, 10)];
                     return i && r.push(parseInt(i, 10)), r
                 }
 
-                function Nn(e) {
+                function Cn(e) {
                     var t = parseInt(e, 10);
                     return t <= 49 ? 2e3 + t : t <= 999 ? 1900 + t : t
                 }
 
-                function In(e) {
+                function Nn(e) {
                     return e.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, "")
                 }
 
-                function Cn(e, t, n) {
+                function In(e, t, n) {
                     return !e || At.indexOf(e) === new Date(t[0], t[1], t[2]).getDay() || (M(n).weekdayMismatch = !0, n._isValid = !1, !1)
                 }
                 var An = {
@@ -3202,47 +3199,47 @@
                 function jn(e, t, n) {
                     if (e) return An[e];
                     if (t) return 0;
-                    var a = parseInt(n, 10),
-                        s = a % 100;
-                    return (a - s) / 100 * 60 + s
+                    var s = parseInt(n, 10),
+                        a = s % 100;
+                    return (s - a) / 100 * 60 + a
                 }
 
                 function Rn(e) {
-                    var t = On.exec(In(e._i));
+                    var t = On.exec(Nn(e._i));
                     if (t) {
                         var n = Pn(t[4], t[3], t[2], t[5], t[6], t[7]);
-                        if (!Cn(t[1], n, e)) return;
+                        if (!In(t[1], n, e)) return;
                         e._a = n, e._tzm = jn(t[8], t[9], t[10]), e._d = kt.apply(null, e._a), e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), M(e).rfc2822 = !0
                     } else e._isValid = !1
                 }
 
                 function Wn(e) {
                     var t = xn.exec(e._i);
-                    null === t ? (Hn(e), !1 === e._isValid && (delete e._isValid, Rn(e), !1 === e._isValid && (delete e._isValid, s.createFromInputFallback(e)))) : e._d = new Date(+t[1])
+                    null === t ? (Hn(e), !1 === e._isValid && (delete e._isValid, Rn(e), !1 === e._isValid && (delete e._isValid, a.createFromInputFallback(e)))) : e._d = new Date(+t[1])
                 }
 
                 function Fn(e) {
-                    if (e._f !== s.ISO_8601)
-                        if (e._f !== s.RFC_2822) {
+                    if (e._f !== a.ISO_8601)
+                        if (e._f !== a.RFC_2822) {
                             e._a = [], M(e).empty = !0;
-                            var t, n, a, i, r, o = "" + e._i,
+                            var t, n, s, i, r, o = "" + e._i,
                                 l = o.length,
                                 d = 0;
-                            for (a = _e(e._f, e._locale).match(ae) || [], t = 0; t < a.length; t++) i = a[t], (n = (o.match(He(i, e)) || [])[0]) && ((r = o.substr(0, o.indexOf(n))).length > 0 && M(e).unusedInput.push(r), o = o.slice(o.indexOf(n) + n.length), d += n.length), re[i] ? (n ? M(e).empty = !1 : M(e).unusedTokens.push(i), Ae(i, n, e)) : e._strict && !n && M(e).unusedTokens.push(i);
-                            M(e).charsLeftOver = l - d, o.length > 0 && M(e).unusedInput.push(o), e._a[Fe] <= 12 && !0 === M(e).bigHour && e._a[Fe] > 0 && (M(e).bigHour = void 0), M(e).parsedDateParts = e._a.slice(0), M(e).meridiem = e._meridiem, e._a[Fe] = Bn(e._locale, e._a[Fe], e._meridiem), bn(e), gn(e)
+                            for (s = _e(e._f, e._locale).match(se) || [], t = 0; t < s.length; t++) i = s[t], (n = (o.match(He(i, e)) || [])[0]) && ((r = o.substr(0, o.indexOf(n))).length > 0 && M(e).unusedInput.push(r), o = o.slice(o.indexOf(n) + n.length), d += n.length), re[i] ? (n ? M(e).empty = !1 : M(e).unusedTokens.push(i), Ae(i, n, e)) : e._strict && !n && M(e).unusedTokens.push(i);
+                            M(e).charsLeftOver = l - d, o.length > 0 && M(e).unusedInput.push(o), e._a[Fe] <= 12 && !0 === M(e).bigHour && e._a[Fe] > 0 && (M(e).bigHour = void 0), M(e).parsedDateParts = e._a.slice(0), M(e).meridiem = e._meridiem, e._a[Fe] = Un(e._locale, e._a[Fe], e._meridiem), bn(e), gn(e)
                         } else Rn(e);
                     else Hn(e)
                 }
 
-                function Bn(e, t, n) {
-                    var a;
-                    return null == n ? t : null != e.meridiemHour ? e.meridiemHour(t, n) : null != e.isPM ? ((a = e.isPM(n)) && t < 12 && (t += 12), a || 12 !== t || (t = 0), t) : t
+                function Un(e, t, n) {
+                    var s;
+                    return null == n ? t : null != e.meridiemHour ? e.meridiemHour(t, n) : null != e.isPM ? ((s = e.isPM(n)) && t < 12 && (t += 12), s || 12 !== t || (t = 0), t) : t
                 }
 
-                function Un(e) {
-                    var t, n, a, s, i;
+                function Bn(e) {
+                    var t, n, s, a, i;
                     if (0 === e._f.length) return M(e).invalidFormat = !0, void(e._d = new Date(NaN));
-                    for (s = 0; s < e._f.length; s++) i = 0, t = k({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[s], Fn(t), y(t) && (i += M(t).charsLeftOver, i += 10 * M(t).unusedTokens.length, M(t).score = i, (null == a || i < a) && (a = i, n = t));
+                    for (a = 0; a < e._f.length; a++) i = 0, t = k({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[a], Fn(t), y(t) && (i += M(t).charsLeftOver, i += 10 * M(t).unusedTokens.length, M(t).score = i, (null == s || i < s) && (s = i, n = t));
                     p(e, n || t)
                 }
 
@@ -3265,27 +3262,27 @@
                         n = e._f;
                     return e._locale = e._locale || yn(e._l), null === t || void 0 === n && "" === t ? L({
                         nullInput: !0
-                    }) : ("string" == typeof t && (e._i = t = e._locale.preparse(t)), Y(t) ? new b(gn(t)) : (_(t) ? e._d = t : r(n) ? Un(e) : n ? Fn(e) : Jn(e), y(e) || (e._d = null), e))
+                    }) : ("string" == typeof t && (e._i = t = e._locale.preparse(t)), Y(t) ? new b(gn(t)) : (_(t) ? e._d = t : r(n) ? Bn(e) : n ? Fn(e) : Jn(e), y(e) || (e._d = null), e))
                 }
 
                 function Jn(e) {
                     var t = e._i;
-                    d(t) ? e._d = new Date(s.now()) : _(t) ? e._d = new Date(t.valueOf()) : "string" == typeof t ? Wn(e) : r(t) ? (e._a = u(t.slice(0), (function(e) {
+                    d(t) ? e._d = new Date(a.now()) : _(t) ? e._d = new Date(t.valueOf()) : "string" == typeof t ? Wn(e) : r(t) ? (e._a = u(t.slice(0), (function(e) {
                         return parseInt(e, 10)
-                    })), bn(e)) : o(t) ? zn(e) : m(t) ? e._d = new Date(t) : s.createFromInputFallback(e)
+                    })), bn(e)) : o(t) ? zn(e) : m(t) ? e._d = new Date(t) : a.createFromInputFallback(e)
                 }
 
-                function qn(e, t, n, a, s) {
+                function qn(e, t, n, s, a) {
                     var i = {};
-                    return !0 !== n && !1 !== n || (a = n, n = void 0), (o(e) && l(e) || r(e) && 0 === e.length) && (e = void 0), i._isAMomentObject = !0, i._useUTC = i._isUTC = s, i._l = n, i._i = e, i._f = t, i._strict = a, Vn(i)
+                    return !0 !== n && !1 !== n || (s = n, n = void 0), (o(e) && l(e) || r(e) && 0 === e.length) && (e = void 0), i._isAMomentObject = !0, i._useUTC = i._isUTC = a, i._l = n, i._i = e, i._f = t, i._strict = s, Vn(i)
                 }
 
-                function Kn(e, t, n, a) {
-                    return qn(e, t, n, a, !1)
+                function Kn(e, t, n, s) {
+                    return qn(e, t, n, s, !1)
                 }
-                s.createFromInputFallback = w("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", (function(e) {
+                a.createFromInputFallback = w("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", (function(e) {
                     e._d = new Date(e._i + (e._useUTC ? " UTC" : ""))
-                })), s.ISO_8601 = function() {}, s.RFC_2822 = function() {};
+                })), a.ISO_8601 = function() {}, a.RFC_2822 = function() {};
                 var Qn = w("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", (function() {
                         var e = Kn.apply(null, arguments);
                         return this.isValid() && e.isValid() ? e < this ? this : e : L()
@@ -3296,9 +3293,9 @@
                     }));
 
                 function Xn(e, t) {
-                    var n, a;
+                    var n, s;
                     if (1 === t.length && r(t[0]) && (t = t[0]), !t.length) return Kn();
-                    for (n = t[0], a = 1; a < t.length; ++a) t[a].isValid() && !t[a][e](n) || (n = t[a]);
+                    for (n = t[0], s = 1; s < t.length; ++s) t[s].isValid() && !t[s][e](n) || (n = t[s]);
                     return n
                 }
 
@@ -3306,125 +3303,125 @@
                     return Xn("isBefore", [].slice.call(arguments, 0))
                 }
 
-                function ea() {
+                function es() {
                     return Xn("isAfter", [].slice.call(arguments, 0))
                 }
-                var ta = function() {
+                var ts = function() {
                         return Date.now ? Date.now() : +new Date
                     },
-                    na = ["year", "quarter", "month", "week", "day", "hour", "minute", "second", "millisecond"];
+                    ns = ["year", "quarter", "month", "week", "day", "hour", "minute", "second", "millisecond"];
 
-                function aa(e) {
+                function ss(e) {
                     for (var t in e)
-                        if (-1 === Ke.call(na, t) || null != e[t] && isNaN(e[t])) return !1;
-                    for (var n = !1, a = 0; a < na.length; ++a)
-                        if (e[na[a]]) {
+                        if (-1 === Ke.call(ns, t) || null != e[t] && isNaN(e[t])) return !1;
+                    for (var n = !1, s = 0; s < ns.length; ++s)
+                        if (e[ns[s]]) {
                             if (n) return !1;
-                            parseFloat(e[na[a]]) !== S(e[na[a]]) && (n = !0)
+                            parseFloat(e[ns[s]]) !== S(e[ns[s]]) && (n = !0)
                         } return !0
                 }
 
-                function sa() {
+                function as() {
                     return this._isValid
                 }
 
-                function ia() {
-                    return Da(NaN)
+                function is() {
+                    return Ds(NaN)
                 }
 
-                function ra(e) {
+                function rs(e) {
                     var t = X(e),
                         n = t.year || 0,
-                        a = t.quarter || 0,
-                        s = t.month || 0,
+                        s = t.quarter || 0,
+                        a = t.month || 0,
                         i = t.week || t.isoWeek || 0,
                         r = t.day || 0,
                         o = t.hour || 0,
                         l = t.minute || 0,
                         d = t.second || 0,
                         m = t.millisecond || 0;
-                    this._isValid = aa(t), this._milliseconds = +m + 1e3 * d + 6e4 * l + 1e3 * o * 60 * 60, this._days = +r + 7 * i, this._months = +s + 3 * a + 12 * n, this._data = {}, this._locale = yn(), this._bubble()
+                    this._isValid = ss(t), this._milliseconds = +m + 1e3 * d + 6e4 * l + 1e3 * o * 60 * 60, this._days = +r + 7 * i, this._months = +a + 3 * s + 12 * n, this._data = {}, this._locale = yn(), this._bubble()
                 }
 
-                function oa(e) {
-                    return e instanceof ra
+                function os(e) {
+                    return e instanceof rs
                 }
 
-                function la(e) {
+                function ls(e) {
                     return e < 0 ? -1 * Math.round(-1 * e) : Math.round(e)
                 }
 
-                function da(e, t) {
+                function ds(e, t) {
                     oe(e, 0, 0, (function() {
                         var e = this.utcOffset(),
                             n = "+";
                         return e < 0 && (e = -e, n = "-"), n + ne(~~(e / 60), 2) + t + ne(~~e % 60, 2)
                     }))
                 }
-                da("Z", ":"), da("ZZ", ""), xe("Z", Se), xe("ZZ", Se), Ie(["Z", "ZZ"], (function(e, t, n) {
-                    n._useUTC = !0, n._tzm = _a(Se, e)
+                ds("Z", ":"), ds("ZZ", ""), xe("Z", Se), xe("ZZ", Se), Ne(["Z", "ZZ"], (function(e, t, n) {
+                    n._useUTC = !0, n._tzm = _s(Se, e)
                 }));
-                var ma = /([\+\-]|\d\d)/gi;
+                var ms = /([\+\-]|\d\d)/gi;
 
-                function _a(e, t) {
+                function _s(e, t) {
                     var n = (t || "").match(e);
                     if (null === n) return null;
-                    var a = ((n[n.length - 1] || []) + "").match(ma) || ["-", 0, 0],
-                        s = 60 * a[1] + S(a[2]);
-                    return 0 === s ? 0 : "+" === a[0] ? s : -s
+                    var s = ((n[n.length - 1] || []) + "").match(ms) || ["-", 0, 0],
+                        a = 60 * s[1] + S(s[2]);
+                    return 0 === a ? 0 : "+" === s[0] ? a : -a
                 }
 
-                function ua(e, t) {
-                    var n, a;
-                    return t._isUTC ? (n = t.clone(), a = (Y(e) || _(e) ? e.valueOf() : Kn(e).valueOf()) - n.valueOf(), n._d.setTime(n._d.valueOf() + a), s.updateOffset(n, !1), n) : Kn(e).local()
+                function us(e, t) {
+                    var n, s;
+                    return t._isUTC ? (n = t.clone(), s = (Y(e) || _(e) ? e.valueOf() : Kn(e).valueOf()) - n.valueOf(), n._d.setTime(n._d.valueOf() + s), a.updateOffset(n, !1), n) : Kn(e).local()
                 }
 
-                function ca(e) {
+                function cs(e) {
                     return 15 * -Math.round(e._d.getTimezoneOffset() / 15)
                 }
 
-                function pa(e, t, n) {
-                    var a, i = this._offset || 0;
+                function ps(e, t, n) {
+                    var s, i = this._offset || 0;
                     if (!this.isValid()) return null != e ? this : NaN;
                     if (null != e) {
                         if ("string" == typeof e) {
-                            if (null === (e = _a(Se, e))) return this
+                            if (null === (e = _s(Se, e))) return this
                         } else Math.abs(e) < 16 && !n && (e *= 60);
-                        return !this._isUTC && t && (a = ca(this)), this._offset = e, this._isUTC = !0, null != a && this.add(a, "m"), i !== e && (!t || this._changeInProgress ? Oa(this, Da(e - i, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, s.updateOffset(this, !0), this._changeInProgress = null)), this
+                        return !this._isUTC && t && (s = cs(this)), this._offset = e, this._isUTC = !0, null != s && this.add(s, "m"), i !== e && (!t || this._changeInProgress ? Os(this, Ds(e - i, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, a.updateOffset(this, !0), this._changeInProgress = null)), this
                     }
-                    return this._isUTC ? i : ca(this)
+                    return this._isUTC ? i : cs(this)
                 }
 
-                function ha(e, t) {
+                function hs(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
                 }
 
-                function fa(e) {
+                function fs(e) {
                     return this.utcOffset(0, e)
                 }
 
-                function Ma(e) {
-                    return this._isUTC && (this.utcOffset(0, e), this._isUTC = !1, e && this.subtract(ca(this), "m")), this
+                function Ms(e) {
+                    return this._isUTC && (this.utcOffset(0, e), this._isUTC = !1, e && this.subtract(cs(this), "m")), this
                 }
 
-                function ya() {
+                function ys() {
                     if (null != this._tzm) this.utcOffset(this._tzm, !1, !0);
                     else if ("string" == typeof this._i) {
-                        var e = _a(Te, this._i);
+                        var e = _s(Te, this._i);
                         null != e ? this.utcOffset(e) : this.utcOffset(0, !0)
                     }
                     return this
                 }
 
-                function La(e) {
+                function Ls(e) {
                     return !!this.isValid() && (e = e ? Kn(e).utcOffset() : 0, (this.utcOffset() - e) % 60 == 0)
                 }
 
-                function ga() {
+                function gs() {
                     return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset()
                 }
 
-                function ka() {
+                function ks() {
                     if (!d(this._isDSTShifted)) return this._isDSTShifted;
                     var e = {};
                     if (k(e, this), (e = Gn(e))._a) {
@@ -3434,252 +3431,252 @@
                     return this._isDSTShifted
                 }
 
-                function va() {
+                function vs() {
                     return !!this.isValid() && !this._isUTC
                 }
 
-                function ba() {
+                function bs() {
                     return !!this.isValid() && this._isUTC
                 }
 
-                function Ya() {
+                function Ys() {
                     return !!this.isValid() && this._isUTC && 0 === this._offset
                 }
-                s.updateOffset = function() {};
-                var Ta = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/,
-                    Sa = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
+                a.updateOffset = function() {};
+                var Ts = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/,
+                    Ss = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
 
-                function Da(e, t) {
-                    var n, a, s, i = e,
+                function Ds(e, t) {
+                    var n, s, a, i = e,
                         r = null;
-                    return oa(e) ? i = {
+                    return os(e) ? i = {
                         ms: e._milliseconds,
                         d: e._days,
                         M: e._months
-                    } : m(e) ? (i = {}, t ? i[t] = e : i.milliseconds = e) : (r = Ta.exec(e)) ? (n = "-" === r[1] ? -1 : 1, i = {
+                    } : m(e) ? (i = {}, t ? i[t] = e : i.milliseconds = e) : (r = Ts.exec(e)) ? (n = "-" === r[1] ? -1 : 1, i = {
                         y: 0,
                         d: S(r[We]) * n,
                         h: S(r[Fe]) * n,
-                        m: S(r[Be]) * n,
-                        s: S(r[Ue]) * n,
-                        ms: S(la(1e3 * r[ze])) * n
-                    }) : (r = Sa.exec(e)) ? (n = "-" === r[1] ? -1 : 1, i = {
-                        y: Ea(r[2], n),
-                        M: Ea(r[3], n),
-                        w: Ea(r[4], n),
-                        d: Ea(r[5], n),
-                        h: Ea(r[6], n),
-                        m: Ea(r[7], n),
-                        s: Ea(r[8], n)
-                    }) : null == i ? i = {} : "object" == typeof i && ("from" in i || "to" in i) && (s = xa(Kn(i.from), Kn(i.to)), (i = {}).ms = s.milliseconds, i.M = s.months), a = new ra(i), oa(e) && c(e, "_locale") && (a._locale = e._locale), a
+                        m: S(r[Ue]) * n,
+                        s: S(r[Be]) * n,
+                        ms: S(ls(1e3 * r[ze])) * n
+                    }) : (r = Ss.exec(e)) ? (n = "-" === r[1] ? -1 : 1, i = {
+                        y: Es(r[2], n),
+                        M: Es(r[3], n),
+                        w: Es(r[4], n),
+                        d: Es(r[5], n),
+                        h: Es(r[6], n),
+                        m: Es(r[7], n),
+                        s: Es(r[8], n)
+                    }) : null == i ? i = {} : "object" == typeof i && ("from" in i || "to" in i) && (a = xs(Kn(i.from), Kn(i.to)), (i = {}).ms = a.milliseconds, i.M = a.months), s = new rs(i), os(e) && c(e, "_locale") && (s._locale = e._locale), s
                 }
 
-                function Ea(e, t) {
+                function Es(e, t) {
                     var n = e && parseFloat(e.replace(",", "."));
                     return (isNaN(n) ? 0 : n) * t
                 }
 
-                function wa(e, t) {
+                function ws(e, t) {
                     var n = {};
                     return n.months = t.month() - e.month() + 12 * (t.year() - e.year()), e.clone().add(n.months, "M").isAfter(t) && --n.months, n.milliseconds = +t - +e.clone().add(n.months, "M"), n
                 }
 
-                function xa(e, t) {
+                function xs(e, t) {
                     var n;
-                    return e.isValid() && t.isValid() ? (t = ua(t, e), e.isBefore(t) ? n = wa(e, t) : ((n = wa(t, e)).milliseconds = -n.milliseconds, n.months = -n.months), n) : {
+                    return e.isValid() && t.isValid() ? (t = us(t, e), e.isBefore(t) ? n = ws(e, t) : ((n = ws(t, e)).milliseconds = -n.milliseconds, n.months = -n.months), n) : {
                         milliseconds: 0,
                         months: 0
                     }
                 }
 
-                function Ha(e, t) {
-                    return function(n, a) {
-                        var s;
-                        return null === a || isNaN(+a) || (O(t, "moment()." + t + "(period, number) is deprecated. Please use moment()." + t + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), s = n, n = a, a = s), Oa(this, Da(n = "string" == typeof n ? +n : n, a), e), this
+                function Hs(e, t) {
+                    return function(n, s) {
+                        var a;
+                        return null === s || isNaN(+s) || (O(t, "moment()." + t + "(period, number) is deprecated. Please use moment()." + t + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), a = n, n = s, s = a), Os(this, Ds(n = "string" == typeof n ? +n : n, s), e), this
                     }
                 }
 
-                function Oa(e, t, n, a) {
+                function Os(e, t, n, s) {
                     var i = t._milliseconds,
-                        r = la(t._days),
-                        o = la(t._months);
-                    e.isValid() && (a = null == a || a, o && ut(e, Ze(e, "Month") + o * n), r && et(e, "Date", Ze(e, "Date") + r * n), i && e._d.setTime(e._d.valueOf() + i * n), a && s.updateOffset(e, r || o))
+                        r = ls(t._days),
+                        o = ls(t._months);
+                    e.isValid() && (s = null == s || s, o && ut(e, Ze(e, "Month") + o * n), r && et(e, "Date", Ze(e, "Date") + r * n), i && e._d.setTime(e._d.valueOf() + i * n), s && a.updateOffset(e, r || o))
                 }
-                Da.fn = ra.prototype, Da.invalid = ia;
-                var Pa = Ha(1, "add"),
-                    Na = Ha(-1, "subtract");
+                Ds.fn = rs.prototype, Ds.invalid = is;
+                var Ps = Hs(1, "add"),
+                    Cs = Hs(-1, "subtract");
 
-                function Ia(e, t) {
+                function Ns(e, t) {
                     var n = e.diff(t, "days", !0);
                     return n < -6 ? "sameElse" : n < -1 ? "lastWeek" : n < 0 ? "lastDay" : n < 1 ? "sameDay" : n < 2 ? "nextDay" : n < 7 ? "nextWeek" : "sameElse"
                 }
 
-                function Ca(e, t) {
+                function Is(e, t) {
                     var n = e || Kn(),
-                        a = ua(n, this).startOf("day"),
-                        i = s.calendarFormat(this, a) || "sameElse",
+                        s = us(n, this).startOf("day"),
+                        i = a.calendarFormat(this, s) || "sameElse",
                         r = t && (P(t[i]) ? t[i].call(this, n) : t[i]);
                     return this.format(r || this.localeData().calendar(i, this, Kn(n)))
                 }
 
-                function Aa() {
+                function As() {
                     return new b(this)
                 }
 
-                function ja(e, t) {
+                function js(e, t) {
                     var n = Y(e) ? e : Kn(e);
                     return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = $(t) || "millisecond") ? this.valueOf() > n.valueOf() : n.valueOf() < this.clone().startOf(t).valueOf())
                 }
 
-                function Ra(e, t) {
+                function Rs(e, t) {
                     var n = Y(e) ? e : Kn(e);
                     return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = $(t) || "millisecond") ? this.valueOf() < n.valueOf() : this.clone().endOf(t).valueOf() < n.valueOf())
                 }
 
-                function Wa(e, t, n, a) {
-                    var s = Y(e) ? e : Kn(e),
+                function Ws(e, t, n, s) {
+                    var a = Y(e) ? e : Kn(e),
                         i = Y(t) ? t : Kn(t);
-                    return !!(this.isValid() && s.isValid() && i.isValid()) && ("(" === (a = a || "()")[0] ? this.isAfter(s, n) : !this.isBefore(s, n)) && (")" === a[1] ? this.isBefore(i, n) : !this.isAfter(i, n))
+                    return !!(this.isValid() && a.isValid() && i.isValid()) && ("(" === (s = s || "()")[0] ? this.isAfter(a, n) : !this.isBefore(a, n)) && (")" === s[1] ? this.isBefore(i, n) : !this.isAfter(i, n))
                 }
 
-                function Fa(e, t) {
-                    var n, a = Y(e) ? e : Kn(e);
-                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = $(t) || "millisecond") ? this.valueOf() === a.valueOf() : (n = a.valueOf(), this.clone().startOf(t).valueOf() <= n && n <= this.clone().endOf(t).valueOf()))
+                function Fs(e, t) {
+                    var n, s = Y(e) ? e : Kn(e);
+                    return !(!this.isValid() || !s.isValid()) && ("millisecond" === (t = $(t) || "millisecond") ? this.valueOf() === s.valueOf() : (n = s.valueOf(), this.clone().startOf(t).valueOf() <= n && n <= this.clone().endOf(t).valueOf()))
                 }
 
-                function Ba(e, t) {
+                function Us(e, t) {
                     return this.isSame(e, t) || this.isAfter(e, t)
                 }
 
-                function Ua(e, t) {
+                function Bs(e, t) {
                     return this.isSame(e, t) || this.isBefore(e, t)
                 }
 
-                function za(e, t, n) {
-                    var a, s, i;
+                function zs(e, t, n) {
+                    var s, a, i;
                     if (!this.isValid()) return NaN;
-                    if (!(a = ua(e, this)).isValid()) return NaN;
-                    switch (s = 6e4 * (a.utcOffset() - this.utcOffset()), t = $(t)) {
+                    if (!(s = us(e, this)).isValid()) return NaN;
+                    switch (a = 6e4 * (s.utcOffset() - this.utcOffset()), t = $(t)) {
                         case "year":
-                            i = Va(this, a) / 12;
+                            i = Vs(this, s) / 12;
                             break;
                         case "month":
-                            i = Va(this, a);
+                            i = Vs(this, s);
                             break;
                         case "quarter":
-                            i = Va(this, a) / 3;
+                            i = Vs(this, s) / 3;
                             break;
                         case "second":
-                            i = (this - a) / 1e3;
+                            i = (this - s) / 1e3;
                             break;
                         case "minute":
-                            i = (this - a) / 6e4;
+                            i = (this - s) / 6e4;
                             break;
                         case "hour":
-                            i = (this - a) / 36e5;
+                            i = (this - s) / 36e5;
                             break;
                         case "day":
-                            i = (this - a - s) / 864e5;
+                            i = (this - s - a) / 864e5;
                             break;
                         case "week":
-                            i = (this - a - s) / 6048e5;
+                            i = (this - s - a) / 6048e5;
                             break;
                         default:
-                            i = this - a
+                            i = this - s
                     }
                     return n ? i : T(i)
                 }
 
-                function Va(e, t) {
+                function Vs(e, t) {
                     var n = 12 * (t.year() - e.year()) + (t.month() - e.month()),
-                        a = e.clone().add(n, "months");
-                    return -(n + (t - a < 0 ? (t - a) / (a - e.clone().add(n - 1, "months")) : (t - a) / (e.clone().add(n + 1, "months") - a))) || 0
+                        s = e.clone().add(n, "months");
+                    return -(n + (t - s < 0 ? (t - s) / (s - e.clone().add(n - 1, "months")) : (t - s) / (e.clone().add(n + 1, "months") - s))) || 0
                 }
 
-                function Ga() {
+                function Gs() {
                     return this.clone().locale("en").format("ddd MMM DD YYYY HH:mm:ss [GMT]ZZ")
                 }
 
-                function Ja(e) {
+                function Js(e) {
                     if (!this.isValid()) return null;
                     var t = !0 !== e,
                         n = t ? this.clone().utc() : this;
                     return n.year() < 0 || n.year() > 9999 ? me(n, t ? "YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]" : "YYYYYY-MM-DD[T]HH:mm:ss.SSSZ") : P(Date.prototype.toISOString) ? t ? this.toDate().toISOString() : new Date(this.valueOf() + 60 * this.utcOffset() * 1e3).toISOString().replace("Z", me(n, "Z")) : me(n, t ? "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]" : "YYYY-MM-DD[T]HH:mm:ss.SSSZ")
                 }
 
-                function qa() {
+                function qs() {
                     if (!this.isValid()) return "moment.invalid(/* " + this._i + " */)";
                     var e = "moment",
                         t = "";
                     this.isLocal() || (e = 0 === this.utcOffset() ? "moment.utc" : "moment.parseZone", t = "Z");
                     var n = "[" + e + '("]',
-                        a = 0 <= this.year() && this.year() <= 9999 ? "YYYY" : "YYYYYY",
-                        s = "-MM-DD[T]HH:mm:ss.SSS",
+                        s = 0 <= this.year() && this.year() <= 9999 ? "YYYY" : "YYYYYY",
+                        a = "-MM-DD[T]HH:mm:ss.SSS",
                         i = t + '[")]';
-                    return this.format(n + a + s + i)
+                    return this.format(n + s + a + i)
                 }
 
-                function Ka(e) {
-                    e || (e = this.isUtc() ? s.defaultFormatUtc : s.defaultFormat);
+                function Ks(e) {
+                    e || (e = this.isUtc() ? a.defaultFormatUtc : a.defaultFormat);
                     var t = me(this, e);
                     return this.localeData().postformat(t)
                 }
 
-                function Qa(e, t) {
-                    return this.isValid() && (Y(e) && e.isValid() || Kn(e).isValid()) ? Da({
+                function Qs(e, t) {
+                    return this.isValid() && (Y(e) && e.isValid() || Kn(e).isValid()) ? Ds({
                         to: this,
                         from: e
                     }).locale(this.locale()).humanize(!t) : this.localeData().invalidDate()
                 }
 
-                function $a(e) {
+                function $s(e) {
                     return this.from(Kn(), e)
                 }
 
-                function Xa(e, t) {
-                    return this.isValid() && (Y(e) && e.isValid() || Kn(e).isValid()) ? Da({
+                function Xs(e, t) {
+                    return this.isValid() && (Y(e) && e.isValid() || Kn(e).isValid()) ? Ds({
                         from: this,
                         to: e
                     }).locale(this.locale()).humanize(!t) : this.localeData().invalidDate()
                 }
 
-                function Za(e) {
+                function Zs(e) {
                     return this.to(Kn(), e)
                 }
 
-                function es(e) {
+                function ea(e) {
                     var t;
                     return void 0 === e ? this._locale._abbr : (null != (t = yn(e)) && (this._locale = t), this)
                 }
-                s.defaultFormat = "YYYY-MM-DDTHH:mm:ssZ", s.defaultFormatUtc = "YYYY-MM-DDTHH:mm:ss[Z]";
-                var ts = w("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", (function(e) {
+                a.defaultFormat = "YYYY-MM-DDTHH:mm:ssZ", a.defaultFormatUtc = "YYYY-MM-DDTHH:mm:ss[Z]";
+                var ta = w("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", (function(e) {
                     return void 0 === e ? this.localeData() : this.locale(e)
                 }));
 
-                function ns() {
+                function na() {
                     return this._locale
                 }
-                var as = 1e3,
-                    ss = 60 * as,
-                    is = 60 * ss,
-                    rs = 3506328 * is;
+                var sa = 1e3,
+                    aa = 60 * sa,
+                    ia = 60 * aa,
+                    ra = 3506328 * ia;
 
-                function os(e, t) {
+                function oa(e, t) {
                     return (e % t + t) % t
                 }
 
-                function ls(e, t, n) {
-                    return e < 100 && e >= 0 ? new Date(e + 400, t, n) - rs : new Date(e, t, n).valueOf()
+                function la(e, t, n) {
+                    return e < 100 && e >= 0 ? new Date(e + 400, t, n) - ra : new Date(e, t, n).valueOf()
                 }
 
-                function ds(e, t, n) {
-                    return e < 100 && e >= 0 ? Date.UTC(e + 400, t, n) - rs : Date.UTC(e, t, n)
+                function da(e, t, n) {
+                    return e < 100 && e >= 0 ? Date.UTC(e + 400, t, n) - ra : Date.UTC(e, t, n)
                 }
 
-                function ms(e) {
+                function ma(e) {
                     var t;
                     if (void 0 === (e = $(e)) || "millisecond" === e || !this.isValid()) return this;
-                    var n = this._isUTC ? ds : ls;
+                    var n = this._isUTC ? da : la;
                     switch (e) {
                         case "year":
                             t = n(this.year(), 0, 1);
@@ -3701,21 +3698,21 @@
                             t = n(this.year(), this.month(), this.date());
                             break;
                         case "hour":
-                            t = this._d.valueOf(), t -= os(t + (this._isUTC ? 0 : this.utcOffset() * ss), is);
+                            t = this._d.valueOf(), t -= oa(t + (this._isUTC ? 0 : this.utcOffset() * aa), ia);
                             break;
                         case "minute":
-                            t = this._d.valueOf(), t -= os(t, ss);
+                            t = this._d.valueOf(), t -= oa(t, aa);
                             break;
                         case "second":
-                            t = this._d.valueOf(), t -= os(t, as)
+                            t = this._d.valueOf(), t -= oa(t, sa)
                     }
-                    return this._d.setTime(t), s.updateOffset(this, !0), this
+                    return this._d.setTime(t), a.updateOffset(this, !0), this
                 }
 
-                function _s(e) {
+                function _a(e) {
                     var t;
                     if (void 0 === (e = $(e)) || "millisecond" === e || !this.isValid()) return this;
-                    var n = this._isUTC ? ds : ls;
+                    var n = this._isUTC ? da : la;
                     switch (e) {
                         case "year":
                             t = n(this.year() + 1, 0, 1) - 1;
@@ -3737,35 +3734,35 @@
                             t = n(this.year(), this.month(), this.date() + 1) - 1;
                             break;
                         case "hour":
-                            t = this._d.valueOf(), t += is - os(t + (this._isUTC ? 0 : this.utcOffset() * ss), is) - 1;
+                            t = this._d.valueOf(), t += ia - oa(t + (this._isUTC ? 0 : this.utcOffset() * aa), ia) - 1;
                             break;
                         case "minute":
-                            t = this._d.valueOf(), t += ss - os(t, ss) - 1;
+                            t = this._d.valueOf(), t += aa - oa(t, aa) - 1;
                             break;
                         case "second":
-                            t = this._d.valueOf(), t += as - os(t, as) - 1
+                            t = this._d.valueOf(), t += sa - oa(t, sa) - 1
                     }
-                    return this._d.setTime(t), s.updateOffset(this, !0), this
+                    return this._d.setTime(t), a.updateOffset(this, !0), this
                 }
 
-                function us() {
+                function ua() {
                     return this._d.valueOf() - 6e4 * (this._offset || 0)
                 }
 
-                function cs() {
+                function ca() {
                     return Math.floor(this.valueOf() / 1e3)
                 }
 
-                function ps() {
+                function pa() {
                     return new Date(this.valueOf())
                 }
 
-                function hs() {
+                function ha() {
                     var e = this;
                     return [e.year(), e.month(), e.date(), e.hour(), e.minute(), e.second(), e.millisecond()]
                 }
 
-                function fs() {
+                function fa() {
                     var e = this;
                     return {
                         years: e.year(),
@@ -3778,23 +3775,23 @@
                     }
                 }
 
-                function Ms() {
+                function Ma() {
                     return this.isValid() ? this.toISOString() : null
                 }
 
-                function ys() {
+                function ya() {
                     return y(this)
                 }
 
-                function Ls() {
+                function La() {
                     return p({}, M(this))
                 }
 
-                function gs() {
+                function ga() {
                     return M(this).overflow
                 }
 
-                function ks() {
+                function ka() {
                     return {
                         input: this._i,
                         format: this._f,
@@ -3804,68 +3801,68 @@
                     }
                 }
 
-                function vs(e, t) {
+                function va(e, t) {
                     oe(0, [e, e.length], 0, t)
                 }
 
-                function bs(e) {
-                    return Ds.call(this, e, this.week(), this.weekday(), this.localeData()._week.dow, this.localeData()._week.doy)
+                function ba(e) {
+                    return Da.call(this, e, this.week(), this.weekday(), this.localeData()._week.dow, this.localeData()._week.doy)
                 }
 
-                function Ys(e) {
-                    return Ds.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4)
+                function Ya(e) {
+                    return Da.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4)
                 }
 
-                function Ts() {
+                function Ta() {
                     return Tt(this.year(), 1, 4)
                 }
 
-                function Ss() {
+                function Sa() {
                     var e = this.localeData()._week;
                     return Tt(this.year(), e.dow, e.doy)
                 }
 
-                function Ds(e, t, n, a, s) {
+                function Da(e, t, n, s, a) {
                     var i;
-                    return null == e ? Yt(this, a, s).year : (t > (i = Tt(e, a, s)) && (t = i), Es.call(this, e, t, n, a, s))
+                    return null == e ? Yt(this, s, a).year : (t > (i = Tt(e, s, a)) && (t = i), Ea.call(this, e, t, n, s, a))
                 }
 
-                function Es(e, t, n, a, s) {
-                    var i = bt(e, t, n, a, s),
+                function Ea(e, t, n, s, a) {
+                    var i = bt(e, t, n, s, a),
                         r = kt(i.year, 0, i.dayOfYear);
                     return this.year(r.getUTCFullYear()), this.month(r.getUTCMonth()), this.date(r.getUTCDate()), this
                 }
 
-                function ws(e) {
+                function wa(e) {
                     return null == e ? Math.ceil((this.month() + 1) / 3) : this.month(3 * (e - 1) + this.month() % 3)
                 }
                 oe(0, ["gg", 2], 0, (function() {
                     return this.weekYear() % 100
                 })), oe(0, ["GG", 2], 0, (function() {
                     return this.isoWeekYear() % 100
-                })), vs("gggg", "weekYear"), vs("ggggg", "weekYear"), vs("GGGG", "isoWeekYear"), vs("GGGGG", "isoWeekYear"), Q("weekYear", "gg"), Q("isoWeekYear", "GG"), ee("weekYear", 1), ee("isoWeekYear", 1), xe("G", Ye), xe("g", Ye), xe("GG", Me, ce), xe("gg", Me, ce), xe("GGGG", ke, he), xe("gggg", ke, he), xe("GGGGG", ve, fe), xe("ggggg", ve, fe), Ce(["gggg", "ggggg", "GGGG", "GGGGG"], (function(e, t, n, a) {
-                    t[a.substr(0, 2)] = S(e)
-                })), Ce(["gg", "GG"], (function(e, t, n, a) {
-                    t[a] = s.parseTwoDigitYear(e)
-                })), oe("Q", 0, "Qo", "quarter"), Q("quarter", "Q"), ee("quarter", 7), xe("Q", ue), Ie("Q", (function(e, t) {
+                })), va("gggg", "weekYear"), va("ggggg", "weekYear"), va("GGGG", "isoWeekYear"), va("GGGGG", "isoWeekYear"), Q("weekYear", "gg"), Q("isoWeekYear", "GG"), ee("weekYear", 1), ee("isoWeekYear", 1), xe("G", Ye), xe("g", Ye), xe("GG", Me, ce), xe("gg", Me, ce), xe("GGGG", ke, he), xe("gggg", ke, he), xe("GGGGG", ve, fe), xe("ggggg", ve, fe), Ie(["gggg", "ggggg", "GGGG", "GGGGG"], (function(e, t, n, s) {
+                    t[s.substr(0, 2)] = S(e)
+                })), Ie(["gg", "GG"], (function(e, t, n, s) {
+                    t[s] = a.parseTwoDigitYear(e)
+                })), oe("Q", 0, "Qo", "quarter"), Q("quarter", "Q"), ee("quarter", 7), xe("Q", ue), Ne("Q", (function(e, t) {
                     t[Re] = 3 * (S(e) - 1)
                 })), oe("D", ["DD", 2], "Do", "date"), Q("date", "D"), ee("date", 9), xe("D", Me), xe("DD", Me, ce), xe("Do", (function(e, t) {
                     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
-                })), Ie(["D", "DD"], We), Ie("Do", (function(e, t) {
+                })), Ne(["D", "DD"], We), Ne("Do", (function(e, t) {
                     t[We] = S(e.match(Me)[0])
                 }));
-                var xs = Xe("Date", !0);
+                var xa = Xe("Date", !0);
 
-                function Hs(e) {
+                function Ha(e) {
                     var t = Math.round((this.clone().startOf("day") - this.clone().startOf("year")) / 864e5) + 1;
                     return null == e ? t : this.add(e - t, "d")
                 }
-                oe("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), Q("dayOfYear", "DDD"), ee("dayOfYear", 4), xe("DDD", ge), xe("DDDD", pe), Ie(["DDD", "DDDD"], (function(e, t, n) {
+                oe("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), Q("dayOfYear", "DDD"), ee("dayOfYear", 4), xe("DDD", ge), xe("DDDD", pe), Ne(["DDD", "DDDD"], (function(e, t, n) {
                     n._dayOfYear = S(e)
-                })), oe("m", ["mm", 2], 0, "minute"), Q("minute", "m"), ee("minute", 14), xe("m", Me), xe("mm", Me, ce), Ie(["m", "mm"], Be);
-                var Os = Xe("Minutes", !1);
-                oe("s", ["ss", 2], 0, "second"), Q("second", "s"), ee("second", 15), xe("s", Me), xe("ss", Me, ce), Ie(["s", "ss"], Ue);
-                var Ps, Ns = Xe("Seconds", !1);
+                })), oe("m", ["mm", 2], 0, "minute"), Q("minute", "m"), ee("minute", 14), xe("m", Me), xe("mm", Me, ce), Ne(["m", "mm"], Ue);
+                var Oa = Xe("Minutes", !1);
+                oe("s", ["ss", 2], 0, "second"), Q("second", "s"), ee("second", 15), xe("s", Me), xe("ss", Me, ce), Ne(["s", "ss"], Be);
+                var Pa, Ca = Xe("Seconds", !1);
                 for (oe("S", 0, 0, (function() {
                         return ~~(this.millisecond() / 100)
                     })), oe(0, ["SS", 2], 0, (function() {
@@ -3882,97 +3879,97 @@
                         return 1e5 * this.millisecond()
                     })), oe(0, ["SSSSSSSSS", 9], 0, (function() {
                         return 1e6 * this.millisecond()
-                    })), Q("millisecond", "ms"), ee("millisecond", 16), xe("S", ge, ue), xe("SS", ge, ce), xe("SSS", ge, pe), Ps = "SSSS"; Ps.length <= 9; Ps += "S") xe(Ps, be);
+                    })), Q("millisecond", "ms"), ee("millisecond", 16), xe("S", ge, ue), xe("SS", ge, ce), xe("SSS", ge, pe), Pa = "SSSS"; Pa.length <= 9; Pa += "S") xe(Pa, be);
 
-                function Is(e, t) {
+                function Na(e, t) {
                     t[ze] = S(1e3 * ("0." + e))
                 }
-                for (Ps = "S"; Ps.length <= 9; Ps += "S") Ie(Ps, Is);
-                var Cs = Xe("Milliseconds", !1);
+                for (Pa = "S"; Pa.length <= 9; Pa += "S") Ne(Pa, Na);
+                var Ia = Xe("Milliseconds", !1);
 
-                function As() {
+                function Aa() {
                     return this._isUTC ? "UTC" : ""
                 }
 
-                function js() {
+                function ja() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
                 }
                 oe("z", 0, 0, "zoneAbbr"), oe("zz", 0, 0, "zoneName");
-                var Rs = b.prototype;
+                var Ra = b.prototype;
 
-                function Ws(e) {
+                function Wa(e) {
                     return Kn(1e3 * e)
                 }
 
-                function Fs() {
+                function Fa() {
                     return Kn.apply(null, arguments).parseZone()
                 }
 
-                function Bs(e) {
+                function Ua(e) {
                     return e
                 }
-                Rs.add = Pa, Rs.calendar = Ca, Rs.clone = Aa, Rs.diff = za, Rs.endOf = _s, Rs.format = Ka, Rs.from = Qa, Rs.fromNow = $a, Rs.to = Xa, Rs.toNow = Za, Rs.get = tt, Rs.invalidAt = gs, Rs.isAfter = ja, Rs.isBefore = Ra, Rs.isBetween = Wa, Rs.isSame = Fa, Rs.isSameOrAfter = Ba, Rs.isSameOrBefore = Ua, Rs.isValid = ys, Rs.lang = ts, Rs.locale = es, Rs.localeData = ns, Rs.max = $n, Rs.min = Qn, Rs.parsingFlags = Ls, Rs.set = nt, Rs.startOf = ms, Rs.subtract = Na, Rs.toArray = hs, Rs.toObject = fs, Rs.toDate = ps, Rs.toISOString = Ja, Rs.inspect = qa, Rs.toJSON = Ms, Rs.toString = Ga, Rs.unix = cs, Rs.valueOf = us, Rs.creationData = ks, Rs.year = Qe, Rs.isLeapYear = $e, Rs.weekYear = bs, Rs.isoWeekYear = Ys, Rs.quarter = Rs.quarters = ws, Rs.month = ct, Rs.daysInMonth = pt, Rs.week = Rs.weeks = xt, Rs.isoWeek = Rs.isoWeeks = Ht, Rs.weeksInYear = Ss, Rs.isoWeeksInYear = Ts, Rs.date = xs, Rs.day = Rs.days = Ut, Rs.weekday = zt, Rs.isoWeekday = Vt, Rs.dayOfYear = Hs, Rs.hour = Rs.hours = ln, Rs.minute = Rs.minutes = Os, Rs.second = Rs.seconds = Ns, Rs.millisecond = Rs.milliseconds = Cs, Rs.utcOffset = pa, Rs.utc = fa, Rs.local = Ma, Rs.parseZone = ya, Rs.hasAlignedHourOffset = La, Rs.isDST = ga, Rs.isLocal = va, Rs.isUtcOffset = ba, Rs.isUtc = Ya, Rs.isUTC = Ya, Rs.zoneAbbr = As, Rs.zoneName = js, Rs.dates = w("dates accessor is deprecated. Use date instead.", xs), Rs.months = w("months accessor is deprecated. Use month instead", ct), Rs.years = w("years accessor is deprecated. Use year instead", Qe), Rs.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", ha), Rs.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", ka);
-                var Us = C.prototype;
+                Ra.add = Ps, Ra.calendar = Is, Ra.clone = As, Ra.diff = zs, Ra.endOf = _a, Ra.format = Ks, Ra.from = Qs, Ra.fromNow = $s, Ra.to = Xs, Ra.toNow = Zs, Ra.get = tt, Ra.invalidAt = ga, Ra.isAfter = js, Ra.isBefore = Rs, Ra.isBetween = Ws, Ra.isSame = Fs, Ra.isSameOrAfter = Us, Ra.isSameOrBefore = Bs, Ra.isValid = ya, Ra.lang = ta, Ra.locale = ea, Ra.localeData = na, Ra.max = $n, Ra.min = Qn, Ra.parsingFlags = La, Ra.set = nt, Ra.startOf = ma, Ra.subtract = Cs, Ra.toArray = ha, Ra.toObject = fa, Ra.toDate = pa, Ra.toISOString = Js, Ra.inspect = qs, Ra.toJSON = Ma, Ra.toString = Gs, Ra.unix = ca, Ra.valueOf = ua, Ra.creationData = ka, Ra.year = Qe, Ra.isLeapYear = $e, Ra.weekYear = ba, Ra.isoWeekYear = Ya, Ra.quarter = Ra.quarters = wa, Ra.month = ct, Ra.daysInMonth = pt, Ra.week = Ra.weeks = xt, Ra.isoWeek = Ra.isoWeeks = Ht, Ra.weeksInYear = Sa, Ra.isoWeeksInYear = Ta, Ra.date = xa, Ra.day = Ra.days = Bt, Ra.weekday = zt, Ra.isoWeekday = Vt, Ra.dayOfYear = Ha, Ra.hour = Ra.hours = ln, Ra.minute = Ra.minutes = Oa, Ra.second = Ra.seconds = Ca, Ra.millisecond = Ra.milliseconds = Ia, Ra.utcOffset = ps, Ra.utc = fs, Ra.local = Ms, Ra.parseZone = ys, Ra.hasAlignedHourOffset = Ls, Ra.isDST = gs, Ra.isLocal = vs, Ra.isUtcOffset = bs, Ra.isUtc = Ys, Ra.isUTC = Ys, Ra.zoneAbbr = Aa, Ra.zoneName = ja, Ra.dates = w("dates accessor is deprecated. Use date instead.", xa), Ra.months = w("months accessor is deprecated. Use month instead", ct), Ra.years = w("years accessor is deprecated. Use year instead", Qe), Ra.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", hs), Ra.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", ks);
+                var Ba = I.prototype;
 
-                function zs(e, t, n, a) {
-                    var s = yn(),
-                        i = h().set(a, t);
-                    return s[n](i, e)
+                function za(e, t, n, s) {
+                    var a = yn(),
+                        i = h().set(s, t);
+                    return a[n](i, e)
                 }
 
-                function Vs(e, t, n) {
-                    if (m(e) && (t = e, e = void 0), e = e || "", null != t) return zs(e, t, n, "month");
-                    var a, s = [];
-                    for (a = 0; a < 12; a++) s[a] = zs(e, a, n, "month");
-                    return s
+                function Va(e, t, n) {
+                    if (m(e) && (t = e, e = void 0), e = e || "", null != t) return za(e, t, n, "month");
+                    var s, a = [];
+                    for (s = 0; s < 12; s++) a[s] = za(e, s, n, "month");
+                    return a
                 }
 
-                function Gs(e, t, n, a) {
+                function Ga(e, t, n, s) {
                     "boolean" == typeof e ? (m(t) && (n = t, t = void 0), t = t || "") : (n = t = e, e = !1, m(t) && (n = t, t = void 0), t = t || "");
-                    var s, i = yn(),
+                    var a, i = yn(),
                         r = e ? i._week.dow : 0;
-                    if (null != n) return zs(t, (n + r) % 7, a, "day");
+                    if (null != n) return za(t, (n + r) % 7, s, "day");
                     var o = [];
-                    for (s = 0; s < 7; s++) o[s] = zs(t, (s + r) % 7, a, "day");
+                    for (a = 0; a < 7; a++) o[a] = za(t, (a + r) % 7, s, "day");
                     return o
                 }
 
-                function Js(e, t) {
-                    return Vs(e, t, "months")
+                function Ja(e, t) {
+                    return Va(e, t, "months")
                 }
 
-                function qs(e, t) {
-                    return Vs(e, t, "monthsShort")
+                function qa(e, t) {
+                    return Va(e, t, "monthsShort")
                 }
 
-                function Ks(e, t, n) {
-                    return Gs(e, t, n, "weekdays")
+                function Ka(e, t, n) {
+                    return Ga(e, t, n, "weekdays")
                 }
 
-                function Qs(e, t, n) {
-                    return Gs(e, t, n, "weekdaysShort")
+                function Qa(e, t, n) {
+                    return Ga(e, t, n, "weekdaysShort")
                 }
 
-                function $s(e, t, n) {
-                    return Gs(e, t, n, "weekdaysMin")
+                function $a(e, t, n) {
+                    return Ga(e, t, n, "weekdaysMin")
                 }
-                Us.calendar = j, Us.longDateFormat = W, Us.invalidDate = B, Us.ordinal = V, Us.preparse = Bs, Us.postformat = Bs, Us.relativeTime = J, Us.pastFuture = q, Us.set = N, Us.months = ot, Us.monthsShort = dt, Us.monthsParse = _t, Us.monthsRegex = yt, Us.monthsShortRegex = ft, Us.week = St, Us.firstDayOfYear = wt, Us.firstDayOfWeek = Et, Us.weekdays = Ct, Us.weekdaysMin = Wt, Us.weekdaysShort = jt, Us.weekdaysParse = Bt, Us.weekdaysRegex = Jt, Us.weekdaysShortRegex = Kt, Us.weekdaysMinRegex = $t, Us.isPM = an, Us.meridiem = rn, hn("en", {
+                Ba.calendar = j, Ba.longDateFormat = W, Ba.invalidDate = U, Ba.ordinal = V, Ba.preparse = Ua, Ba.postformat = Ua, Ba.relativeTime = J, Ba.pastFuture = q, Ba.set = C, Ba.months = ot, Ba.monthsShort = dt, Ba.monthsParse = _t, Ba.monthsRegex = yt, Ba.monthsShortRegex = ft, Ba.week = St, Ba.firstDayOfYear = wt, Ba.firstDayOfWeek = Et, Ba.weekdays = It, Ba.weekdaysMin = Wt, Ba.weekdaysShort = jt, Ba.weekdaysParse = Ut, Ba.weekdaysRegex = Jt, Ba.weekdaysShortRegex = Kt, Ba.weekdaysMinRegex = $t, Ba.isPM = sn, Ba.meridiem = rn, hn("en", {
                     dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
                     ordinal: function(e) {
                         var t = e % 10;
                         return e + (1 === S(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th")
                     }
-                }), s.lang = w("moment.lang is deprecated. Use moment.locale instead.", hn), s.langData = w("moment.langData is deprecated. Use moment.localeData instead.", yn);
-                var Xs = Math.abs;
+                }), a.lang = w("moment.lang is deprecated. Use moment.locale instead.", hn), a.langData = w("moment.langData is deprecated. Use moment.localeData instead.", yn);
+                var Xa = Math.abs;
 
-                function Zs() {
+                function Za() {
                     var e = this._data;
-                    return this._milliseconds = Xs(this._milliseconds), this._days = Xs(this._days), this._months = Xs(this._months), e.milliseconds = Xs(e.milliseconds), e.seconds = Xs(e.seconds), e.minutes = Xs(e.minutes), e.hours = Xs(e.hours), e.months = Xs(e.months), e.years = Xs(e.years), this
+                    return this._milliseconds = Xa(this._milliseconds), this._days = Xa(this._days), this._months = Xa(this._months), e.milliseconds = Xa(e.milliseconds), e.seconds = Xa(e.seconds), e.minutes = Xa(e.minutes), e.hours = Xa(e.hours), e.months = Xa(e.months), e.years = Xa(e.years), this
                 }
 
-                function ei(e, t, n, a) {
-                    var s = Da(t, n);
-                    return e._milliseconds += a * s._milliseconds, e._days += a * s._days, e._months += a * s._months, e._bubble()
+                function ei(e, t, n, s) {
+                    var a = Ds(t, n);
+                    return e._milliseconds += s * a._milliseconds, e._days += s * a._days, e._months += s * a._months, e._bubble()
                 }
 
                 function ti(e, t) {
@@ -3983,16 +3980,16 @@
                     return ei(this, e, t, -1)
                 }
 
-                function ai(e) {
+                function si(e) {
                     return e < 0 ? Math.floor(e) : Math.ceil(e)
                 }
 
-                function si() {
-                    var e, t, n, a, s, i = this._milliseconds,
+                function ai() {
+                    var e, t, n, s, a, i = this._milliseconds,
                         r = this._days,
                         o = this._months,
                         l = this._data;
-                    return i >= 0 && r >= 0 && o >= 0 || i <= 0 && r <= 0 && o <= 0 || (i += 864e5 * ai(ri(o) + r), r = 0, o = 0), l.milliseconds = i % 1e3, e = T(i / 1e3), l.seconds = e % 60, t = T(e / 60), l.minutes = t % 60, n = T(t / 60), l.hours = n % 24, r += T(n / 24), o += s = T(ii(r)), r -= ai(ri(s)), a = T(o / 12), o %= 12, l.days = r, l.months = o, l.years = a, this
+                    return i >= 0 && r >= 0 && o >= 0 || i <= 0 && r <= 0 && o <= 0 || (i += 864e5 * si(ri(o) + r), r = 0, o = 0), l.milliseconds = i % 1e3, e = T(i / 1e3), l.seconds = e % 60, t = T(e / 60), l.minutes = t % 60, n = T(t / 60), l.hours = n % 24, r += T(n / 24), o += a = T(ii(r)), r -= si(ri(a)), s = T(o / 12), o %= 12, l.days = r, l.months = o, l.years = s, this
                 }
 
                 function ii(e) {
@@ -4005,8 +4002,8 @@
 
                 function oi(e) {
                     if (!this.isValid()) return NaN;
-                    var t, n, a = this._milliseconds;
-                    if ("month" === (e = $(e)) || "quarter" === e || "year" === e) switch (t = this._days + a / 864e5, n = this._months + ii(t), e) {
+                    var t, n, s = this._milliseconds;
+                    if ("month" === (e = $(e)) || "quarter" === e || "year" === e) switch (t = this._days + s / 864e5, n = this._months + ii(t), e) {
                         case "month":
                             return n;
                         case "quarter":
@@ -4015,17 +4012,17 @@
                             return n / 12
                     } else switch (t = this._days + Math.round(ri(this._months)), e) {
                         case "week":
-                            return t / 7 + a / 6048e5;
+                            return t / 7 + s / 6048e5;
                         case "day":
-                            return t + a / 864e5;
+                            return t + s / 864e5;
                         case "hour":
-                            return 24 * t + a / 36e5;
+                            return 24 * t + s / 36e5;
                         case "minute":
-                            return 1440 * t + a / 6e4;
+                            return 1440 * t + s / 6e4;
                         case "second":
-                            return 86400 * t + a / 1e3;
+                            return 86400 * t + s / 1e3;
                         case "millisecond":
-                            return Math.floor(864e5 * t) + a;
+                            return Math.floor(864e5 * t) + s;
                         default:
                             throw new Error("Unknown unit " + e)
                     }
@@ -4051,7 +4048,7 @@
                     yi = di("y");
 
                 function Li() {
-                    return Da(this)
+                    return Ds(this)
                 }
 
                 function gi(e) {
@@ -4084,31 +4081,31 @@
                         M: 11
                     };
 
-                function Oi(e, t, n, a, s) {
-                    return s.relativeTime(t || 1, !!n, e, a)
+                function Oi(e, t, n, s, a) {
+                    return a.relativeTime(t || 1, !!n, e, s)
                 }
 
                 function Pi(e, t, n) {
-                    var a = Da(e).abs(),
-                        s = xi(a.as("s")),
-                        i = xi(a.as("m")),
-                        r = xi(a.as("h")),
-                        o = xi(a.as("d")),
-                        l = xi(a.as("M")),
-                        d = xi(a.as("y")),
-                        m = s <= Hi.ss && ["s", s] || s < Hi.s && ["ss", s] || i <= 1 && ["m"] || i < Hi.m && ["mm", i] || r <= 1 && ["h"] || r < Hi.h && ["hh", r] || o <= 1 && ["d"] || o < Hi.d && ["dd", o] || l <= 1 && ["M"] || l < Hi.M && ["MM", l] || d <= 1 && ["y"] || ["yy", d];
+                    var s = Ds(e).abs(),
+                        a = xi(s.as("s")),
+                        i = xi(s.as("m")),
+                        r = xi(s.as("h")),
+                        o = xi(s.as("d")),
+                        l = xi(s.as("M")),
+                        d = xi(s.as("y")),
+                        m = a <= Hi.ss && ["s", a] || a < Hi.s && ["ss", a] || i <= 1 && ["m"] || i < Hi.m && ["mm", i] || r <= 1 && ["h"] || r < Hi.h && ["hh", r] || o <= 1 && ["d"] || o < Hi.d && ["dd", o] || l <= 1 && ["M"] || l < Hi.M && ["MM", l] || d <= 1 && ["y"] || ["yy", d];
                     return m[2] = t, m[3] = +e > 0, m[4] = n, Oi.apply(null, m)
                 }
 
-                function Ni(e) {
+                function Ci(e) {
                     return void 0 === e ? xi : "function" == typeof e && (xi = e, !0)
                 }
 
-                function Ii(e, t) {
+                function Ni(e, t) {
                     return void 0 !== Hi[e] && (void 0 === t ? Hi[e] : (Hi[e] = t, "s" === e && (Hi.ss = t - 1), !0))
                 }
 
-                function Ci(e) {
+                function Ii(e) {
                     if (!this.isValid()) return this.localeData().invalidDate();
                     var t = this.localeData(),
                         n = Pi(this, !e, t);
@@ -4123,12 +4120,12 @@
                 function Ri() {
                     if (!this.isValid()) return this.localeData().invalidDate();
                     var e, t, n = Ai(this._milliseconds) / 1e3,
-                        a = Ai(this._days),
-                        s = Ai(this._months);
+                        s = Ai(this._days),
+                        a = Ai(this._months);
                     e = T(n / 60), t = T(e / 60), n %= 60, e %= 60;
-                    var i = T(s / 12),
-                        r = s %= 12,
-                        o = a,
+                    var i = T(a / 12),
+                        r = a %= 12,
+                        o = s,
                         l = t,
                         d = e,
                         m = n ? n.toFixed(3).replace(/\.?0+$/, "") : "",
@@ -4140,12 +4137,12 @@
                         h = ji(this._milliseconds) !== ji(_) ? "-" : "";
                     return u + "P" + (i ? c + i + "Y" : "") + (r ? c + r + "M" : "") + (o ? p + o + "D" : "") + (l || d || m ? "T" : "") + (l ? h + l + "H" : "") + (d ? h + d + "M" : "") + (m ? h + m + "S" : "")
                 }
-                var Wi = ra.prototype;
-                return Wi.isValid = sa, Wi.abs = Zs, Wi.add = ti, Wi.subtract = ni, Wi.as = oi, Wi.asMilliseconds = mi, Wi.asSeconds = _i, Wi.asMinutes = ui, Wi.asHours = ci, Wi.asDays = pi, Wi.asWeeks = hi, Wi.asMonths = fi, Wi.asQuarters = Mi, Wi.asYears = yi, Wi.valueOf = li, Wi._bubble = si, Wi.clone = Li, Wi.get = gi, Wi.milliseconds = vi, Wi.seconds = bi, Wi.minutes = Yi, Wi.hours = Ti, Wi.days = Si, Wi.weeks = wi, Wi.months = Di, Wi.years = Ei, Wi.humanize = Ci, Wi.toISOString = Ri, Wi.toString = Ri, Wi.toJSON = Ri, Wi.locale = es, Wi.localeData = ns, Wi.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Ri), Wi.lang = ts, oe("X", 0, 0, "unix"), oe("x", 0, 0, "valueOf"), xe("x", Ye), xe("X", De), Ie("X", (function(e, t, n) {
+                var Wi = rs.prototype;
+                return Wi.isValid = as, Wi.abs = Za, Wi.add = ti, Wi.subtract = ni, Wi.as = oi, Wi.asMilliseconds = mi, Wi.asSeconds = _i, Wi.asMinutes = ui, Wi.asHours = ci, Wi.asDays = pi, Wi.asWeeks = hi, Wi.asMonths = fi, Wi.asQuarters = Mi, Wi.asYears = yi, Wi.valueOf = li, Wi._bubble = ai, Wi.clone = Li, Wi.get = gi, Wi.milliseconds = vi, Wi.seconds = bi, Wi.minutes = Yi, Wi.hours = Ti, Wi.days = Si, Wi.weeks = wi, Wi.months = Di, Wi.years = Ei, Wi.humanize = Ii, Wi.toISOString = Ri, Wi.toString = Ri, Wi.toJSON = Ri, Wi.locale = ea, Wi.localeData = na, Wi.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Ri), Wi.lang = ta, oe("X", 0, 0, "unix"), oe("x", 0, 0, "valueOf"), xe("x", Ye), xe("X", De), Ne("X", (function(e, t, n) {
                     n._d = new Date(1e3 * parseFloat(e, 10))
-                })), Ie("x", (function(e, t, n) {
+                })), Ne("x", (function(e, t, n) {
                     n._d = new Date(S(e))
-                })), s.version = "2.24.0", i(Kn), s.fn = Rs, s.min = Zn, s.max = ea, s.now = ta, s.utc = h, s.unix = Ws, s.months = Js, s.isDate = _, s.locale = hn, s.invalid = L, s.duration = Da, s.isMoment = Y, s.weekdays = Ks, s.parseZone = Fs, s.localeData = yn, s.isDuration = oa, s.monthsShort = qs, s.weekdaysMin = $s, s.defineLocale = fn, s.updateLocale = Mn, s.locales = Ln, s.weekdaysShort = Qs, s.normalizeUnits = $, s.relativeTimeRounding = Ni, s.relativeTimeThreshold = Ii, s.calendarFormat = Ia, s.prototype = Rs, s.HTML5_FMT = {
+                })), a.version = "2.24.0", i(Kn), a.fn = Ra, a.min = Zn, a.max = es, a.now = ts, a.utc = h, a.unix = Wa, a.months = Ja, a.isDate = _, a.locale = hn, a.invalid = L, a.duration = Ds, a.isMoment = Y, a.weekdays = Ka, a.parseZone = Fa, a.localeData = yn, a.isDuration = os, a.monthsShort = qa, a.weekdaysMin = $a, a.defineLocale = fn, a.updateLocale = Mn, a.locales = Ln, a.weekdaysShort = Qa, a.normalizeUnits = $, a.relativeTimeRounding = Ci, a.relativeTimeThreshold = Ni, a.calendarFormat = Ns, a.prototype = Ra, a.HTML5_FMT = {
                     DATETIME_LOCAL: "YYYY-MM-DDTHH:mm",
                     DATETIME_LOCAL_SECONDS: "YYYY-MM-DDTHH:mm:ss",
                     DATETIME_LOCAL_MS: "YYYY-MM-DDTHH:mm:ss.SSS",
@@ -4155,10 +4152,10 @@
                     TIME_MS: "HH:mm:ss.SSS",
                     WEEK: "GGGG-[W]WW",
                     MONTH: "YYYY-MM"
-                }, s
+                }, a
             }()
         }, (e, t, n) => {
-            var a = {
+            var s = {
                 "./af": 91,
                 "./af.js": 91,
                 "./ar": 92,
@@ -4415,21 +4412,21 @@
                 "./zh-tw.js": 217
             };
 
-            function s(e) {
+            function a(e) {
                 var t = i(e);
                 return n(t)
             }
 
             function i(e) {
-                if (!n.o(a, e)) {
+                if (!n.o(s, e)) {
                     var t = new Error("Cannot find module '" + e + "'");
                     throw t.code = "MODULE_NOT_FOUND", t
                 }
-                return a[e]
+                return s[e]
             }
-            s.keys = function() {
-                return Object.keys(a)
-            }, s.resolve = i, e.exports = s, s.id = 90
+            a.keys = function() {
+                return Object.keys(s)
+            }, a.resolve = i, e.exports = a, a.id = 90
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4515,10 +4512,10 @@
                         "٩": "9",
                         "٠": "0"
                     },
-                    a = function(e) {
+                    s = function(e) {
                         return 0 === e ? 0 : 1 === e ? 1 : 2 === e ? 2 : e % 100 >= 3 && e % 100 <= 10 ? 3 : e % 100 >= 11 ? 4 : 5
                     },
-                    s = {
+                    a = {
                         s: ["أقل من ثانية", "ثانية واحدة", ["ثانيتان", "ثانيتين"], "%d ثوان", "%d ثانية", "%d ثانية"],
                         m: ["أقل من دقيقة", "دقيقة واحدة", ["دقيقتان", "دقيقتين"], "%d دقائق", "%d دقيقة", "%d دقيقة"],
                         h: ["أقل من ساعة", "ساعة واحدة", ["ساعتان", "ساعتين"], "%d ساعات", "%d ساعة", "%d ساعة"],
@@ -4528,8 +4525,8 @@
                     },
                     i = function(e) {
                         return function(t, n, i, r) {
-                            var o = a(t),
-                                l = s[e][a(t)];
+                            var o = s(t),
+                                l = a[e][s(t)];
                             return 2 === o && (l = l[n ? 0 : 1]), l.replace(/%d/i, t)
                         }
                     },
@@ -4710,7 +4707,7 @@
                     n = function(e) {
                         return 0 === e ? 0 : 1 === e ? 1 : 2 === e ? 2 : e % 100 >= 3 && e % 100 <= 10 ? 3 : e % 100 >= 11 ? 4 : 5
                     },
-                    a = {
+                    s = {
                         s: ["أقل من ثانية", "ثانية واحدة", ["ثانيتان", "ثانيتين"], "%d ثوان", "%d ثانية", "%d ثانية"],
                         m: ["أقل من دقيقة", "دقيقة واحدة", ["دقيقتان", "دقيقتين"], "%d دقائق", "%d دقيقة", "%d دقيقة"],
                         h: ["أقل من ساعة", "ساعة واحدة", ["ساعتان", "ساعتين"], "%d ساعات", "%d ساعة", "%d ساعة"],
@@ -4718,11 +4715,11 @@
                         M: ["أقل من شهر", "شهر واحد", ["شهران", "شهرين"], "%d أشهر", "%d شهرا", "%d شهر"],
                         y: ["أقل من عام", "عام واحد", ["عامان", "عامين"], "%d أعوام", "%d عامًا", "%d عام"]
                     },
-                    s = function(e) {
-                        return function(t, s, i, r) {
+                    a = function(e) {
+                        return function(t, a, i, r) {
                             var o = n(t),
-                                l = a[e][n(t)];
-                            return 2 === o && (l = l[s ? 0 : 1]), l.replace(/%d/i, t)
+                                l = s[e][n(t)];
+                            return 2 === o && (l = l[a ? 0 : 1]), l.replace(/%d/i, t)
                         }
                     },
                     i = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
@@ -4759,18 +4756,18 @@
                     relativeTime: {
                         future: "بعد %s",
                         past: "منذ %s",
-                        s: s("s"),
-                        ss: s("s"),
-                        m: s("m"),
-                        mm: s("m"),
-                        h: s("h"),
-                        hh: s("h"),
-                        d: s("d"),
-                        dd: s("d"),
-                        M: s("M"),
-                        MM: s("M"),
-                        y: s("y"),
-                        yy: s("y")
+                        s: a("s"),
+                        ss: a("s"),
+                        m: a("m"),
+                        mm: a("m"),
+                        h: a("h"),
+                        hh: a("h"),
+                        d: a("d"),
+                        dd: a("d"),
+                        M: a("M"),
+                        MM: a("M"),
+                        y: a("y"),
+                        yy: a("y")
                     },
                     preparse: function(e) {
                         return e.replace(/،/g, ",")
@@ -5044,9 +5041,9 @@
                     ordinal: function(e) {
                         if (0 === e) return e + "-ıncı";
                         var n = e % 10,
-                            a = e % 100 - n,
-                            s = e >= 100 ? 100 : null;
-                        return e + (t[n] || t[a] || t[s])
+                            s = e % 100 - n,
+                            a = e >= 100 ? 100 : null;
+                        return e + (t[n] || t[s] || t[a])
                     },
                     week: {
                         dow: 1,
@@ -5063,15 +5060,15 @@
                     return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2]
                 }
 
-                function n(e, n, a) {
-                    return "m" === a ? n ? "хвіліна" : "хвіліну" : "h" === a ? n ? "гадзіна" : "гадзіну" : e + " " + t({
+                function n(e, n, s) {
+                    return "m" === s ? n ? "хвіліна" : "хвіліну" : "h" === s ? n ? "гадзіна" : "гадзіну" : e + " " + t({
                         ss: n ? "секунда_секунды_секунд" : "секунду_секунды_секунд",
                         mm: n ? "хвіліна_хвіліны_хвілін" : "хвіліну_хвіліны_хвілін",
                         hh: n ? "гадзіна_гадзіны_гадзін" : "гадзіну_гадзіны_гадзін",
                         dd: "дзень_дні_дзён",
                         MM: "месяц_месяцы_месяцаў",
                         yy: "год_гады_гадоў"
-                    } [a], +e)
+                    } [s], +e)
                 }
                 e.defineLocale("be", {
                     months: {
@@ -5452,7 +5449,7 @@
                 "use strict";
 
                 function t(e, t, n) {
-                    return e + " " + s({
+                    return e + " " + a({
                         mm: "munutenn",
                         MM: "miz",
                         dd: "devezh"
@@ -5460,7 +5457,7 @@
                 }
 
                 function n(e) {
-                    switch (a(e)) {
+                    switch (s(e)) {
                         case 1:
                         case 3:
                         case 4:
@@ -5472,11 +5469,11 @@
                     }
                 }
 
-                function a(e) {
-                    return e > 9 ? a(e % 10) : e
+                function s(e) {
+                    return e > 9 ? s(e % 10) : e
                 }
 
-                function s(e, t) {
+                function a(e, t) {
                     return 2 === t ? i(e) : e
                 }
 
@@ -5542,24 +5539,24 @@
                 "use strict";
 
                 function t(e, t, n) {
-                    var a = e + " ";
+                    var s = e + " ";
                     switch (n) {
                         case "ss":
-                            return a += 1 === e ? "sekunda" : 2 === e || 3 === e || 4 === e ? "sekunde" : "sekundi";
+                            return s += 1 === e ? "sekunda" : 2 === e || 3 === e || 4 === e ? "sekunde" : "sekundi";
                         case "m":
                             return t ? "jedna minuta" : "jedne minute";
                         case "mm":
-                            return a += 1 === e ? "minuta" : 2 === e || 3 === e || 4 === e ? "minute" : "minuta";
+                            return s += 1 === e ? "minuta" : 2 === e || 3 === e || 4 === e ? "minute" : "minuta";
                         case "h":
                             return t ? "jedan sat" : "jednog sata";
                         case "hh":
-                            return a += 1 === e ? "sat" : 2 === e || 3 === e || 4 === e ? "sata" : "sati";
+                            return s += 1 === e ? "sat" : 2 === e || 3 === e || 4 === e ? "sata" : "sati";
                         case "dd":
-                            return a += 1 === e ? "dan" : "dana";
+                            return s += 1 === e ? "dan" : "dana";
                         case "MM":
-                            return a += 1 === e ? "mjesec" : 2 === e || 3 === e || 4 === e ? "mjeseca" : "mjeseci";
+                            return s += 1 === e ? "mjesec" : 2 === e || 3 === e || 4 === e ? "mjeseca" : "mjeseci";
                         case "yy":
-                            return a += 1 === e ? "godina" : 2 === e || 3 === e || 4 === e ? "godine" : "godina"
+                            return s += 1 === e ? "godina" : 2 === e || 3 === e || 4 === e ? "godine" : "godina"
                     }
                 }
                 e.defineLocale("bs", {
@@ -5713,52 +5710,52 @@
                 "use strict";
                 var t = "leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec".split("_"),
                     n = "led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro".split("_"),
-                    a = [/^led/i, /^úno/i, /^bře/i, /^dub/i, /^kvě/i, /^(čvn|červen$|června)/i, /^(čvc|červenec|července)/i, /^srp/i, /^zář/i, /^říj/i, /^lis/i, /^pro/i],
-                    s = /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
+                    s = [/^led/i, /^úno/i, /^bře/i, /^dub/i, /^kvě/i, /^(čvn|červen$|června)/i, /^(čvc|červenec|července)/i, /^srp/i, /^zář/i, /^říj/i, /^lis/i, /^pro/i],
+                    a = /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
 
                 function i(e) {
                     return e > 1 && e < 5 && 1 != ~~(e / 10)
                 }
 
-                function r(e, t, n, a) {
-                    var s = e + " ";
+                function r(e, t, n, s) {
+                    var a = e + " ";
                     switch (n) {
                         case "s":
-                            return t || a ? "pár sekund" : "pár sekundami";
+                            return t || s ? "pár sekund" : "pár sekundami";
                         case "ss":
-                            return t || a ? s + (i(e) ? "sekundy" : "sekund") : s + "sekundami";
+                            return t || s ? a + (i(e) ? "sekundy" : "sekund") : a + "sekundami";
                         case "m":
-                            return t ? "minuta" : a ? "minutu" : "minutou";
+                            return t ? "minuta" : s ? "minutu" : "minutou";
                         case "mm":
-                            return t || a ? s + (i(e) ? "minuty" : "minut") : s + "minutami";
+                            return t || s ? a + (i(e) ? "minuty" : "minut") : a + "minutami";
                         case "h":
-                            return t ? "hodina" : a ? "hodinu" : "hodinou";
+                            return t ? "hodina" : s ? "hodinu" : "hodinou";
                         case "hh":
-                            return t || a ? s + (i(e) ? "hodiny" : "hodin") : s + "hodinami";
+                            return t || s ? a + (i(e) ? "hodiny" : "hodin") : a + "hodinami";
                         case "d":
-                            return t || a ? "den" : "dnem";
+                            return t || s ? "den" : "dnem";
                         case "dd":
-                            return t || a ? s + (i(e) ? "dny" : "dní") : s + "dny";
+                            return t || s ? a + (i(e) ? "dny" : "dní") : a + "dny";
                         case "M":
-                            return t || a ? "měsíc" : "měsícem";
+                            return t || s ? "měsíc" : "měsícem";
                         case "MM":
-                            return t || a ? s + (i(e) ? "měsíce" : "měsíců") : s + "měsíci";
+                            return t || s ? a + (i(e) ? "měsíce" : "měsíců") : a + "měsíci";
                         case "y":
-                            return t || a ? "rok" : "rokem";
+                            return t || s ? "rok" : "rokem";
                         case "yy":
-                            return t || a ? s + (i(e) ? "roky" : "let") : s + "lety"
+                            return t || s ? a + (i(e) ? "roky" : "let") : a + "lety"
                     }
                 }
                 e.defineLocale("cs", {
                     months: t,
                     monthsShort: n,
-                    monthsRegex: s,
-                    monthsShortRegex: s,
+                    monthsRegex: a,
+                    monthsShortRegex: a,
                     monthsStrictRegex: /^(leden|ledna|února|únor|březen|března|duben|dubna|květen|května|červenec|července|červen|června|srpen|srpna|září|říjen|října|listopadu|listopad|prosinec|prosince)/i,
                     monthsShortStrictRegex: /^(led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i,
-                    monthsParse: a,
-                    longMonthsParse: a,
-                    shortMonthsParse: a,
+                    monthsParse: s,
+                    longMonthsParse: s,
+                    shortMonthsParse: s,
                     weekdays: "neděle_pondělí_úterý_středa_čtvrtek_pátek_sobota".split("_"),
                     weekdaysShort: "ne_po_út_st_čt_pá_so".split("_"),
                     weekdaysMin: "ne_po_út_st_čt_pá_so".split("_"),
@@ -5991,8 +5988,8 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
-                    var s = {
+                function t(e, t, n, s) {
+                    var a = {
                         m: ["eine Minute", "einer Minute"],
                         h: ["eine Stunde", "einer Stunde"],
                         d: ["ein Tag", "einem Tag"],
@@ -6002,7 +5999,7 @@
                         y: ["ein Jahr", "einem Jahr"],
                         yy: [e + " Jahre", e + " Jahren"]
                     };
-                    return t ? s[n][0] : s[n][1]
+                    return t ? a[n][0] : a[n][1]
                 }
                 e.defineLocale("de", {
                     months: "Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -6056,8 +6053,8 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
-                    var s = {
+                function t(e, t, n, s) {
+                    var a = {
                         m: ["eine Minute", "einer Minute"],
                         h: ["eine Stunde", "einer Stunde"],
                         d: ["ein Tag", "einem Tag"],
@@ -6067,7 +6064,7 @@
                         y: ["ein Jahr", "einem Jahr"],
                         yy: [e + " Jahre", e + " Jahren"]
                     };
-                    return t ? s[n][0] : s[n][1]
+                    return t ? a[n][0] : a[n][1]
                 }
                 e.defineLocale("de-at", {
                     months: "Jänner_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -6121,8 +6118,8 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
-                    var s = {
+                function t(e, t, n, s) {
+                    var a = {
                         m: ["eine Minute", "einer Minute"],
                         h: ["eine Stunde", "einer Stunde"],
                         d: ["ein Tag", "einem Tag"],
@@ -6132,7 +6129,7 @@
                         y: ["ein Jahr", "einem Jahr"],
                         yy: [e + " Jahre", e + " Jahren"]
                     };
-                    return t ? s[n][0] : s[n][1]
+                    return t ? a[n][0] : a[n][1]
                 }
                 e.defineLocale("de-ch", {
                     months: "Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -6287,9 +6284,9 @@
                         sameElse: "L"
                     },
                     calendar: function(e, n) {
-                        var a = this._calendarEl[e],
-                            s = n && n.hours();
-                        return t(a) && (a = a.apply(n)), a.replace("{}", s % 12 == 1 ? "στη" : "στις")
+                        var s = this._calendarEl[e],
+                            a = n && n.hours();
+                        return t(s) && (s = s.apply(n)), s.replace("{}", a % 12 == 1 ? "στη" : "στις")
                     },
                     relativeTime: {
                         future: "σε %s",
@@ -6731,20 +6728,20 @@
                 "use strict";
                 var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
                     n = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_"),
-                    a = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i],
-                    s = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+                    s = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i],
+                    a = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
                 e.defineLocale("es", {
                     months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
-                    monthsShort: function(e, a) {
-                        return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
+                    monthsShort: function(e, s) {
+                        return e ? /-MMM-/.test(s) ? n[e.month()] : t[e.month()] : t
                     },
-                    monthsRegex: s,
-                    monthsShortRegex: s,
+                    monthsRegex: a,
+                    monthsShortRegex: a,
                     monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
                     monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
-                    monthsParse: a,
-                    longMonthsParse: a,
-                    shortMonthsParse: a,
+                    monthsParse: s,
+                    longMonthsParse: s,
+                    shortMonthsParse: s,
                     weekdays: "domingo_lunes_martes_miércoles_jueves_viernes_sábado".split("_"),
                     weekdaysShort: "dom._lun._mar._mié._jue._vie._sáb.".split("_"),
                     weekdaysMin: "do_lu_ma_mi_ju_vi_sá".split("_"),
@@ -6804,20 +6801,20 @@
                 "use strict";
                 var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
                     n = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_"),
-                    a = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i],
-                    s = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+                    s = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i],
+                    a = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
                 e.defineLocale("es-do", {
                     months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
-                    monthsShort: function(e, a) {
-                        return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
+                    monthsShort: function(e, s) {
+                        return e ? /-MMM-/.test(s) ? n[e.month()] : t[e.month()] : t
                     },
-                    monthsRegex: s,
-                    monthsShortRegex: s,
+                    monthsRegex: a,
+                    monthsShortRegex: a,
                     monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
                     monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
-                    monthsParse: a,
-                    longMonthsParse: a,
-                    shortMonthsParse: a,
+                    monthsParse: s,
+                    longMonthsParse: s,
+                    shortMonthsParse: s,
                     weekdays: "domingo_lunes_martes_miércoles_jueves_viernes_sábado".split("_"),
                     weekdaysShort: "dom._lun._mar._mié._jue._vie._sáb.".split("_"),
                     weekdaysMin: "do_lu_ma_mi_ju_vi_sá".split("_"),
@@ -6877,20 +6874,20 @@
                 "use strict";
                 var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
                     n = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_"),
-                    a = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i],
-                    s = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+                    s = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i],
+                    a = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
                 e.defineLocale("es-us", {
                     months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
-                    monthsShort: function(e, a) {
-                        return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
+                    monthsShort: function(e, s) {
+                        return e ? /-MMM-/.test(s) ? n[e.month()] : t[e.month()] : t
                     },
-                    monthsRegex: s,
-                    monthsShortRegex: s,
+                    monthsRegex: a,
+                    monthsShortRegex: a,
                     monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
                     monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
-                    monthsParse: a,
-                    longMonthsParse: a,
-                    shortMonthsParse: a,
+                    monthsParse: s,
+                    longMonthsParse: s,
+                    shortMonthsParse: s,
                     weekdays: "domingo_lunes_martes_miércoles_jueves_viernes_sábado".split("_"),
                     weekdaysShort: "dom._lun._mar._mié._jue._vie._sáb.".split("_"),
                     weekdaysMin: "do_lu_ma_mi_ju_vi_sá".split("_"),
@@ -6949,8 +6946,8 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
-                    var s = {
+                function t(e, t, n, s) {
+                    var a = {
                         s: ["mõne sekundi", "mõni sekund", "paar sekundit"],
                         ss: [e + "sekundi", e + "sekundit"],
                         m: ["ühe minuti", "üks minut"],
@@ -6963,7 +6960,7 @@
                         y: ["ühe aasta", "aasta", "üks aasta"],
                         yy: [e + " aasta", e + " aastat"]
                     };
-                    return t ? s[n][2] ? s[n][2] : s[n][1] : a ? s[n][0] : s[n][1]
+                    return t ? a[n][2] ? a[n][2] : a[n][1] : s ? a[n][0] : a[n][1]
                 }
                 e.defineLocale("et", {
                     months: "jaanuar_veebruar_märts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember".split("_"),
@@ -7163,43 +7160,43 @@
                 var t = "nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän".split(" "),
                     n = ["nolla", "yhden", "kahden", "kolmen", "neljän", "viiden", "kuuden", t[7], t[8], t[9]];
 
-                function a(e, t, n, a) {
+                function s(e, t, n, s) {
                     var i = "";
                     switch (n) {
                         case "s":
-                            return a ? "muutaman sekunnin" : "muutama sekunti";
+                            return s ? "muutaman sekunnin" : "muutama sekunti";
                         case "ss":
-                            return a ? "sekunnin" : "sekuntia";
+                            return s ? "sekunnin" : "sekuntia";
                         case "m":
-                            return a ? "minuutin" : "minuutti";
+                            return s ? "minuutin" : "minuutti";
                         case "mm":
-                            i = a ? "minuutin" : "minuuttia";
+                            i = s ? "minuutin" : "minuuttia";
                             break;
                         case "h":
-                            return a ? "tunnin" : "tunti";
+                            return s ? "tunnin" : "tunti";
                         case "hh":
-                            i = a ? "tunnin" : "tuntia";
+                            i = s ? "tunnin" : "tuntia";
                             break;
                         case "d":
-                            return a ? "päivän" : "päivä";
+                            return s ? "päivän" : "päivä";
                         case "dd":
-                            i = a ? "päivän" : "päivää";
+                            i = s ? "päivän" : "päivää";
                             break;
                         case "M":
-                            return a ? "kuukauden" : "kuukausi";
+                            return s ? "kuukauden" : "kuukausi";
                         case "MM":
-                            i = a ? "kuukauden" : "kuukautta";
+                            i = s ? "kuukauden" : "kuukautta";
                             break;
                         case "y":
-                            return a ? "vuoden" : "vuosi";
+                            return s ? "vuoden" : "vuosi";
                         case "yy":
-                            i = a ? "vuoden" : "vuotta"
+                            i = s ? "vuoden" : "vuotta"
                     }
-                    return i = s(e, a) + " " + i
+                    return i = a(e, s) + " " + i
                 }
 
-                function s(e, a) {
-                    return e < 10 ? a ? n[e] : t[e] : e
+                function a(e, s) {
+                    return e < 10 ? s ? n[e] : t[e] : e
                 }
                 e.defineLocale("fi", {
                     months: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split("_"),
@@ -7230,18 +7227,18 @@
                     relativeTime: {
                         future: "%s päästä",
                         past: "%s sitten",
-                        s: a,
-                        ss: a,
-                        m: a,
-                        mm: a,
-                        h: a,
-                        hh: a,
-                        d: a,
-                        dd: a,
-                        M: a,
-                        MM: a,
-                        y: a,
-                        yy: a
+                        s,
+                        ss: s,
+                        m: s,
+                        mm: s,
+                        h: s,
+                        hh: s,
+                        d: s,
+                        dd: s,
+                        M: s,
+                        MM: s,
+                        y: s,
+                        yy: s
                     },
                     dayOfMonthOrdinalParse: /\d{1,2}\./,
                     ordinal: "%d.",
@@ -7496,8 +7493,8 @@
                     n = "jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des".split("_");
                 e.defineLocale("fy", {
                     months: "jannewaris_febrewaris_maart_april_maaie_juny_july_augustus_septimber_oktober_novimber_desimber".split("_"),
-                    monthsShort: function(e, a) {
-                        return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
+                    monthsShort: function(e, s) {
+                        return e ? /-MMM-/.test(s) ? n[e.month()] : t[e.month()] : t
                     },
                     monthsParseExact: !0,
                     weekdays: "snein_moandei_tiisdei_woansdei_tongersdei_freed_sneon".split("_"),
@@ -7551,15 +7548,15 @@
                 "use strict";
                 var t = ["Eanáir", "Feabhra", "Márta", "Aibreán", "Bealtaine", "Méitheamh", "Iúil", "Lúnasa", "Meán Fómhair", "Deaireadh Fómhair", "Samhain", "Nollaig"],
                     n = ["Eaná", "Feab", "Márt", "Aibr", "Beal", "Méit", "Iúil", "Lúna", "Meán", "Deai", "Samh", "Noll"],
-                    a = ["Dé Domhnaigh", "Dé Luain", "Dé Máirt", "Dé Céadaoin", "Déardaoin", "Dé hAoine", "Dé Satharn"],
-                    s = ["Dom", "Lua", "Mái", "Céa", "Déa", "hAo", "Sat"],
+                    s = ["Dé Domhnaigh", "Dé Luain", "Dé Máirt", "Dé Céadaoin", "Déardaoin", "Dé hAoine", "Dé Satharn"],
+                    a = ["Dom", "Lua", "Mái", "Céa", "Déa", "hAo", "Sat"],
                     i = ["Do", "Lu", "Má", "Ce", "Dé", "hA", "Sa"];
                 e.defineLocale("ga", {
                     months: t,
                     monthsShort: n,
                     monthsParseExact: !0,
-                    weekdays: a,
-                    weekdaysShort: s,
+                    weekdays: s,
+                    weekdaysShort: a,
                     weekdaysMin: i,
                     longDateFormat: {
                         LT: "HH:mm",
@@ -7608,15 +7605,15 @@
                 "use strict";
                 var t = ["Am Faoilleach", "An Gearran", "Am Màrt", "An Giblean", "An Cèitean", "An t-Ògmhios", "An t-Iuchar", "An Lùnastal", "An t-Sultain", "An Dàmhair", "An t-Samhain", "An Dùbhlachd"],
                     n = ["Faoi", "Gear", "Màrt", "Gibl", "Cèit", "Ògmh", "Iuch", "Lùn", "Sult", "Dàmh", "Samh", "Dùbh"],
-                    a = ["Didòmhnaich", "Diluain", "Dimàirt", "Diciadain", "Diardaoin", "Dihaoine", "Disathairne"],
-                    s = ["Did", "Dil", "Dim", "Dic", "Dia", "Dih", "Dis"],
+                    s = ["Didòmhnaich", "Diluain", "Dimàirt", "Diciadain", "Diardaoin", "Dihaoine", "Disathairne"],
+                    a = ["Did", "Dil", "Dim", "Dic", "Dia", "Dih", "Dis"],
                     i = ["Dò", "Lu", "Mà", "Ci", "Ar", "Ha", "Sa"];
                 e.defineLocale("gd", {
                     months: t,
                     monthsShort: n,
                     monthsParseExact: !0,
-                    weekdays: a,
-                    weekdaysShort: s,
+                    weekdays: s,
+                    weekdaysShort: a,
                     weekdaysMin: i,
                     longDateFormat: {
                         LT: "HH:mm",
@@ -7727,8 +7724,8 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
-                    var s = {
+                function t(e, t, n, s) {
+                    var a = {
                         s: ["thodde secondanim", "thodde second"],
                         ss: [e + " secondanim", e + " second"],
                         m: ["eka mintan", "ek minute"],
@@ -7742,7 +7739,7 @@
                         y: ["eka vorsan", "ek voros"],
                         yy: [e + " vorsanim", e + " vorsam"]
                     };
-                    return t ? s[n][0] : s[n][1]
+                    return t ? a[n][0] : a[n][1]
                 }
                 e.defineLocale("gom-latn", {
                     months: "Janer_Febrer_Mars_Abril_Mai_Jun_Julai_Agost_Setembr_Otubr_Novembr_Dezembr".split("_"),
@@ -8047,24 +8044,24 @@
                 "use strict";
 
                 function t(e, t, n) {
-                    var a = e + " ";
+                    var s = e + " ";
                     switch (n) {
                         case "ss":
-                            return a += 1 === e ? "sekunda" : 2 === e || 3 === e || 4 === e ? "sekunde" : "sekundi";
+                            return s += 1 === e ? "sekunda" : 2 === e || 3 === e || 4 === e ? "sekunde" : "sekundi";
                         case "m":
                             return t ? "jedna minuta" : "jedne minute";
                         case "mm":
-                            return a += 1 === e ? "minuta" : 2 === e || 3 === e || 4 === e ? "minute" : "minuta";
+                            return s += 1 === e ? "minuta" : 2 === e || 3 === e || 4 === e ? "minute" : "minuta";
                         case "h":
                             return t ? "jedan sat" : "jednog sata";
                         case "hh":
-                            return a += 1 === e ? "sat" : 2 === e || 3 === e || 4 === e ? "sata" : "sati";
+                            return s += 1 === e ? "sat" : 2 === e || 3 === e || 4 === e ? "sata" : "sati";
                         case "dd":
-                            return a += 1 === e ? "dan" : "dana";
+                            return s += 1 === e ? "dan" : "dana";
                         case "MM":
-                            return a += 1 === e ? "mjesec" : 2 === e || 3 === e || 4 === e ? "mjeseca" : "mjeseci";
+                            return s += 1 === e ? "mjesec" : 2 === e || 3 === e || 4 === e ? "mjeseca" : "mjeseci";
                         case "yy":
-                            return a += 1 === e ? "godina" : 2 === e || 3 === e || 4 === e ? "godine" : "godina"
+                            return s += 1 === e ? "godina" : 2 === e || 3 === e || 4 === e ? "godine" : "godina"
                     }
                 }
                 e.defineLocale("hr", {
@@ -8150,38 +8147,38 @@
                 "use strict";
                 var t = "vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton".split(" ");
 
-                function n(e, t, n, a) {
-                    var s = e;
+                function n(e, t, n, s) {
+                    var a = e;
                     switch (n) {
                         case "s":
-                            return a || t ? "néhány másodperc" : "néhány másodperce";
+                            return s || t ? "néhány másodperc" : "néhány másodperce";
                         case "ss":
-                            return s + (a || t) ? " másodperc" : " másodperce";
+                            return a + (s || t) ? " másodperc" : " másodperce";
                         case "m":
-                            return "egy" + (a || t ? " perc" : " perce");
+                            return "egy" + (s || t ? " perc" : " perce");
                         case "mm":
-                            return s + (a || t ? " perc" : " perce");
+                            return a + (s || t ? " perc" : " perce");
                         case "h":
-                            return "egy" + (a || t ? " óra" : " órája");
+                            return "egy" + (s || t ? " óra" : " órája");
                         case "hh":
-                            return s + (a || t ? " óra" : " órája");
+                            return a + (s || t ? " óra" : " órája");
                         case "d":
-                            return "egy" + (a || t ? " nap" : " napja");
+                            return "egy" + (s || t ? " nap" : " napja");
                         case "dd":
-                            return s + (a || t ? " nap" : " napja");
+                            return a + (s || t ? " nap" : " napja");
                         case "M":
-                            return "egy" + (a || t ? " hónap" : " hónapja");
+                            return "egy" + (s || t ? " hónap" : " hónapja");
                         case "MM":
-                            return s + (a || t ? " hónap" : " hónapja");
+                            return a + (s || t ? " hónap" : " hónapja");
                         case "y":
-                            return "egy" + (a || t ? " év" : " éve");
+                            return "egy" + (s || t ? " év" : " éve");
                         case "yy":
-                            return s + (a || t ? " év" : " éve")
+                            return a + (s || t ? " év" : " éve")
                     }
                     return ""
                 }
 
-                function a(e) {
+                function s(e) {
                     return (e ? "" : "[múlt] ") + "[" + t[this.day()] + "] LT[-kor]"
                 }
                 e.defineLocale("hu", {
@@ -8209,11 +8206,11 @@
                         sameDay: "[ma] LT[-kor]",
                         nextDay: "[holnap] LT[-kor]",
                         nextWeek: function() {
-                            return a.call(this, !0)
+                            return s.call(this, !0)
                         },
                         lastDay: "[tegnap] LT[-kor]",
                         lastWeek: function() {
-                            return a.call(this, !1)
+                            return s.call(this, !1)
                         },
                         sameElse: "L"
                     },
@@ -8376,31 +8373,31 @@
                     return e % 100 == 11 || e % 10 != 1
                 }
 
-                function n(e, n, a, s) {
+                function n(e, n, s, a) {
                     var i = e + " ";
-                    switch (a) {
+                    switch (s) {
                         case "s":
-                            return n || s ? "nokkrar sekúndur" : "nokkrum sekúndum";
+                            return n || a ? "nokkrar sekúndur" : "nokkrum sekúndum";
                         case "ss":
-                            return t(e) ? i + (n || s ? "sekúndur" : "sekúndum") : i + "sekúnda";
+                            return t(e) ? i + (n || a ? "sekúndur" : "sekúndum") : i + "sekúnda";
                         case "m":
                             return n ? "mínúta" : "mínútu";
                         case "mm":
-                            return t(e) ? i + (n || s ? "mínútur" : "mínútum") : n ? i + "mínúta" : i + "mínútu";
+                            return t(e) ? i + (n || a ? "mínútur" : "mínútum") : n ? i + "mínúta" : i + "mínútu";
                         case "hh":
-                            return t(e) ? i + (n || s ? "klukkustundir" : "klukkustundum") : i + "klukkustund";
+                            return t(e) ? i + (n || a ? "klukkustundir" : "klukkustundum") : i + "klukkustund";
                         case "d":
-                            return n ? "dagur" : s ? "dag" : "degi";
+                            return n ? "dagur" : a ? "dag" : "degi";
                         case "dd":
-                            return t(e) ? n ? i + "dagar" : i + (s ? "daga" : "dögum") : n ? i + "dagur" : i + (s ? "dag" : "degi");
+                            return t(e) ? n ? i + "dagar" : i + (a ? "daga" : "dögum") : n ? i + "dagur" : i + (a ? "dag" : "degi");
                         case "M":
-                            return n ? "mánuður" : s ? "mánuð" : "mánuði";
+                            return n ? "mánuður" : a ? "mánuð" : "mánuði";
                         case "MM":
-                            return t(e) ? n ? i + "mánuðir" : i + (s ? "mánuði" : "mánuðum") : n ? i + "mánuður" : i + (s ? "mánuð" : "mánuði");
+                            return t(e) ? n ? i + "mánuðir" : i + (a ? "mánuði" : "mánuðum") : n ? i + "mánuður" : i + (a ? "mánuð" : "mánuði");
                         case "y":
-                            return n || s ? "ár" : "ári";
+                            return n || a ? "ár" : "ári";
                         case "yy":
-                            return t(e) ? i + (n || s ? "ár" : "árum") : i + (n || s ? "ár" : "ári")
+                            return t(e) ? i + (n || a ? "ár" : "árum") : i + (n || a ? "ár" : "ári")
                     }
                 }
                 e.defineLocale("is", {
@@ -8806,8 +8803,8 @@
                     dayOfMonthOrdinalParse: /\d{1,2}-(ші|шы)/,
                     ordinal: function(e) {
                         var n = e % 10,
-                            a = e >= 100 ? 100 : null;
-                        return e + (t[e] || t[n] || t[a])
+                            s = e >= 100 ? 100 : null;
+                        return e + (t[e] || t[n] || t[s])
                     },
                     week: {
                         dow: 1,
@@ -9096,10 +9093,10 @@
                         "٩": "9",
                         "٠": "0"
                     },
-                    a = ["کانونی دووەم", "شوبات", "ئازار", "نیسان", "ئایار", "حوزەیران", "تەمموز", "ئاب", "ئەیلوول", "تشرینی یەكەم", "تشرینی دووەم", "كانونی یەکەم"];
+                    s = ["کانونی دووەم", "شوبات", "ئازار", "نیسان", "ئایار", "حوزەیران", "تەمموز", "ئاب", "ئەیلوول", "تشرینی یەكەم", "تشرینی دووەم", "كانونی یەکەم"];
                 e.defineLocale("ku", {
-                    months: a,
-                    monthsShort: a,
+                    months: s,
+                    monthsShort: s,
                     weekdays: "یه‌كشه‌ممه‌_دووشه‌ممه‌_سێشه‌ممه‌_چوارشه‌ممه‌_پێنجشه‌ممه‌_هه‌ینی_شه‌ممه‌".split("_"),
                     weekdaysShort: "یه‌كشه‌م_دووشه‌م_سێشه‌م_چوارشه‌م_پێنجشه‌م_هه‌ینی_شه‌ممه‌".split("_"),
                     weekdaysMin: "ی_د_س_چ_پ_ه_ش".split("_"),
@@ -9225,8 +9222,8 @@
                     dayOfMonthOrdinalParse: /\d{1,2}-(чи|чы|чү|чу)/,
                     ordinal: function(e) {
                         var n = e % 10,
-                            a = e >= 100 ? 100 : null;
-                        return e + (t[e] || t[n] || t[a])
+                            s = e >= 100 ? 100 : null;
+                        return e + (t[e] || t[n] || t[s])
                     },
                     week: {
                         dow: 1,
@@ -9238,38 +9235,38 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
-                    var s = {
+                function t(e, t, n, s) {
+                    var a = {
                         m: ["eng Minutt", "enger Minutt"],
                         h: ["eng Stonn", "enger Stonn"],
                         d: ["een Dag", "engem Dag"],
                         M: ["ee Mount", "engem Mount"],
                         y: ["ee Joer", "engem Joer"]
                     };
-                    return t ? s[n][0] : s[n][1]
+                    return t ? a[n][0] : a[n][1]
                 }
 
                 function n(e) {
-                    return s(e.substr(0, e.indexOf(" "))) ? "a " + e : "an " + e
-                }
-
-                function a(e) {
-                    return s(e.substr(0, e.indexOf(" "))) ? "viru " + e : "virun " + e
+                    return a(e.substr(0, e.indexOf(" "))) ? "a " + e : "an " + e
                 }
 
                 function s(e) {
+                    return a(e.substr(0, e.indexOf(" "))) ? "viru " + e : "virun " + e
+                }
+
+                function a(e) {
                     if (e = parseInt(e, 10), isNaN(e)) return !1;
                     if (e < 0) return !0;
                     if (e < 10) return 4 <= e && e <= 7;
                     if (e < 100) {
                         var t = e % 10;
-                        return s(0 === t ? e / 10 : t)
+                        return a(0 === t ? e / 10 : t)
                     }
                     if (e < 1e4) {
                         for (; e >= 10;) e /= 10;
-                        return s(e)
+                        return a(e)
                     }
-                    return s(e /= 1e3)
+                    return a(e /= 1e3)
                 }
                 e.defineLocale("lb", {
                     months: "Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -9305,7 +9302,7 @@
                     },
                     relativeTime: {
                         future: n,
-                        past: a,
+                        past: s,
                         s: "e puer Sekonnen",
                         ss: "%d Sekonnen",
                         m: t,
@@ -9399,15 +9396,15 @@
                     yy: "metai_metų_metus"
                 };
 
-                function n(e, t, n, a) {
-                    return t ? "kelios sekundės" : a ? "kelių sekundžių" : "kelias sekundes"
+                function n(e, t, n, s) {
+                    return t ? "kelios sekundės" : s ? "kelių sekundžių" : "kelias sekundes"
                 }
 
-                function a(e, t, n, a) {
-                    return t ? i(n)[0] : a ? i(n)[1] : i(n)[2]
+                function s(e, t, n, s) {
+                    return t ? i(n)[0] : s ? i(n)[1] : i(n)[2]
                 }
 
-                function s(e) {
+                function a(e) {
                     return e % 10 == 0 || e > 10 && e < 20
                 }
 
@@ -9417,7 +9414,7 @@
 
                 function r(e, t, n, r) {
                     var o = e + " ";
-                    return 1 === e ? o + a(e, t, n[0], r) : t ? o + (s(e) ? i(n)[1] : i(n)[0]) : r ? o + i(n)[1] : o + (s(e) ? i(n)[1] : i(n)[2])
+                    return 1 === e ? o + s(e, t, n[0], r) : t ? o + (a(e) ? i(n)[1] : i(n)[0]) : r ? o + i(n)[1] : o + (a(e) ? i(n)[1] : i(n)[2])
                 }
                 e.defineLocale("lt", {
                     months: {
@@ -9459,15 +9456,15 @@
                         past: "prieš %s",
                         s: n,
                         ss: r,
-                        m: a,
+                        m: s,
                         mm: r,
-                        h: a,
+                        h: s,
                         hh: r,
-                        d: a,
+                        d: s,
                         dd: r,
-                        M: a,
+                        M: s,
                         MM: r,
-                        y: a,
+                        y: s,
                         yy: r
                     },
                     dayOfMonthOrdinalParse: /\d{1,2}-oji/,
@@ -9501,12 +9498,12 @@
                     return n ? t % 10 == 1 && t % 100 != 11 ? e[2] : e[3] : t % 10 == 1 && t % 100 != 11 ? e[0] : e[1]
                 }
 
-                function a(e, a, s) {
-                    return e + " " + n(t[s], e, a)
+                function s(e, s, a) {
+                    return e + " " + n(t[a], e, s)
                 }
 
-                function s(e, a, s) {
-                    return n(t[s], e, a)
+                function a(e, s, a) {
+                    return n(t[a], e, s)
                 }
 
                 function i(e, t) {
@@ -9539,17 +9536,17 @@
                         future: "pēc %s",
                         past: "pirms %s",
                         s: i,
-                        ss: a,
-                        m: s,
-                        mm: a,
-                        h: s,
-                        hh: a,
-                        d: s,
-                        dd: a,
-                        M: s,
-                        MM: a,
-                        y: s,
-                        yy: a
+                        ss: s,
+                        m: a,
+                        mm: s,
+                        h: a,
+                        hh: s,
+                        d: a,
+                        dd: s,
+                        M: a,
+                        MM: s,
+                        y: a,
+                        yy: s
                     },
                     dayOfMonthOrdinalParse: /\d{1,2}\./,
                     ordinal: "%d.",
@@ -9576,9 +9573,9 @@
                     correctGrammaticalCase: function(e, t) {
                         return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2]
                     },
-                    translate: function(e, n, a) {
-                        var s = t.words[a];
-                        return 1 === a.length ? n ? s[0] : s[1] : e + " " + t.correctGrammaticalCase(e, s)
+                    translate: function(e, n, s) {
+                        var a = t.words[s];
+                        return 1 === s.length ? n ? a[0] : a[1] : e + " " + t.correctGrammaticalCase(e, a)
                     }
                 };
                 e.defineLocale("me", {
@@ -9818,7 +9815,7 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
+                function t(e, t, n, s) {
                     switch (n) {
                         case "s":
                             return t ? "хэдхэн секунд" : "хэдхэн секундын";
@@ -9931,82 +9928,82 @@
                         "०": "0"
                     };
 
-                function a(e, t, n, a) {
-                    var s = "";
+                function s(e, t, n, s) {
+                    var a = "";
                     if (t) switch (n) {
                         case "s":
-                            s = "काही सेकंद";
+                            a = "काही सेकंद";
                             break;
                         case "ss":
-                            s = "%d सेकंद";
+                            a = "%d सेकंद";
                             break;
                         case "m":
-                            s = "एक मिनिट";
+                            a = "एक मिनिट";
                             break;
                         case "mm":
-                            s = "%d मिनिटे";
+                            a = "%d मिनिटे";
                             break;
                         case "h":
-                            s = "एक तास";
+                            a = "एक तास";
                             break;
                         case "hh":
-                            s = "%d तास";
+                            a = "%d तास";
                             break;
                         case "d":
-                            s = "एक दिवस";
+                            a = "एक दिवस";
                             break;
                         case "dd":
-                            s = "%d दिवस";
+                            a = "%d दिवस";
                             break;
                         case "M":
-                            s = "एक महिना";
+                            a = "एक महिना";
                             break;
                         case "MM":
-                            s = "%d महिने";
+                            a = "%d महिने";
                             break;
                         case "y":
-                            s = "एक वर्ष";
+                            a = "एक वर्ष";
                             break;
                         case "yy":
-                            s = "%d वर्षे"
+                            a = "%d वर्षे"
                     } else switch (n) {
                         case "s":
-                            s = "काही सेकंदां";
+                            a = "काही सेकंदां";
                             break;
                         case "ss":
-                            s = "%d सेकंदां";
+                            a = "%d सेकंदां";
                             break;
                         case "m":
-                            s = "एका मिनिटा";
+                            a = "एका मिनिटा";
                             break;
                         case "mm":
-                            s = "%d मिनिटां";
+                            a = "%d मिनिटां";
                             break;
                         case "h":
-                            s = "एका तासा";
+                            a = "एका तासा";
                             break;
                         case "hh":
-                            s = "%d तासां";
+                            a = "%d तासां";
                             break;
                         case "d":
-                            s = "एका दिवसा";
+                            a = "एका दिवसा";
                             break;
                         case "dd":
-                            s = "%d दिवसां";
+                            a = "%d दिवसां";
                             break;
                         case "M":
-                            s = "एका महिन्या";
+                            a = "एका महिन्या";
                             break;
                         case "MM":
-                            s = "%d महिन्यां";
+                            a = "%d महिन्यां";
                             break;
                         case "y":
-                            s = "एका वर्षा";
+                            a = "एका वर्षा";
                             break;
                         case "yy":
-                            s = "%d वर्षां"
+                            a = "%d वर्षां"
                     }
-                    return s.replace(/%d/i, e)
+                    return a.replace(/%d/i, e)
                 }
                 e.defineLocale("mr", {
                     months: "जानेवारी_फेब्रुवारी_मार्च_एप्रिल_मे_जून_जुलै_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर".split("_"),
@@ -10034,18 +10031,18 @@
                     relativeTime: {
                         future: "%sमध्ये",
                         past: "%sपूर्वी",
-                        s: a,
-                        ss: a,
-                        m: a,
-                        mm: a,
-                        h: a,
-                        hh: a,
-                        d: a,
-                        dd: a,
-                        M: a,
-                        MM: a,
-                        y: a,
-                        yy: a
+                        s,
+                        ss: s,
+                        m: s,
+                        mm: s,
+                        h: s,
+                        hh: s,
+                        d: s,
+                        dd: s,
+                        M: s,
+                        MM: s,
+                        y: s,
+                        yy: s
                     },
                     preparse: function(e) {
                         return e.replace(/[१२३४५६७८९०]/g, (function(e) {
@@ -10454,20 +10451,20 @@
                 "use strict";
                 var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
                     n = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),
-                    a = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i],
-                    s = /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
+                    s = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i],
+                    a = /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
                 e.defineLocale("nl", {
                     months: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
-                    monthsShort: function(e, a) {
-                        return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
+                    monthsShort: function(e, s) {
+                        return e ? /-MMM-/.test(s) ? n[e.month()] : t[e.month()] : t
                     },
-                    monthsRegex: s,
-                    monthsShortRegex: s,
+                    monthsRegex: a,
+                    monthsShortRegex: a,
                     monthsStrictRegex: /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december)/i,
                     monthsShortStrictRegex: /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
-                    monthsParse: a,
-                    longMonthsParse: a,
-                    shortMonthsParse: a,
+                    monthsParse: s,
+                    longMonthsParse: s,
+                    shortMonthsParse: s,
                     weekdays: "zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag".split("_"),
                     weekdaysShort: "zo._ma._di._wo._do._vr._za.".split("_"),
                     weekdaysMin: "zo_ma_di_wo_do_vr_za".split("_"),
@@ -10519,20 +10516,20 @@
                 "use strict";
                 var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
                     n = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),
-                    a = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i],
-                    s = /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
+                    s = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i],
+                    a = /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
                 e.defineLocale("nl-be", {
                     months: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
-                    monthsShort: function(e, a) {
-                        return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
+                    monthsShort: function(e, s) {
+                        return e ? /-MMM-/.test(s) ? n[e.month()] : t[e.month()] : t
                     },
-                    monthsRegex: s,
-                    monthsShortRegex: s,
+                    monthsRegex: a,
+                    monthsShortRegex: a,
                     monthsStrictRegex: /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december)/i,
                     monthsShortStrictRegex: /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
-                    monthsParse: a,
-                    longMonthsParse: a,
-                    shortMonthsParse: a,
+                    monthsParse: s,
+                    longMonthsParse: s,
+                    shortMonthsParse: s,
                     weekdays: "zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag".split("_"),
                     weekdaysShort: "zo._ma._di._wo._do._vr._za.".split("_"),
                     weekdaysMin: "zo_ma_di_wo_do_vr_za".split("_"),
@@ -10722,32 +10719,32 @@
                 var t = "styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień".split("_"),
                     n = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia".split("_");
 
-                function a(e) {
+                function s(e) {
                     return e % 10 < 5 && e % 10 > 1 && ~~(e / 10) % 10 != 1
                 }
 
-                function s(e, t, n) {
-                    var s = e + " ";
+                function a(e, t, n) {
+                    var a = e + " ";
                     switch (n) {
                         case "ss":
-                            return s + (a(e) ? "sekundy" : "sekund");
+                            return a + (s(e) ? "sekundy" : "sekund");
                         case "m":
                             return t ? "minuta" : "minutę";
                         case "mm":
-                            return s + (a(e) ? "minuty" : "minut");
+                            return a + (s(e) ? "minuty" : "minut");
                         case "h":
                             return t ? "godzina" : "godzinę";
                         case "hh":
-                            return s + (a(e) ? "godziny" : "godzin");
+                            return a + (s(e) ? "godziny" : "godzin");
                         case "MM":
-                            return s + (a(e) ? "miesiące" : "miesięcy");
+                            return a + (s(e) ? "miesiące" : "miesięcy");
                         case "yy":
-                            return s + (a(e) ? "lata" : "lat")
+                            return a + (s(e) ? "lata" : "lat")
                     }
                 }
                 e.defineLocale("pl", {
-                    months: function(e, a) {
-                        return e ? "" === a ? "(" + n[e.month()] + "|" + t[e.month()] + ")" : /D MMMM/.test(a) ? n[e.month()] : t[e.month()] : t
+                    months: function(e, s) {
+                        return e ? "" === s ? "(" + n[e.month()] + "|" + t[e.month()] + ")" : /D MMMM/.test(s) ? n[e.month()] : t[e.month()] : t
                     },
                     monthsShort: "sty_lut_mar_kwi_maj_cze_lip_sie_wrz_paź_lis_gru".split("_"),
                     weekdays: "niedziela_poniedziałek_wtorek_środa_czwartek_piątek_sobota".split("_"),
@@ -10797,17 +10794,17 @@
                         future: "za %s",
                         past: "%s temu",
                         s: "kilka sekund",
-                        ss: s,
-                        m: s,
-                        mm: s,
-                        h: s,
-                        hh: s,
+                        ss: a,
+                        m: a,
+                        mm: a,
+                        h: a,
+                        hh: a,
                         d: "1 dzień",
                         dd: "%d dni",
                         M: "miesiąc",
-                        MM: s,
+                        MM: a,
                         y: "rok",
-                        yy: s
+                        yy: a
                     },
                     dayOfMonthOrdinalParse: /\d{1,2}\./,
                     ordinal: "%d.",
@@ -10922,8 +10919,8 @@
                 "use strict";
 
                 function t(e, t, n) {
-                    var a = " ";
-                    return (e % 100 >= 20 || e >= 100 && e % 100 == 0) && (a = " de "), e + a + {
+                    var s = " ";
+                    return (e % 100 >= 20 || e >= 100 && e % 100 == 0) && (s = " de "), e + s + {
                         ss: "secunde",
                         mm: "minute",
                         hh: "ore",
@@ -10986,17 +10983,17 @@
                     return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2]
                 }
 
-                function n(e, n, a) {
-                    return "m" === a ? n ? "минута" : "минуту" : e + " " + t({
+                function n(e, n, s) {
+                    return "m" === s ? n ? "минута" : "минуту" : e + " " + t({
                         ss: n ? "секунда_секунды_секунд" : "секунду_секунды_секунд",
                         mm: n ? "минута_минуты_минут" : "минуту_минуты_минут",
                         hh: "час_часа_часов",
                         dd: "день_дня_дней",
                         MM: "месяц_месяца_месяцев",
                         yy: "год_года_лет"
-                    } [a], +e)
+                    } [s], +e)
                 }
-                var a = [/^янв/i, /^фев/i, /^мар/i, /^апр/i, /^ма[йя]/i, /^июн/i, /^июл/i, /^авг/i, /^сен/i, /^окт/i, /^ноя/i, /^дек/i];
+                var s = [/^янв/i, /^фев/i, /^мар/i, /^апр/i, /^ма[йя]/i, /^июн/i, /^июл/i, /^авг/i, /^сен/i, /^окт/i, /^ноя/i, /^дек/i];
                 e.defineLocale("ru", {
                     months: {
                         format: "января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря".split("_"),
@@ -11013,9 +11010,9 @@
                     },
                     weekdaysShort: "вс_пн_вт_ср_чт_пт_сб".split("_"),
                     weekdaysMin: "вс_пн_вт_ср_чт_пт_сб".split("_"),
-                    monthsParse: a,
-                    longMonthsParse: a,
-                    shortMonthsParse: a,
+                    monthsParse: s,
+                    longMonthsParse: s,
+                    shortMonthsParse: s,
                     monthsRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
                     monthsShortRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
                     monthsStrictRegex: /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|ма[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
@@ -11281,37 +11278,37 @@
                 var t = "január_február_marec_apríl_máj_jún_júl_august_september_október_november_december".split("_"),
                     n = "jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec".split("_");
 
-                function a(e) {
+                function s(e) {
                     return e > 1 && e < 5
                 }
 
-                function s(e, t, n, s) {
+                function a(e, t, n, a) {
                     var i = e + " ";
                     switch (n) {
                         case "s":
-                            return t || s ? "pár sekúnd" : "pár sekundami";
+                            return t || a ? "pár sekúnd" : "pár sekundami";
                         case "ss":
-                            return t || s ? i + (a(e) ? "sekundy" : "sekúnd") : i + "sekundami";
+                            return t || a ? i + (s(e) ? "sekundy" : "sekúnd") : i + "sekundami";
                         case "m":
-                            return t ? "minúta" : s ? "minútu" : "minútou";
+                            return t ? "minúta" : a ? "minútu" : "minútou";
                         case "mm":
-                            return t || s ? i + (a(e) ? "minúty" : "minút") : i + "minútami";
+                            return t || a ? i + (s(e) ? "minúty" : "minút") : i + "minútami";
                         case "h":
-                            return t ? "hodina" : s ? "hodinu" : "hodinou";
+                            return t ? "hodina" : a ? "hodinu" : "hodinou";
                         case "hh":
-                            return t || s ? i + (a(e) ? "hodiny" : "hodín") : i + "hodinami";
+                            return t || a ? i + (s(e) ? "hodiny" : "hodín") : i + "hodinami";
                         case "d":
-                            return t || s ? "deň" : "dňom";
+                            return t || a ? "deň" : "dňom";
                         case "dd":
-                            return t || s ? i + (a(e) ? "dni" : "dní") : i + "dňami";
+                            return t || a ? i + (s(e) ? "dni" : "dní") : i + "dňami";
                         case "M":
-                            return t || s ? "mesiac" : "mesiacom";
+                            return t || a ? "mesiac" : "mesiacom";
                         case "MM":
-                            return t || s ? i + (a(e) ? "mesiace" : "mesiacov") : i + "mesiacmi";
+                            return t || a ? i + (s(e) ? "mesiace" : "mesiacov") : i + "mesiacmi";
                         case "y":
-                            return t || s ? "rok" : "rokom";
+                            return t || a ? "rok" : "rokom";
                         case "yy":
-                            return t || s ? i + (a(e) ? "roky" : "rokov") : i + "rokmi"
+                            return t || a ? i + (s(e) ? "roky" : "rokov") : i + "rokmi"
                     }
                 }
                 e.defineLocale("sk", {
@@ -11369,18 +11366,18 @@
                     relativeTime: {
                         future: "za %s",
                         past: "pred %s",
-                        s,
-                        ss: s,
-                        m: s,
-                        mm: s,
-                        h: s,
-                        hh: s,
-                        d: s,
-                        dd: s,
-                        M: s,
-                        MM: s,
-                        y: s,
-                        yy: s
+                        s: a,
+                        ss: a,
+                        m: a,
+                        mm: a,
+                        h: a,
+                        hh: a,
+                        d: a,
+                        dd: a,
+                        M: a,
+                        MM: a,
+                        y: a,
+                        yy: a
                     },
                     dayOfMonthOrdinalParse: /\d{1,2}\./,
                     ordinal: "%d.",
@@ -11394,33 +11391,33 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
-                    var s = e + " ";
+                function t(e, t, n, s) {
+                    var a = e + " ";
                     switch (n) {
                         case "s":
-                            return t || a ? "nekaj sekund" : "nekaj sekundami";
+                            return t || s ? "nekaj sekund" : "nekaj sekundami";
                         case "ss":
-                            return s += 1 === e ? t ? "sekundo" : "sekundi" : 2 === e ? t || a ? "sekundi" : "sekundah" : e < 5 ? t || a ? "sekunde" : "sekundah" : "sekund";
+                            return a += 1 === e ? t ? "sekundo" : "sekundi" : 2 === e ? t || s ? "sekundi" : "sekundah" : e < 5 ? t || s ? "sekunde" : "sekundah" : "sekund";
                         case "m":
                             return t ? "ena minuta" : "eno minuto";
                         case "mm":
-                            return s += 1 === e ? t ? "minuta" : "minuto" : 2 === e ? t || a ? "minuti" : "minutama" : e < 5 ? t || a ? "minute" : "minutami" : t || a ? "minut" : "minutami";
+                            return a += 1 === e ? t ? "minuta" : "minuto" : 2 === e ? t || s ? "minuti" : "minutama" : e < 5 ? t || s ? "minute" : "minutami" : t || s ? "minut" : "minutami";
                         case "h":
                             return t ? "ena ura" : "eno uro";
                         case "hh":
-                            return s += 1 === e ? t ? "ura" : "uro" : 2 === e ? t || a ? "uri" : "urama" : e < 5 ? t || a ? "ure" : "urami" : t || a ? "ur" : "urami";
+                            return a += 1 === e ? t ? "ura" : "uro" : 2 === e ? t || s ? "uri" : "urama" : e < 5 ? t || s ? "ure" : "urami" : t || s ? "ur" : "urami";
                         case "d":
-                            return t || a ? "en dan" : "enim dnem";
+                            return t || s ? "en dan" : "enim dnem";
                         case "dd":
-                            return s += 1 === e ? t || a ? "dan" : "dnem" : 2 === e ? t || a ? "dni" : "dnevoma" : t || a ? "dni" : "dnevi";
+                            return a += 1 === e ? t || s ? "dan" : "dnem" : 2 === e ? t || s ? "dni" : "dnevoma" : t || s ? "dni" : "dnevi";
                         case "M":
-                            return t || a ? "en mesec" : "enim mesecem";
+                            return t || s ? "en mesec" : "enim mesecem";
                         case "MM":
-                            return s += 1 === e ? t || a ? "mesec" : "mesecem" : 2 === e ? t || a ? "meseca" : "mesecema" : e < 5 ? t || a ? "mesece" : "meseci" : t || a ? "mesecev" : "meseci";
+                            return a += 1 === e ? t || s ? "mesec" : "mesecem" : 2 === e ? t || s ? "meseca" : "mesecema" : e < 5 ? t || s ? "mesece" : "meseci" : t || s ? "mesecev" : "meseci";
                         case "y":
-                            return t || a ? "eno leto" : "enim letom";
+                            return t || s ? "eno leto" : "enim letom";
                         case "yy":
-                            return s += 1 === e ? t || a ? "leto" : "letom" : 2 === e ? t || a ? "leti" : "letoma" : e < 5 ? t || a ? "leta" : "leti" : t || a ? "let" : "leti"
+                            return a += 1 === e ? t || s ? "leto" : "letom" : 2 === e ? t || s ? "leti" : "letoma" : e < 5 ? t || s ? "leta" : "leti" : t || s ? "let" : "leti"
                     }
                 }
                 e.defineLocale("sl", {
@@ -11573,9 +11570,9 @@
                     correctGrammaticalCase: function(e, t) {
                         return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2]
                     },
-                    translate: function(e, n, a) {
-                        var s = t.words[a];
-                        return 1 === a.length ? n ? s[0] : s[1] : e + " " + t.correctGrammaticalCase(e, s)
+                    translate: function(e, n, s) {
+                        var a = t.words[s];
+                        return 1 === s.length ? n ? a[0] : a[1] : e + " " + t.correctGrammaticalCase(e, a)
                     }
                 };
                 e.defineLocale("sr", {
@@ -11659,9 +11656,9 @@
                     correctGrammaticalCase: function(e, t) {
                         return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2]
                     },
-                    translate: function(e, n, a) {
-                        var s = t.words[a];
-                        return 1 === a.length ? n ? s[0] : s[1] : e + " " + t.correctGrammaticalCase(e, s)
+                    translate: function(e, n, s) {
+                        var a = t.words[s];
+                        return 1 === s.length ? n ? a[0] : a[1] : e + " " + t.correctGrammaticalCase(e, a)
                     }
                 };
                 e.defineLocale("sr-cyrl", {
@@ -12162,8 +12159,8 @@
                     dayOfMonthOrdinalParse: /\d{1,2}-(ум|юм)/,
                     ordinal: function(e) {
                         var n = e % 10,
-                            a = e >= 100 ? 100 : null;
-                        return e + (t[e] || t[n] || t[a])
+                            s = e >= 100 ? 100 : null;
+                        return e + (t[e] || t[n] || t[s])
                     },
                     week: {
                         dow: 1,
@@ -12284,35 +12281,35 @@
                     return t = -1 !== e.indexOf("jaj") ? t.slice(0, -3) + "leS" : -1 !== e.indexOf("jar") ? t.slice(0, -3) + "waQ" : -1 !== e.indexOf("DIS") ? t.slice(0, -3) + "nem" : t + " pIq"
                 }
 
-                function a(e) {
+                function s(e) {
                     var t = e;
                     return t = -1 !== e.indexOf("jaj") ? t.slice(0, -3) + "Hu’" : -1 !== e.indexOf("jar") ? t.slice(0, -3) + "wen" : -1 !== e.indexOf("DIS") ? t.slice(0, -3) + "ben" : t + " ret"
                 }
 
-                function s(e, t, n, a) {
-                    var s = i(e);
+                function a(e, t, n, s) {
+                    var a = i(e);
                     switch (n) {
                         case "ss":
-                            return s + " lup";
+                            return a + " lup";
                         case "mm":
-                            return s + " tup";
+                            return a + " tup";
                         case "hh":
-                            return s + " rep";
+                            return a + " rep";
                         case "dd":
-                            return s + " jaj";
+                            return a + " jaj";
                         case "MM":
-                            return s + " jar";
+                            return a + " jar";
                         case "yy":
-                            return s + " DIS"
+                            return a + " DIS"
                     }
                 }
 
                 function i(e) {
                     var n = Math.floor(e % 1e3 / 100),
-                        a = Math.floor(e % 100 / 10),
-                        s = e % 10,
+                        s = Math.floor(e % 100 / 10),
+                        a = e % 10,
                         i = "";
-                    return n > 0 && (i += t[n] + "vatlh"), a > 0 && (i += ("" !== i ? " " : "") + t[a] + "maH"), s > 0 && (i += ("" !== i ? " " : "") + t[s]), "" === i ? "pagh" : i
+                    return n > 0 && (i += t[n] + "vatlh"), s > 0 && (i += ("" !== i ? " " : "") + t[s] + "maH"), a > 0 && (i += ("" !== i ? " " : "") + t[a]), "" === i ? "pagh" : i
                 }
                 e.defineLocale("tlh", {
                     months: "tera’ jar wa’_tera’ jar cha’_tera’ jar wej_tera’ jar loS_tera’ jar vagh_tera’ jar jav_tera’ jar Soch_tera’ jar chorgh_tera’ jar Hut_tera’ jar wa’maH_tera’ jar wa’maH wa’_tera’ jar wa’maH cha’".split("_"),
@@ -12339,19 +12336,19 @@
                     },
                     relativeTime: {
                         future: n,
-                        past: a,
+                        past: s,
                         s: "puS lup",
-                        ss: s,
+                        ss: a,
                         m: "wa’ tup",
-                        mm: s,
+                        mm: a,
                         h: "wa’ rep",
-                        hh: s,
+                        hh: a,
                         d: "wa’ jaj",
-                        dd: s,
+                        dd: a,
                         M: "wa’ jar",
-                        MM: s,
+                        MM: a,
                         y: "wa’ DIS",
-                        yy: s
+                        yy: a
                     },
                     dayOfMonthOrdinalParse: /\d{1,2}\./,
                     ordinal: "%d.",
@@ -12431,10 +12428,10 @@
                                 return e;
                             default:
                                 if (0 === e) return e + "'ıncı";
-                                var a = e % 10,
-                                    s = e % 100 - a,
+                                var s = e % 10,
+                                    a = e % 100 - s,
                                     i = e >= 100 ? 100 : null;
-                                return e + (t[a] || t[s] || t[i])
+                                return e + (t[s] || t[a] || t[i])
                         }
                     },
                     week: {
@@ -12447,8 +12444,8 @@
             ! function(e) {
                 "use strict";
 
-                function t(e, t, n, a) {
-                    var s = {
+                function t(e, t, n, s) {
+                    var a = {
                         s: ["viensas secunds", "'iensas secunds"],
                         ss: [e + " secunds", e + " secunds"],
                         m: ["'n míut", "'iens míut"],
@@ -12462,7 +12459,7 @@
                         y: ["'n ar", "'iens ar"],
                         yy: [e + " ars", e + " ars"]
                     };
-                    return a || t ? s[n][0] : s[n][1]
+                    return s || t ? a[n][0] : a[n][1]
                 }
                 e.defineLocale("tzl", {
                     months: "Januar_Fevraglh_Març_Avrïu_Mai_Gün_Julia_Guscht_Setemvar_Listopäts_Noemvar_Zecemvar".split("_"),
@@ -12633,8 +12630,8 @@
                         return 12 === e && (e = 0), "يېرىم كېچە" === t || "سەھەر" === t || "چۈشتىن بۇرۇن" === t ? e : "چۈشتىن كېيىن" === t || "كەچ" === t ? e + 12 : e >= 11 ? e : e + 12
                     },
                     meridiem: function(e, t, n) {
-                        var a = 100 * e + t;
-                        return a < 600 ? "يېرىم كېچە" : a < 900 ? "سەھەر" : a < 1130 ? "چۈشتىن بۇرۇن" : a < 1230 ? "چۈش" : a < 1800 ? "چۈشتىن كېيىن" : "كەچ"
+                        var s = 100 * e + t;
+                        return s < 600 ? "يېرىم كېچە" : s < 900 ? "سەھەر" : s < 1130 ? "چۈشتىن بۇرۇن" : s < 1230 ? "چۈش" : s < 1800 ? "چۈشتىن كېيىن" : "كەچ"
                     },
                     calendar: {
                         sameDay: "[بۈگۈن سائەت] LT",
@@ -12695,18 +12692,18 @@
                     return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2]
                 }
 
-                function n(e, n, a) {
-                    return "m" === a ? n ? "хвилина" : "хвилину" : "h" === a ? n ? "година" : "годину" : e + " " + t({
+                function n(e, n, s) {
+                    return "m" === s ? n ? "хвилина" : "хвилину" : "h" === s ? n ? "година" : "годину" : e + " " + t({
                         ss: n ? "секунда_секунди_секунд" : "секунду_секунди_секунд",
                         mm: n ? "хвилина_хвилини_хвилин" : "хвилину_хвилини_хвилин",
                         hh: n ? "година_години_годин" : "годину_години_годин",
                         dd: "день_дні_днів",
                         MM: "місяць_місяці_місяців",
                         yy: "рік_роки_років"
-                    } [a], +e)
+                    } [s], +e)
                 }
 
-                function a(e, t) {
+                function s(e, t) {
                     var n = {
                         nominative: "неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота".split("_"),
                         accusative: "неділю_понеділок_вівторок_середу_четвер_п’ятницю_суботу".split("_"),
@@ -12715,7 +12712,7 @@
                     return !0 === e ? n.nominative.slice(1, 7).concat(n.nominative.slice(0, 1)) : e ? n[/(\[[ВвУу]\]) ?dddd/.test(t) ? "accusative" : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(t) ? "genitive" : "nominative"][e.day()] : n.nominative
                 }
 
-                function s(e) {
+                function a(e) {
                     return function() {
                         return e + "о" + (11 === this.hours() ? "б" : "") + "] LT"
                     }
@@ -12726,7 +12723,7 @@
                         standalone: "січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень".split("_")
                     },
                     monthsShort: "січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд".split("_"),
-                    weekdays: a,
+                    weekdays: s,
                     weekdaysShort: "нд_пн_вт_ср_чт_пт_сб".split("_"),
                     weekdaysMin: "нд_пн_вт_ср_чт_пт_сб".split("_"),
                     longDateFormat: {
@@ -12738,21 +12735,21 @@
                         LLLL: "dddd, D MMMM YYYY р., HH:mm"
                     },
                     calendar: {
-                        sameDay: s("[Сьогодні "),
-                        nextDay: s("[Завтра "),
-                        lastDay: s("[Вчора "),
-                        nextWeek: s("[У] dddd ["),
+                        sameDay: a("[Сьогодні "),
+                        nextDay: a("[Завтра "),
+                        lastDay: a("[Вчора "),
+                        nextWeek: a("[У] dddd ["),
                         lastWeek: function() {
                             switch (this.day()) {
                                 case 0:
                                 case 3:
                                 case 5:
                                 case 6:
-                                    return s("[Минулої] dddd [").call(this);
+                                    return a("[Минулої] dddd [").call(this);
                                 case 1:
                                 case 2:
                                 case 4:
-                                    return s("[Минулого] dddd [").call(this)
+                                    return a("[Минулого] dddd [").call(this)
                             }
                         },
                         sameElse: "L"
@@ -13149,8 +13146,8 @@
                         return 12 === e && (e = 0), "凌晨" === t || "早上" === t || "上午" === t ? e : "下午" === t || "晚上" === t ? e + 12 : e >= 11 ? e : e + 12
                     },
                     meridiem: function(e, t, n) {
-                        var a = 100 * e + t;
-                        return a < 600 ? "凌晨" : a < 900 ? "早上" : a < 1130 ? "上午" : a < 1230 ? "中午" : a < 1800 ? "下午" : "晚上"
+                        var s = 100 * e + t;
+                        return s < 600 ? "凌晨" : s < 900 ? "早上" : s < 1130 ? "上午" : s < 1230 ? "中午" : s < 1800 ? "下午" : "晚上"
                     },
                     calendar: {
                         sameDay: "[今天]LT",
@@ -13224,8 +13221,8 @@
                         return 12 === e && (e = 0), "凌晨" === t || "早上" === t || "上午" === t ? e : "中午" === t ? e >= 11 ? e : e + 12 : "下午" === t || "晚上" === t ? e + 12 : void 0
                     },
                     meridiem: function(e, t, n) {
-                        var a = 100 * e + t;
-                        return a < 600 ? "凌晨" : a < 900 ? "早上" : a < 1130 ? "上午" : a < 1230 ? "中午" : a < 1800 ? "下午" : "晚上"
+                        var s = 100 * e + t;
+                        return s < 600 ? "凌晨" : s < 900 ? "早上" : s < 1130 ? "上午" : s < 1230 ? "中午" : s < 1800 ? "下午" : "晚上"
                     },
                     calendar: {
                         sameDay: "[今天]LT",
@@ -13295,8 +13292,8 @@
                         return 12 === e && (e = 0), "凌晨" === t || "早上" === t || "上午" === t ? e : "中午" === t ? e >= 11 ? e : e + 12 : "下午" === t || "晚上" === t ? e + 12 : void 0
                     },
                     meridiem: function(e, t, n) {
-                        var a = 100 * e + t;
-                        return a < 600 ? "凌晨" : a < 900 ? "早上" : a < 1130 ? "上午" : a < 1230 ? "中午" : a < 1800 ? "下午" : "晚上"
+                        var s = 100 * e + t;
+                        return s < 600 ? "凌晨" : s < 900 ? "早上" : s < 1130 ? "上午" : s < 1230 ? "中午" : s < 1800 ? "下午" : "晚上"
                     },
                     calendar: {
                         sameDay: "[今天] LT",
@@ -13344,20 +13341,20 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "geO2bsSV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["style-profile-perks-icon style-profile-boost ",["helper",["if"],[["get",["boostActive"]],"","disabled"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],5],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_perks_boost_tooltip_message_none"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","lol-typekit-label"],["flush-element"],["text","\\n                    "],["append",["unknown",["xpBoostWinCountString"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","lol-typekit-label"],["flush-element"],["text","\\n                    "],["append",["unknown",["xpExpireString"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","tr",[]],["flush-element"],["text","\\n              "],["open-element","td",[]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","lol-typekit-value"],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","profile_perks_boost_tooltip_message_xp_subtitle"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","td",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["xpExpireString"]]],null,2],["block",["if"],[["get",["xpBoostWinCountString"]]],null,1],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","table",[]],["static-attr","class","lol-uikit-list-table"],["flush-element"],["text","\\n"],["block",["if"],[["get",["xpBoostActive"]]],null,3],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["static-attr","class","style-profile-boosts-tooltip"],["flush-element"],["text","\\n      "],["open-element","h6",[]],["dynamic-attr","class",["concat",["style-profile-boosts-tooltip-title ",["helper",["if"],[["get",["boostActive"]],"left",""],null]]]],["flush-element"],["append",["unknown",["tra","profile_perks_boost_tooltip_title"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["boostActive"]]],null,4,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "PHWBX8p3",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["style-profile-perks-icon style-profile-boost ",["helper",["if"],[["get",["boostActive"]],"","disabled"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],5],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_perks_boost_tooltip_message_none"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","lol-typekit-label"],["flush-element"],["text","\\n                    "],["append",["unknown",["xpBoostWinCountString"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","lol-typekit-label"],["flush-element"],["text","\\n                    "],["append",["unknown",["xpExpireString"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","tr",[]],["flush-element"],["text","\\n              "],["open-element","td",[]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","lol-typekit-value"],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","profile_perks_boost_tooltip_message_xp_subtitle"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","td",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["xpExpireString"]]],null,2],["block",["if"],[["get",["xpBoostWinCountString"]]],null,1],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","table",[]],["static-attr","class","lol-uikit-list-table"],["flush-element"],["text","\\n"],["block",["if"],[["get",["xpBoostActive"]]],null,3],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["static-attr","class","style-profile-boosts-tooltip"],["flush-element"],["text","\\n      "],["open-element","h6",[]],["dynamic-attr","class",["concat",["style-profile-boosts-tooltip-title ",["helper",["if"],[["get",["boostActive"]],"left",""],null]]]],["flush-element"],["append",["unknown",["tra","profile_perks_boost_tooltip_title"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["boostActive"]]],null,4,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
+            var s = n(1);
             const {
-                RunMixin: s
-            } = a.EmberAddons.EmberLifeline, i = (0, a.EmberDataBinding)({
-                Ember: a.Ember,
-                websocket: (0, a.getProvider)().getSocket(),
+                RunMixin: a
+            } = s.EmberAddons.EmberLifeline, i = (0, s.EmberDataBinding)({
+                Ember: s.Ember,
+                websocket: (0, s.getProvider)().getSocket(),
                 basePaths: {
                     login: "/lol-login",
                     summoner: "/lol-summoner",
@@ -13399,17 +13396,17 @@
                     }
                 }
             });
-            e.exports = a.Ember.Service.extend(i, s, {
-                friends: a.Ember.A(),
+            e.exports = s.Ember.Service.extend(i, a, {
+                friends: s.Ember.A(),
                 init: function() {
                     this._super(...arguments), this.runTask((() => {
-                        a.logger.trace("PROFILEREADY: force set ready"), this.set("loadingComplete", !0)
+                        s.logger.trace("PROFILEREADY: force set ready"), this.set("loadingComplete", !0)
                     }), 3e3)
                 },
-                locale: a.Ember.computed("regionLocale.locale", (function() {
+                locale: s.Ember.computed("regionLocale.locale", (function() {
                     return (this.get("regionLocale.locale") || "").replace("_", "-")
                 })),
-                onProfileModeObserver: a.Ember.on("init", a.Ember.observer("summonerId", "profileMode", (function() {
+                onProfileModeObserver: s.Ember.on("init", s.Ember.observer("summonerId", "profileMode", (function() {
                     const e = this.get("profileMode");
                     if (!e) return;
                     const t = "searched" === e;
@@ -13422,19 +13419,19 @@
                         this.set("summoner", e)
                     }))
                 },
-                friend: a.Ember.computed("summoner.summonerId", "isSearched", "friends.[]", (function() {
+                friend: s.Ember.computed("summoner.summonerId", "isSearched", "friends.[]", (function() {
                     const e = this.get("summoner.summonerId");
                     if (!e) return;
                     const t = Boolean(this.get("profileMode")),
                         n = Boolean(this.get("isSearched"));
                     return !(!t || !n) && this.get("friends").isAny("summonerId", e)
                 })),
-                boosts: a.Ember.computed("isSearched", (function() {
+                boosts: s.Ember.computed("isSearched", (function() {
                     const e = Boolean(this.get("profileMode")),
                         t = Boolean(this.get("isSearched"));
                     e && !t && this.dataBindProperty("boosts", "/v1/active-boosts", "boosts")
                 })),
-                rankedData: a.Ember.computed("summoner.puuid", (function() {
+                rankedData: s.Ember.computed("summoner.puuid", (function() {
                     const e = this.get("summoner.puuid");
                     if (!e) return;
                     this.get("api.ranked").get(`/v1/ranked-stats/${e}`, {
@@ -13443,7 +13440,7 @@
                         t || (t = {}), t.puuid = e, this.set("rankedData", t)
                     }))
                 })),
-                championMasteries: a.Ember.computed("summoner.puuid", (function() {
+                championMasteries: s.Ember.computed("summoner.puuid", (function() {
                     const e = this.get("summoner.puuid");
                     if (!e) return;
                     this.get("api.championMastery").post(`/v1/${e}/champion-mastery-view/top?count=3`, {
@@ -13451,38 +13448,38 @@
                     }).then((e => {
                         this.set("championMasteries", e)
                     })).catch((e => {
-                        a.logger.error("Failed to fetch champion mastery views:", e)
+                        s.logger.error("Failed to fetch champion mastery views:", e)
                     }))
                 })),
-                backdropObserver: a.Ember.observer("summoner.summonerId", (function() {
+                backdropObserver: s.Ember.observer("summoner.summonerId", (function() {
                     const e = this.get("summoner.summonerId");
                     e && this.dataBindProperty("collections", `/v1/inventories/${e}/backdrop`, "backdrop", {
                         skipCache: !0
                     })
                 })),
-                loadingComplete: a.Ember.computed("backdrop.summonerId", "championMasteries.puuid", "rankedData.summonerId", (function() {
+                loadingComplete: s.Ember.computed("backdrop.summonerId", "championMasteries.puuid", "rankedData.summonerId", (function() {
                     const e = Boolean(this.get("backdrop.summonerId")),
                         t = Boolean(this.get("championMasteries.puuid")),
                         n = Boolean(this.get("rankedData.puuid")),
-                        s = e && t && n;
-                    return a.logger.trace("PROFILEREADY", {
+                        a = e && t && n;
+                    return s.logger.trace("PROFILEREADY", {
                         backdrop: e,
                         mastery: t,
                         ranked: n,
-                        ready: s
-                    }), s
+                        ready: a
+                    }), a
                 }))
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            e.exports = a.Ember.Service.extend({
+            var s = n(1);
+            e.exports = s.Ember.Service.extend({
                 summary: [],
                 enabled: !1,
-                profileService: a.Ember.inject.service("profile"),
-                puuid: a.Ember.computed.alias("profileService.summoner.puuid"),
+                profileService: s.Ember.inject.service("profile"),
+                puuid: s.Ember.computed.alias("profileService.summoner.puuid"),
                 init() {
-                    this._super(...arguments), this.binding = a.DataBinding.bindTo(a.socket), this.initDatabindings()
+                    this._super(...arguments), this.binding = s.DataBinding.bindTo(s.socket), this.initDatabindings()
                 },
                 willDestroy() {
                     this._super(...arguments), this.binding.removeObserver("/lol-platform-config/v1/namespaces/Eternals/Enabled", this)
@@ -13506,39 +13503,39 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.CUSTOMIZER_TITLES_SETTINGS_VERSION = void 0;
-            var a = n(1);
+            var s = n(1);
             t.CUSTOMIZER_TITLES_SETTINGS_VERSION = 1;
-            const s = "/v2/account/LCUPreferences/lol-notifications",
+            const a = "/v2/account/LCUPreferences/lol-notifications",
                 i = "/v1/latest-challenge-level-up",
                 r = "/v2/account/LCUPreferences/lol-customizer-tokens",
                 o = "/lol-challenges-latest-level-up",
                 l = `/v2/account/LCUPreferences${o}`;
-            e.exports = a.Ember.Service.extend({
-                sharedNotificationsService: a.Ember.inject.service("shared-notifications"),
+            e.exports = s.Ember.Service.extend({
+                sharedNotificationsService: s.Ember.inject.service("shared-notifications"),
                 tokenSettings: {},
                 lastChallengeLevelUpTimestamp: 0,
                 init() {
-                    this._super(...arguments), this.settingsBinding = (0, a.DataBinding)("/lol-settings", a.socket), this.inventoryBinding = (0, a.DataBinding)("/lol-inventory", a.socket), this.challengesBinding = (0, a.DataBinding)("/lol-challenges", a.socket), this.accountPreferences = (0, a.DataBinding)("/lol-settings/v2/account/LCUPreferences", a.socket), this.settingsBinding.addObserver(s, this, this._handleNotificationPreferences.bind(this)), this.settingsBinding.addObserver(r, this, this._handleCustomizerTokenSettings.bind(this)), this.settingsBinding.addObserver(l, this, this._handleChallengesLatestLevelUpSettings.bind(this))
+                    this._super(...arguments), this.settingsBinding = (0, s.DataBinding)("/lol-settings", s.socket), this.inventoryBinding = (0, s.DataBinding)("/lol-inventory", s.socket), this.challengesBinding = (0, s.DataBinding)("/lol-challenges", s.socket), this.accountPreferences = (0, s.DataBinding)("/lol-settings/v2/account/LCUPreferences", s.socket), this.settingsBinding.addObserver(a, this, this._handleNotificationPreferences.bind(this)), this.settingsBinding.addObserver(r, this, this._handleCustomizerTokenSettings.bind(this)), this.settingsBinding.addObserver(l, this, this._handleChallengesLatestLevelUpSettings.bind(this))
                 },
                 willDestroy() {
-                    this._super(...arguments), this._destroyObservers(), this.settingsBinding.removeObserver(s, this), this.settingsBinding.removeObserver(r, this), this.settingsBinding.removeObserver(l, this)
+                    this._super(...arguments), this._destroyObservers(), this.settingsBinding.removeObserver(a, this), this.settingsBinding.removeObserver(r, this), this.settingsBinding.removeObserver(l, this)
                 },
-                hasUnreadNotifications: a.Ember.computed("sharedNotificationsService.hasUnreadTitleNotification", "sharedNotificationsService.hasUnreadIconNotification", "sharedNotificationsService.hasUnreadBannerNotification", "hasUnreadTokens", (function() {
+                hasUnreadNotifications: s.Ember.computed("sharedNotificationsService.hasUnreadTitleNotification", "sharedNotificationsService.hasUnreadIconNotification", "sharedNotificationsService.hasUnreadBannerNotification", "hasUnreadTokens", (function() {
                     const e = this.get("sharedNotificationsService.hasUnreadTitleNotification"),
                         t = this.get("sharedNotificationsService.hasUnreadIconNotification"),
                         n = this.get("sharedNotificationsService.hasUnreadBannerNotification"),
-                        a = this.get("hasUnreadTokens");
-                    return e || t || a || n
+                        s = this.get("hasUnreadTokens");
+                    return e || t || s || n
                 })),
-                hasUnreadTokens: a.Ember.computed("tokenSettings", "lastChallengeLevelUpTimestamp", "challengeLevelUpSettings", (function() {
+                hasUnreadTokens: s.Ember.computed("tokenSettings", "lastChallengeLevelUpTimestamp", "challengeLevelUpSettings", (function() {
                     const e = this.get("tokenSettings");
                     if (!e || !e.lastVisitTime) return !1;
                     const t = this.get("challengeLevelUpSettings"),
                         n = t ? t.lastLevelUpTime : 0,
-                        a = this.get("lastChallengeLevelUpTimestamp");
-                    if (!a && !n) return !1;
-                    const s = e.lastVisitTime;
-                    return a > s || n && n > s
+                        s = this.get("lastChallengeLevelUpTimestamp");
+                    if (!s && !n) return !1;
+                    const a = e.lastVisitTime;
+                    return s > a || n && n > a
                 })),
                 _initObservers() {
                     this.challengesBinding.addObserver(i, this, this._setLatestChallengeLevelUp.bind(this))
@@ -13556,8 +13553,8 @@
                     e && (this.set("lastChallengeLevelUpTimestamp", e), this.accountPreferences.get("/lol-customizer-tokens").then((t => {
                         if (t && t.data) {
                             const n = t.data,
-                                a = n.lastVisitTime;
-                            a && a < e && this._saveTokenUpdateTimestamp(e), this.set("tokenSettings", n)
+                                s = n.lastVisitTime;
+                            s && s < e && this._saveTokenUpdateTimestamp(e), this.set("tokenSettings", n)
                         }
                     })))
                 },
@@ -13575,39 +13572,39 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
+            var s = n(1);
             n(224);
-            var s = n(6);
-            e.exports = a.Ember.Component.extend({
+            var a = n(6);
+            e.exports = s.Ember.Component.extend({
                 classNames: ["ranked-reference-modal-button-component"],
                 layout: n(225),
                 init() {
-                    this._super(...arguments), a.db.get("/lol-summoner/v1/current-summoner").then((e => {
+                    this._super(...arguments), s.db.get("/lol-summoner/v1/current-summoner").then((e => {
                         this.set("isRankedEligible", e.summonerLevel >= 30)
-                    })), a.db.get("/lol-platform-config/v1/namespaces/LeagueConfig/RankedReferenceModalEnabled").then((e => {
+                    })), s.db.get("/lol-platform-config/v1/namespaces/LeagueConfig/RankedReferenceModalEnabled").then((e => {
                         let t = !0;
                         !1 === e && (t = e), this.set("RankedReferenceModalEnabled", t)
                     }))
                 },
-                showingRankedReference: a.Ember.computed("RankedReferenceModalEnabled", "isRankedEligible", "queueType", (function() {
-                    return this.get("RankedReferenceModalEnabled") && this.get("isRankedEligible") && !s.QUEUES.RANKED_AND_RATED_TFT_QUEUE_TYPES.includes(this.get("queueType"))
+                showingRankedReference: s.Ember.computed("RankedReferenceModalEnabled", "isRankedEligible", "queueType", (function() {
+                    return this.get("RankedReferenceModalEnabled") && this.get("isRankedEligible") && !a.QUEUES.RANKED_AND_RATED_TFT_QUEUE_TYPES.includes(this.get("queueType"))
                 })),
                 actions: {
                     OpenRankedReferenceModal: function() {
                         const e = this.get("queueType");
-                        return Promise.all([a.LeagueTierNames.getTiersForQueue(e), a.db.get("/lol-ranked/v1/current-ranked-stats"), a.db.get("/lol-seasons/v1/season/product/LOL"), a.db.get("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.ranked_reference_modal_rewards"), a.db.get("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.vic_skin_wins_required"), a.db.get("/riotclient/region-locale")]).then((e => {
-                            const [t, n, s, i, r, o] = e;
-                            a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-uikit/sfx-uikit-click-generic.ogg");
-                            const l = a.ComponentFactory.create("RankedReferenceModalComponent", {
+                        return Promise.all([s.LeagueTierNames.getTiersForQueue(e), s.db.get("/lol-ranked/v1/current-ranked-stats"), s.db.get("/lol-seasons/v1/season/product/LOL"), s.db.get("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.ranked_reference_modal_rewards"), s.db.get("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.vic_skin_wins_required"), s.db.get("/riotclient/region-locale")]).then((e => {
+                            const [t, n, a, i, r, o] = e;
+                            s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-uikit/sfx-uikit-click-generic.ogg");
+                            const l = s.ComponentFactory.create("RankedReferenceModalComponent", {
                                 queueType: this.get("queueType"),
                                 tiers: t,
-                                activeLolSeason: s,
+                                activeLolSeason: a,
                                 currentRankedStats: n,
                                 overrideRewardsConfig: i,
                                 winsRequiredForRewards: r,
                                 regionLocale: o
                             });
-                            a.ModalManager.add({
+                            s.ModalManager.add({
                                 type: "DialogAlert",
                                 data: {
                                     contents: l.domNode,
@@ -13616,7 +13613,7 @@
                                     dismissibleType: "inside"
                                 }
                             }).okPromise.then((e => {
-                                "ok-button" === e && a.Parties.showGameSelectPreselected(420)
+                                "ok-button" === e && s.Parties.showGameSelectPreselected(420)
                             }))
                         }))
                     }
@@ -13626,19 +13623,19 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "bgS+BEDP",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showingRankedReference"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"OpenRankedReferenceModal"],null],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "z4UnrOuk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showingRankedReference"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"OpenRankedReferenceModal"],null],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
+            var s = n(1);
             n(227);
-            var s = n(228);
+            var a = n(228);
             const i = 628;
-            e.exports = a.Ember.Component.extend({
+            e.exports = s.Ember.Component.extend({
                 classNames: ["ranked-reference-modal-component"],
                 layout: n(229),
                 pageIndex: 0,
@@ -13649,9 +13646,9 @@
                         this.setInitialPage(this.get("rankedStatsEntry.tier"))
                     }))
                 },
-                titleText: a.Ember.computed("activeLolSeason.metadata.currentSplit", "activeLolSeason.seasonStart", (function() {
+                titleText: s.Ember.computed("activeLolSeason.metadata.currentSplit", "activeLolSeason.seasonStart", (function() {
                     const e = this.get("activeLolSeason.seasonStart"),
-                        t = e ? (0, s.convertDateMillisToString)(e, this.get("regionLocale"), {
+                        t = e ? (0, a.convertDateMillisToString)(e, this.get("regionLocale"), {
                             year: "numeric"
                         }) : (new Date).getFullYear(),
                         n = this.get("activeLolSeason.metadata.currentSplit");
@@ -13662,14 +13659,14 @@
                         year: t
                     })
                 })),
-                winsRequired: a.Ember.computed("winsRequiredForRewards", (function() {
+                winsRequired: s.Ember.computed("winsRequiredForRewards", (function() {
                     return this.get("winsRequiredForRewards") || 15
                 })),
-                rankedStatsEntry: a.Ember.computed("currentRankedStats.queueMap", "queueType", (function() {
+                rankedStatsEntry: s.Ember.computed("currentRankedStats.queueMap", "queueType", (function() {
                     const e = this.get("queueType");
                     return (this.get("currentRankedStats.queueMap") || {})[e]
                 })),
-                rankedRewardsConfig: a.Ember.computed("defaultRewardsConfig", "overrideRewardsConfig", (function() {
+                rankedRewardsConfig: s.Ember.computed("defaultRewardsConfig", "overrideRewardsConfig", (function() {
                     const e = this.get("defaultRewardsConfig"),
                         t = this.get("overrideRewardsConfig");
                     return t ? JSON.parse(t) : e
@@ -13683,20 +13680,20 @@
                         isReward: !0
                     }
                 },
-                newCards: a.Ember.computed("rankedStatsEntry", "rankedRewardsConfig.[]", (function() {
+                newCards: s.Ember.computed("rankedStatsEntry", "rankedRewardsConfig.[]", (function() {
                     return (this.get("rankedRewardsConfig") || []).map((e => {
                         const t = [],
                             n = e.tier.toUpperCase(),
-                            s = a.LeagueTierNames.getTierName(n);
-                        t.push(...e.rewards.map((e => this.createRewardNode(e, s)))), t.push({
+                            a = s.LeagueTierNames.getTierName(n);
+                        t.push(...e.rewards.map((e => this.createRewardNode(e, a)))), t.push({
                             loc: this.get("tra.ranked_rewards_end_of_year_rewards_header")
-                        }), t.push(...e.endOfYearRewards.map((e => this.createRewardNode(e, s))));
+                        }), t.push(...e.endOfYearRewards.map((e => this.createRewardNode(e, a))));
                         const i = t.slice(0, 3),
                             r = t.slice(3),
                             o = t.filter((e => e.isReward)).length;
                         return {
                             rankedTier: n,
-                            rankedTierName: s,
+                            rankedTierName: a,
                             nodesAfterHovered: r,
                             nodesBeforeHovered: i,
                             numberOfTextNodes: t.length,
@@ -13705,7 +13702,7 @@
                                 number: o - 3
                             }),
                             is_current_rank: this.get("rankedStatsEntry.tier") === n,
-                            is_apex_tier: a.LeagueTierNames.getConstants().APEX_TIERS.includes(n),
+                            is_apex_tier: s.LeagueTierNames.getConstants().APEX_TIERS.includes(n),
                             division_indicator: this.getDivisionContentArray(n, this.get("rankedStatsEntry.tier"), this.get("rankedStatsEntry.division")),
                             lp_points_text: this.getLPContent(n, this.get("rankedStatsEntry.tier"), this.get("rankedStatsEntry.leaguePoints"))
                         }
@@ -13715,49 +13712,49 @@
                     const t = document.querySelector(".carousel-body"),
                         n = this.get("tiers") || [];
                     if (!n.includes(e) || !t) return;
-                    let a = 0;
+                    let s = 0;
                     for (let t = 0; t < n.length; t++) {
-                        if (t > 0 && t % 3 == 0 && a++, e === n[t]) break
+                        if (t > 0 && t % 3 == 0 && s++, e === n[t]) break
                     }
-                    let s = i * a;
-                    this.get("numPages") - 1 === a && (s -= 20), t.style.transform = `translateX(-${s}px)`, this.set("pageIndex", a)
+                    let a = i * s;
+                    this.get("numPages") - 1 === s && (a -= 20), t.style.transform = `translateX(-${a}px)`, this.set("pageIndex", s)
                 },
                 getDivisionContentArray: function(e, t, n) {
-                    const s = [],
+                    const a = [],
                         i = this.get("tiers") || [];
-                    if (a.LeagueTierNames.getConstants().APEX_TIERS.includes(e)) return s;
+                    if (s.LeagueTierNames.getConstants().APEX_TIERS.includes(e)) return a;
                     if (t === e) {
-                        const e = a.LeagueTierNames.getConstants().DIVISION_TO_ORDINAL[n],
-                            t = a.LeagueTierNames.getConstants().DIVISIONS.length - e - 1;
-                        for (let t = 0; t < e + 1; t++) s.push("current");
-                        for (let e = 0; e < t; e++) s.push("future")
+                        const e = s.LeagueTierNames.getConstants().DIVISION_TO_ORDINAL[n],
+                            t = s.LeagueTierNames.getConstants().DIVISIONS.length - e - 1;
+                        for (let t = 0; t < e + 1; t++) a.push("current");
+                        for (let e = 0; e < t; e++) a.push("future")
                     } else if (i.indexOf(t) > i.indexOf(e))
-                        for (let e = 0; e < a.LeagueTierNames.getConstants().DIVISIONS.length; e++) s.push("completed");
+                        for (let e = 0; e < s.LeagueTierNames.getConstants().DIVISIONS.length; e++) a.push("completed");
                     else if (i.indexOf(t) < i.indexOf(e) || "NONE" === t)
-                        for (let e = 0; e < a.LeagueTierNames.getConstants().DIVISIONS.length; e++) s.push("future");
-                    return s
+                        for (let e = 0; e < s.LeagueTierNames.getConstants().DIVISIONS.length; e++) a.push("future");
+                    return a
                 },
                 getLPContent: function(e, t, n) {
-                    return a.LeagueTierNames.getConstants().APEX_TIERS.includes(e) && t === e ? this.get("tra").formatString("ranked_subtitle_lp", {
+                    return s.LeagueTierNames.getConstants().APEX_TIERS.includes(e) && t === e ? this.get("tra").formatString("ranked_subtitle_lp", {
                         lp: n
                     }) : ""
                 },
                 setScrollingFalse: function() {
                     this.set("isScrolling", !1)
                 },
-                showLeftArrowButton: a.Ember.computed("pageIndex", (function() {
+                showLeftArrowButton: s.Ember.computed("pageIndex", (function() {
                     return 0 !== this.get("pageIndex")
                 })),
-                showRightArrowButton: a.Ember.computed("pageIndex", "numPages", (function() {
+                showRightArrowButton: s.Ember.computed("pageIndex", "numPages", (function() {
                     return this.get("pageIndex") < this.get("numPages") - 1
                 })),
                 actions: {
                     navigatePage: function(e) {
                         if (this.get("isScrolling")) return;
                         const t = this.get("pageIndex");
-                        let n, s = i * t; - 1 === e ? (n = i * (t - 1), this.set("pageIndex", t - 1)) : 1 === e && (n = i * (t + 1), this.set("pageIndex", t + 1)), 1 === e && t + 1 === this.get("numPages") - 1 ? n -= 20 : -1 === e && t === this.get("numPages") - 1 && (s -= 20), this.set("isScrolling", !0);
+                        let n, a = i * t; - 1 === e ? (n = i * (t - 1), this.set("pageIndex", t - 1)) : 1 === e && (n = i * (t + 1), this.set("pageIndex", t + 1)), 1 === e && t + 1 === this.get("numPages") - 1 ? n -= 20 : -1 === e && t === this.get("numPages") - 1 && (a -= 20), this.set("isScrolling", !0);
                         document.getElementById("carousel-body").animate([{
-                            transform: `translateX(-${s}px)`
+                            transform: `translateX(-${a}px)`
                         }, {
                             transform: `translateX(-${n}px)`
                         }], {
@@ -13765,12 +13762,12 @@
                             iterations: 1,
                             easing: "ease",
                             fill: "forwards"
-                        }).onfinish = this.setScrollingFalse.bind(this), a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-uikit/sfx-uikit-click-and-slide.ogg"), a.Telemetry.sendCustomData("ranked-reference-modal-events", {
+                        }).onfinish = this.setScrollingFalse.bind(this), s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-uikit/sfx-uikit-click-and-slide.ogg"), s.Telemetry.sendCustomData("ranked-reference-modal-events", {
                             event: "press-arrow-buttons"
                         })
                     },
                     playHoverSound: function() {
-                        a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-uikit/sfx-uikit-arrow-button-hover.ogg")
+                        s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-uikit/sfx-uikit-arrow-button-hover.ogg")
                     }
                 }
             })
@@ -13786,14 +13783,14 @@
                 day: "numeric",
                 year: "numeric"
             }) {
-                const a = (t && t.locale || "en_US").replace("_", "-");
-                return new Date(e).toLocaleString(a, n)
+                const s = (t && t.locale || "en_US").replace("_", "-");
+                return new Date(e).toLocaleString(s, n)
             }
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "NtroH3ln",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","ranked-reference-modal-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","ranked-reference-modal-background"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-wing-left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-text"],["flush-element"],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-wing-right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summary-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summary-title"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_summary_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summary-content"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_summary_content"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["rankedStatsEntry","isProvisional"]]],null,13],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","visual"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","visual_caption_division"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_divisions"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","visual_content_container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","visual_tier"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_sizer"],["flush-element"],["text","\\n            "],["open-element","lol-regalia-emblem-element",[]],["static-attr","ranked-tier","SILVER"],["flush-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_caption"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_tier"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","visual_tier"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_sizer"],["flush-element"],["text","\\n            "],["open-element","lol-regalia-emblem-element",[]],["static-attr","ranked-tier","GOLD"],["flush-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_caption"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_tier"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","id","carousel-container"],["static-attr","class","carousel-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","id","carousel-body"],["static-attr","class","carousel-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["newCards"]]],null,12],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["carousel-left-arrow-mask ",["helper",["if"],[["get",["showLeftArrowButton"]],"reveal","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","carousel-left-arrow"],["modifier",["action"],[["get",[null]],"navigatePage",-1]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["carousel-right-arrow-mask ",["helper",["if"],[["get",["showRightArrowButton"]],"reveal","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","carousel-right-arrow"],["modifier",["action"],[["get",[null]],"navigatePage",1]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","current-rank-overlay"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","current-rank-text"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_current_rank_text"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","more-rewards-text"],["flush-element"],["append",["unknown",["item","extra_rewards_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","reward-text-line"],["flush-element"],["text","\\n                          "],["open-element","font",[]],["static-attr","color","#F0E6D2"],["flush-element"],["text","•"],["close-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardListNode","isReward"]]],null,3,2]],"locals":["rewardListNode"]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","reward-text-line"],["flush-element"],["text","\\n                          "],["open-element","font",[]],["static-attr","color","#F0E6D2"],["flush-element"],["text","•"],["close-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardListNode","isReward"]]],null,6,5]],"locals":["rewardListNode"]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["division-icon ",["get",["indicator"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["indicator"]},{"statements":[["block",["each"],[["get",["item","division_indicator"]]],null,8]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["static-attr","class","apex-lp-text"],["flush-element"],["append",["unknown",["item","lp_points_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","is_current_rank"]]],null,10]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","carousel-item-container"],["static-attr","id","carousel-item-container"],["modifier",["action"],[["get",[null]],"playHoverSound"],[["on"],["mouseEnter"]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["dynamic-attr","class",["concat",["regalia-crest-container ",["unknown",["item","rankedTier"]]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","regalia-crest-emblem-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","regalia-emblem-sizer"],["flush-element"],["text","\\n                "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["unknown",["item","rankedTier"]],null],["flush-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","carousel-item-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["anchor-",["unknown",["item","numberOfTextNodes"]]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","carousel-item-text-anchor"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","rank-tier-title-text"],["flush-element"],["text","\\n                  "],["append",["unknown",["item","rankedTierName"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","rank-division-indicator"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","is_apex_tier"]]],null,11,9],["text","                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","reward-text-container"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_reward_text"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-text-container-upper-half"],["flush-element"],["text","\\n"],["block",["each"],[["get",["item","nodesBeforeHovered"]]],null,7],["text","                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-text-container-bottom-half"],["flush-element"],["text","\\n"],["block",["each"],[["get",["item","nodesAfterHovered"]]],null,4],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","has_extra_rewards"]]],null,1],["text","                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","is_current_rank"]]],null,0],["text","        "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","provisional-warning-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","provisional-warning-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","provisional-warning-text"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_unranked_warning"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "T1/xY9AD",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","ranked-reference-modal-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","ranked-reference-modal-background"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-wing-left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-text"],["flush-element"],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-wing-right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summary-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summary-title"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_summary_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summary-content"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_summary_content"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["rankedStatsEntry","isProvisional"]]],null,13],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","visual"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","visual_caption_division"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_divisions"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","visual_content_container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","visual_tier"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_sizer"],["flush-element"],["text","\\n            "],["open-element","lol-regalia-emblem-element",[]],["static-attr","ranked-tier","SILVER"],["flush-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_caption"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_tier"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","visual_tier"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_sizer"],["flush-element"],["text","\\n            "],["open-element","lol-regalia-emblem-element",[]],["static-attr","ranked-tier","GOLD"],["flush-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_caption"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_tier"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","id","carousel-container"],["static-attr","class","carousel-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","id","carousel-body"],["static-attr","class","carousel-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["newCards"]]],null,12],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["carousel-left-arrow-mask ",["helper",["if"],[["get",["showLeftArrowButton"]],"reveal","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","carousel-left-arrow"],["modifier",["action"],[["get",[null]],"navigatePage",-1]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["carousel-right-arrow-mask ",["helper",["if"],[["get",["showRightArrowButton"]],"reveal","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","carousel-right-arrow"],["modifier",["action"],[["get",[null]],"navigatePage",1]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","current-rank-overlay"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","current-rank-text"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_current_rank_text"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","more-rewards-text"],["flush-element"],["append",["unknown",["item","extra_rewards_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","reward-text-line"],["flush-element"],["text","\\n                          "],["open-element","font",[]],["static-attr","color","#F0E6D2"],["flush-element"],["text","•"],["close-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardListNode","isReward"]]],null,3,2]],"locals":["rewardListNode"]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","reward-text-line"],["flush-element"],["text","\\n                          "],["open-element","font",[]],["static-attr","color","#F0E6D2"],["flush-element"],["text","•"],["close-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardListNode","isReward"]]],null,6,5]],"locals":["rewardListNode"]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["division-icon ",["get",["indicator"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["indicator"]},{"statements":[["block",["each"],[["get",["item","division_indicator"]]],null,8]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["static-attr","class","apex-lp-text"],["flush-element"],["append",["unknown",["item","lp_points_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","is_current_rank"]]],null,10]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","carousel-item-container"],["static-attr","id","carousel-item-container"],["modifier",["action"],[["get",[null]],"playHoverSound"],[["on"],["mouseEnter"]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["dynamic-attr","class",["concat",["regalia-crest-container ",["unknown",["item","rankedTier"]]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","regalia-crest-emblem-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","regalia-emblem-sizer"],["flush-element"],["text","\\n                "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["unknown",["item","rankedTier"]],null],["flush-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","carousel-item-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["anchor-",["unknown",["item","numberOfTextNodes"]]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","carousel-item-text-anchor"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","rank-tier-title-text"],["flush-element"],["text","\\n                  "],["append",["unknown",["item","rankedTierName"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","rank-division-indicator"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","is_apex_tier"]]],null,11,9],["text","                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","reward-text-container"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_reward_text"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-text-container-upper-half"],["flush-element"],["text","\\n"],["block",["each"],[["get",["item","nodesBeforeHovered"]]],null,7],["text","                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-text-container-bottom-half"],["flush-element"],["text","\\n"],["block",["each"],[["get",["item","nodesAfterHovered"]]],null,4],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","has_extra_rewards"]]],null,1],["text","                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","is_current_rank"]]],null,0],["text","        "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","provisional-warning-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","provisional-warning-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","provisional-warning-text"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_unranked_warning"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, e => {
@@ -13804,13 +13801,13 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t._makeBannerDataFlagKey = d, t.default = void 0;
-            var a = n(1),
-                s = n(81);
+            var s = n(1),
+                a = n(81);
             n(232);
             var i = n(83);
-            const r = (0, a.EmberDataBinding)({
-                Ember: a.Ember,
-                websocket: (0, a.getProvider)().getSocket(),
+            const r = (0, s.EmberDataBinding)({
+                Ember: s.Ember,
+                websocket: (0, s.getProvider)().getSocket(),
                 basePaths: {
                     banners: "/lol-banners"
                 },
@@ -13818,14 +13815,14 @@
                     bannersConfigNamespace: "/lol-platform-config/v1/namespaces/Banners"
                 }
             });
-            var o = a.Ember.Component.extend(r, {
+            var o = s.Ember.Component.extend(r, {
                 layout: n(233),
                 classNames: ["style-profile-clash-banner-picker-component"],
                 isInitialized: !1,
                 init: function() {
-                    this._super.apply(this, arguments), this.initializedPromise = Promise.all([a.GameDataClashBanners.getBannerGameDataPromise().then((e => {
+                    this._super.apply(this, arguments), this.initializedPromise = Promise.all([s.GameDataClashBanners.getBannerGameDataPromise().then((e => {
                         var t, n;
-                        !this.isDestroyed && e.BannerFlags && (this.set("bannerDataFlagMap", (n = e.BannerFlags, new Map(a.Lodash.map(n, (e => [d(e), e]))))), this.set("bannerDataFrameMap", (t = e.BannerFrames, new Map(a.Lodash.map(t, (e => [parseInt(e.level, 10), e]))))))
+                        !this.isDestroyed && e.BannerFlags && (this.set("bannerDataFlagMap", (n = e.BannerFlags, new Map(s.Lodash.map(n, (e => [d(e), e]))))), this.set("bannerDataFrameMap", (t = e.BannerFrames, new Map(s.Lodash.map(t, (e => [parseInt(e.level, 10), e]))))))
                     })), this.get("api.banners").get("/v1/current-summoner/flags/equipped", {
                         skipCache: !0
                     }).then((e => {
@@ -13841,8 +13838,8 @@
                     }))]), this.initializedPromise.then((() => {
                         this.isDestroyed || this.set("isInitialized", !0)
                     })).catch((e => {
-                        a.logger.warning("Failed to load flag selection modal", e);
-                        a.ModalManager.add({
+                        s.logger.warning("Failed to load flag selection modal", e);
+                        s.ModalManager.add({
                             type: "DialogAlert",
                             data: {
                                 contents: this.get("tra.banners_update_error_dialog_text"),
@@ -13850,30 +13847,30 @@
                             },
                             owner: this.get("element")
                         }).okPromise.then((() => {
-                            s.ClashBannerPickerHandler.hideModal()
+                            a.ClashBannerPickerHandler.hideModal()
                         }))
                     })), this._boundOnDialogDismissEvent = this._handleDialogDismissEvent.bind(this)
                 },
                 _setSelectedFlag: function(e) {
-                    a.logger.trace("Updating flag selection to", e), this.set("selectedFlag", e)
+                    s.logger.trace("Updating flag selection to", e), this.set("selectedFlag", e)
                 },
-                onDidInsertElement: a.Ember.on("didInsertElement", (function() {
+                onDidInsertElement: s.Ember.on("didInsertElement", (function() {
                     this.element.addEventListener("dialogFrameDismissed", this._boundOnDialogDismissEvent)
                 })),
-                onWillDestroyElement: a.Ember.on("willDestroyElement", (function() {
+                onWillDestroyElement: s.Ember.on("willDestroyElement", (function() {
                     this.element.removeEventListener("dialogFrameDismissed", this._boundOnDialogDismissEvent)
                 })),
-                flags: a.Ember.computed("ownedFlags", "selectedFlag", "bannerDataFlagMap", (function() {
+                flags: s.Ember.computed("ownedFlags", "selectedFlag", "bannerDataFlagMap", (function() {
                     const e = this.get("ownedFlags"),
                         t = this.get("selectedFlag"),
                         n = this.get("bannerDataFlagMap");
-                    if (!e || !t || !n) return a.Ember.A([]);
-                    const s = a.Lodash.chain(e).map((e => ({
+                    if (!e || !t || !n) return s.Ember.A([]);
+                    const a = s.Lodash.chain(e).map((e => ({
                         ownedFlag: e,
                         bannerDataFlag: l(e, n)
                     }))).filter((({
                         bannerDataFlag: e
-                    }) => a.Lodash.isObject(e))).map((({
+                    }) => s.Lodash.isObject(e))).map((({
                         ownedFlag: e,
                         bannerDataFlag: n
                     }) => ({
@@ -13888,9 +13885,9 @@
                         earnedDateText: this._earnedDateIso8601ToEarnedDateText(e.earnedDateIso8601),
                         isSelected: parseInt(e.itemId, 10) === parseInt(t.itemId, 10)
                     }))).value();
-                    return a.Ember.A(s)
+                    return s.Ember.A(a)
                 })),
-                frame: a.Ember.computed("equippedFrame", "bannerDataFrameMap", (function() {
+                frame: s.Ember.computed("equippedFrame", "bannerDataFrameMap", (function() {
                     const e = this.get("equippedFrame"),
                         t = this.get("bannerDataFrameMap");
                     if (!e || !t) return null;
@@ -13905,7 +13902,7 @@
                     return this.get("tra").get("clash_tournament_name_" + e.toLowerCase()) || ""
                 },
                 _levelToLevelText: function(e, t) {
-                    if (!a.Lodash.inRange(e, 1, 5)) return "";
+                    if (!s.Lodash.inRange(e, 1, 5)) return "";
                     let n = "banners_update_flag_level_" + e;
                     return n && i.CLASH_THEMES_EOS.includes(t) && (n += "_eos"), n ? this.get("tra").get(n) : ""
                 },
@@ -13914,36 +13911,36 @@
                     return e ? this.get("tra").moment(e).locale(t).format("LL") : ""
                 },
                 _handleDialogDismissEvent: function() {
-                    a.logger.trace("Dismissing banner update modal"), s.ClashBannerPickerHandler.hideModal()
+                    s.logger.trace("Dismissing banner update modal"), a.ClashBannerPickerHandler.hideModal()
                 },
                 _saveSelectedBanner: function() {
                     const e = this.get("selectedFlag");
-                    a.logger.trace("Saving selected flag", e);
+                    s.logger.trace("Saving selected flag", e);
                     const t = Object.assign({
                         event: "selected-clash-flag"
                     }, e);
-                    return a.Telemetry.sendCustomData("profile-overview-events", t), this.get("api.banners").put("/v1/current-summoner/flags/equipped", e)
+                    return s.Telemetry.sendCustomData("profile-overview-events", t), this.get("api.banners").put("/v1/current-summoner/flags/equipped", e)
                 },
                 isCurrentlySaving: !1,
                 actions: {
                     hoverFlag() {
-                        a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-profiles/sounds/sfx-banners-update-list-item-hover.ogg")
+                        s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-profiles/sounds/sfx-banners-update-list-item-hover.ogg")
                     },
-                    selectFlag(e, t, n, s, i) {
+                    selectFlag(e, t, n, a, i) {
                         const r = {
                             itemId: e,
                             theme: t,
                             level: n,
-                            seasonId: s,
+                            seasonId: a,
                             earnedDateIso8601: i
                         };
-                        this._setSelectedFlag(r), a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-profiles/sounds/sfx-banners-update-list-item-select.ogg")
+                        this._setSelectedFlag(r), s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-profiles/sounds/sfx-banners-update-list-item-select.ogg")
                     },
                     save() {
-                        this.get("isCurrentlySaving") ? a.logger.trace("Flag selection is already being updated") : (this.set("isCurrentlySaving", !0), a.logger.trace("Updating flag selection and dismissing banner update modal"), this._saveSelectedBanner().then((e => {
-                            this.set("isCurrentlySaving", !1), a.logger.trace("Successfully saved flag", e), s.ClashBannerPickerHandler.hideModal()
+                        this.get("isCurrentlySaving") ? s.logger.trace("Flag selection is already being updated") : (this.set("isCurrentlySaving", !0), s.logger.trace("Updating flag selection and dismissing banner update modal"), this._saveSelectedBanner().then((e => {
+                            this.set("isCurrentlySaving", !1), s.logger.trace("Successfully saved flag", e), a.ClashBannerPickerHandler.hideModal()
                         }), (e => {
-                            this.set("isCurrentlySaving", !1), a.logger.warning("Failed to save flag", e), a.ModalManager.add({
+                            this.set("isCurrentlySaving", !1), s.logger.warning("Failed to save flag", e), s.ModalManager.add({
                                 type: "DialogAlert",
                                 data: {
                                     contents: this.get("tra.banners_update_error_dialog_text"),
@@ -13968,28 +13965,28 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "pt+6uYyu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["static-attr","class","dialog-frame"],["static-attr","dismissable",""],["static-attr","orientation","bottom"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","dialog-content style-profile-clash-banner-picker-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","banners_update_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isInitialized"]]],null,5,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isCurrentlySaving"]]],null,1],["text","  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","button-accept"],["dynamic-attr","disabled",["unknown",["isCurrentlySaving"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"save"],null],null],["flush-element"],["text","\\n      "],["append",["helper",["if"],[["get",["isCurrentlySaving"]],["get",["tra","banners_update_save_button_saving"]],["get",["tra","banners_update_save_button"]]],null],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isCurrentlySaving"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-saving-spinner"],["flush-element"],["text","\\n      "],["append",["unknown",["uikit-spinner"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-loading-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["uikit-spinner"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-picker-frame-img"],["dynamic-attr","src",["concat",[["unknown",["frame","imgSrc"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-clash-banner-picker-list-item ",["helper",["if"],[["get",["flag","isSelected"]],"list-item-selected"],null]]]],["modifier",["action"],[["get",[null]],"hoverFlag"],[["on"],["mouseEnter"]]],["modifier",["action"],[["get",[null]],"selectFlag",["get",["flag","itemId"]],["get",["flag","theme"]],["get",["flag","level"]],["get",["flag","seasonId"]],["get",["flag","earnedDateIso8601"]]],[["on"],["click"]]],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-picker-flag-img"],["dynamic-attr","src",["concat",[["unknown",["flag","imgSrc"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-details-group"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-theme"],["flush-element"],["append",["unknown",["flag","tournamentText"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-level"],["flush-element"],["append",["unknown",["flag","levelText"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-earned-date"],["flush-element"],["append",["unknown",["flag","earnedDateText"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["flag","isSelected"]]],null,3],["text","              "],["close-element"],["text","\\n"]],"locals":["flag"]},{"statements":[["text","          "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["flags"]]],null,4],["text","          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "Pqu2jC5s",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["static-attr","class","dialog-frame"],["static-attr","dismissable",""],["static-attr","orientation","bottom"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","dialog-content style-profile-clash-banner-picker-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","banners_update_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isInitialized"]]],null,5,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isCurrentlySaving"]]],null,1],["text","  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","button-accept"],["dynamic-attr","disabled",["unknown",["isCurrentlySaving"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"save"],null],null],["flush-element"],["text","\\n      "],["append",["helper",["if"],[["get",["isCurrentlySaving"]],["get",["tra","banners_update_save_button_saving"]],["get",["tra","banners_update_save_button"]]],null],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isCurrentlySaving"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-saving-spinner"],["flush-element"],["text","\\n      "],["append",["unknown",["uikit-spinner"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-loading-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["uikit-spinner"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-picker-frame-img"],["dynamic-attr","src",["concat",[["unknown",["frame","imgSrc"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-clash-banner-picker-list-item ",["helper",["if"],[["get",["flag","isSelected"]],"list-item-selected"],null]]]],["modifier",["action"],[["get",[null]],"hoverFlag"],[["on"],["mouseEnter"]]],["modifier",["action"],[["get",[null]],"selectFlag",["get",["flag","itemId"]],["get",["flag","theme"]],["get",["flag","level"]],["get",["flag","seasonId"]],["get",["flag","earnedDateIso8601"]]],[["on"],["click"]]],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-picker-flag-img"],["dynamic-attr","src",["concat",[["unknown",["flag","imgSrc"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-details-group"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-theme"],["flush-element"],["append",["unknown",["flag","tournamentText"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-level"],["flush-element"],["append",["unknown",["flag","levelText"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-earned-date"],["flush-element"],["append",["unknown",["flag","earnedDateText"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["flag","isSelected"]]],null,3],["text","              "],["close-element"],["text","\\n"]],"locals":["flag"]},{"statements":[["text","          "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["flags"]]],null,4],["text","          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
-            n(235), e.exports = s.Ember.Component.extend(i.default, {
+            n(235), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-backdrop-component"],
                 layout: n(236),
-                profileService: s.Ember.inject.service("profile"),
-                backdrop: s.Ember.computed.alias("profileService.backdrop"),
-                potatoModeSettings: s.Ember.computed.alias("profileService.potatoModeSettings"),
-                animationsDisabled: s.Ember.computed.bool("profileService.potatoModeSettings.data.potatoModeEnabled"),
-                defaultBackdrop: s.Ember.computed.equal("backdrop.backdropType", "default"),
-                sectionIdObserver: s.Ember.on("init", s.Ember.observer("subnavigationState.shownSectionId", (function() {
-                    s.Ember.run.once(this, "playVideoIfOnOverview")
+                profileService: a.Ember.inject.service("profile"),
+                backdrop: a.Ember.computed.alias("profileService.backdrop"),
+                potatoModeSettings: a.Ember.computed.alias("profileService.potatoModeSettings"),
+                animationsDisabled: a.Ember.computed.bool("profileService.potatoModeSettings.data.potatoModeEnabled"),
+                defaultBackdrop: a.Ember.computed.equal("backdrop.backdropType", "default"),
+                sectionIdObserver: a.Ember.on("init", a.Ember.observer("subnavigationState.shownSectionId", (function() {
+                    a.Ember.run.once(this, "playVideoIfOnOverview")
                 }))),
                 playVideoIfOnOverview: function() {
                     if (this.get("subnavigationState.shownSectionId") === this.overviewSectionId) {
@@ -14000,14 +13997,14 @@
                         }
                     }
                 },
-                overlays: s.Ember.computed("profileService.backdrop.backdropAugments.@each", "profileService.backdrop.backdropImage", (function() {
+                overlays: a.Ember.computed("profileService.backdrop.backdropAugments.@each", "profileService.backdrop.backdropImage", (function() {
                     return (this.get("profileService.backdrop.backdropAugments") || []).map((e => e.centeredLCOverlayPath))
                 })),
-                isOverviewSection: s.Ember.computed("subnavigationState.shownSectionId", (function() {
+                isOverviewSection: a.Ember.computed("subnavigationState.shownSectionId", (function() {
                     const e = this.get("subnavigationState.shownSectionId");
                     return null === e || e === this.overviewSectionId
                 })),
-                shouldShowVideo: s.Ember.computed("potatoModeSettings", "animationsDisabled", "isOverviewSection", "backdrop.backdropType", "backdrop.backdropVideo", (function() {
+                shouldShowVideo: a.Ember.computed("potatoModeSettings", "animationsDisabled", "isOverviewSection", "backdrop.backdropType", "backdrop.backdropVideo", (function() {
                     if (!0 === this.get("animationsDisabled")) return !1;
                     if (!this.get("isOverviewSection")) return !1;
                     const e = this.get("backdrop.backdropType");
@@ -14018,19 +14015,19 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "WjCoQsfJ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-backdrop-container ",["helper",["unless"],[["get",["isOverviewSection"]],"style-profile-backdrop-dimmed"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-masked-image"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-background-switcher"],null,[["class","src","overlays"],["style-profile-background-image",["helper",["if"],[["get",["shouldShowVideo"]],["get",["backdrop","backdropVideo"]],["get",["backdrop","backdropImage"]]],null],["get",["overlays"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["defaultBackdrop"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","style-profile-backdrop-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-backdrop-magic",[]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "ze2FESFe",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-backdrop-container ",["helper",["unless"],[["get",["isOverviewSection"]],"style-profile-backdrop-dimmed"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-masked-image"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-background-switcher"],null,[["class","src","overlays"],["style-profile-background-image",["helper",["if"],[["get",["shouldShowVideo"]],["get",["backdrop","backdropVideo"]],["get",["backdrop","backdropImage"]]],null],["get",["overlays"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["defaultBackdrop"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","style-profile-backdrop-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-backdrop-magic",[]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
+            var s = n(1);
             n(238);
-            const s = (0, a.EmberDataBinding)({
-                Ember: a.Ember,
-                websocket: (0, a.getProvider)().getSocket(),
+            const a = (0, s.EmberDataBinding)({
+                Ember: s.Ember,
+                websocket: (0, s.getProvider)().getSocket(),
                 basePaths: {
                     login: "/lol-login",
                     platformConfig: "/lol-platform-config",
@@ -14052,17 +14049,17 @@
                     }
                 }
             });
-            e.exports = a.Ember.Component.extend(s, {
+            e.exports = s.Ember.Component.extend(a, {
                 classNames: ["style-profile-backdrop-picker-component"],
                 layout: n(239),
-                isOnOverviewPage: a.Ember.computed("subnavigationState.shownSectionId", "overviewSectionId", (function() {
+                isOnOverviewPage: s.Ember.computed("subnavigationState.shownSectionId", "overviewSectionId", (function() {
                     return this.get("overviewSectionId") === this.get("subnavigationState.shownSectionId")
                 })),
-                isOnModalView: a.Ember.computed.equal("profileMode", "searched"),
-                isNotOnModalView: a.Ember.computed.not("isOnModalView"),
-                skinsPickerDisabled: a.Ember.computed.equal("jmxSkinsPickerEnabled", !1),
-                skinsPickerEnabled: a.Ember.computed.not("skinsPickerDisabled"),
-                showSkinsPickerButton: a.Ember.computed.and("skinsPickerEnabled", "isOnOverviewPage", "isNotOnModalView"),
+                isOnModalView: s.Ember.computed.equal("profileMode", "searched"),
+                isNotOnModalView: s.Ember.computed.not("isOnModalView"),
+                skinsPickerDisabled: s.Ember.computed.equal("jmxSkinsPickerEnabled", !1),
+                skinsPickerEnabled: s.Ember.computed.not("skinsPickerDisabled"),
+                showSkinsPickerButton: s.Ember.computed.and("skinsPickerEnabled", "isOnOverviewPage", "isNotOnModalView"),
                 init() {
                     this._super(...arguments);
                     const e = this._onSelectedSkinChange.bind(this);
@@ -14081,7 +14078,7 @@
                     this.get("skinsPickerButton") && this.set("skinsPickerButton", null), this._super(...arguments)
                 },
                 willDestroy() {
-                    a.SkinsPicker.destroy(), this._super(...arguments)
+                    s.SkinsPicker.destroy(), this._super(...arguments)
                 },
                 actions: {
                     toggleSkinsPicker() {
@@ -14094,7 +14091,7 @@
                         const e = this.get("selectedSkinUpdateHandler"),
                             t = this.get("resetBackdropHandler"),
                             n = this.get("skinsPickerReadyHandler");
-                        a.SkinsPicker.selectSkin(e, t, n)
+                        s.SkinsPicker.selectSkin(e, t, n)
                     }
                 },
                 _onSelectedSkinChange(e, t) {
@@ -14110,21 +14107,21 @@
                             key: "backgroundSkinId",
                             value: e
                         }),
-                        a = this.get("api.summoner").post("/v1/current-summoner/summoner-profile", {
+                        s = this.get("api.summoner").post("/v1/current-summoner/summoner-profile", {
                             key: "backgroundSkinAugments",
                             value: t ?? ""
                         });
-                    return Promise.all([n, a])
+                    return Promise.all([n, s])
                 }
             })
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "nRFWni2m",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-skin-picker-button ",["helper",["unless"],[["get",["showSkinsPickerButton"]],"hide"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-close-button",[]],["static-attr","button-type","cog"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleSkinsPicker"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_backdrop_picker_button_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "5JC7+Tw+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-skin-picker-button ",["helper",["unless"],[["get",["showSkinsPickerButton"]],"hide"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-close-button",[]],["static-attr","button-type","cog"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleSkinsPicker"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_backdrop_picker_button_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14132,38 +14129,38 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
-                i = (a = n(241)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(241)) && s.__esModule ? s : {
+                    default: s
                 },
                 r = n(42);
             n(242);
-            const o = (0, s.EmberDataBinding)({
-                Ember: s.Ember,
-                websocket: (0, s.getProvider)().getSocket(),
+            const o = (0, a.EmberDataBinding)({
+                Ember: a.Ember,
+                websocket: (0, a.getProvider)().getSocket(),
                 basePaths: {
                     summoner: "/lol-summoner"
                 }
             });
-            var l = s.Ember.Component.extend(o, {
+            var l = a.Ember.Component.extend(o, {
                 classNames: ["style-profile-search-input-component"],
                 layout: i.default,
                 disabled: !1,
-                isOnOverviewPage: s.Ember.computed("subnavigationState.shownSectionId", "overviewSectionId", (function() {
+                isOnOverviewPage: a.Ember.computed("subnavigationState.shownSectionId", "overviewSectionId", (function() {
                     return this.get("overviewSectionId") === this.get("subnavigationState.shownSectionId")
                 })),
                 init() {
-                    this._super(...arguments), this._playerNames = s.playerNames
+                    this._super(...arguments), this._playerNames = a.playerNames
                 },
                 _showAlertSummonerNotFound(e) {
                     const t = this.$("<div>").text(e).html(),
                         n = this.get("tra.profile_search_hint_text"),
-                        a = (0, r.translate)(this, "profile_search_error_not_found", {
+                        s = (0, r.translate)(this, "profile_search_error_not_found", {
                             name: t
                         }),
                         i = this.get("tra.lib_ui_dialog_alert_ok"),
-                        o = s.TemplateHelper.contentBlockDialog(n, a, "dialog-small", "profile-search-alert");
-                    s.ModalManager.add({
+                        o = a.TemplateHelper.contentBlockDialog(n, s, "dialog-small", "profile-search-alert");
+                    a.ModalManager.add({
                         type: "DialogAlert",
                         data: {
                             contents: o,
@@ -14175,7 +14172,7 @@
                     gameName: e,
                     tagLine: t,
                     summonerName: n
-                }) => n || (e && t ? `${e}#${t}` : (s.logger.error("Profile Search received an empty gameName and tagLine or summonerName from the player name input component"), !1)),
+                }) => n || (e && t ? `${e}#${t}` : (a.logger.error("Profile Search received an empty gameName and tagLine or summonerName from the player name input component"), !1)),
                 actions: {
                     async enterKeyPressHandler(e) {
                         this.set("disabled", !0);
@@ -14184,16 +14181,16 @@
                             try {
                                 const n = await this.get("api.summoner").get("/v1/summoners?name=" + encodeURIComponent(t));
                                 n ? this.privateApi.showOverlayForSummoner(n) : this._showAlertSummonerNotFound(this.get("_playerNames").formatPlayerName(e).playerNameFull);
-                                const a = {
+                                const s = {
                                     event: "search-for-summoner",
                                     summonerName: t,
                                     ...n?.summonerId && {
                                         summonerId: n.summonerId
                                     }
                                 };
-                                s.Telemetry.sendCustomData("profile-overview-events", a)
+                                a.Telemetry.sendCustomData("profile-overview-events", s)
                             } catch (e) {
-                                s.logger.error("Error searching for summoner", e)
+                                a.logger.error("Error searching for summoner", e)
                             }
                             this.set("disabled", !1)
                         }
@@ -14202,10 +14199,10 @@
             });
             t.default = l
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "YRYgldNe",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isOnOverviewPage"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["player-name-input"],null,[["enterKeyPressHandler","disabled"],[["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["get",["disabled"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "z8kdtkCa",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isOnOverviewPage"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["player-name-input"],null,[["enterKeyPressHandler","disabled"],[["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["get",["disabled"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14213,19 +14210,19 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                i = (a = n(32)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                i = (s = n(32)) && s.__esModule ? s : {
+                    default: s
                 };
-            n(244), e.exports = s.Ember.Component.extend(i.default, {
+            n(244), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-search-trail-component"],
                 layout: n(245),
-                profileService: s.Ember.inject.service("profile"),
-                bannerEnabled: s.Ember.computed.alias("profileService.bannerEnabled"),
-                friend: s.Ember.computed.alias("profileService.friend"),
-                summonerIconPathObserver: s.Ember.on("init", s.Ember.observer("summoner.profileIconId", "friend.icon", (function() {
+                profileService: a.Ember.inject.service("profile"),
+                bannerEnabled: a.Ember.computed.alias("profileService.bannerEnabled"),
+                friend: a.Ember.computed.alias("profileService.friend"),
+                summonerIconPathObserver: a.Ember.on("init", a.Ember.observer("summoner.profileIconId", "friend.icon", (function() {
                     let e = this.get("friend.icon");
-                    Number.isInteger(e) && -1 !== e || (e = this.get("summoner.profileIconId")), s.GameDataProfileIcons.getIconUrlPromise(e).then((e => {
+                    Number.isInteger(e) && -1 !== e || (e = this.get("summoner.profileIconId")), a.GameDataProfileIcons.getIconUrlPromise(e).then((e => {
                         this.set("summonerIconPath", e)
                     }))
                 })))
@@ -14234,27 +14231,27 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "mXNSFkpm",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-search-trail-summoner-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["summonerIconPath"]]],null,1],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","style-profile-search-trail-summoner-name"],["flush-element"],["text","\\n  "],["append",["helper",["player-name"],null,[["format","puuid"],["short",["get",["summoner","puuid"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["summonerIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-framed-icon"],null,null,0]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "blBbguHf",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-search-trail-summoner-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["summonerIconPath"]]],null,1],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","style-profile-search-trail-summoner-name"],["flush-element"],["text","\\n  "],["append",["helper",["player-name"],null,[["format","puuid"],["short",["get",["summoner","puuid"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["summonerIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-framed-icon"],null,null,0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
+            var s, a = n(1),
                 i = n(247),
                 r = n(261),
-                o = (a = n(262)) && a.__esModule ? a : {
-                    default: a
+                o = (s = n(262)) && s.__esModule ? s : {
+                    default: s
                 };
             n(263), e.exports = function() {
                 const e = new i.FullPageModalMediator({
-                        Navigation: s.Navigation
+                        Navigation: a.Navigation
                     }),
                     t = e.getScreenNode(),
                     n = document.createElement("div");
-                let a = !1,
+                let s = !1,
                     l = null;
                 n.classList.add("rcp-fe-lol-profiles-modal"), t.appendChild(n);
                 const {
@@ -14265,15 +14262,15 @@
                     overviewSection: c
                 } = (0, r.createOverviewSubnavigation)("searched", e, n), p = new o.default;
                 return d.addEventListener("screenHidden", (() => {
-                    p.destroyWrapper("rcp-fe-lol-profiles-overview"), p.destroyWrapper("rcp-fe-lol-profiles-backdrop"), p.destroyWrapper("rcp-fe-lol-profiles-search-trail"), a = !1
+                    p.destroyWrapper("rcp-fe-lol-profiles-overview"), p.destroyWrapper("rcp-fe-lol-profiles-backdrop"), p.destroyWrapper("rcp-fe-lol-profiles-search-trail"), s = !1
                 })), d.addEventListener("showSubsection", ((e, t) => {
-                    if (a && l === t.puuid) return;
+                    if (s && l === t.puuid) return;
                     l = t.puuid, _.summonerId = t.summonerId;
                     const n = p.createWrapper("rcp-fe-lol-profiles-overview", Object.assign({}, _), u),
-                        s = p.createWrapper("rcp-fe-lol-profiles-backdrop", Object.assign({}, _));
-                    m.insertBefore(s.domNode, m.firstChild);
+                        a = p.createWrapper("rcp-fe-lol-profiles-backdrop", Object.assign({}, _));
+                    m.insertBefore(a.domNode, m.firstChild);
                     const i = p.createWrapper("rcp-fe-lol-profiles-search-trail", Object.assign({}, _));
-                    m.appendChild(i.domNode), u.appendChild(n.domNode), a = !0
+                    m.appendChild(i.domNode), u.appendChild(n.domNode), s = !0
                 })), {
                     subnavigationApi: d,
                     overviewSection: c
@@ -14281,8 +14278,8 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var a = d(n(248)),
-                s = d(n(254)),
+            var s = d(n(248)),
+                a = d(n(254)),
                 i = d(n(255)),
                 r = d(n(258)),
                 o = d(n(259)),
@@ -14294,8 +14291,8 @@
                 }
             }
             e.exports = {
-                SubnavigationApi: a.default,
-                NavigationBarMediator: s.default,
+                SubnavigationApi: s.default,
+                NavigationBarMediator: a.default,
                 SectionControllerMediator: i.default,
                 FullPageModalMediator: r.default,
                 DialogFrameMediator: o.default,
@@ -14306,8 +14303,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = l(n(249)),
-                s = l(n(250)),
+            var s = l(n(249)),
+                a = l(n(250)),
                 i = l(n(252)),
                 r = n(253),
                 o = n(251);
@@ -14318,7 +14315,7 @@
                 }
             }
             const d = "riotclient-lib-subnavigation";
-            class m extends a.default {
+            class m extends s.default {
                 constructor(e) {
                     super(), this._mediators = this._validateMediators(e), this._mediators && this._mediators.forEach((e => {
                         e.setLibraryReference(this)
@@ -14348,9 +14345,9 @@
                 _validateMediators(e) {
                     if (e) {
                         if (Array.isArray(e)) return e.forEach((e => {
-                            if (!(e instanceof s.default)) throw new Error(`${d} _validateMediators: Expected mediator to be an instance of Mediator`)
+                            if (!(e instanceof a.default)) throw new Error(`${d} _validateMediators: Expected mediator to be an instance of Mediator`)
                         })), e;
-                        if (!(e instanceof s.default)) throw new Error(`${d} _validateMediators: Expected mediator to be an instance of Mediator`);
+                        if (!(e instanceof a.default)) throw new Error(`${d} _validateMediators: Expected mediator to be an instance of Mediator`);
                         return [e]
                     }
                 }
@@ -14400,8 +14397,8 @@
                 }
                 removeEventListener(e, t) {
                     const n = this._listeners.get(e);
-                    let a;
-                    return !!(n && n.length && (a = n.indexOf(t), a > -1)) && (n.splice(a, 1), this._listeners.set(e, n), !0)
+                    let s;
+                    return !!(n && n.length && (s = n.indexOf(t), s > -1)) && (n.splice(s, 1), this._listeners.set(e, n), !0)
                 }
                 clearEventListeners() {
                     this._listeners.clear()
@@ -14418,8 +14415,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(249)) && a.__esModule ? a : {
-                    default: a
+            var s, a = (s = n(249)) && s.__esModule ? s : {
+                    default: s
                 },
                 i = n(251);
             t.default = class {
@@ -14428,7 +14425,7 @@
                     this._component = e, this._library = null, this._setComponentListeners()
                 }
                 setLibraryReference(e) {
-                    if (!(e instanceof s.default)) throw new Error("Mediator expects lib to be an instance of Evented");
+                    if (!(e instanceof a.default)) throw new Error("Mediator expects lib to be an instance of Evented");
                     this._library = e, this._library.addEventListener(i.EVENT_OUT_SHOW_SUBSECTION, ((...e) => this._onApiShowSubsection(...e))), this._library.addEventListener(i.EVENT_OUT_REGISTER_SUBSECTION, ((...e) => {
                         const {
                             registerWithMediators: t
@@ -14481,8 +14478,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = r(n(249)),
-                s = r(n(248)),
+            var s = r(n(249)),
+                a = r(n(248)),
                 i = n(251);
 
             function r(e) {
@@ -14491,11 +14488,11 @@
                 }
             }
             const o = "riotclient-lib-subnavigation";
-            class l extends a.default {
+            class l extends s.default {
                 constructor(e, t) {
                     if (super(), !e) throw new Error(`${o} SubsectionAPI - libRef is mandatory`);
                     if (!t) throw new Error(`${o} SubsectionAPI - sectionId is mandatory`);
-                    if (!(e instanceof s.default)) throw new Error(`${o} SubsectionAPI - libRef should be an instance of API`);
+                    if (!(e instanceof a.default)) throw new Error(`${o} SubsectionAPI - libRef should be an instance of API`);
                     this._libRef = e, this._sectionId = t, this._showing = !1, this._libRef.addEventListener(i.EVENT_OUT_SHOW_SUBSECTION, this._showSubsection.bind(this)), this._libRef.addEventListener(i.EVENT_OUT_SCREEN_HIDDEN, this._deselected.bind(this)), this._libRef.addEventListener(i.EVENT_OUT_SECTION_WILL_SHOW, this._sectionWillShow.bind(this)), this._libRef.addEventListener(i.EVENT_OUT_SECTION_SHOW, this._sectionShow.bind(this)), this._libRef.addEventListener(i.EVENT_OUT_SECTION_WILL_HIDE, this._sectionWillHide.bind(this)), this._libRef.addEventListener(i.EVENT_OUT_SECTION_HIDE, this._sectionHide.bind(this)), this._libRef.addEventListener(i.EVENT_OUT_DESTROY, this._onDestroy.bind(this))
                 }
                 _onDestroy() {
@@ -14550,24 +14547,24 @@
                 return e ? isNaN(e) ? t : parseInt(e, 10) : t
             }
 
-            function a(e, t) {
+            function s(e, t) {
                 return null == e ? t : !0 === e
             }
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0, t.sanitizeBoolean = a, t.sanitizeInteger = n;
-            var s = {
+            }), t.default = void 0, t.sanitizeBoolean = s, t.sanitizeInteger = n;
+            var a = {
                 sanitizeInteger: n,
-                sanitizeBoolean: a
+                sanitizeBoolean: s
             };
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.NAVIGATION_ITEM_ATTR_PRIORITY = t.NAVIGATION_ITEM_ATTR_ID = t.NAVIGATION_ITEM_ATTR_DISABLED = t.NAVIGATION_ITEM_ATTR_ALERT = t.NAVIGATION_BAR_INDEX_ATTR = t.EVENT_NAVIGATION_CLICKED = void 0;
-            var a, s = (a = n(250)) && a.__esModule ? a : {
-                    default: a
+            var s, a = (s = n(250)) && s.__esModule ? s : {
+                    default: s
                 },
                 i = n(251),
                 r = n(253);
@@ -14583,7 +14580,7 @@
             t.NAVIGATION_ITEM_ATTR_ALERT = _;
             const u = "selectedindex";
             t.NAVIGATION_BAR_INDEX_ATTR = u;
-            class c extends s.default {
+            class c extends a.default {
                 constructor(e = {}) {
                     const {
                         component: t
@@ -14602,9 +14599,9 @@
                     let t = Array.prototype.slice.call(this._component.childNodes);
                     t = t.filter((e => "LOL-UIKIT-NAVIGATION-ITEM" === e.tagName));
                     for (let n = 0; n < t.length; n++) {
-                        const a = t[n];
-                        if (a.getAttribute(l) === e) return {
-                            element: a,
+                        const s = t[n];
+                        if (s.getAttribute(l) === e) return {
+                            element: s,
                             index: n
                         }
                     }
@@ -14617,10 +14614,10 @@
                     const t = document.createElement("lol-uikit-navigation-item");
                     t.setAttribute(l, e.id), t.setAttribute(d, e.priority), t.innerHTML = e.title, !1 === e.enabled && t.setAttribute(m, "");
                     const n = this._component.childNodes;
-                    for (let a = 0; a < n.length; a++) {
-                        const s = n[a];
-                        if ("LOL-UIKIT-NAVIGATION-ITEM" !== s.tagName) continue;
-                        if ((0, r.sanitizeInteger)(s.getAttribute(d), 1) > e.priority) return void this._component.insertBefore(t, s)
+                    for (let s = 0; s < n.length; s++) {
+                        const a = n[s];
+                        if ("LOL-UIKIT-NAVIGATION-ITEM" !== a.tagName) continue;
+                        if ((0, r.sanitizeInteger)(a.getAttribute(d), 1) > e.priority) return void this._component.insertBefore(t, a)
                     }
                     this._component.appendChild(t)
                 }
@@ -14635,16 +14632,16 @@
                 _onApiSetTooltipSubsection(e, t) {
                     const {
                         TooltipManager: n,
-                        TemplateHelper: a
+                        TemplateHelper: s
                     } = this._options;
-                    if (!n || !a) return void console.warn("NavigationBarMediator requires TooltipManager and TemplateHelper dependencies to run setTooltip");
-                    const s = this._getSectionDataById(e);
-                    if (!s) return;
-                    if (!("string" == typeof t && t.length > 0)) return void n.unassign(s.element);
-                    const i = a.contentBlockTooltipSystem(t),
+                    if (!n || !s) return void console.warn("NavigationBarMediator requires TooltipManager and TemplateHelper dependencies to run setTooltip");
+                    const a = this._getSectionDataById(e);
+                    if (!a) return;
+                    if (!("string" == typeof t && t.length > 0)) return void n.unassign(a.element);
+                    const i = s.contentBlockTooltipSystem(t),
                         r = document.createElement("lol-uikit-tooltip");
                     r.appendChild(i);
-                    n.assign(s.element, r, null, {
+                    n.assign(a.element, r, null, {
                         type: "system",
                         targetAnchor: {
                             x: "center",
@@ -14670,8 +14667,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.SECTION_CONTROLLER_ATTR_SELECTED_ITEM = t.SECTION_ATTR_ID = t.SECTION_ATTR_DISABLED = t.EVENT_SECTION_WILL_SHOW = t.EVENT_SECTION_WILL_HIDE = t.EVENT_SECTION_SHOW = t.EVENT_SECTION_HIDE = void 0;
-            var a = r(n(250)),
-                s = r(n(256)),
+            var s = r(n(250)),
+                a = r(n(256)),
                 i = n(251);
 
             function r(e) {
@@ -14693,7 +14690,7 @@
             t.SECTION_ATTR_DISABLED = u;
             const c = "section-id";
             t.SECTION_ATTR_ID = c;
-            class p extends a.default {
+            class p extends s.default {
                 constructor(e = {}) {
                     const {
                         component: t
@@ -14725,9 +14722,9 @@
                     this._component.addEventListener(o, this._onSectionWillShow.bind(this)), this._component.addEventListener(l, this._onSectionShow.bind(this)), this._component.addEventListener(d, this._onSectionWillHide.bind(this)), this._component.addEventListener(m, this._onSectionHide.bind(this))
                 }
                 _renderSection(e, t, n) {
-                    const a = this.sectionsRenders[t],
-                        i = s.default.create(a, n),
-                        r = s.default.getDOMNode(i);
+                    const s = this.sectionsRenders[t],
+                        i = a.default.create(s, n),
+                        r = a.default.getDOMNode(i);
                     for (; e.firstChild;) e.removeChild(e.firstChild);
                     e.appendChild(r)
                 }
@@ -14749,35 +14746,35 @@
             t.default = p
         }, (e, t, n) => {
             "use strict";
-            const a = n(257),
-                s = new a;
-            s.constructorClass = a, e.exports = s
+            const s = n(257),
+                a = new s;
+            a.constructorClass = s, e.exports = a
         }, e => {
             "use strict";
             const t = "use_public_only",
                 n = new WeakMap;
 
-            function a(e) {
+            function s(e) {
                 return n.has(e) || n.set(e, {}), n.get(e)
             }
 
-            function s(e) {
+            function a(e) {
                 return null !== e && "object" == typeof e
             }
             const i = function() {
                 this.factories = {}
             };
             i.prototype.setFactory = function(e, t) {
-                if (s(e)) {
+                if (a(e)) {
                     const n = "Component";
-                    let a = e.name ? e.name : Object.keys(e)[0];
-                    t = e.create ? e.create : e[a], -1 !== a.indexOf(n, a.length - n.length) && (a = a.substring(0, a.length - n.length)), e = a
+                    let s = e.name ? e.name : Object.keys(e)[0];
+                    t = e.create ? e.create : e[s], -1 !== s.indexOf(n, s.length - n.length) && (s = s.substring(0, s.length - n.length)), e = s
                 } else if ("function" == typeof e) {
                     throw new Error("ComponentFactory.setFactory: type needs to be an object or a string, not a function!")
                 }
                 this.factories[e] = t
             }, i.prototype.setPrivateFactory = function(e, t) {
-                a(this)[e] = t
+                s(this)[e] = t
             }, i.prototype.getFactory = function(e) {
                 const t = this.getPublicFactory(e);
                 return t || this.getPrivateFactory(e)
@@ -14786,7 +14783,7 @@
                 return this.factories[e]
             }, i.prototype.getPrivateFactory = function(e) {
                 e instanceof Object && (e = e.type);
-                return a(this)[e]
+                return s(this)[e]
             }, i.prototype.getFactories = function() {
                 return Object.assign({}, this.factories)
             }, i.prototype.setUpstreamComponentFactory = function(e) {
@@ -14797,15 +14794,15 @@
             }, i.prototype.create = function(e, t, n) {
                 if ("string" == typeof e) return this.createByName(e, t, n);
                 if ("function" == typeof e) return e(t);
-                if (s(a = e) && a instanceof HTMLElement && 1 === a.nodeType || e.domNode) return e;
-                var a;
+                if (a(s = e) && s instanceof HTMLElement && 1 === s.nodeType || e.domNode) return e;
+                var s;
                 const i = this.create(e.type, t || e.data);
                 return e.domNode = this.getDOMNode(i), e.classNames && e.classNames.forEach((function(t) {
                     e.domNode.classList.add(t)
                 })), i
             }, i.prototype.createByName = function(e, t, n) {
-                const a = this.findFactory(e, n);
-                return a ? this.create(a, t) : this.buildDummy(e)
+                const s = this.findFactory(e, n);
+                return s ? this.create(s, t) : this.buildDummy(e)
             }, i.prototype.findFactory = function(e, n) {
                 return n === t ? this.getPublicFactory(e) : this.getFactory(e)
             }, i.prototype.buildDummy = function(e) {
@@ -14816,8 +14813,8 @@
             }, i.prototype.exportable = function() {
                 const e = this;
                 return {
-                    create: function(n, a) {
-                        return e.create(n, a, t)
+                    create: function(n, s) {
+                        return e.create(n, s, t)
                     },
                     getFactories: function() {
                         return e.getFactories.apply(e, arguments)
@@ -14831,12 +14828,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(250)) && a.__esModule ? a : {
-                    default: a
+            var s, a = (s = n(250)) && s.__esModule ? s : {
+                    default: s
                 },
                 i = n(251);
             const r = ["Navigation"];
-            class o extends s.default {
+            class o extends a.default {
                 constructor(e = {}) {
                     super(null), r.forEach((t => {
                         if (!e.hasOwnProperty(t)) throw new Error(`FullPageModalMediator options[${t}] is mandatory`)
@@ -14875,12 +14872,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(250)) && a.__esModule ? a : {
-                    default: a
+            var s, a = (s = n(250)) && s.__esModule ? s : {
+                    default: s
                 },
                 i = n(251);
             const r = ["UIKit"];
-            class o extends s.default {
+            class o extends a.default {
                 constructor(e = {}) {
                     super(null), r.forEach((t => {
                         if (!e.hasOwnProperty(t)) throw new Error(`DialogFrameMediator options[${t}] is mandatory`)
@@ -14917,12 +14914,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = (a = n(250)) && a.__esModule ? a : {
-                    default: a
+            var s, a = (s = n(250)) && s.__esModule ? s : {
+                    default: s
                 },
                 i = n(251);
             const r = ["screenName", "displayPriority", "displayNameLocKey", "Viewport", "Navigation"];
-            class o extends s.default {
+            class o extends a.default {
                 constructor(e = {}) {
                     super(null), r.forEach((t => {
                         if (!e.hasOwnProperty(t)) throw new Error(`MainNavigationMediator options[${t}] is mandatory`)
@@ -14974,8 +14971,8 @@
             t.default = o
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                s = n(247);
+            var s = n(1),
+                a = n(247);
             const i = "profile_overview_subsection";
             e.exports = {
                 overviewSectionId: i,
@@ -14989,16 +14986,16 @@
                         r.setAttribute("animation", "crossfade"), n.appendChild(r);
                         const o = document.createElement("lol-uikit-navigation-bar");
                         o.setAttribute("type", "nav-bar-secondary"), o.classList.add("style-profile-sub-nav"), n.appendChild(o);
-                        const l = new s.NavigationBarMediator({
-                                TooltipManager: a.TooltipManager,
-                                TemplateHelper: a.TemplateHelper,
+                        const l = new a.NavigationBarMediator({
+                                TooltipManager: s.TooltipManager,
+                                TemplateHelper: s.TemplateHelper,
                                 component: o
                             }),
-                            d = new s.SectionControllerMediator({
+                            d = new a.SectionControllerMediator({
                                 component: r
                             }),
-                            m = new s.SubnavigationApi([t, l, d]),
-                            _ = a.Ember.Object.create({
+                            m = new a.SubnavigationApi([t, l, d]),
+                            _ = s.Ember.Object.create({
                                 shownSectionId: null
                             }),
                             u = {
@@ -15008,25 +15005,25 @@
                             };
                         return m.addEventListener("showSubsection", ((t, n) => {
                             _.set("shownSectionId", t);
-                            const s = {};
-                            e && (s.profileMode = e), t && (s.sectionId = t), n && n.summonerId && (s.summonerId = n.summonerId), a.Telemetry.sendCustomData("profiles-subnav", s)
+                            const a = {};
+                            e && (a.profileMode = e), t && (a.sectionId = t), n && n.summonerId && (a.summonerId = n.summonerId), s.Telemetry.sendCustomData("profiles-subnav", a)
                         })), {
                             subnavigationApi: m,
                             screenRoot: n,
                             subnavigationModel: u
                         }
                     }(e, t, n), d = document.createElement("div"), m = function(e, t) {
-                        const n = () => a.traService.get("profile_navigation_overview") || "_",
-                            s = e.registerSection({
+                        const n = () => s.traService.get("profile_navigation_overview") || "_",
+                            a = e.registerSection({
                                 id: i,
                                 title: n(),
                                 priority: 1,
                                 render: t,
                                 enabled: !0
                             });
-                        return a.tra.observe((() => {
-                            s.setTitle(n())
-                        })), s
+                        return s.tra.observe((() => {
+                            a.setTitle(n())
+                        })), a
                     }(r, d);
                     return {
                         subnavigationApi: r,
@@ -15042,7 +15039,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             t.default = class {
                 constructor() {
                     this._wrapperInstances = {}
@@ -15055,8 +15052,8 @@
                 }
                 createWrapper(e, t, n) {
                     this.destroyWrapper(e);
-                    const s = a.ComponentFactory.create(e, t);
-                    return this._setInstance(e, s), n && (s.parentElement = n), s
+                    const a = s.ComponentFactory.create(e, t);
+                    return this._setInstance(e, a), n && (a.parentElement = n), a
                 }
                 destroyWrapper(e) {
                     const t = this._getInstance(e);
@@ -15076,16 +15073,16 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
+            var s, a = n(1),
                 i = n(247),
                 r = n(261),
-                o = (a = n(262)) && a.__esModule ? a : {
-                    default: a
+                o = (s = n(262)) && s.__esModule ? s : {
+                    default: s
                 };
             n(263), e.exports = function(e) {
                 const t = new i.MainNavigationMediator({
-                        Navigation: s.Navigation,
-                        Viewport: s.Viewport,
+                        Navigation: a.Navigation,
+                        Viewport: a.Viewport,
                         screenName: "rcp-fe-lol-profiles-main",
                         displayPriority: 20,
                         displayNameLocKey: "navbar_profile",
@@ -15094,15 +15091,15 @@
                         iconPath: "/fe/lol-static-assets/images/nav-icon-profile.svg"
                     }),
                     n = t.getScreenNode(),
-                    a = document.createElement("div");
-                a.classList.add("rcp-fe-lol-profiles-main"), n.appendChild(a);
+                    s = document.createElement("div");
+                s.classList.add("rcp-fe-lol-profiles-main"), n.appendChild(s);
                 const {
                     subnavigationApi: l,
                     screenRoot: d,
                     subnavigationModel: m,
                     rootElement: _,
                     overviewSection: u
-                } = (0, r.createOverviewSubnavigation)("main", t, a), c = new o.default;
+                } = (0, r.createOverviewSubnavigation)("main", t, s), c = new o.default;
                 let p = null;
                 return l.addEventListener("screenShown", (() => {
                     p || (p = c.createWrapper("rcp-fe-lol-profiles-search-input", Object.assign({
@@ -15116,7 +15113,7 @@
                     c.destroyWrapper("rcp-fe-lol-profiles-backdrop"), c.destroyWrapper("rcp-fe-lol-profiles-backdrop-picker"), c.destroyWrapper("rcp-fe-lol-profiles-overview")
                 })), l.addEventListener("showSubsection", (e => {
                     if (e !== r.overviewSectionId) return void c.destroyWrapper("rcp-fe-lol-profiles-overview");
-                    s.Telemetry.startTracingEvent("profile-overview-rendered");
+                    a.Telemetry.startTracingEvent("profile-overview-rendered");
                     const t = c.createWrapper("rcp-fe-lol-profiles-overview", Object.assign({}, m), _);
                     _.appendChild(t.domNode)
                 })), {
@@ -15130,13 +15127,13 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             t.default = class {
                 constructor() {
                     let e = null;
                     this.dataPromise = new Promise((t => {
                         e = t
-                    })), this._gameDataBinding = (0, a.DataBinding)("/lol-game-data", (0, a.getProvider)().getSocket()), this._gameDataBinding.get("assets/v1/champion-summary.json").then((t => {
+                    })), this._gameDataBinding = (0, s.DataBinding)("/lol-game-data", (0, s.getProvider)().getSocket()), this._gameDataBinding.get("assets/v1/champion-summary.json").then((t => {
                         e(t)
                     }))
                 }
@@ -15149,13 +15146,13 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             t.default = class {
                 constructor() {
                     let e = null;
                     this.dataPromise = new Promise((t => {
                         e = t
-                    })), this._gameDataBinding = (0, a.DataBinding)("/lol-game-data", (0, a.getProvider)().getSocket()), this._gameDataBinding.get("assets/v1/summoner-banners.json").then((t => {
+                    })), this._gameDataBinding = (0, s.DataBinding)("/lol-game-data", (0, s.getProvider)().getSocket()), this._gameDataBinding.get("assets/v1/summoner-banners.json").then((t => {
                         e(t)
                     }))
                 }
@@ -15164,14 +15161,14 @@
                 }
                 getBannerFlagPromise(e, t) {
                     return this.dataPromise.then((n => {
-                        let s = null;
-                        return n && (s = a.Lodash.find(n.BannerFlags, (n => n.theme.toLowerCase() === e.toLowerCase() && parseInt(n.level, 10) === parseInt(t, 10)))), s
+                        let a = null;
+                        return n && (a = s.Lodash.find(n.BannerFlags, (n => n.theme.toLowerCase() === e.toLowerCase() && parseInt(n.level, 10) === parseInt(t, 10)))), a
                     }))
                 }
                 getDefaultBannerFramePromise() {
                     return this.dataPromise.then((e => {
                         let t = null;
-                        return e && (t = a.Lodash.find(e.BannerFrames, (e => 1 === parseInt(e.level, 10)))), t
+                        return e && (t = s.Lodash.find(e.BannerFrames, (e => 1 === parseInt(e.level, 10)))), t
                     }))
                 }
             }
@@ -15180,26 +15177,26 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             t.default = class {
                 constructor() {
                     let e = null;
                     this.dataPromise = new Promise((t => {
                         e = t
-                    })), this._gameDataBinding = (0, a.DataBinding)("/lol-game-data", (0, a.getProvider)().getSocket()), this._gameDataBinding.get("assets/v1/summoner-trophies.json").then((t => {
+                    })), this._gameDataBinding = (0, s.DataBinding)("/lol-game-data", (0, s.getProvider)().getSocket()), this._gameDataBinding.get("assets/v1/summoner-trophies.json").then((t => {
                         e(t)
                     }))
                 }
                 getTrophyPromise(e, t) {
                     return this.dataPromise.then((n => {
-                        let s = null;
-                        return n && (s = a.Lodash.find(n.Trophies, (n => n.theme.toLowerCase() === e.toLowerCase() && parseInt(n.bracket, 10) === parseInt(t, 10)))), s
+                        let a = null;
+                        return n && (a = s.Lodash.find(n.Trophies, (n => n.theme.toLowerCase() === e.toLowerCase() && parseInt(n.bracket, 10) === parseInt(t, 10)))), a
                     }))
                 }
                 getPedestalPromise(e) {
                     return this.dataPromise.then((t => {
                         let n = null;
-                        return t && (n = a.Lodash.find(t.TrophyPedestals, (t => parseInt(t.tier, 10) === parseInt(e, 10)))), n
+                        return t && (n = s.Lodash.find(t.TrophyPedestals, (t => parseInt(t.tier, 10) === parseInt(e, 10)))), n
                     }))
                 }
             }
@@ -15208,18 +15205,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             t.default = class {
                 constructor() {
-                    this._gameDataBinding = (0, a.DataBinding)("/lol-game-data", (0, a.getProvider)().getSocket()), this.dataPromise = new Promise((e => {
+                    this._gameDataBinding = (0, s.DataBinding)("/lol-game-data", (0, s.getProvider)().getSocket()), this.dataPromise = new Promise((e => {
                         this._gameDataBinding.get("assets/v1/summoner-icons.json").then(e)
                     }))
                 }
                 _lookupProfileIconPath(e, t) {
                     if (!Number.isInteger(e) || !t) return "";
                     const n = e => t.find((t => t.id === e)),
-                        a = n(e) || n(0);
-                    return a ? a.imagePath : ""
+                        s = n(e) || n(0);
+                    return s ? s.imagePath : ""
                 }
                 getIconUrlPromise(e) {
                     return this.dataPromise.then((t => this._lookupProfileIconPath(e, t)))
@@ -15230,13 +15227,13 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             t.default = class {
                 constructor() {
                     let e = null;
                     this.dataPromise = new Promise((t => {
                         e = t
-                    })), this._gameDataBinding = (0, a.DataBinding)("/lol-game-data", (0, a.getProvider)().getSocket()), this._gameDataBinding.get("assets/v1/skins.json").then((t => {
+                    })), this._gameDataBinding = (0, s.DataBinding)("/lol-game-data", (0, s.getProvider)().getSocket()), this._gameDataBinding.get("assets/v1/skins.json").then((t => {
                         e(t)
                     }))
                 }
@@ -15249,49 +15246,49 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
+            var s = n(1);
             t.default = class {
                 constructor() {}
                 mainSection() {
-                    return a.PrivateAPI.mainProfile.subnavigationApi
+                    return s.PrivateAPI.mainProfile.subnavigationApi
                 }
                 overlaySection() {
-                    return a.PrivateAPI.modalProfile.subnavigationApi
+                    return s.PrivateAPI.modalProfile.subnavigationApi
                 }
                 showOverlay(e) {
-                    a.PrivateAPI.showOverlay(e)
+                    s.PrivateAPI.showOverlay(e)
                 }
                 showOverlayForSummoner(e) {
-                    a.PrivateAPI.showOverlayForSummoner(e)
+                    s.PrivateAPI.showOverlayForSummoner(e)
                 }
                 setActive(e) {
-                    return a.Navigation.setActive(a.PrivateAPI.mainProfile.mainNavigationItem, e)
+                    return s.Navigation.setActive(s.PrivateAPI.mainProfile.mainNavigationItem, e)
                 }
                 setShowAlert(e) {
-                    return a.Navigation.setItemAlert(a.PrivateAPI.mainProfile.mainNavigationItem, e)
+                    return s.Navigation.setItemAlert(s.PrivateAPI.mainProfile.mainNavigationItem, e)
                 }
                 enabled() {
-                    return a.PrivateAPI.profilesEnabled
+                    return s.PrivateAPI.profilesEnabled
                 }
                 addConfigObserver(e) {
-                    "function" == typeof e && (a.PrivateAPI.platformConfigListeners.add(e), e({
-                        Enabled: a.PrivateAPI.profilesEnabled
+                    "function" == typeof e && (s.PrivateAPI.platformConfigListeners.add(e), e({
+                        Enabled: s.PrivateAPI.profilesEnabled
                     }))
                 }
                 removeConfigObserver(e) {
-                    a.PrivateAPI.platformConfigListeners.delete(e)
+                    s.PrivateAPI.platformConfigListeners.delete(e)
                 }
                 registerComponent(e, t, n) {
-                    return a.PrivateAPI.registerComponent(e, t, n)
+                    return s.PrivateAPI.registerComponent(e, t, n)
                 }
                 getRankedReferenceButton() {
-                    return a.PrivateAPI.getRankedReferenceModalButton()
+                    return s.PrivateAPI.getRankedReferenceModalButton()
                 }
                 showAlertSummonerIsPrivate(e) {
-                    a.PrivateAPI.showAlertSummonerIsPrivate(e)
+                    s.PrivateAPI.showAlertSummonerIsPrivate(e)
                 }
                 hasPrivateProfile(e) {
-                    return a.PrivateAPI.hasPrivateProfile(e)
+                    return s.PrivateAPI.hasPrivateProfile(e)
                 }
             }
         }, (e, t) => {
@@ -15324,15 +15321,15 @@
         }],
         t = {};
 
-    function n(a) {
-        var s = t[a];
-        if (void 0 !== s) return s.exports;
-        var i = t[a] = {
-            id: a,
+    function n(s) {
+        var a = t[s];
+        if (void 0 !== a) return a.exports;
+        var i = t[s] = {
+            id: s,
             loaded: !1,
             exports: {}
         };
-        return e[a].call(i.exports, i, i.exports, n), i.loaded = !0, i.exports
+        return e[s].call(i.exports, i, i.exports, n), i.loaded = !0, i.exports
     }
     n.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t), n.r = e => {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
@@ -15345,10 +15342,10 @@
         var e, t = (e = n(1)) && e.__esModule ? e : {
             default: e
         };
-        const a = "rcp-fe-lol-profiles",
-            s = document.currentScript.ownerDocument;
-        const i = window.getPluginAnnounceEventName(a);
-        s.addEventListener(i, (function(e) {
+        const s = "rcp-fe-lol-profiles",
+            a = document.currentScript.ownerDocument;
+        const i = window.getPluginAnnounceEventName(s);
+        a.addEventListener(i, (function(e) {
             (0, e.registrationHandler)((function(e) {
                 return t.default.init(e, {
                     AudioPlugin: e => e.get("rcp-fe-audio"),
@@ -15362,7 +15359,7 @@
                     LeagueTierNames: e => e.get("rcp-fe-lol-shared-components").getApi_LeagueTierNames(),
                     lockAndLoadPlugin: e => e.get("rcp-fe-lol-lock-and-load"),
                     Lodash: e => e.get("rcp-fe-common-libs").getLodash(4),
-                    logger: e => e.get("rcp-fe-common-libs").logging.create(a),
+                    logger: e => e.get("rcp-fe-common-libs").logging.create(s),
                     ModalManager: e => e.get("rcp-fe-lol-uikit").getModalManager(),
                     moment: e => e.get("rcp-fe-lol-l10n").moment(),
                     Navigation: e => e.get("rcp-fe-lol-navigation"),
@@ -15390,23 +15387,23 @@
                     db: t.default.DataBinding.bindTo(t.default.socket)
                 }))).then((() => {
                     const n = e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-clash/trans.json").overlay("/fe/lol-profiles/trans.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-shared-components/trans-challenges.json"),
-                        a = t.default.emberl10n(t.default.Ember, n);
+                        s = t.default.emberl10n(t.default.Ember, n);
                     return t.default.add({
                         tra: n,
-                        traService: a
+                        traService: s
                     })
                 })).then((() => {
                     const e = n(2).default;
                     t.default.add({
                         PrivateAPI: () => new e
                     });
-                    const a = n(265).default,
-                        s = n(266).default,
+                    const s = n(265).default,
+                        a = n(266).default,
                         i = n(267).default,
                         r = n(268).default,
                         o = n(269).default,
-                        l = new a,
-                        d = new s,
+                        l = new s,
+                        d = new a,
                         m = new i,
                         _ = new r,
                         u = new o;
@@ -15420,11 +15417,11 @@
                     const c = new(0, n(270).default);
                     return t.default.Regalia.registerProfilesApi && t.default.Regalia.registerProfilesApi(c), c
                 })).catch((e => {
-                    const a = n(271).default,
-                        s = e && e.message ? e.message : "unknown";
-                    return t.default.logger.error(`init API creation error: ${s}`), t.default.add({
-                        PrivateAPI: () => new a
-                    }), new a
+                    const s = n(271).default,
+                        a = e && e.message ? e.message : "unknown";
+                    return t.default.logger.error(`init API creation error: ${a}`), t.default.add({
+                        PrivateAPI: () => new s
+                    }), new s
                 }))
             }))
         }), {

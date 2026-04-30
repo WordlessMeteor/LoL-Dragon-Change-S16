@@ -592,15 +592,6 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        6.0,
-                        10.0,
-                        14.0,
-                        18.0,
-                        22.0,
-                        26.0,
-                        30.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -650,6 +641,19 @@
                         290.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseARShred",
+                    "values": [
+                        0.05999999865889549,
+                        0.10000000149011612,
+                        0.14000000059604645,
+                        0.18000000715255737,
+                        0.2199999988079071,
+                        0.25999999046325684,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -674,7 +678,6 @@
             },
             "mSpellCalculations": {
                 "TotalDamage": {
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -690,7 +693,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.4500000476837158,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIVQ.dds"
@@ -787,8 +789,9 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseARShred",
                                     "typeIndex": 2,
+                                    "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_ArmorReduction",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -1379,15 +1382,6 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        10.0,
-                        15.0,
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -1451,8 +1445,23 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseSlowAmount",
+                    "values": [
+                        0.10000000149011612,
+                        0.15000000596046448,
+                        0.20000000298023224,
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
-                "BaseShield": {
+                "TotalShield": {
                     "mFormulaParts": [
                         {
                             "mEffectIndex": 1,
@@ -1478,7 +1487,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIVW.dds"
@@ -1569,8 +1577,9 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseSlowAmount",
                                     "typeIndex": 2,
+                                    "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -1633,15 +1642,6 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        0.17499999701976776,
-                        0.20000000298023224,
-                        0.22499999403953552,
-                        0.25,
-                        0.2750000059604645,
-                        0.30000001192092896,
-                        0.32499998807907104
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -1740,6 +1740,19 @@
                         0.800000011920929
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseAuraAS",
+                    "values": [
+                        0.17499999701976776,
+                        0.20000000298023224,
+                        0.22499999403953552,
+                        0.25,
+                        0.2750000059604645,
+                        0.30000001192092896,
+                        0.32499998807907104
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1777,7 +1790,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIVE.dds"
@@ -1886,7 +1898,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseAuraAS",
                                     "typeIndex": 3,
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_ActiveAttackSpeed",

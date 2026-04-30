@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Galio": {
             "id": "Galio",
@@ -530,7 +530,7 @@
                     "id": "GalioW",
                     "name": "杜朗护盾",
                     "description": "加里奥在防御姿态下蓄力，同时移动速度减慢。在蓄力得以释放时，加里奥将嘲讽并伤害附近的敌人。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>如果加里奥在{{ passiveshieldooctimer }}秒内没有受到伤害，那么他就会获得<shield>{{ totalpassiveshield }}魔法护盾</shield>。<br /><br /><charge>开始蓄力：</charge>加里奥使即将到来的魔法伤害降低{{ magicdamagereduction }}，使即将到来的物理伤害降低{{ physicaldamagereduction }}，并且自身<status>减速</status>{{ e3 }}%。<br /><br /><release>释放：</release>加里奥<status>嘲讽</status>附近的敌方英雄{{ e4 }}到{{ e7 }}秒，造成<magicDamage>{{ mintotaldamage }}</magicDamage>到<magicDamage>{{ maxtotaldamage }}魔法伤害</magicDamage>，并使伤害减免的持续时长刷新至{{ e8 }}秒。嘲讽的持续时长、伤害和距离取决于他的蓄力时长。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>如果加里奥在{{ passiveshieldooctimer }}秒内没有受到伤害，那么他就会获得<shield>{{ totalpassiveshield }}魔法护盾</shield>。<br /><br /><charge>开始蓄力：</charge>加里奥使即将到来的魔法伤害降低{{ magicdamagereduction }}，使即将到来的物理伤害降低{{ physicaldamagereduction }}，并且自身<status>减速</status>{{ selfslowpercent }}%。<br /><br /><release>释放：</release>加里奥<status>嘲讽</status>附近的敌方英雄{{ ccdurationmin }}到{{ ccdurationmax }}秒，造成<magicDamage>{{ mintotaldamage }}</magicDamage>到<magicDamage>{{ maxtotaldamage }}魔法伤害</magicDamage>，并使伤害减免的持续时长刷新至{{ drlingerduration }}秒。嘲讽的持续时长、伤害和距离取决于他的蓄力时长。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾生命值收益",
@@ -541,8 +541,8 @@
                         ],
                         "effect": [
                             "{{ passiveshieldhealthratio*100.000000 }}% -> {{ passiveshieldhealthrationl*100.000000 }}%",
-                            "{{ e1 }}% -> {{ e1NL }}%",
-                            "{{ effect1amount*0.500000 }}% -> {{ effect1amountnl*0.500000 }}%",
+                            "{{ damagereductionbase*100.000000 }}% -> {{ damagereductionbasenl*100.000000 }}%",
+                            "{{ damagereductionbase*50.000000 }}% -> {{ damagereductionbasenl*50.000000 }}%",
                             "{{ maximumwbasedamage }} -> {{ maximumwbasedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
@@ -568,32 +568,11 @@
                     "effect": [
                         null,
                         [
-                            25,
-                            30,
-                            35,
-                            40,
-                            45
-                        ],
-                        [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
-                        ],
-                        [
-                            15,
-                            15,
-                            15,
-                            15,
-                            15
-                        ],
-                        [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -603,53 +582,74 @@
                             0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.25,
-                            1.25,
-                            1.25,
-                            1.25,
-                            1.25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "25/30/35/40/45",
-                        "2",
-                        "15",
-                        "0.5",
                         "0",
-                        "1",
-                        "1.5",
-                        "2",
-                        "1.25",
-                        "4"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",

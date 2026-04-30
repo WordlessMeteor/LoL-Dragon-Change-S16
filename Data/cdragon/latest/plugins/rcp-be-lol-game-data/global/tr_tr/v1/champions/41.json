@@ -1,5 +1,6 @@
 {
     "id": 41,
+    "contentId": "338fd36d-e4b2-4c6f-8cc4-99d194165e20",
     "name": "Gangplank",
     "alias": "Gangplank",
     "title": "Okyanus Şeytanı",
@@ -1108,7 +1109,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Turunç yiyerek kitle kontrol etkilerini tedavi eder ve can yeniler.",
-            "dynamicDescription": "Gangplank yüksek miktarda turunç yiyerek üstündeki tüm <status>engelleyici</status> etkileri kaldırır ve <healing>@BaseHealth@ artı eksik canının %@Effect2Amount@ kadarını</healing> yeniler.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank yüksek miktarda turunç yiyerek üstündeki tüm <status>engelleyici</status> etkileri kaldırır ve <healing>@BaseHealth@ artı eksik canının %@PercentHeal@ kadarını</healing> yeniler.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1258,7 +1259,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@AmmoRechargeTime@ sn. Yenilenme (en fazla: @MaxAmmo@)",
             "description": "Gangplank hedef konumda bir barut fıçısı ortaya çıkarır. Saldırdığında patlayarak saldırının verdiği hasarı bölge içinde kalan rakiplere yayar ve onları yavaşlatır.",
-            "dynamicDescription": "Gangplank, @Effect5Amount@ saniye boyunca kendisinin ve rakip şampiyonların saldırabileceği bir fıçı yerleştirir. Bir rakip fıçıyı yok ederse fıçı patlamaz. Gangplank fıçıyı yok ederse fıçı patlayarak rakipleri @Effect2Amount@ saniyeliğine %@FinalSlowAmount@ <status>yavaşlatır</status> ve %@Effect10Amount@ Zırhı yok sayarak <physicalDamage>saldırının hasarını</physicalDamage> verir. Şampiyonlar fazladan <physicalDamage>@Effect3Amount@ Fiziksel Hasar</physicalDamage> alır.<br><br>Fıçıların canı her @BarrelDecayTime@ saniyede bir azalır. Patlayan fıçılar, patlama alanları kesişen diğer fıçıları patlatır ama aynı hedefe birden fazla kez hasar veremez. <spellName>Çakaralmaz</spellName> ile tetiklenen fıçı patlamaları, hedefleri katlederse ilave altın kazandırır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank, @BarrelDuration@ saniye boyunca kendisinin ve rakip şampiyonların saldırabileceği bir fıçı yerleştirir. Bir rakip fıçıyı yok ederse fıçı patlamaz. Gangplank fıçıyı yok ederse fıçı patlayarak rakipleri @DebuffDuration@ saniyeliğine %@FinalSlowAmount@ <status>yavaşlatır</status> ve %@BarrelArmorPenetration@ Zırhı yok sayarak <physicalDamage>saldırının hasarını</physicalDamage> verir. Şampiyonlar fazladan <physicalDamage>@BonusDamageToChampions@ Fiziksel Hasar</physicalDamage> alır.<br><br>Fıçıların canı her @BarrelDecayTime@ saniyede bir azalır. Patlayan fıçılar, patlama alanları kesişen diğer fıçıları patlatır ama aynı hedefe birden fazla kez hasar veremez. <spellName>Çakaralmaz</spellName> ile tetiklenen fıçı patlamaları, hedefleri katlederse ilave altın kazandırır.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

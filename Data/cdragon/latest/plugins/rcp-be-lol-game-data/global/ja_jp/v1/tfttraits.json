@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "スキルを@CastsToGainXP@回使用するたびに、「クロノキーパー」はXPを<TFTBonus>@XPPerCast@</TFTBonus>蓄積する。レベルアップに必要なXPを蓄積すると、そのXPをプレイヤーに移行する。<br><br>プレイヤーレベルが10の場合、代わりに<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>のダメージ増加効果を獲得する。<br><br><rules>XP蓄積量: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>「チョンクのお宝」では、ステージ3-5までXPを獲得するために必要な詠唱回数が@CastsToGainXPCT@に増加する。</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "スキルを@CastsToGainXP@回使用するたびに、「クロノキーパー」はXPを<TFTBonus>@XPPerCast@</TFTBonus>蓄積する。レベルアップに必要なXPを蓄積すると、そのXPをプレイヤーに移行する。<br><br>プレイヤーレベルが10の場合、代わりに<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>のダメージ増加効果を獲得する。<br><br><rules>XP蓄積量: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,10 +12270,6 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
-                    },
-                    {
-                        "name": "CastsToGainXPCT",
-                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13774,7 +13770,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "毎秒、「シュリーマ」チャンピオンの攻撃速度が@ASPerSecond*100@%増加し、体力を@HealthRestorePerSecond@回復する。戦闘開始時、追加効果を獲得する。<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>プリズム: ナサス、レネクトン、ゼラスを解除してから、シュリーマを4体配置する</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) 最大体力@BonusHealth*100@%</row><br><row>(@MinUnits@) 物理防御と魔法防御@ArmorMR@</row><br><row>(@MinUnits@)<ShowIf.TFT16_Shurima_PrismaticActive> @GodhoodCadence@秒ごとに、「シュリーマ」1体が超越して「神」になる。</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>ナサス、レネクトン、ゼラスを解除している場合のみ有効。</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
+        "tooltip_text": "毎秒、「シュリーマ」チャンピオンの攻撃速度が@ASPerSecond*100@%増加し、体力を@HealthRestorePerSecond@回復する。戦闘開始時、追加効果を獲得する。<br><br><row>(@MinUnits@) 最大体力@BonusHealth*100@%</row><br><row>(@MinUnits@) 物理防御と魔法防御@ArmorMR@</row><br><row>(@MinUnits@) @GodhoodCadence@秒ごとに、「シュリーマ」1体が超越して「神」になる。</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13854,7 +13850,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 0.0
+                        "value": 1.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13862,7 +13858,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 0.0
+                        "value": 3.0
                     },
                     {
                         "name": "SkinScale",
@@ -13870,8 +13866,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -14574,7 +14570,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "各戦闘後、「超越のチャーム」がショップに出現する。ゴールドで購入可能なこれらのチャームは、強力な効果を持つ。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>「チョンクのお宝」では、レベル7になるまで「忠実な信者チャーム」は出現しない。</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "各戦闘後、「超越のチャーム」がショップに出現する。これらのチャームは、ゴールドで購入可能な強力な効果である。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -14887,7 +14883,7 @@
         "trait_id": "TFT17_ADMIN",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Arbiter.TFT_Set17.png",
-        "tooltip_text": "独自の聖なる掟を定め、所定の原因が発生した際に「アービター」に適用される効果を選択できるようにする。<br><br><row>(@MinUnits@) 自分の掟の原因と結果を選択する。</row><br><row>(@MinUnits@) 効果が強化される。</row>",
+        "tooltip_text": "独自の聖なる掟を定め、所定の条件が発生した際に「アービター」に適用される効果を選択できるようにする。<br><br><row>(@MinUnits@) 自分の掟の条件と効果を選択する。</row><br><row>(@MinUnits@) 効果が強化される。</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15038,7 +15034,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.36
+                        "value": 0.4
                     },
                     {
                         "name": "DamageReduction",
@@ -15054,7 +15050,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.48
+                        "value": 0.55
                     },
                     {
                         "name": "DamageReduction",
@@ -15072,13 +15068,13 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "対人戦に敗北すると@TechPerCombat@「テック」を獲得し、さらに連敗数x@TechPerLoss@の「テック」を追加で獲得する。さらに、「アニマ」がキルまたはアシストを獲得するたびに、「テック」を@TechPerKill@獲得する。<br><br>「アニマ」が「テック」を@TechBreakpoint@獲得するたびに、新たな「アニマ武器」が試作される。その武器を獲得するか、「テック」を温存して次回により強力な武器を得ることも可能。<br><br><row>(@MinUnits@) 研究開始！</row><br><row>(@MinUnits@) 対人戦に勝利後、戦利品を獲得！</row>",
+        "tooltip_text": "対人戦に敗北すると「テック」を@TechPerCombat@獲得し、さらに連敗数x@TechPerLoss@の「テック」を追加で獲得する。さらに、「アニマ」がキルまたはアシストを獲得するたびに、「テック」を@TechPerKill@獲得する。<br><br>「アニマ」が「テック」を@TechBreakpoint@獲得するたびに、新たな「アニマ武器」が試作される。その武器を獲得するか、「テック」を温存して次回により強力な武器を得ることも可能。<br><br><row>(@MinUnits@) 研究開始！</row><br><row>(@MinUnits@) 対人戦に勝利後、戦利品を獲得！</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "PairsPartnerWinMultiplier",
-                        "value": 0.5
+                        "value": 0.85
                     },
                     {
                         "name": "TechBreakpoint",
@@ -15090,7 +15086,7 @@
                     },
                     {
                         "name": "TechPerCombat_DU",
-                        "value": 15.0
+                        "value": 20.0
                     },
                     {
                         "name": "TechPerDeath_PVE",
@@ -15675,7 +15671,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.2
+                        "value": 0.25
                     }
                 ],
                 "min_units": 2,
@@ -15687,7 +15683,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.4
+                        "value": 0.45
                     }
                 ],
                 "min_units": 4,
@@ -15699,7 +15695,7 @@
                 "constants": [
                     {
                         "name": "HealthBonus",
-                        "value": 0.6
+                        "value": 0.65
                     }
                 ],
                 "min_units": 6,
@@ -15841,11 +15837,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.2
+                        "value": 0.25
                     },
                     {
                         "name": "AP",
-                        "value": 20.0
+                        "value": 25.0
                     }
                 ],
                 "min_units": 3,
@@ -15857,11 +15853,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.45
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 45.0
                     }
                 ],
                 "min_units": 4,
@@ -16634,6 +16630,10 @@
                         "value": 0.08
                     },
                     {
+                        "name": "Mountain_RoundsPerEmblem",
+                        "value": 5.0
+                    },
+                    {
                         "name": "Serpent_DR_Teamwide",
                         "value": 0.08
                     },
@@ -16642,12 +16642,24 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Shield_AS_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Duration",
                         "value": 10.0
                     },
                     {
+                        "name": "Shield_Health_Teamwide",
+                        "value": 8.0
+                    },
+                    {
                         "name": "Shield_Interval",
                         "value": 1.0
+                    },
+                    {
+                        "name": "Shield_NumDeaths",
+                        "value": 60.0
                     },
                     {
                         "name": "Shield_Shield_Teamwide",
@@ -16660,6 +16672,10 @@
                     {
                         "name": "Wolf_HealthThreshold",
                         "value": 0.5
+                    },
+                    {
+                        "name": "Wolf_Health_Teamwide",
+                        "value": 0.08
                     }
                 ]
             }
@@ -16677,7 +16693,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.1
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16708,6 +16724,10 @@
                         "value": 0.2
                     },
                     {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
                         "name": "Serpent_DR",
                         "value": 0.15
                     },
@@ -16720,12 +16740,32 @@
                         "value": 0.02
                     },
                     {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
                         "name": "Shield_Shield",
                         "value": 0.15
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.25
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16749,7 +16789,7 @@
                     },
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16772,12 +16812,20 @@
                         "value": 30.0
                     },
                     {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
                         "name": "Mountain_APPerHealthThreshold",
                         "value": 2.0
                     },
                     {
                         "name": "Mountain_Health",
                         "value": 0.3
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 5.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16796,8 +16844,20 @@
                         "value": 0.25
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.35
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.08
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16848,6 +16908,14 @@
                         "value": 3.0
                     },
                     {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
                         "name": "Mountain_DamageAmpPercent",
                         "value": 0.01
                     },
@@ -16858,6 +16926,18 @@
                     {
                         "name": "Mountain_HexesToReveal_TOOLTIPONLY",
                         "value": 2.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 7.0
                     },
                     {
                         "name": "Serpent_DR",
@@ -16876,8 +16956,20 @@
                         "value": 0.35
                     },
                     {
+                        "name": "Wolf_ADAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "Wolf_CriticalStrikeChance",
                         "value": 0.45
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.15
                     },
                     {
                         "name": "Wolf_ModifiedCriticalStrikeDamage",
@@ -16885,6 +16977,119 @@
                     }
                 ],
                 "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumMarks",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Shield_CashoutAS",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "Shield_CashoutHP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Wolf_ADAP",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Wolf_Gold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Wolf_Health",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Mountain_ADAP",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_AS",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_DR",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "Mountain_Health",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "Mountain_Resists",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Mountain_StatIncrease",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 10,
                 "style_idx": 5,
                 "style_name": "kGold"
             }
@@ -16895,7 +17100,7 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>泉</TFTStargazer><br><br>強化マスにいる味方はマナ自動回復が@Fountain_ManaRegen_Teamwide@増加する。強化マスにいる「星の観測者」はさらに増加量が多くなり、スキルで体力が最も低い味方を回復できる。<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%、@Fountain_HealPercent*100@%のスキルによるダメージ回復</expandRow><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>泉</TFTStargazer>。<br><br>強化マスにいる味方はマナ自動回復が@Fountain_ManaRegen_Teamwide@増加する。強化マスにいる「星の観測者」はさらに増加量が多くなり、スキルで体力が最も低い味方を回復できる。<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%、スキルダメージの@Fountain_HealPercent*100@%分回復</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%、スキルダメージの@Fountain_HealPercent*100@%分回復</row><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16955,7 +17160,7 @@
                     },
                     {
                         "name": "Huntress_Heal",
-                        "value": 0.1
+                        "value": 0.15
                     }
                 ]
             }
@@ -16965,7 +17170,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.1
+                        "value": 0.12
                     },
                     {
                         "name": "NumMarks",
@@ -16981,7 +17186,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.3
+                        "value": 0.35
                     },
                     {
                         "name": "NumMarks",
@@ -16997,7 +17202,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.45
+                        "value": 0.55
                     },
                     {
                         "name": "NumMarks",
@@ -17025,7 +17230,7 @@
                     },
                     {
                         "name": "Medallion_IncreasePer3Star",
-                        "value": 6.5
+                        "value": 5.0
                     },
                     {
                         "name": "Medallion_Resists_Teamwide",
@@ -17093,7 +17298,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17113,7 +17318,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
@@ -17129,7 +17334,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17149,7 +17354,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
@@ -17165,11 +17370,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17185,11 +17390,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17201,11 +17406,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17221,11 +17426,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17237,11 +17442,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17257,11 +17462,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Mountain_DA",
@@ -17273,11 +17478,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17569,7 +17774,7 @@
         "trait_id": "TFT17_Timebreaker",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) 敗北時に無料リロールを獲得する。勝利時には時空の核にXPを蓄積する(ステージに応じて増加)。</row><br><row>(@MinUnits@) さらに、味方の攻撃速度が@AttackSpeed*100@%増加する。</row><br><row>(@MinUnits@) さらに、「タイムブレーカー」の攻撃速度が追加で@TimebreakerAdditionalAS*100@%増加する</row><br><br><rules>敗北時のリロール: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>勝利時のXP: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "tooltip_text": "<row>(@MinUnits@) 味方の攻撃速度が@AttackSpeed*100@%増加する。</row><br><row>(@MinUnits@) さらに、敗北時に無料のリロールを獲得する。勝利時には「時空の核」にXPを蓄積する(ステージに応じて増加)。</row><br><row>(@MinUnits@) さらに、「タイムブレーカー」の攻撃速度が@TimebreakerAdditionalAS*100@%増加する。</row><br><br><rules>敗北時のリロール: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>勝利時のXP: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -17580,11 +17785,11 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.0
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
@@ -17600,7 +17805,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.25
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17620,7 +17825,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.25
+                        "value": 0.15
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17628,7 +17833,7 @@
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
-                        "value": 0.4
+                        "value": 0.5
                     }
                 ],
                 "min_units": 4,

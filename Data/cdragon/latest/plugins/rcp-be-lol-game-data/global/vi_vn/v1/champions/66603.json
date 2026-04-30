@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "Lux Máy Siêu Khủng Khiếp",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "Lux Máy Siêu Khủng Khiếp",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "Chớp Lửa Soi Rọi",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "Các kỹ năng sát thương của Lux phủ năng lượng lên kẻ địch trong một vài giây. Đòn đánh kế tiếp của Lux đốt cháy năng lượng này, gây thêm sát thương (tùy theo cấp của Lux) lên mục tiêu. "
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "Khóa Ánh Sáng",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Lux phóng ra một quả cầu ánh sáng làm trói chân và gây sát thương tối đa 2 mục tiêu.",
-            "dynamicDescription": "Lux bắn ra một quả cầu ánh sáng, <status>Trói chân</status> hai kẻ địch đầu tiên trúng phải trong @Effect3Amount@ giây và gây <magicDamage>@TotalDamageTT@ sát thương phép</magicDamage> lên mỗi mục tiêu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux bắn ra một quả cầu ánh sáng, <status>Trói Chân</status> 2 kẻ địch đầu tiên trong @RootDuration@ giây và gây <magicDamage>@TotalDamageTT@ sát thương phép</magicDamage> lên mỗi mục tiêu.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "Lăng Kính Phòng Hộ",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Lux ném chiếc gậy phép của mình làm bẻ cong tia sáng quanh các đơn vị đồng minh chạm phải, bảo vệ họ khỏi sát thương nhận phải. ",
-            "dynamicDescription": "Lux ném cây gậy phép của mình, giúp tạo <shield>@TotalShieldTT@ Lá Chắn</shield> trong @Effect3Amount@ giây cho đồng minh nó đi qua. Sau đó quay trở lại, tiếp tục tạo lượng <shield>Lá Chắn</shield> tương đương trên đường về.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux ném gậy phép của mình, tạo <shield>@TotalShieldTT@ Lá Chắn</shield> trong @ShieldDuration@ giây cho các đồng minh mà nó đi qua. Sau đó nó quay trở lại, tạo <shield>Lá Chắn</shield> tương tự trên đường quay về.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "Quả Cầu Ánh Sáng",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Bắn một vòng xoáy năng lượng đến vị trí đã chọn, làm chậm kẻ địch cạnh bên. Lux có thể kích nổ gây sát thương tại vị trí đó. ",
-            "dynamicDescription": "Lux tạo ra một vùng ánh sáng <status>Làm Chậm</status> kẻ địch đi @Effect1Amount@% và làm lộ diện khu vực đó. Sau @Effect3Amount@ giây hoặc khi <recast>Tái kích hoạt</recast> Kỹ năng, nó sẽ phát nổ, gây <magicDamage>@TotalDamageTT@ sát thương phép</magicDamage> và tiếp tục <status>Làm Chậm</status> chúng thêm @SlowLingerDuration@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux tạo ra một vùng ánh sáng, <status>Làm Chậm</status> @SlowPercent@% và soi sáng khu vực xung quanh. Sau @SlowZoneDuration@ giây hoặc khi <recast>Tái Kích Hoạt</recast> Kỹ Năng này, nó sẽ phát nổ, gây <magicDamage>@TotalDamageTT@ sát thương phép</magicDamage> và <status>Làm Chậm</status> thêm @SlowLingerDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "Cầu Vồng Tối Thượng",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",

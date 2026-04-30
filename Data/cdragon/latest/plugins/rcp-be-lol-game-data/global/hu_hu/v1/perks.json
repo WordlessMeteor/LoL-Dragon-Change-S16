@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Halálos iram",
         "majorChangePatchVersion": "",
-        "tooltip": "Az ellenséges hősök elleni támadások 6 másodpercre %i:scaleAS%@ASPerStack@ támadási sebességet biztosítanak (legfeljebb 6 jelzőig). Maximális jelző elérésekor további @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>bónusz adaptív sebzést</font></lol-uikit-tooltipped-keyword> %i:OnHit% okoznak <OnHit>támadáskor</OnHit>.<br><br>Jelzők maximális időtartama: @f1@ másodperc<br>Okozott sebzés: @f2@<br><br>A rúna emellett követi a hősök ellen indított alaptámadásaid százalékos arányát a támadás készállásától számított 0.25 másodpercen belül, miután egy hős támadtál: @f3@% (@f4@/@f5@)",
+        "tooltip": "Az ellenséges hősök elleni támadások6 másodpercre %i:scaleAS%@ASPerStack@ támadási sebességet biztosítanak (legfeljebb 6 jelzőig). A maximális számú jelző elérésekor @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>bónusz adaptív sebzést</font></lol-uikit-tooltipped-keyword> okoznak %i:OnHit% <OnHit>támadáskor</OnHit>.<br><br>Jelzők maximális időtartama: @f1@ másodperc<br>Okozott sebzés: @f2@<br><br>A rúna emellett követi a hősök ellen indított alaptámadásaid százalékos arányát a támadás készen állásától számított 0.25 másodpercen belül, miután egy hősre támadtál: @f3@% (@f4@/@f5@)",
         "shortDesc": "Az ellenséges hősök elleni támadások támadási sebességet biztosítanak (legfeljebb 6 jelzőig). Maximális jelző elérésekor további <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>bónusz adaptív sebzést</font> okoznak</lol-uikit-tooltipped-keyword> támadáskor.",
         "longDesc": "Az ellenséges hősök elleni támadások 6 másodpercre [6% közelharcos || 4% távolsági harcos] támadási sebességet biztosítanak (legfeljebb 6 jelzőig). Maximális jelző elérésekor további [9–30 közelharcos || 6–24 távolsági harcos] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>bónusz adaptív sebzést okoznak támadáskor, ami a bónusz támadási sebesség minden 1%-a után 1%-kal nő</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Növekvő támadási sebesség",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Fázisroham",
-        "majorChangePatchVersion": "",
-        "tooltip": "Ha egy ellenséges hőst 4 másodpercen belül 3 támadással vagy <b>különálló</b> képességgel találsz el, 3 másodpercre <speed>@MoveSpeedCalc@ mozgási sebességet</speed> és <status>50% lassítás-ellenállást</status> kapsz.<br><br>Töltési idő: <attention>@CooldownCalc@ másodperc</attention><br><br>Összes aktiválás: <attention>@f1@</attention>",
-        "shortDesc": "Ha egy ellenséges hőst 3 <b>különálló</b> támadással vagy képességgel eltalálsz, rövid időre hirtelen megnő a <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>mozgási sebességed</lol-uikit-tooltipped-keyword> és a lassítás-ellenállásod. ",
-        "longDesc": "Ha egy ellenséges hőst 4 másodpercen belül 3 támadással vagy <b>különálló</b> képességgel találsz el, a szintedtől függően 3 másodpercre <speed>25–50% mozgási sebességet</speed> és <status>50% lassítás-ellenállást</status> kapsz. A mozgási sebesség távolsági hősök számára 50%-os hatékonyságú.<br>Töltési idő: 30–10 másodperc",
+        "name": "Viharos lendület",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Ha 3 másodperc alatt a hős maximális életerejének 25%-ával egyező sebzést okozol, 3 másodpercre <speed>@MoveSpeedCalc@ mozgási sebességre</speed> és <status>50% lassítás-ellenállásra</status> teszel szert.<br><br>Töltési idő: <attention>@CooldownCalc@ másodperc</attention><br><br>Összes aktiválás: <attention>@f1@</attention>",
+        "shortDesc": "A hős maximális életerejének 25%-ával egyező sebzés okozásakor rövid időre <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>mozgási sebességre</lol-uikit-tooltipped-keyword> és lassítás-ellenállásra teszel szert. ",
+        "longDesc": "Ha 3 másodperc alatt a hős maximális életerejének 25%-ával egyező sebzést okozol, 3 másodpercre <speed>40% mozgási sebességre</speed> és <status>50% lassítás-ellenállásra</status> teszel szert. A mozgási sebesség távolsági hősök számára 75%-os hatékonyságú.<br>Töltési idő: 20–10 másodperc",
         "recommendationDescriptor": "Sebességlöket",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Összes aktiválás: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "A Pusztítótűz érintése",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "A képességgel megsebzett hősök égni kezdenek, ami másodpercenként @DamageCalc@ adaptív sebzést okoz nekik. 3 másodperc égés után az égés sebzése 100%-kal nő, ha a célpont még mindig ég.<br><rules><br>Időtartam:<br>Egy célpont: 4 másodperc.<br>Területre ható képesség: 2 másodperc<br>Folyamatos sebzés: 1 másodperc<br></rules><br>@f1@ sebzést okoztál hősöknek a Pusztítótűz érintésének égetésével.",
+        "shortDesc": "A képességgel megsebzett hősök égni kezdenek, ami folyamatos sebzést okoz nekik.",
+        "longDesc": "A képességgel megsebzett hősök égni kezdenek, ami másodpercenként a szinttől függően 1–10 (+<scaleAP>0.03 varázserő</scaleAP>) (+<scaleAD>0.08 bónusz sebzés</scaleAD>) adaptív sebzést okoz nekik. 3 másodperc égés után az égés sebzése 100%-kal nő, ha a célpont még mindig ég.<br><rules><br>Időtartam:<br>Egy célpont: 4 másodperc.<br>Területre ható képesség: 2 másodperc<br>Folyamatos sebzés: 1 másodperc<br></rules>",
+        "recommendationDescriptor": "Képességek folyamatos sebzése",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            "Kiosztott égetési sebzés: @eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Őrző",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Pengezápor",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "{{ Item_Melee_Ranged_Split }}%-kal nő a támadási sebességed az ellenséges hősök elleni első legfeljebb @NumHits@ támadás idejére. <br><br>Töltési idő: @Cooldown@ mp.<br><hr><br>Pengezápor-támadások száma: @f1@<br>Pengezápor-támadások találati aránya: @f2@%<br><br><rules>A visszaállított alaptámadások +1 támadást biztosítanak.<br>Amíg aktív, ideiglenesen átlépheted a támadási sebesség felső határát.</rules>",
-        "shortDesc": "Jelentősen megnő a támadási sebességed az ellenséges hősök elleni első 3 támadás idejére.",
-        "longDesc": "160%-kal (távolsági harcosok esetében 80%-kal) nő a támadási sebességed az ellenséges hősök elleni első legfeljebb 3 támadás idejére.<br><br>Ha több mint 3 másodperc telik el a támadások között, a hatás véget ér.<br><br>Töltési idő: 10 mp.<br><br><rules>A visszaállított támadások +1 támadást biztosítanak.<br>Amíg aktív, ideiglenesen átlépheted a támadási sebesség felső határát.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Ellenséges hős megtámadásakor legfeljebb @NumHits@ támadás idejére {{ Item_Melee_Ranged_Split }}% támadási sebességet kapsz, és <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>bónusz tényleges sebzést</trueDamage> okozol.<br><br>Töltési idő: @Cooldown@ másodperc.<br><hr><br>Pengezápor-támadások száma: @f1@<br>Okozott sebzés: @f2@<br>A célba talált záportámadások aránya: @f3@%<br><br><rules>A visszaállított alaptámadások +1 támadást biztosítanak. A bónusz támadások maximális száma @MaxBonusHits@.<br>Amíg aktív, ideiglenesen átlépheted a támadási sebesség felső határát.</rules>",
+        "shortDesc": "Jelentősen megnő a támadási sebességed, és <trueDamage>bónusz tényleges sebzést</trueDamage> kapsz az ellenséges hősök elleni első 3 támadás idejére.",
+        "longDesc": "120%-kal (távolsági harcosok esetében 60%-kal) nő a támadási sebességed, és <trueDamage>bónusz tényleges sebzést</trueDamage> kapsz az ellenséges hősök elleni első legfeljebb 3 támadás idejére.<br><br>Ha több mint 3 másodperc telik el a támadások között, a hatás véget ér.<br><br>Töltési idő: 10 másodperc.<br>Találati sebzés: 4–20 (+0.08 bónusz sebzés, +0.06 varázserő) sebzés.<br><br><rules>A visszaállított támadások +1 támadást biztosítanak.<br>Amíg aktív, ideiglenesen átlépheted a támadási sebesség felső határát.</rules>",
         "recommendationDescriptor": "Támadássorozat",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Megnövelt támadási sebességgel végrehajtott támadások: @eogvar1@",
-            "Pengezápor támadások találati aránya: @eogvar2@%"
+            "Kiosztott sebzés: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Arcane üstökös",
         "majorChangePatchVersion": "",
-        "tooltip": "A képességgel megsebzett ellenfelekre egy üstökös zuhan, illetve ha a Misztikus üstökös éppen töltődik, csökkenti a hátralévő töltési idejét.<br><br>Sebzés: @DamageCalc@<br>Töltési idő: @CooldownCalc@másodperc<br><rules><br>Töltésiidő-csökkentés:<br>Egy célpont: 20%.<br>Területre ható: 10%.<br>Folyamatos sebzés: 5%.<br></rules><br>Az üstökösök @f3@%-a ért el találatot, és összesen @f1@ sebzést okoztak a hősöknek.",
+        "tooltip": "Egy üstökös zuhan a képességekkel megsebzett ellenfelek pozíciójára, és megnövelt sebzést okoz attól függően, hogy mennyire vannak távol.<br><br>Sebzés: @DamageCalc@<br>Töltési idő: @CooldownCalc@ másodperc<br><rules><br>A sebzésnövekedés 100%-os értékig erősödik 750 távolság mellett.<br></rules><br>A kilőtt üstökösök @f3@%-a talált, összesen @f1@ sebzést okozva hősöknek.",
         "shortDesc": "Egy sebzést okozó üstökös zuhan a képességekkel megsebzett ellenfelek pozíciójára.",
-        "longDesc": "A képességgel megsebzett ellenfelekre egy üstökös zuhan, illetve ha az Arcane üstökös éppen töltődik, csökkenti a hátralévő töltési idejét.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Adaptív sebzés</font></lol-uikit-tooltipped-keyword>: 30–130, a szinttől függően (<scaleAP>+0.05 varázserő</scaleAP> és <scaleAD>+0.1 bónusz sebzés</scaleAD>)<br>Töltési idő: 20–8másodperc<br><rules><br>Töltésiidő-csökkentés:<br>Egy célpont: 20%.<br>Területre ható: 10%.<br>Folyamatos sebzés: 5%.<br></rules>",
+        "longDesc": "Egy üstökös zuhan a képességekkel megsebzett ellenfelek pozíciójára, és a távolságtól függően megnövelt sebzést okoz.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Adaptív sebzés</font></lol-uikit-tooltipped-keyword>: 15–100, a szinttől függően (<scaleAP>+0.05 varázserő</scaleAP> és <scaleAD>+0.1 bónusz sebzés</scaleAD>)<br>Töltési idő: 20–8 másodperc<br><rules><br>A sebzésnövekedés 100%-os értékig erősödik 750 távolságnál.<br></rules>",
         "recommendationDescriptor": "Képesség sebzése",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

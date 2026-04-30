@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Veigar": {
             "id": "Veigar",
@@ -809,7 +809,7 @@
                     "id": "VeigarEventHorizon",
                     "name": "扭曲空间",
                     "description": "维迦扭曲空间的边缘，创造一个牢笼来使途径的敌人晕眩。",
-                    "tooltip": "维迦扭曲空间的边缘，创造一个牢笼来使途径的敌人<status>晕眩</status>{{ e1 }}秒。牢笼持续3秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "维迦扭曲空间的边缘，创造一个牢笼来使途经的敌人<status>晕眩</status>{{ stunduration }}秒。牢笼持续3秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "晕眩时长：",
@@ -817,7 +817,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ stunduration }} -> {{ stundurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]

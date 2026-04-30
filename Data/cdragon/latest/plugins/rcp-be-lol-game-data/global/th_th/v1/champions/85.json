@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "Kennen",
     "alias": "Kennen",
     "title": "แก่นพายุโหม",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ทุก ๆ การโจมตีปกติไม่กี่ครั้งของ Kennen เขาจะสร้างความเสียหายเพิ่ม และติดตราประทับสายฟ้า (Mark of the Storm) แก่เป้าหมาย เขาสามารถกดใช้สกิลนี้เพื่อสร้างความเสียหาย และติดตราประทับสายฟ้าเพิ่มแก่เป้าหมายทุกตัวที่มีตราประทับสายฟ้าอยู่ก่อนแล้ว",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> ทุก ๆ การโจมตีครั้งที่ 5 จะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @TotalDamagePassive@ หน่วย</magicDamage><br><br><spellActive>กดใช้:</spellActive> Kennen ปล่อยกระแสไฟฟ้าสร้าง<magicDamage>ความเสียหายเวท @TotalDamageActive@ หน่วย</magicDamage>ให้กับศัตรูที่อยู่ใกล้ ๆ ที่ได้รับเอฟเฟกต์จาก<spellName> Mark of the Storm</spellName><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> การโจมตีครั้งที่ 5 จะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @TotalDamagePassive@ หน่วย</magicDamage>แบบ <OnHit>On-Hit</OnHit> %i:OnHit%<br><br><spellActive>กดใช้:</spellActive> Kennen ปล่อยกระแสไฟฟ้าสร้าง<magicDamage>ความเสียหายเวท @TotalDamageActive@ หน่วย</magicDamage> แก่ศัตรูใกล้เคียงที่ได้รับผลจาก<spellName> Mark of the Storm</spellName><br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Kennen กลายร่างเป็นไฟฟ้า ทำให้เขาสามารถเคลื่อนที่ผ่านยูนิตต่าง ๆ และติด Mark of the Storm ให้แก่พวกเขา Kennen ได้รับความเร็วเคลื่อนที่เมื่อเข้าสู่ร่างนี้ และได้รับความเร็วโจมตีเมื่อกลับสู่ร่างเดิม",
-            "dynamicDescription": "Kennen แปรสภาพเป็นลูกบอลไฟฟ้า ได้รับ<speed>ความเร็วเคลื่อนที่ @MovementSpeed*100@%</speed> สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@&nbsp;หน่วย</magicDamage>ให้กับศัตรูทุกตัวที่เขาวิ่งผ่าน และเคลื่อนที่ทะลุยูนิตได้เป็นเวลา @DurationAsBall@ วินาที หาก Kennen สร้างความเสียหายให้กับศัตรูอย่างน้อยหนึ่งตัว เขาจะได้รับ Energy @EnergyRefund@ หน่วย<br><br>หากสกิลนี้สิ้นสุดลง Kennen จะได้รับ<attackSpeed>ความเร็วโจมตี @AttackSpeed*100@%</attackSpeed> เป็นเวลา @DurationAfterBall@ วินาที Kennen สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อหยุดสกิลนี้ก่อนเวลาได้@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen แปรสภาพเป็นลูกบอลสายฟ้า ได้รับ<speed>ความเร็วเคลื่อนที่ @MovementSpeed*100@%</speed> สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูทุกตัวที่วิ่งผ่าน และเคลื่อนที่ทะลุยูนิตได้เป็นเวลา @DurationAsBall@ วินาที หาก Kennen สร้างความเสียหายแก่ศัตรูอย่างน้อยหนึ่งตัว เขาจะได้รับ Energy @EnergyRefund@ หน่วย<br><br>หลังจากสกิลนี้สิ้นสุด Kennen จะได้รับ<attackSpeed>ความเร็วโจมตี @TotalAS*100@%</attackSpeed> เป็นเวลา @DurationAfterBall@ วินาที การโจมตีคริติคอลจะยืดระยะเวลาของสกิลนี้ @CritDurationBonus@ วินาที Kennen สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อหยุดสกิลนี้ก่อนเวลาได้@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "Kennen",
     "alias": "Kennen",
     "title": "El Corazón de la Tempestad",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Kennen inflige daño adicional de forma pasiva y añade a su objetivo una Marca de la tormenta cada varios ataques. Puede activar esta habilidad para dañar y añadir otra Marca de la tormenta a los objetivos que ya están marcados.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Cada quinto ataque inflige <magicDamage>@TotalDamagePassive@ de daño mágico adicional</magicDamage>.<br><br><spellActive>Activa:</spellActive> Kennen lanza una explosión de electricidad que inflige <magicDamage>@TotalDamageActive@ de daño mágico</magicDamage> a los enemigos cercanos afectados por <spellName>Marca de la tormenta</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Cada 5 ataques, inflige <magicDamage>@TotalDamagePassive@ de daño mágico</magicDamage> adicional %i:OnHit% <OnHit>al impactar</OnHit>.<br><br><spellActive>Activa:</spellActive> Kennen lanza una explosión de electricidad que inflige <magicDamage>@TotalDamageActive@ de daño mágico</magicDamage> a los enemigos cercanos afectados por <spellName>Marca de la tormenta</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Kennen adopta la forma de un rayo, lo que le permite atravesar a las unidades y aplicar una Marca de la tormenta. Kennen obtiene velocidad de movimiento cuando adopta esta forma y velocidad de ataque cuando la abandona.",
-            "dynamicDescription": "Kennen se convierte en una bola de rayos, obtiene un <speed>@MovementSpeed*100@% de velocidad de movimiento</speed>, inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos que atraviesa y se vuelve fantasmal durante @DurationAsBall@ s. Si Kennen daña al menos a un enemigo, obtiene @EnergyRefund@ de energía. <br><br>Cuando la habilidad termina, Kennen obtiene un <attackSpeed>@AttackSpeed*100@% de velocidad de ataque</attackSpeed> durante @DurationAfterBall@ s. Kennen puede <recast>reactivar</recast> esta habilidad para que termine antes.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen se convierte en una bola de rayos, obtiene un <speed>@MovementSpeed*100@% de velocidad de movimiento</speed>, inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos que atraviesa y se vuelve fantasmal durante @DurationAsBall@ s. Si Kennen daña al menos a un enemigo, obtiene @EnergyRefund@ de energía. <br><br>Cuando la habilidad termina, Kennen obtiene un <attackSpeed>@TotalAS*100@% de velocidad de ataque</attackSpeed> durante @DurationAfterBall@ s. Los impactos críticos aumentan la duración en @CritDurationBonus@ s. Kennen puede <recast>reactivar</recast> esta habilidad para que termine antes.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

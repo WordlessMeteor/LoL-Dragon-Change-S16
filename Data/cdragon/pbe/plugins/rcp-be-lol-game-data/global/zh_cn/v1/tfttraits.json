@@ -5220,7 +5220,7 @@
         "trait_id": "TFT15_BattleAcademia",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_BattleClub.TFT_Set15.png",
-        "tooltip_text": "【战斗学院】弈子升级技能并获得潜能%i:set14AmpIcon%。潜能将强化其技能。<br><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) 解！锁！真！实！潜！能！</row>",
+        "tooltip_text": "【战斗学院】弈子升级技能并获得潜能%i:set14AmpIcon%。潜能将强化其技能。<br><ShowIf.TFT15_BattleAcademia_NoPrismatic><br><rules>棱彩条件：登场【(7) 战斗学院】，然后通过给弈子们配备装备来赚取@PrismaticItemRequirement@点数。</rules><br></ShowIf.TFT15_BattleAcademia_NoPrismatic><ShowIf.TFT15_BattleAcademia_PrismaticPending><br><TFTRadiantItemBonus>棱彩条件：</TFTRadiantItemBonus>一个弈子在战斗中使用的每件成装提供1点数。在@PrismaticItemRequirement@点数时毕业。(@TFTUnitProperty.trait:TFT15_BattleAcademia_PrismaticNumItems@/@PrismaticItemRequirement@)。<br></ShowIf.TFT15_BattleAcademia_PrismaticPending><ShowIf.TFT15_BattleAcademia_PrismaticActive><br><TFTRadiantItemBonus><br>真实潜能已解锁：+@UltimateNumPotential@ %i:set14AmpIcon%</TFTRadiantItemBonus><br></ShowIf.TFT15_BattleAcademia_PrismaticActive><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row>  ",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -5292,28 +5292,8 @@
                     }
                 ],
                 "min_units": 7,
-                "max_units": 8,
                 "style_idx": 5,
                 "style_name": "kGold"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "DA",
-                        "value": 0.75
-                    },
-                    {
-                        "name": "DR",
-                        "value": 0.4
-                    },
-                    {
-                        "name": "NumPotential",
-                        "value": 12.0
-                    }
-                ],
-                "min_units": 10,
-                "style_idx": 6,
-                "style_name": "kChromatic"
             }
         ]
     },
@@ -6761,7 +6741,7 @@
         "trait_id": "TFT15_SoulFighter",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_SoulFighter.TFT_Set15.png",
-        "tooltip_text": "【斗魂战士】们获得额外生命值，并且每秒获得物理加成和法术加成，至多至@MaxStacks@层。在最大层数时，造成额外真实伤害。<br><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>最！大！斗！魂！能！量！<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%，@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%，+@BonusTrueDamage*100@%伤害</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%，@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%，+@BonusTrueDamage*100@%伤害</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%，@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%，+@BonusTrueDamage*100@%伤害</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%，@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%，+@BonusTrueDamage*100@%伤害</row><br><row>(@MinUnits@) 最！大！斗！魂！能！量！</row>",
+        "tooltip_text": "【斗魂战士】们获得额外生命值，并且每秒获得物理加成和法术加成，至多至@MaxStacks@层。在最大层数时，造成额外真实伤害。<br><ShowIf.TFT15_SoulFighter_NoPrismatic><br><rules>棱彩条件：登场(8)，然后赢得@PlayerDamageToPrismatic@场玩家对战。</rules><br></ShowIf.TFT15_SoulFighter_NoPrismatic><ShowIf.TFT15_SoulFighter_PrismaticPending><br><TFTRadiantItemBonus>棱彩条件：</TFTRadiantItemBonus>赢得@PlayerDamageToPrismatic@场玩家对战。(@TFTUnitProperty.trait:TFT15_SoulFighter_PlayerDamageDealt@)<br></ShowIf.TFT15_SoulFighter_PrismaticPending><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>最！大！斗！魂！能！量！<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%，@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%，+@BonusTrueDamage*100@%伤害</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%，@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%，+@BonusTrueDamage*100@%伤害</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%，@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%，+@BonusTrueDamage*100@%伤害</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%，@StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%，+@BonusTrueDamage*100@%伤害</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -6865,32 +6845,8 @@
                     }
                 ],
                 "min_units": 8,
-                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "BonusTrueDamage",
-                        "value": 0.3
-                    },
-                    {
-                        "name": "FlatHealth",
-                        "value": 700.0
-                    },
-                    {
-                        "name": "MaxStacks",
-                        "value": 8.0
-                    },
-                    {
-                        "name": "StatsPerSecond",
-                        "value": 0.04
-                    }
-                ],
-                "min_units": 10,
-                "style_idx": 6,
-                "style_name": "kChromatic"
             }
         ]
     },
@@ -6980,7 +6936,7 @@
         "trait_id": "TFT15_StarGuardian",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_StarGuardian.png",
-        "tooltip_text": "【星之守护者】们各有一个独特团队加成，会提供给所有【星之守护者】。每个已登场的【星之守护者】都会提升这个加成！<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>棱彩条件：登场(10)，然后群。星。觉。醒。</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>棱彩条件：</TFTRadiantItemBonus>花费@ManaToPrismatic@法力值  (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>群。星。觉。醒。</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>【芮尔】：</status>获得@TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@护盾值</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>【芮尔】：获得护盾值</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>【辛德拉】：</status>每@SyndraTimer@秒获得@TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@%法术加成</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>【辛德拉】：获得法术加成</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>【霞】：</status>每第3次攻击造成<magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@(每个阶段获得提升)</magicDamage>魔法伤害</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>【霞】： 攻击附带魔法伤害</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>【阿狸】：</status>施放后，在@AhriDuration@秒里持续获得@TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@法力值</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>【阿狸】：施放时，获得法力值</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>【妮蔻】：</status>+@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@%治疗和护盾效果</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>【妮蔻】：提升治疗和护盾效果</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>【波比】：</status>在40%生命值，治疗@TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@% %i:scaleHealth%</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>【波比】： 在低生命值时获得治疗</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>【金克丝】：</status>+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@%攻击速度，参与击杀后+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@% %i:scaleAS%，3秒里持续衰减</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>【金克丝】：获得攻击速度</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>【萨勒芬妮】</status>获得@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth%和@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@% %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>【萨勒芬妮】：获得每种属性</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>纹章：</status>将各个加成提升@EmblemBonus*100@%！</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>纹章：提升其它各个加成。</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
+        "tooltip_text": "【星之守护者】们各有一个独特团队加成，会提供给所有【星之守护者】。每个已登场的【星之守护者】都会提升这个加成！<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>棱彩条件：登场(8)，然后花费@ManaToPrismatic@法力值。</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>棱彩条件：</TFTRadiantItemBonus>花费@ManaToPrismatic@法力值  (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>群。星。觉。醒。</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>【芮尔】：</status>获得@TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@护盾值</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>【芮尔】：获得护盾值</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>【辛德拉】：</status>每@SyndraTimer@秒获得@TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@%法术加成</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>【辛德拉】：获得法术加成</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>【霞】：</status>每第3次攻击造成<magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@(每个阶段获得提升)</magicDamage>魔法伤害</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>【霞】： 攻击附带魔法伤害</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>【阿狸】：</status>施放后，在@AhriDuration@秒里持续获得@TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@法力值</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>【阿狸】：施放时，获得法力值</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>【妮蔻】：</status>+@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@%治疗和护盾效果</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>【妮蔻】：提升治疗和护盾效果</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>【波比】：</status>在40%生命值，治疗@TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@% %i:scaleHealth%</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>【波比】： 在低生命值时获得治疗</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>【金克丝】：</status>+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@%攻击速度，参与击杀后+@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@% %i:scaleAS%，3秒里持续衰减</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>【金克丝】：获得攻击速度</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>【萨勒芬妮】</status>获得@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth%和@TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@% %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>【萨勒芬妮】：获得每种属性</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>纹章：</status>将各个加成提升@EmblemBonus*100@%！</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>纹章：提升其它各个加成。</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -7152,6 +7108,18 @@
                 "constants": [
                     {
                         "name": "Multiplier",
+                        "value": 1.18
+                    }
+                ],
+                "min_units": 8,
+                "max_units": 8,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Multiplier",
                         "value": 1.2
                     }
                 ],
@@ -7165,6 +7133,29 @@
                     {
                         "name": "Multiplier",
                         "value": 1.2
+                    }
+                ],
+                "min_units": 9,
+                "max_units": 9,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Multiplier",
+                        "value": 1.5
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Multiplier",
+                        "value": 2.0
                     }
                 ],
                 "min_units": 10,
@@ -7356,7 +7347,7 @@
                     },
                     {
                         "name": "StatBonus",
-                        "value": 0.1
+                        "value": 0.05
                     },
                     {
                         "name": "XPPerReroll",
@@ -15077,7 +15068,7 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "在输掉1场玩家对战后，获得@TechPerCombat@【科技点】，并且会额外增加相当于你连败回合数@TechPerLoss@倍的【科技点】。此外，每个【幻灵战队】参与击杀时都会获得@TechPerKill@【科技点】。<br><br>每当【幻灵战队】们获得@TechBreakpoint@【科技点】，他们就会制造新的幻灵武器原型。你可以选择立刻拿走这些装备，或者保留你的【科技点】直到下一次获取更加强力的武器。<br><br><row>(@MinUnits@) 研发启动！</row><br><row>(@MinUnits@) 在赢得一场玩家对战之后，获得战利品！</row><br><br><ShowIf.TFT17_AnimaSquad_IsDoubleUp><rules>在双人作战中，如果你的搭档赢得了一场对战，那么你在输掉时会获得@PairsPartnerWinMultiplier*100@%【科技点】。</rules></ShowIf.TFT17_AnimaSquad_IsDoubleUp>",
+        "tooltip_text": "在输掉1场玩家对战后，获得@TechPerCombat@【科技点】，并且会额外增加相当于你连败回合数@TechPerLoss@倍的【科技点】。此外，每个【幻灵战队】参与击杀时都会获得@TechPerKill@【科技点】。<br><br>每当【幻灵战队】们获得@TechBreakpoint@科技点，他们就会制造新的幻灵武器原型。你可以选择立刻拿走这些装备，或者保留你的【科技点】直到下一次获取更加强力的武器。<br><br><row>(@MinUnits@) 研发启动！</row><br><row>(@MinUnits@) 在赢得一场玩家对战之后，获得战利品！</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15393,7 +15384,7 @@
         "trait_id": "TFT17_DarkStar",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) 【暗星】创造【黑洞】，【黑洞】会吞噬最大生命值低于<ShowIf.TFT17_DarkStar_HasNeutronStar><TFTBonus>@TFTUnitProperty.trait:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@%</TFTBonus></ShowIf.TFT17_DarkStar_HasNeutronStar><ShowIfNot.TFT17_DarkStar_HasNeutronStar>@ExecuteHPPercent*100@%</ShowIfNot.TFT17_DarkStar_HasNeutronStar>的敌人。</row><br><row>(@MinUnits@) 并且他们获得@ADAP@% %i:scaleAD%%i:scaleAP%。</row><br><row>(@MinUnits@) 并且最强大的【暗星】单位进入【超大质量】状态，获得@SupermassivePercentBonus*100@%效能的【暗星】加成，并生成2个小型【黑洞】。</row><br><row>(@MinUnits@) 所有的【暗星】进入【超大质量】状态。达到10级后，吞！噬！天！地！万！物！。</row>",
+        "tooltip_text": "<row>(@MinUnits@) 【暗星】创造【黑洞】，【黑洞】会吞噬最大生命值低于@ExecuteHPPercent*100@%的敌人。</row><br><row>(@MinUnits@) 并且他们获得@ADAP@% %i:scaleAD%%i:scaleAP%。</row><br><row>(@MinUnits@) 并且最强大的【暗星】单位进入【超大质量】状态，获得@SupermassivePercentBonus*100@%效能的【暗星】加成，并生成2个小型【黑洞】。</row><br><row>(@MinUnits@) 所有的【暗星】进入【超大质量】状态。达到10级后，吞！噬！天！地！万！物！。</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16024,17 +16015,17 @@
         "trait_id": "TFT17_MorganaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
-        "tooltip_text": "你的队伍获得@Durability*100@%伤害减免%i:scaleDurability%，在【莫甘娜】处于她的【黑暗形态】之中时，该数值提升至@TransformedDurability*100@%。",
+        "tooltip_text": "友军受到的技能伤害减少@UntransformedAbilityDA*100@%，当莫甘娜处于【黑暗形态】时，该效果提升至@TransformedAbilityDA*100@%。",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "Durability",
-                        "value": 0.05
+                        "name": "TransformedAbilityDA",
+                        "value": 0.1
                     },
                     {
-                        "name": "TransformedDurability",
-                        "value": 0.1
+                        "name": "UntransformedAbilityDA",
+                        "value": 0.05
                     }
                 ]
             }
@@ -16296,7 +16287,7 @@
         "trait_id": "TFT17_RhaastUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Redeemer.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) 每激活一个非单人羁绊，你的队伍获得@BonusOffensiveStat1*100@%/@BonusOffensiveStat2*100@%/@BonusOffensiveStat3*100@%攻击速度，和@BonusDefensiveStat1@/@BonusDefensiveStat2@/@BonusDefensiveStat3@护甲和魔抗。</row><br><br>队伍获得的攻击速度：@TFTUnitProperty.trait:TFT17_RhaastUnique_OffensiveStatToGain@% %i:scaleAS%<br>队伍获得的双抗：@TFTUnitProperty.trait:TFT17_RhaastUnique_DefensiveStatToGain@ %i:scaleArmor%%i:scaleMR%",
+        "tooltip_text": "<row>(@MinUnits@) 每激活一个非唯一羁绊，你的队伍获得@BonusOffensiveStat1*100@%/@BonusOffensiveStat2*100@%/@BonusOffensiveStat3*100@%攻击速度，和@BonusDefensiveStat1@/@BonusDefensiveStat2@/@BonusDefensiveStat3@护甲和魔抗。</row><br><br>队伍获得的攻击速度：@TFTUnitProperty.trait:TFT17_RhaastUnique_OffensiveStatToGain@% %i:scaleAS%<br>队伍获得的双抗：@TFTUnitProperty.trait:TFT17_RhaastUnique_DefensiveStatToGain@ %i:scaleArmor%%i:scaleMR%",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -16607,20 +16598,12 @@
                         "value": 0.1
                     },
                     {
-                        "name": "Fountain_HealthRegen",
-                        "value": 0.04
-                    },
-                    {
-                        "name": "Fountain_HealthRegen_Teamwide",
-                        "value": 0.02
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
                     },
                     {
                         "name": "Huntress_AS_Teamwide",
                         "value": 0.15
-                    },
-                    {
-                        "name": "MaxStacks",
-                        "value": 0.0
                     },
                     {
                         "name": "Medallion_DA_Teamwide",
@@ -16709,8 +16692,12 @@
                         "value": 10.0
                     },
                     {
-                        "name": "Fountain_StackingADAP",
-                        "value": 2.0
+                        "name": "Fountain_HealPercent",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 3.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -16801,7 +16788,11 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_StackingADAP",
+                        "name": "Fountain_HealPercent",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
                         "value": 4.0
                     },
                     {
@@ -16889,8 +16880,12 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_StackingADAP",
-                        "value": 4.0
+                        "name": "Fountain_HealPercent",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -17105,25 +17100,13 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>泉水</TFTStargazer>。<br><br>强化格内的友军每@Fountain_Interval@秒治疗@Fountain_HealthRegen_Teamwide*100@%最大生命值。强化格内的【观星者】额外治疗@Fountain_HealthRegen*100@%并且每@Fountain_Interval@秒获得可叠加的物理加成和法术加成。<br><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><br><rules>玩家每提升1级，就会有更多的格子显露出来</rules>",
+        "tooltip_text": "【观星者】每局游戏会观测到一个不同的星座。本局游戏：<TFTStargazer>泉水</TFTStargazer>。<br><br>强化格内的友军获得@Fountain_ManaRegen_Teamwide@法力回复。强化格内的【观星者】获得更多，并且他们的技能现在会治疗最低生命值的友军。<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%，@Fountain_HealPercent*100@%技能伤害治疗</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%，@Fountain_HealPercent*100@%技能伤害治疗</row><br><br><rules>玩家每提升1级，就会有更多的格子显露出来</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealthRegen",
-                        "value": 0.04
-                    },
-                    {
-                        "name": "Fountain_HealthRegen_Teamwide",
-                        "value": 0.02
-                    },
-                    {
-                        "name": "Fountain_Interval",
-                        "value": 2.0
-                    },
-                    {
-                        "name": "MaxStacks",
-                        "value": 0.0
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
                     }
                 ]
             }
@@ -17132,8 +17115,12 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_StackingADAP",
-                        "value": 2.0
+                        "name": "Fountain_HealPercent",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 1.0
                     }
                 ],
                 "min_units": 3,
@@ -17144,8 +17131,12 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_StackingADAP",
-                        "value": 4.0
+                        "name": "Fountain_HealPercent",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
                     }
                 ],
                 "min_units": 5,
@@ -24817,7 +24808,7 @@
                     },
                     {
                         "name": "Tier1Heal",
-                        "value": 1.0
+                        "value": 2.0
                     },
                     {
                         "name": "Tier1HealDU",

@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "Kennen",
     "alias": "Kennen",
     "title": "Serce Nawałnicy",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "W trybie biernym Kennen zadaje dodatkowe obrażenia i co kilka ataków nakłada na cel Znak Burzy. Aktywacja umiejętności zadaje obrażenia i dodaje kolejny znak oznaczonemu już celowi.",
-            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Co 5. atak zadaje dodatkowo <magicDamage>@TotalDamagePassive@ pkt. obrażeń magicznych</magicDamage>.<br><br><spellActive>Użycie:</spellActive> Kennen wyzwala elektryczny wybuch, zadając <magicDamage>@TotalDamageActive@ pkt. obrażeń magicznych</magicDamage> pobliskim wrogom dotkniętym <spellName>Znakiem Burzy</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Co 5. atak zadaje dodatkowo <magicDamage>@TotalDamagePassive@ pkt. obrażeń magicznych</magicDamage> %i:OnHit% <OnHit>przy trafieniu</OnHit>.<br><br><spellActive>Użycie:</spellActive> Kennen wyzwala elektryczny wybuch, zadając <magicDamage>@TotalDamageActive@ pkt. obrażeń magicznych</magicDamage> pobliskim wrogom dotkniętym <spellName>Znakiem Burzy</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Kennen zmienia się w błyskawicę, co pozwala mu na przenikanie przez jednostki i nakładanie na nie Znaku Burzy. Kennen zyskuje prędkość ruchu, przyjmując postać błyskawicy, a kiedy wraca do swojej normalnej postaci, otrzymuje prędkość ataku.",
-            "dynamicDescription": "Kennen na @DurationAsBall@ sek. zmienia się w kłębek błyskawic, zyskuje <speed>@MovementSpeed*100@% prędkości ruchu</speed>, może przenikać przez jednostki i zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom, przez których przeniknie. Jeśli Kennen zada obrażenia co najmniej jednemu wrogowi, zyskuje @EnergyRefund@ pkt. Energii.<br><br>Po zakończeniu działania tej umiejętności Kennen zyskuje <attackSpeed>@AttackSpeed*100@% prędkości ataku</attackSpeed> na @DurationAfterBall@ sek. Kennen może <recast>ponownie użyć</recast> tej umiejętności, by zakończyć ją wcześniej.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen na @DurationAsBall@ sek. zmienia się w kłębek błyskawic, zyskuje <speed>@MovementSpeed*100@% prędkości ruchu</speed>, może przenikać przez jednostki i zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom, przez których przeniknie. Jeśli Kennen zada obrażenia co najmniej jednemu wrogowi, zyskuje @EnergyRefund@ pkt. Energii.<br><br>Po zakończeniu działania tej umiejętności Kennen zyskuje <attackSpeed>@TotalAS*100@% prędkości ataku</attackSpeed> na @DurationAfterBall@ sek. Udziały w zabójstwach przedłużają czas trwania o @CritDurationBonus@ sek. Kennen może <recast>ponownie użyć</recast> tej umiejętności, by zakończyć ją wcześniej.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

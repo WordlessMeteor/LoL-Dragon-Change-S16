@@ -1,5 +1,6 @@
 {
     "id": 56,
+    "contentId": "3795a4c7-9400-4719-a493-598b6315b006",
     "name": "ノクターン",
     "alias": "Nocturne",
     "title": "終わりなき悪夢",
@@ -814,7 +815,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定方向に影の刃を投げてダメージを与える。刃の軌跡や命中した敵チャンピオンが残す影の上にいる間はユニットをすり抜けられ、移動速度と攻撃力が増加する。",
-            "dynamicDescription": "影の刃を投げて<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、刃の軌跡に@Effect3Amount@秒間影を残す。命中した敵チャンピオンの後にも影が残る。 <br><br>自身は影の上にいる間はゴースト化し、<speed>移動速度が@MoveSpeed@%</speed>、<physicalDamage>攻撃力が@BonusTrailAD@</physicalDamage>増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "影の刃を投げて<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、刃の軌跡に@TrailDuration@秒間影を残す。命中した敵チャンピオンの後にも影が残る。<br><br>自身は影の上にいる間はゴースト化し、<speed>移動速度が@MoveSpeed@%</speed>、<physicalDamage>攻撃力が@BonusTrailAD@</physicalDamage>増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 1125.0,
                 1125.0,
@@ -964,7 +965,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自動効果: 刃に念が送られ、攻撃速度が増加する。<br><br>発動効果: 魔法のバリアを張って敵のスキルを一度だけ無効化する。無効化成功後は自動効果による攻撃速度の増加率が倍になる。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <attackSpeed>攻撃速度が@Effect1Amount@%</attackSpeed>増加する。<br><br><spellActive>発動効果:</spellActive> 1.5秒間、次の敵のスキルを無効化する影のバリアを展開する。無効化に成功すると@Effect4Amount@秒間、このスキルの自動効果が<attackSpeed>@Effect1Amount*2@%の攻撃速度</attackSpeed>に増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <attackSpeed>攻撃速度が@ActiveAS@%</attackSpeed>増加する。<br><br><spellActive>発動効果:</spellActive> 1.5秒間、次に敵から受けるスキルをブロックする影のバリアを作り出す。これでスキルをブロックすると、このスキルの自動効果が@DoubleASDuration@秒間強化されて<attackSpeed>攻撃速度が@ActiveAS*2@%</attackSpeed>増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -1114,7 +1115,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "対象におぞましい悪夢を見せ、毎秒ダメージを与える。効果終了までに範囲内から抜け出せなかった対象にはフィアー効果を与える。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <status>フィアー効果</status>を受けた敵に向かう際に<speed>移動速度が@TooltipFearMS*100@%</speed>増加する。<br><br><spellActive>発動効果:</spellActive> 自身を対象と繋ぐことで悪夢を見せ、@Effect3Amount@秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。繋がりが最後まで解けなかった場合は、対象に@Effect2Amount@秒間<status>フィアー効果</status>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <status>フィアー効果</status>を受けた敵に向かう際に<speed>移動速度が@TooltipFearMS*100@%</speed>増加する。<br><br><spellActive>発動効果:</spellActive> 自身を対象と繋ぐことで悪夢を見せ、@LeashDuration@秒かけて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。繋がりが最後まで解けなかった場合は、対象に@CCDuration@秒間<status>フィアー効果</status>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,

@@ -1,5 +1,6 @@
 {
     "id": 26,
+    "contentId": "829f170b-4fcf-413b-9ff5-e598fd4412e9",
     "name": "Zilean",
     "alias": "Zilean",
     "title": "Strážce času",
@@ -573,10 +574,10 @@
             "isBase": false,
             "name": "Magický Zilean",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.SKINS_Zilean_Skin24.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.SKINS_Zilean_Skin24.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.SKINS_Zilean_Skin24.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.SKINS_Zilean_Skin24.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -751,7 +752,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Hodí do zaměřené oblasti bombu, která se přilepí na jednotku, jež se ocitne v její blízkosti (upřednostňuje šampiony). Nálož po 3&nbsp;sekundách vybuchne a způsobí plošné poškození. Pokud Časovaná bomba vybuchne předčasně kvůli jiné Časované bombě, exploze zasažené nepřátele navíc omráčí.",
-            "dynamicDescription": "Zilean hodí zpožděnou časovou bombu, která se přichytí k první jednotce, jež vstoupí do malé oblasti kolem ní. Po @Effect2Amount@&nbsp;sek. zařízení vybuchne a způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.<br><br>V případě umístění druhé bomby na jednotku, která už na sobě jednu má, vybuchne ta první okamžitě a nepřátelé v dosahu exploze budou na @Effect4Amount@&nbsp;sek. <status>omráčeni</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean hodí zpožděnou časovou bombu, která se přichytí k první jednotce, jež vstoupí do malé oblasti kolem ní. Po @FuseDuration@&nbsp;sek. zařízení vybuchne a způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.<br><br>V případě umístění druhé bomby na jednotku, která už na sobě jednu má, vybuchne ta první okamžitě a nepřátelé v dosahu exploze budou na @StunDuration@&nbsp;sek. <status>omráčeni</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +899,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ many",
+            "cost": "@ManaCost@ many",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Zilean se může připravit na budoucí střety a zkrátit si přebíjecí doby všech ostatních základních schopností.",
-            "dynamicDescription": "Zilean přetočí čas a zkrátí si přebíjecí doby svých ostatních základních schopností o @Effect2Amount@&nbsp;sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean přetočí čas a zkrátí si přebíjecí doby ostatních základních schopností o @CooldownReduction@&nbsp;sek.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +942,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1052,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Zilean zakřiví čas kolem libovolné jednotky, čímž po krátkou dobu sníží rychlost pohybu protivníkovi či zvýší rychlost pohybu zvolenému spojenci.",
-            "dynamicDescription": "Zilean na @Effect1Amount@&nbsp;sek. <status>zpomalí</status> nepřátelského šampiona o @Effect2Amount@&nbsp;% nebo poskytne spojeneckému šampionovi <speed>@Effect2Amount@&nbsp;% k rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean na @Duration@&nbsp;sek. <status>zpomalí</status> nepřátelského šampiona o @SpeedAmount@&nbsp;% nebo poskytne spojeneckému šampionovi <speed>@SpeedAmount@&nbsp;% k rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

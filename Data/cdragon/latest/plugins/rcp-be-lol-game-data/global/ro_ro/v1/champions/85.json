@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "Kennen",
     "alias": "Kennen",
     "title": "inima furtunii",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Kennen provoacă în mod pasiv daune suplimentare și aplică un ''Însemn al furtunii'' țintei sale la fiecare câteva atacuri; poate activa această abilitate pentru a provoca daune și a aplica încă un ''Însemn al furtunii'' țintelor deja marcate.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> fiecare al 5-lea atac provoacă <magicDamage>@TotalDamagePassive@ daune magice</magicDamage> bonus.<br><br><spellActive>Activă:</spellActive> Kennen lansează o explozie de electricitate, provocându-le <magicDamage>@TotalDamageActive@ daune magice</magicDamage> inamicilor din apropiere afectați de <spellName>''Însemnul furtunii''</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> fiecare al 5-lea atac provoacă încă <magicDamage>@TotalDamagePassive@ daune magice</magicDamage> %i:OnHit% <OnHit>la impact</OnHit>.<br><br><spellActive>Activă:</spellActive> Kennen lansează o explozie de electricitate, provocându-le <magicDamage>@TotalDamageActive@ daune magice</magicDamage> inamicilor din apropiere afectați de <spellName>''Însemnul furtunii''</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Kennen se transformă în fulger, putând să treacă prin unități, cărora le aplică un ''Însemn al furtunii''. Kennen primește viteză de mișcare bonus când intră în această stare și apoi viteză de atac bonus după încheierea efectului.",
-            "dynamicDescription": "Kennen se transformă într-o minge de fulgere, primind <speed>@MovementSpeed*100@% viteză de mișcare</speed>, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor prin care trece și primind efectul ''Fantomă'' timp de @DurationAsBall@ secunde. În cazul în care Kennen îi provoacă daune cel puțin unui inamic, primește @EnergyRefund@ energie. <br><br>După ce abilitatea se încheie, Kennen primește <attackSpeed>@AttackSpeed*100@% viteză de atac</attackSpeed> timp de @DurationAfterBall@ secunde. Kennen poate <recast>refolosi</recast> abilitatea pentru a o încheia mai devreme.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen se transformă într-o minge de fulgere, primind <speed>@MovementSpeed*100@% viteză de mișcare</speed>, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor prin care trece și primind efectul ''Fantomă'' timp de @DurationAsBall@ secunde. În cazul în care Kennen îi provoacă daune cel puțin unui inamic, primește @EnergyRefund@ energie. <br><br>După ce abilitatea se încheie, Kennen primește <attackSpeed>@TotalAS*100@% viteză de atac</attackSpeed> timp de @DurationAfterBall@ secunde. Loviturile critice extind această durată cu @CritDurationBonus@ sec. Kennen poate <recast>refolosi</recast> abilitatea pentru a o încheia mai devreme.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

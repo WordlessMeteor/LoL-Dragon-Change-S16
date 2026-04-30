@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Teemo": {
             "id": "Teemo",
@@ -775,8 +775,8 @@
                 {
                     "id": "TeemoE",
                     "name": "毒性射击",
-                    "description": "提莫的每次攻击将使目标中毒，在命中时和之后的4秒里每秒造成伤害。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>提莫的攻击会施加剧毒，造成额外的<magicDamage>{{ impactcalculateddamage }}魔法伤害</magicDamage>外加在{{ poisonduration }}秒里持续造成共<magicDamage>{{ totaldotdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "description": "提莫每次攻击附带毒液伤害%i:OnHit% <OnHit>攻击特效</OnHit>，造成持续性伤害，持续4秒。",
+                    "tooltip": "<spellPassive>被动：</spellPassive>提莫的攻击会施加剧毒%i:OnHit% <OnHit>攻击特效</OnHit>，造成额外的<magicDamage>{{ impactcalculateddamage }}魔法伤害</magicDamage>外加在{{ poisonduration }}秒里持续造成共<magicDamage>{{ totaldotdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "立即伤害",
@@ -916,8 +916,8 @@
                 {
                     "id": "TeemoR",
                     "name": "种蘑菇",
-                    "description": "提莫投掷一个可爆炸的毒性陷阱，需要消耗提莫背包里的一个蘑菇。陷阱会在被敌方踩中时爆炸，释放出一团毒云，对附近的敌人造成减速效果和持续伤害。如果提莫把一个蘑菇扔到另一个蘑菇上，那么这个蘑菇会进行弹跳，获得额外的施放距离。",
-                    "tooltip": "提莫扔出一个蘑菇陷阱，陷阱会在被踩到后爆炸。陷阱<status>减速</status>{{ slowamount }}%并在{{ debuffduration }}秒里持续造成共<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。敌人会被显形相同的持续时长。<br /><br />陷阱持续{{ mushroomduration }}分钟并且是潜行状态。当蘑菇被丢到另一个蘑菇上时，它会在弹跳后着陆。这个技能有{{ maxammo }}层充能({{ ammorechargetime }}秒刷新时间)。<br />{{ spellmodifierdescriptionappend }}",
+                    "description": "提莫投掷一个可爆炸的毒性陷阱，需要消耗提莫背包里的一个蘑菇。陷阱会在被敌方踩中时爆炸，释放出一团毒云，对附近的敌人造成减速效果和持续伤害。如果提莫把一个蘑菇扔到另一个蘑菇上，那么这个蘑菇会进行弹跳，获得额外的距离。",
+                    "tooltip": "提莫投掷一个蘑菇陷阱，它会在被敌方踩中时爆炸。陷阱造成持续{{ debuffduration }}秒的{{ slowamount }}%<status>减速</status>并在此期间持续造成共<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。敌人会被显形相同的时长 。<br /><br />陷阱持续{{ mushroomduration }}分钟并且处于潜行状态。一个蘑菇在被扔到另一个蘑菇上时，会先弹跳然后着陆到它的位置。这个技能有{{ maxammo }}层充能({{ ammorechargetime }}秒充能时间)。<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -1039,9 +1039,9 @@
             ],
             "passive": {
                 "name": "游击队军备",
-                "description": "如果提莫在短时间内静止站立且不受任何伤害，就会进入无定期的隐形状态。如果提莫在草丛中，他就能在移动的同时进入并保持隐形状态。离开隐形状态后，提莫会获得“出奇制胜”的增益效果，提升攻击速度，持续若干秒。",
+                "description": "如果提莫在短时间内静止站立且不受任何伤害，就会进入无定期的隐形状态。如果提莫在草丛中，他就能在移动的同时进入并保持隐形状态。离开隐形状态后，提莫会获得“出奇制胜”的增益效果，提升攻击速度，持续3秒。",
                 "image": {
-                    "full": "TeemoPassive.ASU_Teemo.png",
+                    "full": "TeemoPassive.png",
                     "sprite": "passive4.png",
                     "group": "passive",
                     "x": 288,

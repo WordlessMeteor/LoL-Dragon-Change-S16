@@ -885,7 +885,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "AttackSpeed",
+                    "name": "TotalAS",
                     "values": [
                         0.30000001192092896,
                         0.4000000059604645,
@@ -946,6 +946,19 @@
                         0.15000000596046448,
                         0.15000000596046448,
                         0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CritDurationBonus",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1047,7 +1060,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "AttackSpeed",
+                                    "type": "TotalAS",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
@@ -1315,10 +1328,11 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mAlternateName": "KennenShurikenHurlMissile1",
-            "mEffectAmount": [
+            "DataValues": [
                 {
-                    "value": [
-                        30.0,
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
                         75.0,
                         125.0,
                         175.0,
@@ -1326,44 +1340,16 @@
                         275.0,
                         325.0
                     ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.75,
@@ -1373,7 +1359,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.75,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/Characters/Kennen/HUD/Icons2D/Kennen_Q.dds"
@@ -1487,7 +1472,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
@@ -2171,6 +2156,25 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "TotalDamagePassiveCrit": {
+                    "mMultiplier": {
+                        "mSubparts": [
+                            {
+                                "mNumber": 1.399999976158142,
+                                "__type": "NumberCalculationPart"
+                            },
+                            {
+                                "mStat": 9,
+                                "mStatFormula": 2,
+                                "mCoefficient": 0.4000000059604645,
+                                "__type": "StatByCoefficientCalculationPart"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalDamagePassive",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell5",

@@ -582,7 +582,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taliyah arremessa uma rajada de pedras na direção-alvo, movimentando-se livremente durante a conjuração. Isso cria um Terreno Manipulado sob ela. Se Taliyah conjurar Voleio Entrelaçado em Terreno Manipulado, ela consome o terreno para arremessar um pedregulho fortalecido que causa Lentidão a inimigos.",
-            "dynamicDescription": "Taliyah arremessa 5 pedras. Cada uma causa <magicDamage>@RockDamage@ de Dano Mágico</magicDamage> em uma área ao redor do primeiro inimigo atingido e cria Terreno Manipulado naquela área. Acertos seguintes contra o mesmo inimigo causarão @ExtraMissileReducedDamagePercent@% a menos de dano.<br><br>Conjurações em terreno manipulado custam @BigRockManaCost@ de Mana, têm @WorkedGroundCDR*100@% a menos de Tempo de Recarga, consomem o Terreno Manipulado e arremessam um pedregulho que causa @SlowPercent*100@% de <status>Lentidão</status> por @SlowDuration@s aos inimigos atingidos e <magicDamage>@BigRockDamage@ de Dano Mágico</magicDamage> ao alvo primário. Monstros atingidos pelo pedregulho são <status>Atordoados</status> por @MonsterStunDuration@s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah arremessa 5 pedras. Cada uma causa <magicDamage>@RockDamage@ de Dano Mágico</magicDamage> em uma área ao redor do primeiro inimigo atingido e cria Terreno Manipulado naquela área. Acertos subsequentes no mesmo inimigo causam @ExtraMissileReducedDamagePercent@% de dano reduzido.<br><br>Conjurações em terreno manipulado custam @Effect7Amount@ de Mana, têm @WorkedGroundCDR*100@% de Tempo de Recarga reduzido, consomem o Terreno Manipulado e arremessam um pedregulho que causa @SlowPercent*100@% de <status>Lentidão</status> por @SlowDuration@s aos inimigos atingidos e <magicDamage>@BigRockDamage@ de Dano Mágico</magicDamage> ao alvo primário. Monstros atingidos pelo pedregulho são <status>Atordoados</status> por @MonsterStunDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taliyah cria uma parede comprida e desliza sobre ela.",
-            "dynamicDescription": "Taliyah cria uma enorme parede de terra por @WallDuration@s. Se <recast>Reconjurar</recast> imediatamente, Taliyah também percorre a parede conforme ela é criada. Mover-se ou sofrer imobilização interromperá o trajeto.<br><br>A habilidade não pode ser conjurada se Taliyah tiver sofrido dano de Campeões ou estruturas nos últimos @DamageLockoutTime@s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah cria uma enorme parede de terra por @Effect1Amount@s. Se <recast>Reconjurar</recast> imediatamente, Taliyah também percorre a parede conforme ela é criada. Se mover ou sofrer imobilização interrompe o trajeto.<br><br>A Habilidade não pode ser conjurada se Taliyah tiver sofrido dano de Campeões ou estruturas nos últimos @DamageLockoutTime@s.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

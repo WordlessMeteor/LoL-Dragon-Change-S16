@@ -1,5 +1,6 @@
 {
     "id": 26,
+    "contentId": "829f170b-4fcf-413b-9ff5-e598fd4412e9",
     "name": "Zilean",
     "alias": "Zilean",
     "title": "paznicul timpului",
@@ -573,10 +574,10 @@
             "isBase": false,
             "name": "Zilean magic",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.SKINS_Zilean_Skin24.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.SKINS_Zilean_Skin24.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.SKINS_Zilean_Skin24.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.SKINS_Zilean_Skin24.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_centered_24.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_uncentered_24.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/Images/zilean_splash_tile_24.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/Skins/Skin24/ZileanLoadScreen_24.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -751,7 +752,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Aruncă o bombă într-o anumită zonă, care apoi se atașează de orice unitate care se apropie de ea (primii afectați sunt campionii). Bomba explodează după 3 secunde, provocând daune AoE. Dacă o ''Bombă cu ceas'' este detonată prematur de o altă ''Bombă cu ceas'', aceasta amețește de asemenea inamicii.",
-            "dynamicDescription": "Zilean aruncă o bombă cu ceas care se atașează de prima unitate care se apropie la distanță mică. După @Effect2Amount@ secunde, bomba se detonează, provocând <magicDamage>@TotalDamage@ daune magice</magicDamage>.<br><br>Dacă o bombă se atașează de o unitate care are deja una, prima bombă se detonează imediat și <status>amețește</status> inamicii din zonă timp de @Effect4Amount@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean aruncă o bombă cu ceas care se atașează de prima unitate care se apropie la distanță mică. După @FuseDuration@ secunde, bomba se detonează, provocând <magicDamage>@TotalDamage@ daune magice</magicDamage>.<br><br>Dacă o bombă se atașează de o unitate care are deja una, prima bombă se detonează imediat și <status>amețește</status> inamicii din zonă timp de @StunDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -898,10 +899,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_W.png",
             "abilityVideoPath": "champion-abilities/0026/ability_0026_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0026/ability_0026_W1.jpg",
-            "cost": "@Effect3Amount@ mană",
+            "cost": "@ManaCost@ mană",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Zilean se pregătește pentru confruntările viitoare și reduce timpii de reactivare pentru celelalte abilități de bază.",
-            "dynamicDescription": "Zilean întoarce timpul, reducând timpii de reactivare ai celorlalte abilități de bază cu @Effect2Amount@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean întoarce timpul, reducând timpii de reactivare ai celorlalte abilități de bază cu @CooldownReduction@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -941,13 +942,13 @@
                     70.0
                 ],
                 "Effect2Amount": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     35.0,
@@ -1051,7 +1052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Zilean distorsionează timpul în jurul oricărei unități, reducând viteza de mișcare a inamicilor sau mărind viteza de mișcare a aliaților pentru scurt timp.",
-            "dynamicDescription": "Zilean <status>încetinește</status> un campion inamic cu @Effect2Amount@% sau îi oferă unui campion aliat <speed>@Effect2Amount@% viteză de mișcare</speed> timp de @Effect1Amount@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zilean <status>încetinește</status> un campion inamic cu @SpeedAmount@% sau îi oferă unui campion aliat <speed>@SpeedAmount@% viteză de mișcare</speed> timp de @Duration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

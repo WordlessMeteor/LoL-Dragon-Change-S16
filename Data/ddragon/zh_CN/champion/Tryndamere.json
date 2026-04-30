@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "Tryndamere": {
             "id": "Tryndamere",
@@ -809,7 +809,7 @@
                     "id": "UndyingRage",
                     "name": "无尽怒火",
                     "description": "泰达米尔是如此渴望战斗，以至于承受再多的伤害也不会死亡。",
-                    "tooltip": "泰达米尔变得对死亡完全免疫，持续{{ e3 }}秒，拒绝将生命值降至{{ e2 }}以下，并瞬间获得<keywordMajor>{{ e1 }}怒气</keywordMajor>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "泰达米尔变得对死亡完全免疫，持续{{ tryndrduration }}秒，拒绝将生命值降至{{ tryndrminhealth }}以下，并瞬间获得<keywordMajor>{{ tryndrfurygain }}怒气</keywordMajor>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -818,8 +818,8 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }} -> {{ e1NL }}"
+                            "{{ tryndrminhealth }} -> {{ tryndrminhealthNL }}",
+                            "{{ tryndrfurygain }} -> {{ tryndrfurygainNL }}"
                         ]
                     },
                     "maxrank": 3,

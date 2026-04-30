@@ -1946,6 +1946,24 @@ body[data-locale=ru-RU] .parties-header-container .lobby-header-wrapper .lobby-h
     color: #5c5b57
 }
 
+.parties-debug-queues .parties-debug-queue-search {
+    background-color: rgba(0, 0, 0, .6);
+    border: 1px solid #3c3732;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #f0e6d2;
+    display: block;
+    font-size: 14px;
+    margin: 0 0 8px;
+    outline: none;
+    padding: 4px 8px;
+    width: 100%
+}
+
+.parties-debug-queues .parties-debug-queue-search::placeholder {
+    color: #5c5b57
+}
+
 .parties-footer-notifications .parties-beta-watermark {
     font-family: var(--font-display)
 }
@@ -8322,6 +8340,10 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
     width: 288px
 }
 
+.v2-footer-notifications:has(>*)~.toggle-option-component {
+    display: none
+}
+
 .v2-footer-notifications,
 .v2-footer-notifications .parties-footer-error,
 .v2-footer-notifications .parties-footer-error-scrollable a:link,
@@ -11035,12 +11057,7 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] {
 }
 
 .pass-progression-widget-wrapper {
-    cursor: pointer;
     width: 100%
-}
-
-.pass-progression-widget-wrapper:hover {
-    opacity: .9
 }
 
 .v2-parties-invite-panel-tft-progression .progression-complete .progression-complete-title,

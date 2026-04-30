@@ -1,5 +1,6 @@
 {
     "id": 41,
+    "contentId": "338fd36d-e4b2-4c6f-8cc4-99d194165e20",
     "name": "갱플랭크",
     "alias": "Gangplank",
     "title": "바다의 무법자",
@@ -1108,7 +1109,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "귤을 먹어서 군중 제어 효과를 제거하고 체력을 회복합니다.",
-            "dynamicDescription": "갱플랭크가 귤을 많이 먹어서 모든 <status>방해</status> 효과를 제거하고 체력을 <healing>@BaseHealth@+잃은 체력의 @Effect2Amount@%</healing>만큼 회복합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "갱플랭크가 귤을 많이 먹어서 모든 <status>방해</status> 효과를 제거하고 체력을 <healing>@BaseHealth@+잃은 체력의 @PercentHeal@%</healing>만큼 회복합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1258,7 +1259,7 @@
             "cost": "소모값 없음",
             "cooldown": "재충전 대기시간 @AmmoRechargeTime@초 (최대: @MaxAmmo@개)",
             "description": "갱플랭크가 대상 위치에 화약통을 비치합니다. 갱플랭크가 이 통을 공격하면 폭발하여 주위 적들에게 피해를 입히며 둔화를 적용합니다.",
-            "dynamicDescription": "@Effect5Amount@초 동안 갱플랭크와 적 챔피언이 공격할 수 있는 화약통을 설치합니다. 적이 파괴하는 통은 사라집니다. 갱플랭크가 파괴하는 통은 폭발하여 @Effect2Amount@초 동안 적을 @FinalSlowAmount@% <status>둔화</status>시키고 방어력의 @Effect10Amount@%를 무시하며 <physicalDamage>기본 공격의 피해량</physicalDamage>만큼 피해를 입힙니다. 챔피언은 <physicalDamage>@Effect3Amount@의 물리 피해</physicalDamage>를 추가로 입습니다.<br><br>통의 체력은 @BarrelDecayTime@초마다 줄어듭니다. 통이 폭발하면 폭발 지대에 겹쳐 있는 통들이 연쇄 폭발하지만 같은 대상이 여러 번 피해를 입지는 않습니다. <spellName>혀어어어업상</spellName> 스킬로 통을 터뜨리면 대상 처치 시 추가 골드를 얻습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@BarrelDuration@초 동안 갱플랭크와 적 챔피언이 공격할 수 있는 화약통을 설치합니다. 적이 파괴하는 통은 사라집니다. 갱플랭크가 파괴하는 통은 폭발하여 @DebuffDuration@초 동안 적을 @FinalSlowAmount@% <status>둔화</status>시키고 방어력의 @BarrelArmorPenetration@%를 무시하며 <physicalDamage>기본 공격의 피해량</physicalDamage>만큼 피해를 입힙니다. 챔피언은 <physicalDamage>@BonusDamageToChampions@의 물리 피해</physicalDamage>를 추가로 입습니다.<br><br>통의 체력은 @BarrelDecayTime@초마다 줄어듭니다. 통이 폭발하면 폭발 지대에 겹쳐 있는 통들이 연쇄 폭발하지만 같은 대상이 여러 번 피해를 입지는 않습니다. <spellName>혀어어어업상</spellName> 스킬로 통을 터뜨리면 대상 처치 시 추가 골드를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

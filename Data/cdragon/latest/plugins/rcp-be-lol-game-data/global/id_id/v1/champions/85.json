@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "Kennen",
     "alias": "Kennen",
     "title": "the Heart of the Tempest",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Kennen secara pasif menghasilkan damage ekstra dan menambahkan Mark of the Storm ke target setiap beberapa serangan, dan dia bisa mengaktifkan ability ini untuk menghasilkan damage dan menambahkan satu lagi Mark of the Storm ke target yang sudah ditandai.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Setiap Attack ke-5 menghasilkan tambahan <magicDamage>@TotalDamagePassive@ magic damage</magicDamage>.<br><br><spellActive>Aktif:</spellActive> Kennen melepaskan gelombang listrik yang menghasilkan <magicDamage>@TotalDamageActive@ magic damage</magicDamage> ke musuh di sekitar yang terkena <spellName>Mark of the Storm</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Setiap Serangan ke-5 menghasilkan tambahan <magicDamage>@TotalDamagePassive@ magic damage</magicDamage> %i:OnHit% <OnHit>On-Hit</OnHit>.<br><br><spellActive>Aktif:</spellActive> Kennen melepaskan gelombang listrik yang menghasilkan <magicDamage>@TotalDamageActive@ magic damage</magicDamage> ke musuh di sekitar yang terkena <spellName>Mark of the Storm</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Kennen berubah menjadi bola petir, memungkinkannya menembus unit dan menerapkan Mark of the Storm. Kennen memperoleh tambahan Move Speed dalam wujud ini, dan attack speed saat keluar dari wujud ini.",
-            "dynamicDescription": "Kennen berubah menjadi bola petir, memperoleh <speed>@MovementSpeed*100@% Move Speed</speed>, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh yang ditembusnya, dan menjadi Ghost selama @DurationAsBall@ detik. Jika Kennen memberikan damage setidaknya ke satu musuh, dia memperoleh @EnergyRefund@ Energy. <br><br>Setelah ability ini berakhir, Kennen memperoleh <attackSpeed>@AttackSpeed*100@% Attack Speed</attackSpeed> selama @DurationAfterBall@ detik. Kennen bisa <recast>Recast</recast> untuk mengakhiri ability ini lebih awal.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen berubah menjadi bola petir, memperoleh <speed>@MovementSpeed*100@% Move Speed</speed>, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh yang ditembusnya, dan menjadi Ghost selama @DurationAsBall@ detik. Jika Kennen memberikan damage setidaknya ke satu musuh, dia memperoleh @EnergyRefund@ Energy. <br><br>Setelah ability ini berakhir, Kennen memperoleh <attackSpeed>@TotalAS*100@% Attack Speed</attackSpeed> selama @DurationAfterBall@ detik. Critical Strike memperpanjang durasi ini sebanyak @CritDurationBonus@ detik. Kennen bisa <recast>Recast</recast> untuk mengakhiri ability ini lebih awal.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

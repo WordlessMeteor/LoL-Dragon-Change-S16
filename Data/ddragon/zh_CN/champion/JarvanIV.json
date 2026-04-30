@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.8.1",
+    "version": "16.9.1",
     "data": {
         "JarvanIV": {
             "id": "JarvanIV",
@@ -437,7 +437,7 @@
                     "id": "JarvanIVDragonStrike",
                     "name": "巨龙撞击",
                     "description": "嘉文四世的长矛穿透敌人，对沿途的敌人造成物理伤害和护甲击碎效果。如果嘉文四世该技能指向德邦军旗，那么他将会被导向军旗，并击飞沿途所有敌人。",
-                    "tooltip": "嘉文延伸他的长枪，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并移除<scaleArmor>{{ e2 }}%护甲</scaleArmor>，持续{{ e3 }}秒。<br /><br />如果长枪与<spellName>德邦军旗</spellName>连接，那么嘉文会将自己拉向它，将沿途的敌人<status>击飞</status>0.75秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "嘉文延伸他的长枪，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并移除<scaleArmor>{{ basearshred*100 }}%护甲</scaleArmor>，持续{{ e3 }}秒。<br /><br />如果长枪与<spellName>德邦军旗</spellName>连接，那么嘉文会将自己拉向它，将沿途的敌人<status>击飞</status>0.75秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -447,7 +447,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basearshred*100.000000 }}% -> {{ basearshrednl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -480,11 +480,11 @@
                             240
                         ],
                         [
-                            10,
-                            14,
-                            18,
-                            22,
-                            26
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             3,
@@ -546,7 +546,7 @@
                     "effectBurn": [
                         null,
                         "80/120/160/200/240",
-                        "10/14/18/22/26",
+                        "0",
                         "3",
                         "0",
                         "0",
@@ -582,7 +582,7 @@
                     "id": "JarvanIVGoldenAegis",
                     "name": "黄金圣盾",
                     "description": "嘉文四世召唤古德玛西亚国王保护自己，护盾吸收伤害并减速附近敌人。",
-                    "tooltip": "嘉文召唤一个圣盾，对附近的敌人造成持续{{ e5 }}秒的{{ e2 }}%<status>减速</status>并为他提供<shield>{{ baseshield }}护盾值</shield>，每命中一个敌方英雄会提升<shield>{{ bonusshield }}</shield>护盾值。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "嘉文召唤一个圣盾，对附近的敌人造成持续{{ e5 }}秒的{{ baseslowamount*100 }}%<status>减速</status>并为他提供<shield>{{ totalshield }}护盾值</shield>，每命中一个敌方英雄会提升<shield>{{ bonusshield }}</shield>护盾值。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -590,7 +590,7 @@
                         ],
                         "effect": [
                             "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%"
+                            "{{ baseslowamount*100.000000 }}% -> {{ baseslowamountnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -621,11 +621,11 @@
                             140
                         ],
                         [
-                            15,
-                            20,
-                            25,
-                            30,
-                            35
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             10,
@@ -687,7 +687,7 @@
                     "effectBurn": [
                         null,
                         "60/80/100/120/140",
-                        "15/20/25/30/35",
+                        "0",
                         "10/20/30/40/50",
                         "4",
                         "2",
@@ -723,7 +723,7 @@
                     "id": "JarvanIVDemacianStandard",
                     "name": "德邦军旗",
                     "description": "嘉文四世携带着德玛西亚的骄傲，能被动地给予他额外的攻击速度。激活德邦军旗会使嘉文四世放置一面德玛西亚军旗，在军旗的着陆点造成魔法伤害，并强化军旗附近的队友们的攻击速度。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>嘉文获得<attackSpeed>{{ permanentattackspeed*100 }}%攻击速度</attackSpeed>。<br /><br /><spellActive>主动：</spellActive>嘉文将一面军旗投掷到地上，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并为附近的友军们提供持续{{ e4 }}秒的<attackSpeed>{{ e3 }}%攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>嘉文获得<attackSpeed>{{ permanentattackspeed*100 }}%攻击速度</attackSpeed>。<br /><br /><spellActive>主动：</spellActive>嘉文将一面军旗投掷到地上，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并为附近的友军们提供持续{{ e4 }}秒的<attackSpeed>{{ baseauraas*100 }}%攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -734,7 +734,7 @@
                         "effect": [
                             "{{ e2 }} -> {{ e2NL }}",
                             "{{ permanentattackspeed*100.000000 }}% -> {{ permanentattackspeednl*100.000000 }}%",
-                            "{{ effect3amount*100.000000 }}% -> {{ effect3amountnl*100.000000 }}%",
+                            "{{ baseauraas*100.000000 }}% -> {{ baseauraasnl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -773,11 +773,11 @@
                             240
                         ],
                         [
-                            20,
-                            22.5,
-                            25,
-                            27.5,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             8,
@@ -833,7 +833,7 @@
                         null,
                         "10/13/16/19/22",
                         "80/120/160/200/240",
-                        "20/22.5/25/27.5/30",
+                        "0",
                         "8",
                         "0",
                         "0",

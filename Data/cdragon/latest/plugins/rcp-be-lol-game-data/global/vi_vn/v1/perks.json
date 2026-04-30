@@ -338,7 +338,7 @@
         "id": 8008,
         "name": "Nhịp Độ Chết Người",
         "majorChangePatchVersion": "",
-        "tooltip": "Tấn công tướng địch sẽ cho bạn thêm %i:scaleAS%@ASPerStack@ Tốc Độ Đánh trong 6 giây, tối đa 6. Ở số cộng dồn tối đa, đòn đánh sẽ gây thêm @NoteDamage@ <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>sát thương thích ứng</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>Trên Đòn Đánh</OnHit>.<br><br>Thời Gian Duy Trì Cộng Dồn Tối Đa: @f1@ giây<br>Sát Thương Đã Gây Ra: @f2@<br><br>Ngọc bổ trợ này cũng sẽ theo dõi phần trăm số đòn đánh thường lên tướng được tung ra trong vòng 0.25 giây khi đòn đánh đã sẵn sàng sau khi tấn công tướng trước đó: @f3@% (@f4@/@f5@)",
+        "tooltip": "Tấn công tướng địch sẽ cho bạn thêm %i:scaleAS%@ASPerStack@ Tốc Độ Đánh trong 6 giây, tối đa 6 cộng dồn. Ở cộng dồn tối đa, gây @NoteDamage@ (%i:scaleAS%) <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>sát thương thích ứng cộng thêm</font></lol-uikit-tooltipped-keyword> %i:OnHit% <OnHit>Trên Đòn Đánh</OnHit>.<br><br>Thời Gian Cộng Dồn Tối Đa: @f1@ giây<br>Sát Thương Gây Ra: @f2@<br><br>Ngọc bổ trợ này cũng sẽ theo dõi phần trăm số đòn đánh thường lên tướng được tung ra trong vòng 0.25 giây khi đòn đánh đã sẵn sàng sau khi tấn công tướng trước đó: @f3@% (@f4@/@f5@)",
         "shortDesc": "Tấn công tướng địch sẽ cho bạn thêm Tốc Độ Đánh, tối đa 6 cộng dồn. Ở số cộng dồn tối đa, gây thêm <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>sát thương thích ứng</font></lol-uikit-tooltipped-keyword> Trên Đòn Đánh.",
         "longDesc": "Tấn công tướng địch sẽ cho bạn [6% cận chiến || 4% đánh xa] Tốc Độ Đánh trong 6 giây, tối đa 6. Ở số cộng dồn tối đa, gây thêm [9 - 30 cận chiến || 6 - 24 đánh xa] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>sát thương thích ứng Trên Đòn Đánh, tăng thêm 1% với mỗi 1% Tốc Độ Đánh Cộng Thêm</lol-uikit-tooltipped-keyword>.",
         "recommendationDescriptor": "Tăng Dần Tốc Độ Đánh",
@@ -994,13 +994,13 @@
     },
     {
         "id": 8230,
-        "name": "Tăng Tốc Pha",
-        "majorChangePatchVersion": "",
-        "tooltip": "Đánh trúng tướng địch bằng 3 đòn đánh hoặc kỹ năng <b>riêng biệt</b> trong vòng 4 giây sẽ tăng thêm <speed>@MoveSpeedCalc@ Tốc Độ Di Chuyển</speed> và <status>50% Kháng Làm Chậm</status> trong 3 giây.<br><br>Hồi chiêu: <attention>@CooldownCalc@ giây</attention><br><br>Tổng Số Kích Hoạt: <attention>@f1@</attention>",
-        "shortDesc": "Đánh trúng tướng địch bằng 3 đòn đánh hoặc kỹ năng <b>riêng biệt</b> sẽ tăng mạnh <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>Tốc Độ Di Chuyển</lol-uikit-tooltipped-keyword> và Kháng Làm Chậm. ",
-        "longDesc": "Đánh trúng tướng địch bằng 3 đòn đánh hoặc kỹ năng <b>riêng biệt</b> trong vòng 4 giây sẽ tăng thêm <speed>25 - 50% Tốc Độ Di Chuyển</speed> tùy theo cấp và <status>50% Kháng Làm Chậm</status> trong 3 giây. Tốc Độ Di Chuyển có 50% hiệu lực đối với tướng đánh xa.<br>Hồi chiêu: 30 giây - 10 giây",
+        "name": "Xung Kích Bão Tố",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Gây sát thương bằng 25% máu tối đa của một tướng trong 3 giây sẽ cho <speed>@MoveSpeedCalc@ Tốc Độ Di Chuyển</speed> và <status>50% Kháng Làm Chậm</status> trong 3 giây.<br><br>Hồi Chiêu: <attention>@CooldownCalc@ giây</attention><br><br>Tổng Số Lần Kích Hoạt: <attention>@f1@</attention>",
+        "shortDesc": "Gây sát thương bằng 25% máu tối đa của một tướng sẽ cho lượng lớn <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>TĐDC</lol-uikit-tooltipped-keyword> và Kháng Làm Chậm. ",
+        "longDesc": "Gây sát thương bằng 25% máu tối đa của một tướng trong 3 giây sẽ cho <speed>40% Tốc Độ Di Chuyển</speed> và <status>Kháng Làm Chậm 50%</status> trong 3 giây. Tốc Độ Di Chuyển có 75% hiệu lực đối với tướng đánh xa.<br>Hồi Chiêu: 20 - 10 giây",
         "recommendationDescriptor": "Tăng Hết Tốc Lực",
-        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
             "Tổng số kích hoạt: @eogvar1@"
         ],
@@ -1166,6 +1166,20 @@
         }
     },
     {
+        "id": 8992,
+        "name": "Lửa Tử Thần",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Gây sát thương lên tướng bằng kỹ năng sẽ thiêu đốt chúng gây @DamageCalc@ sát thương thích ứng mỗi giây. Sau khi thiêu đốt trong 3 giây, sát thương của hiệu ứng thiêu đốt tăng thêm 100% khi chúng vẫn còn bị thiêu đốt.<br><rules><br>Thời Gian Tác Dụng:<br>Đơn Mục Tiêu: 4 giây.<br>Diện Rộng: 2 giây<br>Sát Thương Theo Thời Gian: 1 giây<br></rules><br>Bạn đã gây @f1@ sát thương lên tướng bằng hiệu ứng thiêu đốt của Lửa Tử Thần.",
+        "shortDesc": "Gây sát thương lên tướng bằng kỹ năng sẽ thiêu đốt chúng theo thời gian.",
+        "longDesc": "Gây sát thương lên tướng bằng kỹ năng sẽ thiêu đốt chúng gây 1 - 10 sát thương theo cấp (+<scaleAP>0.03 SMPT</scaleAP>) (+<scaleAD>0.08 SMCK cộng thêm</scaleAD>) sát thương thích ứng mỗi giây. Sau khi thiêu đốt trong 3 giây, sát thương của hiệu ứng thiêu đốt tăng thêm 100% khi chúng vẫn còn bị thiêu đốt.<br><rules><br>Thời Gian Tác Dụng:<br>Đơn Mục Tiêu: 4 giây.<br>Diện Rộng: 2 giây<br>Sát Thương Theo Thời Gian: 1 giây<br></rules>",
+        "recommendationDescriptor": "Sát Thương Kỹ Năng Duy Trì",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "endOfGameStatDescs": [
+            "Sát Thương Thiêu Đốt Đã Gây Ra: @eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
         "id": 8465,
         "name": "Hộ Vệ",
         "majorChangePatchVersion": "",
@@ -1318,15 +1332,15 @@
     {
         "id": 9923,
         "name": "Mưa Kiếm",
-        "majorChangePatchVersion": "8.11",
-        "tooltip": "Nhận {{ Item_Melee_Ranged_Split }}% Tốc Độ Đánh khi bạn tấn công tướng địch, tối đa @NumHits@ đòn đánh. <br><br>Hồi Chiêu: @Cooldown@ giây.<br><hr><br>Đòn đánh Mưa Kiếm: @f1@<br>Tỉ lệ đòn đánh Mưa Kiếm trúng đích: @f2@%<br><br><rules>Tái tạo Đòn Đánh Thường sẽ tăng giới hạn đòn đánh thêm 1.<br>Cho phép bạn tạm thời vượt qua giới hạn Tốc Độ Đánh.</rules>",
-        "shortDesc": "Nhận một lượng lớn Tốc độ Đánh trong 3 đòn đánh đầu tiên lên tướng.",
-        "longDesc": "Nhận 160% (80% cho tướng đánh xa) Tốc Độ Đánh khi bạn tấn công tướng địch, tối đa 3 đòn đánh.<br><br>Các đòn đánh không thể cách nhau quá 3 giây, nếu không hiệu ứng sẽ chấm dứt.<br><br>Hồi Chiêu: 10 giây.<br><br><rules>Tái tạo đòn đánh sẽ tăng giới hạn đòn đánh thêm 1.<br>Cho phép bạn tạm thời vượt qua giới hạn Tốc Độ Đánh.</rules>",
+        "majorChangePatchVersion": "16.9",
+        "tooltip": "Khi bạn tấn công tướng địch, trong tối đa @NumHits@ đòn đánh, nhận {{ Item_Melee_Ranged_Split }}% Tốc Độ Đánh và gây thêm <font color='#48C4B7'>@BonusDamage@</font> <trueDamage>sát thương chuẩn</trueDamage>. <br><br>Hồi Chiêu: @Cooldown@ giây.<br><hr><br>Số đòn đánh Mưa Kiếm: @f1@<br>Sát Thương Gây Ra: @f2@<br>Tỉ lệ đòn đánh Mưa Kiếm trúng đích: @f3@%<br><br><rules>Tái tạo Đòn Đánh Thường sẽ tăng giới hạn đòn đánh thêm +1, thêm tối đa +@MaxBonusHits@.<br>Cho phép bạn tạm thời vượt qua giới hạn Tốc Độ Đánh.</rules>",
+        "shortDesc": "Nhận thêm một lượng lớn Tốc Độ Đánh và <trueDamage>sát thương chuẩn cộng thêm</trueDamage> trong 3 đòn đánh đầu tiên lên tướng địch.",
+        "longDesc": "Nhận 120% (60% cho tướng đánh xa) Tốc Độ Đánh và <trueDamage>sát thương chuẩn cộng thêm</trueDamage> khi bạn tấn công tướng địch, tối đa 3 đòn đánh.<br><br>Các đòn đánh không thể cách nhau quá 3 giây, nếu không hiệu ứng sẽ chấm dứt.<br><br>Hồi Chiêu: 10 giây.<br>Sát Thương Trên Đòn Đánh: 4 - 20 (+0.08 SMCK cộng thêm, +0.06 SMPT) sát thương.<br><br><rules>Tái tạo đòn đánh sẽ tăng giới hạn đòn đánh thêm 1.<br>Cho phép bạn tạm thời vượt qua giới hạn Tốc Độ Đánh.</rules>",
         "recommendationDescriptor": "Tấn Công Liên Hoàn",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
         "endOfGameStatDescs": [
             "Số đòn đánh với Tốc Độ Đánh cộng thêm: @eogvar1@",
-            "Phần trăm đòn đánh Mưa Kiếm trúng đích: @eogvar2@%"
+            "Sát Thương Gây Ra: @eogvar2@"
         ],
         "recommendationDescriptorAttributes": {}
     },
@@ -1468,9 +1482,9 @@
         "id": 8229,
         "name": "Thiên Thạch Bí Ẩn",
         "majorChangePatchVersion": "",
-        "tooltip": "Gây sát thương lên tướng bằng kỹ năng sẽ thả một thiên thạch xuống chỗ kẻ đó, hoặc, nếu Thiên Thạch Bí Ẩn đang hồi, giảm hồi chiêu còn lại của nó.<br><br>Sát thương: @DamageCalc@<br>Hồi chiêu: @CooldownCalc@giây<br><rules><br>Giảm hồi chiêu:<br>Đơn mục tiêu: 20%.<br>Diện rộng: 10%.<br>Sát thương theo thời gian: 5%.<br></rules><br>Bạn đã dùng trúng đích @f3@% số thiên thạch, gây tổng cộng @f1@ sát thương lên tướng.",
+        "tooltip": "Gây sát thương lên tướng bằng kỹ năng sẽ giáng một thiên thạch xuống vị trí của chúng, gây sát thương tăng thêm dựa khoảng cách bay.<br><br>Sát Thương: @DamageCalc@<br>Hồi Chiêu: @CooldownCalc@ giây<br><rules><br>Khuếch đại sát thương tăng tới tối đa 100% ở khoảng cách 750.<br></rules><br>Bạn đã đánh trúng @f3@% số lượng thiên thạch phóng ra, gây tổng cộng @f1@ sát thương lên tướng.",
         "shortDesc": "Gây sát thương lên tướng bằng kỹ năng thả một thiên thạch xuống chỗ kẻ đó.",
-        "longDesc": "Gây sát thương lên tướng bằng khả năng thả một thiên thạch xuống chỗ của kẻ đó, hoặc, nếu Thiên Thạch Bí Ẩn đang hồi, giảm hồi chiêu còn lại của nó.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Sát thương Thích ứng</font></lol-uikit-tooltipped-keyword>: 30 - 130 theo cấp (<scaleAP>+0.05 SMPT</scaleAP> and <scaleAD>+0.1 SMCK cộng thêm</scaleAD>)<br>Hồi chiêu: 20 - 8 giây<br><rules><br>Giảm Hồi chiêu:<br>Đơn mục tiêu: 20%.<br>Diện rộng: 10%.<br>Sát thương theo thời gian: 5%.<br></rules>",
+        "longDesc": "Gây sát thương lên tướng bằng kỹ năng sẽ phóng một thiên thạch xuống chỗ kẻ đó, gây sát thương tăng thêm dựa trên khoảng cách.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Sát Thương Thích Ứng</font></lol-uikit-tooltipped-keyword>: 15 - 100 tùy theo cấp độ (<scaleAP>+0.05 SMPT</scaleAP> và <scaleAD>+0.1 SMCK cộng thêm</scaleAD>)<br>Hồi Chiêu: 20 - 8 giây<br><rules><br>Khuếch đại sát thương tăng tối đa 100% ở khoảng cách 750.<br></rules>",
         "recommendationDescriptor": "Sát Thương Kỹ Năng",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
         "endOfGameStatDescs": [

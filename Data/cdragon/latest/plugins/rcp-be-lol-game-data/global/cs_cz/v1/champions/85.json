@@ -1,5 +1,6 @@
 {
     "id": 85,
+    "contentId": "923c264b-07aa-4121-ac0a-fdc5b1156aef",
     "name": "Kennen",
     "alias": "Kennen",
     "title": "Srdce bouře",
@@ -800,18 +801,18 @@
                 4.0
             ],
             "coefficients": {
-                "coefficient1": 0.75,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    75.0,
-                    125.0,
-                    175.0,
-                    225.0,
-                    275.0,
-                    325.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -924,7 +925,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Kennen pasivně způsobuje dodatečné poškození a každých pár útoků svůj cíl označí Znamením bouře. Tuto schopnost může aktivovat, čímž způsobí poškození a přidá další Znamení bouře již označeným cílům.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Každý 5. útok způsobí dodatečných <magicDamage>@TotalDamagePassive@ bodů magického poškození</magicDamage>.<br><br><spellActive>Aktivace:</spellActive> Kennen vyšle výboj elektrické energie, který způsobí <magicDamage>@TotalDamageActive@ bodů magického poškození</magicDamage> okolním nepřátelům, kteří jsou pod vlivem <spellName>Znamení bouře</spellName>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Každý 5. útok způsobí %i:OnHit% <OnHit>při zásahu</OnHit> dodatečných <magicDamage>@TotalDamagePassive@ bodů magického poškození</magicDamage>.<br><br><spellActive>Aktivace:</spellActive> Kennen vyšle výboj elektrické energie, který způsobí <magicDamage>@TotalDamageActive@ bodů magického poškození</magicDamage> okolním nepřátelům, kteří jsou pod vlivem <spellName>Znamení bouře</spellName>.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1074,7 +1075,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Kennen se promění do bleskové podoby, díky čemuž bude moci procházet jednotkami a umisťovat na ně Znamení bouře. Při vstupu do této formy získá Kennen bonus rychlosti pohybu a při odchodu z ní bonus k rychlosti útoků.",
-            "dynamicDescription": "Kennen se přemění na kouli blesků, obdrží efekt Duch, získá <speed>@MovementSpeed*100@&nbsp;% k rychlosti pohybu</speed> a všem nepřátelům, kterými projde, způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Tento efekt může trvat až @DurationAsBall@&nbsp;sek. Pokud Kennen způsobí poškození alespoň jednomu nepříteli, získá @EnergyRefund@ energie. <br><br>Po skončení působení této schopnosti získá Kennen na @DurationAfterBall@&nbsp;sek. <attackSpeed>@AttackSpeed*100@&nbsp;% k rychlosti útoků</attackSpeed>. <recast>Opětovným sesláním</recast> může Kennen tuto schopnost ukončit předčasně.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kennen se přemění na kouli blesků, obdrží efekt Duch, získá <speed>@MovementSpeed*100@&nbsp;% k rychlosti pohybu</speed> a všem nepřátelům, kterými projde, způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Tento efekt může trvat až @DurationAsBall@&nbsp;sek. Pokud Kennen způsobí poškození alespoň jednomu nepříteli, získá @EnergyRefund@ energie. <br><br>Po skončení působení této schopnosti získá Kennen na @DurationAfterBall@&nbsp;sek. <attackSpeed>@TotalAS*100@&nbsp;% k rychlosti útoků</attackSpeed>. Kritické zásahy prodlužují tuto dobu o @CritDurationBonus@&nbsp;sek. <recast>Opětovným sesláním</recast> může Kennen tuto schopnost ukončit předčasně.@SpellModifierDescriptionAppend@",
             "range": [
                 170.0,
                 170.0,

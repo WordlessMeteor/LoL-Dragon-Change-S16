@@ -1,5 +1,6 @@
 {
     "id": 66603,
+    "contentId": "496f8b53-2fed-48d3-ba04-d218f74d5dc4",
     "name": "Doom Bot Lux",
     "alias": "Ruby_Lux",
     "title": "",
@@ -38,10 +39,10 @@
             "isBase": true,
             "name": "Doom Bot Lux",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.Ruby.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.Ruby.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.Ruby.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.Ruby.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_centered_17.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_uncentered_17.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/Images/lux_splash_tile_17.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/Skins/Base/LuxLoadscreen_17.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -60,7 +61,7 @@
     ],
     "passive": {
         "name": "Illumination",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.Ruby.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxIlluminatingFraulein.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
         "description": "Spell penghasil damage Lux menyerang target dengan energi selama beberapa detik. Serangan Lux berikutnya memantik energi tersebut dan menghasilkan magic damage bonus (tergantung pada level Lux) pada target."
@@ -69,13 +70,13 @@
         {
             "spellKey": "q",
             "name": "Light Binding",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxCrashingBlitz2.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Lux mengeluarkan bola cahaya yang menerapkan bind dan menghasilkan damage pada maksimal dua unit musuh.",
-            "dynamicDescription": "Lux mengeluarkan bola cahaya, menerapkan <status>Root</status> pada dua musuh pertama selama @Effect3Amount@ detik dan menghasilkan <magicDamage>@TotalDamageTT@ magic damage</magicDamage> ke masing-masing musuh.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux mengeluarkan bola cahaya, menerapkan <status>Root</status> pada dua musuh pertama selama @RootDuration@ detik dan menghasilkan <magicDamage>@TotalDamageTT@ magic damage</magicDamage> ke masing-masing musuh.@SpellModifierDescriptionAppend@",
             "range": [
                 1175.0,
                 1175.0,
@@ -219,13 +220,13 @@
         {
             "spellKey": "w",
             "name": "Prismatic Barrier",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxPrismaWrap.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Lux melempar tongkatnya dan membelokkan cahaya ke sekitar target sekutu yang disentuhnya, melindungi mereka dari damage musuh.",
-            "dynamicDescription": "Lux melempar tongkatnya, memperoleh <shield>@TotalShieldTT@ Shield</shield> selama @Effect3Amount@ detik ke sekutu yang dilaluinya. Kemudian kembali, memberikan <shield>Shield</shield> yang sama pada saat kembali.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux melempar tongkatnya, memberikan <shield>@TotalShieldTT@ Shield</shield> selama @ShieldDuration@ detik ke sekutu yang dilaluinya. Tongkatnya kemudian kembali, memberikan <shield>Shield</shield> yang sama pada saat kembali.@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -369,13 +370,13 @@
         {
             "spellKey": "e",
             "name": "Lucent Singularity",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxLightStrikeKugel.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Menembakkan anomali cahaya aneh ke satu area, yang memberikan efek slow pada musuh di sekitar. Lux bisa meledakkannya untuk menghasilkan damage pada musuh di area efek.",
-            "dynamicDescription": "Lux menciptakan zona cahaya yang menerapkan <status>Slow</status> sebesar @Effect1Amount@% dan mengungkap area tersebut. Setelah @Effect3Amount@ detik atau jika Ability ini di-<recast>Recast</recast>, cahaya tersebut meledak, menghasilkan <magicDamage>@TotalDamageTT@ magic damage</magicDamage> dan menerapkan <status>Slow</status> dengan tambahan @SlowLingerDuration@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lux menciptakan zona cahaya yang menerapkan <status>Slow</status> sebesar @SlowPercent@% dan mengungkap area tersebut. Setelah @SlowZoneDuration@ detik atau jika Ability ini di-<recast>Recast</recast>, cahaya tersebut meledak, menghasilkan <magicDamage>@TotalDamageTT@ magic damage</magicDamage> dan menerapkan <status>Slow</status> dengan tambahan @SlowLingerDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -519,7 +520,7 @@
         {
             "spellKey": "r",
             "name": "Final Spark",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.Ruby.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Ruby_Lux/HUD/Icons2D/Ruby_LuxFinaleFunkeln.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",

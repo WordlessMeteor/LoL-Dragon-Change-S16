@@ -3109,7 +3109,7 @@
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-chat-toggle-button" noshadow>\r\n  <template>\r\n    <div\r\n      class="chat-button"\r\n      class-toggled="{{data.chatWindow.isOpen}}"\r\n      class-unread="{{data.unreadMessageCount}}"\r\n      class-use-animation="{{!data.disableAnimations}}"\r\n      on-mousedown="{{toggleChatWindow()}}"\r\n      on-dblclick="{{onDoubleClick()}}"\r\n    >\r\n      <div class="social-count-badge" if="{{data.unreadMessageCount}}">{{data.unreadMessageCount}}</div>\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
         }, e => {
             "use strict";
-            e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-chat-input" attributes="message placeholder can-hide-player-messages" noshadow>\r\n  <template>\r\n    <pre class="input-sizer"><span ref="contentElement"></span><br></pre>\r\n    <textarea\r\n      ref="inputElement"\r\n      class="chat-input"\r\n      class-can-hide-player-messages="{{hasAttribute(\'can-hide-player-messages\')}}"\r\n      rows="1"\r\n      value="{{message}}"\r\n      class="social-scroll"\r\n      placeholder="{{chatPlaceholder}}"\r\n      on-contextmenu="{{showInputContextMenu($event)}}"\r\n      maxlength="200"\r\n      on-focus="{{makeChatRoomBigger()}}"\r\n      on-focusout="{{makeChatRoomSmaller()}}"\r\n      disabled?="{{hasAttribute(\'disabled\')}}"\r\n      if="{{!willDisappearOnRestart}}"\r\n    ></textarea>\r\n    <div else-if="{{willDisappearOnRestart}}" class="unrecoverable-chat-placeholder">\r\n      {{ t(\'conversation_unrecoverable\') }}\r\n    </div>\r\n    <div\r\n      class="chat-toggle-button"\r\n      class-disabled="{{!isPlayerChatToggledOn}}"\r\n      class-can-hide-player-messages="{{hasAttribute(\'can-hide-player-messages\')}}"\r\n      on-click="{{handleChatToggleClick($event)}}"\r\n      on-mousedown="{{handleChatButtonMouseDown($event)}}"\r\n    />\r\n    <lc-tooltip direction="top">\r\n      <lc-tooltip-content>\r\n        <div>{{toggleButtonTooltip}}</div>\r\n      </lc-tooltip-content>\r\n    </lc-tooltip>\r\n    <div class="chat-divider" class-can-hide-player-messages="{{hasAttribute(\'can-hide-player-messages\')}}" />\r\n  </template>\r\n</lol-social-element>\r\n'
+            e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-chat-input" attributes="message placeholder can-hide-player-messages" noshadow>\r\n  <template>\r\n    <pre class="input-sizer"><span ref="contentElement"></span><br></pre>\r\n    <textarea\r\n      ref="inputElement"\r\n      class="chat-input"\r\n      class-can-hide-player-messages="{{hasAttribute(\'can-hide-player-messages\')}}"\r\n      rows="1"\r\n      value="{{message}}"\r\n      class="social-scroll"\r\n      placeholder="{{chatPlaceholder}}"\r\n      on-contextmenu="{{showInputContextMenu($event)}}"\r\n      maxlength="200"\r\n      on-focus="{{makeChatRoomBigger()}}"\r\n      on-focusout="{{makeChatRoomSmaller()}}"\r\n      disabled?="{{hasAttribute(\'disabled\')}}"\r\n      if="{{!willDisappearOnRestart && !isChatDisabled}}"\r\n    ></textarea>\r\n    <div else-if="{{isChatDisabled}}" class="unrecoverable-chat-placeholder">\r\n      {{ t(\'conversation_dm_restricted\') }}\r\n    </div>\r\n    <div else-if="{{willDisappearOnRestart}}" class="unrecoverable-chat-placeholder">\r\n      {{ t(\'conversation_unrecoverable\') }}\r\n    </div>\r\n    <div\r\n      class="chat-toggle-button"\r\n      class-disabled="{{!isPlayerChatToggledOn}}"\r\n      class-can-hide-player-messages="{{hasAttribute(\'can-hide-player-messages\')}}"\r\n      on-click="{{handleChatToggleClick($event)}}"\r\n      on-mousedown="{{handleChatButtonMouseDown($event)}}"\r\n    />\r\n    <lc-tooltip direction="top">\r\n      <lc-tooltip-content>\r\n        <div>{{toggleButtonTooltip}}</div>\r\n      </lc-tooltip-content>\r\n    </lc-tooltip>\r\n    <div class="chat-divider" class-can-hide-player-messages="{{hasAttribute(\'can-hide-player-messages\')}}" />\r\n  </template>\r\n</lol-social-element>\r\n'
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-chat-message" properties="message previous conversation" noshadow>\r\n  <template>\r\n    <div if="{{needsDateDivider()}}" class="date-divider">{{displayDate(message)}}</div>\r\n\r\n    <div\r\n      class="bubble-container"\r\n      class-mine="{{data.isMessageMine(message) && !data.isActionMessage(message)}}"\r\n      class-my-action="{{data.isActionMessage(message) && data.isMessageMine(message)}}"\r\n      class-new-sender="{{isNewSender(message)}}"\r\n    >\r\n      <div if="{{!data.isChatMessage(message) || data.isActionMessage(message)}}" class="system-bubble">\r\n        <div\r\n          class="system-message"\r\n          class-celebration="{{message.type === \'celebration\'}}"\r\n          class-action="{{data.isActionMessage(message)}}"\r\n          class-room="{{data.isRoom(conversation)}}"\r\n          chat-message="{{ message }}"\r\n        ></div>\r\n      </div>\r\n\r\n      <div\r\n        else-if="{{data.isMessageMine(message)}}"\r\n        class="chat-bubble my-bubble"\r\n        on-mouseenter="{{showTimeTooltip($event, message)}}"\r\n        data-message-id="{{message.id}}"\r\n      >\r\n        <div class="message" chat-message="{{ message }}"></div>\r\n      </div>\r\n\r\n      <div else-if="{{data.isRoom(conversation)}}" class="room-bubble">\r\n        <div class="author-name" if="{{isNewSender(message)}}">{{ data.getFormattedDisplayName(message) }}</div>\r\n        <div\r\n          class="chat-bubble their-bubble"\r\n          on-mouseenter="{{showTimeTooltip($event, message)}}"\r\n          data-message-id="{{message.id}}"\r\n        >\r\n          <div class="message" chat-message="{{ message }}"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <div\r\n        else-if="{{ data.isChatMessage(message) }}"\r\n        class="chat-bubble their-bubble"\r\n        on-mouseenter="{{showTimeTooltip($event, message)}}"\r\n        data-message-id="{{message.id}}"\r\n      >\r\n        <div class="message" chat-message="{{ message }}"></div>\r\n      </div>\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
@@ -3118,7 +3118,7 @@
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-chat-messages" properties="conversation messages" noshadow>\r\n  <template>\r\n    <iframe id="chat-messages-frame" ref="messagesIframe" framed="{{frameStyles}}" on-resize="{{scrollToBottom()}}">\r\n      <section\r\n        ref="messageContainer"\r\n        class="social-scroll messages"\r\n        on-scroll="{{onScroll()}}"\r\n        on-contextmenu="{{showMessagesContextMenu($event)}}"\r\n        on-click="{{ onClick($event) }}"\r\n        lang="{{documentLanguage}}"\r\n      >\r\n        <div class="warning-message" if="{{!data.isRoom(conversation)}}">{{t(\'conversation_warning_message\')}}</div>\r\n        <div if="{{virtualized}}" ref="container" class="virtualized inner-messages"></div>\r\n        <div else class="inner-messages">\r\n          <lol-social-chat-message\r\n            repeat="{{index, message in filteredMessages}}"\r\n            message="{{message}}"\r\n            previous="{{filteredMessages[index - 1]}}"\r\n            conversation="{{conversation}}"\r\n          >\r\n          </lol-social-chat-message>\r\n        </div>\r\n        <div if="{{unavailableSystemMessage()}}" class="system-message-container">\r\n          <div class="system-message-line"></div>\r\n          <div class="system-message-diamond"></div>\r\n          <div class="system-message-text">\r\n            {{{ unavailableSystemMessage() }}}\r\n          </div>\r\n          <div class="system-message-diamond"></div>\r\n          <div class="system-message-line"></div>\r\n        </div>\r\n      </section>\r\n    </iframe>\r\n  </template>\r\n</lol-social-element>\r\n'
         }, e => {
             "use strict";
-            e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-chat-window" noshadow>\r\n  <template>\r\n    \x3c!-- This wrapper is used to show and hide the chat window without changing the height and width of the chat-window element --\x3e\r\n    <div\r\n      id="chat-window-wrapper"\r\n      class-open="{{ visible }}"\r\n      class-button-inside="{{ showChatToggleButton }}"\r\n      class-use-animation="{{!data.disableAnimations}}"\r\n      on-click="{{onClick($event)}}"\r\n    >\r\n      <lol-uikit-scrollable\r\n        ref="list"\r\n        class="social-scroll conversations"\r\n        on-scroll="{{updateScrollInfo()}}"\r\n        class-scrolled-to-bottom="{{listScrolledToBottom}}"\r\n        class-has-button="{{hasNewChatButton}}"\r\n      >\r\n        <div class="conversations-list">\r\n          <div\r\n            class="conversation {{ conversation.type }} social-avatar-hit"\r\n            contextmenu="{{getConversationContextMenu(conversation)}}"\r\n            data-id="{{conversation.id}}"\r\n            data-name="{{conversation.name}}"\r\n            repeat="{{index, conversation in clashConversations}}"\r\n            class-active="{{conversation === active}}"\r\n            class-unread="{{conversation.unreadMessageCount}}"\r\n            class-offline="{{data.friends.byId[conversation.id].availability === \'offline\'}}"\r\n            class-lobby="{{conversation.type !== \'chat\'}}"\r\n            on-click="{{selectConversation(conversation)}}"\r\n            class-use-animation="{{!data.disableAnimations}}"\r\n            style="order:{{index}}"\r\n            animate="slide"\r\n          >\r\n            <img if="{{conversation.type === \'clash\'}}" class="clash-icon" src="{{data.getClashIcon(conversation)}}" />\r\n            <div class="conversation-titles-container">\r\n              <div class="conversation-title">{{ chatName(conversation) }}</div>\r\n              <div class="conversation-subtitle" if="{{conversation.lastMessage}}">\r\n                {{conversation.lastMessage | messageBody}}\r\n              </div>\r\n            </div>\r\n\r\n            \x3c!-- the count-badge shows up if there are unread messages and the conversation is not muted --\x3e\r\n            <div class="social-count-badge" if="{{conversation.unreadMessageCount && !conversation.isMuted}}">\r\n              {{conversation.unreadMessageCount}}\r\n            </div>\r\n            \x3c!-- the mute button shows up if the conversation is muted, and is permanently shown if this is a game room --\x3e\r\n            <div\r\n              else-if="{{conversation.isMuted}}"\r\n              class="conversation-muted"\r\n              permanent?="{{data.gameRooms.has(conversation)}}"\r\n            ></div>\r\n            \x3c!-- Clash conversations can span multiple games are are closed programmatically - not via player action in the social panel --\x3e\r\n            <div if="{{conversation.type === \'clash\'}}" class="conversation-cannot-close-button"></div>\r\n          </div>\r\n          <div\r\n            if="{{clashConversations.length}}"\r\n            class="clash-seperator"\r\n            style="order:{{ clashConversations.length - 1 }}"\r\n          ></div>\r\n          <div\r\n            class="conversation {{ conversation.type }} social-avatar-hit"\r\n            contextmenu="{{getConversationContextMenu(conversation)}}"\r\n            data-id="{{conversation.id}}"\r\n            data-name="{{conversation.name}}"\r\n            repeat="{{index, conversation in chatConversations}}"\r\n            class-active="{{conversation === active}}"\r\n            class-unread="{{conversation.unreadMessageCount}}"\r\n            class-offline="{{data.friends.byId[conversation.id].availability === \'offline\'}}"\r\n            class-lobby="{{conversation.type !== \'chat\'}}"\r\n            on-click="{{selectConversation(conversation)}}"\r\n            class-use-animation="{{!data.disableAnimations}}"\r\n            style="order:{{index}}"\r\n            animate="slide"\r\n          >\r\n            <lol-social-avatar\r\n              if="{{conversation.type === \'chat\'}}"\r\n              class="avatar"\r\n              icon="{{data.getSummonerIcon(data.friends.byId[conversation.id])}}"\r\n              member="{{data.friends.byId[conversation.id]}}"\r\n              hideindicator\r\n            ></lol-social-avatar>\r\n            <div class="conversation-titles-container">\r\n              <div class="conversation-title">{{ chatName(conversation) }}</div>\r\n              <div class="conversation-subtitle blocked" if="{{conversationIsBlocked(conversation)}}">\r\n                {{ t("conversation_blocked") }}\r\n              </div>\r\n              <div class="conversation-subtitle unavailable" else-if="{{!conversationIsFriend(conversation)}}">\r\n                {{ t("conversation_unavailable") }}\r\n              </div>\r\n              <div class="conversation-subtitle" else-if="{{conversation.lastMessage}}">\r\n                {{conversation.lastMessage | messageBody}}\r\n              </div>\r\n            </div>\r\n\r\n            \x3c!-- the count-badge shows up if there are unread messages and the conversation is not muted --\x3e\r\n            <div class="social-count-badge" if="{{conversation.unreadMessageCount && !conversation.isMuted}}">\r\n              {{conversation.unreadMessageCount}}\r\n            </div>\r\n            \x3c!-- the mute button shows up if the conversation is muted, and is permanently shown if this is a game room --\x3e\r\n            <div\r\n              else-if="{{conversation.isMuted}}"\r\n              class="conversation-muted"\r\n              permanent?="{{data.gameRooms.has(conversation)}}"\r\n            ></div>\r\n            \x3c!-- Only allow the conversation to be closed if it isn\'t a game room and if the convo is muted or does not have unread messages --\x3e\r\n            <div\r\n              if="{{!data.gameRooms.has(conversation) && (conversation.isMuted || !conversation.unreadMessageCount)}}"\r\n              class="conversation-close-button"\r\n              on-click="{{closeConversation(conversation, $event)}}"\r\n            ></div>\r\n          </div>\r\n          <div\r\n            ref="createTab"\r\n            class="new-chat-placeholder conversation chat offline"\r\n            if="{{data.chatWindow.showingCreateTab}}"\r\n            class-active="{{data.chatWindow.showingCreatePanel}}"\r\n            on-click="{{openCreatePanel()}}"\r\n            style="order:{{ clashConversations.length - 1 }}"\r\n            animate="slide"\r\n          >\r\n            <lol-social-avatar class="avatar" icon="-1" disabled hideindicator></lol-social-avatar>\r\n            <div class="conversation-titles-container">\r\n              <div class="conversation-title">{{ t(\'new_message\') }}</div>\r\n              <div class="conversation-subtitle">{{ t(\'new_message_creating\') }}</div>\r\n            </div>\r\n            <div class="conversation-close-button" on-click="{{closeCreatePanel($event)}}"></div>\r\n          </div>\r\n        </div>\r\n      </lol-uikit-scrollable>\r\n      <div ref="newChatButton" class="new-chat-button" class-hidden="{{!hasNewChatButton}}">\r\n        <lol-uikit-flat-button-secondary on-click="{{openCreatePanel()}}"\r\n          >{{t(\'new_message\')}}</lol-uikit-flat-button-secondary\r\n        >\r\n      </div>\r\n      <div class="more-unread above" if="{{unreadAbove}}" on-click="{{ jump(\'above\') }}">\r\n        <div class="bar">{{t(\'roster_more_unreads\')}}</div>\r\n        <div class="arrow"></div>\r\n      </div>\r\n      <div class="more-unread below" if="{{unreadBelow}}" on-click="{{ jump(\'below\') }}">\r\n        <div class="bar">{{t(\'roster_more_unreads\')}}</div>\r\n        <div class="arrow"></div>\r\n      </div>\r\n      \x3c!-- Creating new conversation panel --\x3e\r\n      <div class="chat-area create-panel" class-hidden="{{!data.chatWindow.showingCreatePanel}}">\r\n        <header class="chat-header" disabled>\r\n          <lol-social-avatar class="avatar" icon="-1" disabled availability="offline"></lol-social-avatar>\r\n          <div class="chat-name">{{t(\'new_message\')}}</div>\r\n          <div class="spacer"></div>\r\n          <div class="header-button close-window-button" on-click="{{closeWindow($event)}}"></div>\r\n          <div class="header-button conversation-settings-button" disabled></div>\r\n        </header>\r\n        <lol-uikit-flat-input class="flat-input create-panel-search-input">\r\n          <input\r\n            ref="createPanelSearchInput"\r\n            id="summoner-name-input"\r\n            type="search"\r\n            on-input="{{findSearchMatches()}}"\r\n            maxlength="16"\r\n            placeholder="{{t(\'dropdown_placeholder_enter_a_summoner_name\')}}"\r\n            value="{{searchText}}"\r\n            autofocus\r\n          />\r\n        </lol-uikit-flat-input>\r\n        <lol-uikit-scrollable class="social-scroll" overflow-masks="enabled">\r\n          <div\r\n            repeat="{{friend in data.friends}}"\r\n            class="create-panel-search-match social-avatar-hit"\r\n            class-hidden="{{searchText.length > 0 && searchMatches.indexOf(friend) < 0}}"\r\n            on-click="{{selectSearchMatch(friend)}}"\r\n          >\r\n            <lol-social-avatar\r\n              class="avatar"\r\n              icon="{{ data.getSummonerIcon(friend) }}"\r\n              member="{{friend}}"\r\n              availability="{{friend.availability}}"\r\n            ></lol-social-avatar>\r\n            <div class="create-panel-name-wrapper">\r\n              <div class="create-panel-summoner-name" if="{{friend.name}}">\r\n                <lol-uikit-player-name format="short" game-name="{{friend.gameName}}" tag-line="{{friend.gameTag}}" />\r\n              </div>\r\n              <div class="create-panel-gnt" if="{{friend.gameName && friend.gameTag}}">\r\n                <span class="create-panel-game-name" class-only-name="{{!friend.name}}"\r\n                  >{{getLocaleWrappedGameName(friend)}}</span\r\n                >\r\n                <span class="create-panel-game-tag">{{getLocaleWrappedTagLine(friend)}}</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </lol-uikit-scrollable>\r\n      </div>\r\n      \x3c!-- Conversation panel --\x3e\r\n      <div class="chat-area" class-hidden="{{data.chatWindow.showingCreatePanel}}">\r\n        \x3c!-- Header for clash chats --\x3e\r\n        <header\r\n          if="{{active.type and active.type !== \'chat\'}}"\r\n          class-active="{{showingParticipants}}"\r\n          class="chat-header room-header"\r\n        >\r\n          <div class="chat-name social-arrow-hit" on-mousedown="{{toggleParticipants()}}">\r\n            <div if="{{active.type === \'clash\'}}" class="chat-header-clash-title-container">\r\n              <div class="chat-header-clash-title-prefix">{{ data.getClashChatWindowTitlePrefix(active) }}</div>\r\n              <div class="chat-header-clash-title-main">{{ data.getClashChatWindowTitleMain(active) }}</div>\r\n            </div>\r\n            <div class="chat-participants-count">({{ participants.length }})</div>\r\n            <lol-social-arrow-toggle open class="toggle-btn medium golden"></lol-social-arrow-toggle>\r\n          </div>\r\n          <div class="spacer"></div>\r\n          <div class="header-button close-window-button" on-click="{{closeWindow($event)}}"></div>\r\n          <div class="header-button conversation-settings-button" on-mousedown="{{openSettingsMenu($event)}}"></div>\r\n        </header>\r\n\r\n        \x3c!-- Header for p2p chats --\x3e\r\n        <header\r\n          class="chat-header"\r\n          disabled\r\n          class-offline="{{friend.availability === \'offline\'}}"\r\n          else-if="{{active.type and active.type === \'chat\'}}"\r\n        >\r\n          <lol-social-avatar\r\n            class="avatar"\r\n            icon="{{data.getSummonerIcon(friend)}}"\r\n            member="{{friend}}"\r\n            disabled\r\n            availability="{{isBlocked ? \'blocked\' : friend.availability}}"\r\n          ></lol-social-avatar>\r\n          <div class="chat-name-info">\r\n            <div class="chat-name-parts">\r\n              <div class="chat-name">\r\n                \x3c!-- Use "active" instead of "friend" for the name here in case they are no longer our friend --\x3e\r\n                <lol-uikit-player-name format="short" game-name="{{active.gameName}}" tag-line="{{active.gameTag}}"/>\r\n              </div>\r\n            </div>\r\n            <div class="chat-subtitle-parts">\r\n              <div class="chat-gnt" if="{{active.gameName && active.gameTag}}">\r\n                <lol-uikit-player-name\r\n                    render-mode="fullAlias"\r\n                    game-name="{{active.gameName}}"\r\n                    tag-line="{{active.gameTag}}"\r\n                />\r\n              </div>\r\n              <div class="chat-state-separator" if="{{isBlocked || !isFriend}}">&hyphen;</div>\r\n              <div class="chat-state blocked" if="{{isBlocked}}">\r\n                 {{ t(\'conversation_blocked\') }}\r\n              </div>\r\n              <div class="chat-state" else-if="{{!isFriend}}">\r\n                {{ t(\'conversation_unavailable\') }}\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class="spacer"></div>\r\n          <div class="header-button close-window-button" on-click="{{closeWindow($event)}}"></div>\r\n          <div\r\n            class="header-button conversation-report-button"\r\n            if="{{dmReportingEnabled}}"\r\n            reported?="{{activeChatAlreadyReported}}"\r\n            on-mouseenter="{{showReportButtonTooltip($event)}}"\r\n            on-mouseleave="{{hideReportButtonTooltip($event)}}"\r\n            on-mousedown="{{reportActiveConversation($event)}}"\r\n          ></div>\r\n          <div class="header-button conversation-settings-button" on-mousedown="{{openSettingsMenu($event)}}"></div>\r\n        </header>\r\n\r\n        \x3c!-- Empty Header to show during close animation --\x3e\r\n        <header class="chat-header" disabled class-offline="{{friend.availability === \'offline\'}}" else>\r\n          <div class="spacer"></div>\r\n          <div class="header-button close-window-button" disabled></div>\r\n          <div class="header-button conversation-settings-button" disabled></div>\r\n        </header>\r\n\r\n        <lol-social-menu\r\n          if="{{ showingParticipants }}"\r\n          keep-open-on-scroll\r\n          keep-open-on-focusout\r\n          ref="participantsElement"\r\n          class="participants social-scroll"\r\n          animate="slide"\r\n        >\r\n          <div\r\n            if="{{active.type and active.type === \'clash\'}}"\r\n            repeat="{{participant in participants}}"\r\n            class="participant"\r\n          >\r\n            <lol-social-avatar\r\n              class="avatar"\r\n              icon="{{ data.getSummonerIcon(participant) }}"\r\n              member="{{participant}}"\r\n              availability="{{participant.availability}}"\r\n              disabled\r\n            ></lol-social-avatar>\r\n            <div if="{{isUsingAlias && participant.gameName}}">{{participant.gameName}}</div>\r\n            <div else-if="{{!isUsingAlias && participant.name}}">{{participant.name}}</div>\r\n          </div>\r\n        </lol-social-menu>\r\n\r\n        <lol-social-chat-messages\r\n          ref="messagesElement"\r\n          class="messages"\r\n          conversation="{{active}}"\r\n          messages="{{data.messages[active.id]}}"\r\n          room-type="{{active.type}}"\r\n          is-friend?="{{isFriend}}"\r\n          is-blocked?="{{isBlocked}}"\r\n        ></lol-social-chat-messages>\r\n\r\n        <lol-social-chat-input\r\n          ref="chatInput"\r\n          class="chat-input"\r\n          on-send="{{submitText($event.message)}}"\r\n          on-esc="{{closeWindow($event)}}"\r\n          placeholder="{{t(\'conversation_get_started_placeholder\')}}"\r\n          room-type="{{active.type}}"\r\n          is-friend?="{{isFriend}}"\r\n          is-blocked?="{{isBlocked}}"\r\n          autofocus\r\n        ></lol-social-chat-input>\r\n      </div>\r\n\r\n      <lol-social-menu\r\n        ref="settingsMenu"\r\n        class="settings-menu"\r\n        if="{{settingsOpen}}"\r\n        on-close="{{closeSettingsMenu()}}"\r\n        animate="slide"\r\n      >\r\n        <lol-social-menu-item if="{{data.platformConfig.clearChatHistoryEnabled && active.type === \'chat\'}}">\r\n          <div class="clear-history" on-click="{{clearHistory()}}">{{ t(\'dropdown_clear_history\') }}</div>\r\n        </lol-social-menu-item>\r\n        <lol-social-menu-item>\r\n          <lol-uikit-flat-checkbox>\r\n            <input\r\n              slot="input"\r\n              class="conversation-datedivider-checkbox"\r\n              type="checkbox"\r\n              on-click="{{toggleDateDivider()}}"\r\n              checked?="{{!data.playerSettings.hideDateDividers}}"\r\n            />\r\n            <label slot="label" class="conversation-mute-label">{{ t(\'dropdown_date_divider\') }}</label>\r\n          </lol-uikit-flat-checkbox>\r\n        </lol-social-menu-item>\r\n        <lol-social-menu-item>\r\n          <lol-uikit-flat-checkbox>\r\n            <input\r\n              slot="input"\r\n              class="conversation-mute-checkbox"\r\n              type="checkbox"\r\n              on-click="{{toggleMute()}}"\r\n              checked?="{{active.isMuted}}"\r\n            />\r\n            <label slot="label" class="conversation-mute-label">{{ t(\'dropdown_mute\') }}</label>\r\n          </lol-uikit-flat-checkbox>\r\n        </lol-social-menu-item>\r\n      </lol-social-menu>\r\n\r\n      <div class="resizer" if="{{resizeable}}" on-mousedown="{{resizerDragStart($event)}}"></div>\r\n      <lol-social-link-warning-dialog\r\n        if="{{showLinkHref}}"\r\n        on-accept="{{followLink(showLinkHref)}}"\r\n        on-cancel="{{cancelLinkWarning()}}"\r\n      ></lol-social-link-warning-dialog>\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
+            e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-chat-window" noshadow>\r\n  <template>\r\n    \x3c!-- This wrapper is used to show and hide the chat window without changing the height and width of the chat-window element --\x3e\r\n    <div\r\n      id="chat-window-wrapper"\r\n      class-open="{{ visible }}"\r\n      class-button-inside="{{ showChatToggleButton }}"\r\n      class-use-animation="{{!data.disableAnimations}}"\r\n      on-click="{{onClick($event)}}"\r\n    >\r\n      <lol-uikit-scrollable\r\n        ref="list"\r\n        class="social-scroll conversations"\r\n        on-scroll="{{updateScrollInfo()}}"\r\n        class-scrolled-to-bottom="{{listScrolledToBottom}}"\r\n        class-has-button="{{hasNewChatButton}}"\r\n      >\r\n        <div class="conversations-list">\r\n          <div\r\n            class="conversation {{ conversation.type }} social-avatar-hit"\r\n            contextmenu="{{getConversationContextMenu(conversation)}}"\r\n            data-id="{{conversation.id}}"\r\n            data-name="{{conversation.name}}"\r\n            repeat="{{index, conversation in clashConversations}}"\r\n            class-active="{{conversation === active}}"\r\n            class-unread="{{conversation.unreadMessageCount}}"\r\n            class-offline="{{data.friends.byId[conversation.id].availability === \'offline\'}}"\r\n            class-lobby="{{conversation.type !== \'chat\'}}"\r\n            on-click="{{selectConversation(conversation)}}"\r\n            class-use-animation="{{!data.disableAnimations}}"\r\n            style="order:{{index}}"\r\n            animate="slide"\r\n          >\r\n            <img if="{{conversation.type === \'clash\'}}" class="clash-icon" src="{{data.getClashIcon(conversation)}}" />\r\n            <div class="conversation-titles-container">\r\n              <div class="conversation-title">{{ chatName(conversation) }}</div>\r\n              <div class="conversation-subtitle" if="{{conversation.lastMessage}}">\r\n                {{conversation.lastMessage | messageBody}}\r\n              </div>\r\n            </div>\r\n\r\n            \x3c!-- the count-badge shows up if there are unread messages and the conversation is not muted --\x3e\r\n            <div class="social-count-badge" if="{{conversation.unreadMessageCount && !conversation.isMuted}}">\r\n              {{conversation.unreadMessageCount}}\r\n            </div>\r\n            \x3c!-- the mute button shows up if the conversation is muted, and is permanently shown if this is a game room --\x3e\r\n            <div\r\n              else-if="{{conversation.isMuted}}"\r\n              class="conversation-muted"\r\n              permanent?="{{data.gameRooms.has(conversation)}}"\r\n            ></div>\r\n            \x3c!-- Clash conversations can span multiple games are are closed programmatically - not via player action in the social panel --\x3e\r\n            <div if="{{conversation.type === \'clash\'}}" class="conversation-cannot-close-button"></div>\r\n          </div>\r\n          <div\r\n            if="{{clashConversations.length}}"\r\n            class="clash-seperator"\r\n            style="order:{{ clashConversations.length - 1 }}"\r\n          ></div>\r\n          <div\r\n            class="conversation {{ conversation.type }} social-avatar-hit"\r\n            contextmenu="{{getConversationContextMenu(conversation)}}"\r\n            data-id="{{conversation.id}}"\r\n            data-name="{{conversation.name}}"\r\n            repeat="{{index, conversation in chatConversations}}"\r\n            class-active="{{conversation === active}}"\r\n            class-unread="{{conversation.unreadMessageCount}}"\r\n            class-offline="{{data.friends.byId[conversation.id].availability === \'offline\'}}"\r\n            class-lobby="{{conversation.type !== \'chat\'}}"\r\n            on-click="{{selectConversation(conversation)}}"\r\n            class-use-animation="{{!data.disableAnimations}}"\r\n            style="order:{{index}}"\r\n            animate="slide"\r\n          >\r\n            <lol-social-avatar\r\n              if="{{conversation.type === \'chat\'}}"\r\n              class="avatar"\r\n              icon="{{data.getSummonerIcon(data.friends.byId[conversation.id])}}"\r\n              member="{{data.friends.byId[conversation.id]}}"\r\n              hideindicator\r\n            ></lol-social-avatar>\r\n            <div class="conversation-titles-container">\r\n              <div class="conversation-title">{{ chatName(conversation) }}</div>\r\n              <div class="conversation-subtitle blocked" if="{{conversationIsBlocked(conversation)}}">\r\n                {{ t("conversation_blocked") }}\r\n              </div>\r\n              <div class="conversation-subtitle unavailable" else-if="{{!conversationIsFriend(conversation)}}">\r\n                {{ t("conversation_unavailable") }}\r\n              </div>\r\n              <div class="conversation-subtitle" else-if="{{conversation.lastMessage}}">\r\n                {{conversation.lastMessage | messageBody}}\r\n              </div>\r\n            </div>\r\n\r\n            \x3c!-- the count-badge shows up if there are unread messages and the conversation is not muted --\x3e\r\n            <div class="social-count-badge" if="{{conversation.unreadMessageCount && !conversation.isMuted}}">\r\n              {{conversation.unreadMessageCount}}\r\n            </div>\r\n            \x3c!-- the mute button shows up if the conversation is muted, and is permanently shown if this is a game room --\x3e\r\n            <div\r\n              else-if="{{conversation.isMuted}}"\r\n              class="conversation-muted"\r\n              permanent?="{{data.gameRooms.has(conversation)}}"\r\n            ></div>\r\n            \x3c!-- Only allow the conversation to be closed if it isn\'t a game room and if the convo is muted or does not have unread messages --\x3e\r\n            <div\r\n              if="{{!data.gameRooms.has(conversation) && (conversation.isMuted || !conversation.unreadMessageCount)}}"\r\n              class="conversation-close-button"\r\n              on-click="{{closeConversation(conversation, $event)}}"\r\n            ></div>\r\n          </div>\r\n          <div\r\n            ref="createTab"\r\n            class="new-chat-placeholder conversation chat offline"\r\n            if="{{data.chatWindow.showingCreateTab}}"\r\n            class-active="{{data.chatWindow.showingCreatePanel}}"\r\n            on-click="{{openCreatePanel()}}"\r\n            style="order:{{ clashConversations.length - 1 }}"\r\n            animate="slide"\r\n          >\r\n            <lol-social-avatar class="avatar" icon="-1" disabled hideindicator></lol-social-avatar>\r\n            <div class="conversation-titles-container">\r\n              <div class="conversation-title">{{ t(\'new_message\') }}</div>\r\n              <div class="conversation-subtitle">{{ t(\'new_message_creating\') }}</div>\r\n            </div>\r\n            <div class="conversation-close-button" on-click="{{closeCreatePanel($event)}}"></div>\r\n          </div>\r\n        </div>\r\n      </lol-uikit-scrollable>\r\n      <div ref="newChatButton" class="new-chat-button" class-hidden="{{!hasNewChatButton}}">\r\n        <lol-uikit-flat-button-secondary on-click="{{openCreatePanel()}}"\r\n          >{{t(\'new_message\')}}</lol-uikit-flat-button-secondary\r\n        >\r\n      </div>\r\n      <div class="more-unread above" if="{{unreadAbove}}" on-click="{{ jump(\'above\') }}">\r\n        <div class="bar">{{t(\'roster_more_unreads\')}}</div>\r\n        <div class="arrow"></div>\r\n      </div>\r\n      <div class="more-unread below" if="{{unreadBelow}}" on-click="{{ jump(\'below\') }}">\r\n        <div class="bar">{{t(\'roster_more_unreads\')}}</div>\r\n        <div class="arrow"></div>\r\n      </div>\r\n      \x3c!-- Creating new conversation panel --\x3e\r\n      <div class="chat-area create-panel" class-hidden="{{!data.chatWindow.showingCreatePanel}}">\r\n        <header class="chat-header" disabled>\r\n          <lol-social-avatar class="avatar" icon="-1" disabled availability="offline"></lol-social-avatar>\r\n          <div class="chat-name">{{t(\'new_message\')}}</div>\r\n          <div class="spacer"></div>\r\n          <div class="header-button close-window-button" on-click="{{closeWindow($event)}}"></div>\r\n          <div class="header-button conversation-settings-button" disabled></div>\r\n        </header>\r\n        <lol-uikit-flat-input class="flat-input create-panel-search-input">\r\n          <input\r\n            ref="createPanelSearchInput"\r\n            id="summoner-name-input"\r\n            type="search"\r\n            on-input="{{findSearchMatches()}}"\r\n            maxlength="16"\r\n            placeholder="{{t(\'dropdown_placeholder_enter_a_summoner_name\')}}"\r\n            value="{{searchText}}"\r\n            autofocus\r\n          />\r\n        </lol-uikit-flat-input>\r\n        <lol-uikit-scrollable class="social-scroll" overflow-masks="enabled">\r\n          <div\r\n            repeat="{{friend in data.friends}}"\r\n            class="create-panel-search-match social-avatar-hit"\r\n            class-hidden="{{searchText.length > 0 && searchMatches.indexOf(friend) < 0}}"\r\n            on-click="{{selectSearchMatch(friend)}}"\r\n          >\r\n            <lol-social-avatar\r\n              class="avatar"\r\n              icon="{{ data.getSummonerIcon(friend) }}"\r\n              member="{{friend}}"\r\n              availability="{{friend.availability}}"\r\n            ></lol-social-avatar>\r\n            <div class="create-panel-name-wrapper">\r\n              <div class="create-panel-summoner-name" if="{{friend.name}}">\r\n                <lol-uikit-player-name format="short" game-name="{{friend.gameName}}" tag-line="{{friend.gameTag}}" />\r\n              </div>\r\n              <div class="create-panel-gnt" if="{{friend.gameName && friend.gameTag}}">\r\n                <span class="create-panel-game-name" class-only-name="{{!friend.name}}"\r\n                  >{{getLocaleWrappedGameName(friend)}}</span\r\n                >\r\n                <span class="create-panel-game-tag">{{getLocaleWrappedTagLine(friend)}}</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </lol-uikit-scrollable>\r\n      </div>\r\n      \x3c!-- Conversation panel --\x3e\r\n      <div class="chat-area" class-hidden="{{data.chatWindow.showingCreatePanel}}">\r\n        \x3c!-- Header for clash chats --\x3e\r\n        <header\r\n          if="{{active.type and active.type !== \'chat\'}}"\r\n          class-active="{{showingParticipants}}"\r\n          class="chat-header room-header"\r\n        >\r\n          <div class="chat-name social-arrow-hit" on-mousedown="{{toggleParticipants()}}">\r\n            <div if="{{active.type === \'clash\'}}" class="chat-header-clash-title-container">\r\n              <div class="chat-header-clash-title-prefix">{{ data.getClashChatWindowTitlePrefix(active) }}</div>\r\n              <div class="chat-header-clash-title-main">{{ data.getClashChatWindowTitleMain(active) }}</div>\r\n            </div>\r\n            <div class="chat-participants-count">({{ participants.length }})</div>\r\n            <lol-social-arrow-toggle open class="toggle-btn medium golden"></lol-social-arrow-toggle>\r\n          </div>\r\n          <div class="spacer"></div>\r\n          <div class="header-button close-window-button" on-click="{{closeWindow($event)}}"></div>\r\n          <div class="header-button conversation-settings-button" on-mousedown="{{openSettingsMenu($event)}}"></div>\r\n        </header>\r\n\r\n        \x3c!-- Header for p2p chats --\x3e\r\n        <header\r\n          class="chat-header"\r\n          disabled\r\n          class-offline="{{friend.availability === \'offline\'}}"\r\n          else-if="{{active.type and active.type === \'chat\'}}"\r\n        >\r\n          <lol-social-avatar\r\n            class="avatar"\r\n            icon="{{data.getSummonerIcon(friend)}}"\r\n            member="{{friend}}"\r\n            disabled\r\n            availability="{{isBlocked ? \'blocked\' : friend.availability}}"\r\n          ></lol-social-avatar>\r\n          <div class="chat-name-info">\r\n            <div class="chat-name-parts">\r\n              <div class="chat-name">\r\n                \x3c!-- Use "active" instead of "friend" for the name here in case they are no longer our friend --\x3e\r\n                <lol-uikit-player-name format="short" game-name="{{active.gameName}}" tag-line="{{active.gameTag}}"/>\r\n              </div>\r\n            </div>\r\n            <div class="chat-subtitle-parts">\r\n              <div class="chat-gnt" if="{{active.gameName && active.gameTag}}">\r\n                <lol-uikit-player-name\r\n                    render-mode="fullAlias"\r\n                    game-name="{{active.gameName}}"\r\n                    tag-line="{{active.gameTag}}"\r\n                />\r\n              </div>\r\n              <div class="chat-state-separator" if="{{isBlocked || !isFriend}}">&hyphen;</div>\r\n              <div class="chat-state blocked" if="{{isBlocked}}">\r\n                 {{ t(\'conversation_blocked\') }}\r\n              </div>\r\n              <div class="chat-state" else-if="{{!isFriend}}">\r\n                {{ t(\'conversation_unavailable\') }}\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class="spacer"></div>\r\n          <div class="header-button close-window-button" on-click="{{closeWindow($event)}}"></div>\r\n          <div\r\n            class="header-button conversation-report-button"\r\n            if="{{dmReportingEnabled}}"\r\n            reported?="{{activeChatAlreadyReported}}"\r\n            on-mouseenter="{{showReportButtonTooltip($event)}}"\r\n            on-mouseleave="{{hideReportButtonTooltip($event)}}"\r\n            on-mousedown="{{reportActiveConversation($event)}}"\r\n          ></div>\r\n          <div class="header-button conversation-settings-button" on-mousedown="{{openSettingsMenu($event)}}"></div>\r\n        </header>\r\n\r\n        \x3c!-- Empty Header to show during close animation --\x3e\r\n        <header class="chat-header" disabled class-offline="{{friend.availability === \'offline\'}}" else>\r\n          <div class="spacer"></div>\r\n          <div class="header-button close-window-button" disabled></div>\r\n          <div class="header-button conversation-settings-button" disabled></div>\r\n        </header>\r\n\r\n        <lol-social-menu\r\n          if="{{ showingParticipants }}"\r\n          keep-open-on-scroll\r\n          keep-open-on-focusout\r\n          ref="participantsElement"\r\n          class="participants social-scroll"\r\n          animate="slide"\r\n        >\r\n          <div\r\n            if="{{active.type and active.type === \'clash\'}}"\r\n            repeat="{{participant in participants}}"\r\n            class="participant"\r\n          >\r\n            <lol-social-avatar\r\n              class="avatar"\r\n              icon="{{ data.getSummonerIcon(participant) }}"\r\n              member="{{participant}}"\r\n              availability="{{participant.availability}}"\r\n              disabled\r\n            ></lol-social-avatar>\r\n            <div if="{{isUsingAlias && participant.gameName}}">{{participant.gameName}}</div>\r\n            <div else-if="{{!isUsingAlias && participant.name}}">{{participant.name}}</div>\r\n          </div>\r\n        </lol-social-menu>\r\n\r\n        <lol-social-chat-messages\r\n          ref="messagesElement"\r\n          class="messages"\r\n          conversation="{{active}}"\r\n          messages="{{data.messages[active.id]}}"\r\n          room-type="{{active.type}}"\r\n          is-friend?="{{isFriend}}"\r\n          is-blocked?="{{isBlocked}}"\r\n        ></lol-social-chat-messages>\r\n\r\n        <lol-social-chat-input\r\n          ref="chatInput"\r\n          class="chat-input"\r\n          on-send="{{submitText($event.message)}}"\r\n          on-esc="{{closeWindow($event)}}"\r\n          placeholder="{{t(\'conversation_get_started_placeholder\')}}"\r\n          room-type="{{active.type}}"\r\n          is-friend?="{{isFriend}}"\r\n          is-blocked?="{{isBlocked}}"\r\n          is-dm-restricted?="{{isDmRestricted}}"\r\n          autofocus\r\n        ></lol-social-chat-input>\r\n      </div>\r\n\r\n      <lol-social-menu\r\n        ref="settingsMenu"\r\n        class="settings-menu"\r\n        if="{{settingsOpen}}"\r\n        on-close="{{closeSettingsMenu()}}"\r\n        animate="slide"\r\n      >\r\n        <lol-social-menu-item if="{{data.platformConfig.clearChatHistoryEnabled && active.type === \'chat\'}}">\r\n          <div class="clear-history" on-click="{{clearHistory()}}">{{ t(\'dropdown_clear_history\') }}</div>\r\n        </lol-social-menu-item>\r\n        <lol-social-menu-item>\r\n          <lol-uikit-flat-checkbox>\r\n            <input\r\n              slot="input"\r\n              class="conversation-datedivider-checkbox"\r\n              type="checkbox"\r\n              on-click="{{toggleDateDivider()}}"\r\n              checked?="{{!data.playerSettings.hideDateDividers}}"\r\n            />\r\n            <label slot="label" class="conversation-mute-label">{{ t(\'dropdown_date_divider\') }}</label>\r\n          </lol-uikit-flat-checkbox>\r\n        </lol-social-menu-item>\r\n        <lol-social-menu-item>\r\n          <lol-uikit-flat-checkbox>\r\n            <input\r\n              slot="input"\r\n              class="conversation-mute-checkbox"\r\n              type="checkbox"\r\n              on-click="{{toggleMute()}}"\r\n              checked?="{{active.isMuted}}"\r\n            />\r\n            <label slot="label" class="conversation-mute-label">{{ t(\'dropdown_mute\') }}</label>\r\n          </lol-uikit-flat-checkbox>\r\n        </lol-social-menu-item>\r\n      </lol-social-menu>\r\n\r\n      <div class="resizer" if="{{resizeable}}" on-mousedown="{{resizerDragStart($event)}}"></div>\r\n      <lol-social-link-warning-dialog\r\n        if="{{showLinkHref}}"\r\n        on-accept="{{followLink(showLinkHref)}}"\r\n        on-cancel="{{cancelLinkWarning()}}"\r\n      ></lol-social-link-warning-dialog>\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-clash-roster-panel-item" attributes="roster" noshadow>\r\n  <template>\r\n    <div\r\n      class="clash-roster-item"\r\n      on-contextmenu="{{showContextMenu($event)}}"\r\n      on-click="{{clickHandler()}}"\r\n      data-id="{{roster.multiUserChatId}}"\r\n      data-name="{{roster.shortName}}"\r\n      class-unread="{{conversation.unreadMessageCount && !conversation.isMuted}}"\r\n      class-use-animation="{{!data.disableAnimations}}"\r\n    >\r\n      <div class="clash-roster-info-container" class-context-menu-open="{{contextMenuOpen}}">\r\n        <img class="clash-roster-icon" src="{{roster.iconSrc}}" />\r\n        <div class="clash-roster-info-text">\r\n          <div if="{{roster.isRegistered}}" class="clash-roster-name-container">\r\n            <div class="clash-roster-shortName">{{roster.shortName}}</div>\r\n            <div class="clash-roster-name">{{roster.name}}</div>\r\n          </div>\r\n          <div if="{{!roster.isRegistered}}" class="clash-roster-name">{{t(\'clash_chat_roster_pending_name\')}}</div>\r\n          <div if="{{clashRosterParticipantCount}}" class="clash-roster-members-online">\r\n            {{clashRosterParticipantCount}} {{ t(\'clash_chat_roster_online_label\') }}\r\n          </div>\r\n        </div>\r\n        <div class="social-count-badge unread-count" if="{{conversation.unreadMessageCount && !conversation.isMuted}}">\r\n          {{conversation.unreadMessageCount}}\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
@@ -3432,11 +3432,12 @@
                 "./products.js": 179,
                 "./profiles.js": 180,
                 "./reported-players.js": 181,
-                "./riotclient.js": 182,
-                "./settings.js": 183,
-                "./summoners.js": 184,
-                "./system.js": 185,
-                "./ux-settings.js": 186
+                "./restriction-view.js": 182,
+                "./riotclient.js": 183,
+                "./settings.js": 184,
+                "./summoners.js": 185,
+                "./system.js": 186,
+                "./ux-settings.js": 187
             };
 
             function o(e) {
@@ -8776,6 +8777,26 @@
                     }
                 }
             }
+        }, (e, t, n) => {
+            "use strict";
+            const r = n(1),
+                {
+                    components: o
+                } = r;
+            e.exports = {
+                init: function(e) {
+                    const t = e.getService("/lol-summoner-profiles");
+                    e.restrictionView = {
+                        restrictions: []
+                    }, e.hasDmRestriction = !1, e.afterLogin((function() {
+                        t.observe("/v1/get-restriction-view", e.restrictionView, (function(t) {
+                            t && Array.isArray(t.restrictions) ? (e.restrictionView.restrictions = t.restrictions, e.hasDmRestriction = t.restrictions.some((function(e) {
+                                return e && "DM_RESTRICTION" === e.restrictionType
+                            }))) : (e.restrictionView.restrictions = [], e.hasDmRestriction = !1), o.sync()
+                        }))
+                    }))
+                }
+            }
         }, e => {
             "use strict";
             e.exports = {
@@ -9124,7 +9145,7 @@
                     e(t)
                 }))
             }
-            n(188), s(n(189));
+            n(189), s(n(190));
             const l = {
                 left: {
                     targetAnchor: {
@@ -9218,7 +9239,7 @@
                     hideTooltips: function(e) {
                         i.tooltipManager && i.tooltipManager.hide(e || this)
                     }
-                }), s(n(200))
+                }), s(n(201))
             };
             const d = o.animation("slide"),
                 p = d.options;
@@ -9264,24 +9285,24 @@
             }))
         }, (e, t, n) => {
             var r = {
-                "./chat-message": 190,
-                "./chat-message.js": 190,
-                "./contextmenu": 192,
-                "./contextmenu.js": 192,
-                "./draggable-element": 193,
-                "./draggable-element.js": 193,
-                "./error": 194,
-                "./error.js": 194,
-                "./framed": 195,
-                "./framed.js": 195,
-                "./on-unfocus": 196,
-                "./on-unfocus.js": 196,
-                "./scroll-bottom": 197,
-                "./scroll-bottom.js": 197,
-                "./scroll-top": 198,
-                "./scroll-top.js": 198,
-                "./tooltip": 199,
-                "./tooltip.js": 199
+                "./chat-message": 191,
+                "./chat-message.js": 191,
+                "./contextmenu": 193,
+                "./contextmenu.js": 193,
+                "./draggable-element": 194,
+                "./draggable-element.js": 194,
+                "./error": 195,
+                "./error.js": 195,
+                "./framed": 196,
+                "./framed.js": 196,
+                "./on-unfocus": 197,
+                "./on-unfocus.js": 197,
+                "./scroll-bottom": 198,
+                "./scroll-bottom.js": 198,
+                "./scroll-top": 199,
+                "./scroll-top.js": 199,
+                "./tooltip": 200,
+                "./tooltip.js": 200
             };
 
             function o(e) {
@@ -9298,11 +9319,11 @@
             }
             o.keys = function() {
                 return Object.keys(r)
-            }, o.resolve = i, e.exports = o, o.id = 189
+            }, o.resolve = i, e.exports = o, o.id = 190
         }, (e, t, n) => {
             "use strict";
             var r, o = n(1),
-                i = n(191),
+                i = n(192),
                 a = (r = n(144)) && r.__esModule ? r : {
                     default: r
                 };
@@ -9566,67 +9587,67 @@
                         })), t
                     }({
                         get head() {
-                            return this.contentDocument.head
+                            return this.contentDocument?.head ?? null
                         },
                         get body() {
-                            return this.contentDocument.body
+                            return this.contentDocument?.body ?? null
                         },
                         get scrollTop() {
-                            return this.body.scrollTop
+                            return this.body?.scrollTop ?? 0
                         },
                         set scrollTop(e) {
-                            this.body.scrollTop = e
+                            this.body && (this.body.scrollTop = e)
                         },
                         get scrollHeight() {
-                            return this.body.scrollHeight
+                            return this.body?.scrollHeight ?? 0
                         },
                         get scrollLeft() {
-                            return this.body.scrollLeft
+                            return this.body?.scrollLeft ?? 0
                         },
                         set scrollLeft(e) {
-                            this.body.scrollLeft = e
+                            this.body && (this.body.scrollLeft = e)
                         },
                         get scrollWidth() {
-                            return this.body.scrollWidth
+                            return this.body?.scrollWidth ?? 0
                         },
                         get childNodes() {
-                            return this.body.childNodes
+                            return this.body?.childNodes ?? []
                         },
                         get children() {
-                            return this.body.children
+                            return this.body?.children ?? []
                         },
                         get firstChild() {
-                            return this.body.firstChild
+                            return this.body?.firstChild ?? null
                         },
                         get lastChild() {
-                            return this.body.lastChild
+                            return this.body?.lastChild ?? null
                         },
                         get firstElementChild() {
-                            return this.body.firstElementChild
+                            return this.body?.firstElementChild ?? null
                         },
                         get lastElementChild() {
-                            return this.body.lastElementChild
+                            return this.body?.lastElementChild ?? null
                         },
                         querySelector: function(e) {
-                            return this.body.querySelector(e)
+                            return this.body?.querySelector(e) ?? null
                         },
                         querySelectorAll: function(e) {
-                            return this.body.querySelectorAll(e)
+                            return this.body?.querySelectorAll(e) ?? []
                         },
                         appendChild: function(e) {
-                            return this.body.appendChild(e)
+                            return this.body ? this.body.appendChild(e) : null
                         },
                         insertBefore: function(e, t) {
                             if (this.body) return this.body.insertBefore(e, t)
                         },
                         removeChild: function(e) {
-                            return this.body.removeChild(e)
+                            return this.body ? this.body.removeChild(e) : null
                         },
                         replaceChild: function(e, t) {
-                            return this.body.replaceChild(e, t)
+                            return this.body ? this.body.replaceChild(e, t) : null
                         },
                         hasChildNodes: function() {
-                            return this.body.hasChildNodes()
+                            return this.body?.hasChildNodes() ?? !1
                         }
                     })), this.styles = void 0, this.element.addEventListener("load", this.loadHandler.bind(this))
                 },
@@ -9803,40 +9824,40 @@
             })
         }, (e, t, n) => {
             var r = {
-                "./arrow-toggle/arrow-toggle.js": 201,
-                "./availability-hitbox/availability-hitbox.js": 205,
-                "./avatar/avatar.js": 210,
-                "./chat-room/chat-room.js": 216,
-                "./chat-toggle-button/chat-toggle-button.js": 235,
-                "./chat-window/chat-input/chat-input.js": 238,
-                "./chat-window/chat-message/chat-message.js": 240,
-                "./chat-window/chat-messages/chat-messages.js": 241,
-                "./chat-window/chat-messages/virtualized-messages.js": 242,
-                "./chat-window/chat-window-controller.js": 246,
-                "./chat-window/chat-window/chat-window.js": 247,
-                "./clash-roster-panel-item/clash-roster-panel-item.js": 257,
-                "./clash-roster-panel/clash-roster-panel.js": 259,
-                "./friend-request-modal/friend-request-modal.js": 261,
-                "./friend-request/friend-request.js": 263,
-                "./friend-requests/friend-requests.js": 270,
-                "./game-invite/game-invite.js": 272,
-                "./game-invites/game-invites.js": 275,
-                "./game-panel/game-panel.js": 278,
-                "./game-queue/game-queue.js": 280,
-                "./input/input.js": 283,
-                "./link-warning-dialog/link-warning-dialog.js": 284,
-                "./link-warning/link-warning.js": 286,
-                "./menu-input/menu-input.js": 288,
-                "./menu-item/menu-item.js": 291,
-                "./menu/menu.js": 294,
-                "./panel/panel.js": 296,
-                "./roster-group-name/roster-group-name.js": 300,
-                "./roster-group/roster-group.js": 302,
-                "./roster-member/context-menu-items.js": 250,
-                "./roster-member/roster-member.js": 306,
-                "./roster/roster.js": 313,
-                "./roster/virtualize-roster-members.js": 314,
-                "./status/status.js": 317
+                "./arrow-toggle/arrow-toggle.js": 202,
+                "./availability-hitbox/availability-hitbox.js": 206,
+                "./avatar/avatar.js": 211,
+                "./chat-room/chat-room.js": 217,
+                "./chat-toggle-button/chat-toggle-button.js": 236,
+                "./chat-window/chat-input/chat-input.js": 239,
+                "./chat-window/chat-message/chat-message.js": 241,
+                "./chat-window/chat-messages/chat-messages.js": 242,
+                "./chat-window/chat-messages/virtualized-messages.js": 243,
+                "./chat-window/chat-window-controller.js": 247,
+                "./chat-window/chat-window/chat-window.js": 248,
+                "./clash-roster-panel-item/clash-roster-panel-item.js": 258,
+                "./clash-roster-panel/clash-roster-panel.js": 260,
+                "./friend-request-modal/friend-request-modal.js": 262,
+                "./friend-request/friend-request.js": 264,
+                "./friend-requests/friend-requests.js": 271,
+                "./game-invite/game-invite.js": 273,
+                "./game-invites/game-invites.js": 276,
+                "./game-panel/game-panel.js": 279,
+                "./game-queue/game-queue.js": 281,
+                "./input/input.js": 284,
+                "./link-warning-dialog/link-warning-dialog.js": 285,
+                "./link-warning/link-warning.js": 287,
+                "./menu-input/menu-input.js": 289,
+                "./menu-item/menu-item.js": 292,
+                "./menu/menu.js": 295,
+                "./panel/panel.js": 297,
+                "./roster-group-name/roster-group-name.js": 301,
+                "./roster-group/roster-group.js": 303,
+                "./roster-member/context-menu-items.js": 251,
+                "./roster-member/roster-member.js": 307,
+                "./roster/roster.js": 314,
+                "./roster/virtualize-roster-members.js": 315,
+                "./status/status.js": 318
             };
 
             function o(e) {
@@ -9853,7 +9874,7 @@
             }
             o.keys = function() {
                 return Object.keys(r)
-            }, o.resolve = i, e.exports = o, o.id = 200
+            }, o.resolve = i, e.exports = o, o.id = 201
         }, (e, t, n) => {
             "use strict";
             const r = n(1),
@@ -9861,11 +9882,11 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-arrow-toggle", {
-                styles: n(202)
+                styles: n(203)
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, "lol-social-arrow-toggle {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  outline: none;\n  border: 0;\n  background: none;\n  min-width: 8px;\n  min-height: 8px;\n  box-sizing: border-box;\n  cursor: pointer;\n/* an arrow with a point-down attribute of true will override the\n     rotations so the arrow will point down when closed and up when\n     open (as per the design for game invites header) */\n}\nlol-social-arrow-toggle .arrow-toggle {\n  border: 4px solid transparent;\n  margin: 2px 0 -2px;\n  border-top-color: #a09b8c;\n  transform: rotate(-90deg);\n  transform-origin: 50% 25%;\n}\nlol-social-arrow-toggle .arrow-toggle.use-animation {\n  transition: transform 0.2s cubic-bezier(0, 0, 0, 1);\n}\nlol-social-arrow-toggle .arrow-toggle:lang(ar-ae) {\n  transform: rotate(90deg);\n}\nlol-social-arrow-toggle.medium .arrow-toggle {\n  border-width: 6px 4px;\n}\nlol-social-arrow-toggle.golden {\n  border-top-color: #cdbe91;\n}\nlol-social-arrow-toggle[open] .arrow-toggle {\n  transform: rotate(0deg);\n}\nlol-social-arrow-toggle[point-down] .arrow-toggle {\n  transform: rotate(0deg);\n}\nlol-social-arrow-toggle[open][point-down] .arrow-toggle {\n  transform: rotate(180deg);\n}\n.social-arrow-hit:hover:not(:disabled) lol-social-arrow-toggle .arrow-toggle,\nlol-social-arrow-toggle:hover:not(:disabled) .arrow-toggle {\n  border-top-color: #f0e6d2;\n}\n.social-arrow-hit:active:not(:disabled) lol-social-arrow-toggle .arrow-toggle,\nlol-social-arrow-toggle:active:not(:disabled) .arrow-toggle {\n  border-top-color: #cdbe91;\n}\n.social-arrow-hit.active.golden lol-social-arrow-toggle .arrow-toggle {\n  border-top-color: #785a28;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-social/src/web-components/arrow-toggle/arrow-toggle.styl"],
@@ -9918,7 +9939,7 @@
             "use strict";
             var r = n(1);
             r.components.defineElement("lol-social-availability-hitbox", {
-                styles: n(206),
+                styles: n(207),
                 getAvailabilityIcon: function() {
                     return this.member && this.data.showOpenParty(this.member) ? "open-party" : this.getAttribute("availability") || "offline"
                 },
@@ -9946,11 +9967,11 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(208),
-                s = n(209),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(209),
+                s = n(210),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -9977,7 +9998,7 @@
             "use strict";
             var r = n(1);
             r.components.defineElement("lol-social-avatar", {
-                styles: n(211),
+                styles: n(212),
                 computed: {
                     remoteProduct: "data.isFriendRemoteProduct(member)",
                     summonerIconUrl: 'data.gameData.profileIcons.byId[getAttribute("icon")].imagePath',
@@ -10010,13 +10031,13 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(212),
-                s = n(213),
-                l = n(214),
-                c = n(215),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(213),
+                s = n(214),
+                l = n(215),
+                c = n(216),
                 d = o(r),
                 p = i(a),
                 u = i(s),
@@ -10046,10 +10067,10 @@
             "use strict";
             const {
                 components: r
-            } = n(1), o = n(217), i = n(232), a = "focused-chat-box", s = ["INPUT", "TEXTAREA", "LOL-PARTIES-COSMETICS-PANEL"];
+            } = n(1), o = n(218), i = n(233), a = "focused-chat-box", s = ["INPUT", "TEXTAREA", "LOL-PARTIES-COSMETICS-PANEL"];
             r.defineElement("lol-social-chat-room", o, i, {
-                styles: n(233),
-                frameStyles: n(234),
+                styles: n(234),
+                frameStyles: n(235),
                 isClickingInChat: !1,
                 isOpeningLink: !1,
                 isPlayerChatMessagesVisible: !0,
@@ -10182,8 +10203,8 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var r = n(218),
-                o = n(219);
+            var r = n(219),
+                o = n(220);
             e.exports = {
                 showInputContextMenu: function(e) {
                     e.preventDefault(), e.stopPropagation(), this.data.contextMenuManager && (this.data.contextMenuManager.setMenuItems([{
@@ -10456,18 +10477,18 @@
             }
         }, (e, t, n) => {
             "use strict";
-            const r = n(220),
-                o = n(221),
-                i = n(222),
-                a = n(223),
-                s = n(224),
-                l = n(225),
-                c = n(226),
-                d = n(227),
-                p = n(228),
-                u = n(229),
-                m = n(230),
-                g = n(231),
+            const r = n(221),
+                o = n(222),
+                i = n(223),
+                a = n(224),
+                s = n(225),
+                l = n(226),
+                c = n(227),
+                d = n(228),
+                p = n(229),
+                u = n(230),
+                m = n(231),
+                g = n(232),
                 h = "#ff2345",
                 f = {
                     ADD_FRIEND: "add-friend",
@@ -10600,8 +10621,8 @@
                 }
             }
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, 'lol-social-chat-room {\n  font-family: var(--font-body);\n}\nlol-social-chat-room {\n  -webkit-user-select: none;\n}\nlol-social-chat-room {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-chat-room {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-room:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-chat-room:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.shadow-effect,\nlol-social-chat-room.scoreboard-v2.focused-chat-box:not(.chat-room-disabled)::after,\nlol-social-chat-room.focused-chat-box:not(.chat-room-disabled)::after {\n  content: "";\n  position: absolute;\n  top: 0px;\n  bottom: 0;\n  left: 0px;\n  right: 0px;\n  box-shadow: inset 0px 15px 15px -8px rgba(0,0,0,0.75);\n  pointer-events: none;\n}\n.embiggened-embedded-chat,\nlol-social-chat-room.focused-chat-box:not(.chat-room-disabled) {\n  height: 225px;\n}\nlol-social-chat-room {\n  display: block;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 320px;\n  height: 125px;\n  -webkit-user-drag: none;\n  -webkit-user-select: none;\n  -webkit-mask-image: -webkit-gradient(linear, left top, left 15%, from(rgba(0,0,0,0)), to(#000));\n/* 1px transparent border is used so when a border is added on focus\n     the chat room won\'t jump slightly by 1 px */\n  border: thin solid transparent;\n}\nlol-social-chat-room.scoreboard-v2 {\n  height: 80px;\n  pointer-events: all;\n}\nlol-social-chat-room.scoreboard-v2.focused-chat-box:not(.chat-room-disabled) {\n  height: 225px;\n  background-color: rgba(1,10,19,0.95);\n  border: thin solid #1e282d;\n  -webkit-mask-image: none;\n}\nlol-social-chat-room.scoreboard-v2.focused-chat-box:not(.chat-room-disabled) .chat-box {\n  height: 100%;\n}\nlol-social-chat-room.scoreboard-v2 .chat-box {\n  height: 80px;\n}\nlol-social-chat-room.focused-chat-box:not(.chat-room-disabled) {\n  background-color: rgba(1,10,19,0.95);\n  border: thin solid #1e282d;\n  -webkit-mask-image: none;\n}\nlol-social-chat-room .chat-box {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  box-sizing: border-box;\n  background: linear-gradient(transparent, #010a13);\n}\nlol-social-chat-room #embedded-messages-frame {\n  display: flex;\n  flex: 1 1 100%;\n  height: 0;\n  border: none;\n  -webkit-user-select: text;\n  overflow-y: auto;\n}\nlol-social-chat-room .chat-room-input {\n  flex-shrink: 0;\n  box-sizing: border-box;\n  background-color: #010a13;\n  box-shadow: 0 0 2px 1px rgba(0,0,0,0.5), inset 0 0 1px 1px #000, inset 0 -1px 1px 1px rgba(255,255,255,0.15);\n  padding: 7px 8px;\n  border: thin solid #3e3501;\n  border-radius: 1px;\n  margin-top: 1px;\n}\nlol-social-chat-room .chat-room-input:lang(ar-ae) {\n  direction: rtl;\n}\nlol-social-chat-room .chat-message {\n  position: relative;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/chat-room/chat-room.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -10611,8 +10632,8 @@
                 sourceRoot: ""
             }]), e.exports = o
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.messages,\n.message-name,\n.mine {\n  font-family: var(--font-body);\n}\n.messages,\n.message-name,\n.mine {\n  -webkit-user-select: none;\n}\n.messages,\n.message-name,\n.mine {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.messages,\n.message-name,\n.mine {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.messages:lang(ja-jp),\n.message-name:lang(ja-jp),\n.mine:lang(ja-jp) {\n  font-size: 13px;\n}\n.messages:lang(ar-ae),\n.message-name:lang(ar-ae),\n.mine:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.messages,\n.message-name,\n.mine {\n  font-weight: 400;\n  letter-spacing: 0.05em;\n}\nbody {\n  display: flex;\n  flex-wrap: wrap;\n  overflow-y: auto;\n}\n.messages {\n  color: #f0e6d2;\n  flex: 1 1 100%;\n  overflow: hidden;\n  -webkit-user-select: text;\n  display: flex;\n  flex-direction: column;\n  align-self: flex-end;\n  padding: 5px 7px 7px 10px;\n}\n.messages:lang(ar-ae) {\n  direction: rtl;\n  padding: 5px 10px 7px 7px;\n}\n.messages::-webkit-scrollbar-thumb,\n::-webkit-scrollbar-thumb {\n  background-color: #695625;\n}\n.messages::-webkit-scrollbar-track,\n::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);\n  background-color: transparent;\n  border-radius: 7px;\n}\n.messages::-webkit-scrollbar,\n::-webkit-scrollbar {\n  width: 7px;\n  background-color: transparent;\n}\n.messages::-webkit-scrollbar-thumb,\n::-webkit-scrollbar-thumb {\n  border-radius: 7px;\n  border: thin solid transparent;\n  background-clip: padding-box;\n}\n.message-box {\n  margin: 1px;\n  overflow: hidden;\n}\n.message-name {\n  display: inline-flex;\n  color: #a09b8c;\n  vertical-align: bottom;\n}\n.message-tag {\n  margin: 0 0 0 6px;\n}\n.message-tag:lang(ar-ae) {\n  margin: 0 6px 0 0;\n}\n.mine .message-name {\n  color: #16cae5;\n  margin: 0;\n}\n.mine .message-name-end {\n  color: #c89b3c;\n  margin: 0 4px 0 0;\n}\n.mine .message-name-end:lang(ar-ae) {\n  margin: 0 0 0 4px;\n}\n.mine .message-tag {\n  margin: 0 0 0 3px;\n}\n.mine .message-tag:lang(ar-ae) {\n  margin: 0 3px 0 0;\n}\n.my-team .message-name {\n  color: #0a96aa;\n}\n.other-team .message-name {\n  color: #be1e37;\n}\n.message {\n  word-break: break-word;\n  overflow: hidden;\n  vertical-align: bottom;\n}\n.message a:link,\n.message a:visited {\n  color: #0596aa;\n}\n.mine .message a:link,\n.mine .message a:visited {\n  color: #a09b8c;\n}\n.action-name {\n  font-weight: 900;\n}\n.system-message {\n  color: #5b5a56;\n}\n.system-message .celebration {\n  color: #fabe0a;\n}\n.system-message .action {\n  color: #c8aa6e;\n  font-style: italic;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/chat-room/chat-room-frame.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -10628,7 +10649,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-chat-toggle-button", {
-                styles: n(236),
+                styles: n(237),
                 attached: function() {
                     this.closeChatWindowImmediatelyIfOpen()
                 },
@@ -10646,10 +10667,10 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(237),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(238),
                 s = o(r),
                 l = i(a);
             s.push([e.id, ".social-count-badge {\n  font-family: var(--font-body);\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-chat-toggle-button .chat-button,\nlol-social-chat-toggle-button .chat-button.toggled {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\nlol-social-chat-toggle-button {\n  background-color: #010a13;\n  z-index: 0;\n}\nlol-social-chat-toggle-button .chat-button {\n  background-image: url(" + l + ");\n  background-size: cover;\n  background-position-y: 0px;\n  width: 38px;\n  height: 32px;\n}\nlol-social-chat-toggle-button .chat-button:hover {\n  background-position-y: -32px;\n}\nlol-social-chat-toggle-button .chat-button:active {\n  background-position-y: -64px;\n}\nlol-social-chat-toggle-button .chat-button:disabled,\nlol-social-chat-toggle-button .chat-button[disabled],\nlol-social-chat-toggle-button .chat-button.disabled {\n  cursor: default;\n  background-position-y: -96px;\n}\nlol-social-chat-toggle-button .chat-button.toggled {\n  background-image: url(" + l + ");\n  background-size: cover;\n  background-position-y: -96px;\n}\nlol-social-chat-toggle-button .chat-button.toggled:hover {\n  background-position-y: -128px;\n}\nlol-social-chat-toggle-button .chat-button.toggled:active {\n  background-position-y: -160px;\n}\nlol-social-chat-toggle-button .chat-button.toggled:disabled,\nlol-social-chat-toggle-button .chat-button.toggled[disabled],\nlol-social-chat-toggle-button .chat-button.toggled.disabled {\n  cursor: default;\n  background-position-y: -192px;\n}\nlol-social-chat-toggle-button .chat-button.unread.use-animation {\n  animation: pulseChatButton 750ms infinite alternate ease-in-out;\n}\nlol-social-chat-toggle-button .chat-button.unread:not(.use-animation) {\n  -webkit-filter: brightness(1.5) saturate(1.5);\n}\nlol-social-chat-toggle-button .chat-button[disabled] {\n  background-position-y: 0;\n  opacity: 0.5;\n  cursor: default;\n}\nlol-social-chat-toggle-button .social-count-badge {\n  width: fit-content;\n  transform: translate(25px, -50%);\n  box-shadow: 0 0 2px rgba(1,10,19,0.5);\n}\n@-moz-keyframes pulseChatButton {\n  from {\n    filter: brightness(1) saturate(1);\n  }\n  to {\n    filter: brightness(1.5) saturate(1.5);\n  }\n}\n@-webkit-keyframes pulseChatButton {\n  from {\n    filter: brightness(1) saturate(1);\n  }\n  to {\n    filter: brightness(1.5) saturate(1.5);\n  }\n}\n@-o-keyframes pulseChatButton {\n  from {\n    filter: brightness(1) saturate(1);\n  }\n  to {\n    filter: brightness(1.5) saturate(1.5);\n  }\n}\n@keyframes pulseChatButton {\n  from {\n    filter: brightness(1) saturate(1);\n  }\n  to {\n    filter: brightness(1.5) saturate(1.5);\n  }\n}\n", "", {
@@ -10669,13 +10690,13 @@
                 {
                     components: o
                 } = r,
-                i = n(217),
+                i = n(218),
                 a = "lol-social-chat-room",
                 s = "lobby",
                 l = "championSelect",
                 c = "postGame";
             o.defineElement("lol-social-chat-input", i, {
-                styles: n(239),
+                styles: n(240),
                 isPlayerChatToggledOn: !0,
                 computed: {
                     canHidePlayerMessages: "hasAttribute('can-hide-player-messages')",
@@ -10684,7 +10705,9 @@
                     isDirectMessage: "roomType === 'chat'",
                     isFriend: "hasAttribute('is-friend')",
                     isBlocked: "hasAttribute('is-blocked')",
-                    willDisappearOnRestart: "isDirectMessage && (!isFriend || isBlocked)"
+                    isDmRestricted: "hasAttribute('is-dm-restricted')",
+                    willDisappearOnRestart: "isDirectMessage && (!isFriend || isBlocked)",
+                    isChatDisabled: "isDirectMessage && isDmRestricted"
                 },
                 created: function() {
                     this._message = "", this.addEventListener("keydown", this.handleKeyDown), this.watch("canHidePlayerMessages", function() {
@@ -10779,8 +10802,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, 'lol-social-chat-input .chat-placeholder-text,\nlol-social-chat-input .chat-placeholder-text kbd,\nlol-social-chat-input .unrecoverable-chat-placeholder {\n  font-family: var(--font-body);\n}\nlol-social-chat-input .chat-placeholder-text,\nlol-social-chat-input .chat-placeholder-text kbd,\nlol-social-chat-input .unrecoverable-chat-placeholder {\n  -webkit-user-select: none;\n}\nlol-social-chat-input .chat-placeholder-text,\nlol-social-chat-input .chat-placeholder-text kbd,\nlol-social-chat-input .unrecoverable-chat-placeholder {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-chat-input .unrecoverable-chat-placeholder {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-input .unrecoverable-chat-placeholder:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-input .chat-placeholder-text,\nlol-social-chat-input .chat-placeholder-text kbd {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-input .chat-placeholder-text:lang(ja-jp),\nlol-social-chat-input .chat-placeholder-text kbd:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-chat-input .chat-placeholder-text:lang(ar-ae),\nlol-social-chat-input .chat-placeholder-text kbd:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-input .chat-placeholder-text,\nlol-social-chat-input .chat-placeholder-text kbd {\n  font-weight: 400;\n  letter-spacing: 0.05em;\n}\nlol-social-chat-input {\n  display: block;\n  position: relative;\n  max-height: 96px;\n  min-height: 20px;\n  font-size: 12px;\n  overflow: hidden;\n/*\n  These styles should mostly inherit from the host so that they can be set from the outside. Any default font, size,\n  line-height, etc. should be set on the host. If anything needs to be set explicitly on #input then #sizer should likely\n  get the same styles so that it can correctly size the component for the text-area.\n  */\n}\nlol-social-chat-input .chat-placeholder-text {\n  white-space: nowrap;\n  color: #5b5a56;\n  position: absolute;\n  padding-left: 36px;\n  padding-top: 2px;\n  pointer-events: none;\n}\nlol-social-chat-input .chat-placeholder-text:lang(ar-ae) {\n  padding-left: 0;\n  padding-right: 36px;\n}\nlol-social-chat-input .chat-placeholder-text kbd {\n  color: #a09b8c;\n  background: #3c3c41;\n  padding: 2px 4px 2px 4px;\n  border-radius: 2px;\n  pointer-events: none;\n}\nlol-social-chat-input .chat-placeholder-visible {\n  visibility: visible;\n}\nlol-social-chat-input .chat-placeholder-invisible {\n  visibility: hidden;\n}\nlol-social-chat-input .chat-toggle-button {\n  position: absolute;\n  top: 6px;\n  width: 20px;\n  height: 20px;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: contain;\n  background-image: url("/fe/lol-static-assets/images/buttons/chat-enabled.png");\n}\nlol-social-chat-input .chat-toggle-button:hover {\n  background-image: url("/fe/lol-static-assets/images/buttons/chat-enabled-hover.png");\n}\nlol-social-chat-input .chat-toggle-button.disabled {\n  background-image: url("/fe/lol-static-assets/images/buttons/chat-disabled.png");\n}\nlol-social-chat-input .chat-toggle-button.disabled:hover {\n  background-image: url("/fe/lol-static-assets/images/buttons/chat-disabled-hover.png");\n}\nlol-social-chat-input .chat-toggle-button.invisible {\n  visibility: hidden;\n}\nlol-social-chat-input .chat-toggle-button.cant-hide-player-messages {\n  visibility: visible;\n  pointer-events: none;\n}\nlol-social-chat-input .chat-toggle-button.can-hide-player-messages {\n  visibility: visible;\n}\nlol-social-chat-input .chat-divider {\n  cursor: auto;\n  position: absolute;\n  height: 20px;\n  width: 1px;\n  margin-left: 28px;\n  background: linear-gradient(180deg, rgba(160,155,140,0) 0%, #5b5a56 50.52%, rgba(160,155,140,0) 100%);\n}\nlol-social-chat-input .chat-divider:lang(ar-ae) {\n  margin-left: 0;\n  margin-right: 28px;\n}\nlol-social-chat-input .chat-divider.can-hide-player-messages {\n  visibility: visible;\n}\nlol-social-chat-input .chat-input {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  box-sizing: border-box;\n  background: none;\n  border: none;\n  padding: inherit;\n  font: inherit;\n  letter-spacing: inherit;\n  color: inherit;\n  outline: none;\n  resize: none;\n  white-space: pre-wrap;\n  overflow-wrap: break-word;\n  word-break: break-word;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset, 0 0 0 1px rgba(0,0,0,0.25);\n  border-style: solid;\n  border-image: linear-gradient(#a09b8c, #3c3c41) 1;\n  border-width: 1px;\n  padding-left: 45px;\n}\nlol-social-chat-input .chat-input:lang(ar-ae) {\n  padding-left: 0;\n  padding-right: 45px;\n}\nlol-social-chat-input .chat-input::-webkit-scrollbar {\n  width: 0;\n}\nlol-social-chat-input .chat-input::-webkit-input-placeholder {\n  color: #5b5a56;\n}\nlol-social-chat-input .chat-input:focus {\n  background: linear-gradient(to bottom, rgba(7,16,25,0.7), rgba(32,39,44,0.7));\n  border-image: linear-gradient(#c8aa6e, #785a28) 1;\n}\nlol-social-chat-input .chat-input[disabled] {\n  border: 1px solid #3c3c41;\n}\nlol-social-chat-input .chat-input[disabled]::placeholder {\n  color: transparent;\n}\nlol-social-chat-input .chat-input.can-hide-player-messages {\n  padding-left: 44px;\n}\nlol-social-chat-input .chat-input.can-hide-player-messages:lang(ar-ae) {\n  padding-left: 0;\n  padding-right: 44px;\n}\nlol-social-chat-input .chat-input.can-hide-player-messages::-webkit-input-placeholder {\n  color: #3c3c41;\n  padding-top: 1px;\n  font-style: normal;\n}\nlol-social-chat-input .input-sizer {\n/* The sizer is what gives this component its height */\n/* http://alistapart.com/article/expanding-text-areas-made-elegant */\n  display: block;\n  visibility: hidden;\n  font: inherit;\n  letter-spacing: inherit;\n  margin: 0;\n  white-space: pre-wrap;\n  overflow-wrap: break-word;\n  word-break: break-all;\n  padding: 1px;\n}\nlol-social-chat-input .unrecoverable-chat-placeholder {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  color: #5b5a56;\n  border: 1px solid #3c3c41;\n  pointer-events: none;\n  padding: 0 8px;\n  font-style: italic;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/chat-window/chat-input/chat-input.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -10897,11 +10920,11 @@
                 {
                     components: o
                 } = r,
-                i = n(217),
-                a = n(242);
+                i = n(218),
+                a = n(243);
             o.defineElement("lol-social-chat-messages", i, a, {
-                styles: n(244),
-                frameStyles: n(245),
+                styles: n(245),
+                frameStyles: n(246),
                 computed: {
                     filteredMessages: "messages | filter(notJoinLeaveMessages)",
                     roomType: "getAttribute('room-type')",
@@ -10958,7 +10981,7 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(243)) && r.__esModule ? r : {
+            var r, o = (r = n(244)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(1),
@@ -11280,8 +11303,8 @@
                 }
             }
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, 'lol-social-chat-messages {\n  font-family: var(--font-body);\n}\nlol-social-chat-messages {\n  -webkit-user-select: none;\n}\nlol-social-chat-messages {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-chat-messages {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-messages:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.social-scroll {\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.social-scroll::-webkit-scrollbar {\n  width: 11px;\n  background: none;\n}\n.social-scroll::-webkit-scrollbar-thumb {\n  border: 3px solid transparent;\n  background-color: #1e2328;\n  border-radius: 6px;\n  background-clip: padding-box;\n}\n.social-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #785a28;\n}\n.social-scroll::-webkit-scrollbar-thumb:hover {\n  background-color: #cdbe91;\n}\n.social-scroll::-webkit-scrollbar-thumb:active {\n  background-color: #463714;\n}\n.social-blue-scroll {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.social-blue-scroll::-webkit-scrollbar {\n  width: 9px;\n  background: transparent;\n}\n.social-blue-scroll::-webkit-scrollbar-thumb {\n  background: transparent;\n  border-radius: 6px;\n  border: 2px solid transparent;\n  background-clip: padding-box;\n}\n.social-blue-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #0596aa;\n}\nlol-social-chat-messages {\n  display: flex;\n  color: #f0e6d2;\n}\nlol-social-chat-messages #chat-messages-frame {\n  display: flex;\n  flex: 1 1 100%;\n  border: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/chat-window/chat-messages/chat-messages.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/styles/scroll.styl"],
@@ -11291,8 +11314,8 @@
                 sourceRoot: ""
             }]), e.exports = o
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, ".messages,\n.warning-message,\n.date-divider,\n.system-bubble,\n.author-name,\n.timestamp,\n.system-message-container,\n.system-message-container .system-message-username {\n  font-family: var(--font-body);\n}\n.messages,\n.warning-message,\n.date-divider,\n.system-bubble,\n.author-name,\n.timestamp,\n.system-message-container,\n.system-message-container .system-message-username {\n  -webkit-user-select: none;\n}\n.messages,\n.warning-message,\n.date-divider,\n.system-bubble,\n.author-name,\n.timestamp,\n.system-message-container,\n.system-message-container .system-message-username {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.messages,\n.system-message-container {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.messages:lang(ar-ae),\n.system-message-container:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.warning-message,\n.date-divider,\n.system-bubble,\n.author-name,\n.timestamp {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.warning-message:lang(ja-jp),\n.date-divider:lang(ja-jp),\n.system-bubble:lang(ja-jp),\n.author-name:lang(ja-jp),\n.timestamp:lang(ja-jp) {\n  font-size: 13px;\n}\n.warning-message:lang(ar-ae),\n.date-divider:lang(ar-ae),\n.system-bubble:lang(ar-ae),\n.author-name:lang(ar-ae),\n.timestamp:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.system-message-container .system-message-username {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 18px;\n  letter-spacing: 0.01em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.system-message-container .system-message-username:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.system-message-container .system-message-username {\n  font-weight: 550;\n}\n.social-scroll {\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.social-scroll::-webkit-scrollbar {\n  width: 11px;\n  background: none;\n}\n.social-scroll::-webkit-scrollbar-thumb {\n  border: 3px solid transparent;\n  background-color: #1e2328;\n  border-radius: 6px;\n  background-clip: padding-box;\n}\n.social-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #785a28;\n}\n.social-scroll::-webkit-scrollbar-thumb:hover {\n  background-color: #cdbe91;\n}\n.social-scroll::-webkit-scrollbar-thumb:active {\n  background-color: #463714;\n}\n.social-blue-scroll {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.social-blue-scroll::-webkit-scrollbar {\n  width: 9px;\n  background: transparent;\n}\n.social-blue-scroll::-webkit-scrollbar-thumb {\n  background: transparent;\n  border-radius: 6px;\n  border: 2px solid transparent;\n  background-clip: padding-box;\n}\n.social-blue-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #0596aa;\n}\n/********\n\nNOTE: any style changes that alter the height or width of messages (padding, margin, elements that give them less\nspace such as avatars, etc) should also be reflected in virtualized-messages.js in the guessedHeight algorithm which\nguesses the height of each message based on its data.\n\n*********/\nbody {\n  display: flex;\n  overflow: hidden;\n}\n.messages {\n  flex: 1 1 100%;\n  position: relative;\n  color: #f0e6d2;\n  -webkit-user-select: text;\n  display: flex;\n  flex-direction: column;\n  padding: 5px 7px 0 10px;\n}\n.messages:lang(ar-ae) {\n  direction: rtl;\n}\n.inner-messages {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  flex: 1 0 auto;\n  padding-bottom: 6px;\n}\n.inner-messages.virtualized lol-social-chat-message {\n  position: absolute;\n  width: 100%;\n}\n.warning-message {\n  color: #5b5a56;\n  line-height: 16px;\n  margin-top: 4px;\n  margin-bottom: 10px;\n}\n.date-divider {\n  display: flex;\n  margin: 6px 0 10px;\n  color: #3c3c41;\n  align-items: center;\n}\n.date-divider::after {\n  background-color: #3c3c41;\n  content: '';\n  flex: 1;\n  height: 1px;\n  margin: 0 0 0 5px;\n}\n.date-divider:lang(ar-ae)::after {\n  margin: 0 5px 0 0;\n}\n.bubble-container {\n  display: flex;\n  align-items: flex-end;\n  justify-content: flex-start;\n  margin-bottom: 4px;\n}\n.bubble-container.mine,\n.bubble-container.my-action {\n  justify-content: flex-end;\n}\n.bubble-container.new-sender {\n  margin-top: 6px;\n}\n.system-bubble {\n  padding: 2px 0;\n  color: #a09b8c;\n  font-style: italic;\n}\n.chat-bubble {\n  order: 1;\n  padding: 4px 8px;\n  border-radius: 5px;\n  position: relative;\n  word-wrap: break-word;\n  max-width: 80%;\n}\n.chat-bubble::after {\n  content: '';\n  position: absolute;\n  top: 0;\n  border: 5px solid transparent;\n}\n.message {\n  overflow: hidden;\n}\n.message a:link,\n.message a:visited {\n  color: #0596aa;\n}\n.mine .message a:link,\n.mine .message a:visited {\n  color: #f0e6d2;\n}\n.action-name {\n  font-weight: 900;\n}\n.my-bubble {\n  margin: 0 5px 0 0;\n  background-color: #785a28;\n}\n.my-bubble:lang(ar-ae) {\n  margin: 0 0 0 5px;\n}\n.my-bubble::after {\n  right: -5px;\n  border-top-color: #785a28;\n}\n.my-bubble:lang(ar-ae)::after {\n  right: auto;\n  left: -5px;\n}\n.their-bubble {\n  margin: 0 0 0 5px;\n  background-color: #1e2328;\n}\n.their-bubble:lang(ar-ae) {\n  margin: 0 5px 0 0;\n}\n.their-bubble::after {\n  left: -5px;\n  border-top-color: #1e2328;\n}\n.their-bubble:lang(ar-ae)::after {\n  left: auto;\n  right: -5px;\n}\n.room-bubble .their-bubble {\n  margin-left: 40px;\n}\n.author-name {\n  color: #a09b8c;\n  margin-bottom: 4px;\n}\n.avatar {\n  float: left;\n  margin-right: -40px;\n  margin-bottom: -4px; /* makes the height of that first message line be normal, vs taller because of the image */\n}\n.system-message {\n  margin-left: 13px;\n  color: #5b5a56;\n}\n.system-message.celebration {\n  color: #c89b3c;\n}\n.system-message.action {\n  color: #c8aa6e;\n}\n.system-message.room {\n  margin-left: 48px;\n}\n.timestamp {\n  color: #a09b8c;\n  order: 2;\n  white-space: nowrap;\n  margin: 5px 10px;\n  opacity: 0;\n  transition: opacity 300ms;\n}\n.bubble-container:hover .timestamp {\n  opacity: 1;\n}\n.mine .timestamp {\n  order: 0;\n}\n.system-message-container {\n  display: flex;\n  align-items: center;\n  width: 100%;\n  margin-bottom: 6px;\n}\n.system-message-container .system-message-line {\n  flex-grow: 1;\n  height: 1px;\n  background-color: #3c3c41;\n}\n.system-message-container .system-message-diamond {\n  content: \"\";\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  margin: 0 0 0 0;\n  background-color: #3c3c41;\n  transform: rotate(45deg);\n}\n.system-message-container .system-message-text {\n  text-align: center;\n  white-space: normal;\n  margin-left: 5px;\n  margin-right: 5px;\n}\n.system-message-container .system-message-username {\n  margin-left: 3px;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/chat-window/chat-messages/chat-messages-frame.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/hextech-ui.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/styles/scroll.styl"],
@@ -11368,12 +11391,12 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1),
-                o = n(218);
+                o = n(219);
             const {
                 computed: i
-            } = r.components, a = n(232), s = n(248), l = n(249), c = n(250);
+            } = r.components, a = n(233), s = n(249), l = n(250), c = n(251);
             r.components.defineElement("lol-social-chat-window", a, s, l, {
-                styles: n(251),
+                styles: n(252),
                 computed: {
                     disconnected: 'data.chatSession.sessionState === "disconnected"',
                     visible: "data.chatWindow.isOpen && !disconnected",
@@ -11385,6 +11408,7 @@
                     isBlocked: "data.blockedPlayers.byId[data.activeConversations.active.id] !== undefined",
                     resizeable: "data.platformConfig.chatWindowResizeEnabled",
                     resizedHeight: "resizeable && data.chatSettings.chatWindowDockedHeight",
+                    isDmRestricted: "data.hasDmRestriction",
                     visibleConversations: "data.conversations | filter(data.isConversationVisible) | reverse",
                     clashConversations: "visibleConversations | filter(isClashConversation)",
                     chatConversations: "visibleConversations | filter(isChatConversation)",
@@ -11615,11 +11639,11 @@
                 } = n(1),
                 {
                     confirmReportFriendForAbusiveTextHelper: l
-                } = n(218),
+                } = n(219),
                 {
                     createContextMenuIcon: c,
                     ICON_NAMES: d
-                } = n(219);
+                } = n(220);
             let p = null;
             e.exports = {
                 giveGift: function(e) {
@@ -11783,14 +11807,14 @@
         }, (e, t, n) => {
             "use strict";
             const r = n(144),
-                o = n(248),
+                o = n(249),
                 {
                     ICON_NAMES: i,
                     createContextMenuIcon: a
-                } = n(219),
+                } = n(220),
                 {
                     confirmUnfriendOrBlockFriendHelper: s
-                } = n(218);
+                } = n(219);
             e.exports = {
                 inviteToGame: (e, t) => ({
                     action: "inviteToGame",
@@ -11903,15 +11927,15 @@
                 }
             }
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(252),
-                s = n(253),
-                l = n(254),
-                c = n(255),
-                d = n(256),
-                p = n(229),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(253),
+                s = n(254),
+                l = n(255),
+                c = n(256),
+                d = n(257),
+                p = n(230),
                 u = o(r),
                 m = i(a),
                 g = i(s),
@@ -11949,7 +11973,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-clash-roster-panel-item", {
-                styles: n(258),
+                styles: n(259),
                 computed: {
                     conversation: "data.getClashConversation(roster.multiUserChatId)",
                     clashRosterParticipants: "data.participants[conversation.id]",
@@ -11960,8 +11984,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, ".social-count-badge {\n  font-family: var(--font-body);\n}\nlol-social-clash-roster-panel-item .clash-roster-item.unread .clash-roster-name-container,\nlol-social-clash-roster-panel-item .clash-roster-item.unread .clash-roster-members-online {\n  color: #f0e6d2;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-clash-roster-panel-item .clash-roster-item {\n  display: flex;\n  height: 48px;\n  width: 100%;\n  flex-shrink: 0;\n  cursor: pointer;\n  justify-content: flex-start;\n  overflow: hidden;\n  transition: opacity 0.3s ease-out;\n}\nlol-social-clash-roster-panel-item .clash-roster-item.unread {\n  background: rgba(240,230,210,0.18);\n}\nlol-social-clash-roster-panel-item .clash-roster-item.unread.use-animation {\n  animation: highlight 825ms 4 alternate;\n}\nlol-social-clash-roster-panel-item .clash-roster-item.unread.use-animation .social-count-badge {\n  animation: highlightBadge 825ms 4 alternate;\n}\nlol-social-clash-roster-panel-item .clash-roster-item.unread .clash-roster-name-container {\n  font-weight: bold;\n}\nlol-social-clash-roster-panel-item .clash-roster-name {\n  color: #f0e6d2;\n  flex: 1;\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\nlol-social-clash-roster-panel-item .clash-roster-shortName {\n  color: #c8aa6e;\n  margin: 0 3px 0 0;\n  vertical-align: top;\n}\nlol-social-clash-roster-panel-item .clash-roster-shortName:lang(ar-ae) {\n  margin: 0 0 0 3px;\n}\nlol-social-clash-roster-panel-item .clash-roster-name-container {\n  display: flex;\n  flex: 1;\n  flex-direction: row;\n  width: 100%;\n}\nlol-social-clash-roster-panel-item .clash-roster-members-online {\n  color: #5b5a56;\n}\nlol-social-clash-roster-panel-item .clash-roster-info-container {\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  width: 100%;\n  padding: 0 10px;\n}\nlol-social-clash-roster-panel-item .clash-roster-info-container:hover,\nlol-social-clash-roster-panel-item .clash-roster-info-container.context-menu-open {\n  background: rgba(240,230,210,0.1);\n}\nlol-social-clash-roster-panel-item .clash-roster-info-container:hover .clash-roster-members-online,\nlol-social-clash-roster-panel-item .clash-roster-info-container.context-menu-open .clash-roster-members-online {\n  color: #a09b8c;\n}\nlol-social-clash-roster-panel-item .clash-roster-info-text {\n  display: flex;\n  flex-direction: column;\n  line-height: 16px;\n  padding-top: 1px;\n  flex: 1;\n  width: 100%;\n  justify-content: center;\n  overflow: hidden;\n  margin: 0 2px 0 10px;\n}\nlol-social-clash-roster-panel-item .clash-roster-info-text > * {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\nlol-social-clash-roster-panel-item .clash-roster-icon {\n  width: 32px;\n  height: 32px;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/clash-roster-panel-item/clash-roster-panel-item.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/styles/count-badge.styl"],
@@ -11977,11 +12001,11 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-clash-roster-panel", {
-                styles: n(260)
+                styles: n(261)
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, "lol-social-clash-roster-panel .clash-roster-item-scroll {\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-social/src/web-components/clash-roster-panel/clash-roster-panel.styl"],
@@ -11997,7 +12021,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-friend-request-modal", {
-                styles: n(262),
+                styles: n(263),
                 attached: function() {
                     this.honorRecognitionHistoryPuuids = new Set((this.data.honorRecognitionHistory || []).map((({
                         puuid: e
@@ -12011,8 +12035,8 @@
                 }))
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, 'lol-social-friend-request-modal .friend-request-title {\n  font-family: var(--font-display);\n}\nlol-social-friend-request-modal {\n  font-family: var(--font-body);\n}\nlol-social-friend-request-modal .friend-request-title {\n  -webkit-user-select: none;\n}\nlol-social-friend-request-modal .friend-request-title {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-friend-request-modal .friend-request-title {\n  text-transform: uppercase;\n}\nlol-social-friend-request-modal .friend-request-title:lang(ko-kr),\nlol-social-friend-request-modal .friend-request-title:lang(ja-jp),\nlol-social-friend-request-modal .friend-request-title:lang(tr-tr),\nlol-social-friend-request-modal .friend-request-title:lang(el-gr),\nlol-social-friend-request-modal .friend-request-title:lang(th-th),\nlol-social-friend-request-modal .friend-request-title:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-friend-request-modal .friend-request-title {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\nlol-social-friend-request-modal .friend-request-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-friend-request-modal {\n  width: 400px;\n  height: 470px;\n  border: thin solid #1e282d;\n  background: #010a13;\n  display: flex;\n  flex-direction: column;\n  font-size: 12px;\n}\nlol-social-friend-request-modal .friend-request-header {\n  padding: 10px 0;\n  border-bottom: thin solid #1e282d;\n}\nlol-social-friend-request-modal .friend-request-title {\n  text-align: center;\n}\nlol-social-friend-request-modal .friend-request-title:lang(ar-ae) {\n  direction: rtl;\n}\nlol-social-friend-request-modal .friend-request-list {\n  margin-bottom: 29px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/friend-request-modal/friend-request-modal.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -12024,14 +12048,14 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1),
-                o = n(218);
-            const i = n(264),
-                a = n(248),
+                o = n(219);
+            const i = n(265),
+                a = n(249),
                 {
                     computed: s
                 } = r.components;
             r.components.defineElement("lol-social-friend-request", i, a, {
-                styles: n(265),
+                styles: n(266),
                 computed: {
                     summonerInfo: s.resource("/lol-summoner/v2/summoner-icons?ids=[{{friend.summonerId}}]"),
                     icon: "summonerInfo[0].profileIconId"
@@ -12112,15 +12136,15 @@
                 }
             }
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(266),
-                s = n(267),
-                l = n(268),
-                c = n(269),
-                d = n(252),
-                p = n(208),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(267),
+                s = n(268),
+                l = n(269),
+                c = n(270),
+                d = n(253),
+                p = n(209),
                 u = o(r),
                 m = i(a),
                 g = i(s),
@@ -12158,7 +12182,7 @@
                     computed: i
                 } = o;
             o.defineElement("lol-social-friend-requests", {
-                styles: n(271),
+                styles: n(272),
                 computed: {
                     gameflow: i.resource("/lol-gameflow/v1/session"),
                     inGame: "gameflow.gameClient.running"
@@ -12208,8 +12232,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.social-count-badge,\nlol-social-friend-requests .friend-requests-header {\n  font-family: var(--font-body);\n}\nlol-social-friend-requests .friend-requests-header {\n  -webkit-user-select: none;\n}\nlol-social-friend-requests .friend-requests-header {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-friend-requests .friend-requests-header {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-friend-requests .friend-requests-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-friend-requests .friend-requests {\n  height: 44px;\n  padding: 0 10px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  cursor: pointer;\n  background: rgba(1,10,19,0.45);\n}\nlol-social-friend-requests .friend-requests[disabled] {\n  cursor: default;\n  opacity: 0.5;\n}\nlol-social-friend-requests .friend-requests:not([disabled]):hover {\n  background: rgba(240,230,210,0.1);\n}\nlol-social-friend-requests .friend-requests:not([disabled]):hover .friend-requests-header {\n  color: #fabe0a;\n}\nlol-social-friend-requests .friend-requests:not([disabled]):hover > .social-count-badge {\n  background-color: #fabe0a;\n}\nlol-social-friend-requests .friend-requests:not([disabled]):active .friend-requests-header {\n  color: #785a28;\n}\nlol-social-friend-requests .friend-requests:not([disabled]):active > .social-count-badge {\n  background-color: #785a28;\n}\nlol-social-friend-requests .friend-requests-header {\n  color: #c89b3c;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  margin-right: 5px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/friend-requests/friend-requests.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/styles/count-badge.styl"],
@@ -12221,9 +12245,9 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1);
-            const o = n(264);
+            const o = n(265);
             r.components.defineElement("lol-social-game-invite", o, {
-                styles: n(273),
+                styles: n(274),
                 computed: {
                     inviterName: "data.getFormattedDisplayName(gameInvite)",
                     isAcceptable: "data.isGameInviteAcceptable(gameInvite)",
@@ -12304,11 +12328,11 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(274),
-                s = n(252),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(275),
+                s = n(253),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -12330,7 +12354,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-game-invites", {
-                styles: n(276),
+                styles: n(277),
                 clearAll: function() {
                     this.sounds.play("click");
                     for (let e = this.data.gameInvites.length - 1; e >= 0; e--) this.data.declineGameInvite(this.data.gameInvites[e])
@@ -12340,10 +12364,10 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(277),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(278),
                 s = o(r),
                 l = i(a);
             s.push([e.id, 'lol-social-game-invites .game-invite-heading {\n  font-family: var(--font-display);\n}\n.social-count-badge {\n  font-family: var(--font-body);\n}\nlol-social-game-invites .game-invite-heading {\n  -webkit-user-select: none;\n}\nlol-social-game-invites .game-invite-heading {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-game-invites .game-invite-heading {\n  text-transform: uppercase;\n}\nlol-social-game-invites .game-invite-heading:lang(ko-kr),\nlol-social-game-invites .game-invite-heading:lang(ja-jp),\nlol-social-game-invites .game-invite-heading:lang(tr-tr),\nlol-social-game-invites .game-invite-heading:lang(el-gr),\nlol-social-game-invites .game-invite-heading:lang(th-th),\nlol-social-game-invites .game-invite-heading:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-game-invites .game-invite-heading {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\nlol-social-game-invites .game-invite-heading:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-game-invites .game-invite-heading:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.social-scroll {\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.social-scroll::-webkit-scrollbar {\n  width: 11px;\n  background: none;\n}\n.social-scroll::-webkit-scrollbar-thumb {\n  border: 3px solid transparent;\n  background-color: #1e2328;\n  border-radius: 6px;\n  background-clip: padding-box;\n}\n.social-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #785a28;\n}\n.social-scroll::-webkit-scrollbar-thumb:hover {\n  background-color: #cdbe91;\n}\n.social-scroll::-webkit-scrollbar-thumb:active {\n  background-color: #463714;\n}\n.social-blue-scroll {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.social-blue-scroll::-webkit-scrollbar {\n  width: 9px;\n  background: transparent;\n}\n.social-blue-scroll::-webkit-scrollbar-thumb {\n  background: transparent;\n  border-radius: 6px;\n  border: 2px solid transparent;\n  background-clip: padding-box;\n}\n.social-blue-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #0596aa;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-game-invites .clear-all-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\nlol-social-game-invites .game-invite-heading {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  color: #a09b8c;\n  padding: 0 5px 0 9px;\n  flex-shrink: 0;\n  pointer-events: none;\n  margin-top: 1px;\n}\nlol-social-game-invites .hover-highlight {\n  pointer-events: auto;\n}\nlol-social-game-invites .hover-highlight:hover {\n  background: linear-gradient(to right, rgba(10,203,230,0.2), rgba(10,203,230,0));\n  cursor: pointer;\n  color: #f0e6d2;\n}\nlol-social-game-invites .hover-highlight:active {\n  color: #cdbe91;\n}\nlol-social-game-invites .game-invite-heading-container {\n  flex: 1;\n  display: flex;\n  margin-right: 7px;\n  overflow: hidden;\n}\nlol-social-game-invites .game-invite-heading-text {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\nlol-social-game-invites .game-invite-count {\n  padding-left: 5px;\n}\nlol-social-game-invites .clear-all-button {\n  -webkit-mask: url(' + l + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #c8aa6e;\n  width: 18px;\n  height: 18px;\n  pointer-events: auto;\n}\nlol-social-game-invites .clear-all-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-game-invites .clear-all-button:active {\n  background-color: #463714;\n}\nlol-social-game-invites lol-social-arrow-toggle {\n  width: 18px;\n  height: 18px;\n}\nlol-social-game-invites lol-social-game-invite {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  flex-shrink: 0;\n}\nlol-social-game-invites .game-invite-scroll {\n  flex-grow: 1;\n}\n", "", {
@@ -12364,7 +12388,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-game-panel", {
-                styles: n(279),
+                styles: n(280),
                 created: function() {
                     this.listen("gameInviteAdded", this.playVideo), this.listen("partyInviteAdded", this.playVideo), this.listen("gameSearchStarted", this.playVideo), this.watch("data.gameInvites.length > 0 || data.gameSearch", (function(e, t) {
                         e ? this.sounds.delayedPlay("menuOpen", 150) : t && this.sounds.delayedPlay("menuClose", 150)
@@ -12375,8 +12399,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, "lol-social-game-panel .game-section {\n  flex: 0 0 auto;\n  position: relative;\n  overflow: hidden;\n}\nlol-social-game-panel .video-background-container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n}\nlol-social-game-panel .game-section-content {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  max-height: 202px;\n}\nlol-social-game-panel .game-invites {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-social/src/web-components/game-panel/game-panel.styl"],
@@ -12392,7 +12416,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-game-queue", {
-                styles: n(281),
+                styles: n(282),
                 createLowPriorityTooltip: function(e, t) {
                     const n = document.createElement("lol-uikit-tooltip"),
                         r = t.templateHelper.contentBlockTooltip(t.t("tooltip_low_priority_queue_title"), t.t("tooltip_low_priority_queue_body"), "tooltip-large"),
@@ -12440,11 +12464,11 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(282),
-                s = n(252),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(283),
+                s = n(253),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -12465,7 +12489,7 @@
                 {
                     components: o
                 } = r,
-                i = n(217);
+                i = n(218);
             o.defineElement("lol-social-input", i, {
                 created: function() {
                     this.addEventListener("dragstart", (e => {
@@ -12480,14 +12504,14 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-link-warning-dialog", {
-                styles: n(285),
+                styles: n(286),
                 dispatch: function(e) {
                     this.dispatchEvent(new Event(e))
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, "lol-social-link-warning-dialog .link-warning-dialog-wrapper {\n  position: absolute;\n  left: 0px;\n  right: 0px;\n  top: 0px;\n  bottom: 0px;\n  z-index: 9000;\n}\nlol-social-link-warning-dialog .backdrop {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  top: 0px;\n  bottom: 0px;\n  right: 0px;\n  left: 0px;\n}\nlol-social-link-warning-dialog .dialog-confirm {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  top: 0px;\n  bottom: 0px;\n  right: 0px;\n  left: 0px;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-social/src/web-components/link-warning-dialog/link-warning-dialog.styl"],
@@ -12503,15 +12527,15 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-link-warning", {
-                styles: n(287),
+                styles: n(288),
                 doNotShowAgain: !1,
                 toggleChatLinkWarning: function() {
                     this.data.playerSettings.linkClickWarningEnabled = !this.doNotShowAgain
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, 'lol-social-link-warning .warning-title {\n  font-family: var(--font-display);\n}\nlol-social-link-warning .warning-body {\n  font-family: var(--font-body);\n}\nlol-social-link-warning .warning-title,\nlol-social-link-warning .warning-body {\n  -webkit-user-select: none;\n}\nlol-social-link-warning .warning-title,\nlol-social-link-warning .warning-body {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-link-warning .warning-title {\n  text-transform: uppercase;\n}\nlol-social-link-warning .warning-title:lang(ko-kr),\nlol-social-link-warning .warning-title:lang(ja-jp),\nlol-social-link-warning .warning-title:lang(tr-tr),\nlol-social-link-warning .warning-title:lang(el-gr),\nlol-social-link-warning .warning-title:lang(th-th),\nlol-social-link-warning .warning-title:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-link-warning .warning-title {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\nlol-social-link-warning .warning-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-link-warning .warning-body {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-link-warning .warning-body:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-link-warning {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 360px;\n  height: 220px;\n  padding: 0 18px;\n  cursor: default;\n}\nlol-social-link-warning .warning-title {\n  margin: 15px 10px;\n}\nlol-social-link-warning .warning-body {\n  margin: 0 15px 10px 15px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/link-warning/link-warning.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -12527,7 +12551,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-menu-input", {
-                styles: n(289),
+                styles: n(290),
                 attached: function() {
                     this.saved = !1, this.saving = !1, this.closing = !1, this.afterSync((() => {
                         this.input && (this.input.focus(), this.input.select())
@@ -12560,10 +12584,10 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(290),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(291),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-social-menu-input {\n  display: block;\n}\nlol-social-menu-input .wrapper {\n  width: 100%;\n  position: relative;\n  overflow: hidden;\n}\nlol-social-menu-input .note,\nlol-social-menu-input .note-saving {\n  -webkit-mask: url(" + l + ") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #c8aa6e;\n}\nlol-social-menu-input .note-saving {\n  background-color: #f0e6d2;\n}\nlol-social-menu-input .input-icon {\n  width: 18px;\n  height: 18px;\n  position: absolute;\n  left: 10px;\n  top: 5px;\n  cursor: default;\n}\nlol-social-menu-input .input-icon:lang(ar-ae) {\n  left: auto;\n  right: 10px;\n}\nlol-social-menu-input .input.has-icon {\n  padding: 0 6px 0 34px;\n}\nlol-social-menu-input .input.has-icon:lang(ar-ae) {\n  padding: 0 34px 0 6px;\n}\nlol-social-menu-input .input {\n  width: 100%;\n  padding: 0 30px 0 6px;\n  height: 34px;\n}\nlol-social-menu-input .input:lang(ar-ae) {\n  padding: 0 6px 0 30px;\n}\nlol-social-menu-input .input.saving {\n  display: block;\n  border-color: transparent;\n  border-image: none;\n  box-shadow: none;\n  background: none;\n}\nlol-social-menu-input .input.saving:not(.saved) {\n  visibility: hidden;\n}\nlol-social-menu-input .animation {\n  position: absolute;\n  background: #785a28;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 100%;\n  transition: all 0.3s cubic-bezier(0, 0, 0, 1);\n  overflow: hidden;\n}\nlol-social-menu-input .animation .input-message {\n  position: absolute;\n  box-sizing: border-box;\n  font-size: 12px;\n  letter-spacing: 0.05em;\n  line-height: 16px;\n  color: #f0e6d2;\n  height: 30px;\n  padding: 7px;\n  width: 222px;\n}\nlol-social-menu-input .animation .input-message.has-icon {\n  padding-left: 34px;\n}\nlol-social-menu-input .animation.will-animate-in {\n  right: 100%;\n}\nlol-social-menu-input .animation.animate-in {\n  right: 0;\n}\nlol-social-menu-input .animation.animate-in .input-message {\n  left: 0;\n  right: auto;\n}\nlol-social-menu-input .animation.will-animate-out {\n  right: 0;\n  left: 0;\n}\nlol-social-menu-input .animation.animate-out {\n  transition-delay: 0.3s;\n  left: 100%;\n}\nlol-social-menu-item lol-social-menu-input {\n  margin: -10px -11px;\n}\nlol-social-menu-item:last-child lol-social-menu-input {\n  margin-bottom: -11px;\n}\n", "", {
@@ -12584,13 +12608,13 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-menu-item", {
-                styles: n(292)
+                styles: n(293)
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(293),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(294),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-social-menu-item {\n  font-family: var(--font-body);\n}\nlol-social-menu-item {\n  display: block;\n  width: 100%;\n  box-sizing: border-box;\n  word-break: break-word;\n  color: #cdbe91;\n  font-size: 12px;\n  line-height: 16px;\n  text-align: left;\n  cursor: pointer;\n  padding: 8px 10px;\n  outline: none;\n  transition: padding 0.05s ease-in-out;\n}\nlol-social-menu-item:hover:not([has-input]) {\n  color: #f0e6d2;\n  background: rgba(240,230,210,0.1);\n}\n.context lol-social-menu-item:active,\n.context lol-social-menu-item.active,\n.context lol-social-menu-item:hover:active {\n  color: #cdbe91;\n  background: none;\n}\n.context lol-social-menu-item:active,\n.context lol-social-menu-item.active {\n  background: url(" + l + ") no-repeat top;\n  padding-left: 16px;\n  padding-right: 4px;\n}\n.context lol-social-menu-item:hover:active {\n  background-position-y: -18px;\n}\n", "", {
@@ -12611,7 +12635,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-menu", {
-                styles: n(295),
+                styles: n(296),
                 created: function() {
                     this.listen("focusout", this.handleFocusOut), this.listen("click", this.handleClick), this.hasAttribute("keep-open-on-scroll") || this.listen(window, "mousewheel", this.requestClose)
                 },
@@ -12633,8 +12657,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, ":host {\n  outline: none;\n}\n#container {\n  background: rgba(1,10,19,0.86);\n  padding: 2px 1px;\n  outline: none;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-social/src/web-components/menu/menu.styl"],
@@ -12651,7 +12675,7 @@
                     logger: i
                 } = r;
             o.defineElement("lol-social-panel", {
-                styles: n(297),
+                styles: n(298),
                 created: function() {
                     this.data.track("chatErrors", (e => {
                         this.onChatError(e)
@@ -12672,11 +12696,11 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(298),
-                s = n(299),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(299),
+                s = n(300),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -12700,7 +12724,7 @@
             const o = "offline",
                 i = "mobile";
             r.components.defineElement("lol-social-roster-group-name", {
-                styles: n(301),
+                styles: n(302),
                 computed: {
                     filterByName: 'group.isMetaGroup ? "displayGroupId" : "groupId"',
                     groupFriends: "data.friends | filter(filterByName, group.id)",
@@ -12765,8 +12789,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, "lol-social-roster-group-name {\n  display: block;\n  overflow: hidden;\n}\nlol-social-roster-group-name .group-name-text {\n  position: relative;\n  display: flex;\n  align-items: center;\n  padding: 0 9px;\n  width: 100%;\n  box-sizing: border-box;\n}\nlol-social-roster-group-name .group-name-text.error {\n  border: thin solid #bc213b;\n}\nlol-social-roster-group-name .group-label {\n  flex: 1;\n  cursor: pointer;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\nlol-social-roster-group-name .group-label-locale-direction-override {\n  direction: ltr;\n  unicode-bidi: isolate;\n}\nlol-social-roster-group-name .group-label-localized {\n  text-transform: none;\n}\nlol-social-roster-group-name .group-name-input {\n  font: inherit;\n  padding: 0;\n  width: 100%;\n  background: none;\n  color: #fff;\n  letter-spacing: inherit;\n  text-transform: inherit;\n  outline: none;\n  border: none;\n}\nlol-social-roster-group-name .group-name-animation {\n  position: absolute;\n  background: #785a28;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 24px;\n  transition: all 0.3s ease-out;\n}\nlol-social-roster-group-name .group-name-animation.will-animate-in {\n  right: 100%;\n}\nlol-social-roster-group-name .group-name-animation.animate-in {\n  right: 0;\n}\nlol-social-roster-group-name .group-name-animation.animate-out {\n  transition-delay: 0.3s;\n  left: 100%;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-social/src/web-components/roster-group-name/roster-group-name.styl"],
@@ -12778,12 +12802,12 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1);
-            const o = n(303);
+            const o = n(304);
             r.components.defineElement("lol-social-roster-group", o, {
                 FRIEND_HEIGHT: 48,
                 ARROW_CONTAIN_HEIGHT: 56,
                 GROUP_NAME_HEIGHT: 28,
-                styles: n(304),
+                styles: n(305),
                 acceptMimes: ["application/riot.roster-member+json"],
                 computed: {
                     groupFriendsLength: "data.friends.filter(friendFilter.bind(this)).length",
@@ -12902,10 +12926,10 @@
             });
             t.default = o
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(305),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(306),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-social-roster-group .group-header {\n  font-family: var(--font-display);\n}\n.social-count-badge {\n  font-family: var(--font-body);\n}\nlol-social-roster-group .group-header {\n  -webkit-user-select: none;\n}\nlol-social-roster-group .group-header {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-roster-group .group-header {\n  text-transform: uppercase;\n}\nlol-social-roster-group .group-header:lang(ko-kr),\nlol-social-roster-group .group-header:lang(ja-jp),\nlol-social-roster-group .group-header:lang(tr-tr),\nlol-social-roster-group .group-header:lang(el-gr),\nlol-social-roster-group .group-header:lang(th-th),\nlol-social-roster-group .group-header:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-roster-group .group-header {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\nlol-social-roster-group .group-header:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-roster-group .group-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-roster-group .group-header {\n  color: #a09b8c;\n}\nlol-social-roster-group .group.unread .group-header {\n  color: #f0e6d2;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-roster-group {\n  display: block;\n}\nlol-social-roster-group:lang(ar-ae) {\n  direction: rtl;\n}\nlol-social-roster-group .hidden {\n  display: none !important;\n}\nlol-social-roster-group .group {\n  position: relative;\n}\nlol-social-roster-group .group.unread .group-header {\n  font-weight: bold;\n  background: rgba(240,230,210,0.18);\n}\nlol-social-roster-group .group.unread .unread-count {\n  margin-top: 4px;\n  margin-right: 10px;\n}\nlol-social-roster-group .group.unread.use-animation .group-header {\n  animation: highlight 825ms 4 alternate;\n}\nlol-social-roster-group .group.unread.use-animation .social-count-badge {\n  animation: highlightBadge 825ms 4 alternate;\n}\nlol-social-roster-group .group .unread-dot {\n  height: 10px;\n  width: 10px;\n  border-radius: 5px;\n  background-color: #c89b3c;\n}\nlol-social-roster-group .group-header {\n  background: rgba(1,10,19,0.45);\n  height: 24px;\n  cursor: pointer;\n  display: flex;\n  margin-bottom: 4px;\n}\nlol-social-roster-group .group-header:hover {\n  background: rgba(240,230,210,0.1);\n  color: #f0e6d2;\n}\nlol-social-roster-group .group-header:active {\n  color: #cdbe91;\n}\nlol-social-roster-group .group-header.dragging {\n  opacity: 0.5;\n}\nlol-social-roster-group .group-header.drag-capture {\n  border: thin solid #785a28;\n  padding: 0 9px;\n  line-height: 20px;\n}\nlol-social-roster-group .group-header.drag-capture .arrow-container {\n  display: none;\n}\nlol-social-roster-group .group-name {\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\nlol-social-roster-group.drop-available .drop-area {\n  overflow: hidden;\n  position: absolute;\n  margin-top: -28px;\n  box-sizing: border-box;\n  width: 100%;\n  height: 100%;\n  z-index: 2;\n}\nlol-social-roster-group.dropping .drop-area {\n  border: thin solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0%, #c89b3c 100%) 1 1;\n  background: linear-gradient(to bottom, transparent 28px, rgba(1,10,19,0.75) 28px);\n}\nlol-social-roster-group.dropping .drop-area .drop-area-arrow {\n  content: '';\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 32px;\n  height: 28px;\n  background-image: url(" + l + ");\n  background-position-y: -28px;\n  background-size: cover;\n  align-self: center;\n}\nlol-social-roster-group.dropping .group-header {\n  background-color: #3c3c41;\n  color: #f0e6d2;\n}\nlol-social-roster-group.dropping .arrow {\n  -webkit-filter: brightness(2);\n}\nlol-social-roster-group .arrow-container {\n  display: flex;\n  justify-content: flex-end;\n  width: 18px;\n  opacity: 1;\n}\nlol-social-roster-group .arrow-container.use-animation {\n  transition: width 250ms cubic-bezier(0, 0, 0, 1), opacity 250ms ease-out;\n}\nlol-social-roster-group .arrow-container.hide {\n  width: 0;\n  opacity: 0;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n", "", {
@@ -12922,12 +12946,12 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1),
-                o = n(218);
-            const i = n(250),
-                a = n(264),
-                s = n(248);
+                o = n(219);
+            const i = n(251),
+                a = n(265),
+                s = n(249);
             r.components.defineElement("lol-social-roster-member", a, s, {
-                styles: n(307),
+                styles: n(308),
                 computed: {
                     conversation: "member && data.getConversation(member.id)",
                     isInQueueOrGame: 'member.availability === "dnd"',
@@ -13164,16 +13188,16 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(308),
-                s = n(254),
-                l = n(309),
-                c = n(310),
-                d = n(311),
-                p = n(299),
-                u = n(312),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(309),
+                s = n(255),
+                l = n(310),
+                c = n(311),
+                d = n(312),
+                p = n(300),
+                u = n(313),
                 m = o(r),
                 g = i(a),
                 h = i(s),
@@ -13211,9 +13235,9 @@
                 components: r,
                 SocialTelemetry: o,
                 logger: i
-            } = n(1), a = n(314), s = n(303), l = n(249);
+            } = n(1), a = n(315), s = n(304), l = n(250);
             r.defineElement("lol-social-roster", s, l, a, {
-                styles: n(315),
+                styles: n(316),
                 acceptMimes: ["application/riot.roster-group+json"],
                 groupMime: "application/riot.roster-group+json",
                 created: function() {
@@ -13281,11 +13305,11 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(243)) && r.__esModule ? r : {
+            var r, o = (r = n(244)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(144),
-                a = n(249),
+                a = n(250),
                 s = {
                     useUniquePool: !0,
                     minItemHeight: 28,
@@ -13378,11 +13402,11 @@
                 }
             }
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(308),
-                s = n(316),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(309),
+                s = n(317),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -13404,7 +13428,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-status", {
-                styles: n(318),
+                styles: n(319),
                 computed: {
                     gameStatus: 'friend.lol.gameStatus || "outOfGame"',
                     tournamentStatus: 'friend.lol.clashTournamentState || "NONE"',
@@ -13428,8 +13452,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, 'lol-social-status .status-message,\nlol-social-status .status-message-wrapper {\n  font-family: var(--font-body);\n}\nlol-social-status .status-message,\nlol-social-status .status-message-wrapper {\n  -webkit-user-select: none;\n}\nlol-social-status .status-message,\nlol-social-status .status-message-wrapper {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-status .status-message,\nlol-social-status .status-message-wrapper {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-status .status-message:lang(ja-jp),\nlol-social-status .status-message-wrapper:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-status .status-message:lang(ar-ae),\nlol-social-status .status-message-wrapper:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-status {\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n}\nlol-social-status .status-message {\n  flex: 1 1 auto;\n  color: inherit;\n  font: inherit;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  position: relative;\n}\nlol-social-status .status-message-availability-text {\n  display: flex;\n}\nlol-social-status .status-message-wrapper {\n  color: inherit;\n  font: inherit;\n  display: inline-flex;\n  white-space: nowrap;\n  flex: 1 1 auto;\n}\nlol-social-status .status-message.chat,\nlol-social-status .status-message-wrapper.chat {\n  color: #00a741;\n}\nlol-social-status .status-message.dnd,\nlol-social-status .status-message-wrapper.dnd,\nlol-social-status .status-message.spectating,\nlol-social-status .status-message-wrapper.spectating {\n  color: #16cae5;\n}\nlol-social-status .status-message.away,\nlol-social-status .status-message-wrapper.away {\n  color: #a09b8c;\n}\nlol-social-status .status-message.open-party,\nlol-social-status .status-message-wrapper.open-party {\n  color: #00a741;\n}\nlol-social-status .status-message.open-party.away,\nlol-social-status .status-message-wrapper.open-party.away {\n  color: #a09b8c;\n}\nlol-social-status .status-message-quoted,\nlol-social-status .status-message {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  min-width: 20px;\n  flex: 0 0 auto;\n}\nlol-social-status .status-message-quoted:lang(ar-ae),\nlol-social-status .status-message:lang(ar-ae) {\n  direction: rtl;\n  text-align: right;\n}\nlol-social-status .status-message-product-name {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  flex: 1 1 auto;\n  text-transform: capitalize;\n}\nlol-social-status .status-message-quoted {\n  flex: 0 1 auto;\n}\nlol-social-status .status-message-quoted + .status-message-product-name {\n  flex: 1 0 auto;\n}\n.identity-message .status-message-wrapper {\n  width: 100px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/status/status.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -13461,50 +13485,50 @@
                     Router: r.Ember.Router.extend({
                         location: "none"
                     }),
-                    ApplicationController: n(323).default,
-                    ActionsBarComponent: n(324).default,
-                    ActionsFolderInputComponent: n(326).default,
-                    ArrowToggleComponent: n(327).default,
-                    AvailabilityHitboxComponent: n(329).default,
-                    ChatToggleButtonComponent: n(331).default,
-                    ClashRosterPanelComponent: n(332).default,
-                    ClashRosterPanelItemComponent: n(334).default,
-                    DiscordBannerComponent: n(336).default,
-                    DiscordEatComponent: n(338).default,
-                    FriendFinderAddSummonerByNameComponent: n(339).default,
-                    FriendFinderButtonComponent: n(341).default,
-                    FriendFinderDiscordComponent: n(342).default,
-                    FriendFinderModalComponent: n(343).default,
-                    FriendFinderRecentlyPlayedComponent: n(342).default,
-                    FriendFinderRecentSummonerComponent: n(344).default,
-                    FriendFinderRequestedPlayerComponent: n(348).default,
-                    FriendFinderRequestedPlayersComponent: n(349).default,
-                    HovercardComponentComponent: n(350).default,
-                    HovercardContentComponent: n(353).default,
-                    HovercardShellComponent: n(358).default,
-                    IdentityAndPartiesComponent: n(361).default,
-                    SidebarMainComponent: n(362).default,
-                    SocialAvatarComponent: n(364).default,
-                    SocialButtonComponent: n(366).default,
-                    SocialFriendRequestComponent: n(367).default,
-                    SocialFriendRequestsComponent: n(370).default,
-                    SocialFriendRequestsModalComponent: n(372).default,
-                    SocialIdentityComponent: n(374).default,
-                    SocialMenuComponent: n(375).default,
-                    SocialMenuInputComponent: n(377).default,
-                    SocialMenuItemComponent: n(378).default,
-                    SocialPanelComponent: n(380).default,
-                    SocialRosterComponent: n(381).default,
-                    SocialRosterGroupComponent: n(383).default,
-                    SocialRosterGroupNameComponent: n(387).default,
-                    SocialRosterMemberComponent: n(389).default,
-                    SocialStatusWrapperComponent: n(391).default,
-                    SocialTextTooltipComponent: n(393).default,
-                    SocialTooltipComponent: n(394).default,
-                    TooltipMessageComponent: n(395).default,
-                    UikitRadioComponent: n(396).default,
-                    VersionBarComponent: n(397).default,
-                    VngAgeRatingComponent: n(398).default,
+                    ApplicationController: n(324).default,
+                    ActionsBarComponent: n(325).default,
+                    ActionsFolderInputComponent: n(327).default,
+                    ArrowToggleComponent: n(328).default,
+                    AvailabilityHitboxComponent: n(330).default,
+                    ChatToggleButtonComponent: n(332).default,
+                    ClashRosterPanelComponent: n(333).default,
+                    ClashRosterPanelItemComponent: n(335).default,
+                    DiscordBannerComponent: n(337).default,
+                    DiscordEatComponent: n(339).default,
+                    FriendFinderAddSummonerByNameComponent: n(340).default,
+                    FriendFinderButtonComponent: n(342).default,
+                    FriendFinderDiscordComponent: n(343).default,
+                    FriendFinderModalComponent: n(344).default,
+                    FriendFinderRecentlyPlayedComponent: n(343).default,
+                    FriendFinderRecentSummonerComponent: n(345).default,
+                    FriendFinderRequestedPlayerComponent: n(349).default,
+                    FriendFinderRequestedPlayersComponent: n(350).default,
+                    HovercardComponentComponent: n(351).default,
+                    HovercardContentComponent: n(354).default,
+                    HovercardShellComponent: n(359).default,
+                    IdentityAndPartiesComponent: n(362).default,
+                    SidebarMainComponent: n(363).default,
+                    SocialAvatarComponent: n(365).default,
+                    SocialButtonComponent: n(367).default,
+                    SocialFriendRequestComponent: n(368).default,
+                    SocialFriendRequestsComponent: n(371).default,
+                    SocialFriendRequestsModalComponent: n(373).default,
+                    SocialIdentityComponent: n(375).default,
+                    SocialMenuComponent: n(376).default,
+                    SocialMenuInputComponent: n(378).default,
+                    SocialMenuItemComponent: n(379).default,
+                    SocialPanelComponent: n(381).default,
+                    SocialRosterComponent: n(382).default,
+                    SocialRosterGroupComponent: n(384).default,
+                    SocialRosterGroupNameComponent: n(388).default,
+                    SocialRosterMemberComponent: n(390).default,
+                    SocialStatusWrapperComponent: n(392).default,
+                    SocialTextTooltipComponent: n(394).default,
+                    SocialTooltipComponent: n(395).default,
+                    TooltipMessageComponent: n(396).default,
+                    UikitRadioComponent: n(397).default,
+                    VersionBarComponent: n(398).default,
+                    VngAgeRatingComponent: n(399).default,
                     DiscordBetaComponent: d,
                     DiscordButtonComponent: p,
                     DiscordPopupComponent: m,
@@ -13515,105 +13539,105 @@
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
                     SharedNotificationsService: c,
-                    AnalyticsService: n(400).default,
-                    BanNotificationService: n(401).default,
-                    ChatErrorsService: n(402).default,
-                    ChatRestrictionService: n(403).default,
-                    ChatWindowSettingsService: n(404).default,
-                    ClashService: n(405).default,
-                    ClientConfigService: n(406).default,
-                    CodeOfConductService: n(407).default,
-                    ConversationsService: n(410).default,
-                    DiagnosticAssistantService: n(411).default,
-                    DiscordIntegrationService: n(412).default,
-                    DragStateService: n(413).default,
-                    EogService: n(414).default,
-                    FriendFinderService: n(415).default,
-                    FriendGroupsService: n(416).default,
-                    FriendHovercardsService: n(417).default,
-                    FriendRequestsService: n(418).default,
-                    FriendsService: n(419).default,
-                    GameDataService: n(420).default,
-                    GameflowService: n(421).default,
-                    GameInvitesService: n(422).default,
-                    GameQueuesService: n(423).default,
-                    GenericAssetsService: n(424).default,
-                    HoneyfruitService: n(425).default,
-                    LeaverBusterService: n(426).default,
-                    LobbyService: n(430).default,
-                    MapsService: n(431).default,
-                    MatchmakingService: n(432).default,
-                    NotificationsService: n(433).default,
-                    OpenPartiesService: n(434).default,
-                    PatcherService: n(435).default,
-                    PlatformConfigService: n(436).default,
-                    ProductsService: n(437).default,
-                    ProfileChampionInfoService: n(438).default,
-                    ProfilesService: n(439).default,
-                    ReformCardService: n(440).default,
-                    RemedyService: n(458).default,
-                    ReportedPlayersService: n(459).default,
-                    ReporterFeedbackMessagesService: n(460).default,
-                    ReporterFeedbackService: n(461).default,
-                    RequestCacheService: n(462).default,
-                    SettingsService: n(463).default,
-                    SocialButtonsService: n(464).default,
-                    SocialPlatformConfigService: n(465).default,
-                    SocialSessionService: n(466).default,
-                    SocialSettingsService: n(467).default,
-                    SpectatorService: n(468).default,
-                    StatusUpdatesService: n(469).default,
-                    StoreService: n(470).default,
-                    SummonerService: n(471).default,
-                    SystemService: n(472).default,
-                    UxSettingsService: n(473).default,
+                    AnalyticsService: n(401).default,
+                    BanNotificationService: n(402).default,
+                    ChatErrorsService: n(403).default,
+                    ChatRestrictionService: n(404).default,
+                    ChatWindowSettingsService: n(405).default,
+                    ClashService: n(406).default,
+                    ClientConfigService: n(407).default,
+                    CodeOfConductService: n(408).default,
+                    ConversationsService: n(411).default,
+                    DiagnosticAssistantService: n(412).default,
+                    DiscordIntegrationService: n(413).default,
+                    DragStateService: n(414).default,
+                    EogService: n(415).default,
+                    FriendFinderService: n(416).default,
+                    FriendGroupsService: n(417).default,
+                    FriendHovercardsService: n(418).default,
+                    FriendRequestsService: n(419).default,
+                    FriendsService: n(420).default,
+                    GameDataService: n(421).default,
+                    GameflowService: n(422).default,
+                    GameInvitesService: n(423).default,
+                    GameQueuesService: n(424).default,
+                    GenericAssetsService: n(425).default,
+                    HoneyfruitService: n(426).default,
+                    LeaverBusterService: n(427).default,
+                    LobbyService: n(431).default,
+                    MapsService: n(432).default,
+                    MatchmakingService: n(433).default,
+                    NotificationsService: n(434).default,
+                    OpenPartiesService: n(435).default,
+                    PatcherService: n(436).default,
+                    PlatformConfigService: n(437).default,
+                    ProductsService: n(438).default,
+                    ProfileChampionInfoService: n(439).default,
+                    ProfilesService: n(440).default,
+                    ReformCardService: n(441).default,
+                    RemedyService: n(459).default,
+                    ReportedPlayersService: n(460).default,
+                    ReporterFeedbackMessagesService: n(461).default,
+                    ReporterFeedbackService: n(462).default,
+                    RequestCacheService: n(463).default,
+                    SettingsService: n(464).default,
+                    SocialButtonsService: n(465).default,
+                    SocialPlatformConfigService: n(466).default,
+                    SocialSessionService: n(467).default,
+                    SocialSettingsService: n(468).default,
+                    SpectatorService: n(469).default,
+                    StatusUpdatesService: n(470).default,
+                    StoreService: n(471).default,
+                    SummonerService: n(472).default,
+                    SystemService: n(473).default,
+                    UxSettingsService: n(474).default,
                     MissionsService: g.MissionsService,
                     TEMPLATES: {
-                        application: n(474),
-                        index: n(475),
-                        "components/actions-bar": n(476),
-                        "components/actions-folder-input": n(477),
-                        "components/arrow-toggle": n(478),
-                        "components/availability-hitbox": n(479),
-                        "components/chat-toggle-button": n(480),
-                        "components/clash-roster-panel": n(481),
-                        "components/clash-roster-panel-item": n(482),
-                        "components/content-block-attention": n(483),
-                        "components/discord-banner": n(484),
-                        "components/discord-eat": n(485),
-                        "components/friend-finder-add-summoner-by-name": n(486),
-                        "components/friend-finder-button": n(487),
-                        "components/friend-finder-discord": n(488),
-                        "components/friend-finder-modal": n(489),
-                        "components/friend-finder-recent-summoner": n(490),
-                        "components/friend-finder-recently-played": n(491),
-                        "components/friend-finder-requested-player": n(492),
-                        "components/friend-finder-requested-players": n(493),
-                        "components/hovercard-name-alias-mode": n(494),
-                        "components/hovercard-name-summoner-mode": n(495),
-                        "components/identity-and-parties": n(496),
-                        "components/sidebar-main": n(497),
-                        "components/social-avatar": n(498),
-                        "components/social-button": n(499),
-                        "components/social-friend-request": n(500),
-                        "components/social-friend-requests-modal": n(501),
-                        "components/social-friend-requests": n(502),
-                        "components/social-identity": n(503),
-                        "components/social-menu-input": n(504),
-                        "components/social-menu-item": n(505),
-                        "components/social-menu": n(506),
-                        "components/social-panel": n(507),
-                        "components/social-roster-group-name": n(508),
-                        "components/social-roster-group": n(509),
-                        "components/social-roster-member": n(510),
-                        "components/social-roster": n(511),
-                        "components/social-status-wrapper": n(512),
-                        "components/social-text-tooltip": n(513),
-                        "components/social-tooltip": n(514),
-                        "components/tooltip-message": n(515),
-                        "components/uikit-radio": n(516),
-                        "components/version-bar": n(517),
-                        "components/vng-age-rating": n(518),
+                        application: n(475),
+                        index: n(476),
+                        "components/actions-bar": n(477),
+                        "components/actions-folder-input": n(478),
+                        "components/arrow-toggle": n(479),
+                        "components/availability-hitbox": n(480),
+                        "components/chat-toggle-button": n(481),
+                        "components/clash-roster-panel": n(482),
+                        "components/clash-roster-panel-item": n(483),
+                        "components/content-block-attention": n(484),
+                        "components/discord-banner": n(485),
+                        "components/discord-eat": n(486),
+                        "components/friend-finder-add-summoner-by-name": n(487),
+                        "components/friend-finder-button": n(488),
+                        "components/friend-finder-discord": n(489),
+                        "components/friend-finder-modal": n(490),
+                        "components/friend-finder-recent-summoner": n(491),
+                        "components/friend-finder-recently-played": n(492),
+                        "components/friend-finder-requested-player": n(493),
+                        "components/friend-finder-requested-players": n(494),
+                        "components/hovercard-name-alias-mode": n(495),
+                        "components/hovercard-name-summoner-mode": n(496),
+                        "components/identity-and-parties": n(497),
+                        "components/sidebar-main": n(498),
+                        "components/social-avatar": n(499),
+                        "components/social-button": n(500),
+                        "components/social-friend-request": n(501),
+                        "components/social-friend-requests-modal": n(502),
+                        "components/social-friend-requests": n(503),
+                        "components/social-identity": n(504),
+                        "components/social-menu-input": n(505),
+                        "components/social-menu-item": n(506),
+                        "components/social-menu": n(507),
+                        "components/social-panel": n(508),
+                        "components/social-roster-group-name": n(509),
+                        "components/social-roster-group": n(510),
+                        "components/social-roster-member": n(511),
+                        "components/social-roster": n(512),
+                        "components/social-status-wrapper": n(513),
+                        "components/social-text-tooltip": n(514),
+                        "components/social-tooltip": n(515),
+                        "components/tooltip-message": n(516),
+                        "components/uikit-radio": n(517),
+                        "components/version-bar": n(518),
+                        "components/vng-age-rating": n(519),
                         "components/missions-button": g.MissionsButtonComponentTemplate
                     }
                 };
@@ -13622,30 +13646,30 @@
                     name: "RemedyReceived",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    RemediesReceivedComponent: n(519).default,
-                    RemedyRewardCardComponent: n(527).default,
+                    RemediesReceivedComponent: n(520).default,
+                    RemedyRewardCardComponent: n(528).default,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(458).default
+                    RemedyService: n(459).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "HostageDetectedComponent",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    HostageDetectedComponent: n(320).HostageDetectedComponent,
+                    HostageDetectedComponent: n(321).HostageDetectedComponent,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(458).default
+                    RemedyService: n(459).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "CredibilityBehaviorWarning",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    CredibilityBehaviorWarningComponent: n(530).default,
-                    CredibilityBehaviorWarningOptionComponent: n(534).default,
-                    RemedyService: n(458).default
+                    CredibilityBehaviorWarningComponent: n(531).default,
+                    CredibilityBehaviorWarningOptionComponent: n(535).default,
+                    RemedyService: n(459).default
                 })
             };
             var r = n(1);
-            n(320);
+            n(321);
             const o = {
                     EMBER_CLI_COMPAT: !0
                 },
@@ -13660,9 +13684,9 @@
                 value: !0
             }), t.HostageDetectedComponent = void 0;
             const r = n(1);
-            n(321), t.HostageDetectedComponent = r.Ember.Component.extend({
+            n(322), t.HostageDetectedComponent = r.Ember.Component.extend({
                 classNames: ["hostage-detected-component"],
-                layout: n(322),
+                layout: n(323),
                 offenderPuuid: "",
                 didReceiveAttrs: function() {
                     this._super(...arguments);
@@ -13692,8 +13716,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "8baigsq7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\hostage-detected-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\hostage-detected-component\\\\style.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","span",[]],["static-attr","class","hostage-detected-notification-title"],["flush-element"],["append",["unknown",["hostageDetectedNotificationTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","hostage-detected-notification-body"],["flush-element"],["append",["helper",["sanitize"],[["get",["hostageDetectedNotificationBody"]]],null],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "pibrqi6a",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\hostage-detected-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\hostage-detected-component\\\\style.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","span",[]],["static-attr","class","hostage-detected-notification-title"],["flush-element"],["append",["unknown",["hostageDetectedNotificationTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","hostage-detected-notification-body"],["flush-element"],["append",["helper",["sanitize"],[["get",["hostageDetectedNotificationBody"]]],null],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -13726,7 +13750,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(325)) && r.__esModule ? r : {
+                i = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 };
             const {
@@ -13987,7 +14011,7 @@
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(1)),
-                i = (r = n(325)) && r.__esModule ? r : {
+                i = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 };
 
@@ -14070,7 +14094,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(328);
+            n(329);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-arrow-toggle"],
                 attributeBindings: ["open", "point-down"],
@@ -14089,10 +14113,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(325)) && r.__esModule ? r : {
+                i = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 };
-            n(330);
+            n(331);
             var a = o.Ember.Component.extend({
                 availability: "",
                 large: !1,
@@ -14145,7 +14169,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(325)) && r.__esModule ? r : {
+                i = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -14175,7 +14199,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(333);
+            n(334);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-clash-roster-panel-item"],
                 clashService: r.Ember.inject.service("clash"),
@@ -14191,7 +14215,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(335);
+            n(336);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-clash-roster-panel-item"],
                 roster: {},
@@ -14226,7 +14250,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(337);
+            n(338);
             var o = r.Ember.Component.extend({
                 classNames: ["discord-banner"],
                 bannerText: "",
@@ -14292,7 +14316,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(340);
+                o = n(341);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = (e, t) => "string" == typeof e && "string" == typeof t && e.toUpperCase() === t.toUpperCase();
@@ -14509,7 +14533,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(325)) && r.__esModule ? r : {
+                i = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -14613,11 +14637,11 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(345),
-                i = n(346),
-                a = n(347),
-                s = n(340),
-                l = n(219),
+                o = n(346),
+                i = n(347),
+                a = n(348),
+                s = n(341),
+                l = n(220),
                 c = r.Ember.Component.extend({
                     classNames: ["lol-friend-finder-recent-summoner"],
                     summoner: {},
@@ -14772,13 +14796,13 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(325)) && r.__esModule ? r : {
+                i = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(346),
-                s = n(347),
-                l = n(345),
-                c = n(219);
+                a = n(347),
+                s = n(348),
+                l = n(346),
+                c = n(220);
             var d = o.Ember.Component.extend({
                 classNames: ["lol-friend-finder-requested-player"],
                 tra: o.Ember.inject.service("tra"),
@@ -14869,7 +14893,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(351);
+                o = n(352);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = "show-hovercard", s = "hide-hovercard", l = {
@@ -14893,7 +14917,7 @@
             let c = !1;
             var d = r.Ember.Component.extend(i, {
                 tagName: "template",
-                layout: n(352),
+                layout: n(353),
                 socialPlatformConfig: r.Ember.inject.service(),
                 puuid: null,
                 summonerId: null,
@@ -15034,8 +15058,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "PIuA+7U8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-component.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-component.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-root-container lol-uikit-tooltip-target"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasShown"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["hovercard-shell"],null,[["direction","directionRef","hovercardReadyPromiseResolve","puuid","getTarget","getHovercardRoot","openPartyDescription","summonerIdArg","isHovercardShowing"],[["get",["direction"]],["get",["directionRef"]],["get",["hovercardReadyPromiseResolve"]],["get",["puuid"]],["helper",["action"],[["get",[null]],"getTarget"],null],["helper",["action"],[["get",[null]],"getHovercardRoot"],null],["get",["openPartyDescription"]],["get",["summonerId"]],["get",["isHovercardShowing"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "TaqpGii9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-component.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-component.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-root-container lol-uikit-tooltip-target"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasShown"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["hovercard-shell"],null,[["direction","directionRef","hovercardReadyPromiseResolve","puuid","getTarget","getHovercardRoot","openPartyDescription","summonerIdArg","isHovercardShowing"],[["get",["direction"]],["get",["directionRef"]],["get",["hovercardReadyPromiseResolve"]],["get",["puuid"]],["helper",["action"],[["get",[null]],"getTarget"],null],["helper",["action"],[["get",[null]],"getHovercardRoot"],null],["get",["openPartyDescription"]],["get",["summonerId"]],["get",["isHovercardShowing"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15044,13 +15068,13 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(354),
-                i = n(355),
-                a = n(356);
+                o = n(355),
+                i = n(356),
+                a = n(357);
             var s = r.Ember.Component.extend({
                 clientConfig: r.Ember.inject.service("client-config"),
                 tagName: "",
-                layout: n(357),
+                layout: n(358),
                 loggedIn: null,
                 isKnown: null,
                 me: null,
@@ -15539,8 +15563,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "2kyZpfwL",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","id","hover-card-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","style",["unknown",["backdropStyles"]],null],["static-attr","id","hover-card-backdrop"],["static-attr","class","hover-card-backdrop"],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["backdropOverlays"]]],null,43],["text","  "],["open-element","div",[]],["static-attr","class","hover-card-header-left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["masteryScore"]]],null,42],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-header-right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["role"]]],null,41],["block",["if"],[["get",["position"]]],null,40],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["summonerIdAndNotRemote"]]],null,39,33],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-bottom-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["gntOnlyAndOffline"]]],null,29],["block",["if"],[["get",["noteOfflineGnt"]]],null,28,27],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-note-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-note-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-note"],["flush-element"],["append",["unknown",["note"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-status-message-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-status-message-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-status-message"],["flush-element"],["text","“"],["append",["unknown",["statusMessage"]],false],["text","”"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text","- "],["append",["unknown",["remotePlatformId"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["remotePlatformId"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text","- "],["append",["unknown",["remoteProductName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityMessageClasses"]],null],["flush-element"],["text","\\n            "],["append",["unknown",["availabilityTra"]],false],["text","\\n"],["block",["if"],[["get",["remoteProductName"]]],null,4,3],["text","          "],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAvailabilityString"]]],null,5]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["hover-card-game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameStatusNotOutOfGame"]]],null,7,6]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n            "],["append",["unknown",["tournamentStatusTra"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["tournamentStatusNotNone"]]],null,9,8]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["text"," - "],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","availability_championSelect"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["mapName"]]],null,11],["text","            "],["open-element","span",[]],["flush-element"],["text"," ("],["append",["unknown",["gameQueueTypeString"]],false],["text",")"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameStatusChampionSelect"]]],null,12,10]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","open-party-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","open-party-availability"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityIconClasses"]],null],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityMessageClasses"]],null],["flush-element"],["append",["unknown",["availabilityTra"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hovercard-open-party"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hovercard-open-party-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["availabilityAway"]]],null,15,14],["text","              "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardOpenPartyClasses"]],null],["flush-element"],["append",["unknown",["partyOccupancyString"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","open-party-string"],["flush-element"],["append",["unknown",["tra","open_party"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardOpenPartySummonersClasses"]],null],["flush-element"],["text","\\n              "],["append",["unknown",["partySummonerNames"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showPartyBlock"]]],null,16,13]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","hover-card-time"],["flush-element"],["text","\\n              "],["append",["unknown",["gameStartFormatted"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["text"," - "],["append",["unknown",["championName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["append",["unknown",["gameMode"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["gameMode"]]],null,20]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["flush-element"],["text","("],["append",["unknown",["gameQueueTypeString"]],false],["text",")"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["flush-element"],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["mapName"]]],null,23],["block",["if"],[["get",["gameType"]]],null,22]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n"],["block",["if"],[["get",["mapNameOrGameType"]]],null,24,21],["block",["if"],[["get",["championName"]]],null,19],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameStart"]]],null,18]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-availability"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["availabilityClasses"]],null],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["gameStatusInGame"]]],null,25,17],["text","      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["statusMessage"]]],null,1],["text","\\n"],["block",["if"],[["get",["note"]]],null,0],["text","    "]],"locals":[]},{"statements":[["block",["if"],[["get",["knownNotGnt"]]],null,26]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-note-wrapper-offline-gnt"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-note-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-note"],["flush-element"],["append",["unknown",["note"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-availability offline"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","hover-card-availability-icon offline"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-availability-message offline"],["flush-element"],["append",["unknown",["tra","availability_offline"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","hover-card-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","hover-card-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","icon-ring"],["static-attr","class","no-image"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","icon-image"],["dynamic-attr","src",["unknown",["productIconUrl"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","icon-ring"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-info-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-identity"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","hover-card-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["productIconUrl"]]],null,32,31],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","hover-card-info"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","aliasComponent","gameName","tagLine"],["component","hovercard-name-alias-mode",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,30],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-challenge-crystal"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hover-card-rank-img-container"],["flush-element"],["open-element","img",[]],["static-attr","class","hover-card-crystal-image"],["dynamic-attr","src",["unknown",["challengeMiniCrystalPath"]],null],["flush-element"],["close-element"],["close-element"],["text","\\n            "],["append",["unknown",["challengeCrystalLevelSummary"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-rank"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hover-card-rank-img-container"],["flush-element"],["open-element","img",[]],["static-attr","class","hover-card-rank-image"],["dynamic-attr","src",["unknown",["rankedMiniRegaliaPath"]],null],["flush-element"],["close-element"],["close-element"],["text","\\n            "],["append",["unknown",["rankedSummary"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-title-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-title"],["flush-element"],["append",["unknown",["summonerTitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","hover-card-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","hover-card-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-regalia-hovercard-v2-element",[]],["static-attr","ref","regaliaElement"],["dynamic-attr","summoner-id",["unknown",["summonerId"]],null],["dynamic-attr","puuid",["unknown",["puuid"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-info-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-identity"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isHovercardShowing"]]],null,38],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","hover-card-info hover-card-info-line-height-override"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","aliasComponent","gameName","tagLine"],["component","hovercard-name-alias-mode",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,37],["block",["if"],[["get",["summonerTitle"]]],null,36],["text","      "],["open-element","div",[]],["static-attr","class","hover-card-ranked-description"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showRankData"]]],null,35],["block",["if"],[["get",["showChallengeCrystalData"]]],null,34],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["positionClasses"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["roleClasses"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","hover-card-mastery-image"],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","hover-card-mastery-score"],["flush-element"],["append",["unknown",["masteryScore"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","hover-card-backdrop-overlay"],["dynamic-attr","style",["get",["overlay"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["overlay"]}],"hasPartials":false}',
+                id: "NQybLLpt",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","id","hover-card-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","style",["unknown",["backdropStyles"]],null],["static-attr","id","hover-card-backdrop"],["static-attr","class","hover-card-backdrop"],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["backdropOverlays"]]],null,43],["text","  "],["open-element","div",[]],["static-attr","class","hover-card-header-left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["masteryScore"]]],null,42],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-header-right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["role"]]],null,41],["block",["if"],[["get",["position"]]],null,40],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["summonerIdAndNotRemote"]]],null,39,33],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-bottom-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["gntOnlyAndOffline"]]],null,29],["block",["if"],[["get",["noteOfflineGnt"]]],null,28,27],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-note-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-note-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-note"],["flush-element"],["append",["unknown",["note"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-status-message-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-status-message-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-status-message"],["flush-element"],["text","“"],["append",["unknown",["statusMessage"]],false],["text","”"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text","- "],["append",["unknown",["remotePlatformId"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["remotePlatformId"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text","- "],["append",["unknown",["remoteProductName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityMessageClasses"]],null],["flush-element"],["text","\\n            "],["append",["unknown",["availabilityTra"]],false],["text","\\n"],["block",["if"],[["get",["remoteProductName"]]],null,4,3],["text","          "],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAvailabilityString"]]],null,5]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["hover-card-game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameStatusNotOutOfGame"]]],null,7,6]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n            "],["append",["unknown",["tournamentStatusTra"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["tournamentStatusNotNone"]]],null,9,8]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["text"," - "],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","availability_championSelect"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["mapName"]]],null,11],["text","            "],["open-element","span",[]],["flush-element"],["text"," ("],["append",["unknown",["gameQueueTypeString"]],false],["text",")"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameStatusChampionSelect"]]],null,12,10]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","open-party-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","open-party-availability"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityIconClasses"]],null],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityMessageClasses"]],null],["flush-element"],["append",["unknown",["availabilityTra"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hovercard-open-party"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hovercard-open-party-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["availabilityAway"]]],null,15,14],["text","              "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardOpenPartyClasses"]],null],["flush-element"],["append",["unknown",["partyOccupancyString"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","open-party-string"],["flush-element"],["append",["unknown",["tra","open_party"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardOpenPartySummonersClasses"]],null],["flush-element"],["text","\\n              "],["append",["unknown",["partySummonerNames"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showPartyBlock"]]],null,16,13]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","hover-card-time"],["flush-element"],["text","\\n              "],["append",["unknown",["gameStartFormatted"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["text"," - "],["append",["unknown",["championName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["append",["unknown",["gameMode"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["gameMode"]]],null,20]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["flush-element"],["text","("],["append",["unknown",["gameQueueTypeString"]],false],["text",")"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["flush-element"],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["mapName"]]],null,23],["block",["if"],[["get",["gameType"]]],null,22]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n"],["block",["if"],[["get",["mapNameOrGameType"]]],null,24,21],["block",["if"],[["get",["championName"]]],null,19],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameStart"]]],null,18]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-availability"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["availabilityClasses"]],null],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["gameStatusInGame"]]],null,25,17],["text","      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["statusMessage"]]],null,1],["text","\\n"],["block",["if"],[["get",["note"]]],null,0],["text","    "]],"locals":[]},{"statements":[["block",["if"],[["get",["knownNotGnt"]]],null,26]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-note-wrapper-offline-gnt"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-note-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-note"],["flush-element"],["append",["unknown",["note"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-availability offline"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","hover-card-availability-icon offline"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-availability-message offline"],["flush-element"],["append",["unknown",["tra","availability_offline"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","hover-card-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","hover-card-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","icon-ring"],["static-attr","class","no-image"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","icon-image"],["dynamic-attr","src",["unknown",["productIconUrl"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","icon-ring"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-info-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-identity"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","hover-card-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["productIconUrl"]]],null,32,31],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","hover-card-info"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","aliasComponent","gameName","tagLine"],["component","hovercard-name-alias-mode",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,30],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-challenge-crystal"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hover-card-rank-img-container"],["flush-element"],["open-element","img",[]],["static-attr","class","hover-card-crystal-image"],["dynamic-attr","src",["unknown",["challengeMiniCrystalPath"]],null],["flush-element"],["close-element"],["close-element"],["text","\\n            "],["append",["unknown",["challengeCrystalLevelSummary"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-rank"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hover-card-rank-img-container"],["flush-element"],["open-element","img",[]],["static-attr","class","hover-card-rank-image"],["dynamic-attr","src",["unknown",["rankedMiniRegaliaPath"]],null],["flush-element"],["close-element"],["close-element"],["text","\\n            "],["append",["unknown",["rankedSummary"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-title-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-title"],["flush-element"],["append",["unknown",["summonerTitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","hover-card-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","hover-card-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-regalia-hovercard-v2-element",[]],["static-attr","ref","regaliaElement"],["dynamic-attr","summoner-id",["unknown",["summonerId"]],null],["dynamic-attr","puuid",["unknown",["puuid"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-info-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-identity"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isHovercardShowing"]]],null,38],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","hover-card-info hover-card-info-line-height-override"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","aliasComponent","gameName","tagLine"],["component","hovercard-name-alias-mode",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,37],["block",["if"],[["get",["summonerTitle"]]],null,36],["text","      "],["open-element","div",[]],["static-attr","class","hover-card-ranked-description"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showRankData"]]],null,35],["block",["if"],[["get",["showChallengeCrystalData"]]],null,34],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["positionClasses"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["roleClasses"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","hover-card-mastery-image"],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","hover-card-mastery-score"],["flush-element"],["append",["unknown",["masteryScore"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","hover-card-backdrop-overlay"],["dynamic-attr","style",["get",["overlay"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["overlay"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15549,17 +15573,17 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(351),
-                a = n(354),
-                s = n(359),
-                l = n(356),
-                c = (r = n(325)) && r.__esModule ? r : {
+                i = n(352),
+                a = n(355),
+                s = n(360),
+                l = n(357),
+                c = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 };
             const d = /\W+/g;
             var p = o.Ember.Component.extend({
                 tagName: "",
-                layout: n(360),
+                layout: n(361),
                 friendHovercardsService: o.Ember.inject.service("friend-hovercards"),
                 profileChampionInfo: o.Ember.inject.service(),
                 socialPlatformConfig: o.Ember.inject.service(),
@@ -15753,8 +15777,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "Xkjt/Rgh",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-shell.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-shell.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["rootClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["containerClasses"]],null],["flush-element"],["text","\\n    "],["append",["helper",["hovercard-content"],null,[["loggedIn","isKnown","me","rawChampionsInfo","champion","puuid","friendInfo","accountId","summonerName","gameName","gameTag","puuid","availability","isDiscordOnline","isLeagueOffline","gameStatus","playerChallengeSummary","playerRankedSummary","gntOnlyAndOffline","regaliaEnabled","remoteProduct","remotePlatform","notRemoteProduct","summonerIconUrl","getHovercardRoot","__canRenderHovercard","openPartyDescription","isHovercardShowing","discordId"],[["get",["loggedIn"]],["get",["isKnown"]],["get",["me"]],["get",["rawChampionsInfo"]],["get",["champion"]],["get",["puuid"]],["get",["friendInfo"]],["get",["accountId"]],["get",["summonerName"]],["get",["gameName"]],["get",["gameTag"]],["get",["puuid"]],["get",["availability"]],["get",["isDiscordOnline"]],["get",["isLeagueOffline"]],["get",["gameStatus"]],["get",["playerChallengeSummary"]],["get",["playerRankedSummary"]],["get",["gntOnlyAndOffline"]],["get",["regaliaEnabled"]],["get",["remoteProduct"]],["get",["remotePlatform"]],["get",["notRemoteProduct"]],["get",["summonerIconUrl"]],["get",["getHovercardRoot"]],["get",["canRenderHovercard"]],["get",["openPartyDescription"]],["get",["isHovercardShowing"]],["get",["discordId"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["canRenderHovercard"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","id","border-container"],["static-attr","data-class-has-regalia","--isRegaliaEnabled"],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","id","border"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","width","100%"],["static-attr","height","100%"],["static-attr","version","1.1"],["flush-element"],["text","\\n      "],["open-element","defs",[]],["flush-element"],["text","\\n        "],["open-element","linearGradient",[]],["static-attr","id","gradient"],["dynamic-attr","x1",["unknown",["svgLinGradPos","x1"]],null],["dynamic-attr","y1",["unknown",["svgLinGradPos","y1"]],null],["dynamic-attr","x2",["unknown",["svgLinGradPos","x2"]],null],["dynamic-attr","y2",["unknown",["svgLinGradPos","y2"]],null],["flush-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","60%"],["static-attr","stop-color","#785A28"],["flush-element"],["close-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","100%"],["static-attr","stop-color","#463714"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","id","tick-path"],["static-attr","d","M369.5 6.5 l 3 1 v 59.5 l 2 2 v 1 l -2 2 v 59.5 l -3 1 v -52.5 l 10.5 -10.5 l -10.5 -10.5 z"],["static-attr","fill","#010A13"],["static-attr","stroke","#785A28"],["static-attr","stroke-width","1"],["flush-element"],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","id","border-path"],["static-attr","d","M1 1 h 368 v 57.5 l 11 11 l -11 11 v 57.5 H 1 Z"],["static-attr","fill","transparent"],["static-attr","stroke","url(#gradient)"],["static-attr","stroke-width","2"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "TT1Due0P",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-shell.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-shell.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["rootClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["containerClasses"]],null],["flush-element"],["text","\\n    "],["append",["helper",["hovercard-content"],null,[["loggedIn","isKnown","me","rawChampionsInfo","champion","puuid","friendInfo","accountId","summonerName","gameName","gameTag","puuid","availability","isDiscordOnline","isLeagueOffline","gameStatus","playerChallengeSummary","playerRankedSummary","gntOnlyAndOffline","regaliaEnabled","remoteProduct","remotePlatform","notRemoteProduct","summonerIconUrl","getHovercardRoot","__canRenderHovercard","openPartyDescription","isHovercardShowing","discordId"],[["get",["loggedIn"]],["get",["isKnown"]],["get",["me"]],["get",["rawChampionsInfo"]],["get",["champion"]],["get",["puuid"]],["get",["friendInfo"]],["get",["accountId"]],["get",["summonerName"]],["get",["gameName"]],["get",["gameTag"]],["get",["puuid"]],["get",["availability"]],["get",["isDiscordOnline"]],["get",["isLeagueOffline"]],["get",["gameStatus"]],["get",["playerChallengeSummary"]],["get",["playerRankedSummary"]],["get",["gntOnlyAndOffline"]],["get",["regaliaEnabled"]],["get",["remoteProduct"]],["get",["remotePlatform"]],["get",["notRemoteProduct"]],["get",["summonerIconUrl"]],["get",["getHovercardRoot"]],["get",["canRenderHovercard"]],["get",["openPartyDescription"]],["get",["isHovercardShowing"]],["get",["discordId"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["canRenderHovercard"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","id","border-container"],["static-attr","data-class-has-regalia","--isRegaliaEnabled"],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","id","border"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","width","100%"],["static-attr","height","100%"],["static-attr","version","1.1"],["flush-element"],["text","\\n      "],["open-element","defs",[]],["flush-element"],["text","\\n        "],["open-element","linearGradient",[]],["static-attr","id","gradient"],["dynamic-attr","x1",["unknown",["svgLinGradPos","x1"]],null],["dynamic-attr","y1",["unknown",["svgLinGradPos","y1"]],null],["dynamic-attr","x2",["unknown",["svgLinGradPos","x2"]],null],["dynamic-attr","y2",["unknown",["svgLinGradPos","y2"]],null],["flush-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","60%"],["static-attr","stop-color","#785A28"],["flush-element"],["close-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","100%"],["static-attr","stop-color","#463714"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","id","tick-path"],["static-attr","d","M369.5 6.5 l 3 1 v 59.5 l 2 2 v 1 l -2 2 v 59.5 l -3 1 v -52.5 l 10.5 -10.5 l -10.5 -10.5 z"],["static-attr","fill","#010A13"],["static-attr","stroke","#785A28"],["static-attr","stroke-width","1"],["flush-element"],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","id","border-path"],["static-attr","d","M1 1 h 368 v 57.5 l 11 11 l -11 11 v 57.5 H 1 Z"],["static-attr","fill","transparent"],["static-attr","stroke","url(#gradient)"],["static-attr","stroke-width","2"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15773,7 +15797,7 @@
             }), t.default = void 0;
             var r = n(1);
             const o = n(153),
-                i = n(363),
+                i = n(364),
                 a = (0, r.emberDataBinding)({
                     Ember: r.Ember,
                     websocket: (0, r.getProvider)().getSocket(),
@@ -15869,11 +15893,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(356),
-                a = (r = n(325)) && r.__esModule ? r : {
+                i = n(357),
+                a = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 };
-            n(365);
+            n(366);
             var s = o.Ember.Component.extend({
                 avatarClassNames: "",
                 championId: null,
@@ -15912,6 +15936,10 @@
                         n = this.get("meObj");
                     return !(!e || t) && Boolean((n?.platformId !== e?.platformId || n.product !== e?.product) && this.get("availability") !== i.AVAILABILITY.OFFLINE)
                 })),
+                isDiscordOnlyFriend: o.Ember.computed("member", (function() {
+                    const e = this.get("member");
+                    return !!e && e.relationshipOnRiot === i.SOCIAL_RELATIONSHIP_TYPES.NONE
+                })),
                 summonerIconUrl: o.Ember.computed("iconId", "profileIcons", (function() {
                     return this.get("profileIcons") && null != this.get("iconId") && -1 !== this.get("iconId") ? this.get("profileIcons").find((e => e.id === this.get("iconId")))?.imagePath : ""
                 })),
@@ -15924,8 +15952,8 @@
                         n = this.get("productsService");
                     return e && t ? n.getIconUrl(e.product, e.patchline) : ""
                 })),
-                iconUrl: o.Ember.computed("availability", "isRemote", "productIconUrl", "summonerIconUrl", "championIconUrl", "isDiscordOnline", (function() {
-                    return this.get("isDiscordOnline") ? "/fe/lol-social/discord-friend.png" : this.get("isRemote") ? this.get("productIconUrl") : this.get("summonerIconUrl") || this.get("championIconUrl")
+                iconUrl: o.Ember.computed("availability", "isRemote", "productIconUrl", "summonerIconUrl", "championIconUrl", "isDiscordOnline", "isDiscordOnlyFriend", (function() {
+                    return this.get("isDiscordOnline") || this.get("isDiscordOnlyFriend") ? "/fe/lol-social/discord-friend.png" : this.get("isRemote") ? this.get("productIconUrl") : this.get("summonerIconUrl") || this.get("championIconUrl")
                 })),
                 actions: {
                     changeIcon: function() {
@@ -15956,16 +15984,16 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(218),
-                i = s(n(325)),
-                a = s(n(368));
+                o = n(219),
+                i = s(n(326)),
+                a = s(n(369));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(369);
+            n(370);
             var l = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-request"],
                 closeModal: null,
@@ -16140,7 +16168,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(371);
+            n(372);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-requests"],
                 alertNewFriendRequests: !1,
@@ -16210,7 +16238,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(373);
+            n(374);
             var o = r.Ember.Component.extend({
                 friendsService: r.Ember.inject.service("friends"),
                 friendRequestsService: r.Ember.inject.service("friendRequests"),
@@ -16235,7 +16263,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = a(n(325)),
+                o = a(n(326)),
                 i = a(n(153));
 
             function a(e) {
@@ -16380,7 +16408,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(376);
+            n(377);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu"],
                 keepOpenOnScroll: !1,
@@ -16410,7 +16438,7 @@
                 value: !0
             }), t.default = t.SAVING_ANIMATION_MS = void 0;
             var r, o = n(1),
-                i = (r = n(325)) && r.__esModule ? r : {
+                i = (r = n(326)) && r.__esModule ? r : {
                     default: r
                 };
             t.SAVING_ANIMATION_MS = 300;
@@ -16481,7 +16509,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(379);
+            n(380);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu-item"]
             });
@@ -16533,16 +16561,16 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(356),
-                i = s(n(325)),
-                a = s(n(303));
+                o = n(357),
+                i = s(n(326)),
+                a = s(n(304));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(382);
+            n(383);
             const l = 28;
             var c = r.Ember.Component.extend(a.default, {
                 classNames: ["lol-social-roster", "social-ember-fade-in"],
@@ -16778,18 +16806,18 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(356),
-                i = c(n(325)),
-                a = c(n(384)),
-                s = c(n(303)),
-                l = c(n(385));
+                o = n(357),
+                i = c(n(326)),
+                a = c(n(385)),
+                s = c(n(304)),
+                l = c(n(386));
 
             function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(386);
+            n(387);
             var d = r.Ember.Component.extend(a.default, s.default, l.default, {
                 classNames: ["lol-social-roster-group"],
                 attributeBindings: ["draggable"],
@@ -17026,10 +17054,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(385)) && r.__esModule ? r : {
+                i = (r = n(386)) && r.__esModule ? r : {
                     default: r
                 };
-            n(388);
+            n(389);
             var a = o.Ember.Component.extend(i.default, {
                 classNames: ["lol-social-roster-group-name"],
                 group: null,
@@ -17107,20 +17135,20 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = p(n(385)),
-                i = n(356),
-                a = n(340),
-                s = p(n(325)),
-                l = n(218),
-                c = n(219),
-                d = p(n(384));
+                o = p(n(386)),
+                i = n(357),
+                a = n(341),
+                s = p(n(326)),
+                l = n(219),
+                c = n(220),
+                d = p(n(385));
 
             function p(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(390);
+            n(391);
             var u = r.Ember.Component.extend(d.default, o.default, {
                 classNames: ["lol-social-roster-member"],
                 classNameBindings: ["useMessagesMutedClass:muted", "showUnreadMessageCount:has-unread", "isOffline:offline"],
@@ -17813,8 +17841,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(356);
-            n(392);
+                o = n(357);
+            n(393);
             const i = "outOfGame",
                 a = "NONE";
             var s = r.Ember.Component.extend({
@@ -17925,7 +17953,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(356),
+                o = n(357),
                 i = r.Ember.Component.extend({
                     tagName: "template",
                     type: "top",
@@ -18170,7 +18198,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(399);
+            n(400);
             var o = r.Ember.Component.extend({
                 classNames: ["vng-age-rating"],
                 classNameBindings: ["isHidden:vng-age-rating-hidden"],
@@ -18365,7 +18393,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(385)) && r.__esModule ? r : {
+                i = (r = n(386)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "ForcedShutdown",
@@ -18459,7 +18487,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(385)) && r.__esModule ? r : {
+                i = (r = n(386)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -18767,7 +18795,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(385)) && r.__esModule ? r : {
+                i = (r = n(386)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Service.extend(i.default, {
@@ -18779,7 +18807,7 @@
                         name: "CodeOfConduct",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        CodeOfConductComponent: n(408).default
+                        CodeOfConductComponent: n(409).default
                     })
                 },
                 handleCodeOfConductNotification: function(e) {
@@ -18808,7 +18836,7 @@
             const o = (0, r.getProvider)().get("rcp-fe-lol-uikit").getTemplateHelper();
             var i = r.Ember.Component.extend({
                 classNames: ["code-of-conduct"],
-                layout: n(409),
+                layout: n(410),
                 didInsertElement: function() {
                     this._super(...arguments), this.unlockRule(1)
                 },
@@ -18876,8 +18904,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "ecD2ZfGx",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","code-of-conduct-content-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-close-button"],["modifier",["action"],[["get",[null]],"closeModalWithoutAccepting"]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-logos-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/logo-riot.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-divider.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-lol.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-divider.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-tft.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-title"],["flush-element"],["append",["unknown",["tra","player_behavior_code_of_conduct_header"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-subtitle"],["flush-element"],["append",["unknown",["tra","player_behavior_code_of_conduct_subheader"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rules-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rulesToAcknowledge"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","more-info-link"],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["tra","player_behavior_code_of_conduct_link_more_info"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["rule-item-container rule-item-",["unknown",["ruleItem","id"]]," ",["helper",["if"],[["get",["ruleItem","accepted"]],"accepted"],null]]]],["modifier",["action"],[["get",[null]],"unlockNextRule",["get",["ruleItem"]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","rule-item-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rule-item-checkbox-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-checkbox"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rule-item-body-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-subheader"],["flush-element"],["append",["unknown",["ruleItem","subheader"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-body"],["flush-element"],["append",["unknown",["ruleItem","body"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["ruleItem"]}],"hasPartials":false}',
+                id: "nYU+Wm7Y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","code-of-conduct-content-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-close-button"],["modifier",["action"],[["get",[null]],"closeModalWithoutAccepting"]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-logos-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/logo-riot.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-divider.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-lol.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-divider.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-tft.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-title"],["flush-element"],["append",["unknown",["tra","player_behavior_code_of_conduct_header"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-subtitle"],["flush-element"],["append",["unknown",["tra","player_behavior_code_of_conduct_subheader"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rules-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rulesToAcknowledge"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","more-info-link"],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["tra","player_behavior_code_of_conduct_link_more_info"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["rule-item-container rule-item-",["unknown",["ruleItem","id"]]," ",["helper",["if"],[["get",["ruleItem","accepted"]],"accepted"],null]]]],["modifier",["action"],[["get",[null]],"unlockNextRule",["get",["ruleItem"]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","rule-item-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rule-item-checkbox-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-checkbox"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rule-item-body-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-subheader"],["flush-element"],["append",["unknown",["ruleItem","subheader"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-body"],["flush-element"],["append",["unknown",["ruleItem","body"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["ruleItem"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -19359,7 +19387,7 @@
                 i = (r = n(158)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(356);
+                a = n(357);
             var s = o.Ember.Service.extend({
                 friendsService: o.Ember.inject.service("friends"),
                 systemService: o.Ember.inject.service("system"),
@@ -19493,7 +19521,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(354);
+                o = n(355);
             const i = "/lol-chat/v2/friend-requests",
                 a = "/lol-chat/v1/blocked-players",
                 s = "/lol-client-config/v3/client-config/lol.client_settings.match_history.recently_played_summoners.friend_finder_disabled",
@@ -19601,8 +19629,8 @@
                 i = (r = n(160)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(354),
-                s = n(356);
+                a = n(355),
+                s = n(357);
             const l = "/lol-chat/v1/friends",
                 c = "/lol-honor-v2/v1/recognition-history",
                 d = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegration.enabled";
@@ -19797,7 +19825,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(356);
+                o = n(357);
             const i = {
                     NORMAL_GAME: "game_type_normal",
                     TUTORIAL_GAME: "game_type_tutorial",
@@ -19989,7 +20017,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(385)) && r.__esModule ? r : {
+                i = (r = n(386)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20006,7 +20034,7 @@
                 d = "OnLockoutWarning",
                 p = "RankedRestrictedGames",
                 u = ["InProgress", "WaitingForStats", "PreEndOfGame"],
-                m = n(427),
+                m = n(428),
                 g = o.Ember.get;
             var h = o.Ember.Service.extend(a, i.default, {
                 init() {
@@ -20017,7 +20045,7 @@
                         name: "LeaverBusterWarning",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        LeaverBusterWarningComponent: n(428).default
+                        LeaverBusterWarningComponent: n(429).default
                     })
                 },
                 notificationObserver: o.Ember.on("init", o.Ember.observer("leaverBusterNotifications.[]", "gameflow.phase", (function() {
@@ -20138,7 +20166,7 @@
             var r = n(1),
                 o = r.Ember.Component.extend({
                     classNames: ["leaver-buster-dialog"],
-                    layout: n(429),
+                    layout: n(430),
                     agreeText: r.Ember.computed("tra.leaver_buster_warning_agree", "tra.leaver_buster_warning_agree_prompt$html", "notificationContext.agreeText", (function() {
                         return this.get("tra").formatString("leaver_buster_warning_agree_prompt$html", {
                             leaverBusterWarningAgree: this.get("notificationContext.agreeText")
@@ -20165,8 +20193,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "0gk8eAAH",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["notificationContext","header"]]],null],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["notificationContext","body"]]],null],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","class","value","maxlength"],["text","leaver-buster-warning-input",["get",["inputValue"]],"70"]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","leaver-buster-agree-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["agreeText"]]],null],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "bPwtOKhX",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["notificationContext","header"]]],null],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["notificationContext","body"]]],null],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","class","value","maxlength"],["text","leaver-buster-warning-input",["get",["inputValue"]],"70"]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","leaver-buster-agree-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["agreeText"]]],null],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20317,7 +20345,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(356);
+                o = n(357);
             const i = {
                 queue_id_800: "Intermediate",
                 queue_id_810: "Intro",
@@ -20499,7 +20527,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(354);
+            var r = n(355);
             const o = n(1),
                 {
                     dataBinding: i,
@@ -20581,7 +20609,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(385)) && r.__esModule ? r : {
+                i = (r = n(386)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "PERMA_BAN";
@@ -20594,22 +20622,22 @@
                         name: "ReformCard",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardComponent: n(441).default,
-                        ReformCardChatLogComponent: n(443).default,
-                        ReformCardMatchHistoryComponent: n(445).default
+                        ReformCardComponent: n(442).default,
+                        ReformCardChatLogComponent: n(444).default,
+                        ReformCardMatchHistoryComponent: n(446).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV2",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV2Component: n(447).default,
-                        ReformCardV2ChatLogComponent: n(449).default,
-                        ReformCardV2MatchHistoryComponent: n(451).default
+                        ReformCardV2Component: n(448).default,
+                        ReformCardV2ChatLogComponent: n(450).default,
+                        ReformCardV2MatchHistoryComponent: n(452).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV3",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV3Component: n(453).default,
-                        ReformCardV3ChatLogComponent: n(456).default
+                        ReformCardV3Component: n(454).default,
+                        ReformCardV3ChatLogComponent: n(457).default
                     }))
                 },
                 initDataBindings() {
@@ -20692,7 +20720,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(442)) && r.__esModule ? r : {
+                i = (r = n(443)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20826,8 +20854,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "630EOvYD",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-subhead"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-player-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isCustomMessage"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-chat-log"],null,[["reformCard","summonerName"],[["get",["reformCard"]],["get",["summonerName"]]]]],false],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reform-card-match-history"],null,[["reformCard"],[["get",["reformCard"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["explanationText"]]],null],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowMatchHistory"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["trimmedCustomMessage"]]],null],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "x+2OJMMF",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-subhead"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-player-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isCustomMessage"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-chat-log"],null,[["reformCard","summonerName"],[["get",["reformCard"]],["get",["summonerName"]]]]],false],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reform-card-match-history"],null,[["reformCard"],[["get",["reformCard"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["explanationText"]]],null],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowMatchHistory"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["trimmedCustomMessage"]]],null],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20836,7 +20864,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(444)) && r.__esModule ? r : {
+                i = (r = n(445)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20900,8 +20928,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "Y/wfCd9U",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","player_behavior_reform_card_logs_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gamesChatLogs"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",": "],["append",["get",["chatLog"]],false],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["append",["unknown",["gameChatLogs","title"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLogs","chatLogs"]]],null,0]],"locals":["gameChatLogs"]}],"hasPartials":false}',
+                id: "SPi6lzzE",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","player_behavior_reform_card_logs_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gamesChatLogs"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",": "],["append",["get",["chatLog"]],false],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["append",["unknown",["gameChatLogs","title"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLogs","chatLogs"]]],null,0]],"locals":["gameChatLogs"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20910,7 +20938,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(446)) && r.__esModule ? r : {
+                i = (r = n(447)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20938,8 +20966,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "5H+0pz1q",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["matchHistoryGameIdTexts"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","class","reform-card-match-history-game-id-text"],["flush-element"],["append",["unknown",["gameIdText","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["gameIdText"]}],"hasPartials":false}',
+                id: "kOIqIvHy",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["matchHistoryGameIdTexts"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","class","reform-card-match-history-game-id-text"],["flush-element"],["append",["unknown",["gameIdText","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["gameIdText"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20948,7 +20976,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(448)) && r.__esModule ? r : {
+                i = (r = n(449)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21116,8 +21144,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "gse50gTS",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-scrollable-content"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","reform-card-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isCustomMessage"]]],null,4,3],["text","        "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowMatchHistory"]]],null,2,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-v2-chat-log"],null,[["reformCard","summonerName"],[["get",["reformCard"]],["get",["summonerName"]]]]],false],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reform-card-v2-match-history"],null,[["reformCard"],[["get",["reformCard"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["explanationText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["trimmedCustomMessage"]]],null],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "+5JLS4tj",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-scrollable-content"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","reform-card-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isCustomMessage"]]],null,4,3],["text","        "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowMatchHistory"]]],null,2,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-v2-chat-log"],null,[["reformCard","summonerName"],[["get",["reformCard"]],["get",["summonerName"]]]]],false],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reform-card-v2-match-history"],null,[["reformCard"],[["get",["reformCard"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["explanationText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["trimmedCustomMessage"]]],null],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21126,7 +21154,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(450)) && r.__esModule ? r : {
+                i = (r = n(451)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -21171,8 +21199,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "uag+nmn4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-title"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","player_behavior_reform_card_logs_title"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["reformCard","punishedForReformCardChatLogs","length"]]],null,9,8],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_postgame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","postGameChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_ingame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","inGameChatLogs"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_pregame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","preGameChatLogs"]]],null,4]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","id",["concat",[["get",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-scrollable-game ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-hidden-header"],["flush-element"],["text","\\n            "],["append",["unknown",["gameChatLog","title"]],false],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameChatLog","preGameChatLogs","length"]]],null,5],["block",["if"],[["get",["gameChatLog","inGameChatLogs","length"]]],null,3],["block",["if"],[["get",["gameChatLog","postGameChatLogs","length"]]],null,1],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["gameChatLog","index"]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","id",["concat",[["get",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-chat-tab ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["modifier",["action"],[["get",[null]],"selectGame",["get",["index"]]]],["flush-element"],["text","\\n          "],["append",["unknown",["gameChatLog","title"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["gameChatLog","index"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reform-card-chat-tab-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["allChatLogs"]]],null,7],["text","      "],["open-element","hr",[]],["static-attr","class","reform-card-chat-tab-line"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["each"],[["get",["allChatLogs"]]],null,6]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable-game selected"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","player_behavior_reform_card_no_logs_text"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Mo4FlLgu",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-title"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","player_behavior_reform_card_logs_title"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["reformCard","punishedForReformCardChatLogs","length"]]],null,9,8],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_postgame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","postGameChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_ingame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","inGameChatLogs"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_pregame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","preGameChatLogs"]]],null,4]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","id",["concat",[["get",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-scrollable-game ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-hidden-header"],["flush-element"],["text","\\n            "],["append",["unknown",["gameChatLog","title"]],false],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameChatLog","preGameChatLogs","length"]]],null,5],["block",["if"],[["get",["gameChatLog","inGameChatLogs","length"]]],null,3],["block",["if"],[["get",["gameChatLog","postGameChatLogs","length"]]],null,1],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["gameChatLog","index"]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","id",["concat",[["get",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-chat-tab ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["modifier",["action"],[["get",[null]],"selectGame",["get",["index"]]]],["flush-element"],["text","\\n          "],["append",["unknown",["gameChatLog","title"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["gameChatLog","index"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reform-card-chat-tab-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["allChatLogs"]]],null,7],["text","      "],["open-element","hr",[]],["static-attr","class","reform-card-chat-tab-line"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["each"],[["get",["allChatLogs"]]],null,6]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable-game selected"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","player_behavior_reform_card_no_logs_text"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21181,7 +21209,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(452)) && r.__esModule ? r : {
+                i = (r = n(453)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21209,8 +21237,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "MDy/XRIK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["matchHistoryGameIdTexts"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","class","reform-card-match-history-game-id-text"],["flush-element"],["append",["unknown",["gameIdText","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["gameIdText"]}],"hasPartials":false}',
+                id: "WKzWxqmQ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["matchHistoryGameIdTexts"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","class","reform-card-match-history-game-id-text"],["flush-element"],["append",["unknown",["gameIdText","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["gameIdText"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21219,10 +21247,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(454)) && r.__esModule ? r : {
+                i = (r = n(455)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(455);
+                a = n(456);
             const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             var l = o.Ember.Component.extend({
                 classNames: ["player-behavior-reform-card-v3"],
@@ -21262,8 +21290,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "oXGoj567",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-scrollable-content"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPenalties"]]],null,3],["text","        "],["open-element","div",[]],["static-attr","class","reform-card-text body-text"],["flush-element"],["append",["unknown",["bodyText"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameId"]]],null,1],["block",["if"],[["get",["hasChatLogEvidence"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-v3-chat-log"],null,[["gameId","reformCard","displayName"],[["get",["gameId"]],["get",["reformCard"]],["get",["displayName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","h4",[]],["static-attr","class","game-id-text"],["flush-element"],["append",["unknown",["gameIdText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","li",[]],["flush-element"],["append",["get",["penalty"]],true],["close-element"],["text","\\n"]],"locals":["penalty"]},{"statements":[["text","          "],["open-element","h4",[]],["static-attr","class","reform-card-subhead"],["flush-element"],["append",["unknown",["penaltyHeader"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","reform-card-text"],["flush-element"],["text","\\n            "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["penalties"]]],null,2],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "MPedMxb2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-scrollable-content"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPenalties"]]],null,3],["text","        "],["open-element","div",[]],["static-attr","class","reform-card-text body-text"],["flush-element"],["append",["unknown",["bodyText"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameId"]]],null,1],["block",["if"],[["get",["hasChatLogEvidence"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-v3-chat-log"],null,[["gameId","reformCard","displayName"],[["get",["gameId"]],["get",["reformCard"]],["get",["displayName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","h4",[]],["static-attr","class","game-id-text"],["flush-element"],["append",["unknown",["gameIdText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","li",[]],["flush-element"],["append",["get",["penalty"]],true],["close-element"],["text","\\n"]],"locals":["penalty"]},{"statements":[["text","          "],["open-element","h4",[]],["static-attr","class","reform-card-subhead"],["flush-element"],["append",["unknown",["penaltyHeader"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","reform-card-text"],["flush-element"],["text","\\n            "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["penalties"]]],null,2],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t) => {
@@ -21279,7 +21307,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(457)) && r.__esModule ? r : {
+                i = (r = n(458)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -21315,8 +21343,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "x2NbtPvN",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-title"],["flush-element"],["text","\\n    "],["append",["unknown",["chatLogsHeader"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","id",["concat",[["unknown",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-scrollable-game ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n"],["block",["each"],[["get",["chatLogLines"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["displayName"]],false],["text",":"],["close-element"],["text","\\n          "],["append",["get",["chatLogLine"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["chatLogLine"]}],"hasPartials":false}',
+                id: "rkil1gLW",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-title"],["flush-element"],["text","\\n    "],["append",["unknown",["chatLogsHeader"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","id",["concat",[["unknown",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-scrollable-game ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n"],["block",["each"],[["get",["chatLogLines"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["displayName"]],false],["text",":"],["close-element"],["text","\\n          "],["append",["get",["chatLogLine"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["chatLogLine"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21325,7 +21353,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(385)) && r.__esModule ? r : {
+                i = (r = n(386)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "/client-config/v2/config/lol.client_settings.remedy.obfuscated_player_name";
@@ -21465,7 +21493,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(385)) && r.__esModule ? r : {
+                i = (r = n(386)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21971,316 +21999,316 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "M8e2zdYS",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["outlet"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "FF2YDZrv",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["outlet"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "M/RpxOGR",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["sidebar-main"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "lTtDQowZ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["sidebar-main"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "VkOOAo/I",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-actions-bar actions"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["actionsBarClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","buttons"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","friend-header"],["flush-element"],["append",["unknown",["tra","friend_header"]],false],["close-element"],["text","\\n      "],["append",["helper",["friend-finder-button"],null,[["disabled"],[["get",["friendFinderButtonDisabled"]]]]],false],["text","\\n"],["block",["if"],[["get",["notChatGBG"]]],null,12],["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["optionsButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openOptionsMenu"],null],null],["static-attr","data-dd-action-name","button.social.options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showGroupingNotification"]]],null,10,7],["text","      "],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["filterButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openSlidingFilter"],null],null],["static-attr","data-dd-action-name","button.social.filter"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["left",true]],5],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["folderAddOpen"]]],null,4],["text","\\n    "],["open-element","div",[]],["static-attr","class","search-box"],["static-attr","id","actions-bar-search-input"],["flush-element"],["text","\\n      "],["append",["helper",["player-name-input"],null,[["placeholder","gameNameInputSupplementalClass","singleInputSupplementalClass","gameNameInputHandler","tagLineInputHandler","singleInputHandler"],[["get",["tra","filter_placeholder"]],"search-input__game-name","search-input__single-input",["helper",["action"],[["get",[null]],"filterGameNameValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterTagLineValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterSingleInputValueChangeHandler"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["optionsOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeOptionsMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["optionsMenuClasses"]],null],["flush-element"],["text","\\n"],["block",["uikit-radio"],null,[["selected"],[["helper",["action"],[["get",[null]],"updateSort"],null]]],3],["text","\\n"],["block",["if"],[["get",["allowGroupByGame"]]],null,2],["text","\\n"],["block",["unless"],[["get",["isTencent"]]],null,1],["text","\\n      "],["open-element","div",[]],["static-attr","id","group-offline-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupOffline"],null],null],["dynamic-attr","checked",["unknown",["chatGroupOfflineOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_offline"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowDiscordGroupOption"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupDiscord"],null],null],["dynamic-attr","checked",["unknown",["chatGroupDiscordOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_discord"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupMobile"],null],null],["dynamic-attr","checked",["unknown",["chatGroupMobileOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_mobile"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","gbg-menuitem"],["static-attr","class","lol-social-menu-item menu-item-separator"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","gbg-checkbox"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGBG"],null],null],["dynamic-attr","checked",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","gbg-label"],["flush-element"],["text","\\n              "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","dropdown_gbg"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","menuitem-sublabel"],["flush-element"],["append",["unknown",["tra","dropdown_disables_folders"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","alphabetical"],["dynamic-attr","selected",["unknown",["sortingAlphabetical"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_alphabetically"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","availability"],["dynamic-attr","selected",["unknown",["sortingAvailability"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_status"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["actions-folder-input"],null,[["onFolderInputClose"],[["helper",["action"],[["get",[null]],"closeFolderInput"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","tooltip_filter"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_options"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],6]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","roster_attention_grouping_changes"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["content-block-attention"],null,null,8]],"locals":[]},{"statements":[["block",["social-tooltip"],null,[["direction","type","onclick"],["left","attention",["helper",["action"],[["get",[null]],"closeAttentionTooltip"],null]]],9]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_new_folder"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["folderButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"addFolder"],null],null],["static-attr","data-dd-action-name","button.social.add_folder"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],11],["text","        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "bp9B0K/J",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-actions-bar actions"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["actionsBarClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","buttons"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","friend-header"],["flush-element"],["append",["unknown",["tra","friend_header"]],false],["close-element"],["text","\\n      "],["append",["helper",["friend-finder-button"],null,[["disabled"],[["get",["friendFinderButtonDisabled"]]]]],false],["text","\\n"],["block",["if"],[["get",["notChatGBG"]]],null,12],["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["optionsButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openOptionsMenu"],null],null],["static-attr","data-dd-action-name","button.social.options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showGroupingNotification"]]],null,10,7],["text","      "],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["filterButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openSlidingFilter"],null],null],["static-attr","data-dd-action-name","button.social.filter"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["left",true]],5],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["folderAddOpen"]]],null,4],["text","\\n    "],["open-element","div",[]],["static-attr","class","search-box"],["static-attr","id","actions-bar-search-input"],["flush-element"],["text","\\n      "],["append",["helper",["player-name-input"],null,[["placeholder","gameNameInputSupplementalClass","singleInputSupplementalClass","gameNameInputHandler","tagLineInputHandler","singleInputHandler"],[["get",["tra","filter_placeholder"]],"search-input__game-name","search-input__single-input",["helper",["action"],[["get",[null]],"filterGameNameValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterTagLineValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterSingleInputValueChangeHandler"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["optionsOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeOptionsMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["optionsMenuClasses"]],null],["flush-element"],["text","\\n"],["block",["uikit-radio"],null,[["selected"],[["helper",["action"],[["get",[null]],"updateSort"],null]]],3],["text","\\n"],["block",["if"],[["get",["allowGroupByGame"]]],null,2],["text","\\n"],["block",["unless"],[["get",["isTencent"]]],null,1],["text","\\n      "],["open-element","div",[]],["static-attr","id","group-offline-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupOffline"],null],null],["dynamic-attr","checked",["unknown",["chatGroupOfflineOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_offline"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowDiscordGroupOption"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupDiscord"],null],null],["dynamic-attr","checked",["unknown",["chatGroupDiscordOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_discord"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupMobile"],null],null],["dynamic-attr","checked",["unknown",["chatGroupMobileOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_mobile"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","gbg-menuitem"],["static-attr","class","lol-social-menu-item menu-item-separator"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","gbg-checkbox"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGBG"],null],null],["dynamic-attr","checked",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","gbg-label"],["flush-element"],["text","\\n              "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","dropdown_gbg"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","menuitem-sublabel"],["flush-element"],["append",["unknown",["tra","dropdown_disables_folders"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","alphabetical"],["dynamic-attr","selected",["unknown",["sortingAlphabetical"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_alphabetically"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","availability"],["dynamic-attr","selected",["unknown",["sortingAvailability"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_status"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["actions-folder-input"],null,[["onFolderInputClose"],[["helper",["action"],[["get",[null]],"closeFolderInput"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","tooltip_filter"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_options"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],6]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","roster_attention_grouping_changes"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["content-block-attention"],null,null,8]],"locals":[]},{"statements":[["block",["social-tooltip"],null,[["direction","type","onclick"],["left","attention",["helper",["action"],[["get",[null]],"closeAttentionTooltip"],null]]],9]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_new_folder"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["folderButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"addFolder"],null],null],["static-attr","data-dd-action-name","button.social.add_folder"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],11],["text","        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "/aDXe/fG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-folder-input.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-folder-input.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","folder-name"],["flush-element"],["text","\\n\\n  "],["open-element","form",[]],["dynamic-attr","onsubmit",["helper",["action"],[["get",[null]],"onSubmit"],null],null],["static-attr","class","folder-name-contents layout"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","flat-input"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","type","text"],["dynamic-attr","class",["unknown",["folderInputClasses"]],null],["dynamic-attr","value",["unknown",["folderNameText"]],null],["dynamic-attr","onkeydown",["helper",["action"],[["get",[null]],"onKeyEvent"],null],null],["dynamic-attr","onblur",["helper",["action"],[["get",[null]],"onCancel"],null],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onInput"],[["value"],["target.value"]]],null],["static-attr","maxlength","25"],["dynamic-attr","placeholder",["unknown",["placeholderText"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["errorMessage"]]],null,1],["text","  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isSaving"]]],null,0],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","animation"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","success-message"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","group_new_group_created"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay"],["bottom",["get",["errorMessage"]],-1]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "APFWvFc2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-folder-input.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-folder-input.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","folder-name"],["flush-element"],["text","\\n\\n  "],["open-element","form",[]],["dynamic-attr","onsubmit",["helper",["action"],[["get",[null]],"onSubmit"],null],null],["static-attr","class","folder-name-contents layout"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","flat-input"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","type","text"],["dynamic-attr","class",["unknown",["folderInputClasses"]],null],["dynamic-attr","value",["unknown",["folderNameText"]],null],["dynamic-attr","onkeydown",["helper",["action"],[["get",[null]],"onKeyEvent"],null],null],["dynamic-attr","onblur",["helper",["action"],[["get",[null]],"onCancel"],null],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onInput"],[["value"],["target.value"]]],null],["static-attr","maxlength","25"],["dynamic-attr","placeholder",["unknown",["placeholderText"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["errorMessage"]]],null,1],["text","  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isSaving"]]],null,0],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","animation"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","success-message"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","group_new_group_created"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay"],["bottom",["get",["errorMessage"]],-1]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "gZUtxNHb",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\arrow-toggle.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\arrow-toggle.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\arrow-toggle.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["arrowToggleClasses"]],null],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "ZhkHdqBu",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\arrow-toggle.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\arrow-toggle.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\arrow-toggle.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["arrowToggleClasses"]],null],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "8UZ8ixVx",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\availability-hitbox.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\availability-hitbox.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\availability-hitbox.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-availability-hitbox"],["flush-element"],["text","\\n"],["block",["if"],[["get",["me"]]],null,3,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["availability-icon ",["unknown",["availabilityIconClasses"]]," ",["helper",["if"],[["get",["large"]],"large"],null]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","discord-online"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isDiscordOnline"]]],null,1,0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleAvailability"],null],null],["static-attr","class","availability-hitbox"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["availability-icon ",["helper",["if"],[["get",["availability"]],["get",["availability"]],"offline"],null]," ",["helper",["if"],[["get",["large"]],"large"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "pazmdShq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\availability-hitbox.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\availability-hitbox.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\availability-hitbox.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-availability-hitbox"],["flush-element"],["text","\\n"],["block",["if"],[["get",["me"]]],null,3,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["availability-icon ",["unknown",["availabilityIconClasses"]]," ",["helper",["if"],[["get",["large"]],"large"],null]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","discord-online"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isDiscordOnline"]]],null,1,0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleAvailability"],null],null],["static-attr","class","availability-hitbox"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["availability-icon ",["helper",["if"],[["get",["availability"]],["get",["availability"]],"offline"],null]," ",["helper",["if"],[["get",["large"]],"large"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "emOEtn9C",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\chat-toggle-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\chat-toggle-button.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["toggleButtonClasses"]],null],["dynamic-attr","onMouseDown",["helper",["action"],[["get",[null]],"toggleChatWindow"],null],null],["static-attr","data-dd-action-name","button.social.chat"],["flush-element"],["text","\\n"],["block",["if"],[["get",["unreadMessageCount"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge"],["flush-element"],["append",["unknown",["unreadMessageCount"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "KXJDxyqS",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\chat-toggle-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\chat-toggle-button.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["toggleButtonClasses"]],null],["dynamic-attr","onMouseDown",["helper",["action"],[["get",[null]],"toggleChatWindow"],null],null],["static-attr","data-dd-action-name","button.social.chat"],["flush-element"],["text","\\n"],["block",["if"],[["get",["unreadMessageCount"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge"],["flush-element"],["append",["unknown",["unreadMessageCount"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "Ggcu2P0B",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\clash-roster-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\clash-roster-panel.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\clash-roster-panel.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","clash-roster-item-scroll"],["flush-element"],["text","\\n"],["block",["each"],[["get",["clashRosters"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["clash-roster-panel-item"],null,[["roster"],[["get",["roster"]]]]],false],["text","\\n"]],"locals":["roster"]}],"hasPartials":false}',
+                id: "VIGFBVcl",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\clash-roster-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\clash-roster-panel.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\clash-roster-panel.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","clash-roster-item-scroll"],["flush-element"],["text","\\n"],["block",["each"],[["get",["clashRosters"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["clash-roster-panel-item"],null,[["roster"],[["get",["roster"]]]]],false],["text","\\n"]],"locals":["roster"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "cEx0iM0N",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\clash-roster-panel-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\clash-roster-panel-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\clash-roster-panel-item.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","clash-roster-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleClick"],null],null],["dynamic-attr","data-id",["unknown",["roster","multiUserChatId"]],null],["dynamic-attr","data-name",["unknown",["roster","shortName"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","clash-roster-info-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","clash-roster-icon"],["dynamic-attr","src",["unknown",["roster","iconSrc"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","clash-roster-info-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["roster?","isRegistered"]]],null,3,2],["block",["if"],[["get",["clashRosterParticipantCount"]]],null,1],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowUnreadMessageCount"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n        "],["append",["unknown",["conversation","unreadMessageCount"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-members-online"],["flush-element"],["text","\\n          "],["append",["unknown",["clashRosterParticipantCount"]],false],["text","\\n          "],["append",["unknown",["tra","clash_chat_roster_online_label"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-name"],["flush-element"],["append",["unknown",["tra","clash_chat_roster_pending_name"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-name-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","clash-roster-shortName"],["flush-element"],["append",["unknown",["roster","shortName"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","clash-roster-name"],["flush-element"],["append",["unknown",["roster?","name"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "trIGZypC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\clash-roster-panel-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\clash-roster-panel-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\clash-roster-panel-item.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","clash-roster-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleClick"],null],null],["dynamic-attr","data-id",["unknown",["roster","multiUserChatId"]],null],["dynamic-attr","data-name",["unknown",["roster","shortName"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","clash-roster-info-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","clash-roster-icon"],["dynamic-attr","src",["unknown",["roster","iconSrc"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","clash-roster-info-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["roster?","isRegistered"]]],null,3,2],["block",["if"],[["get",["clashRosterParticipantCount"]]],null,1],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowUnreadMessageCount"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n        "],["append",["unknown",["conversation","unreadMessageCount"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-members-online"],["flush-element"],["text","\\n          "],["append",["unknown",["clashRosterParticipantCount"]],false],["text","\\n          "],["append",["unknown",["tra","clash_chat_roster_online_label"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-name"],["flush-element"],["append",["unknown",["tra","clash_chat_roster_pending_name"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-name-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","clash-roster-shortName"],["flush-element"],["append",["unknown",["roster","shortName"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","clash-roster-name"],["flush-element"],["append",["unknown",["roster?","name"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "LpRs3vqY",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\content-block-attention.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","attention"],["flush-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["yield","default"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "AtKNU+h+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\content-block-attention.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","attention"],["flush-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["yield","default"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "u7phZXkh",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\discord-banner.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\discord-banner.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\discord-banner.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowDiscordBanner"]]],null,0],["text","\\n"],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["static-attr","class","header-text"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_discord_banner"]],false],["text"," "],["append",["unknown",["discord-beta"]],false],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","discord-banner-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-banner-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-banner-logo"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-banner-text"],["flush-element"],["text","\\n        "],["append",["unknown",["bannerText"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-banner-button"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","link-profile-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDiscordPopup"],null],null],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","button-text"],["flush-element"],["append",["unknown",["buttonText"]],false],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","button-arrow"],["flush-element"],["text","↗"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "8wSNB7Jd",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\discord-banner.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\discord-banner.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\discord-banner.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowDiscordBanner"]]],null,0],["text","\\n"],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["static-attr","class","header-text"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_discord_banner"]],false],["text"," "],["append",["unknown",["discord-beta"]],false],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","discord-banner-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-banner-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-banner-logo"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-banner-text"],["flush-element"],["text","\\n        "],["append",["unknown",["bannerText"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-banner-button"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","link-profile-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDiscordPopup"],null],null],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","button-text"],["flush-element"],["append",["unknown",["buttonText"]],false],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","button-arrow"],["flush-element"],["text","↗"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "aEZ/L5fP",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\discord-eat.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\discord-eat.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\discord-eat.js\\" "],["text","\\n"],["block",["if"],[["get",["showEphemeralActionTooltip"]]],null,0],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"markToolTipRead"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-content-decoration"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-icon"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-social/discord_eat_logo.svg"],["static-attr","alt","Profile attention tooltip icon"],["static-attr","class","discord-attention-tooltip-icon-profile"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text-title"],["flush-element"],["text","\\n          "],["append",["unknown",["eatTitle"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text-msg"],["flush-element"],["text","\\n          "],["append",["unknown",["eatDescription"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "mtiKni4+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\discord-eat.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\discord-eat.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\discord-eat.js\\" "],["text","\\n"],["block",["if"],[["get",["showEphemeralActionTooltip"]]],null,0],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"markToolTipRead"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-content-decoration"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-icon"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-social/discord_eat_logo.svg"],["static-attr","alt","Profile attention tooltip icon"],["static-attr","class","discord-attention-tooltip-icon-profile"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text-title"],["flush-element"],["text","\\n          "],["append",["unknown",["eatTitle"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text-msg"],["flush-element"],["text","\\n          "],["append",["unknown",["eatDescription"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "ccaIeMc5",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-add-summoner-by-name.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-add-summoner-by-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","description"],["flush-element"],["append",["unknown",["instructions"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-name-input-wrapper"],["flush-element"],["text","\\n  "],["append",["helper",["player-name-input"],null,[["enableSubmitButton","submitButtonText","disabled","enterKeyPressHandler","validationHandler","successHandler","errorHandler"],[true,["get",["tra","friend_finder_modal_button_add_friend"]],["get",["working"]],["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["helper",["action"],[["get",[null]],"validationHandler"],null],["helper",["action"],[["get",[null]],"successHandler"],null],["helper",["action"],[["get",[null]],"errorHandler"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "wnXhFyhs",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-add-summoner-by-name.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-add-summoner-by-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","description"],["flush-element"],["append",["unknown",["instructions"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-name-input-wrapper"],["flush-element"],["text","\\n  "],["append",["helper",["player-name-input"],null,[["enableSubmitButton","submitButtonText","disabled","enterKeyPressHandler","validationHandler","successHandler","errorHandler"],[true,["get",["tra","friend_finder_modal_button_add_friend"]],["get",["working"]],["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["helper",["action"],[["get",[null]],"validationHandler"],null],["helper",["action"],[["get",[null]],"successHandler"],null],["helper",["action"],[["get",[null]],"errorHandler"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "clzTdlUy",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-button.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["unknown",["buttonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["static-attr","data-dd-action-name","button.social.add_friend"],["flush-element"],["close-element"],["text","\\n\\n"],["append",["helper",["friend-finder-modal"],null,[["isModalOpen","onClose"],[["get",["isModalOpen"]],["helper",["action"],[["get",[null]],"closeModal"],null]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "Jh5x1FDH",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-button.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["unknown",["buttonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["static-attr","data-dd-action-name","button.social.add_friend"],["flush-element"],["close-element"],["text","\\n\\n"],["append",["helper",["friend-finder-modal"],null,[["isModalOpen","onClose"],[["get",["isModalOpen"]],["helper",["action"],[["get",[null]],"closeModal"],null]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "dH1s4A3x",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-discord.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-discord.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","friend_finder_modal_discord_banner"]],false],["text","\\n  "],["append",["unknown",["discord-beta"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","recent-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendableSummoners"]]],[["key"],["puuid"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["friend-finder-recent-summoner"],null,[["summoner","closeModal","source"],[["get",["summoner"]],["get",["closeModal"]],["get",["source"]]]]],false],["text","\\n"]],"locals":["summoner"]}],"hasPartials":false}',
+                id: "f7pOxKiq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-discord.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-discord.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","friend_finder_modal_discord_banner"]],false],["text","\\n  "],["append",["unknown",["discord-beta"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","recent-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendableSummoners"]]],[["key"],["puuid"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["friend-finder-recent-summoner"],null,[["summoner","closeModal","source"],[["get",["summoner"]],["get",["closeModal"]],["get",["source"]]]]],false],["text","\\n"]],"locals":["summoner"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "QLyXu1jE",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-friend-finder-modal"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["static-attr","class","title"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","modal-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","recently-played-panel active"],["flush-element"],["text","\\n      "],["append",["unknown",["friend-finder-add-summoner-by-name"]],false],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSentFriendRequests"]]],null,3],["block",["if"],[["get",["isDiscordEnabled"]]],null,2],["block",["if"],[["get",["friendRequestsService","friendableRecentlyHonored","length"]]],null,0],["text","        "],["append",["helper",["friend-finder-recently-played"],null,[["isLoading","friendableSummoners","emptyText","titleText","closeModal","source"],[["get",["friendRequestsService","isLoadingRecentlyPlayedSummoners"]],["get",["friendRequestsService","friendableRecentlyPlayed"]],["get",["tra","recently_played_empty"]],["get",["tra","friend_finder_modal_recently_played_with"]],["get",["onClose"]],"recently-played"]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["friend-finder-recently-played"],null,[["titleIconUrl","isLoading","friendableSummoners","titleText","closeModal","source"],["/fe/lol-social/recently-honored-default-icon.png",["get",["friendRequestsService","isLoadingHonorRecognition"]],["get",["friendRequestsService","friendableRecentlyHonored"]],["get",["tra","friend_finder_modal_recently_honored"]],["get",["onClose"]],"recently-honored"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["friend-finder-discord"],null,[["friendableSummoners","closeModal","source"],[["get",["discordOnlyFriends"]],["get",["onClose"]],"discord"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["discord-banner"],null,[["bannerText","buttonText","shouldShowDiscordBanner"],[["get",["tra","friend_finder_modal_discord_banner_text"]],["get",["tra","friend_finder_modal_discord_button_text"]],["get",["shouldShowDiscordBanner"]]]]],false],["text","\\n"],["block",["if"],[["get",["shouldShowDiscordFriendRequests"]]],null,1]],"locals":[]},{"statements":[["text","          "],["append",["helper",["friend-finder-requested-players"],null,[["closeModal"],[["get",["onClose"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "SbiKP6tU",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-friend-finder-modal"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["static-attr","class","title"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","modal-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","recently-played-panel active"],["flush-element"],["text","\\n      "],["append",["unknown",["friend-finder-add-summoner-by-name"]],false],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSentFriendRequests"]]],null,3],["block",["if"],[["get",["isDiscordEnabled"]]],null,2],["block",["if"],[["get",["friendRequestsService","friendableRecentlyHonored","length"]]],null,0],["text","        "],["append",["helper",["friend-finder-recently-played"],null,[["isLoading","friendableSummoners","emptyText","titleText","closeModal","source"],[["get",["friendRequestsService","isLoadingRecentlyPlayedSummoners"]],["get",["friendRequestsService","friendableRecentlyPlayed"]],["get",["tra","recently_played_empty"]],["get",["tra","friend_finder_modal_recently_played_with"]],["get",["onClose"]],"recently-played"]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["friend-finder-recently-played"],null,[["titleIconUrl","isLoading","friendableSummoners","titleText","closeModal","source"],["/fe/lol-social/recently-honored-default-icon.png",["get",["friendRequestsService","isLoadingHonorRecognition"]],["get",["friendRequestsService","friendableRecentlyHonored"]],["get",["tra","friend_finder_modal_recently_honored"]],["get",["onClose"]],"recently-honored"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["friend-finder-discord"],null,[["friendableSummoners","closeModal","source"],[["get",["discordOnlyFriends"]],["get",["onClose"]],"discord"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["discord-banner"],null,[["bannerText","buttonText","shouldShowDiscordBanner"],[["get",["tra","friend_finder_modal_discord_banner_text"]],["get",["tra","friend_finder_modal_discord_button_text"]],["get",["shouldShowDiscordBanner"]]]]],false],["text","\\n"],["block",["if"],[["get",["shouldShowDiscordFriendRequests"]]],null,1]],"locals":[]},{"statements":[["text","          "],["append",["helper",["friend-finder-requested-players"],null,[["closeModal"],[["get",["onClose"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "jzNCOLBI",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recent-summoner.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recent-summoner.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-identity"],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["isDiscordOnline","championId","hideindicator"],[["get",["discordId"]],["get",["summoner","championId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","gameName","tagLine","puuid","gameNameClass"],["short",["get",["gameName"]],["get",["tagLine"]],["get",["puuid"]],"summoner-name"]]],false],["text","\\n\\n    "],["append",["helper",["player-name"],null,[["format","gameName","tagLine","puuid"],["full",["get",["gameName"]],["get",["tagLine"]],["get",["puuid"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["discordId"]]],null,4],["text","  "],["close-element"],["text","\\n\\n  "],["append",["helper",["tooltip-message"],null,[["position","width","messagePacket"],["bottom","300px",["get",["messagePacket"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["computedRequested"]]],null,3,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","summonerId","puuid"],[["get",["hovercardOptions"]],["get",["summoner","summonerId"]],["get",["puuid"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","add-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"submitAddFriend"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["working"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","added"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "kqs2zDIa",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recent-summoner.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recent-summoner.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-identity"],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["isDiscordOnline","championId","hideindicator"],[["get",["discordId"]],["get",["summoner","championId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","gameName","tagLine","puuid","gameNameClass"],["short",["get",["gameName"]],["get",["tagLine"]],["get",["puuid"]],"summoner-name"]]],false],["text","\\n\\n    "],["append",["helper",["player-name"],null,[["format","gameName","tagLine","puuid"],["full",["get",["gameName"]],["get",["tagLine"]],["get",["puuid"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["discordId"]]],null,4],["text","  "],["close-element"],["text","\\n\\n  "],["append",["helper",["tooltip-message"],null,[["position","width","messagePacket"],["bottom","300px",["get",["messagePacket"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["computedRequested"]]],null,3,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","summonerId","puuid"],[["get",["hovercardOptions"]],["get",["summoner","summonerId"]],["get",["puuid"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","add-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"submitAddFriend"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["working"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","added"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "JV9wFHu2",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recently-played.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recently-played.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["block",["if"],[["get",["titleIconUrl","length"]]],null,5],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLoading"]]],null,4,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","no-recently-played-summoners"],["flush-element"],["append",["unknown",["emptyText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["friend-finder-recent-summoner"],null,[["summoner","closeModal","source"],[["get",["summoner"]],["get",["closeModal"]],["get",["source"]]]]],false],["text","\\n"]],"locals":["summoner"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","recent-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendableSummoners"]]],[["key"],["summonerId"]],1],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasFriendableSummoners"]]],null,2,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","img",[]],["static-attr","class","header-icon"],["dynamic-attr","src",["unknown",["titleIconUrl"]],null],["static-attr","alt","recently-honored-icon"],["flush-element"],["close-element"]],"locals":[]}],"hasPartials":false}',
+                id: "YPr/J00b",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recently-played.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recently-played.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["block",["if"],[["get",["titleIconUrl","length"]]],null,5],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLoading"]]],null,4,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","no-recently-played-summoners"],["flush-element"],["append",["unknown",["emptyText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["friend-finder-recent-summoner"],null,[["summoner","closeModal","source"],[["get",["summoner"]],["get",["closeModal"]],["get",["source"]]]]],false],["text","\\n"]],"locals":["summoner"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","recent-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendableSummoners"]]],[["key"],["summonerId"]],1],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasFriendableSummoners"]]],null,2,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","img",[]],["static-attr","class","header-icon"],["dynamic-attr","src",["unknown",["titleIconUrl"]],null],["static-attr","alt","recently-honored-icon"],["flush-element"],["close-element"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "lOWb9QlZ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-player.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-player.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerIdentityClasses"]],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["iconId","hideindicator"],[["get",["iconId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["short",["get",["puuid"]],"player-name","player-name",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["hasGameNameAndTagLine"]]],null,3],["block",["if"],[["get",["discordId"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["working"]]],null,1,0],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","puuid","summonerId"],[["get",["hovercardOptions"]],["get",["puuid"]],["get",["summonerId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","remove-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"removeFriendRequest"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-gnt"],["flush-element"],["text","\\n        "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["full",["get",["puuid"]],"player-game-name","player-game-tag",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "14/5PmCK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-player.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-player.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerIdentityClasses"]],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["iconId","hideindicator"],[["get",["iconId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["short",["get",["puuid"]],"player-name","player-name",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["hasGameNameAndTagLine"]]],null,3],["block",["if"],[["get",["discordId"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["working"]]],null,1,0],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","puuid","summonerId"],[["get",["hovercardOptions"]],["get",["puuid"]],["get",["summonerId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","remove-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"removeFriendRequest"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-gnt"],["flush-element"],["text","\\n        "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["full",["get",["puuid"]],"player-game-name","player-game-tag",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "5Szw0CN+",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-players.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-players.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_requested_summoners"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","id","requested-players-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["sentFriendRequests"]]],[["key"],["idToUse"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["friend-finder-requested-player"],null,[["player","closeModal"],[["get",["player"]],["get",["closeModal"]]]]],false],["text","\\n"]],"locals":["player"]}],"hasPartials":false}',
+                id: "IYiBAlsG",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-players.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-players.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_requested_summoners"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","id","requested-players-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["sentFriendRequests"]]],[["key"],["idToUse"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["friend-finder-requested-player"],null,[["player","closeModal"],[["get",["player"]],["get",["closeModal"]]]]],false],["text","\\n"]],"locals":["player"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "TeuH+FXD",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-name-alias-mode.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-name-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-name"],["flush-element"],["append",["unknown",["playerName","gameName"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-game-tag"],["flush-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-separator"],["flush-element"],["text","#"],["close-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-text"],["flush-element"],["append",["unknown",["playerName","tagLine"]],false],["close-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "FD644HOM",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-name-alias-mode.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-name-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-name"],["flush-element"],["append",["unknown",["playerName","gameName"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-game-tag"],["flush-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-separator"],["flush-element"],["text","#"],["close-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-text"],["flush-element"],["append",["unknown",["playerName","tagLine"]],false],["close-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "dZ3M9KtJ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-name-summoner-mode.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["showGameNameAndTag"]]],null,0],["open-element","div",[]],["static-attr","class","hover-card-name-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-name"],["flush-element"],["text","\\n"],["text","    "],["append",["helper",["if"],[["get",["summonerIdAndNotRemote"]],["get",["playerName","summonerName"]],["get",["playerName","gameName"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-game-name-and-tag-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-game-name"],["flush-element"],["append",["unknown",["playerName","gameName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-game-tag"],["flush-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-separator"],["flush-element"],["text","#"],["close-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-text"],["flush-element"],["append",["unknown",["playerName","tagLine"]],false],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "ROan2qIk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-name-summoner-mode.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["showGameNameAndTag"]]],null,0],["open-element","div",[]],["static-attr","class","hover-card-name-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-name"],["flush-element"],["text","\\n"],["text","    "],["append",["helper",["if"],[["get",["summonerIdAndNotRemote"]],["get",["playerName","summonerName"]],["get",["playerName","gameName"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-game-name-and-tag-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-game-name"],["flush-element"],["append",["unknown",["playerName","gameName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-game-tag"],["flush-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-separator"],["flush-element"],["text","#"],["close-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-text"],["flush-element"],["append",["unknown",["playerName","tagLine"]],false],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "RSNwhqDS",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\identity-and-parties.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\identity-and-parties.js\\" "],["text","\\n"],["append",["unknown",["social-identity"]],false],["text","\\n\\n"],["open-element","lol-social-panel",[]],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "qk9L7KkQ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\identity-and-parties.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\identity-and-parties.js\\" "],["text","\\n"],["append",["unknown",["social-identity"]],false],["text","\\n\\n"],["open-element","lol-social-panel",[]],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "hWv0OaT3",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\sidebar-main.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\sidebar-main.js\\" "],["text","\\n"],["append",["unknown",["social-panel"]],false],["text","\\n"],["append",["unknown",["vng-age-rating"]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","alpha-version-panel"],["flush-element"],["text","\\n  "],["append",["unknown",["chat-toggle-button"]],false],["text","\\n\\n"],["block",["if"],[["get",["missionsButtonEnabled"]]],null,3],["text","\\n"],["block",["each"],[["get",["socialButtons"]]],null,2],["text","\\n  "],["append",["unknown",["version-bar"]],false],["text","\\n\\n  "],["open-element","button",[]],["dynamic-attr","class",["unknown",["bugReportButtonClassNames"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"reportBug"],null],null],["dynamic-attr","disabled",["unknown",["bugReportDisabled"]],null],["static-attr","data-dd-action-name","button.social.report_bug"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDiagnosticAssistantNeedNotify"]]],null,1],["block",["social-text-tooltip"],null,[["direction"],["left"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["discord-eat"]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["tra","tooltip_report_bug"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","bug-report-button-notification"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["social-button"],null,[["buttonPacket"],[["get",["socialButton"]]]]],false],["text","\\n"]],"locals":["socialButton"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-button"],["flush-element"],["text","\\n      "],["append",["unknown",["missions-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "uztVniiW",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\sidebar-main.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\sidebar-main.js\\" "],["text","\\n"],["append",["unknown",["social-panel"]],false],["text","\\n"],["append",["unknown",["vng-age-rating"]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","alpha-version-panel"],["flush-element"],["text","\\n  "],["append",["unknown",["chat-toggle-button"]],false],["text","\\n\\n"],["block",["if"],[["get",["missionsButtonEnabled"]]],null,3],["text","\\n"],["block",["each"],[["get",["socialButtons"]]],null,2],["text","\\n  "],["append",["unknown",["version-bar"]],false],["text","\\n\\n  "],["open-element","button",[]],["dynamic-attr","class",["unknown",["bugReportButtonClassNames"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"reportBug"],null],null],["dynamic-attr","disabled",["unknown",["bugReportDisabled"]],null],["static-attr","data-dd-action-name","button.social.report_bug"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDiagnosticAssistantNeedNotify"]]],null,1],["block",["social-text-tooltip"],null,[["direction"],["left"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["discord-eat"]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["tra","tooltip_report_bug"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","bug-report-button-notification"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["social-button"],null,[["buttonPacket"],[["get",["socialButton"]]]]],false],["text","\\n"]],"locals":["socialButton"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-button"],["flush-element"],["text","\\n      "],["append",["unknown",["missions-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "AU3Q4G8I",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-avatar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-avatar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-avatar.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-social-avatar ",["unknown",["avatarClassNames"]]]]],["dynamic-attr","large",["unknown",["large"]],null],["dynamic-attr","me",["unknown",["me"]],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["block",["if"],[["get",["showSummonerLevel"]]],null,2,1],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","        "],["append",["helper",["availability-hitbox"],null,[["large","member","availability","me","isDiscordOnline"],[["get",["large"]],["get",["member"]],["get",["availability"]],["get",["me"]],["get",["isDiscordOnline"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["comment"," Original summoner icon rendering "],["text","\\n      "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["unknown",["iconClassNames"]]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["icon-ring ",["unknown",["iconClassNames"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["hideindicator"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","summoner-level-icon"],["static-attr","type","custom"],["dynamic-attr","percent",["unknown",["percentCompleteForNextLevel"]],null],["static-attr","start-angle","240"],["static-attr","end-angle","-60"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["text","\\n"],["text","      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom unfilled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle filled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","center xp-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-level ",["helper",["if"],[["get",["hasLongSummonerLevel"]],"has-long-summoner-level"],null]]]],["flush-element"],["append",["unknown",["summonerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Bfi+CnPh",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-avatar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-avatar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-avatar.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-social-avatar ",["unknown",["avatarClassNames"]]]]],["dynamic-attr","large",["unknown",["large"]],null],["dynamic-attr","me",["unknown",["me"]],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["block",["if"],[["get",["showSummonerLevel"]]],null,2,1],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","        "],["append",["helper",["availability-hitbox"],null,[["large","member","availability","me","isDiscordOnline"],[["get",["large"]],["get",["member"]],["get",["availability"]],["get",["me"]],["get",["isDiscordOnline"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["comment"," Original summoner icon rendering "],["text","\\n      "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["unknown",["iconClassNames"]]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["icon-ring ",["unknown",["iconClassNames"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["hideindicator"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","summoner-level-icon"],["static-attr","type","custom"],["dynamic-attr","percent",["unknown",["percentCompleteForNextLevel"]],null],["static-attr","start-angle","240"],["static-attr","end-angle","-60"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["text","\\n"],["text","      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom unfilled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle filled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","center xp-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-level ",["helper",["if"],[["get",["hasLongSummonerLevel"]],"has-long-summoner-level"],null]]]],["flush-element"],["append",["unknown",["summonerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "OCgFt2Tl",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-button.js\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "bSSkfa1Y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-button.js\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "BsgWnYWp",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-request.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-request.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-request.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["friendRequestClasses"]],null],["dynamic-attr","oncontextmenu",["helper",["action"],[["get",[null]],"openContextMenu"],null],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","hideindicator"],["friend-icon",["get",["friendRequest"]],["get",["friendRequest","icon"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-game-name-tagline"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-player-name",[]],["static-attr","render-mode","fullAlias"],["dynamic-attr","game-name",["unknown",["friendRequest","gameName"]],null],["dynamic-attr","tag-line",["unknown",["friendRequest","tagLine"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,6],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["accepted"]]],null,5,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-buttons"],["flush-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["acceptRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["declineRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"declineRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["blockRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"blockRequest"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","friend_request"]],false],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","recently-honored-description"],["flush-element"],["open-element","img",[]],["static-attr","class","recently-honored-icon"],["static-attr","role","presentation"],["dynamic-attr","src",["unknown",["recentlyHonoredImage"]],null],["flush-element"],["close-element"],["append",["unknown",["tra","previously_honored"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["friendRequest","hasHonorRecognition"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_declined"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["declined"]]],null,3,2]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_accepted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "sC5jYYK/",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-request.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-request.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-request.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["friendRequestClasses"]],null],["dynamic-attr","oncontextmenu",["helper",["action"],[["get",[null]],"openContextMenu"],null],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","hideindicator"],["friend-icon",["get",["friendRequest"]],["get",["friendRequest","icon"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-game-name-tagline"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-player-name",[]],["static-attr","render-mode","fullAlias"],["dynamic-attr","game-name",["unknown",["friendRequest","gameName"]],null],["dynamic-attr","tag-line",["unknown",["friendRequest","tagLine"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,6],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["accepted"]]],null,5,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-buttons"],["flush-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["acceptRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["declineRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"declineRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["blockRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"blockRequest"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","friend_request"]],false],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","recently-honored-description"],["flush-element"],["open-element","img",[]],["static-attr","class","recently-honored-icon"],["static-attr","role","presentation"],["dynamic-attr","src",["unknown",["recentlyHonoredImage"]],null],["flush-element"],["close-element"],["append",["unknown",["tra","previously_honored"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["friendRequest","hasHonorRecognition"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_declined"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["declined"]]],null,3,2]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_accepted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "yuwzj3Vz",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-requests-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-requests-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-requests-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-friend-requests-modal"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-title"],["flush-element"],["append",["unknown",["tra","group_label_friend_requests"]],false],["text","\\n      ("],["append",["unknown",["incomingFriendRequests","length"]],false],["text",")\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","friend-request-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendRequestsWithHonorInfo"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-friend-request"],null,[["closeModal","friendRequest"],[["get",["closeModal"]],["get",["friendRequest"]]]]],false],["text","\\n"]],"locals":["friendRequest"]}],"hasPartials":false}',
+                id: "I9uq2DoG",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-requests-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-requests-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-requests-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-friend-requests-modal"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-title"],["flush-element"],["append",["unknown",["tra","group_label_friend_requests"]],false],["text","\\n      ("],["append",["unknown",["incomingFriendRequests","length"]],false],["text",")\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","friend-request-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendRequestsWithHonorInfo"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-friend-request"],null,[["closeModal","friendRequest"],[["get",["closeModal"]],["get",["friendRequest"]]]]],false],["text","\\n"]],"locals":["friendRequest"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "RXR7Ly2F",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-requests.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-requests.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-requests.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","friend-requests"],["dynamic-attr","disabled",["unknown",["isInGame"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-requests-header"],["flush-element"],["append",["unknown",["tra","group_label_friend_requests"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","social-count-badge"],["flush-element"],["append",["unknown",["friendRequestsCount"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showFriendRequestModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["social-friend-requests-modal"],null,[["closeModal"],[["helper",["action"],[["get",[null]],"closeModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["displayModal","type","okText","dismissible","dismissibleType","onClose"],[["get",["showFriendRequestModal"]],"DialogAlert",["get",["tra","friend_request_close"]],true,"outside",["helper",["action"],[["get",[null]],"closeModal"],null]]],0]],"locals":[]}],"hasPartials":false}',
+                id: "eeXf1gx5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-requests.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-requests.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-requests.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","friend-requests"],["dynamic-attr","disabled",["unknown",["isInGame"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-requests-header"],["flush-element"],["append",["unknown",["tra","group_label_friend_requests"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","social-count-badge"],["flush-element"],["append",["unknown",["friendRequestsCount"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showFriendRequestModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["social-friend-requests-modal"],null,[["closeModal"],[["helper",["action"],[["get",[null]],"closeModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["displayModal","type","okText","dismissible","dismissibleType","onClose"],[["get",["showFriendRequestModal"]],"DialogAlert",["get",["tra","friend_request_close"]],true,"outside",["helper",["action"],[["get",[null]],"closeModal"],null]]],0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "LbZ2oFRt",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-identity.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-identity.js\\" "],["text","\\n"],["block",["if"],[["get",["hasUnreadNotifications"]]],null,6],["text","\\n"],["block",["social-avatar"],null,[["avatarClassNames","iconId","large","me"],[["get",["avatarClassNames"]],["get",["avatarIcon"]],true,true]],5],["text","\\n"],["open-element","div",[]],["static-attr","class","details"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["transitionContainerClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["viewProfileTransitionClassNames"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","details-view-profile"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","details-view-profile-icon"],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["tra","social_identity_view_profile"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerNameTransitionClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lower-details"],["flush-element"],["text","\\n      "],["append",["helper",["availability-hitbox"],null,[["availability","large","me"],[["get",["availability"]],true,true]]],false],["text","\\n"],["block",["if"],[["get",["availability"]]],null,4],["block",["if"],[["get",["playerNotificationsEnabled"]]],null,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isMenuOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"doCloseMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","offsety","2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","identity-menu"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isMenuOpen"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay","selector"],["bottom",["get",["statusInputMessagePacket"]],-1,".social-status-change-input"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-menu-input"],null,[["error","currentInput","saveMessage","placeholderText","onCancel","onChange","onSave","maxLength"],[["get",["statusError"]],["get",["statusMessage"]],["get",["tra","menu_item_status_saved"]],["get",["tra","menu_item_set_status"]],["helper",["action"],[["get",[null]],"doCloseMenu"],null],["helper",["action"],[["get",[null]],"doClearStatusError"],null],["helper",["action"],[["get",[null]],"saveNewMessage"],null],"25"]]],false],["text","\\n"],["block",["if"],[["get",["statusInputMessagePacket"]]],null,0]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_notifications"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-player-notifications-button",[]],["static-attr","class","notifications-button"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction"],["left"]],2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["unknown",["statusClassNames"]],null],["modifier",["action"],[["get",[null]],"openMenu"]],["flush-element"],["text","\\n          "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["identity-message",["get",["meObj"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["hovercard-component"],null,[["canShow","summonerId","puuid","openPartyDescription"],[["get",["canShowHovercard"]],["get",["summonerId"]],["get",["meObj","puuid"]],["get",["openPartyDescription"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","identity-rewards-unread-pip"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "aY0cD1j5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-identity.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-identity.js\\" "],["text","\\n"],["block",["if"],[["get",["hasUnreadNotifications"]]],null,6],["text","\\n"],["block",["social-avatar"],null,[["avatarClassNames","iconId","large","me"],[["get",["avatarClassNames"]],["get",["avatarIcon"]],true,true]],5],["text","\\n"],["open-element","div",[]],["static-attr","class","details"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["transitionContainerClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["viewProfileTransitionClassNames"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","details-view-profile"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","details-view-profile-icon"],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["tra","social_identity_view_profile"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerNameTransitionClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lower-details"],["flush-element"],["text","\\n      "],["append",["helper",["availability-hitbox"],null,[["availability","large","me"],[["get",["availability"]],true,true]]],false],["text","\\n"],["block",["if"],[["get",["availability"]]],null,4],["block",["if"],[["get",["playerNotificationsEnabled"]]],null,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isMenuOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"doCloseMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","offsety","2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","identity-menu"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isMenuOpen"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay","selector"],["bottom",["get",["statusInputMessagePacket"]],-1,".social-status-change-input"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-menu-input"],null,[["error","currentInput","saveMessage","placeholderText","onCancel","onChange","onSave","maxLength"],[["get",["statusError"]],["get",["statusMessage"]],["get",["tra","menu_item_status_saved"]],["get",["tra","menu_item_set_status"]],["helper",["action"],[["get",[null]],"doCloseMenu"],null],["helper",["action"],[["get",[null]],"doClearStatusError"],null],["helper",["action"],[["get",[null]],"saveNewMessage"],null],"25"]]],false],["text","\\n"],["block",["if"],[["get",["statusInputMessagePacket"]]],null,0]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_notifications"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-player-notifications-button",[]],["static-attr","class","notifications-button"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction"],["left"]],2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["unknown",["statusClassNames"]],null],["modifier",["action"],[["get",[null]],"openMenu"]],["flush-element"],["text","\\n          "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["identity-message",["get",["meObj"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["hovercard-component"],null,[["canShow","summonerId","puuid","openPartyDescription"],[["get",["canShowHovercard"]],["get",["summonerId"]],["get",["meObj","puuid"]],["get",["openPartyDescription"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","identity-rewards-unread-pip"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "VoiPEeB5",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu-input.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu-input.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["wrapperClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["animationClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","input-message"],["flush-element"],["text","\\n      "],["append",["unknown",["saveMessage"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showIcon"]]],null,0],["text","\\n  "],["open-element","form",[]],["dynamic-attr","onsubmit",["helper",["action"],[["get",[null]],"onSubmit"],null],null],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","flat-input"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","type","text"],["dynamic-attr","class",["concat",["input social-status-change-input ",["unknown",["inputClass"]]]]],["dynamic-attr","value",["unknown",["currentInputValue"]],null],["dynamic-attr","onblur",["helper",["action"],[["get",[null]],"onBlur"],null],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onInput"],[["value"],["target.value"]]],null],["dynamic-attr","maxlength",["unknown",["maxLength"]],null],["dynamic-attr","placeholder",["unknown",["placeholderText"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["input-icon ",["unknown",["inputIconClasses"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "LAc3Ydby",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu-input.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu-input.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["wrapperClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["animationClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","input-message"],["flush-element"],["text","\\n      "],["append",["unknown",["saveMessage"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showIcon"]]],null,0],["text","\\n  "],["open-element","form",[]],["dynamic-attr","onsubmit",["helper",["action"],[["get",[null]],"onSubmit"],null],null],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","flat-input"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","type","text"],["dynamic-attr","class",["concat",["input social-status-change-input ",["unknown",["inputClass"]]]]],["dynamic-attr","value",["unknown",["currentInputValue"]],null],["dynamic-attr","onblur",["helper",["action"],[["get",[null]],"onBlur"],null],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onInput"],[["value"],["target.value"]]],null],["dynamic-attr","maxlength",["unknown",["maxLength"]],null],["dynamic-attr","placeholder",["unknown",["placeholderText"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["input-icon ",["unknown",["inputIconClasses"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "VsfOt64R",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-menu-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu-item.js\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "/OQipKZ9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-menu-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu-item.js\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "wRRFVJar",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-menu.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","social-menu-container"],["static-attr","tabIndex","-1"],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "gwwh08/9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-menu.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","social-menu-container"],["static-attr","tabIndex","-1"],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "lZ6RGN/b",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-panel.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-panel.js\\" "],["text","\\n"],["append",["unknown",["identity-and-parties"]],false],["text","\\n\\n"],["block",["if"],[["get",["chatAndFriendsInitializing"]]],null,3,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-social-lower-pane-container"],["flush-element"],["text","\\n    "],["append",["unknown",["actions-bar"]],false],["text","\\n    "],["append",["unknown",["social-roster"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","roster disconnected centered social-ember-fade-in"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","message"],["flush-element"],["append",["unknown",["tra","system_message_disconnected"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["chatSessionSessionStateDisconnected"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","roster inprogress centered social-ember-fade-in"],["static-attr","animate","fade"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","spinner"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "84NVhUb9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-panel.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-panel.js\\" "],["text","\\n"],["append",["unknown",["identity-and-parties"]],false],["text","\\n\\n"],["block",["if"],[["get",["chatAndFriendsInitializing"]]],null,3,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-social-lower-pane-container"],["flush-element"],["text","\\n    "],["append",["unknown",["actions-bar"]],false],["text","\\n    "],["append",["unknown",["social-roster"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","roster disconnected centered social-ember-fade-in"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","message"],["flush-element"],["append",["unknown",["tra","system_message_disconnected"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["chatSessionSessionStateDisconnected"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","roster inprogress centered social-ember-fade-in"],["static-attr","animate","fade"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","spinner"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "eHlVXGn0",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-group-name.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-group-name.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-group-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-roster-group-name group-name"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isSaved"]]],null,2],["text","\\n  "],["open-element","div",[]],["static-attr","class","group-name-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isEditingName"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","group-label"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["groupLabelClasses"]],null],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","group-label-locale-direction-override"],["flush-element"],["append",["unknown",["groupLocalizedLabel"]],false],["close-element"],["text","\\n          "],["append",["unknown",["friendCount"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["inputClass","currentInput","onSave","onCancel","maxLength"],["group-name-input",["get",["groupLocalizedLabel"]],["helper",["action"],[["get",[null]],"handleSubmit"],null],["helper",["action"],[["get",[null]],"cancelInput"],null],"25"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","group-name-animation"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "GvEjeXGu",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-group-name.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-group-name.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-group-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-roster-group-name group-name"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isSaved"]]],null,2],["text","\\n  "],["open-element","div",[]],["static-attr","class","group-name-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isEditingName"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","group-label"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["groupLabelClasses"]],null],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","group-label-locale-direction-override"],["flush-element"],["append",["unknown",["groupLocalizedLabel"]],false],["close-element"],["text","\\n          "],["append",["unknown",["friendCount"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["inputClass","currentInput","onSave","onCancel","maxLength"],["group-name-input",["get",["groupLocalizedLabel"]],["helper",["action"],[["get",[null]],"handleSubmit"],null],["helper",["action"],[["get",[null]],"cancelInput"],null],"25"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","group-name-animation"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "i2W0JRC7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-group.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-group.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-group.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["groupClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","group-header"],["static-attr","class","social-arrow-hit"],["dynamic-attr","index",["unknown",["index"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleCollapse"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["arrowContainerClasses"]],null],["flush-element"],["text","\\n      "],["append",["helper",["arrow-toggle"],null,[["class","open"],["arrow",["get",["isNotCollapsed"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["append",["helper",["social-roster-group-name"],null,[["group","isEditingName","onCancelEdit"],[["get",["group"]],["get",["isEditingName"]],["helper",["action"],[["get",[null]],"handleCancelEdit"],null]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isDraggingRosterMember"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","drop-area-arrow"],["static-attr","animate","slide"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","drop-area"],["dynamic-attr","style",["unknown",["dropAreaStyle"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["showDropArrow"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "cEd5GB0S",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-group.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-group.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-group.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["groupClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","group-header"],["static-attr","class","social-arrow-hit"],["dynamic-attr","index",["unknown",["index"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleCollapse"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["arrowContainerClasses"]],null],["flush-element"],["text","\\n      "],["append",["helper",["arrow-toggle"],null,[["class","open"],["arrow",["get",["isNotCollapsed"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["append",["helper",["social-roster-group-name"],null,[["group","isEditingName","onCancelEdit"],[["get",["group"]],["get",["isEditingName"]],["helper",["action"],[["get",[null]],"handleCancelEdit"],null]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isDraggingRosterMember"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","drop-area-arrow"],["static-attr","animate","slide"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","drop-area"],["dynamic-attr","style",["unknown",["dropAreaStyle"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["showDropArrow"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "sWkZHjdK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-member.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-member.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-member.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["memberClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","open-party-indicator"],["flush-element"],["close-element"],["text","\\n\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","availability","isDiscordOnline"],["member-icon",["get",["friend"]],["get",["friend","icon"]],["get",["friend","availability"]],["get",["isDiscordOnline"]]]]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","member-name-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-name"],["flush-element"],["append",["unknown",["gameName"]],false],["close-element"],["text","\\n    "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["member-status",["get",["friend"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showUnreadMessageCount"]]],null,6],["text","\\n"],["block",["if"],[["get",["isOpenPartyJoinable"]]],null,5],["text","\\n"],["block",["if"],[["get",["isMuted"]]],null,4],["text","\\n"],["block",["if"],[["get",["showDiscordOfflineIcon"]]],null,3],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEditingNote"]]],null,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["summonerId","puuid","targetDomNode","options","openPartyDescription"],[["get",["friend","summonerId"]],["get",["friend","puuid"]],["get",["hovercardData","domNode"]],["get",["hovercardData","options"]],["get",["hovercardData","openPartyDescription"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["class","currentInput","saveMessage","placeholderText","onSave","onCancel","iconName","maxLength"],["edit-note-input",["get",["editingNoteInputValue"]],["get",["tra","roster_note_saved"]],["get",["tra","roster_note"]],["helper",["action"],[["get",[null]],"saveNote"],null],["helper",["action"],[["get",[null]],"closeMenu"],null],"note","140"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-menu-item"],null,null,0]],"locals":[]},{"statements":[["block",["social-menu"],null,[["class","onRequestClose"],["edit-note-menu",["helper",["action"],[["get",[null]],"closeMenu"],null]]],1]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","muted-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["partyJoinClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"joinParty"],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showJoinOpenPartyTooltip"],null],null],["dynamic-attr","disabled",["unknown",["isJoinOpenPartyDisabled"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n      "],["append",["unknown",["unreadMessageCount"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Q1p3+yqe",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-member.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-member.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-member.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["memberClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","open-party-indicator"],["flush-element"],["close-element"],["text","\\n\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","availability","isDiscordOnline"],["member-icon",["get",["friend"]],["get",["friend","icon"]],["get",["friend","availability"]],["get",["isDiscordOnline"]]]]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","member-name-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-name"],["flush-element"],["append",["unknown",["gameName"]],false],["close-element"],["text","\\n    "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["member-status",["get",["friend"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showUnreadMessageCount"]]],null,6],["text","\\n"],["block",["if"],[["get",["isOpenPartyJoinable"]]],null,5],["text","\\n"],["block",["if"],[["get",["isMuted"]]],null,4],["text","\\n"],["block",["if"],[["get",["showDiscordOfflineIcon"]]],null,3],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEditingNote"]]],null,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["summonerId","puuid","targetDomNode","options","openPartyDescription"],[["get",["friend","summonerId"]],["get",["friend","puuid"]],["get",["hovercardData","domNode"]],["get",["hovercardData","options"]],["get",["hovercardData","openPartyDescription"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["class","currentInput","saveMessage","placeholderText","onSave","onCancel","iconName","maxLength"],["edit-note-input",["get",["editingNoteInputValue"]],["get",["tra","roster_note_saved"]],["get",["tra","roster_note"]],["helper",["action"],[["get",[null]],"saveNote"],null],["helper",["action"],[["get",[null]],"closeMenu"],null],"note","140"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-menu-item"],null,null,0]],"locals":[]},{"statements":[["block",["social-menu"],null,[["class","onRequestClose"],["edit-note-menu",["helper",["action"],[["get",[null]],"closeMenu"],null]]],1]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","muted-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["partyJoinClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"joinParty"],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showJoinOpenPartyTooltip"],null],null],["dynamic-attr","disabled",["unknown",["isJoinOpenPartyDisabled"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n      "],["append",["unknown",["unreadMessageCount"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "hshEpk/F",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowClash"]]],null,9],["open-element","div",[]],["dynamic-attr","class",["unknown",["activitySectionClasses"]],null],["flush-element"],["text","\\n  "],["append",["unknown",["social-friend-requests"]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["hasNoFriends"]]],null,8,7],["text","\\n"],["open-element","div",[]],["static-attr","class","preload-drag-grip"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","roster-drop-marker"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","more-unread below"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","more-unread-bar"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"jumpBelow"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","more-unread-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-text"],["flush-element"],["append",["unknown",["tra","roster_more_unreads"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-arrow"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","more-unread above"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","more-unread-bar"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"jumpAbove"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","more-unread-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-text"],["flush-element"],["append",["unknown",["tra","roster_more_unreads"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-arrow"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["social-roster-member"],null,[["memberModel"],[["get",["groupOrFriend"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["groupOrFriend","groupModel","group","collapsed"]]],null,3]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-roster-group"],null,[["groupModel"],[["get",["groupOrFriend"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["groupOrFriend","isGroup"]]],null,5,4]],"locals":["groupOrFriend","index"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","list-container"],["flush-element"],["text","\\n"],["block",["ember-collection"],null,[["class","items","scroll-top","scroll-change","cell-layout"],["roster-scrollable",["get",["rosterModel"]],["get",["scrollTop"]],["helper",["action"],[["get",[null]],"scrollChange"],null],["helper",["mixed-grid-layout"],[["get",["itemSizes"]]],null]]],6],["text","\\n"],["block",["if"],[["get",["unreadAbove"]]],null,2],["text","\\n"],["block",["if"],[["get",["unreadBelow"]]],null,1],["text","\\n"],["block",["if"],[["get",["shouldHideFriendsAndMetaGroups"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","list-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","no-friends"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","system_message_no_friends"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["unknown",["clash-roster-panel"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "RMeHJZcK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowClash"]]],null,9],["open-element","div",[]],["dynamic-attr","class",["unknown",["activitySectionClasses"]],null],["flush-element"],["text","\\n  "],["append",["unknown",["social-friend-requests"]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["hasNoFriends"]]],null,8,7],["text","\\n"],["open-element","div",[]],["static-attr","class","preload-drag-grip"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","roster-drop-marker"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","more-unread below"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","more-unread-bar"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"jumpBelow"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","more-unread-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-text"],["flush-element"],["append",["unknown",["tra","roster_more_unreads"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-arrow"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","more-unread above"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","more-unread-bar"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"jumpAbove"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","more-unread-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-text"],["flush-element"],["append",["unknown",["tra","roster_more_unreads"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-arrow"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["social-roster-member"],null,[["memberModel"],[["get",["groupOrFriend"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["groupOrFriend","groupModel","group","collapsed"]]],null,3]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-roster-group"],null,[["groupModel"],[["get",["groupOrFriend"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["groupOrFriend","isGroup"]]],null,5,4]],"locals":["groupOrFriend","index"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","list-container"],["flush-element"],["text","\\n"],["block",["ember-collection"],null,[["class","items","scroll-top","scroll-change","cell-layout"],["roster-scrollable",["get",["rosterModel"]],["get",["scrollTop"]],["helper",["action"],[["get",[null]],"scrollChange"],null],["helper",["mixed-grid-layout"],[["get",["itemSizes"]]],null]]],6],["text","\\n"],["block",["if"],[["get",["unreadAbove"]]],null,2],["text","\\n"],["block",["if"],[["get",["unreadBelow"]]],null,1],["text","\\n"],["block",["if"],[["get",["shouldHideFriendsAndMetaGroups"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","list-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","no-friends"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","system_message_no_friends"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["unknown",["clash-roster-panel"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "aX/G3fHr",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-status-wrapper.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-status-wrapper.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-status-wrapper.js\\" "],["text","\\n"],["block",["if"],[["get",["isInGameOrChampSelect"]]],null,16,15]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text"," - "],["append",["unknown",["friend","platformId"]],false],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemotePlatform"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text"," - "],["append",["unknown",["friend","productName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemoteProduct"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["availabilityString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAvailability"]]],null,4,3]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-quoted"],["flush-element"],["text","\\n        “"],["append",["unknown",["statusMessage"]],false],["text","”\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["status-message-wrapper ",["unknown",["availability"]]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasStatusMessage"]]],null,6,5],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasGameStatus"]]],null,8,7]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message open-party ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["partyOccupancyString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isOpenPartyJoinable"]]],null,10,9]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","status-message game-status dnd"],["flush-element"],["append",["unknown",["tournamentStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasTournamentStatus"]]],null,12,11]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","status-message game-status dnd"],["flush-element"],["append",["unknown",["availabilityString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemoteDnd"]]],null,14,13]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "3sel/BOh",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-status-wrapper.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-status-wrapper.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-status-wrapper.js\\" "],["text","\\n"],["block",["if"],[["get",["isInGameOrChampSelect"]]],null,16,15]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text"," - "],["append",["unknown",["friend","platformId"]],false],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemotePlatform"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text"," - "],["append",["unknown",["friend","productName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemoteProduct"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["availabilityString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAvailability"]]],null,4,3]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-quoted"],["flush-element"],["text","\\n        “"],["append",["unknown",["statusMessage"]],false],["text","”\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["status-message-wrapper ",["unknown",["availability"]]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasStatusMessage"]]],null,6,5],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasGameStatus"]]],null,8,7]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message open-party ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["partyOccupancyString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isOpenPartyJoinable"]]],null,10,9]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","status-message game-status dnd"],["flush-element"],["append",["unknown",["tournamentStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasTournamentStatus"]]],null,12,11]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","status-message game-status dnd"],["flush-element"],["append",["unknown",["availabilityString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemoteDnd"]]],null,14,13]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "SpMbSG4T",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-text-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-text-tooltip.js\\" "],["text","\\n"],["block",["social-tooltip"],null,[["direction","restrictArea","clearOnClick"],[["get",["direction"]],["get",["restrictArea"]],["get",["clearOnClick"]]]],0]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","style","white-space: nowrap"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["text","\\n      "],["yield","default"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "heHXZOhr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-text-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-text-tooltip.js\\" "],["text","\\n"],["block",["social-tooltip"],null,[["direction","restrictArea","clearOnClick"],[["get",["direction"]],["get",["restrictArea"]],["get",["clearOnClick"]]]],0]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","style","white-space: nowrap"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["text","\\n      "],["yield","default"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "BhJ8jKVT",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"clickHandler"],null],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "YTCxHrKN",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"clickHandler"],null],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "PkHHruZo",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\tooltip-message.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\tooltip-message.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","tooltip-small"],["dynamic-attr","style",["unknown",["styleContent"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["messagePacketLocal"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["messagePacketLocal","title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["messagePacketLocal","text"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "zea3qCmL",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\tooltip-message.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\tooltip-message.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","tooltip-small"],["dynamic-attr","style",["unknown",["styleContent"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["messagePacketLocal"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["messagePacketLocal","title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["messagePacketLocal","text"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "O8+PAaES",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\uikit-radio.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\uikit-radio.js\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "peUl1ESk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\uikit-radio.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\uikit-radio.js\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "SGPFhVfB",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\version-bar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\version-bar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\version-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","version-bar-container"],["static-attr","draggable","true"],["dynamic-attr","onDragStart",["helper",["action"],[["get",[null]],"onDragStart"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayLegacyPatchNumbers"]]],null,6,3],["block",["if"],[["get",["patchlineVisibleName"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","span",[]],["flush-element"],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["patchlineVisibleName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","br",[]],["flush-element"],["close-element"],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["openDevPanelHint"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["lolTextShorthand"]],false],["text","\\n      "],["append",["unknown",["lolExternalPatchVersion"]],false],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n      "],["append",["unknown",["tftTextShorthand"]],false],["text","\\n      "],["append",["unknown",["tftExternalPatchVersion"]],false],["text","\\n"],["block",["if"],[["get",["isDevPanelSupported"]]],null,1]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction"],["top"]],2],["text","    "],["append",["unknown",["lolExternalPatchVersion"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","br",[]],["flush-element"],["close-element"],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["openDevPanelHint"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      V"],["append",["unknown",["fullVersion"]],false],["text","\\n"],["block",["if"],[["get",["isDevPanelSupported"]]],null,4]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","reShowFlag"],["top",["get",["showExpandedDetail"]]]],5],["text","    V"],["append",["unknown",["versionDisplay"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "AvYC1hvw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\version-bar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\version-bar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\version-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","version-bar-container"],["static-attr","draggable","true"],["dynamic-attr","onDragStart",["helper",["action"],[["get",[null]],"onDragStart"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayLegacyPatchNumbers"]]],null,6,3],["block",["if"],[["get",["patchlineVisibleName"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","span",[]],["flush-element"],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["patchlineVisibleName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","br",[]],["flush-element"],["close-element"],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["openDevPanelHint"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["lolTextShorthand"]],false],["text","\\n      "],["append",["unknown",["lolExternalPatchVersion"]],false],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n      "],["append",["unknown",["tftTextShorthand"]],false],["text","\\n      "],["append",["unknown",["tftExternalPatchVersion"]],false],["text","\\n"],["block",["if"],[["get",["isDevPanelSupported"]]],null,1]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction"],["top"]],2],["text","    "],["append",["unknown",["lolExternalPatchVersion"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","br",[]],["flush-element"],["close-element"],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["openDevPanelHint"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      V"],["append",["unknown",["fullVersion"]],false],["text","\\n"],["block",["if"],[["get",["isDevPanelSupported"]]],null,4]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","reShowFlag"],["top",["get",["showExpandedDetail"]]]],5],["text","    V"],["append",["unknown",["versionDisplay"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "iai3bTxU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\vng-age-rating.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\vng-age-rating.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\vng-age-rating.js\\" "],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","svg",[]],["static-attr","id","vn-age-rating"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","version","1.1"],["static-attr","viewBox","0 0 279 55"],["static-attr","class","vng-age-rating-container"],["flush-element"],["text","\\n  "],["open-element","defs",[]],["flush-element"],["text","\\n    "],["open-element","style",[]],["flush-element"],["text","\\n      .st0 {\\n        fill: #8c9195;\\n      }\\n\\n      .st1 {\\n        fill: #202a2c;\\n      }\\n\\n      .st2 {\\n        fill: #94948e;\\n      }\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","g",[]],["flush-element"],["text","\\n    "],["open-element","rect",[]],["static-attr","class","st1"],["static-attr","x",".5"],["static-attr","y",".5"],["static-attr","width","278"],["static-attr","height","54"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st0"],["static-attr","d","M278,1v53H1V1h277M279,0H0v55h279V0h0Z"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","g",[]],["flush-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M11.8,21.7c-1,.8-2.6,1.2-4.7,1.2h-.7v-7.8h.5c1.6,0,3-.4,4.1-1.2,1.1-.8,1.9-2,2.4-3.5h6.4v34.9h-8.1v-23.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M40,26.3c1.6.8,2.7,1.8,3.5,3,.7,1.2,1.1,2.9,1.1,5v2.1c0,1.4-.3,2.8-.8,3.9s-1.2,2.2-2.1,3c-.9.8-2,1.5-3.4,1.9-1.3.5-2.8.7-4.4.7-3.3,0-5.9-.8-7.8-2.5-1.9-1.7-2.8-4-2.8-7v-2.1c0-3,1.5-5.2,4.6-6.6-1.3-.7-2.4-1.7-3.1-3-.7-1.2-1.1-2.8-1.1-4.8v-1.7c0-1.3.2-2.5.7-3.6.5-1.1,1.2-2,2.1-2.8.9-.8,1.9-1.4,3.2-1.8,1.2-.4,2.6-.6,4.1-.6,3.1,0,5.6.8,7.3,2.3,1.8,1.5,2.7,3.6,2.7,6.3v1.7c0,1.5-.3,2.8-.9,3.8-.6,1-1.6,1.9-3,2.7ZM36.4,33.5c0-.5,0-.9-.1-1.3,0-.3-.2-.6-.5-.9-.2-.2-.5-.5-.9-.7-.4-.2-.9-.4-1.4-.6l-.3-.2c-.6.4-1,.8-1.2,1.4-.3.5-.4,1.2-.4,2.1v3.5c0,2.1.8,3.2,2.5,3.2s2.4-1,2.4-3.1v-3.4ZM31.7,20.7c0,.9.2,1.5.7,2,.5.5,1.1.9,2,1.3l.4.2c.9-.7,1.4-1.8,1.4-3.4v-2.8c0-2.1-.7-3.1-2.2-3.1s-2.2,1-2.2,3v2.8Z"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M58.2,18.4h-3.8v4.1h-3.5v-4.1h-3.7v-3.3h3.7v-3.8h3.5v3.8h3.8v3.3Z"],["flush-element"],["close-element"],["text","\\n  "],["open-element","rect",[]],["static-attr","class","st2"],["static-attr","x","63.9"],["static-attr","y","6.9"],["static-attr","width","1.9"],["static-attr","height","41.9"],["flush-element"],["close-element"],["text","\\n  "],["open-element","g",[]],["flush-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M81.1,21.3h0c0,1-.3,1.8-1,2.5s-1.6.9-2.7.9-2.1-.4-2.8-1.2c-.7-.8-1.1-1.8-1.1-3v-1.9c0-1.2.4-2.2,1.1-3,.7-.8,1.6-1.2,2.8-1.2s2.1.3,2.7.9c.7.6,1,1.4,1,2.5h0s-1.6,0-1.6,0c0-.7-.2-1.2-.5-1.5s-.9-.6-1.6-.6-1.2.3-1.6.8-.6,1.2-.6,2v1.9c0,.8.2,1.5.6,2s.9.8,1.6.8,1.2-.2,1.5-.5c.4-.4.5-.9.5-1.5h1.6Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M84.2,18.2c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2-.2-.3-.6-.4-1-.4s-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M90.1,20.8c0-1.1.3-2,.9-2.7.6-.7,1.4-1,2.4-1s.9,0,1.3.2c.4.2.7.4,1,.7.3-.1.5-.3.7-.6.2-.3.2-.7.2-1.1h1.3c0,.7-.1,1.2-.4,1.7-.3.4-.7.8-1.2.9.1.3.2.6.3.9,0,.3.1.7.1,1h0c0,1.2-.3,2.1-.9,2.8-.6.7-1.4,1-2.5,1s-1.9-.3-2.5-1c-.6-.7-.9-1.6-.9-2.7h0ZM91.7,21c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7s1-.2,1.3-.7.4-1,.4-1.7h0c0-.8-.1-1.4-.4-1.9s-.7-.7-1.3-.7-1,.2-1.3.7c-.3.5-.4,1-.4,1.7h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M100.1,15.4h-1.6v-1.4h1.6v1.4ZM100.1,24.5h-1.6v-7.3h1.6v7.3Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M105.1,21c0-1.2.2-2.1.7-2.8.5-.7,1.2-1.1,2.1-1.1s.8,0,1.1.3c.3.2.6.4.8.8l.2-.9h1.3v10.1h-1.6v-3.5c-.2.3-.5.5-.8.6-.3.1-.7.2-1,.2-.9,0-1.6-.3-2.1-1-.5-.7-.7-1.5-.7-2.6h0ZM106.7,21.1c0,.7.1,1.2.4,1.6.3.4.7.6,1.2.6s.6,0,.8-.2.4-.3.6-.6v-3.4c-.2-.2-.3-.4-.6-.6-.2-.1-.5-.2-.8-.2-.6,0-1,.2-1.2.7s-.4,1.1-.4,1.9h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M117.8,23.5c-.2.4-.5.7-.9.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3.2.3.5.4.9.4s.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v7.3h-1.4v-1.1Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M125.5,24.5c0-.2-.1-.4-.1-.5,0-.2,0-.4,0-.5-.2.3-.5.6-.9.9-.4.2-.8.3-1.2.3-.8,0-1.3-.2-1.8-.6-.4-.4-.6-.9-.6-1.6s.3-1.3.8-1.7c.6-.4,1.3-.6,2.4-.6h1.3v-.6c0-.4-.1-.7-.3-.9-.2-.2-.5-.3-1-.3s-.7,0-.9.3-.3.4-.3.7h-1.6c0-.6.2-1.1.8-1.6s1.3-.7,2.1-.7,1.5.2,2.1.6c.5.4.8,1.1.8,1.9v3.2c0,.3,0,.6,0,.9s.1.5.2.8h-1.7ZM123.4,23.4c.4,0,.8-.1,1.1-.3s.6-.4.7-.7v-1.1h-1.3c-.5,0-.9.1-1.1.4s-.4.5-.4.8,0,.5.3.7c.2.2.4.2.8.2ZM124.4,14.4h1.8s-1.8,1.8-1.8,1.8h-1.3l1.3-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M136,24.5h-1.6v-8.3h-2v-1.2l3.6-.4v9.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M146,17.3c0,.5-.1.9-.4,1.3s-.6.7-1.1.9c.5.2,1,.5,1.3.9.3.4.5.9.5,1.4,0,.9-.3,1.6-.9,2.1-.6.5-1.4.7-2.4.7s-1.8-.2-2.4-.7c-.6-.5-.9-1.2-.9-2.1s.2-1,.5-1.4c.3-.4.7-.7,1.3-.9-.5-.2-.8-.5-1.1-.9s-.4-.8-.4-1.3c0-.9.3-1.5.8-2,.6-.5,1.3-.7,2.2-.7s1.6.2,2.2.7.8,1.1.8,2ZM144.6,21.8c0-.5-.2-.9-.5-1.2-.3-.3-.7-.5-1.2-.5s-.9.1-1.2.4c-.3.3-.4.7-.4,1.2s.1.9.4,1.2.7.4,1.2.4.9-.1,1.2-.4c.3-.3.5-.7.5-1.2ZM144.3,17.4c0-.4-.1-.8-.4-1.1s-.6-.4-1-.4-.8.1-1,.4c-.2.3-.4.6-.4,1.1s.1.8.4,1.1c.2.3.6.4,1,.4s.7-.1,1-.4c.2-.3.4-.6.4-1.1Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M154,20.8c0,1.3-.3,2.3-.9,2.9-.6.7-1.4,1-2.4,1s-1.8-.3-2.4-1c-.6-.7-.9-1.6-.9-2.9v-2.2c0-1.3.3-2.2.9-2.9.6-.7,1.4-1,2.4-1s1.8.3,2.4,1c.6.7.9,1.6.9,2.9v2.2ZM152.4,18.3c0-.8-.1-1.4-.4-1.8-.3-.4-.7-.6-1.2-.6s-.9.2-1.2.6c-.3.4-.4,1-.4,1.8v2.7c0,.8.1,1.4.4,1.8s.7.6,1.2.6.9-.2,1.2-.6.4-1,.4-1.8v-2.7Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M165.5,21.1c0,1.1-.2,1.9-.7,2.6-.5.7-1.2,1-2.1,1s-.8,0-1.1-.2c-.3-.1-.6-.4-.8-.7v3.5h-1.6v-10.1h1.4l.2.9c.2-.3.5-.6.8-.8s.7-.3,1.2-.3c.9,0,1.6.4,2.1,1.1.5.7.8,1.7.8,2.8h0ZM163.8,21c0-.7-.1-1.4-.4-1.8-.3-.5-.7-.7-1.3-.7s-.6,0-.9.2c-.2.1-.4.3-.6.6v3.3c.1.3.3.5.6.6.2.1.5.2.9.2.6,0,1-.2,1.3-.6.3-.4.4-1,.4-1.6h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M168.5,18.2c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2-.2-.3-.6-.4-1-.4s-.6,0-.9.2c-.3.1-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M179.3,23.5c-.2.4-.5.7-.9.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3.2.3.5.4.9.4s.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v7.3h-1.4v-1.1ZM178.2,14.5h1.8s-1.8,1.8-1.8,1.8h-1.3l1.3-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M184.6,15.5v1.8h1.3v1.2h-1.3v4c0,.3,0,.5.2.6.1.1.3.2.5.2s.2,0,.3,0c0,0,.2,0,.2,0l.2,1.2c-.1,0-.3.1-.5.2-.2,0-.4,0-.6,0-.6,0-1.1-.2-1.4-.5-.3-.4-.5-.9-.5-1.7v-4h-1.1v-1.2h1.1v-1.8h1.6Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M192.3,17.2v1c.3-.3.6-.6,1-.8.4-.2.8-.3,1.2-.3s.9.1,1.2.3c.3.2.6.5.8,1,.2-.4.5-.7.9-1,.4-.2.8-.3,1.3-.3.7,0,1.3.3,1.7.8s.6,1.3.6,2.3v4.4h-1.6v-4.4c0-.6-.1-1.1-.3-1.3-.2-.3-.5-.4-1-.4s-.6,0-.9.3-.4.4-.5.8c0,0,0,.1,0,.2,0,0,0,0,0,.1v4.7h-1.6v-4.4c0-.6-.1-1-.3-1.3-.2-.3-.5-.4-1-.4s-.6,0-.8.2c-.2.1-.4.3-.5.5v5.4h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M202.5,20.8c0-1.1.3-2,.9-2.7.6-.7,1.4-1,2.5-1s1.9.3,2.5,1c.6.7.9,1.6.9,2.7h0c0,1.2-.3,2.1-.9,2.8-.6.7-1.4,1-2.5,1s-1.9-.3-2.5-1c-.6-.7-.9-1.6-.9-2.7h0ZM208.2,15.8v.2h-1.3l-1-.9-1,.9h-1.3v-.2l1.8-1.6h1l1.8,1.6ZM204.2,21c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7s1-.2,1.3-.7c.3-.4.4-1,.4-1.7h0c0-.8-.1-1.4-.4-1.9-.3-.5-.7-.7-1.3-.7s-1,.2-1.3.7c-.3.5-.4,1-.4,1.7h0ZM206.8,26.9h-1.8v-1.5h1.8v1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M212.7,15.5v1.8h1.3v1.2h-1.3v4c0,.3,0,.5.2.6.1.1.3.2.5.2s.2,0,.3,0c0,0,.2,0,.2,0l.2,1.2c-.1,0-.3.1-.5.2-.2,0-.4,0-.6,0-.6,0-1.1-.2-1.4-.5-.3-.4-.5-.9-.5-1.7v-4h-1.1v-1.2h1.1v-1.8h1.6Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M220.4,17.2v1.1c.3-.4.6-.7,1-.9s.8-.3,1.2-.3c.8,0,1.4.2,1.8.7.4.5.6,1.2.6,2.2v4.6h-1.6v-4.6c0-.5-.1-.9-.3-1.2s-.6-.3-1-.3-.6,0-.9.2c-.3.1-.5.3-.6.6v5.3h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M226.5,21c0-1.2.3-2.1.8-2.8s1.2-1.1,2.1-1.1.8,0,1.2.3c.3.2.6.5.8.8l.2-1h1.4v7.3c0,.9-.3,1.7-.9,2.2-.6.5-1.4.8-2.5.8s-.7,0-1.2-.2c-.4-.1-.8-.2-1.1-.4l.4-1.3c.3.1.6.2.9.3s.7.1,1,.1c.6,0,1-.1,1.3-.4.3-.3.4-.6.4-1.2v-.7c-.2.3-.5.5-.8.7-.3.2-.7.2-1.1.2-.9,0-1.6-.3-2.1-1s-.8-1.5-.8-2.6h0ZM228.1,21.1c0,.7.1,1.2.4,1.6s.7.6,1.2.6.6,0,.9-.2c.2-.1.4-.4.6-.6v-3.2c-.2-.3-.4-.5-.6-.6-.2-.2-.5-.2-.9-.2-.6,0-1,.2-1.3.7-.3.5-.4,1.1-.4,1.8h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M239,24.5c0-.2-.1-.4-.1-.5,0-.2,0-.4,0-.5-.2.3-.5.6-.9.9-.4.2-.8.3-1.2.3-.8,0-1.3-.2-1.8-.6s-.6-.9-.6-1.6.3-1.3.8-1.7c.6-.4,1.3-.6,2.4-.6h1.3v-.6c0-.4-.1-.7-.3-.9-.2-.2-.5-.3-1-.3s-.7,0-.9.3-.3.4-.3.7h-1.6c0-.6.2-1.1.8-1.6.5-.4,1.3-.7,2.1-.7s1.5.2,2.1.6c.5.4.8,1.1.8,1.9v3.2c0,.3,0,.6,0,.9,0,.3.1.5.2.8h-1.7ZM238.2,16.2h-1.3l-1.8-1.8h0s1.8,0,1.8,0l1.2,1.8ZM237,23.4c.4,0,.8-.1,1.1-.3s.6-.4.7-.7v-1.1h-1.3c-.5,0-.9.1-1.1.4-.3.2-.4.5-.4.8s0,.5.3.7c.2.2.4.2.8.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M244.4,21.6l.2.7h0l1.6-5.1h1.8l-3,8.4c-.2.5-.5.9-.8,1.3-.4.4-.8.5-1.5.5s-.3,0-.4,0c-.2,0-.3,0-.4,0l.2-1.3c0,0,.1,0,.2,0,.1,0,.2,0,.2,0,.3,0,.5-.1.7-.3s.3-.4.4-.7l.3-.7-2.7-7.2h1.8l1.4,4.4Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M77.8,40.6c0-.3-.1-.5-.3-.6-.2-.2-.6-.3-1.2-.4-.9-.2-1.5-.4-2-.8-.4-.3-.7-.8-.7-1.4s.3-1.1.8-1.6c.5-.4,1.2-.6,2-.6s1.6.2,2.1.7c.5.4.8,1,.8,1.6h0s-1.6,0-1.6,0c0-.3-.1-.6-.3-.8-.2-.2-.5-.3-.9-.3s-.7,0-.9.3c-.2.2-.3.4-.3.7s0,.5.3.6.6.3,1.2.4c.9.2,1.6.5,2,.8s.7.8.7,1.4-.3,1.2-.8,1.6c-.5.4-1.3.6-2.1.6s-1.7-.2-2.2-.7-.8-1-.8-1.7h0s1.5,0,1.5,0c0,.4.2.7.5.9s.6.3,1.1.3.7,0,1-.2c.2-.2.3-.4.3-.7Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M84.1,42.8c-1,0-1.9-.3-2.5-1-.6-.7-.9-1.5-.9-2.6v-.3c0-1.1.3-1.9.9-2.6.6-.7,1.4-1,2.3-1,1,0,1.7.3,2.3.9s.8,1.4.8,2.4v1h-4.6c0,.6.2,1.1.5,1.5.3.4.7.6,1.3.6s.8,0,1.1-.2c.3-.1.6-.3.9-.5l.5,1.1c-.3.2-.6.5-1.1.6-.5.2-1,.3-1.6.3ZM86.2,32.3c0,.4-.1.8-.4,1.1-.3.3-.6.5-1,.5s-.7-.1-1-.3c-.4-.2-.7-.3-.9-.3s-.3,0-.4.2-.2.3-.2.5l-.9-.2c0-.4.1-.8.4-1.1.3-.3.6-.5,1-.5s.6,0,1,.3.7.3,1,.3.3,0,.4-.2c.1-.1.2-.3.2-.5l.9.3ZM83.9,36.5c-.4,0-.7.2-1,.5s-.4.7-.5,1.2h0s2.9,0,2.9,0v-.2c0-.5-.1-.8-.4-1.1s-.6-.4-1.1-.4Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M96.1,42.6c0-.2-.1-.4-.1-.5,0-.2,0-.4,0-.5-.2.3-.5.6-.9.9-.4.2-.8.3-1.2.3-.8,0-1.3-.2-1.8-.6-.4-.4-.6-.9-.6-1.6s.3-1.3.8-1.7c.6-.4,1.3-.6,2.4-.6h1.3v-.6c0-.4-.1-.7-.3-.9s-.5-.3-1-.3-.7,0-.9.3c-.2.2-.3.4-.3.7h-1.6c0-.6.2-1.1.8-1.6.5-.4,1.3-.7,2.1-.7s1.5.2,2.1.6c.5.4.8,1.1.8,1.9v3.2c0,.3,0,.6,0,.9,0,.3.1.5.2.8h-1.7ZM94.1,41.5c.4,0,.8-.1,1.1-.3s.6-.4.7-.7v-1.1h-1.3c-.5,0-.9.1-1.1.4s-.4.5-.4.8,0,.5.3.7c.2.2.4.2.8.2ZM94,34.1v-1c.3,0,.5,0,.7-.1.1,0,.2-.2.2-.3s0-.3-.3-.4c-.2,0-.4-.1-.7-.1v-.8c.8,0,1.4.1,1.8.3.4.2.6.5.6.9s0,.5-.3.7c-.2.2-.4.3-.7.3v.5h-1.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M100.7,35.3v1.1c.3-.4.6-.7,1-.9.4-.2.8-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.6,1.2.6,2.2v4.6h-1.6v-4.6c0-.5-.1-.9-.3-1.2-.2-.2-.6-.3-1-.3s-.6,0-.9.2c-.3.1-.5.3-.6.6v5.3h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M108.7,36.3c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2s-.6-.4-1-.4-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M120,36.3c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2s-.6-.4-1-.4-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M134.7,34.5h0c0,.8-.2,1.5-.6,1.9-.4.4-1,.7-1.8.8v5.5h-1.4v-1.1c-.4.4-.7.7-1,.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3.2.3.5.4.9.4s.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v.8h0c.4,0,.7-.2.9-.5s.3-.7.3-1.2h1.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M133.9,38.9c0-1.1.3-2,.9-2.7.6-.7,1.4-1,2.4-1s.9,0,1.3.2c.4.2.7.4,1,.7.3-.1.5-.3.7-.6.2-.3.2-.7.2-1.1h1.3c0,.7-.1,1.2-.4,1.7-.3.4-.7.8-1.2.9.1.3.2.6.3.9s.1.7.1,1h0c0,1.2-.3,2.1-.9,2.8-.6.7-1.4,1-2.5,1s-1.9-.3-2.5-1c-.6-.7-.9-1.6-.9-2.7h0ZM135.5,39c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7s1-.2,1.3-.7c.3-.4.4-1,.4-1.7h0c0-.8-.1-1.4-.4-1.9-.3-.5-.7-.7-1.3-.7s-1,.2-1.3.7c-.3.5-.4,1-.4,1.7h0ZM136.6,34.1v-1c.3,0,.5,0,.7-.1.1,0,.2-.2.2-.3s0-.3-.3-.4c-.2,0-.4-.1-.7-.1v-.8c.8,0,1.4.1,1.8.3.4.2.6.5.6.9s0,.5-.3.7c-.2.2-.4.3-.7.3v.5h-1.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M143.7,35.3v1.1c.3-.4.6-.7,1-.9.4-.2.8-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.6,1.2.6,2.2v4.6h-1.6v-4.6c0-.5-.1-.9-.3-1.2-.2-.2-.6-.3-1-.3s-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M149.7,39.1c0-1.2.3-2.1.8-2.8.5-.7,1.2-1.1,2.1-1.1s.8,0,1.2.3.6.5.8.8l.2-1h1.4v7.3c0,.9-.3,1.7-.9,2.2-.6.5-1.4.8-2.5.8s-.7,0-1.2-.2c-.4-.1-.8-.2-1.1-.4l.4-1.3c.3.1.6.2.9.3.3,0,.7.1,1,.1.6,0,1-.1,1.3-.4.3-.3.4-.6.4-1.2v-.8c-.2.3-.5.5-.8.7-.3.2-.7.2-1.1.2-.9,0-1.6-.3-2.1-1-.5-.7-.8-1.5-.8-2.6h0ZM151.3,39.2c0,.7.1,1.2.4,1.6s.7.6,1.2.6.6,0,.9-.2c.2-.1.4-.4.6-.6v-3.2c-.2-.3-.4-.5-.6-.6-.2-.2-.5-.2-.9-.2-.6,0-1,.2-1.3.7s-.4,1.1-.4,1.8h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M163.9,37.8l1.4-2.5h1.9l-2.3,3.6,2.4,3.7h-1.9l-1.4-2.6-1.4,2.6h-1.9l2.4-3.7-2.3-3.6h1.9l1.3,2.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M172.7,42.6c0-.2-.1-.4-.1-.5,0-.2,0-.4,0-.5-.2.3-.5.6-.9.9-.4.2-.8.3-1.2.3-.8,0-1.3-.2-1.8-.6-.4-.4-.6-.9-.6-1.6s.3-1.3.8-1.7c.6-.4,1.3-.6,2.4-.6h1.3v-.6c0-.4-.1-.7-.3-.9-.2-.2-.5-.3-1-.3s-.7,0-.9.3c-.2.2-.3.4-.3.7h-1.6c0-.6.2-1.1.8-1.6.5-.4,1.3-.7,2.1-.7s1.5.2,2.1.6c.5.4.8,1.1.8,1.9v3.2c0,.3,0,.6,0,.9,0,.3.1.5.2.8h-1.7ZM170.5,32.3h1.3l2,1.7h0s-1.5,0-1.5,0l-1.1-1-1.1,1h-1.6s2-1.8,2-1.8ZM170.7,41.5c.4,0,.8-.1,1.1-.3s.6-.4.7-.7v-1.1h-1.3c-.5,0-.9.1-1.1.4-.3.2-.4.5-.4.8s0,.5.3.7c.2.2.4.2.8.2ZM174.2,31.1h1.6l-1.4,1.8h-1.2l1-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M180.4,41.6c-.2.4-.5.7-.9.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3s.5.4.9.4.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v7.3h-1.4v-1.1Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M194.3,34.4h-1.2v8.3h-1.4l-.2-.9c-.2.3-.5.6-.8.8-.3.2-.7.3-1.1.3-.9,0-1.6-.3-2.1-1-.5-.7-.8-1.5-.8-2.6h0c0-1.3.2-2.2.8-3,.5-.7,1.2-1.1,2.1-1.1s.8,0,1.1.2c.3.2.6.4.8.7v-1.8h-1.6v-1.1h1.6v-1.1h1.6v1.1h1.2v1.1ZM188.4,39.2c0,.7.1,1.2.4,1.6.3.4.7.6,1.2.6s.6,0,.9-.2c.2-.1.4-.4.6-.6v-3.2c-.2-.3-.4-.5-.6-.6-.2-.2-.5-.2-.9-.2-.6,0-1,.2-1.2.7-.3.5-.4,1.1-.4,1.8h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M198.3,42.8c-1,0-1.9-.3-2.5-1-.6-.7-.9-1.5-.9-2.6v-.3c0-1.1.3-1.9.9-2.6.6-.7,1.4-1,2.3-1,1,0,1.7.3,2.3.9s.8,1.4.8,2.4v1h-4.6c0,.6.2,1.1.5,1.5.3.4.7.6,1.3.6s.8,0,1.1-.2c.3-.1.6-.3.9-.5l.5,1.1c-.3.2-.6.5-1.1.6-.5.2-1,.3-1.6.3ZM197.3,32.3h1.3l2,1.7h0s-1.5,0-1.5,0l-1.1-1-1.1,1h-1.6s2-1.8,2-1.8ZM198.1,36.5c-.4,0-.7.2-1,.5-.3.3-.4.7-.5,1.2h0s2.9,0,2.9,0v-.2c0-.5-.1-.8-.4-1.1s-.6-.4-1.1-.4ZM201.1,31.1h1.6l-1.4,1.8h-1.2l1-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M203.9,35.3v1.1c.3-.4.6-.7,1-.9.4-.2.8-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.6,1.2.6,2.2v4.6h-1.6v-4.6c0-.5-.1-.9-.3-1.2-.2-.2-.6-.3-1-.3s-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M217.8,40.6c0-.3-.1-.5-.3-.6-.2-.2-.6-.3-1.2-.4-.9-.2-1.5-.4-2-.8-.4-.3-.7-.8-.7-1.4s.3-1.1.8-1.6c.5-.4,1.2-.6,2-.6s1.6.2,2.1.7c.5.4.8,1,.8,1.6h0s-1.6,0-1.6,0c0-.3-.1-.6-.3-.8-.2-.2-.5-.3-.9-.3s-.7,0-.9.3-.3.4-.3.7,0,.5.3.6.6.3,1.2.4c.9.2,1.6.5,2,.8.4.3.7.8.7,1.4s-.3,1.2-.8,1.6c-.5.4-1.3.6-2.1.6s-1.7-.2-2.2-.7c-.5-.5-.8-1-.8-1.7h0s1.5,0,1.5,0c0,.4.2.7.5.9s.6.3,1.1.3.8,0,1-.2.3-.4.3-.7Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M229.4,34.5h0c0,.8-.2,1.5-.6,1.9-.4.4-1,.7-1.8.8v5.5h-1.4v-1.1c-.4.4-.7.7-1,.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3s.5.4.9.4.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v.8h0c.4,0,.7-.2.9-.5.2-.3.3-.7.3-1.2h1.2ZM224.5,32.6h1.8s-1.8,1.8-1.8,1.8h-1.3l1.3-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M232,41.5c.4,0,.7-.1,1-.4.3-.2.4-.5.4-.9h1.5c0,.7-.3,1.3-.8,1.8-.6.5-1.3.7-2.1.7s-1.9-.3-2.5-1-.9-1.6-.9-2.6v-.2c0-1.1.3-1.9.9-2.6.6-.7,1.4-1,2.5-1s1.6.3,2.1.8c.5.5.8,1.2.8,1.9h0s-1.5,0-1.5,0c0-.4-.1-.7-.4-1s-.6-.4-1-.4c-.6,0-1.1.2-1.3.7s-.4,1-.4,1.7v.2c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M242,39.4h-.7v3.2h-1.6v-10.5h1.6v6h.7l1.8-2.8h1.9l-2.4,3.3,2.8,4h-1.9l-2.2-3.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M248.5,36.3c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2-.2-.3-.6-.4-1-.4s-.6,0-.9.2c-.3.1-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M254.4,38.9c0-1.1.3-2,.9-2.7.6-.7,1.4-1,2.5-1s1.9.3,2.5,1c.6.7.9,1.6.9,2.7h0c0,1.2-.3,2.1-.9,2.8-.6.7-1.4,1-2.5,1s-1.9-.3-2.5-1c-.6-.7-.9-1.6-.9-2.7h0ZM256.1,39c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7s1-.2,1.3-.7c.3-.4.4-1,.4-1.7h0c0-.8-.1-1.4-.4-1.9-.3-.5-.7-.7-1.3-.7s-1,.2-1.3.7c-.3.5-.4,1-.4,1.7h0ZM257.2,34.1v-1c.3,0,.5,0,.7-.1.1,0,.2-.2.2-.3s0-.3-.3-.4c-.2,0-.4-.1-.7-.1v-.8c.8,0,1.4.1,1.8.3.4.2.6.5.6.9s0,.5-.3.7c-.2.2-.4.3-.7.3v.5h-1.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M265.7,42.8c-1,0-1.9-.3-2.5-1-.6-.7-.9-1.5-.9-2.6v-.3c0-1.1.3-1.9.9-2.6.6-.7,1.4-1,2.3-1,1,0,1.7.3,2.3.9s.8,1.4.8,2.4v1h-4.6c0,.6.2,1.1.5,1.5.3.4.7.6,1.3.6s.8,0,1.1-.2c.3-.1.6-.3.9-.5l.5,1.1c-.3.2-.6.5-1.1.6-.5.2-1,.3-1.6.3ZM265.5,36.5c-.4,0-.7.2-1,.5-.3.3-.4.7-.5,1.2h0s2.9,0,2.9,0v-.2c0-.5-.1-.8-.4-1.1s-.6-.4-1.1-.4Z"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "iDZ3bHFp",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\vng-age-rating.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\vng-age-rating.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\vng-age-rating.js\\" "],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","svg",[]],["static-attr","id","vn-age-rating"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","version","1.1"],["static-attr","viewBox","0 0 279 55"],["static-attr","class","vng-age-rating-container"],["flush-element"],["text","\\n  "],["open-element","defs",[]],["flush-element"],["text","\\n    "],["open-element","style",[]],["flush-element"],["text","\\n      .st0 {\\n        fill: #8c9195;\\n      }\\n\\n      .st1 {\\n        fill: #202a2c;\\n      }\\n\\n      .st2 {\\n        fill: #94948e;\\n      }\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","g",[]],["flush-element"],["text","\\n    "],["open-element","rect",[]],["static-attr","class","st1"],["static-attr","x",".5"],["static-attr","y",".5"],["static-attr","width","278"],["static-attr","height","54"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st0"],["static-attr","d","M278,1v53H1V1h277M279,0H0v55h279V0h0Z"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","g",[]],["flush-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M11.8,21.7c-1,.8-2.6,1.2-4.7,1.2h-.7v-7.8h.5c1.6,0,3-.4,4.1-1.2,1.1-.8,1.9-2,2.4-3.5h6.4v34.9h-8.1v-23.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M40,26.3c1.6.8,2.7,1.8,3.5,3,.7,1.2,1.1,2.9,1.1,5v2.1c0,1.4-.3,2.8-.8,3.9s-1.2,2.2-2.1,3c-.9.8-2,1.5-3.4,1.9-1.3.5-2.8.7-4.4.7-3.3,0-5.9-.8-7.8-2.5-1.9-1.7-2.8-4-2.8-7v-2.1c0-3,1.5-5.2,4.6-6.6-1.3-.7-2.4-1.7-3.1-3-.7-1.2-1.1-2.8-1.1-4.8v-1.7c0-1.3.2-2.5.7-3.6.5-1.1,1.2-2,2.1-2.8.9-.8,1.9-1.4,3.2-1.8,1.2-.4,2.6-.6,4.1-.6,3.1,0,5.6.8,7.3,2.3,1.8,1.5,2.7,3.6,2.7,6.3v1.7c0,1.5-.3,2.8-.9,3.8-.6,1-1.6,1.9-3,2.7ZM36.4,33.5c0-.5,0-.9-.1-1.3,0-.3-.2-.6-.5-.9-.2-.2-.5-.5-.9-.7-.4-.2-.9-.4-1.4-.6l-.3-.2c-.6.4-1,.8-1.2,1.4-.3.5-.4,1.2-.4,2.1v3.5c0,2.1.8,3.2,2.5,3.2s2.4-1,2.4-3.1v-3.4ZM31.7,20.7c0,.9.2,1.5.7,2,.5.5,1.1.9,2,1.3l.4.2c.9-.7,1.4-1.8,1.4-3.4v-2.8c0-2.1-.7-3.1-2.2-3.1s-2.2,1-2.2,3v2.8Z"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M58.2,18.4h-3.8v4.1h-3.5v-4.1h-3.7v-3.3h3.7v-3.8h3.5v3.8h3.8v3.3Z"],["flush-element"],["close-element"],["text","\\n  "],["open-element","rect",[]],["static-attr","class","st2"],["static-attr","x","63.9"],["static-attr","y","6.9"],["static-attr","width","1.9"],["static-attr","height","41.9"],["flush-element"],["close-element"],["text","\\n  "],["open-element","g",[]],["flush-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M81.1,21.3h0c0,1-.3,1.8-1,2.5s-1.6.9-2.7.9-2.1-.4-2.8-1.2c-.7-.8-1.1-1.8-1.1-3v-1.9c0-1.2.4-2.2,1.1-3,.7-.8,1.6-1.2,2.8-1.2s2.1.3,2.7.9c.7.6,1,1.4,1,2.5h0s-1.6,0-1.6,0c0-.7-.2-1.2-.5-1.5s-.9-.6-1.6-.6-1.2.3-1.6.8-.6,1.2-.6,2v1.9c0,.8.2,1.5.6,2s.9.8,1.6.8,1.2-.2,1.5-.5c.4-.4.5-.9.5-1.5h1.6Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M84.2,18.2c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2-.2-.3-.6-.4-1-.4s-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M90.1,20.8c0-1.1.3-2,.9-2.7.6-.7,1.4-1,2.4-1s.9,0,1.3.2c.4.2.7.4,1,.7.3-.1.5-.3.7-.6.2-.3.2-.7.2-1.1h1.3c0,.7-.1,1.2-.4,1.7-.3.4-.7.8-1.2.9.1.3.2.6.3.9,0,.3.1.7.1,1h0c0,1.2-.3,2.1-.9,2.8-.6.7-1.4,1-2.5,1s-1.9-.3-2.5-1c-.6-.7-.9-1.6-.9-2.7h0ZM91.7,21c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7s1-.2,1.3-.7.4-1,.4-1.7h0c0-.8-.1-1.4-.4-1.9s-.7-.7-1.3-.7-1,.2-1.3.7c-.3.5-.4,1-.4,1.7h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M100.1,15.4h-1.6v-1.4h1.6v1.4ZM100.1,24.5h-1.6v-7.3h1.6v7.3Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M105.1,21c0-1.2.2-2.1.7-2.8.5-.7,1.2-1.1,2.1-1.1s.8,0,1.1.3c.3.2.6.4.8.8l.2-.9h1.3v10.1h-1.6v-3.5c-.2.3-.5.5-.8.6-.3.1-.7.2-1,.2-.9,0-1.6-.3-2.1-1-.5-.7-.7-1.5-.7-2.6h0ZM106.7,21.1c0,.7.1,1.2.4,1.6.3.4.7.6,1.2.6s.6,0,.8-.2.4-.3.6-.6v-3.4c-.2-.2-.3-.4-.6-.6-.2-.1-.5-.2-.8-.2-.6,0-1,.2-1.2.7s-.4,1.1-.4,1.9h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M117.8,23.5c-.2.4-.5.7-.9.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3.2.3.5.4.9.4s.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v7.3h-1.4v-1.1Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M125.5,24.5c0-.2-.1-.4-.1-.5,0-.2,0-.4,0-.5-.2.3-.5.6-.9.9-.4.2-.8.3-1.2.3-.8,0-1.3-.2-1.8-.6-.4-.4-.6-.9-.6-1.6s.3-1.3.8-1.7c.6-.4,1.3-.6,2.4-.6h1.3v-.6c0-.4-.1-.7-.3-.9-.2-.2-.5-.3-1-.3s-.7,0-.9.3-.3.4-.3.7h-1.6c0-.6.2-1.1.8-1.6s1.3-.7,2.1-.7,1.5.2,2.1.6c.5.4.8,1.1.8,1.9v3.2c0,.3,0,.6,0,.9s.1.5.2.8h-1.7ZM123.4,23.4c.4,0,.8-.1,1.1-.3s.6-.4.7-.7v-1.1h-1.3c-.5,0-.9.1-1.1.4s-.4.5-.4.8,0,.5.3.7c.2.2.4.2.8.2ZM124.4,14.4h1.8s-1.8,1.8-1.8,1.8h-1.3l1.3-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M136,24.5h-1.6v-8.3h-2v-1.2l3.6-.4v9.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M146,17.3c0,.5-.1.9-.4,1.3s-.6.7-1.1.9c.5.2,1,.5,1.3.9.3.4.5.9.5,1.4,0,.9-.3,1.6-.9,2.1-.6.5-1.4.7-2.4.7s-1.8-.2-2.4-.7c-.6-.5-.9-1.2-.9-2.1s.2-1,.5-1.4c.3-.4.7-.7,1.3-.9-.5-.2-.8-.5-1.1-.9s-.4-.8-.4-1.3c0-.9.3-1.5.8-2,.6-.5,1.3-.7,2.2-.7s1.6.2,2.2.7.8,1.1.8,2ZM144.6,21.8c0-.5-.2-.9-.5-1.2-.3-.3-.7-.5-1.2-.5s-.9.1-1.2.4c-.3.3-.4.7-.4,1.2s.1.9.4,1.2.7.4,1.2.4.9-.1,1.2-.4c.3-.3.5-.7.5-1.2ZM144.3,17.4c0-.4-.1-.8-.4-1.1s-.6-.4-1-.4-.8.1-1,.4c-.2.3-.4.6-.4,1.1s.1.8.4,1.1c.2.3.6.4,1,.4s.7-.1,1-.4c.2-.3.4-.6.4-1.1Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M154,20.8c0,1.3-.3,2.3-.9,2.9-.6.7-1.4,1-2.4,1s-1.8-.3-2.4-1c-.6-.7-.9-1.6-.9-2.9v-2.2c0-1.3.3-2.2.9-2.9.6-.7,1.4-1,2.4-1s1.8.3,2.4,1c.6.7.9,1.6.9,2.9v2.2ZM152.4,18.3c0-.8-.1-1.4-.4-1.8-.3-.4-.7-.6-1.2-.6s-.9.2-1.2.6c-.3.4-.4,1-.4,1.8v2.7c0,.8.1,1.4.4,1.8s.7.6,1.2.6.9-.2,1.2-.6.4-1,.4-1.8v-2.7Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M165.5,21.1c0,1.1-.2,1.9-.7,2.6-.5.7-1.2,1-2.1,1s-.8,0-1.1-.2c-.3-.1-.6-.4-.8-.7v3.5h-1.6v-10.1h1.4l.2.9c.2-.3.5-.6.8-.8s.7-.3,1.2-.3c.9,0,1.6.4,2.1,1.1.5.7.8,1.7.8,2.8h0ZM163.8,21c0-.7-.1-1.4-.4-1.8-.3-.5-.7-.7-1.3-.7s-.6,0-.9.2c-.2.1-.4.3-.6.6v3.3c.1.3.3.5.6.6.2.1.5.2.9.2.6,0,1-.2,1.3-.6.3-.4.4-1,.4-1.6h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M168.5,18.2c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2-.2-.3-.6-.4-1-.4s-.6,0-.9.2c-.3.1-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M179.3,23.5c-.2.4-.5.7-.9.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3.2.3.5.4.9.4s.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v7.3h-1.4v-1.1ZM178.2,14.5h1.8s-1.8,1.8-1.8,1.8h-1.3l1.3-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M184.6,15.5v1.8h1.3v1.2h-1.3v4c0,.3,0,.5.2.6.1.1.3.2.5.2s.2,0,.3,0c0,0,.2,0,.2,0l.2,1.2c-.1,0-.3.1-.5.2-.2,0-.4,0-.6,0-.6,0-1.1-.2-1.4-.5-.3-.4-.5-.9-.5-1.7v-4h-1.1v-1.2h1.1v-1.8h1.6Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M192.3,17.2v1c.3-.3.6-.6,1-.8.4-.2.8-.3,1.2-.3s.9.1,1.2.3c.3.2.6.5.8,1,.2-.4.5-.7.9-1,.4-.2.8-.3,1.3-.3.7,0,1.3.3,1.7.8s.6,1.3.6,2.3v4.4h-1.6v-4.4c0-.6-.1-1.1-.3-1.3-.2-.3-.5-.4-1-.4s-.6,0-.9.3-.4.4-.5.8c0,0,0,.1,0,.2,0,0,0,0,0,.1v4.7h-1.6v-4.4c0-.6-.1-1-.3-1.3-.2-.3-.5-.4-1-.4s-.6,0-.8.2c-.2.1-.4.3-.5.5v5.4h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M202.5,20.8c0-1.1.3-2,.9-2.7.6-.7,1.4-1,2.5-1s1.9.3,2.5,1c.6.7.9,1.6.9,2.7h0c0,1.2-.3,2.1-.9,2.8-.6.7-1.4,1-2.5,1s-1.9-.3-2.5-1c-.6-.7-.9-1.6-.9-2.7h0ZM208.2,15.8v.2h-1.3l-1-.9-1,.9h-1.3v-.2l1.8-1.6h1l1.8,1.6ZM204.2,21c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7s1-.2,1.3-.7c.3-.4.4-1,.4-1.7h0c0-.8-.1-1.4-.4-1.9-.3-.5-.7-.7-1.3-.7s-1,.2-1.3.7c-.3.5-.4,1-.4,1.7h0ZM206.8,26.9h-1.8v-1.5h1.8v1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M212.7,15.5v1.8h1.3v1.2h-1.3v4c0,.3,0,.5.2.6.1.1.3.2.5.2s.2,0,.3,0c0,0,.2,0,.2,0l.2,1.2c-.1,0-.3.1-.5.2-.2,0-.4,0-.6,0-.6,0-1.1-.2-1.4-.5-.3-.4-.5-.9-.5-1.7v-4h-1.1v-1.2h1.1v-1.8h1.6Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M220.4,17.2v1.1c.3-.4.6-.7,1-.9s.8-.3,1.2-.3c.8,0,1.4.2,1.8.7.4.5.6,1.2.6,2.2v4.6h-1.6v-4.6c0-.5-.1-.9-.3-1.2s-.6-.3-1-.3-.6,0-.9.2c-.3.1-.5.3-.6.6v5.3h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M226.5,21c0-1.2.3-2.1.8-2.8s1.2-1.1,2.1-1.1.8,0,1.2.3c.3.2.6.5.8.8l.2-1h1.4v7.3c0,.9-.3,1.7-.9,2.2-.6.5-1.4.8-2.5.8s-.7,0-1.2-.2c-.4-.1-.8-.2-1.1-.4l.4-1.3c.3.1.6.2.9.3s.7.1,1,.1c.6,0,1-.1,1.3-.4.3-.3.4-.6.4-1.2v-.7c-.2.3-.5.5-.8.7-.3.2-.7.2-1.1.2-.9,0-1.6-.3-2.1-1s-.8-1.5-.8-2.6h0ZM228.1,21.1c0,.7.1,1.2.4,1.6s.7.6,1.2.6.6,0,.9-.2c.2-.1.4-.4.6-.6v-3.2c-.2-.3-.4-.5-.6-.6-.2-.2-.5-.2-.9-.2-.6,0-1,.2-1.3.7-.3.5-.4,1.1-.4,1.8h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M239,24.5c0-.2-.1-.4-.1-.5,0-.2,0-.4,0-.5-.2.3-.5.6-.9.9-.4.2-.8.3-1.2.3-.8,0-1.3-.2-1.8-.6s-.6-.9-.6-1.6.3-1.3.8-1.7c.6-.4,1.3-.6,2.4-.6h1.3v-.6c0-.4-.1-.7-.3-.9-.2-.2-.5-.3-1-.3s-.7,0-.9.3-.3.4-.3.7h-1.6c0-.6.2-1.1.8-1.6.5-.4,1.3-.7,2.1-.7s1.5.2,2.1.6c.5.4.8,1.1.8,1.9v3.2c0,.3,0,.6,0,.9,0,.3.1.5.2.8h-1.7ZM238.2,16.2h-1.3l-1.8-1.8h0s1.8,0,1.8,0l1.2,1.8ZM237,23.4c.4,0,.8-.1,1.1-.3s.6-.4.7-.7v-1.1h-1.3c-.5,0-.9.1-1.1.4-.3.2-.4.5-.4.8s0,.5.3.7c.2.2.4.2.8.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M244.4,21.6l.2.7h0l1.6-5.1h1.8l-3,8.4c-.2.5-.5.9-.8,1.3-.4.4-.8.5-1.5.5s-.3,0-.4,0c-.2,0-.3,0-.4,0l.2-1.3c0,0,.1,0,.2,0,.1,0,.2,0,.2,0,.3,0,.5-.1.7-.3s.3-.4.4-.7l.3-.7-2.7-7.2h1.8l1.4,4.4Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M77.8,40.6c0-.3-.1-.5-.3-.6-.2-.2-.6-.3-1.2-.4-.9-.2-1.5-.4-2-.8-.4-.3-.7-.8-.7-1.4s.3-1.1.8-1.6c.5-.4,1.2-.6,2-.6s1.6.2,2.1.7c.5.4.8,1,.8,1.6h0s-1.6,0-1.6,0c0-.3-.1-.6-.3-.8-.2-.2-.5-.3-.9-.3s-.7,0-.9.3c-.2.2-.3.4-.3.7s0,.5.3.6.6.3,1.2.4c.9.2,1.6.5,2,.8s.7.8.7,1.4-.3,1.2-.8,1.6c-.5.4-1.3.6-2.1.6s-1.7-.2-2.2-.7-.8-1-.8-1.7h0s1.5,0,1.5,0c0,.4.2.7.5.9s.6.3,1.1.3.7,0,1-.2c.2-.2.3-.4.3-.7Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M84.1,42.8c-1,0-1.9-.3-2.5-1-.6-.7-.9-1.5-.9-2.6v-.3c0-1.1.3-1.9.9-2.6.6-.7,1.4-1,2.3-1,1,0,1.7.3,2.3.9s.8,1.4.8,2.4v1h-4.6c0,.6.2,1.1.5,1.5.3.4.7.6,1.3.6s.8,0,1.1-.2c.3-.1.6-.3.9-.5l.5,1.1c-.3.2-.6.5-1.1.6-.5.2-1,.3-1.6.3ZM86.2,32.3c0,.4-.1.8-.4,1.1-.3.3-.6.5-1,.5s-.7-.1-1-.3c-.4-.2-.7-.3-.9-.3s-.3,0-.4.2-.2.3-.2.5l-.9-.2c0-.4.1-.8.4-1.1.3-.3.6-.5,1-.5s.6,0,1,.3.7.3,1,.3.3,0,.4-.2c.1-.1.2-.3.2-.5l.9.3ZM83.9,36.5c-.4,0-.7.2-1,.5s-.4.7-.5,1.2h0s2.9,0,2.9,0v-.2c0-.5-.1-.8-.4-1.1s-.6-.4-1.1-.4Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M96.1,42.6c0-.2-.1-.4-.1-.5,0-.2,0-.4,0-.5-.2.3-.5.6-.9.9-.4.2-.8.3-1.2.3-.8,0-1.3-.2-1.8-.6-.4-.4-.6-.9-.6-1.6s.3-1.3.8-1.7c.6-.4,1.3-.6,2.4-.6h1.3v-.6c0-.4-.1-.7-.3-.9s-.5-.3-1-.3-.7,0-.9.3c-.2.2-.3.4-.3.7h-1.6c0-.6.2-1.1.8-1.6.5-.4,1.3-.7,2.1-.7s1.5.2,2.1.6c.5.4.8,1.1.8,1.9v3.2c0,.3,0,.6,0,.9,0,.3.1.5.2.8h-1.7ZM94.1,41.5c.4,0,.8-.1,1.1-.3s.6-.4.7-.7v-1.1h-1.3c-.5,0-.9.1-1.1.4s-.4.5-.4.8,0,.5.3.7c.2.2.4.2.8.2ZM94,34.1v-1c.3,0,.5,0,.7-.1.1,0,.2-.2.2-.3s0-.3-.3-.4c-.2,0-.4-.1-.7-.1v-.8c.8,0,1.4.1,1.8.3.4.2.6.5.6.9s0,.5-.3.7c-.2.2-.4.3-.7.3v.5h-1.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M100.7,35.3v1.1c.3-.4.6-.7,1-.9.4-.2.8-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.6,1.2.6,2.2v4.6h-1.6v-4.6c0-.5-.1-.9-.3-1.2-.2-.2-.6-.3-1-.3s-.6,0-.9.2c-.3.1-.5.3-.6.6v5.3h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M108.7,36.3c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2s-.6-.4-1-.4-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M120,36.3c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2s-.6-.4-1-.4-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M134.7,34.5h0c0,.8-.2,1.5-.6,1.9-.4.4-1,.7-1.8.8v5.5h-1.4v-1.1c-.4.4-.7.7-1,.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3.2.3.5.4.9.4s.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v.8h0c.4,0,.7-.2.9-.5s.3-.7.3-1.2h1.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M133.9,38.9c0-1.1.3-2,.9-2.7.6-.7,1.4-1,2.4-1s.9,0,1.3.2c.4.2.7.4,1,.7.3-.1.5-.3.7-.6.2-.3.2-.7.2-1.1h1.3c0,.7-.1,1.2-.4,1.7-.3.4-.7.8-1.2.9.1.3.2.6.3.9s.1.7.1,1h0c0,1.2-.3,2.1-.9,2.8-.6.7-1.4,1-2.5,1s-1.9-.3-2.5-1c-.6-.7-.9-1.6-.9-2.7h0ZM135.5,39c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7s1-.2,1.3-.7c.3-.4.4-1,.4-1.7h0c0-.8-.1-1.4-.4-1.9-.3-.5-.7-.7-1.3-.7s-1,.2-1.3.7c-.3.5-.4,1-.4,1.7h0ZM136.6,34.1v-1c.3,0,.5,0,.7-.1.1,0,.2-.2.2-.3s0-.3-.3-.4c-.2,0-.4-.1-.7-.1v-.8c.8,0,1.4.1,1.8.3.4.2.6.5.6.9s0,.5-.3.7c-.2.2-.4.3-.7.3v.5h-1.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M143.7,35.3v1.1c.3-.4.6-.7,1-.9.4-.2.8-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.6,1.2.6,2.2v4.6h-1.6v-4.6c0-.5-.1-.9-.3-1.2-.2-.2-.6-.3-1-.3s-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M149.7,39.1c0-1.2.3-2.1.8-2.8.5-.7,1.2-1.1,2.1-1.1s.8,0,1.2.3.6.5.8.8l.2-1h1.4v7.3c0,.9-.3,1.7-.9,2.2-.6.5-1.4.8-2.5.8s-.7,0-1.2-.2c-.4-.1-.8-.2-1.1-.4l.4-1.3c.3.1.6.2.9.3.3,0,.7.1,1,.1.6,0,1-.1,1.3-.4.3-.3.4-.6.4-1.2v-.8c-.2.3-.5.5-.8.7-.3.2-.7.2-1.1.2-.9,0-1.6-.3-2.1-1-.5-.7-.8-1.5-.8-2.6h0ZM151.3,39.2c0,.7.1,1.2.4,1.6s.7.6,1.2.6.6,0,.9-.2c.2-.1.4-.4.6-.6v-3.2c-.2-.3-.4-.5-.6-.6-.2-.2-.5-.2-.9-.2-.6,0-1,.2-1.3.7s-.4,1.1-.4,1.8h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M163.9,37.8l1.4-2.5h1.9l-2.3,3.6,2.4,3.7h-1.9l-1.4-2.6-1.4,2.6h-1.9l2.4-3.7-2.3-3.6h1.9l1.3,2.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M172.7,42.6c0-.2-.1-.4-.1-.5,0-.2,0-.4,0-.5-.2.3-.5.6-.9.9-.4.2-.8.3-1.2.3-.8,0-1.3-.2-1.8-.6-.4-.4-.6-.9-.6-1.6s.3-1.3.8-1.7c.6-.4,1.3-.6,2.4-.6h1.3v-.6c0-.4-.1-.7-.3-.9-.2-.2-.5-.3-1-.3s-.7,0-.9.3c-.2.2-.3.4-.3.7h-1.6c0-.6.2-1.1.8-1.6.5-.4,1.3-.7,2.1-.7s1.5.2,2.1.6c.5.4.8,1.1.8,1.9v3.2c0,.3,0,.6,0,.9,0,.3.1.5.2.8h-1.7ZM170.5,32.3h1.3l2,1.7h0s-1.5,0-1.5,0l-1.1-1-1.1,1h-1.6s2-1.8,2-1.8ZM170.7,41.5c.4,0,.8-.1,1.1-.3s.6-.4.7-.7v-1.1h-1.3c-.5,0-.9.1-1.1.4-.3.2-.4.5-.4.8s0,.5.3.7c.2.2.4.2.8.2ZM174.2,31.1h1.6l-1.4,1.8h-1.2l1-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M180.4,41.6c-.2.4-.5.7-.9.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3s.5.4.9.4.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v7.3h-1.4v-1.1Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M194.3,34.4h-1.2v8.3h-1.4l-.2-.9c-.2.3-.5.6-.8.8-.3.2-.7.3-1.1.3-.9,0-1.6-.3-2.1-1-.5-.7-.8-1.5-.8-2.6h0c0-1.3.2-2.2.8-3,.5-.7,1.2-1.1,2.1-1.1s.8,0,1.1.2c.3.2.6.4.8.7v-1.8h-1.6v-1.1h1.6v-1.1h1.6v1.1h1.2v1.1ZM188.4,39.2c0,.7.1,1.2.4,1.6.3.4.7.6,1.2.6s.6,0,.9-.2c.2-.1.4-.4.6-.6v-3.2c-.2-.3-.4-.5-.6-.6-.2-.2-.5-.2-.9-.2-.6,0-1,.2-1.2.7-.3.5-.4,1.1-.4,1.8h0Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M198.3,42.8c-1,0-1.9-.3-2.5-1-.6-.7-.9-1.5-.9-2.6v-.3c0-1.1.3-1.9.9-2.6.6-.7,1.4-1,2.3-1,1,0,1.7.3,2.3.9s.8,1.4.8,2.4v1h-4.6c0,.6.2,1.1.5,1.5.3.4.7.6,1.3.6s.8,0,1.1-.2c.3-.1.6-.3.9-.5l.5,1.1c-.3.2-.6.5-1.1.6-.5.2-1,.3-1.6.3ZM197.3,32.3h1.3l2,1.7h0s-1.5,0-1.5,0l-1.1-1-1.1,1h-1.6s2-1.8,2-1.8ZM198.1,36.5c-.4,0-.7.2-1,.5-.3.3-.4.7-.5,1.2h0s2.9,0,2.9,0v-.2c0-.5-.1-.8-.4-1.1s-.6-.4-1.1-.4ZM201.1,31.1h1.6l-1.4,1.8h-1.2l1-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M203.9,35.3v1.1c.3-.4.6-.7,1-.9.4-.2.8-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.6,1.2.6,2.2v4.6h-1.6v-4.6c0-.5-.1-.9-.3-1.2-.2-.2-.6-.3-1-.3s-.6,0-.9.2-.5.3-.6.6v5.3h-1.6v-7.3h1.5Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M217.8,40.6c0-.3-.1-.5-.3-.6-.2-.2-.6-.3-1.2-.4-.9-.2-1.5-.4-2-.8-.4-.3-.7-.8-.7-1.4s.3-1.1.8-1.6c.5-.4,1.2-.6,2-.6s1.6.2,2.1.7c.5.4.8,1,.8,1.6h0s-1.6,0-1.6,0c0-.3-.1-.6-.3-.8-.2-.2-.5-.3-.9-.3s-.7,0-.9.3-.3.4-.3.7,0,.5.3.6.6.3,1.2.4c.9.2,1.6.5,2,.8.4.3.7.8.7,1.4s-.3,1.2-.8,1.6c-.5.4-1.3.6-2.1.6s-1.7-.2-2.2-.7c-.5-.5-.8-1-.8-1.7h0s1.5,0,1.5,0c0,.4.2.7.5.9s.6.3,1.1.3.8,0,1-.2.3-.4.3-.7Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M229.4,34.5h0c0,.8-.2,1.5-.6,1.9-.4.4-1,.7-1.8.8v5.5h-1.4v-1.1c-.4.4-.7.7-1,.9-.4.2-.8.3-1.2.3-.8,0-1.4-.2-1.8-.7-.4-.5-.7-1.3-.7-2.3v-4.4h1.6v4.4c0,.6.1,1.1.3,1.3s.5.4.9.4.7,0,1-.2c.3-.1.5-.3.6-.6v-5.3h1.6v.8h0c.4,0,.7-.2.9-.5.2-.3.3-.7.3-1.2h1.2ZM224.5,32.6h1.8s-1.8,1.8-1.8,1.8h-1.3l1.3-1.8Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M232,41.5c.4,0,.7-.1,1-.4.3-.2.4-.5.4-.9h1.5c0,.7-.3,1.3-.8,1.8-.6.5-1.3.7-2.1.7s-1.9-.3-2.5-1-.9-1.6-.9-2.6v-.2c0-1.1.3-1.9.9-2.6.6-.7,1.4-1,2.5-1s1.6.3,2.1.8c.5.5.8,1.2.8,1.9h0s-1.5,0-1.5,0c0-.4-.1-.7-.4-1s-.6-.4-1-.4c-.6,0-1.1.2-1.3.7s-.4,1-.4,1.7v.2c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M242,39.4h-.7v3.2h-1.6v-10.5h1.6v6h.7l1.8-2.8h1.9l-2.4,3.3,2.8,4h-1.9l-2.2-3.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M248.5,36.3c.2-.3.5-.6.9-.8.3-.2.7-.3,1.2-.3.8,0,1.4.2,1.8.7.4.5.7,1.2.7,2.3v4.5h-1.6v-4.5c0-.6-.1-1-.3-1.2-.2-.3-.6-.4-1-.4s-.6,0-.9.2c-.3.1-.5.3-.6.6v5.3h-1.6v-10.5h1.6v4.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M254.4,38.9c0-1.1.3-2,.9-2.7.6-.7,1.4-1,2.5-1s1.9.3,2.5,1c.6.7.9,1.6.9,2.7h0c0,1.2-.3,2.1-.9,2.8-.6.7-1.4,1-2.5,1s-1.9-.3-2.5-1c-.6-.7-.9-1.6-.9-2.7h0ZM256.1,39c0,.7.1,1.3.4,1.7.3.4.7.7,1.3.7s1-.2,1.3-.7c.3-.4.4-1,.4-1.7h0c0-.8-.1-1.4-.4-1.9-.3-.5-.7-.7-1.3-.7s-1,.2-1.3.7c-.3.5-.4,1-.4,1.7h0ZM257.2,34.1v-1c.3,0,.5,0,.7-.1.1,0,.2-.2.2-.3s0-.3-.3-.4c-.2,0-.4-.1-.7-.1v-.8c.8,0,1.4.1,1.8.3.4.2.6.5.6.9s0,.5-.3.7c-.2.2-.4.3-.7.3v.5h-1.2Z"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","st2"],["static-attr","d","M265.7,42.8c-1,0-1.9-.3-2.5-1-.6-.7-.9-1.5-.9-2.6v-.3c0-1.1.3-1.9.9-2.6.6-.7,1.4-1,2.3-1,1,0,1.7.3,2.3.9s.8,1.4.8,2.4v1h-4.6c0,.6.2,1.1.5,1.5.3.4.7.6,1.3.6s.8,0,1.1-.2c.3-.1.6-.3.9-.5l.5,1.1c-.3.2-.6.5-1.1.6-.5.2-1,.3-1.6.3ZM265.5,36.5c-.4,0-.7.2-1,.5-.3.3-.4.7-.5,1.2h0s2.9,0,2.9,0v-.2c0-.5-.1-.8-.4-1.1s-.6-.4-1.1-.4Z"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22289,11 +22317,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(520)) && r.__esModule ? r : {
+                i = (r = n(521)) && r.__esModule ? r : {
                     default: r
                 };
-            n(521);
-            var a = n(522);
+            n(522);
+            var a = n(523);
             var s = o.Ember.Component.extend({
                 classNames: ["remedies-received-component"],
                 layout: i.default,
@@ -22333,15 +22361,15 @@
                     })
                 })),
                 remedyFeedbackBottomText: o.Ember.computed("didReportOffender", (function() {
-                    return this.get("tra.remedy_received_notification_body_bottom")
+                    return this.get("didReportOffender") ? this.get("tra.remedy_received_notification_body_bottom") : this.get("tra.remedy_received_notification_body_bottom_bystander")
                 }))
             });
             t.default = s
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "gHElPZad",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["static-attr","class","remedy-received-notification-title"],["flush-element"],["append",["unknown",["remedyReceivedNotificationTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-top"],["flush-element"],["append",["helper",["sanitize"],[["get",["remedyFeedbackTopText"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["didReceiveRemedies"]]],null,1],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-bottom"],["flush-element"],["append",["unknown",["remedyFeedbackBottomText"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["remedy-reward-card"],null,[["remedyRewardType","rewardAmount"],[["get",["remedy","remedyRewardType"]],["get",["remedy","rewardAmount"]]]]],false],["text","\\n"]],"locals":["remedy"]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-middle"],["flush-element"],["append",["unknown",["tra","remedy_feedback_rewards_received_description"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","remedy-rewards-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["remedies"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "0unCtO7b",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["static-attr","class","remedy-received-notification-title"],["flush-element"],["append",["unknown",["remedyReceivedNotificationTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-top"],["flush-element"],["append",["helper",["sanitize"],[["get",["remedyFeedbackTopText"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["didReceiveRemedies"]]],null,1],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-bottom"],["flush-element"],["append",["unknown",["remedyFeedbackBottomText"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["remedy-reward-card"],null,[["remedyRewardType","rewardAmount"],[["get",["remedy","remedyRewardType"]],["get",["remedy","rewardAmount"]]]]],false],["text","\\n"]],"locals":["remedy"]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-middle"],["flush-element"],["append",["unknown",["tra","remedy_feedback_rewards_received_description"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","remedy-rewards-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["remedies"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22351,7 +22379,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.XP_BOOST_ICON_PATH = t.XP_BOOSTED_GAMES_REWARD_TYPE = t.UNKNOWN_TRANSGRESSION_TYPE = t.REMEDY_ICON_MAP = t.RANK_MANIPULATION_HITCHHIKER = t.RANK_MANIPULATION_BOOSTEE = t.NEGATIVE_IN_GAME_BEHAVIOR_TRANSGRESSION_TYPE = t.LP_CONSOLATION_REWARD_TYPE = t.LP_CONSOLATION_REMEDY_ICON_PATH = t.KNOWN_TRANSGRESSION_TYPES = t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = t.INAPPROPRIATE_DM_TRANSGRESSION_TYPE = t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = t.AWAY_FROM_KEYBOARD_TRANSGRESSION_TYPE = t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = t.ARAM_REROLL_REFUND_REWARD_TYPE = t.ARAM_REROLL_ICON_PATH = void 0;
+            }), t.XP_BOOST_ICON_PATH = t.XP_BOOSTED_GAMES_REWARD_TYPE = t.UNKNOWN_TRANSGRESSION_TYPE = t.REMEDY_ICON_MAP = t.RANK_MANIPULATION_HITCHHIKER = t.RANK_MANIPULATION_BOOSTEE = t.NEGATIVE_IN_GAME_BEHAVIOR_TRANSGRESSION_TYPE = t.LP_CONSOLATION_REWARD_TYPE = t.LP_CONSOLATION_REMEDY_ICON_PATH = t.LEAGUE_DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = t.KNOWN_TRANSGRESSION_TYPES = t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = t.DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = t.AWAY_FROM_KEYBOARD_TRANSGRESSION_TYPE = t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = t.ARAM_REROLL_REFUND_REWARD_TYPE = t.ARAM_REROLL_ICON_PATH = void 0;
             const r = "GAMEPLAY_VIOLATION";
             t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = r;
             const o = "AWAY_FROM_KEYBOARD";
@@ -22364,31 +22392,33 @@
             t.RANK_MANIPULATION_BOOSTEE = s;
             const l = "INAPPROPRIATE_TEXT";
             t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = l;
-            const c = "INAPPROPRIATE_DM";
-            t.INAPPROPRIATE_DM_TRANSGRESSION_TYPE = c;
+            const c = "DIRECT_MESSAGE_ABUSE";
+            t.DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = c;
             const d = "DISRUPTIVE_PINGING";
             t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = d;
             t.UNKNOWN_TRANSGRESSION_TYPE = "UNKNOWN";
-            const p = new Set([r, o, i, a, s, l, c, d]);
-            t.KNOWN_TRANSGRESSION_TYPES = p;
-            const u = "XP_BOOSTED_GAMES";
-            t.XP_BOOSTED_GAMES_REWARD_TYPE = u;
-            const m = "AUTOFILL_PROTECTED_GAMES";
-            t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = m;
-            const g = "ARAM_REROLL_REFUND";
-            t.ARAM_REROLL_REFUND_REWARD_TYPE = g;
-            const h = "LP_CONSOLATION";
-            t.LP_CONSOLATION_REWARD_TYPE = h;
-            const f = n(523);
-            t.ARAM_REROLL_ICON_PATH = f;
+            const p = "LEAGUE_DM_ABUSE";
+            t.LEAGUE_DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = p;
+            const u = new Set([r, o, i, a, s, l, c, p, d]);
+            t.KNOWN_TRANSGRESSION_TYPES = u;
+            const m = "XP_BOOSTED_GAMES";
+            t.XP_BOOSTED_GAMES_REWARD_TYPE = m;
+            const g = "AUTOFILL_PROTECTED_GAMES";
+            t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = g;
+            const h = "ARAM_REROLL_REFUND";
+            t.ARAM_REROLL_REFUND_REWARD_TYPE = h;
+            const f = "LP_CONSOLATION";
+            t.LP_CONSOLATION_REWARD_TYPE = f;
             const _ = n(524);
-            t.XP_BOOST_ICON_PATH = _;
+            t.ARAM_REROLL_ICON_PATH = _;
             const A = n(525);
-            t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = A;
+            t.XP_BOOST_ICON_PATH = A;
             const b = n(526);
-            t.LP_CONSOLATION_REMEDY_ICON_PATH = b;
-            const y = {};
-            t.REMEDY_ICON_MAP = y, y[u] = _, y[m] = A, y[g] = f, y[h] = b
+            t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = b;
+            const y = n(527);
+            t.LP_CONSOLATION_REMEDY_ICON_PATH = y;
+            const x = {};
+            t.REMEDY_ICON_MAP = x, x[m] = A, x[g] = b, x[h] = _, x[f] = y
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "aram_blessing.svg"
@@ -22407,11 +22437,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(522),
-                a = (r = n(528)) && r.__esModule ? r : {
+                i = n(523),
+                a = (r = n(529)) && r.__esModule ? r : {
                     default: r
                 };
-            n(529);
+            n(530);
             const s = {};
             s[i.XP_BOOSTED_GAMES_REWARD_TYPE] = "xp_boosted_games_reward_description", s[i.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE] = "autofill_protected_games_reward_description", s[i.ARAM_REROLL_REFUND_REWARD_TYPE] = "aram_reroll_refund_reward_description", s[i.LP_CONSOLATION_REWARD_TYPE] = "lp_consolation_reward_description";
             var l = o.Ember.Component.extend({
@@ -22433,8 +22463,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "TRvUm4jM",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","remedy-reward-container"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","remedy-reward-icon"],["dynamic-attr","src",["unknown",["remedyIconPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","remedy-reward-description"],["flush-element"],["append",["unknown",["remedyRewardDescription"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "aU60k2Qk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","remedy-reward-container"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","remedy-reward-icon"],["dynamic-attr","src",["unknown",["remedyIconPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","remedy-reward-description"],["flush-element"],["append",["unknown",["remedyRewardDescription"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22446,11 +22476,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(531),
-                a = (r = n(532)) && r.__esModule ? r : {
+                i = n(532),
+                a = (r = n(533)) && r.__esModule ? r : {
                     default: r
                 };
-            n(533);
+            n(534);
             var s = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-component"],
                 layout: a.default,
@@ -22503,8 +22533,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "/z0/4Oyn",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","behavior-warning-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-title-flair"],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","behavior-warning-title"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-title-flair behavior-warning-title-flair-flipped"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-description"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_description"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-description"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_description_2"]],true],["close-element"],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playToWinOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_to_win_option_title"]],["get",["tra","behavior_warning_play_to_win_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playFairOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_fair_option_title"]],["get",["tra","behavior_warning_play_fair_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playWithRespectOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_with_respect_option_title"]],["get",["tra","behavior_warning_play_with_respect_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playSomethingElseOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_something_else_option_title"]],["get",["tra","behavior_warning_play_something_else_option_description"]]]]],false],["text","\\n  "],["open-element","span",[]],["static-attr","class","credibility_behavior_warning_acknowledge_label"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_acknowledge_label"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","behavior-warning-confirmation-input"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","value","maxlength","placeholder","key-up"],["text",["get",["confirmationInputText"]],"70",["get",["tra","credibility_behavior_i_understand"]],"updatedConfirmationText"]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "b4Io5XNS",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","behavior-warning-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-title-flair"],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","behavior-warning-title"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-title-flair behavior-warning-title-flair-flipped"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-description"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_description"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-description"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_description_2"]],true],["close-element"],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playToWinOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_to_win_option_title"]],["get",["tra","behavior_warning_play_to_win_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playFairOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_fair_option_title"]],["get",["tra","behavior_warning_play_fair_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playWithRespectOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_with_respect_option_title"]],["get",["tra","behavior_warning_play_with_respect_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playSomethingElseOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_something_else_option_title"]],["get",["tra","behavior_warning_play_something_else_option_description"]]]]],false],["text","\\n  "],["open-element","span",[]],["static-attr","class","credibility_behavior_warning_acknowledge_label"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_acknowledge_label"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","behavior-warning-confirmation-input"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","value","maxlength","placeholder","key-up"],["text",["get",["confirmationInputText"]],"70",["get",["tra","credibility_behavior_i_understand"]],"updatedConfirmationText"]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22516,10 +22546,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(535)) && r.__esModule ? r : {
+                i = (r = n(536)) && r.__esModule ? r : {
                     default: r
                 };
-            n(536);
+            n(537);
             var a = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-option"],
                 layout: i.default,
@@ -22536,8 +22566,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "hjAoS3Wr",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_8\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","behavior-warning-option-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","behavior-warning-option-checkbox"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","checked",["unknown",["isCheckboxChecked"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-option-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-option-inner-container"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","behavior-warning-option-title"],["flush-element"],["append",["unknown",["optionTitle"]],false],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","behavior-warning-option-description"],["flush-element"],["append",["unknown",["optionDescription"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "FM/mYm0n",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","behavior-warning-option-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","behavior-warning-option-checkbox"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","checked",["unknown",["isCheckboxChecked"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-option-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-option-inner-container"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","behavior-warning-option-title"],["flush-element"],["append",["unknown",["optionTitle"]],false],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","behavior-warning-option-description"],["flush-element"],["append",["unknown",["optionDescription"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22545,7 +22575,7 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            n(538), n(539), n(540), n(543), n(545), n(558), n(560), n(563), n(564), n(566), n(567), n(569), n(570), n(572), n(573), n(574), n(576), n(577), n(579), n(580)
+            n(539), n(540), n(541), n(544), n(546), n(559), n(561), n(564), n(565), n(567), n(568), n(570), n(571), n(573), n(574), n(575), n(577), n(578), n(580), n(581)
         }, (e, t, n) => {
             "use strict";
             const r = n(1);
@@ -22647,7 +22677,7 @@
                     computed: i
                 } = o;
             o.defineElement("lol-player-notifications-button", {
-                styles: n(541),
+                styles: n(542),
                 computed: {
                     notifications: i.resource("/player-notifications/v1/notifications"),
                     toastNotifications: "notifications.reduce(reduceToasts, [])",
@@ -22726,10 +22756,10 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(542),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(543),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "/* notifications button styles */\n.player-notifications-button {\n  position: relative;\n  cursor: pointer;\n  width: 18px;\n  height: 18px;\n}\n.player-notifications-button-icon {\n  outline: none;\n  border: none;\n  background: none;\n  padding: 0;\n  width: 18px;\n  height: 18px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #c8aa6e;\n  -webkit-mask-size: contain;\n}\n.player-notifications-button-icon:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-button-icon:active,\n.player-notifications-button.open .player-notifications-button-icon {\n  background-color: #785a28;\n}\n.player-notifications-button.disabled .player-notifications-button-icon {\n  background-color: #5c5b57;\n}\n.player-notifications-button.disabled {\n  pointer-events: none;\n}\n.player-notifications-button-unread-pip {\n  position: absolute;\n  top: 1px;\n  right: -1px;\n  width: 8px;\n  height: 8px;\n  box-sizing: border-box;\n  border-radius: 50%;\n  flex-shrink: 0;\n  background: #010a13;\n  box-shadow: 0 0 0 2px #010a13;\n  background-color: #c89b3c;\n}\n", "", {
@@ -22750,11 +22780,11 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-default-toast", {
-                styles: n(544)
+                styles: n(545)
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.player-notifications-default-toast-title {\n  font-family: var(--font-display);\n}\n.player-notifications-default-toast-title {\n  -webkit-user-select: none;\n}\n.player-notifications-default-toast-title {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.player-notifications-default-toast-title {\n  text-transform: uppercase;\n}\n.player-notifications-default-toast-title:lang(ko-kr),\n.player-notifications-default-toast-title:lang(ja-jp),\n.player-notifications-default-toast-title:lang(tr-tr),\n.player-notifications-default-toast-title:lang(el-gr),\n.player-notifications-default-toast-title:lang(th-th),\n.player-notifications-default-toast-title:lang(zh-tw) {\n  text-transform: none;\n}\n.player-notifications-default-toast-title {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n.player-notifications-default-toast-title:lang(ja-jp) {\n  font-size: 13px;\n}\n.player-notifications-default-toast-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.player-notifications-default-toast-title {\n  font-family: var(--font-display);\n}\n.player-notifications-default-toast-title {\n  margin-bottom: 16px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.player-notifications-default-toast-details {\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/player-notifications/components/notifications-default-toast.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -22765,7 +22795,7 @@
             }]), e.exports = o
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(546)) && r.__esModule ? r : {
+            var r, o = (r = n(547)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(1),
@@ -22774,7 +22804,7 @@
                     tra: s
                 } = i;
             a.defineElement("lol-player-notifications-item", {
-                styles: n(556),
+                styles: n(557),
                 dismiss: function() {
                     Object.prototype.hasOwnProperty.call(this.notification, "dismissible") && !this.notification.dismissible || (this.notification.state = "dismissed", i.ajax.delete("/player-notifications/v1/notifications/" + this.notification.id).then((() => {
                         i.playerNotificationsPrivateApi.dispatch("remove", this.notification)
@@ -22806,15 +22836,15 @@
             }), t.default = function(e) {
                 return m.get(e) || e
             };
-            var r = u(n(547)),
-                o = u(n(548)),
-                i = u(n(549)),
-                a = u(n(550)),
-                s = u(n(551)),
-                l = u(n(552)),
-                c = u(n(553)),
-                d = u(n(554)),
-                p = u(n(555));
+            var r = u(n(548)),
+                o = u(n(549)),
+                i = u(n(550)),
+                a = u(n(551)),
+                s = u(n(552)),
+                l = u(n(553)),
+                c = u(n(554)),
+                d = u(n(555)),
+                p = u(n(556));
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -22860,10 +22890,10 @@
             "use strict";
             e.exports = n.p + "tft-tc-notification-logo.svg"
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(557),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(558),
                 s = o(r),
                 l = i(a);
             s.push([e.id, ".player-notifications-item {\n  display: flex;\n  padding: 12px 18px 10px;\n  border-bottom: thin solid #1e282d;\n}\n.player-notifications-item:hover {\n  background: #1e2328;\n}\n.player-notifications-item:hover .text {\n  color: #f0e6d2;\n}\n.player-notifications-item:hover .time {\n  color: #a09b8c;\n}\n.player-notifications-item-image {\n  width: 56px;\n  height: 56px;\n  flex: 0 0 auto;\n  margin: 0 18px 0 0;\n}\n.player-notifications-item-image:lang(ar-ae) {\n  margin: 0 0 0 18px;\n}\n.player-notifications-item-text {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 auto;\n  overflow: hidden;\n}\n.player-notifications-item-dismiss-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\n.player-notifications-item-dismiss-button {\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  width: 18px;\n  height: 18px;\n  flex: 0 0 auto;\n}\n.player-notifications-item-dismiss-button:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-item-dismiss-button:active {\n  background-color: #463714;\n}\n.text {\n  color: #a09b8c;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\nh6.unread,\nh6.toast {\n  color: #c89b3c;\n}\n.text-unread,\n.text-toast {\n  color: #f0e6d2;\n}\n.time {\n  color: #3c3c41;\n}\n.time-unread,\n.time-toast {\n  color: #a09b8c;\n}\n", "", {
@@ -22885,7 +22915,7 @@
                 } = r,
                 i = /^(\/|https?:\/\/)/;
             o.defineElement("lol-player-notifications-toast", {
-                styles: n(559),
+                styles: n(560),
                 attached: function() {
                     const e = this.querySelector(".player-notifications-toast-container");
                     let t = this.notification.backgroundUrl;
@@ -22900,8 +22930,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, 'lol-player-notifications-toast {\n  font-family: var(--font-body);\n}\nlol-player-notifications-toast {\n  -webkit-user-select: none;\n}\nlol-player-notifications-toast {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-player-notifications-toast {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-player-notifications-toast:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-player-notifications-toast:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-toast {\n  font-family: var(--font-body);\n}\nlol-player-notifications-toast {\n  display: block;\n}\n.player-notifications-toast-container {\n  width: 284px;\n  min-height: 34px;\n  max-height: 84px;\n  padding: 18px;\n  background-size: cover;\n  background-repeat: no-repeat;\n  overflow: hidden;\n}\n.player-notifications-toast-container:lang(ar-ae) {\n  padding: 30px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/player-notifications/components/notifications-toast.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -22917,7 +22947,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-tray", {
-                styles: n(561),
+                styles: n(562),
                 dismissAll: function() {
                     r.modalManager.add({
                         type: "DialogConfirm",
@@ -22946,10 +22976,10 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204),
-                i = n(207),
-                a = n(562),
+            var r = n(204),
+                o = n(205),
+                i = n(208),
+                a = n(563),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-player-notifications-tray {\n  display: block;\n  width: 414px;\n  height: 402px;\n}\n.notifications-tray {\n  display: flex;\n  flex-direction: column;\n}\n.notifications-tray-header {\n  display: flex;\n  align-items: center;\n  height: 46px;\n  padding: 0 18px;\n  border-bottom: thin solid #463714;\n}\n.notifications-tray-title {\n  flex-grow: 1;\n}\n.notifications-dismiss-all-btn {\n  width: 16px;\n  height: 16px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  cursor: pointer;\n}\n.notifications-dismiss-all-btn:hover {\n  background-color: #f0e6d2;\n}\n.notifications-dismiss-all-btn:active {\n  background-color: #463714;\n}\n.notifications-dismiss-all-btn:lang(ar-ae) {\n  transform: scaleX(-1);\n}\n.notifications-tray-body {\n  flex-grow: 1;\n  height: 355px;\n}\n", "", {
@@ -22979,11 +23009,11 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-esports-toast", {
-                styles: n(565)
+                styles: n(566)
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.player-notifications-esports-toast-title,\n.player-notifications-esports-toast-secondary-title {\n  font-family: var(--font-display);\n}\nlol-player-notifications-esports-toast,\n.player-notifications-esports-toast-divider {\n  font-family: var(--font-body);\n}\nlol-player-notifications-esports-toast,\n.player-notifications-esports-toast-title,\n.player-notifications-esports-toast-secondary-title,\n.player-notifications-esports-toast-divider {\n  -webkit-user-select: none;\n}\nlol-player-notifications-esports-toast,\n.player-notifications-esports-toast-title,\n.player-notifications-esports-toast-secondary-title,\n.player-notifications-esports-toast-divider {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.player-notifications-esports-toast-title,\n.player-notifications-esports-toast-secondary-title {\n  text-transform: uppercase;\n}\n.player-notifications-esports-toast-title:lang(ko-kr),\n.player-notifications-esports-toast-secondary-title:lang(ko-kr),\n.player-notifications-esports-toast-title:lang(ja-jp),\n.player-notifications-esports-toast-secondary-title:lang(ja-jp),\n.player-notifications-esports-toast-title:lang(tr-tr),\n.player-notifications-esports-toast-secondary-title:lang(tr-tr),\n.player-notifications-esports-toast-title:lang(el-gr),\n.player-notifications-esports-toast-secondary-title:lang(el-gr),\n.player-notifications-esports-toast-title:lang(th-th),\n.player-notifications-esports-toast-secondary-title:lang(th-th),\n.player-notifications-esports-toast-title:lang(zh-tw),\n.player-notifications-esports-toast-secondary-title:lang(zh-tw) {\n  text-transform: none;\n}\n.player-notifications-esports-toast-title,\n.player-notifications-esports-toast-secondary-title {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n.player-notifications-esports-toast-title:lang(ja-jp),\n.player-notifications-esports-toast-secondary-title:lang(ja-jp) {\n  font-size: 13px;\n}\n.player-notifications-esports-toast-title:lang(ar-ae),\n.player-notifications-esports-toast-secondary-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-esports-toast,\n.player-notifications-esports-toast-divider {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-player-notifications-esports-toast:lang(ja-jp),\n.player-notifications-esports-toast-divider:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-player-notifications-esports-toast:lang(ar-ae),\n.player-notifications-esports-toast-divider:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.player-notifications-esports-toast-title,\n.player-notifications-esports-toast-secondary-title {\n  font-family: var(--font-display);\n}\nlol-player-notifications-esports-toast,\n.player-notifications-esports-toast-divider {\n  font-family: var(--font-body);\n}\nlol-player-notifications-esports-toast {\n  display: flex;\n  align-items: center;\n  height: 84px;\n  width: 280px;\n}\n.player-notifications-esports-toast-container {\n  display: inherit;\n  align-items: center;\n}\n.player-notifications-esports-toast-leftSide-content {\n  padding-top: 16px;\n}\n.player-notifications-esports-toast-rightSide {\n  display: flex;\n  width: 100px;\n  margin: 0 0 0 10px;\n}\n.player-notifications-esports-toast-rightSide:lang(ar-ae) {\n  margin: 0 10px 0 0;\n}\n.player-notifications-esports-toast-teamA {\n  background-repeat: no-repeat;\n  height: 40px;\n  width: 40px;\n}\n.player-notifications-esports-toast-divider {\n  height: 40px;\n  line-height: 40px;\n  text-align: center;\n  width: 20px;\n}\n.player-notifications-esports-toast-teamB {\n  background-repeat: no-repeat;\n  height: 40px;\n  width: 40px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/player-notifications/renderers/esports/esports-toast.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -23003,14 +23033,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(546)) && r.__esModule ? r : {
+            var r, o = (r = n(547)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-esports-tft-toast", {
-                styles: n(568),
+                styles: n(569),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -23019,8 +23049,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.player-notifications__esports-tft-title {\n  font-family: var(--font-display);\n}\nlol-player-notifications-esports-tft-toast {\n  font-family: var(--font-body);\n}\nlol-player-notifications-esports-tft-toast,\n.player-notifications__esports-tft-title {\n  -webkit-user-select: none;\n}\nlol-player-notifications-esports-tft-toast,\n.player-notifications__esports-tft-title {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.player-notifications__esports-tft-title {\n  text-transform: uppercase;\n}\n.player-notifications__esports-tft-title:lang(ko-kr),\n.player-notifications__esports-tft-title:lang(ja-jp),\n.player-notifications__esports-tft-title:lang(tr-tr),\n.player-notifications__esports-tft-title:lang(el-gr),\n.player-notifications__esports-tft-title:lang(th-th),\n.player-notifications__esports-tft-title:lang(zh-tw) {\n  text-transform: none;\n}\n.player-notifications__esports-tft-title {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n.player-notifications__esports-tft-title:lang(ja-jp) {\n  font-size: 13px;\n}\n.player-notifications__esports-tft-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-esports-tft-toast {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-player-notifications-esports-tft-toast:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-player-notifications-esports-tft-toast:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-esports-tft-toast {\n  display: flex;\n  align-items: center;\n  width: 280px;\n}\n.player-notifications__esports-tft-container {\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  width: 256px;\n  align-items: center;\n}\n.player-notifications__esports-tft-content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.player-notifications__esports-tft-title {\n  margin-bottom: 2px;\n}\n.player-notifications__esports-tft-icon {\n  height: 56px;\n  width: 56px;\n  flex-shrink: 0;\n}\n.player-notifications__esports-tft-icon > img {\n  display: block;\n  height: 100%;\n  width: 100%;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/player-notifications/renderers/esports-tft/esports-tft-toast.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -23045,11 +23075,11 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-merch-toast", {
-                styles: n(571)
+                styles: n(572)
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.player-notifications-merch-toast-title,\n.player-notifications-merch-toast-secondary-title {\n  font-family: var(--font-display);\n}\nlol-player-notifications-merch-toast {\n  font-family: var(--font-body);\n}\nlol-player-notifications-merch-toast,\n.player-notifications-merch-toast-title,\n.player-notifications-merch-toast-secondary-title {\n  -webkit-user-select: none;\n}\nlol-player-notifications-merch-toast,\n.player-notifications-merch-toast-title,\n.player-notifications-merch-toast-secondary-title {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.player-notifications-merch-toast-title,\n.player-notifications-merch-toast-secondary-title {\n  text-transform: uppercase;\n}\n.player-notifications-merch-toast-title:lang(ko-kr),\n.player-notifications-merch-toast-secondary-title:lang(ko-kr),\n.player-notifications-merch-toast-title:lang(ja-jp),\n.player-notifications-merch-toast-secondary-title:lang(ja-jp),\n.player-notifications-merch-toast-title:lang(tr-tr),\n.player-notifications-merch-toast-secondary-title:lang(tr-tr),\n.player-notifications-merch-toast-title:lang(el-gr),\n.player-notifications-merch-toast-secondary-title:lang(el-gr),\n.player-notifications-merch-toast-title:lang(th-th),\n.player-notifications-merch-toast-secondary-title:lang(th-th),\n.player-notifications-merch-toast-title:lang(zh-tw),\n.player-notifications-merch-toast-secondary-title:lang(zh-tw) {\n  text-transform: none;\n}\n.player-notifications-merch-toast-title,\n.player-notifications-merch-toast-secondary-title {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n.player-notifications-merch-toast-title:lang(ja-jp),\n.player-notifications-merch-toast-secondary-title:lang(ja-jp) {\n  font-size: 13px;\n}\n.player-notifications-merch-toast-title:lang(ar-ae),\n.player-notifications-merch-toast-secondary-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-merch-toast {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-player-notifications-merch-toast:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-player-notifications-merch-toast:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-merch-toast {\n  display: flex;\n  align-items: center;\n  height: 84px;\n  width: 280px;\n}\n.player-notifications-merch-toast-container {\n  display: inherit;\n  align-items: center;\n}\n.player-notifications-merch-toast-leftSide-content {\n  padding-top: 16px;\n}\n.player-notifications-merch-toast-rightSide {\n  display: flex;\n  width: 100px;\n  align-items: center;\n  justify-content: center;\n  margin: 0 0 0 10px;\n}\n.player-notifications-merch-toast-rightSide:lang(ar-ae) {\n  margin: 0 10px 0 0;\n}\n.player-notifications-merch-toast-item-icon {\n  background-repeat: no-repeat;\n  height: 40px;\n  width: 80px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/player-notifications/renderers/merch/merch-toast.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -23080,14 +23110,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(546)) && r.__esModule ? r : {
+            var r, o = (r = n(547)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-rewards-program-toast", {
-                styles: n(575),
+                styles: n(576),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -23096,8 +23126,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.player-notifications__rewards-title {\n  font-family: var(--font-display);\n}\nlol-player-notifications-rewards-program-toast {\n  font-family: var(--font-body);\n}\nlol-player-notifications-rewards-program-toast,\n.player-notifications__rewards-title {\n  -webkit-user-select: none;\n}\nlol-player-notifications-rewards-program-toast,\n.player-notifications__rewards-title {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.player-notifications__rewards-title {\n  text-transform: uppercase;\n}\n.player-notifications__rewards-title:lang(ko-kr),\n.player-notifications__rewards-title:lang(ja-jp),\n.player-notifications__rewards-title:lang(tr-tr),\n.player-notifications__rewards-title:lang(el-gr),\n.player-notifications__rewards-title:lang(th-th),\n.player-notifications__rewards-title:lang(zh-tw) {\n  text-transform: none;\n}\n.player-notifications__rewards-title {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n.player-notifications__rewards-title:lang(ja-jp) {\n  font-size: 13px;\n}\n.player-notifications__rewards-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-rewards-program-toast {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-player-notifications-rewards-program-toast:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-player-notifications-rewards-program-toast:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-rewards-program-toast {\n  display: flex;\n  align-items: center;\n  width: 280px;\n}\n.player-notifications__rewards-container {\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  width: 256px;\n  align-items: center;\n}\n.player-notifications__rewards-content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.player-notifications__rewards-title {\n  margin-bottom: 2px;\n}\n.player-notifications__rewards-icon {\n  height: 62px;\n  width: 62px;\n  flex-shrink: 0;\n}\n.player-notifications__rewards-icon > img {\n  display: block;\n  height: 100%;\n  width: 100%;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/player-notifications/renderers/rewards-program/rewards-program-toast.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -23145,11 +23175,11 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-rgm-toast", {
-                styles: n(578)
+                styles: n(579)
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.player-notifications-rgm-toast-header,\n.player-notifications-rgm-toast-title,\n.player-notifications-rgm-toast-detail {\n  font-family: var(--font-display);\n}\nlol-player-notifications-rgm-toast {\n  font-family: var(--font-body);\n}\nlol-player-notifications-rgm-toast,\n.player-notifications-rgm-toast-header,\n.player-notifications-rgm-toast-title,\n.player-notifications-rgm-toast-detail {\n  -webkit-user-select: none;\n}\nlol-player-notifications-rgm-toast,\n.player-notifications-rgm-toast-header,\n.player-notifications-rgm-toast-title,\n.player-notifications-rgm-toast-detail {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.player-notifications-rgm-toast-header,\n.player-notifications-rgm-toast-title,\n.player-notifications-rgm-toast-detail {\n  text-transform: uppercase;\n}\n.player-notifications-rgm-toast-header:lang(ko-kr),\n.player-notifications-rgm-toast-title:lang(ko-kr),\n.player-notifications-rgm-toast-detail:lang(ko-kr),\n.player-notifications-rgm-toast-header:lang(ja-jp),\n.player-notifications-rgm-toast-title:lang(ja-jp),\n.player-notifications-rgm-toast-detail:lang(ja-jp),\n.player-notifications-rgm-toast-header:lang(tr-tr),\n.player-notifications-rgm-toast-title:lang(tr-tr),\n.player-notifications-rgm-toast-detail:lang(tr-tr),\n.player-notifications-rgm-toast-header:lang(el-gr),\n.player-notifications-rgm-toast-title:lang(el-gr),\n.player-notifications-rgm-toast-detail:lang(el-gr),\n.player-notifications-rgm-toast-header:lang(th-th),\n.player-notifications-rgm-toast-title:lang(th-th),\n.player-notifications-rgm-toast-detail:lang(th-th),\n.player-notifications-rgm-toast-header:lang(zh-tw),\n.player-notifications-rgm-toast-title:lang(zh-tw),\n.player-notifications-rgm-toast-detail:lang(zh-tw) {\n  text-transform: none;\n}\n.player-notifications-rgm-toast-header {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n.player-notifications-rgm-toast-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.player-notifications-rgm-toast-title,\n.player-notifications-rgm-toast-detail {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n.player-notifications-rgm-toast-title:lang(ar-ae),\n.player-notifications-rgm-toast-detail:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-rgm-toast {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-player-notifications-rgm-toast:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-player-notifications-rgm-toast:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.player-notifications-rgm-toast-header,\n.player-notifications-rgm-toast-title,\n.player-notifications-rgm-toast-detail {\n  font-family: var(--font-display);\n}\nlol-player-notifications-rgm-toast {\n  font-family: var(--font-body);\n}\nlol-player-notifications-rgm-toast {\n  display: flex;\n  align-items: center;\n  height: 84px;\n  width: 280px;\n}\n.player-notifications-rgm-toast-container {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n.player-notifications-rgm-toast-icon {\n  background-repeat: no-repeat;\n  background-size: 60px;\n  height: 60px;\n  width: 60px;\n  margin: 0 10px 0 0;\n}\n.player-notifications-rgm-toast-icon:lang(ar-ae) {\n  margin: 0 0 0 10px;\n}\n.player-notifications-rgm-toast-content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 210px;\n  text-shadow: 1px 1px 6px #000;\n}\n.player-notifications-rgm-toast-header {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  margin-bottom: 3px;\n}\n.player-notifications-rgm-toast-title {\n  color: #c89b3c;\n  margin-bottom: 3px;\n}\n.player-notifications-rgm-toast-detail {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  font-weight: 500;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/player-notifications/renderers/rgm/rgm-toast.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -23169,14 +23199,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(546)) && r.__esModule ? r : {
+            var r, o = (r = n(547)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-xbox-gamepass-toast", {
-                styles: n(581),
+                styles: n(582),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -23185,8 +23215,8 @@
                 }
             })
         }, (e, t, n) => {
-            var r = n(203),
-                o = n(204)(r);
+            var r = n(204),
+                o = n(205)(r);
             o.push([e.id, '.player-notifications__gamepass-title {\n  font-family: var(--font-display);\n}\nlol-player-notifications-xbox-gamepass-toast {\n  font-family: var(--font-body);\n}\nlol-player-notifications-xbox-gamepass-toast,\n.player-notifications__gamepass-title {\n  -webkit-user-select: none;\n}\nlol-player-notifications-xbox-gamepass-toast,\n.player-notifications__gamepass-title {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.player-notifications__gamepass-title {\n  text-transform: uppercase;\n}\n.player-notifications__gamepass-title:lang(ko-kr),\n.player-notifications__gamepass-title:lang(ja-jp),\n.player-notifications__gamepass-title:lang(tr-tr),\n.player-notifications__gamepass-title:lang(el-gr),\n.player-notifications__gamepass-title:lang(th-th),\n.player-notifications__gamepass-title:lang(zh-tw) {\n  text-transform: none;\n}\n.player-notifications__gamepass-title {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n.player-notifications__gamepass-title:lang(ja-jp) {\n  font-size: 13px;\n}\n.player-notifications__gamepass-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-xbox-gamepass-toast {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-player-notifications-xbox-gamepass-toast:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-player-notifications-xbox-gamepass-toast:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-player-notifications-xbox-gamepass-toast {\n  display: flex;\n  align-items: center;\n  width: 280px;\n}\n.player-notifications__gamepass-container {\n  display: flex;\n  flex-direction: row;\n  gap: 10px;\n  width: 256px;\n  align-items: center;\n}\n.player-notifications__gamepass-content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.player-notifications__gamepass-title {\n  margin-bottom: 2px;\n}\n.player-notifications__gamepass-icon {\n  height: 62px;\n  width: 62px;\n  flex-shrink: 0;\n}\n.player-notifications__gamepass-icon > img {\n  display: block;\n  height: 100%;\n  width: 100%;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/player-notifications/renderers/xbox-gamepass/xbox-gamepass-toast.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -23235,21 +23265,21 @@
                         r.tournaments.persistentPanel = e || null, i.sync()
                     },
                     getHovercardTemplates: () => ({
-                        "components/hovercard-name-alias-mode": n(494),
-                        "components/hovercard-name-summoner-mode": n(495)
+                        "components/hovercard-name-alias-mode": n(495),
+                        "components/hovercard-name-summoner-mode": n(496)
                     }),
                     getHovercardComponent: () => {
                         const {
                             PlayerNameComponent: e
                         } = s;
                         return {
-                            HovercardComponentComponent: n(350).default,
-                            HovercardShellComponent: n(358).default,
-                            HovercardContentComponent: n(353).default,
-                            SocialSessionService: n(466).default,
-                            SocialPlatformConfigService: n(465).default,
-                            SocialSettingsService: n(467).default,
-                            ProfileChampionInfoService: n(438).default,
+                            HovercardComponentComponent: n(351).default,
+                            HovercardShellComponent: n(359).default,
+                            HovercardContentComponent: n(354).default,
+                            SocialSessionService: n(467).default,
+                            SocialPlatformConfigService: n(466).default,
+                            SocialSettingsService: n(468).default,
+                            ProfileChampionInfoService: n(439).default,
                             PlayerNameComponent: e
                         }
                     },
@@ -23378,19 +23408,19 @@
                 u.setBoundDataBinding(p), e.default.socket = d, e.default.rest = p, g.rest = p, g.profilePlugin = e.default.profilePlugin, g.init(d, l.baseURI, e.default.l10n), g.tooltipManager = e.default.tooltipManager, g.contextMenuManager = e.default.contextMenuManager, g.toastManager = e.default.toastManager, g.modalManager = e.default.modalManager, g.templateHelper = e.default.templateHelper, g.layerManager = e.default.layerManager, g.hovercard = e.default.hovercard, g.iconPicker = e.default.iconPicker, g.missionTracker = e.default.missionTracker, g.patcher = e.default.navigation, g.socialButtons = [], g.tournaments = {
                     gameInfoPanel: null,
                     persistentPanel: null
-                }, n(187).init(), h.init(e.default.audioPlugin), await e.default.add({
+                }, n(188).init(), h.init(e.default.audioPlugin), await e.default.add({
                     data: g,
                     sounds: h
                 });
                 const {
                     ComponentFactory: f
-                } = e.default, _ = e.default.Viewport.sidebar().getScreenRoot("social"), A = n(319).default, b = document.createElement("div");
+                } = e.default, _ = e.default.Viewport.sidebar().getScreenRoot("social"), A = n(320).default, b = document.createElement("div");
                 b.classList.add("social-plugin-home"), A(b, (e => {
                     const t = e.__container__.lookup("service:conversations");
                     g.setChatWindowVisibility = e => {
                         t.setVisibility(e)
                     }
-                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(537);
+                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(538);
                 const y = f.create("rcp-fe-lol-social");
                 _.bump().then((e => {
                     e.getElement().appendChild(b)
@@ -23400,7 +23430,7 @@
                         friendFinder: x.__container__.lookup("service:friend-finder"),
                         socialButtons: x.__container__.lookup("service:social-buttons")
                     };
-                return n(582)(v)
+                return n(583)(v)
             }))
         }), {
             once: !0
