@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
-            "cooldown": "%i:cooldown% de @f2@s",
+            "cooldown": "Spell_RakanE_Cooldown",
             "description": "Voa até um aliado e concede um escudo a ele. Pode ser conjurada novamente sem custo por um breve período.",
-            "dynamicDescription": "Rakan avança em direção a um Campeão aliado, concedendo a ele <shield>@TotalShield@ de Escudo</shield> por @Effect3Amount@s.<br><br>Ele pode <recast>Reconjurar</recast> a Habilidade mais uma vez dentro de @Effect2Amount@s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan avança em direção a um Campeão aliado, concedendo a ele <shield>@TotalShield@ de Escudo</shield> por @Duration@s.<br><br>Rakan pode <recast>Reconjurar</recast> a Habilidade mais uma vez dentro de @RecastWindow@s.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Recebe Velocidade de Movimento, encantando e causando Dano Mágico ao tocar nos inimigos.",
-            "dynamicDescription": "Rakan recebe <speed>@Effect5Amount@% de Velocidade de Movimento</speed> por @Effect2Amount@s, causa <magicDamage>@TotalDamageTooltip@ de Dano Mágico</magicDamage> e <status>Encanta</status> os inimigos por @Effect3Amount@s na primeira vez que encosta neles. O primeiro Campeão encantado concede a Rakan <speed>@Effect6Amount@% de Velocidade de Movimento</speed>, que decai ao longo do tempo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan recebe <speed>@InitialCastSpeed@% de Velocidade de Movimento</speed> por @Duration@s. Rakan causa <magicDamage>@TotalDamageTooltip@ de Dano Mágico</magicDamage> e <status>Encanta</status> os inimigos por @CharmDuration@s na primeira vez que encosta neles. O primeiro Campeão encantado concede a Rakan <speed>@TouchSpeed@% de Velocidade de Movimento</speed>, que decai ao longo do tempo.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,

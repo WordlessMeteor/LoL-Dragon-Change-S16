@@ -582,7 +582,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔莉雅向目标方向投掷一排石块，期间可自由移动。此技能会在她脚下产生变动领域。如果塔莉雅在变动领域上施放旋舞飞岩，她将消耗掉该领域，投掷出一块更硕大的巨岩并缓速敌人。",
-            "dynamicDescription": "塔莉雅发射 5 块岩石，每块岩石在第一个命中敌人周遭的一块区域内造成 <magicDamage>@RockDamage@ 魔法伤害</magicDamage>，塔莉雅并会于所在位置创造出变动领域。对同一个敌人命中的后续岩石造成 @ExtraMissileReducedDamagePercent@% 较少伤害。<br><br>在变动领域上施放此技能将消耗 @Effect7Amount@ 魔力，且冷却时间缩减 @WorkedGroundCDR*100@% ，会消耗掉变动领域，并发射 1 块巨岩，<status>缓速</status>命中的敌人 @SlowPercent*100@%，持续 @SlowDuration@ 秒，且对主要目标造成 <magicDamage>@BigRockDamage@ 魔法伤害</magicDamage>。被岩石击中的野怪会被 <status>晕眩</status> @MonsterStunDuration@ 秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔莉雅朝目标方向投掷5块岩石，每块岩石都会在命中第一个敌人的附近区域造成<magicDamage>@RockDamage@魔法伤害</magicDamage>，并在该区域生成掘石场。对同一敌人的后续命中造成的伤害降低@ExtraMissileReducedDamagePercent@%。<br><br>在掘石场施放\"旋舞飞岩\"会消耗@BigRockManaCost@魔力值，缩短@WorkedGroundCDR*100@%冷却时间，还会消耗掘石场来投掷一块巨石，使被击中的敌人<status>减速</status>@SlowPercent*100@%，持续@SlowDuration@秒，并对主要目标造成<magicDamage>@BigRockDamage@魔法伤害</magicDamage>。被巨石击中的野怪会被<status>晕眩</status>@MonsterStunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔莉雅能够创造一座非常长的石墙并乘于之上。",
-            "dynamicDescription": "塔莉雅创造出一堵巨大土墙，持续存在@Effect1Amount@ 秒。如果她立刻<recast>再次施放</recast>，即可乘着展延的土墙一同前行。移动或受到定身效果将会结束乘行。<br><br>如果塔莉雅在过去@DamageLockoutTime@秒内受到过来自英雄或建筑物的伤害，则将无法施放此技能。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔莉雅创造一道巨大的土墙，持续@WallDuration@秒。如果她立即<recast>再次施放</recast>，将可乘着展延的土墙一同前行。移动或受到定身效果都会结束乘行。<br><br>如果塔莉雅在过去@DamageLockoutTime@秒内受到过来自英雄或建筑物的伤害，则将无法施放此技能。@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

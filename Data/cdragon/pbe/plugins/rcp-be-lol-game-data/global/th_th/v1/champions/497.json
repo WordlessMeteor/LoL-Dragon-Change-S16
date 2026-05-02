@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
-            "cooldown": "คูลดาวน์ @f2@ วินาที %i:cooldown%",
+            "cooldown": "คูลดาวน์ %i:cooldown% @Cooldown@ วินาที",
             "description": "บินไปหาแชมเปี้ยนฝ่ายตนเอง และเพิ่มเกราะป้องกันให้แก่เป้าหมาย เขาสามารถร่ายสกิลได้อีกครั้งได้ในช่วงระยะเวลาสั้น ๆ",
-            "dynamicDescription": "Rakan พุ่งไปหาแชมเปี้ยนร่วมทีม มอบ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield>ให้กับพวกเขาเป็นเวลา @Effect3Amount@ วินาที<br><br>Rakan สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อใช้สกิลนี้ได้อีกครั้งภายในเวลา @Effect2Amount@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan พุ่งไปหาแชมเปี้ยนร่วมทีม มอบ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield>ให้กับพวกเขาเป็นเวลา @Duration@ วินาที<br><br>Rakan สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อใช้สกิลนี้ได้อีกครั้งภายในเวลา @RecastWindow@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "เพิ่มความเร็วเคลื่อนที่ หากพุ่งชนศัตรูจะสร้างความเสียหายเวทและทำให้ศัตรูตกอยู่ในมนต์สะกดลุ่มหลง",
-            "dynamicDescription": "Rakan ได้รับ<speed>ความเร็วเคลื่อนที่ @Effect5Amount@%</speed> เป็นเวลา @Effect2Amount@ วินาที Rakan สร้าง<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage> และ<status>ยั่วยวน</status>ศัตรูเป็นเวลา @Effect3Amount@ วินาทีในครั้งแรกเขาสัมผัสแชมเปี้ยนเหล่านั้น แชมเปี้ยนตัวแรกที่สัมผัสจะมอบความเร็วเคลื่อนที่ให้ Rakan <speed>@Effect6Amount@% โดยจะค่อย ๆ ลดลง</speed>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan จะได้รับ<speed>ความเร็วเคลื่อนที่ @InitialCastSpeed@%</speed> เป็นเวลา @Duration@ วินาที Rakan สร้าง<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage>และ<status>สะกด</status>ศัตรู เป็นเวลา @CharmDuration@ วินาที เมื่อเขาสัมผัสโดนศัตรูเป็นครั้งแรก แชมเปี้ยนคนแรกที่สัมผัสจะมอบ<speed>ความเร็วเคลื่อนที่ @TouchSpeed@% ที่จะค่อย ๆ ลดลง</speed>ให้แก่ Rakan@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,

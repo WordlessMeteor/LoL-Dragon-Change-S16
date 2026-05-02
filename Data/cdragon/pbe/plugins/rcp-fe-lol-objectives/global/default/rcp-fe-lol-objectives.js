@@ -37,7 +37,7 @@
                 }
             };
             e.exports = a
-        }, (e, t, s) => {
+        }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
@@ -45,43 +45,43 @@
                 switch (e) {
                     case "SUMMONER_ICON":
                     case "SUMMONER_ICON_SHARD":
-                        return i.SUMMONER_ICON;
+                        return l.SUMMONER_ICON;
                     case "CHAMPION":
                     case "CHAMPION_SKIN":
                     case "CHAMPION_SHARD":
                     case "CHAMPION_SKIN_SHARD":
                     case "CHAMPION_CHROMA":
-                        return i.SPLASH;
+                        return l.SPLASH;
                     default:
                         return ""
                 }
             };
-            s(3);
             t.APP_NAME = "rcp-fe-lol-objectives";
             t.OBJECTIVES_PLAYER_PREFERENCES = "/lol-settings/v2/account/LCUPreferences/objectives";
-            const a = {
+            const s = {
                 LEAGUE_TAB: "lol",
                 TFT_TAB: "tft"
             };
-            t.OBJECTIVES_GAME_TABS = a;
-            const n = {
-                [a.LEAGUE_TAB]: {
+            t.OBJECTIVES_GAME_TABS = s;
+            const a = {
+                [s.LEAGUE_TAB]: {
                     restingAssetPath: "/fe/lol-objectives/images/objectives-game-tabs/tab-lol-resting.png",
                     activeAssetPath: "/fe/lol-objectives/images/objectives-game-tabs/tab-lol-active.png",
                     hoverAssetPath: "/fe/lol-objectives/images/objectives-game-tabs/tab-lol-hover.png"
                 },
-                [a.TFT_TAB]: {
+                [s.TFT_TAB]: {
                     restingAssetPath: "/fe/lol-objectives/images/objectives-game-tabs/tab-tft-resting.png",
                     activeAssetPath: "/fe/lol-objectives/images/objectives-game-tabs/tab-tft-active.png",
                     hoverAssetPath: "/fe/lol-objectives/images/objectives-game-tabs/tab-tft-hover.png"
                 }
             };
-            t.OBJECTIVES_GAME_TAB_ASSETS_STATES = n;
-            t.APPLICATION_ROUTE_NAME = {
+            t.OBJECTIVES_GAME_TAB_ASSETS_STATES = a;
+            const n = {
                 TFT: "rcp-fe-lol-tft",
                 LOL_EVENT_HUB: "rcp-fe-lol-event-hub"
             };
-            t.getObjectiveGameTab = e => Object.values(a).includes(e) ? e : a.LEAGUE_TAB;
+            t.APPLICATION_ROUTE_NAME = n;
+            t.getObjectiveGameTab = e => Object.values(s).includes(e) ? e : s.LEAGUE_TAB;
             const o = {
                 COMPLETED: "COMPLETED",
                 PENDING: "PENDING",
@@ -91,13 +91,13 @@
                 REWARDS_PENDING: "REWARDS_PENDING"
             };
             t.MISSIONS_STATUS = o;
-            const l = [o.PENDING, o.UPCOMING, o.SELECT_REWARDS, o.COMPLETED, o.REWARDS_PENDING];
-            t.ACTIVE_MISSION_DISPLAY_STATUS_V2 = l;
-            const i = {
+            const i = [o.PENDING, o.UPCOMING, o.SELECT_REWARDS, o.COMPLETED, o.REWARDS_PENDING];
+            t.ACTIVE_MISSION_DISPLAY_STATUS_V2 = i;
+            const l = {
                 SUMMONER_ICON: "summoner",
                 SPLASH: "splash"
             };
-            t.REWARD_TOOLTIP_STYLE_ENUM = i;
+            t.REWARD_TOOLTIP_STYLE_ENUM = l;
             t.EXPIRATION_TIME_48HRS_MS = 1728e5;
             t.REWARD_TYPE = {
                 BXP: "PROGRESSION",
@@ -117,17 +117,17 @@
                 OF: "of"
             };
             t.MISSION_EXPRESSION_TYPE = c;
-            const d = {
+            const m = {
                 [c.AND]: " and ",
                 [c.OR]: " or ",
                 [c.OF]: " of "
             };
-            t.MISSION_EXPRESSION_TYPE_SEARCH_SAFE = d;
-            const m = {
+            t.MISSION_EXPRESSION_TYPE_SEARCH_SAFE = m;
+            const d = {
                 AND: c.AND,
                 OR: c.OR
             };
-            t.OBJECTIVE_DIVIDER_ENUM = m;
+            t.OBJECTIVE_DIVIDER_ENUM = d;
             t.SEASON_PASS_PREMIUM = "PREMIUM";
             t.SFX = {
                 hover: "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-hover.ogg",
@@ -192,67 +192,16 @@
                 TEXT_LEVEL: "TEXT_LEVEL",
                 MAYHEM_SEASON_PASS: "TEXT_MXP"
             }
-        }, function(e, t, s) {
-            "use strict";
-            var a = this && this.__createBinding || (Object.create ? function(e, t, s, a) {
-                    void 0 === a && (a = s);
-                    var n = Object.getOwnPropertyDescriptor(t, s);
-                    n && !("get" in n ? !t.__esModule : n.writable || n.configurable) || (n = {
-                        enumerable: !0,
-                        get: function() {
-                            return t[s]
-                        }
-                    }), Object.defineProperty(e, a, n)
-                } : function(e, t, s, a) {
-                    void 0 === a && (a = s), e[a] = t[s]
-                }),
-                n = this && this.__exportStar || function(e, t) {
-                    for (var s in e) "default" === s || Object.prototype.hasOwnProperty.call(t, s) || a(t, e, s)
-                };
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), n(s(4), t), n(s(5), t)
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.TftPassType = t.RewardTrackItemHeaderType = t.ObjectiveCategoryFilter = t.LolEventHubType = t.ObjectiveCategoryType = void 0, t.ObjectiveCategoryType = {
-                NONPASS: "kNonPass",
-                LEAGUEPASS: "kEventHubConfiguration",
-                TFTPASS: "kTFTPassData"
-            }, t.LolEventHubType = {
-                EVENT_SHOP: "EVENT_SHOP",
-                HALL_OF_LEGENDS: "HALL_OF_LEGENDS",
-                SEASON_PASS: "SEASON_PASS",
-                SEASON_PASS_MAYHEM: "SEASON_PASS_MAYHEM",
-                NON_PASS: "NON_PASS"
-            }, t.ObjectiveCategoryFilter = {
-                NONE: "kNone",
-                NPE: "kNPE"
-            }, t.RewardTrackItemHeaderType = {
-                PREMIUM: "kPremium",
-                FREE: "kFree",
-                NONE: "kNone"
-            }, t.TftPassType = {
-                UNKNOWN: "kUnknown",
-                BATTLE_PASS: "kBattlePass",
-                EVENT_PASS: "kEventPass"
-            }
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            })
         }, (e, t, s) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = r(s(7)),
-                n = r(s(10)),
+            var a = r(s(4)),
+                n = r(s(7)),
                 o = r(s(13)),
-                l = r(s(16)),
-                i = r(s(19));
+                i = r(s(16)),
+                l = r(s(19));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -274,19 +223,26 @@
                         ObjectivesCardComponentV2: o.default,
                         ObjectivesRewardTooltipComponent: n.default,
                         ObjectivesProgressRadialComponent: a.default,
-                        ObjectivesTooltipRequirementsComponent: l.default,
-                        ObjectivesTooltipRequirementIconComponent: i.default
+                        ObjectivesTooltipRequirementsComponent: i.default,
+                        ObjectivesTooltipRequirementIconComponent: l.default
                     }
+                }
+                addObjectivesModalVisibilityObserverCallback(e) {
+                    let t;
+                    return t = this.privateApi._objectivesModalVisibilityCallbacks.findIndex((e => void 0 === e)), -1 !== t ? this.privateApi._objectivesModalVisibilityCallbacks[t] = e : t = this.privateApi._objectivesModalVisibilityCallbacks.push(e) - 1, e(!!this.privateApi._componentState && this.privateApi._componentState.isVisible), t
+                }
+                removeObjectivesModalVisibilityObserverCallback(e) {
+                    delete this.privateApi._objectivesModalVisibilityCallbacks[e]
                 }
             }
         }, (e, t, s) => {
             "use strict";
             var a = s(1);
-            s(8);
+            s(5);
             e.exports = a.Ember.Component.extend({
                 classNames: ["objectives-progress-radial"],
                 classNameBindings: ["showCompletedBg:completed"],
-                layout: s(9),
+                layout: s(6),
                 targetPercentage: 0,
                 progressText: "",
                 showCompletedCheck: !1,
@@ -313,9 +269,9 @@
                         s = performance.now(),
                         a = n => {
                             const o = n - s,
-                                l = Math.min(o / 500, 1),
-                                i = t + (e - t) * l;
-                            this.set("radialPercentage", i), l < 1 ? requestAnimationFrame(a) : (this.set("radialPercentage", e), this.set("showCompletedCheck", 100 === e))
+                                i = Math.min(o / 500, 1),
+                                l = t + (e - t) * i;
+                            this.set("radialPercentage", l), i < 1 ? requestAnimationFrame(a) : (this.set("radialPercentage", e), this.set("showCompletedCheck", 100 === e))
                         };
                     requestAnimationFrame(a)
                 }
@@ -326,16 +282,16 @@
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "N09bAKRd",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-progress-radial.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-progress-radial.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-progress-radial.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-progress-radial__progress-container ",["helper",["if"],[["get",["showCompletedBg"]],"objectives-progress-radial__progress-container--completed"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","objectives-progress-radial__progress"],["static-attr","type","custom"],["dynamic-attr","percent",["unknown",["radialPercentage"]],null],["static-attr","start-angle","270deg"],["static-attr","end-angle","-90deg"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","objectives-progress-radial__progress-background"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","slot","middle"],["dynamic-attr","class",["concat",["objectives-progress-radial__progress-middle ",["helper",["if"],[["get",["showCompletedBg"]],"objectives-progress-radial__progress-middle--completed"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","objectives-progress-radial__progress-top"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showCompletedCheck"]]],null,1,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h4",[]],["flush-element"],["append",["unknown",["progressText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","svg",[]],["static-attr","width","25"],["static-attr","height","30"],["static-attr","viewBox","0 0 150 150"],["flush-element"],["text","\\n        "],["open-element","defs",[]],["flush-element"],["text","\\n          "],["open-element","linearGradient",[]],["dynamic-attr","id",["unknown",["strokeId"]],null],["static-attr","x1","0%"],["static-attr","y1","0%"],["static-attr","x2","0%"],["static-attr","y2","100%"],["flush-element"],["text","\\n            "],["open-element","stop",[]],["static-attr","offset","0%"],["static-attr","stop-color","#F0E6D2"],["flush-element"],["close-element"],["text","\\n            "],["open-element","stop",[]],["static-attr","offset","100%"],["static-attr","stop-color","#C89B3C"],["static-attr","stop-opacity","0.95"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","path",[]],["static-attr","class","objectives-progress-radial__checkmark"],["static-attr","d","M10,65 l30,50 l95,-70"],["dynamic-attr","stroke",["concat",["url(#",["unknown",["strokeId"]],")"]]],["static-attr","stroke-width","20"],["static-attr","fill","none"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "SNdYv5KV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-progress-radial.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-progress-radial.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-progress-radial.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-progress-radial__progress-container ",["helper",["if"],[["get",["showCompletedBg"]],"objectives-progress-radial__progress-container--completed"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","objectives-progress-radial__progress"],["static-attr","type","custom"],["dynamic-attr","percent",["unknown",["radialPercentage"]],null],["static-attr","start-angle","270deg"],["static-attr","end-angle","-90deg"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","objectives-progress-radial__progress-background"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","slot","middle"],["dynamic-attr","class",["concat",["objectives-progress-radial__progress-middle ",["helper",["if"],[["get",["showCompletedBg"]],"objectives-progress-radial__progress-middle--completed"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","objectives-progress-radial__progress-top"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showCompletedCheck"]]],null,1,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h4",[]],["flush-element"],["append",["unknown",["progressText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","svg",[]],["static-attr","width","25"],["static-attr","height","30"],["static-attr","viewBox","0 0 150 150"],["flush-element"],["text","\\n        "],["open-element","defs",[]],["flush-element"],["text","\\n          "],["open-element","linearGradient",[]],["dynamic-attr","id",["unknown",["strokeId"]],null],["static-attr","x1","0%"],["static-attr","y1","0%"],["static-attr","x2","0%"],["static-attr","y2","100%"],["flush-element"],["text","\\n            "],["open-element","stop",[]],["static-attr","offset","0%"],["static-attr","stop-color","#F0E6D2"],["flush-element"],["close-element"],["text","\\n            "],["open-element","stop",[]],["static-attr","offset","100%"],["static-attr","stop-color","#C89B3C"],["static-attr","stop-opacity","0.95"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","path",[]],["static-attr","class","objectives-progress-radial__checkmark"],["static-attr","d","M10,65 l30,50 l95,-70"],["dynamic-attr","stroke",["concat",["url(#",["unknown",["strokeId"]],")"]]],["static-attr","stroke-width","20"],["static-attr","fill","none"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             "use strict";
             var a = s(1),
                 n = s(2),
-                o = s(3),
-                l = s(11);
+                o = s(8),
+                i = s(11);
             e.exports = a.Ember.Component.extend({
                 classNames: ["objectives-reward-tooltip"],
                 layout: s(12),
@@ -388,20 +344,71 @@
                         s = this.get("lolEventHubType");
                     return e.map((e => {
                         const a = e?.media || {},
-                            l = !!a?.overrideMediaRewardUrl;
-                        let i;
-                        return e.rewardType === n.REWARD_TYPE.BXP && (t ? (i = e.rewardType.toLowerCase(), s === o.LolEventHubType.HALL_OF_LEGENDS ? i = `${i}-hol` : s === o.LolEventHubType.SEASON_PASS_MAYHEM && (i = `${i}-mayhem`)) : i = n.REWARD_TYPE.DEFAULT), {
-                            hasOverrideMediaReward: l,
+                            i = !!a?.overrideMediaRewardUrl;
+                        let l;
+                        return e.rewardType === n.REWARD_TYPE.BXP && (t ? (l = e.rewardType.toLowerCase(), s === o.LolEventHubType.HALL_OF_LEGENDS ? l = `${l}-hol` : s === o.LolEventHubType.SEASON_PASS_MAYHEM && (l = `${l}-mayhem`)) : l = n.REWARD_TYPE.DEFAULT), {
+                            hasOverrideMediaReward: i,
                             overrideMediaRewardUrl: a?.overrideMediaRewardUrl,
-                            rewardTypeIcon: i,
+                            rewardTypeIcon: l,
                             tooltipSubtitle: e.description
                         }
                     }))
                 })),
                 expirationDetails: a.Ember.computed("endTime", (function() {
                     const e = this.get("endTime");
-                    return (0, l.calculateExpirationDetails)(e)
+                    return (0, i.calculateExpirationDetails)(e)
                 }))
+            })
+        }, function(e, t, s) {
+            "use strict";
+            var a = this && this.__createBinding || (Object.create ? function(e, t, s, a) {
+                    void 0 === a && (a = s);
+                    var n = Object.getOwnPropertyDescriptor(t, s);
+                    n && !("get" in n ? !t.__esModule : n.writable || n.configurable) || (n = {
+                        enumerable: !0,
+                        get: function() {
+                            return t[s]
+                        }
+                    }), Object.defineProperty(e, a, n)
+                } : function(e, t, s, a) {
+                    void 0 === a && (a = s), e[a] = t[s]
+                }),
+                n = this && this.__exportStar || function(e, t) {
+                    for (var s in e) "default" === s || Object.prototype.hasOwnProperty.call(t, s) || a(t, e, s)
+                };
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), n(s(9), t), n(s(10), t)
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.TftPassType = t.RewardTrackItemHeaderType = t.ObjectiveCategoryFilter = t.LolEventHubType = t.ObjectiveCategoryType = void 0, t.ObjectiveCategoryType = {
+                NONPASS: "kNonPass",
+                LEAGUEPASS: "kEventHubConfiguration",
+                TFTPASS: "kTFTPassData"
+            }, t.LolEventHubType = {
+                EVENT_SHOP: "EVENT_SHOP",
+                HALL_OF_LEGENDS: "HALL_OF_LEGENDS",
+                SEASON_PASS: "SEASON_PASS",
+                SEASON_PASS_MAYHEM: "SEASON_PASS_MAYHEM",
+                NON_PASS: "NON_PASS"
+            }, t.ObjectiveCategoryFilter = {
+                NONE: "kNone",
+                NPE: "kNPE"
+            }, t.RewardTrackItemHeaderType = {
+                PREMIUM: "kPremium",
+                FREE: "kFree",
+                NONE: "kNone"
+            }, t.TftPassType = {
+                UNKNOWN: "kUnknown",
+                BATTLE_PASS: "kBattlePass",
+                EVENT_PASS: "kEventPass"
+            }
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
             })
         }, (e, t) => {
             "use strict";
@@ -414,24 +421,24 @@
                     a = Math.floor(t / 1e3),
                     n = Math.floor(a / 60),
                     o = Math.floor(n / 60),
-                    l = Math.floor(o / 24);
-                let i = !1,
+                    i = Math.floor(o / 24);
+                let l = !1,
                     r = !1,
                     c = !1,
-                    d = !1;
-                return l >= 7 ? i = !0 : l >= 1 ? (i = !0, r = !0) : o >= 1 ? (r = !0, c = !0) : (c = !0, d = !0), {
+                    m = !1;
+                return i >= 7 ? l = !0 : i >= 1 ? (l = !0, r = !0) : o >= 1 ? (r = !0, c = !0) : (c = !0, m = !0), {
                     isExpiringSoon: s,
-                    showDays: i,
+                    showDays: l,
                     showHours: r,
                     showMinutes: c,
-                    showSeconds: d
+                    showSeconds: m
                 }
             }
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "QmMF/wTT",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-reward-tooltip.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-reward-tooltip.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-reward-tooltip.js\\" "],["text","\\n"],["block",["if"],[["get",["completedDateText"]]],null,9,8],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__top"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__icons"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDoubleReward"]]],null,6,5],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__horizontal-divider"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__bottom"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isDoubleReward"]],"objectives-reward-tooltip__multiple-rewards-wrapper","objectives-reward-tooltip__reward-wrapper"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["bottomRewards"]]],null,4],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["description"]]],null,1],["block",["if"],[["get",["objectivesTooltipMetadata"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["objectives-tooltip-requirements"],null,[["objectivesTooltipMetadata"],[["get",["objectivesTooltipMetadata"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__horizontal-divider"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__description"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["description"]]],null],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-reward-tooltip__bottom-reward-icon objectives-reward-tooltip__bottom-reward-icon--",["unknown",["reward","rewardTypeIcon"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__bottom-reward-icon objectives-reward-tooltip__bottom-reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["reward","overrideMediaRewardUrl"]],"\');"]]],["flush-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-reward"],["flush-element"],["text","\\n"],["block",["if"],[["get",["reward","hasOverrideMediaReward"]]],null,3,2],["text","        "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__text-block"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__text"],["flush-element"],["text","\\n            "],["append",["unknown",["reward","tooltipSubtitle"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__icon-bounding"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["objectives-reward-tooltip__icon\\n            ",["unknown",["rewardOne","rewardTooltipTypeSummonerIcon"]],"\\n            ",["unknown",["rewardOne","rewardTooltipTypeSplash"]]]]],["dynamic-attr","src",["concat",[["unknown",["rewardOne","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__icon-bounding__left"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["objectives-reward-tooltip__icon multi\\n            ",["unknown",["rewardOne","rewardTooltipTypeSummonerIcon"]],"\\n            ",["unknown",["rewardOne","rewardTooltipTypeSplash"]]]]],["dynamic-attr","src",["concat",[["unknown",["rewardOne","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__vertical-divider"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__icon-bounding__right"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["objectives-reward-tooltip__icon multi\\n            ",["unknown",["rewardTwo","rewardTooltipTypeSummonerIcon"]],"\\n            ",["unknown",["rewardTwo","rewardTooltipTypeSplash"]]]]],["dynamic-attr","src",["concat",[["unknown",["rewardTwo","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__end_timer_wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__end_timer_text"],["flush-element"],["text","\\n        "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText"],[["get",["endTime"]],["get",["expirationDetails","showDays"]],["get",["expirationDetails","showHours"]],["get",["expirationDetails","showMinutes"]],["get",["expirationDetails","showSeconds"]],true,1," ",["get",["tra","objectives_reward_tooltip_end_timer_text"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__horizontal-divider"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["expirationDetails","isExpiringSoon"]]],null,7]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__end_timer_wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__end_timer_text"],["flush-element"],["text","\\n      "],["append",["unknown",["completedDateText"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__horizontal-divider"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "hef91OMP",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-reward-tooltip.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-reward-tooltip.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-reward-tooltip.js\\" "],["text","\\n"],["block",["if"],[["get",["completedDateText"]]],null,9,8],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__top"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__icons"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDoubleReward"]]],null,6,5],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__horizontal-divider"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__bottom"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isDoubleReward"]],"objectives-reward-tooltip__multiple-rewards-wrapper","objectives-reward-tooltip__reward-wrapper"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["bottomRewards"]]],null,4],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["description"]]],null,1],["block",["if"],[["get",["objectivesTooltipMetadata"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["objectives-tooltip-requirements"],null,[["objectivesTooltipMetadata"],[["get",["objectivesTooltipMetadata"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__horizontal-divider"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__description"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["description"]]],null],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-reward-tooltip__bottom-reward-icon objectives-reward-tooltip__bottom-reward-icon--",["unknown",["reward","rewardTypeIcon"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__bottom-reward-icon objectives-reward-tooltip__bottom-reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["reward","overrideMediaRewardUrl"]],"\');"]]],["flush-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-reward"],["flush-element"],["text","\\n"],["block",["if"],[["get",["reward","hasOverrideMediaReward"]]],null,3,2],["text","        "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__text-block"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__text"],["flush-element"],["text","\\n            "],["append",["unknown",["reward","tooltipSubtitle"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__icon-bounding"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["objectives-reward-tooltip__icon\\n            ",["unknown",["rewardOne","rewardTooltipTypeSummonerIcon"]],"\\n            ",["unknown",["rewardOne","rewardTooltipTypeSplash"]]]]],["dynamic-attr","src",["concat",[["unknown",["rewardOne","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__icon-bounding__left"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["objectives-reward-tooltip__icon multi\\n            ",["unknown",["rewardOne","rewardTooltipTypeSummonerIcon"]],"\\n            ",["unknown",["rewardOne","rewardTooltipTypeSplash"]]]]],["dynamic-attr","src",["concat",[["unknown",["rewardOne","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__vertical-divider"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__icon-bounding__right"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["objectives-reward-tooltip__icon multi\\n            ",["unknown",["rewardTwo","rewardTooltipTypeSummonerIcon"]],"\\n            ",["unknown",["rewardTwo","rewardTooltipTypeSplash"]]]]],["dynamic-attr","src",["concat",[["unknown",["rewardTwo","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__end_timer_wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__end_timer_text"],["flush-element"],["text","\\n        "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText"],[["get",["endTime"]],["get",["expirationDetails","showDays"]],["get",["expirationDetails","showHours"]],["get",["expirationDetails","showMinutes"]],["get",["expirationDetails","showSeconds"]],true,1," ",["get",["tra","objectives_reward_tooltip_end_timer_text"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__horizontal-divider"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["expirationDetails","isExpiringSoon"]]],null,7]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__end_timer_wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__end_timer_text"],["flush-element"],["text","\\n      "],["append",["unknown",["completedDateText"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","objectives-reward-tooltip__horizontal-divider"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, function(e, t, s) {
@@ -446,8 +453,8 @@
             });
             const n = s(1),
                 o = s(2),
-                l = s(3),
-                i = a(s(14));
+                i = s(8),
+                l = a(s(14));
             e.exports = n.Ember.Component.extend({
                 pipNotificationService: n.Ember.inject.service("pip-notifications"),
                 userExperienceService: n.Ember.inject.service("user-experience"),
@@ -465,7 +472,7 @@
                 lolEventHubType: null,
                 description: n.Ember.computed.alias("cardData.description"),
                 backgroundUrl: n.Ember.computed.alias("cardData.iconImageUrl"),
-                LOL_EVENT_HUB_TYPE: l.LolEventHubType,
+                LOL_EVENT_HUB_TYPE: i.LolEventHubType,
                 hasClickSelectReward: !1,
                 init() {
                     this._super(...arguments), this.mouseEnter = this.mouseEnter.bind(this)
@@ -598,7 +605,7 @@
                     return t
                 })),
                 mouseEnter: function() {
-                    this.get("isNew") && this.get("pipNotificationService") && this.get("parentGroupId") && (this.get("pipNotificationService").notifySeenGroup(this.get("parentGroupId")), this.get("pipNotificationService").addToViewedBatch(this.get("cardData.id")), this.set("isNew", !1)), i.default.playAudio(o.SFX.hover)
+                    this.get("isNew") && this.get("pipNotificationService") && this.get("parentGroupId") && (this.get("pipNotificationService").notifySeenGroup(this.get("parentGroupId")), this.get("pipNotificationService").addToViewedBatch(this.get("cardData.id")), this.set("isNew", !1)), l.default.playAudio(o.SFX.hover)
                 },
                 _formatObjectives(e) {
                     return e?.objectives ? e?.completionExpression?.toLowerCase()?.includes(o.MISSION_EXPRESSION_TYPE_SEARCH_SAFE[o.MISSION_EXPRESSION_TYPE.OF]) ? this._formatOfMissionObjectives(e) : e.objectives.map((e => {
@@ -623,20 +630,20 @@
                         const a = s[e],
                             {
                                 currentProgress: o,
-                                totalCount: l
+                                totalCount: i
                             } = a.progress;
-                        o === l && t < n && t++
+                        o === i && t < n && t++
                     }
                     const o = n > 0 ? Math.floor(t / n * 100) : 0,
-                        l = this._generateProgressText(t, n, o);
+                        i = this._generateProgressText(t, n, o);
                     return [{
                         description: e?.description,
                         progressPercentage: o,
-                        progressText: l
+                        progressText: i
                     }]
                 },
                 _generateProgressText: (e, t, s) => Math.abs(t).toString().length >= 3 ? `${s}%` : `${e}/${t}`,
-                _inferEventHubTypeFromLocations: e => e.includes(o.EVENT_HUB_TYPE_OVERRIDE_LOCATION.BACKGROUND_GOLD) && e.includes(o.EVENT_HUB_TYPE_OVERRIDE_LOCATION.TEXT_LEVEL) ? l.LolEventHubType.HALL_OF_LEGENDS : e.includes(o.EVENT_HUB_TYPE_OVERRIDE_LOCATION.MAYHEM_SEASON_PASS) ? l.LolEventHubType.SEASON_PASS_MAYHEM : null,
+                _inferEventHubTypeFromLocations: e => e.includes(o.EVENT_HUB_TYPE_OVERRIDE_LOCATION.BACKGROUND_GOLD) && e.includes(o.EVENT_HUB_TYPE_OVERRIDE_LOCATION.TEXT_LEVEL) ? i.LolEventHubType.HALL_OF_LEGENDS : e.includes(o.EVENT_HUB_TYPE_OVERRIDE_LOCATION.MAYHEM_SEASON_PASS) ? i.LolEventHubType.SEASON_PASS_MAYHEM : null,
                 click(e) {
                     const t = e?.target;
                     if (t?.closest && t.closest("a")) return void e.stopPropagation();
@@ -645,12 +652,12 @@
                     const s = this.get("cardData"),
                         a = s?.status;
                     if (a !== o.MISSIONS_STATUS.SELECT_REWARDS) return;
-                    const l = s?.id,
-                        i = s?.rewards;
-                    if (!l || !i) return void n.logger.info("No mission id or rewards found for this mission");
-                    const r = i.find((e => "" !== e.rewardGroup)),
+                    const i = s?.id,
+                        l = s?.rewards;
+                    if (!i || !l) return void n.logger.info("No mission id or rewards found for this mission");
+                    const r = l.find((e => "" !== e.rewardGroup)),
                         c = r?.rewardGroup;
-                    c ? (this.set("isSelectingReward", !0), n.db.put(`/lol-missions/v1/player/${l}`, {
+                    c ? (this.set("isSelectingReward", !0), n.db.put(`/lol-missions/v1/player/${i}`, {
                         rewardGroups: [c]
                     }).then((() => {
                         this.set("hasClickSelectReward", !0)
@@ -658,7 +665,7 @@
                         this.set("isSelectingReward", !1), n.logger.error(`An error occured while selecting rewards: ${e}`)
                     })).finally((() => {
                         n.TelemetryService.sendTelemetryEvent(o.TELEMETRY_EVENTS.OBJECTIVES_SELECT_REWARDS, "select_rewards_clicked", o.TELEMETRY_ORIGIN_OBJECTIVES, {
-                            missionId: l,
+                            missionId: i,
                             rewardItemId: r?.itemId
                         })
                     }))) : n.logger.info("No reward groups found for this mission")
@@ -685,8 +692,8 @@
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "EvIObsa3",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-card-v2.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-card-v2.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-card-v2__objectives-main-container\\n    ",["helper",["if"],[["get",["isNew"]],"objectives-card-v2__objectives-main-container--new"],null]]]],["dynamic-attr","onmouseenter",["unknown",["mouseEnter"]],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["objectives"]]],null,31],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","left"]],25],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-container"],["flush-element"],["text","\\n"],["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","SEASON_PASS"]]],null]],null,24,23],["block",["if"],[["get",["isRewardFulfilled"]]],null,19],["block",["each"],[["get",["rewards"]]],null,18],["block",["if"],[["get",["isRewardFulfilled"]]],null,1],["block",["if"],[["get",["showMultiRewardCount"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-count-box"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-count"],["flush-element"],["append",["unknown",["rewardCount"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["static-attr","class","objectives-card-v2__reward-fulfilled-checkmark"],["static-attr","src","/fe/lol-objectives/images/mission-complete-checkmark.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","generic_xp"]],false],["close-element"],["text","\\n                "]],"locals":[]},{"statements":[["block",["if"],[["get",["isSummonerXPReward"]]],null,2]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","objectives_mayhem_xp"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","SEASON_PASS_MAYHEM"]]],null]],null,4,3]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","objectives_battlepass_xp"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","SEASON_PASS"]]],null]],null,6,5]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","objectives_hol_xp"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","objectives_hol_xp_level"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["reward","quantity"]],1],null]],null,9,8]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","HALL_OF_LEGENDS"]]],null]],null,10,7]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-text-wrapper"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-v2"],["flush-element"],["append",["unknown",["reward","quantity"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["displayXPAmountDescription"]]],null,11],["text","            "],["close-element"],["text","\\n          "]],"locals":[]},{"statements":[["block",["if"],[["get",["displayXPAmountChange"]]],null,12]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount"],["flush-element"],["append",["unknown",["reward","quantity"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-card-v2__reward-item_claim-container_animation\\n                    ",["helper",["if"],[["get",["isClaimHovered"]],"hover","default"],null]]]],["flush-element"],["text","\\n                  "],["open-element","uikit-video",[]],["static-attr","class","objectives-card-v2__reward-item_claim-container_animation--default"],["static-attr","src","/fe/lol-static-assets/videos/rewards/reward-claimable-particles-default.webm"],["static-attr","cache-name","rcp-fe-lol-objectives"],["static-attr","preload",""],["static-attr","loop",""],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n                  "],["open-element","uikit-video",[]],["static-attr","class","objectives-card-v2__reward-item_claim-container_animation--hover"],["static-attr","src","/fe/lol-static-assets/videos/rewards/reward-claimable-particles-hover.webm"],["static-attr","cache-name","rcp-fe-lol-objectives"],["static-attr","preload",""],["static-attr","loop",""],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-item_claim-container_static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-item_claim-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPotatoMode"]]],null,16,15],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","button",[]],["dynamic-attr","class",["concat",["objectives-card-v2__reward-item-wrapper\\n        ",["helper",["if"],[["get",["hasClaimableReward"]],"claimable-reward"],null],"\\n        ",["helper",["if"],[["get",["isSelectingReward"]],"selecting-reward"],null],"\\n        ",["helper",["if"],[["get",["isRewardFulfilled"]],"reward-fulfilled"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-item"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-wrapper"],["flush-element"],["text","\\n          "],["open-element","img",[]],["dynamic-attr","class",["concat",["objectives-card-v2__reward-item_image\\n              ",["helper",["if"],[["get",["displayXPAmountChange"]],"objectives-card-v2__reward-item_image--xp"],null],"\\n              ",["helper",["if"],[["get",["isXPReward"]],"objectives-card-v2__reward-item_image--bottom-fade"],null]]]],["dynamic-attr","src",["concat",[["unknown",["reward","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["hasClaimableReward"]]],null,17],["text","\\n"],["block",["if"],[["get",["shouldShowQuantity"]]],null,14,13],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-container-fulfilled-overlay"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["static-attr","class","objectives-card-v2__reward-container_background-image"],["static-attr","src","/fe/lol-objectives/images/HOL_reward_background.png"],["flush-element"],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","HALL_OF_LEGENDS"]]],null]],null,20]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","objectives-card-v2__reward-container_background-image"],["static-attr","src","/fe/lol-objectives/images/BXP_reward_background.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","SEASON_PASS_MAYHEM"]]],null]],null,22,21]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["static-attr","class","objectives-card-v2__reward-container_background-image"],["static-attr","src","/fe/lol-objectives/images/BXP_reward_background.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["objectives-reward-tooltip"],null,[["rewards","description","endTime","completedDate","isLOL","objectivesTooltipMetadata","lolEventHubType"],[["get",["tooltipRewards"]],["get",["description"]],["get",["cardData","endTime"]],["get",["cardData","completedDate"]],["get",["isLOL"]],["get",["objectivesTooltipMetadata"]],["get",["missionEventType"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","objectives-card-v2__expiring-icon"],["dynamic-attr","alt",["concat",[["unknown",["tra","objectives_modal_acc_expiring"]]]]],["static-attr","src","/fe/lol-objectives/images/expiring-soon-clock.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowExpireIcon"]]],null,26]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","objectives-card-v2__title"],["flush-element"],["append",["helper",["sanitize"],[["get",["title"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__background-image-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__image-mask"],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","objectives-card-v2__background-image"],["dynamic-attr","src",["unknown",["backgroundUrl"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-card-v2__objective-divider"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__divider-line"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__divider-text"],["flush-element"],["append",["unknown",["dividerTextTra"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__divider-line objectives-card-v2__divider-line--flip-x"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["index"]]],null,30],["text","    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__objectives-row"],["flush-element"],["text","\\n      "],["append",["helper",["objectives-progress-radial"],null,[["targetPercentage","progressText"],[["get",["objective","progressPercentage"]],["get",["objective","progressText"]]]]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-card-v2__description-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["backgroundUrl"]]],null,29],["block",["if"],[["get",["title"]]],null,28],["text","        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__description"],["flush-element"],["append",["helper",["sanitize"],[["get",["objective","description"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["unless"],[["get",["index"]]],null,27],["text","    "],["close-element"],["text","\\n"]],"locals":["objective","index"]}],"hasPartials":false}',
+                id: "KOYcNoN/",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-card-v2.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-card-v2.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-card-v2__objectives-main-container\\n    ",["helper",["if"],[["get",["isNew"]],"objectives-card-v2__objectives-main-container--new"],null]]]],["dynamic-attr","onmouseenter",["unknown",["mouseEnter"]],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["objectives"]]],null,31],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","left"]],25],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-container"],["flush-element"],["text","\\n"],["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","SEASON_PASS"]]],null]],null,24,23],["block",["if"],[["get",["isRewardFulfilled"]]],null,19],["block",["each"],[["get",["rewards"]]],null,18],["block",["if"],[["get",["isRewardFulfilled"]]],null,1],["block",["if"],[["get",["showMultiRewardCount"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-count-box"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-count"],["flush-element"],["append",["unknown",["rewardCount"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["static-attr","class","objectives-card-v2__reward-fulfilled-checkmark"],["static-attr","src","/fe/lol-objectives/images/mission-complete-checkmark.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","generic_xp"]],false],["close-element"],["text","\\n                "]],"locals":[]},{"statements":[["block",["if"],[["get",["isSummonerXPReward"]]],null,2]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","objectives_mayhem_xp"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","SEASON_PASS_MAYHEM"]]],null]],null,4,3]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","objectives_battlepass_xp"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","SEASON_PASS"]]],null]],null,6,5]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","objectives_hol_xp"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-description"],["flush-element"],["append",["unknown",["tra","objectives_hol_xp_level"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["reward","quantity"]],1],null]],null,9,8]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","HALL_OF_LEGENDS"]]],null]],null,10,7]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-text-wrapper"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount-v2"],["flush-element"],["append",["unknown",["reward","quantity"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["displayXPAmountDescription"]]],null,11],["text","            "],["close-element"],["text","\\n          "]],"locals":[]},{"statements":[["block",["if"],[["get",["displayXPAmountChange"]]],null,12]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-amount"],["flush-element"],["append",["unknown",["reward","quantity"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-card-v2__reward-item_claim-container_animation\\n                    ",["helper",["if"],[["get",["isClaimHovered"]],"hover","default"],null]]]],["flush-element"],["text","\\n                  "],["open-element","uikit-video",[]],["static-attr","class","objectives-card-v2__reward-item_claim-container_animation--default"],["static-attr","src","/fe/lol-static-assets/videos/rewards/reward-claimable-particles-default.webm"],["static-attr","cache-name","rcp-fe-lol-objectives"],["static-attr","preload",""],["static-attr","loop",""],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n                  "],["open-element","uikit-video",[]],["static-attr","class","objectives-card-v2__reward-item_claim-container_animation--hover"],["static-attr","src","/fe/lol-static-assets/videos/rewards/reward-claimable-particles-hover.webm"],["static-attr","cache-name","rcp-fe-lol-objectives"],["static-attr","preload",""],["static-attr","loop",""],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-item_claim-container_static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-item_claim-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPotatoMode"]]],null,16,15],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","button",[]],["dynamic-attr","class",["concat",["objectives-card-v2__reward-item-wrapper\\n        ",["helper",["if"],[["get",["hasClaimableReward"]],"claimable-reward"],null],"\\n        ",["helper",["if"],[["get",["isSelectingReward"]],"selecting-reward"],null],"\\n        ",["helper",["if"],[["get",["isRewardFulfilled"]],"reward-fulfilled"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-item"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-wrapper"],["flush-element"],["text","\\n          "],["open-element","img",[]],["dynamic-attr","class",["concat",["objectives-card-v2__reward-item_image\\n              ",["helper",["if"],[["get",["displayXPAmountChange"]],"objectives-card-v2__reward-item_image--xp"],null],"\\n              ",["helper",["if"],[["get",["isXPReward"]],"objectives-card-v2__reward-item_image--bottom-fade"],null]]]],["dynamic-attr","src",["concat",[["unknown",["reward","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["hasClaimableReward"]]],null,17],["text","\\n"],["block",["if"],[["get",["shouldShowQuantity"]]],null,14,13],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__reward-container-fulfilled-overlay"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["static-attr","class","objectives-card-v2__reward-container_background-image"],["static-attr","src","/fe/lol-objectives/images/HOL_reward_background.png"],["flush-element"],["close-element"],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","HALL_OF_LEGENDS"]]],null]],null,20]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","objectives-card-v2__reward-container_background-image"],["static-attr","src","/fe/lol-objectives/images/BXP_reward_background.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["missionEventType"]],["get",["LOL_EVENT_HUB_TYPE","SEASON_PASS_MAYHEM"]]],null]],null,22,21]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["static-attr","class","objectives-card-v2__reward-container_background-image"],["static-attr","src","/fe/lol-objectives/images/BXP_reward_background.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["objectives-reward-tooltip"],null,[["rewards","description","endTime","completedDate","isLOL","objectivesTooltipMetadata","lolEventHubType"],[["get",["tooltipRewards"]],["get",["description"]],["get",["cardData","endTime"]],["get",["cardData","completedDate"]],["get",["isLOL"]],["get",["objectivesTooltipMetadata"]],["get",["missionEventType"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","objectives-card-v2__expiring-icon"],["dynamic-attr","alt",["concat",[["unknown",["tra","objectives_modal_acc_expiring"]]]]],["static-attr","src","/fe/lol-objectives/images/expiring-soon-clock.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowExpireIcon"]]],null,26]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","objectives-card-v2__title"],["flush-element"],["append",["helper",["sanitize"],[["get",["title"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__background-image-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","objectives-card-v2__image-mask"],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","objectives-card-v2__background-image"],["dynamic-attr","src",["unknown",["backgroundUrl"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-card-v2__objective-divider"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__divider-line"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__divider-text"],["flush-element"],["append",["unknown",["dividerTextTra"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__divider-line objectives-card-v2__divider-line--flip-x"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["index"]]],null,30],["text","    "],["open-element","div",[]],["static-attr","class","objectives-card-v2__objectives-row"],["flush-element"],["text","\\n      "],["append",["helper",["objectives-progress-radial"],null,[["targetPercentage","progressText"],[["get",["objective","progressPercentage"]],["get",["objective","progressText"]]]]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-card-v2__description-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["backgroundUrl"]]],null,29],["block",["if"],[["get",["title"]]],null,28],["text","        "],["open-element","div",[]],["static-attr","class","objectives-card-v2__description"],["flush-element"],["append",["helper",["sanitize"],[["get",["objective","description"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["unless"],[["get",["index"]]],null,27],["text","    "],["close-element"],["text","\\n"]],"locals":["objective","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
@@ -723,11 +730,11 @@
                         const {
                             currentProgress: s,
                             totalCount: a
-                        } = e.objective?.progress || {}, n = s === a, l = e.metadata?.type;
+                        } = e.objective?.progress || {}, n = s === a, i = e.metadata?.type;
                         return {
-                            type: l,
+                            type: i,
                             isCompleted: n,
-                            iconPath: t && !n ? o[l]?.DEFAULT || o.CHAMPION.DEFAULT : this._getIconPath(e.metadata)
+                            iconPath: t && !n ? o[i]?.DEFAULT || o.CHAMPION.DEFAULT : this._getIconPath(e.metadata)
                         }
                     }))
                 })),
@@ -774,8 +781,8 @@
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "kNlRP8ND",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\tooltip-components\\\\objectives-tooltip-requirements.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","objectives-tooltip-requirements__icons-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["visualIconList"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["objectives-tooltip-requirement-icon"],null,[["iconPath","type","isCompleted"],[["get",["icon","iconPath"]],["get",["icon","type"]],["get",["icon","isCompleted"]]]]],false],["text","\\n"]],"locals":["icon"]}],"hasPartials":false}',
+                id: "vGFmDVJP",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\tooltip-components\\\\objectives-tooltip-requirements.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","objectives-tooltip-requirements__icons-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["visualIconList"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["objectives-tooltip-requirement-icon"],null,[["iconPath","type","isCompleted"],[["get",["icon","iconPath"]],["get",["icon","type"]],["get",["icon","isCompleted"]]]]],false],["text","\\n"]],"locals":["icon"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
@@ -797,8 +804,8 @@
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "Qpr0xiw3",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\tooltip-components\\\\objectives-tooltip-requirement-icon.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-tooltip-requirement-icon__container ",["helper",["if"],[["get",["isCompleted"]],"is-completed"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt","icon"],["static-attr","class","objectives-tooltip-requirement-icon__icon-image"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isCompleted"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["static-attr","src","/fe/lol-objectives/images/objectives-tooltip/objectives-tooltip-requirement-complete-checkmark.svg"],["static-attr","class","objectives-tooltip-requirement-icon__checkmark"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "nPEX0V5y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\tooltip-components\\\\objectives-tooltip-requirement-icon.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-tooltip-requirement-icon__container ",["helper",["if"],[["get",["isCompleted"]],"is-completed"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt","icon"],["static-attr","class","objectives-tooltip-requirement-icon__icon-image"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isCompleted"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["static-attr","src","/fe/lol-objectives/images/objectives-tooltip/objectives-tooltip-requirement-complete-checkmark.svg"],["static-attr","class","objectives-tooltip-requirement-icon__checkmark"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
@@ -809,10 +816,10 @@
             var a = s(1),
                 n = s(23),
                 o = s(2);
-            const l = new Set(["GameStart", "PreEndOfGame"]);
-            const i = new class {
+            const i = new Set(["GameStart", "PreEndOfGame"]);
+            const l = new class {
                 constructor() {
-                    this._application = null, this._applicationInstance = null, this._applicationRootElement = null, this._componentState = {}, this._router = null, (0, n.registerEmberApplication)(), this._handleGameflowData = this._handleGameFlowData.bind(this), a.db.observe("/lol-gameflow/v1/session", this, this._handleGameflowData)
+                    this._application = null, this._applicationInstance = null, this._applicationRootElement = null, this._componentState = {}, this._router = null, this._objectivesModalVisibilityCallbacks = [], (0, n.registerEmberApplication)(), this._handleGameflowData = this._handleGameFlowData.bind(this), a.db.observe("/lol-gameflow/v1/session", this, this._handleGameflowData)
                 }
                 _createObjectivesComponent() {
                     return this._componentState = {
@@ -823,17 +830,20 @@
                     })
                 }
                 show(e) {
-                    this._componentState.isVisible = !0, this._navigate(e)
+                    this._componentState.isVisible = !0, this._notifyObjectivesModalVisibility(!0), this._navigate(e)
                 }
                 hide() {
-                    this._componentState && (this._componentState.isVisible = !1), this._applicationInstance && this._applicationInstance.destroy(), a.LayerManager.removeLayer(this._applicationRootElement), this._application = null, this._applicationRootElement = null, this._applicationInstance = null
+                    this._componentState && (this._componentState.isVisible = !1, this._notifyObjectivesModalVisibility(!1)), this._applicationInstance && this._applicationInstance.destroy(), a.LayerManager.removeLayer(this._applicationRootElement), this._application = null, this._applicationRootElement = null, this._applicationInstance = null
+                }
+                _notifyObjectivesModalVisibility(e) {
+                    for (const t of this._objectivesModalVisibilityCallbacks) t && t(e)
                 }
                 _navigate(e = {}) {
                     const t = e.gameTab ?? "",
                         s = e.group ?? "",
                         n = e.category ?? "",
                         o = e.missionId ?? "",
-                        l = new URLSearchParams({
+                        i = new URLSearchParams({
                             group: s,
                             game: t,
                             category: n,
@@ -841,7 +851,7 @@
                         });
                     if (!this._application) {
                         const e = this._createObjectivesComponent();
-                        this._applicationRootElement = e.domNode, e.emberAppInstancePromise.then((e => (this._application = e, e.visit(`/?${l}`)))).then((e => {
+                        this._applicationRootElement = e.domNode, e.emberAppInstancePromise.then((e => (this._application = e, e.visit(`/?${i}`)))).then((e => {
                             this._applicationInstance = e, a.LayerManager.addLayer(this._applicationRootElement)
                         })).catch((e => {
                             a.logger.error("Failed to create and initialize objectives component:", e), this.hide()
@@ -851,11 +861,11 @@
                 _handleGameFlowData(e) {
                     const t = e?.phase,
                         s = this._componentState?.isVisible;
-                    s && t && l.has(t) && this.hide()
+                    s && t && i.has(t) && this.hide()
                 }
             };
-            Object.seal(i);
-            var r = i;
+            Object.seal(l);
+            var r = l;
             t.default = r
         }, (e, t, s) => {
             "use strict";
@@ -866,49 +876,54 @@
                     ComponentFactory: a.ComponentFactory,
                     disableAutoboot: !0,
                     Router: o.default,
-                    ApplicationRoute: l.default,
+                    ApplicationRoute: i.default,
                     RemainingTimeTextComponent: a.SharedEmberComponents.RemainingTimeTextComponent,
                     ResetTimerComponent: a.SharedEmberComponents.ResetTimerComponent,
-                    ObjectivesGameTabsComponent: i.default,
+                    ObjectivesGameTabsComponent: l.default,
                     ObjectivesCardV2Component: r.default,
                     ObjectivesProgressRadialComponent: c.default,
-                    ObjectivesRewardTooltipComponent: d.default,
-                    ErrorStateComponent: m.default,
-                    MilestoneTooltipComponent: Y,
-                    MasterySetCarouselComponent: X,
+                    ObjectivesRewardTooltipComponent: m.default,
+                    ErrorStateComponent: d.default,
+                    MilestoneTooltipComponent: q,
+                    MasterySetCarouselComponent: J,
                     ObjectivesSubNavV2Component: p.default,
                     ObjectivesMainV2Component: u.default,
                     HeaderTypesBaseComponent: g.default,
                     LeagueHolComponent: h.default,
-                    LeagueNpeComponent: b.default,
+                    LeagueDemaciaComponent: _.default,
+                    LeagueNpeComponent: E.default,
                     LeagueSeasonPassComponent: v.default,
-                    GenericObjectivesHeaderComponent: _.default,
-                    ObjectivesTooltipRequirementsComponent: E.default,
-                    ObjectivesTooltipRequirementIconComponent: f.default,
-                    ApplicationController: T.default,
+                    GenericObjectivesHeaderComponent: b.default,
+                    ObjectivesTooltipRequirementsComponent: f.default,
+                    ObjectivesTooltipRequirementIconComponent: T.default,
+                    ApplicationController: x.default,
                     tra: a.traService,
-                    PipNotificationsService: D.default,
-                    UserExperienceService: B.default,
-                    GamephaseService: H.default,
-                    SeasonPassService: G.default,
-                    GameDataService: V.default,
-                    EqHelper: U.default,
+                    PipNotificationsService: G.default,
+                    UserExperienceService: V.default,
+                    GamephaseService: U.default,
+                    SeasonPassService: H.default,
+                    GameDataService: F.default,
+                    ShoppefrontService: a.ShoppefrontComponents.ShoppefrontService,
+                    ShoppefrontLolInventoryService: a.ShoppefrontComponents.ShoppefrontLolInventoryService,
+                    ShoppefrontCatalogItemEnricherService: a.ShoppefrontComponents.ShoppefrontCatalogItemEnricherService,
+                    EqHelper: Y.default,
                     TEMPLATES: {
                         application: w.default,
-                        "components/objectives-game-tabs": x.default,
-                        "components/objectives-sub-nav-v2": C.default,
+                        "components/objectives-game-tabs": S.default,
+                        "components/objectives-sub-nav-v2": I.default,
                         "components/objectives-main-v2": j.default,
                         "components/objectives-card-v2": O.default,
-                        "components/objectives-progress-radial": S.default,
-                        "components/objectives-reward-tooltip": P.default,
-                        "components/error-state": y.default,
-                        "components/header-types-base": I.default,
-                        "components/league-hol": A.default,
-                        "components/league-npe": k.default,
-                        "components/league-season-pass": M.default,
-                        "components/generic-objectives-header": R.default,
-                        "components/objectives-tooltip-requirements": L.default,
-                        "components/objectives-tooltip-requirement-icon": N.default
+                        "components/objectives-progress-radial": P.default,
+                        "components/objectives-reward-tooltip": y.default,
+                        "components/error-state": C.default,
+                        "components/header-types-base": A.default,
+                        "components/league-hol": M.default,
+                        "components/league-npe": N.default,
+                        "components/league-season-pass": k.default,
+                        "components/league-demacia": D.default,
+                        "components/generic-objectives-header": L.default,
+                        "components/objectives-tooltip-requirements": R.default,
+                        "components/objectives-tooltip-requirement-icon": B.default
                     }
                 };
                 a.EmberApplicationFactory.setFactoryDefinition(n.APP_NAME, e, {
@@ -917,53 +932,55 @@
             };
             var a = s(1),
                 n = s(2),
-                o = F(s(24)),
-                l = F(s(25)),
-                i = F(s(26)),
-                r = F(s(13)),
-                c = F(s(7)),
-                d = F(s(10)),
-                m = F(s(27)),
-                p = F(s(28)),
-                u = F(s(29)),
-                g = F(s(30)),
-                h = F(s(31)),
-                v = F(s(32)),
-                _ = F(s(33)),
-                b = F(s(34)),
-                E = F(s(16)),
-                f = F(s(19)),
-                T = F(s(35)),
-                x = F(s(37)),
-                S = F(s(9)),
-                P = F(s(12)),
-                y = F(s(38)),
-                w = F(s(39)),
-                C = F(s(40)),
-                j = F(s(41)),
-                O = F(s(15)),
-                I = F(s(42)),
-                A = F(s(43)),
-                M = F(s(44)),
-                k = F(s(45)),
-                R = F(s(46)),
-                L = F(s(18)),
-                N = F(s(21)),
-                D = F(s(47)),
-                G = F(s(48)),
-                B = F(s(49)),
-                H = F(s(50)),
-                V = F(s(51)),
-                U = F(s(52));
+                o = X(s(24)),
+                i = X(s(25)),
+                l = X(s(26)),
+                r = X(s(13)),
+                c = X(s(4)),
+                m = X(s(7)),
+                d = X(s(27)),
+                p = X(s(28)),
+                u = X(s(29)),
+                g = X(s(30)),
+                h = X(s(31)),
+                _ = X(s(32)),
+                v = X(s(33)),
+                b = X(s(34)),
+                E = X(s(35)),
+                f = X(s(16)),
+                T = X(s(19)),
+                x = X(s(36)),
+                S = X(s(38)),
+                P = X(s(6)),
+                y = X(s(12)),
+                C = X(s(39)),
+                w = X(s(40)),
+                I = X(s(41)),
+                j = X(s(42)),
+                O = X(s(15)),
+                A = X(s(43)),
+                M = X(s(44)),
+                k = X(s(45)),
+                N = X(s(46)),
+                D = X(s(47)),
+                L = X(s(48)),
+                R = X(s(18)),
+                B = X(s(21)),
+                G = X(s(49)),
+                H = X(s(50)),
+                V = X(s(51)),
+                U = X(s(52)),
+                F = X(s(53)),
+                Y = X(s(54));
 
-            function F(e) {
+            function X(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             const {
-                MilestoneTooltipComponent: Y,
-                MasterySetCarouselComponent: X
+                MilestoneTooltipComponent: q,
+                MasterySetCarouselComponent: J
             } = a.SharedComponents.getApi_SharedChampionMasteryComponents()
         }, (e, t, s) => {
             "use strict";
@@ -1018,7 +1035,7 @@
             "use strict";
             var a, n = s(1),
                 o = s(2),
-                l = (a = s(14)) && a.__esModule ? a : {
+                i = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 };
             e.exports = n.Ember.Component.extend({
@@ -1031,21 +1048,21 @@
                         const {
                             restingAssetPath: a,
                             activeAssetPath: n,
-                            hoverAssetPath: l
+                            hoverAssetPath: i
                         } = o.OBJECTIVES_GAME_TAB_ASSETS_STATES[s];
                         return {
                             tabName: s,
                             accessibilityLabelTra: t.get(`objectives_modal_side_nav_aria_label_${s}_tab`),
                             restingAssetPath: a,
                             activeAssetPath: n,
-                            hoverAssetPath: l,
+                            hoverAssetPath: i,
                             isHovering: !1,
                             isSelected: s === e
                         }
                     }))
                 })),
                 _selectTab(e) {
-                    e !== this.get("selectedTab") && (this.set("selectedTab", e), this.sendAction("routeTo", e), l.default.playAudio(o.SFX.buttonGoldClick), n.TelemetryService.sendTelemetryEvent(o.TELEMETRY_EVENTS.OBJECTIVES_GAME_TAB, "game_tab_clicked", o.TELEMETRY_EVENTS.OBJECTIVES_MODAL, {
+                    e !== this.get("selectedTab") && (this.set("selectedTab", e), this.sendAction("routeTo", e), i.default.playAudio(o.SFX.buttonGoldClick), n.TelemetryService.sendTelemetryEvent(o.TELEMETRY_EVENTS.OBJECTIVES_GAME_TAB, "game_tab_clicked", o.TELEMETRY_EVENTS.OBJECTIVES_MODAL, {
                         game_type: e
                     }))
                 },
@@ -1054,7 +1071,7 @@
                         n.Ember.run.debounce(this, this._selectTab, e, 100)
                     },
                     handleTabHover(e, t) {
-                        n.Ember.set(e, "isHovering", t), t && l.default.playAudio(o.SFX.hover)
+                        n.Ember.set(e, "isHovering", t), t && i.default.playAudio(o.SFX.hover)
                     }
                 }
             })
@@ -1089,10 +1106,10 @@
             "use strict";
             var a, n = s(1),
                 o = s(2),
-                l = (a = s(14)) && a.__esModule ? a : {
+                i = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 },
-                i = s(11);
+                l = s(11);
             e.exports = n.Ember.Component.extend({
                 pipNotificationService: n.Ember.inject.service("pip-notifications"),
                 classNames: ["objectives-sub-nav-v2"],
@@ -1126,7 +1143,7 @@
                         const a = t.id === e,
                             n = this._buildGroups(t.subcategoryGroups, s),
                             o = n.some((e => e.isNew)),
-                            l = this.get(`currentSessionClickedCategories.${t.id}`) || !1;
+                            i = this.get(`currentSessionClickedCategories.${t.id}`) || !1;
                         return {
                             id: t.id,
                             overrideBackgroundImage: t.overrideBackgroundImage,
@@ -1134,14 +1151,14 @@
                             isSelected: a,
                             categorySectionImage: t.categorySectionImage,
                             subcategoryGroups: n,
-                            showNewCategoryPip: !l && o
+                            showNewCategoryPip: !i && o
                         }
                     }))
                 })),
                 _buildGroups(e, t) {
                     const s = t || e[0]?.id;
                     return e.map((e => {
-                        const t = (0, i.calculateExpirationDetails)(e.endTime);
+                        const t = (0, l.calculateExpirationDetails)(e.endTime);
                         return {
                             id: e.id,
                             groupNameLocalized: e.localizedTitle,
@@ -1171,15 +1188,15 @@
                             isDisabled: t,
                             id: s
                         } = e;
-                        t || this.get("selectedGroup") === s || (this.sendAction("updateGroupId", e.id), this.sendAction("scrollToGroup", s), l.default.playAudio(o.SFX.gridClick), n.TelemetryService.sendTelemetryEvent(o.TELEMETRY_EVENTS.OBJECTIVES_SUB_NAV_CLICKED, o.TELEMETRY_TYPE.CLICK, o.TELEMETRY_ORIGIN_OBJECTIVES, {
+                        t || this.get("selectedGroup") === s || (this.sendAction("updateGroupId", e.id), this.sendAction("scrollToGroup", s), i.default.playAudio(o.SFX.gridClick), n.TelemetryService.sendTelemetryEvent(o.TELEMETRY_EVENTS.OBJECTIVES_SUB_NAV_CLICKED, o.TELEMETRY_TYPE.CLICK, o.TELEMETRY_ORIGIN_OBJECTIVES, {
                             subnavId: s
                         }))
                     },
                     selectCategory(e) {
-                        e.isSelected || (0 === e.subcategoryGroups.length && n.logger.warning(`${e.categoryNameLocalized} Category has no subcategory groups`), n.Ember.set(this, `currentSessionClickedCategories.${e.id}`, !0), this.sendAction("updateCategoryId", e.id), l.default.playAudio(o.SFX.gridClick))
+                        e.isSelected || (0 === e.subcategoryGroups.length && n.logger.warning(`${e.categoryNameLocalized} Category has no subcategory groups`), n.Ember.set(this, `currentSessionClickedCategories.${e.id}`, !0), this.sendAction("updateCategoryId", e.id), i.default.playAudio(o.SFX.gridClick))
                     },
                     handleGroupHover(e) {
-                        e?.isSelected || l.default.playAudio(o.SFX.gridHover)
+                        e?.isSelected || i.default.playAudio(o.SFX.gridHover)
                     },
                     toggleShowCompletedObjectives(e) {
                         n.TelemetryService.sendTelemetryEvent(o.TELEMETRY_EVENTS.OBJECTIVES_COMPLETED_TOGGLE_CLICKED, "objectives_completed_toggle_clicked", o.TELEMETRY_EVENTS.OBJECTIVES_MODAL, {
@@ -1263,15 +1280,15 @@
                                     t = n.lastScrollTop;
                                     const o = n.visibleGroups,
                                         {
-                                            scrollPercentage: l,
-                                            isAtBottom: i,
+                                            scrollPercentage: i,
+                                            isAtBottom: l,
                                             scrollDirection: r
                                         } = n.metrics;
                                     if (0 === o.length) return;
                                     let c = null;
-                                    const d = o.filter((e => e.visiblePercentage >= .95));
-                                    if (i || l > .95) c = this.selectBotttomMostGroup(o);
-                                    else if (d.length > 1) c = this.selectScrollAlignedGroup(d, r);
+                                    const m = o.filter((e => e.visiblePercentage >= .95));
+                                    if (l || i > .95) c = this.selectBotttomMostGroup(o);
+                                    else if (m.length > 1) c = this.selectScrollAlignedGroup(m, r);
                                     else {
                                         c = o.reduce(((e, t) => t.visiblePercentage > e.visiblePercentage ? t : e)).id
                                     }
@@ -1305,17 +1322,17 @@
                 calculateScrollMetricsAndVisibleGroups(e, t, s, a) {
                     const n = e.scrollTop,
                         o = e.scrollHeight,
-                        l = e.clientHeight,
-                        i = n / (o - l) || 0,
-                        r = Math.abs(o - n - l) < 10,
+                        i = e.clientHeight,
+                        l = n / (o - i) || 0,
+                        r = Math.abs(o - n - i) < 10,
                         c = n > s ? 1 : n < s ? -1 : 0,
-                        d = [];
+                        m = [];
                     return a.forEach((function(e) {
                         const s = e.getBoundingClientRect(),
                             a = Math.max(s.top, t.top),
                             n = Math.min(s.bottom, t.bottom),
                             o = Math.max(0, n - a) / s.height;
-                        o > 0 && d.push({
+                        o > 0 && m.push({
                             id: e.id,
                             element: e,
                             visiblePercentage: o,
@@ -1327,13 +1344,13 @@
                         metrics: {
                             scrollTop: n,
                             scrollHeight: o,
-                            clientHeight: l,
-                            scrollPercentage: i,
+                            clientHeight: i,
+                            scrollPercentage: l,
                             isAtBottom: r,
                             scrollDirection: c
                         },
                         lastScrollTop: n,
-                        visibleGroups: d
+                        visibleGroups: m
                     }
                 },
                 groups: a.Ember.computed("groupData", "tra", "masteryGroupName", "selectedCategoryId", "objectiveCategories", "showCompletedObjectives", (function() {
@@ -1351,14 +1368,14 @@
                     return e.map((e => {
                         const a = e.refreshInterval > 0 && e.isCompleted && e.isPooledMission && e.sequence < e.maxRefreshCount,
                             o = e.localizedTitle.toLowerCase(),
-                            l = e.groupName.toLowerCase(),
-                            i = {
+                            i = e.groupName.toLowerCase(),
+                            l = {
                                 id: e.id,
                                 isCompleted: e.isCompleted,
                                 titleTra: e.localizedTitle,
                                 showRefreshTra: a,
                                 localizedTitle: o,
-                                refreshTra: a ? this.get(`tra.objectives_modal_main_refresh_subtext_${l}`) : "",
+                                refreshTra: a ? this.get(`tra.objectives_modal_main_refresh_subtext_${i}`) : "",
                                 groupCount: e.groupCount,
                                 missions: e.missions,
                                 endDate: e.endTime,
@@ -1366,7 +1383,7 @@
                                 isMastery: e.id === s
                             },
                             r = this.get("sessionSelectedMissionId");
-                        return i.missions = t ? e.missions : e.missions.filter((e => e.status !== n.MISSIONS_STATUS.COMPLETED && e.status !== n.MISSIONS_STATUS.REWARDS_PENDING || e.id === r)), i
+                        return l.missions = t ? e.missions : e.missions.filter((e => e.status !== n.MISSIONS_STATUS.COMPLETED && e.status !== n.MISSIONS_STATUS.REWARDS_PENDING || e.id === r)), l
                     }))
                 },
                 actions: {
@@ -1378,12 +1395,12 @@
                             this.set("isScrollTo", !0);
                             const e = this.element.querySelector(".objectives-main-v2__scrollbar"),
                                 o = s.offsetTop,
-                                l = n.OBJECTIVES_GROUP_HEADER_PADDING;
+                                i = n.OBJECTIVES_GROUP_HEADER_PADDING;
                             if (e) {
                                 const s = e.clientHeight;
-                                let n = o - l;
-                                const i = e.scrollHeight - s;
-                                if (n = Math.min(n, i), n = Math.max(0, n), 0 === n) this.set("isScrollTo", !1), a.Ember.run.later(this, (() => {
+                                let n = o - i;
+                                const l = e.scrollHeight - s;
+                                if (n = Math.min(n, l), n = Math.max(0, n), 0 === n) this.set("isScrollTo", !1), a.Ember.run.later(this, (() => {
                                     this.send("animateSelectedMission", t)
                                 }), 200);
                                 else {
@@ -1428,8 +1445,8 @@
             });
             const n = s(1),
                 o = a(s(14)),
-                l = s(2),
-                i = s(3);
+                i = s(2),
+                l = s(8);
             t.default = n.Ember.Component.extend({
                 classNames: ["objectives-season-pass-wrapper"],
                 seasonPassData: null,
@@ -1441,14 +1458,15 @@
                 userExperienceService: n.Ember.inject.service("user-experience"),
                 isPotatoMode: n.Ember.computed.readOnly("userExperienceService.isPotatoMode"),
                 objectiveCategoryType: n.Ember.computed.alias("seasonPassData.passType"),
-                isLeaguePass: n.Ember.computed.equal("objectiveCategoryType", i.ObjectiveCategoryType.LEAGUEPASS),
-                isLeagueHOL: n.Ember.computed.equal("seasonPassData.lolEventHubType", i.LolEventHubType.HALL_OF_LEGENDS),
-                isLeagueSeasonPass: n.Ember.computed.equal("seasonPassData.lolEventHubType", i.LolEventHubType.SEASON_PASS),
-                isTftPass: n.Ember.computed.equal("objectiveCategoryType", i.ObjectiveCategoryType.TFTPASS),
-                isNonPass: n.Ember.computed.equal("objectiveCategoryType", i.ObjectiveCategoryType.NONPASS),
+                isLeaguePass: n.Ember.computed.equal("objectiveCategoryType", l.ObjectiveCategoryType.LEAGUEPASS),
+                isLeagueHOL: n.Ember.computed.equal("seasonPassData.lolEventHubType", l.LolEventHubType.HALL_OF_LEGENDS),
+                isLeagueSeasonPass: n.Ember.computed.equal("seasonPassData.lolEventHubType", l.LolEventHubType.SEASON_PASS),
+                isLeagueDemacia: n.Ember.computed.equal("seasonPassData.lolEventHubType", l.LolEventHubType.DEMACIA_PASS),
+                isTftPass: n.Ember.computed.equal("objectiveCategoryType", l.ObjectiveCategoryType.TFTPASS),
+                isNonPass: n.Ember.computed.equal("objectiveCategoryType", l.ObjectiveCategoryType.NONPASS),
                 isNPE: n.Ember.computed("seasonPassData", (function() {
                     const e = this.get("seasonPassData");
-                    return e?.passType === i.ObjectiveCategoryType.NONPASS && e?.objectiveCategoryFilter === i.ObjectiveCategoryFilter.NPE
+                    return e?.passType === l.ObjectiveCategoryType.NONPASS && e?.objectiveCategoryFilter === l.ObjectiveCategoryFilter.NPE
                 })),
                 didInsertElement() {
                     this._super(...arguments), this.element.addEventListener("pass-clicked", this._passClicked), this.element.addEventListener("pass-hover", this._passHover)
@@ -1457,13 +1475,13 @@
                     this._super(...arguments), this.element.removeEventListener("pass-clicked", this._passClicked), this.element.removeEventListener("pass-hover", this._passHover)
                 },
                 _passHover: function() {
-                    o.default.playAudio(l.SFX.hover)
+                    o.default.playAudio(i.SFX.hover)
                 },
                 _passClicked: function() {
-                    o.default.playAudio(l.SFX.buttonGoldClick)
+                    o.default.playAudio(i.SFX.buttonGoldClick)
                 },
                 _sendTelemetry(e) {
-                    n.TelemetryService.sendTelemetryEvent(l.TELEMETRY_EVENTS.OBJECTIVES_ROUTE_TO_PASS, "objectives_pass_clicked", l.TELEMETRY_ORIGIN_OBJECTIVES, {
+                    n.TelemetryService.sendTelemetryEvent(i.TELEMETRY_EVENTS.OBJECTIVES_ROUTE_TO_PASS, "objectives_pass_clicked", i.TELEMETRY_ORIGIN_OBJECTIVES, {
                         eventPassId: e,
                         game: this.get("gameType")
                     })
@@ -1475,11 +1493,11 @@
                             s = this.get("isLeaguePass");
                         if (e && t) {
                             const e = this.get("seasonPassData.tftPassType"),
-                                t = l.TFT_PASS_TYPE_TO_ROUTE[e];
-                            n.Router.navigateTo(l.APPLICATION_ROUTE_NAME.TFT, {
+                                t = i.TFT_PASS_TYPE_TO_ROUTE[e];
+                            n.Router.navigateTo(i.APPLICATION_ROUTE_NAME.TFT, {
                                 page: t
                             }), this._sendTelemetry(e), n.PrivateAPI.hide()
-                        } else e && s && (n.Router.navigateTo(`${l.APPLICATION_ROUTE_NAME.LOL_EVENT_HUB}#${e}`, {
+                        } else e && s && (n.Router.navigateTo(`${i.APPLICATION_ROUTE_NAME.LOL_EVENT_HUB}#${e}`, {
                             eventId: e,
                             showRewardTrackPage: !0
                         }), this._sendTelemetry(e), n.PrivateAPI.hide())
@@ -1562,6 +1580,84 @@
                 value: !0
             });
             const a = s(1),
+                n = s(11);
+            t.default = a.Ember.Component.extend({
+                classNames: ["league-pass-demacia"],
+                classNameBindings: ["isOpeningPassAllowed:pass-link-enabled"],
+                init() {
+                    this._super(...arguments), this.onMouseEnter = this.onMouseEnter.bind(this), this.onClicked = this.onClicked.bind(this)
+                },
+                isOpeningPassAllowed: a.Ember.computed("gamePhaseService.isOpeningPassAllowed", "isLoading", (function() {
+                    const e = this.get("isLoading");
+                    return this.get("gamePhaseService.isOpeningPassAllowed") && !e
+                })),
+                eventName: a.Ember.computed("seasonPass.eventName", "seasonPassData.overrideCategoryName", (function() {
+                    return this.get("seasonPass.eventName") || this.get("seasonPassData.overrideCategoryName")
+                })),
+                tokenBalance: a.Ember.computed("seasonPass.tokenBalance", (function() {
+                    const e = this.get("seasonPass.tokenBalance");
+                    return null != e ? e : 0
+                })),
+                tokenBalanceText: a.Ember.computed("tokenBalance", "tra", (function() {
+                    const e = this.get("tokenBalance");
+                    return this.get("tra").formatString("demacia_pass_token_balance", {
+                        balance: e
+                    })
+                })),
+                eventEndDate: a.Ember.computed.alias("seasonPass.eventEndDate"),
+                eventEndTimestamp: a.Ember.computed("eventEndDate", (function() {
+                    const e = this.get("eventEndDate");
+                    return e ? new Date(e).getTime() : 0
+                })),
+                expirationDetails: a.Ember.computed("eventEndTimestamp", (function() {
+                    const e = this.get("eventEndTimestamp");
+                    return !e || e <= Date.now() ? null : (0, n.calculateExpirationDetails)(e)
+                })),
+                hasTimeRemaining: a.Ember.computed("expirationDetails", (function() {
+                    return null != this.get("expirationDetails")
+                })),
+                claimedCount: a.Ember.computed.alias("seasonPassData.claimedCount"),
+                totalItemCount: a.Ember.computed.alias("seasonPassData.totalItemCount"),
+                claimedCountText: a.Ember.computed("claimedCount", "totalItemCount", "tra", (function() {
+                    const e = this.get("claimedCount"),
+                        t = this.get("totalItemCount");
+                    return null == e || null == t || 0 === t ? null : this.get("tra").formatString("demacia_pass_claimed_count", {
+                        claimed: e,
+                        total: t
+                    })
+                })),
+                backgroundImage: a.Ember.computed("seasonPass", "seasonPassData", (function() {
+                    const e = this.get("seasonPass"),
+                        t = this.get("seasonPassData"),
+                        s = t?.overrideBackgroundImage;
+                    return e?.objectiveBannerImage || s
+                })),
+                onMouseEnter: function() {
+                    if (!this.get("isOpeningPassAllowed")) return;
+                    const e = new CustomEvent("pass-hover", {
+                        bubbles: !0
+                    });
+                    this.element.dispatchEvent(e)
+                },
+                onClicked: function() {
+                    if (!this.get("isOpeningPassAllowed")) return;
+                    const e = new CustomEvent("pass-clicked", {
+                        bubbles: !0
+                    });
+                    this.element.dispatchEvent(e)
+                },
+                actions: {
+                    openPass: function() {
+                        this.get("isOpeningPassAllowed") && this.sendAction("openPass")
+                    }
+                }
+            })
+        }, (e, t, s) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            const a = s(1),
                 n = s(2);
             t.default = a.Ember.Component.extend({
                 classNames: ["league-season-pass"],
@@ -1592,6 +1688,10 @@
                 nextRewardLevel: a.Ember.computed.alias("nextReward.level"),
                 isLocked: a.Ember.computed("nextReward", (function() {
                     return this.get("nextReward.state") === n.SEASON_PASS_PREMIUM
+                })),
+                xpText: a.Ember.computed("seasonPassData.seasonPass", "tra", (function() {
+                    const e = this.get("seasonPassData.seasonPass.objectiveBannerImage");
+                    return e && e.indexOf("Kiwi") > -1 ? this.get("tra.objectives_mayhem_xp") : this.get("tra.season_pass_XP")
                 })),
                 progressBarFill: a.Ember.computed("currentLevelXP", "nextLevelXP", (function() {
                     const e = this.get("currentLevelXP"),
@@ -1639,7 +1739,7 @@
             });
             const a = s(1),
                 n = s(2),
-                o = s(3);
+                o = s(8);
             t.default = a.Ember.Component.extend({
                 classNames: ["non-pass-generic"],
                 classNameBindings: ["isOpeningPassAllowed:pass-link-enabled"],
@@ -1739,10 +1839,10 @@
                 value: !0
             });
             const n = s(1);
-            s(36);
+            s(37);
             const o = a(s(14)),
-                l = s(2),
-                i = s(3);
+                i = s(2),
+                l = s(8);
             t.default = n.Ember.Controller.extend({
                 pipNotifications: n.Ember.inject.service("pip-notifications"),
                 seasonPassService: n.Ember.inject.service("season-pass"),
@@ -1762,10 +1862,10 @@
                 _selectedCategoryChanged() {
                     const e = this.get("selectedCategory"),
                         t = this.get("previousSelectedCategory");
-                    e !== t && (t && t.id !== e?.id && n.TelemetryService.stopTelemetryTimerEvent(l.TELEMETRY_EVENTS.OBJECTIVES_CATEGORY_TIME_SPENT, "category_time_spent", l.TELEMETRY_EVENTS.OBJECTIVES_MODAL, {
+                    e !== t && (t && t.id !== e?.id && n.TelemetryService.stopTelemetryTimerEvent(i.TELEMETRY_EVENTS.OBJECTIVES_CATEGORY_TIME_SPENT, "category_time_spent", i.TELEMETRY_EVENTS.OBJECTIVES_MODAL, {
                         categoryId: t.id,
                         categoryName: t.categoryName
-                    }), e?.id !== t?.id && n.TelemetryService.startTelemetryTimerEvent(l.TELEMETRY_EVENTS.OBJECTIVES_CATEGORY_TIME_SPENT), e && this.get("seasonPassService").fetchSeasonPassData(e), this.set("previousSelectedCategory", e))
+                    }), e?.id !== t?.id && n.TelemetryService.startTelemetryTimerEvent(i.TELEMETRY_EVENTS.OBJECTIVES_CATEGORY_TIME_SPENT), e && this.get("seasonPassService").fetchSeasonPassData(e), this.set("previousSelectedCategory", e))
                 },
                 getIsObjectivesReady(e = 2e4) {
                     return new Promise(((t, s) => {
@@ -1832,7 +1932,7 @@
                 })),
                 seasonPassData: n.Ember.computed.alias("seasonPassService.currentSeasonPassData"),
                 seasonPass: n.Ember.computed.alias("seasonPassData.seasonPass"),
-                isLOL: n.Ember.computed.equal("gameType", l.OBJECTIVES_GAME_TABS.LEAGUE_TAB),
+                isLOL: n.Ember.computed.equal("gameType", i.OBJECTIVES_GAME_TABS.LEAGUE_TAB),
                 objectivesErrorState: n.Ember.computed("seasonPass", "objectiveCategories", (function() {
                     return !this.get("seasonPass") && !this.get("objectiveCategories")
                 })),
@@ -1843,10 +1943,10 @@
                 isGracePeriod: n.Ember.computed.alias("seasonPassService.isGracePeriod"),
                 actions: {
                     closeObjectivesModal() {
-                        this.set("scrollToGroupId", void 0), this.get("pipNotifications").markMissionsViewed(this.get("objectiveGroupsFlat")), n.PrivateAPI.hide(), o.default.playAudio(l.SFX.buttonCircleXClick), n.TelemetryService.stopTelemetryTimerEvent(l.TELEMETRY_EVENTS.OBJECTIVES_CATEGORY_TIME_SPENT, "category_time_spent", l.TELEMETRY_EVENTS.OBJECTIVES_MODAL, {
+                        this.set("scrollToGroupId", void 0), this.get("pipNotifications").markMissionsViewed(this.get("objectiveGroupsFlat")), n.PrivateAPI.hide(), o.default.playAudio(i.SFX.buttonCircleXClick), n.TelemetryService.stopTelemetryTimerEvent(i.TELEMETRY_EVENTS.OBJECTIVES_CATEGORY_TIME_SPENT, "category_time_spent", i.TELEMETRY_EVENTS.OBJECTIVES_MODAL, {
                             categoryId: this.get("previousSelectedCategory.id"),
                             categoryName: this.get("previousSelectedCategory.categoryName")
-                        }), n.TelemetryService.stopTelemetryTimerEvent(l.TELEMETRY_EVENTS.OBJECTIVES_MODAL, "timeSpent", l.TELEMETRY_EVENTS.OBJECTIVES_MODAL)
+                        }), n.TelemetryService.stopTelemetryTimerEvent(i.TELEMETRY_EVENTS.OBJECTIVES_MODAL, "timeSpent", i.TELEMETRY_EVENTS.OBJECTIVES_MODAL)
                     },
                     async routeTo(e) {
                         try {
@@ -1880,7 +1980,7 @@
                     },
                     async fetchInitialData() {
                         try {
-                            await this.getIsObjectivesReady(), n.TelemetryService.startTelemetryTimerEvent(l.TELEMETRY_EVENTS.OBJECTIVES_MODAL), await Promise.all([this.fetchObjectivesData(this.get("gameType")), this.fetchCompletedPreferences()]), n.Ember.run.next((() => {
+                            await this.getIsObjectivesReady(), n.TelemetryService.startTelemetryTimerEvent(i.TELEMETRY_EVENTS.OBJECTIVES_MODAL), await Promise.all([this.fetchObjectivesData(this.get("gameType")), this.fetchCompletedPreferences()]), n.Ember.run.next((() => {
                                 this._selectedCategoryChanged()
                             }))
                         } catch (e) {
@@ -1892,12 +1992,12 @@
                     }
                 },
                 async fetchCompletedPreferences() {
-                    const e = await n.db.get(l.OBJECTIVES_PLAYER_PREFERENCES),
+                    const e = await n.db.get(i.OBJECTIVES_PLAYER_PREFERENCES),
                         t = e?.data;
                     t && !1 === t?.showCompletedObjectives && this.set("showCompletedObjectives", !1)
                 },
                 updateCompletedPreferences(e) {
-                    n.db.patch(l.OBJECTIVES_PLAYER_PREFERENCES, {
+                    n.db.patch(i.OBJECTIVES_PLAYER_PREFERENCES, {
                         data: {
                             showCompletedObjectives: e
                         },
@@ -1905,7 +2005,7 @@
                     }), this.set("showCompletedObjectives", e)
                 },
                 validateParams(e) {
-                    e.game = (0, l.getObjectiveGameTab)(e.game), e.category = this.validateCategoryParam(e.category)
+                    e.game = (0, i.getObjectiveGameTab)(e.game), e.category = this.validateCategoryParam(e.category)
                 },
                 validateCategoryParam: e => e || "",
                 processMission: (e, t, s) => ({
@@ -1919,7 +2019,7 @@
                     objectives: e.objectives,
                     isNew: e.isNew,
                     iconImageUrl: e.media?.backgroundUrl || s,
-                    isExpiring: e.endTime - t >= 0 && e.endTime - t <= l.EXPIRATION_TIME_48HRS_MS,
+                    isExpiring: e.endTime - t >= 0 && e.endTime - t <= i.EXPIRATION_TIME_48HRS_MS,
                     endTime: e.endTime,
                     completedDate: e.completedDate,
                     id: e.id,
@@ -1931,9 +2031,9 @@
                     let a = 0,
                         n = !0,
                         o = Number.MAX_SAFE_INTEGER,
-                        i = 0;
+                        l = 0;
                     if (e && e.length > 0) {
-                        i = e[0].sequence
+                        l = e[0].sequence
                     }
                     const r = e => e.objectives && e.objectives.length ? Math.max(...e.objectives.map((e => {
                             if (!e.progress) return 0;
@@ -1944,31 +2044,31 @@
                             return s ? t / s * 100 : 0
                         }))) : 0,
                         c = e.filter((e => {
-                            const s = l.ACTIVE_MISSION_DISPLAY_STATUS_V2.includes(e.status),
+                            const s = i.ACTIVE_MISSION_DISPLAY_STATUS_V2.includes(e.status),
                                 a = e.startTime <= t && e.endTime >= t;
                             return s && a
                         })).sort(((e, s) => {
-                            const a = e.status === l.MISSIONS_STATUS.COMPLETED,
-                                n = s.status === l.MISSIONS_STATUS.COMPLETED;
+                            const a = e.status === i.MISSIONS_STATUS.COMPLETED,
+                                n = s.status === i.MISSIONS_STATUS.COMPLETED;
                             if (a !== n) return a ? 1 : -1;
                             if (a && n) {
                                 return (e.completedDate || 0) - (s.completedDate || 0)
                             }
                             const o = e.endTime - t,
-                                i = s.endTime - t;
-                            if (o !== i) return o - i;
+                                l = s.endTime - t;
+                            if (o !== l) return o - l;
                             const c = r(e);
                             return r(s) - c
                         })).map((e => {
-                            const i = this.processMission(e, t, s);
-                            return i.status !== l.MISSIONS_STATUS.COMPLETED && a++, i.isNew && i.isActive && (n = !1), o = Math.min(o, e.endTime), i
+                            const l = this.processMission(e, t, s);
+                            return l.status !== i.MISSIONS_STATUS.COMPLETED && a++, l.isNew && l.isActive && (n = !1), o = Math.min(o, e.endTime), l
                         }));
                     return o === Number.MAX_SAFE_INTEGER && (o = 0), {
                         missions: c,
                         currentlyActiveMissions: a,
                         allMissionsViewed: n,
                         endTime: o,
-                        sequence: i
+                        sequence: l
                     }
                 },
                 processPassData: (e, t) => ({
@@ -1998,7 +2098,7 @@
                             subcategoryGroups: s,
                             objectiveCategoryFilter: e.objectiveCategoryFilter
                         }
-                    })).filter((e => e.objectiveCategoryFilter !== i.ObjectiveCategoryFilter.NPE || e.subcategoryGroups.some((e => e.missions.some((e => e.status !== l.MISSIONS_STATUS.COMPLETED))))))
+                    })).filter((e => e.objectiveCategoryFilter !== l.ObjectiveCategoryFilter.NPE || e.subcategoryGroups.some((e => e.missions.some((e => e.status !== i.MISSIONS_STATUS.COMPLETED))))))
                 },
                 generateSubCategoryGroups(e, t) {
                     return e.objectives.filter((e => this.isActiveInTimeWindow(e, t))).sort(((e, t) => e.priority - t.priority)).map((e => {
@@ -2034,71 +2134,78 @@
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "ncxZuPKK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-game-tabs.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-game-tabs.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-game-tabs.js\\" "],["text","\\n"],["block",["each"],[["get",["tabs"]]],null,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","tab-container__tab-icon"],["dynamic-attr","src",["concat",[["unknown",["tab","restingAssetPath"]]]]],["flush-element"],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","tab-container__tab-icon"],["dynamic-attr","src",["concat",[["unknown",["tab","hoverAssetPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["tab","isHovering"]]],null,1,0]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","tab-container__tab-icon"],["dynamic-attr","src",["concat",[["unknown",["tab","activeAssetPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["tab-container ",["helper",["if"],[["get",["tab","isSelected"]],"active"],null]," ",["helper",["if"],[["get",["tab","isHovering"]],"hovering"],null]]]],["dynamic-attr","aria-pressed",["concat",[["unknown",["tab","isSelected"]]]]],["dynamic-attr","aria-label",["concat",[["unknown",["tab","accessibilityLabelTra"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTab",["get",["tab","tabName"]]],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"handleTabHover",["get",["tab"]],true],null],null],["dynamic-attr","onMouseLeave",["helper",["action"],[["get",[null]],"handleTabHover",["get",["tab"]],false],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["tab","isSelected"]]],null,3,2],["text","  "],["close-element"],["text","\\n"]],"locals":["tab"]}],"hasPartials":false}',
+                id: "+UBWgpWN",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-game-tabs.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-game-tabs.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-game-tabs.js\\" "],["text","\\n"],["block",["each"],[["get",["tabs"]]],null,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","tab-container__tab-icon"],["dynamic-attr","src",["concat",[["unknown",["tab","restingAssetPath"]]]]],["flush-element"],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","tab-container__tab-icon"],["dynamic-attr","src",["concat",[["unknown",["tab","hoverAssetPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["tab","isHovering"]]],null,1,0]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","tab-container__tab-icon"],["dynamic-attr","src",["concat",[["unknown",["tab","activeAssetPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["tab-container ",["helper",["if"],[["get",["tab","isSelected"]],"active"],null]," ",["helper",["if"],[["get",["tab","isHovering"]],"hovering"],null]]]],["dynamic-attr","aria-pressed",["concat",[["unknown",["tab","isSelected"]]]]],["dynamic-attr","aria-label",["concat",[["unknown",["tab","accessibilityLabelTra"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTab",["get",["tab","tabName"]]],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"handleTabHover",["get",["tab"]],true],null],null],["dynamic-attr","onMouseLeave",["helper",["action"],[["get",[null]],"handleTabHover",["get",["tab"]],false],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["tab","isSelected"]]],null,3,2],["text","  "],["close-element"],["text","\\n"]],"locals":["tab"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "zzfGKEM9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\error-state.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\error-state.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\error-state.js\\" "],["text","\\n"],["block",["if"],[["get",["isObjectivesErrorState"]]],null,3,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","error-state__group-error-state"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","error-state__error-state-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","error-state__error-state-description"],["flush-element"],["append",["unknown",["tra","objectives_error_state_text"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","error-state__season-pass-error-state"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","error-state__header"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","error-state__error-state-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","error-state__error-state-title"],["flush-element"],["append",["unknown",["tra","season_pass_error_state_title"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","error-state__season-pass-error-state-description"],["flush-element"],["append",["unknown",["tra","season_pass_error_state_text"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showSeasonPassError"]]],null,1],["text","\\n"],["block",["if"],[["get",["shouldShowGroupDataError"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","error-state__objectives-error-state"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","error-state__error-state-icon"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","error-state__error-state-description"],["flush-element"],["append",["unknown",["tra","objectives_full_error_state"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "FufP5/i2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\error-state.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\error-state.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\error-state.js\\" "],["text","\\n"],["block",["if"],[["get",["isObjectivesErrorState"]]],null,3,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","error-state__group-error-state"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","error-state__error-state-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","error-state__error-state-description"],["flush-element"],["append",["unknown",["tra","objectives_error_state_text"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","error-state__season-pass-error-state"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","error-state__header"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","error-state__error-state-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","error-state__error-state-title"],["flush-element"],["append",["unknown",["tra","season_pass_error_state_title"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","error-state__season-pass-error-state-description"],["flush-element"],["append",["unknown",["tra","season_pass_error_state_text"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showSeasonPassError"]]],null,1],["text","\\n"],["block",["if"],[["get",["shouldShowGroupDataError"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","error-state__objectives-error-state"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","error-state__error-state-icon"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","error-state__error-state-description"],["flush-element"],["append",["unknown",["tra","objectives_full_error_state"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "ktBhizlR",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\application-v2.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","backdrop-click-region"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeObjectivesModal"],null],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","objectives-application-v2"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,3,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","close-objectives"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","close-objectives__close-btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeObjectivesModal"],null],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-application-v2__header"],["flush-element"],["text","\\n              "],["append",["helper",["header-types-base"],null,[["seasonPassData","gameType"],[["get",["seasonPassData"]],["get",["gameType"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["helper",["error-state"],null,[["groupData","seasonPass","gameType","isGracePeriod"],[["get",["objectiveGroupsFlat"]],["get",["seasonPass"]],["get",["gameType"]],["get",["isGracePeriod"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","objectives-application-v2__side-nav"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-application-v2__side-nav__title"],["flush-element"],["append",["unknown",["tra","objectives_title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-application-v2__side-nav__game-tab-divider"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["objectives-game-tabs"],null,[["selectedTab","routeTo"],[["get",["gameType"]],"routeTo"]]],false],["text","\\n          "],["append",["helper",["objectives-sub-nav-v2"],null,[["scrollToGroup","updateGroupId","updateCategoryId","selectedGroup","selectedCategoryId","objectiveCategories","groupIdToCategoryIdMap","showCompletedObjectives","updateShowCompletedObjectives","isPlayerInitiatedGroupClick"],["scrollToGroup","updateGroupId","updateCategoryId",["get",["selectedGroupId"]],["get",["selectedCategory","id"]],["get",["objectiveCategories"]],["get",["groupIdToCategoryIdMap"]],["get",["showCompletedObjectives"]],"updateShowCompletedObjectives",["get",["isPlayerInitiatedGroupClick"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-application-v2__main-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-application-v2__error-state-container"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isLoading"]]],null,1],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["showHeader"]]],null,0],["text","          "],["open-element","div",[]],["static-attr","class","objectives-application-v2__main"],["flush-element"],["text","\\n            "],["append",["helper",["objectives-main-v2"],null,[["groupData","scrollToGroupId","isGracePeriod","isLOL","selectedCategoryId","selectedMissionId","objectiveCategories","showCompletedObjectives","groupIdToCategoryIdMap","updateGroupId","isPlayerInitiatedGroupClick"],[["get",["objectiveGroupsFlat"]],["get",["scrollToGroupId"]],["get",["isGracePeriod"]],["get",["isLOL"]],["get",["selectedCategory","id"]],["get",["selectedMissionId"]],["get",["objectiveCategories"]],["get",["showCompletedObjectives"]],["get",["groupIdToCategoryIdMap"]],"updateGroupId",["get",["isPlayerInitiatedGroupClick"]]]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","objectives-application-v2__loading-container"],["flush-element"],["text","\\n          "],["append",["helper",["uikit-spinner"],null,[["width","height"],["35px","35px"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "PrH1dUv5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\application-v2.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","backdrop-click-region"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeObjectivesModal"],null],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","objectives-application-v2"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,3,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","close-objectives"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","close-objectives__close-btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeObjectivesModal"],null],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-application-v2__header"],["flush-element"],["text","\\n              "],["append",["helper",["header-types-base"],null,[["seasonPassData","gameType"],[["get",["seasonPassData"]],["get",["gameType"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["helper",["error-state"],null,[["groupData","seasonPass","gameType","isGracePeriod"],[["get",["objectiveGroupsFlat"]],["get",["seasonPass"]],["get",["gameType"]],["get",["isGracePeriod"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","objectives-application-v2__side-nav"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-application-v2__side-nav__title"],["flush-element"],["append",["unknown",["tra","objectives_title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-application-v2__side-nav__game-tab-divider"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["objectives-game-tabs"],null,[["selectedTab","routeTo"],[["get",["gameType"]],"routeTo"]]],false],["text","\\n          "],["append",["helper",["objectives-sub-nav-v2"],null,[["scrollToGroup","updateGroupId","updateCategoryId","selectedGroup","selectedCategoryId","objectiveCategories","groupIdToCategoryIdMap","showCompletedObjectives","updateShowCompletedObjectives","isPlayerInitiatedGroupClick"],["scrollToGroup","updateGroupId","updateCategoryId",["get",["selectedGroupId"]],["get",["selectedCategory","id"]],["get",["objectiveCategories"]],["get",["groupIdToCategoryIdMap"]],["get",["showCompletedObjectives"]],"updateShowCompletedObjectives",["get",["isPlayerInitiatedGroupClick"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-application-v2__main-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-application-v2__error-state-container"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isLoading"]]],null,1],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["showHeader"]]],null,0],["text","          "],["open-element","div",[]],["static-attr","class","objectives-application-v2__main"],["flush-element"],["text","\\n            "],["append",["helper",["objectives-main-v2"],null,[["groupData","scrollToGroupId","isGracePeriod","isLOL","selectedCategoryId","selectedMissionId","objectiveCategories","showCompletedObjectives","groupIdToCategoryIdMap","updateGroupId","isPlayerInitiatedGroupClick"],[["get",["objectiveGroupsFlat"]],["get",["scrollToGroupId"]],["get",["isGracePeriod"]],["get",["isLOL"]],["get",["selectedCategory","id"]],["get",["selectedMissionId"]],["get",["objectiveCategories"]],["get",["showCompletedObjectives"]],["get",["groupIdToCategoryIdMap"]],"updateGroupId",["get",["isPlayerInitiatedGroupClick"]]]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","objectives-application-v2__loading-container"],["flush-element"],["text","\\n          "],["append",["helper",["uikit-spinner"],null,[["width","height"],["35px","35px"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "UDpS3Bx8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-sub-nav-v2.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-sub-nav-v2.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-sub-nav-v2.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","objectives-sub-nav-v2__scroll-bar"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["categories"]]],null,8],["close-element"],["text","\\n"],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","objectives-sub-nav-v2__checkbox-completed"],["flush-element"],["text","\\n  "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","showCompleted"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleShowCompletedObjectives"],null],null],["dynamic-attr","checked",["unknown",["showCompletedObjectives"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","showCompleted"],["flush-element"],["append",["unknown",["tra","show_completed_checkbox"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__new-pip"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__new-pip objectives-sub-nav-v2__new-pip--expiring"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__expiring-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__expiring-text"],["flush-element"],["text","\\n                  "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText"],[["get",["group","endTime"]],["get",["group","expirationDetails","showDays"]],["get",["group","expirationDetails","showHours"]],["get",["group","expirationDetails","showMinutes"]],["get",["group","expirationDetails","showSeconds"]],true,1," ",["get",["tra","objectives_sub_nav_expiring_text"]]]]],false],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["group","isNew"]]],null,1],["text","              "],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["group","expirationDetails","isExpiringSoon"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["static-attr","class","objectives-sub-nav-v2__completed-icon"],["static-attr","src","/fe/lol-objectives/images/group-completed-checkmark.png"],["dynamic-attr","alt",["concat",[["unknown",["tra","objectives_modal_acc_completed"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-sub-nav-v2__row\\n              ",["helper",["if"],[["get",["group","isSelected"]],"objectives-sub-nav-v2__row--active"],null],"\\n              ",["helper",["if"],[["get",["group","isDisabled"]],"objectives-sub-nav-v2__row--disabled"],null]]]],["dynamic-attr","id",["concat",[["unknown",["group","id"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTab",["get",["group"]]],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"handleGroupHover"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__item"],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["group","groupNameLocalized"]]],null],false],["text","\\n            "],["close-element"],["text","\\n"],["block",["if"],[["get",["group","isCompleted"]]],null,4,3],["text","\\n"],["block",["if"],[["get",["showNonExpiringNewPip"]]],null,0],["text","          "],["close-element"],["text","\\n"]],"locals":["group"]},{"statements":[["block",["each"],[["get",["category","subcategoryGroups"]]],null,5]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__new-pip"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-sub-nav-v2__section ",["helper",["if"],[["get",["category","isSelected"]],"objectives-sub-nav-v2__section--active"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-sub-nav-v2__section-title ",["helper",["if"],[["get",["category","isSelected"]],"objectives-sub-nav-v2__section-title--active"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectCategory",["get",["category"]]],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"handleGroupHover",["get",["category"]]],null],null],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","objectives-sub-nav-v2__section-img"],["dynamic-attr","src",["unknown",["category","categorySectionImage"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__section-name"],["flush-element"],["append",["helper",["sanitize"],[["get",["category","categoryNameLocalized"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["category","showNewCategoryPip"]]],null,7],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["category","isSelected"]]],null,6],["text","    "],["close-element"],["text","\\n"]],"locals":["category"]}],"hasPartials":false}',
+                id: "+e49j7JU",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-sub-nav-v2.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-sub-nav-v2.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-sub-nav-v2.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","objectives-sub-nav-v2__scroll-bar"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["categories"]]],null,8],["close-element"],["text","\\n"],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","objectives-sub-nav-v2__checkbox-completed"],["flush-element"],["text","\\n  "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","showCompleted"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleShowCompletedObjectives"],null],null],["dynamic-attr","checked",["unknown",["showCompletedObjectives"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","showCompleted"],["flush-element"],["append",["unknown",["tra","show_completed_checkbox"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__new-pip"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__new-pip objectives-sub-nav-v2__new-pip--expiring"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__expiring-container"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__expiring-text"],["flush-element"],["text","\\n                  "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText"],[["get",["group","endTime"]],["get",["group","expirationDetails","showDays"]],["get",["group","expirationDetails","showHours"]],["get",["group","expirationDetails","showMinutes"]],["get",["group","expirationDetails","showSeconds"]],true,1," ",["get",["tra","objectives_sub_nav_expiring_text"]]]]],false],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["group","isNew"]]],null,1],["text","              "],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["group","expirationDetails","isExpiringSoon"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["static-attr","class","objectives-sub-nav-v2__completed-icon"],["static-attr","src","/fe/lol-objectives/images/group-completed-checkmark.png"],["dynamic-attr","alt",["concat",[["unknown",["tra","objectives_modal_acc_completed"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-sub-nav-v2__row\\n              ",["helper",["if"],[["get",["group","isSelected"]],"objectives-sub-nav-v2__row--active"],null],"\\n              ",["helper",["if"],[["get",["group","isDisabled"]],"objectives-sub-nav-v2__row--disabled"],null]]]],["dynamic-attr","id",["concat",[["unknown",["group","id"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTab",["get",["group"]]],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"handleGroupHover"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__item"],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["group","groupNameLocalized"]]],null],false],["text","\\n            "],["close-element"],["text","\\n"],["block",["if"],[["get",["group","isCompleted"]]],null,4,3],["text","\\n"],["block",["if"],[["get",["showNonExpiringNewPip"]]],null,0],["text","          "],["close-element"],["text","\\n"]],"locals":["group"]},{"statements":[["block",["each"],[["get",["category","subcategoryGroups"]]],null,5]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__new-pip"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-sub-nav-v2__section ",["helper",["if"],[["get",["category","isSelected"]],"objectives-sub-nav-v2__section--active"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-sub-nav-v2__section-title ",["helper",["if"],[["get",["category","isSelected"]],"objectives-sub-nav-v2__section-title--active"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectCategory",["get",["category"]]],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"handleGroupHover",["get",["category"]]],null],null],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","objectives-sub-nav-v2__section-img"],["dynamic-attr","src",["unknown",["category","categorySectionImage"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","objectives-sub-nav-v2__section-name"],["flush-element"],["append",["helper",["sanitize"],[["get",["category","categoryNameLocalized"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["category","showNewCategoryPip"]]],null,7],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["category","isSelected"]]],null,6],["text","    "],["close-element"],["text","\\n"]],"locals":["category"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "H3Z8Kk/3",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-main-v2.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-main-v2.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-main-v2.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","objectives-main-v2__scrollbar"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGracePeriod"]]],null,9,8],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-mission-container"],["dynamic-attr","id",["concat",[["unknown",["mission","id"]]]]],["flush-element"],["text","\\n              "],["append",["helper",["objectives-card-v2"],null,[["cardData","isNew","parentGroupId","isLOL","lolEventHubType"],[["get",["mission"]],["get",["mission","isNew"]],["get",["group","id"]],["get",["isLOL"]],["get",["lolEventHubType"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["mission"]},{"statements":[["block",["each"],[["get",["group","missions"]]],null,0]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-mastery-header-container"],["flush-element"],["text","\\n              "],["append",["helper",["mastery-set-carousel"],null,[["isObjectivesView"],[true]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["masterySetsEnabled"]]],null,2]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["group","groupCount"]],false],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["group","isEnabled"]]],null,4]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["static-attr","src","/fe/lol-objectives/images/group-completed-checkmark.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-container"],["dynamic-attr","id",["concat",[["unknown",["group","id"]]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-main-v2__group-header\\n            ",["helper",["if"],[["get",["group","isEnabled"]],"","objectives-main-v2__group-header--disabled"],null]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-subtext-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-header-item"],["flush-element"],["append",["unknown",["group","titleTra"]],false],["close-element"],["text","\\n"],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-header-item"],["flush-element"],["text","\\n"],["block",["if"],[["get",["group","isCompleted"]]],null,6,5],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["group","isMastery"]]],null,3],["block",["if"],[["get",["group","isEnabled"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":["group"]},{"statements":[["block",["each"],[["get",["groups"]]],null,7]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","objectives-main-v2__grace-period-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-main-v2__grace-period-text"],["flush-element"],["append",["unknown",["tra","objectives_grace_period_text"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-main-v2__horizontal_divider"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "rlE5eNBJ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\objectives-main-v2.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\styles\\\\components\\\\objectives-main-v2.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\components\\\\objectives-main-v2.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","objectives-main-v2__scrollbar"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGracePeriod"]]],null,9,8],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-mission-container"],["dynamic-attr","id",["concat",[["unknown",["mission","id"]]]]],["flush-element"],["text","\\n              "],["append",["helper",["objectives-card-v2"],null,[["cardData","isNew","parentGroupId","isLOL","lolEventHubType"],[["get",["mission"]],["get",["mission","isNew"]],["get",["group","id"]],["get",["isLOL"]],["get",["lolEventHubType"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["mission"]},{"statements":[["block",["each"],[["get",["group","missions"]]],null,0]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-mastery-header-container"],["flush-element"],["text","\\n              "],["append",["helper",["mastery-set-carousel"],null,[["isObjectivesView"],[true]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["masterySetsEnabled"]]],null,2]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["group","groupCount"]],false],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["group","isEnabled"]]],null,4]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["static-attr","src","/fe/lol-objectives/images/group-completed-checkmark.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-container"],["dynamic-attr","id",["concat",[["unknown",["group","id"]]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["objectives-main-v2__group-header\\n            ",["helper",["if"],[["get",["group","isEnabled"]],"","objectives-main-v2__group-header--disabled"],null]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-subtext-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-header-item"],["flush-element"],["append",["unknown",["group","titleTra"]],false],["close-element"],["text","\\n"],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","objectives-main-v2__group-header-item"],["flush-element"],["text","\\n"],["block",["if"],[["get",["group","isCompleted"]]],null,6,5],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["group","isMastery"]]],null,3],["block",["if"],[["get",["group","isEnabled"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":["group"]},{"statements":[["block",["each"],[["get",["groups"]]],null,7]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","objectives-main-v2__grace-period-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-main-v2__grace-period-text"],["flush-element"],["append",["unknown",["tra","objectives_grace_period_text"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","objectives-main-v2__horizontal_divider"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "HuPGF2lk",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\header-types-base.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,10,9]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["generic-objectives-header"],null,[["seasonPassData","isLoading","gameType","objectiveCategoryType","gamePhaseService"],[["get",["seasonPassData"]],["get",["isLoading"]],["get",["gameType"]],["get",["objectiveCategoryType"]],["get",["gamePhaseService"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["league-npe"],null,[["seasonPassData","seasonPass"],[["get",["seasonPassData"]],["get",["seasonPass"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isNPE"]]],null,1,0],["text","  "]],"locals":[]},{"statements":[["text","    "],["append",["helper",["generic-objectives-header"],null,[["seasonPassData","gameType","gamePhaseService","isLoading","objectiveCategoryType","openPass"],[["get",["seasonPassData"]],["get",["gameType"]],["get",["gamePhaseService"]],["get",["isLoading"]],["get",["objectiveCategoryType"]],"openPass"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isTftPass"]]],null,3,2]],"locals":[]},{"statements":[["text","      "],["append",["helper",["league-season-pass"],null,[["seasonPassData","gamePhaseService","isLoading","seasonPass","openPass"],[["get",["seasonPassData"]],["get",["gamePhaseService"]],["get",["isLoading"]],["get",["seasonPass"]],"openPass"]]],false],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isLeagueSeasonPass"]]],null,5]],"locals":[]},{"statements":[["text","      "],["append",["helper",["league-hol"],null,[["seasonPassData","gamePhaseService","isLoading","seasonPass","openPass"],[["get",["seasonPassData"]],["get",["gamePhaseService"]],["get",["isLoading"]],["get",["seasonPass"]],"openPass"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isLeagueHOL"]]],null,7,6],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isLeaguePass"]]],null,8,4]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","objectives-season-pass-wrapper__loading-container"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["30px","30px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Q3Vc4JFK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\header-types-base.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,12,11]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["generic-objectives-header"],null,[["seasonPassData","isLoading","gameType","objectiveCategoryType","gamePhaseService"],[["get",["seasonPassData"]],["get",["isLoading"]],["get",["gameType"]],["get",["objectiveCategoryType"]],["get",["gamePhaseService"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["league-npe"],null,[["seasonPassData","seasonPass"],[["get",["seasonPassData"]],["get",["seasonPass"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isNPE"]]],null,1,0],["text","  "]],"locals":[]},{"statements":[["text","    "],["append",["helper",["generic-objectives-header"],null,[["seasonPassData","gameType","gamePhaseService","isLoading","objectiveCategoryType","openPass"],[["get",["seasonPassData"]],["get",["gameType"]],["get",["gamePhaseService"]],["get",["isLoading"]],["get",["objectiveCategoryType"]],"openPass"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isTftPass"]]],null,3,2]],"locals":[]},{"statements":[["text","      "],["append",["helper",["league-season-pass"],null,[["seasonPassData","gamePhaseService","isLoading","seasonPass","openPass"],[["get",["seasonPassData"]],["get",["gamePhaseService"]],["get",["isLoading"]],["get",["seasonPass"]],"openPass"]]],false],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isLeagueSeasonPass"]]],null,5]],"locals":[]},{"statements":[["text","      "],["append",["helper",["league-hol"],null,[["seasonPassData","gamePhaseService","isLoading","seasonPass","openPass"],[["get",["seasonPassData"]],["get",["gamePhaseService"]],["get",["isLoading"]],["get",["seasonPass"]],"openPass"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isLeagueHOL"]]],null,7,6]],"locals":[]},{"statements":[["text","      "],["append",["helper",["league-demacia"],null,[["seasonPassData","gamePhaseService","isLoading","seasonPass","openPass"],[["get",["seasonPassData"]],["get",["gamePhaseService"]],["get",["isLoading"]],["get",["seasonPass"]],"openPass"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isLeagueDemacia"]]],null,9,8],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isLeaguePass"]]],null,10,4]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","objectives-season-pass-wrapper__loading-container"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["30px","30px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "FHGL3Y7p",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\league-hol.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","league-pass-hol__container"],["dynamic-attr","onmouseenter",["unknown",["onMouseEnter"]],null],["dynamic-attr","onclick",["unknown",["onClicked"]],null],["modifier",["action"],[["get",[null]],"openPass"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-pass-hol__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","league-pass-hol__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-pass-hol__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-pass-hol__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-pass-hol__top"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isCompleted"]]],null,2],["text","      "],["open-element","div",[]],["static-attr","class","league-pass-hol__reward-text-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-pass-hol__pass-header-text"],["flush-element"],["append",["unknown",["eventName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-pass-hol__reward-text text-flex"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper_view"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper_view-text-content"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","season_pass_view_reward"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper_view-icon"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper_next"],["flush-element"],["text","\\n              "],["append",["unknown",["currentLevelOutOfTotalText"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","season_pass_tooltip_text"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],0],["text","          "],["open-element","img",[]],["static-attr","class","league-pass-hol__lock-icon"],["static-attr","src","/fe/lol-objectives/images/lockClosed.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","league-pass-hol__reward"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["league-pass-hol__reward-image ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["dynamic-attr","src",["unknown",["rewardIcon"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isLocked"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "5TxA15q3",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\league-hol.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","league-pass-hol__container"],["dynamic-attr","onmouseenter",["unknown",["onMouseEnter"]],null],["dynamic-attr","onclick",["unknown",["onClicked"]],null],["modifier",["action"],[["get",[null]],"openPass"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-pass-hol__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","league-pass-hol__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-pass-hol__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-pass-hol__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-pass-hol__top"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isCompleted"]]],null,2],["text","      "],["open-element","div",[]],["static-attr","class","league-pass-hol__reward-text-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-pass-hol__pass-header-text"],["flush-element"],["append",["unknown",["eventName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-pass-hol__reward-text text-flex"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper_view"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper_view-text-content"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","season_pass_view_reward"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper_view-icon"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-pass-hol__text-hover-wrapper_next"],["flush-element"],["text","\\n              "],["append",["unknown",["currentLevelOutOfTotalText"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","season_pass_tooltip_text"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],0],["text","          "],["open-element","img",[]],["static-attr","class","league-pass-hol__lock-icon"],["static-attr","src","/fe/lol-objectives/images/lockClosed.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","league-pass-hol__reward"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["league-pass-hol__reward-image ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["dynamic-attr","src",["unknown",["rewardIcon"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isLocked"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "XK4xFFc4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\league-season-pass.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","league-season-pass__container"],["dynamic-attr","onmouseenter",["unknown",["onMouseEnter"]],null],["dynamic-attr","onclick",["unknown",["onClicked"]],null],["modifier",["action"],[["get",[null]],"openPass"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-season-pass__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","league-season-pass__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-season-pass__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-season-pass__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-season-pass__top"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__reward"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["league-season-pass__reward-image ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["dynamic-attr","src",["unknown",["rewardIcon"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isLocked"]]],null,2],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__reward-text-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__pass-header-text"],["flush-element"],["append",["unknown",["eventName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__reward-text text-flex"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper_view"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper_view-text-content"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","season_pass_view_reward"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper_view-icon"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper_next"],["flush-element"],["text","\\n              "],["append",["unknown",["rewardText"]],false],["text",":"],["open-element","span",[]],["static-attr","class","league-season-pass__reward-text league-season-pass__reward-text--level"],["flush-element"],["append",["unknown",["rewardLevelText"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-bar-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-bar"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-meter-fill"],["dynamic-attr","style",["concat",["width:",["unknown",["progressBarFill"]],"%"]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isPotatoMode"]]],null,0],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-text"],["flush-element"],["append",["unknown",["currentLevelXP"]],false],["text"," / "],["append",["unknown",["nextLevelXP"]],false],["text"," "],["append",["unknown",["tra","season_pass_XP"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__left-level-container"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","league-season-pass__left-level-image"],["static-attr","src","/fe/lol-objectives/images/objectives-seasonpass-level.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__current-level"],["flush-element"],["append",["unknown",["currentLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__right-level-container"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","league-season-pass__right-level-image"],["static-attr","src","/fe/lol-objectives/images/objectives-seasonpass-level.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__next-level"],["flush-element"],["append",["unknown",["nextLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-bar-animation-container"],["flush-element"],["text","\\n              "],["open-element","uikit-video",[]],["static-attr","class","league-season-pass__progress-bar-animation"],["static-attr","src","/fe/lol-objectives/videos/progress-bar-animation.webm"],["static-attr","loop",""],["static-attr","preload",""],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","season_pass_tooltip_text"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],1],["text","          "],["open-element","img",[]],["static-attr","class","league-season-pass__lock-icon"],["static-attr","src","/fe/lol-objectives/images/lockClosed.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "VXIIYQrC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\league-season-pass.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","league-season-pass__container"],["dynamic-attr","onmouseenter",["unknown",["onMouseEnter"]],null],["dynamic-attr","onclick",["unknown",["onClicked"]],null],["modifier",["action"],[["get",[null]],"openPass"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-season-pass__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","league-season-pass__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-season-pass__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-season-pass__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-season-pass__top"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__reward"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["league-season-pass__reward-image ",["helper",["if"],[["get",["isLocked"]],"locked"],null]]]],["dynamic-attr","src",["unknown",["rewardIcon"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isLocked"]]],null,2],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__reward-text-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__pass-header-text"],["flush-element"],["text","\\n          "],["append",["unknown",["eventName"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__reward-text text-flex"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper_view"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper_view-text-content"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","season_pass_view_reward"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper_view-icon"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-season-pass__text-hover-wrapper_next"],["flush-element"],["text","\\n              "],["append",["unknown",["rewardText"]],false],["text",":"],["open-element","span",[]],["static-attr","class","league-season-pass__reward-text league-season-pass__reward-text--level"],["flush-element"],["append",["unknown",["rewardLevelText"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-bar-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-bar"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-meter-fill"],["dynamic-attr","style",["concat",["width:",["unknown",["progressBarFill"]],"%"]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isPotatoMode"]]],null,0],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-text"],["flush-element"],["append",["unknown",["currentLevelXP"]],false],["text"," / "],["append",["unknown",["nextLevelXP"]],false],["text"," "],["append",["unknown",["xpText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__left-level-container"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","league-season-pass__left-level-image"],["static-attr","src","/fe/lol-objectives/images/objectives-seasonpass-level.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__current-level"],["flush-element"],["append",["unknown",["currentLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-season-pass__right-level-container"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","league-season-pass__right-level-image"],["static-attr","src","/fe/lol-objectives/images/objectives-seasonpass-level.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-season-pass__next-level"],["flush-element"],["append",["unknown",["nextLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","league-season-pass__progress-bar-animation-container"],["flush-element"],["text","\\n              "],["open-element","uikit-video",[]],["static-attr","class","league-season-pass__progress-bar-animation"],["static-attr","src","/fe/lol-objectives/videos/progress-bar-animation.webm"],["static-attr","loop",""],["static-attr","preload",""],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","season_pass_tooltip_text"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],1],["text","          "],["open-element","img",[]],["static-attr","class","league-season-pass__lock-icon"],["static-attr","src","/fe/lol-objectives/images/lockClosed.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "uFGSTdnk",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\league-npe.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","league-npe__container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-npe__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","league-npe__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-npe__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-npe__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-npe__top"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-npe__reward-text-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-npe__pass-header-text"],["flush-element"],["append",["unknown",["eventName"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["summonerData"]]],null,1],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","league-npe__progress-bar-animation-container"],["flush-element"],["text","\\n                "],["open-element","uikit-video",[]],["static-attr","class","league-npe__progress-bar-animation"],["static-attr","src","/fe/lol-objectives/videos/progress-bar-animation.webm"],["static-attr","loop",""],["static-attr","preload",""],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","league-npe__progress-bar-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-npe__progress-bar"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-npe__progress-meter-fill"],["dynamic-attr","style",["concat",["width:",["unknown",["progressBarFill"]],"%"]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isPotatoMode"]]],null,0],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-npe__progress-text"],["flush-element"],["append",["unknown",["displayXpText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-npe__left-level-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","league-npe__left-level-image"],["static-attr","src","/fe/lol-objectives/images/objectives-seasonpass-level.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-npe__current-level"],["flush-element"],["append",["unknown",["summonerData","currentLevel"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-npe__right-level-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","league-npe__right-level-image"],["static-attr","src","/fe/lol-objectives/images/objectives-seasonpass-level.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-npe__next-level"],["flush-element"],["append",["unknown",["summonerData","nextLevel"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "BkyOPf6i",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\league-npe.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","league-npe__container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-npe__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","league-npe__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-npe__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-npe__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-npe__top"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-npe__reward-text-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-npe__pass-header-text"],["flush-element"],["append",["unknown",["eventName"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["summonerData"]]],null,1],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","league-npe__progress-bar-animation-container"],["flush-element"],["text","\\n                "],["open-element","uikit-video",[]],["static-attr","class","league-npe__progress-bar-animation"],["static-attr","src","/fe/lol-objectives/videos/progress-bar-animation.webm"],["static-attr","loop",""],["static-attr","preload",""],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","league-npe__progress-bar-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-npe__progress-bar"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-npe__progress-meter-fill"],["dynamic-attr","style",["concat",["width:",["unknown",["progressBarFill"]],"%"]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isPotatoMode"]]],null,0],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-npe__progress-text"],["flush-element"],["append",["unknown",["displayXpText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-npe__left-level-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","league-npe__left-level-image"],["static-attr","src","/fe/lol-objectives/images/objectives-seasonpass-level.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-npe__current-level"],["flush-element"],["append",["unknown",["summonerData","currentLevel"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-npe__right-level-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","league-npe__right-level-image"],["static-attr","src","/fe/lol-objectives/images/objectives-seasonpass-level.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-npe__next-level"],["flush-element"],["append",["unknown",["summonerData","nextLevel"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
             const a = s(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "RY13gOVZ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\generic-objectives-header.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","non-pass-generic__container"],["dynamic-attr","onmouseenter",["unknown",["onMouseEnter"]],null],["dynamic-attr","onclick",["unknown",["onClicked"]],null],["modifier",["action"],[["get",[null]],"openPass"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","non-pass-generic__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","non-pass-generic__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","non-pass-generic__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","non-pass-generic__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","non-pass-generic__top"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","non-pass-generic__pass-header-text"],["flush-element"],["append",["unknown",["eventName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "ptgPx3r6",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\league-demacia.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","league-pass-demacia__container"],["dynamic-attr","onmouseenter",["unknown",["onMouseEnter"]],null],["dynamic-attr","onclick",["unknown",["onClicked"]],null],["modifier",["action"],[["get",[null]],"openPass"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-pass-demacia__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","league-pass-demacia__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-pass-demacia__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","league-pass-demacia__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-pass-demacia__top"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","league-pass-demacia__title-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-pass-demacia__pass-header-text"],["flush-element"],["text","\\n          "],["append",["unknown",["eventName"]],false],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTimeRemaining"]]],null,1],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["claimedCountText"]]],null,0],["text","      "],["open-element","div",[]],["static-attr","class","league-pass-demacia__reward-text text-flex"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","league-pass-demacia__text-hover-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","league-pass-demacia__text-hover-wrapper_view"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-pass-demacia__text-hover-wrapper_view-text-content"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","season_pass_view_reward"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","league-pass-demacia__text-hover-wrapper_view-icon"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","league-pass-demacia__token-balance"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","league-pass-demacia__token-icon"],["static-attr","src","/fe/lol-objectives/images/demacia_token.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","league-pass-demacia__token-text"],["flush-element"],["append",["unknown",["tokenBalanceText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","league-pass-demacia__claimed-count"],["flush-element"],["append",["unknown",["claimedCountText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","league-pass-demacia__time-remaining"],["flush-element"],["text","\\n            "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["eventEndTimestamp"]],["get",["expirationDetails","showDays"]],["get",["expirationDetails","showHours"]],["get",["expirationDetails","showMinutes"]],["get",["expirationDetails","showSeconds"]],true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, s) => {
+            const a = s(1).Ember;
+            e.exports = a.HTMLBars.template({
+                id: "dGw4fDBS",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-objectives\\\\src\\\\app\\\\templates\\\\components\\\\header-types\\\\generic-objectives-header.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","non-pass-generic__container"],["dynamic-attr","onmouseenter",["unknown",["onMouseEnter"]],null],["dynamic-attr","onclick",["unknown",["onClicked"]],null],["modifier",["action"],[["get",[null]],"openPass"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","non-pass-generic__image-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","non-pass-generic__main-image"],["dynamic-attr","src",["unknown",["backgroundImage"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","non-pass-generic__main-image_gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","non-pass-generic__main"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","non-pass-generic__top"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","non-pass-generic__pass-header-text"],["flush-element"],["append",["unknown",["eventName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, s) => {
@@ -2139,13 +2246,64 @@
                 value: !0
             });
             const a = s(1),
-                n = s(3);
+                n = s(8);
             t.default = a.Ember.Service.extend({
+                shoppefrontService: a.Ember.inject.service("shoppefront"),
+                lolInventoryService: a.Ember.inject.service("shoppefront-lol-inventory"),
                 currentSeasonPassData: null,
                 isGracePeriod: !1,
+                _velocityData: null,
                 init() {
-                    this._eventHubDB = (0, a.dataBinding)("/lol-event-hub", a.socket)
+                    this._super(...arguments), this._eventHubDB = (0, a.dataBinding)("/lol-event-hub", a.socket), this._shoppefrontDB = a.dataBinding.bindTo(a.socket)
                 },
+                _isOwnedByInventory(e) {
+                    const t = this.get("lolInventoryService.ownedItemInstanceIds"),
+                        s = e.purchaseUnits?.[0]?.fulfillment?.itemId;
+                    return !!s && !!t?.has?.(s)
+                },
+                _isPurchaseLimitReached(e, t) {
+                    const s = e.purchaseLimits;
+                    return !(!s || 0 === s.length) && s.some((e => {
+                        const s = e.ruleId;
+                        return !(!s || !t || null == t[s]) && 0 === t[s].availableTokens
+                    }))
+                },
+                _computeClaimedCounts() {
+                    const e = this.get("shoppefrontService.categories") || [],
+                        t = this.get("_velocityData") || this.get("shoppefrontService.purchaseLimitsMap") || {};
+                    let s = 0,
+                        a = 0;
+                    for (const n of e) {
+                        if (!n.categoryId || !n.categoryId.startsWith("BP_TIER_")) continue;
+                        const e = n.items || [];
+                        a += e.length;
+                        for (const a of e) {
+                            const e = this._isOwnedByInventory(a),
+                                n = this._isPurchaseLimitReached(a, t);
+                            (e || n) && s++
+                        }
+                    }
+                    return {
+                        claimedCount: s,
+                        totalItemCount: a
+                    }
+                },
+                _updateSeasonPassClaimedCounts() {
+                    const e = this.get("currentSeasonPassData");
+                    if (!e || e.isLoading) return;
+                    const {
+                        claimedCount: t,
+                        totalItemCount: s
+                    } = this._computeClaimedCounts();
+                    this.set("currentSeasonPassData", {
+                        ...e,
+                        claimedCount: t,
+                        totalItemCount: s
+                    })
+                },
+                _onInventoryChanged: a.Ember.observer("lolInventoryService.ownedItemInstanceIdsByItemType", "shoppefrontService.categories.[]", (function() {
+                    this._updateSeasonPassClaimedCounts()
+                })),
                 fetchSeasonPassData(e) {
                     if (e) {
                         const {
@@ -2153,16 +2311,16 @@
                             overrideBackgroundImage: s,
                             categoryType: a,
                             categoryName: o,
-                            lolEventHubType: l,
-                            tftPassType: i,
+                            lolEventHubType: i,
+                            tftPassType: l,
                             objectiveCategoryFilter: r
                         } = e, c = {
                             passId: t,
                             passType: a,
                             overrideBackgroundImage: s,
                             overrideCategoryName: o,
-                            lolEventHubType: l,
-                            tftPassType: i,
+                            lolEventHubType: i,
+                            tftPassType: l,
                             objectiveCategoryFilter: r,
                             isLoading: !0
                         };
@@ -2176,8 +2334,8 @@
                     try {
                         const [s, o] = await Promise.all([this._eventHubDB.get(`/v1/events/${e}/is-grace-period`), this._eventHubDB.get(`/v1/events/${e}/objectives-banner`)]);
                         if (e !== this.get("currentSeasonPassData.passId")) return;
-                        const l = Boolean(s);
-                        if (this.set("isGracePeriod", l), !o) return a.logger.warning("No valid objectives-banner data defaulting to override background and name", e), void this.set("currentSeasonPassData", {
+                        const i = Boolean(s);
+                        if (this.set("isGracePeriod", i), !o) return a.logger.warning("No valid objectives-banner data defaulting to override background and name", e), void this.set("currentSeasonPassData", {
                             ...t,
                             isLoading: !1,
                             passType: n.ObjectiveCategoryType.NONPASS
@@ -2186,7 +2344,7 @@
                             ...t,
                             isLoading: !1,
                             seasonPass: o
-                        })
+                        }), this._loadBattlepassClaimedCounts()
                     } catch (e) {
                         a.logger.warning("Error fetching season pass data. Defaulting to override background and name ", e), this.set("currentSeasonPassData", {
                             ...t,
@@ -2194,6 +2352,9 @@
                             passType: n.ObjectiveCategoryType.NONPASS
                         })
                     }
+                },
+                async _loadBattlepassClaimedCounts() {
+                    0
                 }
             })
         }, (e, t, s) => {
@@ -2348,6 +2509,7 @@
                 PawPlugin: e => e.get("rcp-fe-lol-paw"),
                 SharedComponents: e => e.get("rcp-fe-lol-shared-components"),
                 SharedEmberComponents: e => e.get("rcp-fe-lol-shared-components").getSharedEmberComponents(),
+                ShoppefrontComponents: e => e.get("rcp-fe-lol-shared-components").getShoppefrontComponents(),
                 Viewport: e => e.get("rcp-fe-lol-shared-components").getApi_Viewport(),
                 socket: e => e.getSocket()
             }).then((() => {
@@ -2360,7 +2522,7 @@
                     traService: a
                 })
             })).then((() => {
-                const e = s(6).default,
+                const e = s(3).default,
                     a = s(22).default;
                 return t.default.add({
                     PrivateAPI: a

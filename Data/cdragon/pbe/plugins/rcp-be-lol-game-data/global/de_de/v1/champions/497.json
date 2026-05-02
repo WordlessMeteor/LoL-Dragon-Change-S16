@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
-            "cooldown": "@f2@&nbsp;Sek. %i:cooldown%",
+            "cooldown": "@Cooldown@&nbsp;Sek. %i:cooldown%",
             "description": "Fliegt zu einem verbündeten Champion und gewährt ihm einen Schild. Kann für kurze Zeit ohne Kosten erneut gewirkt werden.",
-            "dynamicDescription": "Rakan springt zu einem verbündeten Champion und gewährt ihm @Effect3Amount@&nbsp;Sekunden lang einen <shield>Schild</shield> in Höhe von @TotalShield@.<br><br>Rakan kann diese Fähigkeit innerhalb von @Effect2Amount@&nbsp;Sekunden einmal <recast>reaktivieren</recast>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan springt zu einem verbündeten Champion und gewährt ihm @Duration@&nbsp;Sekunden lang einen <shield>Schild in Höhe von @TotalShield@</shield>.<br><br>Rakan kann diese Fähigkeit innerhalb von @RecastWindow@&nbsp;Sekunden einmal <recast>reaktivieren</recast>.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Erhöht das Lauftempo, bezaubert berührte Gegner und fügt ihnen magischen Schaden zu.",
-            "dynamicDescription": "Rakan erhält @Effect2Amount@&nbsp;Sekunden lang <speed>@Effect5Amount@&nbsp;% Lauftempo</speed>. Rakan verursacht @Effect3Amount@&nbsp;Sekunde(n) lang <magicDamage>@TotalDamageTooltip@&nbsp;magischen Schaden</magicDamage> und <status>bezaubert</status> Gegner, die er zum ersten Mal berührt. Der erste berührte Champion gewährt Rakan <speed>@Effect6Amount@&nbsp;% Lauftempo</speed>, das langsam wieder abfällt.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan erhält @Duration@&nbsp;Sekunden lang <speed>@InitialCastSpeed@&nbsp;% Lauftempo</speed>. Rakan verursacht @CharmDuration@&nbsp;Sekunde(n) lang <magicDamage>@TotalDamageTooltip@&nbsp;magischen Schaden</magicDamage> und <status>bezaubert</status> Gegner, die er zum ersten Mal berührt. Der erste berührte Champion gewährt Rakan <speed>@TouchSpeed@&nbsp;% Lauftempo</speed>, das langsam wieder abfällt.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,
