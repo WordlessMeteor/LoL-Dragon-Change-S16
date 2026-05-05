@@ -4422,7 +4422,7 @@
                 XP_SOCIAL_DISCORD_ADD_FRIEND: "client.xp.social.discord.add_friend",
                 XP_SOCIAL_DISCORD_LINK: "client.xp.social.discord.link",
                 XP_SOCIAL_DISCORD_UNLINK: "client.xp.social.discord.unlink",
-                XP_SOCIAL_DISCORD_LOBBY_COPY_SMARTURL: "client.xp.social.discord.loby.copy_smarturl",
+                XP_SOCIAL_DISCORD_LOBBY_COPY_SMARTURL: "client.xp.social.discord.lobby.copy_smarturl",
                 XP_SOCIAL_DISCORD_LOBBY_INVITE_DIALOG_OPEN: "client.xp.social.discord.lobby.invite_dialog.open",
                 XP_SOCIAL_DISCORD_LOBBY_INVITE_DIALOG_INVITE: "client.xp.social.discord.lobby.invite_dialog.invite",
                 XP_SOCIAL_FRIEND_BLOCK: "client.xp.social.friend.block",

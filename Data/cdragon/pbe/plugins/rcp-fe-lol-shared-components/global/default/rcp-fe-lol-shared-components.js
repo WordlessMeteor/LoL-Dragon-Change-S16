@@ -8709,13 +8709,13 @@
                 formatIncompletePhoneNumber: () => W,
                 formatNumber: () => I,
                 formatRFC3966: () => z,
-                getCountryCallingCode: () => q,
+                getCountryCallingCode: () => K,
                 getCountryCallingCodeCustom: () => y.getCountryCallingCode,
                 getExampleNumber: () => P,
                 getExtPrefix: () => j,
                 getNumberType: () => R,
                 getNumberTypeCustom: () => l.default,
-                getPhoneCode: () => K,
+                getPhoneCode: () => q,
                 getPhoneCodeCustom: () => Q,
                 isPossibleNumber: () => N,
                 isSupportedCountry: () => F,
@@ -8870,12 +8870,12 @@
                 return e.push(a), E.default.apply(this, e)
             }
 
-            function q(e) {
+            function K(e) {
                 return (0, y.getCountryCallingCode)(e, a)
             }
 
-            function K(e) {
-                return q(e)
+            function q(e) {
+                return K(e)
             }
 
             function Q(e, t) {
@@ -18960,25 +18960,41 @@
                     default: a
                 };
             n(478);
-            var i = s.Ember.Component.extend({
+            const i = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.korea_compliance_enabled",
+                o = s.dataBinding.bindTo(s.socket);
+            var l = s.Ember.Component.extend({
                 classNames: ["communications-agreement-modal-component"],
                 layout: r.default,
                 communicationsAgreementService: s.Ember.inject.service("communications-agreement"),
+                showKoreaCompliance: !1,
+                koreaConsentDataCollection: !1,
+                koreaConsentDataTransfer: !1,
+                isAuthorizeDisabled: s.Ember.computed("showKoreaCompliance", "koreaConsentDataCollection", "koreaConsentDataTransfer", (function() {
+                    return !!this.get("showKoreaCompliance") && (!this.get("koreaConsentDataCollection") || !this.get("koreaConsentDataTransfer"))
+                })),
                 didInsertElement() {
                     this._super(...arguments);
                     const e = this.get("onClose");
-                    e && this.get("communicationsAgreementService").setCloseHandler(e)
+                    e && this.get("communicationsAgreementService").setCloseHandler(e), this._onActionLinkClick = this._onActionLinkClick.bind(this), this.element.addEventListener("click", this._onActionLinkClick, !0), o.observe(i, this, this._onKoreaComplianceConfigUpdate.bind(this))
                 },
-                click(e) {
+                willDestroyElement() {
+                    this._super(...arguments), this.element && this._onActionLinkClick && this.element.removeEventListener("click", this._onActionLinkClick, !0), o.unobserve(i, this)
+                },
+                _onActionLinkClick(e) {
                     const t = e.target.closest("[data-action]");
                     if (!t || !this.element.contains(t)) return;
                     const n = t.getAttribute("data-action");
                     if (!n) return;
-                    this.actions && this.actions[n] && (e.preventDefault(), this.send(n))
+                    this.actions && this.actions[n] && (e.preventDefault(), e.stopPropagation(), this.send(n))
+                },
+                _onKoreaComplianceConfigUpdate(e) {
+                    if (this.isDestroyed || this.isDestroying) return;
+                    const t = Boolean(e && e.enabled);
+                    this.set("showKoreaCompliance", t), s.logger.trace("Communications agreement Korea compliance section enabled:", t)
                 },
                 actions: {
                     authorize() {
-                        this.get("communicationsAgreementService").authorize()
+                        this.get("isAuthorizeDisabled") || this.get("communicationsAgreementService").authorize()
                     },
                     deny() {
                         this.get("communicationsAgreementService").deny()
@@ -18991,15 +19007,21 @@
                     },
                     openPrivacyNotice() {
                         this.get("communicationsAgreementService").openPrivacyNotice()
+                    },
+                    openKoreaDataCollectionDetails() {
+                        this.get("communicationsAgreementService").openKoreaDataCollectionDetails()
+                    },
+                    openKoreaDataTransferDetails() {
+                        this.get("communicationsAgreementService").openKoreaDataTransferDetails()
                     }
                 }
             });
-            t.default = i
+            t.default = l
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "gbKejFkb",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\communications-agreement-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\communications-agreement-modal.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","communications-agreement-content"],["flush-element"],["text","\\n  "],["open-element","h2",[]],["static-attr","class","communications-agreement-header"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","communications_agreement_modal_header"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","communications-agreement-body"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","communications_agreement_modal_body"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","communications-agreement-body"],["flush-element"],["append",["unknown",["tra","communications_agreement_modal_optional"]],true],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","communications-agreement-legal"],["flush-element"],["append",["unknown",["tra","communications_agreement_modal_learn_more"]],true],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","communications-agreement-divider"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","communications-agreement-info"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","communications-agreement-info-icon"],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","communications-agreement-info-text"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","communications_agreement_modal_info_text"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","lol-uikit-flat-button-group",[]],["static-attr","class","communications-agreement-button-group"],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","communications-agreement-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"authorize"],null],null],["flush-element"],["append",["unknown",["tra","communications_agreement_modal_authorize_button"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","communications-agreement-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"deny"],null],null],["flush-element"],["append",["unknown",["tra","communications_agreement_modal_deny_button"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "gLJq4cXc",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\communications-agreement-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\communications-agreement-modal.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","communications-agreement-content"],["flush-element"],["text","\\n  "],["open-element","h2",[]],["static-attr","class","communications-agreement-header"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","communications_agreement_modal_header"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","communications-agreement-body"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","communications_agreement_modal_body"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","communications-agreement-body"],["flush-element"],["append",["unknown",["tra","communications_agreement_modal_optional"]],true],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","communications-agreement-legal"],["flush-element"],["append",["unknown",["tra","communications_agreement_modal_learn_more"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["showKoreaCompliance"]]],null,0],["text","  "],["open-element","div",[]],["static-attr","class","communications-agreement-divider"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","communications-agreement-info"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","communications-agreement-info-icon"],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","communications-agreement-info-text"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","communications_agreement_modal_info_text"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","lol-uikit-flat-button-group",[]],["static-attr","class","communications-agreement-button-group"],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","communications-agreement-button"],["dynamic-attr","disabled",["unknown",["isAuthorizeDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"authorize"],null],null],["flush-element"],["append",["unknown",["tra","communications_agreement_modal_authorize_button"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","communications-agreement-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"deny"],null],null],["flush-element"],["append",["unknown",["tra","communications_agreement_modal_deny_button"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","communications-agreement-korea-section"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","communications-agreement-korea-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","communications-agreement-korea-intro"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","communications_agreement_modal_korea_intro"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","communications-agreement-korea-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","communications-agreement-korea-options"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","communications-agreement-korea-option"],["static-attr","for","koreaConsentDataCollection"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","koreaConsentDataCollection",["helper",["mut"],[["get",["koreaConsentDataCollection"]]],null]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","koreaConsentDataCollection"],["static-attr","class","communications-agreement-korea-option-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","communications_agreement_modal_korea_data_collection"]],true],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","communications-agreement-korea-option"],["static-attr","for","koreaConsentDataTransfer"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","koreaConsentDataTransfer",["helper",["mut"],[["get",["koreaConsentDataTransfer"]]],null]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","koreaConsentDataTransfer"],["static-attr","class","communications-agreement-korea-option-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","communications_agreement_modal_korea_data_transfer"]],true],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26403,6 +26425,8 @@
                 },
                 openTermsOfService() {},
                 openPrivacyNotice() {},
+                openKoreaDataCollectionDetails() {},
+                openKoreaDataTransferDetails() {},
                 _setVoiceComplianceAgreement(e) {
                     return this.db.patch("/lol-settings/v2/account/LCUPreferences/lol-navigation", {
                         schemaVersion: 1,

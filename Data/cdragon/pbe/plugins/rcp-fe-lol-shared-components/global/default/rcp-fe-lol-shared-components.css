@@ -4646,6 +4646,8 @@ div.player-name-input__split-inputs-wrapper {
 .communications-agreement-modal-component .communications-agreement-external-link,
 .communications-agreement-modal-component .communications-agreement-info-text,
 .communications-agreement-modal-component .communications-agreement-internal-link,
+.communications-agreement-modal-component .communications-agreement-korea-intro,
+.communications-agreement-modal-component .communications-agreement-korea-option-label,
 .communications-agreement-modal-component .communications-agreement-legal {
     font-family: var(--font-body)
 }
@@ -4655,6 +4657,8 @@ div.player-name-input__split-inputs-wrapper {
 .communications-agreement-modal-component .communications-agreement-header,
 .communications-agreement-modal-component .communications-agreement-info-text,
 .communications-agreement-modal-component .communications-agreement-internal-link,
+.communications-agreement-modal-component .communications-agreement-korea-intro,
+.communications-agreement-modal-component .communications-agreement-korea-option-label,
 .communications-agreement-modal-component .communications-agreement-legal {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
@@ -4688,6 +4692,8 @@ div.player-name-input__split-inputs-wrapper {
 }
 
 .communications-agreement-modal-component .communications-agreement-body,
+.communications-agreement-modal-component .communications-agreement-korea-intro,
+.communications-agreement-modal-component .communications-agreement-korea-option-label,
 .communications-agreement-modal-component .communications-agreement-legal {
     color: #a09b8c;
     font-size: 14px;
@@ -4698,6 +4704,8 @@ div.player-name-input__split-inputs-wrapper {
 }
 
 .communications-agreement-modal-component .communications-agreement-body:lang(ar-ae),
+.communications-agreement-modal-component .communications-agreement-korea-intro:lang(ar-ae),
+.communications-agreement-modal-component .communications-agreement-korea-option-label:lang(ar-ae),
 .communications-agreement-modal-component .communications-agreement-legal:lang(ar-ae) {
     letter-spacing: 0
 }
@@ -4825,6 +4833,47 @@ div.player-name-input__split-inputs-wrapper {
 .communications-agreement-modal-component .communications-agreement-external-link {
     color: #0596aa;
     text-decoration: underline
+}
+
+.communications-agreement-modal-component .communications-agreement-korea-section {
+    align-items: stretch;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.communications-agreement-modal-component .communications-agreement-korea-rule {
+    background-color: #1e2328;
+    height: 1px
+}
+
+.communications-agreement-modal-component .communications-agreement-korea-intro {
+    color: #a09b8c;
+    line-height: 20px;
+    margin: 4px 0;
+    text-align: center
+}
+
+.communications-agreement-modal-component .communications-agreement-korea-options {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    padding-left: 24px
+}
+
+.communications-agreement-modal-component .communications-agreement-korea-option {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.communications-agreement-modal-component .communications-agreement-korea-option-label {
+    color: #a09b8c;
+    line-height: 20px
 }
 
 .communications-agreement-modal-component .communications-agreement-divider {

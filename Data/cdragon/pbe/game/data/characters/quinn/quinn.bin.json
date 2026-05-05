@@ -1372,6 +1372,16 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{929bc6f6}": {
+                    "mFormulaParts": [
+                        {
+                            "mStartValue": 15.0,
+                            "mEndValue": 90.0,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
             "mAnimationName": "",
@@ -2026,6 +2036,19 @@
                         1.75
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusMonsterDmgMult",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2080,6 +2103,23 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{a06afe5e}": {
+                    "mMultiplier": {
+                        "mSubparts": [
+                            {
+                                "mNumber": 1.0,
+                                "__type": "NumberCalculationPart"
+                            },
+                            {
+                                "mDataValue": "{334ec52c}",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalDamage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell1",
@@ -2188,7 +2228,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_QuinnQ_Name",
                         "keySummary": "Spell_QuinnQ_Summary",
-                        "keyTooltip": "Spell_QuinnQ_Tooltip"
+                        "keyTooltip": "Spell_QuinnQ_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_QuinnQ_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2412,7 +2453,6 @@
     "{786c4e8f}": {
         "mOverrides": [
             {
-                "mForceOverride": true,
                 "mOverrideContexts": [
                     {
                         "mMapID": 11,

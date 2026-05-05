@@ -4647,8 +4647,8 @@
                     "name": "DebrisDamage",
                     "values": [
                         300.0,
-                        280.0,
-                        420.0,
+                        300.0,
+                        450.0,
                         999.0,
                         999.0,
                         2.0,
@@ -4660,8 +4660,8 @@
                     "name": "SlamDamage",
                     "values": [
                         2.5,
-                        680.0,
-                        1050.0,
+                        720.0,
+                        1100.0,
                         9999.0,
                         9999.0,
                         2.5,
@@ -6101,7 +6101,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 50.0,
+            "baseValue": 52.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -6295,6 +6295,32 @@
                         4.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "NumAttacks",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PrimaryTargetBonusDamage",
+                    "values": [
+                        10.0,
+                        10.0,
+                        15.0,
+                        200.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -6322,6 +6348,21 @@
                                 }
                             ],
                             "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{96bcff1d}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "{005ff112}",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 1.0,
+                            "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -6408,6 +6449,11 @@
                                 {
                                     "type": "ADDamage",
                                     "nameOverride": "TFT_ADAP_PhysicalDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PrimaryTargetBonusDamage",
+                                    "nameOverride": "Spell_TFT17_XayahSpell_PrimaryTargetDamage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -7924,8 +7970,8 @@
                     "values": [
                         0.33000001311302185,
                         0.33000001311302185,
-                        0.33000001311302185,
-                        0.33000001311302185,
+                        0.4000000059604645,
+                        0.4000000059604645,
                         0.33000001311302185,
                         0.33000001311302185,
                         0.33000001311302185
@@ -7999,6 +8045,15 @@
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "HPPenalty",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT17_NasusSpell_BonusHealth",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
                             "__type": "TooltipInstanceList"
                         }
                     },
@@ -8946,7 +9001,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 30.0,
+            "baseValue": 25.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -8968,7 +9023,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.8500000238418579,
+            "baseValue": 0.75,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -9062,8 +9117,8 @@
                     "name": "PassiveDamage",
                     "values": [
                         0.0,
-                        35.0,
-                        55.0,
+                        30.0,
+                        45.0,
                         999.0,
                         999.0,
                         0.0,
@@ -9101,8 +9156,8 @@
                     "name": "PhysicalDamage",
                     "values": [
                         0.4000000059604645,
-                        230.0,
-                        350.0,
+                        180.0,
+                        270.0,
                         9999.0,
                         9999.0,
                         0.4000000059604645,
@@ -9669,19 +9724,32 @@
                 {
                     "name": "GridADDamage",
                     "values": [
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "GridAPDamage",
                     "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SwordAoEADDamage",
+                    "values": [
                         200.0,
                         200.0,
                         200.0,
@@ -9693,28 +9761,15 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "SwordAoEADDamage",
-                    "values": [
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "SwordAoEAPDamage",
                     "values": [
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -9747,13 +9802,13 @@
                 {
                     "name": "Durability",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -9912,10 +9967,6 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "{726ee5cd}": {
-                "baseValue": 85.0,
-                "__type": "ModifiableFloat"
-            },
             "{c4ab3550}": {
                 "baseValue": 0.0,
                 "__type": "ModifiableFloat"
@@ -9928,11 +9979,11 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 150.0,
+            "baseValue": 60.0,
             "__type": "ModifiableFloat"
         },
         "baseMR": {
-            "baseValue": 150.0,
+            "baseValue": 60.0,
             "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
@@ -9946,7 +9997,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.8999999761581421,
+            "baseValue": 0.6000000238418579,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -9986,7 +10037,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 50.0,
+        "mInitialMana": 30.0,
         "mShopData": "{2e4a05f8}",
         "__type": "TFTCharacterRecord"
     },
@@ -50970,6 +51021,7 @@
         "AbilityIconPath": "ASSETS/Characters/TFT17_DarkStar_FakeUnit/HUD/TFT17_DarkStar_FakeUnit_SmallSplash.TFT_Set17.tex",
         "PcSplashPath": "ASSETS/Characters/TFT17_DarkStar_FakeUnit/HUD/TFT17_DarkStar_FakeUnit_BigSplash.TFT_Set17.tex",
         "SquareSplashPath": "ASSETS/Characters/TFT17_DarkStar_FakeUnit/HUD/TFT17_DarkStar_FakeUnit_SmallSplash.TFT_Set17.tex",
+        "TeamPlannerPortraitPath": "ASSETS/Characters/TFT17_AnimaSquadProp/TFT17_DarkStar_Square.tex",
         "mDisplayNameTra": "TFT17_DarkStar_FakeUnit_Name",
         "mAbilityNameTra": "TFT17_DarkStar_FakeUnitSpell_Name",
         "mDescriptionTra": "TFT17_DarkStar_FakeUnitSpell_Description",
@@ -51201,7 +51253,7 @@
                 "constants": {
                     "{df085b93}": {
                         "AD": {
-                            "mValue": 0.20000000298023224,
+                            "mValue": 0.18000000715255737,
                             "__type": "GameModeConstantFloat"
                         },
                         "Omnivamp": {
@@ -51229,7 +51281,7 @@
                 "constants": {
                     "{df085b93}": {
                         "AD": {
-                            "mValue": 0.4000000059604645,
+                            "mValue": 0.3499999940395355,
                             "__type": "GameModeConstantFloat"
                         },
                         "Omnivamp": {
@@ -51258,7 +51310,7 @@
                 "constants": {
                     "{df085b93}": {
                         "AD": {
-                            "mValue": 0.6000000238418579,
+                            "mValue": 0.550000011920929,
                             "__type": "GameModeConstantFloat"
                         },
                         "Omnivamp": {

@@ -25,7 +25,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 50.0,
+            "baseValue": 52.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -395,6 +395,32 @@
                         4.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "NumAttacks",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PrimaryTargetBonusDamage",
+                    "values": [
+                        10.0,
+                        10.0,
+                        15.0,
+                        200.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -422,6 +448,21 @@
                                 }
                             ],
                             "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{96bcff1d}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "{005ff112}",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 1.0,
+                            "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -508,6 +549,11 @@
                                 {
                                     "type": "ADDamage",
                                     "nameOverride": "TFT_ADAP_PhysicalDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PrimaryTargetBonusDamage",
+                                    "nameOverride": "Spell_TFT17_XayahSpell_PrimaryTargetDamage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
