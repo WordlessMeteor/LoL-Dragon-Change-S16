@@ -1062,7 +1062,7 @@
                         DynamicConfigService: n(218).default,
                         InventoryService: n(219).default,
                         ChatPublisherService: n(220).default,
-                        LoadoutsService: n(221).default,
+                        ChampSelectLoadoutsService: n(221).default,
                         RankedAssetsService: v,
                         SkinPurchaseService: n(222).default,
                         PlayerReportService: n(247).default,
@@ -5887,7 +5887,7 @@
                 layout: n(118),
                 classNames: ["loadouts-edit-component"],
                 classNameBindings: ["isDemacia:is-Demacia"],
-                loadoutsService: i.Ember.inject.service("loadouts"),
+                loadoutsService: i.Ember.inject.service("champ-select-loadouts"),
                 isRoleSwapEnabled: !1,
                 wardSkins: [],
                 init: function() {
@@ -10452,19 +10452,6 @@
                     })).then((() => {
                         s && s(!0), i.Telemetry.stopAndRecordTimer(n)
                     }))
-                },
-                setActiveDemaciaPage(e, t, n, s) {
-                    const o = {
-                        id: e,
-                        loadout: {
-                            [s]: {
-                                contentId: "",
-                                inventoryType: n,
-                                itemId: t
-                            }
-                        }
-                    };
-                    return i.db.patch(`/lol-loadouts/v4/loadouts/${e}`, o)
                 }
             });
             t.default = o

@@ -7700,10 +7700,11 @@
                         lpBonusAppliedReason: e,
                         rankedAssetsService: this.get("rankedAssetsService")
                     });
+                    let n = this.get("rankedAssetsService.assets.valorAegisModalTitleLoc");
                     c.add({
                         data: {
                             header: {
-                                title: this.get("rankedAssetsService.assets.valorAegisModalTitleLoc")
+                                title: n
                             },
                             nextButtonText: this.get("tra.postgame_rank_lp_modal_accept_text"),
                             backgroundImageUrl: this.get("lpChangeBackground")
@@ -8140,7 +8141,7 @@
                 };
             var l = a.Ember.Component.extend(o.default, {
                 classNames: ["rating-change-component"],
-                classNameBindings: ["isWin::is-loss", "lpChangeClassName:expanded"],
+                classNameBindings: ["isWin::is-loss", "lpChangeClassName:expanded", "removeGoldFrame:no-gold-frame"],
                 rankedAssetsService: a.Ember.inject.service("ranked-assets"),
                 isBeingPromoted: !1,
                 isBeingDemoted: !1,
@@ -8203,7 +8204,7 @@
                 })),
                 updateResultLoc: a.Ember.computed("ratingChangeLoc", "isPromotedOrDemoted", "isInMiniseries", "isWin", "isLossPrevented", "lpChangeClassName", "rankedAssetsService.assets", (function() {
                     const e = this.get("isWin");
-                    return this.get("isInMiniseries") ? e ? this.get("tra.career_postgame_ranked_win_short") : this.get("tra.career_postgame_ranked_loss_short") : this.get("isPromotedOrDemoted") ? e ? this.get("tra.career_postgame_ranked_promoted_short") : this.get("tra.career_postgame_ranked_demoted_short") : this.get("isLossPrevented") ? this.get("tra.career_postgame_ranked_loss_prevented") : this.get("lpChangeClassName") ? e ? this.get("rankedAssetsService.assets.lpChangeValorBonusLoc") : this.get("rankedAssetsService.assets.lpChangeValorProtectionLoc") : this.get("ratingChangeLoc")
+                    return this.get("isInMiniseries") ? e ? this.get("tra.career_postgame_ranked_win_short") : this.get("tra.career_postgame_ranked_loss_short") : this.get("isPromotedOrDemoted") ? e ? this.get("tra.career_postgame_ranked_promoted_short") : this.get("tra.career_postgame_ranked_demoted_short") : this.get("isLossPrevented") ? this.get("tra.career_postgame_ranked_loss_prevented") : this.get("lpChangeClassName") && !this.get("overrideShowLp") ? e ? this.get("rankedAssetsService.assets.lpChangeValorBonusLoc") : this.get("rankedAssetsService.assets.lpChangeValorProtectionLoc") : this.get("ratingChangeLoc")
                 }))
             });
             t.default = l
@@ -9907,17 +9908,18 @@
                     return this.get("rankedAssetsService.assets.valorAegisModalAwardedSfx")
                 })),
                 introVideo: a.Ember.computed("lpBonusAppliedReason", "rankedAssetsService.assets.valorAegisAwardedVideoAutofillIntro", "rankedAssetsService.assets.valorAegisAwardedVideoScarceIntro", (function() {
-                    return this.get("lpBonusAppliedReason") === l ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoAutofillIntro") : this.get("lpBonusAppliedReason") === i ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoScarceIntro") : ""
+                    return this.get("lpBonusAppliedReason") === l ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoAutofillIntro") : (this.get("lpBonusAppliedReason"), this.get("rankedAssetsService.assets.valorAegisAwardedVideoScarceIntro"))
                 })),
                 idleLoopVideo: a.Ember.computed("lpBonusAppliedReason", "rankedAssetsService.assets.valorAegisAwardedVideoAutofillIdle", "rankedAssetsService.assets.valorAegisAwardedVideoScarceIdle", (function() {
-                    return this.get("lpBonusAppliedReason") === l ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoAutofillIdle") : this.get("lpBonusAppliedReason") === i ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoScarceIdle") : ""
+                    return this.get("lpBonusAppliedReason") === l ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoAutofillIdle") : (this.get("lpBonusAppliedReason"), this.get("rankedAssetsService.assets.valorAegisAwardedVideoScarceIdle"))
                 })),
-                valorAegisEffectText: a.Ember.computed("isWin", "rankedAssetsService.assets.lpChangeValorBonusLoc", "rankedAssetsService.assets.lpChangeValorProtectionLoc", (function() {
-                    return this.get("isWin") ? this.get("rankedAssetsService.assets.lpChangeValorBonusLoc") : this.get("rankedAssetsService.assets.lpChangeValorProtectionLoc")
+                valorAegisEffectText: a.Ember.computed("isWin", "lpBonusAppliedReason", "rankedAssetsService.assets.lpChangeValorBonusLoc", "rankedAssetsService.assets.lpChangeValorProtectionLoc", (function() {
+                    const e = this.get("lpBonusAppliedReason");
+                    if (e === i || e === l) return this.get("isWin") ? this.get("rankedAssetsService.assets.lpChangeValorBonusLoc") : this.get("rankedAssetsService.assets.lpChangeValorProtectionLoc")
                 })),
                 valorAegisEmblemPath: a.Ember.computed("lpBonusAppliedReason", "rankedAssetsService.assets.valorAegisEmblemAutofillLarge", "rankedAssetsService.assets.valorAegisEmblemPriorityRoleLarge", (function() {
                     const e = this.get("lpBonusAppliedReason");
-                    return e === l ? this.get("rankedAssetsService.assets.valorAegisEmblemAutofillLarge") : e === i ? this.get("rankedAssetsService.assets.valorAegisEmblemPriorityRoleLarge") : ""
+                    return e === l ? this.get("rankedAssetsService.assets.valorAegisEmblemAutofillLarge") : this.get("rankedAssetsService.assets.valorAegisEmblemPriorityRoleLarge")
                 })),
                 valorAegisExplanationLines: a.Ember.computed("lpBonusAppliedReason", "rankedAssetsService.assets.valorAegisAutofillProtectionDesc", "rankedAssetsService.assets.valorAegisPriorityRoleProtectionDesc1", "rankedAssetsService.assets.valorAegisPriorityRoleProtectionDesc2", (function() {
                     const e = this.get("lpBonusAppliedReason");

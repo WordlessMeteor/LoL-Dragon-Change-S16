@@ -662,6 +662,20 @@
                     "__type": "SpellDataValueVector"
                 }
             },
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "ChargeDamage": {
                     "mFormulaParts": [
@@ -2306,6 +2320,55 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BADRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "BADRatio",
+                            "values": [
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        8.0,
+                        8.0,
+                        7.5,
+                        7.0,
+                        6.5,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "BonusDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
@@ -2317,8 +2380,8 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.4000000059604645,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "BADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"

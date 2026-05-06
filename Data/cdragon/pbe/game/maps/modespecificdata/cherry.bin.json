@@ -78673,6 +78673,19 @@
                 {
                     "name": "BADRatioPerRed",
                     "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatioPerRed",
+                    "values": [
                         0.30000001192092896,
                         0.30000001192092896,
                         0.30000001192092896,
@@ -78680,19 +78693,6 @@
                         0.30000001192092896,
                         0.30000001192092896,
                         0.30000001192092896
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "APRatioPerRed",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -122607,6 +122607,9 @@
             "{c4182067}": "Cherry_CombinationFriedRice_Tooltip",
             "__type": "{5b441d9b}"
         },
+        "{791eb92e}": {
+            "__type": "{21dad86e}"
+        },
         "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Combination_Fried_Rice.tex",
         "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Combination_Fried_Rice_Small.tex",
         "AugmentDisplayTags": [
@@ -132327,13 +132330,13 @@
                 {
                     "name": "MaxLevel",
                     "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -132368,8 +132371,8 @@
                     "values": [
                         1.0,
                         1.0,
-                        1.0,
-                        1.0,
+                        1.25,
+                        1.5,
                         1.0,
                         1.0,
                         1.0
@@ -132381,8 +132384,8 @@
                     "values": [
                         0.75,
                         0.75,
-                        0.75,
-                        0.75,
+                        1.0,
+                        1.25,
                         0.75,
                         0.75,
                         0.75
@@ -132403,16 +132406,12 @@
                     },
                     "mLists": {
                         "LevelUp": {
+                            "levelCount": 3,
                             "Elements": [
-                                {
-                                    "type": "AbilityHaste",
-                                    "nameOverride": "Spell_ListType_AbilityHaste",
-                                    "__type": "TooltipInstanceListElement"
-                                },
                                 {
                                     "type": "DamageAmp",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_DamageAdditional",
+                                    "nameOverride": "Spell_ListType_AdditionalDamage",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },

@@ -185,9 +185,9 @@
                     "name": "DashDamage",
                     "values": [
                         80.0,
-                        110.0,
-                        165.0,
-                        265.0,
+                        120.0,
+                        180.0,
+                        290.0,
                         470.0,
                         250.0,
                         250.0
@@ -275,16 +275,16 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{8e908ca5}": {
+                "ModifiedMeepBonusDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mPart1": {
-                                "mSpellCalculationKey": "{2f5b0f5a}",
+                                "mSpellCalculationKey": "ModifiedNumMeeps",
                                 "__type": "{f3cbe7b2}"
                             },
                             "mPart2": {
-                                "mSpellCalculationKey": "{7d429d50}",
+                                "mSpellCalculationKey": "ModifiedChompMeepAPDamage",
                                 "__type": "{f3cbe7b2}"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"
@@ -292,7 +292,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{549f0a8e}": {
+                "ModifiedChompDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
@@ -306,7 +306,7 @@
                                     "__type": "SubPartScaledProportionalToStat"
                                 },
                                 {
-                                    "mSpellCalculationKey": "{8e908ca5}",
+                                    "mSpellCalculationKey": "ModifiedMeepBonusDamage",
                                     "__type": "{f3cbe7b2}"
                                 }
                             ],
@@ -315,7 +315,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{2f5b0f5a}": {
+                "ModifiedNumMeeps": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
@@ -326,7 +326,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{7d429d50}": {
+                "ModifiedChompMeepAPDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {

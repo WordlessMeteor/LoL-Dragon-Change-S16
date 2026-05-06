@@ -3535,15 +3535,15 @@
                 })),
                 currentInvitedSummonerIds: a.Ember.computed("roster.members.[]", "localPlayerSummonerId", (function() {
                     const e = this.get("localPlayerSummonerId");
-                    return a._.filter(this.get("roster.members"), (t => t.summonerId !== e)).map((e => e.summonerId))
+                    return a._.filter(this.get("roster.members"), (t => 0 !== t.summonerId && t.summonerId !== e)).map((e => e.summonerId))
                 })),
                 currentSuggestedSummonerIds: a.Ember.computed("suggestedInvites.[]", "localPlayerSummonerId", (function() {
                     const e = this.get("localPlayerSummonerId");
-                    return a._.filter(this.get("suggestedInvites"), (t => t.summonerId !== e)).map((e => e.summonerId))
+                    return a._.filter(this.get("suggestedInvites"), (t => 0 !== t.summonerId && t.summonerId !== e)).map((e => e.summonerId))
                 })),
                 localPlayerSuggestedSummonerIds: a.Ember.computed("suggestedInvites.[]", "localPlayerSummonerId", (function() {
                     const e = this.get("localPlayerSummonerId");
-                    return a._.filter(this.get("suggestedInvites"), (t => t.summonerId !== e && t.suggesterSummonerId === e)).map((e => e.summonerId))
+                    return a._.filter(this.get("suggestedInvites"), (t => 0 !== t.summonerId && t.summonerId !== e && t.suggesterSummonerId === e)).map((e => e.summonerId))
                 })),
                 isAtMaxInvites: a.Ember.computed("numCurrentInvites", "numCurrentTeamMembers", "maxInvites", (function() {
                     return this.get("numCurrentInvites") + this.get("numCurrentTeamMembers") >= this.get("maxInvites")
@@ -3684,8 +3684,9 @@
                             r = a(n),
                             l = a(s),
                             c = a(i),
-                            d = e.product && e.product !== o.product || e.platformId && e.platformId !== o.platformId;
-                        return -1 !== t.indexOf(e.summonerId) || r >= 0 || l >= 0 || c >= 0 || d
+                            d = e.product && e.product !== o.product || e.platformId && e.platformId !== o.platformId,
+                            m = 0 === e.summonerId;
+                        return -1 !== t.indexOf(e.summonerId) || r >= 0 || l >= 0 || c >= 0 || d || m
                     }));
                     return r.forEach((e => {
                         !e.summonerIconPath && e.icon && (e.summonerIconPath = this._getSummonerIconPath(e.summonerId, e.icon), e.notifyPropertyChange("summonerIconPath"), e.isFriend = !0, e.notifyPropertyChange("isFriend"))
