@@ -590,27 +590,9 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        0.2199999988079071,
-                        0.2199999988079071,
-                        0.23499999940395355,
-                        0.25,
-                        0.26499998569488525,
-                        0.2800000011920929,
-                        0.2800000011920929
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.149999976158142,
-                        1.2000000476837158,
-                        1.25,
-                        1.2999999523162842,
-                        1.350000023841858
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -666,12 +648,24 @@
                         1.350000023841858
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShotsPerStrike",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "EmpoweredDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
                             "mStat": 2,
@@ -752,7 +746,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "DamagePerStrike",
                                     "typeIndex": 6,
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_AsheFlurryAttackDamageratio",

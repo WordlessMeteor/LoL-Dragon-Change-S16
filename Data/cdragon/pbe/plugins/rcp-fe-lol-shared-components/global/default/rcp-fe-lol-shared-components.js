@@ -6705,7 +6705,7 @@
                     return !1
                 }
                 constructor() {
-                    super(), this._position = null, this._queue = null, this._summonerId = null, this._regalia = null, this._preferences = {
+                    super(), this._position = null, this._queue = null, this._summonerId = null, this._regalia = null, this._showDiscordIcon = !1, this._preferences = {
                         crystalLevel: null,
                         bannerId: null
                     }, this._service = new r.default(this._onSummonerRegaliaCallback.bind(this), this.isHovercard())
@@ -6717,7 +6717,7 @@
                     super.disconnectedCallback(), this._service.detach()
                 }
                 static get observedAttributes() {
-                    return ["position", "queue", "summoner-id", "puuid"]
+                    return ["position", "queue", "summoner-id", "puuid", "show-discord-icon"]
                 }
                 attributeChangedCallback(e, t, n) {
                     switch (super.attributeChangedCallback(e, t, n), e) {
@@ -6731,7 +6731,10 @@
                             this._updateSummonerId(n);
                             break;
                         case "puuid":
-                            this._updatePuuid(n)
+                            this._updatePuuid(n);
+                            break;
+                        case "show-discord-icon":
+                            this._updateShowDiscordIcon(n)
                     }
                 }
                 _updatePosition(e) {
@@ -6745,6 +6748,9 @@
                 }
                 _updateSummonerId(e) {
                     (0, i.attributeValueNotSet)(e) || this._summonerId !== e && (this._hide(), delete this._regalia, delete this._summonerId, this._updateCrestAttributes(), this._updateBannerAttributes(), this._summonerId = e, this._service.setSummonerId(e), this.handleSummonerChanged(e))
+                }
+                _updateShowDiscordIcon(e) {
+                    (0, i.attributeValueNotSet)(e) ? this._showDiscordIcon = !1: this._showDiscordIcon.toString() !== e && (this._showDiscordIcon = "true" === e, this._updateCrestAttributes())
                 }
                 _onSummonerRegaliaCallback(e, t, n) {
                     this._regalia = e, this._preferences = n, this._updateCrestAttributes(), this._updateBannerAttributes(), this._show()
@@ -6765,7 +6771,7 @@
                     if (!this.getRegaliaCrestElement()) return;
                     const e = this.getRegaliaCrestElement();
                     this._regalia ? (this._updateCrystalAttributes(), s.SharedComponentsApi_Private.Regalia.getProfileIcons().getIconUrlPromise(this._regalia.profileIconId).then((t => {
-                        this._regalia && (e.setAttribute("profile-icon-url", t), e.setAttribute("summoner-level", this._regalia.summonerLevel), e.setAttribute("prestige-crest-id", this._regalia.selectedPrestigeCrest), e.setAttribute("ranked-tier", s.lodash.get(this._regalia, "highestRankedEntry.tier")), e.setAttribute("ranked-division", s.lodash.get(this._regalia, "highestRankedEntry.division")), e.setAttribute("ranked-split-reward", s.lodash.get(this._regalia, "highestRankedEntry.splitRewardLevel")), e.setAttribute("crest-type", this._regalia.crestType), this.handleCrestChanged(this._regalia), e.classList.add("regalia-crest-loaded"))
+                        this._regalia && (this._showDiscordIcon ? e.setAttribute("profile-icon-url", "/fe/lol-social/discord-friend.png") : e.setAttribute("profile-icon-url", t), e.setAttribute("summoner-level", this._regalia.summonerLevel), e.setAttribute("prestige-crest-id", this._regalia.selectedPrestigeCrest), e.setAttribute("ranked-tier", s.lodash.get(this._regalia, "highestRankedEntry.tier")), e.setAttribute("ranked-division", s.lodash.get(this._regalia, "highestRankedEntry.division")), e.setAttribute("ranked-split-reward", s.lodash.get(this._regalia, "highestRankedEntry.splitRewardLevel")), e.setAttribute("crest-type", this._regalia.crestType), this.handleCrestChanged(this._regalia), e.classList.add("regalia-crest-loaded"))
                     }))) : e.classList.remove("regalia-crest-loaded")
                 }
                 _updateBannerAttributes() {

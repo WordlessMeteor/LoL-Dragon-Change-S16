@@ -93831,7 +93831,10 @@
                             "mSelfEventName": "Recall3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -93848,7 +93851,10 @@
                             "mSpectatorEventName": "Taunt3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -93967,7 +93973,6 @@
                             "mSpectatorEventName": "cast3D",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "DontResetTimer": true,

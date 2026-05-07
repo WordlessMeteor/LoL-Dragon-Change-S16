@@ -10515,7 +10515,7 @@
                             t.style.webkitMaskImage = `url(${r})`;
                             break;
                         case f.DISCORD:
-                            t.style.webkitMaskImage = `url(${i})`, t.style.backgroundColor = "#7289DA";
+                            t.style.webkitMaskImage = `url(${i})`, t.style.backgroundColor = "#5865F2";
                             break;
                         case f.INVITE:
                             t.style.webkitMaskImage = `url(${l})`;

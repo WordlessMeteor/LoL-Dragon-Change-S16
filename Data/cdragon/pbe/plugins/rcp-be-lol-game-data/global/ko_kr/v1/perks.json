@@ -998,7 +998,7 @@
         "majorChangePatchVersion": "16.9",
         "tooltip": "3초 안에 챔피언 최대 체력의 25%에 해당하는 피해를 입히면 4초 동안 <speed>이동 속도가 @MoveSpeedCalc@</speed>, <status>둔화 저항이 50%</status> 증가합니다.<br><br>재사용 대기시간: <attention>@CooldownCalc@초</attention><br><br>활성화 횟수: 총 <attention>@f1@</attention>",
         "shortDesc": "챔피언 최대 체력의 25%에 해당하는 피해를 입힐 시 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>이동 속도</lol-uikit-tooltipped-keyword> 및 둔화 저항 대폭 증가 ",
-        "longDesc": "3초 안에 챔피언 최대 체력의 25%에 해당하는 피해를 입히면 4초 동안 <speed>이동 속도가 40%</speed>, <status>둔화 저항이 50%</status> 증가합니다. 원거리 챔피언은 이동 속도 증가 효과가 75%만 적용됩니다.<br>재사용 대기시간: 20~10초",
+        "longDesc": "3초 안에 챔피언 최대 체력의 25%에 해당하는 피해를 입히면 4초 동안 <speed>이동 속도가 @HasteMax*100@%</speed>, <status>둔화 저항이 50%</status> 증가합니다. 원거리 챔피언은 이동 속도 증가 효과가 75%만 적용됩니다.<br>재사용 대기시간: 20~10초",
         "recommendationDescriptor": "돌진 이동",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
         "endOfGameStatDescs": [
@@ -1171,7 +1171,7 @@
         "majorChangePatchVersion": "16.9",
         "tooltip": "챔피언에게 스킬로 피해를 입히면 화상을 적용해 초당 @DamageCalc@의 적응형 피해를 입힙니다. 3초 동안 화상 피해를 입으면 불이 붙어 있는 동안 화상 피해량이 75% 증가합니다.<br><rules><br>지속시간:<br>단일 대상: 4초<br>광역: 2초<br>지속 피해: 1초<br></rules><br>죽음불꽃 손길 화상으로 챔피언에게 @f1@의 피해를 입혔습니다.",
         "shortDesc": "챔피언에게 스킬로 피해를 입히면 지속적으로 화상 적용",
-        "longDesc": "챔피언에게 스킬로 피해를 입히면 화상을 적용해 레벨에 따라 초당 3~14(+<scaleAP>주문력의 0.03</scaleAP>)(+<scaleAD>추가 공격력의 0.07</scaleAD>)의 적응형 피해를 입힙니다. 3초 동안 화상 피해를 입으면 불이 붙어 있는 동안 화상 피해량이 75% 증가합니다.<br><rules><br>지속시간:<br>단일 대상: 4초<br>광역: 2초<br>지속 피해: 1초<br></rules>",
+        "longDesc": "챔피언에게 스킬로 피해를 입히면 화상을 적용해 레벨에 따라 초당 3~12(+<scaleAP>주문력의 0.03</scaleAP>)(+<scaleAD>추가 공격력의 0.07</scaleAD>)의 적응형 피해를 입힙니다. 3초 동안 화상 피해를 입으면 불이 붙어 있는 동안 화상 피해량이 75% 증가합니다.<br><rules><br>지속시간:<br>단일 대상: 4초<br>광역: 2초<br>지속 피해: 1초<br></rules>",
         "recommendationDescriptor": "지속 스킬 피해",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
@@ -1372,7 +1372,7 @@
         "recommendationDescriptor": "비전투 상태 이동",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/Predator/Predator.png",
         "endOfGameStatDescs": [
-            "챔피언에게 가한 총 피해량: @eogvar1@"
+            "챔피언에게 가한 총피해량: @eogvar1@"
         ],
         "recommendationDescriptorAttributes": {}
     },
