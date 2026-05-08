@@ -2760,10 +2760,9 @@
                 "Trait_AttackReset",
                 "Trait_ImmobilizingCCSpell"
             ],
-            "DataValues": [
+            "mEffectAmount": [
                 {
-                    "name": "BaseDamage",
-                    "values": [
+                    "value": [
                         20.0,
                         50.0,
                         80.0,
@@ -2772,7 +2771,34 @@
                         170.0,
                         200.0
                     ],
-                    "__type": "SpellDataValue"
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
                 }
             ],
             "mCoefficient": 0.4000000059604645,
@@ -2913,8 +2939,8 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mDataValue": "BaseDamage",
-                        "__type": "NamedDataValueCalculationPart"
+                        "mEffectIndex": 1,
+                        "__type": "EffectValueCalculationPart"
                     }
                 ],
                 "__type": "GameCalculation"
