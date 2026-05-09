@@ -582,7 +582,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Taliyah lanza una ráfaga de rocas en la dirección objetivo. Durante el lanzamiento, se puede mover libremente. Esto crea una zona de tierra árida a sus pies. Si Taliyah activa Lanzarrocas en tierra árida, la consume para lanzar un pedrusco de mayor tamaño que ralentiza a los enemigos.",
-            "dynamicDescription": "Taliyah lanza 5 rocas, cada una de las cuales inflige <magicDamage>@RockDamage@ de daño mágico</magicDamage> en un área alrededor del primer enemigo golpeado y crea tierra árida en esa zona. Los golpes consecutivos contra un mismo enemigo infligen un @ExtraMissileReducedDamagePercent@% menos de daño.<br><br>El lanzamiento de la habilidad en tierra árida cuesta @BigRockManaCost@ de maná, tiene un @WorkedGroundCDR*100@% menos de enfriamiento y consume la tierra árida. Además, lanza una roca que <status>ralentiza</status> a los enemigos alcanzados un @SlowPercent*100@% durante @SlowDuration@ s e inflige <magicDamage>@BigRockDamage@ de daño mágico</magicDamage> al objetivo principal. Los monstruos golpeados por la roca quedan <status>aturdidos</status> durante @MonsterStunDuration@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah lanza 5 rocas, cada una de las cuales inflige <magicDamage>@RockDamage@ de daño mágico</magicDamage> en un área alrededor del primer enemigo golpeado y crea tierra árida en esa zona. Los golpes consecutivos contra el mismo enemigo infligen un @ExtraMissileReducedDamagePercent@% menos de daño.<br><br>El lanzamiento de la habilidad en tierra árida cuesta @Effect7Amount@ de maná, tiene un @WorkedGroundCDR*100@% menos de enfriamiento y consume la tierra árida. Además, lanza una roca que <status>ralentiza</status> a los enemigos alcanzados un @SlowPercent*100@% durante @SlowDuration@ s e inflige <magicDamage>@BigRockDamage@ de daño mágico</magicDamage> al objetivo principal. Los monstruos golpeados por la roca quedan <status>aturdidos</status> durante @MonsterStunDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Taliyah crea un muro muy largo y surfea sobre él.",
-            "dynamicDescription": "Taliyah crea un enorme muro de tierra que dura @WallDuration@ s. Si <recast>reactiva</recast> la habilidad de inmediato, se subirá al muro mientras se genera. Moverse o sufrir una inmovilización cancelará el desplazamiento.<br><br>No se puede lanzar esta habilidad si Taliyah ha recibido daño de campeones o estructuras hace @DamageLockoutTime@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah crea un enorme muro de tierra que dura @Effect1Amount@ s. Si <recast>reactiva</recast> la habilidad de inmediato, se subirá al muro mientras se genera. Si Taliyah se mueve o resulta inmovilizada, se bajará del muro.<br><br>No se puede lanzar esta habilidad si Taliyah ha recibido daño de campeones o estructuras en los últimos @DamageLockoutTime@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

@@ -5220,7 +5220,7 @@
         "trait_id": "TFT15_BattleAcademia",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_BattleClub.TFT_Set15.png",
-        "tooltip_text": "แชมเปี้ยน Battle Academia อัปเกรดสกิลของพวกเขา และได้รับศักยภาพพิเศษ %i:set14AmpIcon% โดยศักยภาพพิเศษ จะช่วยเสริมพลังสกิลไปอีกระดับ <br><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) ปลดล็อกศักยภาพแท้จริง</row>",
+        "tooltip_text": "แชมเปี้ยน Battle Academia อัปเกรดสกิลของพวกเขา และได้รับศักยภาพพิเศษ %i:set14AmpIcon% โดยศักยภาพพิเศษ จะช่วยเสริมพลังสกิลไปอีกระดับ <br><ShowIf.TFT15_BattleAcademia_NoPrismatic><br><rules>Prismatic: ใช้งานแชมเปี้ยน Battle Academia 7 ตัว จากนั้นได้รับ @PrismaticItemRequirement@ คะแนนจากการสวมใส่ไอเทม ให้กับแชมเปี้ยน</rules><br></ShowIf.TFT15_BattleAcademia_NoPrismatic><ShowIf.TFT15_BattleAcademia_PrismaticPending><br><TFTRadiantItemBonus>Prismatic:</TFTRadiantItemBonus> ได้รับ 1 คะแนน ตามจำนวนไอเทมสมบูรณ์ ที่แชมเปี้ยนใช้งานในแต่ละการต่อสู้ และจบการศึกษาที่ @PrismaticItemRequirement@ คะแนน (@TFTUnitProperty.trait:TFT15_BattleAcademia_PrismaticNumItems@/@PrismaticItemRequirement@ คะแนน)<br></ShowIf.TFT15_BattleAcademia_PrismaticPending><ShowIf.TFT15_BattleAcademia_PrismaticActive><br><TFTRadiantItemBonus><br>ปลดล็อกศักยภาพแท้จริง: +@UltimateNumPotential@ %i:set14AmpIcon% หน่วย</TFTRadiantItemBonus><br></ShowIf.TFT15_BattleAcademia_PrismaticActive><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon% หน่วย</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon% หน่วย</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon% หน่วย</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -5292,28 +5292,8 @@
                     }
                 ],
                 "min_units": 7,
-                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "DA",
-                        "value": 0.75
-                    },
-                    {
-                        "name": "DR",
-                        "value": 0.4
-                    },
-                    {
-                        "name": "NumPotential",
-                        "value": 12.0
-                    }
-                ],
-                "min_units": 10,
-                "style_idx": 6,
-                "style_name": "kChromatic"
             }
         ]
     },
@@ -6761,7 +6741,7 @@
         "trait_id": "TFT15_SoulFighter",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_SoulFighter.TFT_Set15.png",
-        "tooltip_text": "Soul Fighter ได้รับโบนัสพลังชีวิตเพิ่ม อีกทั้งได้รับพลังโจมตีและพลังเวท ในทุก ๆ วินาที สแตคได้สูงสุด @MaxStacks@ ครั้ง จากนั้นเมื่อสแตคเต็ม พวกเขาจะสร้างโบนัสความเสียหายจริง<br><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>พลังวิญญาณเต็มพิกัด<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth% หน่วย, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, ความเสียหาย +@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth% หน่วย, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, ความเสียหาย +@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth% หน่วย, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, ความเสียหาย +@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth% หน่วย, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, ความเสียหาย +@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) พลังวิญญาณเต็มพิกัด</row>",
+        "tooltip_text": "Soul Fighter ได้รับโบนัสพลังชีวิตเพิ่ม อีกทั้งได้รับพลังโจมตีและพลังเวท ในทุก ๆ วินาที สแตคได้สูงสุด @MaxStacks@ ครั้ง เมื่อสะสมสแตคจนเต็ม จะสร้างโบนัสความเสียหายจริง<br><ShowIf.TFT15_SoulFighter_NoPrismatic><br><rules>Prismatic: ใช้งาน 8 ตัว จากนั้นชนะการต่อสู้ @PlayerDamageToPrismatic@ ครั้ง</rules><br></ShowIf.TFT15_SoulFighter_NoPrismatic><ShowIf.TFT15_SoulFighter_PrismaticPending><br><TFTRadiantItemBonus>Prismatic:</TFTRadiantItemBonus> ชนะการต่อสู้กับผู้เล่น @PlayerDamageToPrismatic@ ครั้ง (@TFTUnitProperty.trait:TFT15_SoulFighter_PlayerDamageDealt@ ครั้ง)<br></ShowIf.TFT15_SoulFighter_PrismaticPending><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>พลังวิญญาณเต็มพิกัด<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth% หน่วย, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, ความเสียหาย +@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth% หน่วย, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, ความเสียหาย +@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth% หน่วย, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, ความเสียหาย +@BonusTrueDamage*100@%</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth% หน่วย, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, ความเสียหาย +@BonusTrueDamage*100@%</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -6865,32 +6845,8 @@
                     }
                 ],
                 "min_units": 8,
-                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "BonusTrueDamage",
-                        "value": 0.3
-                    },
-                    {
-                        "name": "FlatHealth",
-                        "value": 700.0
-                    },
-                    {
-                        "name": "MaxStacks",
-                        "value": 8.0
-                    },
-                    {
-                        "name": "StatsPerSecond",
-                        "value": 0.04
-                    }
-                ],
-                "min_units": 10,
-                "style_idx": 6,
-                "style_name": "kChromatic"
             }
         ]
     },
@@ -6980,7 +6936,7 @@
         "trait_id": "TFT15_StarGuardian",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_StarGuardian.png",
-        "tooltip_text": "Star Guardian มีโบนัสทีมเวิร์คพิเศษ ที่มอบให้ Star Guardian ตัวอื่นทั้งหมด ยิ่งใช้งาน Star Guardian มาก โบนัสก็จะยิ่งเพิ่มขึ้น!<ShowIf.TFT15_StarGuardian_NoPrismatic><br><rules>Prismatic: ใช้งาน Star Guardian 10 ตัว จะปลุกพลังแห่งดวงดารา ให้ตื่นขึ้นอีกครั้ง!</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><TFTRadiantItemBonus>Prismatic:</TFTRadiantItemBonus> ใช้มานา @ManaToPrismatic@ หน่วย (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@ หน่วย)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><TFTRadiantItemBonus>ดวงดาราตื่นขึ้นมาอีกครั้ง</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><ShowIf.TFT15_StarGuardian_HasRell><status>Rell:</status> โล่ป้องกัน @TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@ หน่วย</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>Rell: ได้รับโล่ป้องกัน</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>Syndra:</status> พลังเวท @TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@% ในทุก ๆ @SyndraTimer@ วินาที</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>Syndra: ได้รับพลังเวท</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>Xayah:</status> การโจมตีทุก ๆ 3 ครั้ง จะสร้างความเสียหายเวท <magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@</magicDamage> หน่วย (เพิ่มขึ้นตามด่าน)</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>Xayah: สร้างความเสียหายเวทเมื่อโจมตี</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>Ahri:</status> มานา @TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@ หน่วย ใน @AhriDuration@ วินาที หลังร่ายสกิล</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>Ahri: ได้รับมานาเมื่อร่ายสกิล</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>Neeko:</status> ฮีลและโล่ป้องกัน +@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@%</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>Neeko: เพิ่มเอฟเฟกต์ฮีลและโล่ป้องกัน</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>Poppy:</status> ฮีล %i:scaleHealth% @TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@% เมื่อพลังชีวิตเหลือ 40%</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>Poppy: ฮีลเมื่อพลังชีวิตเหลือน้อย</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>Jinx:</status> ความเร็วโจมตี +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@% และ +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@% %i:scaleAS% เมื่อโค่นล้มศัตรู ที่ค่อย ๆ ลดลงใน 3 วินาที</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>Jinx: ได้รับความเร็วโจมตี</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>Seraphine:</status> %i:scaleArmor%%i:scaleMR%%i:scaleHealth% @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ หน่วย และ %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult% @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@%</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>Seraphine: ได้รับค่าสถานะทุกอย่าง</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>Emblem:</status> เพิ่มโบนัสทุกอย่างขึ้น @EmblemBonus*100@%!</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>Emblem: เพิ่มโบนัสทุกอย่าง</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
+        "tooltip_text": "Star Guardian มีโบนัสทีมเวิร์คพิเศษ ที่มอบให้กับ Star Guardian ทั้งหมด โดยยิ่งใช้งาน Star Guardian มากเท่าไหร่ โบนัสก็จะยิ่งเพิ่มขึ้น!<ShowIf.TFT15_StarGuardian_NoPrismatic><br><rules>Prismatic: ใช้งานยูนิต 8 ตัว จากนั้นใช้มานา @ManaToPrismatic@ หน่วย</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><TFTRadiantItemBonus>Prismatic:</TFTRadiantItemBonus> ใช้มานา @ManaToPrismatic@ หน่วย (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@ หน่วย)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><TFTRadiantItemBonus>ดวงดาราตื่นขึ้นมาอีกครั้ง</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><ShowIf.TFT15_StarGuardian_HasRell><status>Rell:</status> ได้รับโล่ป้องกัน @TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@ หน่วย </ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>Rell: ได้รับโล่ป้องกันความเสียหาย</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>Syndra:</status> พลังเวท @TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@% ทุก @SyndraTimer@ วินาที </ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>Syndra: ได้รับพลังเวท</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>Xayah:</status> การโจมตีทุก ๆ 3 ครั้ง สร้างความเสียหายเวท <magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@</magicDamage> หน่วย (เพิ่มขึ้นตามด่าน) </ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>Xayah: ความเสียหายเวทต่อการโจมตี</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>Ahri:</status> ได้รับมานา @TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@ หน่วย ใน @AhriDuration@ วินาทีหลังร่ายสกิล </ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>Ahri: ได้รับมานาเมื่อร่ายสกิล</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>Neeko:</status> เอฟเฟกต์ฮีลและโล่ป้องกัน +@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@%</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>Neeko: เพิ่มเอฟเฟกต์ฮีลและโล่ป้องกัน</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>Poppy:</status> เมื่อมีพลังชีวิต 40% ฮีล @TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@% จากพลังชีวิต %i:scaleHealth% </ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>Poppy: ฮีลเมื่อพลังชีวิตเหลือน้อย</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>Jinx:</status> ความเร็วโจมตี +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@% และ +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@% %i:scaleAS% เมื่อโค่นล้ม ลดลงใน 3 วินาที </ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>Jinx: ได้รับความเร็วโจมตี</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>Seraphine:</status> ได้รับ @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth% หน่วย และ @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@% %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult% </ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>Seraphine: ได้รับค่าสถานะทุกอย่าง</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>Emblem:</status> เพิ่มโบนัสทุกอย่างขึ้น @EmblemBonus*100@%! </ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>Emblem: เพิ่มโบนัสอย่างอื่น ๆ</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -7152,6 +7108,18 @@
                 "constants": [
                     {
                         "name": "Multiplier",
+                        "value": 1.18
+                    }
+                ],
+                "min_units": 8,
+                "max_units": 8,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Multiplier",
                         "value": 1.2
                     }
                 ],
@@ -7165,6 +7133,29 @@
                     {
                         "name": "Multiplier",
                         "value": 1.2
+                    }
+                ],
+                "min_units": 9,
+                "max_units": 9,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Multiplier",
+                        "value": 1.5
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Multiplier",
+                        "value": 2.0
                     }
                 ],
                 "min_units": 10,
@@ -7356,7 +7347,7 @@
                     },
                     {
                         "name": "StatBonus",
-                        "value": 0.1
+                        "value": 0.05
                     },
                     {
                         "name": "XPPerReroll",
@@ -15077,7 +15068,7 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "ได้รับแต้มทรัพยากร @TechPerCombat@ หน่วย เมื่อพ่ายแพ้การต่อสู้กับผู้เล่น บวกด้วยทรัพยากรเพิ่มเติมเท่ากับ @TechPerLoss@ เท่าจากสถิติแพ้ต่อเนื่องของคุณ อีกทั้งได้รับ @TechPerKill@ หน่วยในทุกครั้งที่ Anima โค่นล้มศัตรูด้วย<br><br>ทุกครั้งที่ Anima สะสมทรัพยากรครบ @TechBreakpoint@ หน่วย พวกเขาจะสร้างต้นแบบอาวุธ Anima ชิ้นใหม่ ซึ่งสามารถเลือกรับ หรือเก็บทรัพยากรไว้ใช้กับ อาวุธที่ทรงพลังกว่าในครั้งถัดไป<br><br><row>(@MinUnits@) เริ่มวิจัย! </row><br><row>(@MinUnits@) ได้รับสมบัติ หลังจบทุกรอบต่อสู้กับผู้เล่น!</row><br><br><ShowIf.TFT17_AnimaSquad_IsDoubleUp><rules>ได้รับทรัพยากร @PairsPartnerWinMultiplier*100@% เมื่อพ่ายแพ้ หากคู่หูชนะการต่อสู้ใน Double Up</rules></ShowIf.TFT17_AnimaSquad_IsDoubleUp>",
+        "tooltip_text": "ได้รับแต้มทรัพยากร @TechPerCombat@ หน่วย เมื่อพ่ายแพ้การต่อสู้กับผู้เล่น บวกด้วยทรัพยากรเพิ่มเติมเท่ากับ @TechPerLoss@ เท่าจากสถิติแพ้ต่อเนื่องของคุณ อีกทั้งได้รับ @TechPerKill@ หน่วยในทุกครั้งที่ Anima โค่นล้มศัตรูด้วย<br><br>ทุกครั้งที่ Anima สะสมทรัพยากรครบ @TechBreakpoint@ หน่วย พวกเขาจะสร้างต้นแบบอาวุธ Anima ชิ้นใหม่ ซึ่งสามารถเลือกรับ หรือเก็บทรัพยากรไว้ใช้กับอาวุธ ที่ทรงพลังกว่าในครั้งถัดไป<br><br><row>(@MinUnits@) เริ่มวิจัย! </row><br><row>(@MinUnits@) ได้รับสมบัติ เมื่อชนะการต่อสู้กับผู้เล่น!</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15393,7 +15384,7 @@
         "trait_id": "TFT17_DarkStar",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) Dark Star สร้างหลุมดำขึ้นมา เพื่อกลืนกินศัตรูที่พลังชีวิตสูงสุด ลดลงต่ำกว่า <ShowIf.TFT17_DarkStar_HasNeutronStar><TFTBonus>@TFTUnitProperty.trait:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@%</TFTBonus></ShowIf.TFT17_DarkStar_HasNeutronStar><ShowIfNot.TFT17_DarkStar_HasNeutronStar>@ExecuteHPPercent*100@%</ShowIfNot.TFT17_DarkStar_HasNeutronStar></row><br><row>(@MinUnits@) และ Dark Star ได้รับ %i:scaleAD%%i:scaleAP% @ADAP@%</row><br><row>(@MinUnits@) และ Dark Star ที่แข็งแกร่งที่สุดขยายร่างยักษ์ ได้รับค่าพลังจากคุณสมบัติเพิ่มขึ้น @SupermassivePercentBonus*100@% และสร้างหลุมดำขนาดเล็ก 2 หลุม</row><br><row>(@MinUnits@) Dark Star ทั้งหมดขยายร่างยักษ์ และเมื่อไปถึงเลเวล 10 กลืนกินทุกอย่างให้สิ้น </row>",
+        "tooltip_text": "<row>(@MinUnits@) Dark Star สร้างหลุมดำขึ้นมาเพื่อกลืนกินศัตรู ที่พลังชีวิตสูงสุดลดลงต่ำกว่า @ExecuteHPPercent*100@%</row><br><row>(@MinUnits@) และ Dark Star ได้รับ @ADAP@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) และ Dark Star ที่แข็งแกร่งที่สุดขยายร่างยักษ์ ได้รับค่าพลังจากคุณสมบัติเพิ่มขึ้น @SupermassivePercentBonus*100@% และสร้างหลุมดำขนาดเล็ก 2 หลุม</row><br><row>(@MinUnits@) Dark Star ทั้งหมดขยายร่างยักษ์ และเมื่อไปถึงเลเวล 10 กลืนกินทุกอย่างให้สิ้น </row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15916,7 +15907,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.18
+                        "value": 0.2
                     },
                     {
                         "name": "Omnivamp",
@@ -15936,7 +15927,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "Omnivamp",
@@ -15956,7 +15947,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.55
+                        "value": 0.6
                     },
                     {
                         "name": "Omnivamp",
@@ -16024,17 +16015,17 @@
         "trait_id": "TFT17_MorganaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
-        "tooltip_text": "ทีมของคุณได้รับความทนทาน @Durability*100@% เพิ่มขึ้นเป็น @TransformedDurability*100@% หาก Morgana อยู่ในร่างมิติมืด",
+        "tooltip_text": "พันธมิตรได้รับความเสียหายจากสกิล น้อยลง @UntransformedAbilityDA*100@% เพิ่มขึ้นเป็น @TransformedAbilityDA*100@% หาก Morgana อยู่ในร่างมิติมืด",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "Durability",
-                        "value": 0.04
+                        "name": "TransformedAbilityDA",
+                        "value": 0.1
                     },
                     {
-                        "name": "TransformedDurability",
-                        "value": 0.1
+                        "name": "UntransformedAbilityDA",
+                        "value": 0.05
                     }
                 ]
             }
@@ -16607,20 +16598,12 @@
                         "value": 0.1
                     },
                     {
-                        "name": "Fountain_HealthRegen",
-                        "value": 0.04
-                    },
-                    {
-                        "name": "Fountain_HealthRegen_Teamwide",
-                        "value": 0.02
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
                     },
                     {
                         "name": "Huntress_AS_Teamwide",
                         "value": 0.15
-                    },
-                    {
-                        "name": "MaxStacks",
-                        "value": 0.0
                     },
                     {
                         "name": "Medallion_DA_Teamwide",
@@ -16709,8 +16692,12 @@
                         "value": 10.0
                     },
                     {
-                        "name": "Fountain_StackingADAP",
-                        "value": 2.0
+                        "name": "Fountain_HealPercent",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 3.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -16801,7 +16788,11 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_StackingADAP",
+                        "name": "Fountain_HealPercent",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
                         "value": 4.0
                     },
                     {
@@ -16889,8 +16880,12 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_StackingADAP",
-                        "value": 4.0
+                        "name": "Fountain_HealPercent",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -17105,25 +17100,13 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Stargazer เปิดเผยกลุ่มดาวที่แตกต่างกันในทุก ๆ เกม กลุ่มดาวเกมนี้: <TFTStargazer>The Fountain</TFTStargazer><br><br>พันธมิตรในช่องเสริมพลังฮีล @Fountain_HealthRegen_Teamwide*100@% จากพลังชีวิตสูงสุดในทุก ๆ @Fountain_Interval@ วินาที โดย Stargazer ในช่องเสริมพลังจะฮีลเพิ่มขึ้น @Fountain_HealthRegen*100@% รวมถึงได้รับพลังโจมตีและพลังเวท ที่สแตคซ้อนทับกันได้ในทุก ๆ @Fountain_Interval@ วินาที<br><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><br><rules>ช่องจะเปิดเผยมากขึ้น ตามเลเวลของผู้เล่น</rules>",
+        "tooltip_text": "Stargazer เปิดเผยกลุ่มดาวที่แตกต่างกันในทุก ๆ เกม กลุ่มดาวเกมนี้: <TFTStargazer>The Fountain</TFTStargazer><br><br>พันธมิตรในช่องเสริมพลังได้รับ ฟื้นฟูมานา @Fountain_ManaRegen_Teamwide@ หน่วย โดย Stargazer จะได้รับมากขึ้น และสกิลของพวกเขาจะฮีลพันธมิตร ที่มีพลังชีวิตน้อยที่สุดด้วย<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen% หน่วย, ฮีล @Fountain_HealPercent*100@% จากความเสียหายสกิล</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen% หน่วย, ฮีล @Fountain_HealPercent*100@% จากความเสียหายสกิล</row><br><br><rules>ช่องจะเปิดเผยมากขึ้น ตามเลเวลของผู้เล่น</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealthRegen",
-                        "value": 0.025
-                    },
-                    {
-                        "name": "Fountain_HealthRegen_Teamwide",
-                        "value": 0.01
-                    },
-                    {
-                        "name": "Fountain_Interval",
-                        "value": 2.0
-                    },
-                    {
-                        "name": "MaxStacks",
-                        "value": 0.0
+                        "name": "Fountain_ManaRegen_Teamwide",
+                        "value": 1.0
                     }
                 ]
             }
@@ -17132,8 +17115,12 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_StackingADAP",
-                        "value": 4.0
+                        "name": "Fountain_HealPercent",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 1.0
                     }
                 ],
                 "min_units": 3,
@@ -17144,8 +17131,12 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_StackingADAP",
-                        "value": 7.0
+                        "name": "Fountain_HealPercent",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Fountain_ManaRegen",
+                        "value": 5.0
                     }
                 ],
                 "min_units": 5,
@@ -24817,7 +24808,7 @@
                     },
                     {
                         "name": "Tier1Heal",
-                        "value": 1.0
+                        "value": 2.0
                     },
                     {
                         "name": "Tier1HealDU",

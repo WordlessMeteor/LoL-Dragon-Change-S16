@@ -1972,7 +1972,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Защитник: Ли Син бросается к выбранному союзнику, ограждая себя и его (если это чемпион) от урона. После применения Защитника Ли Син может использовать Железную волю.<br>Железная воля: интенсивные тренировки позволяют Ли Сину прекрасно чувствовать себя в бою. У него увеличивается всестороннее вытягивание жизни.",
-            "dynamicDescription": "Ли Син совершает рывок к союзнику или тотему. Если это чемпион, Ли Син накладывает на себя и него <shield>щит прочностью @ShieldAmount@</shield> на @ShieldDuration@ сек. Ли Син может <recast>повторно применить</recast> умение в течение @W1ReactivateTime@ сек.<br><br><recast>Повторное применение:</recast> Ли Син получает @LifestealAndSpellVamp@% всестор. вытягивания жизни на @LifestealAndSpellVampTime@ сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ли Син совершает рывок к союзнику или тотему. Если это чемпион, Ли Син накладывает на себя и него <shield>щит прочностью @ShieldAmount@</shield> на @ShieldDuration@ сек., а перезарядка этого умения сокращается на @W1CooldownRecovered*100@%. Ли Син может <recast>повторно применить</recast> умение в течение @W1ReactivateTime@ сек.<br><br><recast>Повторное применение:</recast> Ли Син получает @LifestealAndSpellVamp@% всестороннего вытягивания жизни на @LifestealAndSpellVampTime@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1990,12 +1990,12 @@
                 50.0
             ],
             "cooldownCoefficients": [
-                7.0,
-                7.0,
-                7.0,
-                7.0,
-                7.0,
-                7.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,

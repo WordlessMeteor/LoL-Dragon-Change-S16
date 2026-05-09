@@ -1972,7 +1972,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Safeguard: Lee Sin menerjang ke arah sekutu yang ditarget, memberikan shield ke dirinya sendiri dari damage. Jika sekutunya champion, mereka juga akan mendapatkan shield. Setelah menggunakan Safeguard, Lee Sin bisa cast Iron Will.<br>Iron Will: Latihan intens Lee Sin membuatnya kuat dalam pertempuran. Lee Sin mendapatkan Omnivamp.",
-            "dynamicDescription": "Lee Sin dash ke arah sekutu atau ward. Jika targetnya champion, Lee Sin dan sekutunya akan mendapatkan <shield>@ShieldAmount@ Shield</shield> selama @ShieldDuration@ detik. Lee Sin bisa <recast>Recast</recast> selama @W1ReactivateTime@ detik berikutnya.<br><br><recast>Recast:</recast> Lee Sin mendapatkan @LifestealAndSpellVamp@% Omnivamp selama @LifestealAndSpellVampTime@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lee Sin dash ke arah sekutu atau ward. Jika targetnya champion, Lee Sin dan sekutunya akan mendapatkan <shield>@ShieldAmount@ Shield</shield> selama @ShieldDuration@ detik dan Cooldown Ability ini akan berkurang sebanyak @W1CooldownRecovered*100@%. Lee Sin bisa <recast>Recast</recast> selama @W1ReactivateTime@ detik berikutnya.<br><br><recast>Recast:</recast> Lee Sin mendapatkan @LifestealAndSpellVamp@% Omnivamp selama @LifestealAndSpellVampTime@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1990,12 +1990,12 @@
                 50.0
             ],
             "cooldownCoefficients": [
-                7.0,
-                7.0,
-                7.0,
-                7.0,
-                7.0,
-                7.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,

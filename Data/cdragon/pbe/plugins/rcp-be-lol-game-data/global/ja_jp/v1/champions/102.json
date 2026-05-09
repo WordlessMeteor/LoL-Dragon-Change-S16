@@ -772,7 +772,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "シールドと移動速度を獲得し、少ししてから周囲を爆発させる。ドラゴンフォーム中は、爆発が敵チャンピオンに命中すると自身の体力が回復する。",
-            "dynamicDescription": "@Duration@秒間、炎をその身にまとい、<shield>@Calc_Shield@のシールド</shield>を獲得する。このシールドは近くにいる敵チャンピオン1体につき<shield>@Calc_Shield_Per_Nearby_Champion@</shield>増加する。さらに<speed>移動速度が@MoveSpeed@</speed>増加する。敵チャンピオンに向かって移動する際は、この増加移動速度が<speed>@MoveSpeedTowardsEnemies@</speed>に増加する。<br><br>効果終了時、<shield>シールド</shield>が破壊された時、または<recast>再発動</recast>時に周囲を爆発させ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 爆発が敵チャンピオンに命中すると、シヴァーナは<healing> @Calc_Base_Heal@ + 減少体力の@Calc_Missing_Health_Heal@</healing>の体力を回復する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、炎をその身にまとい、<shield>@Calc_Shield@のシールド</shield>を獲得する。このシールドは近くにいる敵チャンピオン1体につき<shield>@Calc_Shield_Per_Nearby_Champion@</shield>増加する。さらに<speed>移動速度が@MoveSpeed@</speed>増加する。敵チャンピオンに向かって移動する際は、この増加移動速度が<speed>@MoveSpeedTowardsEnemies@</speed>に増加する。<br><br>効果終了時か<shield>シールド</shield>が破壊された時、または<recast>再発動</recast>時に周囲を爆発させ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 爆発が敵チャンピオンに命中すると、シヴァーナは<healing>@Calc_Base_Heal@ + 減少体力の@Calc_Missing_Health_Heal@</healing>の体力を回復する。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -791,11 +791,11 @@
             ],
             "cooldownCoefficients": [
                 13.0,
-                12.25,
-                11.5,
-                10.75,
+                12.0,
+                11.0,
                 10.0,
-                10.0
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

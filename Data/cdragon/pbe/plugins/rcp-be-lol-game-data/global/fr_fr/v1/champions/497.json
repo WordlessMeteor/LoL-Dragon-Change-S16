@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
-            "cooldown": "%i:cooldown% de @Cooldown@ sec",
+            "cooldown": "@f2@ sec %i:cooldown%",
             "description": "Rakan s'envole vers un champion allié en lui octroyant un bouclier. La compétence peut être relancée sans coût pendant un court instant.",
-            "dynamicDescription": "Rakan se rue sur un champion allié et lui octroie un <shield>bouclier de @TotalShield@ PV</shield> pendant @Duration@ sec.<br><br>Rakan peut <recast>réactiver</recast> une fois cette compétence dans les @RecastWindow@ sec qui suivent la première activation.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan se rue sur un champion allié et lui octroie un <shield>bouclier de @TotalShield@ PV</shield> pendant @Effect3Amount@ sec.<br><br>Rakan peut <recast>réactiver</recast> une fois cette compétence dans les @Effect2Amount@ sec qui suivent la première activation.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Rakan augmente sa vitesse de déplacement, charme les ennemis touchés et leur inflige des dégâts magiques.",
-            "dynamicDescription": "Rakan gagne <speed>@InitialCastSpeed@% de vitesse de déplacement</speed> pendant @Duration@ sec. Rakan inflige <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage> et <status>charme</status> les ennemis pendant @CharmDuration@ sec la première fois qu'il les touche. Le premier champion touché octroie à Rakan <speed>@TouchSpeed@% de vitesse de déplacement</speed>, et ce bonus diminue progressivement.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan gagne <speed>+@Effect5Amount@% de vitesse de déplacement</speed> pendant @Effect2Amount@ sec. Rakan inflige <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage> et <status>charme</status> les ennemis pendant @Effect3Amount@ sec la première fois qu'il les touche. Le premier champion touché octroie à Rakan <speed>+@Effect6Amount@% de vitesse de déplacement</speed>, et ce bonus diminue progressivement.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,

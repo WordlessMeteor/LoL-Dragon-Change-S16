@@ -10,13 +10,13 @@
                 value: !0
             });
             const o = a(n(1)),
-                i = n(2),
-                s = a(n(14)),
+                s = n(2),
+                i = a(n(14)),
                 r = a(n(15));
             n(16);
             const l = "rcp-fe-lol-settings",
                 c = document.currentScript.ownerDocument;
-            s.default.set(c);
+            i.default.set(c);
             const u = window.getPluginAnnounceEventName(l);
             c.addEventListener(u, (function(e) {
                 e.registrationHandler((async function(e) {
@@ -45,7 +45,6 @@
                         ModalManager: e => e.get("rcp-fe-lol-uikit").getModalManager(),
                         Navigation: e => e.get("rcp-fe-lol-navigation"),
                         SharedComponents: e => e.get("rcp-fe-lol-shared-components"),
-                        SharedPlayerBehaviorApps: e => e.get("rcp-fe-lol-shared-components").getApi_SharedPlayerBehaviorApps(),
                         sounds: r.default.init(o.default.audioPlugin),
                         Telemetry: e => e.get("rcp-fe-common-libs").getTelemetry("1"),
                         templateHelper: e => e.get("rcp-fe-lol-uikit").getTemplateHelper(),
@@ -55,8 +54,8 @@
                     const t = (0, n(17).default)();
                     await t.build();
                     const a = await o.default.ComponentFactory.create(t.getName()).emberAppInstancePromise,
-                        s = a.__container__.lookup("service:modal-manager"),
-                        c = new i.SettingsApiImpl(o.default.logger, s);
+                        i = a.__container__.lookup("service:modal-manager"),
+                        c = new s.SettingsApiImpl(o.default.logger, i);
                     o.default.api = c;
                     const u = o.default.SharedComponents.getApi_HomeRegistry();
                     u.resolveOpenSettingsHandler(((...e) => c.show(...e))), u.resolveCloseSettingsHandler((() => c.close()));
@@ -68,7 +67,7 @@
                             }
                         };
                     try {
-                        await s.initialize(a.rootElement, p)
+                        await i.initialize(a.rootElement, p)
                     } catch (e) {
                         o.default.logger.error("Settings error during plugin initialization")
                     }
@@ -98,10 +97,10 @@
                         n = this;
                     return Object.keys(e).forEach((function(a) {
                         const o = e[a],
-                            i = n._getValue(a, o);
-                        i && i.then ? (i.then((function(e) {
+                            s = n._getValue(a, o);
+                        s && s.then ? (s.then((function(e) {
                             e || console.warn("The promise for the key " + a + " resolved with a falsy value: ", e), n._addValue(a, e)
-                        })), t.push(i)) : n._addValue(a, i)
+                        })), t.push(s)) : n._addValue(a, s)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -156,7 +155,7 @@
                 o = this && this.__exportStar || function(e, t) {
                     for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || a(t, e, n)
                 },
-                i = this && this.__importDefault || function(e) {
+                s = this && this.__importDefault || function(e) {
                     return e && e.__esModule ? e : {
                         default: e
                     }
@@ -172,9 +171,9 @@
                     once: !0
                 })
             };
-            const s = i(n(4));
+            const i = s(n(4));
             o(n(5), t), o(n(9), t), o(n(12), t);
-            const r = new s.default;
+            const r = new i.default;
             t.default = r
         }, (e, t) => {
             "use strict";
@@ -245,18 +244,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.SettingsCategoryName = t.SettingsCategory = void 0, o(n(6), t);
-            var i = n(7);
+            var s = n(7);
             Object.defineProperty(t, "SettingsCategory", {
                 enumerable: !0,
                 get: function() {
-                    return i.SettingsCategory
+                    return s.SettingsCategory
                 }
             });
-            var s = n(8);
+            var i = n(8);
             Object.defineProperty(t, "SettingsCategoryName", {
                 enumerable: !0,
                 get: function() {
-                    return s.SettingsCategoryName
+                    return i.SettingsCategoryName
                 }
             })
         }, (e, t) => {
@@ -399,14 +398,14 @@
                     DiscordButtonComponent: t,
                     DiscordLinkingPopupComponent: a,
                     DiscordPopupComponent: c
-                } = o.SharedComponents.getApi_SharedDiscordPopupComponents(), u = o.emberApplicationFactory.factoryDefinitionBuilder().setName("rcp-fe-lol-settings").setRoot(document.createElement("div")).setComponentFactory(o.ComponentFactory).setRouter(i.default).setEmber(o.Ember).setL10n(o.emberL10n).setTra(o.tra).setFeatureFlag("EMBER_CLI_COMPAT", !0).addRoute("Application", n(20).default).addRoute("General", n(21).default).addRoute("Notifications", n(22).default).addRoute("Chat", n(23).default).addRoute("Sound", n(24).default).addRoute("Voice", n(25).default).addRoute("BlockList", n(26).default).addRoute("GameHotkeys", n(27).default).addRoute("GameSound", n(28).default).addRoute("GameInterface", n(30).default).addRoute("GameGameplay", n(31).default).addRoute("Replays", n(32).default).addRoute("PrivacyNotice", n(33).default).addRoute("TermsOfUse", n(34).default).addRoute("ThirdpartyLicenses", n(35).default).addRoute("Version", n(36).default).addRoute("LegalStatements", n(37).default).addController("Application", n(38).default).addController("General", n(39).default).addController("Notifications", n(65).default).addController("Chat", n(66).default).addController("Sound", n(264).default).addController("Voice", n(265).default).addController("BlockList", n(266).default).addController("GameHotkeys", n(267).default).addController("GameSound", n(268).default).addController("GameInterface", n(270).default).addController("GameGameplay", n(271).default).addController("Replays", n(272).default).addController("PrivacyNotice", n(273).default).addController("TermsOfUse", n(274).default).addController("ThirdpartyLicenses", n(275).default).addController("Version", n(276).default).addController("LegalStatements", n(277).default).addComponent("ModalHeader", n(278).default).addComponent("ModalFooter", n(279).default).addComponent("NavigationBarGroup", n(280).default).addComponent("NavigationBarGroupItem", n(281).default).addComponent("BlockedPlayer", n(282).default).addComponent("BlockListError", n(283).default).addComponent("GameSoundContent", n(284).default).addComponent("GameInterfaceContent", n(285).default).addComponent("GameGameplayContent", n(286).default).addComponent("GameHotkeysAdditionalSection", n(287).default).addComponent("GameHotkeysAdditional", n(288).default).addComponent("GameHotkeysPrimaryButton", n(291).default).addComponent("GameHotkeysPrimary", n(292).default).addComponent("GameHotkeysQuickcast", n(294).default).addComponent("GameHotkeysContent", n(295).default).addComponent("RepairGameButton", n(297).default).addComponent("PublishingLocale", n(298).default).addComponent("AccountVerification", n(299).default).addComponent("SettingsSlider", n(300).default).addComponent("PushToTalkKey", n(301).default).addComponent("VngPublisherSettings", n(304).default).addComponent("HoneyfruitSettingsErrors", n(306).default).addComponent("PlayerName", r).addComponent("DiscordBeta", e).addComponent("DiscordButton", t).addComponent("DiscordPopup", c).addComponent("DiscordLinkingPopup", a).addService("Honeyfruit", n(308).default).addService("ModalManager", n(309).default).addService("Patch", n(312).default).addService("Persistence", n(313).default).addService("Voice", n(315).default).addService("Gameflow", n(296).default).addHelper("FormatKeyBindings", o.Ember.Helper.helper(s.formatAdditionalKeyBindings)).addHelper("GetKeyBindingsModifier", o.Ember.Helper.helper(s.getPrimaryModifierDisplay)).addHelper("GetKeyBindingsMainKey", o.Ember.Helper.helper(s.getPrimaryMainKeyDisplay)).addTemplate("application", n(316)).addTemplate("index", n(317)).addTemplate("general", n(318)).addTemplate("notifications", n(319)).addTemplate("chat", n(320)).addTemplate("sound", n(321)).addTemplate("voice", n(322)).addTemplate("block-list", n(323)).addTemplate("game-hotkeys", n(324)).addTemplate("game-sound", n(325)).addTemplate("game-interface", n(326)).addTemplate("game-gameplay", n(327)).addTemplate("replays", n(328)).addTemplate("privacy-notice", n(329)).addTemplate("terms-of-use", n(330)).addTemplate("thirdparty-licenses", n(331)).addTemplate("loading", n(332)).addTemplate("version", n(333)).addTemplate("legal-statements", n(334)).addTemplate("components/modal-header", n(335)).addTemplate("components/modal-footer", n(336)).addTemplate("components/navigation-bar-group", n(337)).addTemplate("components/navigation-bar-group-item", n(338)).addTemplate("components/blocked-player", n(339)).addTemplate("components/block-list-error", n(340)).addTemplate("components/repair-game-button", n(341)).addTemplate("components/publishing-locale", n(342)).addTemplate("components/account-verification", n(343)).addTemplate("components/settings-slider", n(344)).addTemplate("components/push-to-talk-key", n(345)).addTemplate("components/game-sound-content", n(346)).addTemplate("components/game-interface-content", n(347)).addTemplate("components/game-gameplay-content", n(348)).addTemplate("components/game-hotkeys-additional-section", n(349)).addTemplate("components/game-hotkeys-additional", n(350)).addTemplate("components/game-hotkeys-primary-button", n(351)).addTemplate("components/game-hotkeys-primary", n(352)).addTemplate("components/game-hotkeys-quickcast", n(353)).addTemplate("components/game-hotkeys-content", n(354)).addTemplate("components/vng-publisher-settings", n(355)).addTemplate("components/honeyfruit-settings-error", n(356));
+                } = o.SharedComponents.getApi_SharedDiscordPopupComponents(), u = o.emberApplicationFactory.factoryDefinitionBuilder().setName("rcp-fe-lol-settings").setRoot(document.createElement("div")).setComponentFactory(o.ComponentFactory).setRouter(s.default).setEmber(o.Ember).setL10n(o.emberL10n).setTra(o.tra).setFeatureFlag("EMBER_CLI_COMPAT", !0).addRoute("Application", n(20).default).addRoute("General", n(21).default).addRoute("Notifications", n(22).default).addRoute("Chat", n(23).default).addRoute("Sound", n(24).default).addRoute("Voice", n(25).default).addRoute("BlockList", n(26).default).addRoute("GameHotkeys", n(27).default).addRoute("GameSound", n(28).default).addRoute("GameInterface", n(30).default).addRoute("GameGameplay", n(31).default).addRoute("Replays", n(32).default).addRoute("PrivacyNotice", n(33).default).addRoute("TermsOfUse", n(34).default).addRoute("ThirdpartyLicenses", n(35).default).addRoute("Version", n(36).default).addRoute("LegalStatements", n(37).default).addController("Application", n(38).default).addController("General", n(39).default).addController("Notifications", n(65).default).addController("Chat", n(66).default).addController("Sound", n(264).default).addController("Voice", n(265).default).addController("BlockList", n(266).default).addController("GameHotkeys", n(267).default).addController("GameSound", n(268).default).addController("GameInterface", n(270).default).addController("GameGameplay", n(271).default).addController("Replays", n(272).default).addController("PrivacyNotice", n(273).default).addController("TermsOfUse", n(274).default).addController("ThirdpartyLicenses", n(275).default).addController("Version", n(276).default).addController("LegalStatements", n(277).default).addComponent("ModalHeader", n(278).default).addComponent("ModalFooter", n(279).default).addComponent("NavigationBarGroup", n(280).default).addComponent("NavigationBarGroupItem", n(281).default).addComponent("BlockedPlayer", n(282).default).addComponent("BlockListError", n(283).default).addComponent("GameSoundContent", n(284).default).addComponent("GameInterfaceContent", n(285).default).addComponent("GameGameplayContent", n(286).default).addComponent("GameHotkeysAdditionalSection", n(287).default).addComponent("GameHotkeysAdditional", n(288).default).addComponent("GameHotkeysPrimaryButton", n(291).default).addComponent("GameHotkeysPrimary", n(292).default).addComponent("GameHotkeysQuickcast", n(294).default).addComponent("GameHotkeysContent", n(295).default).addComponent("RepairGameButton", n(297).default).addComponent("PublishingLocale", n(298).default).addComponent("AccountVerification", n(299).default).addComponent("SettingsSlider", n(300).default).addComponent("PushToTalkKey", n(301).default).addComponent("VngPublisherSettings", n(304).default).addComponent("HoneyfruitSettingsErrors", n(306).default).addComponent("PlayerName", r).addComponent("DiscordBeta", e).addComponent("DiscordButton", t).addComponent("DiscordPopup", c).addComponent("DiscordLinkingPopup", a).addService("Honeyfruit", n(308).default).addService("ModalManager", n(309).default).addService("Patch", n(312).default).addService("Persistence", n(313).default).addService("Voice", n(315).default).addService("Gameflow", n(296).default).addHelper("FormatKeyBindings", o.Ember.Helper.helper(i.formatAdditionalKeyBindings)).addHelper("GetKeyBindingsModifier", o.Ember.Helper.helper(i.getPrimaryModifierDisplay)).addHelper("GetKeyBindingsMainKey", o.Ember.Helper.helper(i.getPrimaryMainKeyDisplay)).addTemplate("application", n(316)).addTemplate("index", n(317)).addTemplate("general", n(318)).addTemplate("notifications", n(319)).addTemplate("chat", n(320)).addTemplate("sound", n(321)).addTemplate("voice", n(322)).addTemplate("block-list", n(323)).addTemplate("game-hotkeys", n(324)).addTemplate("game-sound", n(325)).addTemplate("game-interface", n(326)).addTemplate("game-gameplay", n(327)).addTemplate("replays", n(328)).addTemplate("privacy-notice", n(329)).addTemplate("terms-of-use", n(330)).addTemplate("thirdparty-licenses", n(331)).addTemplate("loading", n(332)).addTemplate("version", n(333)).addTemplate("legal-statements", n(334)).addTemplate("components/modal-header", n(335)).addTemplate("components/modal-footer", n(336)).addTemplate("components/navigation-bar-group", n(337)).addTemplate("components/navigation-bar-group-item", n(338)).addTemplate("components/blocked-player", n(339)).addTemplate("components/block-list-error", n(340)).addTemplate("components/repair-game-button", n(341)).addTemplate("components/publishing-locale", n(342)).addTemplate("components/account-verification", n(343)).addTemplate("components/settings-slider", n(344)).addTemplate("components/push-to-talk-key", n(345)).addTemplate("components/game-sound-content", n(346)).addTemplate("components/game-interface-content", n(347)).addTemplate("components/game-gameplay-content", n(348)).addTemplate("components/game-hotkeys-additional-section", n(349)).addTemplate("components/game-hotkeys-additional", n(350)).addTemplate("components/game-hotkeys-primary-button", n(351)).addTemplate("components/game-hotkeys-primary", n(352)).addTemplate("components/game-hotkeys-quickcast", n(353)).addTemplate("components/game-hotkeys-content", n(354)).addTemplate("components/vng-publisher-settings", n(355)).addTemplate("components/honeyfruit-settings-error", n(356));
                 return l.registerOnAppBuilder(u), u
             };
             var a, o = n(1),
-                i = (a = n(18)) && a.__esModule ? a : {
+                s = (a = n(18)) && a.__esModule ? a : {
                     default: a
                 },
-                s = n(19);
+                i = n(19);
             const {
                 PlayerNameComponent: r,
                 PlayerNameInputApi: l
@@ -423,8 +422,8 @@
             o.map((function() {
                 this.route(a.SettingsCategory.GENERAL), this.route(a.SettingsCategory.NOTIFICATIONS), this.route(a.SettingsCategory.CHAT), this.route(a.SettingsCategory.SOUND), this.route(a.SettingsCategory.VOICE), this.route(a.SettingsCategory.BLOCK_LIST), this.route(a.SettingsCategory.GAME_HOTKEYS), this.route(a.SettingsCategory.GAME_SOUND), this.route(a.SettingsCategory.GAME_INTERFACE), this.route(a.SettingsCategory.GAME_GAMEPLAY), this.route(a.SettingsCategory.REPLAYS), this.route(a.SettingsCategory.PRIVACY_NOTICE), this.route(a.SettingsCategory.TERMS_OF_USE), this.route(a.SettingsCategory.THIRDPARTY_LICENSES), this.route(a.SettingsCategory.VERSION), this.route(a.SettingsCategory.LEGAL_STATEMENTS)
             }));
-            var i = o;
-            t.default = i
+            var s = o;
+            t.default = s
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -435,13 +434,13 @@
                 return d(l(e[0])[e[1] - 1])
             }, t.fromKeyToSaved = function(e) {
                 let t;
-                t = r() ? i[e.code] : o[e.code];
+                t = r() ? s[e.code] : o[e.code];
                 return void 0 !== t ? c(e) + t : void 0
             }, t.fromSavedToArray = l, t.getModifiersPrefix = c, t.getPrimaryMainKeyDisplay = function(e) {
                 const [t] = e || [];
                 if (t === n || void 0 === t) return "";
                 const a = t.slice(t.lastIndexOf("[", t.length - 3));
-                return s[a]
+                return i[a]
             }, t.getPrimaryModifierDisplay = function(e) {
                 if (void 0 === e || void 0 === e[0]) return "";
                 const t = e[0];
@@ -567,7 +566,7 @@
                     PageDown: "[PgDn]",
                     Delete: "[Del]"
                 },
-                i = {
+                s = {
                     Escape: "[Esc]",
                     Digit1: "[1]",
                     Digit2: "[2]",
@@ -667,7 +666,7 @@
                     OSLeft: "[L Win]",
                     OSRight: "[R Win]"
                 },
-                s = {
+                i = {
                     "[Esc]": "Esc",
                     "[1]": "1",
                     "[2]": "2",
@@ -821,7 +820,7 @@
                 if (e === n || void 0 === e) return "";
                 const t = e.slice(e.lastIndexOf("[", e.length - 3)),
                     a = e.slice(0, e.lastIndexOf("[", e.length - 3)),
-                    o = s[t];
+                    o = i[t];
                 return void 0 === o ? e : u(a, " + ") + o
             }
 
@@ -961,7 +960,7 @@
             }), t.default = void 0;
             var a = n(1);
             const o = a.dataBinding.bindTo(a.socket);
-            var i = a.Ember.Route.extend({
+            var s = a.Ember.Route.extend({
                 model: () => Promise.all([o.get("/lol-chat/v1/me"), o.get("/lol-chat/v1/blocked-players")]).then((e => {
                     const [t, n] = e;
                     return {
@@ -970,7 +969,7 @@
                     }
                 }))
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -978,7 +977,7 @@
             }), t.default = void 0;
             var a = n(1);
             const o = a.dataBinding.bindTo(a.socket);
-            var i = a.Ember.Route.extend({
+            var s = a.Ember.Route.extend({
                 persistenceService: a.Ember.inject.service("persistence"),
                 model() {
                     const e = this.get("persistenceService");
@@ -993,18 +992,18 @@
                     }))
                 }
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(29)) && a.__esModule ? a : {
+                s = (a = n(29)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Route.extend(i.default);
-            t.default = s
+            var i = o.Ember.Route.extend(s.default);
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1034,22 +1033,22 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(29)) && a.__esModule ? a : {
+                s = (a = n(29)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Route.extend(i.default);
-            t.default = s
+            var i = o.Ember.Route.extend(s.default);
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(29)) && a.__esModule ? a : {
+                s = (a = n(29)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Route.extend(i.default);
-            t.default = s
+            var i = o.Ember.Route.extend(s.default);
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1072,12 +1071,12 @@
             }), t.default = void 0;
             var a = n(1);
             const o = a.dataBinding.bindTo(a.socket);
-            var i = a.Ember.Route.extend({
+            var s = a.Ember.Route.extend({
                 model: () => o.get("/lol-license-agreement/v1/privacy-policy").then((e => ({
                     privacyPolicyText: e
                 })))
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1085,12 +1084,12 @@
             }), t.default = void 0;
             var a = n(1);
             const o = a.dataBinding.bindTo(a.socket);
-            var i = a.Ember.Route.extend({
+            var s = a.Ember.Route.extend({
                 model: () => o.get("/lol-license-agreement/v1/agreement").then((e => ({
                     licenseAgreementText: e
                 })))
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1099,7 +1098,7 @@
             var a = n(1);
             const o = a.dataBinding.bindTo(a.socket);
             t.binding = o;
-            var i = a.Ember.Route.extend({
+            var s = a.Ember.Route.extend({
                 async model() {
                     const [e, t, n] = await Promise.all([o.get("/system/v1/builds"), o.get("/lol-settings/v2/config").then((({
                         localizedLicensesURL: e
@@ -1110,7 +1109,7 @@
                     }
                 }
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1118,12 +1117,12 @@
             }), t.default = void 0;
             var a = n(1);
             const o = a.dataBinding.bindTo(a.socket);
-            var i = a.Ember.Route.extend({
+            var s = a.Ember.Route.extend({
                 model: () => o.get("/system/v1/builds").then((e => ({
                     leagueClientVersion: e.version
                 })))
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1160,15 +1159,15 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(40)) && a.__esModule ? a : {
+                s = (a = n(40)) && a.__esModule ? a : {
                     default: a
                 },
-                s = n(41);
+                i = n(41);
             const {
                 DEFAULT_PROFILE_PRIVACY: r,
                 ProfilePrivacyEnabledState: l,
                 ProfilePrivacySetting: c
-            } = s.PROFILE_PRIVACY, u = {
+            } = i.PROFILE_PRIVACY, u = {
                 model: "uxSettings",
                 namespace: "lol-user-experience",
                 schemaVersion: 3,
@@ -1227,7 +1226,7 @@
                 scope: "account",
                 defaultValue: "auto"
             };
-            var E = o.Ember.Controller.extend(i.default, {
+            var E = o.Ember.Controller.extend(s.default, {
                 modalManager: o.Ember.inject.service("modal-manager"),
                 generalSettings: o.Ember.computed.alias("model.generalSettings"),
                 videoSettings: o.Ember.computed.alias("model.videoSettings"),
@@ -1269,12 +1268,12 @@
                         t.forEach((t => {
                             const a = `${t.width} x ${t.height}`,
                                 o = t.scale === n,
-                                i = {
+                                s = {
                                     scale: t.scale,
                                     text: a,
                                     selected: o
                                 };
-                            e.push(i)
+                            e.push(s)
                         }))
                     }
                     return e
@@ -1346,20 +1345,20 @@
                         const {
                             model: n,
                             property: o,
-                            defaultValue: i
-                        } = e, s = this;
-                        s.set(o, a.Ember.computed(t ? `${n}.data.${o}` : `${n}.${o}`, {
-                            get: () => a.lodash.get(s.get(n), t ? `data.${o}` : o, i),
-                            set: (i, r) => (a.lodash.set(s, t ? `${n}.data.${o}` : `${n}.${o}`, r), s._saveSetting(e, r))
+                            defaultValue: s
+                        } = e, i = this;
+                        i.set(o, a.Ember.computed(t ? `${n}.data.${o}` : `${n}.${o}`, {
+                            get: () => a.lodash.get(i.get(n), t ? `data.${o}` : o, s),
+                            set: (s, r) => (a.lodash.set(i, t ? `${n}.data.${o}` : `${n}.${o}`, r), i._saveSetting(e, r))
                         }))
                     },
                     changeSetting: function(e, t) {
                         this.set(e, t)
                     },
                     onSaveSetting: function(e, t) {},
-                    doSaveSetting: function(e, t, n, o, i) {
-                        const s = {};
-                        s[e] = t, this.get("persistenceService").saveDefaultSetting(s, n, o, i), a.Telemetry.invokeWithLowProbability((() => {
+                    doSaveSetting: function(e, t, n, o, s) {
+                        const i = {};
+                        i[e] = t, this.get("persistenceService").saveDefaultSetting(i, n, o, s), a.Telemetry.invokeWithLowProbability((() => {
                             a.Telemetry.sendCustomData("league-client-setting-changed", {
                                 setting_name: e,
                                 setting_value: t
@@ -1371,9 +1370,9 @@
                             property: n,
                             scope: a,
                             namespace: o,
-                            schemaVersion: i
+                            schemaVersion: s
                         } = e;
-                        return this.doSaveSetting(n, t, a, o, i), this.onSaveSetting(n, t), t
+                        return this.doSaveSetting(n, t, a, o, s), this.onSaveSetting(n, t), t
                     }
                 });
             t.default = o
@@ -1389,12 +1388,12 @@
             }), Object.defineProperty(t, "GAME_CONTEXT_KEYS", {
                 enumerable: !0,
                 get: function() {
-                    return i.GAME_CONTEXT_KEYS
+                    return s.GAME_CONTEXT_KEYS
                 }
             }), Object.defineProperty(t, "GAME_MODES", {
                 enumerable: !0,
                 get: function() {
-                    return s.default
+                    return i.default
                 }
             }), Object.defineProperty(t, "GAME_SEARCH_STATES", {
                 enumerable: !0,
@@ -1449,13 +1448,13 @@
             }), Object.defineProperty(t, "getGameKeyFromGameMode", {
                 enumerable: !0,
                 get: function() {
-                    return i.getGameKeyFromGameMode
+                    return s.getGameKeyFromGameMode
                 }
             });
             var a = _(n(42)),
                 o = _(n(43)),
-                i = n(44),
-                s = _(n(45)),
+                s = n(44),
+                i = _(n(45)),
                 r = _(n(46)),
                 l = _(n(57)),
                 c = _(n(58)),
@@ -1509,32 +1508,29 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.GAME_CONTEXT_KEYS = void 0, t.getGameKeyFromGameMode = function(e) {
-                return e === o.default.TFT ? i.TFT : i.LEAGUE_OF_LEGENDS
+                return e === o.default.TFT ? s.TFT : s.LEAGUE_OF_LEGENDS
             };
             var a, o = (a = n(45)) && a.__esModule ? a : {
                 default: a
             };
-            const i = {
+            const s = {
                 TFT: "tft",
                 LEAGUE_OF_LEGENDS: "league_of_legends"
             };
-            t.GAME_CONTEXT_KEYS = i;
-            var s = i;
-            t.default = s
+            t.GAME_CONTEXT_KEYS = s;
+            var i = s;
+            t.default = i
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var n = {
-                CHERRY: "CHERRY",
-                CLASSIC: "CLASSIC",
-                CUSTOM: "CUSTOM",
-                KIWI: "KIWI",
-                PRACTICETOOL: "PRACTICETOOL",
-                STRAWBERRY: "STRAWBERRY",
                 TFT: "TFT",
-                TUTORIAL: "TUTORIAL"
+                CLASSIC: "CLASSIC",
+                CHERRY: "CHERRY",
+                STRAWBERRY: "STRAWBERRY",
+                PRACTICETOOL: "PRACTICETOOL"
             };
             t.default = n
         }, (e, t, n) => {
@@ -1544,8 +1540,8 @@
             }), t.default = void 0;
             var a = p(n(47)),
                 o = p(n(48)),
-                i = p(n(49)),
-                s = p(n(50)),
+                s = p(n(49)),
+                i = p(n(50)),
                 r = p(n(51)),
                 l = p(n(52)),
                 c = p(n(53)),
@@ -1561,8 +1557,8 @@
             var f = {
                 COMPONENT_TYPES: a.default,
                 CURRENCY_TYPES: o.default,
-                INVENTORY_TYPES: i.default,
-                MEDIA_TYPES: s.default,
+                INVENTORY_TYPES: s.default,
+                MEDIA_TYPES: i.default,
                 MEDIA_LOAD_TYPES: r.default,
                 MODAL_TYPES: l.default,
                 OFFER_PURCHASE_STATES: c.default,
@@ -1741,15 +1737,15 @@
             const n = "RANKED_SOLO_5x5",
                 a = "RANKED_FLEX_SR",
                 o = "RANKED_FLEX_TT",
-                i = "CHERRY",
-                s = "RANKED_TFT",
+                s = "CHERRY",
+                i = "RANKED_TFT",
                 r = "RANKED_TFT_DOUBLE_UP",
                 l = "RANKED_TFT_TURBO",
                 c = "RANKED_TFT_PAIRS",
                 u = [n, a],
                 d = [...u, o],
-                m = [i],
-                p = [s, r],
+                m = [s],
+                p = [i, r],
                 f = [l, c],
                 g = [...p, ...f],
                 _ = [...d, ...p],
@@ -1758,8 +1754,8 @@
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: a,
                 RANKED_FLEX_TT_QUEUE_TYPE: o,
-                RANKED_CHERRY_QUEUE_TYPE: i,
-                RANKED_TFT_QUEUE_TYPE: s,
+                RANKED_CHERRY_QUEUE_TYPE: s,
+                RANKED_TFT_QUEUE_TYPE: i,
                 RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: r,
                 RANKED_TFT_TURBO_QUEUE_TYPE: l,
                 RANKED_TFT_PAIRS_QUEUE_TYPE: c,
@@ -1781,8 +1777,8 @@
             const n = "UNRANKED",
                 a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 o = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                i = ["IV", "III", "II", "I"],
-                s = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                s = ["IV", "III", "II", "I"],
+                i = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
             function r(e) {
                 const t = {};
@@ -1803,12 +1799,12 @@
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 HIGHEST_TIER: a[a.length - 1],
                 LOWEST_TIER: a[0],
-                DIVISIONS: i,
-                HIGHEST_DIVISION: i[i.length - 1],
-                LOWEST_DIVISION: i[0],
+                DIVISIONS: s,
+                HIGHEST_DIVISION: s[s.length - 1],
+                LOWEST_DIVISION: s[0],
                 LP_PER_DIVISION: 100,
                 TIER_NAME_TO_ORDINAL: r(o),
-                DIVISION_TO_ORDINAL: r(i),
+                DIVISION_TO_ORDINAL: r(s),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1816,9 +1812,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: s,
+                TFT_RATED_TIERS: i,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: s[0],
+                LOWEST_TFT_RATED_TIER: i[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -1900,19 +1896,19 @@
             t.TIME_UNITS = n;
             const a = 36e5,
                 o = 864e5,
-                i = 6048e5,
-                s = {
+                s = 6048e5,
+                i = {
                     MILLISECONDS_IN_A_SECOND: 1e3,
                     MILLISECONDS_IN_A_MINUTE: 6e4,
                     MILLISECONDS_IN_A_HOUR: a,
                     MILLISECONDS_IN_A_DAY: o,
-                    MILLISECONDS_IN_A_WEEK: i,
+                    MILLISECONDS_IN_A_WEEK: s,
                     MILLISECONDS_IN_A_YEAR: 314496e5
                 };
-            t.TIME_CONVERSIONS = s;
+            t.TIME_CONVERSIONS = i;
             var r = {
                 TIME_UNITS: n,
-                TIME_CONVERSIONS: s
+                TIME_CONVERSIONS: i
             };
             t.default = r
         }, (e, t) => {
@@ -1931,10 +1927,10 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(40)) && a.__esModule ? a : {
+                s = (a = n(40)) && a.__esModule ? a : {
                     default: a
                 };
-            const s = {
+            const i = {
                     model: "notificationsSettings",
                     namespace: "lol-notifications",
                     schemaVersion: 1,
@@ -1958,14 +1954,14 @@
                     scope: "account",
                     defaultValue: !1
                 };
-            var c = o.Ember.Controller.extend(i.default, {
+            var c = o.Ember.Controller.extend(s.default, {
                 notificationsSettings: o.Ember.computed.alias("model.notificationsSettings"),
                 persistenceService: o.Ember.inject.service("persistence"),
                 init() {
-                    this._super(...arguments), this.bindSetting(s), this.bindSetting(r), this.bindSetting(l)
+                    this._super(...arguments), this.bindSetting(i), this.bindSetting(r), this.bindSetting(l)
                 },
                 resetToDefault() {
-                    this.changeSetting(s.property, s.defaultValue), this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue)
+                    this.changeSetting(i.property, i.defaultValue), this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue)
                 }
             });
             t.default = c
@@ -1975,11 +1971,11 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(40)) && a.__esModule ? a : {
+                s = (a = n(40)) && a.__esModule ? a : {
                     default: a
                 };
             n(67);
-            const s = {
+            const i = {
                 OPT_LANGUAGE_FILTER: {
                     model: "chatSettings",
                     namespace: "lol-chat",
@@ -2013,7 +2009,7 @@
                     defaultValue: !0
                 }
             };
-            var r = o.Ember.Controller.extend(i.default, {
+            var r = o.Ember.Controller.extend(s.default, {
                 chatSettings: o.Ember.computed.alias("model.chatSettings"),
                 socialToggles: o.Ember.computed.alias("model.socialToggles"),
                 negatedChatFilter: o.Ember.computed.not("chatFilterDisabled"),
@@ -2032,7 +2028,7 @@
                 })),
                 persistenceService: o.Ember.inject.service("persistence"),
                 init() {
-                    this._super(...arguments), Object.values(s).forEach((e => {
+                    this._super(...arguments), Object.values(i).forEach((e => {
                         this.bindSetting(e)
                     })), this.addObserver("negatedChatFilter", this, this.negatedChatFilterObserver)
                 },
@@ -2044,8 +2040,8 @@
                 },
                 negatedChatFilterObserver: function() {
                     const e = Boolean(this.get("negatedChatFilter"));
-                    if (Boolean(this.get(s.OPT_LANGUAGE_FILTER.property)) === e) {
-                        this.changeSetting(s.OPT_LANGUAGE_FILTER.property, !e);
+                    if (Boolean(this.get(i.OPT_LANGUAGE_FILTER.property)) === e) {
+                        this.changeSetting(i.OPT_LANGUAGE_FILTER.property, !e);
                         const t = {
                             Chat: {
                                 EnableChatFilter: e ? 1 : 0
@@ -2058,7 +2054,7 @@
                     this._super(...arguments), this.removeObserver("negatedChatFilter", this, this.negatedChatFilterObserver)
                 },
                 resetToDefault: function() {
-                    this.set("negatedChatFilter", !s.OPT_LANGUAGE_FILTER.defaultValue), Object.entries(s).forEach((([e, t]) => {
+                    this.set("negatedChatFilter", !i.OPT_LANGUAGE_FILTER.defaultValue), Object.entries(i).forEach((([e, t]) => {
                         "OPT_LANGUAGE_FILTER" !== e && this.changeSetting(t.property, t.defaultValue)
                     }))
                 }
@@ -2072,13 +2068,13 @@
             });
             var a = n(134),
                 o = n(100),
-                i = n(68),
-                s = n(219),
+                s = n(68),
+                i = n(219),
                 r = n(258),
                 l = n(261),
                 c = n(85),
-                u = (0, r.makeRecorderApi)(s.startRecording),
-                d = (0, i.makeRumPublicApi)(i.startRum, u, {
+                u = (0, r.makeRecorderApi)(i.startRecording),
+                d = (0, s.makeRumPublicApi)(s.startRum, u, {
                     startDeflateWorker: l.startDeflateWorker,
                     createDeflateEncoder: l.createDeflateEncoder
                 });
@@ -2090,7 +2086,7 @@
                 CENSORED_STRING_MARK: () => _.CENSORED_STRING_MARK,
                 DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE: () => u.DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE,
                 FORM_PRIVATE_TAG_NAMES: () => _.FORM_PRIVATE_TAG_NAMES,
-                LifeCycle: () => i.LifeCycle,
+                LifeCycle: () => s.LifeCycle,
                 MAX_ATTRIBUTE_VALUE_CHAR_LENGTH: () => g.MAX_ATTRIBUTE_VALUE_CHAR_LENGTH,
                 NodePrivacyLevel: () => _.NodePrivacyLevel,
                 PRIVACY_ATTR_NAME: () => _.PRIVACY_ATTR_NAME,
@@ -2131,12 +2127,12 @@
                 shouldIgnoreElement: () => _.shouldIgnoreElement,
                 shouldMaskNode: () => _.shouldMaskNode,
                 startRum: () => o.startRum,
-                startViewHistory: () => s.startViewHistory
+                startViewHistory: () => i.startViewHistory
             });
             var a = n(69),
                 o = n(136),
-                i = n(144),
-                s = n(146),
+                s = n(144),
+                i = n(146),
                 r = n(137),
                 l = n(198),
                 c = n(197),
@@ -2154,8 +2150,8 @@
             });
             var a = n(130),
                 o = n(131),
-                i = n(86),
-                s = n(132),
+                s = n(86),
+                i = n(132),
                 r = n(133),
                 l = n(101),
                 c = n(117),
@@ -2177,17 +2173,17 @@
                 var T = (0, a.createCustomerDataTrackerManager)(0),
                     b = (0, o.createContextManager)(T.getOrCreateTracker(2)),
                     N = (0, o.createContextManager)(T.getOrCreateTracker(1)),
-                    A = (0, i.createTrackingConsentState)(),
-                    C = (0, v.createCustomVitalsState)();
+                    C = (0, s.createTrackingConsentState)(),
+                    I = (0, v.createCustomVitalsState)();
 
-                function I() {
+                function A() {
                     return (0, E.buildCommonContext)(b, N, t)
                 }
-                var L = (0, S.createPreStartStrategy)(n, I, A, C, (function(a, o, i) {
-                        a.storeContextsAcrossPages && ((0, s.storeContextManager)(a, b, y, 2), (0, s.storeContextManager)(a, N, y, 1)), T.setCompressionStatus(o ? 1 : 2);
-                        var l = e(a, t, T, I, i, o && n.createDeflateEncoder ? function(e) {
+                var L = (0, S.createPreStartStrategy)(n, A, C, I, (function(a, o, s) {
+                        a.storeContextsAcrossPages && ((0, i.storeContextManager)(a, b, y, 2), (0, i.storeContextManager)(a, N, y, 1)), T.setCompressionStatus(o ? 1 : 2);
+                        var l = e(a, t, T, A, s, o && n.createDeflateEncoder ? function(e) {
                             return n.createDeflateEncoder(a, o, e)
-                        } : r.createIdentityEncoder, A, C);
+                        } : r.createIdentityEncoder, C, I);
                         return t.onRumStart(l.lifeCycle, a, l.session, l.viewHistory, o), L = function(e, t) {
                             return (0, _.assign)({
                                 init: function(e) {
@@ -2210,7 +2206,7 @@
                             L.init(e, x)
                         })),
                         setTrackingConsent: (0, l.monitor)((function(e) {
-                            A.update(e), (0, c.addTelemetryUsage)({
+                            C.update(e), (0, c.addTelemetryUsage)({
                                 feature: "set-tracking-consent",
                                 tracking_consent: e
                             })
@@ -2369,16 +2365,16 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                createCustomVitalsState: () => s,
+                createCustomVitalsState: () => i,
                 startDurationVital: () => l,
                 startVitalCollection: () => r,
                 stopDurationVital: () => c
             });
             var a = n(72),
                 o = n(74),
-                i = n(76);
+                s = n(76);
 
-            function s() {
+            function i() {
                 return {
                     vitalsByName: new Map,
                     vitalsByReference: new WeakMap
@@ -2393,7 +2389,7 @@
                         var n = {
                             date: e.startClocks.timeStamp,
                             vital: {
-                                id: (0, i.generateUUID)(),
+                                id: (0, s.generateUUID)(),
                                 type: e.type,
                                 name: e.name,
                                 duration: (0, a.toServerDuration)(e.duration),
@@ -2427,9 +2423,9 @@
 
             function l(e, t, n) {
                 var o = e.vitalsByName,
-                    i = e.vitalsByReference;
+                    s = e.vitalsByReference;
                 void 0 === n && (n = {});
-                var s = {
+                var i = {
                         name: t,
                         startClocks: (0, a.clocksNow)(),
                         context: n.context,
@@ -2438,33 +2434,33 @@
                     r = {
                         __dd_vital_reference: !0
                     };
-                return o.set(t, s), i.set(r, s), r
+                return o.set(t, i), s.set(r, i), r
             }
 
-            function c(e, t, n, i) {
-                var s = t.vitalsByName,
+            function c(e, t, n, s) {
+                var i = t.vitalsByName,
                     r = t.vitalsByReference;
-                void 0 === i && (i = {});
-                var l = "string" == typeof n ? s.get(n) : r.get(n);
-                l && (e(function(e, t, n, i) {
-                    var s;
+                void 0 === s && (s = {});
+                var l = "string" == typeof n ? i.get(n) : r.get(n);
+                l && (e(function(e, t, n, s) {
+                    var i;
                     return {
                         name: e.name,
                         type: "duration",
                         startClocks: t,
-                        duration: (0, a.elapsed)(t.timeStamp, i.timeStamp),
+                        duration: (0, a.elapsed)(t.timeStamp, s.timeStamp),
                         context: (0, o.combine)(e.context, n.context),
-                        description: null !== (s = n.description) && void 0 !== s ? s : e.description
+                        description: null !== (i = n.description) && void 0 !== i ? i : e.description
                     }
-                }(l, l.startClocks, i, (0, a.clocksNow)())), "string" == typeof n ? s.delete(n) : r.delete(n))
+                }(l, l.startClocks, s, (0, a.clocksNow)())), "string" == typeof n ? i.delete(n) : r.delete(n))
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
                 ONE_DAY: () => l,
                 ONE_HOUR: () => r,
-                ONE_MINUTE: () => s,
-                ONE_SECOND: () => i,
+                ONE_MINUTE: () => i,
+                ONE_SECOND: () => s,
                 ONE_YEAR: () => c,
                 addDuration: () => y,
                 clocksNow: () => E,
@@ -2482,9 +2478,9 @@
                 toServerDuration: () => f
             });
             var a, o = n(73),
-                i = 1e3,
-                s = 60 * i,
-                r = 60 * s,
+                s = 1e3,
+                i = 60 * s,
+                r = 60 * i,
                 l = 24 * r,
                 c = 365 * l;
 
@@ -2504,11 +2500,11 @@
 
             function m(e) {
                 var t = g() - performance.now();
-                return t > A() ? Math.round(y(t, e)) : b(e)
+                return t > C() ? Math.round(y(t, e)) : b(e)
             }
 
             function p() {
-                return Math.round(g() - y(A(), performance.now()))
+                return Math.round(g() - y(C(), performance.now()))
             }
 
             function f(e) {
@@ -2537,7 +2533,7 @@
             function v() {
                 return {
                     relative: 0,
-                    timeStamp: A()
+                    timeStamp: C()
                 }
             }
 
@@ -2550,18 +2546,18 @@
             }
 
             function T(e) {
-                return e - A()
+                return e - C()
             }
 
             function b(e) {
-                return Math.round(y(A(), e))
+                return Math.round(y(C(), e))
             }
 
             function N(e) {
                 return e < c
             }
 
-            function A() {
+            function C() {
                 return void 0 === a && (a = performance.timing.navigationStart), a
             }
         }, (e, t, n) => {
@@ -2575,24 +2571,24 @@
                 return +e.toFixed(t)
             }
 
-            function i(e) {
-                return s(e) && e >= 0 && e <= 100
+            function s(e) {
+                return i(e) && e >= 0 && e <= 100
             }
 
-            function s(e) {
+            function i(e) {
                 return "number" == typeof e
             }
             n.r(t), n.d(t, {
-                isNumber: () => s,
-                isPercentage: () => i,
+                isNumber: () => i,
+                isPercentage: () => s,
                 performDraw: () => a,
                 round: () => o
             })
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                combine: () => s,
-                deepClone: () => i,
+                combine: () => i,
+                deepClone: () => s,
                 mergeInto: () => o
             });
             var a = n(75);
@@ -2619,13 +2615,13 @@
                 if ("object" != typeof t || null === t) return t;
                 if (t instanceof Date) return new Date(t.getTime());
                 if (t instanceof RegExp) {
-                    var i = t.flags || [t.global ? "g" : "", t.ignoreCase ? "i" : "", t.multiline ? "m" : "", t.sticky ? "y" : "", t.unicode ? "u" : ""].join("");
-                    return new RegExp(t.source, i)
+                    var s = t.flags || [t.global ? "g" : "", t.ignoreCase ? "i" : "", t.multiline ? "m" : "", t.sticky ? "y" : "", t.unicode ? "u" : ""].join("");
+                    return new RegExp(t.source, s)
                 }
                 if (!n.hasAlreadyBeenSeen(t)) {
                     if (Array.isArray(t)) {
-                        for (var s = Array.isArray(e) ? e : [], r = 0; r < t.length; ++r) s[r] = o(s[r], t[r], n);
-                        return s
+                        for (var i = Array.isArray(e) ? e : [], r = 0; r < t.length; ++r) i[r] = o(i[r], t[r], n);
+                        return i
                     }
                     var l = "object" === (0, a.getType)(e) ? e : {};
                     for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && (l[c] = o(l[c], t[c], n));
@@ -2633,15 +2629,15 @@
                 }
             }
 
-            function i(e) {
+            function s(e) {
                 return o(void 0, e)
             }
 
-            function s() {
+            function i() {
                 for (var e, t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
-                for (var a = 0, i = t; a < i.length; a++) {
-                    var s = i[a];
-                    null != s && (e = o(e, s))
+                for (var a = 0, s = t; a < s.length; a++) {
+                    var i = s[a];
+                    null != i && (e = o(e, i))
                 }
                 return e
             }
@@ -2661,14 +2657,14 @@
                 return e ? (parseInt(e, 10) ^ 16 * Math.random() >> parseInt(e, 10) / 4).toString(16) : "".concat(1e7, "-").concat(1e3, "-").concat(4e3, "-").concat(8e3, "-").concat(1e11).replace(/[018]/g, a)
             }
             n.r(t), n.d(t, {
-                findCommaSeparatedValue: () => i,
-                findCommaSeparatedValues: () => s,
+                findCommaSeparatedValue: () => s,
+                findCommaSeparatedValues: () => i,
                 generateUUID: () => a,
                 safeTruncate: () => r
             });
             var o = /([\w-]+)\s*=\s*([^;]+)/g;
 
-            function i(e, t) {
+            function s(e, t) {
                 for (o.lastIndex = 0;;) {
                     var n = o.exec(e);
                     if (!n) break;
@@ -2676,7 +2672,7 @@
                 }
             }
 
-            function s(e) {
+            function i(e) {
                 var t = new Map;
                 for (o.lastIndex = 0;;) {
                     var n = o.exec(e);
@@ -2699,8 +2695,8 @@
             });
             var a = n(114),
                 o = n(116),
-                i = n(117),
-                s = n(126),
+                s = n(117),
+                i = n(126),
                 r = n(83),
                 l = n(102),
                 c = n(127),
@@ -2715,18 +2711,18 @@
             function h(e, t, n, h, E) {
                 var v, S, y, T, b = e.ignoreInitIfSyntheticsWillInjectRum,
                     N = e.startDeflateWorker,
-                    A = (0, a.createBoundedBuffer)(),
-                    C = n.observable.subscribe(I);
+                    C = (0, a.createBoundedBuffer)(),
+                    I = n.observable.subscribe(A);
 
-                function I() {
+                function A() {
                     if (y && T && n.isGranted()) {
                         var e;
-                        if (C.unsubscribe(), T.trackViewsManually) {
+                        if (I.unsubscribe(), T.trackViewsManually) {
                             if (!v) return;
-                            A.remove(v.callback), e = v.options
+                            C.remove(v.callback), e = v.options
                         }
                         var t = E(T, S, e);
-                        A.drain(t)
+                        C.drain(t)
                     }
                 }
 
@@ -2740,14 +2736,14 @@
                                 sessionSampleRate: 100,
                                 defaultPrivacyLevel: null !== (t = e.defaultPrivacyLevel) && void 0 !== t ? t : null === (n = (0, o.getEventBridge)()) || void 0 === n ? void 0 : n.getPrivacyLevel()
                             })
-                        }(e)), y = e, (0, i.addTelemetryConfiguration)((0, f.serializeRumConfiguration)(e)), T)(0, s.displayAlreadyInitializedError)("DD_RUM", e);
+                        }(e)), y = e, (0, s.addTelemetryConfiguration)((0, f.serializeRumConfiguration)(e)), T)(0, i.displayAlreadyInitializedError)("DD_RUM", e);
                     else {
                         var a = (0, f.validateAndBuildRumConfiguration)(e);
-                        a && (t || a.sessionStoreStrategyType ? a.compressIntakeRequests && !t && N && !(S = N(a, "Datadog RUM", l.noop)) || (T = a, (0, c.initFetchObservable)().subscribe(l.noop), n.tryToInit(a.trackingConsent), I()) : r.display.warn("No storage available for session. We will not send any data."))
+                        a && (t || a.sessionStoreStrategyType ? a.compressIntakeRequests && !t && N && !(S = N(a, "Datadog RUM", l.noop)) || (T = a, (0, c.initFetchObservable)().subscribe(l.noop), n.tryToInit(a.trackingConsent), A()) : r.display.warn("No storage available for session. We will not send any data."))
                     }
                 }
                 var k = function(e) {
-                    A.add((function(t) {
+                    C.add((function(t) {
                         return t.addDurationVital(e)
                     }))
                 };
@@ -2764,7 +2760,7 @@
                     getInternalContext: l.noop,
                     stopSession: l.noop,
                     addTiming: function(e, t) {
-                        void 0 === t && (t = (0, m.timeStampNow)()), A.add((function(n) {
+                        void 0 === t && (t = (0, m.timeStampNow)()), C.add((function(n) {
                             return n.addTiming(e, t)
                         }))
                     },
@@ -2773,38 +2769,38 @@
                         var n = function(n) {
                             n.startView(e, t)
                         };
-                        A.add(n), v || (v = {
+                        C.add(n), v || (v = {
                             options: e,
                             callback: n
-                        }, I())
+                        }, A())
                     },
                     setViewName: function(e) {
-                        A.add((function(t) {
+                        C.add((function(t) {
                             return t.setViewName(e)
                         }))
                     },
                     setViewContext: function(e) {
-                        A.add((function(t) {
+                        C.add((function(t) {
                             return t.setViewContext(e)
                         }))
                     },
                     setViewContextProperty: function(e, t) {
-                        A.add((function(n) {
+                        C.add((function(n) {
                             return n.setViewContextProperty(e, t)
                         }))
                     },
                     addAction: function(e, n) {
-                        void 0 === n && (n = t()), A.add((function(t) {
+                        void 0 === n && (n = t()), C.add((function(t) {
                             return t.addAction(e, n)
                         }))
                     },
                     addError: function(e, n) {
-                        void 0 === n && (n = t()), A.add((function(t) {
+                        void 0 === n && (n = t()), C.add((function(t) {
                             return t.addError(e, n)
                         }))
                     },
                     addFeatureFlagEvaluation: function(e, t) {
-                        A.add((function(n) {
+                        C.add((function(n) {
                             return n.addFeatureFlagEvaluation(e, t)
                         }))
                     },
@@ -2839,8 +2835,8 @@
             });
             var a = n(83),
                 o = n(85),
-                i = n(82),
-                s = n(84),
+                s = n(82),
+                i = n(84),
                 r = n(81),
                 l = n(75),
                 c = n(80),
@@ -2865,7 +2861,7 @@
                             }(e);
                             if (l) {
                                 var d = (0, o.validateAndBuildConfiguration)(e);
-                                if (d) return (0, i.assign)({
+                                if (d) return (0, s.assign)({
                                     applicationId: e.applicationId,
                                     version: e.version || void 0,
                                     actionNameAttribute: e.actionNameAttribute,
@@ -2881,10 +2877,10 @@
                                     trackResources: !!e.trackResources,
                                     trackLongTasks: !!e.trackLongTasks,
                                     subdomain: e.subdomain,
-                                    defaultPrivacyLevel: (0, s.objectHasValue)(o.DefaultPrivacyLevel, e.defaultPrivacyLevel) ? e.defaultPrivacyLevel : o.DefaultPrivacyLevel.MASK,
+                                    defaultPrivacyLevel: (0, i.objectHasValue)(o.DefaultPrivacyLevel, e.defaultPrivacyLevel) ? e.defaultPrivacyLevel : o.DefaultPrivacyLevel.MASK,
                                     enablePrivacyForActionName: !!e.enablePrivacyForActionName,
                                     customerDataTelemetrySampleRate: 1,
-                                    traceContextInjection: (0, s.objectHasValue)(o.TraceContextInjection, e.traceContextInjection) ? e.traceContextInjection : o.TraceContextInjection.ALL,
+                                    traceContextInjection: (0, i.objectHasValue)(o.TraceContextInjection, e.traceContextInjection) ? e.traceContextInjection : o.TraceContextInjection.ALL,
                                     plugins: e.betaPlugins || []
                                 }, d)
                             }
@@ -2900,12 +2896,12 @@
                     })): "object" === (0, l.getType)(e) && Array.isArray(e.propagatorTypes) && e.propagatorTypes.forEach((function(e) {
                         return t.add(e)
                     }))
-                })), (0, i.arrayFrom)(t)
+                })), (0, s.arrayFrom)(t)
             }
 
             function p(e) {
                 var t, n = (0, o.serializeConfiguration)(e);
-                return (0, i.assign)({
+                return (0, s.assign)({
                     session_replay_sample_rate: e.sessionReplaySampleRate,
                     start_session_replay_recording_manually: e.startSessionReplayRecordingManually,
                     trace_sample_rate: e.traceSampleRate,
@@ -2924,7 +2920,7 @@
                     track_long_task: e.trackLongTasks,
                     plugins: null === (t = e.betaPlugins) || void 0 === t ? void 0 : t.map((function(e) {
                         var t;
-                        return (0, i.assign)({
+                        return (0, s.assign)({
                             name: e.name
                         }, null === (t = e.getConfigurationTelemetry) || void 0 === t ? void 0 : t.call(e))
                     }))
@@ -2942,8 +2938,8 @@
             });
             var a = n(75),
                 o = n(81),
-                i = n(84),
-                s = n(82),
+                s = n(84),
+                i = n(82),
                 r = n(73),
                 l = n(85);
 
@@ -2966,7 +2962,7 @@
                                 n.input.headers.append(t, e[t])
                             }));
                             else {
-                                n.init = (0, i.shallowClone)(n.init);
+                                n.init = (0, s.shallowClone)(n.init);
                                 var a = [];
                                 n.init.headers instanceof Headers ? n.init.headers.forEach((function(e, t) {
                                     a.push([t, e])
@@ -2974,7 +2970,7 @@
                                     a.push(e)
                                 })) : n.init.headers && Object.keys(n.init.headers).forEach((function(e) {
                                     a.push([e, n.init.headers[e]])
-                                })), n.init.headers = a.concat((0, s.objectEntries)(e))
+                                })), n.init.headers = a.concat((0, i.objectEntries)(e))
                             }
                         }))
                     },
@@ -2990,33 +2986,33 @@
 
             function m(e, t, n, a) {
                 if (p() && n.findTrackedSession()) {
-                    var i, c, u, d, m, f = (0, s.find)(e.allowedTracingUrls, (function(e) {
+                    var s, c, u, d, m, f = (0, i.find)(e.allowedTracingUrls, (function(e) {
                         return (0, o.matchList)([e.match], t.url, !0)
                     }));
                     if (f)
-                        if (t.traceSampled = !(0, r.isNumber)(e.traceSampleRate) || (0, r.performDraw)(e.traceSampleRate), t.traceSampled || e.traceContextInjection === l.TraceContextInjection.ALL) t.traceId = g(), t.spanId = g(), a((i = t.traceId, c = t.spanId, u = t.traceSampled, d = f.propagatorTypes, m = {}, d.forEach((function(e) {
+                        if (t.traceSampled = !(0, r.isNumber)(e.traceSampleRate) || (0, r.performDraw)(e.traceSampleRate), t.traceSampled || e.traceContextInjection === l.TraceContextInjection.ALL) t.traceId = g(), t.spanId = g(), a((s = t.traceId, c = t.spanId, u = t.traceSampled, d = f.propagatorTypes, m = {}, d.forEach((function(e) {
                             switch (e) {
                                 case "datadog":
-                                    (0, s.assign)(m, {
+                                    (0, i.assign)(m, {
                                         "x-datadog-origin": "rum",
                                         "x-datadog-parent-id": c.toDecimalString(),
                                         "x-datadog-sampling-priority": u ? "1" : "0",
-                                        "x-datadog-trace-id": i.toDecimalString()
+                                        "x-datadog-trace-id": s.toDecimalString()
                                     });
                                     break;
                                 case "tracecontext":
-                                    (0, s.assign)(m, {
-                                        traceparent: "00-0000000000000000".concat(i.toPaddedHexadecimalString(), "-").concat(c.toPaddedHexadecimalString(), "-0").concat(u ? "1" : "0")
+                                    (0, i.assign)(m, {
+                                        traceparent: "00-0000000000000000".concat(s.toPaddedHexadecimalString(), "-").concat(c.toPaddedHexadecimalString(), "-0").concat(u ? "1" : "0")
                                     });
                                     break;
                                 case "b3":
-                                    (0, s.assign)(m, {
-                                        b3: "".concat(i.toPaddedHexadecimalString(), "-").concat(c.toPaddedHexadecimalString(), "-").concat(u ? "1" : "0")
+                                    (0, i.assign)(m, {
+                                        b3: "".concat(s.toPaddedHexadecimalString(), "-").concat(c.toPaddedHexadecimalString(), "-").concat(u ? "1" : "0")
                                     });
                                     break;
                                 case "b3multi":
-                                    (0, s.assign)(m, {
-                                        "X-B3-TraceId": i.toPaddedHexadecimalString(),
+                                    (0, i.assign)(m, {
+                                        "X-B3-TraceId": s.toPaddedHexadecimalString(),
                                         "X-B3-SpanId": c.toPaddedHexadecimalString(),
                                         "X-B3-Sampled": u ? "1" : "0"
                                     })
@@ -3045,8 +3041,8 @@
                         a = t(4),
                         o = "";
                     do {
-                        var i = n % e * 4294967296 + a;
-                        n = Math.floor(n / e), a = Math.floor(i / e), o = (i % e).toString(e) + o
+                        var s = n % e * 4294967296 + a;
+                        n = Math.floor(n / e), a = Math.floor(s / e), o = (s % e).toString(e) + o
                     } while (n || a);
                     return o
                 }
@@ -3063,15 +3059,15 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                isMatchOption: () => s,
+                isMatchOption: () => i,
                 matchList: () => r
             });
             var a = n(82),
                 o = n(83),
-                i = n(75);
+                s = n(75);
 
-            function s(e) {
-                var t = (0, i.getType)(e);
+            function i(e) {
+                var t = (0, s.getType)(e);
                 return "string" === t || "function" === t || e instanceof RegExp
             }
 
@@ -3105,14 +3101,14 @@
                 return t
             }
 
-            function i(e, t) {
+            function s(e, t) {
                 for (var n = 0; n < e.length; n += 1) {
                     var a = e[n];
                     if (t(a, n)) return a
                 }
             }
 
-            function s(e, t) {
+            function i(e, t) {
                 for (var n = e.length - 1; n >= 0; n -= 1) {
                     var a = e[n];
                     if (t(a, n, e)) return a
@@ -3153,8 +3149,8 @@
                 arrayFrom: () => o,
                 assign: () => m,
                 endsWith: () => d,
-                find: () => i,
-                findLast: () => s,
+                find: () => s,
+                findLast: () => i,
                 forEach: () => r,
                 includes: () => a,
                 objectEntries: () => c,
@@ -3170,7 +3166,7 @@
                 MORE_DETAILS: () => u,
                 display: () => r,
                 globalConsole: () => o,
-                originalConsoleMethods: () => i
+                originalConsoleMethods: () => s
             });
             var a = {
                     log: "log",
@@ -3180,17 +3176,17 @@
                     error: "error"
                 },
                 o = console,
-                i = {};
+                s = {};
             Object.keys(a).forEach((function(e) {
-                i[e] = o[e]
+                s[e] = o[e]
             }));
-            var s = "Datadog Browser SDK:",
+            var i = "Datadog Browser SDK:",
                 r = {
-                    debug: i.debug.bind(o, s),
-                    log: i.log.bind(o, s),
-                    info: i.info.bind(o, s),
-                    warn: i.warn.bind(o, s),
-                    error: i.error.bind(o, s)
+                    debug: s.debug.bind(o, i),
+                    log: s.log.bind(o, i),
+                    info: s.info.bind(o, i),
+                    warn: s.warn.bind(o, i),
+                    error: s.error.bind(o, i)
                 },
                 l = "https://docs.datadoghq.com",
                 c = "".concat(l, "/real_user_monitoring/browser/troubleshooting"),
@@ -3198,9 +3194,9 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                isEmptyObject: () => s,
+                isEmptyObject: () => i,
                 mapValues: () => r,
-                objectHasValue: () => i,
+                objectHasValue: () => s,
                 shallowClone: () => o
             });
             var a = n(82);
@@ -3209,20 +3205,20 @@
                 return (0, a.assign)({}, e)
             }
 
-            function i(e, t) {
+            function s(e, t) {
                 return Object.keys(e).some((function(n) {
                     return e[n] === t
                 }))
             }
 
-            function s(e) {
+            function i(e) {
                 return 0 === Object.keys(e).length
             }
 
             function r(e, t) {
                 for (var n = {}, a = 0, o = Object.keys(e); a < o.length; a++) {
-                    var i = o[a];
-                    n[i] = t(e[i])
+                    var s = o[a];
+                    n[s] = t(e[s])
                 }
                 return n
             }
@@ -3237,8 +3233,8 @@
             });
             var a = n(88),
                 o = n(83),
-                i = n(72),
-                s = n(73),
+                s = n(72),
+                i = n(73),
                 r = n(104),
                 l = n(84),
                 c = n(82),
@@ -3260,11 +3256,11 @@
             }
 
             function _(e, t) {
-                return !(void 0 !== e && !(0, s.isPercentage)(e)) || (o.display.error("".concat(t, " Sample Rate should be a number between 0 and 100")), !1)
+                return !(void 0 !== e && !(0, i.isPercentage)(e)) || (o.display.error("".concat(t, " Sample Rate should be a number between 0 and 100")), !1)
             }
 
             function h(e) {
-                var t, n, s, p, f;
+                var t, n, i, p, f;
                 if (e && e.clientToken) {
                     if ((!(h = e.site) || "string" != typeof h || /(datadog|ddog|datad0g|dd0g)/.test(h) || (o.display.error("Site should be a valid Datadog site. ".concat(o.MORE_DETAILS, " ").concat(o.DOCS_ORIGIN, "/getting_started/site/.")), 0)) && _(e.sessionSampleRate, "Session") && _(e.telemetrySampleRate, "Telemetry") && _(e.telemetryConfigurationSampleRate, "Telemetry Configuration") && _(e.telemetryUsageSampleRate, "Telemetry Usage") && g(e.version, "Version") && g(e.env, "Env") && g(e.service, "Service")) {
                         var h;
@@ -3273,7 +3269,7 @@
                             sessionStoreStrategyType: (0, u.selectSessionStoreStrategyType)(e),
                             sessionSampleRate: null !== (t = e.sessionSampleRate) && void 0 !== t ? t : 100,
                             telemetrySampleRate: null !== (n = e.telemetrySampleRate) && void 0 !== n ? n : 20,
-                            telemetryConfigurationSampleRate: null !== (s = e.telemetryConfigurationSampleRate) && void 0 !== s ? s : 5,
+                            telemetryConfigurationSampleRate: null !== (i = e.telemetryConfigurationSampleRate) && void 0 !== i ? i : 5,
                             telemetryUsageSampleRate: null !== (p = e.telemetryUsageSampleRate) && void 0 !== p ? p : 5,
                             service: e.service || void 0,
                             silentMultipleInit: !!e.silentMultipleInit,
@@ -3283,7 +3279,7 @@
                             batchBytesLimit: 16 * r.ONE_KIBI_BYTE,
                             eventRateLimiterThreshold: 3e3,
                             maxTelemetryEventsPerPage: 15,
-                            flushTimeout: 30 * i.ONE_SECOND,
+                            flushTimeout: 30 * s.ONE_SECOND,
                             batchMessagesLimit: 50,
                             messageBytesLimit: 256 * r.ONE_KIBI_BYTE
                         }, (0, m.computeTransportConfiguration)(e));
@@ -3315,7 +3311,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 TrackingConsent: () => o,
-                createTrackingConsentState: () => i
+                createTrackingConsentState: () => s
             });
             var a = n(87),
                 o = {
@@ -3323,7 +3319,7 @@
                     NOT_GRANTED: "not-granted"
                 };
 
-            function i(e) {
+            function s(e) {
                 var t = new a.Observable;
                 return {
                     tryToInit: function(t) {
@@ -3405,15 +3401,15 @@
             });
             var a = n(98),
                 o = n(87),
-                i = n(72),
-                s = n(102),
+                s = n(72),
+                i = n(102),
                 r = n(76),
                 l = n(82),
                 c = n(90),
                 u = n(95),
                 d = n(97),
                 m = n(103),
-                p = i.ONE_SECOND;
+                p = s.ONE_SECOND;
 
             function f(e) {
                 var t = (0, c.selectCookieStrategy)(e);
@@ -3434,8 +3430,8 @@
                             after: N
                         }, E)
                     }), p);
-                A();
-                var y = (0, s.throttle)((function() {
+                C();
+                var y = (0, i.throttle)((function() {
                         (0, m.processSessionStoreOperations)({
                             process: function(e) {
                                 if (!(0, u.isSessionInNotStartedState)(e)) {
@@ -3444,13 +3440,13 @@
                                         if ((0, u.isSessionInNotStartedState)(e)) return !1;
                                         var a = n(e[t]),
                                             o = a.trackingType,
-                                            s = a.isTracked;
-                                        e[t] = o, delete e.isExpired, s && !e.id && (e.id = (0, r.generateUUID)(), e.created = String((0, i.dateNow)()))
+                                            i = a.isTracked;
+                                        e[t] = o, delete e.isExpired, i && !e.id && (e.id = (0, r.generateUUID)(), e.created = String((0, s.dateNow)()))
                                     }(a), a
                                 }
                             },
                             after: function(e) {
-                                (0, u.isSessionStarted)(e) && !C() && function(e) {
+                                (0, u.isSessionStarted)(e) && !I() && function(e) {
                                     f = e, g.notify()
                                 }(e), f = e
                             }
@@ -3460,7 +3456,7 @@
                     b = y.cancel;
 
                 function N(e) {
-                    return (0, u.isSessionInExpiredState)(e) && (e = (0, u.getExpiredSessionState)()), C() && (! function(e) {
+                    return (0, u.isSessionInExpiredState)(e) && (e = (0, u.getExpiredSessionState)()), I() && (! function(e) {
                         return f.id !== e.id || f[t] !== e[t]
                     }(e) ? (h.notify({
                         previousState: f,
@@ -3468,7 +3464,7 @@
                     }), f = e) : (f = (0, u.getExpiredSessionState)(), _.notify())), e
                 }
 
-                function A() {
+                function C() {
                     (0, m.processSessionStoreOperations)({
                         process: function(e) {
                             if ((0, u.isSessionInNotStartedState)(e)) return (0, u.getExpiredSessionState)()
@@ -3479,7 +3475,7 @@
                     }, E)
                 }
 
-                function C() {
+                function I() {
                     return void 0 !== f[t]
                 }
                 return {
@@ -3487,7 +3483,7 @@
                     expandSession: function() {
                         (0, m.processSessionStoreOperations)({
                             process: function(e) {
-                                return C() ? N(e) : void 0
+                                return I() ? N(e) : void 0
                             }
                         }, E)
                     },
@@ -3497,7 +3493,7 @@
                     renewObservable: g,
                     expireObservable: _,
                     sessionStateUpdateObservable: h,
-                    restartSession: A,
+                    restartSession: C,
                     expire: function() {
                         b(), v(), N((0, u.getExpiredSessionState)())
                     },
@@ -3523,8 +3519,8 @@
             });
             var a = n(92),
                 o = n(91),
-                i = n(93),
-                s = n(96),
+                s = n(93),
+                i = n(96),
                 r = n(95),
                 l = n(94);
 
@@ -3540,16 +3536,16 @@
                 var t, n = {
                     isLockEnabled: (0, a.isChromium)(),
                     persistSession: (t = e, function(e) {
-                        (0, o.setCookie)(l.SESSION_STORE_KEY, (0, r.toSessionString)(e), s.SESSION_EXPIRATION_DELAY, t)
+                        (0, o.setCookie)(l.SESSION_STORE_KEY, (0, r.toSessionString)(e), i.SESSION_EXPIRATION_DELAY, t)
                     }),
                     retrieveSession: d,
                     expireSession: function() {
                         return function(e) {
-                            (0, o.setCookie)(l.SESSION_STORE_KEY, (0, r.toSessionString)((0, r.getExpiredSessionState)()), s.SESSION_TIME_OUT_DELAY, e)
+                            (0, o.setCookie)(l.SESSION_STORE_KEY, (0, r.toSessionString)((0, r.getExpiredSessionState)()), i.SESSION_TIME_OUT_DELAY, e)
                         }(e)
                     }
                 };
-                return (0, i.tryOldCookiesMigration)(n), n
+                return (0, s.tryOldCookiesMigration)(n), n
             }
 
             function d() {
@@ -3572,19 +3568,19 @@
                 resetInitCookies: () => d,
                 setCookie: () => l
             });
-            var a, o, i = n(83),
-                s = n(72),
+            var a, o, s = n(83),
+                i = n(72),
                 r = n(76);
 
             function l(e, t, n, a) {
                 var o = new Date;
                 o.setTime(o.getTime() + n);
-                var i = "expires=".concat(o.toUTCString()),
-                    s = a && a.crossSite ? "none" : "strict",
+                var s = "expires=".concat(o.toUTCString()),
+                    i = a && a.crossSite ? "none" : "strict",
                     r = a && a.domain ? ";domain=".concat(a.domain) : "",
                     l = a && a.secure ? ";secure" : "",
                     c = a && a.partitioned ? ";partitioned" : "";
-                document.cookie = "".concat(e, "=").concat(t, ";").concat(i, ";path=/;samesite=").concat(s).concat(r).concat(l).concat(c)
+                document.cookie = "".concat(e, "=").concat(t, ";").concat(s, ";path=/;samesite=").concat(i).concat(r).concat(l).concat(c)
             }
 
             function c(e) {
@@ -3608,17 +3604,17 @@
                 try {
                     var t = "dd_cookie_test_".concat((0, r.generateUUID)()),
                         n = "test";
-                    l(t, n, s.ONE_MINUTE, e);
+                    l(t, n, i.ONE_MINUTE, e);
                     var a = c(t) === n;
                     return m(t, e), a
                 } catch (e) {
-                    return i.display.error(e), !1
+                    return s.display.error(e), !1
                 }
             }
 
             function f() {
                 if (void 0 === o) {
-                    for (var e = "dd_site_test_".concat((0, r.generateUUID)()), t = window.location.hostname.split("."), n = t.pop(); t.length && !c(e);) n = "".concat(t.pop(), ".").concat(n), l(e, "test", s.ONE_SECOND, {
+                    for (var e = "dd_site_test_".concat((0, r.generateUUID)()), t = window.location.hostname.split("."), n = t.pop(); t.length && !c(e);) n = "".concat(t.pop(), ".").concat(n), l(e, "test", i.ONE_SECOND, {
                         domain: n
                     });
                     m(e, {
@@ -3638,13 +3634,13 @@
                 return 1 === r()
             }
 
-            function i() {
+            function s() {
                 return 2 === r()
             }
-            var s;
+            var i;
 
             function r() {
-                return null != s ? s : s = l()
+                return null != i ? i : i = l()
             }
 
             function l(e) {
@@ -3657,7 +3653,7 @@
                 detectBrowser: () => l,
                 isChromium: () => o,
                 isIE: () => a,
-                isSafari: () => i
+                isSafari: () => s
             })
         }, (e, t, n) => {
             "use strict";
@@ -3665,14 +3661,14 @@
                 LOGS_SESSION_KEY: () => u,
                 OLD_LOGS_COOKIE_NAME: () => l,
                 OLD_RUM_COOKIE_NAME: () => r,
-                OLD_SESSION_COOKIE_NAME: () => s,
+                OLD_SESSION_COOKIE_NAME: () => i,
                 RUM_SESSION_KEY: () => c,
                 tryOldCookiesMigration: () => d
             });
             var a = n(91),
                 o = n(94),
-                i = n(95),
-                s = "_dd",
+                s = n(95),
+                i = "_dd",
                 r = "_dd_r",
                 l = "_dd_l",
                 c = "rum",
@@ -3680,11 +3676,11 @@
 
             function d(e) {
                 if (!(0, a.getInitCookie)(o.SESSION_STORE_KEY)) {
-                    var t = (0, a.getInitCookie)(s),
+                    var t = (0, a.getInitCookie)(i),
                         n = (0, a.getInitCookie)(r),
                         d = (0, a.getInitCookie)(l),
                         m = {};
-                    t && (m.id = t), d && /^[01]$/.test(d) && (m[u] = d), n && /^[012]$/.test(n) && (m[c] = n), (0, i.isSessionStarted)(m) && ((0, i.expandSessionState)(m), e.persistSession(m))
+                    t && (m.id = t), d && /^[01]$/.test(d) && (m[u] = d), n && /^[012]$/.test(n) && (m[c] = n), (0, s.isSessionStarted)(m) && ((0, s.expandSessionState)(m), e.persistSession(m))
                 }
             }
         }, (e, t, n) => {
@@ -3707,8 +3703,8 @@
             });
             var a = n(84),
                 o = n(82),
-                i = n(72),
-                s = n(96),
+                s = n(72),
+                i = n(96),
                 r = /^([a-zA-Z]+)=([a-z0-9-]+)$/,
                 l = "&",
                 c = "1";
@@ -3728,12 +3724,12 @@
             }
 
             function p(e) {
-                return void 0 !== e.isExpired || !((void 0 === (t = e).created || (0, i.dateNow)() - Number(t.created) < s.SESSION_TIME_OUT_DELAY) && (void 0 === t.expire || (0, i.dateNow)() < Number(t.expire)));
+                return void 0 !== e.isExpired || !((void 0 === (t = e).created || (0, s.dateNow)() - Number(t.created) < i.SESSION_TIME_OUT_DELAY) && (void 0 === t.expire || (0, s.dateNow)() < Number(t.expire)));
                 var t
             }
 
             function f(e) {
-                e.expire = String((0, i.dateNow)() + s.SESSION_EXPIRATION_DELAY)
+                e.expire = String((0, s.dateNow)() + i.SESSION_EXPIRATION_DELAY)
             }
 
             function g(e) {
@@ -3760,12 +3756,12 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                SESSION_EXPIRATION_DELAY: () => i,
+                SESSION_EXPIRATION_DELAY: () => s,
                 SESSION_TIME_OUT_DELAY: () => o
             });
             var a = n(72),
                 o = 4 * a.ONE_HOUR,
-                i = 15 * a.ONE_MINUTE
+                s = 15 * a.ONE_MINUTE
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
@@ -3774,13 +3770,13 @@
             });
             var a = n(76),
                 o = n(95),
-                i = n(94),
-                s = "_dd_test_";
+                s = n(94),
+                i = "_dd_test_";
 
             function r() {
                 try {
                     var e = (0, a.generateUUID)(),
-                        t = "".concat(s).concat(e);
+                        t = "".concat(i).concat(e);
                     localStorage.setItem(t, e);
                     var n = localStorage.getItem(t);
                     return localStorage.removeItem(t), e === n ? {
@@ -3801,11 +3797,11 @@
             }
 
             function c(e) {
-                localStorage.setItem(i.SESSION_STORE_KEY, (0, o.toSessionString)(e))
+                localStorage.setItem(s.SESSION_STORE_KEY, (0, o.toSessionString)(e))
             }
 
             function u() {
-                var e = localStorage.getItem(i.SESSION_STORE_KEY);
+                var e = localStorage.getItem(s.SESSION_STORE_KEY);
                 return (0, o.toSessionState)(e)
             }
 
@@ -3818,26 +3814,26 @@
                 clearInterval: () => c,
                 clearTimeout: () => r,
                 setInterval: () => l,
-                setTimeout: () => s
+                setTimeout: () => i
             });
             var a = n(99),
                 o = n(101),
-                i = n(100);
+                s = n(100);
 
-            function s(e, t) {
-                return (0, a.getZoneJsOriginalValue)((0, i.getGlobalObject)(), "setTimeout")((0, o.monitor)(e), t)
+            function i(e, t) {
+                return (0, a.getZoneJsOriginalValue)((0, s.getGlobalObject)(), "setTimeout")((0, o.monitor)(e), t)
             }
 
             function r(e) {
-                (0, a.getZoneJsOriginalValue)((0, i.getGlobalObject)(), "clearTimeout")(e)
+                (0, a.getZoneJsOriginalValue)((0, s.getGlobalObject)(), "clearTimeout")(e)
             }
 
             function l(e, t) {
-                return (0, a.getZoneJsOriginalValue)((0, i.getGlobalObject)(), "setInterval")((0, o.monitor)(e), t)
+                return (0, a.getZoneJsOriginalValue)((0, s.getGlobalObject)(), "setInterval")((0, o.monitor)(e), t)
             }
 
             function c(e) {
-                (0, a.getZoneJsOriginalValue)((0, i.getGlobalObject)(), "clearInterval")(e)
+                (0, a.getZoneJsOriginalValue)((0, s.getGlobalObject)(), "clearInterval")(e)
             }
         }, (e, t, n) => {
             "use strict";
@@ -3879,23 +3875,23 @@
                 startMonitorErrorCollection: () => r
             });
             var a, o = n(83),
-                i = function(e, t, n) {
+                s = function(e, t, n) {
                     if (n || 2 === arguments.length)
-                        for (var a, o = 0, i = t.length; o < i; o++) !a && o in t || (a || (a = Array.prototype.slice.call(t, 0, o)), a[o] = t[o]);
+                        for (var a, o = 0, s = t.length; o < s; o++) !a && o in t || (a || (a = Array.prototype.slice.call(t, 0, o)), a[o] = t[o]);
                     return e.concat(a || Array.prototype.slice.call(t))
                 },
-                s = !1;
+                i = !1;
 
             function r(e) {
                 a = e
             }
 
             function l(e) {
-                s = e
+                i = e
             }
 
             function c() {
-                a = void 0, s = !1
+                a = void 0, i = !1
             }
 
             function u(e, t, n) {
@@ -3926,34 +3922,34 @@
 
             function p() {
                 for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
-                s && o.display.error.apply(o.display, i(["[MONITOR]"], e, !1))
+                i && o.display.error.apply(o.display, s(["[MONITOR]"], e, !1))
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                noop: () => i,
+                noop: () => s,
                 throttle: () => o
             });
             var a = n(98);
 
             function o(e, t, n) {
-                var o, i, s = !n || void 0 === n.leading || n.leading,
+                var o, s, i = !n || void 0 === n.leading || n.leading,
                     r = !n || void 0 === n.trailing || n.trailing,
                     l = !1;
                 return {
                     throttled: function() {
                         for (var n = [], c = 0; c < arguments.length; c++) n[c] = arguments[c];
-                        l ? o = n : (s ? e.apply(void 0, n) : o = n, l = !0, i = (0, a.setTimeout)((function() {
+                        l ? o = n : (i ? e.apply(void 0, n) : o = n, l = !0, s = (0, a.setTimeout)((function() {
                             r && o && e.apply(void 0, o), l = !1, o = void 0
                         }), t))
                     },
                     cancel: function() {
-                        (0, a.clearTimeout)(i), l = !1, o = void 0
+                        (0, a.clearTimeout)(s), l = !1, o = void 0
                     }
                 }
             }
 
-            function i() {}
+            function s() {}
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
@@ -3962,8 +3958,8 @@
                 processSessionStoreOperations: () => d
             });
             var a, o = n(98),
-                i = n(76),
-                s = n(82),
+                s = n(76),
+                i = n(82),
                 r = n(95),
                 l = 10,
                 c = 100,
@@ -3976,7 +3972,7 @@
                     d = t.persistSession,
                     f = t.expireSession,
                     g = function(e) {
-                        return d((0, s.assign)({}, e, {
+                        return d((0, i.assign)({}, e, {
                             lock: h
                         }))
                     },
@@ -3994,7 +3990,7 @@
                         var h, E = _();
                         if (l) {
                             if (E.lock) return void m(e, t, n);
-                            if (h = (0, i.generateUUID)(), g(E.session), (E = _()).lock !== h) return void m(e, t, n)
+                            if (h = (0, s.generateUUID)(), g(E.session), (E = _()).lock !== h) return void m(e, t, n)
                         }
                         var v = e.process(E.session);
                         if (l && (E = _()).lock !== h) m(e, t, n);
@@ -4025,23 +4021,23 @@
             n.r(t), n.d(t, {
                 ONE_KIBI_BYTE: () => a,
                 ONE_MEBI_BYTE: () => o,
-                computeBytesCount: () => s,
+                computeBytesCount: () => i,
                 concatBuffers: () => r
             });
             var a = 1024,
                 o = 1024 * a,
-                i = /[^\u0000-\u007F]/;
+                s = /[^\u0000-\u007F]/;
 
-            function s(e) {
-                return i.test(e) ? void 0 !== window.TextEncoder ? (new TextEncoder).encode(e).length : new Blob([e]).size : e.length
+            function i(e) {
+                return s.test(e) ? void 0 !== window.TextEncoder ? (new TextEncoder).encode(e).length : new Blob([e]).size : e.length
             }
 
             function r(e) {
                 for (var t = e.reduce((function(e, t) {
                         return e + t.length
-                    }), 0), n = new Uint8Array(t), a = 0, o = 0, i = e; o < i.length; o++) {
-                    var s = i[o];
-                    n.set(s, a), a += s.length
+                    }), 0), n = new Uint8Array(t), a = 0, o = 0, s = e; o < s.length; o++) {
+                    var i = s[o];
+                    n.set(i, a), a += i.length
                 }
                 return n
             }
@@ -4053,12 +4049,12 @@
             });
             var a = n(82),
                 o = n(108),
-                i = n(107),
-                s = n(106);
+                s = n(107),
+                i = n(106);
 
             function r(e) {
-                var t = e.site || s.INTAKE_SITE_US1,
-                    n = (0, i.buildTags)(e),
+                var t = e.site || i.INTAKE_SITE_US1,
+                    n = (0, s.buildTags)(e),
                     r = function(e, t) {
                         return {
                             logsEndpointBuilder: (0, o.createEndpointBuilder)(e, "logs", t),
@@ -4069,16 +4065,16 @@
                     l = function(e, t) {
                         if (!e.replica) return;
                         var n = (0, a.assign)({}, e, {
-                                site: s.INTAKE_SITE_US1,
+                                site: i.INTAKE_SITE_US1,
                                 clientToken: e.replica.clientToken
                             }),
-                            i = {
+                            s = {
                                 logsEndpointBuilder: (0, o.createEndpointBuilder)(n, "logs", t),
                                 rumEndpointBuilder: (0, o.createEndpointBuilder)(n, "rum", t)
                             };
                         return (0, a.assign)({
                             applicationId: e.replica.applicationId
-                        }, i)
+                        }, s)
                     }(e, n);
                 return (0, a.assign)({
                     replica: l,
@@ -4087,25 +4083,25 @@
             }
 
             function l(e) {
-                return s.INTAKE_URL_PARAMETERS.every((function(t) {
+                return i.INTAKE_URL_PARAMETERS.every((function(t) {
                     return (0, a.includes)(e, t)
                 }))
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                INTAKE_SITE_EU1: () => s,
+                INTAKE_SITE_EU1: () => i,
                 INTAKE_SITE_FED_STAGING: () => o,
                 INTAKE_SITE_STAGING: () => a,
-                INTAKE_SITE_US1: () => i,
+                INTAKE_SITE_US1: () => s,
                 INTAKE_SITE_US1_FED: () => r,
                 INTAKE_URL_PARAMETERS: () => c,
                 PCI_INTAKE_HOST_US1: () => l
             });
             var a = "datad0g.com",
                 o = "dd0g-gov.com",
-                i = "datadoghq.com",
-                s = "datadoghq.eu",
+                s = "datadoghq.com",
+                i = "datadoghq.eu",
                 r = "ddog-gov.com",
                 l = "pci.browser-intake-datadoghq.com",
                 c = ["ddsource", "ddtags"]
@@ -4113,30 +4109,30 @@
             "use strict";
             n.r(t), n.d(t, {
                 TAG_SIZE_LIMIT: () => o,
-                buildTag: () => s,
-                buildTags: () => i,
+                buildTag: () => i,
+                buildTags: () => s,
                 supportUnicodePropertyEscapes: () => r
             });
             var a = n(83),
                 o = 200;
 
-            function i(e) {
+            function s(e) {
                 var t = e.env,
                     n = e.service,
                     a = e.version,
                     o = e.datacenter,
-                    i = [];
-                return t && i.push(s("env", t)), n && i.push(s("service", n)), a && i.push(s("version", a)), o && i.push(s("datacenter", o)), i
+                    s = [];
+                return t && s.push(i("env", t)), n && s.push(i("service", n)), a && s.push(i("version", a)), o && s.push(i("datacenter", o)), s
             }
 
-            function s(e, t) {
+            function i(e, t) {
                 var n = o - e.length - 1;
                 (t.length > n || function(e) {
                     if (!r()) return !1;
                     return new RegExp("[^\\p{Ll}\\p{Lo}0-9_:./-]", "u").test(e)
                 }(t)) && a.display.warn("".concat(e, " value doesn't meet tag requirements and will be sanitized. ").concat(a.MORE_DETAILS, " ").concat(a.DOCS_ORIGIN, "/getting_started/tagging/#defining-tags"));
-                var i = t.replace(/,/g, "_");
-                return "".concat(e, ":").concat(i)
+                var s = t.replace(/,/g, "_");
+                return "".concat(e, ":").concat(s)
             }
 
             function r() {
@@ -4153,17 +4149,17 @@
             });
             var a = n(72),
                 o = n(109),
-                i = n(76),
-                s = n(106);
+                s = n(76),
+                i = n(106);
 
             function r(e, t, n) {
                 var r = function(e, t) {
                     var n = "/api/v2/".concat(t),
                         a = e.proxy;
                     if ("string" == typeof a) {
-                        var i = (0, o.normalizeUrl)(a);
+                        var s = (0, o.normalizeUrl)(a);
                         return function(e) {
-                            return "".concat(i, "?ddforward=").concat(encodeURIComponent("".concat(n, "?").concat(e)))
+                            return "".concat(s, "?ddforward=").concat(encodeURIComponent("".concat(n, "?").concat(e)))
                         }
                     }
                     if ("function" == typeof a) return function(e) {
@@ -4174,34 +4170,34 @@
                     };
                     var r = function(e, t) {
                         var n = t.site,
-                            a = void 0 === n ? s.INTAKE_SITE_US1 : n,
+                            a = void 0 === n ? i.INTAKE_SITE_US1 : n,
                             o = t.internalAnalyticsSubdomain;
-                        if ("logs" === e && t.usePciIntake && a === s.INTAKE_SITE_US1) return s.PCI_INTAKE_HOST_US1;
-                        if (o && a === s.INTAKE_SITE_US1) return "".concat(o, ".").concat(s.INTAKE_SITE_US1);
-                        if (a === s.INTAKE_SITE_FED_STAGING) return "http-intake.logs.".concat(a);
-                        var i = a.split("."),
-                            r = i.pop();
-                        return "browser-intake-".concat(i.join("-"), ".").concat(r)
+                        if ("logs" === e && t.usePciIntake && a === i.INTAKE_SITE_US1) return i.PCI_INTAKE_HOST_US1;
+                        if (o && a === i.INTAKE_SITE_US1) return "".concat(o, ".").concat(i.INTAKE_SITE_US1);
+                        if (a === i.INTAKE_SITE_FED_STAGING) return "http-intake.logs.".concat(a);
+                        var s = a.split("."),
+                            r = s.pop();
+                        return "browser-intake-".concat(s.join("-"), ".").concat(r)
                     }(t, e);
                     return function(e) {
                         return "https://".concat(r).concat(n, "?").concat(e)
                     }
                 }(e, t);
                 return {
-                    build: function(o, s) {
-                        var l = function(e, t, n, o, s) {
+                    build: function(o, i) {
+                        var l = function(e, t, n, o, i) {
                             var r = e.clientToken,
                                 l = e.internalAnalyticsSubdomain,
-                                c = s.retry,
-                                u = s.encoding,
+                                c = i.retry,
+                                u = i.encoding,
                                 d = ["sdk_version:".concat("5.30.0"), "api:".concat(o)].concat(n);
                             c && d.push("retry_count:".concat(c.count), "retry_after:".concat(c.lastFailureStatus));
-                            var m = ["ddsource=browser", "ddtags=".concat(encodeURIComponent(d.join(","))), "dd-api-key=".concat(r), "dd-evp-origin-version=".concat(encodeURIComponent("5.30.0")), "dd-evp-origin=browser", "dd-request-id=".concat((0, i.generateUUID)())];
+                            var m = ["ddsource=browser", "ddtags=".concat(encodeURIComponent(d.join(","))), "dd-api-key=".concat(r), "dd-evp-origin-version=".concat(encodeURIComponent("5.30.0")), "dd-evp-origin=browser", "dd-request-id=".concat((0, s.generateUUID)())];
                             u && m.push("dd-evp-encoding=".concat(u));
                             "rum" === t && m.push("batch_time=".concat((0, a.timeStampNow)()));
                             l && m.reverse();
                             return m.join("&")
-                        }(e, t, n, o, s);
+                        }(e, t, n, o, i);
                         return r(l)
                     },
                     urlPrefix: r(""),
@@ -4212,8 +4208,8 @@
             "use strict";
             n.r(t), n.d(t, {
                 buildUrl: () => r,
-                getPathName: () => s,
-                isValidUrl: () => i,
+                getPathName: () => i,
+                isValidUrl: () => s,
                 normalizeUrl: () => o
             });
             var a = n(110);
@@ -4222,7 +4218,7 @@
                 return r(e, location.href).href
             }
 
-            function i(e) {
+            function s(e) {
                 try {
                     return !!r(e)
                 } catch (e) {
@@ -4230,7 +4226,7 @@
                 }
             }
 
-            function s(e) {
+            function i(e) {
                 var t = r(e).pathname;
                 return "/" === t[0] ? t : "/".concat(t)
             }
@@ -4255,38 +4251,38 @@
                 }
                 if (void 0 === t && !/:/.test(e)) throw new Error("Invalid URL: '".concat(e, "'"));
                 var o = document,
-                    i = o.createElement("a");
+                    s = o.createElement("a");
                 if (void 0 !== t) {
-                    var s = (o = document.implementation.createHTMLDocument("")).createElement("base");
-                    s.href = t, o.head.appendChild(s), o.body.appendChild(i)
+                    var i = (o = document.implementation.createHTMLDocument("")).createElement("base");
+                    i.href = t, o.head.appendChild(i), o.body.appendChild(s)
                 }
-                return i.href = e, i
+                return s.href = e, s
             }
             var l, c = URL
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                detachToJsonMethod: () => i,
+                detachToJsonMethod: () => s,
                 jsonStringify: () => o
             });
             var a = n(102);
 
             function o(e, t, n) {
                 if ("object" != typeof e || null === e) return JSON.stringify(e);
-                var a = i(Object.prototype),
-                    o = i(Array.prototype),
-                    s = i(Object.getPrototypeOf(e)),
-                    r = i(e);
+                var a = s(Object.prototype),
+                    o = s(Array.prototype),
+                    i = s(Object.getPrototypeOf(e)),
+                    r = s(e);
                 try {
                     return JSON.stringify(e, t, n)
                 } catch (e) {
                     return "<error: unable to serialize object>"
                 } finally {
-                    a(), o(), s(), r()
+                    a(), o(), i(), r()
                 }
             }
 
-            function i(e) {
+            function s(e) {
                 var t = e,
                     n = t.toJSON;
                 return n ? (delete t.toJSON, function() {
@@ -4296,15 +4292,15 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                REMOTE_CONFIGURATION_URL: () => s,
+                REMOTE_CONFIGURATION_URL: () => i,
                 applyRemoteConfiguration: () => l,
                 fetchAndApplyRemoteConfiguration: () => r,
                 fetchRemoteConfiguration: () => c
             });
             var a = n(82),
                 o = n(112),
-                i = n(83),
-                s = "https://d3uc069fcn7uxw.cloudfront.net/configuration";
+                s = n(83),
+                i = "https://d3uc069fcn7uxw.cloudfront.net/configuration";
 
             function r(e, t) {
                 c(e, (function(n) {
@@ -4322,32 +4318,32 @@
                     200 === n.status ? t(JSON.parse(n.responseText)) : u()
                 })), (0, o.addEventListener)(e, n, "error", (function() {
                     u()
-                })), n.open("GET", "".concat(s, "/").concat(encodeURIComponent(e.remoteConfigurationId), ".json")), n.send()
+                })), n.open("GET", "".concat(i, "/").concat(encodeURIComponent(e.remoteConfigurationId), ".json")), n.send()
             }
 
             function u() {
-                i.display.error("Error fetching the remote configuration.")
+                s.display.error("Error fetching the remote configuration.")
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                addEventListener: () => i,
-                addEventListeners: () => s
+                addEventListener: () => s,
+                addEventListeners: () => i
             });
             var a = n(101),
                 o = n(99);
 
-            function i(e, t, n, a, o) {
-                return s(e, t, [n], a, o)
+            function s(e, t, n, a, o) {
+                return i(e, t, [n], a, o)
             }
 
-            function s(e, t, n, i, s) {
-                var r = void 0 === s ? {} : s,
+            function i(e, t, n, s, i) {
+                var r = void 0 === i ? {} : i,
                     l = r.once,
                     c = r.capture,
                     u = r.passive,
                     d = (0, a.monitor)((function(t) {
-                        (t.isTrusted || t.__ddIsTrusted || e.allowUntrustedEvents) && (l && f(), i(t))
+                        (t.isTrusted || t.__ddIsTrusted || e.allowUntrustedEvents) && (l && f(), s(t))
                     })),
                     m = u ? {
                         capture: c,
@@ -4373,8 +4369,8 @@
             function a(e, t, n) {
                 if (e)
                     for (var a = 0, o = e; a < o.length; a++) {
-                        var i = o[a][t];
-                        i && i(n)
+                        var s = o[a][t];
+                        s && s(n)
                     }
             }
             n.r(t), n.d(t, {
@@ -4383,12 +4379,12 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                createBoundedBuffer: () => i
+                createBoundedBuffer: () => s
             });
             var a = n(115),
                 o = 500;
 
-            function i() {
+            function s() {
                 var e = [];
                 return {
                     add: function(t) {
@@ -4408,7 +4404,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 removeDuplicates: () => o,
-                removeItem: () => i
+                removeItem: () => s
             });
             var a = n(82);
 
@@ -4419,21 +4415,21 @@
                 })), (0, a.arrayFrom)(t)
             }
 
-            function i(e, t) {
+            function s(e, t) {
                 var n = e.indexOf(t);
                 n >= 0 && e.splice(n, 1)
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                bridgeSupports: () => s,
+                bridgeSupports: () => i,
                 canUseEventBridge: () => r,
-                getEventBridge: () => i
+                getEventBridge: () => s
             });
             var a = n(82),
                 o = n(100);
 
-            function i() {
+            function s() {
                 var e = (0, o.getGlobalObject)().DatadogEventBridge;
                 if (e) return {
                     getCapabilities: function() {
@@ -4460,15 +4456,15 @@
                 }
             }
 
-            function s(e) {
-                var t = i();
+            function i(e) {
+                var t = s();
                 return !!t && (0, a.includes)(t.getCapabilities(), e)
             }
 
             function r(e) {
                 var t;
                 void 0 === e && (e = null === (t = (0, o.getGlobalObject)().location) || void 0 === t ? void 0 : t.hostname);
-                var n = i();
+                var n = s();
                 return !!n && n.getAllowedWebViewHosts().some((function(t) {
                     return e === t || (0, a.endsWith)(e, ".".concat(t))
                 }))
@@ -4480,18 +4476,18 @@
                 addTelemetryDebug: () => k,
                 addTelemetryError: () => x,
                 addTelemetryUsage: () => M,
-                drainPreStartTelemetry: () => C,
+                drainPreStartTelemetry: () => I,
                 formatError: () => R,
                 isTelemetryReplicationAllowed: () => L,
-                resetTelemetry: () => I,
+                resetTelemetry: () => A,
                 scrubCustomerFrames: () => w,
-                startFakeTelemetry: () => A,
+                startFakeTelemetry: () => C,
                 startTelemetry: () => N
             });
             var a = n(83),
                 o = n(124),
-                i = n(123),
-                s = n(121),
+                s = n(123),
+                i = n(121),
                 r = n(106),
                 l = n(87),
                 c = n(72),
@@ -4516,7 +4512,7 @@
 
             function N(e, t) {
                 var n, a, o = new l.Observable,
-                    i = new Set,
+                    s = new Set,
                     r = !(0, m.includes)(y, t.site) && (0, p.performDraw)(t.telemetrySampleRate),
                     _ = ((n = {})[v.TelemetryType.log] = r, n[v.TelemetryType.configuration] = r && (0, p.performDraw)(t.telemetryConfigurationSampleRate), n[v.TelemetryType.usage] = r && (0, p.performDraw)(t.telemetryUsageSampleRate), n),
                     E = {
@@ -4525,7 +4521,7 @@
                     };
                 return b = function(n) {
                     var r = (0, f.jsonStringify)(n);
-                    if (_[n.type] && i.size < t.maxTelemetryEventsPerPage && !i.has(r)) {
+                    if (_[n.type] && s.size < t.maxTelemetryEventsPerPage && !s.has(r)) {
                         var l = function(e, t, n) {
                             return (0, g.combine)({
                                 type: "telemetry",
@@ -4541,10 +4537,10 @@
                                     connectivity: (0, h.getConnectivity)(),
                                     sdk_setup: "npm"
                                 }),
-                                experimental_features: (0, m.arrayFrom)((0, s.getExperimentalFeatures)())
+                                experimental_features: (0, m.arrayFrom)((0, i.getExperimentalFeatures)())
                             }, void 0 !== a ? a() : {})
                         }(e, n, E);
-                        o.notify(l), (0, d.sendToExtension)("telemetry", l), i.add(r)
+                        o.notify(l), (0, d.sendToExtension)("telemetry", l), s.add(r)
                     }
                 }, (0, u.startMonitorErrorCollection)(x), {
                     setContextProvider: function(e) {
@@ -4555,18 +4551,18 @@
                 }
             }
 
-            function A() {
+            function C() {
                 var e = [];
                 return b = function(t) {
                     e.push(t)
                 }, e
             }
 
-            function C() {
+            function I() {
                 T.drain()
             }
 
-            function I() {
+            function A() {
                 T = (0, E.createBoundedBuffer)(), b = function(e) {
                     T.add((function() {
                         return b(e)
@@ -4613,7 +4609,7 @@
                     return {
                         error: {
                             kind: t.name,
-                            stack: (0, i.toStackTraceString)(w(t))
+                            stack: (0, s.toStackTraceString)(w(t))
                         },
                         message: t.message
                     }
@@ -4676,7 +4672,7 @@
                 ExperimentalFeature: () => a,
                 addExperimentalFeatures: () => r,
                 getExperimentalFeatures: () => u,
-                initFeatureFlags: () => s,
+                initFeatureFlags: () => i,
                 isExperimentalFeatureEnabled: () => l,
                 resetExperimentalFeatures: () => c
             });
@@ -4684,9 +4680,9 @@
             ! function(e) {
                 e.WRITABLE_RESOURCE_GRAPHQL = "writable_resource_graphql", e.REMOTE_CONFIGURATION = "remote_configuration", e.LONG_ANIMATION_FRAME = "long_animation_frame"
             }(a || (a = {}));
-            var i = new Set;
+            var s = new Set;
 
-            function s(e) {
+            function i(e) {
                 Array.isArray(e) && r(e.filter((function(e) {
                     return (0, o.objectHasValue)(a, e)
                 })))
@@ -4694,42 +4690,42 @@
 
             function r(e) {
                 e.forEach((function(e) {
-                    i.add(e)
+                    s.add(e)
                 }))
             }
 
             function l(e) {
-                return i.has(e)
+                return s.has(e)
             }
 
             function c() {
-                i.clear()
+                s.clear()
             }
 
             function u() {
-                return i
+                return s
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                computeStackTrace: () => i,
+                computeStackTrace: () => s,
                 computeStackTraceFromOnErrorMessage: () => g
             });
             var a = n(82),
                 o = "?";
 
-            function i(e) {
+            function s(e) {
                 var t = [],
                     n = f(e, "stack"),
-                    i = String(e);
-                return n && (0, a.startsWith)(n, i) && (n = n.slice(i.length)), n && n.split("\n").forEach((function(e) {
+                    s = String(e);
+                return n && (0, a.startsWith)(n, s) && (n = n.slice(s.length)), n && n.split("\n").forEach((function(e) {
                     var n = function(e) {
                         var t = l.exec(e);
                         if (!t) return;
                         var n = t[2] && 0 === t[2].indexOf("native"),
                             a = t[2] && 0 === t[2].indexOf("eval"),
-                            i = c.exec(t[2]);
-                        a && i && (t[2] = i[1], t[3] = i[2], t[4] = i[3]);
+                            s = c.exec(t[2]);
+                        a && s && (t[2] = s[1], t[3] = s[2], t[4] = s[3]);
                         return {
                             args: n ? [t[2]] : [],
                             column: t[4] ? +t[4] : void 0,
@@ -4778,11 +4774,11 @@
                     stack: t
                 }
             }
-            var s = "((?:file|https?|blob|chrome-extension|native|eval|webpack|snippet|<anonymous>|\\w+\\.|\\/).*?)",
+            var i = "((?:file|https?|blob|chrome-extension|native|eval|webpack|snippet|<anonymous>|\\w+\\.|\\/).*?)",
                 r = "(?::(\\d+))",
-                l = new RegExp("^\\s*at (.*?) ?\\(".concat(s).concat(r, "?").concat(r, "?\\)?\\s*$"), "i"),
+                l = new RegExp("^\\s*at (.*?) ?\\(".concat(i).concat(r, "?").concat(r, "?\\)?\\s*$"), "i"),
                 c = new RegExp("\\((\\S*)".concat(r).concat(r, "\\)"));
-            var u = new RegExp("^\\s*at ?".concat(s).concat(r, "?").concat(r, "??\\s*$"), "i");
+            var u = new RegExp("^\\s*at ?".concat(i).concat(r, "?").concat(r, "??\\s*$"), "i");
             var d = /^\s*at (?:((?:\[object object\])?.+) )?\(?((?:file|ms-appx|https?|webpack|blob):.*?):(\d+)(?::(\d+))?\)?\s*$/i;
             var m = /^\s*(.*?)(?:\((.*?)\))?(?:^|@)((?:file|https?|blob|chrome|webpack|resource|capacitor|\[native).*?|[^@]*bundle)(?::(\d+))?(?::(\d+))?\s*$/i,
                 p = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i;
@@ -4800,7 +4796,7 @@
                         column: a,
                         line: n
                     }],
-                    i = function(e) {
+                    s = function(e) {
                         var t, n, a;
                         "[object String]" === {}.toString.call(e) && (n = (t = _.exec(e))[1], a = t[2]);
                         return {
@@ -4809,8 +4805,8 @@
                         }
                     }(e);
                 return {
-                    name: i.name,
-                    message: i.message,
+                    name: s.name,
+                    message: s.message,
                     stack: o
                 }
             }
@@ -4818,15 +4814,15 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                createHandlingStack: () => s,
+                createHandlingStack: () => i,
                 formatErrorMessage: () => l,
                 toStackTraceString: () => r
             });
             var a = n(101),
                 o = n(102),
-                i = n(122);
+                s = n(122);
 
-            function s() {
+            function i() {
                 var e, t = new Error;
                 if (!t.stack) try {
                     throw t
@@ -4834,7 +4830,7 @@
                     (0, o.noop)()
                 }
                 return (0, a.callMonitored)((function() {
-                    var n = (0, i.computeStackTrace)(t);
+                    var n = (0, s.computeStackTrace)(t);
                     n.stack = n.stack.slice(2), e = r(n)
                 })), e
             }
@@ -4845,8 +4841,8 @@
                     var n = "?" === e.func ? "<anonymous>" : e.func,
                         a = e.args && e.args.length > 0 ? "(".concat(e.args.join(", "), ")") : "",
                         o = e.line ? ":".concat(e.line) : "",
-                        i = e.line && e.column ? ":".concat(e.column) : "";
-                    t += "\n  at ".concat(n).concat(a, " @ ").concat(e.url).concat(o).concat(i)
+                        s = e.line && e.column ? ":".concat(e.column) : "";
+                    t += "\n  at ".concat(n).concat(a, " @ ").concat(e.url).concat(o).concat(s)
                 })), t
             }
 
@@ -4864,33 +4860,33 @@
             });
             var a = n(125),
                 o = n(110),
-                i = n(122),
-                s = n(123),
+                s = n(122),
+                i = n(123),
                 r = "No stack, consider using an instance of Error";
 
             function l(e) {
                 var t = e.stackTrace,
                     n = e.originalError,
-                    i = e.handlingStack,
+                    s = e.handlingStack,
                     l = e.startClocks,
                     u = e.nonErrorPrefix,
                     m = e.source,
                     p = e.handling,
                     f = n instanceof Error,
-                    g = function(e, t, n, i) {
-                        return (null == e ? void 0 : e.message) && (null == e ? void 0 : e.name) ? e.message : t ? "Empty message" : "".concat(n, " ").concat((0, o.jsonStringify)((0, a.sanitize)(i)))
+                    g = function(e, t, n, s) {
+                        return (null == e ? void 0 : e.message) && (null == e ? void 0 : e.name) ? e.message : t ? "Empty message" : "".concat(n, " ").concat((0, o.jsonStringify)((0, a.sanitize)(s)))
                     }(t, f, u, n),
                     _ = function(e, t) {
                         if (void 0 === t) return !1;
                         if (e) return !0;
                         return t.stack.length > 0 && (t.stack.length > 1 || void 0 !== t.stack[0].url)
-                    }(f, t) ? (0, s.toStackTraceString)(t) : r,
+                    }(f, t) ? (0, i.toStackTraceString)(t) : r,
                     h = f ? d(n, m) : void 0;
                 return {
                     startClocks: l,
                     source: m,
                     handling: p,
-                    handlingStack: i,
+                    handlingStack: s,
                     originalError: n,
                     type: t ? t.name : void 0,
                     message: g,
@@ -4912,12 +4908,12 @@
             function d(e, t) {
                 for (var n = e, a = [];
                     (null == n ? void 0 : n.cause) instanceof Error && a.length < 10;) {
-                    var o = (0, i.computeStackTrace)(n.cause);
+                    var o = (0, s.computeStackTrace)(n.cause);
                     a.push({
                         message: n.cause.message,
                         source: t,
                         type: null == o ? void 0 : o.name,
-                        stack: o && (0, s.toStackTraceString)(o)
+                        stack: o && (0, i.toStackTraceString)(o)
                     }), n = n.cause
                 }
                 return a.length ? a : void 0
@@ -4929,15 +4925,15 @@
             });
             var a = n(83),
                 o = n(104),
-                i = n(110),
-                s = 220 * o.ONE_KIBI_BYTE,
+                s = n(110),
+                i = 220 * o.ONE_KIBI_BYTE,
                 r = "$",
                 l = 3;
 
             function c(e, t) {
-                void 0 === t && (t = s);
-                var n = (0, i.detachToJsonMethod)(Object.prototype),
-                    a = (0, i.detachToJsonMethod)(Array.prototype),
+                void 0 === t && (t = i);
+                var n = (0, s.detachToJsonMethod)(Object.prototype),
+                    a = (0, s.detachToJsonMethod)(Array.prototype),
                     o = [],
                     c = new WeakMap,
                     m = u(e, r, void 0, o, c),
@@ -4971,20 +4967,20 @@
             }
 
             function u(e, t, n, a, o) {
-                var i = function(e) {
+                var s = function(e) {
                     var t = e;
                     if (t && "function" == typeof t.toJSON) try {
                         return t.toJSON()
                     } catch (e) {}
                     return e
                 }(e);
-                if (!i || "object" != typeof i) return function(e) {
+                if (!s || "object" != typeof s) return function(e) {
                     if ("bigint" == typeof e) return "[BigInt] ".concat(e.toString());
                     if ("function" == typeof e) return "[Function] ".concat(e.name || "unknown");
                     if ("symbol" == typeof e) return "[Symbol] ".concat(e.description || e.toString());
                     return e
-                }(i);
-                var s = function(e) {
+                }(s);
+                var i = function(e) {
                     try {
                         if (e instanceof Event) return {
                             isTrusted: e.isTrusted
@@ -4993,14 +4989,14 @@
                         if (t && t[1]) return "[".concat(t[1], "]")
                     } catch (e) {}
                     return "[Unserializable]"
-                }(i);
-                if ("[Object]" !== s && "[Array]" !== s && "[Error]" !== s) return s;
+                }(s);
+                if ("[Object]" !== i && "[Array]" !== i && "[Error]" !== i) return i;
                 var r = e;
                 if (o.has(r)) return "[Reference seen at ".concat(o.get(r), "]");
                 var l = void 0 !== n ? "".concat(t, ".").concat(n) : t,
-                    c = Array.isArray(i) ? [] : {};
+                    c = Array.isArray(s) ? [] : {};
                 return o.set(r, l), a.push({
-                    source: i,
+                    source: s,
                     target: c,
                     path: l
                 }), c
@@ -5026,31 +5022,31 @@
                 resetFetchObservable: () => d
             });
             var a, o = n(128),
-                i = n(101),
-                s = n(87),
+                s = n(101),
+                i = n(87),
                 r = n(82),
                 l = n(72),
                 c = n(109);
 
             function u() {
-                return a || (a = new s.Observable((function(e) {
+                return a || (a = new i.Observable((function(e) {
                     if (window.fetch) {
                         var t = (0, o.instrumentMethod)(window, "fetch", (function(t) {
                             return function(e, t) {
                                 var n = e.parameters,
                                     a = e.onPostCall,
                                     o = e.handlingStack,
-                                    s = n[0],
+                                    i = n[0],
                                     u = n[1],
                                     d = u && u.method;
-                                void 0 === d && s instanceof Request && (d = s.method);
+                                void 0 === d && i instanceof Request && (d = i.method);
                                 var m = void 0 !== d ? String(d).toUpperCase() : "GET",
-                                    p = s instanceof Request ? s.url : (0, c.normalizeUrl)(String(s)),
+                                    p = i instanceof Request ? i.url : (0, c.normalizeUrl)(String(i)),
                                     f = (0, l.clocksNow)(),
                                     g = {
                                         state: "start",
                                         init: u,
-                                        input: s,
+                                        input: i,
                                         method: m,
                                         startClocks: f,
                                         url: p,
@@ -5063,14 +5059,14 @@
                                         function o(t) {
                                             a.state = "resolve", (0, r.assign)(a, t), e.notify(a)
                                         }
-                                        t.then((0, i.monitor)((function(e) {
+                                        t.then((0, s.monitor)((function(e) {
                                             o({
                                                 response: e,
                                                 responseType: e.type,
                                                 status: e.status,
                                                 isAborted: !1
                                             })
-                                        })), (0, i.monitor)((function(e) {
+                                        })), (0, s.monitor)((function(e) {
                                             var t, n;
                                             o({
                                                 status: 0,
@@ -5100,23 +5096,23 @@
             });
             var a = n(98),
                 o = n(101),
-                i = n(102),
-                s = n(82),
+                s = n(102),
+                i = n(82),
                 r = n(123);
 
             function l(e, t, n, a) {
                 var l = (void 0 === a ? {} : a).computeHandlingStack,
                     c = e[t];
                 if ("function" != typeof c) {
-                    if (!(t in e) || !(0, s.startsWith)(t, "on")) return {
-                        stop: i.noop
+                    if (!(t in e) || !(0, i.startsWith)(t, "on")) return {
+                        stop: s.noop
                     };
-                    c = i.noop
+                    c = s.noop
                 }
                 var u = !1,
                     d = function() {
                         if (u) return c.apply(this, arguments);
-                        var e, t = (0, s.arrayFrom)(arguments);
+                        var e, t = (0, i.arrayFrom)(arguments);
                         (0, o.callMonitored)(n, null, [{
                             target: this,
                             parameters: t,
@@ -5138,12 +5134,12 @@
             function c(e, t, n) {
                 var o = Object.getOwnPropertyDescriptor(e, t);
                 if (!o || !o.set || !o.configurable) return {
-                    stop: i.noop
+                    stop: s.noop
                 };
-                var s = i.noop,
+                var i = s.noop,
                     r = function(e, t) {
                         (0, a.setTimeout)((function() {
-                            r !== s && n(e, t)
+                            r !== i && n(e, t)
                         }), 0)
                     },
                     l = function(e) {
@@ -5154,15 +5150,15 @@
                 }), {
                     stop: function() {
                         var n;
-                        (null === (n = Object.getOwnPropertyDescriptor(e, t)) || void 0 === n ? void 0 : n.set) === l && Object.defineProperty(e, t, o), r = s
+                        (null === (n = Object.getOwnPropertyDescriptor(e, t)) || void 0 === n ? void 0 : n.set) === l && Object.defineProperty(e, t, o), r = i
                     }
                 }
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                SYNTHETICS_INJECTS_RUM_COOKIE_NAME: () => s,
-                SYNTHETICS_RESULT_ID_COOKIE_NAME: () => i,
+                SYNTHETICS_INJECTS_RUM_COOKIE_NAME: () => i,
+                SYNTHETICS_RESULT_ID_COOKIE_NAME: () => s,
                 SYNTHETICS_TEST_ID_COOKIE_NAME: () => o,
                 getSyntheticsResultId: () => c,
                 getSyntheticsTestId: () => l,
@@ -5170,11 +5166,11 @@
             });
             var a = n(91),
                 o = "datadog-synthetics-public-id",
-                i = "datadog-synthetics-result-id",
-                s = "datadog-synthetics-injects-rum";
+                s = "datadog-synthetics-result-id",
+                i = "datadog-synthetics-injects-rum";
 
             function r() {
-                return Boolean(window._DATADOG_SYNTHETICS_INJECTS_RUM || (0, a.getInitCookie)(s))
+                return Boolean(window._DATADOG_SYNTHETICS_INJECTS_RUM || (0, a.getInitCookie)(i))
             }
 
             function l() {
@@ -5183,7 +5179,7 @@
             }
 
             function c() {
-                var e = window._DATADOG_SYNTHETICS_RESULT_ID || (0, a.getInitCookie)(i);
+                var e = window._DATADOG_SYNTHETICS_RESULT_ID || (0, a.getInitCookie)(s);
                 return "string" == typeof e ? e : void 0
             }
         }, (e, t, n) => {
@@ -5197,8 +5193,8 @@
             });
             var a = n(104),
                 o = n(102),
-                i = n(110),
-                s = n(83),
+                s = n(110),
+                i = n(83),
                 r = n(84),
                 l = 3 * a.ONE_KIBI_BYTE,
                 c = 16 * a.ONE_KIBI_BYTE,
@@ -5211,13 +5207,13 @@
 
                 function o(o) {
                     if (void 0 === o && (o = 0), !n && 0 !== e) {
-                        var i = 2 === e ? l : c,
+                        var s = 2 === e ? l : c,
                             r = o;
                         t.forEach((function(e) {
                             r += e.getBytesCount()
-                        })), r > i && (! function(e) {
-                            s.display.warn("Customer data exceeds the recommended ".concat(e / a.ONE_KIBI_BYTE, "KiB threshold. ").concat(s.MORE_DETAILS, " ").concat(s.DOCS_TROUBLESHOOTING, "/#customer-data-exceeds-the-recommended-threshold-warning"))
-                        }(i), n = !0)
+                        })), r > s && (! function(e) {
+                            i.display.warn("Customer data exceeds the recommended ".concat(e / a.ONE_KIBI_BYTE, "KiB threshold. ").concat(i.MORE_DETAILS, " ").concat(i.DOCS_TROUBLESHOOTING, "/#customer-data-exceeds-the-recommended-threshold-warning"))
+                        }(s), n = !0)
                     }
                 }
                 return {
@@ -5247,16 +5243,16 @@
             function m(e) {
                 var t = 0,
                     n = (0, o.throttle)((function(n) {
-                        t = (0, a.computeBytesCount)((0, i.jsonStringify)(n)), e()
+                        t = (0, a.computeBytesCount)((0, s.jsonStringify)(n)), e()
                     }), u),
-                    s = n.throttled,
+                    i = n.throttled,
                     l = n.cancel,
                     c = function() {
                         l(), t = 0
                     };
                 return {
                     updateCustomerData: function(e) {
-                        (0, r.isEmptyObject)(e) ? c(): s(e)
+                        (0, r.isEmptyObject)(e) ? c(): i(e)
                     },
                     resetCustomerData: c,
                     getBytesCount: function() {
@@ -5274,21 +5270,21 @@
             });
             var a = n(74),
                 o = n(75),
-                i = n(125),
-                s = n(87);
+                s = n(125),
+                i = n(87);
 
             function r(e) {
                 var t = {},
-                    n = new s.Observable,
+                    n = new i.Observable,
                     r = {
                         getContext: function() {
                             return (0, a.deepClone)(t)
                         },
                         setContext: function(a) {
-                            "object" === (0, o.getType)(a) ? (t = (0, i.sanitize)(a), e && e.updateCustomerData(t)) : r.clearContext(), n.notify()
+                            "object" === (0, o.getType)(a) ? (t = (0, s.sanitize)(a), e && e.updateCustomerData(t)) : r.clearContext(), n.notify()
                         },
                         setContextProperty: function(a, o) {
-                            t[a] = (0, i.sanitize)(o), e && e.updateCustomerData(t), n.notify()
+                            t[a] = (0, s.sanitize)(o), e && e.updateCustomerData(t), n.notify()
                         },
                         removeContextProperty: function(a) {
                             delete t[a], e && e.updateCustomerData(t), n.notify()
@@ -5309,17 +5305,17 @@
             });
             var a = n(112),
                 o = n(74),
-                i = "_dd_c",
-                s = [];
+                s = "_dd_c",
+                i = [];
 
-            function r(e, t, n, i) {
-                var r = l(n, i);
+            function r(e, t, n, s) {
+                var r = l(n, s);
 
                 function c() {
                     var e = localStorage.getItem(r);
                     return null !== e ? JSON.parse(e) : {}
                 }
-                s.push((0, a.addEventListener)(e, window, "storage", (function(e) {
+                i.push((0, a.addEventListener)(e, window, "storage", (function(e) {
                     var n = e.key;
                     r === n && t.setContext(c())
                 }))), t.changeObservable.subscribe((function() {
@@ -5328,11 +5324,11 @@
             }
 
             function l(e, t) {
-                return "".concat(i, "_").concat(e, "_").concat(t)
+                return "".concat(s, "_").concat(e, "_").concat(t)
             }
 
             function c() {
-                s.map((function(e) {
+                i.map((function(e) {
                     return e.stop()
                 }))
             }
@@ -5352,8 +5348,8 @@
                         return !e
                     },
                     write: function(n, o) {
-                        var i = (0, a.computeBytesCount)(n);
-                        t += i, e += n, o && o(i)
+                        var s = (0, a.computeBytesCount)(n);
+                        t += s, e += n, o && o(s)
                     },
                     finish: function(e) {
                         e(this.finishSync())
@@ -5380,11 +5376,11 @@
             });
             var a = n(88),
                 o = n(101),
-                i = n(82),
-                s = n(83);
+                s = n(82),
+                i = n(83);
 
             function r(e) {
-                var t = (0, i.assign)({
+                var t = (0, s.assign)({
                     version: "5.30.0",
                     onReady: function(e) {
                         e()
@@ -5400,7 +5396,7 @@
 
             function l(e, t, n) {
                 var o = e[t];
-                o && !o.q && o.version && s.display.warn("SDK is loaded more than once. This is unsupported and might have unexpected behavior."), e[t] = n, o && o.q && o.q.forEach((function(e) {
+                o && !o.q && o.version && i.display.warn("SDK is loaded more than once. This is unsupported and might have unexpected behavior."), e[t] = n, o && o.q && o.q.forEach((function(e) {
                     return (0, a.catchUserErrors)(e, "onReady callback threw an error:")()
                 }))
             }
@@ -5408,14 +5404,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 checkUser: () => r,
-                sanitizeUser: () => s
+                sanitizeUser: () => i
             });
             var a = n(83),
                 o = n(75),
-                i = n(82);
+                s = n(82);
 
-            function s(e) {
-                var t = (0, i.assign)({}, e);
+            function i(e) {
+                var t = (0, s.assign)({}, e);
                 return ["id", "name", "email"].forEach((function(e) {
                     e in t && (t[e] = String(t[e]))
                 })), t
@@ -5433,8 +5429,8 @@
             });
             var a = n(119),
                 o = n(117),
-                i = n(199),
-                s = n(116),
+                s = n(199),
+                i = n(116),
                 r = n(121),
                 l = n(137),
                 c = n(138),
@@ -5453,14 +5449,14 @@
                 T = n(209),
                 b = n(210),
                 N = n(211),
-                A = n(212),
-                C = n(213),
-                I = n(214),
+                C = n(212),
+                I = n(213),
+                A = n(214),
                 L = n(71),
                 k = n(215),
                 x = n(217);
 
-            function O(e, t, n, c, m, f, T, I) {
+            function O(e, t, n, c, m, f, T, A) {
                 var k = [],
                     O = new d.LifeCycle;
                 O.subscribe(12, (function(e) {
@@ -5468,8 +5464,8 @@
                 }));
                 var R = function(e) {
                     var t = (0, o.startTelemetry)("browser-rum-sdk", e);
-                    if ((0, s.canUseEventBridge)()) {
-                        var n = (0, s.getEventBridge)();
+                    if ((0, i.canUseEventBridge)()) {
+                        var n = (0, i.getEventBridge)();
                         t.observable.subscribe((function(e) {
                             return n.send("internal_telemetry", e)
                         }))
@@ -5500,25 +5496,25 @@
                             "error.message": e.message
                         })
                     },
-                    P = (0, N.startFeatureFlagContexts)(O, n.getOrCreateTracker(0)),
-                    D = (0, i.createPageExitObservable)(e),
-                    G = D.subscribe((function(e) {
+                    D = (0, N.startFeatureFlagContexts)(O, n.getOrCreateTracker(0)),
+                    P = (0, s.createPageExitObservable)(e),
+                    G = P.subscribe((function(e) {
                         O.notify(10, e)
                     }));
                 k.push((function() {
                     return G.unsubscribe()
                 }));
-                var K = (0, s.canUseEventBridge)() ? (0, v.startRumSessionManagerStub)() : (0, v.startRumSessionManager)(e, O, T);
-                if ((0, s.canUseEventBridge)())(0, y.startRumEventBridge)(O);
+                var K = (0, i.canUseEventBridge)() ? (0, v.startRumSessionManagerStub)() : (0, v.startRumSessionManager)(e, O, T);
+                if ((0, i.canUseEventBridge)())(0, y.startRumEventBridge)(O);
                 else {
-                    var V = (0, S.startRumBatch)(e, O, R.observable, w, D, K.expireObservable, f);
+                    var V = (0, S.startRumBatch)(e, O, R.observable, w, P, K.expireObservable, f);
                     k.push((function() {
                         return V.stop()
-                    })), (0, A.startCustomerDataTelemetry)(e, R, O, n, V.flushObservable)
+                    })), (0, C.startCustomerDataTelemetry)(e, R, O, n, V.flushObservable)
                 }
                 var U = (0, l.createDOMMutationObservable)(),
                     B = (0, b.createLocationChangeObservable)(e, location),
-                    F = (0, C.startPageStateHistory)(e),
+                    F = (0, I.startPageStateHistory)(e),
                     H = M(O, e, location, K, F, B, U, c, w),
                     Y = H.viewHistory,
                     j = H.urlContexts,
@@ -5526,7 +5522,7 @@
                     W = H.addAction,
                     q = H.stop;
                 k.push(q), (0, o.drainPreStartTelemetry)();
-                var $ = (0, E.startViewCollection)(O, e, location, U, B, P, F, t, m),
+                var $ = (0, E.startViewCollection)(O, e, location, U, B, D, F, t, m),
                     X = $.addTiming,
                     Z = $.startView,
                     J = $.setViewName,
@@ -5541,15 +5537,15 @@
                         k.push(ae)
                     }
                 } else(0, _.startLongTaskCollection)(O, e);
-                var oe = (0, g.startErrorCollection)(O, e, F, P).addError;
+                var oe = (0, g.startErrorCollection)(O, e, F, D).addError;
                 (0, p.startRequestCollection)(O, e, K);
-                var ie = (0, L.startVitalCollection)(O, F, I),
-                    se = (0, u.startInternalContext)(e.applicationId, K, Y, z, j);
+                var se = (0, L.startVitalCollection)(O, F, A),
+                    ie = (0, u.startInternalContext)(e.applicationId, K, Y, z, j);
                 return {
                     addAction: W,
                     addError: oe,
                     addTiming: X,
-                    addFeatureFlagEvaluation: P.addFeatureFlagEvaluation,
+                    addFeatureFlagEvaluation: D.addFeatureFlagEvaluation,
                     startView: Z,
                     setViewContext: Q,
                     setViewContextProperty: ee,
@@ -5560,10 +5556,10 @@
                     stopSession: function() {
                         return K.expire()
                     },
-                    getInternalContext: se.get,
-                    startDurationVital: ie.startDurationVital,
-                    stopDurationVital: ie.stopDurationVital,
-                    addDurationVital: ie.addDurationVital,
+                    getInternalContext: ie.get,
+                    startDurationVital: se.startDurationVital,
+                    stopDurationVital: se.stopDurationVital,
+                    addDurationVital: se.addDurationVital,
                     stop: function() {
                         k.forEach((function(e) {
                             return e()
@@ -5572,13 +5568,13 @@
                 }
             }
 
-            function M(e, t, n, a, o, i, s, r, l) {
+            function M(e, t, n, a, o, s, i, r, l) {
                 var u = (0, m.startViewHistory)(e),
-                    d = (0, T.startUrlContexts)(e, i, n),
-                    p = (0, f.startActionCollection)(e, s, t, o),
+                    d = (0, T.startUrlContexts)(e, s, n),
+                    p = (0, f.startActionCollection)(e, i, t, o),
                     g = p.addAction,
                     _ = p.actionContexts,
-                    h = (0, I.startDisplayContext)(t),
+                    h = (0, A.startDisplayContext)(t),
                     E = (0, k.startCiVisibilityContext)(t);
                 return (0, c.startRumAssembly)(t, e, a, u, d, _, h, E, r, l), {
                     viewHistory: u,
@@ -5599,8 +5595,8 @@
             });
             var a = n(87),
                 o = n(101),
-                i = n(99),
-                s = n(102);
+                s = n(99),
+                i = n(102);
 
             function r() {
                 var e = l();
@@ -5624,9 +5620,9 @@
 
             function l() {
                 var e, t = window;
-                if (t.Zone && (e = (0, i.getZoneJsOriginalValue)(t, "MutationObserver"), t.MutationObserver && e === t.MutationObserver)) {
-                    var n = new t.MutationObserver(s.noop),
-                        a = (0, i.getZoneJsOriginalValue)(n, "originalInstance");
+                if (t.Zone && (e = (0, s.getZoneJsOriginalValue)(t, "MutationObserver"), t.MutationObserver && e === t.MutationObserver)) {
+                    var n = new t.MutationObserver(i.noop),
+                        a = (0, s.getZoneJsOriginalValue)(n, "originalInstance");
                     e = a && a.constructor
                 }
                 return e || (e = t.MutationObserver), e
@@ -5637,8 +5633,8 @@
                 startRumAssembly: () => v
             });
             var a, o = n(82),
-                i = n(121),
-                s = n(141),
+                s = n(121),
+                i = n(141),
                 r = n(72),
                 l = n(73),
                 c = n(116),
@@ -5661,34 +5657,34 @@
                     version: "string"
                 };
 
-            function v(e, t, n, v, S, y, T, b, N, A) {
-                var C, I;
-                (C = {}).view = (0, o.assign)({}, h, _), C.error = (0, o.assign)({
+            function v(e, t, n, v, S, y, T, b, N, C) {
+                var I, A;
+                (I = {}).view = (0, o.assign)({}, h, _), I.error = (0, o.assign)({
                     "error.message": "string",
                     "error.stack": "string",
                     "error.resource.url": "string",
                     "error.fingerprint": "string"
-                }, h, _, E), C.resource = (0, o.assign)({
+                }, h, _, E), I.resource = (0, o.assign)({
                     "resource.url": "string"
-                }, (0, i.isExperimentalFeatureEnabled)(i.ExperimentalFeature.WRITABLE_RESOURCE_GRAPHQL) ? {
+                }, (0, s.isExperimentalFeatureEnabled)(s.ExperimentalFeature.WRITABLE_RESOURCE_GRAPHQL) ? {
                     "resource.graphql": "object"
-                } : {}, h, _, E), C.action = (0, o.assign)({
+                } : {}, h, _, E), I.action = (0, o.assign)({
                     "action.target.name": "string"
-                }, h, _, E), C.long_task = (0, o.assign)({}, h, _), C.vital = (0, o.assign)({}, h, _), a = C;
-                var L = ((I = {}).error = (0, s.createEventRateLimiter)("error", e.eventRateLimiterThreshold, A), I.action = (0, s.createEventRateLimiter)("action", e.eventRateLimiterThreshold, A), I.vital = (0, s.createEventRateLimiter)("vital", e.eventRateLimiterThreshold, A), I),
+                }, h, _, E), I.long_task = (0, o.assign)({}, h, _), I.vital = (0, o.assign)({}, h, _), a = I;
+                var L = ((A = {}).error = (0, i.createEventRateLimiter)("error", e.eventRateLimiterThreshold, C), A.action = (0, i.createEventRateLimiter)("action", e.eventRateLimiterThreshold, C), A.vital = (0, i.createEventRateLimiter)("vital", e.eventRateLimiterThreshold, C), A),
                     k = (0, f.getSyntheticsContext)();
                 t.subscribe(11, (function(o) {
-                    var i, s = o.startTime,
+                    var s, i = o.startTime,
                         f = o.rawRumEvent,
                         _ = o.domainContext,
                         h = o.savedCommonContext,
                         E = o.customerContext,
-                        A = v.findView(s),
-                        C = S.findUrl(s),
-                        I = n.findTrackedSession(s);
-                    if (I && A && C) {
+                        C = v.findView(i),
+                        I = S.findUrl(i),
+                        A = n.findTrackedSession(i);
+                    if (A && C && I) {
                         var x = h || N(),
-                            O = y.findActionId(s),
+                            O = y.findActionId(i),
                             M = {
                                 _dd: {
                                     format_version: 2,
@@ -5703,20 +5699,20 @@
                                     id: e.applicationId
                                 },
                                 date: (0, r.timeStampNow)(),
-                                service: A.service || e.service,
-                                version: A.version || e.version,
+                                service: C.service || e.service,
+                                version: C.version || e.version,
                                 source: "browser",
                                 session: {
-                                    id: I.id,
+                                    id: A.id,
                                     type: k ? "synthetics" : b.get() ? "ci_test" : "user"
                                 },
                                 view: {
-                                    id: A.id,
-                                    name: A.name,
-                                    url: C.url,
-                                    referrer: C.referrer
+                                    id: C.id,
+                                    name: C.name,
+                                    url: I.url,
+                                    referrer: I.referrer
                                 },
-                                action: (i = f, -1 !== ["error", "resource", "long_task"].indexOf(i.type) && O ? {
+                                action: (s = f, -1 !== ["error", "resource", "long_task"].indexOf(s.type) && O ? {
                                     id: O
                                 } : void 0),
                                 synthetics: k,
@@ -5725,17 +5721,17 @@
                                 connectivity: (0, u.getConnectivity)()
                             },
                             R = (0, d.combine)(M, f);
-                        R.context = (0, d.combine)(x.context, A.context, E), "has_replay" in R.session || (R.session.has_replay = x.hasReplay), "view" === R.type && (R.session.sampled_for_replay = 1 === I.sessionReplay), (0, m.isEmptyObject)(x.user) || (R.usr = x.user),
+                        R.context = (0, d.combine)(x.context, C.context, E), "has_replay" in R.session || (R.session.has_replay = x.hasReplay), "view" === R.type && (R.session.sampled_for_replay = 1 === A.sessionReplay), (0, m.isEmptyObject)(x.user) || (R.usr = x.user),
                             function(e, t, n, o) {
-                                var i;
+                                var s;
                                 if (t) {
-                                    var s = (0, g.limitModification)(e, a[e.type], (function(e) {
+                                    var i = (0, g.limitModification)(e, a[e.type], (function(e) {
                                         return t(e, n)
                                     }));
-                                    if (!1 === s && "view" !== e.type) return !1;
-                                    !1 === s && p.display.warn("Can't dismiss view events using beforeSend!")
+                                    if (!1 === i && "view" !== e.type) return !1;
+                                    !1 === i && p.display.warn("Can't dismiss view events using beforeSend!")
                                 }
-                                var r = null === (i = o[e.type]) || void 0 === i ? void 0 : i.isLimitReached();
+                                var r = null === (s = o[e.type]) || void 0 === s ? void 0 : s.isLimitReached();
                                 return !r
                             }(R, e.beforeSend, _, L) && ((0, m.isEmptyObject)(R.context) && delete R.context, t.notify(12, R))
                     }
@@ -5764,8 +5760,8 @@
             });
             var a = n(74),
                 o = n(82),
-                i = n(75),
-                s = n(125);
+                s = n(75),
+                i = n(125);
 
             function r(e, t, n) {
                 var r = (0, a.deepClone)(e),
@@ -5775,27 +5771,27 @@
                         a = t[1],
                         o = function(e, t) {
                             for (var n = e, a = 0, o = t.split("."); a < o.length; a++) {
-                                var i = o[a];
-                                if (!u(n, i)) return;
-                                n = n[i]
+                                var s = o[a];
+                                if (!u(n, s)) return;
+                                n = n[s]
                             }
                             return n
                         }(r, n),
-                        c = (0, i.getType)(o);
-                    c === a ? l(e, n, (0, s.sanitize)(o)) : "object" !== a || "undefined" !== c && "null" !== c || l(e, n, {})
+                        c = (0, s.getType)(o);
+                    c === a ? l(e, n, (0, i.sanitize)(o)) : "object" !== a || "undefined" !== c && "null" !== c || l(e, n, {})
                 })), c
             }
 
             function l(e, t, n) {
-                for (var a = e, o = t.split("."), i = 0; i < o.length; i += 1) {
-                    var s = o[i];
+                for (var a = e, o = t.split("."), s = 0; s < o.length; s += 1) {
+                    var i = o[s];
                     if (!c(a)) return;
-                    i !== o.length - 1 ? a = a[s] : a[s] = n
+                    s !== o.length - 1 ? a = a[i] : a[i] = n
                 }
             }
 
             function c(e) {
-                return "object" === (0, i.getType)(e)
+                return "object" === (0, s.getType)(e)
             }
 
             function u(e, t) {
@@ -5804,26 +5800,26 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                createEventRateLimiter: () => s
+                createEventRateLimiter: () => i
             });
             var a = n(98),
                 o = n(72),
-                i = n(142);
+                s = n(142);
 
-            function s(e, t, n) {
-                var s = 0,
+            function i(e, t, n) {
+                var i = 0,
                     r = !1;
                 return {
                     isLimitReached: function() {
-                        if (0 === s && (0, a.setTimeout)((function() {
-                                s = 0
-                            }), o.ONE_MINUTE), (s += 1) <= t || r) return r = !1, !1;
-                        if (s === t + 1) {
+                        if (0 === i && (0, a.setTimeout)((function() {
+                                i = 0
+                            }), o.ONE_MINUTE), (i += 1) <= t || r) return r = !1, !1;
+                        if (i === t + 1) {
                             r = !0;
                             try {
                                 n({
                                     message: "Reached max number of ".concat(e, "s by minute: ").concat(t),
-                                    source: i.ErrorSource.AGENT,
+                                    source: s.ErrorSource.AGENT,
                                     startClocks: (0, o.clocksNow)()
                                 })
                             } finally {
@@ -5853,12 +5849,12 @@
 
             function a(e, t, n, a, o) {
                 return {
-                    get: function(i) {
-                        var s = n.findView(i),
-                            r = o.findUrl(i),
-                            l = t.findTrackedSession(i);
-                        if (l && s && r) {
-                            var c = a.findActionId(i);
+                    get: function(s) {
+                        var i = n.findView(s),
+                            r = o.findUrl(s),
+                            l = t.findTrackedSession(s);
+                        if (l && i && r) {
+                            var c = a.findActionId(s);
                             return {
                                 application_id: e,
                                 session_id: l.id,
@@ -5866,8 +5862,8 @@
                                     id: c
                                 } : void 0,
                                 view: {
-                                    id: s.id,
-                                    name: s.name,
+                                    id: i.id,
+                                    name: i.name,
                                     referrer: r.referrer,
                                     url: r.url
                                 }
@@ -5913,16 +5909,16 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                VIEW_CONTEXT_TIME_OUT_DELAY: () => i,
-                startViewHistory: () => s
+                VIEW_CONTEXT_TIME_OUT_DELAY: () => s,
+                startViewHistory: () => i
             });
             var a = n(96),
                 o = n(147),
-                i = a.SESSION_TIME_OUT_DELAY;
+                s = a.SESSION_TIME_OUT_DELAY;
 
-            function s(e) {
+            function i(e) {
                 var t = (0, o.createValueHistory)({
-                    expireDelay: i
+                    expireDelay: s
                 });
                 return e.subscribe(1, (function(e) {
                     t.add(function(e) {
@@ -5960,9 +5956,9 @@
             });
             var a = n(98),
                 o = n(115),
-                i = n(72),
-                s = 1 / 0,
-                r = i.ONE_MINUTE;
+                s = n(72),
+                i = 1 / 0,
+                r = s.ONE_MINUTE;
 
             function l(e) {
                 var t = e.expireDelay,
@@ -5970,7 +5966,7 @@
                     l = [],
                     c = (0, a.setInterval)((function() {
                         return function() {
-                            var e = (0, i.relativeNow)() - t;
+                            var e = (0, s.relativeNow)() - t;
                             for (; l.length > 0 && l[l.length - 1].endTime < e;) l.pop()
                         }()
                     }), r);
@@ -5979,7 +5975,7 @@
                         var a = {
                             value: e,
                             startTime: t,
-                            endTime: s,
+                            endTime: i,
                             remove: function() {
                                 (0, o.removeItem)(l, a)
                             },
@@ -5990,7 +5986,7 @@
                         return n && l.length >= n && l.pop(), l.unshift(a), a
                     },
                     find: function(e, t) {
-                        void 0 === e && (e = s), void 0 === t && (t = {
+                        void 0 === e && (e = i), void 0 === t && (t = {
                             returnInactive: !1
                         });
                         for (var n = 0, a = l; n < a.length; n++) {
@@ -6003,11 +5999,11 @@
                     },
                     closeActive: function(e) {
                         var t = l[0];
-                        t && t.endTime === s && t.close(e)
+                        t && t.endTime === i && t.close(e)
                     },
                     findAll: function(e, t) {
-                        void 0 === e && (e = s), void 0 === t && (t = 0);
-                        var n = (0, i.addDuration)(e, t);
+                        void 0 === e && (e = i), void 0 === t && (t = 0);
+                        var n = (0, s.addDuration)(e, t);
                         return l.filter((function(t) {
                             return t.startTime <= n && e <= t.endTime
                         })).map((function(e) {
@@ -6031,8 +6027,8 @@
             });
             var a = n(150),
                 o = n(127),
-                i = n(151),
-                s = n(72),
+                s = n(151),
+                i = n(72),
                 r = n(152),
                 l = n(149),
                 c = n(80),
@@ -6090,13 +6086,13 @@
                             break;
                         case "resolve":
                             ! function(e, t) {
-                                var n = e.response && (0, i.tryToClone)(e.response);
+                                var n = e.response && (0, s.tryToClone)(e.response);
                                 n && n.body ? (0, r.readBytesFromStream)(n.body, (function() {
-                                    t((0, s.elapsed)(e.startClocks.timeStamp, (0, s.timeStampNow)()))
+                                    t((0, i.elapsed)(e.startClocks.timeStamp, (0, i.timeStampNow)()))
                                 }), {
                                     bytesLimit: Number.POSITIVE_INFINITY,
                                     collectStreamBody: !1
-                                }) : t((0, s.elapsed)(e.startClocks.timeStamp, (0, s.timeStampNow)()))
+                                }) : t((0, i.elapsed)(e.startClocks.timeStamp, (0, i.timeStampNow)()))
                             }(a, (function(n) {
                                 t.clearTracingIfNeeded(a), e.notify(7, {
                                     duration: n,
@@ -6149,8 +6145,8 @@
             });
             var a = n(82),
                 o = n(109),
-                i = n(117),
-                s = n(72),
+                s = n(117),
+                i = n(72),
                 r = n(105),
                 l = "initial_document",
                 c = [
@@ -6185,9 +6181,9 @@
 
             function u(e) {
                 var t = e.name;
-                if (!(0, o.isValidUrl)(t)) return (0, i.addTelemetryDebug)('Failed to construct URL for "'.concat(e.name, '"')), "other";
-                for (var n = (0, o.getPathName)(t), a = 0, s = c; a < s.length; a++) {
-                    var r = s[a],
+                if (!(0, o.isValidUrl)(t)) return (0, s.addTelemetryDebug)('Failed to construct URL for "'.concat(e.name, '"')), "other";
+                for (var n = (0, o.getPathName)(t), a = 0, i = c; a < i.length; a++) {
+                    var r = i[a],
                         l = r[0];
                     if ((0, r[1])(e.initiatorType, n)) return l
                 }
@@ -6209,7 +6205,7 @@
                 var t = e.duration,
                     n = e.startTime,
                     a = e.responseEnd;
-                return 0 === t && n < a ? (0, s.toServerDuration)((0, s.elapsed)(n, a)) : (0, s.toServerDuration)(t)
+                return 0 === t && n < a ? (0, i.toServerDuration)((0, i.elapsed)(n, a)) : (0, i.toServerDuration)(t)
             }
 
             function f(e) {
@@ -6218,8 +6214,8 @@
                         n = e.fetchStart,
                         a = e.redirectStart,
                         o = e.redirectEnd,
-                        i = e.domainLookupStart,
-                        s = e.domainLookupEnd,
+                        s = e.domainLookupStart,
+                        i = e.domainLookupEnd,
                         r = e.connectStart,
                         l = e.secureConnectionStart,
                         c = e.connectEnd,
@@ -6229,7 +6225,7 @@
                             download: h(t, d, e.responseEnd),
                             first_byte: h(t, u, d)
                         };
-                    return n < c && (m.connect = h(t, r, c), r <= l && l <= c && (m.ssl = h(t, l, c))), n < s && (m.dns = h(t, i, s)), t < o && (m.redirect = h(t, a, o)), m
+                    return n < c && (m.connect = h(t, r, c), r <= l && l <= c && (m.ssl = h(t, l, c))), n < i && (m.dns = h(t, s, i)), t < o && (m.redirect = h(t, a, o)), m
                 }
             }
 
@@ -6247,8 +6243,8 @@
 
             function h(e, t, n) {
                 if (e <= t && t <= n) return {
-                    duration: (0, s.toServerDuration)((0, s.elapsed)(t, n)),
-                    start: (0, s.toServerDuration)((0, s.elapsed)(e, t))
+                    duration: (0, i.toServerDuration)((0, i.elapsed)(t, n)),
+                    start: (0, i.toServerDuration)((0, i.elapsed)(e, t))
                 }
             }
 
@@ -6294,8 +6290,8 @@
                 initXhrObservable: () => d
             });
             var a, o = n(128),
-                i = n(87),
-                s = n(72),
+                s = n(87),
+                i = n(72),
                 r = n(109),
                 l = n(84),
                 c = n(112),
@@ -6303,16 +6299,16 @@
 
             function d(e) {
                 return a || (a = function(e) {
-                    return new i.Observable((function(t) {
+                    return new s.Observable((function(t) {
                         var n = (0, o.instrumentMethod)(XMLHttpRequest.prototype, "open", m).stop,
                             a = (0, o.instrumentMethod)(XMLHttpRequest.prototype, "send", (function(n) {
                                 ! function(e, t, n) {
                                     var a = e.target,
-                                        i = e.handlingStack,
+                                        s = e.handlingStack,
                                         r = u.get(a);
                                     if (!r) return;
                                     var d = r;
-                                    d.state = "start", d.startClocks = (0, s.clocksNow)(), d.isAborted = !1, d.xhr = a, d.handlingStack = i;
+                                    d.state = "start", d.startClocks = (0, i.clocksNow)(), d.isAborted = !1, d.xhr = a, d.handlingStack = s;
                                     var m = !1,
                                         p = (0, o.instrumentMethod)(a, "onreadystatechange", (function() {
                                             a.readyState === XMLHttpRequest.DONE && f()
@@ -6321,7 +6317,7 @@
                                             if (g(), p(), !m) {
                                                 m = !0;
                                                 var e = r;
-                                                e.state = "complete", e.duration = (0, s.elapsed)(d.startClocks.timeStamp, (0, s.timeStampNow)()), e.status = a.status, n.notify((0, l.shallowClone)(e))
+                                                e.state = "complete", e.duration = (0, i.elapsed)(d.startClocks.timeStamp, (0, i.timeStampNow)()), e.status = a.status, n.notify((0, l.shallowClone)(e))
                                             }
                                         },
                                         g = (0, c.addEventListener)(t, a, "loadend", f).stop;
@@ -6330,9 +6326,9 @@
                             }), {
                                 computeHandlingStack: !0
                             }).stop,
-                            i = (0, o.instrumentMethod)(XMLHttpRequest.prototype, "abort", p).stop;
+                            s = (0, o.instrumentMethod)(XMLHttpRequest.prototype, "abort", p).stop;
                         return function() {
-                            n(), a(), i()
+                            n(), a(), s()
                         }
                     }))
                 }(e)), a
@@ -6376,25 +6372,25 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                readBytesFromStream: () => i
+                readBytesFromStream: () => s
             });
             var a = n(101),
                 o = n(102);
 
-            function i(e, t, n) {
-                var i = e.getReader(),
-                    s = [],
+            function s(e, t, n) {
+                var s = e.getReader(),
+                    i = [],
                     r = 0;
 
                 function l() {
                     var e, a;
-                    if (i.cancel().catch(o.noop), n.collectStreamBody) {
+                    if (s.cancel().catch(o.noop), n.collectStreamBody) {
                         var l;
-                        if (1 === s.length) l = s[0];
+                        if (1 === i.length) l = i[0];
                         else {
                             l = new Uint8Array(r);
                             var c = 0;
-                            s.forEach((function(e) {
+                            i.forEach((function(e) {
                                 l.set(e, c), c += e.length
                             }))
                         }
@@ -6402,8 +6398,8 @@
                     }
                     t(void 0, e, a)
                 }! function e() {
-                    i.read().then((0, a.monitor)((function(t) {
-                        t.done ? l() : (n.collectStreamBody && s.push(t.value), (r += t.value.length) > n.bytesLimit ? l() : e())
+                    s.read().then((0, a.monitor)((function(t) {
+                        t.done ? l() : (n.collectStreamBody && i.push(t.value), (r += t.value.length) > n.bytesLimit ? l() : e())
                     })), (0, a.monitor)((function(e) {
                         return t(e)
                     })))
@@ -6416,26 +6412,26 @@
             });
             var a = n(102),
                 o = n(82),
-                i = n(72),
-                s = n(74),
+                s = n(72),
+                i = n(74),
                 r = n(76),
                 l = n(154),
                 c = n(155);
 
-            function u(e, t, n, i) {
+            function u(e, t, n, s) {
                 e.subscribe(0, (function(t) {
-                    return e.notify(11, d(t, i))
+                    return e.notify(11, d(t, s))
                 }));
-                var s = {
+                var i = {
                     findActionId: a.noop
                 };
-                return n.trackUserInteractions && (s = (0, c.trackClickActions)(e, t, n).actionContexts), {
+                return n.trackUserInteractions && (i = (0, c.trackClickActions)(e, t, n).actionContexts), {
                     addAction: function(t, n) {
                         e.notify(11, (0, o.assign)({
                             savedCommonContext: n
-                        }, d(t, i)))
+                        }, d(t, s)))
                     },
-                    actionContexts: s
+                    actionContexts: i
                 }
             }
 
@@ -6443,7 +6439,7 @@
                 var n = m(e) ? {
                         action: {
                             id: e.id,
-                            loading_time: (0, l.discardNegativeDuration)((0, i.toServerDuration)(e.duration)),
+                            loading_time: (0, l.discardNegativeDuration)((0, s.toServerDuration)(e.duration)),
                             frustration: {
                                 type: e.frustrationTypes
                             },
@@ -6465,7 +6461,7 @@
                         }
                     } : void 0,
                     a = m(e) ? void 0 : e.context,
-                    o = (0, s.combine)({
+                    o = (0, i.combine)({
                         action: {
                             id: (0, r.generateUUID)(),
                             target: {
@@ -6512,8 +6508,8 @@
             });
             var a = n(72),
                 o = n(147),
-                i = n(87),
-                s = n(76),
+                s = n(87),
+                i = n(76),
                 r = n(82),
                 l = n(156),
                 c = n(157),
@@ -6527,19 +6523,19 @@
                 h = 5 * a.ONE_MINUTE;
 
             function E(e, t, n) {
-                var a, s = (0, o.createValueHistory)({
+                var a, i = (0, o.createValueHistory)({
                         expireDelay: h
                     }),
-                    r = new i.Observable;
+                    r = new s.Observable;
                 e.subscribe(9, (function() {
-                    s.reset()
+                    i.reset()
                 })), e.subscribe(4, E);
                 var l = (0, f.listenActionEvents)(n, {
                     onPointerDown: function(a) {
                         return function(e, t, n, a) {
                             var o = e.enablePrivacyForActionName ? (0, d.getNodePrivacyLevel)(a.target, e.defaultPrivacyLevel) : d.NodePrivacyLevel.ALLOW;
                             if (o === d.NodePrivacyLevel.HIDDEN) return;
-                            var i = function(e, t, n) {
+                            var s = function(e, t, n) {
                                     var a = e.target.getBoundingClientRect(),
                                         o = (0, u.getSelectorFromElement)(e.target, n.actionNameAttribute);
                                     o && (0, _.updateInteractionSelector)(e.timeStamp, o);
@@ -6557,24 +6553,24 @@
                                         name: (0, p.getActionNameFromElement)(e.target, n, t)
                                     }
                                 }(a, o, e),
-                                s = !1;
+                                i = !1;
                             return (0, c.waitPageActivityEnd)(t, n, e, (function(e) {
-                                s = e.hadActivity
+                                i = e.hadActivity
                             }), c.PAGE_ACTIVITY_VALIDATION_DELAY), {
-                                clickActionBase: i,
+                                clickActionBase: s,
                                 hadActivityOnPointerDown: function() {
-                                    return s
+                                    return i
                                 }
                             }
                         }(n, e, t, a)
                     },
-                    onPointerUp: function(a, o, i) {
+                    onPointerUp: function(a, o, s) {
                         var l = a.clickActionBase,
                             u = a.hadActivityOnPointerDown;
-                        ! function(e, t, n, a, o, i, s, r, l, u) {
-                            var d, m = v(t, a, l, s, r);
-                            i(m);
-                            var p = null === (d = null == s ? void 0 : s.target) || void 0 === d ? void 0 : d.selector;
+                        ! function(e, t, n, a, o, s, i, r, l, u) {
+                            var d, m = v(t, a, l, i, r);
+                            s(m);
+                            var p = null === (d = null == i ? void 0 : i.target) || void 0 === d ? void 0 : d.selector;
                             p && (0, _.updateInteractionSelector)(r.timeStamp, p);
                             var f = (0, c.waitPageActivityEnd)(t, n, e, (function(e) {
                                     e.hadActivity && e.end < m.startClocks.timeStamp ? m.discard() : e.hadActivity ? m.stop(e.end) : u() ? m.stop(m.startClocks.timeStamp) : m.stop()
@@ -6589,7 +6585,7 @@
                             m.stopObservable.subscribe((function() {
                                 g.unsubscribe(), f(), h.unsubscribe()
                             }))
-                        }(n, e, t, s, r, g, l, o, i, u)
+                        }(n, e, t, i, r, g, l, o, s, u)
                     }
                 }).stop;
                 return {
@@ -6598,7 +6594,7 @@
                     },
                     actionContexts: {
                         findActionId: function(e) {
-                            return s.findAll(e)
+                            return i.findAll(e)
                         }
                     }
                 };
@@ -6618,7 +6614,7 @@
             }
 
             function v(e, t, n, o, c) {
-                var u, d = (0, s.generateUUID)(),
+                var u, d = (0, i.generateUUID)(),
                     m = (0, a.clocksNow)(),
                     p = t.add(d, m.relative),
                     f = (0, l.trackEventCounts)({
@@ -6629,7 +6625,7 @@
                     }),
                     g = 0,
                     _ = [],
-                    h = new i.Observable;
+                    h = new s.Observable;
 
                 function E(e) {
                     0 === g && (g = 1, (u = e) ? p.close((0, a.getRelativeTime)(u)) : p.remove(), f.stop(), h.notify())
@@ -6658,8 +6654,8 @@
                     validate: function(t) {
                         if (E(), 1 === g) {
                             var n = f.eventCounts,
-                                i = n.resourceCount,
-                                s = n.errorCount,
+                                s = n.resourceCount,
+                                i = n.errorCount,
                                 l = n.longTaskCount,
                                 p = (0, r.assign)({
                                     type: "click",
@@ -6668,8 +6664,8 @@
                                     id: d,
                                     frustrationTypes: _,
                                     counts: {
-                                        resourceCount: i,
-                                        errorCount: s,
+                                        resourceCount: s,
+                                        errorCount: i,
                                         longTaskCount: l
                                     },
                                     events: null != t ? t : [c],
@@ -6704,8 +6700,8 @@
                 var t = e.lifeCycle,
                     n = e.isChildEvent,
                     o = e.onChange,
-                    i = void 0 === o ? a.noop : o,
-                    s = {
+                    s = void 0 === o ? a.noop : o,
+                    i = {
                         errorCount: 0,
                         longTaskCount: 0,
                         resourceCount: 0,
@@ -6716,23 +6712,23 @@
                         var t;
                         if ("view" !== e.type && "vital" !== e.type && n(e)) switch (e.type) {
                             case "error":
-                                s.errorCount += 1, i();
+                                i.errorCount += 1, s();
                                 break;
                             case "action":
-                                s.actionCount += 1, e.action.frustration && (s.frustrationCount += e.action.frustration.type.length), i();
+                                i.actionCount += 1, e.action.frustration && (i.frustrationCount += e.action.frustration.type.length), s();
                                 break;
                             case "long_task":
-                                s.longTaskCount += 1, i();
+                                i.longTaskCount += 1, s();
                                 break;
                             case "resource":
-                                (null === (t = e._dd) || void 0 === t ? void 0 : t.discarded) || (s.resourceCount += 1, i())
+                                (null === (t = e._dd) || void 0 === t ? void 0 : t.discarded) || (i.resourceCount += 1, s())
                         }
                     }));
                 return {
                     stop: function() {
                         r.unsubscribe()
                     },
-                    eventCounts: s
+                    eventCounts: i
                 }
             }
         }, (e, t, n) => {
@@ -6746,8 +6742,8 @@
             });
             var a = n(98),
                 o = n(101),
-                i = n(72),
-                s = n(87),
+                s = n(72),
+                i = n(87),
                 r = n(81),
                 l = n(128),
                 c = n(158),
@@ -6759,7 +6755,7 @@
             }
 
             function p(e, t, n) {
-                var s, r = !1,
+                var i, r = !1,
                     l = (0, a.setTimeout)((0, o.monitor)((function() {
                         return f({
                             hadActivity: !1
@@ -6768,14 +6764,14 @@
                     c = void 0 !== n ? (0, a.setTimeout)((0, o.monitor)((function() {
                         return f({
                             hadActivity: !0,
-                            end: (0, i.timeStampNow)()
+                            end: (0, s.timeStampNow)()
                         })
                     })), n) : void 0,
                     m = e.subscribe((function(e) {
                         var t = e.isBusy;
-                        (0, a.clearTimeout)(l), (0, a.clearTimeout)(s);
-                        var n = (0, i.timeStampNow)();
-                        t || (s = (0, a.setTimeout)((0, o.monitor)((function() {
+                        (0, a.clearTimeout)(l), (0, a.clearTimeout)(i);
+                        var n = (0, s.timeStampNow)();
+                        t || (i = (0, a.setTimeout)((0, o.monitor)((function() {
                             return f({
                                 hadActivity: !0,
                                 end: n
@@ -6783,7 +6779,7 @@
                         })), d))
                     })),
                     p = function() {
-                        r = !0, (0, a.clearTimeout)(l), (0, a.clearTimeout)(s), (0, a.clearTimeout)(c), m.unsubscribe()
+                        r = !0, (0, a.clearTimeout)(l), (0, a.clearTimeout)(i), (0, a.clearTimeout)(c), m.unsubscribe()
                     };
 
                 function f(e) {
@@ -6795,30 +6791,30 @@
             }
 
             function f(e, t, n) {
-                return new s.Observable((function(a) {
-                    var o, i = [],
-                        s = 0;
-                    i.push(t.subscribe(d), (0, c.createPerformanceObservable)(n, {
+                return new i.Observable((function(a) {
+                    var o, s = [],
+                        i = 0;
+                    s.push(t.subscribe(d), (0, c.createPerformanceObservable)(n, {
                         type: c.RumPerformanceEntryType.RESOURCE
                     }).subscribe((function(e) {
                         e.some((function(e) {
                             return !g(n, e.name)
                         })) && d()
                     })), e.subscribe(6, (function(e) {
-                        g(n, e.url) || (void 0 === o && (o = e.requestIndex), s += 1, d())
+                        g(n, e.url) || (void 0 === o && (o = e.requestIndex), i += 1, d())
                     })), e.subscribe(7, (function(e) {
-                        g(n, e.url) || void 0 === o || e.requestIndex < o || (s -= 1, d())
+                        g(n, e.url) || void 0 === o || e.requestIndex < o || (i -= 1, d())
                     })));
                     var r, u = (r = d, (0, l.instrumentMethod)(window, "open", r)).stop;
                     return function() {
-                        u(), i.forEach((function(e) {
+                        u(), s.forEach((function(e) {
                             return e.unsubscribe()
                         }))
                     };
 
                     function d() {
                         a.notify({
-                            isBusy: s > 0
+                            isBusy: i > 0
                         })
                     }
                 }))
@@ -6834,8 +6830,8 @@
                 createPerformanceObservable: () => m,
                 supportPerformanceTimingEvent: () => p
             });
-            var a, o, i = n(87),
-                s = n(101),
+            var a, o, s = n(87),
+                i = n(101),
                 r = n(98),
                 l = n(82),
                 c = n(112),
@@ -6843,9 +6839,9 @@
                 d = n(159);
 
             function m(e, t) {
-                return new i.Observable((function(n) {
+                return new s.Observable((function(n) {
                     if (window.PerformanceObserver) {
-                        var i, m, f = function(e) {
+                        var s, m, f = function(e) {
                                 var t = function(e) {
                                     return e.filter((function(e) {
                                         return ! function(e) {
@@ -6856,8 +6852,8 @@
                                 t.length > 0 && n.notify(t)
                             },
                             g = !0,
-                            _ = new PerformanceObserver((0, s.monitor)((function(e) {
-                                g ? i = (0, r.setTimeout)((function() {
+                            _ = new PerformanceObserver((0, i.monitor)((function(e) {
+                                g ? s = (0, r.setTimeout)((function() {
                                     return f(e.getEntries())
                                 })) : f(e.getEntries())
                             })));
@@ -6866,7 +6862,7 @@
                         } catch (e) {
                             var h = [a.RESOURCE, a.NAVIGATION, a.LONG_TASK, a.PAINT];
                             if ((0, l.includes)(h, t.type)) {
-                                t.buffered && (i = (0, r.setTimeout)((function() {
+                                t.buffered && (s = (0, r.setTimeout)((function() {
                                     return f(performance.getEntriesByType(t.type))
                                 })));
                                 try {
@@ -6887,7 +6883,7 @@
                                 f([e])
                             })).stop),
                             function() {
-                                _.disconnect(), m && m(), (0, r.clearTimeout)(i)
+                                _.disconnect(), m && m(), (0, r.clearTimeout)(s)
                             }
                     }
                 }))
@@ -6901,15 +6897,15 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                retrieveFirstInputTiming: () => i
+                retrieveFirstInputTiming: () => s
             });
             var a = n(72),
                 o = n(112);
 
-            function i(e, t) {
+            function s(e, t) {
                 var n = (0, a.dateNow)(),
-                    i = !1,
-                    s = (0, o.addEventListeners)(e, window, ["click", "mousedown", "keydown", "touchstart", "pointerdown"], (function(t) {
+                    s = !1,
+                    i = (0, o.addEventListeners)(e, window, ["click", "mousedown", "keydown", "touchstart", "pointerdown"], (function(t) {
                         if (t.cancelable) {
                             var n = {
                                 entryType: "first-input",
@@ -6937,12 +6933,12 @@
                         capture: !0
                     }).stop;
                 return {
-                    stop: s
+                    stop: i
                 };
 
                 function r(e) {
-                    if (!i) {
-                        i = !0, s();
+                    if (!s) {
+                        s = !0, i();
                         var o = e.processingStart - e.startTime;
                         o >= 0 && o < (0, a.dateNow)() - n && t(e)
                     }
@@ -6951,14 +6947,14 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                STABLE_ATTRIBUTES: () => i,
+                STABLE_ATTRIBUTES: () => s,
                 getSelectorFromElement: () => l,
                 isSelectorUniqueAmongSiblings: () => f,
                 supportScopeSelector: () => _
             });
             var a, o = n(161),
-                i = [n(162).DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE, "data-testid", "data-test", "data-qa", "data-cy", "data-test-id", "data-qa-id", "data-testing", "data-component", "data-element", "data-source-file"],
-                s = [u, function(e) {
+                s = [n(162).DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE, "data-testid", "data-test", "data-qa", "data-cy", "data-test-id", "data-qa-id", "data-testing", "data-component", "data-element", "data-source-file"],
+                i = [u, function(e) {
                     if (e.id && !c(e.id)) return "#".concat((0, o.cssEscape)(e.id))
                 }],
                 r = [u, function(e) {
@@ -6977,8 +6973,8 @@
                         return e.ownerDocument.documentElement.contains(e)
                     }(e)) {
                     for (var n, a = e; a && "HTML" !== a.nodeName;) {
-                        var i = m(a, s, p, t, n);
-                        if (i) return i;
+                        var s = m(a, i, p, t, n);
+                        if (s) return s;
                         n = m(a, r, f, t, n) || g(d(a), n), a = (0, o.getParentElement)(a)
                     }
                     return n
@@ -6990,10 +6986,10 @@
             }
 
             function u(e, t) {
-                if (t && (s = r(t))) return s;
-                for (var n = 0, a = i; n < a.length; n++) {
-                    var s;
-                    if (s = r(a[n])) return s
+                if (t && (i = r(t))) return i;
+                for (var n = 0, a = s; n < a.length; n++) {
+                    var i;
+                    if (i = r(a[n])) return i
                 }
 
                 function r(t) {
@@ -7007,8 +7003,8 @@
             }
 
             function m(e, t, n, a, o) {
-                for (var i = 0, s = t; i < s.length; i++) {
-                    var r = (0, s[i])(e, a);
+                for (var s = 0, i = t; s < i.length; s++) {
+                    var r = (0, i[s])(e, a);
                     if (r && n(e, r, o)) return g(r, o)
                 }
             }
@@ -7023,14 +7019,14 @@
                     return (0, o.elementMatches)(e, t)
                 };
                 else {
-                    var i = _() ? g("".concat(t, ":scope"), n) : g(t, n);
+                    var s = _() ? g("".concat(t, ":scope"), n) : g(t, n);
                     a = function(e) {
-                        return null !== e.querySelector(i)
+                        return null !== e.querySelector(s)
                     }
                 }
-                for (var s = (0, o.getParentElement)(e).firstElementChild; s;) {
-                    if (s !== e && a(s)) return !1;
-                    s = s.nextElementSibling
+                for (var i = (0, o.getParentElement)(e).firstElementChild; i;) {
+                    if (i !== e && a(i)) return !1;
+                    i = i.nextElementSibling
                 }
                 return !0
             }
@@ -7060,7 +7056,7 @@
                 return e.matches ? e.matches(t) : !!e.msMatchesSelector && e.msMatchesSelector(t)
             }
 
-            function i(e) {
+            function s(e) {
                 if (e.parentElement) return e.parentElement;
                 for (; e.parentNode;) {
                     if (e.parentNode.nodeType === Node.ELEMENT_NODE) return e.parentNode;
@@ -7069,7 +7065,7 @@
                 return null
             }
 
-            function s(e) {
+            function i(e) {
                 if (e.classList) return e.classList;
                 var t = (e.getAttribute("class") || "").trim();
                 return t ? t.split(/\s+/) : []
@@ -7078,8 +7074,8 @@
                 WeakSet: () => r,
                 cssEscape: () => a,
                 elementMatches: () => o,
-                getClassList: () => s,
-                getParentElement: () => i
+                getClassList: () => i,
+                getParentElement: () => s
             });
             var r = function() {
                 function e(e) {
@@ -7105,8 +7101,8 @@
             });
             var a = n(82),
                 o = n(76),
-                i = n(92),
-                s = n(161),
+                s = n(92),
+                i = n(161),
                 r = n(163),
                 l = "data-dd-action-name",
                 c = "Masked Element";
@@ -7114,8 +7110,8 @@
             function u(e, t, n) {
                 var a = t.enablePrivacyForActionName,
                     o = t.actionNameAttribute,
-                    i = d(e, l) || o && d(e, o);
-                return n === r.NodePrivacyLevel.MASK ? i || c : i || h(e, o, f, a) || h(e, o, g, a) || ""
+                    s = d(e, l) || o && d(e, o);
+                return n === r.NodePrivacyLevel.MASK ? s || c : s || h(e, o, f, a) || h(e, o, g, a) || ""
             }
 
             function d(e, t) {
@@ -7130,7 +7126,7 @@
                             n = a;
                             break
                         }
-                        a = (0, s.getParentElement)(a)
+                        a = (0, i.getParentElement)(a)
                     }
                 if (n) return v(E(n.getAttribute(t).trim()))
             }
@@ -7184,7 +7180,7 @@
                 _ = 10;
 
             function h(e, t, n, a) {
-                for (var o = e, i = 0; i <= _ && o && "BODY" !== o.nodeName && "HTML" !== o.nodeName && "HEAD" !== o.nodeName;) {
+                for (var o = e, s = 0; s <= _ && o && "BODY" !== o.nodeName && "HTML" !== o.nodeName && "HEAD" !== o.nodeName;) {
                     for (var r = 0, l = n; r < l.length; r++) {
                         var c = (0, l[r])(o, t, a);
                         if ("string" == typeof c) {
@@ -7193,7 +7189,7 @@
                         }
                     }
                     if ("FORM" === o.nodeName) break;
-                    o = (0, s.getParentElement)(o), i += 1
+                    o = (0, i.getParentElement)(o), s += 1
                 }
             }
 
@@ -7211,14 +7207,14 @@
                         var a = e.innerText,
                             o = function(t) {
                                 for (var n = e.querySelectorAll(t), o = 0; o < n.length; o += 1) {
-                                    var i = n[o];
-                                    if ("innerText" in i) {
-                                        var s = i.innerText;
-                                        s && s.trim().length > 0 && (a = a.replace(s, ""))
+                                    var s = n[o];
+                                    if ("innerText" in s) {
+                                        var i = s.innerText;
+                                        i && i.trim().length > 0 && (a = a.replace(i, ""))
                                     }
                                 }
                             };
-                        return (0, i.isIE)() && o("script, style"), o("[".concat(l, "]")), t && o("[".concat(t, "]")), n && o("".concat((0, r.getPrivacySelector)(r.NodePrivacyLevel.HIDDEN), ", ").concat((0, r.getPrivacySelector)(r.NodePrivacyLevel.MASK))), a
+                        return (0, s.isIE)() && o("script, style"), o("[".concat(l, "]")), t && o("[".concat(t, "]")), n && o("".concat((0, r.getPrivacySelector)(r.NodePrivacyLevel.HIDDEN), ", ").concat((0, r.getPrivacySelector)(r.NodePrivacyLevel.MASK))), a
                     }
                     return e.textContent
                 }
@@ -7229,7 +7225,7 @@
                 CENSORED_IMG_MARK: () => f,
                 CENSORED_STRING_MARK: () => p,
                 FORM_PRIVATE_TAG_NAMES: () => g,
-                NodePrivacyLevel: () => s,
+                NodePrivacyLevel: () => i,
                 PRIVACY_ATTR_NAME: () => r,
                 PRIVACY_ATTR_VALUE_ALLOW: () => l,
                 PRIVACY_ATTR_VALUE_HIDDEN: () => d,
@@ -7247,8 +7243,8 @@
             });
             var a = n(85),
                 o = n(164),
-                i = n(161),
-                s = {
+                s = n(161),
+                i = {
                     IGNORE: "ignore",
                     HIDDEN: "hidden",
                     ALLOW: a.DefaultPrivacyLevel.ALLOW,
@@ -7276,23 +7272,23 @@
             function _(e, t, n) {
                 if (n && n.has(e)) return n.get(e);
                 var a = (0, o.getParentNode)(e),
-                    i = a ? _(a, t, n) : t,
-                    s = h(E(e), i);
-                return n && n.set(e, s), s
+                    s = a ? _(a, t, n) : t,
+                    i = h(E(e), s);
+                return n && n.set(e, i), i
             }
 
             function h(e, t) {
                 switch (t) {
-                    case s.HIDDEN:
-                    case s.IGNORE:
+                    case i.HIDDEN:
+                    case i.IGNORE:
                         return t
                 }
                 switch (e) {
-                    case s.ALLOW:
-                    case s.MASK:
-                    case s.MASK_USER_INPUT:
-                    case s.HIDDEN:
-                    case s.IGNORE:
+                    case i.ALLOW:
+                    case i.MASK:
+                    case i.MASK_USER_INPUT:
+                    case i.HIDDEN:
+                    case i.IGNORE:
                         return e;
                     default:
                         return t
@@ -7301,25 +7297,25 @@
 
             function E(e) {
                 if ((0, o.isElementNode)(e)) {
-                    if ("BASE" === e.tagName) return s.ALLOW;
+                    if ("BASE" === e.tagName) return i.ALLOW;
                     if ("INPUT" === e.tagName) {
                         var t = e;
-                        if ("password" === t.type || "email" === t.type || "tel" === t.type) return s.MASK;
-                        if ("hidden" === t.type) return s.MASK;
+                        if ("password" === t.type || "email" === t.type || "tel" === t.type) return i.MASK;
+                        if ("hidden" === t.type) return i.MASK;
                         var n = t.getAttribute("autocomplete");
-                        if (n && (n.startsWith("cc-") || n.endsWith("-password"))) return s.MASK
+                        if (n && (n.startsWith("cc-") || n.endsWith("-password"))) return i.MASK
                     }
-                    return (0, i.elementMatches)(e, N(s.HIDDEN)) ? s.HIDDEN : (0, i.elementMatches)(e, N(s.MASK)) ? s.MASK : (0, i.elementMatches)(e, N(s.MASK_USER_INPUT)) ? s.MASK_USER_INPUT : (0, i.elementMatches)(e, N(s.ALLOW)) ? s.ALLOW : b(e) ? s.IGNORE : void 0
+                    return (0, s.elementMatches)(e, N(i.HIDDEN)) ? i.HIDDEN : (0, s.elementMatches)(e, N(i.MASK)) ? i.MASK : (0, s.elementMatches)(e, N(i.MASK_USER_INPUT)) ? i.MASK_USER_INPUT : (0, s.elementMatches)(e, N(i.ALLOW)) ? i.ALLOW : b(e) ? i.IGNORE : void 0
                 }
             }
 
             function v(e, t) {
                 switch (t) {
-                    case s.MASK:
-                    case s.HIDDEN:
-                    case s.IGNORE:
+                    case i.MASK:
+                    case i.HIDDEN:
+                    case i.IGNORE:
                         return !0;
-                    case s.MASK_USER_INPUT:
+                    case i.MASK_USER_INPUT:
                         return (0, o.isTextNode)(e) ? S(e.parentNode) : S(e);
                     default:
                         return !1
@@ -7344,16 +7340,16 @@
 
             function T(e, t, n) {
                 var a, o = null === (a = e.parentElement) || void 0 === a ? void 0 : a.tagName,
-                    i = e.textContent || "";
-                if (!t || i.trim()) {
+                    s = e.textContent || "";
+                if (!t || s.trim()) {
                     var r = n;
-                    if ("SCRIPT" === o) i = p;
-                    else if (r === s.HIDDEN) i = p;
+                    if ("SCRIPT" === o) s = p;
+                    else if (r === i.HIDDEN) s = p;
                     else if (v(e, r))
                         if ("DATALIST" === o || "SELECT" === o || "OPTGROUP" === o) {
-                            if (!i.trim()) return
-                        } else i = "OPTION" === o ? p : y(i);
-                    return i
+                            if (!s.trim()) return
+                        } else s = "OPTION" === o ? p : y(s);
+                    return s
                 }
             }
 
@@ -7389,26 +7385,26 @@
                 return e.nodeType === Node.COMMENT_NODE
             }
 
-            function i(e) {
+            function s(e) {
                 return e.nodeType === Node.ELEMENT_NODE
             }
 
-            function s(e) {
-                return i(e) && Boolean(e.shadowRoot)
+            function i(e) {
+                return s(e) && Boolean(e.shadowRoot)
             }
 
             function r(e) {
                 var t = e;
-                return !!t.host && t.nodeType === Node.DOCUMENT_FRAGMENT_NODE && i(t.host)
+                return !!t.host && t.nodeType === Node.DOCUMENT_FRAGMENT_NODE && s(t.host)
             }
 
             function l(e) {
-                return e.childNodes.length > 0 || s(e)
+                return e.childNodes.length > 0 || i(e)
             }
 
             function c(e, t) {
                 for (var n = e.firstChild; n;) t(n), n = n.nextSibling;
-                s(e) && t(e.shadowRoot)
+                i(e) && t(e.shadowRoot)
             }
 
             function u(e) {
@@ -7419,29 +7415,29 @@
                 getParentNode: () => u,
                 hasChildNodes: () => l,
                 isCommentNode: () => o,
-                isElementNode: () => i,
-                isNodeShadowHost: () => s,
+                isElementNode: () => s,
+                isNodeShadowHost: () => i,
                 isNodeShadowRoot: () => r,
                 isTextNode: () => a
             })
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                MAX_DISTANCE_BETWEEN_CLICKS: () => s,
-                MAX_DURATION_BETWEEN_CLICKS: () => i,
+                MAX_DISTANCE_BETWEEN_CLICKS: () => i,
+                MAX_DURATION_BETWEEN_CLICKS: () => s,
                 createClickChain: () => r
             });
             var a = n(72),
                 o = n(98),
-                i = a.ONE_SECOND,
-                s = 100;
+                s = a.ONE_SECOND,
+                i = 100;
 
             function r(e, t) {
                 var n, a = [],
                     r = 0;
 
                 function l(e) {
-                    e.stopObservable.subscribe(c), a.push(e), (0, o.clearTimeout)(n), n = (0, o.setTimeout)(u, i)
+                    e.stopObservable.subscribe(c), a.push(e), (0, o.clearTimeout)(n), n = (0, o.setTimeout)(u, s)
                 }
 
                 function c() {
@@ -7455,7 +7451,7 @@
                 }
                 return l(e), {
                     tryAppend: function(e) {
-                        return 0 === r && (a.length > 0 && (t = a[a.length - 1].event, n = e.event, !(t.target === n.target && (o = t, c = n, Math.sqrt(Math.pow(o.clientX - c.clientX, 2) + Math.pow(o.clientY - c.clientY, 2)) <= s) && t.timeStamp - n.timeStamp <= i)) ? (u(), !1) : (l(e), !0));
+                        return 0 === r && (a.length > 0 && (t = a[a.length - 1].event, n = e.event, !(t.target === n.target && (o = t, c = n, Math.sqrt(Math.pow(o.clientX - c.clientX, 2) + Math.pow(o.clientY - c.clientY, 2)) <= i) && t.timeStamp - n.timeStamp <= s)) ? (u(), !1) : (l(e), !0));
                         var t, n, o, c
                     },
                     stop: function() {
@@ -7479,7 +7475,7 @@
                         scroll: !1
                     },
                     u = [(0, a.addEventListener)(e, window, "pointerdown", (function(e) {
-                        s(e) && (n = i(), c = {
+                        i(e) && (n = s(), c = {
                             selection: !1,
                             input: !1,
                             scroll: !1
@@ -7487,7 +7483,7 @@
                     }), {
                         capture: !0
                     }), (0, a.addEventListener)(e, window, "selectionchange", (function() {
-                        n && i() || (c.selection = !0)
+                        n && s() || (c.selection = !0)
                     }), {
                         capture: !0
                     }), (0, a.addEventListener)(e, window, "scroll", (function() {
@@ -7496,7 +7492,7 @@
                         capture: !0,
                         passive: !0
                     }), (0, a.addEventListener)(e, window, "pointerup", (function(e) {
-                        if (s(e) && o) {
+                        if (i(e) && o) {
                             var t = c;
                             l(o, e, (function() {
                                 return t
@@ -7518,26 +7514,26 @@
                 }
             }
 
-            function i() {
+            function s() {
                 var e = window.getSelection();
                 return !e || e.isCollapsed
             }
 
-            function s(e) {
+            function i(e) {
                 return e.target instanceof Element && !1 !== e.isPrimary
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                computeFrustration: () => s,
+                computeFrustration: () => i,
                 isDead: () => c,
                 isRage: () => r
             });
             var a = n(72),
                 o = n(161),
-                i = 3;
+                s = 3;
 
-            function s(e, t) {
+            function i(e, t) {
                 if (r(e)) return t.addFrustration("rage_click"), e.some(c) && t.addFrustration("dead_click"), t.hasError && t.addFrustration("error_click"), {
                     isRage: !0
                 };
@@ -7555,8 +7551,8 @@
                 if (e.some((function(e) {
                         return e.getUserActivity().selection || e.getUserActivity().scroll
                     }))) return !1;
-                for (var t = 0; t < e.length - (i - 1); t += 1)
-                    if (e[t + i - 1].event.timeStamp - e[t].event.timeStamp <= a.ONE_SECOND) return !0;
+                for (var t = 0; t < e.length - (s - 1); t += 1)
+                    if (e[t + s - 1].event.timeStamp - e[t].event.timeStamp <= a.ONE_SECOND) return !0;
                 return !1
             }
             var l = 'input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]),textarea,select,[contenteditable],[contenteditable] *,canvas,a[href],a[href] *';
@@ -7568,22 +7564,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 CLICK_ACTION_MAX_DURATION: () => o,
-                getInteractionSelector: () => s,
-                interactionSelectorCache: () => i,
+                getInteractionSelector: () => i,
+                interactionSelectorCache: () => s,
                 updateInteractionSelector: () => r
             });
             var a = n(72),
                 o = 10 * a.ONE_SECOND,
-                i = new Map;
+                s = new Map;
 
-            function s(e) {
-                var t = i.get(e);
-                return i.delete(e), t
+            function i(e) {
+                var t = s.get(e);
+                return s.delete(e), t
             }
 
             function r(e, t) {
-                i.set(e, t), i.forEach((function(e, t) {
-                    (0, a.elapsed)(t, (0, a.relativeNow)()) > o && i.delete(t)
+                s.set(e, t), s.forEach((function(e, t) {
+                    (0, a.elapsed)(t, (0, a.relativeNow)()) > o && s.delete(t)
                 }))
             }
         }, (e, t, n) => {
@@ -7594,8 +7590,8 @@
             });
             var a = n(87),
                 o = n(174),
-                i = n(82),
-                s = n(122),
+                s = n(82),
+                i = n(122),
                 r = n(124),
                 l = n(142),
                 c = n(76),
@@ -7603,22 +7599,22 @@
                 d = n(170),
                 m = n(172);
 
-            function p(e, t, n, i) {
-                var s = new a.Observable;
-                return (0, d.trackConsoleError)(s), (0, o.trackRuntimeError)(s), (0, m.trackReportError)(t, s), s.subscribe((function(t) {
+            function p(e, t, n, s) {
+                var i = new a.Observable;
+                return (0, d.trackConsoleError)(i), (0, o.trackRuntimeError)(i), (0, m.trackReportError)(t, i), i.subscribe((function(t) {
                     return e.notify(13, {
                         error: t
                     })
-                })), f(e, n, i)
+                })), f(e, n, s)
             }
 
             function f(e, t, n) {
                 return e.subscribe(13, (function(a) {
                     var o = a.error,
-                        s = a.customerContext,
+                        i = a.customerContext,
                         r = a.savedCommonContext;
-                    e.notify(11, (0, i.assign)({
-                        customerContext: s,
+                    e.notify(11, (0, s.assign)({
+                        customerContext: i,
                         savedCommonContext: r
                     }, function(e, t, n) {
                         var a = {
@@ -7643,28 +7639,28 @@
                             },
                             o = n.findFeatureFlagEvaluations(e.startClocks.relative);
                         o && !(0, u.isEmptyObject)(o) && (a.feature_flags = o);
-                        var i = {
+                        var s = {
                             error: e.originalError,
                             handlingStack: e.handlingStack
                         };
                         return {
                             rawRumEvent: a,
                             startTime: e.startClocks.relative,
-                            domainContext: i
+                            domainContext: s
                         }
                     }(o, t, n)))
                 })), {
                     addError: function(t, n) {
                         var a = t.error,
                             o = t.handlingStack,
-                            i = t.startClocks,
+                            s = t.startClocks,
                             c = t.context,
-                            u = a instanceof Error ? (0, s.computeStackTrace)(a) : void 0,
+                            u = a instanceof Error ? (0, i.computeStackTrace)(a) : void 0,
                             d = (0, r.computeRawError)({
                                 stackTrace: u,
                                 originalError: a,
                                 handlingStack: o,
-                                startClocks: i,
+                                startClocks: s,
                                 nonErrorPrefix: "Provided",
                                 source: l.ErrorSource.CUSTOM,
                                 handling: "handled"
@@ -7680,12 +7676,12 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                trackConsoleError: () => i
+                trackConsoleError: () => s
             });
             var a = n(171),
                 o = n(83);
 
-            function i(e) {
+            function s(e) {
                 var t = (0, a.initConsoleObservable)([o.ConsoleApiName.error]).subscribe((function(t) {
                     return e.notify(t.error)
                 }));
@@ -7703,8 +7699,8 @@
             });
             var a = n(124),
                 o = n(87),
-                i = n(83),
-                s = n(101),
+                s = n(83),
+                i = n(101),
                 r = n(125),
                 l = n(82),
                 c = n(110),
@@ -7718,21 +7714,21 @@
                 var t = e.map((function(e) {
                     return f[e] || (f[e] = function(e) {
                         return new o.Observable((function(t) {
-                            var n = i.globalConsole[e];
-                            return i.globalConsole[e] = function() {
+                            var n = s.globalConsole[e];
+                            return s.globalConsole[e] = function() {
                                     for (var o = [], f = 0; f < arguments.length; f++) o[f] = arguments[f];
                                     n.apply(console, o);
                                     var g = (0, m.createHandlingStack)();
-                                    (0, s.callMonitored)((function() {
+                                    (0, i.callMonitored)((function() {
                                         t.notify(function(e, t, n) {
-                                            var o, s = e.map((function(e) {
+                                            var o, i = e.map((function(e) {
                                                 return function(e) {
                                                     if ("string" == typeof e) return (0, r.sanitize)(e);
                                                     if (e instanceof Error) return (0, m.formatErrorMessage)((0, d.computeStackTrace)(e));
                                                     return (0, c.jsonStringify)((0, r.sanitize)(e), void 0, 2)
                                                 }(e)
                                             })).join(" ");
-                                            if (t === i.ConsoleApiName.error) {
+                                            if (t === s.ConsoleApiName.error) {
                                                 var f = (0, l.find)(e, (function(e) {
                                                     return e instanceof Error
                                                 }));
@@ -7741,7 +7737,7 @@
                                                     fingerprint: (0, a.tryToGetFingerprint)(f),
                                                     causes: f ? (0, a.flattenErrorCauses)(f, "console") : void 0,
                                                     startClocks: (0, p.clocksNow)(),
-                                                    message: s,
+                                                    message: i,
                                                     source: u.ErrorSource.CONSOLE,
                                                     handling: "handled",
                                                     handlingStack: n
@@ -7749,7 +7745,7 @@
                                             }
                                             return {
                                                 api: t,
-                                                message: s,
+                                                message: i,
                                                 error: o,
                                                 handlingStack: n
                                             }
@@ -7757,7 +7753,7 @@
                                     }))
                                 },
                                 function() {
-                                    i.globalConsole[e] = n
+                                    s.globalConsole[e] = n
                                 }
                         }))
                     }(e)), f[e]
@@ -7793,8 +7789,8 @@
             });
             var a = n(123),
                 o = n(101),
-                i = n(87),
-                s = n(112),
+                s = n(87),
+                i = n(112),
                 r = n(82),
                 l = n(76),
                 c = n(142),
@@ -7808,8 +7804,8 @@
             function m(e, t) {
                 var n = [];
                 (0, r.includes)(t, d.cspViolation) && n.push(function(e) {
-                    return new i.Observable((function(t) {
-                        return (0, s.addEventListener)(e, document, "securitypolicyviolation", (function(e) {
+                    return new s.Observable((function(t) {
+                        return (0, i.addEventListener)(e, document, "securitypolicyviolation", (function(e) {
                             t.notify(function(e) {
                                 var t = "'".concat(e.blockedURI, "' blocked by '").concat(e.effectiveDirective, "' directive");
                                 return p({
@@ -7829,7 +7825,7 @@
                     return e !== d.cspViolation
                 }));
                 return a.length && n.push(function(e) {
-                    return new i.Observable((function(t) {
+                    return new s.Observable((function(t) {
                         if (window.ReportingObserver) {
                             var n = (0, o.monitor)((function(e, n) {
                                     return e.forEach((function(e) {
@@ -7855,7 +7851,7 @@
                                 }
                         }
                     }))
-                }(a)), i.mergeObservables.apply(void 0, n)
+                }(a)), s.mergeObservables.apply(void 0, n)
             }
 
             function p(e) {
@@ -7866,7 +7862,7 @@
                 }, e)
             }
 
-            function f(e, t, n, o, i) {
+            function f(e, t, n, o, s) {
                 return n ? (0, a.toStackTraceString)({
                     name: e,
                     message: t,
@@ -7874,7 +7870,7 @@
                         func: "?",
                         url: n,
                         line: null != o ? o : void 0,
-                        column: null != i ? i : void 0
+                        column: null != s ? s : void 0
                     }]
                 }) : void 0
             }
@@ -7887,13 +7883,13 @@
             });
             var a = n(128),
                 o = n(72),
-                i = n(122),
-                s = n(124),
+                s = n(122),
+                i = n(124),
                 r = n(142);
 
             function l(e) {
                 var t = function(t, n) {
-                        var a = (0, s.computeRawError)({
+                        var a = (0, i.computeRawError)({
                             stackTrace: t,
                             originalError: n,
                             startClocks: (0, o.clocksNow)(),
@@ -7916,38 +7912,38 @@
                 return (0, a.instrumentMethod)(window, "onerror", (function(t) {
                     var n, a = t.parameters,
                         o = a[0],
-                        s = a[1],
+                        i = a[1],
                         r = a[2],
                         l = a[3],
                         c = a[4];
-                    n = c instanceof Error ? (0, i.computeStackTrace)(c) : (0, i.computeStackTraceFromOnErrorMessage)(o, s, r, l), e(n, null != c ? c : o)
+                    n = c instanceof Error ? (0, s.computeStackTrace)(c) : (0, s.computeStackTraceFromOnErrorMessage)(o, i, r, l), e(n, null != c ? c : o)
                 }))
             }
 
             function u(e) {
                 return (0, a.instrumentMethod)(window, "onunhandledrejection", (function(t) {
                     var n = t.parameters[0].reason || "Empty reason",
-                        a = (0, i.computeStackTrace)(n);
+                        a = (0, s.computeStackTrace)(n);
                     e(a, n)
                 }))
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                startLongTaskCollection: () => s
+                startLongTaskCollection: () => i
             });
             var a = n(72),
                 o = n(76),
-                i = n(158);
+                s = n(158);
 
-            function s(e, t) {
-                var n = (0, i.createPerformanceObservable)(t, {
-                    type: i.RumPerformanceEntryType.LONG_TASK,
+            function i(e, t) {
+                var n = (0, s.createPerformanceObservable)(t, {
+                    type: s.RumPerformanceEntryType.LONG_TASK,
                     buffered: !0
                 }).subscribe((function(n) {
-                    for (var s = 0, r = n; s < r.length; s++) {
-                        var l = r[s];
-                        if (l.entryType !== i.RumPerformanceEntryType.LONG_TASK) break;
+                    for (var i = 0, r = n; i < r.length; i++) {
+                        var l = r[i];
+                        if (l.entryType !== s.RumPerformanceEntryType.LONG_TASK) break;
                         if (!t.trackLongTasks) break;
                         var c = (0, a.relativeToClocks)(l.startTime),
                             u = {
@@ -7984,8 +7980,8 @@
             });
             var a = n(72),
                 o = n(74),
-                i = n(76),
-                s = n(82),
+                s = n(76),
+                i = n(82),
                 r = n(73),
                 l = n(158),
                 c = n(80),
@@ -7993,11 +7989,11 @@
                 d = n(149),
                 m = n(178);
 
-            function p(e, t, n, s) {
-                void 0 === s && (s = m.retrieveInitialDocumentResourceTiming), e.subscribe(7, (function(s) {
+            function p(e, t, n, i) {
+                void 0 === i && (i = m.retrieveInitialDocumentResourceTiming), e.subscribe(7, (function(i) {
                     var r = function(e, t, n) {
-                        var s = (0, u.matchRequestResourceEntry)(e),
-                            r = s ? (0, a.relativeToClocks)(s.startTime) : e.startClocks,
+                        var i = (0, u.matchRequestResourceEntry)(e),
+                            r = i ? (0, a.relativeToClocks)(i.startTime) : e.startClocks,
                             l = function(e, t) {
                                 var n = e.traceSampled && e.traceId && e.spanId;
                                 if (!n) return;
@@ -8011,19 +8007,19 @@
                             }(e, t);
                         if (!t.trackResources && !l) return;
                         var c = "xhr" === e.type ? "xhr" : "fetch",
-                            m = s ? g(s) : void 0,
+                            m = i ? g(i) : void 0,
                             p = function(e, t, n) {
                                 return e.wasInPageStateDuringPeriod("frozen", t.relative, n) ? void 0 : (0, a.toServerDuration)(n)
                             }(n, r, e.duration),
                             f = (0, o.combine)({
                                 date: r.timeStamp,
                                 resource: {
-                                    id: (0, i.generateUUID)(),
+                                    id: (0, s.generateUUID)(),
                                     type: c,
                                     duration: p,
                                     method: e.method,
                                     status_code: e.status,
-                                    protocol: s && (0, d.computeResourceEntryProtocol)(s),
+                                    protocol: i && (0, d.computeResourceEntryProtocol)(i),
                                     url: (0, d.isLongDataUrl)(e.url) ? (0, d.sanitizeDataUrl)(e.url) : e.url
                                 },
                                 type: "resource",
@@ -8035,7 +8031,7 @@
                             startTime: r.relative,
                             rawRumEvent: f,
                             domainContext: {
-                                performanceEntry: s,
+                                performanceEntry: i,
                                 xhr: e.xhr,
                                 response: e.response,
                                 requestInput: e.input,
@@ -8045,7 +8041,7 @@
                                 handlingStack: e.handlingStack
                             }
                         }
-                    }(s, t, n);
+                    }(i, t, n);
                     r && e.notify(11, r)
                 }));
                 var r = (0, l.createPerformanceObservable)(t, {
@@ -8053,14 +8049,14 @@
                     buffered: !0
                 }).subscribe((function(n) {
                     for (var a = 0, o = n; a < o.length; a++) {
-                        var i = o[a];
-                        if (!(0, d.isResourceEntryRequestType)(i)) {
-                            var s = f(i, t);
-                            s && e.notify(11, s)
+                        var s = o[a];
+                        if (!(0, d.isResourceEntryRequestType)(s)) {
+                            var i = f(s, t);
+                            i && e.notify(11, i)
                         }
                     }
                 }));
-                return s(t, (function(n) {
+                return i(t, (function(n) {
                     var a = f(n, t);
                     a && e.notify(11, a)
                 })), {
@@ -8072,7 +8068,7 @@
 
             function f(e, t) {
                 var n = (0, a.relativeToClocks)(e.startTime),
-                    s = function(e, t) {
+                    i = function(e, t) {
                         var n = e.traceId;
                         if (!n) return;
                         return {
@@ -8083,13 +8079,13 @@
                             }
                         }
                     }(e, t);
-                if (t.trackResources || s) {
+                if (t.trackResources || i) {
                     var r, l = (0, d.computeResourceEntryType)(e),
                         u = g(e),
                         m = (0, o.combine)({
                             date: n.timeStamp,
                             resource: {
-                                id: (0, i.generateUUID)(),
+                                id: (0, s.generateUUID)(),
                                 type: l,
                                 url: e.name,
                                 status_code: (r = e.responseStatus, 0 === r ? void 0 : r),
@@ -8099,7 +8095,7 @@
                             _dd: {
                                 discarded: !t.trackResources
                             }
-                        }, s, u);
+                        }, i, u);
                     return {
                         startTime: n.relative,
                         rawRumEvent: m,
@@ -8113,7 +8109,7 @@
             function g(e) {
                 var t = e.renderBlockingStatus;
                 return {
-                    resource: (0, s.assign)({
+                    resource: (0, i.assign)({
                         duration: (0, d.computeResourceEntryDuration)(e),
                         render_blocking_status: t
                     }, (0, d.computeResourceEntrySize)(e), (0, d.computeResourceEntryDetails)(e))
@@ -8130,25 +8126,25 @@
             });
             var a = n(72),
                 o = n(161),
-                i = n(149),
-                s = new o.WeakSet;
+                s = n(149),
+                i = new o.WeakSet;
 
             function r(e) {
                 if (performance && "getEntriesByName" in performance) {
                     var t = performance.getEntriesByName(e.url, "resource");
                     if (t.length && "toJSON" in t[0]) {
                         var n = t.filter((function(e) {
-                            return !s.has(e)
+                            return !i.has(e)
                         })).filter((function(e) {
-                            return (0, i.hasValidResourceEntryDuration)(e) && (0, i.hasValidResourceEntryTimings)(e)
+                            return (0, s.hasValidResourceEntryDuration)(e) && (0, s.hasValidResourceEntryTimings)(e)
                         })).filter((function(t) {
-                            return n = t, o = e.startClocks.relative, i = l({
+                            return n = t, o = e.startClocks.relative, s = l({
                                 startTime: e.startClocks.relative,
                                 duration: e.duration
-                            }), s = 1, n.startTime >= o - s && l(n) <= (0, a.addDuration)(i, s);
-                            var n, o, i, s
+                            }), i = 1, n.startTime >= o - i && l(n) <= (0, a.addDuration)(s, i);
+                            var n, o, s, i
                         }));
-                        return 1 === n.length ? (s.add(n[0]), n[0].toJSON()) : void 0
+                        return 1 === n.length ? (i.add(n[0]), n[0].toJSON()) : void 0
                     }
                 }
             }
@@ -8163,17 +8159,17 @@
             });
             var a = n(181),
                 o = n(82),
-                i = n(158),
-                s = n(179),
+                s = n(158),
+                i = n(179),
                 r = n(180),
                 l = n(149);
 
             function c(e, t) {
                 (0, a.runOnReadyState)(e, "interactive", (function() {
                     var e = (0, o.assign)((0, r.getNavigationEntry)().toJSON(), {
-                        entryType: i.RumPerformanceEntryType.RESOURCE,
+                        entryType: s.RumPerformanceEntryType.RESOURCE,
                         initiatorType: l.FAKE_INITIAL_DOCUMENT,
-                        traceId: (0, s.getDocumentTraceId)(document),
+                        traceId: (0, i.getDocumentTraceId)(document),
                         toJSON: function() {
                             return (0, o.assign)({}, e, {
                                 toJSON: void 0
@@ -8186,7 +8182,7 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                INITIAL_DOCUMENT_OUTDATED_TRACE_ID_THRESHOLD: () => s,
+                INITIAL_DOCUMENT_OUTDATED_TRACE_ID_THRESHOLD: () => i,
                 createDocumentTraceData: () => u,
                 findTraceComment: () => d,
                 getDocumentTraceDataFromComment: () => c,
@@ -8195,12 +8191,12 @@
             });
             var a = n(72),
                 o = n(76),
-                i = n(164),
-                s = 2 * a.ONE_MINUTE;
+                s = n(164),
+                i = 2 * a.ONE_MINUTE;
 
             function r(e) {
                 var t = l(e) || c(e);
-                if (t && !(t.traceTime <= (0, a.dateNow)() - s)) return t.traceId
+                if (t && !(t.traceTime <= (0, a.dateNow)() - i)) return t.traceId
             }
 
             function l(e) {
@@ -8230,12 +8226,12 @@
                     for (t = e.body.childNodes.length - 1; t >= 0; t -= 1) {
                         var n, a = e.body.childNodes[t];
                         if (n = m(a)) return n;
-                        if (!(0, i.isTextNode)(a)) break
+                        if (!(0, s.isTextNode)(a)) break
                     }
             }
 
             function m(e) {
-                if (e && (0, i.isCommentNode)(e)) {
+                if (e && (0, s.isCommentNode)(e)) {
                     var t = /^\s*DATADOG;(.*?)\s*$/.exec(e.data);
                     if (t) return t[1]
                 }
@@ -8248,17 +8244,17 @@
             });
             var a = n(82),
                 o = n(73),
-                i = n(72),
-                s = n(158);
+                s = n(72),
+                i = n(158);
 
             function r() {
-                if ((0, s.supportPerformanceTimingEvent)(s.RumPerformanceEntryType.NAVIGATION)) {
-                    var e = performance.getEntriesByType(s.RumPerformanceEntryType.NAVIGATION)[0];
+                if ((0, i.supportPerformanceTimingEvent)(i.RumPerformanceEntryType.NAVIGATION)) {
+                    var e = performance.getEntriesByType(i.RumPerformanceEntryType.NAVIGATION)[0];
                     if (e) return e
                 }
                 var t = l(),
                     n = (0, a.assign)({
-                        entryType: s.RumPerformanceEntryType.NAVIGATION,
+                        entryType: i.RumPerformanceEntryType.NAVIGATION,
                         initiatorType: "navigation",
                         name: window.location.href,
                         startTime: 0,
@@ -8281,24 +8277,24 @@
                 for (var n in t)
                     if ((0, o.isNumber)(t[n])) {
                         var a = n,
-                            s = t[a];
-                        e[a] = 0 === s ? 0 : (0, i.getRelativeTime)(s)
+                            i = t[a];
+                        e[a] = 0 === i ? 0 : (0, s.getRelativeTime)(i)
                     } return e
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                runOnReadyState: () => i
+                runOnReadyState: () => s
             });
             var a = n(102),
                 o = n(112);
 
-            function i(e, t, n) {
+            function s(e, t, n) {
                 if (document.readyState === t || "complete" === document.readyState) return n(), {
                     stop: a.noop
                 };
-                var i = "complete" === t ? "load" : "DOMContentLoaded";
-                return (0, o.addEventListener)(e, window, i, n, {
+                var s = "complete" === t ? "load" : "DOMContentLoaded";
+                return (0, o.addEventListener)(e, window, s, n, {
                     once: !0
                 })
             }
@@ -8309,20 +8305,20 @@
             });
             var a = n(72),
                 o = n(84),
-                i = n(154),
-                s = n(183);
+                s = n(154),
+                i = n(183);
 
             function r(e, t, n, r, l, c, u, d, m) {
                 return e.subscribe(3, (function(n) {
-                    return e.notify(11, function(e, t, n, s, r) {
-                        var l, c, u, d, m, p, f, g, _, h, E, v, S, y, T, b, N = s.getReplayStats(e.id),
-                            A = n.findFeatureFlagEvaluations(e.startClocks.relative),
-                            C = r.findAll(e.startClocks.relative, e.duration),
-                            I = {
+                    return e.notify(11, function(e, t, n, i, r) {
+                        var l, c, u, d, m, p, f, g, _, h, E, v, S, y, T, b, N = i.getReplayStats(e.id),
+                            C = n.findFeatureFlagEvaluations(e.startClocks.relative),
+                            I = r.findAll(e.startClocks.relative, e.duration),
+                            A = {
                                 _dd: {
                                     document_version: e.documentVersion,
                                     replay_stats: N,
-                                    page_states: C,
+                                    page_states: I,
                                     configuration: {
                                         start_session_replay_recording_manually: t.startSessionReplayRecordingManually
                                     }
@@ -8358,7 +8354,7 @@
                                     largest_contentful_paint: (0, a.toServerDuration)(null === (y = e.initialViewMetrics.largestContentfulPaint) || void 0 === y ? void 0 : y.value),
                                     largest_contentful_paint_target_selector: null === (T = e.initialViewMetrics.largestContentfulPaint) || void 0 === T ? void 0 : T.targetSelector,
                                     load_event: (0, a.toServerDuration)(null === (b = e.initialViewMetrics.navigationTimings) || void 0 === b ? void 0 : b.loadEvent),
-                                    loading_time: (0, i.discardNegativeDuration)((0, a.toServerDuration)(e.commonViewMetrics.loadingTime)),
+                                    loading_time: (0, s.discardNegativeDuration)((0, a.toServerDuration)(e.commonViewMetrics.loadingTime)),
                                     loading_type: e.loadingType,
                                     long_task: {
                                         count: e.eventCounts.longTaskCount
@@ -8368,7 +8364,7 @@
                                     },
                                     time_spent: (0, a.toServerDuration)(e.duration)
                                 },
-                                feature_flags: A && !(0, o.isEmptyObject)(A) ? A : void 0,
+                                feature_flags: C && !(0, o.isEmptyObject)(C) ? C : void 0,
                                 display: e.commonViewMetrics.scroll ? {
                                     scroll: {
                                         max_depth: e.commonViewMetrics.scroll.maxDepth,
@@ -8385,16 +8381,16 @@
                                     replay_level: t.defaultPrivacyLevel
                                 }
                             };
-                        (0, o.isEmptyObject)(e.customTimings) || (I.view.custom_timings = (0, o.mapValues)(e.customTimings, a.toServerDuration));
+                        (0, o.isEmptyObject)(e.customTimings) || (A.view.custom_timings = (0, o.mapValues)(e.customTimings, a.toServerDuration));
                         return {
-                            rawRumEvent: I,
+                            rawRumEvent: A,
                             startTime: e.startClocks.relative,
                             domainContext: {
                                 location: e.location
                             }
                         }
                     }(n, t, c, d, u))
-                })), (0, s.trackViews)(n, e, r, t, l, !t.trackViewsManually, m)
+                })), (0, i.trackViews)(n, e, r, t, l, !t.trackViewsManually, m)
             }
         }, (e, t, n) => {
             "use strict";
@@ -8406,8 +8402,8 @@
             });
             var a = n(72),
                 o = n(199),
-                i = n(76),
-                s = n(87),
+                s = n(76),
+                i = n(87),
                 r = n(84),
                 l = n(131),
                 c = n(102),
@@ -8422,57 +8418,57 @@
 
             function E(e, t, n, E, S, y, T) {
                 var b, N = new Set,
-                    A = C("initial_load", (0, a.clocksOrigin)(), T);
+                    C = I("initial_load", (0, a.clocksOrigin)(), T);
 
-                function C(o, v, S) {
+                function I(o, v, S) {
                     var y = function(e, t, n, o, E, v, S) {
                         void 0 === v && (v = (0, a.clocksNow)());
-                        var y, T, b, N, A, C = (0, i.generateUUID)(),
-                            I = new s.Observable,
+                        var y, T, b, N, C, I = (0, s.generateUUID)(),
+                            A = new i.Observable,
                             L = {},
                             k = 0,
                             x = (0, r.shallowClone)(o),
                             O = (0, l.createContextManager)(),
                             M = !0;
-                        S && (T = S.name, b = S.service || void 0, N = S.version || void 0, S.context && (A = S.context, O.setContext(A)));
+                        S && (T = S.name, b = S.service || void 0, N = S.version || void 0, S.context && (C = S.context, O.setContext(C)));
                         var R = {
-                            id: C,
+                            id: I,
                             name: T,
                             startClocks: v,
                             service: b,
                             version: N,
-                            context: A
+                            context: C
                         };
                         e.notify(1, R), e.notify(2, R);
                         var w = (0, c.throttle)(X, g, {
                                 leading: !1
                             }),
-                            P = w.throttled,
-                            D = w.cancel,
-                            G = (0, f.trackCommonViewMetrics)(e, t, n, P, E, v),
+                            D = w.throttled,
+                            P = w.cancel,
+                            G = (0, f.trackCommonViewMetrics)(e, t, n, D, E, v),
                             K = G.setLoadEvent,
                             V = G.setViewEnd,
                             U = G.stop,
                             B = G.stopINPTracking,
                             F = G.getCommonViewMetrics,
-                            H = "initial_load" === E ? (0, p.trackInitialViewMetrics)(n, K, P) : {
+                            H = "initial_load" === E ? (0, p.trackInitialViewMetrics)(n, K, D) : {
                                 stop: c.noop,
                                 initialViewMetrics: {}
                             },
                             Y = H.stop,
                             j = H.initialViewMetrics,
-                            z = (0, m.trackViewEventCounts)(e, C, P),
+                            z = (0, m.trackViewEventCounts)(e, I, D),
                             W = z.stop,
                             q = z.eventCounts,
                             $ = (0, u.setInterval)(X, _);
 
                         function X() {
-                            D(), k += 1;
+                            P(), k += 1;
                             var t = void 0 === y ? (0, a.timeStampNow)() : y.timeStamp;
                             e.notify(3, {
                                 customTimings: L,
                                 documentVersion: k,
-                                id: C,
+                                id: I,
                                 name: T,
                                 service: b,
                                 version: N,
@@ -8495,19 +8491,19 @@
                             service: b,
                             version: N,
                             contextManager: O,
-                            stopObservable: I,
+                            stopObservable: A,
                             end: function(t) {
-                                var n, o, i = this;
+                                var n, o, s = this;
                                 void 0 === t && (t = {}), y || (y = null !== (n = t.endClocks) && void 0 !== n ? n : (0, a.clocksNow)(), M = null === (o = t.sessionIsActive) || void 0 === o || o, e.notify(4, {
                                     endClocks: y
                                 }), e.notify(5, {
                                     endClocks: y
                                 }), (0, u.clearInterval)($), V(y.relative), U(), X(), (0, u.setTimeout)((function() {
-                                    i.stop()
+                                    s.stop()
                                 }), h))
                             },
                             stop: function() {
-                                Y(), W(), B(), I.notify()
+                                Y(), W(), B(), A.notify()
                             },
                             addTiming: function(e, t) {
                                 if (!y) {
@@ -8516,7 +8512,7 @@
                                         var t = e.replace(/[^a-zA-Z0-9-_.@$]/g, "_");
                                         t !== e && d.display.warn("Invalid timing name: ".concat(e, ", sanitized to: ").concat(t));
                                         return t
-                                    }(e)] = n, P()
+                                    }(e)] = n, D()
                                 }
                             },
                             setViewName: function(e) {
@@ -8529,44 +8525,44 @@
                     })), y
                 }
                 return t.subscribe(9, (function() {
-                    A = C("route_change", void 0, {
-                        name: A.name,
-                        service: A.service,
-                        version: A.version,
-                        context: A.contextManager.getContext()
+                    C = I("route_change", void 0, {
+                        name: C.name,
+                        service: C.service,
+                        version: C.version,
+                        context: C.contextManager.getContext()
                     })
                 })), t.subscribe(8, (function() {
-                    A.end({
+                    C.end({
                         sessionIsActive: !1
                     })
                 })), t.subscribe(10, (function(e) {
-                    e.reason === o.PageExitReason.UNLOADING && A.end()
+                    e.reason === o.PageExitReason.UNLOADING && C.end()
                 })), y && (b = function(e) {
                     return e.subscribe((function(e) {
-                        var t, n, a, o, i = e.oldLocation,
-                            s = e.newLocation;
-                        n = s, (t = i).pathname === n.pathname && (a = n.hash, "" !== (o = a.substring(1)) && document.getElementById(o) || v(n.hash) === v(t.hash)) || (A.end(), A = C("route_change"))
+                        var t, n, a, o, s = e.oldLocation,
+                            i = e.newLocation;
+                        n = i, (t = s).pathname === n.pathname && (a = n.hash, "" !== (o = a.substring(1)) && document.getElementById(o) || v(n.hash) === v(t.hash)) || (C.end(), C = I("route_change"))
                     }))
                 }(S)), {
                     addTiming: function(e, t) {
-                        void 0 === t && (t = (0, a.timeStampNow)()), A.addTiming(e, t)
+                        void 0 === t && (t = (0, a.timeStampNow)()), C.addTiming(e, t)
                     },
                     startView: function(e, t) {
-                        A.end({
+                        C.end({
                             endClocks: t
-                        }), A = C("route_change", t, e)
+                        }), C = I("route_change", t, e)
                     },
                     setViewContext: function(e) {
-                        A.contextManager.setContext(e)
+                        C.contextManager.setContext(e)
                     },
                     setViewContextProperty: function(e, t) {
-                        A.contextManager.setContextProperty(e, t)
+                        C.contextManager.setContextProperty(e, t)
                     },
                     setViewName: function(e) {
-                        A.setViewName(e)
+                        C.setViewName(e)
                     },
                     stop: function() {
-                        b && b.unsubscribe(), A.end(), N.forEach((function(e) {
+                        b && b.unsubscribe(), C.end(), N.forEach((function(e) {
                             return e.stop()
                         }))
                     }
@@ -8604,20 +8600,20 @@
             });
             var a = n(186),
                 o = n(187),
-                i = n(188),
-                s = n(189),
+                s = n(188),
+                i = n(189),
                 r = n(190);
 
             function l(e, t, n) {
                 var l = {},
-                    c = (0, i.trackNavigationTimings)(e, (function(e) {
+                    c = (0, s.trackNavigationTimings)(e, (function(e) {
                         t(e.loadEvent), l.navigationTimings = e, n()
                     })).stop,
                     u = (0, r.trackFirstHidden)(e),
                     d = (0, a.trackFirstContentfulPaint)(e, u, (function(e) {
                         l.firstContentfulPaint = e, n()
                     })).stop,
-                    m = (0, s.trackLargestContentfulPaint)(e, u, window, (function(e) {
+                    m = (0, i.trackLargestContentfulPaint)(e, u, window, (function(e) {
                         l.largestContentfulPaint = e, n()
                     })).stop,
                     p = (0, o.trackFirstInput)(e, u, (function(e) {
@@ -8633,22 +8629,22 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                FCP_MAXIMUM_DELAY: () => s,
+                FCP_MAXIMUM_DELAY: () => i,
                 trackFirstContentfulPaint: () => r
             });
             var a = n(72),
                 o = n(82),
-                i = n(158),
-                s = 10 * a.ONE_MINUTE;
+                s = n(158),
+                i = 10 * a.ONE_MINUTE;
 
             function r(e, t, n) {
                 return {
-                    stop: (0, i.createPerformanceObservable)(e, {
-                        type: i.RumPerformanceEntryType.PAINT,
+                    stop: (0, s.createPerformanceObservable)(e, {
+                        type: s.RumPerformanceEntryType.PAINT,
                         buffered: !0
                     }).subscribe((function(e) {
                         var a = (0, o.find)(e, (function(e) {
-                            return "first-contentful-paint" === e.name && e.startTime < t.timeStamp && e.startTime < s
+                            return "first-contentful-paint" === e.name && e.startTime < t.timeStamp && e.startTime < i
                         }));
                         a && n(a.startTime)
                     })).unsubscribe
@@ -8661,22 +8657,22 @@
             });
             var a = n(82),
                 o = n(72),
-                i = n(164),
-                s = n(158),
+                s = n(164),
+                i = n(158),
                 r = n(160);
 
             function l(e, t, n) {
-                var l = (0, s.createPerformanceObservable)(e, {
-                    type: s.RumPerformanceEntryType.FIRST_INPUT,
+                var l = (0, i.createPerformanceObservable)(e, {
+                    type: i.RumPerformanceEntryType.FIRST_INPUT,
                     buffered: !0
-                }).subscribe((function(s) {
-                    var l = (0, a.find)(s, (function(e) {
+                }).subscribe((function(i) {
+                    var l = (0, a.find)(i, (function(e) {
                         return e.startTime < t.timeStamp
                     }));
                     if (l) {
                         var c = (0, o.elapsed)(l.startTime, l.processingStart),
                             u = void 0;
-                        l.target && (0, i.isElementNode)(l.target) && (u = (0, r.getSelectorFromElement)(l.target, e.actionNameAttribute)), n({
+                        l.target && (0, s.isElementNode)(l.target) && (u = (0, r.getSelectorFromElement)(l.target, e.actionNameAttribute)), n({
                             delay: c >= 0 ? c : 0,
                             time: l.startTime,
                             targetSelector: u
@@ -8696,20 +8692,20 @@
             });
             var a = n(72),
                 o = n(181),
-                i = n(98),
-                s = n(180);
+                s = n(98),
+                i = n(180);
 
             function r(e, t, n) {
-                return void 0 === n && (n = s.getNavigationEntry),
+                return void 0 === n && (n = i.getNavigationEntry),
                     function(e, t) {
                         var n, a = (0, o.runOnReadyState)(e, "complete", (function() {
-                            n = (0, i.setTimeout)((function() {
+                            n = (0, s.setTimeout)((function() {
                                 return t()
                             }))
                         })).stop;
                         return {
                             stop: function() {
-                                a(), (0, i.clearTimeout)(n)
+                                a(), (0, s.clearTimeout)(n)
                             }
                         }
                     }(e, (function() {
@@ -8735,8 +8731,8 @@
             });
             var a = n(72),
                 o = n(112),
-                i = n(82),
-                s = n(158),
+                s = n(82),
+                i = n(158),
                 r = n(160),
                 l = 10 * a.ONE_MINUTE;
 
@@ -8749,12 +8745,12 @@
                         once: !0
                     }).stop,
                     d = 0,
-                    m = (0, s.createPerformanceObservable)(e, {
-                        type: s.RumPerformanceEntryType.LARGEST_CONTENTFUL_PAINT,
+                    m = (0, i.createPerformanceObservable)(e, {
+                        type: i.RumPerformanceEntryType.LARGEST_CONTENTFUL_PAINT,
                         buffered: !0
                     }).subscribe((function(n) {
-                        var o = (0, i.findLast)(n, (function(e) {
-                            return e.entryType === s.RumPerformanceEntryType.LARGEST_CONTENTFUL_PAINT && e.startTime < c && e.startTime < t.timeStamp && e.startTime < l && e.size > d
+                        var o = (0, s.findLast)(n, (function(e) {
+                            return e.entryType === i.RumPerformanceEntryType.LARGEST_CONTENTFUL_PAINT && e.startTime < c && e.startTime < t.timeStamp && e.startTime < l && e.size > d
                         }));
                         if (o) {
                             var u = void 0;
@@ -8799,17 +8795,17 @@
             });
             var a = n(192),
                 o = n(193),
-                i = n(195),
-                s = n(196);
+                s = n(195),
+                i = n(196);
 
             function r(e, t, n, r, l, c) {
                 var u = {},
-                    d = (0, i.trackLoadingTime)(e, t, n, l, c, (function(e) {
+                    d = (0, s.trackLoadingTime)(e, t, n, l, c, (function(e) {
                         u.loadingTime = e, r()
                     })),
                     m = d.stop,
                     p = d.setLoadEvent,
-                    f = (0, s.trackScrollMetrics)(n, c, (function(e) {
+                    f = (0, i.trackScrollMetrics)(n, c, (function(e) {
                         u.scroll = e
                     })).stop,
                     g = (0, a.trackCumulativeLayoutShift)(n, c.relative, (function(e) {
@@ -8839,8 +8835,8 @@
             });
             var a = n(102),
                 o = n(72),
-                i = n(73),
-                s = n(82),
+                s = n(73),
+                i = n(82),
                 r = n(164),
                 l = n(158),
                 c = n(160);
@@ -8849,7 +8845,7 @@
                 if (!f()) return {
                     stop: a.noop
                 };
-                var s, r, u = 0;
+                var i, r, u = 0;
                 n({
                     value: 0
                 });
@@ -8873,13 +8869,13 @@
                                     g = f.cumulatedValue;
                                 if (f.isMaxValue) {
                                     var _ = d(p.sources);
-                                    s = _ ? new WeakRef(_) : void 0, r = (0, o.elapsed)(t, p.startTime)
+                                    i = _ ? new WeakRef(_) : void 0, r = (0, o.elapsed)(t, p.startTime)
                                 }
                                 if (g > u) {
                                     u = g;
-                                    _ = null == s ? void 0 : s.deref();
+                                    _ = null == i ? void 0 : i.deref();
                                     n({
-                                        value: (0, i.round)(u, 4),
+                                        value: (0, s.round)(u, 4),
                                         targetSelector: _ && (0, c.getSelectorFromElement)(_, e.actionNameAttribute),
                                         time: r
                                     })
@@ -8896,7 +8892,7 @@
 
             function d(e) {
                 var t;
-                if (e) return null === (t = (0, s.find)(e, (function(e) {
+                if (e) return null === (t = (0, i.find)(e, (function(e) {
                     return !!e.node && (0, r.isElementNode)(e.node)
                 }))) || void 0 === t ? void 0 : t.node
             }
@@ -8916,8 +8912,8 @@
             });
             var a = n(72),
                 o = n(102),
-                i = n(158),
-                s = n(160),
+                s = n(158),
+                i = n(160),
                 r = n(164),
                 l = n(168),
                 c = n(194),
@@ -8958,19 +8954,19 @@
                     S = -1;
 
                 function y(n) {
-                    for (var o = 0, i = n; o < i.length; o++) {
-                        var u = i[o];
+                    for (var o = 0, s = n; o < s.length; o++) {
+                        var u = s[o];
                         u.interactionId && u.startTime >= t && u.startTime <= E && v.process(u)
                     }
                     var d = v.estimateP98Interaction();
-                    d && d.duration !== S && (S = d.duration, m = (0, a.elapsed)(t, d.startTime), !(c = (0, l.getInteractionSelector)(d.startTime)) && d.target && (0, r.isElementNode)(d.target) && (c = (0, s.getSelectorFromElement)(d.target, e.actionNameAttribute)))
+                    d && d.duration !== S && (S = d.duration, m = (0, a.elapsed)(t, d.startTime), !(c = (0, l.getInteractionSelector)(d.startTime)) && d.target && (0, r.isElementNode)(d.target) && (c = (0, i.getSelectorFromElement)(d.target, e.actionNameAttribute)))
                 }
-                var T = (0, i.createPerformanceObservable)(e, {
-                        type: i.RumPerformanceEntryType.FIRST_INPUT,
+                var T = (0, s.createPerformanceObservable)(e, {
+                        type: s.RumPerformanceEntryType.FIRST_INPUT,
                         buffered: !0
                     }).subscribe(y),
-                    b = (0, i.createPerformanceObservable)(e, {
-                        type: i.RumPerformanceEntryType.EVENT,
+                    b = (0, s.createPerformanceObservable)(e, {
+                        type: s.RumPerformanceEntryType.EVENT,
                         durationThreshold: 40,
                         buffered: !0
                     }).subscribe(y);
@@ -9017,7 +9013,7 @@
             }
 
             function f() {
-                return (0, i.supportPerformanceTimingEvent)(i.RumPerformanceEntryType.EVENT) && window.PerformanceEventTiming && "interactionId" in PerformanceEventTiming.prototype
+                return (0, s.supportPerformanceTimingEvent)(s.RumPerformanceEntryType.EVENT) && window.PerformanceEventTiming && "interactionId" in PerformanceEventTiming.prototype
             }
         }, (e, t, n) => {
             "use strict";
@@ -9026,15 +9022,15 @@
                 initInteractionCountPolyfill: () => l
             });
             var a, o = n(101),
-                i = 0,
-                s = 1 / 0,
+                s = 0,
+                i = 1 / 0,
                 r = 0;
 
             function l() {
                 "interactionCount" in performance || a || (a = new window.PerformanceObserver((0, o.monitor)((function(e) {
                     e.getEntries().forEach((function(e) {
                         var t = e;
-                        t.interactionId && (s = Math.min(s, t.interactionId), r = Math.max(r, t.interactionId), i = (r - s) / 7 + 1)
+                        t.interactionId && (i = Math.min(i, t.interactionId), r = Math.max(r, t.interactionId), s = (r - i) / 7 + 1)
                     }))
                 })))).observe({
                     type: "event",
@@ -9043,22 +9039,22 @@
                 })
             }
             var c = function() {
-                return a ? i : window.performance.interactionCount || 0
+                return a ? s : window.performance.interactionCount || 0
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                trackLoadingTime: () => s
+                trackLoadingTime: () => i
             });
             var a = n(72),
                 o = n(157),
-                i = n(190);
+                s = n(190);
 
-            function s(e, t, n, s, r, l) {
-                var c = "initial_load" === s,
+            function i(e, t, n, i, r, l) {
+                var c = "initial_load" === i,
                     u = !0,
                     d = [],
-                    m = (0, i.trackFirstHidden)(n);
+                    m = (0, s.trackFirstHidden)(n);
 
                 function p() {
                     if (!u && !c && d.length > 0) {
@@ -9088,8 +9084,8 @@
             });
             var a = n(72),
                 o = n(87),
-                i = n(102),
-                s = n(101),
+                s = n(102),
+                i = n(101),
                 r = n(112),
                 l = n(197),
                 c = n(198),
@@ -9097,23 +9093,23 @@
 
             function d(e, t, n, o) {
                 void 0 === o && (o = p(e));
-                var i = 0,
-                    s = 0,
+                var s = 0,
+                    i = 0,
                     r = 0,
                     l = o.subscribe((function(e) {
                         var o = e.scrollDepth,
                             l = e.scrollTop,
                             c = e.scrollHeight,
                             u = !1;
-                        if (o > i && (i = o, u = !0), c > s) {
-                            s = c;
+                        if (o > s && (s = o, u = !0), c > i) {
+                            i = c;
                             var d = (0, a.relativeNow)();
                             r = (0, a.elapsed)(t.relative, d), u = !0
                         }
                         u && n({
-                            maxDepth: Math.min(i, s),
+                            maxDepth: Math.min(s, i),
                             maxDepthScrollTop: l,
-                            maxScrollHeight: s,
+                            maxScrollHeight: i,
                             maxScrollHeightTime: r
                         })
                     }));
@@ -9137,14 +9133,14 @@
             function p(e, t) {
                 return void 0 === t && (t = u), new o.Observable((function(n) {
                     if (window.ResizeObserver) {
-                        var a = (0, i.throttle)((function() {
+                        var a = (0, s.throttle)((function() {
                                 n.notify(m())
                             }), t, {
                                 leading: !1,
                                 trailing: !0
                             }),
                             o = document.scrollingElement || document.documentElement,
-                            l = new ResizeObserver((0, s.monitor)(a.throttled));
+                            l = new ResizeObserver((0, i.monitor)(a.throttled));
                         l.observe(o);
                         var c = (0, r.addEventListener)(e, window, "scroll", a.throttled, {
                             passive: !0
@@ -9179,8 +9175,8 @@
                 initViewportObservable: () => r
             });
             var a, o = n(87),
-                i = n(102),
-                s = n(112);
+                s = n(102),
+                i = n(112);
 
             function r(e) {
                 return a || (a = l(e)), a
@@ -9188,10 +9184,10 @@
 
             function l(e) {
                 return new o.Observable((function(t) {
-                    var n = (0, i.throttle)((function() {
+                    var n = (0, s.throttle)((function() {
                         t.notify(c())
                     }), 200).throttled;
-                    return (0, s.addEventListener)(e, window, "resize", n, {
+                    return (0, i.addEventListener)(e, window, "resize", n, {
                         capture: !0,
                         passive: !0
                     }).stop
@@ -9211,14 +9207,14 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                PageExitReason: () => s,
+                PageExitReason: () => i,
                 createPageExitObservable: () => r,
                 isPageExitReason: () => l
             });
             var a = n(87),
                 o = n(82),
-                i = n(112),
-                s = {
+                s = n(112),
+                i = {
                     HIDDEN: "visibility_hidden",
                     UNLOADING: "before_unload",
                     PAGEHIDE: "page_hide",
@@ -9227,18 +9223,18 @@
 
             function r(e) {
                 return new a.Observable((function(t) {
-                    var n = (0, i.addEventListeners)(e, window, ["visibilitychange", "freeze"], (function(e) {
+                    var n = (0, s.addEventListeners)(e, window, ["visibilitychange", "freeze"], (function(e) {
                             "visibilitychange" === e.type && "hidden" === document.visibilityState ? t.notify({
-                                reason: s.HIDDEN
+                                reason: i.HIDDEN
                             }) : "freeze" === e.type && t.notify({
-                                reason: s.FROZEN
+                                reason: i.FROZEN
                             })
                         }), {
                             capture: !0
                         }).stop,
-                        a = (0, i.addEventListener)(e, window, "beforeunload", (function() {
+                        a = (0, s.addEventListener)(e, window, "beforeunload", (function() {
                             t.notify({
-                                reason: s.UNLOADING
+                                reason: i.UNLOADING
                             })
                         })).stop;
                     return function() {
@@ -9248,7 +9244,7 @@
             }
 
             function l(e) {
-                return (0, o.includes)((0, o.objectValues)(s), e)
+                return (0, o.includes)((0, o.objectValues)(i), e)
             }
         }, (e, t, n) => {
             "use strict";
@@ -9259,8 +9255,8 @@
             });
             var a = n(201),
                 o = n(116),
-                i = n(102),
-                s = n(87),
+                s = n(102),
+                i = n(87),
                 r = n(73),
                 l = "rum";
 
@@ -9315,9 +9311,9 @@
                     findTrackedSession: function() {
                         return e
                     },
-                    expire: i.noop,
-                    expireObservable: new s.Observable,
-                    setForcedReplay: i.noop
+                    expire: s.noop,
+                    expireObservable: new i.Observable,
+                    setForcedReplay: s.noop
                 }
             }
 
@@ -9333,12 +9329,12 @@
             });
             var a = n(87),
                 o = n(147),
-                i = n(72),
-                s = n(112),
+                s = n(72),
+                i = n(112),
                 r = n(98),
                 l = n(96),
                 c = n(89),
-                u = i.ONE_MINUTE,
+                u = s.ONE_MINUTE,
                 d = l.SESSION_TIME_OUT_DELAY,
                 m = [];
 
@@ -9363,14 +9359,14 @@
                 return m.push((function() {
                         return _.stop()
                     })), g.renewObservable.subscribe((function() {
-                        _.add(h(), (0, i.relativeNow)()), p.notify()
+                        _.add(h(), (0, s.relativeNow)()), p.notify()
                     })), g.expireObservable.subscribe((function() {
-                        f.notify(), _.closeActive((0, i.relativeNow)())
-                    })), g.expandOrRenewSession(), _.add(h(), (0, i.clocksOrigin)().relative), l.observable.subscribe((function() {
+                        f.notify(), _.closeActive((0, s.relativeNow)())
+                    })), g.expandOrRenewSession(), _.add(h(), (0, s.clocksOrigin)().relative), l.observable.subscribe((function() {
                         l.isGranted() ? g.expandOrRenewSession() : g.expire()
                     })),
                     function(e, t) {
-                        var n = (0, s.addEventListeners)(e, window, ["click", "touchstart", "keydown", "scroll"], t, {
+                        var n = (0, i.addEventListeners)(e, window, ["click", "touchstart", "keydown", "scroll"], t, {
                             capture: !0,
                             passive: !0
                         }).stop;
@@ -9382,7 +9378,7 @@
                         var n = function() {
                                 "visible" === document.visibilityState && t()
                             },
-                            a = (0, s.addEventListener)(e, document, "visibilitychange", n).stop;
+                            a = (0, i.addEventListener)(e, document, "visibilitychange", n).stop;
                         m.push(a);
                         var o = (0, r.setInterval)(n, u);
                         m.push((function() {
@@ -9392,7 +9388,7 @@
                         return g.expandSession()
                     })),
                     function(e, t) {
-                        var n = (0, s.addEventListener)(e, window, "resume", t, {
+                        var n = (0, i.addEventListener)(e, window, "resume", t, {
                             capture: !0
                         }).stop;
                         m.push(n)
@@ -9418,13 +9414,13 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                startRumBatch: () => s
+                startRumBatch: () => i
             });
             var a = n(203),
                 o = n(74),
-                i = n(117);
+                s = n(117);
 
-            function s(e, t, n, s, r, l, c) {
+            function i(e, t, n, i, r, l, c) {
                 var u = e.replica,
                     d = (0, a.startBatchWithReplica)(e, {
                         endpoint: e.rumEndpointBuilder,
@@ -9439,23 +9435,23 @@
                             })
                         },
                         encoder: c(3)
-                    }, s, r, l);
+                    }, i, r, l);
                 return t.subscribe(12, (function(e) {
                     "view" === e.type ? d.upsert(e, e.view.id) : d.add(e)
                 })), n.subscribe((function(t) {
-                    return d.add(t, (0, i.isTelemetryReplicationAllowed)(e))
+                    return d.add(t, (0, s.isTelemetryReplicationAllowed)(e))
                 })), d
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                startBatchWithReplica: () => s
+                startBatchWithReplica: () => i
             });
             var a = n(204),
                 o = n(205),
-                i = n(207);
+                s = n(207);
 
-            function s(e, t, n, s, r, l, c) {
+            function i(e, t, n, i, r, l, c) {
                 void 0 === c && (c = a.createBatch);
                 var u = m(e, t),
                     d = n && m(e, n);
@@ -9465,8 +9461,8 @@
                         a = t.encoder;
                     return c({
                         encoder: a,
-                        request: (0, o.createHttpRequest)(n, e.batchBytesLimit, s),
-                        flushController: (0, i.createFlushController)({
+                        request: (0, o.createHttpRequest)(n, e.batchBytesLimit, i),
+                        flushController: (0, s.createFlushController)({
                             messagesLimit: e.batchMessagesLimit,
                             bytesLimit: e.batchBytesLimit,
                             durationLimit: e.flushTimeout,
@@ -9496,8 +9492,8 @@
             });
             var a = n(83),
                 o = n(82),
-                i = n(199),
-                s = n(110),
+                s = n(199),
+                i = n(110),
                 r = n(104);
 
             function l(e) {
@@ -9510,9 +9506,9 @@
                         return function(e) {
                             var a = (0, o.objectValues)(d).join("\n");
                             d = {};
-                            var s = (0, i.isPageExitReason)(e.reason),
-                                l = s ? n.sendOnExit : n.send;
-                            if (s && t.isAsync) {
+                            var i = (0, s.isPageExitReason)(e.reason),
+                                l = i ? n.sendOnExit : n.send;
+                            if (i && t.isAsync) {
                                 var u = t.finishSync();
                                 u.outputBytesCount && l(c(u));
                                 var m = [u.pendingData, a].filter(Boolean).join("\n");
@@ -9527,9 +9523,9 @@
                     }));
 
                 function p(e, n) {
-                    var o = (0, s.jsonStringify)(e),
-                        i = t.estimateEncodedBytesCount(o);
-                    i >= u ? a.display.warn("Discarded a message whose size was bigger than the maximum allowed size ".concat(u, "KB. ").concat(a.MORE_DETAILS, " ").concat(a.DOCS_TROUBLESHOOTING, "/#technical-limitations")) : (function(e) {
+                    var o = (0, i.jsonStringify)(e),
+                        s = t.estimateEncodedBytesCount(o);
+                    s >= u ? a.display.warn("Discarded a message whose size was bigger than the maximum allowed size ".concat(u, "KB. ").concat(a.MORE_DETAILS, " ").concat(a.DOCS_TROUBLESHOOTING, "/#technical-limitations")) : (function(e) {
                         return void 0 !== e && void 0 !== d[e]
                     }(n) && function(e) {
                         var n = d[e];
@@ -9540,7 +9536,7 @@
                         l.notifyBeforeAddMessage(n), void 0 !== a ? (d[a] = e, l.notifyAfterAddMessage()) : t.write(t.isEmpty ? e : "\n".concat(e), (function(e) {
                             l.notifyAfterAddMessage(e - n)
                         }))
-                    }(o, i, n))
+                    }(o, s, n))
                 }
                 return {
                     flushController: l,
@@ -9568,31 +9564,31 @@
             });
             var a = n(117),
                 o = n(101),
-                i = n(112),
-                s = n(206);
+                s = n(112),
+                i = n(206);
 
             function r(e, t, n) {
-                var o = (0, s.newRetryState)(),
-                    i = function(n, a) {
+                var o = (0, i.newRetryState)(),
+                    s = function(n, a) {
                         return c(e, t, n, a)
                     };
                 return {
                     send: function(t) {
-                        (0, s.sendWithRetryStrategy)(t, o, i, e.trackType, n)
+                        (0, i.sendWithRetryStrategy)(t, o, s, e.trackType, n)
                     },
                     sendOnExit: function(n) {
                         ! function(e, t, n) {
                             var o = !!navigator.sendBeacon && n.bytesCount < t;
                             if (o) try {
-                                var i = e.build("beacon", n);
-                                if (navigator.sendBeacon(i, n.data)) return
+                                var s = e.build("beacon", n);
+                                if (navigator.sendBeacon(s, n.data)) return
                             } catch (e) {
                                 ! function(e) {
                                     l || (l = !0, (0, a.addTelemetryError)(e))
                                 }(e)
                             }
-                            var s = e.build("xhr", n);
-                            u(s, n.data)
+                            var i = e.build("xhr", n);
+                            u(i, n.data)
                         }(e, t, n)
                     }
                 }
@@ -9607,8 +9603,8 @@
                             return !1
                         }
                     }() && n.bytesCount < t) {
-                    var i = e.build("fetch", n);
-                    fetch(i, {
+                    var s = e.build("fetch", n);
+                    fetch(s, {
                         method: "POST",
                         body: n.data,
                         keepalive: !0,
@@ -9628,7 +9624,7 @@
 
             function u(e, t, n) {
                 var a = new XMLHttpRequest;
-                a.open("POST", e, !0), t instanceof Blob && a.setRequestHeader("Content-Type", t.type), (0, i.addEventListener)({
+                a.open("POST", e, !0), t instanceof Blob && a.setRequestHeader("Content-Type", t.type), (0, s.addEventListener)({
                     allowUntrustedEvents: !0
                 }, a, "loadend", (function() {
                     null == n || n({
@@ -9651,12 +9647,12 @@
             });
             var a = n(98),
                 o = n(72),
-                i = n(104),
-                s = n(151),
+                s = n(104),
+                i = n(151),
                 r = n(142),
-                l = 80 * i.ONE_KIBI_BYTE,
+                l = 80 * s.ONE_KIBI_BYTE,
                 c = 32,
-                u = 3 * i.ONE_MEBI_BYTE,
+                u = 3 * s.ONE_MEBI_BYTE,
                 d = o.ONE_MINUTE,
                 m = o.ONE_SECOND;
 
@@ -9686,25 +9682,25 @@
 
             function g(e, t, n, a) {
                 var o = a.onSuccess,
-                    i = a.onFailure;
+                    s = a.onFailure;
                 t.bandwidthMonitor.add(e), n(e, (function(n) {
                     t.bandwidthMonitor.remove(e), ! function(e) {
-                        return "opaque" !== e.type && (0 === e.status && !navigator.onLine || 408 === e.status || 429 === e.status || (0, s.isServerError)(e.status))
+                        return "opaque" !== e.type && (0 === e.status && !navigator.onLine || 408 === e.status || 429 === e.status || (0, i.isServerError)(e.status))
                     }(n) ? (t.transportStatus = 0, o()) : (t.transportStatus = t.bandwidthMonitor.ongoingRequestCount > 0 ? 1 : 2, e.retry = {
                         count: e.retry ? e.retry.count + 1 : 1,
                         lastFailureStatus: n.status
-                    }, i())
+                    }, s())
                 }))
             }
 
-            function _(e, t, n, a, s) {
-                0 === e && t.queuedPayloads.isFull() && !t.queueFullReported && (s({
-                    message: "Reached max ".concat(a, " events size queued for upload: ").concat(u / i.ONE_MEBI_BYTE, "MiB"),
+            function _(e, t, n, a, i) {
+                0 === e && t.queuedPayloads.isFull() && !t.queueFullReported && (i({
+                    message: "Reached max ".concat(a, " events size queued for upload: ").concat(u / s.ONE_MEBI_BYTE, "MiB"),
                     source: r.ErrorSource.AGENT,
                     startClocks: (0, o.clocksNow)()
                 }), t.queueFullReported = !0);
                 var l = t.queuedPayloads;
-                for (t.queuedPayloads = E(); l.size() > 0;) p(l.dequeue(), t, n, a, s)
+                for (t.queuedPayloads = E(); l.size() > 0;) p(l.dequeue(), t, n, a, i)
             }
 
             function h() {
@@ -9754,15 +9750,15 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                createFlushController: () => i
+                createFlushController: () => s
             });
             var a = n(87),
                 o = n(98);
 
-            function i(e) {
+            function s(e) {
                 var t, n = e.messagesLimit,
-                    i = e.bytesLimit,
-                    s = e.durationLimit,
+                    s = e.bytesLimit,
+                    i = e.durationLimit,
                     r = e.pageExitObservable,
                     l = e.sessionExpireObservable,
                     c = r.subscribe((function(e) {
@@ -9800,12 +9796,12 @@
                         return p
                     },
                     notifyBeforeAddMessage: function(e) {
-                        m + e >= i && f("bytes_limit"), p += 1, m += e, void 0 === t && (t = (0, o.setTimeout)((function() {
+                        m + e >= s && f("bytes_limit"), p += 1, m += e, void 0 === t && (t = (0, o.setTimeout)((function() {
                             f("duration_limit")
-                        }), s))
+                        }), i))
                     },
                     notifyAfterAddMessage: function(e) {
-                        void 0 === e && (e = 0), m += e, p >= n ? f("messages_limit") : m >= i && f("bytes_limit")
+                        void 0 === e && (e = 0), m += e, p >= n ? f("messages_limit") : m >= s && f("bytes_limit")
                     },
                     notifyAfterRemoveMessage: function(e) {
                         m -= e, 0 === (p -= 1) && g()
@@ -9828,17 +9824,17 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                URL_CONTEXT_TIME_OUT_DELAY: () => s,
+                URL_CONTEXT_TIME_OUT_DELAY: () => i,
                 startUrlContexts: () => r
             });
             var a = n(96),
                 o = n(147),
-                i = n(72),
-                s = a.SESSION_TIME_OUT_DELAY;
+                s = n(72),
+                i = a.SESSION_TIME_OUT_DELAY;
 
             function r(e, t, n) {
                 var a, r = (0, o.createValueHistory)({
-                    expireDelay: s
+                    expireDelay: i
                 });
                 e.subscribe(1, (function(e) {
                     var t = e.startClocks,
@@ -9855,7 +9851,7 @@
                     var t = e.newLocation,
                         n = r.find();
                     if (n) {
-                        var a = (0, i.relativeNow)();
+                        var a = (0, s.relativeNow)();
                         r.closeActive(a), r.add(c({
                             url: t.href,
                             referrer: n.referrer
@@ -9885,20 +9881,20 @@
             });
             var a = n(84),
                 o = n(87),
-                i = n(128),
-                s = n(112);
+                s = n(128),
+                i = n(112);
 
             function r(e, t) {
                 var n = (0, a.shallowClone)(t);
                 return new o.Observable((function(o) {
                     var r = function(e, t) {
-                            var n = (0, i.instrumentMethod)(l("pushState"), "pushState", (function(e) {
+                            var n = (0, s.instrumentMethod)(l("pushState"), "pushState", (function(e) {
                                     (0, e.onPostCall)(t)
                                 })).stop,
-                                a = (0, i.instrumentMethod)(l("replaceState"), "replaceState", (function(e) {
+                                a = (0, s.instrumentMethod)(l("replaceState"), "replaceState", (function(e) {
                                     (0, e.onPostCall)(t)
                                 })).stop,
-                                o = (0, s.addEventListener)(e, window, "popstate", t).stop;
+                                o = (0, i.addEventListener)(e, window, "popstate", t).stop;
                             return {
                                 stop: function() {
                                     n(), a(), o()
@@ -9906,7 +9902,7 @@
                             }
                         }(e, u).stop,
                         c = function(e, t) {
-                            return (0, s.addEventListener)(e, window, "hashchange", t)
+                            return (0, i.addEventListener)(e, window, "hashchange", t)
                         }(e, u).stop;
 
                     function u() {
@@ -9930,18 +9926,18 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                BYTES_COMPUTATION_THROTTLING_DELAY: () => s,
-                FEATURE_FLAG_CONTEXT_TIME_OUT_DELAY: () => i,
+                BYTES_COMPUTATION_THROTTLING_DELAY: () => i,
+                FEATURE_FLAG_CONTEXT_TIME_OUT_DELAY: () => s,
                 startFeatureFlagContexts: () => r
             });
             var a = n(96),
                 o = n(147),
-                i = a.SESSION_TIME_OUT_DELAY,
-                s = 200;
+                s = a.SESSION_TIME_OUT_DELAY,
+                i = 200;
 
             function r(e, t) {
                 var n = (0, o.createValueHistory)({
-                    expireDelay: i
+                    expireDelay: s
                 });
                 return e.subscribe(1, (function(e) {
                     var a = e.startClocks;
@@ -9968,20 +9964,20 @@
                 MEASURES_PERIOD_DURATION: () => d,
                 startCustomerDataTelemetry: () => m
             });
-            var a, o, i, s = n(72),
+            var a, o, s, i = n(72),
                 r = n(73),
                 l = n(82),
                 c = n(98),
                 u = n(117),
-                d = 10 * s.ONE_SECOND;
+                d = 10 * i.ONE_SECOND;
 
-            function m(e, t, n, s, u) {
+            function m(e, t, n, i, u) {
                 t.enabled && (0, r.performDraw)(e.customerDataTelemetrySampleRate) && (_(), h(), n.subscribe(12, (function(e) {
-                    i = !0, f(o.globalContextBytes, s.getOrCreateTracker(2).getBytesCount()), f(o.userContextBytes, s.getOrCreateTracker(1).getBytesCount()), f(o.featureFlagBytes, (0, l.includes)(["view", "error"], e.type) ? s.getOrCreateTracker(0).getBytesCount() : 0)
+                    s = !0, f(o.globalContextBytes, i.getOrCreateTracker(2).getBytesCount()), f(o.userContextBytes, i.getOrCreateTracker(1).getBytesCount()), f(o.featureFlagBytes, (0, l.includes)(["view", "error"], e.type) ? i.getOrCreateTracker(0).getBytesCount() : 0)
                 })), u.subscribe((function(e) {
                     var t = e.bytesCount,
                         n = e.messagesCount;
-                    i && (a.batchCount += 1, f(a.batchBytesCount, t), f(a.batchMessagesCount, n), g(a.globalContextBytes, o.globalContextBytes), g(a.userContextBytes, o.userContextBytes), g(a.featureFlagBytes, o.featureFlagBytes), h())
+                    s && (a.batchCount += 1, f(a.batchBytesCount, t), f(a.batchMessagesCount, n), g(a.globalContextBytes, o.globalContextBytes), g(a.userContextBytes, o.userContextBytes), g(a.featureFlagBytes, o.featureFlagBytes), h())
                 })), (0, c.setInterval)(p, d))
             }
 
@@ -10029,7 +10025,7 @@
             }
 
             function h() {
-                i = !1, o = {
+                s = !1, o = {
                     globalContextBytes: {
                         min: 1 / 0,
                         max: 0,
@@ -10057,8 +10053,8 @@
             });
             var a = n(96),
                 o = n(147),
-                i = n(72),
-                s = n(112),
+                s = n(72),
+                i = n(112),
                 r = 4e3,
                 l = 500,
                 c = a.SESSION_TIME_OUT_DELAY;
@@ -10069,8 +10065,8 @@
                     expireDelay: c,
                     maxEntries: r
                 });
-                m(d(), (0, i.relativeNow)());
-                var u = (0, s.addEventListeners)(e, window, ["pageshow", "focus", "blur", "visibilitychange", "resume", "freeze", "pagehide"], (function(e) {
+                m(d(), (0, s.relativeNow)());
+                var u = (0, i.addEventListeners)(e, window, ["pageshow", "focus", "blur", "visibilitychange", "resume", "freeze", "pagehide"], (function(e) {
                     m(function(e) {
                         if ("freeze" === e.type) return "frozen";
                         if ("pagehide" === e.type) return e.persisted ? "frozen" : "terminated";
@@ -10081,7 +10077,7 @@
                 }).stop;
 
                 function m(e, t) {
-                    void 0 === t && (t = (0, i.relativeNow)()), e !== n && (n = e, a.closeActive(t), a.add({
+                    void 0 === t && (t = (0, s.relativeNow)()), e !== n && (n = e, a.closeActive(t), a.add({
                         state: n,
                         startTime: t
                     }, t))
@@ -10090,15 +10086,15 @@
                     findAll: function(e, n) {
                         var o = a.findAll(e, n);
                         if (0 !== o.length) {
-                            for (var s = [], r = Math.max(0, o.length - t), l = o.length - 1; l >= r; l--) {
+                            for (var i = [], r = Math.max(0, o.length - t), l = o.length - 1; l >= r; l--) {
                                 var c = o[l],
-                                    u = (0, i.elapsed)(e, c.startTime);
-                                s.push({
+                                    u = (0, s.elapsed)(e, c.startTime);
+                                i.push({
                                     state: c.state,
-                                    start: (0, i.toServerDuration)(u)
+                                    start: (0, s.toServerDuration)(u)
                                 })
                             }
-                            return s
+                            return i
                         }
                     },
                     wasInPageStateAt: function(e, t) {
@@ -10143,24 +10139,24 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                CI_VISIBILITY_TEST_ID_COOKIE_NAME: () => i,
-                startCiVisibilityContext: () => s
+                CI_VISIBILITY_TEST_ID_COOKIE_NAME: () => s,
+                startCiVisibilityContext: () => i
             });
             var a = n(91),
                 o = n(216),
-                i = "datadog-ci-visibility-test-execution-id";
+                s = "datadog-ci-visibility-test-execution-id";
 
-            function s(e, t) {
+            function i(e, t) {
                 var n;
-                void 0 === t && (t = (0, o.createCookieObservable)(e, i));
-                var s = (0, a.getInitCookie)(i) || (null === (n = window.Cypress) || void 0 === n ? void 0 : n.env("traceId")),
+                void 0 === t && (t = (0, o.createCookieObservable)(e, s));
+                var i = (0, a.getInitCookie)(s) || (null === (n = window.Cypress) || void 0 === n ? void 0 : n.env("traceId")),
                     r = t.subscribe((function(e) {
-                        s = e
+                        i = e
                     }));
                 return {
                     get: function() {
-                        if ("string" == typeof s) return {
-                            test_execution_id: s
+                        if ("string" == typeof i) return {
+                            test_execution_id: i
                         }
                     },
                     stop: function() {
@@ -10176,8 +10172,8 @@
             });
             var a = n(87),
                 o = n(112),
-                i = n(82),
-                s = n(72),
+                s = n(82),
+                i = n(72),
                 r = n(76),
                 l = n(98);
 
@@ -10185,9 +10181,9 @@
                 var n = window.cookieStore ? function(e) {
                     return function(t, n) {
                         return (0, o.addEventListener)(e, window.cookieStore, "change", (function(e) {
-                            var a = (0, i.find)(e.changed, (function(e) {
+                            var a = (0, s.find)(e.changed, (function(e) {
                                 return e.name === t
-                            })) || (0, i.find)(e.deleted, (function(e) {
+                            })) || (0, s.find)(e.deleted, (function(e) {
                                 return e.name === t
                             }));
                             a && n(a.value)
@@ -10200,7 +10196,7 @@
                     }))
                 }))
             }
-            var u = s.ONE_SECOND;
+            var u = i.ONE_SECOND;
 
             function d(e, t) {
                 var n = (0, r.findCommaSeparatedValue)(document.cookie, e),
@@ -10215,32 +10211,32 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                startLongAnimationFrameCollection: () => s
+                startLongAnimationFrameCollection: () => i
             });
             var a = n(72),
                 o = n(76),
-                i = n(158);
+                s = n(158);
 
-            function s(e, t) {
-                var n = (0, i.createPerformanceObservable)(t, {
-                    type: i.RumPerformanceEntryType.LONG_ANIMATION_FRAME,
+            function i(e, t) {
+                var n = (0, s.createPerformanceObservable)(t, {
+                    type: s.RumPerformanceEntryType.LONG_ANIMATION_FRAME,
                     buffered: !0
                 }).subscribe((function(t) {
-                    for (var n = 0, i = t; n < i.length; n++) {
-                        var s = i[n],
-                            r = (0, a.relativeToClocks)(s.startTime),
+                    for (var n = 0, s = t; n < s.length; n++) {
+                        var i = s[n],
+                            r = (0, a.relativeToClocks)(i.startTime),
                             l = {
                                 date: r.timeStamp,
                                 long_task: {
                                     id: (0, o.generateUUID)(),
                                     entry_type: "long-animation-frame",
-                                    duration: (0, a.toServerDuration)(s.duration),
-                                    blocking_duration: (0, a.toServerDuration)(s.blockingDuration),
-                                    first_ui_event_timestamp: (0, a.toServerDuration)(s.firstUIEventTimestamp),
-                                    render_start: (0, a.toServerDuration)(s.renderStart),
-                                    style_and_layout_start: (0, a.toServerDuration)(s.styleAndLayoutStart),
-                                    start_time: (0, a.toServerDuration)(s.startTime),
-                                    scripts: s.scripts.map((function(e) {
+                                    duration: (0, a.toServerDuration)(i.duration),
+                                    blocking_duration: (0, a.toServerDuration)(i.blockingDuration),
+                                    first_ui_event_timestamp: (0, a.toServerDuration)(i.firstUIEventTimestamp),
+                                    render_start: (0, a.toServerDuration)(i.renderStart),
+                                    style_and_layout_start: (0, a.toServerDuration)(i.styleAndLayoutStart),
+                                    start_time: (0, a.toServerDuration)(i.startTime),
+                                    scripts: i.scripts.map((function(e) {
                                         return {
                                             duration: (0, a.toServerDuration)(e.duration),
                                             pause_duration: (0, a.toServerDuration)(e.pauseDuration),
@@ -10265,7 +10261,7 @@
                             rawRumEvent: l,
                             startTime: r.relative,
                             domainContext: {
-                                performanceEntry: s
+                                performanceEntry: i
                             }
                         })
                     }
@@ -10279,7 +10275,7 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                getDatadogSiteUrl: () => i,
+                getDatadogSiteUrl: () => s,
                 getSessionReplayUrl: () => o
             });
             var a = n(106);
@@ -10288,15 +10284,15 @@
                 var n = t.session,
                     a = t.viewContext,
                     o = t.errorType,
-                    s = n ? n.id : "no-session-id",
+                    i = n ? n.id : "no-session-id",
                     r = [];
                 void 0 !== o && r.push("error-type=".concat(o)), a && (r.push("seed=".concat(a.id)), r.push("from=".concat(a.startClocks.timeStamp)));
-                var l = i(e),
-                    c = "/rum/replay/sessions/".concat(s);
+                var l = s(e),
+                    c = "/rum/replay/sessions/".concat(i);
                 return "".concat(l).concat(c, "?").concat(r.join("&"))
             }
 
-            function i(e) {
+            function s(e) {
                 var t = e.site,
                     n = e.subdomain || function(e) {
                         switch (e.site) {
@@ -10318,8 +10314,8 @@
             });
             var a = n(117),
                 o = n(205),
-                i = n(116),
-                s = n(220),
+                s = n(116),
+                i = n(220),
                 r = n(253),
                 l = n(257);
 
@@ -10332,12 +10328,12 @@
                             "error.message": t.message
                         })
                     }));
-                if ((0, i.canUseEventBridge)()) m = (0, l.startRecordBridge)(c).addRecord;
+                if ((0, s.canUseEventBridge)()) m = (0, l.startRecordBridge)(c).addRecord;
                 else {
                     var g = (0, r.startSegmentCollection)(e, t, n, c, f, u);
                     m = g.addRecord, p.push(g.stop)
                 }
-                var _ = (0, s.record)({
+                var _ = (0, i.record)({
                     emit: m,
                     configuration: t,
                     lifeCycle: e,
@@ -10354,14 +10350,14 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                createElementsScrollPositions: () => i.createElementsScrollPositions,
+                createElementsScrollPositions: () => s.createElementsScrollPositions,
                 record: () => a.record,
                 serializeDocument: () => o.serializeDocument,
                 serializeNodeWithId: () => o.serializeNodeWithId
             });
             var a = n(221),
                 o = n(225),
-                i = n(249)
+                s = n(249)
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
@@ -10369,8 +10365,8 @@
             });
             var a = n(119),
                 o = n(222),
-                i = n(223),
-                s = n(249),
+                s = n(223),
+                i = n(249),
                 r = n(250),
                 l = n(251),
                 c = n(252);
@@ -10384,10 +10380,10 @@
                         t(n), (0, a.sendToExtension)("record", {
                             record: n
                         });
-                        var i = e.viewHistory.findView();
-                        o.addRecord(i.id)
+                        var s = e.viewHistory.findView();
+                        o.addRecord(s.id)
                     },
-                    m = (0, s.createElementsScrollPositions)(),
+                    m = (0, i.createElementsScrollPositions)(),
                     p = (0, r.initShadowRootsController)(n, d, m),
                     f = (0, l.startFullSnapshots)(m, p, u, n, g, (function(e) {
                         return e.forEach((function(e) {
@@ -10399,8 +10395,8 @@
                     p.flush(), h.flush()
                 }
                 var _ = (0, c.initRecordIds)(),
-                    h = (0, i.trackMutation)(d, n, p, document),
-                    E = [h, (0, i.trackMove)(n, d), (0, i.trackMouseInteraction)(n, d, _), (0, i.trackScroll)(n, d, m, document), (0, i.trackViewportResize)(n, d), (0, i.trackInput)(n, d), (0, i.trackMediaInteraction)(n, d), (0, i.trackStyleSheet)(d), (0, i.trackFocus)(n, d), (0, i.trackVisualViewportResize)(n, d), (0, i.trackFrustration)(u, d, _), (0, i.trackViewEnd)(u, (function(e) {
+                    h = (0, s.trackMutation)(d, n, p, document),
+                    E = [h, (0, s.trackMove)(n, d), (0, s.trackMouseInteraction)(n, d, _), (0, s.trackScroll)(n, d, m, document), (0, s.trackViewportResize)(n, d), (0, s.trackInput)(n, d), (0, s.trackMediaInteraction)(n, d), (0, s.trackStyleSheet)(d), (0, s.trackFocus)(n, d), (0, s.trackVisualViewportResize)(n, d), (0, s.trackFrustration)(u, d, _), (0, s.trackViewEnd)(u, (function(e) {
                         g(), d(e)
                     }))];
                 return {
@@ -10418,19 +10414,19 @@
             n.r(t), n.d(t, {
                 MAX_STATS_HISTORY: () => o,
                 addRecord: () => r,
-                addSegment: () => s,
+                addSegment: () => i,
                 addWroteData: () => l,
                 getReplayStats: () => c,
-                getSegmentsCount: () => i,
+                getSegmentsCount: () => s,
                 resetReplayStats: () => u
             });
             var a, o = 10;
 
-            function i(e) {
+            function s(e) {
                 return d(e).segments_count
             }
 
-            function s(e) {
+            function i(e) {
                 d(e).segments_count += 1
             }
 
@@ -10479,16 +10475,16 @@
                 trackMouseInteraction: () => o.trackMouseInteraction,
                 trackMove: () => a.trackMove,
                 trackMutation: () => p.trackMutation,
-                trackScroll: () => i.trackScroll,
+                trackScroll: () => s.trackScroll,
                 trackStyleSheet: () => l.trackStyleSheet,
                 trackViewEnd: () => d.trackViewEnd,
-                trackViewportResize: () => s.trackViewportResize,
-                trackVisualViewportResize: () => s.trackVisualViewportResize
+                trackViewportResize: () => i.trackViewportResize,
+                trackVisualViewportResize: () => i.trackVisualViewportResize
             });
             var a = n(224),
                 o = n(238),
-                i = n(239),
-                s = n(240),
+                s = n(239),
+                i = n(240),
                 r = n(241),
                 l = n(242),
                 c = n(243),
@@ -10504,8 +10500,8 @@
             });
             var a = n(102),
                 o = n(112),
-                i = n(117),
-                s = n(225),
+                s = n(117),
+                i = n(225),
                 r = n(229),
                 l = n(235),
                 c = n(236),
@@ -10515,11 +10511,11 @@
             function m(e, t) {
                 var n = (0, a.throttle)((function(e) {
                         var n = (0, l.getEventTarget)(e);
-                        if ((0, s.hasSerializedNode)(n)) {
+                        if ((0, i.hasSerializedNode)(n)) {
                             var a = p(e);
                             if (!a) return;
                             var o = {
-                                id: (0, s.getSerializedNodeId)(n),
+                                id: (0, i.getSerializedNodeId)(n),
                                 timeOffset: 0,
                                 x: a.x,
                                 y: a.y
@@ -10531,9 +10527,9 @@
                     }), d, {
                         trailing: !1
                     }),
-                    i = n.throttled,
+                    s = n.throttled,
                     c = n.cancel,
-                    m = (0, o.addEventListeners)(e, document, ["mousemove", "touchmove"], i, {
+                    m = (0, o.addEventListeners)(e, document, ["mousemove", "touchmove"], s, {
                         capture: !0,
                         passive: !0
                     }).stop;
@@ -10556,7 +10552,7 @@
                     x: n,
                     y: a
                 };
-                e.isTrusted && (0, i.addTelemetryDebug)("mouse/touch event without x/y")
+                e.isTrusted && (0, s.addTelemetryDebug)("mouse/touch event without x/y")
             }
         }, (e, t, n) => {
             "use strict";
@@ -10565,14 +10561,14 @@
                 getSerializedNodeId: () => a.getSerializedNodeId,
                 hasSerializedNode: () => a.hasSerializedNode,
                 nodeAndAncestorsHaveSerializedNode: () => a.nodeAndAncestorsHaveSerializedNode,
-                serializeAttribute: () => s.serializeAttribute,
+                serializeAttribute: () => i.serializeAttribute,
                 serializeDocument: () => o.serializeDocument,
-                serializeNodeWithId: () => i.serializeNodeWithId
+                serializeNodeWithId: () => s.serializeNodeWithId
             });
             var a = n(226),
                 o = n(227),
-                i = n(228),
-                s = n(234)
+                s = n(228),
+                i = n(234)
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
@@ -10583,7 +10579,7 @@
                 getElementInputValue: () => u,
                 getSerializedNodeId: () => l,
                 getValidTagName: () => h,
-                hasSerializedNode: () => s,
+                hasSerializedNode: () => i,
                 makeUrlAbsolute: () => g,
                 nodeAndAncestorsHaveSerializedNode: () => r,
                 setSerializedNodeId: () => c,
@@ -10591,34 +10587,34 @@
             });
             var a = n(109),
                 o = n(68),
-                i = new WeakMap;
+                s = new WeakMap;
 
-            function s(e) {
-                return i.has(e)
+            function i(e) {
+                return s.has(e)
             }
 
             function r(e) {
                 for (var t = e; t;) {
-                    if (!s(t) && !(0, o.isNodeShadowRoot)(t)) return !1;
+                    if (!i(t) && !(0, o.isNodeShadowRoot)(t)) return !1;
                     t = (0, o.getParentNode)(t)
                 }
                 return !0
             }
 
             function l(e) {
-                return i.get(e)
+                return s.get(e)
             }
 
             function c(e, t) {
-                i.set(e, t)
+                s.set(e, t)
             }
 
             function u(e, t) {
                 var n = e.tagName,
                     a = e.value;
                 if ((0, o.shouldMaskNode)(e, t)) {
-                    var i = e.type;
-                    if ("INPUT" === n && ("button" === i || "submit" === i || "reset" === i)) return a;
+                    var s = e.type;
+                    if ("INPUT" === n && ("button" === s || "submit" === s || "reset" === s)) return a;
                     if (!a || "OPTION" === n) return;
                     return o.CENSORED_STRING_MARK
                 }
@@ -10629,8 +10625,8 @@
                 p = /^data:.*,/i;
 
             function f(e, t) {
-                return e.replace(d, (function(e, n, a, o, i, s) {
-                    var r = a || i || s;
+                return e.replace(d, (function(e, n, a, o, s, i) {
+                    var r = a || s || i;
                     if (!t || !r || m.test(r) || p.test(r)) return e;
                     var l = n || o || "";
                     return "url(".concat(l).concat(g(r, t)).concat(l, ")")
@@ -10678,8 +10674,8 @@
             });
             var a = n(68),
                 o = n(82),
-                i = n(229),
-                s = n(226),
+                s = n(229),
+                i = n(226),
                 r = n(232),
                 l = n(233);
 
@@ -10693,7 +10689,7 @@
                                 var n = (0, a.isNodeShadowRoot)(e);
                                 n && t.serializationContext.shadowRootsController.addShadowRoot(e);
                                 return {
-                                    type: i.NodeType.DocumentFragment,
+                                    type: s.NodeType.DocumentFragment,
                                     childNodes: m(e, t),
                                     isShadowRoot: n,
                                     adoptedStyleSheets: n ? (0, r.serializeStyleSheets)(e.adoptedStyleSheets) : void 0
@@ -10701,14 +10697,14 @@
                             }(e, t);
                         case e.DOCUMENT_TYPE_NODE:
                             return n = e, {
-                                type: i.NodeType.DocumentType,
+                                type: s.NodeType.DocumentType,
                                 name: n.name,
                                 publicId: n.publicId,
                                 systemId: n.systemId
                             };
                         case e.ELEMENT_NODE:
                             return function(e, t) {
-                                var n, r = (0, s.getValidTagName)(e.tagName),
+                                var n, r = (0, i.getValidTagName)(e.tagName),
                                     c = (d = e, "svg" === d.tagName || d instanceof SVGElement || void 0),
                                     u = (0, a.reducePrivacyLevel)((0, a.getNodeSelfPrivacyLevel)(e), t.parentNodePrivacyLevel);
                                 var d;
@@ -10717,7 +10713,7 @@
                                         f = p.width,
                                         g = p.height;
                                     return {
-                                        type: i.NodeType.Element,
+                                        type: s.NodeType.Element,
                                         tagName: r,
                                         attributes: (n = {
                                             rr_width: "".concat(f, "px"),
@@ -10737,7 +10733,7 @@
                                     }))
                                 }
                                 return {
-                                    type: i.NodeType.Element,
+                                    type: s.NodeType.Element,
                                     tagName: r,
                                     attributes: _,
                                     childNodes: h,
@@ -10749,21 +10745,21 @@
                                 var n = (0, a.getTextContent)(e, t.ignoreWhiteSpace || !1, t.parentNodePrivacyLevel);
                                 if (void 0 === n) return;
                                 return {
-                                    type: i.NodeType.Text,
+                                    type: s.NodeType.Text,
                                     textContent: n
                                 }
                             }(e, t);
                         case e.CDATA_SECTION_NODE:
                             return {
-                                type: i.NodeType.CDATA, textContent: ""
+                                type: s.NodeType.CDATA, textContent: ""
                             }
                     }
                     var n
                 }(e, t);
                 if (!n) return null;
-                var c = (0, s.getSerializedNodeId)(e) || d(),
+                var c = (0, i.getSerializedNodeId)(e) || d(),
                     u = n;
-                return u.id = c, (0, s.setSerializedNodeId)(e, c), t.serializedNodeIds && t.serializedNodeIds.add(c), u
+                return u.id = c, (0, i.setSerializedNodeId)(e, c), t.serializedNodeIds && t.serializedNodeIds.add(c), u
             }
             var u = 1;
 
@@ -10781,7 +10777,7 @@
 
             function p(e, t) {
                 return {
-                    type: i.NodeType.Document,
+                    type: s.NodeType.Document,
                     childNodes: m(e, t),
                     adoptedStyleSheets: (0, r.serializeStyleSheets)(e.adoptedStyleSheets)
                 }
@@ -10803,9 +10799,9 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                IncrementalSource: () => i,
+                IncrementalSource: () => s,
                 MediaInteractionType: () => r,
-                MouseInteractionType: () => s,
+                MouseInteractionType: () => i,
                 NodeType: () => o,
                 RecordType: () => a
             });
@@ -10826,7 +10822,7 @@
                     CDATA: 4,
                     DocumentFragment: 11
                 },
-                i = {
+                s = {
                     Mutation: 0,
                     MouseMove: 1,
                     MouseInteraction: 2,
@@ -10837,7 +10833,7 @@
                     MediaInteraction: 7,
                     StyleSheetRule: 8
                 },
-                s = {
+                i = {
                     MouseUp: 0,
                     MouseDown: 1,
                     Click: 2,
@@ -10878,19 +10874,19 @@
             });
             var a = n(68),
                 o = n(92),
-                i = n(226),
-                s = n(234);
+                s = n(226),
+                i = n(234);
 
             function r(e, t, n) {
                 var o;
                 if (t === a.NodePrivacyLevel.HIDDEN) return {};
-                for (var r = {}, c = (0, i.getValidTagName)(e.tagName), u = e.ownerDocument, d = 0; d < e.attributes.length; d += 1) {
+                for (var r = {}, c = (0, s.getValidTagName)(e.tagName), u = e.ownerDocument, d = 0; d < e.attributes.length; d += 1) {
                     var m = e.attributes.item(d).name,
-                        p = (0, s.serializeAttribute)(e, t, m, n.configuration);
+                        p = (0, i.serializeAttribute)(e, t, m, n.configuration);
                     null !== p && (r[m] = p)
                 }
                 if (e.value && ("textarea" === c || "select" === c || "option" === c || "input" === c)) {
-                    var f = (0, i.getElementInputValue)(e, t);
+                    var f = (0, s.getElementInputValue)(e, t);
                     void 0 !== f && (r.value = f)
                 }
                 if ("option" === c && t === a.NodePrivacyLevel.ALLOW) {
@@ -10931,7 +10927,7 @@
                 } catch (e) {}
                 if (!t) return null;
                 var n = Array.from(t, (0, o.isSafari)() ? c : u).join("");
-                return (0, i.switchToAbsoluteUrl)(n, e.href)
+                return (0, s.switchToAbsoluteUrl)(n, e.href)
             }
 
             function c(e) {
@@ -10951,16 +10947,16 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                serializeAttribute: () => s
+                serializeAttribute: () => i
             });
             var a = n(82),
                 o = n(68),
-                i = n(226);
+                s = n(226);
 
-            function s(e, t, n, s) {
+            function i(e, t, n, i) {
                 if (t === o.NodePrivacyLevel.HIDDEN) return null;
                 var r = e.getAttribute(n);
-                if (t === o.NodePrivacyLevel.MASK && n !== o.PRIVACY_ATTR_NAME && !o.STABLE_ATTRIBUTES.includes(n) && n !== s.actionNameAttribute) {
+                if (t === o.NodePrivacyLevel.MASK && n !== o.PRIVACY_ATTR_NAME && !o.STABLE_ATTRIBUTES.includes(n) && n !== i.actionNameAttribute) {
                     var l = e.tagName;
                     switch (n) {
                         case "title":
@@ -10970,11 +10966,11 @@
                     }
                     if ("IMG" === l && ("src" === n || "srcset" === n)) {
                         var c = e;
-                        if (c.naturalWidth > 0) return (0, i.censoredImageForSize)(c.naturalWidth, c.naturalHeight);
+                        if (c.naturalWidth > 0) return (0, s.censoredImageForSize)(c.naturalWidth, c.naturalHeight);
                         var u = e.getBoundingClientRect(),
                             d = u.width,
                             m = u.height;
-                        return d > 0 || m > 0 ? (0, i.censoredImageForSize)(d, m) : o.CENSORED_IMG_MARK
+                        return d > 0 || m > 0 ? (0, s.censoredImageForSize)(d, m) : o.CENSORED_IMG_MARK
                     }
                     if ("SOURCE" === l && ("src" === n || "srcset" === n)) return o.CENSORED_IMG_MARK;
                     if ("A" === l && "href" === n) return o.CENSORED_STRING_MARK;
@@ -10986,7 +10982,7 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                getEventTarget: () => i,
+                getEventTarget: () => s,
                 isTouchEvent: () => o
             });
             var a = n(68);
@@ -10995,7 +10991,7 @@
                 return Boolean(e.changedTouches)
             }
 
-            function i(e) {
+            function s(e) {
                 return !0 === e.composed && (0, a.isNodeShadowHost)(e.target) ? e.composedPath()[0] : e.target
             }
         }, (e, t, n) => {
@@ -11030,18 +11026,18 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                assembleIncrementalSnapshot: () => s
+                assembleIncrementalSnapshot: () => i
             });
             var a = n(82),
                 o = n(72),
-                i = n(229);
+                s = n(229);
 
-            function s(e, t) {
+            function i(e, t) {
                 return {
                     data: (0, a.assign)({
                         source: e
                     }, t),
-                    type: i.RecordType.IncrementalSnapshot,
+                    type: s.RecordType.IncrementalSnapshot,
                     timestamp: (0, o.timeStampNow)()
                 }
             }
@@ -11051,8 +11047,8 @@
                 trackMouseInteraction: () => p
             });
             var a, o = n(82),
-                i = n(112),
-                s = n(68),
+                s = n(112),
+                i = n(68),
                 r = n(229),
                 l = n(237),
                 c = n(235),
@@ -11061,10 +11057,10 @@
                 m = ((a = {}).pointerup = r.MouseInteractionType.MouseUp, a.mousedown = r.MouseInteractionType.MouseDown, a.click = r.MouseInteractionType.Click, a.contextmenu = r.MouseInteractionType.ContextMenu, a.dblclick = r.MouseInteractionType.DblClick, a.focus = r.MouseInteractionType.Focus, a.blur = r.MouseInteractionType.Blur, a.touchstart = r.MouseInteractionType.TouchStart, a.touchend = r.MouseInteractionType.TouchEnd, a);
 
             function p(e, t, n) {
-                return (0, i.addEventListeners)(e, document, Object.keys(m), (function(a) {
-                    var i = (0, c.getEventTarget)(a);
-                    if ((0, s.getNodePrivacyLevel)(i, e.defaultPrivacyLevel) !== s.NodePrivacyLevel.HIDDEN && (0, u.hasSerializedNode)(i)) {
-                        var p, f = (0, u.getSerializedNodeId)(i),
+                return (0, s.addEventListeners)(e, document, Object.keys(m), (function(a) {
+                    var s = (0, c.getEventTarget)(a);
+                    if ((0, i.getNodePrivacyLevel)(s, e.defaultPrivacyLevel) !== i.NodePrivacyLevel.HIDDEN && (0, u.hasSerializedNode)(s)) {
+                        var p, f = (0, u.getSerializedNodeId)(s),
                             g = m[a.type];
                         if (g !== r.MouseInteractionType.Blur && g !== r.MouseInteractionType.Focus) {
                             var _ = (0, d.tryToComputeCoordinates)(a);
@@ -11096,8 +11092,8 @@
             });
             var a = n(102),
                 o = n(112),
-                i = n(68),
-                s = n(235),
+                s = n(68),
+                i = n(235),
                 r = n(225),
                 l = n(229),
                 c = n(237),
@@ -11106,12 +11102,12 @@
             function d(e, t, n, d) {
                 void 0 === d && (d = document);
                 var m = (0, a.throttle)((function(a) {
-                        var o = (0, s.getEventTarget)(a);
-                        if (o && (0, i.getNodePrivacyLevel)(o, e.defaultPrivacyLevel) !== i.NodePrivacyLevel.HIDDEN && (0, r.hasSerializedNode)(o)) {
+                        var o = (0, i.getEventTarget)(a);
+                        if (o && (0, s.getNodePrivacyLevel)(o, e.defaultPrivacyLevel) !== s.NodePrivacyLevel.HIDDEN && (0, r.hasSerializedNode)(o)) {
                             var u = (0, r.getSerializedNodeId)(o),
                                 d = o === document ? {
-                                    scrollTop: (0, i.getScrollY)(),
-                                    scrollLeft: (0, i.getScrollX)()
+                                    scrollTop: (0, s.getScrollY)(),
+                                    scrollLeft: (0, s.getScrollX)()
                                 } : {
                                     scrollTop: Math.round(o.scrollTop),
                                     scrollLeft: Math.round(o.scrollLeft)
@@ -11143,15 +11139,15 @@
             });
             var a = n(102),
                 o = n(72),
-                i = n(112),
-                s = n(68),
+                s = n(112),
+                i = n(68),
                 r = n(229),
                 l = n(236),
                 c = n(237),
                 u = 200;
 
             function d(e, t) {
-                var n = (0, s.initViewportObservable)(e).subscribe((function(e) {
+                var n = (0, i.initViewportObservable)(e).subscribe((function(e) {
                     t((0, c.assembleIncrementalSnapshot)(r.IncrementalSource.ViewportResize, e))
                 }));
                 return {
@@ -11166,7 +11162,7 @@
                 if (!n) return {
                     stop: a.noop
                 };
-                var s = (0, a.throttle)((function() {
+                var i = (0, a.throttle)((function() {
                         t({
                             data: (0, l.getVisualViewport)(n),
                             type: r.RecordType.VisualViewport,
@@ -11175,9 +11171,9 @@
                     }), u, {
                         trailing: !1
                     }),
-                    c = s.throttled,
-                    d = s.cancel,
-                    m = (0, i.addEventListeners)(e, n, ["resize", "scroll"], c, {
+                    c = i.throttled,
+                    d = i.cancel,
+                    m = (0, s.addEventListeners)(e, n, ["resize", "scroll"], c, {
                         capture: !0,
                         passive: !0
                     }).stop;
@@ -11194,17 +11190,17 @@
             });
             var a = n(112),
                 o = n(68),
-                i = n(229),
-                s = n(235),
+                s = n(229),
+                i = n(235),
                 r = n(225),
                 l = n(237);
 
             function c(e, t) {
                 return (0, a.addEventListeners)(e, document, ["play", "pause"], (function(n) {
-                    var a = (0, s.getEventTarget)(n);
-                    a && (0, o.getNodePrivacyLevel)(a, e.defaultPrivacyLevel) !== o.NodePrivacyLevel.HIDDEN && (0, r.hasSerializedNode)(a) && t((0, l.assembleIncrementalSnapshot)(i.IncrementalSource.MediaInteraction, {
+                    var a = (0, i.getEventTarget)(n);
+                    a && (0, o.getNodePrivacyLevel)(a, e.defaultPrivacyLevel) !== o.NodePrivacyLevel.HIDDEN && (0, r.hasSerializedNode)(a) && t((0, l.assembleIncrementalSnapshot)(s.IncrementalSource.MediaInteraction, {
                         id: (0, r.getSerializedNodeId)(a),
-                        type: "play" === n.type ? i.MediaInteractionType.Play : i.MediaInteractionType.Pause
+                        type: "play" === n.type ? s.MediaInteractionType.Play : s.MediaInteractionType.Pause
                     }))
                 }), {
                     capture: !0,
@@ -11219,20 +11215,20 @@
             });
             var a = n(128),
                 o = n(229),
-                i = n(225),
-                s = n(237);
+                s = n(225),
+                i = n(237);
 
             function r(e) {
                 function t(e, t) {
-                    e && (0, i.hasSerializedNode)(e.ownerNode) && t((0, i.getSerializedNodeId)(e.ownerNode))
+                    e && (0, s.hasSerializedNode)(e.ownerNode) && t((0, s.getSerializedNodeId)(e.ownerNode))
                 }
                 var n = [(0, a.instrumentMethod)(CSSStyleSheet.prototype, "insertRule", (function(n) {
                     var a = n.target,
-                        i = n.parameters,
-                        r = i[0],
-                        l = i[1];
+                        s = n.parameters,
+                        r = s[0],
+                        l = s[1];
                     t(a, (function(t) {
-                        return e((0, s.assembleIncrementalSnapshot)(o.IncrementalSource.StyleSheetRule, {
+                        return e((0, i.assembleIncrementalSnapshot)(o.IncrementalSource.StyleSheetRule, {
                             id: t,
                             adds: [{
                                 rule: r,
@@ -11242,26 +11238,26 @@
                     }))
                 })), (0, a.instrumentMethod)(CSSStyleSheet.prototype, "deleteRule", (function(n) {
                     var a = n.target,
-                        i = n.parameters[0];
+                        s = n.parameters[0];
                     t(a, (function(t) {
-                        return e((0, s.assembleIncrementalSnapshot)(o.IncrementalSource.StyleSheetRule, {
+                        return e((0, i.assembleIncrementalSnapshot)(o.IncrementalSource.StyleSheetRule, {
                             id: t,
                             removes: [{
-                                index: i
+                                index: s
                             }]
                         }))
                     }))
                 }))];
 
-                function r(i) {
-                    n.push((0, a.instrumentMethod)(i.prototype, "insertRule", (function(n) {
+                function r(s) {
+                    n.push((0, a.instrumentMethod)(s.prototype, "insertRule", (function(n) {
                         var a = n.target,
-                            i = n.parameters,
-                            r = i[0],
-                            c = i[1];
+                            s = n.parameters,
+                            r = s[0],
+                            c = s[1];
                         t(a.parentStyleSheet, (function(t) {
                             var n = l(a);
-                            n && (n.push(c || 0), e((0, s.assembleIncrementalSnapshot)(o.IncrementalSource.StyleSheetRule, {
+                            n && (n.push(c || 0), e((0, i.assembleIncrementalSnapshot)(o.IncrementalSource.StyleSheetRule, {
                                 id: t,
                                 adds: [{
                                     rule: r,
@@ -11269,12 +11265,12 @@
                                 }]
                             })))
                         }))
-                    })), (0, a.instrumentMethod)(i.prototype, "deleteRule", (function(n) {
+                    })), (0, a.instrumentMethod)(s.prototype, "deleteRule", (function(n) {
                         var a = n.target,
-                            i = n.parameters[0];
+                            s = n.parameters[0];
                         t(a.parentStyleSheet, (function(t) {
                             var n = l(a);
-                            n && (n.push(i), e((0, s.assembleIncrementalSnapshot)(o.IncrementalSource.StyleSheetRule, {
+                            n && (n.push(s), e((0, i.assembleIncrementalSnapshot)(o.IncrementalSource.StyleSheetRule, {
                                 id: t,
                                 removes: [{
                                     index: n
@@ -11305,19 +11301,19 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                trackFocus: () => s
+                trackFocus: () => i
             });
             var a = n(112),
                 o = n(72),
-                i = n(229);
+                s = n(229);
 
-            function s(e, t) {
+            function i(e, t) {
                 return (0, a.addEventListeners)(e, window, ["focus", "blur"], (function() {
                     t({
                         data: {
                             has_focus: document.hasFocus()
                         },
-                        type: i.RecordType.Focus,
+                        type: s.RecordType.Focus,
                         timestamp: (0, o.timeStampNow)()
                     })
                 }))
@@ -11331,8 +11327,8 @@
 
             function o(e, t, n) {
                 var o = e.subscribe(11, (function(e) {
-                    var o, i;
-                    "action" === e.rawRumEvent.type && "click" === e.rawRumEvent.action.type && (null === (i = null === (o = e.rawRumEvent.action.frustration) || void 0 === o ? void 0 : o.type) || void 0 === i ? void 0 : i.length) && "events" in e.domainContext && e.domainContext.events && e.domainContext.events.length && t({
+                    var o, s;
+                    "action" === e.rawRumEvent.type && "click" === e.rawRumEvent.action.type && (null === (s = null === (o = e.rawRumEvent.action.frustration) || void 0 === o ? void 0 : o.type) || void 0 === s ? void 0 : s.length) && "events" in e.domainContext && e.domainContext.events && e.domainContext.events.length && t({
                         timestamp: e.rawRumEvent.date,
                         type: a.RecordType.FrustrationRecord,
                         data: {
@@ -11352,12 +11348,12 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                trackViewEnd: () => i
+                trackViewEnd: () => s
             });
             var a = n(72),
                 o = n(229);
 
-            function i(e, t) {
+            function s(e, t) {
                 var n = e.subscribe(4, (function() {
                     t({
                         timestamp: (0, a.timeStampNow)(),
@@ -11377,8 +11373,8 @@
             });
             var a = n(112),
                 o = n(128),
-                i = n(102),
-                s = n(82),
+                s = n(102),
+                i = n(82),
                 r = n(68),
                 l = n(229),
                 c = n(235),
@@ -11397,7 +11393,7 @@
                         capture: !0,
                         passive: !0
                     }).stop;
-                if (g) m = i.noop;
+                if (g) m = s.noop;
                 else {
                     var h = [(0, o.instrumentSetter)(HTMLInputElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLInputElement.prototype, "checked", E), (0, o.instrumentSetter)(HTMLSelectElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLTextAreaElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLSelectElement.prototype, "selectedIndex", E)];
                     m = function() {
@@ -11429,8 +11425,8 @@
                             }
                         }
                         v(e, n);
-                        var i = e.name;
-                        "radio" === a && i && e.checked && (0, s.forEach)(document.querySelectorAll('input[type="radio"][name="'.concat((0, r.cssEscape)(i), '"]')), (function(t) {
+                        var s = e.name;
+                        "radio" === a && s && e.checked && (0, i.forEach)(document.querySelectorAll('input[type="radio"][name="'.concat((0, r.cssEscape)(s), '"]')), (function(t) {
                             t !== e && v(t, {
                                 isChecked: !1
                             })
@@ -11441,7 +11437,7 @@
                 function v(e, n) {
                     if ((0, u.hasSerializedNode)(e)) {
                         var a = f.get(e);
-                        a && a.text === n.text && a.isChecked === n.isChecked || (f.set(e, n), t((0, d.assembleIncrementalSnapshot)(l.IncrementalSource.Input, (0, s.assign)({
+                        a && a.text === n.text && a.isChecked === n.isChecked || (f.set(e, n), t((0, d.assembleIncrementalSnapshot)(l.IncrementalSource.Input, (0, i.assign)({
                             id: (0, u.getSerializedNodeId)(e)
                         }, n))))
                     }
@@ -11455,14 +11451,14 @@
             });
             var a = n(102),
                 o = n(101),
-                i = n(68),
-                s = n(229),
+                s = n(68),
+                i = n(229),
                 r = n(225),
                 l = n(248),
                 c = n(237);
 
             function u(e, t, n, u) {
-                var p = (0, i.getMutationObserverConstructor)();
+                var p = (0, s.getMutationObserverConstructor)();
                 if (!p) return {
                     stop: a.noop,
                     flush: a.noop
@@ -11478,14 +11474,14 @@
                                 }))
                             }));
                             var l = e.filter((function(e) {
-                                    return e.target.isConnected && (0, r.nodeAndAncestorsHaveSerializedNode)(e.target) && (0, i.getNodePrivacyLevel)(e.target, n.defaultPrivacyLevel, o) !== i.NodePrivacyLevel.HIDDEN
+                                    return e.target.isConnected && (0, r.nodeAndAncestorsHaveSerializedNode)(e.target) && (0, s.getNodePrivacyLevel)(e.target, n.defaultPrivacyLevel, o) !== s.NodePrivacyLevel.HIDDEN
                                 })),
                                 u = function(e, t, n, a) {
-                                    for (var o = new Set, s = new Map, l = function(e) {
+                                    for (var o = new Set, i = new Map, l = function(e) {
                                             e.addedNodes.forEach((function(e) {
                                                 o.add(e)
                                             })), e.removedNodes.forEach((function(t) {
-                                                o.has(t) || s.set(t, e.target), o.delete(t)
+                                                o.has(t) || i.set(t, e.target), o.delete(t)
                                             }))
                                         }, c = 0, u = e; c < u.length; c++) {
                                         l(u[c])
@@ -11495,8 +11491,8 @@
                                     for (var p = new Set, f = [], g = 0, _ = m; g < _.length; g++) {
                                         var h = _[g];
                                         if (!T(h)) {
-                                            var E = (0, i.getNodePrivacyLevel)(h.parentNode, t.defaultPrivacyLevel, a);
-                                            if (E !== i.NodePrivacyLevel.HIDDEN && E !== i.NodePrivacyLevel.IGNORE) {
+                                            var E = (0, s.getNodePrivacyLevel)(h.parentNode, t.defaultPrivacyLevel, a);
+                                            if (E !== s.NodePrivacyLevel.HIDDEN && E !== s.NodePrivacyLevel.IGNORE) {
                                                 var v = (0, r.serializeNodeWithId)(h, {
                                                     serializedNodeIds: p,
                                                     parentNodePrivacyLevel: E,
@@ -11507,7 +11503,7 @@
                                                     configuration: t
                                                 });
                                                 if (v) {
-                                                    var S = (0, i.getParentNode)(h);
+                                                    var S = (0, s.getParentNode)(h);
                                                     f.push({
                                                         nextId: b(h),
                                                         parentId: (0, r.getSerializedNodeId)(S),
@@ -11518,7 +11514,7 @@
                                         }
                                     }
                                     var y = [];
-                                    return s.forEach((function(e, t) {
+                                    return i.forEach((function(e, t) {
                                         (0, r.hasSerializedNode)(t) && y.push({
                                             parentId: (0, r.getSerializedNodeId)(e),
                                             id: (0, r.getSerializedNodeId)(t)
@@ -11547,15 +11543,15 @@
                                 f = u.removes,
                                 g = u.hasBeenSerialized,
                                 _ = function(e, t, n) {
-                                    for (var a, o = [], s = new Set, l = e.filter((function(e) {
-                                            return !s.has(e.target) && (s.add(e.target), !0)
+                                    for (var a, o = [], i = new Set, l = e.filter((function(e) {
+                                            return !i.has(e.target) && (i.add(e.target), !0)
                                         })), c = 0, u = l; c < u.length; c++) {
                                         var d = u[c];
                                         if (d.target.textContent !== d.oldValue) {
-                                            var m = (0, i.getNodePrivacyLevel)((0, i.getParentNode)(d.target), t.defaultPrivacyLevel, n);
-                                            m !== i.NodePrivacyLevel.HIDDEN && m !== i.NodePrivacyLevel.IGNORE && o.push({
+                                            var m = (0, s.getNodePrivacyLevel)((0, s.getParentNode)(d.target), t.defaultPrivacyLevel, n);
+                                            m !== s.NodePrivacyLevel.HIDDEN && m !== s.NodePrivacyLevel.IGNORE && o.push({
                                                 id: (0, r.getSerializedNodeId)(d.target),
-                                                value: null !== (a = (0, i.getTextContent)(d.target, !1, m)) && void 0 !== a ? a : null
+                                                value: null !== (a = (0, s.getTextContent)(d.target, !1, m)) && void 0 !== a ? a : null
                                             })
                                         }
                                     }
@@ -11564,13 +11560,13 @@
                                     return "characterData" === e.type && !g(e.target)
                                 })), n, o),
                                 h = function(e, t, n) {
-                                    for (var a = [], o = new Map, s = e.filter((function(e) {
+                                    for (var a = [], o = new Map, i = e.filter((function(e) {
                                             var t = o.get(e.target);
                                             return (!t || !t.has(e.attributeName)) && (t ? t.add(e.attributeName) : o.set(e.target, new Set([e.attributeName])), !0)
-                                        })), l = new Map, c = 0, u = s; c < u.length; c++) {
+                                        })), l = new Map, c = 0, u = i; c < u.length; c++) {
                                         var d = u[c];
                                         if (d.target.getAttribute(d.attributeName) !== d.oldValue) {
-                                            var m = (0, i.getNodePrivacyLevel)(d.target, t.defaultPrivacyLevel, n),
+                                            var m = (0, s.getNodePrivacyLevel)(d.target, t.defaultPrivacyLevel, n),
                                                 p = (0, r.serializeAttribute)(d.target, m, d.attributeName, t),
                                                 f = void 0;
                                             if ("value" === d.attributeName) {
@@ -11590,7 +11586,7 @@
                                     return "attributes" === e.type && !g(e.target)
                                 })), n, o);
                             if (!(_.length || h.length || f.length || p.length)) return;
-                            t((0, c.assembleIncrementalSnapshot)(s.IncrementalSource.Mutation, {
+                            t((0, c.assembleIncrementalSnapshot)(i.IncrementalSource.Mutation, {
                                 adds: p,
                                 removes: f,
                                 texts: _,
@@ -11624,20 +11620,20 @@
             }
 
             function m(e, t) {
-                (0, i.isNodeShadowHost)(e) && t(e.shadowRoot), (0, i.forEachChildNodes)(e, (function(e) {
+                (0, s.isNodeShadowHost)(e) && t(e.shadowRoot), (0, s.forEachChildNodes)(e, (function(e) {
                     return m(e, t)
                 }))
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                MUTATION_PROCESS_MIN_DELAY: () => s,
+                MUTATION_PROCESS_MIN_DELAY: () => i,
                 createMutationBatch: () => r
             });
             var a = n(102),
                 o = n(101),
-                i = 100,
-                s = 16;
+                s = 100,
+                i = 16;
 
             function r(e) {
                 var t = a.noop,
@@ -11646,7 +11642,7 @@
                 function r() {
                     t(), e(n), n = []
                 }
-                var l = (0, a.throttle)(r, s, {
+                var l = (0, a.throttle)(r, i, {
                         leading: !1
                     }),
                     c = l.throttled,
@@ -11665,7 +11661,7 @@
                                 return window.cancelAnimationFrame(a)
                             }
                         }(c, {
-                            timeout: i
+                            timeout: s
                         })), n.push.apply(n, e)
                     },
                     flush: r,
@@ -11702,13 +11698,13 @@
             var a = n(223),
                 o = function(e, t, n) {
                     var o = new Map,
-                        i = {
-                            addShadowRoot: function(s) {
-                                if (!o.has(s)) {
-                                    var r = (0, a.trackMutation)(t, e, i, s),
-                                        l = (0, a.trackInput)(e, t, s),
-                                        c = (0, a.trackScroll)(e, t, n, s);
-                                    o.set(s, {
+                        s = {
+                            addShadowRoot: function(i) {
+                                if (!o.has(i)) {
+                                    var r = (0, a.trackMutation)(t, e, s, i),
+                                        l = (0, a.trackInput)(e, t, i),
+                                        c = (0, a.trackScroll)(e, t, n, i);
+                                    o.set(i, {
                                         flush: function() {
                                             return r.flush()
                                         },
@@ -11733,7 +11729,7 @@
                                 }))
                             }
                         };
-                    return i
+                    return s
                 }
         }, (e, t, n) => {
             "use strict";
@@ -11742,8 +11738,8 @@
             });
             var a = n(68),
                 o = n(72),
-                i = n(229),
-                s = n(225),
+                s = n(229),
+                i = n(225),
                 r = n(236);
 
             function l(e, t, n, l, c, u) {
@@ -11761,28 +11757,28 @@
                                 href: window.location.href,
                                 width: d
                             },
-                            type: i.RecordType.Meta,
+                            type: s.RecordType.Meta,
                             timestamp: n
                         }, {
                             data: {
                                 has_focus: document.hasFocus()
                             },
-                            type: i.RecordType.Focus,
+                            type: s.RecordType.Focus,
                             timestamp: n
                         }, {
                             data: {
-                                node: (0, s.serializeDocument)(document, l, c),
+                                node: (0, i.serializeDocument)(document, l, c),
                                 initialOffset: {
                                     left: (0, a.getScrollX)(),
                                     top: (0, a.getScrollY)()
                                 }
                             },
-                            type: i.RecordType.FullSnapshot,
+                            type: s.RecordType.FullSnapshot,
                             timestamp: n
                         }];
                     return window.visualViewport && m.push({
                         data: (0, r.getVisualViewport)(window.visualViewport),
-                        type: i.RecordType.VisualViewport,
+                        type: s.RecordType.VisualViewport,
                         timestamp: n
                     }), m
                 };
@@ -11831,16 +11827,16 @@
             });
             var a = n(72),
                 o = n(199),
-                i = n(98),
-                s = n(255),
+                s = n(98),
+                i = n(255),
                 r = n(256),
                 l = 5 * a.ONE_SECOND,
                 c = 6e4;
 
-            function u(e, t, n, a, o, i) {
+            function u(e, t, n, a, o, s) {
                 return d(e, (function() {
                     return m(t.applicationId, n, a)
-                }), o, i)
+                }), o, s)
             }
 
             function d(e, t, n, a) {
@@ -11857,9 +11853,9 @@
 
                 function p(e) {
                     1 === u.status && (u.segment.flush((function(t, a) {
-                        var i = (0, s.buildReplayPayload)(a.output, t, a.rawBytesCount);
-                        (0, o.isPageExitReason)(e) ? n.sendOnExit(i): n.send(i)
-                    })), (0, i.clearTimeout)(u.expirationTimeoutId)), u = "stop" !== e ? {
+                        var s = (0, i.buildReplayPayload)(a.output, t, a.rawBytesCount);
+                        (0, o.isPageExitReason)(e) ? n.sendOnExit(s): n.send(s)
+                    })), (0, s.clearTimeout)(u.expirationTimeoutId)), u = "stop" !== e ? {
                         status: 0,
                         nextSegmentCreationReason: e
                     } : {
@@ -11879,7 +11875,7 @@
                                         context: n,
                                         creationReason: u.nextSegmentCreationReason
                                     }),
-                                    expirationTimeoutId: (0, i.setTimeout)((function() {
+                                    expirationTimeoutId: (0, s.setTimeout)((function() {
                                         p("segment_duration_limit")
                                     }), l)
                                 }
@@ -11926,12 +11922,12 @@
                 o.append("segment", new Blob([e], {
                     type: "application/octet-stream"
                 }), "".concat(t.session.id, "-").concat(t.start));
-                var i = (0, a.assign)({
+                var s = (0, a.assign)({
                         raw_segment_size: n,
                         compressed_segment_size: e.byteLength
                     }, t),
-                    s = JSON.stringify(i);
-                return o.append("event", new Blob([s], {
+                    i = JSON.stringify(s);
+                return o.append("event", new Blob([i], {
                     type: "application/json"
                 })), {
                     data: o,
@@ -11941,16 +11937,16 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                createSegment: () => s
+                createSegment: () => i
             });
             var a = n(82),
                 o = n(229),
-                i = n(222);
+                s = n(222);
 
-            function s(e) {
+            function i(e) {
                 var t = e.context,
                     n = e.creationReason,
-                    s = e.encoder,
+                    i = e.encoder,
                     r = 0,
                     l = t.view.id,
                     c = (0, a.assign)({
@@ -11959,21 +11955,21 @@
                         creation_reason: n,
                         records_count: 0,
                         has_full_snapshot: !1,
-                        index_in_view: i.getSegmentsCount(l),
+                        index_in_view: s.getSegmentsCount(l),
                         source: "browser"
                     }, t);
-                return i.addSegment(l), {
+                return s.addSegment(l), {
                     addRecord: function(e, t) {
                         c.start = Math.min(c.start, e.timestamp), c.end = Math.max(c.end, e.timestamp), c.records_count += 1, c.has_full_snapshot || (c.has_full_snapshot = e.type === o.RecordType.FullSnapshot);
-                        var n = s.isEmpty ? '{"records":[' : ",";
-                        s.write(n + JSON.stringify(e), (function(e) {
+                        var n = i.isEmpty ? '{"records":[' : ",";
+                        i.write(n + JSON.stringify(e), (function(e) {
                             t(r += e)
                         }))
                     },
                     flush: function(e) {
-                        if (s.isEmpty) throw new Error("Empty segment flushed");
-                        s.write("],".concat(JSON.stringify(c).slice(1), "\n")), s.finish((function(t) {
-                            i.addWroteData(c.view.id, t.rawBytesCount), e(c, t)
+                        if (i.isEmpty) throw new Error("Empty segment flushed");
+                        i.write("],".concat(JSON.stringify(c).slice(1), "\n")), i.finish((function(t) {
+                            s.addWroteData(c.view.id, t.rawBytesCount), e(c, t)
                         }))
                     }
                 }
@@ -12001,8 +11997,8 @@
             });
             var a = n(116),
                 o = n(102),
-                i = n(199),
-                s = n(181),
+                s = n(199),
+                i = n(181),
                 r = n(222),
                 l = n(259),
                 c = n(261),
@@ -12052,29 +12048,29 @@
                                 status: 1
                             })
                         })), a.subscribe(10, (function(e) {
-                            e.reason === i.PageExitReason.UNLOADING && m()
+                            e.reason === s.PageExitReason.UNLOADING && m()
                         })), a.subscribe(9, (function() {
                             1 === n.status && d()
-                        })), d = function(i) {
+                        })), d = function(s) {
                             var l = r.findTrackedSession();
-                            l && (0 !== l.sessionReplay || i && i.force) ? 2 !== n.status && 3 !== n.status && (n = {
+                            l && (0 !== l.sessionReplay || s && s.force) ? 2 !== n.status && 3 !== n.status && (n = {
                                 status: 2
-                            }, (0, s.runOnReadyState)(o, "interactive", (function() {
+                            }, (0, i.runOnReadyState)(o, "interactive", (function() {
                                 if (2 === n.status) {
-                                    var i = (g || (f || (f = (0, c.startDeflateWorker)(o, "Datadog Session Replay", (function() {
+                                    var s = (g || (f || (f = (0, c.startDeflateWorker)(o, "Datadog Session Replay", (function() {
                                         m()
                                     }), t)), f && (g = (0, c.createDeflateEncoder)(o, f, 1))), g);
-                                    if (i) {
-                                        var s = e(a, o, r, u, i).stop;
+                                    if (s) {
+                                        var i = e(a, o, r, u, s).stop;
                                         n = {
                                             status: 3,
-                                            stopRecording: s
+                                            stopRecording: i
                                         }
                                     } else n = {
                                         status: 0
                                     }
                                 }
-                            })), i && i.force && 0 === l.sessionReplay && r.setForcedReplay()) : n = {
+                            })), s && s.force && 0 === l.sessionReplay && r.setForcedReplay()) : n = {
                                 status: 1
                             }
                         }, m = function() {
@@ -12096,24 +12092,24 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                getSessionReplayLink: () => i
+                getSessionReplayLink: () => s
             });
             var a = n(68),
                 o = n(260);
 
-            function i(e, t, n, i) {
-                var s = t.findTrackedSession(),
+            function s(e, t, n, s) {
+                var i = t.findTrackedSession(),
                     r = function(e, t) {
                         if (!(0, o.isBrowserSupported)()) return "browser-not-supported";
                         if (!e) return "rum-not-tracked";
                         if (0 === e.sessionReplay) return "incorrect-session-plan";
                         if (!t) return "replay-not-started"
-                    }(s, i),
+                    }(i, s),
                     l = n.findView();
                 return (0, a.getSessionReplayUrl)(e, {
                     viewContext: l,
                     errorType: r,
-                    session: s
+                    session: i
                 })
             }
         }, (e, t, n) => {
@@ -12142,8 +12138,8 @@
             });
             var a = n(112),
                 o = n(117),
-                i = n(104),
-                s = n(82);
+                s = n(104),
+                i = n(82);
 
             function r(e, t, n) {
                 var r, l = 0,
@@ -12160,7 +12156,7 @@
                     })).stop;
 
                 function p() {
-                    var e = 0 === c.length ? new Uint8Array(0) : (0, i.concatBuffers)(c.concat(r)),
+                    var e = 0 === c.length ? new Uint8Array(0) : (0, s.concatBuffers)(c.concat(r)),
                         t = {
                             rawBytesCount: l,
                             output: e,
@@ -12205,7 +12201,7 @@
                         var e = d.map((function(e) {
                             return delete e.writeCallback, delete e.finishCallback, e.data
                         })).join("");
-                        return (0, s.assign)(p(), {
+                        return (0, i.assign)(p(), {
                             pendingData: e
                         })
                     },
@@ -12228,8 +12224,8 @@
             });
             var a = n(72),
                 o = n(112),
-                i = n(98),
-                s = n(83),
+                s = n(98),
+                i = n(83),
                 r = n(117),
                 l = n(82),
                 c = 30 * a.ONE_SECOND;
@@ -12278,9 +12274,9 @@
                         })).stop;
                     a.postMessage({
                         action: "init"
-                    }), (0, i.setTimeout)((function() {
+                    }), (0, s.setTimeout)((function() {
                         return function(e) {
-                            1 === d.status && (s.display.error("".concat(e, " failed to start: a timeout occurred while initializing the Worker")), d.initializationFailureCallbacks.forEach((function(e) {
+                            1 === d.status && (i.display.error("".concat(e, " failed to start: a timeout occurred while initializing the Worker")), d.initializationFailureCallbacks.forEach((function(e) {
                                 return e()
                             })), d = {
                                 status: 2
@@ -12302,9 +12298,9 @@
 
             function _(e, t, n, a) {
                 if (1 === d.status || 0 === d.status) {
-                    if (s.display.error("".concat(t, " failed to start: an error occurred while creating the Worker:"), n), n instanceof Event || n instanceof Error && (i = n.message, (0, l.includes)(i, "Content Security Policy") || (0, l.includes)(i, "requires 'TrustedScriptURL'"))) {
+                    if (i.display.error("".concat(t, " failed to start: an error occurred while creating the Worker:"), n), n instanceof Event || n instanceof Error && (s = n.message, (0, l.includes)(s, "Content Security Policy") || (0, l.includes)(s, "requires 'TrustedScriptURL'"))) {
                         var o = void 0;
-                        o = e.workerUrl ? "Please make sure the Worker URL ".concat(e.workerUrl, " is correct and CSP is correctly configured.") : "Please make sure CSP is correctly configured.", s.display.error("".concat(o, " See documentation at ").concat(s.DOCS_ORIGIN, "/integrations/content_security_policy_logs/#use-csp-with-real-user-monitoring-and-session-replay"))
+                        o = e.workerUrl ? "Please make sure the Worker URL ".concat(e.workerUrl, " is correct and CSP is correctly configured.") : "Please make sure CSP is correctly configured.", i.display.error("".concat(o, " See documentation at ").concat(i.DOCS_ORIGIN, "/integrations/content_security_policy_logs/#use-csp-with-real-user-monitoring-and-session-replay"))
                     } else(0, r.addTelemetryError)(n);
                     1 === d.status && d.initializationFailureCallbacks.forEach((function(e) {
                         return e()
@@ -12315,7 +12311,7 @@
                     worker_version: 3 === d.status && d.version,
                     stream_id: a
                 });
-                var i
+                var s
             }
         }, (e, t, n) => {
             "use strict";
@@ -12323,14 +12319,14 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(40)) && a.__esModule ? a : {
+                s = (a = n(40)) && a.__esModule ? a : {
                     default: a
                 },
-                s = n(13);
+                i = n(13);
             const r = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "masterSoundEnabled",
                     scope: "local",
                     defaultValue: !0
@@ -12338,7 +12334,7 @@
                 l = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "masterVolume",
                     scope: "local",
                     defaultValue: 100
@@ -12346,7 +12342,7 @@
                 c = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "sfxEnabled",
                     scope: "local",
                     defaultValue: !0,
@@ -12355,7 +12351,7 @@
                 u = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "sfxVolume",
                     scope: "local",
                     defaultValue: 100,
@@ -12364,7 +12360,7 @@
                 d = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "ambientSfxEnabled",
                     scope: "local",
                     defaultValue: !0
@@ -12372,7 +12368,7 @@
                 m = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "pickChampVoEnabled",
                     scope: "local",
                     defaultValue: !0
@@ -12380,7 +12376,7 @@
                 p = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "banChampVoEnabled",
                     scope: "local",
                     defaultValue: !0
@@ -12388,7 +12384,7 @@
                 f = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "musicEnabled",
                     scope: "local",
                     defaultValue: !0
@@ -12396,7 +12392,7 @@
                 g = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "musicVolume",
                     scope: "local",
                     defaultValue: 100
@@ -12404,7 +12400,7 @@
                 _ = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "championSelectionMusicEnabled",
                     scope: "local",
                     defaultValue: !0
@@ -12412,7 +12408,7 @@
                 h = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "ambienceMusicEnabled",
                     scope: "local",
                     defaultValue: !0
@@ -12420,7 +12416,7 @@
                 E = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "clientAmbienceMusicEnabled",
                     scope: "local",
                     defaultValue: !0
@@ -12428,12 +12424,12 @@
                 v = {
                     model: "soundSettings",
                     namespace: "lol-audio",
-                    schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
+                    schemaVersion: i.LOL_SOUND_SCHEMA_VERSION,
                     property: "loginMusicEnabled",
                     scope: "local",
                     defaultValue: !0
                 };
-            var S = o.Ember.Controller.extend(i.default, {
+            var S = o.Ember.Controller.extend(s.default, {
                 soundSettings: o.Ember.computed.alias("model.soundSettings"),
                 currentSchemaVersion: o.Ember.computed.alias("soundSettings.schemaVersion"),
                 soundDisabled: o.Ember.computed.not("masterSoundEnabled"),
@@ -12463,7 +12459,7 @@
                 init() {
                     this._super(...arguments), this.bindSetting(r), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(f), this.bindSetting(g), this.bindSetting(_), this.bindSetting(h), this.bindSetting(E), this.bindSetting(v);
                     const e = this.get("currentSchemaVersion");
-                    Number.isInteger(e) && e < s.LOL_SOUND_SCHEMA_VERSION && this.resetToDefault()
+                    Number.isInteger(e) && e < i.LOL_SOUND_SCHEMA_VERSION && this.resetToDefault()
                 },
                 resetToDefault: function() {
                     this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(v.property, v.defaultValue)
@@ -12490,12 +12486,10 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(40)) && a.__esModule ? a : {
+                s = (a = n(40)) && a.__esModule ? a : {
                     default: a
                 };
-            const s = "/lol-settings/v2/account/LCUPreferences/lol-navigation",
-                r = o.dataBinding.bindTo(o.socket),
-                l = {
+            const i = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12503,7 +12497,7 @@
                     scope: "account",
                     defaultValue: !1
                 },
-                c = {
+                r = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12511,7 +12505,7 @@
                     scope: "account",
                     defaultValue: !1
                 },
-                u = {
+                l = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12519,7 +12513,7 @@
                     scope: "account",
                     defaultValue: !1
                 },
-                d = {
+                c = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12527,7 +12521,7 @@
                     scope: "local",
                     defaultValue: "Default System Device"
                 },
-                m = {
+                u = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12535,17 +12529,17 @@
                     scope: "local",
                     defaultValue: 50
                 },
-                p = "voiceActivity",
-                f = "pushToTalk",
-                g = {
+                d = "voiceActivity",
+                m = "pushToTalk",
+                p = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "inputMode",
                     scope: "account",
-                    defaultValue: p
+                    defaultValue: d
                 },
-                _ = {
+                f = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12553,39 +12547,37 @@
                     scope: "local",
                     defaultValue: 65
                 },
-                h = {
+                g = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkKey",
                     scope: "account"
                 },
-                E = {
+                _ = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkTeamKey",
                     scope: "account"
                 };
-            var v = o.Ember.Controller.extend(i.default, {
+            var h = o.Ember.Controller.extend(s.default, {
                 localVoiceSettings: o.Ember.computed.alias("model.localVoiceSettings"),
                 accountVoiceSettings: o.Ember.computed.alias("model.accountVoiceSettings"),
                 persistenceService: o.Ember.inject.service("persistence"),
                 voiceService: o.Ember.inject.service("voice"),
                 teamVoicePluginEnabled: o.Ember.computed.alias("voiceService.teamVoicePluginEnabled"),
-                voiceComplianceAgreementAuthorized: !1,
-                shouldShowAgreementSection: o.Ember.computed.not("voiceComplianceAgreementAuthorized"),
-                isTeamVoiceDisabled: o.Ember.computed(l.property, "voiceComplianceAgreementAuthorized", (function() {
-                    return !this.get(l.property) || !this.get("voiceComplianceAgreementAuthorized")
+                isTeamVoiceDisabled: o.Ember.computed(i.property, (function() {
+                    return !this.get(i.property)
                 })),
-                autoJoinObserver: o.Ember.observer(l.property, (function() {
-                    this.get(l.property) || this.changeSetting(u.property, !1)
+                autoJoinObserver: o.Ember.observer(i.property, (function() {
+                    this.get(i.property) || this.changeSetting(l.property, !1)
                 })),
-                captureDevices: o.Ember.computed("voiceService.captureDevices", d.property, (function() {
+                captureDevices: o.Ember.computed("voiceService.captureDevices", c.property, (function() {
                     const e = this.get("voiceService.captureDevices") || [],
-                        t = this.get(d.property) || o.lodash.get(o.lodash.first(e.filter((e => e.is_current_device))), "handle");
+                        t = this.get(c.property) || o.lodash.get(o.lodash.first(e.filter((e => e.is_current_device))), "handle");
                     return e.map((e => {
-                        const n = e.handle === d.defaultValue ? this.get("tra.voice_settings_default_input_device") : e.name;
+                        const n = e.handle === c.defaultValue ? this.get("tra.voice_settings_default_input_device") : e.name;
                         return {
                             handle: e.handle,
                             name: n,
@@ -12593,49 +12585,46 @@
                         }
                     }))
                 })),
-                inputVolumeLabel: o.Ember.computed(m.property, (function() {
-                    const e = Number.isInteger(this.get(m.property)) ? this.get(m.property) : m.defaultValue;
+                inputVolumeLabel: o.Ember.computed(u.property, (function() {
+                    const e = Number.isInteger(this.get(u.property)) ? this.get(u.property) : u.defaultValue;
                     return this.get("tra.formatString")("voice_settings_input_gain", {
                         inputVolume: e
                     })
                 })),
-                inputModes: o.Ember.computed(g.property, (function() {
+                inputModes: o.Ember.computed(p.property, (function() {
                     return [{
-                        name: p,
+                        name: d,
                         label: this.get("tra.voice_settings_input_activity"),
                         selected: this.get("isInputModeVoice")
                     }, {
-                        name: f,
+                        name: m,
                         label: this.get("tra.voice_settings_push_to_talk"),
                         selected: this.get("isInputModePushToTalk")
                     }]
                 })),
-                isInputModeVoice: o.Ember.computed(g.property, (function() {
-                    return this.get(g.property) === p
+                isInputModeVoice: o.Ember.computed(p.property, (function() {
+                    return this.get(p.property) === d
                 })),
-                isInputModePushToTalk: o.Ember.computed(g.property, (function() {
-                    return this.get(g.property) === f
+                isInputModePushToTalk: o.Ember.computed(p.property, (function() {
+                    return this.get(p.property) === m
                 })),
-                inputModeVoiceSensitivityLabel: o.Ember.computed(_.property, (function() {
-                    const e = Number.isInteger(this.get(_.property)) ? this.get(_.property) : _.defaultValue;
+                inputModeVoiceSensitivityLabel: o.Ember.computed(f.property, (function() {
+                    const e = Number.isInteger(this.get(f.property)) ? this.get(f.property) : f.defaultValue;
                     return this.get("tra.formatString")("voice_settings_input_sensitivity", {
                         sensitivity: e
                     })
                 })),
                 init() {
-                    this._super(...arguments), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(g), this.bindSetting(_), this.bindSetting(h), this.bindSetting(E), r.observe(s, this, (e => {
-                        const t = o.lodash.get(e, ["data", "voiceComplianceAgreementAuthorized"], !1);
-                        this.set("voiceComplianceAgreementAuthorized", Boolean(t))
-                    }))
+                    this._super(...arguments), this.bindSetting(i), this.bindSetting(r), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(p), this.bindSetting(f), this.bindSetting(g), this.bindSetting(_)
                 },
                 willDestroy() {
-                    this._super(...arguments), r.unobserve(s, this)
+                    this._super(...arguments)
                 },
                 resetToDefault: function() {
-                    this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue)
+                    this.changeSetting(i.property, i.defaultValue), this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue)
                 },
                 _showPTTPermissionsModal() {
-                    this.changeSetting(g.property, p);
+                    this.changeSetting(p.property, d);
                     const e = this.get("tra.voice_settings_push_to_talk_modal_header"),
                         t = this.get("tra.voice_settings_push_to_talk_modal_body"),
                         n = {
@@ -12650,40 +12639,37 @@
                 },
                 actions: {
                     selectPushToTalkKey: function(e) {
-                        this.changeSetting(h.property, e)
+                        this.changeSetting(g.property, e)
                     },
                     selectPushToTalkTeamKey: function(e) {
-                        this.changeSetting(E.property, e)
+                        this.changeSetting(_.property, e)
                     },
                     selectInputMode: function(e) {
-                        this.changeSetting(g.property, e), e === f && this.get("voiceService").isPushToTalkAvailable(!0).then((e => {
+                        this.changeSetting(p.property, e), e === m && this.get("voiceService").isPushToTalkAvailable(!0).then((e => {
                             e || this._showPTTPermissionsModal()
                         })).catch((() => {
                             this._showPTTPermissionsModal()
                         }))
                     },
                     selectCaptureDevice: function(e) {
-                        this.changeSetting(d.property, e)
+                        this.changeSetting(c.property, e)
                     },
                     onSliderChange: function(e, t) {
                         this.changeSetting(e, t)
-                    },
-                    viewAgreement: function() {
-                        o.SharedPlayerBehaviorApps.showCommunicationsAgreementModal()
                     }
                 }
             });
-            t.default = v
+            t.default = h
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(15)) && a.__esModule ? a : {
+                s = (a = n(15)) && a.__esModule ? a : {
                     default: a
                 };
-            const s = o.dataBinding.bindTo(o.socket),
+            const i = o.dataBinding.bindTo(o.socket),
                 r = "/lol-chat/v1/blocked-players",
                 l = (e, t) => "string" == typeof e && "string" == typeof t && e.toUpperCase() === t.toUpperCase();
             var c = o.Ember.Controller.extend({
@@ -12698,8 +12684,8 @@
                 }) {
                     let a;
                     a = o.playerNames.isUsingAlias ? `${e} #${t}` : n;
-                    const i = this.showBlockPlayerModal(a);
-                    return await i.acceptPromise.then((async () => await this.executeBlockPlayer(a))).catch((() => null))
+                    const s = this.showBlockPlayerModal(a);
+                    return await s.acceptPromise.then((async () => await this.executeBlockPlayer(a))).catch((() => null))
                 },
                 showBlockPlayerModal(e) {
                     const t = o.templateHelper.contentBlockDialog(o.tra.formatString("blocked_summoners_block_confirm_title"), o.tra.formatString("blocked_summoners_block_confirm_text", {
@@ -12722,12 +12708,12 @@
                         error: null
                     };
                     try {
-                        const n = await s.get(`/lol-summoner/v1/summoners?name=${encodeURIComponent(e)}`);
-                        await s.post(r, {
+                        const n = await i.get(`/lol-summoner/v1/summoners?name=${encodeURIComponent(e)}`);
+                        await i.post(r, {
                             summonerId: n.summonerId,
                             puuid: n.puuid
                         });
-                        const a = await s.get(r, {
+                        const a = await i.get(r, {
                             skipCache: !0
                         });
                         this.set("model.blockedPlayers", a), t.isSuccessful = !0
@@ -12802,20 +12788,20 @@
                         summonerName: n
                     }, a) {
                         if (!a) return null;
-                        let i = "";
-                        return i = o.playerNames.isUsingAlias ? `${e} #${t}` : n, {
+                        let s = "";
+                        return s = o.playerNames.isUsingAlias ? `${e} #${t}` : n, {
                             text: this.get("tra").formatString("block_system_message_summoner_dne", {
-                                name: i
+                                name: s
                             }),
                             displayOnGameName: !0,
                             isError: !0
                         }
                     },
                     unblock(e) {
-                        return s.delete(r + "/" + e).then((() => s.get(r, {
+                        return i.delete(r + "/" + e).then((() => i.get(r, {
                             skipCache: !0
                         }))).then((e => {
-                            i.default.unblockSuccess.play(), this.set("model.blockedPlayers", e)
+                            s.default.unblockSuccess.play(), this.set("model.blockedPlayers", e)
                         }))
                     }
                 }
@@ -12849,11 +12835,11 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(269)) && a.__esModule ? a : {
+                s = (a = n(269)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Controller.extend(i.default);
-            t.default = s
+            var i = o.Ember.Controller.extend(s.default);
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12880,32 +12866,32 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(269)) && a.__esModule ? a : {
+                s = (a = n(269)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Controller.extend(i.default);
-            t.default = s
+            var i = o.Ember.Controller.extend(s.default);
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(269)) && a.__esModule ? a : {
+                s = (a = n(269)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Controller.extend(i.default);
-            t.default = s
+            var i = o.Ember.Controller.extend(s.default);
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(40)) && a.__esModule ? a : {
+                s = (a = n(40)) && a.__esModule ? a : {
                     default: a
                 };
-            const s = {
+            const i = {
                     model: "replaysSettings",
                     namespace: "lol-replays",
                     schemaVersion: 1,
@@ -12921,10 +12907,10 @@
                     scope: "local",
                     defaultValue: ""
                 };
-            var l = o.Ember.Controller.extend(i.default, {
+            var l = o.Ember.Controller.extend(s.default, {
                 replaysSettings: o.Ember.computed.alias("model"),
-                replaysPath: o.Ember.computed(s.property, (function() {
-                    return this.get(s.property)
+                replaysPath: o.Ember.computed(i.property, (function() {
+                    return this.get(i.property)
                 })),
                 highlightsPath: o.Ember.computed(r.property, (function() {
                     return this.get(r.property)
@@ -12933,13 +12919,13 @@
                     this._super(...arguments);
                     const e = [o.db.get("/lol-replays/v1/rofls/path/default"), o.db.get("/lol-highlights/v1/highlights-folder-path/default")];
                     Promise.all(e).then((e => {
-                        s.defaultValue = e[0], r.defaultValue = e[1], this.bindSetting(s), this.bindSetting(r)
+                        i.defaultValue = e[0], r.defaultValue = e[1], this.bindSetting(i), this.bindSetting(r)
                     })).catch((e => {
                         o.logger.error("Failed to get default path for replays and highlights", e)
                     }))
                 },
                 resetToDefault: function() {
-                    this.changeSetting(s.property, s.defaultValue), this.changeSetting(r.property, r.defaultValue)
+                    this.changeSetting(i.property, i.defaultValue), this.changeSetting(r.property, r.defaultValue)
                 },
                 _onChooserClick(e, t) {
                     const n = this;
@@ -12961,7 +12947,7 @@
                 },
                 actions: {
                     changeReplaysFolderPath: function() {
-                        this._onChooserClick(s.property, this.get("replaysPath"))
+                        this._onChooserClick(i.property, this.get("replaysPath"))
                     },
                     changeHighlightsFolderPath: function() {
                         this._onChooserClick(r.property, this.get("highlightsPath"))
@@ -13244,7 +13230,7 @@
                 showDelay: 150,
                 transitionSpeed: 150
             };
-            var i = a.Ember.Component.extend({
+            var s = a.Ember.Component.extend({
                 didInsertElement() {
                     this._super(...arguments), this.tooltipTarget = this.element.parentElement.querySelector(".block-list-settings-summoner-input"), a.TooltipManager.assign(this.tooltipTarget, this.element.querySelector("lol-uikit-tooltip"), null, o), this.sync()
                 },
@@ -13267,7 +13253,7 @@
                     this._super(...arguments), this.hideTooltipTimer && a.Ember.run.cancel(this.hideTooltipTimer), a.TooltipManager.unassign(this.tooltipTarget)
                 }
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -13275,15 +13261,15 @@
             }), t.default = void 0;
             var a = n(1);
             const o = "Volume",
-                i = "General",
-                s = "int",
+                s = "General",
+                i = "int",
                 r = "boolean",
                 l = "string",
                 c = {
                     slider: {
                         propertyName: "MasterVolume",
                         dataSection: o,
-                        dataType: s
+                        dataType: i
                     },
                     checkbox: {
                         propertyName: "MasterMute",
@@ -13295,7 +13281,7 @@
                     slider: {
                         propertyName: "MusicVolume",
                         dataSection: o,
-                        dataType: s
+                        dataType: i
                     },
                     checkbox: {
                         propertyName: "MusicMute",
@@ -13306,7 +13292,7 @@
                     slider: {
                         propertyName: "AnnouncerVolume",
                         dataSection: o,
-                        dataType: s
+                        dataType: i
                     },
                     checkbox: {
                         propertyName: "AnnouncerMute",
@@ -13317,7 +13303,7 @@
                     slider: {
                         propertyName: "VoiceVolume",
                         dataSection: o,
-                        dataType: s
+                        dataType: i
                     },
                     checkbox: {
                         propertyName: "VoiceMute",
@@ -13328,7 +13314,7 @@
                     slider: {
                         propertyName: "SfxVolume",
                         dataSection: o,
-                        dataType: s
+                        dataType: i
                     },
                     checkbox: {
                         propertyName: "SfxMute",
@@ -13339,7 +13325,7 @@
                     slider: {
                         propertyName: "NotificationsVolume",
                         dataSection: o,
-                        dataType: s
+                        dataType: i
                     },
                     checkbox: {
                         propertyName: "NotificationsMute",
@@ -13350,7 +13336,7 @@
                     slider: {
                         propertyName: "AmbienceVolume",
                         dataSection: o,
-                        dataType: s
+                        dataType: i
                     },
                     checkbox: {
                         propertyName: "AmbienceMute",
@@ -13361,7 +13347,7 @@
                     slider: {
                         propertyName: "PingsVolume",
                         dataSection: o,
-                        dataType: s
+                        dataType: i
                     },
                     checkbox: {
                         propertyName: "PingsMute",
@@ -13371,14 +13357,14 @@
                 }],
                 d = {
                     propertyName: "EnableAudio",
-                    dataSection: i,
+                    dataSection: s,
                     reverse: !0,
                     dataType: r,
                     defaultValue: !0
                 },
                 m = {
                     propertyName: "ThemeMusic",
-                    dataSection: i,
+                    dataSection: s,
                     dataType: l,
                     defaultValue: 0
                 };
@@ -13401,9 +13387,9 @@
                         propertyName: n,
                         dataSection: a,
                         dataType: o
-                    } = e, i = this._getCurrentValueKey(n), s = this._getGameSettingSchemaKey(a, n);
+                    } = e, s = this._getCurrentValueKey(n), i = this._getGameSettingSchemaKey(a, n);
                     let r;
-                    void 0 !== this.get(s) && null !== this.get(s) && (r = this._getDisplayValue(this.get(s), o)), this.set(i, r);
+                    void 0 !== this.get(i) && null !== this.get(i) && (r = this._getDisplayValue(this.get(i), o)), this.set(s, r);
                     this.$(`lol-uikit-slider[for=${n}]`)[0].setAttribute("value", r), this._appendSaveData(t, e, r)
                 },
                 _resetCheckbox(e, t) {
@@ -13411,11 +13397,11 @@
                         propertyName: n,
                         dataSection: a,
                         dataType: o,
-                        reverse: i,
-                        defaultValue: s
+                        reverse: s,
+                        defaultValue: i
                     } = e, r = this._getCurrentValueKey(n), l = this._getGameSettingSchemaKey(a, n);
                     let c;
-                    void 0 !== this.get(l) && null !== this.get(l) ? c = this._getDisplayValue(this.get(l), o) : void 0 !== s && (c = s), this._appendSaveData(t, e, c), !0 === i && (c = !c), this.set(r, c);
+                    void 0 !== this.get(l) && null !== this.get(l) ? c = this._getDisplayValue(this.get(l), o) : void 0 !== i && (c = i), this._appendSaveData(t, e, c), !0 === s && (c = !c), this.set(r, c);
                     this.$(`input[name='${n}']`)[0].checked = c
                 },
                 _resetDropdown(e, t) {
@@ -13423,8 +13409,8 @@
                         propertyName: n,
                         dataSection: a,
                         defaultValue: o
-                    } = e, i = this._getGameSettingSchemaKey(a, n), s = this.get(i) ?? o ?? 0;
-                    this._appendSaveData(t, e, s), this.set(`gameSettings.${a}.${n}`, s)
+                    } = e, s = this._getGameSettingSchemaKey(a, n), i = this.get(s) ?? o ?? 0;
+                    this._appendSaveData(t, e, i), this.set(`gameSettings.${a}.${n}`, i)
                 },
                 _registerSliderAndCheckbox(e) {
                     this._registerComputedProperty(e.slider), this._registerComputedProperty(e.checkbox)
@@ -13434,11 +13420,11 @@
                         propertyName: t,
                         dataSection: n,
                         dataType: o,
-                        reverse: i
-                    } = e, s = this._getCurrentValueKey(t), l = this._getGameSettingsKey(n, t), c = this._getGameSettingSchemaKey(n, t);
+                        reverse: s
+                    } = e, i = this._getCurrentValueKey(t), l = this._getGameSettingsKey(n, t), c = this._getGameSettingSchemaKey(n, t);
                     this.set(t, a.Ember.computed(l, c, (() => {
                         let e;
-                        return void 0 !== this.get(l) && null !== this.get(l) ? e = this._getDisplayValue(this.get(l), o) : void 0 !== this.get(c) && null !== this.get(c) && (e = this._getDisplayValue(this.get(c), o)), o === r && !0 === i && (e = !e), this.set(s, e), a.logger.trace(`set ${t} value to ${e}`), e
+                        return void 0 !== this.get(l) && null !== this.get(l) ? e = this._getDisplayValue(this.get(l), o) : void 0 !== this.get(c) && null !== this.get(c) && (e = this._getDisplayValue(this.get(c), o)), o === r && !0 === s && (e = !e), this.set(i, e), a.logger.trace(`set ${t} value to ${e}`), e
                     })))
                 },
                 _bindEventListeners: a.Ember.on("didInsertElement", (function() {
@@ -13457,12 +13443,12 @@
                         n = e.checkbox.propertyName,
                         a = this._getCurrentValueKey(t),
                         o = this._getCurrentValueKey(n),
-                        i = this.$(`lol-uikit-slider[for='${t}']`)[0];
+                        s = this.$(`lol-uikit-slider[for='${t}']`)[0];
                     this.addObserver(o, this, (() => {
-                        this.get(o) ? i.setAttribute("disabled", "") : i.removeAttribute("disabled")
-                    })), i.addEventListener("slideEnd", (t => {
+                        this.get(o) ? s.setAttribute("disabled", "") : s.removeAttribute("disabled")
+                    })), s.addEventListener("slideEnd", (t => {
                         void 0 !== t.value && (this.set(a, t.value), this._saveProperty(e.slider, t.value))
-                    })), i.addEventListener("change", (e => {
+                    })), s.addEventListener("change", (e => {
                         void 0 !== e.value && this.set(a, e.value)
                     }))
                 },
@@ -13470,37 +13456,37 @@
                     const t = e.propertyName,
                         n = this._getCurrentValueKey(t),
                         o = this.$(`input[name='${t}']`)[0],
-                        i = this.$(`label[for='${t}'] > span`)[0];
+                        s = this.$(`label[for='${t}'] > span`)[0];
                     this.addObserver(t, this, (() => {
                         o.checked = this.get(t), a.logger.trace(`update ${t} value to ${this.get(t)} by property update.`)
-                    })), i.addEventListener("click", (() => {
+                    })), s.addEventListener("click", (() => {
                         o.checked = !o.checked;
                         const {
-                            checked: i
+                            checked: s
                         } = o;
-                        a.logger.trace(`update ${t} value to ${i} by clicking.`), this.set(n, i);
-                        const s = {};
-                        this._appendSaveData(s, e, i), u.forEach((e => {
+                        a.logger.trace(`update ${t} value to ${s} by clicking.`), this.set(n, s);
+                        const i = {};
+                        this._appendSaveData(i, e, s), u.forEach((e => {
                             const {
                                 propertyName: t
                             } = e.checkbox, n = this._getCurrentValueKey(t), a = this.$(`input[name='${t}']`)[0];
-                            a.checked !== i && (a.checked = i, this._appendSaveData(s, e.checkbox, i), this.set(n, i))
-                        })), this._saveGameSettings(s)
+                            a.checked !== s && (a.checked = s, this._appendSaveData(i, e.checkbox, s), this.set(n, s))
+                        })), this._saveGameSettings(i)
                     })), o.checked = this.get(t)
                 },
                 _bindSubVolumeCheckboxListener(e) {
                     const t = e.propertyName,
                         n = this._getCurrentValueKey(t),
                         o = this.$(`input[name='${t}']`)[0],
-                        i = this.$(`label[for='${t}'] > span`)[0];
+                        s = this.$(`label[for='${t}'] > span`)[0];
                     this.addObserver(t, this, (() => {
                         o.checked = this.get(t), a.logger.trace(`update ${t} value to ${this.get(t)} by property update.`)
-                    })), i.addEventListener("click", (() => {
+                    })), s.addEventListener("click", (() => {
                         o.checked = !o.checked;
                         const {
-                            checked: i
+                            checked: s
                         } = o;
-                        a.logger.trace(`update ${t} value to ${i} by clicking.`), this.set(n, i), this._saveProperty(e, i), this._checkMasterVolumeStatus()
+                        a.logger.trace(`update ${t} value to ${s} by clicking.`), this.set(n, s), this._saveProperty(e, s), this._checkMasterVolumeStatus()
                     })), o.checked = this.get(t)
                 },
                 _bindDisableAllAudioCheckboxListener(e) {
@@ -13511,21 +13497,21 @@
                         o.checked = this.get(t), a.logger.trace(`update ${t} value to ${this.get(t)} by property update.`)
                     })), o.addEventListener("change", (() => {
                         const {
-                            checked: i
+                            checked: s
                         } = o;
-                        a.logger.trace(`update ${t} value to ${i} by clicking.`), this.set(n, i), this._saveProperty(e, !i)
+                        a.logger.trace(`update ${t} value to ${s} by clicking.`), this.set(n, s), this._saveProperty(e, !s)
                     })), o.checked = this.get(t)
                 },
                 _bindSRThemeMusicDropdown(e) {
                     const t = e.dataSection,
                         n = e.propertyName,
                         o = `#${n}`,
-                        i = this.$(o)[0],
-                        s = 0 | this.get(`gameSettings.${t}.${n}`);
-                    null != s && i.select && i.select(s.toString()), a.Ember.addObserver(this, `gameSettings.${t}.${n}`, this, (() => {
+                        s = this.$(o)[0],
+                        i = 0 | this.get(`gameSettings.${t}.${n}`);
+                    null != i && s.select && s.select(i.toString()), a.Ember.addObserver(this, `gameSettings.${t}.${n}`, this, (() => {
                         const e = 0 | this.get(`gameSettings.${t}.${n}`);
-                        null != e && i.select && i.select(e.toString())
-                    })), i.addEventListener("selected", (a => {
+                        null != e && s.select && s.select(e.toString())
+                    })), s.addEventListener("selected", (a => {
                         this.set(`gameSettings.${t}.${n}`, a.selected.attributes.value.value), this._saveProperty(e, Number(a.selected.attributes.value.value))
                     }))
                 },
@@ -13550,8 +13536,8 @@
                 _appendSaveData(e, t, n) {
                     void 0 === e[t.dataSection] && (e[t.dataSection] = {}), e[t.dataSection][t.propertyName] = this._getSaveValue(n, t.dataType)
                 },
-                _getSaveValue: (e, t) => t === r ? e ? 1 : 0 : t === s ? e / 100 : t === l ? e : void a.logger.error(`Unknown data type ${t} with value ${e}`),
-                _getDisplayValue: (e, t) => t === r ? a.lodash.isBoolean(e) ? e : 0 !== e : t === s ? parseInt(100 * e) : void a.logger.error(`Unknown data type ${t} with value ${e}`),
+                _getSaveValue: (e, t) => t === r ? e ? 1 : 0 : t === i ? e / 100 : t === l ? e : void a.logger.error(`Unknown data type ${t} with value ${e}`),
+                _getDisplayValue: (e, t) => t === r ? a.lodash.isBoolean(e) ? e : 0 !== e : t === i ? parseInt(100 * e) : void a.logger.error(`Unknown data type ${t} with value ${e}`),
                 _getGameSettingsKey: (e, t) => `gameSettings.${e}.${t}`,
                 _getGameSettingSchemaKey: (e, t) => `gameSettingsSchema.${e}.${t}.default`,
                 _getCurrentValueKey: e => `${e}CurrentValue`,
@@ -13587,7 +13573,7 @@
                     dataKey: "ObjectiveVoteScale",
                     scale: 100
                 }],
-                i = [{
+                s = [{
                     sectionName: "LOL_SETTINGS_INGAME_INTERFACE_RESOURCE_BARS_SECTION_TITLE",
                     options: [{
                         propertyName: "LOL_SETTINGS_INGAME_INTERFACE_SHOW_HEALTH_BARS",
@@ -13872,11 +13858,11 @@
                         leftColumn: !1
                     }]
                 }];
-            var s = a.Ember.Component.extend({
+            var i = a.Ember.Component.extend({
                 classNames: ["lol-settings-game-interface-content-component"],
                 persistenceService: a.Ember.inject.service("persistence"),
                 scaleDisplays: a.Ember.Object.create(),
-                checkBoxGroups: a.Ember.A(i),
+                checkBoxGroups: a.Ember.A(s),
                 init() {
                     this._super(...arguments), this.get("handleComponentInitialized") && this.get("handleComponentInitialized")(this)
                 },
@@ -13891,7 +13877,7 @@
                     a.lodash.forEach(o, (t => {
                         const n = this._getGameSettingSchemaKey(t.section, t.dataKey);
                         e[t.section][t.dataKey] = this.get(n), this.set(`gameSettings.${t.section}.${t.dataKey}`, e[t.section][t.dataKey])
-                    })), a.lodash.forEach(i, (t => {
+                    })), a.lodash.forEach(s, (t => {
                         a.lodash.forEach(t.options, (t => {
                             const n = this._getGameSettingSchemaKey(t.section, t.dataKey);
                             e[t.section][t.dataKey] = this.get(n), this.set(`gameSettings.${t.section}.${t.dataKey}`, e[t.section][t.dataKey])
@@ -13905,7 +13891,7 @@
                 addListenersOnInserted: a.Ember.on("didInsertElement", (function() {
                     a.lodash.forEach(o, (e => {
                         this.setUpSlider(e)
-                    })), a.lodash.forEach(i, (e => {
+                    })), a.lodash.forEach(s, (e => {
                         a.lodash.forEach(e.options, (e => {
                             this.setUpComputedProperty(e)
                         })), a.lodash.forEach(e.dropdowns, (e => {
@@ -13960,7 +13946,7 @@
                     this.get("persistenceService").saveGameSettings(e)
                 }
             });
-            t.default = s
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -13968,7 +13954,7 @@
             }), t.default = void 0;
             var a = n(1),
                 o = n(19);
-            const i = [{
+            const s = [{
                     roundToFive: function(e) {
                         if (void 0 === e || isNaN(e) || 0 === e) return e;
                         for (; e % 5 != 0;) e++;
@@ -14005,7 +13991,7 @@
                         return Math.round(100 * e)
                     }
                 }],
-                s = [{
+                i = [{
                     section: "General",
                     dataKey: "OSXMouseAcceleration"
                 }, {
@@ -14049,8 +14035,8 @@
                 namespace: "lol-in-game-gameplay",
                 category: "lol-in-game-gameplay",
                 sliders: a.Ember.Object.create(),
-                _roundToFive: i[0].roundToFive,
-                _transformMouseRange: i[0].transformMouseRange,
+                _roundToFive: s[0].roundToFive,
+                _transformMouseRange: s[0].transformMouseRange,
                 init() {
                     this._super(...arguments), this.get("handleComponentInitialized") && this.get("handleComponentInitialized")(this)
                 },
@@ -14059,8 +14045,8 @@
                     e.General = this.resetGeneralContent(), e.HUD = this.resetHudContent(), this._saveGameSettings(e)
                 },
                 addListenersOnInserted: a.Ember.on("didInsertElement", (function() {
-                    for (const e of s) this.setUpCheckbox(e);
-                    for (const e of i) this.setUpSlider(e);
+                    for (const e of i) this.setUpCheckbox(e);
+                    for (const e of s) this.setUpSlider(e);
                     for (const e of r) this.setUpDropdown(e)
                 })),
                 setUpSlider(e) {
@@ -14099,11 +14085,11 @@
                 },
                 resetGeneralContent() {
                     const e = {};
-                    return e.OSXMouseAcceleration = this.get("gameSettingsSchema.General.OSXMouseAcceleration.default"), this.set("gameSettings.General.OSXMouseAcceleration", e.OSXMouseAcceleration), e.RecommendJunglePaths = this.get("gameSettingsSchema.General.RecommendJunglePaths.default"), this.set("gameSettings.General.RecommendJunglePaths", e.RecommendJunglePaths), e.GameMouseSpeed = this.get("gameSettingsSchema.General.GameMouseSpeed.default"), this.set("gameSettings.General.GameMouseSpeed", e.GameMouseSpeed), this.get("sliders").set(i[0].dataKey, i[0].transformGet(e.GameMouseSpeed)), e.SnapCameraOnRespawn = this.get("gameSettingsSchema.General.SnapCameraOnRespawn.default"), this.set("gameSettings.General.SnapCameraOnRespawn", e.SnapCameraOnRespawn), e.AutoAcquireTarget = this.get("gameSettingsSchema.General.AutoAcquireTarget.default"), this.set("gameSettings.General.AutoAcquireTarget", e.AutoAcquireTarget), e.PredictMovement = this.get("gameSettingsSchema.General.PredictMovement.default"), this.set("gameSettings.General.PredictMovement", e.PredictMovement), e.ShowTurretRangeIndicators = this.get("gameSettingsSchema.General.ShowTurretRangeIndicators.default"), this.set("gameSettings.General.ShowTurretRangeIndicators", e.ShowTurretRangeIndicators), e.EnableTargetedAttackMove = this.get("gameSettingsSchema.General.EnableTargetedAttackMove.default"), this.set("gameSettings.General.EnableTargetedAttackMove", e.EnableTargetedAttackMove), e.ClampCastTargetLocationWithinMaxRange = this.get("gameSettingsSchema.General.ClampCastTargetLocationWithinMaxRange.default"), this.set("gameSettings.General.ClampCastTargetLocationWithinMaxRange", e.ClampCastTargetLocationWithinMaxRange), e.TargetChampionsOnlyAsToggle = this.get("gameSettingsSchema.General.TargetChampionsOnlyAsToggle.default"), this.set("gameSettings.General.TargetChampionsOnlyAsToggle", e.TargetChampionsOnlyAsToggle), e
+                    return e.OSXMouseAcceleration = this.get("gameSettingsSchema.General.OSXMouseAcceleration.default"), this.set("gameSettings.General.OSXMouseAcceleration", e.OSXMouseAcceleration), e.RecommendJunglePaths = this.get("gameSettingsSchema.General.RecommendJunglePaths.default"), this.set("gameSettings.General.RecommendJunglePaths", e.RecommendJunglePaths), e.GameMouseSpeed = this.get("gameSettingsSchema.General.GameMouseSpeed.default"), this.set("gameSettings.General.GameMouseSpeed", e.GameMouseSpeed), this.get("sliders").set(s[0].dataKey, s[0].transformGet(e.GameMouseSpeed)), e.SnapCameraOnRespawn = this.get("gameSettingsSchema.General.SnapCameraOnRespawn.default"), this.set("gameSettings.General.SnapCameraOnRespawn", e.SnapCameraOnRespawn), e.AutoAcquireTarget = this.get("gameSettingsSchema.General.AutoAcquireTarget.default"), this.set("gameSettings.General.AutoAcquireTarget", e.AutoAcquireTarget), e.PredictMovement = this.get("gameSettingsSchema.General.PredictMovement.default"), this.set("gameSettings.General.PredictMovement", e.PredictMovement), e.ShowTurretRangeIndicators = this.get("gameSettingsSchema.General.ShowTurretRangeIndicators.default"), this.set("gameSettings.General.ShowTurretRangeIndicators", e.ShowTurretRangeIndicators), e.EnableTargetedAttackMove = this.get("gameSettingsSchema.General.EnableTargetedAttackMove.default"), this.set("gameSettings.General.EnableTargetedAttackMove", e.EnableTargetedAttackMove), e.ClampCastTargetLocationWithinMaxRange = this.get("gameSettingsSchema.General.ClampCastTargetLocationWithinMaxRange.default"), this.set("gameSettings.General.ClampCastTargetLocationWithinMaxRange", e.ClampCastTargetLocationWithinMaxRange), e.TargetChampionsOnlyAsToggle = this.get("gameSettingsSchema.General.TargetChampionsOnlyAsToggle.default"), this.set("gameSettings.General.TargetChampionsOnlyAsToggle", e.TargetChampionsOnlyAsToggle), e
                 },
                 resetHudContent() {
                     const e = {};
-                    return e.MapScrollSpeed = this.get("gameSettingsSchema.HUD.MapScrollSpeed.default"), this.set("gameSettings.HUD.MapScrollSpeed", e.MapScrollSpeed), this.get("sliders").set(i[1].dataKey, i[1].transformGet(e.MapScrollSpeed)), e.KeyboardScrollSpeed = this.get("gameSettingsSchema.HUD.KeyboardScrollSpeed.default"), this.set("gameSettings.HUD.KeyboardScrollSpeed", e.KeyboardScrollSpeed), this.get("sliders").set(i[2].dataKey, i[2].transformGet(e.KeyboardScrollSpeed)), e.ScrollSmoothingEnabled = this.get("gameSettingsSchema.HUD.ScrollSmoothingEnabled.default"), this.set("gameSettings.HUD.ScrollSmoothingEnabled", e.ScrollSmoothingEnabled), e.MiddleClickDragScrollEnabled = this.get("gameSettingsSchema.HUD.MiddleClickDragScrollEnabled.default"), this.set("gameSettings.HUD.MiddleClickDragScrollEnabled", e.MiddleClickDragScrollEnabled), e.CameraLockMode = this.get("gameSettingsSchema.HUD.CameraLockMode.default"), this.set("gameSettings.HUD.CameraLockMode", e.CameraLockMode), e
+                    return e.MapScrollSpeed = this.get("gameSettingsSchema.HUD.MapScrollSpeed.default"), this.set("gameSettings.HUD.MapScrollSpeed", e.MapScrollSpeed), this.get("sliders").set(s[1].dataKey, s[1].transformGet(e.MapScrollSpeed)), e.KeyboardScrollSpeed = this.get("gameSettingsSchema.HUD.KeyboardScrollSpeed.default"), this.set("gameSettings.HUD.KeyboardScrollSpeed", e.KeyboardScrollSpeed), this.get("sliders").set(s[2].dataKey, s[2].transformGet(e.KeyboardScrollSpeed)), e.ScrollSmoothingEnabled = this.get("gameSettingsSchema.HUD.ScrollSmoothingEnabled.default"), this.set("gameSettings.HUD.ScrollSmoothingEnabled", e.ScrollSmoothingEnabled), e.MiddleClickDragScrollEnabled = this.get("gameSettingsSchema.HUD.MiddleClickDragScrollEnabled.default"), this.set("gameSettings.HUD.MiddleClickDragScrollEnabled", e.MiddleClickDragScrollEnabled), e.CameraLockMode = this.get("gameSettingsSchema.HUD.CameraLockMode.default"), this.set("gameSettings.HUD.CameraLockMode", e.CameraLockMode), e
                 },
                 showUseSoftwareMouse: !(0, o.isWindows)(),
                 isWindows: (0, o.isWindows)(),
@@ -14152,10 +14138,10 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(289)) && a.__esModule ? a : {
+                s = (a = n(289)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Component.extend(i.default, {
+            var i = o.Ember.Component.extend(s.default, {
                 namespace: "lol-in-game-hotkeys",
                 category: "lol-in-game-hotkeys",
                 additionalHotkeyGroups: o.Ember.A(n(290)),
@@ -14165,7 +14151,7 @@
                     }
                 }
             });
-            t.default = s
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14173,7 +14159,7 @@
             }), t.default = void 0;
             var a = n(1),
                 o = n(19);
-            var i = a.Ember.Mixin.create({
+            var s = a.Ember.Mixin.create({
                 persistenceService: a.Ember.inject.service("persistence"),
                 tempSavedValue: void 0,
                 saveKeybinding: function(e, t, n, a) {
@@ -14181,8 +14167,8 @@
                     else {
                         const o = this._getKeyArrayForTwoKeySets(e, t);
                         o[n - 1] = a;
-                        const i = (o[0] ? o[0] : "") + "," + (o[1] ? o[1] : "");
-                        this._saveInputSettings(e, t, i)
+                        const s = (o[0] ? o[0] : "") + "," + (o[1] ? o[1] : "");
+                        this._saveInputSettings(e, t, s)
                     }
                 },
                 _saveInputSettings: function(e, t, n) {
@@ -14197,26 +14183,26 @@
                     return void 0 !== n && (a = (0, o.fromSavedToArray)(n), 1 === a.length && (a[1] = "")), a
                 },
                 _removeDuplicateKeybindings: function(e, t, n, a) {
-                    const i = this.get("keyToActionReverseMap"),
-                        s = (0, o.normalizeKeybindingString)(a);
-                    if ("[<unbound>]" !== s && "" !== s) {
-                        const r = i[s];
+                    const s = this.get("keyToActionReverseMap"),
+                        i = (0, o.normalizeKeybindingString)(a);
+                    if ("[<unbound>]" !== i && "" !== i) {
+                        const r = s[i];
                         if (r) {
                             const e = this.get(`inputSettings.${r}`);
                             let t = [];
                             void 0 !== e && (t = (0, o.fromSavedToArray)(e)), this._removeDuplicateInSet(t, a), this.set(`inputSettings.${r}`, this._combineKeyArray(t))
                         }
-                        i[s] = `${e}.${t}`, this._cleanupKeyToActionReverseMap(i, e, t, n)
+                        s[i] = `${e}.${t}`, this._cleanupKeyToActionReverseMap(s, e, t, n)
                     }
                 },
                 _cleanupKeyToActionReverseMap: function(e, t, n, a) {
-                    const i = this.get(`inputSettings.${t}.${n}`);
-                    if (i) {
+                    const s = this.get(`inputSettings.${t}.${n}`);
+                    if (s) {
                         let t = "";
-                        if (0 === a) t = i;
+                        if (0 === a) t = s;
                         else {
                             let e = [];
-                            e = (0, o.fromSavedToArray)(i), 1 === e.length && (e[1] = ""), t = e[a - 1]
+                            e = (0, o.fromSavedToArray)(s), 1 === e.length && (e[1] = ""), t = e[a - 1]
                         }
                         const n = (0, o.normalizeKeybindingString)(t);
                         "[<unbound>]" !== n && "" !== n && delete e[n]
@@ -14233,44 +14219,44 @@
                     return e || this.get("tra.LOL_SETTINGS_INGAME_HOTKEYS_UNBIND_BUTTON")
                 },
                 _createDialogContentDiv: function(e, t, n, a) {
-                    const i = document.createElement("lol-uikit-content-block");
-                    i.setAttribute("type", "dialog-small");
-                    const s = document.createElement("div");
-                    s.classList.add("lol-settings-ingame-section-title"), s.textContent = this.get("tra.LOL_INGAME_SETTINGS_KB_DIALOG_TITLE");
+                    const s = document.createElement("lol-uikit-content-block");
+                    s.setAttribute("type", "dialog-small");
+                    const i = document.createElement("div");
+                    i.classList.add("lol-settings-ingame-section-title"), i.textContent = this.get("tra.LOL_INGAME_SETTINGS_KB_DIALOG_TITLE");
                     const r = document.createElement("div");
                     r.textContent = a;
                     const l = document.createElement("p");
-                    l.appendChild(s), l.appendChild(r);
+                    l.appendChild(i), l.appendChild(r);
                     const c = document.createElement("div");
                     c.classList.add("lol-settings-ingame-keybind-dialog-key-label");
                     const u = [];
                     u[0] = this.get(`inputSettings.${e}.${t}`), null === u[0] && (u[0] = "[<Unbound>]"), 0 !== n && (u[1] = n), c.textContent = (0, o.formatAdditionalKeyBindings)(u);
                     const d = document.createElement("button");
-                    return d.classList.add("lol-settings-ingame-keybind-dialog-unbind-button"), d.innerHTML = this.get("tra.LOL_SETTINGS_INGAME_HOTKEYS_UNBIND_BUTTON"), c.textContent ? (c.setAttribute("empty", !1), d.disabled = !1) : (c.setAttribute("empty", !0), c.textContent = this.get("tra.LOL_SETTINGS_INGAME_HOTKEYS_EMPTY"), d.disabled = !0), l.appendChild(c), l.appendChild(d), i.appendChild(l), {
-                        contentDiv: i,
+                    return d.classList.add("lol-settings-ingame-keybind-dialog-unbind-button"), d.innerHTML = this.get("tra.LOL_SETTINGS_INGAME_HOTKEYS_UNBIND_BUTTON"), c.textContent ? (c.setAttribute("empty", !1), d.disabled = !1) : (c.setAttribute("empty", !0), c.textContent = this.get("tra.LOL_SETTINGS_INGAME_HOTKEYS_EMPTY"), d.disabled = !0), l.appendChild(c), l.appendChild(d), s.appendChild(l), {
+                        contentDiv: s,
                         keybindDiv: c,
                         unbindButton: d
                     }
                 },
                 showKeybindingDialog: function(e, t, n) {
-                    let i = "";
+                    let s = "";
                     if (this.set("tempSavedValue", void 0), 0 === n) {
                         const e = this.get("tra.formatString");
-                        i = e("LOL_INGAME_SETTINGS_KB_DIALOG_PRIMARY", {
+                        s = e("LOL_INGAME_SETTINGS_KB_DIALOG_PRIMARY", {
                             action: this.get(`tra.LOL_INGAME_SETTINGS_KB_KEY_${t.toUpperCase()}`)
                         })
-                    } else i = this.get(`tra.LOL_INGAME_SETTINGS_KB_KEY_${t.toUpperCase()}`);
-                    const s = this._createDialogContentDiv(e, t, n, i),
+                    } else s = this.get(`tra.LOL_INGAME_SETTINGS_KB_KEY_${t.toUpperCase()}`);
+                    const i = this._createDialogContentDiv(e, t, n, s),
                         {
                             keybindDiv: r
-                        } = s,
+                        } = i,
                         {
                             unbindButton: l
-                        } = s,
+                        } = i,
                         c = a.ModalManager.add({
                             type: "DialogConfirm",
                             data: {
-                                contents: s.contentDiv,
+                                contents: i.contentDiv,
                                 acceptText: this.get("tra.LOL_SETTINGS_INGAME_HOTKEYS_SAVE_BUTTON"),
                                 declineText: this.get("tra.LOL_SETTINGS_INGAME_HOTKEYS_CANCEL_BUTTON")
                             },
@@ -14286,7 +14272,7 @@
                             this.set("tempSavedValue", n), r.textContent = (0, o.formatAdditionalKeyBindings)([n]), r.setAttribute("empty", !1), l.disabled = !1, c.enableAcceptButton()
                         };
                     c.disableAcceptButton(), c.acceptPromise.then((() => {
-                        document.removeEventListener("mousedown", u), void 0 !== this.get("tempSavedValue") && this.saveKeybinding(e, t, n, this.get("tempSavedValue"), i)
+                        document.removeEventListener("mousedown", u), void 0 !== this.get("tempSavedValue") && this.saveKeybinding(e, t, n, this.get("tempSavedValue"), s)
                     }), (() => {
                         document.removeEventListener("mousedown", u)
                     })), c.domNode.setAttribute("tabindex", 0), c.domNode.focus(), l.onclick = () => {
@@ -14297,7 +14283,7 @@
                     }, document.addEventListener("mousedown", u)
                 }
             });
-            t.default = i
+            t.default = s
         }, e => {
             "use strict";
             e.exports = JSON.parse('[{"groupName":"LOL_INGAME_SETTINGS_KB_KEY_SECTION_ABILITIESANDSUMMONERS","subgroups":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_NORMALCAST","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTSPELL1","section":"GameEvents","dataKey":"evtNormalCastSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTSPELL2","section":"GameEvents","dataKey":"evtNormalCastSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTSPELL3","section":"GameEvents","dataKey":"evtNormalCastSpell3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTSPELL4","section":"GameEvents","dataKey":"evtNormalCastSpell4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTAVATARSPELL1","section":"GameEvents","dataKey":"evtNormalCastAvatarSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTAVATARSPELL2","section":"GameEvents","dataKey":"evtNormalCastAvatarSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTROLEBOUND","section":"GameEvents","dataKey":"evtNormalCastRoleBound"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_SMARTCAST","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTSPELL1","section":"GameEvents","dataKey":"evtSmartCastSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTSPELL2","section":"GameEvents","dataKey":"evtSmartCastSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTSPELL3","section":"GameEvents","dataKey":"evtSmartCastSpell3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTSPELL4","section":"GameEvents","dataKey":"evtSmartCastSpell4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTAVATARSPELL1","section":"GameEvents","dataKey":"evtSmartCastAvatarSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTAVATARSPELL2","section":"GameEvents","dataKey":"evtSmartCastAvatarSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTROLEBOUND","section":"GameEvents","dataKey":"evtSmartCastRoleBound"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_SMARTCASTWITHINDICATOR","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORSPELL1","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORSPELL2","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORSPELL3","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorSpell3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORSPELL4","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorSpell4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORAVATARSPELL1","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorAvatarSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORAVATARSPELL2","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorAvatarSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORROLEBOUND","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorRoleBound"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_SELFCAST","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTSPELL1","section":"GameEvents","dataKey":"evtSelfCastSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTSPELL2","section":"GameEvents","dataKey":"evtSelfCastSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTSPELL3","section":"GameEvents","dataKey":"evtSelfCastSpell3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTSPELL4","section":"GameEvents","dataKey":"evtSelfCastSpell4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTAVATARSPELL1","section":"GameEvents","dataKey":"evtSelfCastAvatarSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTAVATARSPELL2","section":"GameEvents","dataKey":"evtSelfCastAvatarSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTROLEBOUND","section":"GameEvents","dataKey":"evtSelfCastRoleBound"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_SMARTPLUSSELFCAST","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTSPELL1","section":"GameEvents","dataKey":"evtSmartPlusSelfCastSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTSPELL2","section":"GameEvents","dataKey":"evtSmartPlusSelfCastSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTSPELL3","section":"GameEvents","dataKey":"evtSmartPlusSelfCastSpell3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTSPELL4","section":"GameEvents","dataKey":"evtSmartPlusSelfCastSpell4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTAVATARSPELL1","section":"GameEvents","dataKey":"evtSmartPlusSelfCastAvatarSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTAVATARSPELL2","section":"GameEvents","dataKey":"evtSmartPlusSelfCastAvatarSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTROLEBOUND","section":"GameEvents","dataKey":"evtSmartPlusSelfCastRoleBound"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_SMARTPLUSSELFCASTWITHINDICATOR","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORSPELL1","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORSPELL2","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORSPELL3","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorSpell3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORSPELL4","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorSpell4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORAVATARSPELL1","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorAvatarSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORAVATARSPELL2","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorAvatarSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORROLEBOUND","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorRoleBound"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_OTHER","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTLEVELSPELL1","section":"GameEvents","dataKey":"evtLevelSpell1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTLEVELSPELL2","section":"GameEvents","dataKey":"evtLevelSpell2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTLEVELSPELL3","section":"GameEvents","dataKey":"evtLevelSpell3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTLEVELSPELL4","section":"GameEvents","dataKey":"evtLevelSpell4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTCHAMPIONONLY","section":"GameEvents","dataKey":"evtChampionOnly"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTUSEITEM7","section":"GameEvents","dataKey":"evtUseItem7"}]}]},{"groupName":"LOL_INGAME_SETTINGS_KB_KEY_SECTION_ITEMS","subgroups":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_ITEMNORMALCAST","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTVISIONITEM","section":"GameEvents","dataKey":"evtNormalCastVisionItem"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTITEM1","section":"GameEvents","dataKey":"evtNormalCastItem1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTITEM2","section":"GameEvents","dataKey":"evtNormalCastItem2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTITEM3","section":"GameEvents","dataKey":"evtNormalCastItem3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTITEM4","section":"GameEvents","dataKey":"evtNormalCastItem4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTITEM5","section":"GameEvents","dataKey":"evtNormalCastItem5"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTITEM6","section":"GameEvents","dataKey":"evtNormalCastItem6"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_ITEMSMARTCAST","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTVISIONITEM","section":"GameEvents","dataKey":"evtSmartCastVisionItem"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTITEM1","section":"GameEvents","dataKey":"evtSmartCastItem1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTITEM2","section":"GameEvents","dataKey":"evtSmartCastItem2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTITEM3","section":"GameEvents","dataKey":"evtSmartCastItem3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTITEM4","section":"GameEvents","dataKey":"evtSmartCastItem4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTITEM5","section":"GameEvents","dataKey":"evtSmartCastItem5"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTITEM6","section":"GameEvents","dataKey":"evtSmartCastItem6"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_ITEMSMARTCASTWITHINDICATOR","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORVISIONITEM","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorVisionItem"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORITEM1","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorItem1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORITEM2","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorItem2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORITEM3","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorItem3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORITEM4","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorItem4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORITEM5","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorItem5"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTCASTWITHINDICATORITEM6","section":"GameEvents","dataKey":"evtSmartCastWithIndicatorItem6"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_ITEMSELFCAST","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTVISIONITEM","section":"GameEvents","dataKey":"evtSelfCastVisionItem"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTITEM1","section":"GameEvents","dataKey":"evtSelfCastItem1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTITEM2","section":"GameEvents","dataKey":"evtSelfCastItem2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTITEM3","section":"GameEvents","dataKey":"evtSelfCastItem3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTITEM4","section":"GameEvents","dataKey":"evtSelfCastItem4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTITEM5","section":"GameEvents","dataKey":"evtSelfCastItem5"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELFCASTITEM6","section":"GameEvents","dataKey":"evtSelfCastItem6"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_ITEMSMARTPLUSSELFCAST","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTVISIONITEM","section":"GameEvents","dataKey":"evtSmartPlusSelfCastVisionItem"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTITEM1","section":"GameEvents","dataKey":"evtSmartPlusSelfCastItem1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTITEM2","section":"GameEvents","dataKey":"evtSmartPlusSelfCastItem2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTITEM3","section":"GameEvents","dataKey":"evtSmartPlusSelfCastItem3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTITEM4","section":"GameEvents","dataKey":"evtSmartPlusSelfCastItem4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTITEM5","section":"GameEvents","dataKey":"evtSmartPlusSelfCastItem5"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTITEM6","section":"GameEvents","dataKey":"evtSmartPlusSelfCastItem6"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_ITEMSMARTPLUSSELFCASTWITHINDICATOR","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORVISIONITEM","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorVisionItem"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORITEM1","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorItem1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORITEM2","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorItem2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORITEM3","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorItem3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORITEM4","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorItem4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORITEM5","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorItem5"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSMARTPLUSSELFCASTWITHINDICATORITEM6","section":"GameEvents","dataKey":"evtSmartPlusSelfCastWithIndicatorItem6"}]}]},{"groupName":"LOL_INGAME_SETTINGS_KB_KEY_SECTION_PLAYERMOVEMENT","subgroups":[{"name":null,"twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERMOVECLICK","section":"GameEvents","dataKey":"evtPlayerMoveClick"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERATTACKMOVECLICK","section":"GameEvents","dataKey":"evtPlayerAttackMoveClick"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERATTACKONLYCLICK","section":"GameEvents","dataKey":"evtPlayerAttackOnlyClick"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERATTACKMOVE","section":"GameEvents","dataKey":"evtPlayerAttackMove"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERHOLDPOSITION","section":"GameEvents","dataKey":"evtPlayerHoldPosition"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERSTOPPOSITION","section":"GameEvents","dataKey":"evtPlayerStopPosition"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPETMOVECLICK","section":"GameEvents","dataKey":"evtPetMoveClick"}]}]},{"groupName":"LOL_INGAME_SETTINGS_KB_KEY_SECTION_CAMERACONTROL","subgroups":[{"name":null,"twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTCAMERASNAP","section":"GameEvents","dataKey":"evtCameraSnap"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELECTSELF","section":"GameEvents","dataKey":"evtSelectSelf"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELECTALLY1","section":"GameEvents","dataKey":"evtSelectAlly1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELECTALLY2","section":"GameEvents","dataKey":"evtSelectAlly2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELECTALLY3","section":"GameEvents","dataKey":"evtSelectAlly3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSELECTALLY4","section":"GameEvents","dataKey":"evtSelectAlly4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTCAMERALOCKTOGGLE","section":"GameEvents","dataKey":"evtCameraLockToggle"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSCROLLUP","section":"GameEvents","dataKey":"evtScrollUp"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSCROLLDOWN","section":"GameEvents","dataKey":"evtScrollDown"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSCROLLLEFT","section":"GameEvents","dataKey":"evtScrollLeft"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSCROLLRIGHT","section":"GameEvents","dataKey":"evtScrollRight"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTONUIMOUSE4PAN","section":"GameEvents","dataKey":"evtOnUIMouse4Pan"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTDRAGSCROLLLOCK","section":"GameEvents","dataKey":"evtDragScrollLock"}]}]},{"groupName":"LOL_INGAME_SETTINGS_KB_KEY_SECTION_DISPLAY","subgroups":[{"name":null,"twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSHOWHEALTHBARS","section":"GameEvents","dataKey":"evtShowHealthBars"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTTOGGLEMINIONHEALTHBARS","section":"GameEvents","dataKey":"evtToggleMinionHealthBars"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSHOWSUMMONERNAMES","section":"GameEvents","dataKey":"evtShowSummonerNames"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTDRAWHUD","section":"GameEvents","dataKey":"evtDrawHud"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTTOGGLEFPSANDLATENCY","section":"HUDEvents","dataKey":"evtToggleFPSAndLatency"}]}]},{"groupName":"LOL_INGAME_SETTINGS_KB_KEY_SECTION_COMMUNICATION","subgroups":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_OPENTACTICALWHEEL","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVNTPLAYERPINGCURSOR","section":"GameEvents","dataKey":"evntPlayerPingCursor"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVNTPLAYERPING","section":"GameEvents","dataKey":"evntPlayerPing"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVNTPLAYERPINGDANGER","section":"GameEvents","dataKey":"evntPlayerPingDanger"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVNTPLAYERPINGCURSORDANGER","section":"GameEvents","dataKey":"evntPlayerPingCursorDanger"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_INDIVIDUALPINGS","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERPINGOMW","section":"GameEvents","dataKey":"evtPlayerPingOMW"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERPINGMIA","section":"GameEvents","dataKey":"evtPlayerPingMIA"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERPINGRADIALDANGER","section":"GameEvents","dataKey":"evtPlayerPingRadialDanger"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERPINGCOMEHERE","section":"GameEvents","dataKey":"evtPlayerPingComeHere"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERPINGPUSH","section":"GameEvents","dataKey":"evtPlayerPingPush"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERPINGALLIN","section":"GameEvents","dataKey":"evtPlayerPingAllIn"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTPLAYERPINGVISIONNEEDED","section":"GameEvents","dataKey":"evtPlayerPingVisionNeeded"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_EXPRESSION","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTEMOTEJOKE","section":"GameEvents","dataKey":"evtEmoteJoke"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTEMOTETAUNT","section":"GameEvents","dataKey":"evtEmoteTaunt"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTEMOTEDANCE","section":"GameEvents","dataKey":"evtEmoteDance"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTEMOTELAUGH","section":"GameEvents","dataKey":"evtEmoteLaugh"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTEMOTETOGGLE","section":"GameEvents","dataKey":"evtEmoteToggle"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTCHAMPMASTERYDISPLAY","section":"GameEvents","dataKey":"evtChampMasteryDisplay"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRECIPROCITYTRIGGER","section":"GameEvents","dataKey":"evtReciprocityTrigger"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRECIPROCITYMYBADTRIGGER","section":"GameEvents","dataKey":"evtReciprocityMyBadTrigger"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_EMOTE","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEOPEN","section":"GameEvents","dataKey":"evtRadialEmoteOpen"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEINSTANTOPEN","section":"GameEvents","dataKey":"evtRadialEmoteInstantOpen"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT0","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot0"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT1","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot1"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT2","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot2"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT3","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot3"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT4","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot4"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT5","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot5"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT6","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot6"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT7","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot7"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTRADIALEMOTEPLAYSLOT8","section":"GameEvents","dataKey":"evtRadialEmotePlaySlot8"}]},{"name":"LOL_INGAME_SETTINGS_KB_KEY_SUBSECTION_OTHER","twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTCHATHISTORY","section":"GameEvents","dataKey":"evtChatHistory"}]}]},{"groupName":"LOL_INGAME_SETTINGS_KB_KEY_SECTION_MENUS","subgroups":[{"name":null,"twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSHOWSCOREBOARD","section":"GameEvents","dataKey":"evtShowScoreBoard"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTHOLDSHOWSCOREBOARD","section":"HUDEvents","dataKey":"evtHoldShowScoreBoard"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTTOGGLEMOUSECLIP","section":"HUDEvents","dataKey":"evtToggleMouseClip"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSYSMENU","section":"GameEvents","dataKey":"evtSysMenu"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSHOWCHARACTERMENU","section":"GameEvents","dataKey":"evtShowCharacterMenu"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTTOGGLEPLAYERSTATS","section":"HUDEvents","dataKey":"evtTogglePlayerStats"}]}]},{"groupName":"LOL_INGAME_SETTINGS_KB_KEY_SECTION_ITEMSHOP","subgroups":[{"name":null,"twoSets":true,"controls":[{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTOPENSHOP","section":"GameEvents","dataKey":"evtOpenShop"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSHOPFOCUSSEARCH","section":"ShopEvents","dataKey":"evtShopFocusSearch"},{"name":"LOL_INGAME_SETTINGS_KB_KEY_EVTSHOPSWITCHTABS","section":"ShopEvents","dataKey":"evtShopSwitchTabs"}]}]}]')
@@ -14308,7 +14294,7 @@
             }), t.default = void 0;
             var a = n(1),
                 o = n(19),
-                i = a.Ember.Component.extend({
+                s = a.Ember.Component.extend({
                     classNames: ["lol-settings-ingame-hotkeys-keybinding-button"],
                     classNameBindings: ["quickcast"],
                     assignTooltip() {
@@ -14316,10 +14302,10 @@
                             const n = document.createElement("lol-uikit-tooltip"),
                                 a = document.createElement("lol-uikit-content-block");
                             a.setAttribute("type", "tooltip-system");
-                            const i = document.createElement("div");
-                            i.classList.add("lol-game-settings-hotkeys-tooltip");
                             const s = document.createElement("div");
-                            return s.classList.add("lol-game-settings-hotkeys-description"), s.innerHTML = t ? (0, o.formatAdditionalKeyBindings)([t.get("keybinding")]) : "", i.appendChild(s), a.appendChild(i), n.appendChild(a), n
+                            s.classList.add("lol-game-settings-hotkeys-tooltip");
+                            const i = document.createElement("div");
+                            return i.classList.add("lol-game-settings-hotkeys-description"), i.innerHTML = t ? (0, o.formatAdditionalKeyBindings)([t.get("keybinding")]) : "", s.appendChild(i), a.appendChild(s), n.appendChild(a), n
                         }), this, {
                             type: "tooltip-system",
                             targetAnchor: {
@@ -14362,17 +14348,17 @@
                         }
                     }
                 });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(289)) && a.__esModule ? a : {
+                s = (a = n(289)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Component.extend(i.default, {
+            var i = o.Ember.Component.extend(s.default, {
                 persistenceService: o.Ember.inject.service("persistence"),
                 namespace: "lol-in-game-hotkeys",
                 category: "lol-in-game-hotkeys",
@@ -14422,7 +14408,7 @@
                     }
                 }
             });
-            t.default = s
+            t.default = i
         }, e => {
             "use strict";
             e.exports = JSON.parse('[{"name":"LOL_INGAME_SETTINGS_ABILITIES_AND_SUMMONER_SPELLS_TITLE","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_ABILITY1","section":"GameEvents","dataKey1":"evtCastSpell1","quickCast":"evtCastSpell1smart"},{"name":"LOL_INGAME_SETTINGS_ABILITY2","section":"GameEvents","dataKey1":"evtCastSpell2","quickCast":"evtCastSpell2smart"},{"name":"LOL_INGAME_SETTINGS_ABILITY3","section":"GameEvents","dataKey1":"evtCastSpell3","quickCast":"evtCastSpell3smart"},{"name":"LOL_INGAME_SETTINGS_ABILITY4","section":"GameEvents","dataKey1":"evtCastSpell4","quickCast":"evtCastSpell4smart"},{"name":"LOL_INGAME_SETTINGS_SUMMONER_SPELL1","section":"GameEvents","dataKey1":"evtCastAvatarSpell1","quickCast":"evtCastAvatarSpell1smart"},{"name":"LOL_INGAME_SETTINGS_SUMMONER_SPELL2","section":"GameEvents","dataKey1":"evtCastAvatarSpell2","quickCast":"evtCastAvatarSpell2smart"},{"name":"LOL_INGAME_SETTINGS_ROLEBOUND","section":"GameEvents","dataKey1":"evtCastRoleBound","quickCast":"evtCastRoleBoundsmart"}]},{"name":"LOL_INGAME_SETTINGS_ITEMS_TITLE","twoSets":false,"controls":[{"name":"LOL_INGAME_SETTINGS_TRINKET","section":"GameEvents","dataKey1":"evtUseVisionItem","quickCast":"evtUseVisionItemsmart"},{"name":"LOL_INGAME_SETTINGS_ITEM1","section":"GameEvents","dataKey1":"evtUseItem1","quickCast":"evtUseItem1smart"},{"name":"LOL_INGAME_SETTINGS_ITEM2","section":"GameEvents","dataKey1":"evtUseItem2","quickCast":"evtUseItem2smart"},{"name":"LOL_INGAME_SETTINGS_ITEM3","section":"GameEvents","dataKey1":"evtUseItem3","quickCast":"evtUseItem3smart"},{"name":"LOL_INGAME_SETTINGS_ITEM4","section":"GameEvents","dataKey1":"evtUseItem4","quickCast":"evtUseItem4smart"},{"name":"LOL_INGAME_SETTINGS_ITEM5","section":"GameEvents","dataKey1":"evtUseItem5","quickCast":"evtUseItem5smart"},{"name":"LOL_INGAME_SETTINGS_ITEM6","section":"GameEvents","dataKey1":"evtUseItem6","quickCast":"evtUseItem6smart"}]}]')
@@ -14432,10 +14418,10 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(40)) && a.__esModule ? a : {
+                s = (a = n(40)) && a.__esModule ? a : {
                     default: a
                 };
-            const s = {
+            const i = {
                     model: "gameSettingsRemote.HUD",
                     property: "SmartCastOnKeyRelease",
                     defaultValue: !0
@@ -14445,13 +14431,13 @@
                     property: "SmartCastWithIndicator_CastWhenNewSpellSelected",
                     defaultValue: !1
                 };
-            var l = o.Ember.Component.extend(i.default, {
+            var l = o.Ember.Component.extend(s.default, {
                 persistenceService: o.Ember.inject.service("persistence"),
                 init() {
-                    this._super(...arguments), this.get("handleQuickcastInitialized") && this.get("handleQuickcastInitialized")(this), s.defaultValue = this._getSchemaValue(s.property), r.defaultValue = this._getSchemaValue(r.property), this.bindSetting(s, !1), this.bindSetting(r, !1)
+                    this._super(...arguments), this.get("handleQuickcastInitialized") && this.get("handleQuickcastInitialized")(this), i.defaultValue = this._getSchemaValue(i.property), r.defaultValue = this._getSchemaValue(r.property), this.bindSetting(i, !1), this.bindSetting(r, !1)
                 },
                 resetToDefault() {
-                    this.changeSetting(s.property, s.defaultValue), this.changeSetting(r.property, r.defaultValue)
+                    this.changeSetting(i.property, i.defaultValue), this.changeSetting(r.property, r.defaultValue)
                 },
                 _getSchemaValue(e) {
                     return this.get(`gameSettingsSchema.HUD.${e}.default`)
@@ -14471,8 +14457,8 @@
             }), t.default = void 0;
             var a = n(1),
                 o = n(19),
-                i = n(296);
-            const s = "Quickbinds",
+                s = n(296);
+            const i = "Quickbinds",
                 r = "GameEvents",
                 l = "HUDEvents",
                 c = "ShopEvents";
@@ -14484,7 +14470,7 @@
                 keyToActionReverseMap: void 0,
                 isInvalidGameflowPhase: a.Ember.computed("gameflowService.phase", (function() {
                     const e = this.get("gameflowService.phase");
-                    return !(!e || e === i.GAMEFLOW_PHASES.NONE || e === i.GAMEFLOW_PHASES.LOBBY)
+                    return !(!e || e === s.GAMEFLOW_PHASES.NONE || e === s.GAMEFLOW_PHASES.LOBBY)
                 })),
                 isPracticeToolDisabled: a.Ember.computed.or("patchService.isPatching", "isInvalidGameflowPhase"),
                 practiceToolButtonLabel: a.Ember.computed("patchService.isPatching", "isInvalidGameflowPhase", (function() {
@@ -14499,11 +14485,11 @@
                         const n = this.get(`inputSettings.${t}`);
                         for (const a in n)
                             if (Object.prototype.hasOwnProperty.call(n, a)) {
-                                const i = n[a];
-                                if (i) {
-                                    (0, o.fromSavedToArray)(i).forEach((n => {
-                                        const i = (0, o.normalizeKeybindingString)(n);
-                                        "[<unbound>]" !== i && "" !== i && (e[i] = `${t}.${a}`)
+                                const s = n[a];
+                                if (s) {
+                                    (0, o.fromSavedToArray)(s).forEach((n => {
+                                        const s = (0, o.normalizeKeybindingString)(n);
+                                        "[<unbound>]" !== s && "" !== s && (e[s] = `${t}.${a}`)
                                     }))
                                 }
                             }
@@ -14511,7 +14497,7 @@
                 },
                 resetToDefault: function() {
                     const e = {};
-                    e[s] = this.resetEventsContent(s), e[r] = this.resetEventsContent(r), e[l] = this.resetEventsContent(l), e[c] = this.resetEventsContent(c), this.initialiseKeyToActionMap(), this._saveInputSettings(e), this.get("quickcastComponent") && this.get("quickcastComponent").resetToDefault()
+                    e[i] = this.resetEventsContent(i), e[r] = this.resetEventsContent(r), e[l] = this.resetEventsContent(l), e[c] = this.resetEventsContent(c), this.initialiseKeyToActionMap(), this._saveInputSettings(e), this.get("quickcastComponent") && this.get("quickcastComponent").resetToDefault()
                 },
                 resetEventsContent: function(e) {
                     const t = {},
@@ -14560,7 +14546,7 @@
                 FAILED_TO_LAUNCH: "FailedToLaunch",
                 RECONNECT: "Reconnect"
             };
-            var i = a.Ember.Service.extend({
+            var s = a.Ember.Service.extend({
                 session: null,
                 phase: null,
                 init() {
@@ -14572,17 +14558,17 @@
                     this._super(...arguments), a.db.unobserve(o, this)
                 }
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(15)) && a.__esModule ? a : {
+                s = (a = n(15)) && a.__esModule ? a : {
                     default: a
                 };
-            var s = o.Ember.Component.extend({
+            var i = o.Ember.Component.extend({
                 classNames: "lol-settings-repair-row",
                 _generateRepairConfirmDialog() {
                     const e = document.createElement("lol-uikit-content-block");
@@ -14594,7 +14580,7 @@
                 },
                 actions: {
                     initiateRepairClick() {
-                        i.default.repairClick.play();
+                        s.default.repairClick.play();
                         o.ModalManager.add({
                             type: "DialogConfirm",
                             data: {
@@ -14610,7 +14596,7 @@
                     }
                 }
             });
-            t.default = s
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14646,7 +14632,7 @@
                 zh_MY: "中文(简体)",
                 zh_TW: "中文(繁體)"
             };
-            var i = a.Ember.Component.extend({
+            var s = a.Ember.Component.extend({
                 classNames: ["lol-publishing-locale-preference-row"],
                 publishingLocale: null,
                 publishingContentConfig: null,
@@ -14694,7 +14680,7 @@
                     }
                 }
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14702,7 +14688,7 @@
             }), t.default = void 0;
             var a = n(1);
             const o = a.dataBinding.bindTo(a.socket);
-            var i = a.Ember.Component.extend({
+            var s = a.Ember.Component.extend({
                 classNames: ["lol-settings-account-verification-row"],
                 accountVerificationConfig: null,
                 canVerify: a.Ember.computed.bool("accountVerificationConfig.SettingsVerifyEnabled"),
@@ -14733,7 +14719,7 @@
                     }
                 }
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14772,8 +14758,8 @@
             }), t.default = void 0;
             var a = n(1),
                 o = n(302),
-                i = n(303),
-                s = a.Ember.Component.extend({
+                s = n(303),
+                i = a.Ember.Component.extend({
                     key: void 0,
                     onChange: void 0,
                     label: void 0,
@@ -14878,10 +14864,10 @@
                     },
                     _handleMouseKeySet(e) {
                         let t = e.button;
-                        if (e.button === i.WEB_EVENT_LEFT_MOUSE_BUTTON) {
+                        if (e.button === s.WEB_EVENT_LEFT_MOUSE_BUTTON) {
                             if (!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey)) return;
-                            t = i.GAME_CLIENT_LEFT_MOUSE_BUTTON
-                        } else e.button === i.WEB_EVENT_MIDDLE_MOUSE_BUTTON ? t = i.GAME_CLIENT_MIDDLE_MOUSE_BUTTON : e.button === i.WEB_EVENT_BROWSER_BACK_MOUSE_BUTTON ? t = i.GAME_CLIENT_BROWSER_BACK_MOUSE_BUTTON : e.button === i.WEB_EVENT_BROWSER_FORWARD_MOUSE_BUTTON && (t = i.GAME_CLIENT_BROWSER_FORWARD_MOUSE_BUTTON);
+                            t = s.GAME_CLIENT_LEFT_MOUSE_BUTTON
+                        } else e.button === s.WEB_EVENT_MIDDLE_MOUSE_BUTTON ? t = s.GAME_CLIENT_MIDDLE_MOUSE_BUTTON : e.button === s.WEB_EVENT_BROWSER_BACK_MOUSE_BUTTON ? t = s.GAME_CLIENT_BROWSER_BACK_MOUSE_BUTTON : e.button === s.WEB_EVENT_BROWSER_FORWARD_MOUSE_BUTTON && (t = s.GAME_CLIENT_BROWSER_FORWARD_MOUSE_BUTTON);
                         const n = this._getModifiersPrefix(e) + "[Button " + t + "]";
                         this._tempSaveValue = n, this._keybindDiv.textContent = this._fromSavedToDisplay(n), this._unbindButton.disabled = !1, this._pttModal.enableAcceptButton()
                     },
@@ -14899,7 +14885,7 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -15302,37 +15288,36 @@
                 value: !0
             }), t.default = void 0;
             var a, o = n(1),
-                i = (a = n(310)) && a.__esModule ? a : {
+                s = (a = n(310)) && a.__esModule ? a : {
                     default: a
                 };
-            const s = o.dataBinding.bindTo(o.socket);
+            const i = o.dataBinding.bindTo(o.socket);
             var r = o.Ember.Service.extend({
                 isVisible: !1,
                 currentCategory: null,
                 currentGroups: [],
                 rootElement: null,
                 init() {
-                    this._super(...arguments), this._registeredCategoryGroups = (0, i.default)()
+                    this._super(...arguments), this._registeredCategoryGroups = (0, s.default)()
                 },
                 willDestroy() {
-                    this._super(...arguments), s.unobserve("/lol-login/v1/session", this)
+                    this._super(...arguments), i.unobserve("/lol-login/v1/session", this)
                 },
                 initialize(e, t) {
                     this.rootElement = e, this._routeSupport = t;
                     const n = {};
-                    return n.domNode = e, n.show = !0, this._modal = n, s.get("/lol-login/v1/session").then((e => {
-                        this._onLoginStatusUpdate(e), s.observe("/lol-login/v1/session", this, this._onLoginStatusUpdate.bind(this))
+                    return n.domNode = e, n.show = !0, this._modal = n, i.get("/lol-login/v1/session").then((e => {
+                        this._onLoginStatusUpdate(e), i.observe("/lol-login/v1/session", this, this._onLoginStatusUpdate.bind(this))
                     }))
                 },
                 show(e) {
-                    const t = this.get("isVisible");
-                    t || (o.ModalManager.add(this._modal), this.set("isVisible", !0)), this._setDefaultDisplayCategory(e, !t)
+                    o.ModalManager.add(this._modal), this.set("isVisible", !0), this._setDefaultDisplayCategory(e, !0)
                 },
                 close() {
                     this.get("isVisible") && (this.set("isVisible", !1), this._persistAccountSettings(), o.ModalManager.remove(this._modal), this._setDefaultDisplayCategory(null, !1))
                 },
                 _persistAccountSettings() {
-                    s.post("/lol-settings/v1/account/save").then((() => {
+                    i.post("/lol-settings/v1/account/save").then((() => {
                         o.logger.trace("Persist account settings successful")
                     })).catch((e => {
                         o.logger.error("Error happened when saving account settings: ", e)
@@ -15395,43 +15380,43 @@
                             capitalTitleKey: "lol_settings_group_title_client_capital",
                             categories: null
                         };
-                        e.categories = [new s.default(o.SettingsCategory.GENERAL, o.SettingsCategoryName.GENERAL, "lol_settings_nav_title_general", !0, !0, e), new s.default(o.SettingsCategory.NOTIFICATIONS, o.SettingsCategoryName.NOTIFICATIONS, "lol_settings_nav_title_notifications", !0, !0, e), new s.default(o.SettingsCategory.CHAT, o.SettingsCategoryName.CHAT, "lol_settings_nav_title_chat_and_friends", !0, !0, e), new s.default(o.SettingsCategory.SOUND, o.SettingsCategoryName.SOUND, "lol_settings_nav_title_sound", !1, !0, e), new s.default(o.SettingsCategory.VOICE, o.SettingsCategoryName.VOICE, "lol_settings_nav_title_voice", !1, !0, e), new s.default(o.SettingsCategory.BLOCK_LIST, o.SettingsCategoryName.BLOCK_LIST, "lol_settings_nav_title_block_list", !0, !1, e)];
+                        e.categories = [new i.default(o.SettingsCategory.GENERAL, o.SettingsCategoryName.GENERAL, "lol_settings_nav_title_general", !0, !0, e), new i.default(o.SettingsCategory.NOTIFICATIONS, o.SettingsCategoryName.NOTIFICATIONS, "lol_settings_nav_title_notifications", !0, !0, e), new i.default(o.SettingsCategory.CHAT, o.SettingsCategoryName.CHAT, "lol_settings_nav_title_chat_and_friends", !0, !0, e), new i.default(o.SettingsCategory.SOUND, o.SettingsCategoryName.SOUND, "lol_settings_nav_title_sound", !1, !0, e), new i.default(o.SettingsCategory.VOICE, o.SettingsCategoryName.VOICE, "lol_settings_nav_title_voice", !1, !0, e), new i.default(o.SettingsCategory.BLOCK_LIST, o.SettingsCategoryName.BLOCK_LIST, "lol_settings_nav_title_block_list", !0, !1, e)];
                         const t = {
                             name: "ingame",
                             titleKey: "lol_settings_group_title_ingame",
                             capitalTitleKey: "lol_settings_group_title_ingame_capital",
                             categories: null
                         };
-                        t.categories = [new s.default(o.SettingsCategory.GAME_HOTKEYS, o.SettingsCategoryName.GAME_HOTKEYS, "lol_settings_nav_title_hotkeys", !0, !0, t), new s.default(o.SettingsCategory.GAME_SOUND, o.SettingsCategoryName.GAME_SOUND, "lol_settings_nav_title_in_game_sound", !0, !0, t), new s.default(o.SettingsCategory.GAME_INTERFACE, o.SettingsCategoryName.GAME_INTERFACE, "lol_settings_nav_title_interface", !0, !0, t), new s.default(o.SettingsCategory.GAME_GAMEPLAY, o.SettingsCategoryName.GAME_GAMEPLAY, "lol_settings_nav_title_game", !0, !0, t), new s.default(o.SettingsCategory.REPLAYS, o.SettingsCategoryName.REPLAYS, "lol_settings_nav_title_replays", !0, !0, t)];
+                        t.categories = [new i.default(o.SettingsCategory.GAME_HOTKEYS, o.SettingsCategoryName.GAME_HOTKEYS, "lol_settings_nav_title_hotkeys", !0, !0, t), new i.default(o.SettingsCategory.GAME_SOUND, o.SettingsCategoryName.GAME_SOUND, "lol_settings_nav_title_in_game_sound", !0, !0, t), new i.default(o.SettingsCategory.GAME_INTERFACE, o.SettingsCategoryName.GAME_INTERFACE, "lol_settings_nav_title_interface", !0, !0, t), new i.default(o.SettingsCategory.GAME_GAMEPLAY, o.SettingsCategoryName.GAME_GAMEPLAY, "lol_settings_nav_title_game", !0, !0, t), new i.default(o.SettingsCategory.REPLAYS, o.SettingsCategoryName.REPLAYS, "lol_settings_nav_title_replays", !0, !0, t)];
                         const n = {
                             name: "about",
                             titleKey: "lol_settings_group_title_about",
                             capitalTitleKey: "lol_settings_group_title_about_capital",
                             categories: null
                         };
-                        n.categories = [new s.default(o.SettingsCategory.PRIVACY_NOTICE, o.SettingsCategoryName.PRIVACY_NOTICE, "lol_settings_nav_title_privacy_notice", !1, !1, n), new s.default(o.SettingsCategory.TERMS_OF_USE, o.SettingsCategoryName.TERMS_OF_USE, "lol_settings_nav_title_tou", !1, !1, n), new s.default(o.SettingsCategory.THIRDPARTY_LICENSES, o.SettingsCategoryName.THIRDPARTY_LICENSES, "lol_settings_nav_title_third_party_license", !1, !1, n), new s.default(o.SettingsCategory.VERSION, o.SettingsCategoryName.VERSION, "lol_settings_nav_title_version", !0, !0, n), new s.default(o.SettingsCategory.LEGAL_STATEMENTS, o.SettingsCategoryName.LEGAL_STATEMENTS, "lol_settings_nav_title_legal_statements", !1, !1, n)];
+                        n.categories = [new i.default(o.SettingsCategory.PRIVACY_NOTICE, o.SettingsCategoryName.PRIVACY_NOTICE, "lol_settings_nav_title_privacy_notice", !1, !1, n), new i.default(o.SettingsCategory.TERMS_OF_USE, o.SettingsCategoryName.TERMS_OF_USE, "lol_settings_nav_title_tou", !1, !1, n), new i.default(o.SettingsCategory.THIRDPARTY_LICENSES, o.SettingsCategoryName.THIRDPARTY_LICENSES, "lol_settings_nav_title_third_party_license", !1, !1, n), new i.default(o.SettingsCategory.VERSION, o.SettingsCategoryName.VERSION, "lol_settings_nav_title_version", !0, !0, n), new i.default(o.SettingsCategory.LEGAL_STATEMENTS, o.SettingsCategoryName.LEGAL_STATEMENTS, "lol_settings_nav_title_legal_statements", !1, !1, n)];
                         const a = [e, t, n],
-                            i = new Map([...e.categories, ...t.categories, ...n.categories].map((e => [e.routeName, e])));
+                            s = new Map([...e.categories, ...t.categories, ...n.categories].map((e => [e.routeName, e])));
                         return {
                             list: a,
-                            byRouteName: i
+                            byRouteName: s
                         }
                     }(),
                     t = n => {
                         n && (r.unobserve("/lol-platform-config/v1/initial-configuration-complete", t), function(e) {
                             r.observe("/lol-settings/v2/config", (t => {
-                                t ? (l(e, o.SettingsCategory.GAME_HOTKEYS, t.isHotkeysEnabled), l(e, o.SettingsCategory.GAME_SOUND, t.isSoundEnabled), l(e, o.SettingsCategory.GAME_INTERFACE, t.isInterfaceEnabled), l(e, o.SettingsCategory.GAME_GAMEPLAY, t.isGameplayEnabled), l(e, o.SettingsCategory.REPLAYS, t.isReplaysEnabled), l(e, o.SettingsCategory.TERMS_OF_USE, t.isTermsEnabled), l(e, o.SettingsCategory.PRIVACY_NOTICE, t.isPrivacyNoticeEnabled), l(e, o.SettingsCategory.LEGAL_STATEMENTS, t.isLegalStatementsEnabled)) : i.logger.warning("Failed to receive settings config")
+                                t ? (l(e, o.SettingsCategory.GAME_HOTKEYS, t.isHotkeysEnabled), l(e, o.SettingsCategory.GAME_SOUND, t.isSoundEnabled), l(e, o.SettingsCategory.GAME_INTERFACE, t.isInterfaceEnabled), l(e, o.SettingsCategory.GAME_GAMEPLAY, t.isGameplayEnabled), l(e, o.SettingsCategory.REPLAYS, t.isReplaysEnabled), l(e, o.SettingsCategory.TERMS_OF_USE, t.isTermsEnabled), l(e, o.SettingsCategory.PRIVACY_NOTICE, t.isPrivacyNoticeEnabled), l(e, o.SettingsCategory.LEGAL_STATEMENTS, t.isLegalStatementsEnabled)) : s.logger.warning("Failed to receive settings config")
                             }))
                         }(e))
                     };
                 return r.observe("/lol-platform-config/v1/initial-configuration-complete", t), e.list
             };
             var a, o = n(3),
-                i = n(1),
-                s = (a = n(311)) && a.__esModule ? a : {
+                s = n(1),
+                i = (a = n(311)) && a.__esModule ? a : {
                     default: a
                 };
-            const r = i.dataBinding.bindTo(i.socket);
+            const r = s.dataBinding.bindTo(s.socket);
 
             function l(e, t, n) {
                 e.byRouteName.has(t) && e.byRouteName.get(t).updateForceDisabled(!n)
@@ -15443,8 +15428,8 @@
             }), t.default = void 0;
             var a = n(1);
             var o = class {
-                constructor(e, t, n, o, i, s) {
-                    this.routeName = e, this.name = t, this.titleKey = n, this.requireLogin = o, this.canReset = i, this.group = s, this.loginStatus = !1, this.forceDisabled = !1, this.computeds = a.Ember.Object.create({
+                constructor(e, t, n, o, s, i) {
+                    this.routeName = e, this.name = t, this.titleKey = n, this.requireLogin = o, this.canReset = s, this.group = i, this.loginStatus = !1, this.forceDisabled = !1, this.computeds = a.Ember.Object.create({
                         disabled: !1
                     })
                 }
@@ -15471,7 +15456,7 @@
                 CHECKING_FOR_UPDATES: "CheckingForUpdates"
             };
             t.PATCHER_ACTIONS = o;
-            var i = a.Ember.Service.extend({
+            var s = a.Ember.Service.extend({
                 leagueClientVersion: null,
                 gameClientVersion: null,
                 lolExternalPatchVersion: null,
@@ -15511,7 +15496,7 @@
                 }),
                 putGamePatchUrl: e => a.db.put(`/lol-patch/v1/game-patch-url?url=${e}`)
             });
-            t.default = i
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -15519,10 +15504,10 @@
             }), t.default = void 0;
             var a = n(1),
                 o = n(314),
-                i = n(41);
+                s = n(41);
             const {
-                DEFAULT_PROFILE_PRIVACY: s
-            } = i.PROFILE_PRIVACY, r = a.dataBinding.bindTo(a.socket), l = "/lol-summoner/v1/current-summoner/profile-privacy", c = "/lol-summoner-profiles/v1/get-privacy-view", u = "/lol-game-settings/v1/game-settings", d = "/lol-client-config/v3/client-config/lol.client_settings.full_repair_enabled", m = "/client-config/v2/config/lol.client_settings.vanguard.daysToReshowModal";
+                DEFAULT_PROFILE_PRIVACY: i
+            } = s.PROFILE_PRIVACY, r = a.dataBinding.bindTo(a.socket), l = "/lol-summoner/v1/current-summoner/profile-privacy", c = "/lol-summoner-profiles/v1/get-privacy-view", u = "/lol-game-settings/v1/game-settings", d = "/lol-client-config/v3/client-config/lol.client_settings.full_repair_enabled", m = "/client-config/v2/config/lol.client_settings.vanguard.daysToReshowModal";
             var p = a.Ember.Service.extend({
                 isLoggedIn: !1,
                 regionLocale: null,
@@ -15545,7 +15530,7 @@
                     isLegalStatementsEnabled: !1
                 },
                 profilePrivacy: {
-                    ...s
+                    ...i
                 },
                 init() {
                     this._super(...arguments);
@@ -15600,9 +15585,9 @@
                 saveDefaultSetting(e, t, n, a) {
                     return this.saveSetting(e, o.DEFAULT_PP_KEY, t, n, a)
                 },
-                saveSetting(e, t, n, o, i) {
+                saveSetting(e, t, n, o, s) {
                     return a.logger.trace(`save data ${e} with namespace ${o} and scope ${n} to ${t}`), r.patch(this._getEndpointUrl(t, n, o), {
-                        schemaVersion: i,
+                        schemaVersion: s,
                         data: e
                     })
                 },
@@ -15642,12 +15627,12 @@
                     const n = this.get("anonymityEnabled"),
                         a = this.get("nameOnlyAnonymityEnabled"),
                         o = this.calculateClientAnonymitySettings(e, t, n, a),
-                        i = this.translateClientAnonymitySettingsToGameRepresentation(o),
-                        s = JSON.stringify({
-                            anonymityEnabled: i.anonymityEnabled,
-                            nameOnlyAnonymityEnabled: i.nameOnlyAnonymityEnabled
+                        s = this.translateClientAnonymitySettingsToGameRepresentation(o),
+                        i = JSON.stringify({
+                            anonymityEnabled: s.anonymityEnabled,
+                            nameOnlyAnonymityEnabled: s.nameOnlyAnonymityEnabled
                         });
-                    return r.post("/lol-summoner-profiles/v1/pco/privacy", s)
+                    return r.post("/lol-summoner-profiles/v1/pco/privacy", i)
                 }
             });
             t.default = p
@@ -15668,16 +15653,16 @@
             }), t.default = void 0;
             var a = n(1);
             const o = "/lol-premade-voice",
-                i = o + "/v1/capturedevices",
-                s = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled",
+                s = o + "/v1/capturedevices",
+                i = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled",
                 r = a.dataBinding.bindTo(a.socket);
             var l = a.Ember.Service.extend({
                 captureDevices: void 0,
                 teamVoicePluginEnabled: !1,
                 init() {
-                    this._super(...arguments), r.observe(i, this, (function(e) {
+                    this._super(...arguments), r.observe(s, this, (function(e) {
                         this.set("captureDevices", e)
-                    })), r.observe(s, this, (function(e) {
+                    })), r.observe(i, this, (function(e) {
                         this.set("teamVoicePluginEnabled", e || !1)
                     }))
                 },
@@ -15686,295 +15671,295 @@
                     return r.post(o + "/v1/push-to-talk/check-available", t)
                 },
                 willDestroy() {
-                    this._super(...arguments), r.unobserve(i, this), r.unobserve(s, this)
+                    this._super(...arguments), r.unobserve(s, this), r.unobserve(i, this)
                 }
             });
             t.default = l
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "3RsT95hL",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["static-attr","class","lol-settings-container"],["static-attr","orientation","bottom"],["static-attr","frame","bordered"],["flush-element"],["text","\\n  "],["append",["helper",["modal-header"],null,[["handleResetToDefaultButtonClick"],[["helper",["action"],[["get",[null]],"handleResetToDefaultButtonClick"],null]]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-content"],["flush-element"],["text","\\n    "],["open-element","settings-plugin-navigation-bar",[]],["static-attr","class","lol-settings-navs"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["static-attr","class","lol-settings-nav-scroller"],["flush-element"],["text","\\n        "],["open-element","div",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["currentGroups"]]],null,2],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-options"],["flush-element"],["text","\\n      "],["append",["unknown",["outlet"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["unknown",["modal-footer"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["helper",["navigation-bar-group-item"],null,[["category","goToSection"],[["get",["category"]],["helper",["action"],[["get",[null]],"goToSection"],null]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["block",["each"],[["get",["group","categories"]]],null,0]],"locals":[]},{"statements":[["block",["navigation-bar-group"],null,[["group","groupIdx"],[["get",["group"]],["get",["index"]]]],1]],"locals":["group","index"]}],"hasPartials":false}',
+                id: "RSSWaYsy",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["static-attr","class","lol-settings-container"],["static-attr","orientation","bottom"],["static-attr","frame","bordered"],["flush-element"],["text","\\n  "],["append",["helper",["modal-header"],null,[["handleResetToDefaultButtonClick"],[["helper",["action"],[["get",[null]],"handleResetToDefaultButtonClick"],null]]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-content"],["flush-element"],["text","\\n    "],["open-element","settings-plugin-navigation-bar",[]],["static-attr","class","lol-settings-navs"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["static-attr","class","lol-settings-nav-scroller"],["flush-element"],["text","\\n        "],["open-element","div",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["currentGroups"]]],null,2],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-options"],["flush-element"],["text","\\n      "],["append",["unknown",["outlet"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["unknown",["modal-footer"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["helper",["navigation-bar-group-item"],null,[["category","goToSection"],[["get",["category"]],["helper",["action"],[["get",[null]],"goToSection"],null]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["block",["each"],[["get",["group","categories"]]],null,0]],"locals":[]},{"statements":[["block",["navigation-bar-group"],null,[["group","groupIdx"],[["get",["group"]],["get",["index"]]]],1]],"locals":["group","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "rSlwgGwN",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "Lezfj3dB",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "O+Ko35Mm",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\general.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\general.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-section-title"],["flush-element"],["append",["unknown",["tra","lol_settings_nav_title_interface"]],false],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","potatoModeEnabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","potatoModeEnabled",["helper",["mut"],[["get",["potatoModeEnabled"]]],null],["get",["potatoSettingDisabled"]]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","potatoModeEnabled"],["flush-element"],["append",["unknown",["tra","ux_settings_enable_low_spec_mode"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],18],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","motionEffectsDisabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","motionEffectsDisabled",["helper",["mut"],[["get",["motionEffectsDisabled"]]],null],["get",["motionEffectsToggleDisabled"]]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","motionEffectsDisabled"],["flush-element"],["append",["unknown",["tra","ux_settings_disable_motion_effects"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],17],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_disable_motion_effects_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","closeLeagueClientDuringGame"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","closeLeagueClientDuringGame",["helper",["mut"],[["get",["closeLeagueClientDuringGame"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","closeLeagueClientDuringGame"],["flush-element"],["append",["unknown",["tra","ux_settings_unload_in_game_resource_mode"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],16],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_unload_in_game_setting_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isAbilityPreviewEnabled"]]],null,15],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-window-size-text"],["flush-element"],["append",["unknown",["tra","lol_general_settings_label_window_size"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-window-size-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedSizeInfos"]]],null,13],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-section-title"],["flush-element"],["append",["unknown",["tra","lol_settings_nav_title_system"]],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["model","codeOfConductEnabled"]]],null,12],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","uploadCrashReports"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","uploadCrashReports",["helper",["mut"],[["get",["uploadCrashReports"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","uploadCrashReports"],["flush-element"],["append",["unknown",["tra","lol_general_settings_label_auto_send_crash_reports"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],11],["text","  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["vanguardSystemCheckModalEnabled"]]],null,10],["text","\\n"],["block",["if"],[["get",["profilePrivacyEnabled"]]],null,9],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-section-title"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","isAnonymousModeOthers"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","isAnonymousModeOthers"],["dynamic-attr","checked",["unknown",["isAnonymousModeOthers"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleAnonymousModeOthers"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","isAnonymousModeOthers"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_other_players_names"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],7],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_other_players_names_desc"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","isAnonymousModeMine"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","isAnonymousModeMine"],["dynamic-attr","disabled",["unknown",["isAnonymousModeEverything"]],null],["dynamic-attr","checked",["unknown",["isAnonymousModeMine"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleAnonymousModeMine"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","isAnonymousModeMine"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_my_name"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],6],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_my_name_desc"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","isAnonymousModeEverything"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","isAnonymousModeEverything"],["dynamic-attr","checked",["unknown",["isAnonymousModeEverything"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleAnonymousModeEverything"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","isAnonymousModeEverything"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_everything"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],5],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_everything_desc"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isVngPublisherSettingsVisible"]]],null,4],["text","\\n"],["block",["if"],[["get",["accountVerificationEnabled"]]],null,3],["text","\\n"],["block",["if"],[["get",["showLegacyPatchNumbersSetting"]]],null,2],["text","\\n"],["block",["if"],[["get",["gameRepairEnabled"]]],null,0],["text","\\n  "],["append",["helper",["publishing-locale"],null,[["publishingLocale","publishingContentConfig","selectPublishingLocale"],[["get",["publishingLocale"]],["get",["publishingContentConfig"]],["helper",["action"],[["get",[null]],"selectPublishingLocale"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["append",["unknown",["repair-game-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_display_legacy_patch_numbers_tooltip"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","displayLegacyPatchNumbers"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","displayLegacyPatchNumbers",["helper",["mut"],[["get",["displayLegacyPatchNumbers"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","displayLegacyPatchNumbers"],["flush-element"],["append",["unknown",["tra","ux_settings_display_legacy_patch_numbers"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["append",["helper",["account-verification"],null,[["accountVerificationConfig"],[["get",["accountVerificationConfig"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleHoneyfruitLinkingOpened"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["vng-publisher-settings"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_everything_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_my_name_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_other_players_names_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_enable_private_profile_tooltip"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","isProfilePrivate"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","isProfilePrivate",["helper",["mut"],[["get",["isProfilePrivate"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","isProfilePrivate"],["flush-element"],["append",["unknown",["tra","ux_settings_enable_private_profile"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],8],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-general-title"],["flush-element"],["append",["unknown",["tra","lol_account_vanguard_system_check_button_title"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-vanguard-system-check-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"openVanguardSystemCheckModal"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_account_vanguard_system_check_button_label"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","lol_general_settings_tooltip_auto_send_crash_reports"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-window-size-text"],["flush-element"],["append",["unknown",["tra","lol_general_settings_league_code_of_conduct_label"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-code-of-conduct-link lol-settings-window-size-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["tra","lol_general_settings_league_code_of_conduct_link"]]],null],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","scale",["unknown",["sizeInfo","scale"]],null],["dynamic-attr","selected",["unknown",["sizeInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectWindowSize",["get",["sizeInfo","scale"]]],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["sizeInfo","text"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["sizeInfo"]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_disable_ability_previews_tooltip"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","abilityPreviewsDisabled"],["dynamic-attr","data-dd-action-name",["helper",["if"],[["get",["abilityPreviewsDisabled"]],"settings-ability-previews-enable","settings-ability-previews-disable"],null],null],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","abilityPreviewsDisabled",["helper",["mut"],[["get",["abilityPreviewsDisabled"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","abilityPreviewsDisabled"],["flush-element"],["append",["unknown",["tra","ux_settings_disable_ability_previews"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],14],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_unload_in_game_setting_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_disable_motion_effects_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_enable_low_spec_mode_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Kyq5mNzr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\general.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\general.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-section-title"],["flush-element"],["append",["unknown",["tra","lol_settings_nav_title_interface"]],false],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","potatoModeEnabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","potatoModeEnabled",["helper",["mut"],[["get",["potatoModeEnabled"]]],null],["get",["potatoSettingDisabled"]]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","potatoModeEnabled"],["flush-element"],["append",["unknown",["tra","ux_settings_enable_low_spec_mode"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],18],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","motionEffectsDisabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","motionEffectsDisabled",["helper",["mut"],[["get",["motionEffectsDisabled"]]],null],["get",["motionEffectsToggleDisabled"]]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","motionEffectsDisabled"],["flush-element"],["append",["unknown",["tra","ux_settings_disable_motion_effects"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],17],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_disable_motion_effects_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","closeLeagueClientDuringGame"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","closeLeagueClientDuringGame",["helper",["mut"],[["get",["closeLeagueClientDuringGame"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","closeLeagueClientDuringGame"],["flush-element"],["append",["unknown",["tra","ux_settings_unload_in_game_resource_mode"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],16],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_unload_in_game_setting_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isAbilityPreviewEnabled"]]],null,15],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-window-size-text"],["flush-element"],["append",["unknown",["tra","lol_general_settings_label_window_size"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-window-size-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedSizeInfos"]]],null,13],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-section-title"],["flush-element"],["append",["unknown",["tra","lol_settings_nav_title_system"]],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["model","codeOfConductEnabled"]]],null,12],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","uploadCrashReports"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","uploadCrashReports",["helper",["mut"],[["get",["uploadCrashReports"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","uploadCrashReports"],["flush-element"],["append",["unknown",["tra","lol_general_settings_label_auto_send_crash_reports"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],11],["text","  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["vanguardSystemCheckModalEnabled"]]],null,10],["text","\\n"],["block",["if"],[["get",["profilePrivacyEnabled"]]],null,9],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-section-title"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","isAnonymousModeOthers"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","isAnonymousModeOthers"],["dynamic-attr","checked",["unknown",["isAnonymousModeOthers"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleAnonymousModeOthers"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","isAnonymousModeOthers"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_other_players_names"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],7],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_other_players_names_desc"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","isAnonymousModeMine"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","isAnonymousModeMine"],["dynamic-attr","disabled",["unknown",["isAnonymousModeEverything"]],null],["dynamic-attr","checked",["unknown",["isAnonymousModeMine"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleAnonymousModeMine"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","isAnonymousModeMine"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_my_name"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],6],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_my_name_desc"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","isAnonymousModeEverything"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","isAnonymousModeEverything"],["dynamic-attr","checked",["unknown",["isAnonymousModeEverything"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleAnonymousModeEverything"],null],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","isAnonymousModeEverything"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_everything"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],5],["text","    "],["open-element","p",[]],["static-attr","class","lol-settings-general-subtitle"],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_everything_desc"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isVngPublisherSettingsVisible"]]],null,4],["text","\\n"],["block",["if"],[["get",["accountVerificationEnabled"]]],null,3],["text","\\n"],["block",["if"],[["get",["showLegacyPatchNumbersSetting"]]],null,2],["text","\\n"],["block",["if"],[["get",["gameRepairEnabled"]]],null,0],["text","\\n  "],["append",["helper",["publishing-locale"],null,[["publishingLocale","publishingContentConfig","selectPublishingLocale"],[["get",["publishingLocale"]],["get",["publishingContentConfig"]],["helper",["action"],[["get",[null]],"selectPublishingLocale"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["append",["unknown",["repair-game-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_display_legacy_patch_numbers_tooltip"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","displayLegacyPatchNumbers"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","displayLegacyPatchNumbers",["helper",["mut"],[["get",["displayLegacyPatchNumbers"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","displayLegacyPatchNumbers"],["flush-element"],["append",["unknown",["tra","ux_settings_display_legacy_patch_numbers"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["append",["helper",["account-verification"],null,[["accountVerificationConfig"],[["get",["accountVerificationConfig"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleHoneyfruitLinkingOpened"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["vng-publisher-settings"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_everything_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_my_name_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_anonymous_mode_hide_other_players_names_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_enable_private_profile_tooltip"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","isProfilePrivate"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","isProfilePrivate",["helper",["mut"],[["get",["isProfilePrivate"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","isProfilePrivate"],["flush-element"],["append",["unknown",["tra","ux_settings_enable_private_profile"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],8],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-general-title"],["flush-element"],["append",["unknown",["tra","lol_account_vanguard_system_check_button_title"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-vanguard-system-check-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"openVanguardSystemCheckModal"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_account_vanguard_system_check_button_label"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","lol_general_settings_tooltip_auto_send_crash_reports"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-window-size-text"],["flush-element"],["append",["unknown",["tra","lol_general_settings_league_code_of_conduct_label"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-code-of-conduct-link lol-settings-window-size-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["tra","lol_general_settings_league_code_of_conduct_link"]]],null],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","scale",["unknown",["sizeInfo","scale"]],null],["dynamic-attr","selected",["unknown",["sizeInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectWindowSize",["get",["sizeInfo","scale"]]],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["sizeInfo","text"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["sizeInfo"]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_disable_ability_previews_tooltip"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","abilityPreviewsDisabled"],["dynamic-attr","data-dd-action-name",["helper",["if"],[["get",["abilityPreviewsDisabled"]],"settings-ability-previews-enable","settings-ability-previews-disable"],null],null],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","abilityPreviewsDisabled",["helper",["mut"],[["get",["abilityPreviewsDisabled"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","abilityPreviewsDisabled"],["flush-element"],["append",["unknown",["tra","ux_settings_disable_ability_previews"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],14],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_unload_in_game_setting_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_disable_motion_effects_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","general-settings-tooltip"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","ux_settings_enable_low_spec_mode_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "rkLsE+Hf",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\notifications.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\notifications.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-notifications-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","disableEsportsNotifications"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","disableEsportsNotifications",["helper",["mut"],[["get",["disableEsportsNotifications"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","disableEsportsNotifications"],["static-attr","class","lol-settings-notifications-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_notification_settings_label_disable_esports_notifications"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-notifications-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","blockNonFriendGameInvites"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","blockNonFriendGameInvites",["helper",["mut"],[["get",["blockNonFriendGameInvites"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","blockNonFriendGameInvites"],["static-attr","class","lol-settings-notifications-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_notification_settings_label_block_non_friend_game_invites"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-notifications-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","disableCollectionsNotifications"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","disableCollectionsNotifications",["helper",["mut"],[["get",["disableCollectionsNotifications"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","disableCollectionsNotifications"],["static-attr","class","lol-settings-notifications-label"],["flush-element"],["text","\\n      "],["append",["helper",["sanitize"],[["get",["tra","lol_notification_settings_label_disable_collections_notifications$html"]]],null],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "xBByYexR",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\notifications.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\notifications.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-notifications-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","disableEsportsNotifications"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","disableEsportsNotifications",["helper",["mut"],[["get",["disableEsportsNotifications"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","disableEsportsNotifications"],["static-attr","class","lol-settings-notifications-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_notification_settings_label_disable_esports_notifications"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-notifications-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","blockNonFriendGameInvites"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","blockNonFriendGameInvites",["helper",["mut"],[["get",["blockNonFriendGameInvites"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","blockNonFriendGameInvites"],["static-attr","class","lol-settings-notifications-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_notification_settings_label_block_non_friend_game_invites"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-notifications-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","disableCollectionsNotifications"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","disableCollectionsNotifications",["helper",["mut"],[["get",["disableCollectionsNotifications"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","disableCollectionsNotifications"],["static-attr","class","lol-settings-notifications-label"],["flush-element"],["text","\\n      "],["append",["helper",["sanitize"],[["get",["tra","lol_notification_settings_label_disable_collections_notifications$html"]]],null],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "DMhin0A5",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\chat.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\chat.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["unless"],[["get",["hideChatFilterToggle"]]],null,4],["open-element","div",[]],["static-attr","class","lol-settings-chat-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","linkClickWarningEnabled"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","linkClickWarningEnabled",["helper",["mut"],[["get",["linkClickWarningEnabled"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","linkClickWarningEnabled"],["static-attr","class","lol-settings-chat-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_general_settings_label_enable_link_click_warning"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["unless"],[["get",["hideMoreUnreadsToggle"]]],null,3],["block",["unless"],[["get",["hideFriendRequestToastsToggle"]]],null,2],["block",["if"],[["get",["discordIntegrationEnabled"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-link"],["flush-element"],["append",["helper",["sanitize"],[["get",["tra","lol_chat_settings_discord_account_management"]]],null],true],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","p",[]],["static-attr","class","lol-settings-chat-section-title"],["flush-element"],["append",["unknown",["tra","lol_chat_settings_label_discord"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-chat-row"],["flush-element"],["text","\\n    "],["append",["helper",["discord-button"],null,[["showDiscordButton"],[["get",["shouldShowDiscordButton"]]]]],false],["text","\\n"],["block",["unless"],[["get",["shouldShowDiscordButton"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-chat-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","friendRequestToastsDisabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","friendRequestToastsDisabled",["helper",["mut"],[["get",["friendRequestToastsDisabled"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","friendRequestToastsDisabled"],["static-attr","class","lol-settings-chat-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_chat_settings_label_enable_friend_request_toasts"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-chat-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","moreUnreadsEnabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","moreUnreadsEnabled",["helper",["mut"],[["get",["moreUnreadsEnabled"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","moreUnreadsEnabled"],["static-attr","class","lol-settings-chat-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_chat_settings_label_enable_more_unreads"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-chat-row-top"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","negatedChatFilter"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","negatedChatFilter",["helper",["mut"],[["get",["negatedChatFilter"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","negatedChatFilter"],["static-attr","class","lol-settings-chat-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_chat_settings_label_enable_language_filter"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Dz2ZNAyT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\chat.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\chat.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["unless"],[["get",["hideChatFilterToggle"]]],null,4],["open-element","div",[]],["static-attr","class","lol-settings-chat-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","linkClickWarningEnabled"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","linkClickWarningEnabled",["helper",["mut"],[["get",["linkClickWarningEnabled"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","linkClickWarningEnabled"],["static-attr","class","lol-settings-chat-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_general_settings_label_enable_link_click_warning"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["unless"],[["get",["hideMoreUnreadsToggle"]]],null,3],["block",["unless"],[["get",["hideFriendRequestToastsToggle"]]],null,2],["block",["if"],[["get",["discordIntegrationEnabled"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-link"],["flush-element"],["append",["helper",["sanitize"],[["get",["tra","lol_chat_settings_discord_account_management"]]],null],true],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","p",[]],["static-attr","class","lol-settings-chat-section-title"],["flush-element"],["append",["unknown",["tra","lol_chat_settings_label_discord"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-chat-row"],["flush-element"],["text","\\n    "],["append",["helper",["discord-button"],null,[["showDiscordButton"],[["get",["shouldShowDiscordButton"]]]]],false],["text","\\n"],["block",["unless"],[["get",["shouldShowDiscordButton"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-chat-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","friendRequestToastsDisabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","friendRequestToastsDisabled",["helper",["mut"],[["get",["friendRequestToastsDisabled"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","friendRequestToastsDisabled"],["static-attr","class","lol-settings-chat-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_chat_settings_label_enable_friend_request_toasts"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-chat-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","moreUnreadsEnabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","moreUnreadsEnabled",["helper",["mut"],[["get",["moreUnreadsEnabled"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","moreUnreadsEnabled"],["static-attr","class","lol-settings-chat-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_chat_settings_label_enable_more_unreads"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-chat-row-top"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","negatedChatFilter"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","negatedChatFilter",["helper",["mut"],[["get",["negatedChatFilter"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","negatedChatFilter"],["static-attr","class","lol-settings-chat-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_chat_settings_label_enable_language_filter"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "WriKr/lY",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\sound.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\sound.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-sound-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","masterSoundEnabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","masterSoundEnabled",["helper",["mut"],[["get",["masterSoundEnabled"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","masterSoundEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_master_label"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-sound-title"],["static-attr","for","masterVolume"],["flush-element"],["append",["unknown",["masterVolumeLabel"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-sound-row-slider"],["flush-element"],["text","\\n    "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","disabled","handleOnSlideEnd"],["masterVolume",["get",["masterVolume"]],true,true,["get",["soundDisabled"]],["helper",["action"],[["get",[null]],"onSliderSlideEnd"],null]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsections"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-sound-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","sfxEnabled"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","sfxEnabled",["helper",["mut"],[["get",["sfxEnabled"]]],null],["get",["soundDisabled"]]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","sfxEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_sfx_label"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-title"],["static-attr","for","sfxVolume"],["flush-element"],["append",["unknown",["sfxVolumeLabel"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row-slider"],["flush-element"],["text","\\n        "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","disabled","handleOnSlideEnd"],["sfxVolume",["get",["sfxVolume"]],true,true,["get",["sfxDisabled"]],["helper",["action"],[["get",[null]],"onSliderSlideEnd"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","ambientSfxEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","ambientSfxEnabled",["helper",["mut"],[["get",["ambientSfxEnabled"]]],null],["get",["sfxDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ambientSfxEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_ambient_sound_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","pickChampVoEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","pickChampVoEnabled",["helper",["mut"],[["get",["pickChampVoEnabled"]]],null],["get",["sfxDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","pickChampVoEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_pick_quote_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","banChampVoEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","banChampVoEnabled",["helper",["mut"],[["get",["banChampVoEnabled"]]],null],["get",["sfxDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","banChampVoEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_ban_quote_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-sound-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","musicEnabled"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","musicEnabled",["helper",["mut"],[["get",["musicEnabled"]]],null],["get",["soundDisabled"]]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","musicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_music_label"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-title"],["static-attr","for","musicVolume"],["flush-element"],["append",["unknown",["musicVolumeLabel"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row-slider"],["flush-element"],["text","\\n        "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","disabled","handleOnSlideEnd"],["musicVolume",["get",["musicVolume"]],true,true,["get",["musicDisabled"]],["helper",["action"],[["get",[null]],"onSliderSlideEnd"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","championSelectionMusicEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","championSelectionMusicEnabled",["helper",["mut"],[["get",["championSelectionMusicEnabled"]]],null],["get",["musicDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","championSelectionMusicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_champion_selection_music_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","ambienceMusicEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","ambienceMusicEnabled",["helper",["mut"],[["get",["ambienceMusicEnabled"]]],null],["get",["musicDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ambienceMusicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_ambience_music_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","clientAmbienceMusicEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","clientAmbienceMusicEnabled",["helper",["mut"],[["get",["clientAmbienceMusicEnabled"]]],null],["get",["musicDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","clientAmbienceMusicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_client_ambience_music_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","loginMusicEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","loginMusicEnabled",["helper",["mut"],[["get",["loginMusicEnabled"]]],null],["get",["musicDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","loginMusicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_login_music_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "KU11LrYk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\sound.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\sound.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-sound-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","masterSoundEnabled"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","masterSoundEnabled",["helper",["mut"],[["get",["masterSoundEnabled"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","masterSoundEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_master_label"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-sound-title"],["static-attr","for","masterVolume"],["flush-element"],["append",["unknown",["masterVolumeLabel"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-sound-row-slider"],["flush-element"],["text","\\n    "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","disabled","handleOnSlideEnd"],["masterVolume",["get",["masterVolume"]],true,true,["get",["soundDisabled"]],["helper",["action"],[["get",[null]],"onSliderSlideEnd"],null]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsections"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-sound-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","sfxEnabled"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","sfxEnabled",["helper",["mut"],[["get",["sfxEnabled"]]],null],["get",["soundDisabled"]]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","sfxEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_sfx_label"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-title"],["static-attr","for","sfxVolume"],["flush-element"],["append",["unknown",["sfxVolumeLabel"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row-slider"],["flush-element"],["text","\\n        "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","disabled","handleOnSlideEnd"],["sfxVolume",["get",["sfxVolume"]],true,true,["get",["sfxDisabled"]],["helper",["action"],[["get",[null]],"onSliderSlideEnd"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","ambientSfxEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","ambientSfxEnabled",["helper",["mut"],[["get",["ambientSfxEnabled"]]],null],["get",["sfxDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ambientSfxEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_ambient_sound_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","pickChampVoEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","pickChampVoEnabled",["helper",["mut"],[["get",["pickChampVoEnabled"]]],null],["get",["sfxDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","pickChampVoEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_pick_quote_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","banChampVoEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","banChampVoEnabled",["helper",["mut"],[["get",["banChampVoEnabled"]]],null],["get",["sfxDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","banChampVoEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_ban_quote_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-sound-row"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","musicEnabled"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","musicEnabled",["helper",["mut"],[["get",["musicEnabled"]]],null],["get",["soundDisabled"]]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","musicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_music_label"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-title"],["static-attr","for","musicVolume"],["flush-element"],["append",["unknown",["musicVolumeLabel"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row-slider"],["flush-element"],["text","\\n        "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","disabled","handleOnSlideEnd"],["musicVolume",["get",["musicVolume"]],true,true,["get",["musicDisabled"]],["helper",["action"],[["get",[null]],"onSliderSlideEnd"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","championSelectionMusicEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","championSelectionMusicEnabled",["helper",["mut"],[["get",["championSelectionMusicEnabled"]]],null],["get",["musicDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","championSelectionMusicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_champion_selection_music_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","ambienceMusicEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","ambienceMusicEnabled",["helper",["mut"],[["get",["ambienceMusicEnabled"]]],null],["get",["musicDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ambienceMusicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_ambience_music_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","clientAmbienceMusicEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","clientAmbienceMusicEnabled",["helper",["mut"],[["get",["clientAmbienceMusicEnabled"]]],null],["get",["musicDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","clientAmbienceMusicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_client_ambience_music_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-sound-subsection-row"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","for","loginMusicEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","loginMusicEnabled",["helper",["mut"],[["get",["loginMusicEnabled"]]],null],["get",["musicDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","loginMusicEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","lol_settings_sound_enable_login_music_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "RuUdbnQU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\voice.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\voice.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-party-join"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_party_join_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoin"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","autoJoin",["helper",["mut"],[["get",["autoJoin"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoin"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_party_auto_join"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowAgreementSection"]]],null,8],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,7],["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","muteOnConnect"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","muteOnConnect",["helper",["mut"],[["get",["muteOnConnect"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","muteOnConnect"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_connect_mute"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_input_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row input-mode-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-label"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_input_device_label"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-uikit-framed-dropdown",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["captureDevices"]]],null,6],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-parties-mic-test-button",[]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-volume-label"],["flush-element"],["text","\\n        "],["append",["unknown",["inputVolumeLabel"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-input-volume-slider"],["flush-element"],["text","\\n        "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["inputVolume",["get",["inputVolume"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_input_mode_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-radio-input",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["inputModes"]]],null,5],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isInputModeVoice"]]],null,4,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkKey"],null],"voice_settings_ptt_label","party"]]],false],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,0],["text","      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isInputModePushToTalk"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity-label"],["flush-element"],["text","\\n          "],["append",["unknown",["inputModeVoiceSensitivityLabel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voice-sensitivity-slider-wrapper"],["flush-element"],["text","\\n          "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["vadSensitivity",["get",["vadSensitivity"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,3]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","class","lol-settings-voice-input-mode-option"],["dynamic-attr","selected",["unknown",["inputMode","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectInputMode",["get",["inputMode","name"]]],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["inputMode","label"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["inputMode"]},{"statements":[["text","            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["deviceInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectCaptureDevice",["get",["deviceInfo","handle"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["deviceInfo","name"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["deviceInfo"]},{"statements":[["text","      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoinTeamVoice"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","autoJoinTeamVoice",["helper",["mut"],[["get",["autoJoinTeamVoice"]]],null],["get",["isTeamVoiceDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoinTeamVoice"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_team_voice_enabled"]]],null],false],["text","\\n          "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement-description"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_agreement_description"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","lol-settings-voice-agreement-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"viewAgreement"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_agreement_view_button"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "LK4k4Du9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\voice.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\voice.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-party-join"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_party_join_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoin"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","autoJoin",["helper",["mut"],[["get",["autoJoin"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoin"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_party_auto_join"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,7],["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","muteOnConnect"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","muteOnConnect",["helper",["mut"],[["get",["muteOnConnect"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","muteOnConnect"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_connect_mute"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_input_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row input-mode-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-label"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_input_device_label"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-uikit-framed-dropdown",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["captureDevices"]]],null,6],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-parties-mic-test-button",[]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-volume-label"],["flush-element"],["text","\\n        "],["append",["unknown",["inputVolumeLabel"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-input-volume-slider"],["flush-element"],["text","\\n        "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["inputVolume",["get",["inputVolume"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_input_mode_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-radio-input",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["inputModes"]]],null,5],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isInputModeVoice"]]],null,4,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkKey"],null],"voice_settings_ptt_label","party"]]],false],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,0],["text","      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isInputModePushToTalk"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity-label"],["flush-element"],["text","\\n          "],["append",["unknown",["inputModeVoiceSensitivityLabel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voice-sensitivity-slider-wrapper"],["flush-element"],["text","\\n          "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["vadSensitivity",["get",["vadSensitivity"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,3]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","class","lol-settings-voice-input-mode-option"],["dynamic-attr","selected",["unknown",["inputMode","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectInputMode",["get",["inputMode","name"]]],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["inputMode","label"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["inputMode"]},{"statements":[["text","            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["deviceInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectCaptureDevice",["get",["deviceInfo","handle"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["deviceInfo","name"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["deviceInfo"]},{"statements":[["text","      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoinTeamVoice"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","autoJoinTeamVoice",["helper",["mut"],[["get",["autoJoinTeamVoice"]]],null],["get",["isTeamVoiceDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoinTeamVoice"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_team_voice_enabled"]]],null],false],["text","\\n          "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "dBgj4BlA",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\block-list.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-blocked-summoners"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","block-summoner-text"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","blocked_players_block_text"]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["helper",["player-name-input"],null,[["enableSubmitButton","submitButtonText","disabled","enterKeyPressHandler","validationHandler","successHandler","errorHandler"],[true,["get",["tra","blocked_summoners_block_button"]],["get",["working"]],["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["helper",["action"],[["get",[null]],"validationHandler"],null],["helper",["action"],[["get",[null]],"successHandler"],null],["helper",["action"],[["get",[null]],"errorHandler"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["blockedPlayers","length"]]],null,2,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","no-blocked-summoners"],["flush-element"],["append",["unknown",["tra","blocked_summoners_empty"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["blocked-player"],null,[["player","unblock"],[["get",["summoner"]],["helper",["action"],[["get",[null]],"unblock"],null]]]],false],["text","\\n"]],"locals":["summoner"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","blocked-summoners-info"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_block_list_settings_label_blocked_players"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","blocked-summoners-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["blockedPlayers"]]],[["key"],["summonerId"]],1],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "J0RyDSd/",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\block-list.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-blocked-summoners"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","block-summoner-text"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","blocked_players_block_text"]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["helper",["player-name-input"],null,[["enableSubmitButton","submitButtonText","disabled","enterKeyPressHandler","validationHandler","successHandler","errorHandler"],[true,["get",["tra","blocked_summoners_block_button"]],["get",["working"]],["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["helper",["action"],[["get",[null]],"validationHandler"],null],["helper",["action"],[["get",[null]],"successHandler"],null],["helper",["action"],[["get",[null]],"errorHandler"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["blockedPlayers","length"]]],null,2,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","no-blocked-summoners"],["flush-element"],["append",["unknown",["tra","blocked_summoners_empty"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["blocked-player"],null,[["player","unblock"],[["get",["summoner"]],["helper",["action"],[["get",[null]],"unblock"],null]]]],false],["text","\\n"]],"locals":["summoner"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","blocked-summoners-info"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_block_list_settings_label_blocked_players"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","blocked-summoners-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["blockedPlayers"]]],[["key"],["summonerId"]],1],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "DqQpOqmX",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\game-hotkeys.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\game-hotkeys.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["append",["helper",["game-hotkeys-content"],null,[["inputSettings","inputSettingsSchema","gameSettingsRemote","gameSettingsSchema","handleComponentInitialized"],[["get",["inputSettings"]],["get",["inputSettingsSchema"]],["get",["gameSettingsRemote"]],["get",["gameSettingsSchema"]],["helper",["action"],[["get",[null]],"handleComponentInitialized"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "lSM0vQmF",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\game-hotkeys.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\game-hotkeys.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["append",["helper",["game-hotkeys-content"],null,[["inputSettings","inputSettingsSchema","gameSettingsRemote","gameSettingsSchema","handleComponentInitialized"],[["get",["inputSettings"]],["get",["inputSettingsSchema"]],["get",["gameSettingsRemote"]],["get",["gameSettingsSchema"]],["helper",["action"],[["get",[null]],"handleComponentInitialized"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "dhpuj+FZ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\game-sound.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\game-sound.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["append",["helper",["game-sound-content"],null,[["gameSettings","gameSettingsSchema","handleComponentInitialized"],[["get",["gameSettings"]],["get",["gameSettingsSchema"]],["helper",["action"],[["get",[null]],"handleComponentInitialized"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "OifK6kRK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\game-sound.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\game-sound.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["append",["helper",["game-sound-content"],null,[["gameSettings","gameSettingsSchema","handleComponentInitialized"],[["get",["gameSettings"]],["get",["gameSettingsSchema"]],["helper",["action"],[["get",[null]],"handleComponentInitialized"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "IO1elaTy",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\game-interface.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\game-interface.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["append",["helper",["game-interface-content"],null,[["gameSettings","gameSettingsSchema","handleComponentInitialized"],[["get",["gameSettings"]],["get",["gameSettingsSchema"]],["helper",["action"],[["get",[null]],"handleComponentInitialized"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "H/DK8C71",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\game-interface.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\game-interface.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["append",["helper",["game-interface-content"],null,[["gameSettings","gameSettingsSchema","handleComponentInitialized"],[["get",["gameSettings"]],["get",["gameSettingsSchema"]],["helper",["action"],[["get",[null]],"handleComponentInitialized"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "7ZOgsUoV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\game-gameplay.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\game-gameplay.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["append",["helper",["game-gameplay-content"],null,[["gameSettings","gameSettingsSchema","handleComponentInitialized"],[["get",["gameSettings"]],["get",["gameSettingsSchema"]],["helper",["action"],[["get",[null]],"handleComponentInitialized"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "KAvDU0vm",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\game-gameplay.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\game-gameplay.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["append",["helper",["game-gameplay-content"],null,[["gameSettings","gameSettingsSchema","handleComponentInitialized"],[["get",["gameSettings"]],["get",["gameSettingsSchema"]],["helper",["action"],[["get",[null]],"handleComponentInitialized"],null]]]],false],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "KxM2S0w/",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\replays.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\replays.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-root-title"],["flush-element"],["append",["unknown",["tra","label_replays_folder_locations_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-root-description"],["flush-element"],["append",["unknown",["tra","label_replays_folder_locations_description"]],false],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-title"],["flush-element"],["append",["unknown",["tra","label_replays_folder_path"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-value"],["flush-element"],["append",["unknown",["replaysPath"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"changeReplaysFolderPath"],null],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-title"],["flush-element"],["append",["unknown",["tra","label_highlights_folder_path"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-value"],["flush-element"],["append",["unknown",["highlightsPath"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"changeHighlightsFolderPath"],null],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-hints-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-hints-title"],["flush-element"],["append",["unknown",["tra","label_hints_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-hints-description"],["flush-element"],["append",["unknown",["tra","label_hints_description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "jOjno/3C",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\replays.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\replays.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-root-title"],["flush-element"],["append",["unknown",["tra","label_replays_folder_locations_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-root-description"],["flush-element"],["append",["unknown",["tra","label_replays_folder_locations_description"]],false],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-title"],["flush-element"],["append",["unknown",["tra","label_replays_folder_path"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-value"],["flush-element"],["append",["unknown",["replaysPath"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"changeReplaysFolderPath"],null],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-title"],["flush-element"],["append",["unknown",["tra","label_highlights_folder_path"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-value"],["flush-element"],["append",["unknown",["highlightsPath"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","replays-settings-folder-path-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"changeHighlightsFolderPath"],null],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","replays-settings-hints-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-hints-title"],["flush-element"],["append",["unknown",["tra","label_hints_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","replays-settings-hints-description"],["flush-element"],["append",["unknown",["tra","label_hints_description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "M+wN1dQ6",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\privacy-notice.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","license-agreement-settings"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","license-agreement-settings-title"],["flush-element"],["append",["unknown",["tra","license_agreement_title_privacy_notice"]],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","license-agreement-settings-content"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"handleUrlClick"],null],null],["flush-element"],["append",["helper",["sanitize"],[["get",["privacyPolicyText"]]],null],false],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "nJG0TD25",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\privacy-notice.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","license-agreement-settings"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","license-agreement-settings-title"],["flush-element"],["append",["unknown",["tra","license_agreement_title_privacy_notice"]],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","license-agreement-settings-content"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"handleUrlClick"],null],null],["flush-element"],["append",["helper",["sanitize"],[["get",["privacyPolicyText"]]],null],false],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "YxDkc1+R",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\terms-of-use.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","license-agreement-settings"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","license-agreement-settings-title"],["flush-element"],["append",["unknown",["tra","license_agreement_title_tou"]],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","license-agreement-settings-content"],["flush-element"],["append",["unknown",["licenseAgreementText"]],false],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "IscAcK/v",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\terms-of-use.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","license-agreement-settings"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","license-agreement-settings-title"],["flush-element"],["append",["unknown",["tra","license_agreement_title_tou"]],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","license-agreement-settings-content"],["flush-element"],["append",["unknown",["licenseAgreementText"]],false],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "PFOPMdJg",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\thirdparty-licenses.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","lol-settings-license"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","license_title"]],false],["append",["unknown",["versionInfo","version"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","subtitle"],["flush-element"],["append",["unknown",["tra","third_party_software"]],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","license-text-content"],["flush-element"],["text","\\n    "],["append",["unknown",["licenseText"]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "khj8Aztw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\thirdparty-licenses.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","lol-settings-license"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","license_title"]],false],["append",["unknown",["versionInfo","version"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","subtitle"],["flush-element"],["append",["unknown",["tra","third_party_software"]],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","license-text-content"],["flush-element"],["text","\\n    "],["append",["unknown",["licenseText"]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "diny2ddP",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\loading.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","style","display: flex; align-items: center; height: 100%;"],["flush-element"],["text","\\n  "],["append",["helper",["uikit-spinner"],null,[["style"],["margin-left: auto; margin-right: auto;"]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "ye8Tu70B",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\loading.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","style","display: flex; align-items: center; height: 100%;"],["flush-element"],["text","\\n  "],["append",["helper",["uikit-spinner"],null,[["style"],["margin-left: auto; margin-right: auto;"]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "VnbSrWUz",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\version.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\version.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-version"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"onGameClientVersionClick"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_version_game_client"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","subtitle"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayLegacyPatchNumbers"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["supportedGameReleasesEnabled"]]],null,2],["text","  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_version_league_client"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","subtitle"],["flush-element"],["text","\\n      "],["append",["unknown",["leagueClientVersion"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","error-box"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-icon-red-x-mark"],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_version_game_client_patching_disabled"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectRelease",["get",["release"]]],null],null],["dynamic-attr","selected",["unknown",["release","selected"]],null],["flush-element"],["text","\\n          "],["append",["unknown",["release","artifact_id"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["release"]},{"statements":[["text","    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","text-filter"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["type","class","value","input","placeholder"],["search","filter-input",["get",["supportedGameReleaseSearchTerm"]],["helper",["action"],[["get",[null]],"onSearch"],null],"Filter Supported Versions"]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["filteredSupportedGameReleases"]]],null,1],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["checkingForPatchesDisabled"]]],null,0],["text","    "],["open-element","p",[]],["static-attr","class","warning"],["flush-element"],["append",["unknown",["gamePatchWarning"]],false],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","class","button-group"],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"startPatchingRelease"],null],null],["dynamic-attr","disabled",["unknown",["checkingForPatchesDisabled"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_version_game_client_start_patching"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"refreshReleases"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_version_game_client_start_refresh"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["lolTextShorthand"]],false],["text","\\n        "],["append",["unknown",["lolExternalPatchVersion"]],false],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["tftTextShorthand"]],false],["text","\\n        "],["append",["unknown",["tftExternalPatchVersion"]],false],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["gameClientVersion"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["gameClientVersion"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Yzsvet+e",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\version.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\version.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-version"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"onGameClientVersionClick"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_version_game_client"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","subtitle"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayLegacyPatchNumbers"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["supportedGameReleasesEnabled"]]],null,2],["text","  "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_version_league_client"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","subtitle"],["flush-element"],["text","\\n      "],["append",["unknown",["leagueClientVersion"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","p",[]],["static-attr","class","error-box"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-icon-red-x-mark"],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_version_game_client_patching_disabled"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectRelease",["get",["release"]]],null],null],["dynamic-attr","selected",["unknown",["release","selected"]],null],["flush-element"],["text","\\n          "],["append",["unknown",["release","artifact_id"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["release"]},{"statements":[["text","    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","text-filter"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["type","class","value","input","placeholder"],["search","filter-input",["get",["supportedGameReleaseSearchTerm"]],["helper",["action"],[["get",[null]],"onSearch"],null],"Filter Supported Versions"]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["filteredSupportedGameReleases"]]],null,1],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["checkingForPatchesDisabled"]]],null,0],["text","    "],["open-element","p",[]],["static-attr","class","warning"],["flush-element"],["append",["unknown",["gamePatchWarning"]],false],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","class","button-group"],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"startPatchingRelease"],null],null],["dynamic-attr","disabled",["unknown",["checkingForPatchesDisabled"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_version_game_client_start_patching"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"refreshReleases"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_version_game_client_start_refresh"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["lolTextShorthand"]],false],["text","\\n        "],["append",["unknown",["lolExternalPatchVersion"]],false],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["tftTextShorthand"]],false],["text","\\n        "],["append",["unknown",["tftExternalPatchVersion"]],false],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["gameClientVersion"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["gameClientVersion"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "9E5kVkFV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\legal-statements.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\legal-statements.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-legal-statements"],["flush-element"],["text","\\n"],["block",["if"],[["get",["jpLegalStatementsRequired"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_legal_statements_no_additional"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","title"],["dynamic-attr","lang",["unknown",["tra","lol_settings_legal_statements_lang"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_legal_statements_payment_check"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","subtitle lol-settings-legal-statements-link"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","lol_settings_legal_statements_payment_check_link"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","title"],["dynamic-attr","lang",["unknown",["tra","lol_settings_legal_statements_lang"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_legal_statements_commercial_transactions"]],false],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","subtitle lol-settings-legal-statements-link"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","lol_settings_legal_statements_commercial_transactions_link"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "IVrNGCVF",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\legal-statements.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\legal-statements.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-legal-statements"],["flush-element"],["text","\\n"],["block",["if"],[["get",["jpLegalStatementsRequired"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_legal_statements_no_additional"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","title"],["dynamic-attr","lang",["unknown",["tra","lol_settings_legal_statements_lang"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_legal_statements_payment_check"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","subtitle lol-settings-legal-statements-link"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","lol_settings_legal_statements_payment_check_link"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","title"],["dynamic-attr","lang",["unknown",["tra","lol_settings_legal_statements_lang"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_settings_legal_statements_commercial_transactions"]],false],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","subtitle lol-settings-legal-statements-link"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","lol_settings_legal_statements_commercial_transactions_link"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "BB1Ahj+y",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\modal-header.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\modal-header.js\\" "],["text","\\n"],["open-element","settings-plugin-header",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-title-bar"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-title"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-header-group-name"],["flush-element"],["append",["unknown",["groupName"]],false],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-title-break"],["flush-element"],["text","/"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-title-current"],["flush-element"],["append",["unknown",["categoryName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["canReset"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-flat-button-secondary",[]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"showResetConfirmDialog"],null],null],["static-attr","class","lol-settings-reset-button"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_restore_default_button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "bcVatduz",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\modal-header.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\modal-header.js\\" "],["text","\\n"],["open-element","settings-plugin-header",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-title-bar"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-title"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-header-group-name"],["flush-element"],["append",["unknown",["groupName"]],false],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-title-break"],["flush-element"],["text","/"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-title-current"],["flush-element"],["append",["unknown",["categoryName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["canReset"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-flat-button-secondary",[]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"showResetConfirmDialog"],null],null],["static-attr","class","lol-settings-reset-button"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_restore_default_button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "ocq6lw2d",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\modal-footer.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\modal-footer.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-button-group",[]],["static-attr","type","window-popup"],["static-attr","class","lol-settings-close-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","lol-settings-close-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"closeButtonClick"],null],null],["flush-element"],["text","\\n    "],["append",["unknown",["tra","settings_done_button"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "4RmXKSsP",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\modal-footer.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\modal-footer.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-button-group",[]],["static-attr","type","window-popup"],["static-attr","class","lol-settings-close-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","lol-settings-close-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"closeButtonClick"],null],null],["flush-element"],["text","\\n    "],["append",["unknown",["tra","settings_done_button"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "gDNdiJXQ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\navigation-bar-group.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\navigation-bar-group.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-nav-title"],["flush-element"],["append",["unknown",["groupName"]],false],["close-element"],["text","\\n"],["open-element","lol-uikit-navigation-bar",[]],["static-attr","direction","down"],["static-attr","type","tabbed"],["dynamic-attr","selectedindex",["unknown",["selectedIndex"]],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "Brpwz2NR",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\navigation-bar-group.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\navigation-bar-group.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-nav-title"],["flush-element"],["append",["unknown",["groupName"]],false],["close-element"],["text","\\n"],["open-element","lol-uikit-navigation-bar",[]],["static-attr","direction","down"],["static-attr","type","tabbed"],["dynamic-attr","selectedindex",["unknown",["selectedIndex"]],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "U9fmhYoL",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\navigation-bar-group-item.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\navigation-bar-group-item.js\\" "],["text","\\n"],["block",["unless"],[["get",["isDisabled"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-navigation-item",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectItem",["get",["category"]]],null],null],["static-attr","class","lol-settings-nav"],["dynamic-attr","name",["unknown",["category","name"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["flush-element"],["append",["unknown",["categoryTitleKeyTra"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "7eo3AY2M",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\navigation-bar-group-item.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\navigation-bar-group-item.js\\" "],["text","\\n"],["block",["unless"],[["get",["isDisabled"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-navigation-item",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectItem",["get",["category"]]],null],null],["static-attr","class","lol-settings-nav"],["dynamic-attr","name",["unknown",["category","name"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["flush-element"],["append",["unknown",["categoryTitleKeyTra"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "jYhS+k5/",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\blocked-player.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\blocked-player.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-block-list-player"],["modifier",["action"],[["get",[null]],"remove",["get",["player","id"]]]],["flush-element"],["text","\\n  "],["open-element","lol-social-avatar",[]],["static-attr","class","icon"],["static-attr","hideindicator",""],["static-attr","disabled",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplayRiotId"]]],null,3,2],["block",["if"],[["get",["unblocking"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","blocked-player-unblock-button"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["20px","20px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","blocked-player-game-name"],["flush-element"],["text","\\n      "],["append",["unknown",["summonerName"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","blocked-player-game-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","gameName","tagLine"],["short",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n      "],["open-element","span",[]],["static-attr","class","blocked-player-game-name-tagline"],["flush-element"],["text","\\n        "],["append",["helper",["player-name"],null,[["format","gameName","tagLine"],["full",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Eij1OyOm",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\blocked-player.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\blocked-player.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-block-list-player"],["modifier",["action"],[["get",[null]],"remove",["get",["player","id"]]]],["flush-element"],["text","\\n  "],["open-element","lol-social-avatar",[]],["static-attr","class","icon"],["static-attr","hideindicator",""],["static-attr","disabled",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplayRiotId"]]],null,3,2],["block",["if"],[["get",["unblocking"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","blocked-player-unblock-button"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["20px","20px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","blocked-player-game-name"],["flush-element"],["text","\\n      "],["append",["unknown",["summonerName"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","blocked-player-game-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","gameName","tagLine"],["short",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n      "],["open-element","span",[]],["static-attr","class","blocked-player-game-name-tagline"],["flush-element"],["text","\\n        "],["append",["helper",["player-name"],null,[["format","gameName","tagLine"],["full",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "YSnpSMWA",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\block-list-error.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\block-list-error.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","tooltip-small"],["static-attr","style","width: 200px; white-space: normal;"],["flush-element"],["text","\\n"],["block",["if"],[["get",["_errorPacketLocal"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["_errorPacketLocal","title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["_errorPacketLocal","text"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "ACFiQz9t",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\block-list-error.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\block-list-error.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","tooltip-small"],["static-attr","style","width: 200px; white-space: normal;"],["flush-element"],["text","\\n"],["block",["if"],[["get",["_errorPacketLocal"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["_errorPacketLocal","title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["_errorPacketLocal","text"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "L3Jy3OiV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\repair-game-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\repair-game-button.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-repair-title"],["flush-element"],["append",["unknown",["tra","lol_general_settings_troubleshooting_title"]],false],["close-element"],["text","\\n"],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-repair-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"initiateRepairClick"],null],null],["flush-element"],["text","\\n  "],["append",["unknown",["tra","lol_general_settings_button_init_game_repair"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "IrfsW4NC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\repair-game-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\repair-game-button.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-repair-title"],["flush-element"],["append",["unknown",["tra","lol_general_settings_troubleshooting_title"]],false],["close-element"],["text","\\n"],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-repair-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"initiateRepairClick"],null],null],["flush-element"],["text","\\n  "],["append",["unknown",["tra","lol_general_settings_button_init_game_repair"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "lvwZcVka",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\publishing-locale.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\publishing-locale.js\\" "],["text","\\n"],["block",["if"],[["get",["showDropdown"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","value",["unknown",["option","value"]],null],["dynamic-attr","selected",["unknown",["option","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"onPublishingLocaleSelected",["get",["option","value"]]],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["option","label"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-publishing-locale-preference-label"],["flush-element"],["append",["unknown",["tra","lol_publishing_locale_settings_dropdown_label"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-publishing-locale-preference-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["dropdownOptions"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "MX6l6kP4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\publishing-locale.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\publishing-locale.js\\" "],["text","\\n"],["block",["if"],[["get",["showDropdown"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","value",["unknown",["option","value"]],null],["dynamic-attr","selected",["unknown",["option","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"onPublishingLocaleSelected",["get",["option","value"]]],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["option","label"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-publishing-locale-preference-label"],["flush-element"],["append",["unknown",["tra","lol_publishing_locale_settings_dropdown_label"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-publishing-locale-preference-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["dropdownOptions"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "fikUdlNz",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\account-verification.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\account-verification.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-account-verification-row"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-account-verification-title"],["flush-element"],["append",["unknown",["tra","lol_account_verification_settings_acc_ver_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-account-verification-icon-mobile"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isVerified"]]],null,4],["block",["unless"],[["get",["isVerified"]]],null,3],["text","\\n"],["block",["unless"],[["get",["isVerified"]]],null,2],["text","\\n"],["block",["if"],[["get",["isVerified"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-account-verification-button-change"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"showRemoveProcess"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_account_verification_settings_button_sms_change"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","acc-ver-verify-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","lol_account_verification_settings_button_sms_verify_tooltip"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-account-verification-button-verify"],["dynamic-attr","disabled",["unknown",["cannotVerify"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"showVerificationProcess"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_account_verification_settings_button_sms_verify"]],false],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","disabled"],["left",["get",["canVerify"]]]],1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-icon-red-x-mark"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-icon-green-check-mark"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-account-verification-verified-label"],["flush-element"],["append",["unknown",["tra","lol_account_verification_settings_acc_ver_verified_label"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "4ZWD4Rfu",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\account-verification.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\account-verification.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-account-verification-row"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-account-verification-title"],["flush-element"],["append",["unknown",["tra","lol_account_verification_settings_acc_ver_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-account-verification-icon-mobile"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isVerified"]]],null,4],["block",["unless"],[["get",["isVerified"]]],null,3],["text","\\n"],["block",["unless"],[["get",["isVerified"]]],null,2],["text","\\n"],["block",["if"],[["get",["isVerified"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-account-verification-button-change"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"showRemoveProcess"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_account_verification_settings_button_sms_change"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","notification"],["static-attr","class","acc-ver-verify-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","lol_account_verification_settings_button_sms_verify_tooltip"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-account-verification-button-verify"],["dynamic-attr","disabled",["unknown",["cannotVerify"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"showVerificationProcess"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","lol_account_verification_settings_button_sms_verify"]],false],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","disabled"],["left",["get",["canVerify"]]]],1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-icon-red-x-mark"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-icon-green-check-mark"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-account-verification-verified-label"],["flush-element"],["append",["unknown",["tra","lol_account_verification_settings_acc_ver_verified_label"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "KXJ7mY9h",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\settings-slider.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\settings-slider.js\\" "],["text","\\n"],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-slider"],["dynamic-attr","value",["unknown",["value"]],null],["dynamic-attr","percentage",["unknown",["percentage"]],null],["dynamic-attr","disabled",["unknown",["disabled"]],null],["dynamic-attr","clickset",["unknown",["clickset"]],null],["flush-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "w5Nsl5H2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\settings-slider.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\settings-slider.js\\" "],["text","\\n"],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-slider"],["dynamic-attr","value",["unknown",["value"]],null],["dynamic-attr","percentage",["unknown",["percentage"]],null],["dynamic-attr","disabled",["unknown",["disabled"]],null],["dynamic-attr","clickset",["unknown",["clickset"]],null],["flush-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "woOcL3A9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\push-to-talk-key.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\push-to-talk-key.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-label"],["flush-element"],["text","\\n        "],["append",["unknown",["pushToTalkKeyLabel"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isUnbound"]]],null,3,2],["close-element"],["text","\\n"],["block",["if"],[["get",["displayKey"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["text","\\n                "],["append",["unknown",["displayKey"]],false],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-icon"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-modifier"],["flush-element"],["text","\\n                "],["append",["unknown",["pushToTalkKeyModifier"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-key"],["dynamic-attr","style",["concat",["font-size: ",["unknown",["pushToTalkKeyFontSize"]],";"]]],["flush-element"],["text","\\n                "],["append",["unknown",["pushToTalkKey"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-speaker-wrapper"],["flush-element"],["text","\\n                "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-ptt-voice-type-icon ",["unknown",["voiceTypeIconClass"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-speaker"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound-square"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound-text"],["flush-element"],["append",["unknown",["setKeybindText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "fF4WGt1M",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\push-to-talk-key.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\push-to-talk-key.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-label"],["flush-element"],["text","\\n        "],["append",["unknown",["pushToTalkKeyLabel"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isUnbound"]]],null,3,2],["close-element"],["text","\\n"],["block",["if"],[["get",["displayKey"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["text","\\n                "],["append",["unknown",["displayKey"]],false],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-icon"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-modifier"],["flush-element"],["text","\\n                "],["append",["unknown",["pushToTalkKeyModifier"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-key"],["dynamic-attr","style",["concat",["font-size: ",["unknown",["pushToTalkKeyFontSize"]],";"]]],["flush-element"],["text","\\n                "],["append",["unknown",["pushToTalkKey"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-speaker-wrapper"],["flush-element"],["text","\\n                "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-ptt-voice-type-icon ",["unknown",["voiceTypeIconClass"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-speaker"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound-square"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound-text"],["flush-element"],["append",["unknown",["setKeybindText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "8OmQIUIf",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-sound-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-sound-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_MASTER_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["MasterVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","MasterVolume"],["dynamic-attr","value",["concat",[["unknown",["MasterVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","MasterMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","MasterMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_MUSIC_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["MusicVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","MusicVolume"],["dynamic-attr","value",["concat",[["unknown",["MusicVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","MusicMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","MusicMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_ANNOUNCER_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["AnnouncerVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","AnnouncerVolume"],["dynamic-attr","value",["concat",[["unknown",["AnnouncerVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","AnnouncerMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","AnnouncerMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_VOICE_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["VoiceVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","VoiceVolume"],["dynamic-attr","value",["concat",[["unknown",["VoiceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","VoiceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","VoiceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_FX_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["SfxVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","SfxVolume"],["dynamic-attr","value",["concat",[["unknown",["SfxVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","SfxMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","SfxMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_NOTIFICATIONS_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["NotificationsVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","NotificationsVolume"],["dynamic-attr","value",["concat",[["unknown",["NotificationsVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","NotificationsMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","NotificationsMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_AMBIENCE_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["AmbienceVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","AmbienceVolume"],["dynamic-attr","value",["concat",[["unknown",["AmbienceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","AmbienceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","AmbienceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_PINGS_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["PingsVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","PingsVolume"],["dynamic-attr","value",["concat",[["unknown",["PingsVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","PingsMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","PingsMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-dropdown-item lol-settings-ingame-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-dropdown-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-ingame-dropdown"],["static-attr","id","ThemeMusic"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","0"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_UPDATED"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","1"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_CLASSIC"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-checkbox lol-settings-ingame-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-video-checkbox"],["static-attr","name","EnableAudio"],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","EnableAudio"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","name","EnableAudio"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_DISABLE_SOUND_LABEL"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","class","lol-settings-ingame-sound-description-text"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_DISABLE_SOUND_DESC"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "LkTitRx4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-sound-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-sound-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_MASTER_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["MasterVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","MasterVolume"],["dynamic-attr","value",["concat",[["unknown",["MasterVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","MasterMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","MasterMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_MUSIC_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["MusicVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","MusicVolume"],["dynamic-attr","value",["concat",[["unknown",["MusicVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","MusicMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","MusicMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_ANNOUNCER_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["AnnouncerVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","AnnouncerVolume"],["dynamic-attr","value",["concat",[["unknown",["AnnouncerVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","AnnouncerMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","AnnouncerMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_VOICE_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["VoiceVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","VoiceVolume"],["dynamic-attr","value",["concat",[["unknown",["VoiceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","VoiceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","VoiceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_FX_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["SfxVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","SfxVolume"],["dynamic-attr","value",["concat",[["unknown",["SfxVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","SfxMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","SfxMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_NOTIFICATIONS_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["NotificationsVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","NotificationsVolume"],["dynamic-attr","value",["concat",[["unknown",["NotificationsVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","NotificationsMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","NotificationsMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_AMBIENCE_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["AmbienceVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","AmbienceVolume"],["dynamic-attr","value",["concat",[["unknown",["AmbienceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","AmbienceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","AmbienceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_PINGS_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["PingsVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","PingsVolume"],["dynamic-attr","value",["concat",[["unknown",["PingsVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","PingsMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","PingsMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-dropdown-item lol-settings-ingame-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-dropdown-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-ingame-dropdown"],["static-attr","id","ThemeMusic"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","0"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_UPDATED"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","1"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_CLASSIC"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-checkbox lol-settings-ingame-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-video-checkbox"],["static-attr","name","EnableAudio"],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","EnableAudio"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","name","EnableAudio"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_DISABLE_SOUND_LABEL"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","class","lol-settings-ingame-sound-description-text"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_DISABLE_SOUND_DESC"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "whNfrQ2o",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-interface-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-interface-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_SIZE_TITLE"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_HUD_SCALE"]],false],["text",":\\n    "],["append",["unknown",["scaleDisplays","GlobalScale"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-interface-slider"],["static-attr","for","GlobalScale"],["dynamic-attr","value",["concat",[["unknown",["scaleDisplays","GlobalScale"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_CHAT_SCALE"]],false],["text",":\\n    "],["append",["unknown",["scaleDisplays","ChatScale"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-interface-slider"],["static-attr","for","ChatScale"],["dynamic-attr","value",["concat",[["unknown",["scaleDisplays","ChatScale"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_MINIMAP_SCALE"]],false],["text",":\\n    "],["append",["unknown",["scaleDisplays","MinimapScale"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-interface-slider"],["static-attr","for","MinimapScale"],["dynamic-attr","value",["concat",[["unknown",["scaleDisplays","MinimapScale"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_OBJECTIVE_PLANNING_SCALE"]],false],["text",":\\n    "],["append",["unknown",["scaleDisplays","ObjectiveVoteScale"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-interface-slider"],["static-attr","for","ObjectiveVoteScale"],["dynamic-attr","value",["concat",[["unknown",["scaleDisplays","ObjectiveVoteScale"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["each"],[["get",["checkBoxGroups"]]],null,6]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","value",["get",["index"]],null],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["dropdownOption","title"]]],null],false],["close-element"],["text","\\n"]],"locals":["dropdownOption","index"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-dropdown-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["dropdown","title"]]],null],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-interface-dropdown"],["dynamic-attr","id",["concat",[["unknown",["dropdown","dataKey"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["dropdown","options"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["dropdown"]},{"statements":[["text","          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-interface-checkbox"],["dynamic-attr","name",["unknown",["checkBoxOption","dataKey"]],null],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox",["get",["checkBoxOption","dataKey"]],["helper",["mut"],[["helper",["get"],[["get",[null]],["get",["checkBoxOption","dataKey"]]],null]],null]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["dynamic-attr","for",["concat",[["unknown",["checkBoxOption","dataKey"]]]]],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["checkBoxOption","propertyName"]]],null],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["checkBoxOption","leftColumn"]]],null,2]],"locals":["checkBoxOption"]},{"statements":[["text","          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-interface-checkbox"],["dynamic-attr","name",["unknown",["checkBoxOption","dataKey"]],null],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox",["get",["checkBoxOption","dataKey"]],["helper",["mut"],[["helper",["get"],[["get",[null]],["get",["checkBoxOption","dataKey"]]],null]],null]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["dynamic-attr","for",["concat",[["unknown",["checkBoxOption","dataKey"]]]]],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["checkBoxOption","propertyName"]]],null],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["checkBoxOption","leftColumn"]]],null,4]],"locals":["checkBoxOption"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["checkBoxGroup","sectionName"]]],null],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-interface-checkboxes"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-interface-checkbox-column"],["flush-element"],["text","\\n"],["block",["each"],[["get",["checkBoxGroup","options"]]],null,5],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-interface-checkbox-column"],["flush-element"],["text","\\n"],["block",["each"],[["get",["checkBoxGroup","options"]]],null,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["each"],[["get",["checkBoxGroup","dropdowns"]]],null,1]],"locals":["checkBoxGroup"]}],"hasPartials":false}',
+                id: "THu9SsDK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-interface-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-interface-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_SIZE_TITLE"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_HUD_SCALE"]],false],["text",":\\n    "],["append",["unknown",["scaleDisplays","GlobalScale"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-interface-slider"],["static-attr","for","GlobalScale"],["dynamic-attr","value",["concat",[["unknown",["scaleDisplays","GlobalScale"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_CHAT_SCALE"]],false],["text",":\\n    "],["append",["unknown",["scaleDisplays","ChatScale"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-interface-slider"],["static-attr","for","ChatScale"],["dynamic-attr","value",["concat",[["unknown",["scaleDisplays","ChatScale"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_MINIMAP_SCALE"]],false],["text",":\\n    "],["append",["unknown",["scaleDisplays","MinimapScale"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-interface-slider"],["static-attr","for","MinimapScale"],["dynamic-attr","value",["concat",[["unknown",["scaleDisplays","MinimapScale"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-interface-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_INTERFACE_OBJECTIVE_PLANNING_SCALE"]],false],["text",":\\n    "],["append",["unknown",["scaleDisplays","ObjectiveVoteScale"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-interface-slider"],["static-attr","for","ObjectiveVoteScale"],["dynamic-attr","value",["concat",[["unknown",["scaleDisplays","ObjectiveVoteScale"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["each"],[["get",["checkBoxGroups"]]],null,6]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","value",["get",["index"]],null],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["dropdownOption","title"]]],null],false],["close-element"],["text","\\n"]],"locals":["dropdownOption","index"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-dropdown-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["dropdown","title"]]],null],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-interface-dropdown"],["dynamic-attr","id",["concat",[["unknown",["dropdown","dataKey"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["dropdown","options"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["dropdown"]},{"statements":[["text","          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-interface-checkbox"],["dynamic-attr","name",["unknown",["checkBoxOption","dataKey"]],null],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox",["get",["checkBoxOption","dataKey"]],["helper",["mut"],[["helper",["get"],[["get",[null]],["get",["checkBoxOption","dataKey"]]],null]],null]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["dynamic-attr","for",["concat",[["unknown",["checkBoxOption","dataKey"]]]]],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["checkBoxOption","propertyName"]]],null],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["checkBoxOption","leftColumn"]]],null,2]],"locals":["checkBoxOption"]},{"statements":[["text","          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-interface-checkbox"],["dynamic-attr","name",["unknown",["checkBoxOption","dataKey"]],null],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox",["get",["checkBoxOption","dataKey"]],["helper",["mut"],[["helper",["get"],[["get",[null]],["get",["checkBoxOption","dataKey"]]],null]],null]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["dynamic-attr","for",["concat",[["unknown",["checkBoxOption","dataKey"]]]]],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["checkBoxOption","propertyName"]]],null],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["checkBoxOption","leftColumn"]]],null,4]],"locals":["checkBoxOption"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["checkBoxGroup","sectionName"]]],null],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-interface-checkboxes"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-interface-checkbox-column"],["flush-element"],["text","\\n"],["block",["each"],[["get",["checkBoxGroup","options"]]],null,5],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-interface-checkbox-column"],["flush-element"],["text","\\n"],["block",["each"],[["get",["checkBoxGroup","options"]]],null,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["each"],[["get",["checkBoxGroup","dropdowns"]]],null,1]],"locals":["checkBoxGroup"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "ojzzvDgK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-gameplay-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-gameplay-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-gameplay-controls"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CONTROLS_TITLE"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["showUseSoftwareMouse"]]],null,0],["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-slider-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_MOUSE_SPEED"]],false],["text",":\\n      "],["append",["unknown",["sliders","GameMouseSpeed"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-slider"],["static-attr","for","GameMouseSpeed"],["static-attr","step","5"],["dynamic-attr","value",["concat",[["unknown",["sliders","GameMouseSpeed"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-slider-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_MOVE_SPEED_MOUSE"]],false],["text",":\\n      "],["append",["unknown",["sliders","MapScrollSpeed"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-slider"],["static-attr","for","MapScrollSpeed"],["dynamic-attr","value",["concat",[["unknown",["sliders","MapScrollSpeed"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-slider-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_MOVE_SPEED_KEYBOARD"]],false],["text",":\\n      "],["append",["unknown",["sliders","KeyboardScrollSpeed"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-slider"],["static-attr","for","KeyboardScrollSpeed"],["dynamic-attr","value",["concat",[["unknown",["sliders","KeyboardScrollSpeed"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","SnapCameraOnRespawn"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","SnapCameraOnRespawn",["helper",["mut"],[["get",["SnapCameraOnRespawn"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","SnapCameraOnRespawn"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_MOVE_CAM_ON_REVIVE"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","MiddleClickDragScrollEnabled"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","MiddleClickDragScrollEnabled",["helper",["mut"],[["get",["MiddleClickDragScrollEnabled"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","MiddleClickDragScrollEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_MOUSE_BUTTON_DRAG_SCROLL"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","ScrollSmoothingEnabled"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","ScrollSmoothingEnabled",["helper",["mut"],[["get",["ScrollSmoothingEnabled"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ScrollSmoothingEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_ENABLE_SMOOTH_CAMERA"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-dropdown-item lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-dropdown-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_LOCK_MODE_TITLE"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-ingame-dropdown"],["static-attr","id","CameraLockMode"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","0"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_LOCK_MODE_PER_SIDE"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","1"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_LOCK_MODE_FIXED"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","2"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_LOCK_MODE_SEMI_LOCKED"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-gameplay-controls"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_GAMEPLAY_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","AutoAcquireTarget"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","AutoAcquireTarget",["helper",["mut"],[["get",["AutoAcquireTarget"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","AutoAcquireTarget"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_AUTOATTACK"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","ShowTurretRangeIndicators"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","ShowTurretRangeIndicators",["helper",["mut"],[["get",["ShowTurretRangeIndicators"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ShowTurretRangeIndicators"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_SHOW_TURRET_RANGE_INDICATORS"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","RecommendJunglePaths"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","RecommendJunglePaths",["helper",["mut"],[["get",["RecommendJunglePaths"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","RecommendJunglePaths"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_RECOMMEND_JUNGLE_PATHS"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","ClampCastTargetLocationWithinMaxRange"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","ClampCastTargetLocationWithinMaxRange",["helper",["mut"],[["get",["ClampCastTargetLocationWithinMaxRange"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ClampCastTargetLocationWithinMaxRange"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CLAMP_CAST_TARGET_LOCATION_WITHIN_MAX_RANGE"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","PredictMovement"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","PredictMovement",["helper",["mut"],[["get",["PredictMovement"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","PredictMovement"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_MOVEMENT_PREDICTION"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","EnableTargetedAttackMove"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","EnableTargetedAttackMove",["helper",["mut"],[["get",["EnableTargetedAttackMove"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","EnableTargetedAttackMove"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_ATTACK_MOVE_ON_CURSOR"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","TargetChampionsOnlyAsToggle"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","TargetChampionsOnlyAsToggle",["helper",["mut"],[["get",["TargetChampionsOnlyAsToggle"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","TargetChampionsOnlyAsToggle"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_TARGET_CHAMPIONS_ONLY_AS_TOGGLE"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-ingame-checkbox"],["static-attr","name","OSXMouseAcceleration"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","OSXMouseAcceleration",["helper",["mut"],[["get",["OSXMouseAcceleration"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","OSXMouseAcceleration"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_USE_SOFTWARE_MOUSE"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "l+CEnbJ+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-gameplay-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-gameplay-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-gameplay-controls"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CONTROLS_TITLE"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["showUseSoftwareMouse"]]],null,0],["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-slider-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_MOUSE_SPEED"]],false],["text",":\\n      "],["append",["unknown",["sliders","GameMouseSpeed"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-slider"],["static-attr","for","GameMouseSpeed"],["static-attr","step","5"],["dynamic-attr","value",["concat",[["unknown",["sliders","GameMouseSpeed"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-slider-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_MOVE_SPEED_MOUSE"]],false],["text",":\\n      "],["append",["unknown",["sliders","MapScrollSpeed"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-slider"],["static-attr","for","MapScrollSpeed"],["dynamic-attr","value",["concat",[["unknown",["sliders","MapScrollSpeed"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-slider-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_MOVE_SPEED_KEYBOARD"]],false],["text",":\\n      "],["append",["unknown",["sliders","KeyboardScrollSpeed"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-slider"],["static-attr","for","KeyboardScrollSpeed"],["dynamic-attr","value",["concat",[["unknown",["sliders","KeyboardScrollSpeed"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","SnapCameraOnRespawn"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","SnapCameraOnRespawn",["helper",["mut"],[["get",["SnapCameraOnRespawn"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","SnapCameraOnRespawn"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_MOVE_CAM_ON_REVIVE"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","MiddleClickDragScrollEnabled"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","MiddleClickDragScrollEnabled",["helper",["mut"],[["get",["MiddleClickDragScrollEnabled"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","MiddleClickDragScrollEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_MOUSE_BUTTON_DRAG_SCROLL"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","ScrollSmoothingEnabled"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","ScrollSmoothingEnabled",["helper",["mut"],[["get",["ScrollSmoothingEnabled"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ScrollSmoothingEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_ENABLE_SMOOTH_CAMERA"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-dropdown-item lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-dropdown-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_LOCK_MODE_TITLE"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-ingame-dropdown"],["static-attr","id","CameraLockMode"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","0"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_LOCK_MODE_PER_SIDE"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","1"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_LOCK_MODE_FIXED"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","2"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CAMERA_LOCK_MODE_SEMI_LOCKED"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-gameplay-controls"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_GAMEPLAY_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","AutoAcquireTarget"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","AutoAcquireTarget",["helper",["mut"],[["get",["AutoAcquireTarget"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","AutoAcquireTarget"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_AUTOATTACK"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","ShowTurretRangeIndicators"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","ShowTurretRangeIndicators",["helper",["mut"],[["get",["ShowTurretRangeIndicators"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ShowTurretRangeIndicators"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_SHOW_TURRET_RANGE_INDICATORS"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","RecommendJunglePaths"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","RecommendJunglePaths",["helper",["mut"],[["get",["RecommendJunglePaths"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","RecommendJunglePaths"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_RECOMMEND_JUNGLE_PATHS"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","ClampCastTargetLocationWithinMaxRange"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","ClampCastTargetLocationWithinMaxRange",["helper",["mut"],[["get",["ClampCastTargetLocationWithinMaxRange"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","ClampCastTargetLocationWithinMaxRange"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_CLAMP_CAST_TARGET_LOCATION_WITHIN_MAX_RANGE"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-column"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","PredictMovement"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","PredictMovement",["helper",["mut"],[["get",["PredictMovement"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","PredictMovement"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_MOVEMENT_PREDICTION"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","EnableTargetedAttackMove"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","EnableTargetedAttackMove",["helper",["mut"],[["get",["EnableTargetedAttackMove"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","EnableTargetedAttackMove"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_ATTACK_MOVE_ON_CURSOR"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-ingame-checkbox"],["static-attr","name","TargetChampionsOnlyAsToggle"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","TargetChampionsOnlyAsToggle",["helper",["mut"],[["get",["TargetChampionsOnlyAsToggle"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","TargetChampionsOnlyAsToggle"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_TARGET_CHAMPIONS_ONLY_AS_TOGGLE"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-ingame-checkbox"],["static-attr","name","OSXMouseAcceleration"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","OSXMouseAcceleration",["helper",["mut"],[["get",["OSXMouseAcceleration"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","OSXMouseAcceleration"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_GAMEPLAY_USE_SOFTWARE_MOUSE"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "dfmewvX3",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-additional-section.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-additional-section.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","additional-hotkeys-header"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggle"],null],null],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["tab","groupName"]]],null],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","additional-hotkeys-main"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tab","subgroups"]]],null,4],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","td",[]],["static-attr","class","td-normal"],["dynamic-attr","name",["concat",[["unknown",["control","dataKey"]],"_set2"]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showKeybindingDialog",["get",["control","section"]],["get",["control","dataKey"]],0],null],null],["flush-element"],["append",["helper",["format-key-bindings"],[["helper",["get"],[["helper",["get"],[["get",["inputSettings"]],["get",["control","section"]]],null],["get",["control","dataKey"]]],null]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","td",[]],["static-attr","class","td-normal"],["dynamic-attr","name",["concat",[["unknown",["control","dataKey"]],"_set1"]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showKeybindingDialog",["get",["control","section"]],["get",["control","dataKey"]],1],null],null],["flush-element"],["append",["helper",["format-key-bindings"],[["helper",["get"],[["helper",["get"],[["get",["inputSettings"]],["get",["control","section"]]],null],["get",["control","dataKey"]]],null],1],null],false],["close-element"],["text","\\n            "],["open-element","td",[]],["static-attr","class","td-normal"],["dynamic-attr","name",["concat",[["unknown",["control","dataKey"]],"_set2"]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showKeybindingDialog",["get",["control","section"]],["get",["control","dataKey"]],2],null],null],["flush-element"],["append",["helper",["format-key-bindings"],[["helper",["get"],[["helper",["get"],[["get",["inputSettings"]],["get",["control","section"]]],null],["get",["control","dataKey"]]],null],2],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","tr",[]],["flush-element"],["text","\\n          "],["open-element","td",[]],["static-attr","class","td-normal td-column-header"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["control","name"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["subgroup","twoSets"]]],null,1,0],["text","        "],["close-element"],["text","\\n"]],"locals":["control"]},{"statements":[["text","          "],["open-element","td",[]],["static-attr","class","td-no-border"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_SET_1"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","table",[]],["static-attr","class","additional-hotkeys-tb"],["static-attr","cellspacing","0"],["static-attr","cellpadding","0"],["static-attr","ondragstart","return false;"],["static-attr","ondrop","return false;"],["flush-element"],["text","\\n      "],["open-element","tr",[]],["flush-element"],["text","\\n        "],["open-element","td",[]],["static-attr","class","td-no-border td-column-header"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["subgroup","name"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["subgroup","twoSets"]]],null,3],["text","        "],["open-element","td",[]],["static-attr","class","td-no-border"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_SET_2"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["each"],[["get",["subgroup","controls"]]],null,2],["text","    "],["close-element"],["text","\\n"]],"locals":["subgroup"]}],"hasPartials":false}',
+                id: "TjdD01gO",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-additional-section.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-additional-section.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","additional-hotkeys-header"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggle"],null],null],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["tab","groupName"]]],null],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","additional-hotkeys-main"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tab","subgroups"]]],null,4],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","td",[]],["static-attr","class","td-normal"],["dynamic-attr","name",["concat",[["unknown",["control","dataKey"]],"_set2"]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showKeybindingDialog",["get",["control","section"]],["get",["control","dataKey"]],0],null],null],["flush-element"],["append",["helper",["format-key-bindings"],[["helper",["get"],[["helper",["get"],[["get",["inputSettings"]],["get",["control","section"]]],null],["get",["control","dataKey"]]],null]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","td",[]],["static-attr","class","td-normal"],["dynamic-attr","name",["concat",[["unknown",["control","dataKey"]],"_set1"]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showKeybindingDialog",["get",["control","section"]],["get",["control","dataKey"]],1],null],null],["flush-element"],["append",["helper",["format-key-bindings"],[["helper",["get"],[["helper",["get"],[["get",["inputSettings"]],["get",["control","section"]]],null],["get",["control","dataKey"]]],null],1],null],false],["close-element"],["text","\\n            "],["open-element","td",[]],["static-attr","class","td-normal"],["dynamic-attr","name",["concat",[["unknown",["control","dataKey"]],"_set2"]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showKeybindingDialog",["get",["control","section"]],["get",["control","dataKey"]],2],null],null],["flush-element"],["append",["helper",["format-key-bindings"],[["helper",["get"],[["helper",["get"],[["get",["inputSettings"]],["get",["control","section"]]],null],["get",["control","dataKey"]]],null],2],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","tr",[]],["flush-element"],["text","\\n          "],["open-element","td",[]],["static-attr","class","td-normal td-column-header"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["control","name"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["subgroup","twoSets"]]],null,1,0],["text","        "],["close-element"],["text","\\n"]],"locals":["control"]},{"statements":[["text","          "],["open-element","td",[]],["static-attr","class","td-no-border"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_SET_1"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","table",[]],["static-attr","class","additional-hotkeys-tb"],["static-attr","cellspacing","0"],["static-attr","cellpadding","0"],["static-attr","ondragstart","return false;"],["static-attr","ondrop","return false;"],["flush-element"],["text","\\n      "],["open-element","tr",[]],["flush-element"],["text","\\n        "],["open-element","td",[]],["static-attr","class","td-no-border td-column-header"],["flush-element"],["append",["helper",["get"],[["get",["tra"]],["get",["subgroup","name"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["subgroup","twoSets"]]],null,3],["text","        "],["open-element","td",[]],["static-attr","class","td-no-border"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_SET_2"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["each"],[["get",["subgroup","controls"]]],null,2],["text","    "],["close-element"],["text","\\n"]],"locals":["subgroup"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "vGyVmO5b",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-additional.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-additional.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-additional"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_ADDITIONAL_HOTKEYS_TITLE"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["additionalHotkeyGroups"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["game-hotkeys-additional-section"],null,[["tab","showKeybindingDialog","inputSettings"],[["get",["tab"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["get",["inputSettings"]]]]],false],["text","\\n"]],"locals":["tab"]}],"hasPartials":false}',
+                id: "p5Z7k+w2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-additional.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-additional.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-additional"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_ADDITIONAL_HOTKEYS_TITLE"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["additionalHotkeyGroups"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["game-hotkeys-additional-section"],null,[["tab","showKeybindingDialog","inputSettings"],[["get",["tab"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["get",["inputSettings"]]]]],false],["text","\\n"]],"locals":["tab"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "xOQcrAYq",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-primary-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-primary-button.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-top"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showKeybindingDialog",["get",["section"]],["get",["dataKey"]]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-modifier lol-settings-ingame-hotkeys-keybinding-button-colored-text"],["flush-element"],["append",["helper",["get-key-bindings-modifier"],[["get",["keybinding"]]],null],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-content lol-settings-ingame-hotkeys-keybinding-button-colored-text"],["flush-element"],["append",["helper",["get-key-bindings-main-key"],[["get",["keybinding"]]],null],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-bottom"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleQuickCast",["get",["quickbindKey"]]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-bottom-icon"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "c66vDKFT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-primary-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-primary-button.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-top"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showKeybindingDialog",["get",["section"]],["get",["dataKey"]]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-modifier lol-settings-ingame-hotkeys-keybinding-button-colored-text"],["flush-element"],["append",["helper",["get-key-bindings-modifier"],[["get",["keybinding"]]],null],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-content lol-settings-ingame-hotkeys-keybinding-button-colored-text"],["flush-element"],["append",["helper",["get-key-bindings-main-key"],[["get",["keybinding"]]],null],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-bottom"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleQuickCast",["get",["quickbindKey"]]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-keybinding-button-bottom-icon"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "WL1FHwxi",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-primary.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-primary.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-primary"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_PRIMARY_HOTKEYS"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-ingame-hotkeys-castall-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeCastAll",true],null],null],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-ingame-hotkeys-castall-text"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_QUICK_CAST_ALL"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-ingame-hotkeys-castall-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeCastAll",false],null],null],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-ingame-hotkeys-castall-text"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_NORMAL_CAST_ALL"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-abilities-block-left"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_ABILITIES_LABEL"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["abilities"]]],null,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-abilities-block-right"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_SUMMONER_SPELLS_LABEL"]],false],["text","/"],["append",["unknown",["tra","LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTROLEBOUND"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["summonerSpells"]]],null,1],["text","      "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["roleBound","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["roleBound","dataKey1"]]],null],["get",["roleBound","section"]],["get",["roleBound","dataKey1"]],["get",["roleBound","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n    "],["close-element"],["text","    \\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-abilities-block-left"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_ITEMS_LABEL"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["items"]]],null,0],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-abilities-block-right"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_TRINKET_LABEL"]],false],["close-element"],["text","\\n      "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["trinket","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["trinket","dataKey1"]]],null],["get",["trinket","section"]],["get",["trinket","dataKey1"]],["get",["trinket","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["control","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["control","dataKey1"]]],null],["get",["control","section"]],["get",["control","dataKey1"]],["get",["control","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n"]],"locals":["control"]},{"statements":[["text","      "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["control","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["control","dataKey1"]]],null],["get",["control","section"]],["get",["control","dataKey1"]],["get",["control","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n"]],"locals":["control"]},{"statements":[["text","        "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["control","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["control","dataKey1"]]],null],["get",["control","section"]],["get",["control","dataKey1"]],["get",["control","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n"]],"locals":["control"]}],"hasPartials":false}',
+                id: "rBgGu1dY",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-primary.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-primary.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-primary"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_PRIMARY_HOTKEYS"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-ingame-hotkeys-castall-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeCastAll",true],null],null],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-ingame-hotkeys-castall-text"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_QUICK_CAST_ALL"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-ingame-hotkeys-castall-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeCastAll",false],null],null],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","lol-settings-ingame-hotkeys-castall-text"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_NORMAL_CAST_ALL"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-abilities-block-left"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_ABILITIES_LABEL"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["abilities"]]],null,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-abilities-block-right"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_SUMMONER_SPELLS_LABEL"]],false],["text","/"],["append",["unknown",["tra","LOL_INGAME_SETTINGS_KB_KEY_EVTNORMALCASTROLEBOUND"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["summonerSpells"]]],null,1],["text","      "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["roleBound","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["roleBound","dataKey1"]]],null],["get",["roleBound","section"]],["get",["roleBound","dataKey1"]],["get",["roleBound","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n    "],["close-element"],["text","    \\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-abilities-block-left"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_ITEMS_LABEL"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["items"]]],null,0],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-hotkeys-abilities-block-right"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_TRINKET_LABEL"]],false],["close-element"],["text","\\n      "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["trinket","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["trinket","dataKey1"]]],null],["get",["trinket","section"]],["get",["trinket","dataKey1"]],["get",["trinket","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["control","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["control","dataKey1"]]],null],["get",["control","section"]],["get",["control","dataKey1"]],["get",["control","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n"]],"locals":["control"]},{"statements":[["text","      "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["control","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["control","dataKey1"]]],null],["get",["control","section"]],["get",["control","dataKey1"]],["get",["control","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n"]],"locals":["control"]},{"statements":[["text","        "],["append",["helper",["game-hotkeys-primary-button"],null,[["quickcast","keybinding","section","dataKey","quickbindKey","showKeybindingDialog","toggleQuickCast"],[["helper",["get"],[["get",["inputSettings","Quickbinds"]],["get",["control","quickCast"]]],null],["helper",["get"],[["get",["inputSettings","GameEvents"]],["get",["control","dataKey1"]]],null],["get",["control","section"]],["get",["control","dataKey1"]],["get",["control","quickCast"]],["helper",["action"],[["get",[null]],"showKeybindingDialog"],null],["helper",["action"],[["get",[null]],"toggleQuickCast"],null]]]],false],["text","\\n"]],"locals":["control"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "UBASASUY",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-quickcast.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-quickcast.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-quickcast-with-indicators"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_QUICKCAST_WITH_INDICATOR_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-ingame-checkbox"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","quickCastWithIndicator",["helper",["mut"],[["get",["SmartCastOnKeyRelease"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","quickCastWithIndicator"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_QUICKCAST_WITH_INDICATOR"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-ingame-checkbox"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","castSpellUponAnother",["helper",["mut"],[["get",["SmartCastWithIndicator_CastWhenNewSpellSelected"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","castSpellUponAnother"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_CAST_SPELL_UPON_ANOTHER"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "0Tl0dpLp",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-quickcast.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-quickcast.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-quickcast-with-indicators"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_QUICKCAST_WITH_INDICATOR_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-ingame-checkbox"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","quickCastWithIndicator",["helper",["mut"],[["get",["SmartCastOnKeyRelease"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","quickCastWithIndicator"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_QUICKCAST_WITH_INDICATOR"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-ingame-checkbox"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","castSpellUponAnother",["helper",["mut"],[["get",["SmartCastWithIndicator_CastWhenNewSpellSelected"]]],null]]]],false],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","castSpellUponAnother"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_HOTKEYS_CAST_SPELL_UPON_ANOTHER"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "1yORsdae",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-content.js\\" "],["text","\\n"],["text","\\n"],["open-element","section",[]],["static-attr","class","lol-settings-hotkeys"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-hotkeys_content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-hotkeys_content__label"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_nav_title_hotkeys"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-hotkeys_content__description"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_hotkeys_section_description"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-hotkeys_content__button-container"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-hotkeys__button--practice"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handlePracticeToolClick"],null],null],["dynamic-attr","disabled",["unknown",["isPracticeToolDisabled"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["practiceToolButtonLabel"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "sQjUKQyY",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-hotkeys-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-hotkeys-content.js\\" "],["text","\\n"],["text","\\n"],["open-element","section",[]],["static-attr","class","lol-settings-hotkeys"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-hotkeys_content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-hotkeys_content__label"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_nav_title_hotkeys"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-hotkeys_content__description"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","lol_settings_hotkeys_section_description"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-hotkeys_content__button-container"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button-secondary",[]],["static-attr","class","lol-settings-hotkeys__button--practice"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handlePracticeToolClick"],null],null],["dynamic-attr","disabled",["unknown",["isPracticeToolDisabled"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["practiceToolButtonLabel"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "wnGxOgy7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\vng-publisher-settings.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\vng-publisher-settings.js\\" "],["text","\\n"],["block",["if"],[["get",["isVngReady"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["honeyfruit-settings-error"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-general-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","vng_settings_account"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isError"]]],null,0],["text","    "],["open-element","a",[]],["static-attr","class","vng-publisher-settings__button"],["static-attr","href","#"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleButtonClick"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","vng_settings_edit_profile"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "8GZa/zQk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\vng-publisher-settings.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\vng-publisher-settings.js\\" "],["text","\\n"],["block",["if"],[["get",["isVngReady"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["honeyfruit-settings-error"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-settings-general-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-general-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","vng_settings_account"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isError"]]],null,0],["text","    "],["open-element","a",[]],["static-attr","class","vng-publisher-settings__button"],["static-attr","href","#"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleButtonClick"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","vng_settings_edit_profile"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "WV1XbXI7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\honeyfruit-settings-error.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_10\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\honeyfruit-settings-error.js\\" "],["text","\\n"],["append",["unknown",["tra","honeyfruit_settings_error"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "HEdd2001",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\honeyfruit-settings-error.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_9\\\\LeagueClientContent_Release\\\\15691\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\honeyfruit-settings-error.js\\" "],["text","\\n"],["append",["unknown",["tra","honeyfruit_settings_error"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }],
@@ -15983,10 +15968,10 @@
     function n(a) {
         var o = t[a];
         if (void 0 !== o) return o.exports;
-        var i = t[a] = {
+        var s = t[a] = {
             exports: {}
         };
-        return e[a].call(i.exports, i, i.exports, n), i.exports
+        return e[a].call(s.exports, s, s.exports, n), s.exports
     }
     n.d = (e, t) => {
         for (var a in t) n.o(t, a) && !n.o(e, a) && Object.defineProperty(e, a, {

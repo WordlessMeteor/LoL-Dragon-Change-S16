@@ -1972,7 +1972,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Salvaguarda: Lee Sin salta sobre el aliado elegido y se pone un escudo que lo protege del daño. Si el aliado es un campeón, también lo escuda. Tras utilizar Salvaguarda, Lee Sin puede lanzar Voluntad de hierro.<br>Voluntad de hierro: El intenso entrenamiento de Lee Sin le permite prosperar en la batalla. Lee Sin obtiene omnisucción.",
-            "dynamicDescription": "Lee Sin se desliza hacia un aliado o un guardián. Si el objetivo es un campeón, Lee Sin le otorga a él y a sí mismo <shield>@ShieldAmount@ de escudo</shield> durante @ShieldDuration@ s. Lee Sin puede <recast>reactivar</recast> la habilidad durante los siguientes @W1ReactivateTime@ s.<br><br><recast>Reactivación:</recast> Lee Sin obtiene un @LifestealAndSpellVamp@% de omnisucción durante @LifestealAndSpellVampTime@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lee Sin se desliza hacia un aliado o un guardián. Si el objetivo es un campeón, Lee Sin obtiene y le otorga un <shield>escudo de @ShieldAmount@</shield> durante @ShieldDuration@ s y reduce el enfriamiento de esta habilidad un @W1CooldownRecovered*100@%. Lee Sin puede <recast>reactivar</recast> la habilidad durante los siguientes @W1ReactivateTime@ s.<br><br><recast>Reactivación</recast>: Lee Sin obtiene un @LifestealAndSpellVamp@% de omnisucción durante @LifestealAndSpellVampTime@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1990,12 +1990,12 @@
                 50.0
             ],
             "cooldownCoefficients": [
-                7.0,
-                7.0,
-                7.0,
-                7.0,
-                7.0,
-                7.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.8,

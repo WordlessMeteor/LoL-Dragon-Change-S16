@@ -922,7 +922,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "オリアナが指定地点を攻撃するようボールに命じ、軌道上の敵ユニットに魔法ダメージを与える (敵に命中する度にダメージは低下する)。ボールは攻撃後もその場に留まる。",
-            "dynamicDescription": "オリアナの命令によって<keywordMajor>ボール</keywordMajor>が指定地点に移動し、周囲の敵と移動時に触れた敵に<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与える。2体目以降の敵に与えるダメージは@ReducedDamagePercent@%低下する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "オリアナの命令によって<keywordMajor>ボール</keywordMajor>が指定地点に移動し、周囲の敵と移動時に触れた敵に<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与える。2体目以降の敵に与えるダメージは@Effect2Amount@%低下する。@SpellModifierDescriptionAppend@",
             "range": [
                 815.0,
                 815.0,
@@ -1222,7 +1222,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "オリアナの命令により、ボールが味方チャンピオンに貼りつき、シールドを付与する。ボールは移動時に触れたすべての敵に魔法ダメージを与える。さらに、ボールは貼り付いたチャンピオンの物理防御と魔法防御を増加させる。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <keywordMajor>ボール</keywordMajor>が警護している味方チャンピオンに<scaleArmor>@DefenseBonus@の物理防御</scaleArmor>と<scaleMR>@DefenseBonus@の魔法防御</scaleMR>を付与する。<br><br><spellActive>発動効果:</spellActive> オリアナが<keywordMajor>ボール</keywordMajor>に味方チャンピオンの警護を命じ、<shield>耐久値@TotalShieldTooltip@のシールド</shield>を@ShieldDuration@秒間付与する。<keywordMajor>ボール</keywordMajor>が移動中に当たった敵は<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を受ける。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <keywordMajor>ボール</keywordMajor>が警護している味方チャンピオンに<scaleArmor>@Effect2Amount@の物理防御</scaleArmor>と<scaleMR>@Effect2Amount@の魔法防御</scaleMR>を付与する。<br><br><spellActive>発動効果:</spellActive> オリアナが<keywordMajor>ボール</keywordMajor>に味方チャンピオンの警護を命じ、@Effect5Amount@秒間<shield>@TotalShieldTooltip@のシールド</shield>を付与する。<keywordMajor>ボール</keywordMajor>が移動中に当たった敵は<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を受ける。@SpellModifierDescriptionAppend@",
             "range": [
                 1095.0,
                 1095.0,

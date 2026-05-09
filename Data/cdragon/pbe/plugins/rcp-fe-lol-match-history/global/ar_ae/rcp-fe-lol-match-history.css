@@ -767,13 +767,6 @@
     font-family: var(--font-display)
 }
 
-.match-details-team-list .player-history-mode,
-.match-details-team-list .player-history-team-name,
-.player-history-mode,
-.player-history-others {
-    font-family: var(--font-body)
-}
-
 .match-details-team-list .player-history-lv,
 .match-details-team-list .player-history-mode,
 .match-details-team-list .player-history-stats,
@@ -852,46 +845,6 @@
 }
 
 .match-details-team-list .player-history-stats:lang(ar-ae) {
-    letter-spacing: 0
-}
-
-.player-history-mode,
-.player-history-others {
-    color: #a09b8c;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: .025em;
-    line-height: 16px;
-    -webkit-font-smoothing: subpixel-antialiased
-}
-
-.player-history-mode:lang(ja-jp),
-.player-history-others:lang(ja-jp) {
-    font-size: 13px
-}
-
-.player-history-mode:lang(ar-ae),
-.player-history-others:lang(ar-ae) {
-    letter-spacing: 0
-}
-
-.match-details-team-list .player-history-mode,
-.match-details-team-list .player-history-team-name {
-    color: #a09b8c;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: .1em;
-    line-height: 16px;
-    -webkit-font-smoothing: subpixel-antialiased
-}
-
-.match-details-team-list .player-history-mode:lang(ja-jp),
-.match-details-team-list .player-history-team-name:lang(ja-jp) {
-    font-size: 13px
-}
-
-.match-details-team-list .player-history-mode:lang(ar-ae),
-.match-details-team-list .player-history-team-name:lang(ar-ae) {
     letter-spacing: 0
 }
 
@@ -1058,10 +1011,6 @@
 
 .player-history-lv {
     right: -4px
-}
-
-.player-history-result-text.terminated {
-    color: #a09b8c
 }
 
 .player-history-mode {
@@ -3777,11 +3726,9 @@
 }
 
 .match-details-team-list .player-history-mode,
-.match-details-team-list .player-history-subtitle,
 .match-details-team-list .player-history-team-name,
 .player-history-mode,
-.player-history-others,
-.player-history-subtitle {
+.player-history-others {
     font-family: var(--font-body)
 }
 
@@ -3789,15 +3736,13 @@
 .match-details-team-list .player-history-mode,
 .match-details-team-list .player-history-stats,
 .match-details-team-list .player-history-stats-no-minions,
-.match-details-team-list .player-history-subtitle,
 .match-details-team-list .player-history-team-name,
 .player-history-lv,
 .player-history-mode,
 .player-history-others,
 .player-history-result-text,
 .player-history-stats,
-.player-history-stats-no-minions,
-.player-history-subtitle {
+.player-history-stats-no-minions {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
@@ -3903,8 +3848,7 @@
 }
 
 .player-history-mode,
-.player-history-others,
-.player-history-subtitle {
+.player-history-others {
     color: #a09b8c;
     font-size: 12px;
     font-weight: 400;
@@ -3914,19 +3858,16 @@
 }
 
 .player-history-mode:lang(ja-jp),
-.player-history-others:lang(ja-jp),
-.player-history-subtitle:lang(ja-jp) {
+.player-history-others:lang(ja-jp) {
     font-size: 13px
 }
 
 .player-history-mode:lang(ar-ae),
-.player-history-others:lang(ar-ae),
-.player-history-subtitle:lang(ar-ae) {
+.player-history-others:lang(ar-ae) {
     letter-spacing: 0
 }
 
 .match-details-team-list .player-history-mode,
-.match-details-team-list .player-history-subtitle,
 .match-details-team-list .player-history-team-name {
     color: #a09b8c;
     font-size: 12px;
@@ -3937,13 +3878,11 @@
 }
 
 .match-details-team-list .player-history-mode:lang(ja-jp),
-.match-details-team-list .player-history-subtitle:lang(ja-jp),
 .match-details-team-list .player-history-team-name:lang(ja-jp) {
     font-size: 13px
 }
 
 .match-details-team-list .player-history-mode:lang(ar-ae),
-.match-details-team-list .player-history-subtitle:lang(ar-ae),
 .match-details-team-list .player-history-team-name:lang(ar-ae) {
     letter-spacing: 0
 }
@@ -4296,27 +4235,6 @@
 
 .match-details-team-list .me .player-history-mode {
     color: #fabe0a
-}
-
-.match-details-team-list .has-subtitle .player-history-mode {
-    top: 1px
-}
-
-.player-history-subtitle {
-    color: #a09b8c;
-    line-height: inherit;
-    transition: color .3s ease
-}
-
-.match-details-team-list .player-history-subtitle {
-    color: #be1e37;
-    left: auto;
-    overflow: hidden;
-    position: absolute;
-    right: 114px;
-    text-overflow: ellipsis;
-    top: 15px;
-    width: 130px
 }
 
 .player-history-team-name {
@@ -4750,12 +4668,8 @@
 }
 
 .match-stats-teams {
-    display: flex;
+    padding: 0 281px 0 34px;
     position: relative
-}
-
-.match-stats-teams .match-stats-teams-aligner-spacer {
-    width: 281px
 }
 
 .match-stats-teams .team-avatar-container {
@@ -5350,32 +5264,154 @@
     width: 16px
 }
 
-.match-history-stats-bg {
-    display: flex;
-    height: 100%;
-    position: absolute;
-    width: 100%
+.match-history-stats-bg-column:first-child {
+    left: 281px
 }
 
-.match-history-stats-bg .match-history-stats-bg-spacer {
-    width: 281px
+.match-history-stats-bg-column:first-child:lang(ar-ae) {
+    left: auto;
+    right: 281px
 }
 
-.match-history-stats-bg .match-history-stats-bg-column {
+.match-history-stats-bg-column:nth-child(2) {
+    left: 355px
+}
+
+.match-history-stats-bg-column:nth-child(2):lang(ar-ae) {
+    left: auto;
+    right: 355px
+}
+
+.match-history-stats-bg-column:nth-child(3) {
+    left: 429px
+}
+
+.match-history-stats-bg-column:nth-child(3):lang(ar-ae) {
+    left: auto;
+    right: 429px
+}
+
+.match-history-stats-bg-column:nth-child(4) {
+    left: 503px
+}
+
+.match-history-stats-bg-column:nth-child(4):lang(ar-ae) {
+    left: auto;
+    right: 503px
+}
+
+.match-history-stats-bg-column:nth-child(5) {
+    left: 577px
+}
+
+.match-history-stats-bg-column:nth-child(5):lang(ar-ae) {
+    left: auto;
+    right: 577px
+}
+
+.match-history-stats-bg-column:nth-child(6) {
+    left: 651px
+}
+
+.match-history-stats-bg-column:nth-child(6):lang(ar-ae) {
+    left: auto;
+    right: 651px
+}
+
+.match-history-stats-bg-column:nth-child(7) {
+    left: 725px
+}
+
+.match-history-stats-bg-column:nth-child(7):lang(ar-ae) {
+    left: auto;
+    right: 725px
+}
+
+.match-history-stats-bg-column:nth-child(8) {
+    left: 799px
+}
+
+.match-history-stats-bg-column:nth-child(8):lang(ar-ae) {
+    left: auto;
+    right: 799px
+}
+
+.match-history-stats-bg-column:nth-child(9) {
+    left: 873px
+}
+
+.match-history-stats-bg-column:nth-child(9):lang(ar-ae) {
+    left: auto;
+    right: 873px
+}
+
+.match-history-stats-bg-column:nth-child(10) {
+    left: 947px
+}
+
+.match-history-stats-bg-column:nth-child(10):lang(ar-ae) {
+    left: auto;
+    right: 947px
+}
+
+.match-history-stats-bg-column.hexakill:first-child {
+    left: 285px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(2) {
+    left: 343px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(3) {
+    left: 401px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(4) {
+    left: 459px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(5) {
+    left: 517px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(6) {
+    left: 575px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(7) {
+    left: 633px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(8) {
+    left: 691px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(9) {
+    left: 749px
+}
+
+.match-history-stats-bg-column.hexakill:nth-child(10) {
+    left: 807px
+}
+
+.match-history-stats-bg-column {
     background: transparent;
+    bottom: 0;
     pointer-events: none;
+    position: absolute;
+    top: 0;
     width: 74px
 }
 
-.match-history-stats-bg .match-history-stats-bg-column.hexakill {
+.match-history-stats-bg-column.hexakill {
     width: 54px
 }
 
-.match-history-stats-bg .match-history-stats-bg-column.hover.team_blue {
+.match-history-stats-bg-column.hover.team_blue {
     background: linear-gradient(180deg, rgba(55, 144, 212, .09) 0, rgba(10, 150, 170, 0))
 }
 
-.match-history-stats-bg .match-history-stats-bg-column.hover.team_red {
+.match-history-stats-bg-column.hover.team_red {
     background: linear-gradient(180deg, rgba(190, 30, 55, .2) 0, rgba(190, 30, 55, 0))
 }
 
@@ -5407,19 +5443,6 @@
 .match-graph-display {
     margin-left: 10px;
     width: 815px
-}
-
-.match-graph-category .match-graph-category-checkbox {
-    text-transform: uppercase
-}
-
-.match-graph-category .match-graph-category-checkbox:lang(el-gr),
-.match-graph-category .match-graph-category-checkbox:lang(ja-jp),
-.match-graph-category .match-graph-category-checkbox:lang(ko-kr),
-.match-graph-category .match-graph-category-checkbox:lang(th-th),
-.match-graph-category .match-graph-category-checkbox:lang(tr-tr),
-.match-graph-category .match-graph-category-checkbox:lang(zh-tw) {
-    text-transform: none
 }
 
 .match-graph-category {

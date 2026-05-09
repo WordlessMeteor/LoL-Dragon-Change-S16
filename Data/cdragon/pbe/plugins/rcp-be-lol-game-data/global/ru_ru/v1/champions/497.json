@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
-            "cooldown": "%i:cooldown% @Cooldown@ сек.",
+            "cooldown": "@f2@ сек. %i:cooldown%",
             "description": "Рэйкан летит к союзному чемпиону, защищая его щитом. В течение короткого промежутка времени умение можно использовать еще раз без затрат маны.",
-            "dynamicDescription": "Рэйкан совершает рывок к союзному чемпиону, накладывая на него <shield>щит прочностью @TotalShield@</shield> на @Duration@ сек.<br><br>Рэйкан может <recast>повторно применить</recast> это умение в течение @RecastWindow@ сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Рэйкан совершает рывок к союзному чемпиону, накладывая на него <shield>щит прочностью @TotalShield@</shield> на @Effect3Amount@ сек.<br><br>Рэйкан может <recast>повторно применить</recast> это умение в течение @Effect2Amount@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Скорость передвижения Рэйкана увеличивается, и он очаровывает всех врагов, которых касается, и наносит им магический урон.",
-            "dynamicDescription": "Рэйкан получает <speed>@InitialCastSpeed@% скорости передвижения</speed> на @Duration@ сек. Касаясь врагов, Рэйкан наносит им <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage> и <status>очаровывает</status> на @CharmDuration@ сек. при 1-м касании. После 1-го очарованного чемпиона Рэйкан получает <speed>@TouchSpeed@% скорости передвижения (постепенно снижается)</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Рэйкан увеличивает <speed>скорость передвижения на @Effect5Amount@%</speed> на @Effect2Amount@ сек. Если Рэйкан касается врагов, он наносит им <magicDamage>@TotalDamageTooltip@ магического урона</magicDamage> и <status>очаровывает</status> на @Effect3Amount@ сек. при первом касании. После первого очарованного чемпиона Рэйкан увеличивает <speed>скорость передвижения на @Effect6Amount@% (эффект ослабевает со временем)</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,
