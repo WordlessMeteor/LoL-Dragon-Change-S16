@@ -582,7 +582,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Taliyah lanza una ráfaga de rocas en la dirección de un objetivo y se mueve libremente mientras lanza. Esto crea Tierra Erosionada debajo de ella. Si Taliyah lanza Descarga Pétrea sobre Tierra Erosionada, la consume para lanzar una roca más fuerte que ralentiza a los enemigos.",
-            "dynamicDescription": "Taliyah lanza 5 rocas, cada una de las cuales inflige <magicDamage>@RockDamage@ de daño mágico</magicDamage> en un área alrededor del primer enemigo alcanzado mientras crea Tierra Erosionada en esa área. Los impactos subsecuentes contra el mismo enemigo infligen un @ExtraMissileReducedDamagePercent@% menos de daño.<br><br>Los lanzamientos en tierra erosionada cuestan @Effect7Amount@ de Maná y tienen un @WorkedGroundCDR*100@% menos de Enfriamiento, consume la Tierra Erosionada y lanza una roca que <status>ralentiza</status> a los enemigos alcanzados en un @SlowPercent*100@% por @SlowDuration@ seg e inflige <magicDamage>@BigRockDamage@ de daño mágico</magicDamage> al primer objetivo. Los monstruos golpeados por la roca quedan <status>Aturdidos</status> durante @MonsterStunDuration@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah lanza 5 rocas. Cada proyectil inflige <magicDamage>@RockDamage@ de daño mágico</magicDamage> en un área alrededor del primer enemigo alcanzado y crea una zona de Tierra Erosionada en esa ubicación. Los impactos posteriores contra el mismo objetivo infligen un @ExtraMissileReducedDamagePercent@% menos de daño.<br><br>Los lanzamientos sobre Tierra Erosionada cuestan @BigRockManaCost@ de Maná, tienen un @WorkedGroundCDR*100@% menos de enfriamiento y consumen la zona de Tierra Erosionada para lanzar una roca de mayor tamaño que <status>ralentiza</status> en un @SlowPercent*100@% a los enemigos alcanzados durante @SlowDuration@ seg e inflige <magicDamage>@BigRockDamage@ de daño mágico</magicDamage> al objetivo principal. Los monstruos que reciben el impacto de la roca más grande quedan <status>aturdidos</status> durante @MonsterStunDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Taliyah crea un muro muy largo en el que se desplaza.",
-            "dynamicDescription": "Taliyah crea un muro de tierra enorme por @Effect1Amount@ seg. Si <recast>vuelve a lanzar</recast> inmediatamente, Taliyah se desplazará sobre el muro al formarse. Moverse o ser inmovilizada finalizará el desplazamiento.<br><br>Taliyah no podrá volver a lanzar esta habilidad si ha recibido daño de campeones o de estructuras en los últimos @DamageLockoutTime@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah crea un muro de tierra enorme que dura @WallDuration@ seg. Al <recast>volver a lanzar</recast> la habilidad de inmediato, Taliyah se desplaza sobre el muro mientras se forma. El desplazamiento se cancela si la campeona se mueve o queda inmovilizada.<br><br>Taliyah no puede volver a lanzar esta habilidad si recibió daño de campeones o estructuras en los últimos @DamageLockoutTime@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

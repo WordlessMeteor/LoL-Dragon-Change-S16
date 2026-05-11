@@ -772,7 +772,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "希瓦娜获得护盾和移动速度，短暂延迟后，她周围的区域会发生爆炸。圣龙形态：爆炸命中敌方英雄时会治疗希瓦娜。",
-            "dynamicDescription": "希瓦娜在@Duration@秒内被烈焰包裹，获得<shield>@Calc_Shield@护盾</shield>，附近每有一名敌方英雄，护盾值就会提升<shield>@Calc_Shield_Per_Nearby_Champion@</shield>，并获得<speed>@MoveSpeed@移动速度</speed>，朝敌方英雄移动时提升至<speed>@MoveSpeedTowardsEnemies@</speed>。<br><br>当效果结束、<shield>护盾</shield>破裂或<recast>重施技能</recast>时，她周围的区域会发生爆炸，造成<magicDamage>@Damage@魔法伤害</magicDamage>。<br><br><keywordMajor>圣龙形态：</keywordMajor>如果爆炸命中敌方英雄，希瓦娜会回复<healing>@Calc_Base_Heal@ + @Calc_Missing_Health_Heal@已损失生命值</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "希瓦娜在@Duration@秒内被烈焰包裹，获得<shield>@Calc_Shield@护盾</shield>，附近每有一名敌方英雄，护盾值就会提升<shield>@Calc_Shield_Per_Nearby_Champion@</shield>，并获得<speed>@MoveSpeed@移动速度</speed>，朝敌方英雄移动时提升至<speed>@MoveSpeedTowardsEnemies@</speed>。<br><br>当效果结束、<shield>护盾</shield>破裂或<recast>重施技能</recast>时，她周围的区域会发生爆炸，造成<magicDamage>@Damage@魔法伤害</magicDamage>。<br><br><keywordMajor>圣龙形态：</keywordMajor>如果爆炸命中敌方英雄，希瓦娜会获得<healing>@Calc_Base_Heal@ + @Calc_Missing_Health_Heal@已损失生命值的治疗</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -791,11 +791,11 @@
             ],
             "cooldownCoefficients": [
                 13.0,
-                12.0,
-                11.0,
+                12.25,
+                11.5,
+                10.75,
                 10.0,
-                9.0,
-                9.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

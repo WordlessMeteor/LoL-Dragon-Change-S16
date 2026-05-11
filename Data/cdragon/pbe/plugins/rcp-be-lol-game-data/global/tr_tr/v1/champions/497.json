@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
-            "cooldown": "@f2@ sn. %i:cooldown%",
+            "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Bir takım arkadaşının yanına uçarak ona kalkan verir. Kısa bir süre bedelsiz olarak yeniden kullanılabilir.",
-            "dynamicDescription": "Rakan bir takım arkadaşına atılarak ona @Effect3Amount@ saniyeliğine <shield>@TotalShield@ Kalkan</shield> verir.<br><br>Rakan bu yeteneği @Effect2Amount@ saniye içinde bir kez daha <recast>yeniden kullanabilir</recast>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan bir takım arkadaşına atılarak ona @Duration@ saniyeliğine <shield>@TotalShield@ Kalkan</shield> verir.<br><br>Rakan bu yeteneği @RecastWindow@ saniye içinde bir kez daha <recast>yeniden kullanabilir</recast>.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Hareket hızı kazanarak temas ettiği rakipleri ayartır ve onlara büyü hasarı verir.",
-            "dynamicDescription": "Rakan @Effect2Amount@ saniyeliğine <speed>%@Effect5Amount@ Hareket Hızı</speed> kazanır. Rakan <magicDamage>@TotalDamageTooltip@ Büyü Hasarı</magicDamage> verir ve rakiplere ilk kez temas ettiğinde onları @Effect3Amount@ saniyeliğine <status>ayartır</status>. Rakan'ın dokunduğu ilk şampiyon, ona azalarak biten <speed>%@Effect6Amount@ Hareket Hızı</speed> kazandırır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan @Duration@ saniyeliğine <speed>%@InitialCastSpeed@ Hareket Hızı</speed> kazanır. Rakan <magicDamage>@TotalDamageTooltip@ Büyü Hasarı</magicDamage> verir ve rakiplere ilk kez temas ettiğinde onları @CharmDuration@ saniyeliğine <status>ayartır</status>. Rakan'ın dokunduğu ilk şampiyon, ona azalarak biten <speed>%@TouchSpeed@ Hareket Hızı</speed> kazandırır.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,

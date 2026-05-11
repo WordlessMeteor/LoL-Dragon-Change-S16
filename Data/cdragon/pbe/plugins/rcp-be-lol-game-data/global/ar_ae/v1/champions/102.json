@@ -772,7 +772,7 @@
             "cost": "بلا تكلفة",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تكسب شيفانا درعًا وسرعة حركة، وبعد فترة قصيرة، تنفجر المنطقة المحيطة بها.  أثناء وجودها في هيئة التنين، يعالجها الانفجار عند إصابته بطلًا معاديًا.",
-            "dynamicDescription": "تحيط شيفانا نفسها باللهب لمدة @Duration@ث، فتكسب <shield>@Calc_Shield@ درع</shield>، يزداد بمقدار <shield>@Calc_Shield_Per_Nearby_Champion@</shield> لكل بطل معادٍ في الجوار و <speed>@MoveSpeed@ سرعة حركة</speed>، تزداد إلى <speed>@MoveSpeedTowardsEnemies@</speed> عند التحرك باتجاه أبطال العدو.<br><br>عند انتهاء التأثير أو تحطم <shield>الدرع</shield> أو <recast>إعادة الإلقاء</recast>، تنفجر المنطقة من حولها، فتلحق <magicDamage>@Damage@ ضرر سحر</magicDamage>.<br><br><keywordMajor>هيئة التنين:</keywordMajor> إذا أصابت موجة الانفجار بطلًا معاديًا، تستعيد شيفانا <healing> @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ من الصحة الناقصة</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تحيط شيفانا نفسها باللهب لمدة @Duration@ث، فتكسب <shield>@Calc_Shield@ درع</shield>، يزداد بمقدار <shield>@Calc_Shield_Per_Nearby_Champion@</shield> لكل بطل معادٍ في الجوار و <speed>@MoveSpeed@ سرعة حركة</speed>، تزداد إلى <speed>@MoveSpeedTowardsEnemies@</speed> عند التحرك باتجاه أبطال العدو.<br><br>عند انتهاء التأثير أو تحطم <shield>الدرع</shield> أو <recast>إعادة الإلقاء</recast>، تنفجر المنطقة من حولها، فتلحق <magicDamage>@Damage@ ضرر سحر</magicDamage>.<br><br><keywordMajor>هيئة التنين:</keywordMajor> إذا أصابت موجة الانفجار بطلًا معاديًا، تعالج شيفانا بمقدار <healing> @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ من الصحة الناقصة</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -791,11 +791,11 @@
             ],
             "cooldownCoefficients": [
                 13.0,
-                12.0,
-                11.0,
+                12.25,
+                11.5,
+                10.75,
                 10.0,
-                9.0,
-                9.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

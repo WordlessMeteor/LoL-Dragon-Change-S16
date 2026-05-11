@@ -582,7 +582,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自由に移動しながら、指定された方向に石の欠片を連続して発射する。「スレッドボレー」を使用すると、自身の足元に「加工された地面」を作り出す。「加工された地面」上でこのスキルを使用するとその地面を消費して、敵にスロウ効果を与える大きな石を1発投げる。",
-            "dynamicDescription": "5発の石を放ち、それぞれが最初に命中した敵の周囲に<magicDamage>@RockDamage@の魔法ダメージ</magicDamage>を与えつつ、「加工された地面」を作り出す。同じ敵に複数の石が命中した場合、2発目以降の石はダメージが@ExtraMissileReducedDamagePercent@%低下する。<br><br>「加工された地面」の上で発動する場合、マナコストが@Effect7Amount@マナになり、クールダウンが@WorkedGroundCDR*100@%短縮され、その「加工された地面」を消費して大きな石を1発投げる。この石は命中したすべての敵に@SlowDuration@秒間、@SlowPercent*100@%の<status>スロウ効果</status>を付与し、最初に命中した対象には<magicDamage>@BigRockDamage@の魔法ダメージ</magicDamage>を与える。大きな石がモンスターに命中すると@MonsterStunDuration@秒間<status>スタン</status>させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "指定方向に5個の石を投げる。それぞれの石は最初に命中した敵の周囲に<magicDamage>@RockDamage@の魔法ダメージ</magicDamage>を与え、その地点に「加工された地面」を作り出す。同じ敵に連続で命中すると、ダメージが@ExtraMissileReducedDamagePercent@%低下する。<br><br>「加工された地面」の上で発動する場合、マナコストが@BigRockManaCost@になり、クールダウンが@WorkedGroundCDR*100@%短縮され、その「加工された地面」を消費して大きな石を1発投げる。この石は命中したすべての敵に@SlowDuration@秒間、@SlowPercent*100@%の<status>スロウ効果</status>を付与し、最初に命中した対象には<magicDamage>@BigRockDamage@の魔法ダメージ</magicDamage>を与える。大きな石が命中したモンスターは@MonsterStunDuration@秒間<status>スタン状態</status>になる。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "長い壁を作り、その上を移動する。",
-            "dynamicDescription": "@Effect1Amount@秒間、巨大な壁を作り出す。即座に<recast>再発動</recast>すると、壁を崩しながら壁の上を進む。移動するか移動不能効果を受けると壁から降りる。<br><br>チャンピオンまたは建造物によるダメージを受けてから@DamageLockoutTime@秒間は、このスキルを使用できない。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@WallDuration@秒間、巨大な土壁を作り出す。スキルを即座に<recast>再発動</recast>すると、タリヤは展開される壁に沿って移動する。移動するか移動不能効果を受けると壁から降りる。<br><br>チャンピオンまたは建造物によるダメージを受けてから@DamageLockoutTime@秒間は、このスキルを使用できない。@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
-            "cooldown": "@f2@ sek. %i:cooldown%",
+            "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Leci do sojusznika, osłaniając go tarczą. Przez krótki czas można użyć ponownie za darmo.",
-            "dynamicDescription": "Rakan doskakuje do sojuszniczego bohatera, zapewniając mu <shield>@TotalShield@ pkt. tarczy</shield> na @Effect3Amount@ sek.<br><br>Rakan może <recast>ponownie użyć</recast> tej umiejętności jeszcze raz w ciągu @Effect2Amount@ sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan doskakuje do sojuszniczego bohatera, zapewniając mu <shield>@TotalShield@ pkt. tarczy</shield> na @Duration@ sek.<br><br>Rakan może <recast>ponownie użyć</recast> tej umiejętności jednokrotnie w ciągu @RecastWindow@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Zyskuje prędkość ruchu, urzekając i zadając obrażenia magiczne dotkniętym wrogom.",
-            "dynamicDescription": "Rakan zyskuje <speed>@Effect5Amount@% prędkości ruchu</speed> na @Effect2Amount@ sek. Rakan zadaje wrogom <magicDamage>@TotalDamageTooltip@ pkt. obrażeń magicznych</magicDamage> i przy pierwszym trafieniu rzuca na nich <status>urok</status> trwający @Effect3Amount@ sek. Pierwszy dotknięty bohater zapewnia Rakanowi <speed>@Effect6Amount@% stopniowo zanikającej prędkości ruchu</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan zyskuje <speed>@InitialCastSpeed@% prędkości ruchu</speed> na @Duration@ sek. Rakan zadaje wrogom <magicDamage>@TotalDamageTooltip@ pkt. obrażeń magicznych</magicDamage> i przy pierwszym trafieniu rzuca na nich <status>urok</status> trwający @CharmDuration@ sek. Pierwszy dotknięty bohater zapewnia Rakanowi <speed>@TouchSpeed@% stopniowo zanikającej prędkości ruchu</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,

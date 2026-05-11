@@ -12,6 +12,7 @@
 .lol-settings-license .title,
 .lol-settings-title,
 .lol-settings-version .title,
+.lol-settings-voice-agreement .lol-settings-voice-agreement-button,
 .lol-settings-voice-ptt-key,
 .lol-settings-voice-ptt-modal .lol-settings-voice-ptt-modal-key,
 .lol-settings-voice-ptt-modifier,
@@ -57,6 +58,7 @@
 .lol-settings-sound-title,
 .lol-settings-version,
 .lol-settings-version .subtitle,
+.lol-settings-voice-agreement .lol-settings-voice-agreement-description,
 .lol-settings-voice-input .lol-settings-voice-input-device-label,
 .lol-settings-voice-input .lol-settings-voice-input-volume-label,
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option,
@@ -127,6 +129,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-version,
 .lol-settings-version .subtitle,
 .lol-settings-version .title,
+.lol-settings-voice-agreement .lol-settings-voice-agreement-description,
 .lol-settings-voice-input .lol-settings-voice-input-device-label,
 .lol-settings-voice-input .lol-settings-voice-input-volume-label,
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option,
@@ -395,6 +398,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-repair-title,
 .lol-settings-sound-title,
 .lol-settings-version,
+.lol-settings-voice-agreement .lol-settings-voice-agreement-description,
 .lol-settings-voice-input .lol-settings-voice-input-device-label,
 .lol-settings-voice-input .lol-settings-voice-input-volume-label,
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option,
@@ -442,6 +446,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-repair-title:lang(ja-jp),
 .lol-settings-sound-title:lang(ja-jp),
 .lol-settings-version:lang(ja-jp),
+.lol-settings-voice-agreement .lol-settings-voice-agreement-description:lang(ja-jp),
 .lol-settings-voice-input .lol-settings-voice-input-device-label:lang(ja-jp),
 .lol-settings-voice-input .lol-settings-voice-input-volume-label:lang(ja-jp),
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option:lang(ja-jp),
@@ -484,6 +489,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-repair-title:lang(ar-ae),
 .lol-settings-sound-title:lang(ar-ae),
 .lol-settings-version:lang(ar-ae),
+.lol-settings-voice-agreement .lol-settings-voice-agreement-description:lang(ar-ae),
 .lol-settings-voice-input .lol-settings-voice-input-device-label:lang(ar-ae),
 .lol-settings-voice-input .lol-settings-voice-input-volume-label:lang(ar-ae),
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option:lang(ar-ae),
@@ -1218,15 +1224,82 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
     margin-bottom: 10px
 }
 
-.lol-settings-voice-input,
 .lol-settings-voice-party-join {
     display: flex;
     flex-direction: column;
     width: 100%
 }
 
+.lol-settings-voice-agreement {
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    border: 1px solid rgba(200, 155, 60, .5);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    width: 90%
+}
+
+.lol-settings-voice-agreement .lol-settings-voice-agreement-description {
+    color: #a09b8c;
+    flex: 0 1 auto;
+    margin-left: 0;
+    margin-right: 12px;
+    max-width: 230px;
+    min-width: 0
+}
+
+.lol-settings-voice-agreement .lol-settings-voice-agreement-button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #5d4220 0, #2e2316);
+    border: 1px solid #c89b3c;
+    border-radius: 60px;
+    color: #cdbe91;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .96px;
+    line-height: 16px;
+    padding: 5px 16px;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.lol-settings-voice-agreement .lol-settings-voice-agreement-button:hover {
+    background-image: linear-gradient(180deg, #6e4f27 0, #3a2c1c);
+    border-color: #f0e6d2;
+    color: #f0e6d2
+}
+
+.lol-settings-voice-agreement .lol-settings-voice-agreement-button:active {
+    background-image: linear-gradient(180deg, #2e2316 0, #5d4220);
+    border-color: #c89b3c;
+    color: #cdbe91
+}
+
+.lol-settings-voice-agreement .lol-settings-voice-agreement-button:focus {
+    outline: none
+}
+
+.lol-settings-voice-agreement hr {
+    background-color: #1e2328;
+    border: 0;
+    height: 1px;
+    margin-bottom: 10px
+}
+
 .lol-settings-voice-input {
-    margin-top: 10px
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%
 }
 
 .lol-settings-voice-input lol-uikit-slider {

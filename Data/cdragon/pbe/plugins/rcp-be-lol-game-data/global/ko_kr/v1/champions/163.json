@@ -582,7 +582,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "탈리야가 지정한 방향으로 바위 조각을 던집니다. 이 때 탈리야는 자유롭게 이동할 수 있으며 탈리야 아래의 땅이 다져집니다. 다져진 땅 위에서 파편 난사를 사용하면 다져진 땅이 사라지면서 적을 둔화하는 큰 바위를 던집니다.",
-            "dynamicDescription": "탈리야가 5개의 바위 조각을 던져 처음으로 맞힌 적 주변 지역에 개당 <magicDamage>@RockDamage@의 마법 피해</magicDamage>를 입히고 땅을 다집니다. 동일한 적에게 연달아 바위 조각을 맞힐 경우 피해량이 @ExtraMissileReducedDamagePercent@% 감소합니다.<br><br>다져진 땅에서 이 스킬을 사용하면 마나가 @Effect7Amount@ 소모되며 재사용 대기시간이 @WorkedGroundCDR*100@% 감소하고 다져진 땅을 소모해 바위를 던집니다. 바위는 적중한 적을 @SlowDuration@초 동안 @SlowPercent*100@% <status>둔화</status>시키고 첫 번째 대상에게 <magicDamage>@BigRockDamage@의 마법 피해</magicDamage>를 입힙니다. 바위에 맞은 몬스터는 @MonsterStunDuration@초 동안 <status>기절</status>합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "탈리야가 5개의 바위 조각을 던져 처음으로 맞힌 적 주변 지역에 개당 <magicDamage>@RockDamage@의 마법 피해</magicDamage>를 입히고 땅을 다집니다. 동일한 적에게 연달아 바위 조각을 맞힐 경우 피해량이 @ExtraMissileReducedDamagePercent@% 감소합니다.<br><br>다져진 땅에서 이 스킬을 사용하면 마나가 @BigRockManaCost@ 소모되며 재사용 대기시간이 @WorkedGroundCDR*100@% 감소하고 다져진 땅을 소모해 바위를 던집니다. 바위는 적중한 적을 @SlowDuration@초 동안 @SlowPercent*100@% <status>둔화</status>시키고 첫 번째 대상에게 <magicDamage>@BigRockDamage@의 마법 피해</magicDamage>를 입힙니다. 바위에 맞은 몬스터는 @MonsterStunDuration@초 동안 <status>기절</status>합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "아주 긴 벽을 세웁니다. 탈리야는 이 벽을 타고 이동할 수 있습니다.",
-            "dynamicDescription": "탈리야가 @Effect1Amount@초 동안 거대한 흙벽을 세웁니다. 즉시 <recast>재사용</recast>하면 움직이는 벽에 올라타며, 이동하거나 이동 불가 효과에 걸리면 벽에서 내려옵니다.<br><br>탈리야가 지난 @DamageLockoutTime@초 안에 챔피언 또는 구조물에 의한 피해를 입었으면 이 스킬을 사용할 수 없습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "탈리야가 @WallDuration@초 동안 거대한 흙벽을 세웁니다. 즉시 <recast>재사용</recast>하면 움직이는 벽에 올라타며, 이동하거나 이동 불가 효과에 걸리면 벽에서 내려옵니다.<br><br>탈리야가 지난 @DamageLockoutTime@초 안에 챔피언 또는 구조물에 의한 피해를 입었으면 이 스킬을 사용할 수 없습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

@@ -582,7 +582,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Taliyah ระดมยิงกระสุนหินไปในทิศทางที่เลือก โดยเธอยังสามารถเคลื่อนที่ได้อย่างอิสระขณะร่าย สิ่งนี้จะสร้างพื้นดินทรุดใต้เท้าเธอ หาก Taliyah ใช้สกิล Threaded Volley บนพื้นดินทรุด มันจะเป็นการใช้พื้นดินทรุดนี้เพื่อโยนก้อนหินที่รุนแรงกว่าออกไปซึ่งจะสโลว์ศัตรู",
-            "dynamicDescription": "Taliyah เหวี่ยงก้อนหิน 5 ก้อนออกไป โดยแต่ละก้อนสร้าง<magicDamage>ความเสียหายเวท @RockDamage@ หน่วย</magicDamage> ให้กับศัตรูตัวแรกที่โดนและรอบ ๆ เป้าหมาย พร้อมกับสร้างพื้นดินทรุดในบริเวณนั้น สร้างความเสียหายลดลง @ExtraMissileReducedDamagePercent@% เมื่อโจมตีเป้าหมายเดิมซ้ำ<br><br>กดใช้สกิลบนพื้นดินทรุดจะใช้มานา @Effect7Amount@ หน่วยและลดคูลดาวน์ลง @WorkedGroundCDR*100@% และเป็นการใช้พื้นดินทรุด จากนั้นจะเหวี่ยงหินก้อนใหญ่ที่จะ<status>สโลว์</status>ศัตรูที่โดน @SlowPercent*100@% เป็นเวลา @SlowDuration@ วินาที และสร้าง<magicDamage>ความเสียหายเวท @BigRockDamage@ หน่วย</magicDamage>ให้กับเป้าหมายหลัก สัตว์ป่าที่โดนหินก้อนใหญ่เหวี่ยงใส่จะ<status>ถูกสตัน</status>เป็นเวลา @MonsterStunDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah เหวี่ยงก้อนหิน 5 ก้อนออกไป สร้าง<magicDamage>ความเสียหายเวท @RockDamage@ หน่วย</magicDamage>ต่อก้อน ให้กับพื้นที่รอบ ๆ ศัตรูตัวแรกที่โดน และสร้างพื้นดินทรุดในบริเวณนั้น โดยหินก้อนถัด ๆ ไปที่โดนเป้าหมายเดิมจะสร้างความเสียหายลดลง @ExtraMissileReducedDamagePercent@%<br><br>การใช้สกิลบนพื้นดินทรุดจะใช้มานา @BigRockManaCost@ หน่วยและลดคูลดาวน์ลง @WorkedGroundCDR*100@% อีกทั้งเป็นการใช้งานพื้นดินทรุด เพื่อเหวี่ยงหินก้อนใหญ่ที่จะ<status>สโลว์</status>ศัตรูที่โดน @SlowPercent*100@% เป็นเวลา @SlowDuration@ วินาที และสร้าง<magicDamage>ความเสียหายเวท @BigRockDamage@ หน่วย</magicDamage>ให้กับเป้าหมายหลัก มอนสเตอร์ที่โดนหินก้อนใหญ่เหวี่ยงใส่จะถูก<status>สตัน</status>เป็นเวลา @MonsterStunDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -882,7 +882,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Taliyah สร้างพื้นที่กับดักสโลว์ หากศัตรูพยายามพุ่งตัวผ่าน หรือถูกผลักผ่านมัน กับดักจะระเบิดและสตันพวกเขา",
-            "dynamicDescription": "Taliyah สร้างพื้นที่ก้อนหินกับดักไว้ <status>สโลว์</status>ศัตรูที่โดน @SlowPercent*100@% และสร้าง<magicDamage>ความเสียหายเวท @ScatterDamage@ หน่วย</magicDamage> ก้อนหินจะแตกออกเมื่อศัตรูพุ่งผ่านหรือถูก<status>กระแทก</status>ผ่านก้อนหิน และ<status>สตัน</status>พวกเขาเป็นเวลา @StunDuration@ วินาที + ระยะเวลาการเคลื่อนที่ที่เหลือ พร้อมทั้งสร้าง<magicDamage>ความเสียหายเวท @DetonationDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah สร้างพื้นที่ก้อนหินกับดักไว้ <status>สโลว์</status>ศัตรูที่โดน @SlowPercent*100@% และสร้าง<magicDamage>ความเสียหายเวท @ScatterDamage@ หน่วย</magicDamage> ก้อนหินจะแตกออกเมื่อศัตรูพุ่งผ่านหรือถูก<status>กระแทก</status>ผ่านก้อนหิน และ<status>สตัน</status>พวกเขาเป็นเวลา @StunDuration@ วินาที + ระยะเวลาการเคลื่อนที่ที่เหลือ พร้อมทั้งสร้าง<magicDamage>ความเสียหายเวท @DetonationDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Taliyah จะสร้างกำแพงที่ยาวมาก ๆ ขึ้นมา และเคลื่อนที่ไปตามมันได้",
-            "dynamicDescription": "Taliyah สร้างกำแพงหินยักษ์ขึ้นมาเป็นเวลา @Effect1Amount@ วินาที หาก<recast>กดใช้ซ้ำ</recast>ทันที เธอจะขี่กำแพงที่กำลังสร้างไปด้วย การเคลื่อนที่หรือถูกหยุดการเคลื่อนที่จะเป็นการหยุดการขี่กำแพง<br><br>ไม่สามารถกดใช้สกิลนี้ได้หาก Taliyah ได้รับความเสียหายจากแชมเปี้ยนหรือสิ่งก่อสร้างภายในระยะเวลาก่อนหน้านั้น @DamageLockoutTime@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taliyah สร้างกำแพงหินยักษ์ขึ้นมาเป็นเวลา @WallDuration@ วินาที หาก<recast>กดใช้ซ้ำ</recast>ทันที เธอจะขี่กำแพงที่กำลังสร้างไปด้วย การเคลื่อนที่หรือถูกหยุดการเคลื่อนที่จะทำให้การขี่กำแพงสิ้นสุดลง<br><br>ไม่สามารถร่ายสกิลนี้ได้หาก Taliyah ได้รับความเสียหายจากแชมเปี้ยนหรือสิ่งปลูกสร้างภายใน @DamageLockoutTime@ วินาทีก่อนหน้า@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

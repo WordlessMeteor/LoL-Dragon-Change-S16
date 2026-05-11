@@ -5220,7 +5220,7 @@
         "trait_id": "TFT15_BattleAcademia",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_BattleClub.TFT_Set15.png",
-        "tooltip_text": "A Csata Akadémia hősök fejlesztik a képességeiket és Potenciálra %i:set14AmpIcon% tesznek szert. A Potenciál fejleszti a képességeiket. <br><ShowIf.TFT15_BattleAcademia_NoPrismatic><br><rules>Spektrum: állíts harcba 7 Csata Akadémia hőst, majd szerezz @PrismaticItemRequirement@ pontot hősök tárgyakkal való felszerelésével.</rules><br></ShowIf.TFT15_BattleAcademia_NoPrismatic><ShowIf.TFT15_BattleAcademia_PrismaticPending><br><TFTRadiantItemBonus>Spektrum:</TFTRadiantItemBonus> a harcban használt minden, hősök által használt kész tárgy után 1 pontot kapsz. @PrismaticItemRequirement@ pontnál lediplomázol. (@TFTUnitProperty.trait:TFT15_BattleAcademia_PrismaticNumItems@/@PrismaticItemRequirement@).<br></ShowIf.TFT15_BattleAcademia_PrismaticPending><ShowIf.TFT15_BattleAcademia_PrismaticActive><br><TFTRadiantItemBonus><br>Feloldott valódi Potenciál: +@UltimateNumPotential@ %i:set14AmpIcon%</TFTRadiantItemBonus><br></ShowIf.TFT15_BattleAcademia_PrismaticActive><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row>",
+        "tooltip_text": "A Csata Akadémia-hősök fejlesztik a képességeiket, és Potenciálra %i:set14AmpIcon% tesznek szert. A Potenciál fejleszti a képességeiket. <br><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) VALÓDI POTENCIÁL FELOLDVA</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -5292,8 +5292,28 @@
                     }
                 ],
                 "min_units": 7,
+                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DA",
+                        "value": 0.75
+                    },
+                    {
+                        "name": "DR",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumPotential",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -6741,7 +6761,7 @@
         "trait_id": "TFT15_SoulFighter",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_SoulFighter.TFT_Set15.png",
-        "tooltip_text": "A Lélekharcosok bónusz életerőre tesznek szert, továbbá minden másodpercben sebzést és varázserőt kapnak, legfeljebb @MaxStacks@ jelzőig. A maximális számú jelző elérésekor bónusz tényleges sebzést okoznak.<br><ShowIf.TFT15_SoulFighter_NoPrismatic><br><rules>Spektrum: állíts harcba 8 egységet, majd nyerj meg @PlayerDamageToPrismatic@ csatát.</rules><br></ShowIf.TFT15_SoulFighter_NoPrismatic><ShowIf.TFT15_SoulFighter_PrismaticPending><br><TFTRadiantItemBonus>Spektrum:</TFTRadiantItemBonus> győzz le @PlayerDamageToPrismatic@ játékost csatában. (@TFTUnitProperty.trait:TFT15_SoulFighter_PlayerDamageDealt@)<br></ShowIf.TFT15_SoulFighter_PrismaticPending><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>MAXIMÁLIS LÉLEKERŐ.<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@% sebzés</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@% sebzés</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@% sebzés</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@% sebzés</row>",
+        "tooltip_text": "A Lélekharcosok bónusz életerőre tesznek szert, továbbá minden másodpercben sebzést és varázserőt kapnak, legfeljebb @MaxStacks@ jelzőig. A maximális számú jelző elérésekor bónusz tényleges sebzést okoznak.<br><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>MAXIMÁLIS LÉLEKERŐ.<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@% sebzés</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@% sebzés</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@% sebzés</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@%&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@% sebzés</row><br><row>(@MinUnits@) MAXIMÁLIS LÉLEKERŐ</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -6845,8 +6865,32 @@
                     }
                 ],
                 "min_units": 8,
+                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusTrueDamage",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "FlatHealth",
+                        "value": 700.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "StatsPerSecond",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -6936,7 +6980,7 @@
         "trait_id": "TFT15_StarGuardian",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_StarGuardian.png",
-        "tooltip_text": "A Csillagőrzők egyedi csapatmunkabónusszal rendelkeznek, amelyet minden Csillagőrző megkap. Minden táblára helyezett Csillagőrző növeli a bónuszt!<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>Spektrum: állíts harcba 8 egységet, majd használj fel @ManaToPrismatic@ manát.</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>Spektrum:</TFTRadiantItemBonus> használj fel @ManaToPrismatic@ manát (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>A CSILLAGOK FELÉBREDNEK.</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>Rell:</status> egy @TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@ erejű pajzsot biztosít</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>Rell: több pajzsot biztosít</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>Syndra:</status> @TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@% varázserőt ad @SyndraTimer@ másodpercenként</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>Syndra: varázserőt biztosít</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>Xayah:</status> minden 3. támadás <magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@ (szakaszonként növekszik)</magicDamage> varázssebzést okoz</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>Xayah: támadáskor varázssebzést okoz</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>Ahri:</status> a képességek elsütése után @AhriDuration@ másodperc alatt @TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@ manát kapsz</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>Ahri: manát kapsz a képességek elsütésekor</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>Neeko:</status> +@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@% gyógyítás és pajzs</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>Neeko: megnöveli a gyógyítást és a pajzsok erejét</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>Poppy:</status> 40%-os életerőnél az életereje @TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@%-ával %i:scaleHealth% gyógyít</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>Poppy: alacsony életerő esetén gyógyít</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>Jinx:</status> +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@% támadási sebesség. +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@% %i:scaleAS% a kiiktatások után, amely 3 másodperc alatt elenyészik</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>Jinx: támadási sebességet biztosít</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>Seraphine:</status> @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth% és @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@% %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult% értéket kap</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>Seraphine: minden értékből bónuszt kap</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>Embléma:</status> @EmblemBonus*100@%-kal növeli a bónuszokat!</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>Embléma: megnövel más bónuszokat</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
+        "tooltip_text": "A Csillagőrzők egyedi csapatmunkabónusszal rendelkeznek, amelyet minden Csillagőrző megkap. Minden táblára helyezett Csillagőrző növeli a bónuszt!<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>Spektrum osztályú: Állíts harcba 10 Csillagőrzőt, és ÉBRESZD FEL A CSILLAGOKAT!</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>Spektrum osztályú:</TFTRadiantItemBonus> Használj fel @ManaToPrismatic@ manát (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>A CSILLAGOK FELÉBREDNEK.</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>Rell:</status> egy @TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@ erejű pajzsot biztosít</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>Rell: pajzsot biztosít</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>Syndra:</status> @TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@% varázserőt biztosít @SyndraTimer@ másodpercenként</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>Syndra: varázserőt biztosít</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>Xayah:</status> minden 3. támadás <magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@ (szakaszonként növekszik)</magicDamage> varázssebzést okoz</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>Xayah: támadáskor varázssebzést okoz</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>Ahri:</status> a képességek elsütése után @AhriDuration@ másodperc alatt @TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@ manát kap</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>Ahri: manát kap a képességek elsütésekor</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>Neeko:</status> +@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@% gyógyítás és pajzserő</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>Neeko: megnövelt gyógyítás és pajzserő</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>Poppy:</status> 40%-os életerőnél @TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@% %i:scaleHealth% gyógyulást ér el</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>Poppy: alacsony életerő esetén gyógyul</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>Jinx:</status> +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@% támadási sebesség. +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@% %i:scaleAS% a kiiktatások után, amely 3 másodperc alatt elenyészik</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>Jinx: támadási sebességet biztosít</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>Seraphine:</status> @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth% és @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@% %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult% értéket kap</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>Seraphine: minden értékből bónuszt kap</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>Embléma:</status> @EmblemBonus*100@%-kal növeli a bónuszokat!</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>Embléma: megnövel más bónuszokat</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -7108,18 +7152,6 @@
                 "constants": [
                     {
                         "name": "Multiplier",
-                        "value": 1.18
-                    }
-                ],
-                "min_units": 8,
-                "max_units": 8,
-                "style_idx": 6,
-                "style_name": "kChromatic"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
                         "value": 1.2
                     }
                 ],
@@ -7133,29 +7165,6 @@
                     {
                         "name": "Multiplier",
                         "value": 1.2
-                    }
-                ],
-                "min_units": 9,
-                "max_units": 9,
-                "style_idx": 6,
-                "style_name": "kChromatic"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
-                        "value": 1.5
-                    }
-                ],
-                "min_units": 10,
-                "style_idx": 5,
-                "style_name": "kGold"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
-                        "value": 2.0
                     }
                 ],
                 "min_units": 10,
@@ -7347,7 +7356,7 @@
                     },
                     {
                         "name": "StatBonus",
-                        "value": 0.05
+                        "value": 0.1
                     },
                     {
                         "name": "XPPerReroll",
@@ -15068,7 +15077,7 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "A játékosok elleni csaták elvesztése után @TechPerCombat@ Techet szerzel, továbbá a vereségsorozat minden veresége után még @TechPerLoss@ Techet. A Lélek egységekkel elért kiiktatások szintén @TechPerKill@ Techet érnek.<br><br>@TechBreakpoint@ Tech elérésekor a Lélek egységek új fegyverprototípust hoznak létre. Rajtad múlik, hogy elfogadod, vagy még több Techet halmozol fel erősebb fegyverekért.<br><br><row>(@MinUnits@) Kezdődik a kutatás! </row><br><row>(@MinUnits@) A játékosok elleni csaták megnyerése után zsákmányt kapsz!</row>",
+        "tooltip_text": "A játékosok elleni csaták elvesztése után @TechPerCombat@ Techet szerzel, továbbá a vereségsorozat minden veresége után még @TechPerLoss@ Techet. A Lélek egységekkel elért kiiktatások szintén @TechPerKill@ Techet érnek.<br><br>@TechBreakpoint@ Tech elérésekor a Lélek egységek új fegyverprototípust hoznak létre. Rajtad múlik, hogy elfogadod, vagy még több Techet halmozol fel erősebb fegyverekért.<br><br><row>(@MinUnits@) Kezdődik a kutatás! </row><br><row>(@MinUnits@) Minden játékosok elleni csata után zsákmányt kapsz!</row><br><br><ShowIf.TFT17_AnimaSquad_IsDoubleUp><rules>Ketten együtt módban vereségenként @PairsPartnerWinMultiplier*100@% Techet kapsz, ha a partnered megnyeri a harcot.</rules></ShowIf.TFT17_AnimaSquad_IsDoubleUp>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15384,7 +15393,7 @@
         "trait_id": "TFT17_DarkStar",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) A Sötét csillagok létrehoznak egy fekete lyukat, amely elnyeli az ellenfeleket a maximális életerejük @ExecuteHPPercent*100@%-ánál.</row><br><row>(@MinUnits@) ÉS szert tesznek a következőre: @ADAP@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) ÉS a legerősebb Sötét csillag egység szupermasszívvá válik, amitől a Sötét csillag-képességek @SupermassivePercentBonus*100@%-kal hatékonyabbá válnak, és létrejön 2 kisebb fekete lyuk.</row><br><row>(@MinUnits@) Minden Sötét csillag szupermasszív. A 10. szinten MINDENKIT FELEMÉSZT. </row>",
+        "tooltip_text": "<row>(@MinUnits@) A Sötét csillagok létrehoznak egy fekete lyukat, amely elnyeli az ellenfeleket a maximális életerejük <ShowIf.TFT17_DarkStar_HasNeutronStar><TFTBonus> @TFTUnitProperty.trait:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@</TFTBonus></ShowIf.TFT17_DarkStar_HasNeutronStar><ShowIfNot.TFT17_DarkStar_HasNeutronStar>@ExecuteHPPercent*100@</ShowIfNot.TFT17_DarkStar_HasNeutronStar>%-ánál.</row><br><row>(@MinUnits@) ÉS szert tesznek a következőre: @ADAP@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) ÉS a legerősebb Sötét csillag egység szupermasszívvá válik, amitől a Sötét csillag-képességek @SupermassivePercentBonus*100@%-kal hatékonyabbá válnak, és létrejön 2 kisebb fekete lyuk.</row><br><row>(@MinUnits@) Minden Sötét csillag szupermasszív. A 10. szinten MINDENKIT FELEMÉSZT. </row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15907,7 +15916,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.2
+                        "value": 0.18
                     },
                     {
                         "name": "Omnivamp",
@@ -15927,7 +15936,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.4
+                        "value": 0.35
                     },
                     {
                         "name": "Omnivamp",
@@ -15947,7 +15956,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.6
+                        "value": 0.55
                     },
                     {
                         "name": "Omnivamp",
@@ -16015,17 +16024,17 @@
         "trait_id": "TFT17_MorganaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
-        "tooltip_text": "A szövetségesek @UntransformedAbilityDA*100@%-kal kisebb sebzést szenvednek el a képességektől. Ez az érték @TransformedAbilityDA*100@%-ra nő, amíg Morgana Élő sötétség alakban van.",
+        "tooltip_text": "A csapat @Durability*100@% szívósságra tesz szert, ami @TransformedDurability*100@%-kal nő, ha Morgana Élő sötétség alakban van.",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "TransformedAbilityDA",
-                        "value": 0.1
+                        "name": "Durability",
+                        "value": 0.04
                     },
                     {
-                        "name": "UntransformedAbilityDA",
-                        "value": 0.05
+                        "name": "TransformedDurability",
+                        "value": 0.1
                     }
                 ]
             }
@@ -16598,12 +16607,20 @@
                         "value": 0.1
                     },
                     {
-                        "name": "Fountain_ManaRegen_Teamwide",
-                        "value": 1.0
+                        "name": "Fountain_HealthRegen",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Fountain_HealthRegen_Teamwide",
+                        "value": 0.02
                     },
                     {
                         "name": "Huntress_AS_Teamwide",
                         "value": 0.15
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 0.0
                     },
                     {
                         "name": "Medallion_DA_Teamwide",
@@ -16692,12 +16709,8 @@
                         "value": 10.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.18
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 3.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 2.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -16788,11 +16801,7 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.25
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
+                        "name": "Fountain_StackingADAP",
                         "value": 4.0
                     },
                     {
@@ -16880,12 +16889,8 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.2
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 5.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 4.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -17100,13 +17105,25 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "A Csillagnézők minden játékban más csillagképet rajzolnak fel. A játék csillagképe: <TFTStargazer>a Forrás</TFTStargazer>.<br><br>A felerősített mezőkön álló szövetségesek @Fountain_ManaRegen_Teamwide@ mana-regent kapnak. A felerősített mezőkön álló Csillagnézők többet kapnak, és a képességeikkel gyógyítják a legalacsonyabb életerejű szövetségest.<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, a képességsebzés @Fountain_HealPercent*100@%-ának megfelelő gyógyítás</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, a képességsebzés @Fountain_HealPercent*100@%-ának megfelelő gyógyítás</row><br><br><rules>Minden játékosszinttel újabb mezők válnak elérhetővé</rules>",
+        "tooltip_text": "A Csillagnézők minden játékban más csillagképet rajzolnak fel. A játék csillagképe: <TFTStargazer>a Forrás</TFTStargazer>.<br><br>A felerősített mezőkön álló szövetségesek @Fountain_Interval@ másodpercenként visszatöltik a maximális életerő @Fountain_HealthRegen_Teamwide*100@%-át. A felerősített mezőkön álló Csillagnézők @Fountain_HealthRegen*100@%-kal többet töltenek vissza, és @Fountain_Interval@ másodpercenként halmozódó sebzést és varázserőt is kapnak.<br><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @Fountain_StackingADAP@% %i:scaleAD% %i:scaleAP%</row><br><br><rules>Minden játékosszinttel újabb mezők válnak elérhetővé</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "Fountain_ManaRegen_Teamwide",
-                        "value": 1.0
+                        "name": "Fountain_HealthRegen",
+                        "value": 0.025
+                    },
+                    {
+                        "name": "Fountain_HealthRegen_Teamwide",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "Fountain_Interval",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 0.0
                     }
                 ]
             }
@@ -17115,12 +17132,8 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.18
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 1.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 4.0
                     }
                 ],
                 "min_units": 3,
@@ -17131,12 +17144,8 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.25
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 5.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 7.0
                     }
                 ],
                 "min_units": 5,
@@ -24808,7 +24817,7 @@
                     },
                     {
                         "name": "Tier1Heal",
-                        "value": 2.0
+                        "value": 1.0
                     },
                     {
                         "name": "Tier1HealDU",
