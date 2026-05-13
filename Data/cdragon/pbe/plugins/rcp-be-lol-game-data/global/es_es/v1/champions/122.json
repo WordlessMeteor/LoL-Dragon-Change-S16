@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Darius reúne fuerzas y traza un amplio círculo con su hacha. Los enemigos a los que golpee con su hoja sufrirán más daño que los que sean golpeados por el mango. Darius se cura en función al número de campeones enemigos y monstruos gigantes alcanzados por la hoja.",
-            "dynamicDescription": "Darius alza su hacha y la blande su alrededor, lo que inflige <physicalDamage>@BladeDamage@ de daño físico</physicalDamage> con el borde y <physicalDamage>@HandleDamage@ de daño</physicalDamage> con el mango. Los enemigos alcanzados con el mango no reciben acumulación de <keywordMajor>Hemorragia</keywordMajor>.<br><br>Darius restaura un <healing>@Effect5Amount@% de la vida que le falte</healing> por cada campeón enemigo y monstruo gigante de la jungla golpeado con el borde, hasta un máximo del <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius alza su hacha y la blande a su alrededor, lo que inflige <physicalDamage>@BladeDamage@ de daño físico</physicalDamage> con el borde y <physicalDamage>@HandleDamage@ de daño</physicalDamage> con el mango. Los enemigos alcanzados con el mango no reciben acumulación de <keywordMajor>Hemorragia</keywordMajor>.<br><br>Darius restaura un <healing>@MissingHealthHeal@% de la vida que le falte</healing> por cada campeón enemigo y monstruo gigante de la jungla golpeado con el borde, hasta un máximo del <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "El siguiente ataque de Darius alcanza al enemigo en una arteria vital. Mientras se desangra, su velocidad de movimiento disminuye.",
-            "dynamicDescription": "El siguiente ataque de Darius inflige <physicalDamage>@EmpoweredAttackDamage@ de daño físico</physicalDamage> y <status>ralentiza</status> un @Effect2Amount@% durante @Effect5Amount@&nbsp;s.<br><br>Esta habilidad devuelve el coste de maná y reduce su enfriamiento un @Effect3Amount@% si mata al objetivo.<br><br><rules>Esta habilidad aplica efectos de hechizo al infligir daño.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "El siguiente ataque de Darius inflige <physicalDamage>@EmpoweredAttackDamage@ de daño físico</physicalDamage> y <status>ralentiza</status> un @SlowPercent@% durante @SlowDuration@ s.<br><br>Esta habilidad devuelve su coste de maná y reduce su enfriamiento un @PercentCDRefund@% si mata al objetivo.<br><br><rules>Esta habilidad aplica efectos de hechizo al infligir daño.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Darius pone a punto su hacha, lo cual provoca que, de forma pasiva, su daño físico ignore un porcentaje de la armadura de su objetivo. Cuando se activa, Darius barre a sus enemigos con el gancho de su hacha y los acerca hacia él.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Darius obtiene un @Effect1Amount@% de penetración de armadura.<br><br><spellActive>Activa:</spellActive> Darius engancha con su hacha, <status>atrae</status>, <status>levanta por los aires</status> y <status>ralentiza</status> un @Effect2Amount@% durante @Effect3Amount@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Darius obtiene un @PassivePercentArmorPen@% de penetración de armadura.<br><br><spellActive>Activa:</spellActive> Darius engancha con su hacha, <status>atrae</status>, <status>levanta por los aires</status> y <status>ralentiza</status> un @SlowPercent@% durante @SlowDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

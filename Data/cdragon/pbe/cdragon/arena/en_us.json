@@ -90,6 +90,46 @@
             "tooltip": "Become <keywordStealth>Invisible</keywordStealth> for @StealthDuration@ seconds or until you Attack or use an Ability."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "All damage you do applies <keyword>Grevious Wounds</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Chemtech Putrifier",
+            "rarity": 4,
+            "tooltip": "Dealing <Damage>damage</Damage> to champions applies <keyword>@GrievousAmount*100@% Wounds</keyword> for @GrievousDuration@ seconds."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "Every @Cooldown@ seconds, <keywordMajor>Autocast</keywordMajor> a warding light towards your ally, granting <shield>@TotalShield@ Shield</shield> to yourself and allies it passes through before returning, repeating the effect.."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Dealing damage <status>Slows</status> enemies.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Frozen Mallet",
+            "rarity": 4,
+            "tooltip": "Dealing damage applies a <speed>@SlowAmount*100@%</speed> <status>Slow</status> for @SlowDuration@ seconds."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Vengeance",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Dealing damage deals an additional <physicalDamage>@MaxHealthDamage*100@% max health physical damage</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Bloodrazor",
+            "rarity": 4,
+            "tooltip": "Dealing damage deals an additional <physicalDamage>@MaxHealthDamage*100@% max health physical damage</physicalDamage>."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Numb to Pain",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@% of damage you take instead happens over @BleedDuration@ seconds (@RangedReduction*100@% for ranged champions)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vote for your team to ally with the Demon Hunters. <br><br>Allying with Demon Hunters grants you <gold>+%i:goldCoins%@BonusGold@ bonus gold</gold> when you defeat a <keywordMajor>Demon team</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Ally Hunter",
+            "rarity": 4,
+            "tooltip": "Vote for your team to ally with the Demon Hunters. <br><br>Allying with Demon Hunters grants you <gold>+%i:goldCoins%@BonusGold@ bonus gold</gold> when you defeat a <keywordMajor>Demon team</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Buffing, <healing>Healing</healing>, or <shield>Shielding</shield> your ally deals damage and <status>Slows</status> enemies surrounding them.",
@@ -4656,7 +4807,47 @@
             "id": 76,
             "name": "Sonic Boom",
             "rarity": 0,
-            "tooltip": "Buffing, <healing>Healing</healing>, or <shield>Shielding</shield> your ally deals <trueDamage>@Damage@ true damage</trueDamage> and <status>Slows enemies surrounding them</status> by @SlowAmount*-100@% for @SlowDuration@ seconds.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@"
+            "tooltip": "Buffing, <healing>Healing</healing>, or <shield>Shielding</shield> your ally deals <trueDamage>@Damage@ true damage</trueDamage> and <status>Slows enemies surrounding them</status> by @SlowAmount*-100@% for @SlowDuration@ seconds.<br><br><rules>@ProcCooldown@ second cooldown per cast.</rules><br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Reduce the <attackSpeed>Attack Speed</attackSpeed> of nearby champions.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Remnant of the Watchers",
+            "rarity": 4,
+            "tooltip": "Reduce the <attackSpeed>Attack Speed</attackSpeed> of nearby champions by <attackSpeed>@ASPDSlow*-100@%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "With Haste",
             "rarity": 1,
             "tooltip": "Gain <speed>@AbilityHasteToMSConversionCalc@ Move Speed</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Your damage executes champions that are below @ExecuteThreshold*100@% Health.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Dematerializer",
+            "rarity": 4,
+            "tooltip": "Your damage executes champions that are below @ExecuteThreshold*100@% Health."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Infernal Conduit",
             "rarity": 2,
             "tooltip": "Your Abilities apply an infinitely stacking <keywordMajor>Burn</keywordMajor>, dealing <magicDamage>@BleedDamageTooltip@ magic damage</magicDamage> per second for @BleedDuration@ seconds.<br><br>All your <keywordMajor>Burn</keywordMajor> effects lower your basic Ability Cooldowns by @FlatCooldownRefundPerTick@ seconds when they damage enemies.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vote for your team to ally with the Demons. <br><br>Allying with Demons grants an <keywordMajor>%i:AugmentLevel% Augment Level</keywordMajor> when a <keywordMajor>Hunter team is eliminated</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Ally Demon",
+            "rarity": 4,
+            "tooltip": "Vote for your team to ally with the Demons. <br><br>Allying with Demons grants an <keywordMajor>%i:AugmentLevel% Augment Level</keywordMajor> when a <keywordMajor>Hunter team is eliminated</keywordMajor>."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Spirit Link",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Damage Redirected Total: @f1@<br>Healing Done Total: @f2@<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Gain a <attention>Spell Shield</attention> every @Cooldown@ seconds.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Enchanted Flask",
+            "rarity": 4,
+            "tooltip": "Gain a <attention>Spell Shield</attention> every @Cooldown@ seconds that blocks the next enemy Ability."
         },
         {
             "apiName": "Deathtouch",
@@ -13357,7 +13632,7 @@
             "id": 215,
             "name": "Dark Blessing",
             "rarity": 1,
-            "tooltip": "When you <healing>Heal</healing> or <shield>Shield</shield> an allied champion, gain @CurseCounter@ <keywordMajor>Cursed Power</keywordMajor>.<br><br>Gain @f1@ Ability Haste (@AbilityHasteRatio*100@% of your <keywordMajor>Cursed Power</keywordMajor>).<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "When you <healing>Heal</healing> or <shield>Shield</shield> an allied champion, gain @CurseCounter@ <keywordMajor>Cursed Power</keywordMajor>.<br><br>Gain @f1@ Ability Haste (@AbilityHasteRatio*100@% of your <keywordMajor>Cursed Power</keywordMajor>).<br><br><rules>@Cooldown@ second cooldown per cast.</rules><br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "MindtoMatter",

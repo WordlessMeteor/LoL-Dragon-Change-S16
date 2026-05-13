@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Darius ยกขวานขึ้นและหมุนกวาดรอบตัวเขาเป็นวงกลม ศัตรูที่โดนใบมีดจะได้รับความเสียหายมากกว่าศัตรูที่โดนด้ามจับ Darius จะได้รับผลฮีลตามจำนวนแชมเปี้ยนและสัตว์ป่าตัวใหญ่ที่โดนใบมีด",
-            "dynamicDescription": "Darius ยกขวานขึ้นและเหวี่ยงไปรอบ ๆ สร้าง<physicalDamage>ความเสียหายกายภาพ @BladeDamage@ หน่วย</physicalDamage> ที่อยู่ขอบนอก และ <physicalDamage>@HandleDamage@ หน่วย</physicalDamage>ตรงด้ามจับ ศัตรูที่โดนโจมตีด้วยด้ามจับจะไม่ได้รับสแตค <keywordMajor>Hemorrhage</keywordMajor><br><br>Darius จะฟื้นฟู<healing>พลังชีวิต @Effect5Amount@% ของพลังชีวิตที่หายไป</healing> ต่อจำนวนแชมเปี้ยนศัตรูและมอนสเตอร์ป่าขนาดใหญ่ที่โดนตรงขอบ สูงสุดที่ <healing>@Effect7Amount@%</healing>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius ยกขวานขึ้นแล้วเหวี่ยงไปรอบ ๆ สร้าง<physicalDamage>ความเสียหายกายภาพ @BladeDamage@ หน่วย</physicalDamage>ที่คมขวาน และสร้าง<physicalDamage>ความเสียหายกายภาพ @HandleDamage@ หน่วย</physicalDamage>ที่ด้ามขวาน ศัตรูที่โดนด้ามขวานจะไม่ได้รับสแตค <keywordMajor>Hemorrhage</keywordMajor> <br><br>Darius จะฟื้นฟู <healing>@MissingHealthHeal@% ของพลังชีวิตที่หายไป</healing>ต่อแชมเปี้ยนศัตรูและมอนสเตอร์ขนาดใหญ่ที่โดนคมขวาน สูงสุด <healing>@MissingHealPercent@%</healing>@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "การโจมตีครั้งถัดไปของ Darius จะเล็งไปที่เส้นเลือดใหญ่ของศัตรู ขณะที่พวกเขาเลือดไหล ความเร็วเคลื่อนที่จะลดลง",
-            "dynamicDescription": "การโจมตีครั้งถัดไปของ Darius จะสร้าง<physicalDamage>ความเสียหายกายภาพ @EmpoweredAttackDamage@ หน่วย</physicalDamage> และ<status>สโลว์</status>เป้าหมาย @Effect2Amount@% เป็นเวลา @Effect5Amount@ วินาที<br><br>สกิลนี้จะได้รับมานากลับคืนมาและลดคูลดาวน์ของมันลง @Effect3Amount@% หากสังหารเป้าหมายได้<br><br><rules>สกิลนี้ส่งผลกับเอฟเฟกต์เวทเมื่อสร้างความเสียหาย</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "การโจมตีครั้งถัดไปของ Darius จะสร้าง <physicalDamage>ความเสียหายกายภาพ @EmpoweredAttackDamage@ หน่วย</physicalDamage> และ <status>สโลว์</status> @SlowPercent@% เป็นเวลา @SlowDuration@ วินาที<br><br>สกิลนี้จะคืนมานาและลดคูลดาวน์ลง @PercentCDRefund@% หากสังหารเป้าหมายได้<br><br><rules>สกิลนี้ส่งผลกับเอฟเฟกต์เวทเมื่อสร้างความเสียหาย</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Darius เสริมความแข็งแกร่งให้กับขวานของเขา ทำให้ความเสียหายกายภาพของเขาไม่ถูกลดจากค่าเกราะบางส่วนของเป้าหมาย เมื่อกดใช้ Darius จะดึงศัตรูที่อยู่ด้านหน้าเข้ามาหาด้วยขวานของเขา",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Darius ได้รับค่าเจาะเกราะ @Effect1Amount@%<br><br><spellActive>กดใช้:</spellActive> Darius เกี่ยวดึงด้วยขวานของเขา ทำการ<status>ดึง</status> และ<status>กระแทกศัตรูให้ลอยขึ้น</status> และ<status>สโลว์</status>พวกเขา @Effect2Amount@% เป็นเวลา @Effect3Amount@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Darius ได้รับเจาะเกราะ @PassivePercentArmorPen@%<br><br><spellActive>กดใช้:</spellActive> Darius ใช้ขวานของเขา<status>ดึง</status> และ<status>กระแทกลอย</status>ศัตรู พร้อมทั้ง<status>สโลว์</status>พวกเขา @SlowPercent@% เป็นเวลา @SlowDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

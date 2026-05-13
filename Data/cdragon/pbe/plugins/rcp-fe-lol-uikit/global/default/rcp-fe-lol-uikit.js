@@ -1046,8 +1046,8 @@
                         M = T.pop,
                         O = T.push,
                         L = T.push,
-                        z = T.slice,
-                        D = function(e, t) {
+                        D = T.slice,
+                        z = function(e, t) {
                             for (var n = 0, r = e.length; n < r; n++)
                                 if (e[n] === t) return n;
                             return -1
@@ -1090,11 +1090,11 @@
                             A()
                         };
                     try {
-                        L.apply(T = z.call(x.childNodes), x.childNodes), T[x.childNodes.length].nodeType
+                        L.apply(T = D.call(x.childNodes), x.childNodes), T[x.childNodes.length].nodeType
                     } catch (e) {
                         L = {
                             apply: T.length ? function(e, t) {
-                                O.apply(e, z.call(t))
+                                O.apply(e, D.call(t))
                             } : function(e, t) {
                                 for (var n = e.length, r = 0; e[n++] = t[r++];);
                                 e.length = n - 1
@@ -1249,7 +1249,7 @@
                             }, $ = t ? function(e, t) {
                                 if (e === t) return p = !0, 0;
                                 var r = !e.compareDocumentPosition - !t.compareDocumentPosition;
-                                return r || (1 & (r = (e.ownerDocument || e) === (t.ownerDocument || t) ? e.compareDocumentPosition(t) : 1) || !n.sortDetached && t.compareDocumentPosition(e) === r ? e === a || e.ownerDocument === x && _(x, e) ? -1 : t === a || t.ownerDocument === x && _(x, t) ? 1 : c ? D(c, e) - D(c, t) : 0 : 4 & r ? -1 : 1)
+                                return r || (1 & (r = (e.ownerDocument || e) === (t.ownerDocument || t) ? e.compareDocumentPosition(t) : 1) || !n.sortDetached && t.compareDocumentPosition(e) === r ? e === a || e.ownerDocument === x && _(x, e) ? -1 : t === a || t.ownerDocument === x && _(x, t) ? 1 : c ? z(c, e) - z(c, t) : 0 : 4 & r ? -1 : 1)
                             } : function(e, t) {
                                 if (e === t) return p = !0, 0;
                                 var n, r = 0,
@@ -1257,7 +1257,7 @@
                                     i = t.parentNode,
                                     s = [e],
                                     l = [t];
-                                if (!o || !i) return e === a ? -1 : t === a ? 1 : o ? -1 : i ? 1 : c ? D(c, e) - D(c, t) : 0;
+                                if (!o || !i) return e === a ? -1 : t === a ? 1 : o ? -1 : i ? 1 : c ? z(c, e) - z(c, t) : 0;
                                 if (o === i) return ce(e, t);
                                 for (n = e; n = n.parentNode;) s.unshift(n);
                                 for (n = t; n = n.parentNode;) l.unshift(n);
@@ -1394,7 +1394,7 @@
                                 PSEUDO: function(e, t) {
                                     var n, o = r.pseudos[e] || r.setFilters[e.toLowerCase()] || ie.error("unsupported pseudo: " + e);
                                     return o[y] ? o(t) : o.length > 1 ? (n = [e, e, "", t], r.setFilters.hasOwnProperty(e.toLowerCase()) ? se((function(e, n) {
-                                        for (var r, i = o(e, t), a = i.length; a--;) e[r = D(e, i[a])] = !(n[r] = i[a])
+                                        for (var r, i = o(e, t), a = i.length; a--;) e[r = z(e, i[a])] = !(n[r] = i[a])
                                     })) : function(e) {
                                         return o(e, 0, n)
                                     }) : o
@@ -1575,7 +1575,7 @@
                                         for (d = [], c = m.length; c--;)(p = m[c]) && d.push(b[c] = p);
                                         o(null, m = [], d, l)
                                     }
-                                    for (c = m.length; c--;)(p = m[c]) && (d = o ? D(i, p) : A[c]) > -1 && (i[d] = !(a[d] = p))
+                                    for (c = m.length; c--;)(p = m[c]) && (d = o ? z(i, p) : A[c]) > -1 && (i[d] = !(a[d] = p))
                                 }
                             } else m = _e(m === a ? m.splice(h, m.length) : m), o ? o(null, a, m, l) : L.apply(a, m)
                         }))
@@ -1585,7 +1585,7 @@
                         for (var t, n, o, i = e.length, a = r.relative[e[0].type], s = a || r.relative[" "], l = a ? 1 : 0, c = me((function(e) {
                                 return e === t
                             }), s, !0), p = me((function(e) {
-                                return D(t, e) > -1
+                                return z(t, e) > -1
                             }), s, !0), A = [function(e, n, r) {
                                 var o = !a && (r || n !== d) || ((t = n).nodeType ? c(e, n, r) : p(e, n, r));
                                 return t = null, o
@@ -1850,14 +1850,14 @@
                     }
                 }));
                 var O, L = /\S+/g,
-                    z = {};
+                    D = {};
 
-                function D() {
-                    h.removeEventListener("DOMContentLoaded", D, !1), r.removeEventListener("load", D, !1), b.ready()
+                function z() {
+                    h.removeEventListener("DOMContentLoaded", z, !1), r.removeEventListener("load", z, !1), b.ready()
                 }
                 b.Callbacks = function(e) {
-                    e = "string" == typeof e ? z[e] || function(e) {
-                        var t = z[e] = {};
+                    e = "string" == typeof e ? D[e] || function(e) {
+                        var t = D[e] = {};
                         return b.each(e.match(L) || [], (function(e, n) {
                             t[n] = !0
                         })), t
@@ -1988,7 +1988,7 @@
                         (!0 === e ? --b.readyWait : b.isReady) || (b.isReady = !0, !0 !== e && --b.readyWait > 0 || (O.resolveWith(h, [b]), b.fn.triggerHandler && (b(h).triggerHandler("ready"), b(h).off("ready"))))
                     }
                 }), b.ready.promise = function(e) {
-                    return O || (O = b.Deferred(), "complete" === h.readyState ? setTimeout(b.ready) : (h.addEventListener("DOMContentLoaded", D, !1), r.addEventListener("load", D, !1))), O.promise(e)
+                    return O || (O = b.Deferred(), "complete" === h.readyState ? setTimeout(b.ready) : (h.addEventListener("DOMContentLoaded", z, !1), r.addEventListener("load", z, !1))), O.promise(e)
                 }, b.ready.promise();
                 var I = b.access = function(e, t, n, r, o, i, a) {
                     var s = 0,
@@ -2691,12 +2691,12 @@
                     return r
                 }
 
-                function ze(e, t, n) {
+                function De(e, t, n) {
                     var r = Be.exec(t);
                     return r ? Math.max(0, r[1] - (n || 0)) + (r[2] || "px") : t
                 }
 
-                function De(e, t, n, r, o) {
+                function ze(e, t, n, r, o) {
                     for (var i = n === (r ? "border" : "content") ? 4 : "width" === t ? 1 : 0, a = 0; i < 4; i += 2) "margin" === n && (a += b.css(e, n + q[i], !0, o)), r ? ("content" === n && (a -= b.css(e, "padding" + q[i], !0, o)), "margin" !== n && (a -= b.css(e, "border" + q[i] + "Width", !0, o))) : (a += b.css(e, "padding" + q[i], !0, o), "padding" !== n && (a += b.css(e, "border" + q[i] + "Width", !0, o)));
                     return a
                 }
@@ -2710,7 +2710,7 @@
                         if (((o = we(e, t, i)) < 0 || null == o) && (o = e.style[t]), ve.test(o)) return o;
                         r = a && (u.boxSizingReliable() || o === e.style[t]), o = parseFloat(o) || 0
                     }
-                    return o + De(e, t, n || (a ? "border" : "content"), r, i) + "px"
+                    return o + ze(e, t, n || (a ? "border" : "content"), r, i) + "px"
                 }
 
                 function Pe(e, t) {
@@ -2771,7 +2771,7 @@
                         },
                         set: function(e, n, r) {
                             var o = r && Ee(e);
-                            return ze(0, n, r ? De(e, t, r, "border-box" === b.css(e, "boxSizing", !1, o), o) : 0)
+                            return De(0, n, r ? ze(e, t, r, "border-box" === b.css(e, "boxSizing", !1, o), o) : 0)
                         }
                     }
                 })), b.cssHooks.marginRight = Ce(u.reliableMarginRight, (function(e, t) {
@@ -2788,7 +2788,7 @@
                             for (var r = 0, o = {}, i = "string" == typeof n ? n.split(" ") : [n]; r < 4; r++) o[e + q[r] + t] = i[r] || i[r - 2] || i[0];
                             return o
                         }
-                    }, ke.test(e) || (b.cssHooks[e + t].set = ze)
+                    }, ke.test(e) || (b.cssHooks[e + t].set = De)
                 })), b.fn.extend({
                     css: function(e, t) {
                         return I(this, (function(e, t, n) {
@@ -8296,6 +8296,9 @@
                 hide(e) {
                     i.default.hideTooltip(e)
                 }
+                reposition(e) {
+                    i.default.repositionTooltip(e)
+                }
                 enable(e) {
                     i.default.enableTooltip(e)
                 }
@@ -8482,6 +8485,9 @@
                 })
             }, _.prototype.handleMutation = function() {
                 this.lastPositioned && Object.prototype.hasOwnProperty.call(this.lastPositioned, "target") && this.positionTooltip(this.lastPositioned.target, this.lastPositioned.element)
+            }, _.prototype.repositionTooltip = function(e) {
+                const t = this.targets.get(e);
+                t && t.tooltipVisible && t.domNode && this.positionTooltip(e, t.domNode)
             }, _.prototype.toggleTooltip = function(e, t) {
                 const n = this.targets.get(e);
                 return this.layer.parentElement ? n.eventHandlers.hide(t) : n.eventHandlers.show(t)
@@ -10081,7 +10087,9 @@
                     return n(212)
                 }
                 constructor() {
-                    super(), this._wrapperElement = this.shadowRoot.querySelector("div.lol-uikit-slider-wrapper"), this._baseElement = this.shadowRoot.querySelector("div.lol-uikit-slider-base"), this._buttonElement = this.shadowRoot.querySelector("div.lol-uikit-slider-button"), this._fillElement = this.shadowRoot.querySelector("div.lol-uikit-slider-fill"), this._mouseMoveHandler = this._mouseMoveHandler.bind(this), this._mouseUpHandler = this._mouseUpHandler.bind(this)
+                    super(), this._wrapperElement = this.shadowRoot.querySelector("div.lol-uikit-slider-wrapper"), this._baseElement = this.shadowRoot.querySelector("div.lol-uikit-slider-base"), this._buttonElement = this.shadowRoot.querySelector("div.lol-uikit-slider-button"), this._fillElement = this.shadowRoot.querySelector("div.lol-uikit-slider-fill"), this._mouseMoveHandler = this._mouseMoveHandler.bind(this), this._mouseUpHandler = this._mouseUpHandler.bind(this), this._isDragging = !1, this._suppressTooltipHideDuringDrag = e => {
+                        this._isDragging && this._trackTooltipPosition && e.stopImmediatePropagation()
+                    }, this._buttonElement.addEventListener("mouseleave", this._suppressTooltipHideDuringDrag)
                 }
                 connectedCallback() {
                     super.connectedCallback(), this._initProperties(), this._cleanAttributeObservers(), this._addAttributeObservers(), this._bindEventListeners(), this._moveSliderTo(this._getSliderButtonOffset(this.value))
@@ -10103,7 +10111,7 @@
                     this._halfBtnBlock = g.getComputedStyleAttribute(this._buttonElement, this._options.buttonBlockAttribute) / 2, this._sliderValueRange = this._max - this._min, this._stepCount = this._sliderValueRange / this._step, this._maxOffset = this._getMaxOffset(), this._stepOffset = this._maxOffset / this._stepCount
                 }
                 _initTooltipAttributes() {
-                    this._showTooltip = this._getBooleanAttribute("showTooltip", true), this._showTooltip && !this.disabled && this._assignTooltip(), this._tooltipUnit = this.getAttribute("unit")
+                    this._showTooltip = this._getBooleanAttribute("showTooltip", true), this._trackTooltipPosition = this._getBooleanAttribute("trackTooltipPosition", false), this._showTooltip && !this.disabled && this._assignTooltip(), this._tooltipUnit = this.getAttribute("unit")
                 }
                 _assignTooltip() {
                     !this.disabled && this._showTooltip && o.default.assign(this._buttonElement, this._tooltipElement(), {}, {
@@ -10114,7 +10122,8 @@
                         tooltipAnchor: {
                             x: "center",
                             y: "bottom"
-                        }
+                        },
+                        willHideOnChange: this._trackTooltipPosition
                     })
                 }
                 _tooltipElement() {
@@ -10188,7 +10197,7 @@
                     return this._stepOffset * ((e - this._min) / this._step)
                 }
                 _mouseUpHandler(e) {
-                    e.preventDefault(), document.removeEventListener("mousemove", this._mouseMoveHandler), document.removeEventListener("mouseup", this._mouseUpHandler), this._updateSliderOnEvent(e), this._dispatchSlideEndEvent()
+                    e.preventDefault(), document.removeEventListener("mousemove", this._mouseMoveHandler), document.removeEventListener("mouseup", this._mouseUpHandler), this._updateSliderOnEvent(e), this._dispatchSlideEndEvent(e)
                 }
                 _updateTooltipContent() {
                     if (!this.disabled && this._showTooltip && this._tooltip) {
@@ -10202,13 +10211,16 @@
                     this.attributeObservers && this.attributeObservers.forEach((e => e.disconnect())), this.attributeObservers = []
                 }
                 _dispatchSlideChangeEvent() {
-                    this._dispatchEventWithCurrentValue("change"), this._updateTooltipContent()
+                    this._dispatchEventWithCurrentValue("change"), this._updateTooltipContent(), !this.disabled && this._showTooltip && this._trackTooltipPosition && o.default.reposition(this._buttonElement)
                 }
                 _dispatchSlideStartEvent() {
-                    this._dispatchEventWithCurrentValue("slideStart")
+                    this._isDragging = !0, this._dispatchEventWithCurrentValue("slideStart"), !this.disabled && this._showTooltip && this._trackTooltipPosition && o.default.show(this._buttonElement)
                 }
-                _dispatchSlideEndEvent() {
-                    this._dispatchEventWithCurrentValue("slideEnd")
+                _dispatchSlideEndEvent(e) {
+                    if (this._isDragging = !1, this._dispatchEventWithCurrentValue("slideEnd"), !this.disabled && this._showTooltip && this._trackTooltipPosition && e) {
+                        const t = this._buttonElement.getBoundingClientRect();
+                        e.clientX >= t.left && e.clientX <= t.right && e.clientY >= t.top && e.clientY <= t.bottom || o.default.hide(this._buttonElement)
+                    }
                 }
                 _dispatchEventWithCurrentValue(e) {
                     const t = new Event(e, {

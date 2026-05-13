@@ -1646,7 +1646,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "斧を構えて振り抜き、周囲の敵を攻撃する。刃に当たった敵は、内側の柄に当たった敵より大きなダメージを受ける。刃に当たった敵チャンピオンと大型モンスターの数に応じて自身を回復する。",
-            "dynamicDescription": "斧を構えてから振り回し、刃の部分では<physicalDamage>@BladeDamage@の物理ダメージ</physicalDamage>を、柄の部分では<physicalDamage>@HandleDamage@のダメージ</physicalDamage>を与える。柄が命中した敵は<keywordMajor>「大出血」</keywordMajor>のスタックを受けない。<br><br>刃が命中した敵チャンピオンまたは大型ジャングルモンスター1体ごとに、<healing>減少体力の@Effect5Amount@%</healing>を回復する(最大<healing>@Effect7Amount@%</healing>まで)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "斧を構えてから振り回し、刃の部分では<physicalDamage>@BladeDamage@の物理ダメージ</physicalDamage>を、柄の部分では<physicalDamage>@HandleDamage@のダメージ</physicalDamage>を与える。柄が命中した敵は<keywordMajor>「大出血」</keywordMajor>のスタックを受けない。<br><br>刃が命中した敵チャンピオンまたは大型ジャングルモンスター1体ごとに、<healing>減少体力の@MissingHealthHeal@%</healing>を回復する(最大<healing>@MissingHealPercent@%</healing>まで)。@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "次の通常攻撃で敵の動脈を狙い、出血させることでスロウ効果を付与する。",
-            "dynamicDescription": "次の通常攻撃が<physicalDamage>@EmpoweredAttackDamage@の物理ダメージ</physicalDamage>を与え、@Effect5Amount@秒間@Effect2Amount@%の<status>スロウ効果</status>を付与する。<br><br>このスキルで対象を倒すと、発動時に消費したマナを回復し、クールダウンが@Effect3Amount@%短縮される。<br><br><rules>このスキルはダメージを与えた際にスキル命中時効果を発動する。</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "次の通常攻撃が<physicalDamage>@EmpoweredAttackDamage@の物理ダメージ</physicalDamage>を与え、@SlowDuration@秒間@SlowPercent@%の<status>スロウ効果</status>を付与する。<br><br>このスキルで対象を倒すと、発動時に消費したマナを回復し、クールダウンが@PercentCDRefund@%短縮される。<br><br><rules>このスキルはダメージを与えた際にスキル命中時効果を発動する。</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "斧を研ぎ澄まし、対象の物理防御を一部無視して物理ダメージを与えるようになる。スキルを使用すると、刃で敵を引っかけてそばに引き寄せる。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 物理防御貫通が@Effect1Amount@%増加する。<br><br><spellActive>発動効果:</spellActive> 斧を引っかけて敵を<status>引き寄せ</status>、対象を<status>ノックアップ</status>させて、@Effect3Amount@秒間@Effect2Amount@%の<status>スロウ効果</status>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 物理防御貫通が@PassivePercentArmorPen@%増加する。<br><br><spellActive>発動効果:</spellActive> 斧を引っかけて敵を<status>引き寄せ</status>、<status>ノックアップ</status>して、@SlowDuration@秒間@SlowPercent@%の<status>スロウ効果</status>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

@@ -1211,7 +1211,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Les 3 prochaines attaques de base de Xin Zhao infligeront plus de dégâts et la 3e attaque projettera la cible dans les airs.",
-            "dynamicDescription": "Les 3 prochaines attaques de Xin Zhao infligent <physicalDamage>@BonusDamage@ pts de dégâts physiques</physicalDamage> supplémentaires et réduisent de 1 sec le délai de récupération de ses autres compétences. La troisième attaque <status>projette dans les airs</status> pendant @Effect2Amount@ sec.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Les 3 prochaines attaques de Xin Zhao infligent <physicalDamage>@BonusDamage@ pts de dégâts physiques</physicalDamage> supplémentaires et réduisent de 1 sec le délai de récupération de ses autres compétences. La troisième attaque <status>projette dans les airs</status> pendant @KnockUpDuration@ sec.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 375.0,
                 375.0,
@@ -1237,27 +1237,27 @@
                 5.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    15.0,
-                    15.0,
-                    30.0,
-                    45.0,
-                    60.0,
-                    75.0,
-                    75.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

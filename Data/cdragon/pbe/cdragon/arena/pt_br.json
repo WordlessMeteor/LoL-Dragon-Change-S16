@@ -90,6 +90,46 @@
             "tooltip": "Fica <keywordStealth>Invisível</keywordStealth> por @StealthDuration@s ou até Atacar ou usar uma Habilidade."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Todo dano que você causa aplica <keyword>Feridas Dolorosas</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Putrificador Quimtec",
+            "rarity": 4,
+            "tooltip": "Causar <Damage>Dano Mágico</Damage> a Campeões aplica <keyword>@GrievousAmount*100@% de Ferimento</keyword> por @GrievousDuration@s."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "A cada @Cooldown@s, <keywordMajor>conjura automaticamente</keywordMajor> uma proteção de luz na direção do seu aliado, concedendo <shield>@TotalShield@ de Escudo</shield> a si e aos aliados no caminho antes de voltar, repetindo o efeito."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Causar dano aos inimigos também causa <status>Lentidão</status> a eles.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Malho Congelado",
+            "rarity": 4,
+            "tooltip": "Causar dano aplica <speed>@SlowAmount*100@%</speed> de <status>Lentidão</status> por @SlowDuration@s."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Vingança",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Ao causar dano, você causa Dano Físico adicional igual a <physicalDamage>@MaxHealthDamage*100@% da Vida máxima</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Navalha Sangrenta",
+            "rarity": 4,
+            "tooltip": "Ao causar dano, você causa Dano Físico adicional igual a <physicalDamage>@MaxHealthDamage*100@% da Vida máxima</physicalDamage>."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Imune à Dor",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@% do dano sofrido é causado ao longo de @BleedDuration@s (@RangedReduction*100@% para Campeões de ataque à distância)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vota para sua equipe se aliar aos Caçadores de Demônios. <br><br>Aliar-se a Caçadores de Demônios concede <gold>+%i:goldCoins%@BonusGold@ de ouro adicional</gold> ao derrotar uma <keywordMajor>equipe de Demônios</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Caçador Aliado",
+            "rarity": 4,
+            "tooltip": "Vota para sua equipe se aliar aos Caçadores de Demônios. <br><br>Aliar-se a Caçadores de Demônios concede <gold>+%i:goldCoins%@BonusGold@ de ouro adicional</gold> ao derrotar uma <keywordMajor>equipe de Demônios</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Fortalecer, <healing>curar</healing> ou conceder <shield>Escudo</shield> para um aliado causa dano e <status>Lentidão</status> aos inimigos ao redor dele.",
@@ -4657,6 +4808,46 @@
             "name": "Explosão Sônica",
             "rarity": 0,
             "tooltip": "Fortalecer, <healing>curar</healing> ou conceder <shield>Escudo</shield> a um aliado causa <trueDamage>@Damage@ de Dano Verdadeiro</trueDamage> e @SlowAmount*-100@% de <status>Lentidão aos inimigos ao redor dele</status> por @SlowDuration@s.<br><br>Dano causado nesta rodada: @f1@<br>Total de dano causado: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Reduz a <attackSpeed>Velocidade de Ataque</attackSpeed> dos Campeões próximos.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Resquício dos Observadores",
+            "rarity": 4,
+            "tooltip": "Reduz a <attackSpeed>Velocidade de Ataque</attackSpeed> dos Campeões próximos em <attackSpeed>@ASPDSlow*-100@%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "Correria",
             "rarity": 1,
             "tooltip": "Recebe <speed>@AbilityHasteToMSConversionCalc@ de Velocidade de Movimento</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Seu dano executa Campeões com menos de @ExecuteThreshold*100@% de Vida.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Pulverizar",
+            "rarity": 4,
+            "tooltip": "Seu dano executa Campeões com menos de @ExecuteThreshold*100@% de Vida."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Condutor Infernal",
             "rarity": 2,
             "tooltip": "Suas Habilidades aplicam uma <keywordMajor>Queimadura</keywordMajor> que acumula infinitamente, causando <magicDamage>@BleedDamageTooltip@ de Dano Mágico</magicDamage> por segundo por @BleedDuration@s.<br><br>Seus efeitos de <keywordMajor>Queimadura</keywordMajor> reduzem o Tempo de Recarga das suas habilidades básicas em @FlatCooldownRefundPerTick@s quando causam dano a inimigos.<br><br>Dano causado nesta rodada: @f1@<br>Total de dano causado: @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vota para sua equipe se aliar aos Demônios. <br><br>Aliar-se a Demônios concede <keywordMajor>%i:AugmentLevel% Nível de Aprimoramento</keywordMajor> quando uma <keywordMajor>equipe de Caçadores é eliminada</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Demônio Aliado",
+            "rarity": 4,
+            "tooltip": "Vota para sua equipe se aliar aos Demônios. <br><br>Aliar-se a Demônios concede <keywordMajor>%i:AugmentLevel% Nível de Aprimoramento</keywordMajor> quando uma <keywordMajor>equipe de Caçadores é eliminada</keywordMajor>."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Vínculo Espiritual",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Total de dano redirecionado: @f1@<br>Total de cura realizada: @f2@<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Recebe um <attention>Escudo de Feitiço</attention> a cada @Cooldown@s.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Frasco Enfeitiçado",
+            "rarity": 4,
+            "tooltip": "Recebe um <attention>Escudo de Feitiço</attention> a cada @Cooldown@s para bloquear a próxima habilidade inimiga."
         },
         {
             "apiName": "Deathtouch",

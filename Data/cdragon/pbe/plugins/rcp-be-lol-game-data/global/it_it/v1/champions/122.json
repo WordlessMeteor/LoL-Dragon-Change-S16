@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Darius si carica e rotea la sua ascia in un ampio cerchio. I nemici colpiti dalla lama subiscono più danni di quelli colpiti dal manico. Darius si cura a seconda di quanti campioni nemici e mostri grandi sono stati colpiti dalla lama.",
-            "dynamicDescription": "Darius solleva la sua ascia e la fa roteare, infliggendo <physicalDamage>@BladeDamage@ danni fisici</physicalDamage> con la lama e <physicalDamage>@HandleDamage@ danni fisici</physicalDamage> con l'impugnatura. I nemici colpiti dall'impugnatura non ricevono cariche di <keywordMajor>Emorragia</keywordMajor>.<br><br>Darius recupera il <healing>@Effect5Amount@% della salute mancante</healing> per ogni campione nemico e mostro grande della giungla colpito con la lama, fino a un massimo del <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius solleva la sua ascia e la fa roteare, infliggendo <physicalDamage>@BladeDamage@ danni fisici</physicalDamage> con la lama e <physicalDamage>@HandleDamage@ danni fisici</physicalDamage> con l'impugnatura. I nemici colpiti con l'impugnatura non ricevono una carica di <keywordMajor>Emorragia</keywordMajor>.<br><br>Darius recupera un <healing>@MissingHealthHeal@% della salute mancante</healing> per ogni campione nemico e mostro grande della giungla colpito con la lama, fino a un massimo di un <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Il prossimo attacco di Darius colpisce un'arteria vitale del nemico. Mentre sanguina ha la velocità di movimento rallentata.",
-            "dynamicDescription": "Il prossimo attacco base di Darius infligge <physicalDamage>@EmpoweredAttackDamage@ danni fisici</physicalDamage> e <status>rallenta</status> il bersaglio del @Effect2Amount@% per @Effect5Amount@ secondo.<br><br>Se uccide il bersaglio, questa abilità rimborsa il suo costo in mana e riduce la sua ricarica del @Effect3Amount@%.<br><br><rules>Questa abilità attiva gli effetti sull'incantesimo quando infligge danni.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Il prossimo attacco di Darius infligge <physicalDamage>@EmpoweredAttackDamage@ danni fisici</physicalDamage> e <status>rallenta</status> di un @SlowPercent@% per @SlowDuration@ secondo.<br><br>Se uccide il bersaglio, questa abilità rimborsa il suo costo in mana e riduce la sua ricarica di un @PercentCDRefund@%.<br><br><rules>Questa abilità attiva gli effetti sull'incantesimo quando infligge danni.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Darius affila la sua ascia, aumentando l'efficacia del suo attacco a scapito di una percentuale delle difese del nemico. Quando l'abilità viene attivata, Darius aggancia i nemici con l'ascia e li tira verso di sé.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> Darius ottiene @Effect1Amount@% penetrazione armatura.<br><br><spellActive>Attiva:</spellActive> Darius aggancia i nemici con la sua ascia, <status>attirandoli</status>, <status>lanciandoli in aria</status> e <status>rallentandoli</status> di un @Effect2Amount@% per @Effect3Amount@ secondo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> Darius ottiene @PassivePercentArmorPen@% penetrazione armatura.<br><br><spellActive>Attiva:</spellActive> Darius aggancia i nemici con la sua ascia, <status>attirandoli</status>, <status>lanciandoli in aria</status> e <status>rallentandoli</status> di un @SlowPercent@% per @SlowDuration@ secondo.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

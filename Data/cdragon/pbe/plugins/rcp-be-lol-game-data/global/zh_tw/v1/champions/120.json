@@ -1101,7 +1101,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赫克林朝周遭敵人劈斬，造成物理傷害。如果這個技能對至少一個敵人造成傷害，逸騎刃擊的傷害會增加，而後續施放的逸騎刃擊冷卻時間會降低。",
-            "dynamicDescription": "赫克林朝周遭敵人劈斬，造成 <physicalDamage>@Damage@ 物理傷害</physicalDamage>。如果此技能命中敵人，他將獲得一層堆層，使此技能的冷卻時間降低 @RampageCooldownReduction@ 秒並提升此技能 @RampageBonusDamagePerc@% 傷害，持續 @Effect6Amount@ 秒。此效果最多可堆積 @Effect2Amount@ 次。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赫克林朝鄰近敵軍劈斬，造成<physicalDamage>@Damage@物理傷害</physicalDamage>。如果此技能命中敵軍，他將獲得一層堆層，使此技能的冷卻時間縮短@RampageCooldownReduction@秒並提升此技能@RampageBonusDamagePerc@%傷害，持續@BuffDuration@秒。此效果最多可累加@MaxStacks@次。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1401,7 +1401,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赫克林在短時間內提高跑速且能在單位間不受阻礙地移動。他的下一次普攻將會擊退目標並造成額外的物理傷害，增加的傷害取決於啟動技能後所移動的距離。",
-            "dynamicDescription": "赫克林進入鬼步狀態，並獲得 <speed>@MinMoveSpeed*100@% 跑速</speed>，在 @Effect5Amount@ 秒裡持續提升至 <speed>@MaxMoveSpeed*100@%</speed>。他的下次攻擊會<status>擊退</status>目標並造成 <physicalDamage>@MinDamage@</physicalDamage> 到 <physicalDamage>@MaxDamage@ 物理傷害</physicalDamage>。<status>擊退</status>距離和傷害隨此技能期間的位移距離而增長。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赫克林進入鬼步狀態，並獲得<speed>@MinMoveSpeed*100@%跑速</speed>，在@Duration@秒裡持續提升至<speed>@MaxMoveSpeed*100@%</speed>。他的下一次普攻會<status>擊退</status>目標，並造成<physicalDamage>@MinDamage@</physicalDamage>至<physicalDamage>@MaxDamage@物理傷害</physicalDamage>。<status>擊退</status>距離和傷害隨此技能期間的位移距離而增加。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

@@ -173,6 +173,32 @@
                         0.699999988079071
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        50.0,
+                        50.0,
+                        55.0,
+                        60.0,
+                        65.0,
+                        70.0,
+                        75.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -354,8 +380,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SlowAmount",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -410,8 +435,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -760,19 +785,6 @@
                             {
                                 "mSpellCalculationKey": "TotalShield",
                                 "__type": "{f3cbe7b2}"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 2048,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

@@ -1211,7 +1211,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Xin Zhao's next 3 standard attacks deal increased damage with the third attack knocking an opponent into the air.",
-            "dynamicDescription": "Xin Zhao's next 3 Attacks deal an additional <physicalDamage>@BonusDamage@ physical damage</physicalDamage> and reduces his other Ability's Cooldowns by 1 second. The third Attack also <status>Knocks Up</status> for @Effect2Amount@ seconds.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Xin Zhao's next 3 Attacks deal an additional <physicalDamage>@BonusDamage@ physical damage</physicalDamage> and reduces his other Ability's Cooldowns by 1 second. The third Attack also <status>Knocks Up</status> for @KnockUpDuration@ seconds.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 375.0,
                 375.0,
@@ -1237,27 +1237,27 @@
                 5.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    15.0,
-                    15.0,
-                    30.0,
-                    45.0,
-                    60.0,
-                    75.0,
-                    75.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

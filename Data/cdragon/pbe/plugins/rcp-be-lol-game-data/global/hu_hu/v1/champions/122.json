@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Darius nekilendül, és széles ívben meglendíti a fejszéjét. A penge nagyobb sebzést okoz az ellenfeleknek, mint a markolat. Darius a pengével eltalált ellenséges hősöktől és nagy szörnyektől függő mértékben gyógyul.",
-            "dynamicDescription": "Darius körbelendíti a fejszéjét, <physicalDamage>@BladeDamage@ fizikai sebzést</physicalDamage> okozva a hatóterület szélén, és <physicalDamage>@HandleDamage@ sebzést</physicalDamage> a fegyver nyelével. A fejsze nyelével eltalált ellenfelek nem kapnak <keywordMajor>Vérontás</keywordMajor> jelzőket.<br><br>Darius a pengével eltalált minden hős és nagy dzsungelszörny után visszanyeri <healing>a hiányzó életereje @Effect5Amount@%-át</healing> (legfeljebb <healing>@Effect7Amount@%-ot</healing>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius körbelendíti a fejszéjét, <physicalDamage>@BladeDamage@ fizikai sebzést</physicalDamage> okozva a hatóterület szélén, és <physicalDamage>@HandleDamage@ sebzést</physicalDamage> a fegyver nyelével. A fejsze nyelével eltalált ellenfelek nem kapnak <keywordMajor>Vérontás</keywordMajor> jelzőket.<br><br>Darius a pengével eltalált minden hős és nagy dzsungelszörny után visszanyeri a hiányzó életereje <healing>@MissingHealthHeal@%-át</healing> (legfeljebb <healing>@MissingHealPercent@%-ot</healing>).@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Darius következő támadása átvágja egy ellenfele fő ütőerét. A kivérző áldozat mozgási sebessége csökken.",
-            "dynamicDescription": "Darius következő támadása <physicalDamage>@EmpoweredAttackDamage@ fizikai sebzést</physicalDamage> okoz, és @Effect5Amount@ másodpercre @Effect2Amount@%-kal <status>lelassítja</status> a célpontot.<br><br>Ha a képesség végez a célponttal, Darius visszanyeri a manaköltséget, és @Effect3Amount@%-kal csökken a töltési ideje.<br><br><rules>Ez a képesség sebzés esetén aktiválja a varázslati hatásokat.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius következő támadása <physicalDamage>@EmpoweredAttackDamage@ fizikai sebzést</physicalDamage> okoz, és @SlowDuration@ másodpercre @SlowPercent@%-kal <status>lelassítja</status> a célpontot.<br><br>Ha a képesség végez a célponttal, Darius visszanyeri a manaköltséget, és @PercentCDRefund@%-kal csökken a töltési ideje.<br><br><rules>Ez a képesség sebzés esetén aktiválja a varázslati hatásokat.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Darius megélezi a fejszéjét, így az általa okozott fizikai sebzés passzív módon figyelmen kívül hagyja a célpont páncéljának egy részét. A képesség aktiválása után Darius a fejszéje horgával maga felé rántja az ellenfeleit.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Darius páncéltörése @Effect1Amount@%-kal nagyobb lesz.<br><br><spellActive>Aktív:</spellActive> Darius megsuhintja a fejszéjét, és <status>magához húzza</status>, <status>fellöki</status>, valamint @Effect3Amount@ másodpercre @Effect2Amount@%-kal <status>lelassítja</status> az eltalált ellenfeleket.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Darius @PassivePercentArmorPen@% páncéltörésre tesz szert.<br><br><spellActive>Aktív:</spellActive> Darius megsuhintja a fejszéjét, és <status>magához húzza</status>, <status>fellöki</status>, valamint @SlowDuration@ másodpercre @SlowPercent@%-kal <status>lelassítja</status> az eltalált ellenfeleket.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

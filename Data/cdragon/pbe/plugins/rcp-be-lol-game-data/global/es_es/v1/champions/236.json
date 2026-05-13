@@ -1779,7 +1779,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Lucian dispara un misil que explota en forma de estrella, marca a los enemigos y los revela brevemente. Lucian obtiene velocidad de movimiento por atacar a los enemigos marcados.",
-            "dynamicDescription": "Lucian dispara un proyectil que explota al final de su alcance o en el primer enemigo golpeado, inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>, revela brevemente a los enemigos y los marca durante 6 s.<br><br>Cuando Lucian o un aliado daña a un enemigo marcado, Lucian obtiene <speed>@Effect2Amount@ de velocidad de movimiento</speed> durante 1 s. Los aliados que activan este efecto también otorgan <attention>Vigilancia</attention> a Lucian.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lucian dispara un proyectil que explota al final de su alcance o al alcanzar al primer enemigo, inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>, revela brevemente a los enemigos y los marca durante 6 s.<br><br>Cuando Lucian o un aliado inflige daño a un enemigo marcado, Lucian obtiene <speed>@MoveSpeedAmount@ de velocidad de movimiento</speed> durante 1 s. Los aliados que activan este efecto también otorgan <attention>Vigilancia</attention> a Lucian.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1929,7 +1929,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Lucian se desplaza una corta distancia. Los ataques de Balas de luz reducen el enfriamiento de Persecución implacable.",
-            "dynamicDescription": "Lucian se desliza.<br><br>El enfriamiento se reduce @Effect1Amount@ s cada vez que Lucian golpea a un enemigo con <spellName>Balas de luz</spellName> (@Effect2Amount@ s para campeones). @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lucian se desliza.<br><br>El enfriamiento se reduce @CDRefundBase@ s cada vez que Lucian golpea a un enemigo con <spellName>Balas de luz</spellName> (@CDRefundChampion@ s para campeones). @SpellModifierDescriptionAppend@",
             "range": [
                 445.0,
                 445.0,

@@ -90,6 +90,46 @@
             "tooltip": "Menjadi <keywordStealth>Tak Terlihat</keywordStealth> selama @StealthDuration@ detik atau sampai kamu menyerang atau menggunakan Ability."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Semua damage yang kamu hasilkan akan menerapkan <keyword>Grevious Wounds</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Chemtech Putrifier",
+            "rarity": 4,
+            "tooltip": "Menghasilkan <Damage>damage</Damage> ke champion akan menerapkan <keyword>@GrievousAmount*100@% Wounds</keyword> selama @GrievousDuration@ detik."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "Setiap @Cooldown@ detik, <keywordMajor>Autocast</keywordMajor> warding light ke arah sekutumu, memberikan <shield>@TotalShield@ Shield</shield> ke dirimu sendiri dan sekutu yang dilewatinya sebelum kembali, mengulangi efek ini."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Menghasilkan damage akan menerapkan <status>Slow</status> ke musuh.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Frozen Mallet",
+            "rarity": 4,
+            "tooltip": "Menghasilkan damage akan menerapkan <speed>@SlowAmount*100@%</speed> <status>Slow</status> selama @SlowDuration@ detik."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Vengeance",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Menghasilkan damage akan memberikan tambahan <physicalDamage>@MaxHealthDamage*100@% physical damage Health maksimum</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Bloodrazor",
+            "rarity": 4,
+            "tooltip": "Menghasilkan damage akan memberikan tambahan <physicalDamage>@MaxHealthDamage*100@% physical damage Health maksimum</physicalDamage>."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Numb to Pain",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@% dari damage yang kamu terima berlangsung selama @BleedDuration@ detik (@RangedReduction*100@% untuk champion ranged)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vote timmu untuk bersekutu dengan Demon Hunter. <br><br>Bersekutu dengan Demon Hunter memberimu <gold>+%i:goldCoins%@BonusGold@ gold bonus</gold> saat mengalahkan <keywordMajor>tim Demon</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Ally Hunter",
+            "rarity": 4,
+            "tooltip": "Vote timmu untuk bersekutu dengan Demon Hunter. <br><br>Bersekutu dengan Demon Hunter memberimu <gold>+%i:goldCoins%@BonusGold@ gold bonus</gold> saat mengalahkan <keywordMajor>tim Demon</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Memberi buff, <healing>Heal</healing>, atau <shield>Shield</shield> kepada sekutumu akan menghasilkan damage dan menerapkan <status>Slow</status> ke musuh di sekitar mereka.",
@@ -4657,6 +4808,46 @@
             "name": "Sonic Boom",
             "rarity": 0,
             "tooltip": "Memberi buff, <healing>Heal</healing>, atau <shield>Shield</shield> kepada sekutu akan menghasilkan <trueDamage>@Damage@ true damage</trueDamage> dan menerapkan <status>Slow ke musuh di sekitar mereka</status> sebesar @SlowAmount*-100@% selama @SlowDuration@ detik.<br><br>Damage Dihasilkan Ronde Ini: @f1@<br>Total Damage Dihasilkan: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Mengurangi <attackSpeed>Attack Speed</attackSpeed> champion di sekitar.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Remnant of the Watchers",
+            "rarity": 4,
+            "tooltip": "Mengurangi <attackSpeed>Attack Speed</attackSpeed> champion di sekitar sebesar <attackSpeed>@ASPDSlow*-100@%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "With Haste",
             "rarity": 1,
             "tooltip": "Mendapatkan <speed>@AbilityHasteToMSConversionCalc@ Move Speed</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Damage darimu mengeksekusi champion dengan Health di bawah @ExecuteThreshold*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Dematerializer",
+            "rarity": 4,
+            "tooltip": "Damage darimu mengeksekusi champion dengan Health di bawah @ExecuteThreshold*100@%."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Infernal Conduit",
             "rarity": 2,
             "tooltip": "Ability-mu menerapkan stack <keywordMajor>Burn</keywordMajor> tanpa batas, menghasilkan <magicDamage>@BleedDamageTooltip@ Magic Damage</magicDamage> per detik sebanyak @BleedDuration@ detik.<br><br>Semua efek <keywordMajor>Burn</keywordMajor> mengurangi Cooldown Ability dasar sebanyak @FlatCooldownRefundPerTick@ detik saat menghasilkan damage pada musuh.<br><br>Damage Dihasilkan Ronde Ini: @f1@<br>Total Damage Dihasilkan: @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vote timmu untuk bersekutu dengan Demon. <br><br>Bersekutu dengan Demon memberikan <keywordMajor>%i:AugmentLevel% Level Augment</keywordMajor> saat <keywordMajor>tim Hunter tereliminasi</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Ally Demon",
+            "rarity": 4,
+            "tooltip": "Vote timmu untuk bersekutu dengan Demon. <br><br>Bersekutu dengan Demon memberikan <keywordMajor>%i:AugmentLevel% Level Augment</keywordMajor> saat <keywordMajor>tim Hunter tereliminasi</keywordMajor>."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Spirit Link",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Total Damage Dialihkan: @f1@<br>Total Heal Diberikan: @f2@<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Mendapatkan <attention>Spell Shield</attention> setiap @Cooldown@ detik.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Enchanted Flask",
+            "rarity": 4,
+            "tooltip": "Mendapatkan <attention>Spell Shield</attention> setiap @Cooldown@ detik yang memblokir Ability musuh berikutnya."
         },
         {
             "apiName": "Deathtouch",

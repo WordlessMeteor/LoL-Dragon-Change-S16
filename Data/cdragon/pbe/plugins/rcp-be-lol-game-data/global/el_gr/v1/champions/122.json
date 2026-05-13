@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Ντάριους περιστρέφει το τσεκούρι του σχηματίζοντας έναν μεγάλο κύκλο. Οι εχθροί που δέχονται χτύπημα από τη λεπίδα δέχονται περισσότερη ζημιά σε σχέση με τους εχθρούς που δέχονται χτύπημα από τη λαβή. Ο Ντάριους θεραπεύεται ανάλογα με τον αριθμό των αντίπαλων Ηρώων και των μεγάλων τεράτων που χτυπά με τη λεπίδα του.",
-            "dynamicDescription": "Ο Ντάριους υψώνει το τσεκούρι του και μετά το γυρνάει γύρω του, προκαλώντας <physicalDamage>@BladeDamage@ Σωματική Ζημιά</physicalDamage> με την αιχμή και <physicalDamage>@HandleDamage@ ζημιά</physicalDamage> με τη λαβή. Οι αντίπαλοι που δέχονται χτύπημα με τη λαβή δεν αποκτούν στοίβα <keywordMajor>Αιμορραγίας</keywordMajor>.<br><br>Ο Ντάριους αναπληρώνει <healing>@Effect5Amount@% της Ζωής που του λείπει</healing> ανά αντίπαλο Ήρωα και μεγάλο τέρας Ζούγκλας που χτυπά με την αιχμή, έως <healing>@Effect7Amount@%</healing> το μέγιστο.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Ντάριους υψώνει το τσεκούρι του και μετά το γυρνάει γύρω του, προκαλώντας <physicalDamage>@BladeDamage@ Σωματική Ζημιά</physicalDamage> με την αιχμή και <physicalDamage>@HandleDamage@ ζημιά</physicalDamage> με τη λαβή. Οι αντίπαλοι που χτυπιούνται με τη λαβή δεν αποκτούν στοίβα <keywordMajor>Αιμορραγίας</keywordMajor>.<br><br>Ο Ντάριους αναπληρώνει το <healing>@MissingHealthHeal@% της Ζωής που του λείπει</healing> για κάθε αντίπαλο Ήρωα και μεγάλο τέρας Ζούγκλας που χτυπά με την αιχμή, με ανώτατο όριο <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η επόμενη επίθεση του Ντάριους χτυπά μια κεντρική αρτηρία ενός εχθρού. Καθώς ο εχθρός αιμορραγεί, η Ταχύτητα Κίνησής του επιβραδύνεται.",
-            "dynamicDescription": "Η επόμενη επίθεση του Ντάριους προκαλεί <physicalDamage>@EmpoweredAttackDamage@ Σωματική Ζημιά</physicalDamage> και <status>Επιβραδύνει</status> κατά @Effect2Amount@% για @Effect5Amount@ δευτ.<br><br>Η ικανότητα αυτή επιστρέφει το κόστος της σε Μάνα και μειώνει κατά @Effect3Amount@% τον Χρόνο Επαναφόρτισης, αν σκοτώσει τον στόχο.<br><br><rules>Αυτή η Ικανότητα ενεργοποιεί τις επιδράσεις ικανοτήτων όταν προκαλείτε ζημιά.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η επόμενη Επίθεση του Ντάριους προκαλεί <physicalDamage>@EmpoweredAttackDamage@ Σωματική Ζημιά</physicalDamage> και <status>Επιβραδύνει</status> κατά @SlowPercent@% για @SlowDuration@ δευτ.<br><br>Η ικανότητα αυτή επιστρέφει το κόστος της σε Μάνα και μειώνει κατά @PercentCDRefund@% τον Χρόνο Επαναφόρτισης, αν σκοτώσει τον στόχο.<br><br><rules>Αυτή η Ικανότητα ενεργοποιεί τις επιδράσεις ικανοτήτων όταν προκαλείτε ζημιά.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Ντάριους ακονίζει το τσεκούρι του και η Σωματική Ζημιά που προκαλεί αγνοεί ένα ποσοστό της Θωράκισης του στόχου του. Μόλις ενεργοποιηθεί, ο Ντάριους αρπάζει τους εχθρούς με το άγκιστρο του τσεκουριού του και τους τραβά προς το μέρος του.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Ο Ντάριους αποκτά @Effect1Amount@% Διείσδυση Θωράκισης.<br><br><spellActive>Ενεργή:</spellActive> Ο Ντάριους γαντζώνει με το τσεκούρι του τους αντιπάλους, <status>Τραβώντας</status> τους και <status>Πετώντας τους στον Αέρα</status> και <status>Επιβραδύνοντάς τους</status> κατά @Effect2Amount@% για @Effect3Amount@ δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Ο Ντάριους αποκτά @PassivePercentArmorPen@% Διείσδυση Θωράκισης.<br><br><spellActive>Ενεργή:</spellActive> Ο Ντάριους γαντζώνει με το τσεκούρι του τους αντιπάλους, <status>Τραβώντας</status> τους και <status>Πετώντας τους στον Αέρα</status> και <status>Επιβραδύνοντάς τους</status> κατά @SlowPercent@% για @SlowDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

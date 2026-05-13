@@ -90,6 +90,46 @@
             "tooltip": "Γίνεστε <keywordStealth>Αόρατοι</keywordStealth> για @StealthDuration@ δευτ. ή μέχρι να επιτεθείτε ή να χρησιμοποιήσετε μια ικανότητα."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Όλη η ζημιά που προκαλείτε εφαρμόζει <keyword>Βαριά Τραύματα</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Χημοτεχνικός Τοξικός Ψεκαστήρας",
+            "rarity": 4,
+            "tooltip": "Όταν προκαλείτε <Damage>ζημιά</Damage> σε Ήρωες, εφαρμόζετε <keyword>@GrievousAmount*100@% Βαριά Τραύματα</keyword> για @GrievousDuration@ δευτ."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "Κάθε @Cooldown@ δευτερόλεπτα, κάντε <keywordMajor>Αυτόματη Χρήση</keywordMajor> μιας προστατευτικής δέσμης φωτός προς τον σύμμαχό σας, η οποία δίνει <shield>@TotalShield@ Ασπίδα</shield> σε εσάς και σε όσους συμμάχους διαπεράσει πριν επιστρέψει και δώσει ξανά την επίδραση."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Όταν προκαλείτε ζημιά, <status>Επιβραδύνετε</status> τους εχθρούς.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Παγωμένο Σφυρί",
+            "rarity": 4,
+            "tooltip": "Όταν προκαλείτε ζημιά, εφαρμόζετε <status>Επιβράδυνση</status> <speed>@SlowAmount*100@%</speed> για @SlowDuration@ δευτερόλεπτα."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Εκδίκηση",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Όταν κάνετε ζημιά, προκαλεί επιπλέον <physicalDamage>Σωματική Ζημιά ίση με το @MaxHealthDamage*100@% της μέγ. Ζωής</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Φαλτσέτα",
+            "rarity": 4,
+            "tooltip": "Όταν κάνετε ζημιά, προκαλεί επιπλέον <physicalDamage>Σωματική Ζημιά ίση με το @MaxHealthDamage*100@% της μέγ. Ζωής</physicalDamage>."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Αναισθησία στον Πόνο",
             "rarity": 0,
             "tooltip": "Το @MeleeReduction*100@% της ζημιάς που δέχεστε λαμβάνει χώρα επί @BleedDuration@ δευτ. (@RangedReduction*100@% για Ήρωες που μάχονται από απόσταση)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Ψηφίστε για να συμμαχήσει η ομάδα σας με τους Κυνηγούς Δαιμόνων. <br><br>Η συμμαχία με τους Κυνηγούς Δαιμόνων σάς δίνει <gold>+%i:goldCoins%@BonusGold@ μπόνους Χρυσό</gold> όταν νικάτε μια <keywordMajor>ομάδα Δαιμόνων</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Σύμμαχος Κυνηγός",
+            "rarity": 4,
+            "tooltip": "Ψηφίστε για να συμμαχήσει η ομάδα σας με τους Κυνηγούς Δαιμόνων. <br><br>Η συμμαχία με τους Κυνηγούς Δαιμόνων σάς δίνει <gold>+%i:goldCoins%@BonusGold@ μπόνους Χρυσό</gold> όταν νικάτε μια <keywordMajor>ομάδα Δαιμόνων</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Οι ενισχύσεις, η <healing>Θεραπεία</healing> ή οι <shield>Ασπίδες</shield> στον σύμμαχό σας προκαλούν ζημιά στους εχθρούς που βρίσκονται γύρω του και τους <status>Επιβραδύνουν</status>.",
@@ -4657,6 +4808,46 @@
             "name": "Ηχητική Έκρηξη",
             "rarity": 0,
             "tooltip": "Οι ενισχύσεις, η <healing>Θεραπεία</healing> ή οι <shield>Ασπίδες</shield> που δίνετε στον σύμμαχό σας προκαλούν <trueDamage>@Damage@ Πραγματική Ζημιά</trueDamage> στους εχθρούς που βρίσκονται γύρω του και τους <status>Επιβραδύνουν</status> κατά @SlowAmount*-100@% για @SlowDuration@ δευτερόλεπτα.<br><br>Ζημιά που προκλήθηκε σε αυτόν τον γύρο: @f1@<br>Συνολική Ζημιά που προκλήθηκε: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Μειώνει την <attackSpeed>Ταχύτητα Επίθεσης</attackSpeed> των κοντινών Ηρώων.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Κατάλοιπο των Παρατηρητών",
+            "rarity": 4,
+            "tooltip": "Μειώνει την <attackSpeed>Ταχύτητα Επίθεσης</attackSpeed> των κοντινών Ηρώων κατά <attackSpeed>@ASPDSlow*-100@%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "Πιο Γρήγορα",
             "rarity": 1,
             "tooltip": "Αποκτάτε <speed>@AbilityHasteToMSConversionCalc@ Ταχύτητα Κίνησης</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Η ζημιά σας εκτελεί τους Ήρωες που έχουν κάτω από @ExecuteThreshold*100@% Ζωή.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Εξαϋλωτής",
+            "rarity": 4,
+            "tooltip": "Η ζημιά σας εκτελεί τους Ήρωες που έχουν κάτω από @ExecuteThreshold*100@% Ζωή."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Καταχθόνιος Αγωγός",
             "rarity": 2,
             "tooltip": "Οι Ικανότητές σας εφαρμόζουν άπειρες στοίβες στο <keywordMajor>Έγκαυμα</keywordMajor>, προκαλώντας <magicDamage>@BleedDamageTooltip@ Μαγική Ζημιά</magicDamage> ανά δευτ. για @BleedDuration@ δευτ.<br><br>Όλες οι επιδράσεις <keywordMajor>Εγκαύματος</keywordMajor> μειώνουν τους Χρόνους Επαναφόρτισης της Βασικής Ικανότητας κατά @FlatCooldownRefundPerTick@ δευτ. όταν κάνουν ζημιά σε αντιπάλους.<br><br>Ζημιά που προκλήθηκε σε αυτόν τον γύρο: @f1@<br>Ζημιά που προκλήθηκε συνολικά: @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Ψηφίστε για να συμμαχήσει η ομάδα σας με τους Δαίμονες. <br><br>Η συμμαχία με τους Δαίμονες δίνει ένα <keywordMajor>%i:AugmentLevel% Επίπεδο Ενίσχυσης</keywordMajor> όταν μια <keywordMajor>ομάδα Κυνηγών αποκλειστεί</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Σύμμαχος Δαίμονας",
+            "rarity": 4,
+            "tooltip": "Ψηφίστε για να συμμαχήσει η ομάδα σας με τους Δαίμονες. <br><br>Η συμμαχία με τους Δαίμονες δίνει ένα <keywordMajor>%i:AugmentLevel% Επίπεδο Ενίσχυσης</keywordMajor> όταν μια <keywordMajor>ομάδα Κυνηγών αποκλειστεί</keywordMajor>."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Ψυχικός Δεσμός",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Συνολική ζημιά που ανακατευθύνθηκε: @f1@<br>Συνολική θεραπεία: @f2@<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Αποκτάτε <attention>Ασπίδα Ικανοτήτων</attention> κάθε @Cooldown@ δευτερόλεπτα.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Μαγεμένη Φιάλη",
+            "rarity": 4,
+            "tooltip": "Δίνει μια <attention>Ασπίδα Ικανοτήτων</attention> κάθε @Cooldown@ δευτ., που μπλοκάρει την επόμενη ικανότητα των αντιπάλων."
         },
         {
             "apiName": "Deathtouch",

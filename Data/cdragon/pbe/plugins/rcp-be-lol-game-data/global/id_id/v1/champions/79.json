@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Gragas menggulingkan tong ke sebuah lokasi. Tong dapat diaktifkan agar meledak atau meledak sendiri setelah 4 detik. Kekuatan ledakan akan meningkat sepanjang waktu. Move Speed musuh yang terkena ledakan ini menjadi slow.",
-            "dynamicDescription": "Gragas menggulingkan tong yang akan meledak setelah @Effect4Amount@ detik, menghasilkan antara <magicDamage>@MinDamage@ magic damage</magicDamage> dan <magicDamage>@MaxDamage@ magic damage</magicDamage>, sekaligus menerapkan <status>Slow</status> sebesar @Effect2Amount@ dan @Effect2Amount*1.5@% selama @Effect3Amount@ detik. Damage dan <status>Slow</status> meningkat sepanjang waktu tong belum meledak. <br><br>Gragas dapat melakukan <recast>Recast</recast> untuk meledakkan tong lebih awal.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas menggulingkan tong yang akan meledak setelah @BarrelMaxDuration@ detik, menghasilkan antara <magicDamage>@MinDamage@ magic damage</magicDamage> dan <magicDamage>@MaxDamage@ magic damage</magicDamage>, sekaligus menerapkan <status>Slow</status> antara @SlowPercent@ dan @SlowPercent*1.5@% selama @SlowDuration@ detik. Damage dan <status>Slow</status> meningkat sepanjang waktu tong belum meledak. <br><br>Gragas dapat melakukan <recast>Recast</recast> untuk meledakkan tong lebih awal.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

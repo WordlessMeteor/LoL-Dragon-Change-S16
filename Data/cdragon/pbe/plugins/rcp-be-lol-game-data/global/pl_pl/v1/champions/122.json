@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Darius kręci młynka toporem. Wrogowie trafieni ostrzem otrzymują więcej obrażeń niż uderzeni styliskiem. Darius leczy się w zależności od liczby wrogich bohaterów i dużych potworów trafionych ostrzem.",
-            "dynamicDescription": "Darius wymachuje toporem wokół siebie, zadając <physicalDamage>@BladeDamage@ pkt. obrażeń fizycznych</physicalDamage> krawędzią i <physicalDamage>@HandleDamage@ pkt. obrażeń</physicalDamage> rękojeścią. Wrogowie trafieni rękojeścią nie otrzymują ładunku <keywordMajor>Krwotoku</keywordMajor>.<br><br>Darius przywraca sobie <healing>@Effect5Amount@% brakującego zdrowia</healing> za każdego wrogiego bohatera i dużego potwora z dżungli trafionego krawędzią, do maks. <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius wymachuje toporem wokół siebie, zadając <physicalDamage>@BladeDamage@ pkt. obrażeń fizycznych</physicalDamage> krawędzią i <physicalDamage>@HandleDamage@ pkt. obrażeń</physicalDamage> rękojeścią. Wrogowie trafieni rękojeścią nie otrzymują ładunku <keywordMajor>Krwotoku</keywordMajor>.<br><br>Darius przywraca sobie <healing>@MissingHealthHeal@% brakującego zdrowia</healing> za każdego wrogiego bohatera i dużego potwora z dżungli trafionego krawędzią, do maks. <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Następny atak Dariusa trafi wroga w ważną tętnicę. Gdy trafiony wróg będzie tracił krew, jego prędkość ruchu zostanie zmniejszona.",
-            "dynamicDescription": "Następny atak Dariusa zada <physicalDamage>@EmpoweredAttackDamage@ pkt. obrażeń fizycznych</physicalDamage> i <status>spowolni</status> cel o @Effect2Amount@% na @Effect5Amount@ sek.<br><br>Ta umiejętność zwróci koszt many oraz skróci czas odnowienia o @Effect3Amount@%, jeżeli zabije cel.<br><br><rules>Ta umiejętność aktywuje efekty zaklęć podczas zadawania obrażeń.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Następny atak Dariusa zada <physicalDamage>@EmpoweredAttackDamage@ pkt. obrażeń fizycznych</physicalDamage> i <status>spowolni</status> cel o @SlowPercent@% na @SlowDuration@ sek.<br><br>Ta umiejętność zwróci koszt many oraz skróci czas odnowienia o @PercentCDRefund@%, jeśli zabije cel.<br><br><rules>Ta umiejętność aktywuje efekty zaklęć podczas zadawania obrażeń.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Darius ostrzy topór, sprawiając, że jego ataki fizyczne ignorują pewien procent pancerza celu. Po użyciu Darius wyprowadza atak i przyciąga do siebie wrogów toporem.",
-            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Darius zyskuje @Effect1Amount@% przebicia pancerza.<br><br><spellActive>Użycie:</spellActive> Darius wykonuje zamach swoim toporem, <status>przyciągając</status> i <status>podrzucając</status> wrogów, a także <status>spowalniając</status> ich o @Effect2Amount@% na @Effect3Amount@ sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Darius zyskuje @PassivePercentArmorPen@% przebicia pancerza.<br><br><spellActive>Użycie:</spellActive> Darius wykonuje zamach swoim toporem, <status>przyciągając</status> i <status>podrzucając</status> wrogów, a także <status>spowalniając</status> ich o @SlowPercent@% na @SlowDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

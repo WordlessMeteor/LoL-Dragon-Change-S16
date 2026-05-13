@@ -885,6 +885,7 @@
                     "__type": "VfxChildParticleSetDefinitionData"
                 },
                 "emitterName": "FocusCone1",
+                "disabled": true,
                 "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -981,6 +982,167 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/Quinn_Base_R_channel_ray.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Sparkles",
+                "importance": 3,
+                "birthOrbitalVelocity": {
+                    "constantValue": [
+                        0.0,
+                        0.699999988079071,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    0.5
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.699999988079071,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthVelocity": {
+                    "constantValue": [
+                        10.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.6899999976158142,
+                            0.75,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.5000076293945312
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.5000076293945312
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "particleIsLocalOrientation": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        180.0,
+                        -90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        20.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        120.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                2.0,
+                                2.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/Quinn_Base_R_channel_valor_shadow.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

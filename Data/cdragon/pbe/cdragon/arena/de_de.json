@@ -90,6 +90,46 @@
             "tooltip": "Du wirst @StealthDuration@&nbsp;Sekunden lang, oder bis du angreifst bzw. eine Fähigkeit einsetzt, <keywordStealth>unsichtbar</keywordStealth>."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Dein gesamter Schaden verursacht <keyword>Klaffende Wunden</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Chemtech-Verpester",
+            "rarity": 4,
+            "tooltip": "<Damage>Schaden</Damage> fügt Champions @GrievousDuration@&nbsp;Sekunden lang <keyword>@GrievousAmount*100@&nbsp;% Wunden</keyword> zu."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "Alle @Cooldown@&nbsp;Sekunden <keywordMajor>beschwörst du automatisch</keywordMajor> ein schützendes Licht in Richtung deines Verbündeten. Du und betroffene Verbündete erhalten einen <shield>@TotalShield@&nbsp;Schild</shield>. Anschließend kehrt das Licht zurück, und der Effekt wird wiederholt."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Schaden <status>verlangsamt</status> Gegner.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Frosthammer",
+            "rarity": 4,
+            "tooltip": "Schaden <status>verlangsamt</status> @SlowDuration@&nbsp;Sekunde(n) lang um <speed>@SlowAmount*100@&nbsp;%</speed>."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Rache",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Schaden verursacht zusätzlichen normalen Schaden in Höhe von <physicalDamage>@MaxHealthDamage*100@&nbsp;% des max. Lebens</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Blutschnitter",
+            "rarity": 4,
+            "tooltip": "Schaden verursacht zusätzlichen normalen Schaden in Höhe von <physicalDamage>@MaxHealthDamage*100@&nbsp;% des max. Lebens</physicalDamage>."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Immun gegen Schmerz",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@&nbsp;% des Schadens, den du erleidest, erleidest du stattdessen im Verlauf von @BleedDuration@&nbsp;Sekunden (@RangedReduction*100@&nbsp;% im Fall von Fernkampf-Champions)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Stimme ab, ob sich dein Team mit den Dämonenjägern verbünden soll. <br><br>Verbünde dich mit Dämonenjägern, um <gold>+%i:goldCoins%@BonusGold@&nbsp;zusätzliches Gold</gold> zu erhalten, wenn du ein <keywordMajor>Dämonen-Team</keywordMajor> besiegst.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Verbündeter Jäger",
+            "rarity": 4,
+            "tooltip": "Stimme ab, ob sich dein Team mit den Dämonenjägern verbünden soll. <br><br>Verbünde dich mit Dämonenjägern, um <gold>+%i:goldCoins%@BonusGold@&nbsp;zusätzliches Gold</gold> zu erhalten, wenn du ein <keywordMajor>Dämonen-Team</keywordMajor> besiegst."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Wenn du deinen Verbündeten verstärkst, <healing>heilst</healing> oder mit einem <shield>Schild</shield> beschützt, erleiden angrenzende Gegner Schaden und werden <status>verlangsamt</status>.",
@@ -4657,6 +4808,46 @@
             "name": "Schallexplosion",
             "rarity": 0,
             "tooltip": "Wenn du deinen Verbündeten verstärkst, <healing>heilst</healing> oder mit einem <shield>Schild</shield> beschützt, erleiden angrenzende Gegner <trueDamage>@Damage@&nbsp;absoluten Schaden</trueDamage> und werden @SlowDuration@&nbsp;Sekunden lang um @SlowAmount*-100@&nbsp;% <status>verlangsamt</status>.<br><br>Verursachter Schaden in dieser Runde: @f1@<br>Verursachter Gesamtschaden: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Verringert das <attackSpeed>Angriffstempo</attackSpeed> von Champions in der Nähe.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Relikt der Wächter",
+            "rarity": 4,
+            "tooltip": "Verringert das <attackSpeed>Angriffstempo</attackSpeed> von Champions in der Nähe um <attackSpeed>@ASPDSlow*-100@&nbsp;%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "Unverzüglich",
             "rarity": 1,
             "tooltip": "Du erhältst <speed>@AbilityHasteToMSConversionCalc@&nbsp;Lauftempo</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Dein Schaden exekutiert Champions mit weniger als @ExecuteThreshold*100@&nbsp;% Leben.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Auflöser",
+            "rarity": 4,
+            "tooltip": "Dein Schaden exekutiert Champions mit weniger als @ExecuteThreshold*100@&nbsp;% Leben."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Infernalische Verbindung",
             "rarity": 2,
             "tooltip": "Deine Fähigkeiten belegen Gegner mit einer unendlich steigerbaren <keywordMajor>Verbrennung</keywordMajor>, die @BleedDuration@&nbsp;Sekunden lang <magicDamage>@BleedDamageTooltip@&nbsp;magischen Schaden</magicDamage> pro Sekunde verursacht.<br><br>Alle deine<keywordMajor>Verbrennungseffekte</keywordMajor> verringern die Abklingzeiten deiner Grundfähigkeiten um @FlatCooldownRefundPerTick@&nbsp;Sekunden, wenn sie Gegnern Schaden zufügen.<br><br>In dieser Runde verursachter Schaden: @f1@<br>Verursachter Gesamtschaden: @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Stimme ab, ob sich dein Team mit den Dämonen verbünden soll. <br><br>Verbünde dich mit Dämonen, um eine <keywordMajor>%i:AugmentLevel% Augmentierungsstufe</keywordMajor> zu erhalten, wenn ein <keywordMajor>Jäger-Team eliminiert</keywordMajor> wird.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Verbündeter Dämon",
+            "rarity": 4,
+            "tooltip": "Stimme ab, ob sich dein Team mit den Dämonen verbünden soll. <br><br>Verbünde dich mit Dämonen, um eine <keywordMajor>%i:AugmentLevel% Augmentierungsstufe</keywordMajor> zu erhalten, wenn ein <keywordMajor>Jäger-Team eliminiert</keywordMajor> wird."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Geistige Verbindung",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Insgesamt umgeleiteter Schaden: @f1@<br>Insgesamt verursachte Heilung: @f2@<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Gewährt alle @Cooldown@&nbsp;Sekunden einen <attention>Zauberschild</attention>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Verzauberte Flasche",
+            "rarity": 4,
+            "tooltip": "Gewährt alle @Cooldown@&nbsp;Sekunden einen <attention>Zauberschild</attention>, der die nächste gegnerische Fähigkeit abblockt."
         },
         {
             "apiName": "Deathtouch",

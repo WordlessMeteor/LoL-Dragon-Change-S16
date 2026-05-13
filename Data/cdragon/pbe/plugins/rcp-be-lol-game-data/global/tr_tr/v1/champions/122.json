@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Darius baltasını geniş bir çember halinde savurur. Baltanın keskin tarafının isabet ettiği rakipler, balta sapının isabet ettiği rakiplere göre daha fazla hasar alır. Darius, baltasının keskin tarafının isabet ettiği rakip şampiyonlara ve canavarlara bağlı olarak iyileşir.",
-            "dynamicDescription": "Darius baltasını kaldırıp etrafında çevirerek silahın keskin tarafıyla <physicalDamage>@BladeDamage@ Fiziksel Hasar</physicalDamage>, sapıyla <physicalDamage>@HandleDamage@ Fiziksel Hasar</physicalDamage> verir. Baltanın sapından isabet alan rakipler <keywordMajor>Kanama</keywordMajor> yükü kazanmaz.<br><br>Darius baltasının keskin tarafından isabet alan rakip şampiyon ve büyük orman canavarı başına <healing>eksik canının %@Effect5Amount@ kadarını</healing> yeniler. İyileşme miktarı en fazla <healing>%@Effect7Amount@</healing> olabilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius baltasını kaldırıp etrafında çevirerek silahın keskin tarafıyla <physicalDamage>@BladeDamage@ Fiziksel Hasar</physicalDamage>, sapıyla <physicalDamage>@HandleDamage@ Fiziksel Hasar</physicalDamage> verir. Baltanın sapından isabet alan rakipler <keywordMajor>Kanama</keywordMajor> yükü kazanmaz.<br><br>Darius baltasının keskin tarafından isabet alan rakip şampiyon ve büyük orman canavarı başına <healing>eksik canının %@MissingHealthHeal@ kadarını</healing> yeniler. İyileşme miktarı en fazla <healing>%@MissingHealPercent@</healing> olabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Darius'un bir sonraki saldırısı rakibin atardamarına isabet eder. Rakip kanadıkça daha yavaş hareket eder.",
-            "dynamicDescription": "Darius'un bir sonraki saldırısı <physicalDamage>@EmpoweredAttackDamage@ Fiziksel Hasar</physicalDamage> verir ve hedefi @Effect5Amount@ saniyeliğine %@Effect2Amount@ <status>yavaşlatır</status>.<br><br>Bu yetenek hedefi katlederse, mana bedeli iade edilir ve bekleme süresi %@Effect3Amount@ azalır.<br><br><rules>Bu yetenek hasar verdiğinde yetenek etkilerini tetikler.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius'un bir sonraki saldırısı <physicalDamage>@EmpoweredAttackDamage@ Fiziksel Hasar</physicalDamage> verir ve hedefi @SlowDuration@ saniyeliğine %@SlowPercent@ <status>yavaşlatır</status>.<br><br>Bu yetenek hedefi katlederse mana bedeli iade edilir ve bekleme süresi %@PercentCDRefund@ azalır.<br><br><rules>Bu yetenek hasar verdiğinde yetenek etkilerini tetikler.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Darius baltasını bileyerek verdiği fiziksel hasarın hedefin zırhının belli bir yüzdesini yok saymasını sağlar. Etkinleştirildiğinde, Darius baltasının kancasıyla rakipleri bir araya toplar ve kendine doğru çeker.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Darius %@Effect1Amount@ Zırh Delme kazanır.<br><br><spellActive>Aktif:</spellActive> Darius rakiplerini baltasıyla <status>çeker</status>, <status>havaya savurur</status> ve @Effect3Amount@ saniyeliğine %@Effect2Amount@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Darius %@PassivePercentArmorPen@ Zırh Delme kazanır.<br><br><spellActive>Aktif:</spellActive> Darius rakiplerini baltasıyla <status>çeker</status>, <status>havaya savurur</status> ve @SlowDuration@ saniyeliğine %@SlowPercent@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

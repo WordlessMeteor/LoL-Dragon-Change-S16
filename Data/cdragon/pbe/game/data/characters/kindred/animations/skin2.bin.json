@@ -282,19 +282,12 @@
                 "__type": "AtomicClipData"
             },
             "Run": {
-                "mSelectorPairDataList": [
-                    {
-                        "mClipName": "{cffe7c8b}",
-                        "mProbability": 90.0,
-                        "__type": "SelectorPairData"
-                    },
-                    {
-                        "mClipName": "{72d20e44}",
-                        "mProbability": 10.0,
-                        "__type": "SelectorPairData"
-                    }
-                ],
-                "__type": "SelectorClipData"
+                "Updater": {
+                    "__type": "IsHomeguardParametricUpdater"
+                },
+                "mTrueConditionClipName": "{bc1ef3fb}",
+                "mFalseConditionClipName": "{bc1ef3fb}",
+                "__type": "ConditionBoolClipData"
             },
             "Spell1Back": {
                 "mTrackDataName": "Default",
@@ -393,7 +386,6 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "{d13660ed}": {
@@ -405,7 +397,6 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "{8215553c}": {
@@ -417,13 +408,11 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "{584a6a6f}": {
                         "mName": "{e02d563e}",
                         "mSoundName": "Play_sfx_Kindred_Recall3D_buffactivate",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     }
                 },
@@ -439,7 +428,6 @@
                     "{edd1e584}": {
                         "mName": "{e88a123f}",
                         "mSoundName": "Play_sfx_Kindred_Death3D_cast",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     },
                     "{958638eb}": {
@@ -452,7 +440,6 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "Death_Effect": {
@@ -465,7 +452,6 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "{4804d076}": {
@@ -478,7 +464,6 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "WeaponSnap": {
@@ -578,7 +563,6 @@
                     "{2fa31d3a}": {
                         "mName": "Audio_Recall",
                         "mSoundName": "Play_sfx_Kindred_Respawn3D_buffactivate",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     }
                 },
@@ -605,6 +589,45 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "{bc1ef3fb}": {
+                "mFlags": 2,
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Slow",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Base",
+                        "mValue": 310.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Haste",
+                        "mValue": 420.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "Run_Base": {
+                "mSelectorPairDataList": [
+                    {
+                        "mClipName": "{cffe7c8b}",
+                        "mProbability": 90.0,
+                        "__type": "SelectorPairData"
+                    },
+                    {
+                        "mClipName": "{72d20e44}",
+                        "mProbability": 10.0,
+                        "__type": "SelectorPairData"
+                    }
+                ],
+                "__type": "SelectorClipData"
             }
         },
         "mMaskDataMap": {

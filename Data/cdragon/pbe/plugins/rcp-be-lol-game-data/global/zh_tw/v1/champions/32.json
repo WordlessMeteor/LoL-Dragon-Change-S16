@@ -1366,7 +1366,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@AmmoRechargeTime@ 秒充能時間（@Cooldown@ 秒 %i:cooldown%）",
             "description": "阿姆姆向目標投擲粘稠的繃帶，將自己拉向目標，並對目標造成傷害和暈眩效果。",
-            "dynamicDescription": "阿姆姆射出一條繃帶，將自己拉向第一個命中的敵人，使其<status>暈眩</status> @Effect2Amount@ 秒，並造成 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage>。<br><br>此技能有 2 次充能。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿姆姆射出一條繃帶，將自己拉向第一位命中的敵軍，使其<status>暈眩</status>@StunDuration@秒，並造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br>。<br>此技能有2個充能。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -1666,7 +1666,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "永久減少阿姆姆所受的物理傷害。阿姆姆可以發洩他的怒火，對周圍的敵人造成傷害。阿姆姆被攻擊一次，怒不可遏的冷卻時間就會減少。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>阿姆姆受到的物理傷害降低 @DamageReduction@。此外，當阿姆姆被一次普攻命中時，此技能的冷卻時間會減少 @Effect3Amount@ 秒。<br><br><spellActive>主動：</spellActive>阿姆姆大發脾氣，對附近敵人造成 <magicDamage>@TantrumDamage@ 魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>阿姆姆受到的物理傷害降低@DamageReduction@。此外，當阿姆姆被普攻命中時，此技能的冷卻時間會縮短@CDROnHit@秒。<br><br><spellActive>主動：</spellActive>阿姆姆大發脾氣，對鄰近敵軍造成<magicDamage>@TantrumDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

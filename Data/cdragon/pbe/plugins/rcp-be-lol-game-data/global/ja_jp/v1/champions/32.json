@@ -1366,7 +1366,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "チャージ時間@AmmoRechargeTime@秒(%i:cooldown%@Cooldown@秒)",
             "description": "指定方向にべとべとの包帯を投げつける。敵に当たるとダメージとスタンを与え、包帯をたぐって相手の近くに素早く移動する。",
-            "dynamicDescription": "包帯を飛ばして最初に命中した敵のところに自身を引き寄せ、@Effect2Amount@秒間<status>スタン</status>させて、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>このスキルは2回までチャージできる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "包帯を飛ばして最初に命中した敵のところに自身を引き寄せ、@StunDuration@秒間<status>スタン</status>させて、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>2チャージまでスタック可能。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -1666,7 +1666,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵から受ける物理ダメージを恒久的に軽減する。発動して怒りを爆発させると、周囲の敵にダメージを与える。自身が攻撃を受けるたびに「だだっこ」のクールダウンが短縮される。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 自身の受ける物理ダメージが@DamageReduction@軽減される。また通常攻撃を受けると、このスキルのクールダウンが@Effect3Amount@秒短縮される。<br><br><spellActive>発動効果:</spellActive> だだをこねて周囲の敵に<magicDamage>@TantrumDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 自身の受ける物理ダメージが@DamageReduction@軽減される。また通常攻撃を受けると、このスキルのクールダウンが@CDROnHit@秒短縮される。<br><br><spellActive>発動効果:</spellActive> だだをこねて周囲の敵に<magicDamage>@TantrumDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

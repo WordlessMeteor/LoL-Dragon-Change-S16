@@ -1101,7 +1101,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Hecarim hiende su arma, infligiendo daño físico a los enemigos cercanos. Si Hecarim inflige daño al menos a un enemigo, aumenta el daño y reduce el enfriamiento de los siguientes Alborotos.",
-            "dynamicDescription": "Hecarim asesta un golpe con su arma, lo que inflige <physicalDamage>@Damage@ de daño físico</physicalDamage> a los enemigos cercanos. Si esta habilidad golpea, obtiene una acumulación que reduce su enfriamiento en @RampageCooldownReduction@ s y aumenta su daño un @RampageBonusDamagePerc@% durante @Effect6Amount@ s. Se acumula hasta @Effect2Amount@ veces.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hecarim asesta un golpe con su arma, lo que inflige <physicalDamage>@Damage@ de daño físico</physicalDamage> a los enemigos cercanos. Si esta habilidad golpea, obtiene una acumulación que reduce su enfriamiento en @RampageCooldownReduction@ s y aumenta su daño un @RampageBonusDamagePerc@% durante @BuffDuration@ s. Se acumula hasta @MaxStacks@ veces.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1401,7 +1401,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "La velocidad de movimiento de Hecarim aumenta y puede moverse entre unidades durante un breve periodo de tiempo. Su siguiente ataque empuja al objetivo e inflige daño físico adicional en función de la distancia recorrida tras haber activado la habilidad.",
-            "dynamicDescription": "Hecarim se vuelve fantasmal y obtiene un <speed>@MinMoveSpeed*100@% de velocidad de movimiento</speed>, que aumenta a un <speed>@MaxMoveSpeed*100@%</speed> a lo largo de @Effect5Amount@ s. Su siguiente ataque <status>empuja hacia atrás</status> e inflige entre <physicalDamage>@MinDamage@</physicalDamage> y <physicalDamage>@MaxDamage@ de daño físico</physicalDamage>. La distancia del <status>empujón</status> y el daño progresan con la distancia recorrida durante esta habilidad.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hecarim se vuelve fantasmal y obtiene un <speed>@MinMoveSpeed*100@% de velocidad de movimiento</speed>, que aumenta a un <speed>@MaxMoveSpeed*100@%</speed> a lo largo de @Duration@ s. Su siguiente ataque <status>empuja hacia atrás</status> e inflige entre <physicalDamage>@MinDamage@</physicalDamage> y <physicalDamage>@MaxDamage@ de daño físico</physicalDamage>. La distancia del <status>empujón</status> y el daño progresan con la distancia recorrida durante esta habilidad.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

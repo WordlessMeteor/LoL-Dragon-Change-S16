@@ -1779,7 +1779,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定方向に星形に爆発するエネルギーを発射する。命中した敵ユニットには印が付与され、一時的に可視状態になる。印が付いた敵を攻撃するとルシアンの移動速度が増加する。",
-            "dynamicDescription": "最大距離に達するか、敵に命中した時点で爆発する弾を飛ばし、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、少しの間可視化して6秒間マークを付与する。<br><br>マークした敵に自身または味方がダメージを与えると、1秒間、自身の<speed>移動速度が@Effect2Amount@</speed>増加する。味方によってこの効果が発動した場合、ルシアンは<attention>「警戒」</attention>も獲得する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "最大距離に達するか、敵に命中した時点で爆発する弾を飛ばし、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、少しの間、敵を可視化して6秒間マークを付与する。<br><br>マークした敵に自身または味方がダメージを与えると、1秒間、自身の<speed>移動速度が@MoveSpeedAmount@</speed>増加する。味方によってこの効果が発動した場合、ルシアンは<attention>「警戒」</attention>も獲得する。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1929,7 +1929,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "短距離を素早く移動する。「二挺拳銃」の通常攻撃が敵に命中するたびに、このスキルのクールダウンが短縮される。",
-            "dynamicDescription": "ダッシュする。<br><br><spellName>「二挺拳銃」</spellName>が敵に命中するたびに、クールダウンが@Effect1Amount@秒短縮される(チャンピオンの場合は@Effect2Amount@秒)。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ダッシュする。<br><br><spellName>「二挺拳銃」</spellName>が敵に命中するたびに、クールダウンが@CDRefundBase@秒短縮される(チャンピオンの場合は@CDRefundChampion@秒)。 @SpellModifierDescriptionAppend@",
             "range": [
                 445.0,
                 445.0,

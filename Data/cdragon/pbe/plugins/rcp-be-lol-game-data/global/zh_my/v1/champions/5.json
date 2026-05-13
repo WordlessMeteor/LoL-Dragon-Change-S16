@@ -1211,7 +1211,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赵信接下来 3 次普攻将造成额外伤害，且第 3 下攻击会把一名敌人击飞至空中。",
-            "dynamicDescription": "赵信的下 3 次普攻造成额外 <physicalDamage>@BonusDamage@ 物理伤害</physicalDamage>并使他的其他技能的冷却时间减少 1 秒。第 3 次普攻还会<status>击飞</status>目标 @Effect2Amount@ 秒。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赵信接下来的3次普攻会额外造成<physicalDamage>@BonusDamage@物理伤害</physicalDamage>，并使他的其他技能冷却时间缩短1秒。第三次普攻还会造成持续@KnockUpDuration@秒的<status>击飞</status>效果。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 375.0,
                 375.0,
@@ -1237,27 +1237,27 @@
                 5.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    15.0,
-                    15.0,
-                    30.0,
-                    45.0,
-                    60.0,
-                    75.0,
-                    75.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Gragas își rostogolește butoiul până în locația-țintă. Acesta va exploda fie după 4 secunde, fie la reactivare. Puterea exploziei crește în timp. Inamicilor loviți de explozie le scade viteza de mișcare.",
-            "dynamicDescription": "Gragas rostogolește un butoi care explodează după @Effect4Amount@ secunde, provocând între <magicDamage>@MinDamage@ daune magice</magicDamage> și <magicDamage>@MaxDamage@ daune magice</magicDamage> și <status>încetinind</status> inamicii cu între @Effect2Amount@ și @Effect2Amount*1.5@% timp de @Effect3Amount@ secunde. Daunele și <status>încetinirea</status> cresc în funcție de timpul scurs până la explozia butoiului. <br><br>Gragas poate <recast>refolosi</recast> abilitatea pentru a detona butoiul mai devreme.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas rostogolește un butoi care explodează după @BarrelMaxDuration@ secunde, provocând între <magicDamage>@MinDamage@ daune magice</magicDamage> și <magicDamage>@MaxDamage@ daune magice</magicDamage> și <status>încetinind</status> inamicii cu între @SlowPercent@ și @SlowPercent*1.5@% timp de @SlowDuration@ secunde. Daunele și <status>încetinirea</status> cresc în funcție de timpul scurs până la explozia butoiului. <br><br>Gragas poate <recast>refolosi</recast> abilitatea pentru a detona butoiul mai devreme.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

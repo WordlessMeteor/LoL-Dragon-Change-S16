@@ -1363,13 +1363,41 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        65.0,
+                        95.0,
+                        125.0,
+                        155.0,
+                        185.0,
+                        215.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
@@ -1468,7 +1496,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "StunDuration",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
@@ -1799,12 +1827,53 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "ShieldAmount",
+                    "values": [
+                        45.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        145.0,
+                        170.0,
+                        195.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseShieldAmount",
+                    "values": [
+                        50.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        145.0,
+                        170.0,
+                        235.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalShield": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "ShieldAmount",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
@@ -1904,7 +1973,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "ShieldAmount",
                                     "typeIndex": 2,
                                     "nameOverride": "Spell_ListType_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"

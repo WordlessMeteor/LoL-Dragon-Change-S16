@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Darius holt Schwung und schwingt seine Axt in einem weiten Kreis. Von der Klinge getroffene Gegner erleiden mehr Schaden als Gegner, die vom Schaft getroffen werden. Darius heilt sich abhängig von den gegnerischen Champions und großen Monstern, die von der Klinge getroffen werden.",
-            "dynamicDescription": "Darius hebt seine Axt, schwingt sie und verursacht mit der Klinge <physicalDamage>@BladeDamage@</physicalDamage> und dem Griff <physicalDamage>@HandleDamage@&nbsp;normalen Schaden</physicalDamage>. Gegner, die mit dem Griff getroffen werden, erhalten keine Steigerung von <keywordMajor>Blutung</keywordMajor>.<br><br>Darius stellt pro gegnerischem Champion und großem Dschungelmonster, die er mit der Klinge trifft, <healing>@Effect5Amount@&nbsp;% seines fehlenden Lebens</healing> wieder her, bis zu einem Maximum von <healing>@Effect7Amount@&nbsp;%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius hebt seine Axt, schwingt sie und verursacht mit der Klinge <physicalDamage>@BladeDamage@</physicalDamage> und dem Griff <physicalDamage>@HandleDamage@&nbsp;normalen Schaden</physicalDamage>. Gegner, die mit dem Griff getroffen werden, erhalten keine Steigerung von <keywordMajor>Blutung</keywordMajor>.<br><br>Darius stellt pro gegnerischem Champion und großem Dschungelmonster, die er mit der Klinge trifft, <healing>@MissingHealthHeal@&nbsp;% seines fehlenden Lebens</healing> wieder her, bis zu einem Maximum von <healing>@MissingHealPercent@&nbsp;%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Darius' nächster Angriff trifft die Hauptschlagader eines Gegners. Während dieser verblutet, ist sein Lauftempo verlangsamt.",
-            "dynamicDescription": "Darius' nächster Angriff verursacht <physicalDamage>@EmpoweredAttackDamage@&nbsp;normalen Schaden</physicalDamage> und <status>verlangsamt</status> das Ziel @Effect5Amount@&nbsp;Sekunde(n) lang um @Effect2Amount@&nbsp;%.<br><br>Diese Fähigkeit erstattet ihre Manakosten zurück und verringert die Abklingzeit um @Effect3Amount@&nbsp;%, wenn sie das Ziel tötet.<br><br><rules>Diese Fähigkeit löst Zaubereffekte aus, wenn sie Schaden verursacht.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Der nächste Angriff von Darius verursacht <physicalDamage>@EmpoweredAttackDamage@&nbsp;normalen Schaden</physicalDamage> und <status>verlangsamt</status> das Ziel @SlowDuration@&nbsp;Sekunde lang um @SlowPercent@&nbsp;%.<br><br>Diese Fähigkeit erstattet ihre Manakosten zurück und verringert die Abklingzeit um @PercentCDRefund@&nbsp;%, wenn sie das Ziel tötet.<br><br><rules>Diese Fähigkeit löst Zaubereffekte aus, wenn sie Schaden verursacht.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Darius schärft seine Axt, wodurch sein normaler Schaden passiv einen Prozentsatz der Rüstung seines Ziels ignoriert. Wird die Fähigkeit aktiviert, schleudert Darius seinen Axthaken nach seinen Gegnern und zieht sie zu sich heran.",
-            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Darius erhält @Effect1Amount@&nbsp;% Rüstungsdurchdringung.<br><br><spellActive>Aktiv:</spellActive> Darius schwingt seine Axt, <status>zieht</status> alle Gegner vor sich heran, <status>schleudert sie hoch</status> und <status>verlangsamt</status> sie @Effect3Amount@&nbsp;Sekunden lang um @Effect2Amount@&nbsp;%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Darius erhält @PassivePercentArmorPen@&nbsp;% Rüstungsdurchdringung.<br><br><spellActive>Aktiv:</spellActive> Darius schwingt seine Axt, <status>zieht</status> alle Gegner vor sich heran, <status>schleudert sie hoch</status> und <status>verlangsamt</status> sie @SlowDuration@&nbsp;Sekunden lang um @SlowPercent@&nbsp;%.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

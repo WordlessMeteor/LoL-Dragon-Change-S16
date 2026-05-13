@@ -1072,7 +1072,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点にタルを転がし、4秒後に爆発させる。タルは自分で起爆させることもできる。時間経過とともに爆発の威力が増加する。爆風を浴びた敵はスロウ状態になる。",
-            "dynamicDescription": "タルを転がす。タルは@Effect4Amount@秒経つと爆発し、<magicDamage>@MinDamage@</magicDamage> - <magicDamage>@MaxDamage@の魔法ダメージ</magicDamage>を与えて、@Effect3Amount@秒間@Effect2Amount@ - @Effect2Amount*1.5@%の<status>スロウ効果</status>を付与する。このダメージと<status>スロウ効果</status>は、タルが爆発するまでの時間に応じて増加する。<br><br><recast>再発動</recast>するとタルを早めに爆発できる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "タルを転がす。タルは@BarrelMaxDuration@秒経つと爆発し、<magicDamage>@MinDamage@</magicDamage> - <magicDamage>@MaxDamage@の魔法ダメージ</magicDamage>を与えて、@SlowDuration@秒間@SlowPercent@ - @SlowPercent*1.5@%の<status>スロウ効果</status>を付与する。このダメージと<status>スロウ効果</status>は、タルが爆発するまでの時間に応じて増加する。<br><br><recast>再発動</recast>するとタルを早めに爆発できる。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

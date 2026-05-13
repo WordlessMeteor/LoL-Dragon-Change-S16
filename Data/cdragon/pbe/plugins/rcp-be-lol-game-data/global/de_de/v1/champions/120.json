@@ -1101,7 +1101,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Hecarim schlägt um sich und fügt nahen Gegnern normalen Schaden zu. Trifft Hecarim mindestens einen Gegner, verursacht er erhöhten Schaden und verringert die Abklingzeit für nachfolgendes „Toben“.",
-            "dynamicDescription": "Hecarim schlägt zu und fügt Gegnern in der Nähe <physicalDamage>@Damage@&nbsp;normalen Schaden</physicalDamage> zu. Wenn diese Fähigkeit trifft, erhält er eine Steigerung, die ihre Abklingzeit um @RampageCooldownReduction@&nbsp;Sekunden verringert und ihren Schaden @Effect6Amount@&nbsp;Sekunden lang um @RampageBonusDamagePerc@&nbsp;% erhöht. Maximal @Effect2Amount@&nbsp;Steigerungen.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hecarim schlägt zu und fügt Gegnern in der Nähe <physicalDamage>@Damage@&nbsp;normalen Schaden</physicalDamage> zu. Wenn diese Fähigkeit trifft, erhält er eine Steigerung, die ihre Abklingzeit um @RampageCooldownReduction@&nbsp;Sekunden verringert und ihren Schaden @BuffDuration@&nbsp;Sekunden lang um @RampageBonusDamagePerc@&nbsp;% erhöht. Maximal @MaxStacks@&nbsp;Steigerungen.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1401,7 +1401,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Hecarim erhält erhöhtes Lauftempo und kann sich kurzzeitig durch Einheiten hindurch bewegen. Sein nächster Angriff stößt sein Ziel zurück und verursacht zusätzlichen normalen Schaden abhängig von seiner zurückgelegten Distanz seit der Aktivierung.",
-            "dynamicDescription": "Hecarim erhält „Geist“ und <speed>@MinMoveSpeed*100@&nbsp;% Lauftempo</speed>, das über @Effect5Amount@&nbsp;Sekunden auf <speed>@MaxMoveSpeed*100@&nbsp;%</speed> ansteigt. Bei seinem nächsten Angriff wird das Ziel <status>zurückgestoßen</status> und erleidet zwischen <physicalDamage>@MinDamage@</physicalDamage> und <physicalDamage>@MaxDamage@&nbsp;normalen Schaden</physicalDamage>. Wie weit das Ziel <status>zurückgestoßen</status> wird und der erlittene Schaden skalieren mit der Distanz, die während dieser Fähigkeit zurückgelegt wird.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hecarim erhält „Geist“ und <speed>@MinMoveSpeed*100@&nbsp;% Lauftempo</speed>, das über @Duration@&nbsp;Sekunden auf <speed>@MaxMoveSpeed*100@&nbsp;%</speed> ansteigt. Bei seinem nächsten Angriff wird das Ziel <status>zurückgestoßen</status> und erleidet zwischen <physicalDamage>@MinDamage@</physicalDamage> und <physicalDamage>@MaxDamage@&nbsp;normalen Schaden</physicalDamage>. Wie weit das Ziel <status>zurückgestoßen</status> wird und der erlittene Schaden skalieren mit der Distanz, die während dieser Fähigkeit zurückgelegt wird.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

@@ -90,6 +90,46 @@
             "tooltip": "Devii <keywordStealth>invizibil(ă)</keywordStealth> timp de @StealthDuration@ secunde sau până ataci sau folosești o abilitate."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Toate daunele pe care le provoci aplică <keyword>''Răni grave''</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Putrificator chimtech",
+            "rarity": 4,
+            "tooltip": "Când le provoci <Damage>daune</Damage> campionilor, le aplici <keyword>''Răni grave'' de @GrievousAmount*100@%</keyword> timp de @GrievousDuration@ secunde."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "La fiecare @Cooldown@ secunde, <keywordMajor>lansezi automat</keywordMajor> o lumină protectoare spre aliatul tău. Tu și aliații tăi prin care trece lumina primiți un <shield>scut de @TotalShield@</shield>. Apoi se întoarce, iar efectul se repetă."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Când provoci daune, <status>încetinești</status> inamicii.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Ciocan înghețat",
+            "rarity": 4,
+            "tooltip": "Când provoci daune, aplici o <status>încetinire</status> de <speed>@SlowAmount*100@%</speed> timp de @SlowDuration@ secunde."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Răzbunare",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Când aplici daune, provoci <physicalDamage>daune fizice suplimentare în valoare de @MaxHealthDamage*100@% din viața maximă</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Tăiș însângerat",
+            "rarity": 4,
+            "tooltip": "Când aplici daune, provoci <physicalDamage>daune fizice suplimentare în valoare de @MaxHealthDamage*100@% din viața maximă</physicalDamage>."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Imunitate la durere",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@% din daunele suferite de tine sunt provocate în schimb de-a lungul a @BleedDuration@ secunde (@RangedReduction*100@% pentru campionii care atacă la distanță)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Votează pentru echipa ta ca să se alieze cu vânătorii de demoni. <br><br>Aliază-te cu vânătorii de demoni pentru a primi <gold>+%i:goldCoins%@BonusGold@ aur bonus</gold> când învingi o <keywordMajor>echipă de demoni</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Vânător aliat",
+            "rarity": 4,
+            "tooltip": "Votează pentru echipa ta ca să se alieze cu vânătorii de demoni. <br><br>Aliază-te cu vânătorii de demoni pentru a primi <gold>+%i:goldCoins%@BonusGold@ aur bonus</gold> când învingi o <keywordMajor>echipă de demoni</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Aplicarea buff-urilor, <healing>vindecarea</healing> sau <shield>protejarea cu scuturi</shield> a aliatului provoacă daune și <status>încetinește</status> inamicii din jurul său.",
@@ -4657,6 +4808,46 @@
             "name": "Explozie sonică",
             "rarity": 0,
             "tooltip": "Aplicarea buff-urilor, <healing>vindecarea</healing> sau <shield>protejarea cu scuturi</shield> a aliatului provoacă <trueDamage>@Damage@ daune reale</trueDamage> și <status>încetinește inamicii din jurul acestuia</status> cu @SlowAmount*-100@% timp de @SlowDuration@ secunde.<br><br>Daune provocate în această rundă: @f1@<br>Daune provocate în total: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Reduce <attackSpeed>viteza de atac</attackSpeed> a campionilor din apropiere.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Moștenirea Observatorilor",
+            "rarity": 4,
+            "tooltip": "Reduce <attackSpeed>viteza de atac</attackSpeed> a campionilor din apropiere cu <attackSpeed>@ASPDSlow*-100@%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "Pas alegător",
             "rarity": 1,
             "tooltip": "Primești <speed>@AbilityHasteToMSConversionCalc@ viteză de mișcare</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Atacurile tale îi execută pe campionii care au mai puțin de @ExecuteThreshold*100@% viață.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Anihilator",
+            "rarity": 4,
+            "tooltip": "Atacurile tale îi execută pe campionii care au mai puțin de @ExecuteThreshold*100@% viață."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Conduită infernală",
             "rarity": 2,
             "tooltip": "Abilitățile tale aplică un efect de <keywordMajor>ardere</keywordMajor> care se cumulează la infinit, provocând <magicDamage>@BleedDamageTooltip@ daune magice</magicDamage> pe secundă timp de @BleedDuration@ secunde.<br><br>Toate efectele tale de <keywordMajor>ardere</keywordMajor> reduc timpii de reactivare rămași ai abilităților tale de bază cu @FlatCooldownRefundPerTick@ secunde când le provoacă daune inamicilor.<br><br>Daune provocate în această rundă: @f1@<br>Daune provocate în total: @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Votează pentru ca echipa ta să se alieze cu demonii. <br><br>Aliază-te cu demonii pentru a primi un <keywordMajor>%i:AugmentLevel% nivel de augmentare</keywordMajor> atunci când o <keywordMajor>echipă de vânători este eliminată</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Demon aliat",
+            "rarity": 4,
+            "tooltip": "Votează pentru ca echipa ta să se alieze cu demonii. <br><br>Aliază-te cu demonii pentru a primi un <keywordMajor>%i:AugmentLevel% nivel de augmentare</keywordMajor> atunci când o <keywordMajor>echipă de vânători este eliminată</keywordMajor>."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Legătura spiritului",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Daune redirecționate în total: @f1@<br>Vindecare efectuată în total: @f2@<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Oferă un <attention>scut anti-vrăji</attention> la fiecare @Cooldown@ secunde.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Flacon fermecat",
+            "rarity": 4,
+            "tooltip": "Oferă un <attention>scut anti-vrăji</attention> la fiecare @Cooldown@ secunde, care blochează următoarea abilitate inamică."
         },
         {
             "apiName": "Deathtouch",

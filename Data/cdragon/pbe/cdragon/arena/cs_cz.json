@@ -90,6 +90,46 @@
             "tooltip": "Získáš <keywordStealth>neviditelnost</keywordStealth> na dobu @StealthDuration@&nbsp;sek. nebo do provedení útoku či seslání schopnosti."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Veškeré poškození, které způsobíš, aplikuje <keyword>Vážné rány</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Chemotechnický zahnívač",
+            "rarity": 4,
+            "tooltip": "Způsobení <Damage>poškození</Damage> aplikuje na šampiony na @GrievousDuration@&nbsp;sek. <keyword>@GrievousAmount*100@% zranění</keyword>."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "Vždy po uplynutí @Cooldown@&nbsp;sek. <keywordMajor>automaticky sešleš</keywordMajor> směrem ke svému spojenci strážné světlo, které tobě a spojencům, jimiž projde, poskytne <shield>štít o síle @TotalShield@ bodů</shield>, načež se k tobě začne vracet a aplikuje tento efekt ještě jednou."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Způsobené poškození <status>zpomaluje</status> nepřátele.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Zmrzlá palice",
+            "rarity": 4,
+            "tooltip": "Způsobením poškození cíl na @SlowDuration@&nbsp;sek. <status>zpomalíš</status> o <speed>@SlowAmount*100@&nbsp;%</speed>."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Pomsta",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Když způsobíš poškození, utrpí cíl dodatečné <physicalDamage>fyzické poškození ve výši @MaxHealthDamage*100@&nbsp;% maximálního zdraví</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Krvavá břitva",
+            "rarity": 4,
+            "tooltip": "Když způsobíš poškození, utrpí cíl dodatečné <physicalDamage>fyzické poškození ve výši @MaxHealthDamage*100@&nbsp;% maximálního zdraví</physicalDamage>."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Otupělost vůči bolesti",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@&nbsp;% poškození, které utrpíš, se ti místo okamžitého způsobení rozloží do @BleedDuration@&nbsp;sek. (@RangedReduction*100@&nbsp;% u šampionů bojujících na dálku)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Hlasuj, aby se tvůj tým spojil s lovci. <br><br>Pokud se spojíte s lovci démonů, poražením <keywordMajor>týmu démonů</keywordMajor> získáte <gold>+%i:goldCoins%@BonusGold@ bonusových zlaťáků</gold>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Spojenectví s lovci",
+            "rarity": 4,
+            "tooltip": "Hlasuj, aby se tvůj tým spojil s lovci. <br><br>Pokud se spojíte s lovci démonů, poražením <keywordMajor>týmu démonů</keywordMajor> získáte <gold>+%i:goldCoins%@BonusGold@ bonusových zlaťáků</gold>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Když svému spojenci poskytneš buff, <healing>léčení</healing> nebo <shield>štít</shield>, způsobí nepřátelům kolem sebe poškození a <status>zpomalí</status> je.",
@@ -4657,6 +4808,46 @@
             "name": "Sonický třesk",
             "rarity": 0,
             "tooltip": "Když svému spojenci poskytneš buff, <healing>léčení</healing> nebo <shield>štít</shield>, způsobí nepřátelům kolem sebe <trueDamage>@Damage@ bodů přímého poškození</trueDamage> a na @SlowDuration@&nbsp;sek. je <status>zpomalí</status> o @SlowAmount*-100@&nbsp;%.<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Snižuje okolním šampionům <attackSpeed>rychlost útoků</attackSpeed>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Pozůstatek Strážců",
+            "rarity": 4,
+            "tooltip": "Snižuje okolním šampionům <attackSpeed>rychlost útoků</attackSpeed> o <attackSpeed>@ASPDSlow*-100@&nbsp;%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "Zrychlené tempo",
             "rarity": 1,
             "tooltip": "Získáš <speed>@AbilityHasteToMSConversionCalc@ k rychlosti pohybu</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Nepřátele, kteří mají méně než @ExecuteThreshold*100@&nbsp;% zdraví, tebou způsobené poškození popraví.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Dematerializovač",
+            "rarity": 4,
+            "tooltip": "Nepřátele, kteří mají méně než @ExecuteThreshold*100@&nbsp;% zdraví, tebou způsobené poškození popraví."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Pekelné spojení",
             "rarity": 2,
             "tooltip": "Tvoje schopnosti aplikují neomezeně se nasčítávající efekt <keywordMajor>popálení</keywordMajor>, který po dobu @BleedDuration@&nbsp;sek. způsobuje <magicDamage>@BleedDamageTooltip@ bodů magického poškození</magicDamage> za sekundu.<br><br>Všechny tvé efekty <keywordMajor>popálení</keywordMajor> ti zkracují zbývající přebíjecí doby schopností o @FlatCooldownRefundPerTick@&nbsp;sek., kdykoliv způsobí poškození nepříteli.<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Hlasuj, aby se tvůj tým spojil s démony. <br><br>Pokud se spojíte s démony, <keywordMajor>poražením týmu lovců</keywordMajor> získáte <keywordMajor>%i:AugmentLevel% úroveň augmentace</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Spojenectví s démony",
+            "rarity": 4,
+            "tooltip": "Hlasuj, aby se tvůj tým spojil s démony. <br><br>Pokud se spojíte s démony, <keywordMajor>poražením týmu lovců</keywordMajor> získáte <keywordMajor>%i:AugmentLevel% úroveň augmentace</keywordMajor>."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Duchovní propojení",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Celkové přesměrované poškození: @f1@<br>Celkové způsobené léčení: @f2@<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "V pravidelném intervalu @Cooldown@&nbsp;sek. získáš <attention>protimagický štít</attention>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Očarovaný flakónek",
+            "rarity": 4,
+            "tooltip": "V pravidelném intervalu @Cooldown@&nbsp;sek. získáš <attention>protimagický štít</attention>, který zablokuje příští nepřátelskou schopnost."
         },
         {
             "apiName": "Deathtouch",

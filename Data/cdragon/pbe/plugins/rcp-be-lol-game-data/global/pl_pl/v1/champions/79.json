@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Gragas toczy w kierunku wyznaczonego miejsca beczkę, która wybucha po aktywowaniu lub po 4 sekundach. Siła eksplozji zwiększa się wraz z upływem czasu. Wrogowie trafieni wybuchem zostają spowolnieni.",
-            "dynamicDescription": "Gragas ciska beczką, która wybucha po @Effect4Amount@ sek., zadając <magicDamage>@MinDamage@-@MaxDamage@ pkt. obrażeń magicznych</magicDamage> i <status>spowalniając</status> o @Effect2Amount@-@Effect2Amount*1.5@% na @Effect3Amount@ sek. Wartości obrażeń i <status>spowolnienia</status> zwiększają się wraz z czasem, jaki minął od rzucenia beczki do jej wybuchu. <br><br>Gragas może <recast>ponownie użyć</recast> tej umiejętności, by wysadzić beczkę wcześniej.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas ciska beczką, która wybucha po @BarrelMaxDuration@ sek., zadając <magicDamage>@MinDamage@-@MaxDamage@ pkt. obrażeń magicznych</magicDamage> i <status>spowalniając</status> o @SlowPercent@-@SlowPercent*1.5@% na @SlowDuration@ sek. Wartości obrażeń i <status>spowolnienia</status> zwiększają się wraz z czasem, jaki minął od rzucenia beczki do jej wybuchu. <br><br>Gragas może <recast>ponownie użyć</recast> tej umiejętności, by wysadzić beczkę wcześniej.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Gragas fıçısını belli bir konuma yuvarlar. Fıçı etkinleştirilerek patlatılabileceği gibi, 4 saniye sonra kendi kendine de patlayabilir. Patlamanın şiddeti zamanla artar. Patlamaya yakalanan rakipler yavaşlar.",
-            "dynamicDescription": "Gragas'ın yuvarladığı fıçı @Effect4Amount@ saniyenin ardından patlayarak rakiplere <magicDamage>@MinDamage@</magicDamage> ila <magicDamage>@MaxDamage@ Büyü Hasarı</magicDamage> verir ve onları @Effect3Amount@ saniyeliğine %@Effect2Amount@ ila %@Effect2Amount*1.5@ <status>yavaşlatır</status>. Hasar ve <status>yavaşlatma</status> etkisinin süresi, fıçının patlamadan önce yerde kaldığı süreye bağlı olarak artar. <br><br>Gragas yeteneği <recast>yeniden kullanarak</recast> fıçıyı erken patlatabilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas'ın yuvarladığı fıçı @BarrelMaxDuration@ saniyenin ardından patlayarak rakiplere <magicDamage>@MinDamage@</magicDamage> ila <magicDamage>@MaxDamage@ Büyü Hasarı</magicDamage> verir ve onları @SlowDuration@ saniyeliğine %@SlowPercent@ ila %@SlowPercent*1.5@ <status>yavaşlatır</status>. Hasar ve <status>yavaşlatma</status> etkisinin süresi, fıçının patlamadan önce yerde kaldığı süreye bağlı olarak artar.<br><br>Gragas yeteneği <recast>yeniden kullanarak</recast> fıçıyı erken patlatabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

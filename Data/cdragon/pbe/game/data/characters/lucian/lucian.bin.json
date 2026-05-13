@@ -343,6 +343,32 @@
                         1050.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionBubbleRadius",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionBubbleDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1040,6 +1066,97 @@
                         250.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedAmount",
+                    "values": [
+                        55.0,
+                        60.0,
+                        65.0,
+                        70.0,
+                        75.0,
+                        80.0,
+                        85.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionBubbleSize",
+                    "values": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionBubbleDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffMarkerDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ImpactRangeCheck",
+                    "values": [
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1146,8 +1263,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "MoveSpeedAmount",
                                     "nameOverride": "Spell_ListType_MovementSpeed",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2770,6 +2886,73 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "CDRefundBase",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CDRefundChampion",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDistance",
+                    "values": [
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinDistance",
+                    "values": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashSpeed",
+                    "values": [
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Run",
             "mImgIconName": [
@@ -2909,8 +3092,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "{e6915cf6}",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

@@ -305,6 +305,60 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PercentCDRefund",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        1.5,
+                        1.399999976158142,
+                        1.4500000476837158,
+                        1.5,
+                        1.5499999523162842,
+                        1.600000023841858,
+                        1.649999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -326,8 +380,8 @@
                         {
                             "mStat": 2,
                             "mSubpart": {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "ADRatio",
+                                "__type": "NamedDataValueCalculationPart"
                             },
                             "__type": "StatBySubPartCalculationPart"
                         }
@@ -421,8 +475,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 4,
+                                    "type": "ADRatio",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_TotalADScalar",
                                     "__type": "TooltipInstanceListElement"
@@ -454,8 +507,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1448,6 +1501,45 @@
                         150.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        10.0,
+                        50.0,
+                        80.0,
+                        110.0,
+                        140.0,
+                        170.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InnerCircleDamagePercent",
+                    "values": [
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissingHealPercent",
+                    "values": [
+                        51.0,
+                        51.0,
+                        51.0,
+                        51.0,
+                        51.0,
+                        51.0,
+                        51.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1502,15 +1594,15 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mSubpart": {
                                 "mPart1": {
-                                    "mEffectIndex": 1,
-                                    "__type": "EffectValueCalculationPart"
+                                    "mDataValue": "TotalADRatio",
+                                    "__type": "NamedDataValueCalculationPart"
                                 },
                                 "mPart2": {
                                     "mNumber": 0.009999999776482582,
@@ -1628,14 +1720,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "TotalADRatio",
                                     "nameOverride": "Spell_ListType_TotalADScalar",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -1701,8 +1791,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 5,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "MissingHealthHeal",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1714,8 +1804,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "{fd3f9057}",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1883,6 +1973,47 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "PassivePercentArmorPen",
+                    "values": [
+                        20.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell3",
             "mImgIconName": [
@@ -1979,8 +2110,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "PassivePercentArmorPen",
                                     "nameOverride": "Spell_DariusE_PercentageArmorPenetration",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2020,8 +2150,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

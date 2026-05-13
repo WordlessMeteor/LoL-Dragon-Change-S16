@@ -51,7 +51,7 @@
             "Crit": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Skin02/Animations/Braum_Skin02_Crit.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Critical_Attack_01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -93,12 +93,14 @@
                 "__type": "AtomicClipData"
             },
             "Run": {
-                "mTrackDataName": "Default",
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Run_02.anm",
-                    "__type": "AnimationResourceData"
+                "mFlags": 2,
+                "Updater": {
+                    "__type": "IsHomeguardParametricUpdater"
                 },
-                "__type": "AtomicClipData"
+                "mChangeAnimationMidPlay": true,
+                "mTrueConditionClipName": "{bc1ef3fb}",
+                "mFalseConditionClipName": "{bc1ef3fb}",
+                "__type": "ConditionBoolClipData"
             },
             "Attack1": {
                 "mTrackDataName": "Default",
@@ -445,7 +447,7 @@
             "{8063777d}": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Skin02/Animations/Braum_Skin02_Crit.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Critical_Attack_01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -453,7 +455,7 @@
             "{52834bd9}": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Skin02/Animations/Braum_Skin02_Crit.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Critical_Attack_01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -622,6 +624,44 @@
                 },
                 "__type": "AtomicClipData"
             },
+            "Recall": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Recall": {
+                        "mName": "Recall",
+                        "mStartFrame": 49.0,
+                        "mShowSubmeshList": [
+                            "Recall"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "PORO": {
+                        "mName": "PORO",
+                        "mStartFrame": 49.0,
+                        "mShowSubmeshList": [
+                            "PORO"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "audio_recall_leadin": {
+                        "mName": "audio_recall_leadin",
+                        "mEffectKey": "Braum_recall_leadin_sound",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Skin02/Animations/Braum_Skin02_Recall.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
             "Death": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -784,6 +824,28 @@
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Idle_01_LOOP.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Recall_Winddown": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "audio_recall_winddown": {
+                        "mName": "audio_recall_winddown",
+                        "mStartFrame": 12.0,
+                        "mEffectKey": "Braum_Emote_Recall_WindDown_Sound",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Recall_Return.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -1008,12 +1070,12 @@
                 "mSelectorPairDataList": [
                     {
                         "mClipName": "{0c8c9755}",
-                        "mProbability": 5.0,
+                        "mProbability": 50.0,
                         "__type": "SelectorPairData"
                     },
                     {
                         "mClipName": "{098c929c}",
-                        "mProbability": 5.0,
+                        "mProbability": 50.0,
                         "__type": "SelectorPairData"
                     }
                 ],
@@ -1067,45 +1129,39 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Recall": {
+            "Run_Base": {
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "Recall": {
-                        "mName": "Recall",
-                        "mStartFrame": 49.0,
-                        "mShowSubmeshList": [
-                            "Recall"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "PORO": {
-                        "mName": "PORO",
-                        "mStartFrame": 49.0,
-                        "mShowSubmeshList": [
-                            "PORO"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "audio_recall_leadin": {
-                        "mName": "audio_recall_leadin",
-                        "mEffectKey": "Braum_recall_leadin_sound",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "Root",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "mIsLoop": false,
-                        "__type": "ParticleEventData"
-                    }
-                },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Skin02/Animations/Braum_Skin02_Recall.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Run_02.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "Respawn_Base": {
+            "{bc1ef3fb}": {
+                "mFlags": 2,
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Slow",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Base",
+                        "mValue": 310.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Haste",
+                        "mValue": 450.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "Respawn": {
                 "mFlags": 8,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -1168,22 +1224,6 @@
                 },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Skin02/Animations/Braum_Skin02_Recall_Leadout.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
-            "Respawn": {
-                "mClipNameList": [
-                    "Respawn_Base",
-                    "Idle_01_In",
-                    "Idle_01_Loop"
-                ],
-                "__type": "SequencerClipData"
-            },
-            "Recall_Winddown": {
-                "mTrackDataName": "Default",
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Recall_Return.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -1347,6 +1387,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "213632941836844464": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "213632941901994982": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -1401,6 +1445,10 @@
             },
             "213632943102733109": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "213632943151375979": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "213632943226572764": {
@@ -1687,18 +1735,6 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "1509293448315860002": {
-                "mTime": 0.5,
-                "__type": "TimeBlendData"
-            },
-            "1509293449290960279": {
-                "mTime": 0.5,
-                "__type": "TimeBlendData"
-            },
-            "1509293449753648102": {
-                "mTime": 0.5,
-                "__type": "TimeBlendData"
-            },
             "1832212849267879676": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -1931,6 +1967,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "2750554576078880176": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "2750554576144030694": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -1985,6 +2025,10 @@
             },
             "2750554577344768821": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2750554577393411691": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "2750554577468608476": {
@@ -2163,6 +2207,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "3035821699674258864": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "3035821699739409382": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -2217,6 +2265,10 @@
             },
             "3035821700940147509": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3035821700988790379": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "3035821701063987164": {
@@ -2727,6 +2779,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "5917863712999456176": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "5917863713064606694": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -2781,6 +2837,10 @@
             },
             "5917863714265344821": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5917863714313987691": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "5917863714389184476": {
@@ -3239,6 +3299,94 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "6521702299046555388": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702299070822919": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702299661496016": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702299727914944": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702300205993490": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702300398942641": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702300539534768": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702300873521919": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702301118374213": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702301771447604": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702301805423413": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702301854066283": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702301929263068": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702302194646349": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702302245771910": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702302394615123": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702302464706091": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702302763714371": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702302819034175": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702302935501666": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702302993180810": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702303171404452": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "6778958379229953357": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
@@ -3559,6 +3707,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "7956166191368748464": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "7956166191433898982": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -3613,6 +3765,10 @@
             },
             "7956166192634637109": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7956166192683279979": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "7956166192758476764": {
@@ -3951,6 +4107,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "9007798786449325488": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "9007798786514476006": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -4005,6 +4165,10 @@
             },
             "9007798787715214133": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9007798787763857003": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "9007798787839053788": {
@@ -4539,6 +4703,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "11812727642682146224": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "11812727642747296742": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -4593,6 +4761,10 @@
             },
             "11812727643948034869": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11812727643996677739": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "11812727644071874524": {
@@ -4865,6 +5037,258 @@
             },
             "11958652633824158372": {
                 "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572165532888828": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572165557156359": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572165652133076": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572165653230626": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572165934011361": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572166040840023": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572166147829456": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572166156137114": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572166214248384": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572166225514186": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572166628330903": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572166692326930": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572166829483279": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572166885276081": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572166891752409": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572166961916196": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572166995471434": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167012249053": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167025868208": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167091018726": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167217682123": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167246964880": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167359855359": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572167546470574": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167572450410": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167604707653": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572167661418365": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167846607065": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168029504909": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168210664861": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168257781044": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572168262206221": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168291756853": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572168340399723": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168415596508": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572168433961013": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168492069907": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168509896808": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168560229665": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168570686654": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168593784903": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168640686711": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168671790179": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168680979789": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168732105350": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572168880948563": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572168907350422": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168951039531": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572169003951737": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169088770581": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169202093166": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169242901168": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169250047811": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572169305367615": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572169310329708": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169355122952": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169421835106": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572169468102566": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169479514250": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572169657737892": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572169728024658": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169731663872": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572169758164345": {
+                "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
             "12490539897872232188": {
@@ -5619,6 +6043,10 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
+            "13630352412165389744": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
             "13630352412225286842": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
@@ -5676,6 +6104,10 @@
                 "__type": "TimeBlendData"
             },
             "13630352413431278389": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352413479921259": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -6139,6 +6571,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "14790250172021587376": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "14790250172086737894": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -6193,6 +6629,10 @@
             },
             "14790250173287476021": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14790250173336118891": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "14790250173411315676": {
@@ -6783,6 +7223,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "16312077704855928240": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "16312077704921078758": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -6837,6 +7281,10 @@
             },
             "16312077706121816885": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16312077706170459755": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "16312077706245656540": {
@@ -7175,6 +7623,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "16812301769748102576": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "16812301769813253094": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -7229,6 +7681,10 @@
             },
             "16812301771013991221": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16812301771062634091": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "16812301771137830876": {
@@ -7495,6 +7951,10 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
+            "17060031806889377200": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
             "17060031806954527718": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -7549,6 +8009,10 @@
             },
             "17060031808155265845": {
                 "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17060031808203908715": {
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "17060031808279105500": {

@@ -1646,7 +1646,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Darius v širokém oblouku máchne svou sekerou. Nepřátelé zasažení jejím ostřím utrpí větší poškození než ti, které zasáhne topůrko. Darius se vyléčí podle toho, kolik nepřátelských šampionů a velkých příšer čepel zasáhla.",
-            "dynamicDescription": "Darius napřáhne svou sekeru a máchne s ní kolem sebe. Ostřím způsobí <physicalDamage>@BladeDamage@ bodů fyzického poškození</physicalDamage> a topůrkem <physicalDamage>@HandleDamage@ bodů poškození</physicalDamage>. Na nepřátele zasažené topůrkem se neumístí nový stupeň <keywordMajor>Krvácení</keywordMajor>.<br><br>Za každého nepřátelského šampiona a velkou příšeru v džungli, které zasáhne hlavice sekery, si Darius obnoví <healing>@Effect5Amount@&nbsp;% chybějícího zdraví</healing>, a to až do výše <healing>@Effect7Amount@&nbsp;%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius napřáhne sekeru a máchne s ní kolem sebe. Ostřím způsobí <physicalDamage>@BladeDamage@ bodů fyzického poškození</physicalDamage> a topůrkem <physicalDamage>@HandleDamage@ bodů poškození</physicalDamage>. Na nepřátele zasažené topůrkem se neumístí nový stupeň <keywordMajor>Krvácení</keywordMajor>.<br><br>Za každého nepřátelského šampiona a velkou příšeru v džungli, které zasáhne hlavice sekery, si Darius obnoví <healing>@MissingHealthHeal@&nbsp;% chybějícího zdraví</healing>, a to až do výše <healing>@MissingHealPercent@&nbsp;%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Dariův příští útok zasáhne nepříteli důležitou tepnu. Během krvácení bude mít cíl sníženou rychlost pohybu.",
-            "dynamicDescription": "Dariův následující útok způsobí <physicalDamage>@EmpoweredAttackDamage@ bodů fyzického poškození</physicalDamage> a na @Effect5Amount@&nbsp;sek. <status>zpomalí</status> cíl o @Effect2Amount@&nbsp;%.<br><br>Pokud tato schopnost svůj cíl zabije, vrátí zpět manu spotřebovanou na své seslání a její přebíjecí doba se zkrátí o @Effect3Amount@&nbsp;%.<br><br><rules>Tato schopnost po způsobení poškození aktivuje efekty kouzel.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Dariův následující útok způsobí <physicalDamage>@EmpoweredAttackDamage@ bodů fyzického poškození</physicalDamage> a na @SlowDuration@&nbsp;sek. <status>zpomalí</status> cíl o @SlowPercent@&nbsp;%.<br><br>Pokud tato schopnost svůj cíl zabije, vrátí zpět manu spotřebovanou na své seslání a její přebíjecí doba se zkrátí o @PercentCDRefund@&nbsp;%.<br><br><rules>Tato schopnost po způsobení poškození aktivuje efekty kouzel.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Darius má nabroušenou sekeru. Jeho fyzické útoky pasivně ignorují část brnění zaměřeného cíle. Když tuto schopnost aktivuje, zasekne do svých nepřátel hrot své sekery a přitáhne si je k sobě.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Darius získá @Effect1Amount@&nbsp;% k průraznosti brněním.<br><br><spellActive>Aktivace:</spellActive> Darius zahákne svou sekerou nepřátele, <status>přitáhne</status> je, <status>vyhodí je do vzduchu</status> a <status>zpomalí</status> na @Effect3Amount@&nbsp;sek. o @Effect2Amount@&nbsp;%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Darius získá @PassivePercentArmorPen@&nbsp;% k průraznosti brněním.<br><br><spellActive>Aktivace:</spellActive> Darius zahákne svou sekerou nepřátele, <status>přitáhne</status> je, <status>vyhodí je do vzduchu</status> a <status>zpomalí</status> na @SlowDuration@&nbsp;sek. o @SlowPercent@&nbsp;%.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

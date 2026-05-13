@@ -1101,7 +1101,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Гекарим рассекает ближайших врагов, нанося физический урон. Если Гекарим наносит урон хотя бы одному врагу, он увеличивает урон и сокращает перезарядку последующих применений Буйства.",
-            "dynamicDescription": "Гекарим рассекает ближайших врагов, нанося <physicalDamage>@Damage@ физического урона</physicalDamage>. Если Гекарим поражает врага, он получает заряд, который сокращает время перезарядки этого умения на @RampageCooldownReduction@ сек. и увеличивает его урон на @RampageBonusDamagePerc@% на @Effect6Amount@ сек. Максимум зарядов – @Effect2Amount@.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Гекарим рассекает ближайших врагов, нанося <physicalDamage>@Damage@ ед. физ. урона</physicalDamage>. Поражая врага, Гекарим получает заряд, сокращающий перезарядку этого умения на @RampageCooldownReduction@ сек. и повышающий его урон на @RampageBonusDamagePerc@% на @BuffDuration@ сек. Макс. @MaxStacks@ зар.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1401,7 +1401,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Гекарим постепенно ускоряется и в течение некоторого времени может проходить сквозь бойцов. Его следующая автоатака отбрасывает цель и наносит ей дополнительный физический урон, зависящий от пройденного после активации умения расстояния.",
-            "dynamicDescription": "Гекарим становится призрачным и получает <speed>@MinMoveSpeed*100@% скорости передвижения</speed>, после чего его ускорение увеличивается до <speed>@MaxMoveSpeed*100@%</speed> в течение @Effect5Amount@ сек. Следующая автоатака Гекарима <status>отбрасывает</status> цель и наносит ей <physicalDamage>от @MinDamage@ до @MaxDamage@ физического урона</physicalDamage>. Дальность <status>отбрасывания</status> и урон зависят от расстояния, преодоленного во время действия этого умения.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Гекарим получает призрачность и <speed>@MinMoveSpeed*100@% скорости передвижения</speed> (растет до <speed>@MaxMoveSpeed*100@%</speed> за @Duration@ сек.). Следующая автоатака Гекарима <status>отбрасывает</status> цель, нанося ей <physicalDamage>@MinDamage@</physicalDamage>–<physicalDamage>@MaxDamage@ ед. физ. урона</physicalDamage>. Дальность <status>отбрасывания</status> и урон зависят от расстояния, преодоленного в ходе действия этого умения.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

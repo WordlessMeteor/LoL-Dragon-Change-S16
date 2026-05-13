@@ -90,6 +90,46 @@
             "tooltip": "Vous devenez <keywordStealth>invisible</keywordStealth> pendant @StealthDuration@ sec, ou jusqu'à ce que vous lanciez une attaque ou une compétence."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Tous les dégâts que vous infligez appliquent <keyword>Hémorragie</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Putrificateur techno-chimique",
+            "rarity": 4,
+            "tooltip": "Infliger des <Damage>dégâts</Damage> aux champions leur inflige <keyword>@GrievousAmount*100@% d'Hémorragie</keyword> pendant @GrievousDuration@ sec."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "Toutes les @Cooldown@ sec, vous <keywordMajor>lancez automatiquement</keywordMajor> une vague de lumière protectrice vers votre allié, ce qui octroie un <shield>bouclier de @TotalShield@ PV</shield> aux alliés qu'elle traverse et à vous-même. La vague revient et octroie à nouveau le bouclier sur son retour."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Les dégâts <status>ralentissent</status> les ennemis.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Maillet gelé",
+            "rarity": 4,
+            "tooltip": "Les dégâts infligés appliquent un <status>ralentissement</status> de <speed>@SlowAmount*100@%</speed> pendant @SlowDuration@ sec."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Vengeance",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Les dégâts infligent <physicalDamage>@MaxHealthDamage*100@% des PV max en dégâts physiques</physicalDamage> supplémentaires.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Rasoir sanglant",
+            "rarity": 4,
+            "tooltip": "Les dégâts infligent <physicalDamage>@MaxHealthDamage*100@% des PV max en dégâts physiques</physicalDamage> supplémentaires."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Insensible à la douleur",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@% des dégâts que vous subissez surviennent en @BleedDuration@ sec (@RangedReduction*100@% pour les champions à distance)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>+%i:goldCoins%@BonusGold@ PO bonus</gold> lorsque vous éliminez une <keywordMajor>équipe de démons</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "S'allier aux chasseurs",
+            "rarity": 4,
+            "tooltip": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>+%i:goldCoins%@BonusGold@ PO bonus</gold> lorsque vous éliminez une <keywordMajor>équipe de démons</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "<healing>Soigner</healing> votre allié, lui octroyer un <shield>bouclier</shield> ou le renforcer inflige des dégâts aux ennemis proches de lui et les <status>ralentit</status>.",
@@ -4657,6 +4808,46 @@
             "name": "Protections létales",
             "rarity": 0,
             "tooltip": "<healing>Soigner</healing> votre allié, lui octroyer un <shield>bouclier</shield> ou le renforcer inflige <trueDamage>@Damage@ pts de dégâts bruts</trueDamage> aux ennemis proches de lui et les <status>ralentit</status> de @SlowAmount*-100@% pendant @SlowDuration@ sec.<br><br>Dégâts infligés lors de cette manche : @f1@.<br>Total des dégâts infligés : @f2@."
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vous réduisez la <attackSpeed>vitesse d'attaque</attackSpeed> des champions ennemis proches.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Vestige des Veilleurs",
+            "rarity": 4,
+            "tooltip": "Vous réduisez de <attackSpeed>@ASPDSlow*-100@%</attackSpeed> la <attackSpeed>vitesse d'attaque</attackSpeed> des champions ennemis proches."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "Pied au plancher",
             "rarity": 1,
             "tooltip": "Vous gagnez <speed>+@AbilityHasteToMSConversionCalc@ vitesse de déplacement</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Les dégâts exécutent les champions qui ont moins de @ExecuteThreshold*100@% de leurs PV.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Désintégrateur",
+            "rarity": 4,
+            "tooltip": "Les dégâts exécutent les champions qui ont moins de @ExecuteThreshold*100@% de leurs PV."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Conduit infernal",
             "rarity": 2,
             "tooltip": "Vos compétences appliquent <keywordMajor>brûlure</keywordMajor> (cumulable à l'infini), infligeant <magicDamage>@BleedDamageTooltip@ pts de dégâts magiques</magicDamage> par seconde pendant @BleedDuration@ sec.<br><br>Tous vos effets de <keywordMajor>brûlure</keywordMajor> réduisent le délai de récupération de vos compétences de base de @FlatCooldownRefundPerTick@ sec lorsqu'ils infligent des dégâts aux ennemis.<br><br>Dégâts infligés lors de cette manche : @f1@<br>Total des dégâts infligés : @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vous votez pour que votre équipe s'allie aux démons. <br><br>S'allier avec les démons octroie un <keywordMajor>%i:AugmentLevel% niveau d'optimisation</keywordMajor> lorsqu'une <keywordMajor>équipe de chasseurs est éliminée</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "S'allier aux démons",
+            "rarity": 4,
+            "tooltip": "Vous votez pour que votre équipe s'allie aux démons. <br><br>S'allier avec les démons octroie un <keywordMajor>%i:AugmentLevel% niveau d'optimisation</keywordMajor> lorsqu'une <keywordMajor>équipe de chasseurs est éliminée</keywordMajor>."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Lien spirituel",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Total des dégâts redirigés : @f1@.<br>Total des soins prodigués : @f2@.<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Vous gagnez un <attention>bouclier antisorts</attention> toutes les @Cooldown@ sec.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Flasque enchantée",
+            "rarity": 4,
+            "tooltip": "Vous gagnez un <attention>bouclier antisorts</attention> toutes les @Cooldown@ sec qui bloque la prochaine compétence ennemie."
         },
         {
             "apiName": "Deathtouch",

@@ -90,6 +90,46 @@
             "tooltip": "<keywordStealth>Lopakodni</keywordStealth> kezdesz @StealthDuration@ másodpercig, vagy amíg nem támadsz vagy használsz képességet."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Minden okozott sebzés <keyword>Súlyos seb</keyword> hatást alkalmaz.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Vegytech rothasztó",
+            "rarity": 4,
+            "tooltip": "A hősökre mért <Damage>sebzés</Damage> @GrievousDuration@ másodpercre <keyword>@GrievousAmount*100@%-os Seb</keyword> hatást alkalmaz rájuk."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1438,6 +1478,46 @@
             "tooltip": "@Cooldown@ másodpercenként <keywordMajor>automatikusan elsüt</keywordMajor> egy őrfényt a szövetségesed felé, ami <shield>@TotalShield@ pajzsot</shield> biztosít neked és azoknak a szövetségeseidnek, amelyeken áthalad, majd visszatérve ismét kifejti a hatását."
         },
         {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "A sebzés <status>lelassítja</status> az ellenfeleket.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Jégkalapács",
+            "rarity": 4,
+            "tooltip": "A sebzés @SlowDuration@ másodpercre <speed>@SlowAmount*100@%-os</speed> <status>lassítást</status> alkalmaz."
+        },
+        {
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
@@ -2315,6 +2395,46 @@
             "name": "Bosszú",
             "rarity": 1,
             "tooltip": "{{Cherry_Vengeance_Summary}}"
+        },
+        {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "A sebzéssel további <physicalDamage>@MaxHealthDamage*100@% maximális életerővel arányos fizikai sebzést</physicalDamage> okoz.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Vérpenge",
+            "rarity": 4,
+            "tooltip": "A sebzéssel további <physicalDamage>@MaxHealthDamage*100@% maximális életerővel arányos fizikai sebzést</physicalDamage> okoz."
         },
         {
             "apiName": "Erosion",
@@ -3403,6 +3523,37 @@
             "name": "Fájdalomtűrés",
             "rarity": 0,
             "tooltip": "Az általad elszenvedett sebzés @MeleeReduction*100@%-át @BleedDuration@ másodperc alatt szenveded el (távolsági harcos hősök esetében @RangedReduction*100@%)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Szavazz, hogy a csapatod a démonvadászok oldalára álljon. <br><br>Ha a démonvadászok oldalára álltok, <gold>+%i:goldCoins%@BonusGold@ bónusz aranyat</gold> kaptok egy <keywordMajor>démon csapat legyőzésekor</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Vadász szövetséges",
+            "rarity": 4,
+            "tooltip": "Szavazz, hogy a csapatod a démonvadászok oldalára álljon. <br><br>Ha a démonvadászok oldalára álltok, <gold>+%i:goldCoins%@BonusGold@ bónusz aranyat</gold> kaptok egy <keywordMajor>démon csapat legyőzésekor</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4767,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "A szövetséges erősítése, <healing>gyógyítása</healing> vagy <shield>pajzs általi védelme</shield> sebzést okoz, és <status>lelassítja</status> az őt körülvevő ellenségeket.",
@@ -4657,6 +4808,46 @@
             "name": "Hangrobbanás",
             "rarity": 0,
             "tooltip": "A szövetséges erősítése, <healing>gyógyítása</healing> vagy <shield>pajzs általi védelme</shield> <trueDamage>@Damage@ tényleges sebzést</trueDamage> okoz, és @SlowDuration@ másodpercre @SlowAmount*-100@%-kal <status>lelassítja az őt körülvevő ellenfeleket</status>.<br><br>A körben okozott sebzés: @f1@<br>Okozott sebzés összesen: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Csökkenti a közeli hősök <attackSpeed>támadási sebességét</attackSpeed>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "A Virrasztók maradványai",
+            "rarity": 4,
+            "tooltip": "<attackSpeed>@ASPDSlow*-100@%-kal</attackSpeed> csökkenti a közeli hősök <attackSpeed>támadási sebességét</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5072,37 @@
             "name": "Fürgén",
             "rarity": 1,
             "tooltip": "<speed>@AbilityHasteToMSConversionCalc@ mozgási sebességet</speed> ad."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "A hősöknek okozott sebzés kivégzi őket, ha az életerejük @ExecuteThreshold*100@% alatt van.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Dematerializáló",
+            "rarity": 4,
+            "tooltip": "A hősöknek okozott sebzés kivégzi őket, ha az életerejük @ExecuteThreshold*100@% alatt van."
         },
         {
             "apiName": "FallenAegis",
@@ -5783,6 +6005,28 @@
             "name": "Pokoli csatorna",
             "rarity": 2,
             "tooltip": "A képességek végtelenül halmozódó <keywordMajor>Égés</keywordMajor> hatást alkalmaznak az áldozatra, amivel @BleedDuration@ másodpercig másodpercenként <magicDamage>@BleedDamageTooltip@ varázssebzést</magicDamage> okoznak.<br><br>Ellenfél megsebzése esetén az <keywordMajor>Égés</keywordMajor> összes hatása @FlatCooldownRefundPerTick@ másodperccel csökkenti az alapképességeid hátralévő töltési idejét.<br><br>A körben okozott sebzés: @f1@<br>Összes kiosztott sebzés: @f2@<br>"
+        },
+        {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Szavazz, hogy a csapatod a démonok oldalára álljon. <br><br>Ha a démonok oldalára álltok, egy <keywordMajor>%i:AugmentLevel% erősítésszintet</keywordMajor> kaptok egy <keywordMajor>vadász csapat kiiktatásakor</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Démoni szövetséges",
+            "rarity": 4,
+            "tooltip": "Szavazz, hogy a csapatod a démonok oldalára álljon. <br><br>Ha a démonok oldalára álltok, egy <keywordMajor>%i:AugmentLevel% erősítésszintet</keywordMajor> kaptok egy <keywordMajor>vadász csapat kiiktatásakor</keywordMajor>."
         },
         {
             "apiName": "ADAPt",
@@ -7172,6 +7416,37 @@
             "name": "Lelki kapocs",
             "rarity": 2,
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Összes átirányított sebzés: @f1@<br>Összes gyógyítás: @f2@<br>"
+        },
+        {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "@Cooldown@ másodpercenként egy <attention>varázspajzsot</attention> biztosít.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Elvarázsolt flaska",
+            "rarity": 4,
+            "tooltip": "@Cooldown@ másodpercenként egy <attention>varázspajzsot</attention> biztosít, amely hárítja a következő ellenséges képességet."
         },
         {
             "apiName": "Deathtouch",
