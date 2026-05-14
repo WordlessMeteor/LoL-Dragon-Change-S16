@@ -123,7 +123,7 @@
     },
     "{14e117aa}": {
         "mTypeName": "Armor",
-        "mFontDescription": "UX/Fonts/Descriptions/FloatText_Score",
+        "mFontDescription": "UX/Fonts/Descriptions/FloatText_Armor",
         "combinableNumberFormat": "game_floatingtext_gold_add",
         "priority": 7,
         "decay": 0.44999998807907104,
@@ -136,7 +136,7 @@
         "continualForceY": 550.0,
         "icons": [
             {
-                "mIconFileName": "ASSETS/UX/FloatingText/RoleQuestIcon.tex",
+                "mIconFileName": "ASSETS/UX/FloatingText/Armor.tex",
                 "mColor": [
                     255,
                     255,
@@ -789,6 +789,41 @@
         "shrinkScale": 0.699999988079071,
         "__type": "FloatTextFormattingData"
     },
+    "{889a59de}": {
+        "mTypeName": "{833573ac}",
+        "mFontDescription": "UX/Fonts/Descriptions/FloatText_ModeQuestProgress",
+        "combinableNumberFormat": "game_floatingtext_gold_add",
+        "priority": 7,
+        "decay": 0.44999998807907104,
+        "decayDelay": 0.699999988079071,
+        "isAnimated": true,
+        "disableVerticalReverse": true,
+        "minYVelocity": 300.0,
+        "maxYVelocity": 300.0,
+        "startOffsetY": 40.0,
+        "continualForceY": 550.0,
+        "icons": [
+            {
+                "mIconFileName": "ASSETS/UX/FloatingText/ModesQuestIcon.tex",
+                "mColor": [
+                    255,
+                    255,
+                    255,
+                    0
+                ],
+                "mDisplaySize": [
+                    20.0,
+                    22.0
+                ],
+                "mOffset": [
+                    3.0,
+                    2.0
+                ],
+                "__type": "FloatTextIconData"
+            }
+        ],
+        "__type": "FloatTextFormattingData"
+    },
     "{8c061f36}": {
         "mTypeName": "{ee6adc8c}",
         "mFontDescription": "UX/Fonts/Descriptions/FloatText_EnemyTrueDamageEnhanced",
@@ -1085,7 +1120,7 @@
     },
     "{b60b5294}": {
         "mTypeName": "MagicResist",
-        "mFontDescription": "UX/Fonts/Descriptions/FloatText_Score",
+        "mFontDescription": "UX/Fonts/Descriptions/FloatText_MagicResist",
         "combinableNumberFormat": "game_floatingtext_gold_add",
         "priority": 7,
         "decay": 0.44999998807907104,
@@ -1098,7 +1133,7 @@
         "continualForceY": 550.0,
         "icons": [
             {
-                "mIconFileName": "ASSETS/UX/FloatingText/BraveryIcon.tex",
+                "mIconFileName": "ASSETS/UX/FloatingText/MagicResist.tex",
                 "mColor": [
                     255,
                     255,
@@ -1479,6 +1514,41 @@
                 "mOffset": [
                     3.5999999046325684,
                     -2.0
+                ],
+                "__type": "FloatTextIconData"
+            }
+        ],
+        "__type": "FloatTextFormattingData"
+    },
+    "{f67ba35a}": {
+        "mTypeName": "{9642fc50}",
+        "mFontDescription": "UX/Fonts/Descriptions/FloatText_ModeQuestComplete",
+        "combinableNumberFormat": "game_floatingtext_gold_add",
+        "priority": 7,
+        "decay": 0.44999998807907104,
+        "decayDelay": 0.699999988079071,
+        "isAnimated": true,
+        "disableVerticalReverse": true,
+        "minYVelocity": 300.0,
+        "maxYVelocity": 300.0,
+        "startOffsetY": 40.0,
+        "continualForceY": 550.0,
+        "icons": [
+            {
+                "mIconFileName": "ASSETS/UX/FloatingText/ModesQuestIcon.tex",
+                "mColor": [
+                    255,
+                    255,
+                    255,
+                    0
+                ],
+                "mDisplaySize": [
+                    20.0,
+                    22.0
+                ],
+                "mOffset": [
+                    3.0,
+                    2.0
                 ],
                 "__type": "FloatTextIconData"
             }
@@ -1981,6 +2051,8 @@
             "{08457d57}": "{b113b69f}",
             "Armor": "{14e117aa}",
             "MagicResist": "{b60b5294}",
+            "{833573ac}": "{889a59de}",
+            "{9642fc50}": "{f67ba35a}",
             "__type": "FloatingTextTypeList"
         },
         "__type": "FloatingTextGlobalConfig"

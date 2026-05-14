@@ -717,8 +717,7 @@
         },
         "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever": {
             "Elements": [
-                "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout",
-                "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/PenguLever_BG"
+                "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout"
             ]
         },
         "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/CurrencyValue": {
@@ -786,22 +785,6 @@
             "Scene": "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory",
             "VfxSystem": "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/Particles/TFTM_UI_Armory_CardHoverVFX"
         },
-        "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/ItemIcon": {
-            "Position.Anchors.Anchor": [
-                1.0,
-                0.0
-            ],
-            "Position.UIRect.Position": [
-                765.0,
-                1112.0
-            ],
-            "Position.UIRect.Size": [
-                28.0,
-                28.0
-            ],
-            "Position.UIRect.SourceResolutionHeight": 750,
-            "Position.UIRect.SourceResolutionWidth": 1334
-        },
         "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/ItemSpace": {
             "Enabled": true,
             "Layer": 2,
@@ -830,10 +813,13 @@
         },
         "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/SignText": {
             "FontDescription": "{a7d4749f}",
-            "Position.Anchors.Anchor": [
-                1.0,
-                0.0
-            ],
+            "Position.Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
             "Position.UIRect.Position": [
                 608.0,
                 1090.0
@@ -845,6 +831,25 @@
             "Position.UIRect.SourceResolutionHeight": 750,
             "Position.UIRect.SourceResolutionWidth": 1334,
             "TextAlignmentHorizontal": 1
+        },
+        "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/ItemGroup/ItemIcon": {
+            "Position.Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "Position.UIRect.Position": [
+                765.0,
+                1112.0
+            ],
+            "Position.UIRect.Size": [
+                36.0,
+                36.0
+            ],
+            "Position.UIRect.SourceResolutionHeight": 750,
+            "Position.UIRect.SourceResolutionWidth": 1334
         },
         "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion": {
             "Enabled": true,
@@ -1060,31 +1065,6 @@
                 "__type": "AtlasData"
             }
         },
-        "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/PenguLever_BG": {
-            "Position.Anchors.Anchor": [
-                1.0,
-                0.0
-            ],
-            "Position.UIRect.Position": [
-                680.0,
-                207.0
-            ],
-            "Position.UIRect.Size": [
-                141.0,
-                35.0
-            ],
-            "Position.UIRect.SourceResolutionHeight": 750,
-            "Position.UIRect.SourceResolutionWidth": 1334,
-            "TextureData.EdgeSizesLeftRight": [
-                0.0,
-                0.0
-            ],
-            "TextureData.EdgeSizesTopBottom": [
-                0.0,
-                0.0
-            ],
-            "TextureData.TextureName": "ASSETS/UX/TFT/Armory/TFT_Set17/PenguArmory/PenguArmory_Lever.png"
-        },
         "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/background/Frame": {
             "Color": [
                 255,
@@ -1129,6 +1109,12 @@
                 "__type": "AtlasData"
             }
         },
+        "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/ItemGroup": {
+            "Elements": [
+                "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/ItemGroup/ItemIcon",
+                "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/ItemGroup/ItemFrame"
+            ]
+        },
         "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/Region": {
             "Position.Anchors.Anchor": [
                 1.0,
@@ -1141,6 +1127,14 @@
             "Position.UIRect.Size": [
                 169.0,
                 35.0
+            ],
+            "Position.UIRect.SourceResolutionHeight": 750,
+            "Position.UIRect.SourceResolutionWidth": 1334
+        },
+        "ClientStates/Gameplay/UX/TFT/TFT17_Armory_Pengu/UIBase/TFT_Armory/Armory_Slot0/Lever/Layout/ItemGroup/ItemFrame": {
+            "Position.UIRect.Position": [
+                765.0,
+                1112.0
             ],
             "Position.UIRect.SourceResolutionHeight": 750,
             "Position.UIRect.SourceResolutionWidth": 1334

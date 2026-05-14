@@ -4738,7 +4738,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiRMultiHit",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4766,7 +4766,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiMultipleRootsWithR",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4795,7 +4795,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiEmpQHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4823,7 +4823,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiEHealing",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4852,7 +4852,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiEManaRestore",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -4908,7 +4908,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 226,
+                "EventToTrack": 227,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -5047,7 +5047,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiEBFFShield",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -5075,7 +5075,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiChampsSaved",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -5103,7 +5103,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiRHealShield",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -5131,7 +5131,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiPShielded",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -5160,7 +5160,7 @@
         "mDescriptionTraKey": "stat_stone_description_YuumiPProcs",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -5637,13 +5637,14 @@
     "{48ae7808}": {
         "RecSpellRankUpInfos": [
             {
-                "MapId": 12,
-                "Position": "{ada7afdb}",
+                "MapId": 11,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
                 "mDefaultPriority": [
                     3,
-                    1,
                     0,
-                    2
+                    2,
+                    1
                 ],
                 "mEarlyLevelOverrides": [
                     1,
@@ -5654,14 +5655,13 @@
                 "__type": "RecSpellRankUpInfo"
             },
             {
-                "MapId": 11,
-                "Position": "utility",
-                "IsDefaultRecommendation": true,
+                "MapId": 12,
+                "Position": "{ada7afdb}",
                 "mDefaultPriority": [
                     3,
+                    1,
                     0,
-                    2,
-                    1
+                    2
                 ],
                 "mEarlyLevelOverrides": [
                     1,
@@ -5937,6 +5937,996 @@
             }
         ],
         "__type": "ItemRecommendationOverrideSet"
+    },
+    "Characters/Yuumi/CAC/Yuumi_Skin01": {
+        "mCooldown": 15.0,
+        "mSituations": {
+            "MoveOrder2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Move - Long",
+                        "mConditions": [
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 2,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DLong",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Move - Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 5,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DStandard",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Move - River",
+                        "mConditions": [
+                            {
+                                "mMapIDs": 2048,
+                                "__type": "ContextualConditionMapID"
+                            },
+                            {
+                                "mRegionType": 4,
+                                "mRegionName": "AREA_River_Top",
+                                "__type": "ContextualConditionMapRegionName"
+                            },
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 5,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DRiver",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Move - River",
+                        "mConditions": [
+                            {
+                                "mMapIDs": 2048,
+                                "__type": "ContextualConditionMapID"
+                            },
+                            {
+                                "mRegionType": 4,
+                                "mRegionName": "AREA_River_Bot",
+                                "__type": "ContextualConditionMapRegionName"
+                            },
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DRiver",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackChampion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Champion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "MarkerTriggeredBySelf": {
+                "mRules": [
+                    {
+                        "mRuleName": "BookReact",
+                        "mConditions": [
+                            {
+                                "mMarkerNames": [
+                                    "BookReact"
+                                ],
+                                "__type": "ContextualConditionMarkerName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mAnimationAction": {
+                            "mHashedAnimationName": "Run01_Reaction01",
+                            "__type": "ContextualActionPlayAnimation"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Taunt": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt",
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DGeneral",
+                            "mAllyEventName": "Taunt3DGeneral",
+                            "mEnemyEventName": "Taunt3DGeneral",
+                            "mSpectatorEventName": "Taunt3DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "FirstMove2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "First Move",
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DFirst",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Joke": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneral",
+                            "mAllyEventName": "Joke3DGeneral",
+                            "mEnemyEventName": "Joke3DGeneral",
+                            "mSpectatorEventName": "Joke3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "RecallLeadIn": {
+                "mCoolDownTime": 10.0,
+                "mRules": [
+                    {
+                        "mRuleName": "Recall",
+                        "mAudioAction": {
+                            "mSelfEventName": "Recall3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Respawn2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Respawn2D",
+                        "mAudioAction": {
+                            "mSelfEventName": "Respawn2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "UseItem": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ward",
+                        "mConditions": [
+                            {
+                                "mItemVOGroupHash": "Ward",
+                                "__type": "ContextualConditionItemVOGroup"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "UseItem2DWard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Laugh": {
+                "mRules": [
+                    {
+                        "mRuleName": "Laugh",
+                        "mAudioAction": {
+                            "mSelfEventName": "Laugh3DGeneral",
+                            "mAllyEventName": "Laugh3DGeneral",
+                            "mEnemyEventName": "Laugh3DGeneral",
+                            "mSpectatorEventName": "Laugh3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "KillChampion": {
+                "mRules": [
+                    {
+                        "mRuleName": "Pentakill",
+                        "mConditions": [
+                            {
+                                "mMultikillSize": 5,
+                                "__type": "ContextualConditionMultikillSize"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DPenta",
+                            "mAllyEventName": "Kill3DPenta",
+                            "mEnemyEventName": "Kill3DPenta",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Kill - General",
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DGeneral",
+                            "mAllyEventName": "Kill3DGeneral",
+                            "mEnemyEventName": "Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Dance": {
+                "mRules": [
+                    {
+                        "mRuleName": "Dance",
+                        "mAudioAction": {
+                            "mSelfEventName": "Dance3DGeneral",
+                            "mAllyEventName": "Dance3DGeneral",
+                            "mEnemyEventName": "Dance3DGeneral",
+                            "mSpectatorEventName": "Dance3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackBuilding2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Turret",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DTurret",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackMinion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Minion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackNeutral2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Neutral",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "W - Brand",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Brand/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DBrand",
+                            "mAllyEventName": "cast3DBrand",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Caitlyn",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Caitlyn/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DCaitlyn",
+                            "mAllyEventName": "cast3DCaitlyn",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Chogath",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Chogath/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DChogath",
+                            "mAllyEventName": "cast3DChogath",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Gauntlet Champion",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Ezreal/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DGauntletChampion",
+                            "mAllyEventName": "cast3DGauntletChampion",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Jhin",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Jhin/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DJhin",
+                            "mAllyEventName": "cast3DJhin",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Jinx",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Jinx/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DJinx",
+                            "mAllyEventName": "cast3DJinx",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Lucian",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Lucian/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DLucian",
+                            "mAllyEventName": "cast3DLucian",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Malphite",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Malphite/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DMalphite",
+                            "mAllyEventName": "cast3DMalphite",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Miss Fortune",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/MissFortune/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DMissFortune",
+                            "mAllyEventName": "cast3DMissFortune",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Nasus",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Nasus/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DNasus",
+                            "mAllyEventName": "cast3DNasus",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Nidalee",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Nidalee/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DNidalee",
+                            "mAllyEventName": "cast3DNidalee",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Pantheon",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Pantheon/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DPantheon",
+                            "mAllyEventName": "cast3DPantheon",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Ryze",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Ryze/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DRyze",
+                            "mAllyEventName": "cast3DRyze",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Shen",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Shen/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DShen",
+                            "mAllyEventName": "cast3DShen",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Twitch",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Twitch/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DTwitch",
+                            "mAllyEventName": "cast3DTwitch",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Water Champion",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Nami/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Pyke/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Fizz/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCharacters": [
+                                            "Characters/TahmKench/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DWaterChampion",
+                            "mAllyEventName": "cast3DWaterChampion",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W - Yordle",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 3,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "race",
+                                        "mData": "yordle",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "cast3DYordle",
+                            "mAllyEventName": "cast3DYordle",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 10,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiWAbility/YuumiWCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3DGeneral",
+                            "mAllyEventName": "cast3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Teleport",
+                        "mConditions": [
+                            {
+                                "mSpell": "Shared/Spells/SummonerTeleport",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "SummonerSpell3DTeleportAttachedAlly",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 10,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiQAbility/YuumiQCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "E",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 10,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiEAbility/YuumiE",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "R",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiRAbility/YuumiR",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Basic Attack",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 25,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mSpell": "Characters/Yuumi/Spells/YuumiBasicAttack",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mOverrideCacCooldown": true,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            }
+        },
+        "mObjectPath": "Characters/Yuumi/CAC/Yuumi_Skin01",
+        "__type": "ContextualActionData"
     },
     "Characters/Yuumi/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"

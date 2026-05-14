@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Valor, el águila de Quinn, marca como <font color='#FFF673'>Vulnerables</font> a los enemigos de forma periódica. El primer ataque básico de Quinn contra objetivos <font color='#FFF673'>Vulnerables</font> infligirá daño físico adicional."
+        "description": "Spell_QuinnPassive_Summary"
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Quinn ordena a Valor que marque a un enemigo y dificulte su visión antes de dañar a todos los enemigos en el área cercana.",
-            "dynamicDescription": "Quinn le ordena a Valor que ataque, lo que vuelve <keywordMajor>vulnerable</keywordMajor> al primer enemigo impactado, reduce su radio de visión durante @VisionReductionDuration@ seg y les inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> a todos los enemigos cercanos.<br><br>Si el primer enemigo impactado no es un campeón, el objetivo queda <status>desarmado</status> durante @VisionReductionDuration@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Sin costo",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Otorga de forma pasiva Velocidad de Ataque y Velocidad de Movimiento a Quinn después de atacar a un objetivo <font color='#FFF673'>Vulnerable</font>. Al activarla, Valor revela una amplia zona cercana.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Al atacar a un objetivo <keywordMajor>vulnerable</keywordMajor>, Quinn obtiene un <attackSpeed>@AttackSpeedBonus*100@% de Velocidad de Ataque</attackSpeed> y un <speed>@MovespeedAmount*100@% de Velocidad de Movimiento</speed> durante @BuffDuration@ seg.<br><br><spellActive>Activa:</spellActive> Valor revela una gran área cercana durante @VisionDuration@ seg.@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnW_Summary",
+            "dynamicDescription": "Spell_QuinnW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Quinn corre hacia un enemigo, le inflige daño físico y ralentiza su Velocidad de Movimiento. Al alcanzar al objetivo, lo utiliza para dar un salto que lo interrumpe brevemente. Luego aterriza a una distancia del objetivo igual a su alcance de ataque máximo.",
-            "dynamicDescription": "Quinn se desplaza hacia un enemigo, lo que le inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y lo marca como <keywordMajor>vulnerable</keywordMajor>. Luego de impactar al objetivo, Quinn salta hacia atrás, lo que <status>lanza</status> <status>hacia atrás</status> al oponente y lo <status>ralentiza</status> un @SlowAmount*100@%. El efecto decae a lo largo de @SlowDecayTime@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Quinn y Valor vuelan a una gran velocidad como equipo. Terminar la habilidad lanzará Impacto Celeste, lo que inflige daño a los enemigos cercanos y marca a los campeones para dejarlos Vulnerables.",
-            "dynamicDescription": "Quinn llama a Valor, forman pareja después de canalizar durante 2 segundos, obtiene un <speed>@MovementSpeedMod*100@% de Velocidad de Movimiento</speed> y le permite <recast>volver a lanzar</recast> esta habilidad. Atacar o usar <spellName>Ataque Cegador</spellName> o <spellName>Asalto</spellName> <recast>vuelve a lanzar</recast> automáticamente esta habilidad.<br><br><recast>Lanzamiento adicional</recast>: Quinn y Valor realizan una maniobra aérea que inflige <physicalDamage>@Damage@ de daño físico</physicalDamage>, marca a los campeones como <keywordMajor>Vulnerables</keywordMajor> y finaliza esta habilidad.@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnR_Summary",
+            "dynamicDescription": "Spell_QuinnR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

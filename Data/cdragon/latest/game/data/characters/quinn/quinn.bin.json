@@ -997,8 +997,8 @@
                 2
             ],
             "mana": [
-                100.0,
                 50.0,
+                25.0,
                 0.0,
                 0.0,
                 0.0,
@@ -1369,6 +1369,15 @@
                             "mStatFormula": 2,
                             "mDataValue": "ADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{929bc6f6}": {
+                    "mFormulaParts": [
+                        {
+                            "mNumber": 50.0,
+                            "__type": "NumberCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2026,6 +2035,19 @@
                         1.75
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusMonsterDmgMult",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2080,6 +2102,23 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{a06afe5e}": {
+                    "mMultiplier": {
+                        "mSubparts": [
+                            {
+                                "mNumber": 1.0,
+                                "__type": "NumberCalculationPart"
+                            },
+                            {
+                                "mDataValue": "{334ec52c}",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalDamage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell1",
@@ -2188,7 +2227,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_QuinnQ_Name",
                         "keySummary": "Spell_QuinnQ_Summary",
-                        "keyTooltip": "Spell_QuinnQ_Tooltip"
+                        "keyTooltip": "Spell_QuinnQ_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_QuinnQ_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2412,7 +2452,6 @@
     "{786c4e8f}": {
         "mOverrides": [
             {
-                "mForceOverride": true,
                 "mOverrideContexts": [
                     {
                         "mMapID": 11,
@@ -2525,23 +2564,6 @@
     "{bfcfdaae}": {
         "RecSpellRankUpInfos": [
             {
-                "MapId": 12,
-                "Position": "{ada7afdb}",
-                "mDefaultPriority": [
-                    3,
-                    0,
-                    2,
-                    1
-                ],
-                "mEarlyLevelOverrides": [
-                    0,
-                    1,
-                    2,
-                    0
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
                 "MapId": 11,
                 "Position": "middle",
                 "mDefaultPriority": [
@@ -2573,6 +2595,23 @@
                     0,
                     1,
                     1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
                 ],
                 "__type": "RecSpellRankUpInfo"
             }
@@ -2825,7 +2864,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnPMultihits",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2853,7 +2892,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnQBlinds",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2881,7 +2920,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnWDiscovers",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2937,7 +2976,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnRKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2965,7 +3004,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnPDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2993,7 +3032,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnEDistance",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3036,7 +3075,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 226,
+                "EventToTrack": 227,
                 "__type": "StatStoneEventToTrack"
             }
         ],

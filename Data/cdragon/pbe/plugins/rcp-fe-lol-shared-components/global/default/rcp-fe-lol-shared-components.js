@@ -491,9 +491,9 @@
                     const C = new(0, n(698).default);
                     a.getApi_SharedReportModalApps = () => C;
                     const k = new(0, n(707).default);
-                    a.getApi_SharedPlayerBehaviorApps = () => k, a.getShoppefrontComponents = () => n(711).default;
-                    const T = (0, n(760).default)();
-                    a.getApi_Payments = () => T, a.getApi_SharedChampionMasteryComponents = () => n(770).default, a.getApi_SharedChampionMasteryConstants = () => n(791).default, a.getApi_SfxUiAudioManager = () => n(803).default
+                    a.getApi_SharedPlayerBehaviorApps = () => k, a.getShoppefrontComponents = () => n(765).default;
+                    const T = (0, n(814).default)();
+                    a.getApi_Payments = () => T, a.getApi_SharedChampionMasteryComponents = () => n(824).default, a.getApi_SharedChampionMasteryConstants = () => n(845).default, a.getApi_SfxUiAudioManager = () => n(857).default
                 },
                 privateApi: s,
                 publicApi: a
@@ -26289,6 +26289,9 @@
                 showCommunicationsAgreementModal(e) {
                     return this._privateApi.showCommunicationsAgreementModal(e)
                 }
+                createHonorPanel() {
+                    return this._privateApi.createHonorPanel()
+                }
             }
         }, (e, t, n) => {
             "use strict";
@@ -26296,20 +26299,27 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = i(n(709)),
-                r = i(n(710));
+                s = m(n(709)),
+                r = m(n(710)),
+                i = m(n(713)),
+                o = m(n(727)),
+                l = m(n(757)),
+                c = m(n(760)),
+                d = m(n(761)),
+                u = m(n(764));
 
-            function i(e) {
+            function m(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const o = "VerbalAbuseRemedyModal",
-                l = "HonorV3ExplainerModal",
-                c = "CommunicationsAgreementModal";
-            var d = new class {
+            const p = "VerbalAbuseRemedyModal",
+                h = "HonorV3ExplainerModal",
+                g = "CommunicationsAgreementModal",
+                f = "HonorPanel";
+            var _ = new class {
                 constructor() {
-                    this._registerVerbalAbuseRemedyModalComponent(), this._registerHonorV3SystemExplainerComponent(), this._registerCommunicationsAgreementModalComponent()
+                    this._registerVerbalAbuseRemedyModalComponent(), this._registerHonorV3SystemExplainerComponent(), this._registerCommunicationsAgreementModalComponent(), this._registerHonorPanelComponent()
                 }
                 _registerVerbalAbuseRemedyModalComponent() {
                     const {
@@ -26317,18 +26327,18 @@
                         ChatChannelSelectorComponent: t,
                         PlayerBlockSelectorComponent: n,
                         PlayerBlockSelectionComponent: s,
-                        PlayerNameComponent: i
-                    } = a.SharedComponentsApi.getSharedEmberComponents(), l = {
+                        PlayerNameComponent: r
+                    } = a.SharedComponentsApi.getSharedEmberComponents(), i = {
                         tra: a.traService,
                         VerbalAbuseRemedyModalComponent: e,
                         ChatChannelSelectorComponent: t,
                         PlayerBlockSelectorComponent: n,
                         PlayerBlockSelectionComponent: s,
-                        PlayerNameComponent: i,
-                        VerbalAbuseRemedyService: r.default,
+                        PlayerNameComponent: r,
+                        VerbalAbuseRemedyService: u.default,
                         ComponentFactory: a.ComponentFactory
                     };
-                    a.EmberApplicationFactory.setFactoryDefinition(o, l)
+                    a.EmberApplicationFactory.setFactoryDefinition(p, i)
                 }
                 _registerHonorV3SystemExplainerComponent() {
                     const {
@@ -26340,11 +26350,36 @@
                         HonorV3LevelExplainerCarouselComponent: t,
                         ComponentFactory: a.ComponentFactory
                     };
-                    a.EmberApplicationFactory.setFactoryDefinition(l, n)
+                    a.EmberApplicationFactory.setFactoryDefinition(h, n)
+                }
+                _registerHonorPanelComponent() {
+                    const e = {
+                        tra: a.traService,
+                        HonorPanelComponent: r.default,
+                        HonorPanelHeaderComponent: i.default,
+                        HonorPanelRestrictionComponent: o.default,
+                        HonorPanelRewardComponent: l.default,
+                        HonorPanelSignalCategoryComponent: d.default,
+                        HonorPanelService: c.default,
+                        ComponentFactory: a.ComponentFactory
+                    };
+                    a.EmberApplicationFactory.setFactoryDefinition(f, e)
+                }
+                createHonorPanel() {
+                    a.logger.trace("Create honor panel");
+                    const e = c.default.create({
+                        tra: a.traService
+                    });
+                    return a.ComponentFactory.create({
+                        type: f,
+                        data: {
+                            service: e
+                        }
+                    })
                 }
                 showVerbalAbuseRemedyModal() {
                     a.logger.trace("Open report modal"), this._verbalAbuseRemedyModalInstance = a.ComponentFactory.create({
-                        type: o
+                        type: p
                     });
                     const {
                         domNode: e
@@ -26368,14 +26403,14 @@
                         CommunicationsAgreementService: s.default,
                         ComponentFactory: a.ComponentFactory
                     };
-                    a.EmberApplicationFactory.setFactoryDefinition(c, t)
+                    a.EmberApplicationFactory.setFactoryDefinition(g, t)
                 }
                 showCommunicationsAgreementModal() {
                     let e;
                     a.logger.trace("Open communications agreement modal");
                     const t = s.default.create();
                     this._communicationsAgreementModalInstance = a.ComponentFactory.create({
-                        type: c,
+                        type: g,
                         data: {
                             service: t,
                             onClose: () => {
@@ -26406,7 +26441,7 @@
                 }
                 showHonorV3ExplainerModal(e) {
                     a.logger.trace("Open honor v3 explainer modal"), this._honorV3ExplainerModalInstance = a.ComponentFactory.create({
-                        type: l,
+                        type: h,
                         data: {
                             isFtux: e
                         }
@@ -26425,7 +26460,7 @@
                     })
                 }
             };
-            t.default = d
+            t.default = _
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
@@ -26473,6 +26508,626 @@
                     })
                 }
             })
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a, s = n(1),
+                r = (a = n(711)) && a.__esModule ? a : {
+                    default: a
+                };
+            n(712);
+            var i = s.Ember.Component.extend({
+                classNames: ["honor-panel-component"],
+                layout: r.default,
+                service: null,
+                isTemporarilyReduced: s.Ember.computed.alias("service.isTemporarilyReduced"),
+                behaviorDescription: s.Ember.computed.alias("service.behaviorDescription"),
+                restrictions: s.Ember.computed.alias("service.restrictions"),
+                hasRestrictions: s.Ember.computed.alias("service.hasRestrictions"),
+                panelRestrictionRows: s.Ember.computed.alias("service.panelRestrictionRows"),
+                panelRewardRows: s.Ember.computed.alias("service.panelRewardRows"),
+                resolvedSignalCategories: s.Ember.computed.alias("service.signalCategories"),
+                tra: s.Ember.computed.alias("service.tra")
+            });
+            t.default = i
+        }, (e, t, n) => {
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
+                id: "YpuKlwCk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel.styl\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["honor-panel-header"],null,[["service"],[["get",["service"]]]]],false],["text","\\n\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","honor-panel-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["behaviorDescription"]]],null,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-section"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-section-title"],["flush-element"],["append",["unknown",["tra","honor_panel_active_penalties_rewards"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["panelRestrictionRows"]]],null,2],["block",["each"],[["get",["panelRewardRows"]]],null,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-signals"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-signals-heading"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-title"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-subtitle"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["each"],[["get",["resolvedSignalCategories"]]],null,0],["text","    "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["honor-panel-signal-category"],null,[["title","signals","isExpanded"],[["get",["category","title"]],["get",["category","signals"]],["get",["category","isExpanded"]]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["text","        "],["append",["helper",["honor-panel-reward"],null,[["rewardKey","tra"],[["get",["row","rewardKey"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","        "],["append",["helper",["honor-panel-restriction"],null,[["restrictionKey","gameCount","timeRemaining","restrictionDuration","honorLevel","tra"],[["get",["row","restrictionKey"]],["get",["row","gameCount"]],["get",["row","timeRemaining"]],["get",["row","restrictionDuration"]],["get",["row","honorLevel"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-description"],["flush-element"],["append",["unknown",["behaviorDescription"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a, s = n(1),
+                r = (a = n(714)) && a.__esModule ? a : {
+                    default: a
+                };
+            n(715);
+            const i = [n(716), n(717), n(718), n(719), n(720)],
+                o = [n(721), n(722), n(723), n(724), n(725)],
+                l = n(726);
+            var c = s.Ember.Component.extend({
+                classNames: ["honor-panel-header-component"],
+                layout: r.default,
+                service: null,
+                honorLevel: s.Ember.computed.alias("service.honorLevel"),
+                isTemporarilyReduced: s.Ember.computed.alias("service.isTemporarilyReduced"),
+                tra: s.Ember.computed.alias("service.tra"),
+                honorLevelLabel: s.Ember.computed("honorLevel", "tra", (function() {
+                    const e = this.get("tra"),
+                        t = this.get("honorLevel") || 0;
+                    return e ? e.formatString("honor_panel_level_name", {
+                        level: t
+                    }) : ""
+                })),
+                honorProgressTrackPath: s.Ember.computed("honorLevel", (function() {
+                    const e = this.get("honorLevel") || 0,
+                        t = Math.max(0, Math.min(i.length - 1, e - 1));
+                    return i[t]
+                })),
+                honorEmblemPath: s.Ember.computed("honorLevel", (function() {
+                    const e = this.get("honorLevel") || 0,
+                        t = Math.max(0, Math.min(o.length - 1, e - 1));
+                    return o[t]
+                })),
+                honorTemporarilyReducedIconPath: l
+            });
+            t.default = c
+        }, (e, t, n) => {
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
+                id: "UPl8KZFS",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-header.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-header.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","img",[]],["static-attr","class","honor-panel-header-icon"],["dynamic-attr","src",["unknown",["honorEmblemPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-header-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-header-title-block"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-header-eyebrow"],["flush-element"],["append",["unknown",["tra","honor_panel_behavior_standing"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-header-title"],["flush-element"],["append",["unknown",["honorLevelLabel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-header-status-column"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTemporarilyReduced"]]],null,0],["text","    "],["open-element","img",[]],["static-attr","class","honor-panel-header-progress-track"],["dynamic-attr","src",["unknown",["honorProgressTrackPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-header-status honor-panel-header-status-reduced"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","honor-panel-header-status-icon"],["dynamic-attr","src",["unknown",["honorTemporarilyReducedIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-header-status-label"],["flush-element"],["append",["unknown",["tra","honor_panel_temporarily_reduced"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor_1_progress_track.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor_2_progress_track.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor_3_progress_track.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor_4_progress_track.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor_5_progress_track.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "Emblem_Level_1.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "Emblem_Level_2.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "Emblem_Level_3.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "Emblem_Level_4.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "Emblem_Level_5.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor-temporarily-reduced-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a, s = n(1),
+                r = (a = n(728)) && a.__esModule ? a : {
+                    default: a
+                };
+            n(729);
+            var i = n(730);
+            var o = s.Ember.Component.extend({
+                classNames: ["honor-panel-restriction-component"],
+                layout: r.default,
+                restrictionKey: null,
+                tra: null,
+                gameCount: 0,
+                timeRemaining: "",
+                restrictionDuration: "",
+                honorLevel: 1,
+                definition: s.Ember.computed("restrictionKey", (function() {
+                    const e = this.get("restrictionKey");
+                    return e && i.RESTRICTION_DEFINITIONS[e] || null
+                })),
+                iconPath: s.Ember.computed("definition", (function() {
+                    const e = this.get("definition");
+                    return e ? e.icon : ""
+                })),
+                isHonorIcon: s.Ember.computed.readOnly("definition.isHonorIcon"),
+                title: s.Ember.computed("definition", "tra", (function() {
+                    const e = this.get("definition"),
+                        t = this.get("tra");
+                    return e && t && t.get(e.titleKey) || ""
+                })),
+                isGameBadge: s.Ember.computed.equal("definition.source", "game"),
+                isEventBadge: s.Ember.computed.equal("definition.source", "event"),
+                isHonorBadge: s.Ember.computed.equal("definition.source", "honor"),
+                hasDurationBadge: s.Ember.computed("isGameBadge", "restrictionDuration", (function() {
+                    return this.get("isGameBadge") && !!this.get("restrictionDuration")
+                })),
+                durationBadgeIconPath: i.BADGE_CLOCK_ICON,
+                badgeIconPath: s.Ember.computed("definition", "honorLevel", (function() {
+                    const e = this.get("definition");
+                    return e ? "honor" === e.source ? (0, i.getHonorEmblemForLevel)(this.get("honorLevel")) : "game" === e.source ? i.BADGE_GAMES_FLAG_ICON : i.BADGE_CLOCK_ICON : ""
+                })),
+                badgeText: s.Ember.computed("definition", "tra", "gameCount", "timeRemaining", "honorLevel", (function() {
+                    const e = this.get("definition"),
+                        t = this.get("tra");
+                    if (!e) return "";
+                    if ("game" === e.source) {
+                        const e = this.get("gameCount") || 0;
+                        return (t && t.get("honor_panel_badge_games_count") || "{0} Games").replace("{0}", e)
+                    }
+                    if ("event" === e.source) return this.get("timeRemaining") || "";
+                    const n = this.get("honorLevel") || 1;
+                    return (t && t.get("honor_panel_badge_honor_level") || "Honor {0}").replace("{0}", n)
+                }))
+            });
+            t.default = o
+        }, (e, t, n) => {
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
+                id: "BP+YZM7i",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDurationBadge"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-restriction-row-badge-icon"],["dynamic-attr","src",["unknown",["durationBadgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["restrictionDuration"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.REWARD_KEYS = t.REWARD_DEFINITIONS = t.RESTRICTION_TYPE_TO_KEY = t.RESTRICTION_KEYS = t.RESTRICTION_DEFINITIONS = t.BADGE_GAMES_FLAG_ICON = t.BADGE_CLOCK_ICON = void 0, t.getHonorEmblemForLevel = function(e) {
+                const t = Math.max(1, Math.min(5, e || 3));
+                return l[t]
+            };
+            const a = e => n(731)(`./${e}-icon.svg`),
+                s = {
+                    honor_downgrade: {
+                        icon: a("honor-downgrade"),
+                        titleKey: "honor_panel_restriction_honor_downgrade_title",
+                        source: "game",
+                        isHonorIcon: !0,
+                        restrictionType: "REPUTATION_LIMIT"
+                    },
+                    ranked_suspension: {
+                        icon: a("ranked-suspension"),
+                        titleKey: "honor_panel_restriction_ranked_suspension_title",
+                        source: "honor",
+                        restrictionType: "RANKED_RESTRICTION"
+                    },
+                    queue_lock: {
+                        icon: a("queue-lock"),
+                        titleKey: "honor_panel_restriction_queue_lock_title",
+                        source: "event",
+                        restrictionType: "QUEUE_LOCKOUT"
+                    },
+                    queue_delay: {
+                        icon: a("queue-delay"),
+                        titleKey: "honor_panel_restriction_queue_delay_title",
+                        source: "game",
+                        restrictionType: "QUEUE_DELAY"
+                    },
+                    chat_restriction: {
+                        icon: a("chat-restriction"),
+                        titleKey: "honor_panel_restriction_chat_restriction_title",
+                        source: "event",
+                        restrictionType: "TEXT_CHAT_RESTRICTION"
+                    },
+                    ping_restriction: {
+                        icon: a("ping-restriction"),
+                        titleKey: "honor_panel_restriction_ping_restriction_title",
+                        source: "event",
+                        restrictionType: "ALL_PINGS_RESTRICTION"
+                    },
+                    gameflow_chat_locked: {
+                        icon: a("chat-restriction"),
+                        titleKey: "honor_panel_restriction_gameflow_chat_locked_title",
+                        source: "honor",
+                        activeWhenHonorLevelBelow: 2
+                    },
+                    gameflow_voice_locked: {
+                        icon: a("voice-restriction"),
+                        titleKey: "honor_panel_restriction_gameflow_voice_locked_title",
+                        source: "honor",
+                        activeWhenHonorLevelBelow: 3,
+                        restrictionType: "TEAM_VOICE_LOCKOUT"
+                    }
+                };
+            t.RESTRICTION_DEFINITIONS = s;
+            const r = Object.keys(s).reduce(((e, t) => {
+                const n = s[t].restrictionType;
+                return n && (e[n] = t), e
+            }), {});
+            t.RESTRICTION_TYPE_TO_KEY = r;
+            t.RESTRICTION_KEYS = ["honor_downgrade", "ranked_suspension", "queue_lock", "queue_delay", "chat_restriction", "ping_restriction", "gameflow_chat_locked", "gameflow_voice_locked"];
+            const i = e => n(731)(`./${e}-icon.svg`),
+                o = {
+                    ultra_pass_xp_drops: {
+                        icon: i("pass-xp-drops"),
+                        titleKey: "honor_panel_reward_ultra_pass_xp_drops_title",
+                        requiredHonorLevel: 5
+                    },
+                    honor_skins_unlocked: {
+                        icon: i("honor-skins"),
+                        titleKey: "honor_panel_reward_honor_skins_unlocked_title",
+                        requiredHonorLevel: 5
+                    },
+                    honor_recall: {
+                        icon: i("honor-recall"),
+                        titleKey: "honor_panel_reward_honor_recall_title",
+                        requiredHonorLevel: 5
+                    },
+                    mega_pass_xp_drops: {
+                        icon: i("pass-xp-drops"),
+                        titleKey: "honor_panel_reward_mega_pass_xp_drops_title",
+                        requiredHonorLevel: 4
+                    },
+                    pass_xp_drops: {
+                        icon: i("pass-xp-drops"),
+                        titleKey: "honor_panel_reward_pass_xp_drops_title",
+                        requiredHonorLevel: 3
+                    },
+                    ranked_rewards: {
+                        icon: i("ranked-rewards"),
+                        titleKey: "honor_panel_reward_ranked_rewards_title",
+                        requiredHonorLevel: 3,
+                        showAtOrAboveRequiredLevel: !0
+                    }
+                };
+            t.REWARD_DEFINITIONS = o;
+            t.REWARD_KEYS = ["ultra_pass_xp_drops", "honor_skins_unlocked", "honor_recall", "mega_pass_xp_drops", "pass_xp_drops", "ranked_rewards"];
+            const l = {
+                    1: n(750),
+                    2: n(751),
+                    3: n(752),
+                    4: n(753),
+                    5: n(754)
+                },
+                c = n(755);
+            t.BADGE_GAMES_FLAG_ICON = c;
+            const d = n(756);
+            t.BADGE_CLOCK_ICON = d
+        }, (e, t, n) => {
+            var a = {
+                "./all-chat-icon.svg": 732,
+                "./allied-chat-icon.svg": 733,
+                "./block-all-icon.svg": 734,
+                "./chat-restriction-icon.svg": 735,
+                "./communications-agreement-close-icon.svg": 736,
+                "./communications-agreement-info-icon.svg": 737,
+                "./honor-downgrade-icon.svg": 738,
+                "./honor-recall-icon.svg": 739,
+                "./honor-skins-icon.svg": 740,
+                "./honor-temporarily-reduced-icon.svg": 726,
+                "./party-chat-icon.svg": 741,
+                "./pass-xp-drops-icon.svg": 742,
+                "./ping-restriction-icon.svg": 743,
+                "./player-blocked-icon.svg": 471,
+                "./player-restriction-warning-icon.svg": 744,
+                "./queue-delay-icon.svg": 745,
+                "./queue-lock-icon.svg": 746,
+                "./ranked-rewards-icon.svg": 747,
+                "./ranked-suspension-icon.svg": 748,
+                "./voice-restriction-icon.svg": 749
+            };
+
+            function s(e) {
+                var t = r(e);
+                return n(t)
+            }
+
+            function r(e) {
+                if (!n.o(a, e)) {
+                    var t = new Error("Cannot find module '" + e + "'");
+                    throw t.code = "MODULE_NOT_FOUND", t
+                }
+                return a[e]
+            }
+            s.keys = function() {
+                return Object.keys(a)
+            }, s.resolve = r, e.exports = s, s.id = 731
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "all-chat-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "allied-chat-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "block-all-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "chat-restriction-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "communications-agreement-close-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "communications-agreement-info-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor-downgrade-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor-recall-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor-skins-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "party-chat-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "pass-xp-drops-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "ping-restriction-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "player-restriction-warning-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "queue-delay-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "queue-lock-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "ranked-rewards-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "ranked-suspension-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "voice-restriction-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "badge-honor-1.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "badge-honor-2.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "badge-honor-3.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "badge-honor-4.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "badge-honor-5.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "badge-games-flag.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "badge-clock.svg"
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a, s = n(1),
+                r = (a = n(758)) && a.__esModule ? a : {
+                    default: a
+                };
+            n(759);
+            var i = n(730);
+            var o = s.Ember.Component.extend({
+                classNames: ["honor-panel-reward-component"],
+                layout: r.default,
+                rewardKey: null,
+                tra: null,
+                definition: s.Ember.computed("rewardKey", (function() {
+                    const e = this.get("rewardKey");
+                    return e && i.REWARD_DEFINITIONS[e] || null
+                })),
+                iconPath: s.Ember.computed("definition", (function() {
+                    const e = this.get("definition");
+                    return e ? e.icon : ""
+                })),
+                title: s.Ember.computed("definition", "tra", (function() {
+                    const e = this.get("definition"),
+                        t = this.get("tra");
+                    return e && t && t.get(e.titleKey) || ""
+                })),
+                badgeIconPath: s.Ember.computed("definition", (function() {
+                    const e = this.get("definition");
+                    return e ? (0, i.getHonorEmblemForLevel)(e.requiredHonorLevel) : ""
+                })),
+                badgeText: s.Ember.computed("definition", "tra", (function() {
+                    const e = this.get("definition"),
+                        t = this.get("tra");
+                    if (!e) return "";
+                    return (t && t.get("honor_panel_badge_honor_level") || "Honor {0}").replace("{0}", e.requiredHonorLevel)
+                }))
+            });
+            t.default = o
+        }, (e, t, n) => {
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
+                id: "wrxq7CoH",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-reward.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-reward.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-reward-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-reward-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","honor-panel-reward-row-icon"],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-reward-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-reward-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","honor-panel-reward-row-badge-icon"],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-reward-row-badge-text"],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a = n(1),
+                s = n(730);
+            const r = "/lol-summoner-profiles/v1/get-honor-view",
+                i = "/lol-summoner-profiles/v1/get-restriction-view",
+                o = 6e4,
+                l = 60,
+                c = 24 * l;
+
+            function d(e) {
+                if (!e || e <= 0) return "";
+                const t = Math.max(1, Math.ceil(e / o)),
+                    n = Math.floor(t / c),
+                    a = Math.floor(t % c / l),
+                    s = t % l,
+                    r = [];
+                return n > 0 && r.push(`${n}d`), a > 0 && r.push(`${a}h`), (s > 0 || 0 === r.length) && r.push(`${s}m`), r.join(" ")
+            }
+
+            function u(e) {
+                const t = e && e.expirationData && e.expirationData.redemptions;
+                if (!Array.isArray(t) || 0 === t.length) return 0;
+                const n = t.find((e => e && e.redemptionCountRemaining > 0)) || t[0];
+                return Math.max(0, n && n.redemptionCountRemaining || 0)
+            }
+            var m = a.Ember.Service.extend({
+                honorLevel: 0,
+                redemptions: null,
+                isTemporarilyReduced: !1,
+                restrictions: null,
+                tra: null,
+                init() {
+                    this._super(...arguments), this.db = a.dataBinding.bindTo(a.socket), this.set("redemptions", []), this.set("restrictions", []), this._onHonorViewChange = this._onHonorViewChange.bind(this), this._onRestrictionViewChange = this._onRestrictionViewChange.bind(this), this.db.observe(r, this, this._onHonorViewChange), this.db.observe(i, this, this._onRestrictionViewChange)
+                },
+                willDestroy() {
+                    this.db.unobserve(r, this), this.db.unobserve(i, this), this._super(...arguments)
+                },
+                hasRestrictions: a.Ember.computed("restrictions.[]", (function() {
+                    const e = this.get("restrictions");
+                    return Array.isArray(e) && e.length > 0
+                })),
+                panelRestrictionRows: a.Ember.computed("honorLevel", "restrictions.[]", (function() {
+                    const e = this.get("honorLevel") || 1,
+                        t = (this.get("restrictions") || []).reduce(((e, t) => {
+                            const n = t && s.RESTRICTION_TYPE_TO_KEY[t.restrictionType];
+                            return n && !e[n] && (e[n] = t), e
+                        }), {});
+                    return s.RESTRICTION_KEYS.reduce(((n, a) => {
+                        const r = s.RESTRICTION_DEFINITIONS[a] || {},
+                            i = t[a];
+                        if ("number" == typeof r.activeWhenHonorLevelBelow) return e < r.activeWhenHonorLevelBelow && n.push({
+                            restrictionKey: a,
+                            gameCount: 0,
+                            timeRemaining: "",
+                            honorLevel: e
+                        }), n;
+                        if (!i) return n;
+                        const o = i.expirationData || {};
+                        var l;
+                        return n.push({
+                            restrictionKey: a,
+                            gameCount: u(i),
+                            timeRemaining: (l = o.expirationMillis, !l || l <= 0 ? "" : d(l - Date.now())),
+                            restrictionDuration: d(i.restrictionsMillis),
+                            honorLevel: e
+                        }), n
+                    }), [])
+                })),
+                panelRewardRows: a.Ember.computed("honorLevel", (function() {
+                    const e = this.get("honorLevel") || 0;
+                    return s.REWARD_KEYS.filter((t => {
+                        const n = s.REWARD_DEFINITIONS[t];
+                        return !!n && (n.showAtOrAboveRequiredLevel ? e >= n.requiredHonorLevel : n.requiredHonorLevel === e)
+                    })).map((e => ({
+                        rewardKey: e
+                    })))
+                })),
+                behaviorDescription: a.Ember.computed("tra", (function() {
+                    const e = this.get("tra");
+                    return e && e.get("honor_panel_behavior_description") || ""
+                })),
+                signalCategories: a.Ember.computed("tra", (function() {
+                    const e = this.get("tra");
+                    if (!e) return [];
+                    const t = t => ({
+                        name: e.get("honor_panel_signal_" + t + "_name"),
+                        description: e.get("honor_panel_signal_" + t + "_description")
+                    });
+                    return [{
+                        title: e.get("honor_panel_signals_play_to_win_title"),
+                        isExpanded: !0,
+                        signals: [t("intentional_feeding"), t("resource_sabotage"), t("reckless_play"), t("nonparticipation"), t("griefing_ally_disruption")]
+                    }, {
+                        title: e.get("honor_panel_signals_play_fair_title"),
+                        isExpanded: !0,
+                        signals: [t("gameplay_integrity_violations"), t("cheating"), t("rank_manipulation")]
+                    }, {
+                        title: e.get("honor_panel_signals_play_with_respect_title"),
+                        isExpanded: !0,
+                        signals: [t("spamming"), t("harassment"), t("threats")]
+                    }]
+                })),
+                _onHonorViewChange(e) {
+                    if (!e || "number" != typeof e.honorLevel) return this.set("honorLevel", 0), this.set("redemptions", []), void this.set("isTemporarilyReduced", !1);
+                    this.set("honorLevel", e.honorLevel), this.set("redemptions", Array.isArray(e.redemptions) ? e.redemptions : []), this.set("isTemporarilyReduced", Boolean(e.checkpoint))
+                },
+                _onRestrictionViewChange(e) {
+                    e && Array.isArray(e.restrictions) ? this.set("restrictions", e.restrictions.filter((e => e && s.RESTRICTION_TYPE_TO_KEY[e.restrictionType] && function(e) {
+                        const t = e && e.expirationData;
+                        if (!t) return !0;
+                        const n = t.expirationMillis;
+                        if (n && n > 0) return n > Date.now();
+                        const a = t.redemptions;
+                        return !(Array.isArray(a) && a.length > 0) || a.some((e => e && e.redemptionCountRemaining > 0))
+                    }(e)))) : this.set("restrictions", [])
+                }
+            });
+            t.default = m
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a, s = n(1),
+                r = (a = n(762)) && a.__esModule ? a : {
+                    default: a
+                };
+            n(763);
+            var i = s.Ember.Component.extend({
+                classNames: ["honor-panel-signal-category-component"],
+                classNameBindings: ["isExpanded:expanded"],
+                layout: r.default,
+                title: "",
+                signals: null,
+                isExpanded: !1,
+                click() {
+                    this.toggleProperty("isExpanded")
+                }
+            });
+            t.default = i
+        }, (e, t, n) => {
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
+                id: "b/Cuh1hK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-signal-category.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-signal-category.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-signal-category-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-signal-category-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-signal-category-chevron"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["isExpanded"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-signal-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signal-bullet"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signal-name"],["flush-element"],["append",["unknown",["signal","name"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-signal-description"],["flush-element"],["append",["unknown",["signal","description"]],false],["close-element"],["text","\\n"]],"locals":["signal"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","honor-panel-signal-category-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["signals"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
@@ -26563,38 +27218,38 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = S(n(712)),
-                s = S(n(716)),
-                r = S(n(718)),
-                i = S(n(720)),
-                o = S(n(723)),
-                l = S(n(725)),
-                c = S(n(727)),
-                d = S(n(729)),
-                u = S(n(732)),
-                m = S(n(734)),
-                p = S(n(736)),
-                h = S(n(738)),
-                g = S(n(740)),
-                f = S(n(742)),
-                _ = S(n(744)),
-                b = S(n(746)),
-                y = S(n(750)),
-                v = S(n(751)),
-                E = S(n(753)),
-                A = S(n(754)),
-                x = S(n(755)),
-                C = S(n(756)),
-                k = S(n(757)),
-                T = n(714),
-                w = n(715);
+            var a = S(n(766)),
+                s = S(n(770)),
+                r = S(n(772)),
+                i = S(n(774)),
+                o = S(n(777)),
+                l = S(n(779)),
+                c = S(n(781)),
+                d = S(n(783)),
+                u = S(n(786)),
+                m = S(n(788)),
+                p = S(n(790)),
+                h = S(n(792)),
+                g = S(n(794)),
+                f = S(n(796)),
+                _ = S(n(798)),
+                b = S(n(800)),
+                y = S(n(804)),
+                v = S(n(805)),
+                E = S(n(807)),
+                A = S(n(808)),
+                x = S(n(809)),
+                C = S(n(810)),
+                k = S(n(811)),
+                T = n(768),
+                w = n(769);
 
             function S(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(759);
+            n(813);
             var I = {
                 INVENTORY_TYPE_IDS: T.INVENTORY_TYPE_IDS,
                 CATEGORIES: w.CATEGORIES,
@@ -26630,11 +27285,11 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(713)) && a.__esModule ? a : {
+                r = (a = n(767)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(714),
-                o = n(715);
+                i = n(768),
+                o = n(769);
             const {
                 RunMixin: l
             } = s.EmberAddons.EmberLifeline;
@@ -26921,7 +27576,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(717)) && a.__esModule ? a : {
+                r = (a = n(771)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -26985,7 +27640,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(719)) && a.__esModule ? a : {
+                r = (a = n(773)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -27011,11 +27666,11 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = n(721),
-                i = (a = n(722)) && a.__esModule ? a : {
+                r = n(775),
+                i = (a = n(776)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(714);
+                o = n(768);
             var l = s.Ember.Component.extend({
                 layout: i.default,
                 tagName: "",
@@ -27272,7 +27927,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(724)) && a.__esModule ? a : {
+                r = (a = n(778)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -27294,10 +27949,10 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(726)) && a.__esModule ? a : {
+                r = (a = n(780)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(714);
+                i = n(768);
             var o = s.Ember.Component.extend({
                 classNames: ["shoppefront-categories-sidebar"],
                 layout: r.default,
@@ -27338,7 +27993,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(728)) && a.__esModule ? a : {
+                r = (a = n(782)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -27369,10 +28024,10 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(730)) && a.__esModule ? a : {
+                r = (a = n(784)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(731);
+                i = n(785);
             var o = s.Ember.Component.extend({
                 classNames: ["shoppefront-currency-counter-root"],
                 layout: r.default,
@@ -27434,7 +28089,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(733)) && a.__esModule ? a : {
+                r = (a = n(787)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -27473,7 +28128,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(735)) && a.__esModule ? a : {
+                r = (a = n(789)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -27510,7 +28165,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(737)) && a.__esModule ? a : {
+                r = (a = n(791)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -27539,10 +28194,10 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(739)) && a.__esModule ? a : {
+                r = (a = n(793)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(714);
+                i = n(768);
             var o = s.Ember.Component.extend({
                 classNames: ["shoppefront-purchase-modal"],
                 shoppefrontService: s.Ember.inject.service("shoppefront"),
@@ -27657,7 +28312,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(741)) && a.__esModule ? a : {
+                r = (a = n(795)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -27715,8 +28370,8 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = n(714),
-                i = (a = n(743)) && a.__esModule ? a : {
+                r = n(768),
+                i = (a = n(797)) && a.__esModule ? a : {
                     default: a
                 };
             var o = s.Ember.Component.extend({
@@ -27749,11 +28404,11 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = n(715),
-                i = (a = n(745)) && a.__esModule ? a : {
+                r = n(769),
+                i = (a = n(799)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(714);
+                o = n(768);
             var l = s.Ember.Component.extend({
                 layout: i.default,
                 shoppefrontService: s.Ember.inject.service("shoppefront"),
@@ -27828,9 +28483,9 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = o(n(747)),
-                r = o(n(748)),
-                i = o(n(749));
+                s = o(n(801)),
+                r = o(n(802)),
+                i = o(n(803));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -27890,8 +28545,8 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = n(714),
-                r = n(752),
+                s = n(768),
+                r = n(806),
                 i = a.Ember.Service.extend({
                     lootService: a.Ember.inject.service("shoppefront-loot"),
                     shoppefrontService: a.Ember.inject.service("shoppefront"),
@@ -28093,7 +28748,7 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = n(714),
+                s = n(768),
                 r = a.Ember.Service.extend({
                     shoppefrontService: a.Ember.inject.service("shoppefront"),
                     shoppefrontId: a.Ember.computed.alias("shoppefrontService.shoppefrontId"),
@@ -28162,9 +28817,9 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = n(714),
-                r = n(715),
-                i = n(721);
+                s = n(768),
+                r = n(769),
+                i = n(775);
             const {
                 RunMixin: o
             } = a.EmberAddons.EmberLifeline;
@@ -28388,7 +29043,7 @@
                     ContextualNotificationManager: a.UIKit.getContextualNotificationManager(),
                     displayConfirmationToast: function(e, t) {
                         if (!e || !t) return;
-                        const s = n(758)({
+                        const s = n(812)({
                                 titleLoc: e,
                                 bodyLoc: this.get("tra").get("shoppefront_confirm_toast_body"),
                                 borderType: "permanent",
@@ -28466,10 +29121,10 @@
                 return new s.default(t, e)
             };
             var a = n(1);
-            n(761);
-            var s = o(n(762)),
-                r = o(n(763)),
-                i = o(n(769));
+            n(815);
+            var s = o(n(816)),
+                r = o(n(817)),
+                i = o(n(823));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -28530,11 +29185,11 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = c(n(764)),
-                r = c(n(765)),
-                i = c(n(766)),
-                o = n(767),
-                l = c(n(768));
+                s = c(n(818)),
+                r = c(n(819)),
+                i = c(n(820)),
+                o = n(821),
+                l = c(n(822));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -28906,12 +29561,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = c(n(771)),
-                s = c(n(786)),
-                r = c(n(789)),
-                i = c(n(793)),
-                o = c(n(796)),
-                l = c(n(800));
+            var a = c(n(825)),
+                s = c(n(840)),
+                r = c(n(843)),
+                i = c(n(847)),
+                o = c(n(850)),
+                l = c(n(854));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -28930,11 +29585,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(772);
-            var s = n(773);
+            n(826);
+            var s = n(827);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-grade-display"],
-                layout: n(785),
+                layout: n(839),
                 milestoneProgressMap: {},
                 gradeDisplaySize: s.GRADE_BOX_SIZE.LARGE,
                 isGradeListCentered: !1,
@@ -29049,19 +29704,19 @@
             };
             t.MASTERY_REWARD_TYPES = c;
             const d = {
-                [c.HEXTECH_CHEST]: n(774),
-                [c.MARK]: n(775),
-                [c.AURORA]: n(776),
-                [c.MASTERY_LEVEL]: n(777),
-                [c.TITLE]: n(778)
+                [c.HEXTECH_CHEST]: n(828),
+                [c.MARK]: n(829),
+                [c.AURORA]: n(830),
+                [c.MASTERY_LEVEL]: n(831),
+                [c.TITLE]: n(832)
             };
             t.REWARD_TO_ASSET_PATH = d;
             const u = {
-                [c.HEXTECH_CHEST]: n(779),
-                [c.MARK]: n(780),
-                [c.AURORA]: n(776),
-                [c.MASTERY_LEVEL]: n(777),
-                [c.TITLE]: n(778)
+                [c.HEXTECH_CHEST]: n(833),
+                [c.MARK]: n(834),
+                [c.AURORA]: n(830),
+                [c.MASTERY_LEVEL]: n(831),
+                [c.TITLE]: n(832)
             };
             t.TOOLTIP_REWARD_TO_ASSET_PATH = u;
             const m = 3,
@@ -29126,10 +29781,10 @@
                     10: 3
                 },
                 b = {
-                    0: n(781),
-                    1: n(782),
-                    2: n(783),
-                    3: n(784)
+                    0: n(835),
+                    1: n(836),
+                    2: n(837),
+                    3: n(838)
                 };
             t.MASTERY_SEASON_NAME = "ACTS"
         }, (e, t, n) => {
@@ -29175,11 +29830,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(787);
-            var s = n(773);
+            n(841);
+            var s = n(827);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-tooltip-component"],
-                layout: n(788),
+                layout: n(842),
                 championMasteryUpdateNotification: {},
                 customRewards: [],
                 hideTitle: !1,
@@ -29269,14 +29924,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(790);
-            var s, r = n(773),
-                i = (s = n(791)) && s.__esModule ? s : {
+            n(844);
+            var s, r = n(827),
+                i = (s = n(845)) && s.__esModule ? s : {
                     default: s
                 };
             e.exports = a.Ember.Component.extend({
                 classNames: ["milestone-tooltip-component"],
-                layout: n(792),
+                layout: n(846),
                 masteryRewardData: {},
                 milestoneProgressMap: {},
                 seasonMilestone: 0,
@@ -29375,7 +30030,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(773),
+            var a = n(827),
                 s = {
                     NUMBER_TO_ROMAN_NUMERAL: a.NUMBER_TO_ROMAN_NUMERAL,
                     MINIMUM_MASTERY_LEVEL: a.MINIMUM_MASTERY_LEVEL,
@@ -29403,11 +30058,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(794);
-            var s = n(773);
+            n(848);
+            var s = n(827);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-crest-component"],
-                layout: n(795),
+                layout: n(849),
                 masteryLevel: 0,
                 isAuroraEnabled: !1,
                 isAnimationsEnabled: !1,
@@ -29432,9 +30087,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(797);
-            var s, r = n(773),
-                i = (s = n(798)) && s.__esModule ? s : {
+            n(851);
+            var s, r = n(827),
+                i = (s = n(852)) && s.__esModule ? s : {
                     default: s
                 };
             const o = {
@@ -29455,7 +30110,7 @@
                 };
             e.exports = a.Ember.Component.extend({
                 classNames: ["lcm-celebration-vignette-component"],
-                layout: n(799),
+                layout: n(853),
                 animationsEnabled: !0,
                 animationStarted: !1,
                 audioObject: null,
@@ -29595,8 +30250,8 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1);
-            n(801);
-            var s, r = (s = n(791)) && s.__esModule ? s : {
+            n(855);
+            var s, r = (s = n(845)) && s.__esModule ? s : {
                 default: s
             };
             const i = a.Audio.getChannel("sfx-ui"),
@@ -29607,7 +30262,7 @@
             var u = a.Ember.Component.extend({
                 classNames: ["champion-sets-carousel"],
                 classNameBindings: ["isObjectivesView"],
-                layout: n(802),
+                layout: n(856),
                 isObjectivesView: !1,
                 isLeftArrowDisabled: !0,
                 isRightArrowDisabled: !0,
@@ -29861,7 +30516,7 @@
                     EmberApplicationFactory: e => e.get("rcp-fe-ember-libs").getEmberApplicationFactory()
                 });
                 (0, n(2).default)();
-                const r = e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-shared-components/trans-replays.json").overlay("/fe/lol-shared-components/trans-regalia.json").overlay("/fe/lol-shared-components/trans-account-verification.json").overlay("/fe/lol-shared-components/trans-eternals.json").overlay("/fe/lol-shared-components/trans-league-tier-names.json").overlay("/fe/lol-shared-components/trans-challenges.json").overlay("/fe/lol-shared-components/trans-report-modal.json").overlay("/fe/lol-shared-components/trans-champion-mastery.json").overlay("/fe/lol-shared-components/trans-currency-container.json").overlay("/fe/lol-shared-components/trans-digital-goods-disclaimer.json").overlay("/fe/lol-shared-components/trans-shoppefront.json"),
+                const r = e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-shared-components/trans-replays.json").overlay("/fe/lol-shared-components/trans-regalia.json").overlay("/fe/lol-shared-components/trans-account-verification.json").overlay("/fe/lol-shared-components/trans-eternals.json").overlay("/fe/lol-shared-components/trans-league-tier-names.json").overlay("/fe/lol-shared-components/trans-challenges.json").overlay("/fe/lol-shared-components/trans-report-modal.json").overlay("/fe/lol-shared-components/trans-player-behavior.json").overlay("/fe/lol-shared-components/trans-champion-mastery.json").overlay("/fe/lol-shared-components/trans-currency-container.json").overlay("/fe/lol-shared-components/trans-digital-goods-disclaimer.json").overlay("/fe/lol-shared-components/trans-shoppefront.json"),
                     i = t.default.EmberL10n(t.default.Ember, r);
                 await t.default.add({
                     tra: r,

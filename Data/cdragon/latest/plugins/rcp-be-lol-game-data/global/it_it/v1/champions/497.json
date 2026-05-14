@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
-            "cooldown": "%i:cooldown%: @f2@ secondi",
+            "cooldown": "@Cooldown@ secondo/i %i:cooldown%",
             "description": "Vola da un campione alleato, conferendogli uno scudo. Può essere rilanciata gratuitamente entro un breve periodo.",
-            "dynamicDescription": "Rakan scatta verso un campione alleato, fornendogli uno <shield>scudo da @TotalShield@</shield> per @Effect3Amount@ secondi.<br><br>Rakan può <recast>rilanciare</recast> questa abilità una volta entro @Effect2Amount@ secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan scatta verso un campione alleato, fornendogli uno <shield>scudo da @TotalShield@</shield> per @Duration@ secondi.<br><br>Rakan può <recast>rilanciare</recast> questa abilità una volta entro @RecastWindow@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Ottiene velocità di movimento, ammaliando e infliggendo danni magici ai nemici toccati.",
-            "dynamicDescription": "Rakan ottiene <speed>@Effect5Amount@% velocità di movimento</speed> per @Effect2Amount@ secondi. Rakan infligge <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage> e <status>ammalia</status> i nemici per @Effect3Amount@ secondo/i la prima volta che li tocca. Il primo campione toccato conferisce a Rakan <speed>@Effect6Amount@% velocità di movimento decrescente</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan ottiene <speed>@InitialCastSpeed@% velocità di movimento</speed> per @Duration@ secondi. Rakan infligge <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage> e <status>ammalia</status> i nemici per @CharmDuration@ secondo/i la prima volta che li tocca. Il primo campione toccato conferisce a Rakan <speed>@TouchSpeed@% velocità di movimento decrescente</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,

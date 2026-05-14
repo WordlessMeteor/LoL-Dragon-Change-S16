@@ -1313,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -2218,13 +2218,13 @@
                     3.0
                 ]
             },
-            "desc": "Ce champion gagne %i:scaleAP% <scaleAP>@AP@ puissance</scaleAP>.",
+            "desc": "Vous gagnez %i:scaleAP% <scaleAP>@AP@ puissance</scaleAP>.",
             "iconLarge": "assets/ux/cherry/augments/icons/witchfulthinking_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/witchfulthinking_small.png",
             "id": 97,
             "name": "Héritage de Rabadon",
             "rarity": 0,
-            "tooltip": "Ce champion gagne %i:scaleAP% <scaleAP>@AP@ puissance</scaleAP>."
+            "tooltip": "Vous gagnez %i:scaleAP% <scaleAP>@AP@ puissance</scaleAP>."
         },
         {
             "apiName": "Quest_UrfsChampion",
@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "Conditions : participez à @TakedownsNeeded@ éliminations.<br><br>Récompense : Spatule dorée",
@@ -2428,13 +2428,13 @@
                     1.0
                 ]
             },
-            "desc": "Les dégâts infligent <physicalDamage>@MaxHealthDamage*100@% des PV max en dégâts physiques</physicalDamage> supplémentaires.",
+            "desc": "Les dégâts infligent <physicalDamage>@MaxHealthDamage*100@% des PV max en dégâts physiques</physicalDamage> bonus.",
             "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
             "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
             "id": 348,
             "name": "Rasoir sanglant",
             "rarity": 4,
-            "tooltip": "Les dégâts infligent <physicalDamage>@MaxHealthDamage*100@% des PV max en dégâts physiques</physicalDamage> supplémentaires."
+            "tooltip": "Les dégâts infligent <physicalDamage>@MaxHealthDamage*100@% des PV max en dégâts physiques</physicalDamage> bonus."
         },
         {
             "apiName": "Erosion",
@@ -3446,7 +3446,7 @@
             "id": 310,
             "name": "Université des clowns",
             "rarity": 2,
-            "tooltip": "<spellName>Traîtrise</spellName> : Vous infligez @BasicAttackDamage@ <physicalDamage>pts de dégâts physiques bonus</physicalDamage> quand vous frappez dans le dos d'un ennemi.<br><br><spellName>Tromperie</spellName> : vous vous téléportez et vous devenez <keywordStealth>invisible</keywordStealth> pendant @StealthDuration@ sec. Quand vous êtes <keywordStealth>invisible</keywordStealth>, votre prochaine attaque inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> bonus. Si cette attaque frappe le dos d'un ennemi, le coup est critique et inflige @QCritDamageMod@ de dégâts.<br><br><spellName>Hallucination : Mort</spellName> : Quand vous mourez, vous infligez autour de vous des <trueDamage>dégâts bruts</trueDamage> équivalents à @FearDamage*100@% des PV max et vous effrayez les unités touchées pendant @FearDuration@ sec."
+            "tooltip": "Cherry_ClownCollege_DeceiveTooltip"
         },
         {
             "apiName": "NumbToPain",
@@ -3547,13 +3547,13 @@
                     1.0
                 ]
             },
-            "desc": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>+%i:goldCoins%@BonusGold@ PO bonus</gold> lorsque vous éliminez une <keywordMajor>équipe de démons</keywordMajor>.",
+            "desc": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>%i:goldCoins%@BonusGold@ PO bonus</gold> lorsque vous éliminez une <keywordMajor>équipe de démons</keywordMajor>.",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
             "id": 362,
             "name": "S'allier aux chasseurs",
             "rarity": 4,
-            "tooltip": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>+%i:goldCoins%@BonusGold@ PO bonus</gold> lorsque vous éliminez une <keywordMajor>équipe de démons</keywordMajor>."
+            "tooltip": "Vous votez pour que votre équipe s'allie aux chasseurs de démons. <br><br>S'allier avec les chasseurs de démons vous octroie <gold>%i:goldCoins%@BonusGold@ PO bonus</gold> lorsque vous éliminez une <keywordMajor>équipe de démons</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4801,13 +4801,13 @@
                     1.5
                 ]
             },
-            "desc": "<healing>Soigner</healing> votre allié, lui octroyer un <shield>bouclier</shield> ou le renforcer inflige des dégâts aux ennemis proches de lui et les <status>ralentit</status>.",
+            "desc": "<healing>Soigner</healing> un allié, lui octroyer un <shield>bouclier</shield> ou le renforcer inflige des dégâts aux ennemis proches de lui et les <status>ralentit</status>.",
             "iconLarge": "assets/ux/cherry/augments/icons/sonicboom_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/sonicboom_small.png",
             "id": 76,
             "name": "Protections létales",
             "rarity": 0,
-            "tooltip": "<healing>Soigner</healing> votre allié, lui octroyer un <shield>bouclier</shield> ou le renforcer inflige <trueDamage>@Damage@ pts de dégâts bruts</trueDamage> aux ennemis proches de lui et les <status>ralentit</status> de @SlowAmount*-100@% pendant @SlowDuration@ sec.<br><br>Dégâts infligés lors de cette manche : @f1@.<br>Total des dégâts infligés : @f2@."
+            "tooltip": "Cherry_SonicBoom_Tooltip"
         },
         {
             "apiName": "GoHRemnantOfTheWatchers",
@@ -7615,22 +7615,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -9955,13 +9955,13 @@
                     1.0
                 ],
                 "CritDamageMultipler": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "MaxLevel": [
                     2.0,
@@ -11590,13 +11590,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11970,13 +11970,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -13632,7 +13632,7 @@
             "id": 215,
             "name": "Bénédiction obscure",
             "rarity": 1,
-            "tooltip": "Lorsque vous octroyez des <healing>soins</healing> ou un <shield>bouclier</shield> à un champion allié, vous gagnez @CurseCounter@ <keywordMajor>Puissance maudite</keywordMajor>.<br><br>Vous gagnez @f1@ d'accélération de compétence (@AbilityHasteRatio*100@% de votre <keywordMajor>Puissance maudite</keywordMajor>).<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "Cherry_DarkBlessing_Tooltip"
         },
         {
             "apiName": "MindtoMatter",

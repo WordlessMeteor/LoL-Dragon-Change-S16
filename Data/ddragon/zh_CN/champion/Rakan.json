@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.9.1",
+    "version": "16.10.1",
     "data": {
         "Rakan": {
             "id": "Rakan",
@@ -745,7 +745,7 @@
                     "id": "RakanE",
                     "name": "轻舞成双",
                     "description": "飞向一名友方英雄，并提供给该英雄一层护盾。能在短时间内再次免费施放。",
-                    "tooltip": "洛冲向一名友方英雄，为其提供<shield>{{ totalshield }}护盾值</shield>，持续{{ e3 }}秒。<br /><br />洛可以在{{ e2 }}秒内<recast>再次施放</recast>一次这个技能。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "洛冲向一名友方英雄，为其提供持续{{ duration }}秒的<shield>{{ totalshield }}护盾值</shield>。<br /><br />洛可以在{{ recastwindow }}秒内<recast>再次施放</recast>一次这个技能。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "护盾值",
@@ -754,8 +754,8 @@
                         ],
                         "effect": [
                             "{{ baseshield }} -> {{ baseshieldNL }}",
-                            "{{ e4 }} -> {{ e4NL }}",
-                            "{{ e5 }} -> {{ e5NL }}"
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -888,7 +888,7 @@
                     "id": "RakanR",
                     "name": "惊鸿过隙",
                     "description": "获得移动速度，对触碰到的敌人造成魅惑和魔法伤害。",
-                    "tooltip": "洛获得<speed>{{ e5 }}%移动速度</speed>，持续{{ e2 }}秒。洛触碰到敌人时会造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>，并在首次命中时造成持续{{ e3 }}秒的<status>魅惑</status>效果。被触碰的首个敌方英雄，会为洛提供<speed>持续衰减的{{ e6 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "洛获得持续{{ duration }}秒的<speed>{{ initialcastspeed }}%移动速度</speed>。洛触碰到敌人时会造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>，并对被首次命中的敌人造成持续{{ charmduration }}秒的<status>魅惑</status>效果。被触碰的首个敌方英雄，会为洛提供<speed>持续衰减的{{ touchspeed }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "魅惑时长",
@@ -896,8 +896,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ charmduration }} -> {{ charmdurationNL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },

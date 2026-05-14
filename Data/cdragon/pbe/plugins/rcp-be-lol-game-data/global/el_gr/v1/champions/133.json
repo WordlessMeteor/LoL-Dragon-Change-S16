@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Ο Βάλορ, ο Ντεμασιανός αετός της Κουίν, επισημαίνει περιοδικά εχθρούς ως <font color='#FFF673'>Ευάλωτους</font>. Η πρώτη βασική επίθεση της Κουίν ενάντια στους εχθρούς που έχουν επισημανθεί ως <font color='#FFF673'>Ευάλωτοι</font> προκαλεί μπόνους Σωματική Ζημιά."
+        "description": "Spell_QuinnPassive_Summary"
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Κουίν καλεί τον Βάλορ να σημαδέψει έναν εχθρό και να εμποδίσει την όραση του προτού προκαλέσει Ζημιά σε όλους τους αντίπαλους στην κοντινή περιοχή.",
-            "dynamicDescription": "Η Κουίν διατάζει τον Βάλορ να βουτήξει, κάνοντας τον πρώτο εχθρό που θα δεχτεί χτύπημα <keywordMajor>Ευάλωτο</keywordMajor>, μειώνοντας την ακτίνα Ορατότητάς του για @VisionReductionDuration@ δευτ. και προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> σε όλους τους γύρω εχθρούς.<br><br>Αν ο πρώτος εχθρός που δέχεται χτύπημα δεν είναι ήρωας, <status>Αφοπλίζεται</status> για @VisionReductionDuration@ δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Χωρίς κόστος",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Δίνει στην Κουίν παθητικά Ταχύτητα Επίθεσης και Ταχύτητα Κίνησης, αφού επιτεθεί σε έναν <font color='#FFF673'>Ευάλωτο</font> στόχο. Ενεργοποιήστε το για να αποκαλύψει ο Βάλορ μια μεγάλη κοντινή περιοχή.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Η επίθεση σε έναν <keywordMajor>Ευάλωτο</keywordMajor> στόχο δίνει στην Κουίν <attackSpeed>@AttackSpeedBonus*100@% Ταχύτητα Επίθεσης</attackSpeed> και <speed>@MovespeedAmount*100@% Ταχύτητα Κίνησης</speed> για @BuffDuration@ δευτ.<br><br><spellActive>Ενεργή:</spellActive> Ο Βάλορ αποκαλύπτει μια μεγάλη κοντινή περιοχή για @VisionDuration@ δευτ.@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnW_Summary",
+            "dynamicDescription": "Spell_QuinnW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Κουίν ορμά προς το μέρος ενός εχθρού, προκαλώντας Σωματική Ζημιά και επιβραδύνοντας την Ταχύτητα Κίνησης του στόχου. Όταν φτάσει τον στόχο, πηδά πάνω του, διακόπτει τις ενέργειές του για μικρό χρονικό διάστημα και προσγειώνεται σε απόσταση από τον στόχο που πλησιάζει τη μέγιστη Εμβέλεια Επίθεσής της.",
-            "dynamicDescription": "Η Κουίν εφορμά προς έναν εχθρό, προκαλεί <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> και τον σημαδεύει ως <keywordMajor>Ευάλωτο</keywordMajor>. Η Κουίν τότε πηδά προς τα πίσω και απομακρύνεται από τον στόχο, <status>Απωθώντας</status> τον ελαφρώς προς τα <status>Πίσω</status> και προκαλώντας του <status>Επιβράδυνση</status> κατά @SlowAmount*100@%, που μειώνεται σταδιακά μέσα σε @SlowDecayTime@ δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Κουίν και ο Βάλορ συνεργάζονται και πετούν με πολύ μεγάλη ταχύτητα.  Όταν τερματιστεί η ικανότητα ενεργοποιείται το Ουράνιο Χτύπημα, το οποίο προκαλεί ζημιά σε κοντινούς εχθρούς και σημαδεύει τους Ήρωες ως Ευάλωτους.",
-            "dynamicDescription": "Η Κουίν καλεί τον Βάλορ, με τον οποίο συνδέεται μετά από διοχέτευση για 2 δευτ., κερδίζοντας <speed>@MovementSpeedMod*100@% Ταχύτητα Κίνησης</speed> και αποκτώντας τη δυνατότητα να κάνει <recast>Νέα Χρήση</recast> αυτής της ικανότητας. Αν γίνει επίθεση ή χρησιμοποιηθεί η ικανότητα <spellName>Επίθεση Τύφλωσης</spellName> ή <spellName>Άλμα</spellName>, γίνεται αυτομάτως <recast>Νέα Χρήση</recast> αυτής της Ικανότητας.<br><br><recast>Νέα Χρήση</recast>: Η Κουίν και ο Βάλορ πραγματοποιούν έναν εναέριο ελιγμό, προκαλώντας <physicalDamage>@Damage@ Σωματική Ζημιά</physicalDamage>, σημαδεύοντας τους Ήρωες ως <keywordMajor>Ευάλωτους</keywordMajor> και τερματίζοντας αυτήν την Ικανότητα.@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnR_Summary",
+            "dynamicDescription": "Spell_QuinnR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

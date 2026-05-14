@@ -772,7 +772,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Shyvana ottiene uno scudo, velocità di movimento e, dopo un breve ritardo, l'area intorno a lei esplode.  Quando è in forma draconica, l'esplosione le fornisce guarigione se colpisce un campione nemico.",
-            "dynamicDescription": "Shyvana si avvolge nelle fiamme per @Duration@ secondo/i, ottenendo uno <shield>scudo da @Calc_Shield@</shield>, aumentato di <shield>@Calc_Shield_Per_Nearby_Champion@</shield> per ogni campione nemico vicino, e <speed>@MoveSpeed@ velocità di movimento</speed> che aumenta fino a <speed>@MoveSpeedTowardsEnemies@</speed> quando si muove verso i campioni nemici.<br><br>Quando l'effetto termina, lo <shield>scudo</shield> si rompe, oppure al <recast>rilancio</recast> l'area intorno a lei esplode, infliggendo <magicDamage>@Damage@ danni magici</magicDamage>.<br><br><keywordMajor>Forma del drago:</keywordMajor> se la detonazione colpisce un campione nemico, Shyvana <healing>rigenera @Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ salute mancante</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana si avvolge nelle fiamme per @Duration@ secondo/i, ottenendo uno <shield>scudo da @Calc_Shield@</shield>, aumentato di <shield>@Calc_Shield_Per_Nearby_Champion@</shield> per ogni campione nemico vicino, e <speed>@MoveSpeed@ velocità di movimento</speed> che aumenta fino a <speed>@MoveSpeedTowardsEnemies@</speed> quando si muove verso i campioni nemici.<br><br>Quando l'effetto termina, lo <shield>scudo</shield> si rompe, oppure al <recast>rilancio</recast> l'area intorno a lei esplode, infliggendo <magicDamage>@Damage@ danni magici</magicDamage>.<br><br><keywordMajor>Forma del drago:</keywordMajor> se la detonazione colpisce un campione nemico, Shyvana rigenera <healing>@Calc_Base_Heal@ + @Calc_Missing_Health_Heal@ salute mancante</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -791,11 +791,11 @@
             ],
             "cooldownCoefficients": [
                 13.0,
-                12.0,
-                11.0,
+                12.25,
+                11.5,
+                10.75,
                 10.0,
-                9.0,
-                9.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

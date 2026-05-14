@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Valor, elang Demacian Quinn, secara berkala menandai musuh sebagai <font color='#FFF673'>Vulnerable</font>. Basic attack pertama Quinn terhadap target yang <font color='#FFF673'>Vulnerable</font> akan menghasilkan physical damage bonus."
+        "description": "Spell_QuinnPassive_Summary"
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Quinn memanggil Valor untuk menandai musuh dan menghalangi penglihatannya sebelum menyerang semua musuh di area itu.",
-            "dynamicDescription": "Quinn memerintahkan Valor untuk terjun, membuat musuh pertama yang terkena menjadi <keywordMajor>Vulnerable</keywordMajor>, mengurangi radius vision mereka selama @VisionReductionDuration@ detik dan menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> pada semua musuh di sekitar.<br><br>Jika musuh pertama yang terkena bukan champion, dia akan terkena <status>Disarm</status> selama @VisionReductionDuration@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Memberikan Attack Speed dan Move Speed secara pasif setelah dia menyerang target dengan efek <font color='#FFF673'>Vulnerable</font>. Aktifkan untuk menyuruh Valor mengungkap area besar di sekitar.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Menyerang target <keywordMajor>Vulnerable</keywordMajor> memberi Quinn <attackSpeed>@AttackSpeedBonus*100@% Attack Speed</attackSpeed> dan <speed>@MovespeedAmount*100@% Move Speed</speed> selama @BuffDuration@ detik.<br><br><spellActive>Aktif:</spellActive> Valor mengungkap area besar di sekitar selama @VisionDuration@ detik.@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnW_Summary",
+            "dynamicDescription": "Spell_QuinnW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Quinn dash ke arah musuh, menghasilkan physical damage dan memperlambat Move Speed target. Saat mencapai targetnya, dia melompat dari target, mengganggunya sesaat dan mendarat di sekitar jarak Attack Range maksimumnya, jauh dari target.",
-            "dynamicDescription": "Quinn dash ke arah musuh, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan menandai mereka <keywordMajor>Vulnerable</keywordMajor>. Quinn lalu melompat ke belakang, menjauhi target, menerapkan efek <status>Knock</status> <status>Back</status> sesaat pada lawan dan <status>Slow</status> sebesar @SlowAmount*100@%, yang melemah selama @SlowDecayTime@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Quinn dan Valor bekerja sama untuk terbang dalam kecepatan tinggi.  Mengakhiri ability akan menggunakan Skystrike, yang menghasilkan damage pada musuh di sekitar dan menandai champion sebagai Vulnerable.",
-            "dynamicDescription": "Quinn memanggil Valor, bergerak bersama setelah channeling selama 2 detik, mendapatkan <speed>@MovementSpeedMod*100@% Move Speed</speed> dan memungkinkannya untuk <recast>Recast</recast> Ability ini. Menyerang atau menggunakan <spellName>Blinding Assault</spellName> atau <spellName>Vault</spellName> akan <recast>Recast</recast> otomatis Ability ini.<br><br><recast>Recast</recast>: Quinn dan Valor melakukan manuver udara, menghasilkan <physicalDamage>@Damage@ physical damage</physicalDamage>, menerapkan efek <keywordMajor>Vulnerable</keywordMajor> pada champion, dan mengakhiri Ability ini.@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnR_Summary",
+            "dynamicDescription": "Spell_QuinnR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

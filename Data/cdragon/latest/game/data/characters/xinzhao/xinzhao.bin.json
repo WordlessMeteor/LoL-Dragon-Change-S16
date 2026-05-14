@@ -657,9 +657,36 @@
                                 0.8999999761581421
                             ],
                             "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "APToASRatio",
+                            "values": [
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257
+                            ],
+                            "__type": "SpellDataValue"
                         }
                     ],
                     "__type": "SpellDataValueVector"
+                }
+            },
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0
+                    ],
+                    "__type": "SpellEffectAmount"
                 }
             },
             "mSpellCalculations": {
@@ -2306,6 +2333,55 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BADRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "BADRatio",
+                            "values": [
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        8.0,
+                        8.0,
+                        7.5,
+                        7.0,
+                        6.5,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "BonusDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
@@ -2317,8 +2393,8 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.4000000059604645,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "BADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3386,7 +3462,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoEWTakedowns",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3414,7 +3490,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoRBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3442,7 +3518,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoPHealing",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3569,7 +3645,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 226,
+                "EventToTrack": 227,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3635,7 +3711,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoLongRangeW",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3663,7 +3739,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoRKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3691,7 +3767,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoQKnockuops",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3772,23 +3848,6 @@
     "{e62d4d12}": {
         "RecSpellRankUpInfos": [
             {
-                "MapId": 12,
-                "Position": "{ada7afdb}",
-                "mDefaultPriority": [
-                    3,
-                    1,
-                    2,
-                    0
-                ],
-                "mEarlyLevelOverrides": [
-                    0,
-                    1,
-                    2,
-                    1
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
                 "MapId": 11,
                 "Position": "jungle",
                 "IsDefaultRecommendation": true,
@@ -3802,6 +3861,40 @@
                     2,
                     1,
                     0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
                     1
                 ],
                 "__type": "RecSpellRankUpInfo"

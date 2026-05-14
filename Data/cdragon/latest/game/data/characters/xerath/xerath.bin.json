@@ -275,6 +275,71 @@
                         420.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "NumberOfShots",
+                    "values": [
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AoESize",
+                    "values": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CDPerShot",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FailCastRefund",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -432,14 +497,12 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "NumberOfShots",
                                     "nameOverride": "Spell_ListType_XerathNumberofShots",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -813,6 +876,97 @@
                         195.0,
                         235.0,
                         275.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChargeTime",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RectangleWidth",
+                    "values": [
+                        145.0,
+                        145.0,
+                        145.0,
+                        145.0,
+                        145.0,
+                        145.0,
+                        145.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ManaRefundFail",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StartingSelfSlow",
+                    "values": [
+                        -0.20000000298023224,
+                        -0.20000000298023224,
+                        -0.20000000298023224,
+                        -0.20000000298023224,
+                        -0.20000000298023224,
+                        -0.20000000298023224,
+                        -0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RampingSlow",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StartRangePercent",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RangeGrowthMult",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1491,6 +1645,45 @@
                         2.25
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        40.0,
+                        70.0,
+                        100.0,
+                        130.0,
+                        160.0,
+                        190.0,
+                        220.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Range",
+                    "values": [
+                        1125.0,
+                        1125.0,
+                        1125.0,
+                        1125.0,
+                        1125.0,
+                        1125.0,
+                        1125.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunScaling_RoughAverageWillBeThisNumber_Every100RangeForTheAdditionalStun_AddedTo_5_",
+                    "values": [
+                        0.17000000178813934,
+                        0.17000000178813934,
+                        0.17000000178813934,
+                        0.17000000178813934,
+                        0.17000000178813934,
+                        0.17000000178813934,
+                        0.17000000178813934
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1544,8 +1737,8 @@
                 "TooltipTotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.44999998807907104,
@@ -1655,8 +1848,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2607,7 +2799,7 @@
         "mDescriptionTraKey": "stat_stone_description_XerathWSweetSpot",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2635,7 +2827,7 @@
         "mDescriptionTraKey": "stat_stone_description_XerathLongRangeQ",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2663,7 +2855,7 @@
         "mDescriptionTraKey": "stat_stone_description_XerathRKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2816,7 +3008,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 226,
+                "EventToTrack": 227,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2856,7 +3048,7 @@
         "mDescriptionTraKey": "stat_stone_description_XerathWECombos",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2884,7 +3076,7 @@
         "mDescriptionTraKey": "stat_stone_description_XerathPHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2912,7 +3104,7 @@
         "mDescriptionTraKey": "stat_stone_description_XerathRSubsequent",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2933,17 +3125,6 @@
     "{75b24f6f}": {
         "RecSpellRankUpInfos": [
             {
-                "MapId": 12,
-                "Position": "{ada7afdb}",
-                "mEarlyLevelOverrides": [
-                    0,
-                    1,
-                    2,
-                    0
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
                 "MapId": 11,
                 "Position": "middle",
                 "IsDefaultRecommendation": true,
@@ -2961,6 +3142,17 @@
                 "mEarlyLevelOverrides": [
                     1,
                     0,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
                     2,
                     0
                 ],

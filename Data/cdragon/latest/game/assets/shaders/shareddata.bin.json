@@ -78,7 +78,6 @@
             },
             {
                 "name": "FOW_MAP",
-                "register": 14,
                 "SAMPLER": "{a6bded4f}",
                 "__type": "X3DSharedTextureDef"
             },
@@ -94,7 +93,6 @@
             {
                 "name": "SHADOW_MAP_DEPTH_PCF",
                 "type": 3,
-                "register": 12,
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -106,21 +104,18 @@
             {
                 "name": "IBL_CUBEMAP",
                 "type": 2,
-                "register": 13,
                 "{a1d375b5}": 1,
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "IBL_CUBEMAP",
                 "type": 7,
-                "register": 13,
                 "{a1d375b5}": 2,
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "LIGHT_GRID_TEXTURE",
                 "type": 5,
-                "register": 15,
                 "SAMPLER": "{a6bded4f}",
                 "__type": "X3DSharedTextureDef"
             },
@@ -277,12 +272,19 @@
             {
                 "name": "GAMEPLAY_TEXTURE",
                 "__type": "X3DSharedTextureDef"
+            },
+            {
+                "name": "ADDITIONAL_MRT_TEXTURE",
+                "SAMPLER": "{a6bded4f}",
+                "__type": "X3DSharedTextureDef"
             }
         ],
         "{e0540d74}": [
             "{a6bded4f}",
             "{b40cd67c}",
-            "{51bfd9ae}"
+            "{51bfd9ae}",
+            "{a7d7f4a0}",
+            "{0df3cfcb}"
         ],
         "__type": "X3DSharedData"
     },
@@ -349,6 +351,41 @@
     "{fefebb19}": {
         "objectPath": "{fefebb19}",
         "__type": "SkinnedPbrShadingModel"
+    },
+    "{0df3cfcb}": {
+        "name": "CharacterClamp",
+        "{b6887851}": 4,
+        "__type": "{429c75be}"
+    },
+    "{51bfd9ae}": {
+        "name": "Mirror",
+        "{82ab734b}": 2,
+        "{83ab74de}": 2,
+        "{84ab7671}": 2,
+        "{21bafb31}": -1,
+        "__type": "{429c75be}"
+    },
+    "{a6bded4f}": {
+        "name": "Clamp_No_Mip",
+        "register": 15,
+        "{650eb4bb}": 0,
+        "__type": "{429c75be}"
+    },
+    "{a7d7f4a0}": {
+        "name": "CharacterWrap",
+        "{82ab734b}": 0,
+        "{83ab74de}": 0,
+        "{84ab7671}": 0,
+        "{b6887851}": 4,
+        "__type": "{429c75be}"
+    },
+    "{b40cd67c}": {
+        "name": "Wrap_No_Mip",
+        "{82ab734b}": 0,
+        "{83ab74de}": 0,
+        "{84ab7671}": 0,
+        "{650eb4bb}": 0,
+        "__type": "{429c75be}"
     },
     "{2fa9e31a}": {
         "name": "PerFrameVertexCB",
@@ -458,7 +495,7 @@
                 "name": "LightRegionInfo",
                 "type": 10,
                 "{9d17b3be}": "{f15a89f3}",
-                "Count": 15,
+                "Count": 20,
                 "__type": "X3DSharedConstantDef"
             },
             {
@@ -1071,28 +1108,6 @@
         ],
         "register": 0,
         "__type": "X3DSharedConstantBufferDef"
-    },
-    "{51bfd9ae}": {
-        "name": "Mirror",
-        "{82ab734b}": 2,
-        "{83ab74de}": 2,
-        "{84ab7671}": 2,
-        "{21bafb31}": -1,
-        "__type": "{429c75be}"
-    },
-    "{a6bded4f}": {
-        "name": "Clamp_No_Mip",
-        "register": 15,
-        "{650eb4bb}": 0,
-        "__type": "{429c75be}"
-    },
-    "{b40cd67c}": {
-        "name": "Wrap_No_Mip",
-        "{82ab734b}": 0,
-        "{83ab74de}": 0,
-        "{84ab7671}": 0,
-        "{650eb4bb}": 0,
-        "__type": "{429c75be}"
     },
     "__linked": []
 }

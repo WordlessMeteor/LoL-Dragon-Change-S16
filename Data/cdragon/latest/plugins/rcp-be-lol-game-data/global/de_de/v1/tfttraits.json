@@ -5220,7 +5220,7 @@
         "trait_id": "TFT15_BattleAcademia",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_BattleClub.TFT_Set15.png",
-        "tooltip_text": "Academia-Certaminis-Champions werten ihre Fähigkeiten auf und erhalten Potenzial %i:set14AmpIcon%. Potenzial verbessert ihre Fähigkeiten. <br><ShowIf.TFT15_BattleAcademia_NoPrismatic><br><rules>Prismatisch: Setze 7 Academia-Certaminis-Champions ein und rüste dann Champions mit Gegenständen aus, um @PrismaticItemRequirement@ Punkte zu verdienen.</rules><br></ShowIf.TFT15_BattleAcademia_NoPrismatic><ShowIf.TFT15_BattleAcademia_PrismaticPending><br><TFTRadiantItemBonus>Prismatisch:</TFTRadiantItemBonus> Du erhältst 1 Punkt für jeden vollständigen Gegenstand, den ein Champion im Kampf benutzt. Macht bei @PrismaticItemRequirement@ Punkten seinen Abschluss. (@TFTUnitProperty.trait:TFT15_BattleAcademia_PrismaticNumItems@/@PrismaticItemRequirement@).<br></ShowIf.TFT15_BattleAcademia_PrismaticPending><ShowIf.TFT15_BattleAcademia_PrismaticActive><br><TFTRadiantItemBonus><br>Entfesselung des wahren Potenzials: +@UltimateNumPotential@ %i:set14AmpIcon%</TFTRadiantItemBonus><br></ShowIf.TFT15_BattleAcademia_PrismaticActive><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row>",
+        "tooltip_text": "Academia-Certaminis-Champions werten ihre Fähigkeiten auf und erhalten Potenzial %i:set14AmpIcon%. Potenzial verbessert ihre Fähigkeiten. <br><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) @NumPotential@ %i:set14AmpIcon%</row><br><row>(@MinUnits@) ENTFESSLE DEIN POTENZIAL</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -5292,8 +5292,28 @@
                     }
                 ],
                 "min_units": 7,
+                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DA",
+                        "value": 0.75
+                    },
+                    {
+                        "name": "DR",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumPotential",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -6741,7 +6761,7 @@
         "trait_id": "TFT15_SoulFighter",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_SoulFighter.TFT_Set15.png",
-        "tooltip_text": "Soul Fighter erhalten zusätzliches Leben. Außerdem erhöht sich ihr Angriffsschaden und ihre Fähigkeitsstärke jede Sekunde bis zu einem Maximum von @MaxStacks@ Steigerungen. Bei maximalen Steigerungen verursachen sie zusätzlichen absoluten Schaden.<br><ShowIf.TFT15_SoulFighter_NoPrismatic><br><rules>Prismatisch: Setze 8 Einheiten ein und gewinne anschließend @PlayerDamageToPrismatic@ Kämpfe.</rules><br></ShowIf.TFT15_SoulFighter_NoPrismatic><ShowIf.TFT15_SoulFighter_PrismaticPending><br><TFTRadiantItemBonus>Prismatisch:</TFTRadiantItemBonus> Besiege @PlayerDamageToPrismatic@ Spieler. (@TFTUnitProperty.trait:TFT15_SoulFighter_PlayerDamageDealt@)<br></ShowIf.TFT15_SoulFighter_PrismaticPending><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>MAXIMALE SEELENMACHT.<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@ %&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@ % Schaden</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@ %&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@ % Schaden</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@ %&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@ % Schaden</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@ %&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@ % Schaden</row>",
+        "tooltip_text": "Soul Fighter erhalten zusätzliches Leben. Außerdem erhöht sich ihr Angriffsschaden und ihre Fähigkeitsstärke jede Sekunde bis zu einem Maximum von @MaxStacks@ Steigerungen. Bei maximalen Steigerungen verursachen sie zusätzlichen absoluten Schaden.<br><ShowIf.TFT15_SoulFighter_PrismaticActive><br><TFTRadiantItemBonus>MAX. SEELENMACHT.<br></TFTRadiantItemBonus></ShowIf.TFT15_SoulFighter_PrismaticActive><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@ %&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@ % Schaden</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@ %&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@ % Schaden</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@ %&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@ % Schaden</row><br><row>(@MinUnits@) @FlatHealth@&nbsp;%i:scaleHealth%, @StatsPerSecond*100@ %&nbsp;%i:scaleAD%%i:scaleAP%, +@BonusTrueDamage*100@ % Schaden</row><br><row>(@MinUnits@) MAX. SEELENMACHT</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -6845,8 +6865,32 @@
                     }
                 ],
                 "min_units": 8,
+                "max_units": 9,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusTrueDamage",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "FlatHealth",
+                        "value": 700.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "StatsPerSecond",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -6936,7 +6980,7 @@
         "trait_id": "TFT15_StarGuardian",
         "set": "TFTSet15",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_StarGuardian.png",
-        "tooltip_text": "Sternenwächter verfügen über einen einzigartigen Teamgeist-Bonus, den alle Sternenwächter erhalten. Jeder Sternenwächter auf dem Spielfeld erhöht den Bonus!<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>Prismatisch: Setze 8 Einheiten ein und gib anschließend @ManaToPrismatic@ Mana aus.</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>Prismatisch:</TFTRadiantItemBonus> Gib @ManaToPrismatic@ Mana aus (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>DIE STERNE ERWACHEN.</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>Rell:</status> Erhält einen Schild in Höhe von @TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@</ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>Rell: Erhält Schilde</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>Syndra:</status> Erhält alle @SyndraTimer@ Sekunden @TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@ % Fähigkeitsstärke</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>Syndra: Erhält Fähigkeitsstärke</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>Xayah:</status> Jeder dritte Angriff verursacht <magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@ (erhöht sich mit der Phase)</magicDamage> magischen Schaden</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>Xayah: Magischer Schaden bei Angriffen</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>Ahri:</status> Erhält nach Aktivierung @TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@ Mana im Verlauf von @AhriDuration@ Sekunden</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>Ahri: Erhält nach Aktivierung Mana</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>Neeko:</status> +@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@ % Heil- und Schildkraft</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>Neeko: Erhöht Heil- und Schildkraft</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>Poppy:</status> Heilt sich bei 40 % Leben um @TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@ % %i:scaleHealth%</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>Poppy: Heilt sich bei niedrigem Leben</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>Jinx:</status> +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@ % Angriffstempo +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@ % %i:scaleAS% nach Kill-Beteiligungen; fällt über 3 Sek. hinweg ab</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>Jinx: Erhält Angriffstempo</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>Seraphine:</status> Erhält @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth% und @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ % %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>Seraphine: Erhält alle Werte</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>Emblem:</status> Erhöht Boni um @EmblemBonus*100@ %!</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>Emblem: Erhöht andere Boni</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
+        "tooltip_text": "Sternenwächter haben Boni, die alle Sternenwächter erhalten. Jeder Sternenwächter auf dem Feld erhöht den Bonus!<ShowIf.TFT15_StarGuardian_NoPrismatic><br><br><rules>Prismatisch: Setze 10 Sternenwächter ein und ERWECKE DIE STERNE!</rules></ShowIf.TFT15_StarGuardian_NoPrismatic><ShowIf.TFT15_StarGuardian_PrismaticPending><br><br><TFTRadiantItemBonus>Prismatisch:</TFTRadiantItemBonus> Gib @ManaToPrismatic@ Mana aus (@TFTUnitProperty.trait:TFT15_StarGuardian_ManaSpent@)</ShowIf.TFT15_StarGuardian_PrismaticPending><ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><TFTRadiantItemBonus>DIE STERNE ERWACHEN.</TFTRadiantItemBonus></ShowIf.TFT15_StarGuardian_PrismaticActive><br><br><ShowIf.TFT15_StarGuardian_HasRell><status>Rell:</status> Erhalte Schild von @TFTUnitProperty.trait:TFT15_StarGuardian_RellValue@ </ShowIf.TFT15_StarGuardian_HasRell><ShowIfNot.TFT15_StarGuardian_HasRell><TFTGuildInactive>Rell: Erhalte Schilde</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasRell><br><ShowIf.TFT15_StarGuardian_HasSyndra><status>Syndra:</status> Erhalte alle @SyndraTimer@ Sek. @TFTUnitProperty.trait:TFT15_StarGuardian_SyndraValue@ % AP</ShowIf.TFT15_StarGuardian_HasSyndra><ShowIfNot.TFT15_StarGuardian_HasSyndra><TFTGuildInactive>Syndra: Erhalte AP</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSyndra><br><ShowIf.TFT15_StarGuardian_HasXayah><status>Xayah:</status> Jeder 3. Angriff verursacht <magicDamage>@TFTUnitProperty.trait:TFT15_StarGuardian_XayahValue@ (steigt pro Stufe)</magicDamage> magischen Schaden</ShowIf.TFT15_StarGuardian_HasXayah><ShowIfNot.TFT15_StarGuardian_HasXayah><TFTGuildInactive>Xayah: Magischer Schaden bei Angriffen</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasXayah><br><ShowIf.TFT15_StarGuardian_HasAhri><status>Ahri:</status> Erhalte beim Wirken @TFTUnitProperty.trait:TFT15_StarGuardian_AhriValue@ Mana über @AhriDuration@ Sek.</ShowIf.TFT15_StarGuardian_HasAhri><ShowIfNot.TFT15_StarGuardian_HasAhri><TFTGuildInactive>Ahri: Erhalte beim Wirken Mana</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasAhri><br><ShowIf.TFT15_StarGuardian_HasNeeko><status>Neeko:</status> +@TFTUnitProperty.trait:TFT15_StarGuardian_NeekoValue@ % Heilung und Schilde</ShowIf.TFT15_StarGuardian_HasNeeko><ShowIfNot.TFT15_StarGuardian_HasNeeko><TFTGuildInactive>Neeko: Erhöht Heilungen & Schilde</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasNeeko><br><ShowIf.TFT15_StarGuardian_HasPoppy><status>Poppy:</status> Heile bei 40 % Leben @TFTUnitProperty.trait:TFT15_StarGuardian_PoppyValue@ % %i:scaleHealth%</ShowIf.TFT15_StarGuardian_HasPoppy><ShowIfNot.TFT15_StarGuardian_HasPoppy><TFTGuildInactive>Poppy: Heile bei niedrigem Leben</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasPoppy><br><ShowIf.TFT15_StarGuardian_HasJinx><status>Jinx:</status> +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxValue@ % AT. +@TFTUnitProperty.trait:TFT15_StarGuardian_JinxBonusASValue@ % %i:scaleAS% nach Kills, fällt über 3 Sek. ab</ShowIf.TFT15_StarGuardian_HasJinx><ShowIfNot.TFT15_StarGuardian_HasJinx><TFTGuildInactive>Jinx: Erhalte AT</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasJinx><br><ShowIf.TFT15_StarGuardian_HasSeraphine><status>Seraphine:</status> Erhalte @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ %i:scaleArmor%%i:scaleMR%%i:scaleHealth% und @TFTUnitProperty.trait:TFT15_StarGuardian_SeraphineValue@ % %i:scaleAD%%i:scaleAS%%i:scaleCrit%%i:scaleCritMult%</ShowIf.TFT15_StarGuardian_HasSeraphine><ShowIfNot.TFT15_StarGuardian_HasSeraphine><TFTGuildInactive>Seraphine: Erhalte jeden Wert</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasSeraphine><br><ShowIf.TFT15_StarGuardian_HasEmblem><status>Emblem:</status> Erhöht Boni um @EmblemBonus*100@ %!</ShowIf.TFT15_StarGuardian_HasEmblem><ShowIfNot.TFT15_StarGuardian_HasEmblem><TFTGuildInactive>Emblem: Erhöht andere Boni</TFTGuildInactive></ShowIfNot.TFT15_StarGuardian_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -7108,18 +7152,6 @@
                 "constants": [
                     {
                         "name": "Multiplier",
-                        "value": 1.18
-                    }
-                ],
-                "min_units": 8,
-                "max_units": 8,
-                "style_idx": 6,
-                "style_name": "kChromatic"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
                         "value": 1.2
                     }
                 ],
@@ -7133,29 +7165,6 @@
                     {
                         "name": "Multiplier",
                         "value": 1.2
-                    }
-                ],
-                "min_units": 9,
-                "max_units": 9,
-                "style_idx": 6,
-                "style_name": "kChromatic"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
-                        "value": 1.5
-                    }
-                ],
-                "min_units": 10,
-                "style_idx": 5,
-                "style_name": "kGold"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "Multiplier",
-                        "value": 2.0
                     }
                 ],
                 "min_units": 10,
@@ -7347,7 +7356,7 @@
                     },
                     {
                         "name": "StatBonus",
-                        "value": 0.05
+                        "value": 0.1
                     },
                     {
                         "name": "XPPerReroll",
@@ -15068,7 +15077,7 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "Nachdem du eine PvP-Runde verloren hast, erhältst du @TechPerCombat@ Technologie sowie zusätzliche Technologie, die der @TechPerLoss@-fachen Länge deiner Niederlagenserie entspricht. Du erhältst außerdem @TechPerKill@ Technologie pro Kill-Beteiligung einer Anima-Einheit.<br><br>Sobald Anima-Einheiten @TechBreakpoint@ Technologie erreicht haben, wird ein Prototyp einer neuen Anima-Waffe produziert. Daraufhin hast du die Wahl, ob du die Waffe an dich nimmst oder die Technologie aufsparst, um beim nächsten Mal mächtigere Waffen zu erhalten.<br><br><row>(@MinUnits@) Beginne mit der Forschung! </row><br><row>(@MinUnits@) Erhalte Beute nach einer gewonnenen PvP-Runde!</row>",
+        "tooltip_text": "Nachdem du eine PvP-Runde verloren hast, erhältst du @TechPerCombat@ Technologie sowie zusätzliche Technologie, die der @TechPerLoss@-fachen Länge deiner Niederlagenserie entspricht. Du erhältst außerdem @TechPerKill@ Technologie pro Kill-Beteiligung einer Anima-Einheit.<br><br>Sobald Anima-Einheiten @TechBreakpoint@ Technologie erreicht haben, wird ein Prototyp einer neuen Anima-Waffe produziert. Daraufhin hast du die Wahl, ob du die Waffe an dich nimmst oder die Technologie aufsparst, um beim nächsten Mal mächtigere Waffen zu erhalten.<br><br><row>(@MinUnits@) Beginne mit der Forschung! </row><br><row>(@MinUnits@) Erhalte Beute nach jeder PvP-Runde!</row><br><br><ShowIf.TFT17_AnimaSquad_IsDoubleUp><rules>Du erhältst @PairsPartnerWinMultiplier*100@ % Tech durch eine Niederlage, wenn dein Partner einen Kampf in Double Up gewinnt.</rules></ShowIf.TFT17_AnimaSquad_IsDoubleUp>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15384,7 +15393,7 @@
         "trait_id": "TFT17_DarkStar",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkStar.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) Sternenvernichter erschaffen ein schwarzes Loch, das Gegner bei @ExecuteHPPercent*100@ % max. Leben verschlingt.</row><br><row>(@MinUnits@) UND sie erhalten @ADAP@ % %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) UND der stärkste Sternenvernichter wird riesengroß, erhält @SupermassivePercentBonus*100@ % mehr Boni durch das Attribut und erschafft 2 kleine schwarze Löcher.</row><br><row>(@MinUnits@) Alle Sternenvernichter sind riesengroß. Auf Stufe 10 werden ALLE VERSCHLUNGEN. </row>",
+        "tooltip_text": "<row>(@MinUnits@) Sternenvernichter erschaffen ein schwarzes Loch, das Gegner bei <ShowIf.TFT17_DarkStar_HasNeutronStar><TFTBonus>@TFTUnitProperty.trait:TFT17_Augment_DarkStar_NeutronStar_BonusExecutePercent*100@ %</TFTBonus></ShowIf.TFT17_DarkStar_HasNeutronStar><ShowIfNot.TFT17_DarkStar_HasNeutronStar>@ExecuteHPPercent*100@ %</ShowIfNot.TFT17_DarkStar_HasNeutronStar> ihres maximalen Lebens verschlingt.</row><br><row>(@MinUnits@) UND sie erhalten @ADAP@ % %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) UND der stärkste Sternenvernichter wird riesengroß, erhält @SupermassivePercentBonus*100@ % mehr Boni durch das Attribut und erschafft 2 kleine schwarze Löcher.</row><br><row>(@MinUnits@) Alle Sternenvernichter sind riesengroß. Auf Stufe 10 werden ALLE VERSCHLUNGEN. </row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15705,7 +15714,7 @@
         ]
     },
     {
-        "display_name": "Vernichter",
+        "display_name": "Zerstörer",
         "trait_id": "TFT17_JhinUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Singularity.TFT_Set17.png",
@@ -15907,7 +15916,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.2
+                        "value": 0.18
                     },
                     {
                         "name": "Omnivamp",
@@ -15927,7 +15936,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.4
+                        "value": 0.35
                     },
                     {
                         "name": "Omnivamp",
@@ -15947,7 +15956,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.6
+                        "value": 0.55
                     },
                     {
                         "name": "Omnivamp",
@@ -16015,17 +16024,17 @@
         "trait_id": "TFT17_MorganaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DarkLady.TFT_Set17.png",
-        "tooltip_text": "Verbündete erleiden @UntransformedAbilityDA*100@ % weniger Schaden durch Fähigkeiten. Dieser Wert erhöht sich auf @TransformedAbilityDA*100@ %, solange Morgana in ihrer dunklen Gestalt ist.",
+        "tooltip_text": "Dein Team erhält @Durability*100@ % Durchhaltevermögen, das sich auf @TransformedDurability*100@ % erhöht, wenn Morgana in ihrer dunklen Gestalt ist.",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "TransformedAbilityDA",
-                        "value": 0.1
+                        "name": "Durability",
+                        "value": 0.04
                     },
                     {
-                        "name": "UntransformedAbilityDA",
-                        "value": 0.05
+                        "name": "TransformedDurability",
+                        "value": 0.1
                     }
                 ]
             }
@@ -16598,12 +16607,20 @@
                         "value": 0.1
                     },
                     {
-                        "name": "Fountain_ManaRegen_Teamwide",
-                        "value": 1.0
+                        "name": "Fountain_HealthRegen",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "Fountain_HealthRegen_Teamwide",
+                        "value": 0.02
                     },
                     {
                         "name": "Huntress_AS_Teamwide",
                         "value": 0.15
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 0.0
                     },
                     {
                         "name": "Medallion_DA_Teamwide",
@@ -16692,12 +16709,8 @@
                         "value": 10.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.18
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 3.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 2.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -16788,11 +16801,7 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.25
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
+                        "name": "Fountain_StackingADAP",
                         "value": 4.0
                     },
                     {
@@ -16880,12 +16889,8 @@
                         "value": 35.0
                     },
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.2
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 5.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 4.0
                     },
                     {
                         "name": "Huntress_AS",
@@ -17100,13 +17105,25 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Sterndeuter kartieren in jedem Spiel eine andere Konstellation. Dieses Spiel: <TFTStargazer>Der Brunnen</TFTStargazer>.<br><br>Verbündete auf verstärkten Feldern erhalten @Fountain_ManaRegen_Teamwide@ Manaregeneration. Sterndeuter auf verstärkten Feldern erhalten mehr und heilen mit ihren Fähigkeiten den Verbündeten mit dem niedrigsten Leben.<br><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@ % Heilung des Fähigkeitsschadens</row><br><row>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@ % Heilung des Fähigkeitsschadens</row><br><br><rules>Mit jeder Spielerstufe werden mehr Felder enthüllt.</rules>",
+        "tooltip_text": "Sterndeuter kartieren in jedem Spiel eine andere Konstellation. Dieses Spiel: <TFTStargazer>Der Brunnen</TFTStargazer>.<br><br>Verbündete auf verstärkten Feldern heilen alle @Fountain_Interval@ Sekunden um @Fountain_HealthRegen_Teamwide*100@ % des maximalen Lebens. Sterndeuter auf verstärkten Feldern heilen zusätzlich um @Fountain_HealthRegen*100@ % und erhalten alle @Fountain_Interval@ Sekunden steigerbaren Angriffsschaden und Fähigkeitsstärke.<br><br><row>(@MinUnits@) @Fountain_StackingADAP@ % %i:scaleAD% %i:scaleAP%</row><br><row>(@MinUnits@) @Fountain_StackingADAP@ % %i:scaleAD% %i:scaleAP%</row><br><br><rules>Mit jeder Spielerstufe werden mehr Felder enthüllt.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "Fountain_ManaRegen_Teamwide",
-                        "value": 1.0
+                        "name": "Fountain_HealthRegen",
+                        "value": 0.025
+                    },
+                    {
+                        "name": "Fountain_HealthRegen_Teamwide",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "Fountain_Interval",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 0.0
                     }
                 ]
             }
@@ -17115,12 +17132,8 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.18
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 1.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 4.0
                     }
                 ],
                 "min_units": 3,
@@ -17131,12 +17144,8 @@
             {
                 "constants": [
                     {
-                        "name": "Fountain_HealPercent",
-                        "value": 0.25
-                    },
-                    {
-                        "name": "Fountain_ManaRegen",
-                        "value": 5.0
+                        "name": "Fountain_StackingADAP",
+                        "value": 7.0
                     }
                 ],
                 "min_units": 5,
@@ -24808,7 +24817,7 @@
                     },
                     {
                         "name": "Tier1Heal",
-                        "value": 2.0
+                        "value": 1.0
                     },
                     {
                         "name": "Tier1HealDU",

@@ -1313,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "Követelmény: Érj el @TakedownsNeeded@ kiiktatást.<br><br>Jutalom: Aranyspatula",
@@ -3446,7 +3446,7 @@
             "id": 310,
             "name": "Bohóciskola",
             "rarity": 2,
-            "tooltip": "<spellName>Hátbaszúrás</spellName>: @BasicAttackDamage@ <physicalDamage>bónusz fizikai sebzést</physicalDamage> okozol, amikor hátulról támadsz az ellenfelekre.<br><br><spellName>Megtévesztés</spellName>: Teleportálsz, és @StealthDuration@ másodpercig <keywordStealth>lopakodsz</keywordStealth>. A következő támadásod <keywordStealth>lopakodás</keywordStealth> közben további <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz. Ha hátulról támadsz, a támadás kritikus csapás lesz, és @QCritDamageMod@ sebzést okoz.<br><br><spellName>Hallucináció: Halál</spellName>: halál esetén a maximális életerő <trueDamage>@FearDamage*100@%-ával egyenlő tényleges sebzést</trueDamage> okozol, valamint @FearDuration@ másodpercre megrémíted a körülötted lévő ellenfeleket."
+            "tooltip": "Cherry_ClownCollege_DeceiveTooltip"
         },
         {
             "apiName": "NumbToPain",
@@ -4807,7 +4807,7 @@
             "id": 76,
             "name": "Hangrobbanás",
             "rarity": 0,
-            "tooltip": "A szövetséges erősítése, <healing>gyógyítása</healing> vagy <shield>pajzs általi védelme</shield> <trueDamage>@Damage@ tényleges sebzést</trueDamage> okoz, és @SlowDuration@ másodpercre @SlowAmount*-100@%-kal <status>lelassítja az őt körülvevő ellenfeleket</status>.<br><br>A körben okozott sebzés: @f1@<br>Okozott sebzés összesen: @f2@"
+            "tooltip": "Cherry_SonicBoom_Tooltip"
         },
         {
             "apiName": "GoHRemnantOfTheWatchers",
@@ -7615,22 +7615,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -9955,13 +9955,13 @@
                     1.0
                 ],
                 "CritDamageMultipler": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "MaxLevel": [
                     2.0,
@@ -11590,13 +11590,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11970,13 +11970,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -13632,7 +13632,7 @@
             "id": 215,
             "name": "Sötét áldás",
             "rarity": 1,
-            "tooltip": "Amikor <healing>gyógyítást</healing> vagy <shield>pajzsot</shield> biztosítasz egy szövetséges hősnek, @CurseCounter@ <keywordMajor>Elátkozott erőre</keywordMajor> teszel szert.<br><br>@f1@ képességgyorsítást kapsz (az <keywordMajor>Elátkozott erőd</keywordMajor> @AbilityHasteRatio*100@%-a).<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "Cherry_DarkBlessing_Tooltip"
         },
         {
             "apiName": "MindtoMatter",

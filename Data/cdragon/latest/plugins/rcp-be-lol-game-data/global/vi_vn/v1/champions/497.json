@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
-            "cooldown": "@f2@ giây %i:cooldown%",
+            "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Bay đến bên tướng đồng minh, cho họ lá chắn. Có thể dùng lần nữa mà không tiêu hao năng lượng trong một khoảng thời gian ngắn.",
-            "dynamicDescription": "Rakan lướt đến bên đồng minh, tạo cho họ <shield>@TotalShield@ Lá Chắn</shield> trong @Effect3Amount@ giây.<br><br>Rakan có thể <recast>Tái kích hoạt</recast> Kỹ năng này trong @Effect2Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan lướt đến một tướng đồng minh, trao cho họ <shield>@TotalShield@ Lá Chắn</shield> trong @Duration@ giây.<br><br>Rakan có thể <recast>Tái Kích Hoạt</recast> kỹ năng này một lần trong vòng @RecastWindow@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nhận thêm Tốc độ Di chuyển, mê hoặc và gây sát thương phép lên kẻ địch chạm phải.",
-            "dynamicDescription": "Rakan nhận <speed>@Effect5Amount@% Tốc độ Di chuyển</speed> trong @Effect2Amount@ giây. Rakan gây <magicDamage>@TotalDamageTooltip@ sát thương phép</magicDamage> và <status>Mê Hoặc</status> kẻ địch trong @Effect3Amount@ giây ở lần đầu trúng phải. Tướng địch đầu tiên trúng chiêu sẽ tăng cho Rakan <speed>@Effect6Amount@% Tốc độ Di chuyển giảm dần</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rakan nhận thêm <speed>@InitialCastSpeed@% Tốc Độ Di Chuyển</speed> trong @Duration@ giây. Rakan gây <magicDamage>@TotalDamageTooltip@ sát thương phép</magicDamage> và <status>Mê Hoặc</status> kẻ địch trong @CharmDuration@ giây ngay khi chạm vào chúng. Tướng đầu tiên được chạm sẽ cho Rakan <speed>@TouchSpeed@% Tốc Độ Di Chuyển giảm dần</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,

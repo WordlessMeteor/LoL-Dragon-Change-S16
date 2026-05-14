@@ -14573,13 +14573,13 @@
                 v = dt(n(249)),
                 E = dt(n(250)),
                 b = dt(n(251)),
-                y = dt(n(252)),
-                T = dt(n(253)),
-                S = dt(n(254)),
-                C = dt(n(256)),
-                I = dt(n(257)),
-                x = dt(n(258)),
-                A = dt(n(260)),
+                y = dt(n(253)),
+                T = dt(n(254)),
+                S = dt(n(255)),
+                C = dt(n(257)),
+                I = dt(n(258)),
+                x = dt(n(259)),
+                A = dt(n(261)),
                 w = dt(n(262)),
                 k = dt(n(263)),
                 O = dt(n(264)),
@@ -17936,7 +17936,8 @@
             var i = n(1),
                 a = n(186),
                 s = n(248),
-                o = i.Ember.Component.extend({
+                o = n(252),
+                r = i.Ember.Component.extend({
                     classNames: ["activity-center__background-component"],
                     classNameBindings: ["hasOverride:activity-center__background-component--override"],
                     mediaBlendGradient: !0,
@@ -17958,7 +17959,8 @@
                         return this.get("isVideoBg") ? (0, s.getFirstMediaFromSource)(this.get("background.sources")) : this.get("background.url")
                     })),
                     hasOverride: i.Ember.computed("pageId", (function() {
-                        return !1
+                        const e = this.get("pageId");
+                        return !(!e || !o.OVERRIDE_GRADIENT_PAGE_ID.has(e))
                     })),
                     didInsertElement() {
                         this._super(...arguments);
@@ -17995,7 +17997,15 @@
                         }
                     }
                 });
-            t.default = o
+            t.default = r
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.OVERRIDE_GRADIENT_PAGE_ID = t.DISCORD_SCREEN_ID = void 0;
+            t.DISCORD_SCREEN_ID = "26-08-ac-connect";
+            const n = new Set(["26-11-ac-pride", "26-11-ac-jubilantcolors"]);
+            t.OVERRIDE_GRADIENT_PAGE_ID = n
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
@@ -18424,7 +18434,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(255),
+                a = n(256),
                 s = n(248),
                 o = n(186),
                 r = i.Ember.Component.extend({
@@ -18862,7 +18872,7 @@
                     default: i
                 },
                 o = n(186),
-                r = n(259);
+                r = n(260);
             var l = a.Ember.Component.extend({
                 classNames: ["activity-center-count-down"],
                 endDateTime: "",
@@ -18941,7 +18951,7 @@
                     default: i
                 },
                 l = n(202),
-                c = n(261);
+                c = n(252);
             var d = r.default.extend({
                 classNames: ["activity-center-cta-button"],
                 patcherService: a.Ember.inject.service("patcher"),
@@ -19003,12 +19013,6 @@
                 }
             });
             t.default = d
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.DISCORD_SCREEN_ID = void 0;
-            t.DISCORD_SCREEN_ID = "26-08-ac-connect"
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -22513,10 +22517,10 @@
                         InfoHubRiotComponent: n(362).default,
                         InfoHubCarouselComponent: n(363).default,
                         InfoHubGameSelectorComponent: n(364).default,
-                        ActivityHeaderComponent: n(253).default,
-                        MediaCardComponent: n(256).default,
-                        MediaGroupComponent: n(257).default,
-                        CtaButtonComponent: n(260).default,
+                        ActivityHeaderComponent: n(254).default,
+                        MediaCardComponent: n(257).default,
+                        MediaGroupComponent: n(258).default,
+                        CtaButtonComponent: n(261).default,
                         ErrorMessageComponent: n(265).default,
                         ManagedIframeComponent: i.SharedEmberComponents.ManagedIframeComponent,
                         InfoHubService: n(294).default,

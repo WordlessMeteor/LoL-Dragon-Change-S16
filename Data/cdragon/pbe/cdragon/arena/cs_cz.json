@@ -1313,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "Požadavek: Připiš si @TakedownsNeeded@x likvidaci.<br><br>Odměna: Zlatá obracečka",
@@ -3446,7 +3446,7 @@
             "id": 310,
             "name": "Klaunská univerzita",
             "rarity": 2,
-            "tooltip": "<spellName>Bodnutí do zad</spellName>: Když zasáhneš nepřítele zezadu, způsobíš mu @BasicAttackDamage@ <physicalDamage>bodů bonusového fyzického poškození</physicalDamage>.<br><br><spellName>Oklamat</spellName>: Teleportuješ se a na @StealthDuration@&nbsp;sek. se <keywordStealth>zneviditelníš</keywordStealth>. Tvůj příští útok provedený během <keywordStealth>neviditelnosti</keywordStealth> způsobí dodatečných <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>. Při útoku zezadu tento útok způsobí kritický zásah s poškozením ve výši @QCritDamageMod@.<br><br><spellName>Halucinace: Smrt</spellName>: Po smrti způsobíš okolním jednotkám <trueDamage>přímé poškození ve výši @FearDamage*100@&nbsp;% maximálního zdraví</trueDamage> a na @FearDuration@&nbsp;sek. je zastrašíš."
+            "tooltip": "Cherry_ClownCollege_DeceiveTooltip"
         },
         {
             "apiName": "NumbToPain",
@@ -4807,7 +4807,7 @@
             "id": 76,
             "name": "Sonický třesk",
             "rarity": 0,
-            "tooltip": "Když svému spojenci poskytneš buff, <healing>léčení</healing> nebo <shield>štít</shield>, způsobí nepřátelům kolem sebe <trueDamage>@Damage@ bodů přímého poškození</trueDamage> a na @SlowDuration@&nbsp;sek. je <status>zpomalí</status> o @SlowAmount*-100@&nbsp;%.<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@"
+            "tooltip": "Cherry_SonicBoom_Tooltip"
         },
         {
             "apiName": "GoHRemnantOfTheWatchers",
@@ -7615,22 +7615,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -9955,13 +9955,13 @@
                     1.0
                 ],
                 "CritDamageMultipler": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "MaxLevel": [
                     2.0,
@@ -11590,13 +11590,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11970,13 +11970,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -13632,7 +13632,7 @@
             "id": 215,
             "name": "Temné požehnání",
             "rarity": 1,
-            "tooltip": "Když <healing>vyléčíš</healing> spojeneckého šampiona nebo mu poskytneš <shield>štít</shield>, získáš +@CurseCounter@ k <keywordMajor>Prokleté moci</keywordMajor>.<br><br>Získáš @f1@ ke zrychlení schopností (@AbilityHasteRatio*100@&nbsp;% tvé <keywordMajor>Prokleté moci</keywordMajor>).<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "Cherry_DarkBlessing_Tooltip"
         },
         {
             "apiName": "MindtoMatter",

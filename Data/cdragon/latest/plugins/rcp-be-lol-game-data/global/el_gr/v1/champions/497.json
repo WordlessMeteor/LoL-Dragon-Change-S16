@@ -1535,9 +1535,9 @@
             "abilityVideoPath": "champion-abilities/0497/ability_0497_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0497/ability_0497_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
-            "cooldown": "%i:cooldown% @f2@ δευτ.",
+            "cooldown": "%i:cooldown% @Cooldown@ δευτ.",
             "description": "Πετά σε έναν σύμμαχο Ήρωα και του δίνει ασπίδα. Μπορεί να χρησιμοποιηθεί ξανά χωρίς κόστος για σύντομο χρονικό διάστημα.",
-            "dynamicDescription": "Ο Ρακάν εφορμά σε έναν σύμμαχο Ήρωα, δίνοντάς του <shield>@TotalShield@ Ασπίδα</shield> για @Effect3Amount@ δευτ.<br><br>Ο Ρακάν μπορεί να <recast>ξαναχρησιμοποιήσει</recast> αυτήν την ικανότητα εντός @Effect2Amount@ δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Ρακάν εφορμά σε έναν σύμμαχο Ήρωα, δίνοντάς του <shield>@TotalShield@ Ασπίδα</shield> για @Duration@ δευτ.<br><br>Ο Ρακάν μπορεί να κάνει <recast>Νέα Χρήση</recast> αυτής της ικανότητας μία φορά κάθε @RecastWindow@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1687,7 +1687,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Αποκτά Ταχύτητα Κίνησης, ενώ γοητεύει τους εχθρούς που αγγίζει και τους προκαλεί Μαγική Ζημιά.",
-            "dynamicDescription": "Ο Ρακάν αποκτά <speed>@Effect5Amount@% Ταχύτητα Κίνησης</speed> για @Effect2Amount@ δευτ. Ο Ρακάν προκαλεί <magicDamage>@TotalDamageTooltip@ Μαγική Ζημιά</magicDamage> και <status>Γοητεύει</status> εχθρούς για @Effect3Amount@ δευτ. την πρώτη φορά που τους αγγίζει. Ο πρώτος Ήρωας που αγγίζει δίνει στον Ρακάν επιπλέον <speed>@Effect6Amount@% Ταχύτητα Κίνησης, η οποία μειώνεται σταδιακά</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Ρακάν αποκτά <speed>@InitialCastSpeed@% Ταχύτητα Κίνησης</speed> για @Duration@ δευτ. Ο Ρακάν προκαλεί <magicDamage>@TotalDamageTooltip@ Μαγική Ζημιά</magicDamage> και <status>Γοητεύει</status> εχθρούς για @CharmDuration@ δευτ. την πρώτη φορά που τους αγγίζει. Ο πρώτος Ήρωας που αγγίζει δίνει στον Ρακάν επιπλέον <speed>@TouchSpeed@% Ταχύτητα Κίνησης, η οποία μειώνεται σταδιακά</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 150.0,
                 150.0,

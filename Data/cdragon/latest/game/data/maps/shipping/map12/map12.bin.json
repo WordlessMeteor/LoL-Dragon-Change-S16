@@ -602,6 +602,11 @@
         "name": "PetBaron",
         "__type": "Companion"
     },
+    "Characters/PetStyleTwoLucian": {
+        "FilepathHash": "characters/petstyletwolucian",
+        "name": "PetStyleTwoLucian",
+        "__type": "Companion"
+    },
     "Characters/Turret": {
         "name": "Turret",
         "__type": "Character"
@@ -505904,1548 +505909,6 @@
         "feature": "KINGPORO",
         "__type": "FeatureAudioDataProperties"
     },
-    "{02c2bf5b}": {
-        "ScriptName": "HA_Turret_Targetability_Relationships",
-        "path": "{02c2bf5b}",
-        "sequences": {
-            "GameEntityOnExitAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "9790d144-e012-4b7d-aea2-eca054d44b9c",
-                        "Condition": null,
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "f02364ef-7a36-4231-b25d-3819245b247a",
-                                    "ToSay": {
-                                        "value": "Enable Nexus",
-                                        "__type": "StringGet"
-                                    },
-                                    "Color": [
-                                        3,
-                                        255,
-                                        31,
-                                        255
-                                    ],
-                                    "__type": "DebugPrintToChatBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "0ea4eeb2-dfb9-404d-a961-fdc11f1d9171",
-                                    "Target": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{d2582d5d}",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "callback": {
-                                        "Script": "{47fffe42}",
-                                        "FunctionName": "OnTurretDie",
-                                        "__type": "{f6e1bec7}"
-                                    },
-                                    "__type": "{6c93a1b4}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "cc4a42f8-99a3-489c-a182-a9b757b65f22",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "bb63831a-19fa-442e-80af-dd1fe6fed486",
-                                    "ToSay": {
-                                        "value": "Enable Next Turret:",
-                                        "__type": "StringGet"
-                                    },
-                                    "Src": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{d2582d5d}",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "Color": [
-                                        3,
-                                        255,
-                                        31,
-                                        255
-                                    ],
-                                    "__type": "DebugPrintToChatBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "88fe23b3-9a7c-4f45-a896-5f0f66a64b65",
-                                    "Src": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "IsTargetable",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnEnterAlive": {
-                "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "5eba3fc4-2982-46bd-86ad-2e9b24cb28e4",
-                        "ToSay": {
-                            "value": "Turret Enter Alive",
-                            "__type": "StringGet"
-                        },
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Color": [
-                            0,
-                            255,
-                            2,
-                            255
-                        ],
-                        "__type": "DebugPrintToChatBlock"
-                    },
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "f5118e97-956a-454e-8964-a86945aae224",
-                        "ToSay": {
-                            "value": "Turret Unit",
-                            "__type": "StringGet"
-                        },
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Color": [
-                            0,
-                            255,
-                            2,
-                            255
-                        ],
-                        "__type": "DebugPrintToChatBlock"
-                    },
-                    {
-                        "{d851ffa3}": "df8bf2cd-38c4-4de0-81cb-92701f17addd",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{36df47e8}",
-                                "__type": "BoolTableGet"
-                            },
-                            "Value2": {
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "417f929c-14c9-4073-aa68-735e196b0ea7",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "493c544a-dfdc-4afb-8bd9-a7c1ec8ef1e9",
-                                    "Target": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{d2582d5d}",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "callback": {
-                                        "Script": "{47fffe42}",
-                                        "FunctionName": "OnTurretRespawn",
-                                        "__type": "{f6e1bec7}"
-                                    },
-                                    "__type": "{6c93a1b4}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "572b4c8f-c174-4f7f-bf8a-ca0172f7555d",
-                        "ToSay": {
-                            "value": "Turret Unit ACTIVATE",
-                            "__type": "StringGet"
-                        },
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Color": [
-                            0,
-                            255,
-                            2,
-                            255
-                        ],
-                        "__type": "DebugPrintToChatBlock"
-                    },
-                    {
-                        "{d851ffa3}": "c8381c51-b701-47be-8411-4f995f15d7bc",
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "8210f382-097e-4dcc-a189-a66dbe43a47d",
-                        "Src": {
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "TowerInit",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "CustomSequences": {
-            "{bca134f9}": {
-                "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "bbf15527-5fe1-4ec8-b377-f94d307a82a6",
-                        "ToSay": {
-                            "value": "UpdateTargetability:",
-                            "__type": "StringGet"
-                        },
-                        "Src": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "__type": "DebugPrintToChatBlock"
-                    },
-                    {
-                        "{d851ffa3}": "db3df5fd-75c2-4e25-baed-cc689d31b2a6",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "IsTargetable",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": true,
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "907fe9d7-3785-4a42-8e87-885ba76a55c2",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "c629dcbd-1886-4c40-b1a8-206f3c98bb9d",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "5715f2e6-29f2-4a94-9d79-4fd889d99ff2",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "72e549c5-fd0c-4519-9e5b-09235a2e9150",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "776b6853-3a5c-4cc5-a7e9-c59e0249430f",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "{ee26c73f}": {
-            "{d2582d5d}": {
-                "__type": "{72651449}"
-            },
-            "{e842be4f}": {
-                "value": 15.0,
-                "__type": "FloatGet"
-            },
-            "{2189cced}": {
-                "__type": "BoolGet"
-            },
-            "{fca0a5c1}": {
-                "__type": "BoolGet"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{14ec4dd4}": {
-        "ScriptName": "HA_GameModeEntityActivator",
-        "path": "{14ec4dd4}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    null,
-                    {
-                        "{d851ffa3}": "79df163e-2a86-484d-9dcf-3c24a0a56130",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{ddeddc60}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": "FirstBlood",
-                                "__type": "StringGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "0cbfde2b-239e-4a1a-bdb1-07a9e329773c",
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "ffc43645-d667-4e20-ae4e-d4a52bd53236",
-                                                "tag": {
-                                                    "value": "{758ee03f}",
-                                                    "__type": "{5d85166e}"
-                                                },
-                                                "__type": "{017411ce}"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "ScriptCommentBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "e32dd9e4-a202-4fa3-a614-953cb963e6cc",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "74630469-1257-40f2-84ba-8790033ceb59",
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "c81cdb05-ff7e-479a-8395-822ebb4df60f",
-                                                "tag": {
-                                                    "value": "{cccfd056}",
-                                                    "__type": "{5d85166e}"
-                                                },
-                                                "__type": "{017411ce}"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "ScriptCommentBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "776b2a17-b756-448a-a620-07612ce7c748",
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "b217dae0-f357-4abe-a49c-e902b0496061",
-                                                "Sequence": {
-                                                    "blocks": [
-                                                        {
-                                                            "{d851ffa3}": "802248c9-c2c7-4d82-9bf3-dae9f26417ec",
-                                                            "Target": {
-                                                                "Var": "{96e214ec}",
-                                                                "__type": "{132b63da}"
-                                                            },
-                                                            "__type": "{3aa63a24}"
-                                                        }
-                                                    ],
-                                                    "__type": "ScriptSequence"
-                                                },
-                                                "Script": "{4e74c07b}",
-                                                "{421aee08}": {
-                                                    "Var": "HexgateManager",
-                                                    "__type": "{851d2116}"
-                                                },
-                                                "__type": "{5fa82956}"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "ScriptCommentBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "d71fccbf-d4de-41f4-84c9-364ecc504dac",
-                                    "Sequence": {
-                                        "blocks": [
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "ScriptCommentBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{47fffe42}": {
-        "ScriptName": "HA_Nexus",
-        "path": "{47fffe42}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "c20bcae8-2d78-4ece-9e50-8cb435fc8c2e",
-                        "Src": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{4dfa6eea}",
-                            "__type": "IntTableGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "TurretCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "56f584e5-62ee-4134-a19d-8d03ceee2a69",
-                        "Src": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{cca2a700}",
-                            "__type": "IntTableGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "0c25a3e7-a3b7-48a4-9f94-de19781d8099",
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnExitAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "bc716ff9-249e-455b-ab10-c85c26e9917e",
-                        "__type": "EndGameForLevelBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "functions": {
-            "OnTurretDie": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "44a8431c-e9e5-4278-83ae-dd4f89a98f39",
-                        "Formula": "iv.TurretCount - 1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "TurretCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    {
-                        "{d851ffa3}": "d28e2ec6-a2f0-4a3f-972c-3fce9ada0a8b",
-                        "Var": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "{851d2116}"
-                        },
-                        "__type": "{851b8dc5}"
-                    },
-                    {
-                        "{d851ffa3}": "4c522cd3-905d-4832-b105-d5a07554d21f",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{47fffe42}",
-                            "FunctionName": "{bca134f9}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{b0a21c98}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "a6a666e1-0baf-45df-a0cf-89945bd5ad35",
-                        "Formula": "iv.InhibCount - 1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    {
-                        "{d851ffa3}": "51020ab5-2c96-4edd-8178-9a2e16c33912",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{47fffe42}",
-                            "FunctionName": "{bca134f9}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{445f9dee}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "7decb2c1-7bea-48d8-b56a-3ee51bae8ed8",
-                        "Formula": "iv.InhibCount + 1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    {
-                        "{d851ffa3}": "527e3ace-e5a3-4c54-884e-acd2f30d0ea6",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{47fffe42}",
-                            "FunctionName": "{bca134f9}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{bca134f9}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "436f9ec8-1deb-4ea8-b297-e3789ccbc967",
-                        "__type": "ScriptCommentBlock"
-                    },
-                    {
-                        "{d851ffa3}": "c79d58e5-d6d8-4610-bb02-2254534cf343",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{12e85cd0}",
-                                "__type": "IntTableGet"
-                            },
-                            "Operation": 4,
-                            "Value2": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{cca2a700}",
-                                "__type": "IntTableGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "57f179e2-ee5e-4beb-8b3b-bed47c2eb205",
-                                    "Src": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "IsTargetable",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                null,
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "8b5bc9ff-0803-4afa-a1b3-7165c9082d5d",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "a61ca982-e127-4412-95c3-e7de64a4c789",
-                                    "Src": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "IsTargetable",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                null,
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "b00e21d2-90f8-4c0a-bd76-0d0633d58cf8",
-                        "__type": "ScriptCommentBlock"
-                    },
-                    {
-                        "{d851ffa3}": "c5ec1d70-76b9-4072-95d5-e32a14103527",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{6f2d2dce}",
-                                "__type": "IntTableGet"
-                            },
-                            "Operation": 5,
-                            "Value2": {
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "882841e7-d58f-43cb-832b-23d01d72366a",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{12e85cd0}",
-                                "__type": "IntTableGet"
-                            },
-                            "Operation": 4,
-                            "Value2": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{cca2a700}",
-                                "__type": "IntTableGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "type": 1,
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "34933f26-0295-41f8-8c6d-a3e2d674c6d8",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "9163aea1-78a8-444f-aa24-428da8ca3702",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "3754c483-9158-47fd-b8c9-bf7ab40e7728",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "979b4b22-61c2-4289-84c6-c65287e9a861",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "bae70d11-db5a-4676-aaa4-323eb58098da",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "ScriptFunction"
-            },
-            "OnTurretRespawn": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "8399d507-7d18-4aa8-98c1-a9a45f5bdaa5",
-                        "__type": "ScriptCommentBlock"
-                    },
-                    {
-                        "{d851ffa3}": "bf9415ab-7d65-4423-b410-4789afef97bf",
-                        "Formula": "iv.TurretCount + 1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "TurretCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    {
-                        "{d851ffa3}": "11398a71-8e4e-4426-9288-71b9fc618e12",
-                        "Var": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "{851d2116}"
-                        },
-                        "__type": "{851b8dc5}"
-                    },
-                    {
-                        "{d851ffa3}": "082326aa-dac5-4d5c-84eb-9e0776c8bbb4",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{47fffe42}",
-                            "FunctionName": "{bca134f9}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            }
-        },
-        "{ee26c73f}": {
-            "{4dfa6eea}": {
-                "value": 2,
-                "__type": "IntGet"
-            },
-            "{cca2a700}": {
-                "value": 5,
-                "__type": "IntGet"
-            },
-            "{a84bdd39}": {
-                "__type": "{72651449}"
-            },
-            "{a54bd880}": {
-                "__type": "{72651449}"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{4e74c07b}": {
-        "ScriptName": "HA_Hexgate_Manager",
-        "path": "{4e74c07b}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "59898e07-017a-4372-80d8-5ced7205f2c9",
-                        "Src": {
-                            "value": 13.5,
-                            "__type": "FloatGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "HexgateSpawnDelay",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    null,
-                    {
-                        "{d851ffa3}": "c165ca3c-e9d8-4dc2-9d32-cd61797bb191",
-                        "Condition": {
-                            "Target": {
-                                "Var": "owner",
-                                "__type": "{132b63da}"
-                            },
-                            "Script": "{65a4f0b7}",
-                            "__type": "{de75be67}"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "b27ad1cc-32ad-4963-b13e-9a713f4ffc40",
-                                    "Target": {
-                                        "Var": "owner",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "callback": {
-                                        "Script": "{65a4f0b7}",
-                                        "FunctionName": "{6b344905}",
-                                        "__type": "{f6e1bec7}"
-                                    },
-                                    "__type": "{6c93a1b4}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "functions": {
-            "{c56fbf5b}": {
-                "blocks": [
-                    null,
-                    {
-                        "{d851ffa3}": "51aab461-778e-49d4-b143-360ad3c745d6",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{3edace12}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": null,
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                {
-                                    "{d851ffa3}": "b4a989f4-d17b-42d2-b6c7-2464d7fa478f",
-                                    "Condition": {
-                                        "Target": {
-                                            "Var": "owner",
-                                            "__type": "{132b63da}"
-                                        },
-                                        "Script": "{65a4f0b7}",
-                                        "__type": "{de75be67}"
-                                    },
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "ad4ae2f5-20bc-4c8b-b72c-222fc8d65d6e",
-                                                "Target": {
-                                                    "Var": "owner",
-                                                    "__type": "{132b63da}"
-                                                },
-                                                "callback": {
-                                                    "Script": "{65a4f0b7}",
-                                                    "FunctionName": "{aa04fd34}",
-                                                    "__type": "{f6e1bec7}"
-                                                },
-                                                "__type": "{6c93a1b4}"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "3e65cc39-8689-4286-8a0c-6f569dc1f0af",
-                        "Sequence": {
-                            "blocks": [
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "FunctionDef": {
-                    "{8c54e274}": [
-                        {
-                            "Input": {
-                                "Var": "TurretDeathTrigger",
-                                "__type": "{851d2116}"
-                            },
-                            "__type": "{2330a302}"
-                        }
-                    ],
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{9c2714b0}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "6266a71c-08b2-4a43-aa91-80b43ee6efcd",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{b903b6ac}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": null,
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "18f6b47d-a8eb-4858-8296-b4454b6ef89c",
-                                    "Src": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{8c8acf97}",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "Hexgate",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "d1e26230-e9f6-428c-add7-e1b0da1104ca",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "76ef2bc5-a6e4-4d8e-ae84-b01999b7f504",
-                                    "Src": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{12f6dc0f}",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "Hexgate",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "FunctionDef": {
-                    "{8c54e274}": [
-                        {
-                            "Input": null,
-                            "{3f074682}": null,
-                            "__type": "{2330a302}"
-                        }
-                    ],
-                    "{de888209}": [
-                        {
-                            "Output": {
-                                "Var": "{72cab365}",
-                                "__type": "{132b63da}"
-                            },
-                            "__type": "{294650d7}"
-                        }
-                    ],
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{28edabf0}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "0146784f-d40d-4480-a4e5-fc9a2927a886",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{b903b6ac}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": null,
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "bdbe8ceb-0704-4191-a7d8-2d562cf91284",
-                                    "Src": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{591fcfd7}",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "HexgateExit",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "bce7d3e7-92c2-4514-99db-1c94f1542de7",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "a97f8b3a-fd15-4955-af1a-740acfcf61e4",
-                                    "Src": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{8c2a098f}",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "HexgateExit",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "FunctionDef": {
-                    "{8c54e274}": [
-                        {
-                            "Input": null,
-                            "{3f074682}": null,
-                            "__type": "{2330a302}"
-                        }
-                    ],
-                    "{de888209}": [
-                        {
-                            "Output": {
-                                "Var": "{caa83225}",
-                                "__type": "{132b63da}"
-                            },
-                            "__type": "{294650d7}"
-                        }
-                    ],
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{f3d11e9a}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "40075efe-6e43-40a4-aaf5-e9cf804bfcd1",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{b903b6ac}",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": null,
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "6544048d-fc98-4124-bb0c-3afebbf853e1",
-                                    "Src": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{a512bac5}",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "HexgateExitFallback",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "ef329a4c-4717-4c64-979a-abf3290a22c2",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "8b09da8c-d3a1-4ee4-ac3a-3aa82e495269",
-                                    "Src": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{2a9465cd}",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "Dest": {
-                                        "Var": "HexgateExit",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "FunctionDef": {
-                    "{8c54e274}": [
-                        {
-                            "Input": null,
-                            "{3f074682}": null,
-                            "__type": "{2330a302}"
-                        }
-                    ],
-                    "{de888209}": [
-                        {
-                            "Output": {
-                                "Var": "{9ee7691b}",
-                                "__type": "{132b63da}"
-                            },
-                            "__type": "{294650d7}"
-                        }
-                    ],
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            }
-        },
-        "{ee26c73f}": {
-            "{8c8acf97}": {
-                "__type": "{72651449}"
-            },
-            "{591fcfd7}": {
-                "__type": "{72651449}"
-            },
-            "{a512bac5}": {
-                "__type": "{72651449}"
-            },
-            "{12f6dc0f}": {
-                "__type": "{72651449}"
-            },
-            "{8c2a098f}": {
-                "__type": "{72651449}"
-            },
-            "{2a9465cd}": {
-                "__type": "{72651449}"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{65a4f0b7}": {
-        "ScriptName": "HA_Hexgate_Manager_Crepe",
-        "path": "{65a4f0b7}",
-        "functions": {
-            "{6b344905}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "e6714191-a18e-4317-8aaf-b347a1a0786c",
-                        "Target": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{4e74c07b}",
-                            "FunctionName": "{9c2714b0}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "FunctionDefinition": {
-                            "{8c54e274}": {
-                                "{b903b6ac}": null
-                            },
-                            "{de888209}": {
-                                "{72cab365}": {
-                                    "Var": "OrderHexgate",
-                                    "__type": "ScriptTableSet"
-                                }
-                            },
-                            "__type": "{2a2c82dc}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    },
-                    {
-                        "{d851ffa3}": "e68bea3e-835b-4e93-be52-54c67e8f86b8",
-                        "Target": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{4e74c07b}",
-                            "FunctionName": "{28edabf0}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "FunctionDefinition": {
-                            "{8c54e274}": {
-                                "{b903b6ac}": null
-                            },
-                            "{de888209}": {
-                                "{caa83225}": {
-                                    "Var": "OrderHexgateExit",
-                                    "__type": "ScriptTableSet"
-                                }
-                            },
-                            "__type": "{2a2c82dc}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    },
-                    {
-                        "{d851ffa3}": "c15db571-9a32-414c-9ede-ae996b0b1dfd",
-                        "Target": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{4e74c07b}",
-                            "FunctionName": "{f3d11e9a}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "FunctionDefinition": {
-                            "{8c54e274}": {
-                                "{b903b6ac}": null
-                            },
-                            "{de888209}": {
-                                "{9ee7691b}": {
-                                    "Var": "OrderHexgateExitFallback",
-                                    "__type": "ScriptTableSet"
-                                }
-                            },
-                            "__type": "{2a2c82dc}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    },
-                    {
-                        "{d851ffa3}": "74fb508e-7aa3-4f8a-a624-927edcff4bfc",
-                        "Target": {
-                            "Var": "{8c8acf97}",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Var": "OrderHexgate_FakeVFX_Position",
-                            "__type": "VectorTableSet"
-                        },
-                        "__type": "{667eafac}"
-                    },
-                    {
-                        "{d851ffa3}": "7499563f-9ef2-485f-a9d3-a21ca791d0f1",
-                        "Target": {
-                            "Var": "{591fcfd7}",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "OrderHexgateExit_FakeVFX_Position",
-                            "__type": "VectorTableSet"
-                        },
-                        "__type": "{667eafac}"
-                    },
-                    {
-                        "{d851ffa3}": "a5eb0869-36ef-45f2-b34f-cdb27db57a35",
-                        "Target": {
-                            "Var": "{a512bac5}",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Var": "OrderHexgateExitFallback_FakeVFX_Position",
-                            "__type": "VectorTableSet"
-                        },
-                        "__type": "{667eafac}"
-                    },
-                    null,
-                    {
-                        "{d851ffa3}": "282ac9ea-ccf4-43b0-8c09-dfc4856a0367",
-                        "Formula": "iv.OrderHexgateExit_FakeVFX_Position+ptp.DirectionAwayFromSpawn*500",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "OrderHexgateExit_FakeVFX_Direction",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    {
-                        "{d851ffa3}": "234f4eae-97db-4d2b-a91c-d731178532dd",
-                        "Formula": "ptp.OrderHexgateExitFallback_FakeVFX_Position+ptp.DirectionAwayFromSpawn*500",
-                        "Dest": {
-                            "Var": "OrderHexgateExitFallback_FakeVFX_Direction",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    null,
-                    null,
-                    {
-                        "{d851ffa3}": "0f053d6d-4dde-4185-8c80-5e9215c6280c",
-                        "Src": {
-                            "value": 2,
-                            "__type": "IntGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "NextBuffVars"
-                            },
-                            "Var": "VFXStyle",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    null,
-                    null
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{ab92f130}": {
-                "blocks": [
-                    null
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{aa04fd34}": {
-                "blocks": [
-                    null,
-                    {
-                        "{d851ffa3}": "aadd812c-195b-471f-96fd-f883ff3090d9",
-                        "Src": {
-                            "value": 1,
-                            "__type": "IntGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "NextBuffVars"
-                            },
-                            "Var": "VFXStyle",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    null,
-                    null
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{67f74a0b}": {
-        "ScriptName": "HA_Turret_OnDeathTriggerHexgateFallback",
-        "path": "{67f74a0b}",
-        "sequences": {
-            "GameEntityOnExitAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "0c9a0042-8777-4c4c-82b3-73287b8798a2",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "268bd387-960c-471b-8a5b-7fbfdcecd8e0",
-                                    "Condition": {
-                                        "Target": {
-                                            "Var": "{96e214ec}",
-                                            "__type": "{132b63da}"
-                                        },
-                                        "__type": "{1036ea1c}"
-                                    },
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "f4e0f096-5cca-48f6-9a53-ab4be01f0bd4",
-                                                "Target": {
-                                                    "Var": "{96e214ec}",
-                                                    "__type": "{132b63da}"
-                                                },
-                                                "callback": {
-                                                    "Script": "{4e74c07b}",
-                                                    "FunctionName": "{c56fbf5b}",
-                                                    "__type": "{f6e1bec7}"
-                                                },
-                                                "FunctionDefinition": {
-                                                    "{8c54e274}": {
-                                                        "{02d63b85}": {
-                                                            "Var": "owner",
-                                                            "__type": "ScriptTableGet"
-                                                        }
-                                                    },
-                                                    "__type": "{2a2c82dc}"
-                                                },
-                                                "__type": "{6c93a1b4}"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "Script": "{4e74c07b}",
-                        "{421aee08}": {
-                            "Var": "HexgateManager",
-                            "__type": "{851d2116}"
-                        },
-                        "__type": "{5fa82956}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
     "{8c152a84}": {
         "ScriptName": "HA_Shop_PlayerBuff",
         "path": "{8c152a84}",
@@ -507714,1768 +506177,6 @@
             "__type": "ScriptGlobalProperties"
         },
         "__type": "BuffScript"
-    },
-    "{a1b450b8}": {
-        "ScriptName": "HA_Shop_CanReturnToShopArea",
-        "path": "{a1b450b8}",
-        "sequences": {
-            "{deabfcb7}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "0ea03a8e-1e0b-4f2a-b3c9-45e33a42cc1b",
-                        "Condition": null,
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "01f7bd4d-ca58-47f7-a727-0488f1b45de9",
-                                    "Condition": null,
-                                    "__type": "{e524b2fc}"
-                                },
-                                {
-                                    "{d851ffa3}": "6d94c08f-a61c-4ebc-b129-9d42731c6e79",
-                                    "Condition": null,
-                                    "type": 2,
-                                    "__type": "{e524b2fc}"
-                                },
-                                {
-                                    "{d851ffa3}": "d17ed722-5e45-4f3c-9159-5b75883680c6",
-                                    "Condition": null,
-                                    "type": 2,
-                                    "__type": "{e524b2fc}"
-                                },
-                                {
-                                    "{d851ffa3}": "3aa0fde9-9281-41a6-a7e9-fb61e45ef396",
-                                    "Sequence": {
-                                        "blocks": [
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{a5c2c114}": {
-        "ScriptName": "HA_Barracks",
-        "path": "{a5c2c114}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "ac560614-1ee5-4f93-b00a-d9fe7ecf7150",
-                        "Var": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "NumInhibs",
-                            "__type": "IntTableSet"
-                        },
-                        "__type": "{851b8dc5}"
-                    },
-                    {
-                        "{d851ffa3}": "707780d0-b3a7-4ce0-b70a-481f6ec98f64",
-                        "Var": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibRespawnTime",
-                            "__type": "FloatTableSet"
-                        },
-                        "__type": "{851b8dc5}"
-                    },
-                    {
-                        "{d851ffa3}": "ce79d375-735b-4b7c-857d-cf70ccfe0734",
-                        "Src": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{cca2a700}",
-                            "__type": "IntTableGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "1b26b3eb-21b0-47f7-b8d9-2521f1dc7c74",
-                        "Src": {
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "IsOwnInhibDown",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "d1ccdc6f-ffdd-4d43-91b7-f31a327b2fbb",
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "f95c820b-318e-43e1-a136-85d3287c4d3b",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "af064d11-ccd0-4f75-993f-3959a163fa11",
-                                    "Src": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{38c19901}",
-                                        "__type": "ScriptTableGet"
-                                    },
-                                    "Dest": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "WaveSpawnIntervalSecs",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "ScriptCommentBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnUpdate": {
-                "blocks": [
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "functions": {
-            "{b0a21c98}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "1bf3c672-6ac6-4961-9456-7c4950209132",
-                        "Formula": "iv.InhibCount - 1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    {
-                        "{d851ffa3}": "8eeadf0f-5d64-4776-b725-d5cb53e6d160",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{34ada8b9}",
-                                "__type": "BoolTableGet"
-                            },
-                            "Value2": {
-                                "value": true,
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "30d03231-356f-4e07-ab67-78188f5ba4b1",
-                                    "Src": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "Dest": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "IsOwnInhibDown",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "392542b6-03c7-44b9-b876-861fda3808ec",
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "bfad2086-abb7-488f-907d-f509e0cf1add",
-                                                "__type": "ScriptCommentBlock"
-                                            },
-                                            null
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "ScriptCommentBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "71e430c9-1fc8-4413-ac35-b0d5b1ad21a4",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{a5c2c114}",
-                            "FunctionName": "{f01367a8}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "{8c54e274}": [
-                        {
-                            "Input": {
-                                "Var": "IsSameLane",
-                                "__type": "BoolTableSet"
-                            },
-                            "__type": "{2330a302}"
-                        }
-                    ],
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{445f9dee}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "1c59278f-8b36-4a70-9b79-03cfdabf576b",
-                        "Formula": "iv.InhibCount + 1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibCount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    {
-                        "{d851ffa3}": "c68817e3-b3da-4acb-a488-2c8545dcda1e",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{34ada8b9}",
-                                "__type": "BoolTableGet"
-                            },
-                            "Value2": {
-                                "value": true,
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "5768aea0-a84e-48cb-b8e3-659aa986f463",
-                                    "Src": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "Dest": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "IsOwnInhibDown",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "e761f795-9ade-4e88-949a-9cfc6243d6d6",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{a5c2c114}",
-                            "FunctionName": "{f01367a8}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "{8c54e274}": [
-                        {
-                            "Input": {
-                                "Var": "IsSameLane",
-                                "__type": "BoolTableSet"
-                            },
-                            "__type": "{2330a302}"
-                        }
-                    ],
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{f01367a8}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "cff9dffa-5f1b-46dd-97e6-2f7595a4aea6",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{fab4012b}",
-                                "__type": "BoolTableGet"
-                            },
-                            "Value2": {
-                                "value": true,
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "f1f69aed-ca8a-47c4-b7ff-4bbde84a5ea2",
-                                    "MinionType": 6,
-                                    "OverrideBehavior": {
-                                        "__type": "ConstantWaveBehavior"
-                                    },
-                                    "__type": "{ed124985}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "3203865a-0d22-44d3-8a70-94da16608534",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "b6d7a5bf-1ed9-4253-90d6-c3ae42c95298",
-                                    "MinionType": 6,
-                                    "__type": "{ed124985}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "ScriptFunction"
-            }
-        },
-        "{ee26c73f}": {
-            "{cca2a700}": {
-                "value": 3,
-                "__type": "IntGet"
-            },
-            "{fe88a41a}": {
-                "value": 250.0,
-                "__type": "FloatGet"
-            },
-            "{38c19901}": {
-                "value": 25,
-                "__type": "IntGet"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{a7e822cf}": {
-        "ScriptName": "HA_Hexgate_Manager_Bloom",
-        "path": "{a7e822cf}",
-        "functions": {
-            "{d28a18bc}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "ed3359b2-449a-4b4c-944c-22dc7ab53e6c",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{8beaad01}",
-                            "__type": "{132b63da}"
-                        },
-                        "__type": "{3aa63a24}"
-                    },
-                    {
-                        "{d851ffa3}": "539eff28-0f06-43fa-a226-87eb7e3a3ff4",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{67ce850d}",
-                            "__type": "{132b63da}"
-                        },
-                        "__type": "{3aa63a24}"
-                    },
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    {
-                        "{d851ffa3}": "f7066d36-a976-4fe1-b1db-03f4a2df53bc",
-                        "Target": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{4e74c07b}",
-                            "FunctionName": "{9c2714b0}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "FunctionDefinition": {
-                            "{8c54e274}": {
-                                "{b903b6ac}": null
-                            },
-                            "{de888209}": {
-                                "{72cab365}": {
-                                    "Var": "OrderHexgate",
-                                    "__type": "ScriptTableSet"
-                                }
-                            },
-                            "__type": "{2a2c82dc}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    },
-                    {
-                        "{d851ffa3}": "9d089bc9-1233-4404-ae4a-c1ebfc0a6f2f",
-                        "Target": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{4e74c07b}",
-                            "FunctionName": "{9c2714b0}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "FunctionDefinition": {
-                            "{8c54e274}": {
-                                "{b903b6ac}": null
-                            },
-                            "{de888209}": {
-                                "{72cab365}": {
-                                    "Var": "ChaosHexgate",
-                                    "__type": "ScriptTableSet"
-                                }
-                            },
-                            "__type": "{2a2c82dc}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    },
-                    null,
-                    null,
-                    null,
-                    null
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            }
-        },
-        "{ee26c73f}": {
-            "{8beaad01}": {
-                "__type": "{72651449}"
-            },
-            "{67ce850d}": {
-                "__type": "{72651449}"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{b03b6215}": {
-        "ScriptName": "HA_FountainTurret",
-        "path": "{b03b6215}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "ec8b55be-be1d-475e-b744-8d482daacb5a",
-                        "value": {
-                            "__type": "BoolGet"
-                        },
-                        "__type": "SetTargetableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "37414769-33c0-4146-8255-b0201b776d76",
-                        "value": {
-                            "value": true,
-                            "__type": "BoolGet"
-                        },
-                        "__type": "SetInvulnerableBlock"
-                    },
-                    null,
-                    null,
-                    {
-                        "{d851ffa3}": "069f40c1-e4b9-4c54-8ddd-2d4e0308cd23",
-                        "Src": {
-                            "__type": "IntGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Count",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnUpdate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "bc463b38-64e5-46ea-9821-a01e6e15a2c2",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "COUNT",
-                                "__type": "IntTableGet"
-                            },
-                            "Operation": 4,
-                            "Value2": {
-                                "value": 30,
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "bd8e8bb3-c687-41e5-88ac-2ade0a62639e",
-                        "Formula": "iv.Count + 1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Count",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{dc696ceb}": {
-        "ScriptName": "HA_Inhib",
-        "path": "{dc696ceb}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "0c103530-c49b-4db0-a45b-0613b062b850",
-                        "Src": {
-                            "value": true,
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "IsAlive",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "a562abf0-0abb-4471-a07f-5f9a7bc13595",
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnEnterAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "e5183293-791f-4969-8c78-68be33aaf558",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{0081cd16}",
-                                "__type": "BoolTableGet"
-                            },
-                            "Value2": {
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "14378c38-c1ee-469d-ba97-8f1547885864",
-                                    "__type": "ScriptCommentBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "8c7d6621-9a00-400f-84cd-51d864a05ced",
-                                    "__type": "ScriptCommentBlock"
-                                },
-                                {
-                                    "IsDisabled": true,
-                                    "{d851ffa3}": "c6cfc7f6-55d0-4352-93d8-400d5c440f9b",
-                                    "Target": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{8c632c77}",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "callback": {
-                                        "Script": "{6dd39b5e}",
-                                        "FunctionName": "{445f9dee}",
-                                        "__type": "{f6e1bec7}"
-                                    },
-                                    "FunctionDefinition": {
-                                        "{8c54e274}": {
-                                            "{34ada8b9}": {
-                                                "value": true,
-                                                "__type": "BoolGet"
-                                            }
-                                        },
-                                        "__type": "{2a2c82dc}"
-                                    },
-                                    "__type": "{6c93a1b4}"
-                                },
-                                {
-                                    "{d851ffa3}": "e281bbe5-1c41-426d-81bb-9cfad62ef8aa",
-                                    "Target": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "nexus",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "callback": {
-                                        "Script": "{47fffe42}",
-                                        "FunctionName": "{445f9dee}",
-                                        "__type": "{f6e1bec7}"
-                                    },
-                                    "__type": "{6c93a1b4}"
-                                },
-                                {
-                                    "{d851ffa3}": "55b2bc6d-5d24-4f8e-a58a-400b1a2ddd05",
-                                    "Target": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{9e71dae2}",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "__type": "{4b30a085}"
-                                },
-                                {
-                                    "{d851ffa3}": "d6963735-8fa1-46e7-b5d1-b3b1412073cc",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "2a443ad0-7df9-4b88-b50c-bbb797c8c340",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "85cb5ada-ced2-411a-babd-a5a8955d3169",
-                        "Src": {
-                            "value": true,
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "IsAlive",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnExitAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "72ae5145-74d3-4f69-b4ea-bb1c3e3ca1b3",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{8c632c77}",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{a5c2c114}",
-                            "FunctionName": "{b0a21c98}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "FunctionDefinition": {
-                            "{8c54e274}": {
-                                "{34ada8b9}": {
-                                    "value": true,
-                                    "__type": "BoolGet"
-                                }
-                            },
-                            "__type": "{2a2c82dc}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    },
-                    {
-                        "{d851ffa3}": "bf56cf80-231a-4cbc-8e7a-a99d7bdce043",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "nexus",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{47fffe42}",
-                            "FunctionName": "{b0a21c98}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    },
-                    {
-                        "{d851ffa3}": "cfd4defd-132f-45ed-a5ca-389b6ca48525",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{9e71dae2}",
-                            "__type": "{132b63da}"
-                        },
-                        "__type": "{3aa63a24}"
-                    },
-                    {
-                        "{d851ffa3}": "17ff7d21-8b47-4e65-81f1-00232dacb6df",
-                        "Src": {
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "IsAlive",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "6b80991c-d089-40e5-aced-930e4b72ef84",
-                        "String1": {
-                            "value": "r:",
-                            "__type": "StringGet"
-                        },
-                        "String2": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{fe578ea5}",
-                            "__type": "StringTableGet"
-                        },
-                        "Result": {
-                            "Var": "ResourceKey",
-                            "__type": "StringTableSet"
-                        },
-                        "__type": "ConcatenateStringsBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "CustomSequences": {
-            "{bca134f9}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "2eb0278d-0cef-4d26-bb4c-4bf08d1d7300",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "IsTargetable",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": true,
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "863f5395-ea28-4a67-be44-bc6e5a2333f8",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "5dee6a05-e58f-44a5-947d-17dd5e53b11b",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "740bcbc7-242f-4f57-8045-c13c79093b24",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "c4a5cfaf-eb12-487c-afb7-a232fea915f5",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "caa429f3-3be4-4963-98bd-b5ea596116b4",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "{ee26c73f}": {
-            "nexus": {
-                "__type": "{72651449}"
-            },
-            "{9e71dae2}": {
-                "__type": "{72651449}"
-            },
-            "{8c632c77}": {
-                "__type": "{72651449}"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{19fa14b6}": {
-        "ScriptName": "NexusTurret",
-        "path": "{19fa14b6}",
-        "sequences": {
-            "GameEntityOnExitAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "8a91187c-6207-408c-8402-82f8244879c6",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "nexus",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{2baee48c}",
-                            "FunctionName": "{3d35c511}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "{ee26c73f}": {
-            "nexus": {
-                "__type": "{72651449}"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{2baee48c}": {
-        "ScriptName": "Nexus",
-        "path": "{2baee48c}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "a3b311b1-6703-46a3-9dae-462e724a34bc",
-                        "Src": {
-                            "value": true,
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibitorUp",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "82407a4a-ba7d-444a-9210-be6fdf6fc6a6",
-                        "Src": {
-                            "value": 2,
-                            "__type": "IntGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "TowersUp",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "3995c6f9-4e7c-4f29-a873-aae1c7cdd3b5",
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "577895b3-d993-499e-90d7-5b178d42f1b8",
-                        "value": {
-                            "value": true,
-                            "__type": "BoolGet"
-                        },
-                        "__type": "SetInvulnerableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "353ee0be-609a-4e77-9293-dfbc90e59502",
-                        "value": {
-                            "__type": "BoolGet"
-                        },
-                        "__type": "SetTargetableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnExitAlive": {
-                "blocks": [
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "functions": {
-            "{8224cd5a}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "e99f83cb-3c74-42d6-9371-d38ac043a993",
-                        "Src": {
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibitorUp",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "ea82e240-f425-462c-9bbe-bf1332ab75d1",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{2baee48c}",
-                            "FunctionName": "{bca134f9}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{4bb0ac3f}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "1bb15be7-44f2-4d55-bb56-9f9701b0766e",
-                        "Src": {
-                            "value": true,
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "InhibitorUp",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "916582d9-958b-458e-b44c-3531442b742a",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{2baee48c}",
-                            "FunctionName": "{bca134f9}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{3d35c511}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "930f00f8-c372-416c-8e88-287439c3a9fc",
-                        "Formula": "iv.TowersUp - 1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "TowersUp",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "{15ebaa9c}"
-                    },
-                    {
-                        "{d851ffa3}": "b3c558c9-7d06-4aa2-8b17-1e781a53643b",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{2baee48c}",
-                            "FunctionName": "{bca134f9}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "{bca134f9}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "ebfce5f5-c274-4ff5-a7a6-634fcaa6385e",
-                        "Var": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "{851d2116}"
-                        },
-                        "__type": "{851b8dc5}"
-                    },
-                    {
-                        "{d851ffa3}": "612498ee-7431-4898-8a09-d762b2f19da1",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{550a8564}",
-                                "__type": "BoolTableGet"
-                            },
-                            "Value2": {
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "2864f4d6-4cee-4a56-9add-f84b011af63d",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{f21f4cf6}",
-                                "__type": "IntTableGet"
-                            },
-                            "Value2": {
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "type": 1,
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "b9e3c118-181b-4172-9a6f-f76189809159",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "3aa7ba8b-c005-4499-9c45-5068e7eaa0c4",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "63c5f410-ddad-4c48-b6bd-cc2ebf683be7",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "634daae1-d65d-43c5-af34-58eb47ca8278",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "99f08836-a482-43a8-918e-04d27b5a76ad",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "ScriptFunction"
-            }
-        },
-        "{ee26c73f}": {
-            "enemyTeam": null
-        },
-        "__type": "{e2b34203}"
-    },
-    "{3606c7e5}": {
-        "ScriptName": "Inhibitor",
-        "path": "{3606c7e5}",
-        "sequences": {
-            "GameEntityOnExitAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "b6a8bc62-99cf-4f94-8a61-e4edce20a564",
-                        "Src": {
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "IsAlive",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "a82eef8d-04da-4e1b-86a1-e62dff569c94",
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "80f57ceb-7cb5-467b-aaad-4be3f09f02e9",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "ea8da78c-c797-407a-9421-ac1e4b399b77",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "tag": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{e64c3ed3}",
-                            "__type": "{7dcd3672}"
-                        },
-                        "{421aee08}": {
-                            "Var": "Turret",
-                            "__type": "{851d2116}"
-                        },
-                        "__type": "{1d1499b7}"
-                    },
-                    {
-                        "{d851ffa3}": "aba9b731-a197-49b9-995c-57b51fb763aa",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{1bb14484}",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{b36651d2}",
-                            "FunctionName": "{6fb43260}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    },
-                    {
-                        "{d851ffa3}": "6374d7b5-ab24-4dbe-b463-21143eb07b27",
-                        "Target": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "nexus",
-                            "__type": "{132b63da}"
-                        },
-                        "callback": {
-                            "Script": "{2baee48c}",
-                            "FunctionName": "{8224cd5a}",
-                            "__type": "{f6e1bec7}"
-                        },
-                        "__type": "{6c93a1b4}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnEnterAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "68837d36-2e13-457a-b64b-d4e23617ff9d",
-                        "__type": "ScriptCommentBlock"
-                    },
-                    {
-                        "{d851ffa3}": "785224fe-11ca-47a7-9139-bbebb9d4cd91",
-                        "Condition": {
-                            "Value1": {
-                                "Table": {
-                                    "__type": "InstanceVars"
-                                },
-                                "Var": "{0081cd16}",
-                                "__type": "BoolTableGet"
-                            },
-                            "Value2": {
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "4f97a8b7-bb84-4b8f-be67-90706f4ee9dd",
-                                    "Src": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "Dest": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "IsAlive",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "c112651a-3894-498f-84c5-5920ef84934c",
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetTargetableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "d6d67cc8-9045-4a5c-9372-72828bfeb081",
-                                    "value": {
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetInvulnerableBlock"
-                                },
-                                {
-                                    "{d851ffa3}": "f968560a-0fbc-42ec-bfe6-8940bfe8a3dc",
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "603525e7-00fb-4e60-bd4f-2a2d08dbae05",
-                                                "value": {
-                                                    "__type": "BoolGet"
-                                                },
-                                                "__type": "SetTargetableBlock"
-                                            },
-                                            {
-                                                "{d851ffa3}": "3e538d34-bff7-460b-a747-43c30c8e99a7",
-                                                "value": {
-                                                    "value": true,
-                                                    "__type": "BoolGet"
-                                                },
-                                                "__type": "SetInvulnerableBlock"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "tag": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{e64c3ed3}",
-                                        "__type": "{7dcd3672}"
-                                    },
-                                    "{421aee08}": {
-                                        "Var": "Turret",
-                                        "__type": "{851d2116}"
-                                    },
-                                    "__type": "{1d1499b7}"
-                                },
-                                {
-                                    "{d851ffa3}": "c22a4b62-35dc-4552-b9bc-62c3a803657f",
-                                    "Target": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "{1bb14484}",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "callback": {
-                                        "Script": "{b36651d2}",
-                                        "FunctionName": "DisableSuperMinions",
-                                        "__type": "{f6e1bec7}"
-                                    },
-                                    "__type": "{6c93a1b4}"
-                                },
-                                {
-                                    "{d851ffa3}": "4d796a2d-375d-40b6-8116-f7ac62a24e60",
-                                    "Target": {
-                                        "Table": {
-                                            "__type": "InstanceVars"
-                                        },
-                                        "Var": "nexus",
-                                        "__type": "{132b63da}"
-                                    },
-                                    "callback": {
-                                        "Script": "{2baee48c}",
-                                        "FunctionName": "{4bb0ac3f}",
-                                        "__type": "{f6e1bec7}"
-                                    },
-                                    "__type": "{6c93a1b4}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "879177f7-f28d-4294-9a56-dd8188e58a69",
-                        "Src": {
-                            "value": true,
-                            "__type": "BoolGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "IsAlive",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "f34fe765-ba47-477d-a844-357e7cd9baeb",
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "{ee26c73f}": {
-            "{e64c3ed3}": {
-                "__type": "{5d85166e}"
-            },
-            "{1bb14484}": {
-                "__type": "{72651449}"
-            },
-            "nexus": {
-                "__type": "{72651449}"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{5ba66033}": {
-        "ScriptName": "ActivateStructuresAfterDelay",
-        "path": "{5ba66033}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "{ee26c73f}": {
-            "{164a7d5e}": {
-                "__type": "{5d85166e}"
-            },
-            "{66dcb3ed}": {
-                "__type": "{5d85166e}"
-            },
-            "Delay": {
-                "__type": "IntGet"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{604a3ea2}": {
-        "ScriptName": "BloomHexgate_Clicker",
-        "path": "{604a3ea2}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "3749f28c-14fa-45a7-ac39-f07e43a0e102",
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null,
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "ScriptCommentBlock"
-                    },
-                    {
-                        "{d851ffa3}": "761ce789-779c-4581-ba30-d4347655f8e9",
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                null,
-                                null,
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "ScriptCommentBlock"
-                    },
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{60c07ff0}": {
-        "ScriptName": "DeactivateOnDeath",
-        "path": "{60c07ff0}",
-        "sequences": {
-            "GameEntityOnExitAlive": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "9a3c656c-6d4c-44a1-ba42-794159e1ac04",
-                        "Target": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "__type": "{4b30a085}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{7be773ea}": {
-        "ScriptName": "ARAM_TestMode",
-        "path": "{7be773ea}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "f21e38cd-f334-4af9-8f11-1f350090ba63",
-                        "__type": "ScriptCommentBlock"
-                    },
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnInit": {
-                "blocks": [
-                    {
-                        "IsDisabled": true,
-                        "{d851ffa3}": "7c088c9e-96ed-4d77-bfd2-68e15ec41663",
-                        "ToSay": {
-                            "value": "test test test",
-                            "__type": "StringGet"
-                        },
-                        "__type": "DebugPrintToChatBlock"
-                    },
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{b36651d2}": {
-        "ScriptName": "Barracks",
-        "path": "{b36651d2}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "3544926a-bb4b-494c-b61c-64cf842b8a2c",
-                        "Src": {
-                            "Var": "owner",
-                            "__type": "{132b63da}"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "Owner",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "functions": {
-            "{6fb43260}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "5d313df0-fbec-4544-a507-c6074cb945e1",
-                        "MinionType": 7,
-                        "OverrideBehavior": {
-                            "SpawnCount": 1,
-                            "__type": "ConstantWaveBehavior"
-                        },
-                        "__type": "{ed124985}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            },
-            "DisableSuperMinions": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "f2299fce-66e0-4202-9d13-a0dd0221f1a9",
-                        "MinionType": 7,
-                        "OverrideBehavior": {
-                            "__type": "ConstantWaveBehavior"
-                        },
-                        "__type": "{ed124985}"
-                    }
-                ],
-                "FunctionDef": {
-                    "__type": "{eca2da9a}"
-                },
-                "__type": "ScriptFunction"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{d49c9773}": {
-        "ScriptName": "ActivateSuperMinionsOnDeath",
-        "path": "{d49c9773}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "__type": "RootScriptSequence"
-            }
-        },
-        "{ee26c73f}": {
-            "{164a7d5e}": {
-                "__type": "{5d85166e}"
-            },
-            "{66dcb3ed}": {
-                "__type": "{5d85166e}"
-            },
-            "Delay": {
-                "__type": "IntGet"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{eea90bc6}": {
-        "ScriptName": "InhibitorZaun_MinionPowerup",
-        "path": "{eea90bc6}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "9755edbc-1832-4982-8c18-dfa9becccb7f",
-                        "ToSay": {
-                            "value": "PoweredUp",
-                            "__type": "StringGet"
-                        },
-                        "__type": "DebugPrintToChatBlock"
-                    },
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnUpdate": {
-                "blocks": [
-                    null
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "GameEntityOnDeactivate": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "604b1796-c376-4e92-aa79-1207da751758",
-                        "ToSay": {
-                            "value": "PoweredUp Re move",
-                            "__type": "StringGet"
-                        },
-                        "__type": "DebugPrintToChatBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
     },
     "{3afc663c}": {
         "AugmentNameId": "ARAM_StatAnvil_Hybrid1",
@@ -517700,12 +514401,6 @@
         "LoadingScreenBackground": "ASSETS/UX/LoadingScreen/KingPoroBackground.tex",
         "__type": "{60e2ec74}"
     },
-    "{672d9495}": {
-        "itemLists": {
-            "Kiwi_Apricot": "{0e488bc3}"
-        },
-        "__type": "{3d900309}"
-    },
     "{a095d094}": {
         "{8794a0e6}": {
             "0": 4,
@@ -523874,8 +520569,7 @@
             "{c715905f}",
             "{910c6c3a}",
             "{cd8a7ec3}",
-            "{083f90aa}",
-            "{672d9495}"
+            "{083f90aa}"
         ],
         "ConfigsClient": [
             "{caf87735}",
@@ -529220,7 +525914,10 @@
                 "evtSmartPlusSelfCastRoleBound": "[]",
                 "evtSmartCastWithIndicatorRoleBound": "[]",
                 "evtSmartPlusSelfCastWithIndicatorRoleBound": "[]",
-                "evtNormalCastRoleBound": "[]"
+                "evtNormalCastRoleBound": "[]",
+                "evtChatModeReturnPressed": "[]",
+                "evtOpenChat": "[]",
+                "evtOpenChatAll": "[]"
             },
             "__type": "{5a92b195}"
         },
@@ -529469,7 +526166,10 @@
             "evtPracticeToolInc100Health": "[]",
             "evtPracticeToolDec100Health": "[]",
             "evtPracticeToolInc10Resistance": "[]",
-            "evtPracticeToolDec10Resistance": "[]"
+            "evtPracticeToolDec10Resistance": "[]",
+            "evtChatModeReturnPressed": "[]",
+            "evtOpenChat": "[]",
+            "evtOpenChatAll": "[]"
         },
         "{911d1120}": true,
         "__type": "{5a92b195}"
@@ -531885,7 +528585,8 @@
             "OnUnanimousSurrenderVoteStart": "{56792667}",
             "OnUnanimousAfkSurrenderAllowed": "{da9f1581}",
             "OnShutdown": "{8769e77d}",
-            "OnReviveAlly": "{a804359c}"
+            "OnReviveAlly": "{a804359c}",
+            "OnIGNBSurrenderVoteStart": "{2cb23ff8}"
         },
         "__type": "AnnouncementMap"
     },
@@ -532055,6 +528756,7 @@
             "Characters/PetChibiSyndra",
             "Characters/PetStyleTwoThresh",
             "Characters/PetStyleTwoMordekaiser",
+            "Characters/PetStyleTwoLucian",
             "Characters/PetBubbleTeaBear",
             "Characters/PetChibiSoraka",
             "Characters/PetSpaceCat",
@@ -532213,346 +528915,6 @@
             "Characters/URF_FeeneyPult"
         ],
         "__type": "MapCharacterList"
-    },
-    "{0e488bc3}": {
-        "mItems": [
-            "Items/550005",
-            "Items/550001",
-            "Items/550002",
-            "Items/550003",
-            "Items/550004",
-            "Items/550006",
-            "Items/550007"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{1ced71a9}": {
-        "mItems": [
-            "Items/3901",
-            "Items/3902",
-            "Items/3903",
-            "Items/2422",
-            "Items/2403",
-            "Items/3600",
-            "Items/3599",
-            "Items/2052",
-            "Items/2010",
-            "Items/3040",
-            "Items/3042",
-            "Items/3330",
-            "Items/3400",
-            "Items/2001",
-            "Items/1500",
-            "Items/1501",
-            "Items/1502",
-            "Items/1503",
-            "Items/1508",
-            "Items/1509",
-            "Items/1506",
-            "Items/1507",
-            "Items/1520",
-            "Items/2007",
-            "Items/1510",
-            "Items/1511",
-            "Items/1512",
-            "Items/1515",
-            "Items/7050",
-            "Items/1521",
-            "Items/1522",
-            "Items/2530",
-            "Items/1524",
-            "Items/1505",
-            "Items/1523"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{265f7368}": {
-        "mItems": [
-            "Items/2141"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{3272f8d3}": {
-        "mItems": [
-            "Items/994403",
-            "Items/3039",
-            "Items/123430",
-            "Items/228002",
-            "Items/1111",
-            "Items/6032",
-            "Items/3146",
-            "Items/223069",
-            "Items/124011",
-            "Items/220008"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{413f2f94}": {
-        "mItems": [
-            "Items/1001",
-            "Items/1004",
-            "Items/1006",
-            "Items/1011",
-            "Items/1018",
-            "Items/1026",
-            "Items/1027",
-            "Items/1028",
-            "Items/1029",
-            "Items/1031",
-            "Items/1033",
-            "Items/1036",
-            "Items/1037",
-            "Items/1038",
-            "Items/1042",
-            "Items/1043",
-            "Items/1052",
-            "Items/1053",
-            "Items/1057",
-            "Items/1058",
-            "Items/2003",
-            "Items/6695",
-            "Items/6662",
-            "Items/2031",
-            "Items/6609",
-            "Items/6664",
-            "Items/6694",
-            "Items/2065",
-            "Items/2138",
-            "Items/2139",
-            "Items/2140",
-            "Items/6676",
-            "Items/6675",
-            "Items/2420",
-            "Items/2421",
-            "Items/6660",
-            "Items/3003",
-            "Items/3006",
-            "Items/3009",
-            "Items/3011",
-            "Items/3020",
-            "Items/3024",
-            "Items/3031",
-            "Items/3033",
-            "Items/3035",
-            "Items/3036",
-            "Items/6655",
-            "Items/6653",
-            "Items/3044",
-            "Items/3046",
-            "Items/3047",
-            "Items/3050",
-            "Items/3051",
-            "Items/3053",
-            "Items/3057",
-            "Items/3065",
-            "Items/3066",
-            "Items/3067",
-            "Items/3068",
-            "Items/3070",
-            "Items/3071",
-            "Items/3072",
-            "Items/3074",
-            "Items/3075",
-            "Items/3076",
-            "Items/3077",
-            "Items/3078",
-            "Items/3082",
-            "Items/3083",
-            "Items/3085",
-            "Items/3086",
-            "Items/3089",
-            "Items/3091",
-            "Items/3094",
-            "Items/3100",
-            "Items/3102",
-            "Items/3107",
-            "Items/3108",
-            "Items/3109",
-            "Items/3110",
-            "Items/3111",
-            "Items/3113",
-            "Items/3114",
-            "Items/3115",
-            "Items/3116",
-            "Items/3117",
-            "Items/3123",
-            "Items/3124",
-            "Items/3133",
-            "Items/3134",
-            "Items/3135",
-            "Items/3139",
-            "Items/3140",
-            "Items/3142",
-            "Items/3143",
-            "Items/3145",
-            "Items/3152",
-            "Items/3153",
-            "Items/3155",
-            "Items/3156",
-            "Items/3157",
-            "Items/3158",
-            "Items/3165",
-            "Items/3179",
-            "Items/6333",
-            "Items/3190",
-            "Items/6693",
-            "Items/3211",
-            "Items/3222",
-            "Items/6631",
-            "Items/6692",
-            "Items/3504",
-            "Items/3508",
-            "Items/3742",
-            "Items/3748",
-            "Items/3801",
-            "Items/3802",
-            "Items/3814",
-            "Items/3004",
-            "Items/6673",
-            "Items/6672",
-            "Items/3916",
-            "Items/4005",
-            "Items/4401",
-            "Items/4628",
-            "Items/4629",
-            "Items/4630",
-            "Items/4632",
-            "Items/4633",
-            "Items/4635",
-            "Items/4636",
-            "Items/4637",
-            "Items/4642",
-            "Items/6616",
-            "Items/6617",
-            "Items/1516",
-            "Items/1517",
-            "Items/1518",
-            "Items/1519",
-            "Items/8001",
-            "Items/6696",
-            "Items/3119",
-            "Items/3121",
-            "Items/8020",
-            "Items/4645",
-            "Items/6665",
-            "Items/3161",
-            "Items/3803",
-            "Items/6657",
-            "Items/6620",
-            "Items/2019",
-            "Items/3147",
-            "Items/3118",
-            "Items/4646",
-            "Items/3137",
-            "Items/6690",
-            "Items/6698",
-            "Items/6699",
-            "Items/6701",
-            "Items/3073",
-            "Items/3302",
-            "Items/3002",
-            "Items/2502",
-            "Items/2504",
-            "Items/6621",
-            "Items/6610",
-            "Items/2020",
-            "Items/2021",
-            "Items/2022",
-            "Items/2150",
-            "Items/2151",
-            "Items/2152",
-            "Items/2501",
-            "Items/2503",
-            "Items/2508",
-            "Items/3144",
-            "Items/6670",
-            "Items/3032",
-            "Items/3181",
-            "Items/8010",
-            "Items/3084",
-            "Items/2510",
-            "Items/2512",
-            "Items/2517",
-            "Items/2522",
-            "Items/2523",
-            "Items/2524",
-            "Items/2525",
-            "Items/2526",
-            "Items/3087",
-            "Items/3097",
-            "Items/3146",
-            "Items/3008"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{4270bd82}": {
-        "mItems": [
-            "Items/126697",
-            "Items/4004",
-            "Items/4003"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{53f3ac3c}": {
-        "mItems": [
-            "Items/2051",
-            "Items/3112",
-            "Items/3177",
-            "Items/3184"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{b58cb867}": {
-        "mItems": [
-            "Items/3901",
-            "Items/3902",
-            "Items/3903",
-            "Items/2422",
-            "Items/2403",
-            "Items/3600",
-            "Items/3599",
-            "Items/2052",
-            "Items/2010",
-            "Items/3040",
-            "Items/3042",
-            "Items/3330",
-            "Items/3400",
-            "Items/2001",
-            "Items/1500",
-            "Items/1501",
-            "Items/1502",
-            "Items/1503",
-            "Items/1508",
-            "Items/1509",
-            "Items/1506",
-            "Items/1507",
-            "Items/1520",
-            "Items/2007",
-            "Items/1510",
-            "Items/1511",
-            "Items/1512",
-            "Items/1515",
-            "Items/7050",
-            "Items/1521",
-            "Items/1522"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{becd97c7}": {
-        "mItems": [
-            "Items/1054",
-            "Items/1055",
-            "Items/1056",
-            "Items/1086",
-            "Items/1120"
-        ],
-        "__type": "GameModeItemList"
-    },
-    "{cd39d678}": {
-        "mItems": [
-            "Items/3363"
-        ],
-        "__type": "GameModeItemList"
     },
     "{5ec67f3f}": {
         "RespawnPoints": [
@@ -532887,6 +529249,334 @@
         "mPBITipDurationOnLoadingScreen": 60.0,
         "mDurationInGame": 25.0,
         "__type": "LoadScreenTipConfiguration"
+    },
+    "{1ced71a9}": {
+        "mItems": [
+            "Items/3901",
+            "Items/3902",
+            "Items/3903",
+            "Items/2422",
+            "Items/2403",
+            "Items/3600",
+            "Items/3599",
+            "Items/2052",
+            "Items/2010",
+            "Items/3040",
+            "Items/3042",
+            "Items/3330",
+            "Items/3400",
+            "Items/2001",
+            "Items/1500",
+            "Items/1501",
+            "Items/1502",
+            "Items/1503",
+            "Items/1508",
+            "Items/1509",
+            "Items/1506",
+            "Items/1507",
+            "Items/1520",
+            "Items/2007",
+            "Items/1510",
+            "Items/1511",
+            "Items/1512",
+            "Items/1515",
+            "Items/7050",
+            "Items/1521",
+            "Items/1522",
+            "Items/2530",
+            "Items/1524",
+            "Items/1505",
+            "Items/1523"
+        ],
+        "__type": "GameModeItemList"
+    },
+    "{265f7368}": {
+        "mItems": [
+            "Items/2141"
+        ],
+        "__type": "GameModeItemList"
+    },
+    "{3272f8d3}": {
+        "mItems": [
+            "Items/994403",
+            "Items/3039",
+            "Items/123430",
+            "Items/228002",
+            "Items/1111",
+            "Items/6032",
+            "Items/3146",
+            "Items/223069",
+            "Items/124011",
+            "Items/220008"
+        ],
+        "__type": "GameModeItemList"
+    },
+    "{413f2f94}": {
+        "mItems": [
+            "Items/1001",
+            "Items/1004",
+            "Items/1006",
+            "Items/1011",
+            "Items/1018",
+            "Items/1026",
+            "Items/1027",
+            "Items/1028",
+            "Items/1029",
+            "Items/1031",
+            "Items/1033",
+            "Items/1036",
+            "Items/1037",
+            "Items/1038",
+            "Items/1042",
+            "Items/1043",
+            "Items/1052",
+            "Items/1053",
+            "Items/1057",
+            "Items/1058",
+            "Items/2003",
+            "Items/6695",
+            "Items/6662",
+            "Items/2031",
+            "Items/6609",
+            "Items/6664",
+            "Items/6694",
+            "Items/2065",
+            "Items/2138",
+            "Items/2139",
+            "Items/2140",
+            "Items/6676",
+            "Items/6675",
+            "Items/2420",
+            "Items/2421",
+            "Items/6660",
+            "Items/3003",
+            "Items/3006",
+            "Items/3009",
+            "Items/3011",
+            "Items/3020",
+            "Items/3024",
+            "Items/3031",
+            "Items/3033",
+            "Items/3035",
+            "Items/3036",
+            "Items/6655",
+            "Items/6653",
+            "Items/3044",
+            "Items/3046",
+            "Items/3047",
+            "Items/3050",
+            "Items/3051",
+            "Items/3053",
+            "Items/3057",
+            "Items/3065",
+            "Items/3066",
+            "Items/3067",
+            "Items/3068",
+            "Items/3070",
+            "Items/3071",
+            "Items/3072",
+            "Items/3074",
+            "Items/3075",
+            "Items/3076",
+            "Items/3077",
+            "Items/3078",
+            "Items/3082",
+            "Items/3083",
+            "Items/3085",
+            "Items/3086",
+            "Items/3089",
+            "Items/3091",
+            "Items/3094",
+            "Items/3100",
+            "Items/3102",
+            "Items/3107",
+            "Items/3108",
+            "Items/3109",
+            "Items/3110",
+            "Items/3111",
+            "Items/3113",
+            "Items/3114",
+            "Items/3115",
+            "Items/3116",
+            "Items/3117",
+            "Items/3123",
+            "Items/3124",
+            "Items/3133",
+            "Items/3134",
+            "Items/3135",
+            "Items/3139",
+            "Items/3140",
+            "Items/3142",
+            "Items/3143",
+            "Items/3145",
+            "Items/3152",
+            "Items/3153",
+            "Items/3155",
+            "Items/3156",
+            "Items/3157",
+            "Items/3158",
+            "Items/3165",
+            "Items/3179",
+            "Items/6333",
+            "Items/3190",
+            "Items/6693",
+            "Items/3211",
+            "Items/3222",
+            "Items/6631",
+            "Items/6692",
+            "Items/3504",
+            "Items/3508",
+            "Items/3742",
+            "Items/3748",
+            "Items/3801",
+            "Items/3802",
+            "Items/3814",
+            "Items/3004",
+            "Items/6673",
+            "Items/6672",
+            "Items/3916",
+            "Items/4005",
+            "Items/4401",
+            "Items/4628",
+            "Items/4629",
+            "Items/4630",
+            "Items/4632",
+            "Items/4633",
+            "Items/4635",
+            "Items/4636",
+            "Items/4637",
+            "Items/4642",
+            "Items/6616",
+            "Items/6617",
+            "Items/1516",
+            "Items/1517",
+            "Items/1518",
+            "Items/1519",
+            "Items/8001",
+            "Items/6696",
+            "Items/3119",
+            "Items/3121",
+            "Items/8020",
+            "Items/4645",
+            "Items/6665",
+            "Items/3161",
+            "Items/3803",
+            "Items/6657",
+            "Items/6620",
+            "Items/2019",
+            "Items/3147",
+            "Items/3118",
+            "Items/4646",
+            "Items/3137",
+            "Items/6690",
+            "Items/6698",
+            "Items/6699",
+            "Items/6701",
+            "Items/3073",
+            "Items/3302",
+            "Items/3002",
+            "Items/2502",
+            "Items/2504",
+            "Items/6621",
+            "Items/6610",
+            "Items/2020",
+            "Items/2021",
+            "Items/2022",
+            "Items/2150",
+            "Items/2151",
+            "Items/2152",
+            "Items/2501",
+            "Items/2503",
+            "Items/2508",
+            "Items/3144",
+            "Items/6670",
+            "Items/3032",
+            "Items/3181",
+            "Items/8010",
+            "Items/3084",
+            "Items/2510",
+            "Items/2512",
+            "Items/2517",
+            "Items/2522",
+            "Items/2523",
+            "Items/2524",
+            "Items/2525",
+            "Items/2526",
+            "Items/3087",
+            "Items/3097",
+            "Items/3146",
+            "Items/3008"
+        ],
+        "__type": "GameModeItemList"
+    },
+    "{4270bd82}": {
+        "mItems": [
+            "Items/126697",
+            "Items/4004",
+            "Items/4003"
+        ],
+        "__type": "GameModeItemList"
+    },
+    "{53f3ac3c}": {
+        "mItems": [
+            "Items/2051",
+            "Items/3112",
+            "Items/3177",
+            "Items/3184"
+        ],
+        "__type": "GameModeItemList"
+    },
+    "{b58cb867}": {
+        "mItems": [
+            "Items/3901",
+            "Items/3902",
+            "Items/3903",
+            "Items/2422",
+            "Items/2403",
+            "Items/3600",
+            "Items/3599",
+            "Items/2052",
+            "Items/2010",
+            "Items/3040",
+            "Items/3042",
+            "Items/3330",
+            "Items/3400",
+            "Items/2001",
+            "Items/1500",
+            "Items/1501",
+            "Items/1502",
+            "Items/1503",
+            "Items/1508",
+            "Items/1509",
+            "Items/1506",
+            "Items/1507",
+            "Items/1520",
+            "Items/2007",
+            "Items/1510",
+            "Items/1511",
+            "Items/1512",
+            "Items/1515",
+            "Items/7050",
+            "Items/1521",
+            "Items/1522"
+        ],
+        "__type": "GameModeItemList"
+    },
+    "{becd97c7}": {
+        "mItems": [
+            "Items/1054",
+            "Items/1055",
+            "Items/1056",
+            "Items/1086",
+            "Items/1120"
+        ],
+        "__type": "GameModeItemList"
+    },
+    "{cd39d678}": {
+        "mItems": [
+            "Items/3363"
+        ],
+        "__type": "GameModeItemList"
     },
     "Maps/Particles/HA/Bilgewater/BW_Snowball_Mis": {
         "complexEmitterDefinitionData": [
@@ -535303,6 +531993,17 @@
             "MakeLowerPriorityEventsObsolete": false,
             "Style": "{fa08bea1}",
             "ChatMessageKey": "game_announcement_OnEqualizeNotEnoughLevels",
+            "__type": "AnnouncementDefinitionData"
+        },
+        "__type": "ChatOnlyAnnouncementDefinition_Deprecated"
+    },
+    "{2cb23ff8}": {
+        "DefaultData": {
+            "priority": 1,
+            "CanBeMadeObsolete": false,
+            "MakeLowerPriorityEventsObsolete": false,
+            "Style": "{fa08bea1}",
+            "ChatMessageKey": "game_announcement_OnIGNBSurrenderVoteStart",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "ChatOnlyAnnouncementDefinition_Deprecated"

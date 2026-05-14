@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Valor เหยี่ยวเดมาเซียของ Quinn จะทำเครื่องหมาย<font color='#FFF673'>อ่อนแอ</font>ในทุก ๆ ช่วงเวลาหนึ่งบนตัวศัตรู การโจมตีปกติครั้งแรกของ Quinn กับเป้าหมายที่<font color='#FFF673'>อ่อนแอ</font>จะสร้างโบนัสความเสียหายกายภาพ"
+        "description": "Spell_QuinnPassive_Summary"
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Quinn เรียกให้ Valor เข้าจู่โจมสร้างความเสียหาย และปิดการมองเห็นของศัตรูในพื้นที่ทั้งหมด",
-            "dynamicDescription": "Quinn เรียก Valor ลงมาเพื่อพุ่งโจมตี ทำเครื่องหมาย<keywordMajor>เปราะบาง</keywordMajor>ใส่ศัตรูตัวแรกที่โดน ลดระยะการมองเห็นของพวกเขาเป็นเวลา @VisionReductionDuration@ วินาที และสร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage>ให้กับศัตรูที่อยู่โดยรอบ<br><br>หากศัตรูตัวแรกที่โดนไม่ใช่แชมเปี้ยน ศัตรูจะถูก<status>ปลดอาวุธ</status>เป็นเวลา @VisionReductionDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "ช่วยให้ Quinn เพิ่มความเร็วโจมตีและความเร็วเคลื่อนที่หลังจากที่เธอโจมตีใส่เป้าหมายที่ติดเครื่องหมาย<font color='#FFF673'>อ่อนแอ</font>อยู่แล้ว และสามารถกดใช้เพื่อให้ Valor เปิดพื้นที่รอบ ๆ เป็นบริเวณกว้างได้",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> การโจมตีศัตรูที่มีเครื่องหมาย<keywordMajor>เปราะบาง</keywordMajor>จะทำให้ Quinn ได้รับ<attackSpeed>ความเร็วโจมตี @AttackSpeedBonus*100@%</attackSpeed> และ<speed>ความเร็วเคลื่อนที่ @MovespeedAmount*100@%</speed> เป็นเวลา @BuffDuration@ วินาที<br><br><spellActive>กดใช้:</spellActive> Valor จะเปิดเผยพื้นที่วงกว้างเป็นเวลา @VisionDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnW_Summary",
+            "dynamicDescription": "Spell_QuinnW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Quinn พุ่งเข้าหาศัตรู สร้างความเสียหายกายภาพ พร้อมทั้งลดความเร็วเคลื่อนที่ของเป้าหมาย เมื่อถึงตัวเป้าหมาย เธอจะขัดจังหวะศัตรูเล็กน้อย แล้วถีบตัวออกห่างจากเป้าหมายไปที่สุดระยะยิงของเธอ",
-            "dynamicDescription": "Quinn พุ่งเข้าใส่ศัตรู สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และติดเครื่องหมาย<keywordMajor>เปราะบาง</keywordMajor> จากนั้น Quinn จะกระโดดถีบตัวเองออกจากเป้าหมาย และ<status>กระแทก</status>พวกเขาให้<status>กระเด็นออก</status>ไปเล็กน้อย พร้อมทั้ง<status>สโลว์</status>พวกเขา @SlowAmount*100@% โดยจะค่อย ๆ หายไปในช่วง @SlowDecayTime@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Quinn และ Valor ร่วมมือกันเพื่อบินไปรอบ ๆ อย่างรวดเร็ว เมื่อสกิลนี้สิ้นสุดลงจะทำการร่าย Skystrike ซึ่งจะสร้างความเสียหายให้กับศัตรูในบริเวณใกล้เคียง และติดเครื่องหมายอ่อนแอไว้บนแชมเปี้ยนศัตรู",
-            "dynamicDescription": "Quinn เรียก Valor ลงมาเพื่อสนับสนุนเธอหลังจากทำการร่ายเป็นเวลา 2 วินาที ทำให้ได้รับ<speed>ความเร็วเคลื่อนที่เพิ่ม @MovementSpeedMod*100@%</speed> และเธอสามารถ<recast>กดใช้ซ้ำ</recast>สกิลนี้ได้ การโจมตีหรือใช้ <spellName>Blinding Assault</spellName> หรือ <spellName>Vault</spellName> จะทำการ<recast>กดใช้ซ้ำ</recast>สกิลนี้โดยอัตโนมัติ<br><br><recast>กดใช้ซ้ำ</recast>: Quinn และ Valor ทำการจู่โจมทางอากาศ สร้าง<physicalDamage>ความเสียหายกายภาพ @Damage@ หน่วย</physicalDamage> และทำเครื่องหมาย<keywordMajor>อ่อนแอ</keywordMajor>ใส่แชมเปี้ยน และสิ้นสุดสกิลนี้@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnR_Summary",
+            "dynamicDescription": "Spell_QuinnR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

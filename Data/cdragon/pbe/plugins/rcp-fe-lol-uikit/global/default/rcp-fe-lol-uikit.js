@@ -13214,15 +13214,34 @@
                 initializeDomNodes(e) {
                     if (!e.domNode) {
                         const t = document.createElement("div");
-                        t.classList.add("drawer-wrapper"), e.domNode = t
+                        t.classList.add("drawer-wrapper"), e.domNode = t, this._appendCloseButton(e)
                     }
                     if (e.content && !e.content.domNode) {
                         const t = (e.content.ComponentFactory || e.ComponentFactory || i.componentFactory).create(e.content);
                         t && "object" == typeof t && Object.assign(e.content, t)
                     }
                 }
+                _appendCloseButton(e) {
+                    const t = document.createElement("button");
+                    t.type = "button", t.classList.add("drawer-close-button"), t.setAttribute("aria-label", "Close"), Object.assign(t.style, {
+                        position: "absolute",
+                        top: "12px",
+                        right: "12px",
+                        width: "24px",
+                        height: "24px",
+                        padding: "0",
+                        border: "none",
+                        background: "url('/fe/lol-uikit/images/drawer-close-button.svg') center center no-repeat",
+                        backgroundSize: "contain",
+                        cursor: "pointer",
+                        zIndex: "1",
+                        pointerEvents: "auto"
+                    }), t.addEventListener("click", (t => {
+                        t.stopPropagation(), this.remove(e)
+                    })), e.domNode.appendChild(t)
+                }
                 styleDOMNode(e) {
-                    e.style.position = "absolute", e.style.top = "0", e.style.bottom = "0", e.style.right = "0", e.style.display = "flex", e.style.flexDirection = "column", e.style.pointerEvents = "auto", e.style.transform = "translateX(100%)", e.style.transition = "transform 200ms ease"
+                    e.style.position = "absolute", e.style.top = "1px", e.style.bottom = "0", e.style.right = "0", e.style.display = "flex", e.style.flexDirection = "column", e.style.pointerEvents = "auto", e.style.transform = "translateX(100%)", e.style.transition = "transform 200ms ease"
                 }
                 _onLayerClick(e) {
                     e.target === this.layer && this._activeDrawer && this.remove(this._activeDrawer)

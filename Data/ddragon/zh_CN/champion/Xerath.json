@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.9.1",
+    "version": "16.10.1",
     "data": {
         "Xerath": {
             "id": "Xerath",
@@ -586,7 +586,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -721,7 +721,7 @@
                     "id": "XerathLocusOfPower2",
                     "name": "奥术仪式",
                     "description": "泽拉斯将自己固定在一处魔力之源上，并获得数次远程施法的机会。",
-                    "tooltip": "泽拉斯飞升至他的真正形态并引导{{ e1 }}秒。在此期间，他可以<recast>再次施放</recast>此技能至多{{ e2 }}次。<br /><br /><recast>再次施放：</recast>泽拉斯发射一道魔法炮击，造成<magicDamage>{{ tooltiptotaldamage }}魔法伤害</magicDamage>。每次命中英雄时，炮击都会造成额外的<magicDamage>{{ rampdamagecalc }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "泽拉斯飞升至他的真正形态并引导{{ duration }}秒。在此期间，他可以<recast>再次施放</recast>此技能至多{{ numberofshots }}次。<br /><br /><recast>再次施放：</recast>泽拉斯施放一道魔法炮击，造成<magicDamage>{{ tooltiptotaldamage }}魔法伤害</magicDamage>。每次命中英雄时，炮击都会造成额外的<magicDamage>{{ rampdamagecalc }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -730,8 +730,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ numberofshots }} -> {{ numberofshotsNL }}",
                             "{{ rampbasedamage }} -> {{ rampbasedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]

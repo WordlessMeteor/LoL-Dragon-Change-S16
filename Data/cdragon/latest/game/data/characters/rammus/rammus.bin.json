@@ -26,7 +26,7 @@
         "mDescriptionTraKey": "stat_stone_description_RammusWReflectKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -54,7 +54,7 @@
         "mDescriptionTraKey": "stat_stone_description_RammusQDistance",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -83,7 +83,7 @@
         "mDescriptionTraKey": "stat_stone_description_RammusEKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -236,7 +236,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 226,
+                "EventToTrack": 227,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -276,7 +276,7 @@
         "mDescriptionTraKey": "stat_stone_description_RammusPDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -304,7 +304,7 @@
         "mDescriptionTraKey": "stat_stone_description_RammusWDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -332,7 +332,7 @@
         "mDescriptionTraKey": "stat_stone_description_RammusRTakedowns",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -416,23 +416,6 @@
     "{b14d62c0}": {
         "RecSpellRankUpInfos": [
             {
-                "MapId": 12,
-                "Position": "{ada7afdb}",
-                "mDefaultPriority": [
-                    3,
-                    1,
-                    2,
-                    0
-                ],
-                "mEarlyLevelOverrides": [
-                    0,
-                    1,
-                    2,
-                    1
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
                 "MapId": 11,
                 "Position": "jungle",
                 "IsDefaultRecommendation": true,
@@ -447,6 +430,23 @@
                     0,
                     2,
                     0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    1
                 ],
                 "__type": "RecSpellRankUpInfo"
             }
@@ -830,12 +830,12 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "BonusArmorPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             },
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "BonusMRPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1306,6 +1306,10 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "UnnamedEffectAmount4",
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1545,8 +1549,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1558,8 +1562,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1571,8 +1575,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1584,8 +1588,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

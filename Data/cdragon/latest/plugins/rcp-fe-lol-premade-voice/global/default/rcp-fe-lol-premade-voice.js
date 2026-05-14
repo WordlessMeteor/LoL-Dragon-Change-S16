@@ -27,6 +27,7 @@
                         FlyoutManager: e => e.get("rcp-fe-lol-uikit").getFlyoutManager(),
                         logger: e => e.get("rcp-fe-common-libs").logging.create(l),
                         ModalManager: e => e.get("rcp-fe-lol-uikit").getModalManager(),
+                        SharedPlayerBehaviorApps: e => e.get("rcp-fe-lol-shared-components").getApi_SharedPlayerBehaviorApps(),
                         Social: e => e.get("rcp-fe-lol-social"),
                         TemplateHelper: e => e.get("rcp-fe-lol-uikit").getTemplateHelper(),
                         TooltipManager: e => e.get("rcp-fe-lol-uikit").getTooltipManager(),
@@ -36,7 +37,7 @@
                         Settings: e => e.get("rcp-fe-lol-settings")
                     }), await i.default.tra.ready();
                     n(14)();
-                    return new(n(108))
+                    return new(n(116))
                 }))
             }), {
                 once: !0
@@ -311,15 +312,17 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            var r = p(n(15)),
-                i = p(n(76)),
-                a = p(n(88)),
-                o = p(n(97)),
-                l = p(n(102)),
-                s = p(n(105)),
-                c = n(1);
+            var r = h(n(15)),
+                i = h(n(78)),
+                a = h(n(90)),
+                o = h(n(99)),
+                l = h(n(104)),
+                s = h(n(107)),
+                c = h(n(110)),
+                p = h(n(113)),
+                d = n(1);
 
-            function p(e) {
+            function h(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -328,38 +331,39 @@
                 if (e.premadeVoiceElementsRegistered) return;
                 const {
                     registerCustomElementV1: t
-                } = c.webComponents;
-                t(i.default), t(r.default), t(o.default), t(a.default), t(l.default), t(s.default), e.premadeVoiceElementsRegistered = !0
+                } = d.webComponents;
+                t(i.default), t(r.default), t(o.default), t(a.default), t(l.default), t(s.default), t(c.default), t(p.default), e.premadeVoiceElementsRegistered = !0
             }
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = T(n(16)),
+            var r = w(n(16)),
                 i = n(1),
-                a = k(n(17)),
-                o = k(n(18)),
-                l = k(n(19)),
-                s = k(n(20)),
-                c = k(n(21)),
-                p = k(n(22)),
-                d = k(n(23)),
-                h = k(n(25)),
-                u = k(n(26)),
-                m = k(n(27)),
-                g = k(n(28)),
-                A = k(n(29)),
-                _ = k(n(30)),
-                v = k(n(31)),
-                b = k(n(32)),
-                f = n(33),
-                y = n(34),
-                E = T(n(35)),
-                C = n(36),
-                x = k(n(37));
+                a = B(n(17)),
+                o = B(n(18)),
+                l = B(n(19)),
+                s = B(n(20)),
+                c = B(n(21)),
+                p = B(n(22)),
+                d = B(n(23)),
+                h = B(n(25)),
+                u = B(n(26)),
+                m = B(n(27)),
+                g = B(n(29)),
+                A = B(n(30)),
+                _ = B(n(31)),
+                v = B(n(32)),
+                b = B(n(33)),
+                f = B(n(34)),
+                y = n(35),
+                E = n(36),
+                x = w(n(37)),
+                C = n(38),
+                k = B(n(39));
 
-            function k(e) {
+            function B(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -374,7 +378,7 @@
                 })(e)
             }
 
-            function T(e, t) {
+            function w(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
                     default: e
@@ -389,17 +393,40 @@
                         o && (o.get || o.set) ? Object.defineProperty(r, a, o) : r[a] = e[a]
                     } return r.default = e, n && n.set(e, r), r
             }
-            const B = "chatParticipantsKey",
-                w = "HONOR_LEVEL_TOO_LOW";
-            class P extends r.default {
+            const T = "chatParticipantsKey",
+                $ = "HONOR_LEVEL_TOO_LOW",
+                P = "VOICE_COMPLIANCE_AGREEMENT_NOT_ACCEPTED",
+                O = {
+                    [$]: {
+                        title: "parties_comm_panel_team_voice_restricted_title",
+                        body: "parties_comm_panel_team_voice_restricted_body"
+                    },
+                    PLUGIN_DISABLED: {
+                        title: "parties_comm_panel_team_voice_plugin_disabled_title",
+                        body: "parties_comm_panel_team_voice_plugin_disabled_body"
+                    },
+                    QUEUE_NOT_ENABLED: {
+                        title: "parties_comm_panel_team_voice_queue_not_enabled_title",
+                        body: "parties_comm_panel_team_voice_queue_not_enabled_body"
+                    },
+                    NOT_IN_ACTIVE_GAME_PHASE: {
+                        title: "parties_comm_panel_team_voice_not_in_active_game_phase_title",
+                        body: "parties_comm_panel_team_voice_not_in_active_game_phase_body"
+                    },
+                    [P]: {
+                        title: "parties_comm_panel_team_voice_compliance_agreement_not_accepted_title",
+                        body: "parties_comm_panel_team_voice_compliance_agreement_not_accepted_body"
+                    }
+                };
+            class D extends r.default {
                 templateMarkup() {
-                    return n(38)
+                    return n(40)
                 }
                 stylesheetMarkup() {
-                    return n(39)
+                    return n(41)
                 }
                 constructor() {
-                    super(), this._participants = [], this._participantMap = new Map, this._teamParticipants = [], this._teamParticipantMap = new Map, this._multiUserChatId = null, this._gameflowPhase = "", this._isGameClientRunning = !1, this._lastVolumeUpdate = 0, this._lockOutMemberJoinSound = !1, this._isDraggingMicSlider = !1, this._clashRoster = null, this._headerType = C.HEADER_LOBBY, this._connectionState = f.VOICE_DISCONNECTED_STATE, this._teamConnectionState = f.VOICE_DISCONNECTED_STATE, this._updatingTeamToggle = !1, this._teamVoicePluginEnabled = !1, this._teamVoiceAvailability = !1, this._teamVoiceAvailabilityReason = null, this._puuidsToNameOverrides = {};
+                    super(), this._participants = [], this._participantMap = new Map, this._teamParticipants = [], this._teamParticipantMap = new Map, this._multiUserChatId = null, this._gameflowPhase = "", this._isGameClientRunning = !1, this._lastVolumeUpdate = 0, this._lockOutMemberJoinSound = !1, this._isDraggingMicSlider = !1, this._clashRoster = null, this._headerType = C.HEADER_LOBBY, this._connectionState = y.VOICE_DISCONNECTED_STATE, this._teamConnectionState = y.VOICE_DISCONNECTED_STATE, this._updatingTeamToggle = !1, this._teamVoicePluginEnabled = !1, this._teamVoiceAvailability = !1, this._teamVoiceAvailabilityReason = null, this._puuidsToNameOverrides = {};
                     const e = i.Audio.getChannel(r.SOUND_CHANNEL);
                     this._muteSound = e.createSound(a.default), this._unmuteSound = e.createSound(o.default), this._closeSound = e.createSound(l.default), this._volumeScrollSound = e.createSound(s.default), this._volumeBarClickSound = e.createSound(c.default), this._volumeScrollReleaseSound = e.createSound(p.default), this._selectors = {
                         voicePanel: ".lol-premade-voice-panel",
@@ -477,7 +504,7 @@
                 }
                 _handleDisconnectedState(e) {
                     const t = this.shadowRoot.querySelector(this._selectors.currentPlayerVolume);
-                    e ? (this._updateConnectionState(f.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), t && t.setAttribute("disabled", ""), this.addClass("disabled", this._selectors.currentPlayerContent)) : (t && t.removeAttribute("disabled"), this.removeClass("disabled", this._selectors.currentPlayerContent)), this._updateCurrentPlayerMuteButton()
+                    e ? (this._updateConnectionState(y.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), t && t.setAttribute("disabled", ""), this.addClass("disabled", this._selectors.currentPlayerContent)) : (t && t.removeAttribute("disabled"), this.removeClass("disabled", this._selectors.currentPlayerContent)), this._updateCurrentPlayerMuteButton()
                 }
                 _showPanelMessage(e) {
                     this.addInnerHtml(e, this._selectors.availabilityMessage), this.removeClass("hide", this._selectors.availability), this.addClass("hide", this._selectors.participants)
@@ -518,7 +545,7 @@
                 _refreshConnectionState() {
                     const e = this._participants.length > 0,
                         t = this._connectionState;
-                    e ? this._updateConnectionState(f.VOICE_CONNECTED_STATE) : this._connectionState !== f.VOICE_CONNECTING_STATE && this._connectionState !== f.VOICE_CONNECTED_STATE && this._updateConnectionState(f.VOICE_DISCONNECTED_STATE), t !== this._connectionState && (this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()), this._checkAvailabilityMessaging()
+                    e ? this._updateConnectionState(y.VOICE_CONNECTED_STATE) : this._connectionState !== y.VOICE_CONNECTING_STATE && this._updateConnectionState(y.VOICE_DISCONNECTED_STATE), t !== this._connectionState && (this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()), this._checkAvailabilityMessaging()
                 }
                 settingsUpdated(e) {
                     this._settings = e, this._updateCurrentParticipant(), this._updateKeyBindIndicators()
@@ -527,7 +554,7 @@
                     if (!this._settings) return;
                     const e = this.shadowRoot.querySelector(this._selectors.partyPttIndicator);
                     if (e) {
-                        const t = this._settings.inputMode === E.INPUT_MODE_PUSH_TO_TALK,
+                        const t = this._settings.inputMode === x.INPUT_MODE_PUSH_TO_TALK,
                             n = this._settings.pttKey,
                             r = !n || "[<Unbound>]" === n,
                             a = r ? "" : n.replace(/^\[|\]$/g, "");
@@ -546,12 +573,12 @@
                     t.multiUserChatId && t.multiUserChatId !== this._multiUserChatId && (this._conversations && this._chatParticipantsObserver(t.multiUserChatId), this._headerType = C.HEADER_LOBBY), this._multiUserChatId = t.multiUserChatId
                 }
                 clashRostersUpdated(e) {
-                    const t = (e || []).find((e => e.tournamentState !== y.CLASH_ROSTER_STATE.IDLE));
+                    const t = (e || []).find((e => e.tournamentState !== E.CLASH_ROSTER_STATE.IDLE));
                     t && t.multiUserChatId && (t.multiUserChatId !== this._multiUserChatId && (this._conversations && this._chatParticipantsObserver(t.multiUserChatId), this._headerType = C.HEADER_CLASH, this._clashRoster = t), this._multiUserChatId = t.multiUserChatId)
                 }
                 postgameStatsUpdated(e) {
                     if (e && e.multiUserChatId) {
-                        const t = _.default.parseChatId(e.multiUserChatId);
+                        const t = v.default.parseChatId(e.multiUserChatId);
                         t !== this._multiUserChatId && this._conversations && this._chatParticipantsObserver(t), this._multiUserChatId = t
                     }
                 }
@@ -580,9 +607,9 @@
                     this._conversations = e, this._chatParticipantsObserver(this._multiUserChatId)
                 }
                 _chatParticipantsObserver(e) {
-                    if (v.default.removeObservers(B), this._conversations && e) {
+                    if (b.default.removeObservers(T), this._conversations && e) {
                         const t = this._conversations.find((t => t.id.indexOf(e) > -1));
-                        t && (v.default.createObserver(B, `/v1/conversations/${encodeURIComponent(t.id)}/participants`), v.default.observe(B, this.chatParticipantsUpdated.bind(this)))
+                        t && (b.default.createObserver(T, `/v1/conversations/${encodeURIComponent(t.id)}/participants`), b.default.observe(T, this.chatParticipantsUpdated.bind(this)))
                     }
                 }
                 _chatParticipant(e) {
@@ -605,7 +632,7 @@
                     this._teamVoicePluginEnabled ? (this.removeClass("hide", this._selectors.sectionDivider), this.removeClass("hide", this._selectors.teamHeader)) : (this.addClass("hide", this._selectors.sectionDivider), this.addClass("hide", this._selectors.teamHeader)), this._updateTeamUnavailableStatus()
                 }
                 _updateTeamUnavailableStatus() {
-                    this._teamVoicePluginEnabled && (this._teamVoiceAvailability || this._teamConnectionState === f.VOICE_CONNECTED_STATE ? (this.addClass("hide", this._selectors.teamUnavailable), this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._removeTeamToggleRestrictionTooltip()) : this._teamVoiceAvailabilityReason === w ? (this.addClass("hide", this._selectors.teamUnavailable), this.addClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), this._attachTeamToggleRestrictionTooltip()) : (this.addClass("hide", this._selectors.teamUnavailable), this.addClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), this._removeTeamToggleRestrictionTooltip()))
+                    this._teamVoicePluginEnabled && (this._teamVoiceAvailability || this._teamConnectionState === y.VOICE_CONNECTED_STATE || this._teamVoiceAvailabilityReason === P ? (this.addClass("hide", this._selectors.teamUnavailable), this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._removeTeamToggleRestrictionTooltip()) : (this.addClass("hide", this._selectors.teamUnavailable), this.addClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), O[this._teamVoiceAvailabilityReason] ? this._attachTeamToggleRestrictionTooltip(this._teamVoiceAvailabilityReason) : this._removeTeamToggleRestrictionTooltip()))
                 }
                 _updateConnectionBarVisibility() {
                     const e = this.shadowRoot.querySelector(this._selectors.connectionBar),
@@ -618,15 +645,16 @@
                     this._teamConnectionState !== e && (this._teamConnectionState = e, this._updatingTeamToggle = !0, this._updateToggleState(this._selectors.teamToggle, e), this._updatingTeamToggle = !1, this._updateTeamToggleState(), this._updateTeamUnavailableStatus())
                 }
                 _updateTeamToggleState() {
-                    if (this._teamVoiceAvailabilityReason === w) return void this._setTeamToggleRestricted(!0);
+                    if (this._teamVoiceAvailabilityReason === $) return void this._setTeamToggleRestricted(!0);
                     this._setTeamToggleRestricted(!1);
-                    const e = this._teamConnectionState === f.VOICE_CONNECTED_STATE,
-                        t = this._teamConnectionState === f.VOICE_CONNECTING_STATE,
-                        n = !e && (t || !this._teamVoiceAvailability);
-                    this._setToggleDisabled(this._selectors.teamToggle, n)
+                    const e = this._teamConnectionState === y.VOICE_CONNECTED_STATE,
+                        t = this._teamConnectionState === y.VOICE_CONNECTING_STATE,
+                        n = this._teamVoiceAvailabilityReason === P,
+                        r = !e && !n && (t || !this._teamVoiceAvailability);
+                    this._setToggleDisabled(this._selectors.teamToggle, r)
                 }
                 _refreshTeamConnectionState() {
-                    this._teamParticipants && this._teamParticipants.length > 0 ? this._updateTeamConnectionState(f.VOICE_CONNECTED_STATE) : this._updateTeamConnectionState(f.VOICE_DISCONNECTED_STATE)
+                    this._teamParticipants && this._teamParticipants.length > 0 ? this._updateTeamConnectionState(y.VOICE_CONNECTED_STATE) : this._updateTeamConnectionState(y.VOICE_DISCONNECTED_STATE)
                 }
                 _isVoiceEligible() {
                     return 0 !== this._participants.length
@@ -638,16 +666,16 @@
                     this._connectionButtonLocked = !1
                 }
                 _connectionClick() {
-                    return this._lockConnectionButton(), this._connectionState === f.VOICE_DISCONNECTED_STATE && this._isVoiceEligible() ? (this._updateConnectionState(f.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then((() => {
+                    return this._lockConnectionButton(), this._connectionState === y.VOICE_DISCONNECTED_STATE && this._isVoiceEligible() ? (this._updateConnectionState(y.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then((() => {
                         this._joinVoiceSessionSuccess(), this._unlockConnectionButton()
                     })).catch((e => {
                         this._joinVoiceSessionFailed(e), this._unlockConnectionButton()
-                    }))) : this._connectionState === f.VOICE_CONNECTED_STATE ? d.default.disconnect().then((() => {
+                    }))) : this._connectionState === y.VOICE_CONNECTED_STATE ? d.default.disconnect().then((() => {
                         this._leaveVoiceSessionSuccess(), this._unlockConnectionButton()
                     })) : (this._unlockConnectionButton(), Promise.resolve())
                 }
                 _connectionMouseEnter() {
-                    if (this._connectionState === f.VOICE_DISCONNECTED_STATE && this._isVoiceEligible()) {
+                    if (this._connectionState === y.VOICE_DISCONNECTED_STATE && this._isVoiceEligible()) {
                         const e = i.tra.get("parties_comm_panel_connect_text");
                         this.addInnerHtml(e, this._selectors.connectionState)
                     }
@@ -659,34 +687,35 @@
                     }
                 }
                 _connectionBarClick() {
-                    if (!this._teamVoicePluginEnabled) return this._connectionState === f.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(f.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
+                    if (!this._teamVoicePluginEnabled) return this._connectionState === y.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(y.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
                         this._joinVoiceSessionFailed(e)
-                    }))) : this._connectionState === f.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
+                    }))) : this._connectionState === y.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
                 }
                 _connectionToggleClick() {
-                    return this._connectionState === f.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(f.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
+                    return this._connectionState === y.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(y.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
                         this._joinVoiceSessionFailed(e)
-                    }))) : this._connectionState === f.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
+                    }))) : this._connectionState === y.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
                 }
                 _partyToggleClick() {
                     if (!this._teamVoicePluginEnabled) return;
                     const e = this.shadowRoot.querySelector(this._selectors.partyToggle);
-                    return e && e.classList.contains("restricted") ? void 0 : this._connectionState === f.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(f.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
+                    return e && e.classList.contains("restricted") ? void 0 : this._connectionState === y.VOICE_DISCONNECTED_STATE ? (this._updateConnectionState(y.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, d.default.connect().then(this._joinVoiceSessionSuccess.bind(this)).catch((e => {
                         this._joinVoiceSessionFailed(e)
-                    }))) : this._connectionState === f.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
+                    }))) : this._connectionState === y.VOICE_CONNECTED_STATE ? d.default.disconnect().then(this._leaveVoiceSessionSuccess.bind(this)) : void 0
                 }
                 _teamToggleClick() {
                     if (!this._teamVoicePluginEnabled || this._updatingTeamToggle) return;
+                    if (this._teamVoiceAvailabilityReason === P) return void u.default.showAgreementModal();
                     const e = this.shadowRoot.querySelector(this._selectors.teamToggle);
-                    return e && e.classList.contains("restricted") ? void 0 : this._teamConnectionState === f.VOICE_DISCONNECTED_STATE ? (this._updateTeamConnectionState(f.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, h.default.connect().then(this._joinTeamVoiceSessionSuccess.bind(this)).catch((e => {
+                    return e && e.classList.contains("restricted") ? void 0 : this._teamConnectionState === y.VOICE_DISCONNECTED_STATE ? (this._updateTeamConnectionState(y.VOICE_CONNECTING_STATE), this._lockOutMemberJoinSound = !0, h.default.connect().then(this._joinTeamVoiceSessionSuccess.bind(this)).catch((e => {
                         this._joinTeamVoiceSessionFailed(e)
-                    }))) : this._teamConnectionState === f.VOICE_CONNECTED_STATE ? h.default.disconnect().then(this._leaveTeamVoiceSessionSuccess.bind(this)) : void 0
+                    }))) : this._teamConnectionState === y.VOICE_CONNECTED_STATE ? h.default.disconnect().then(this._leaveTeamVoiceSessionSuccess.bind(this)) : void 0
                 }
                 _leaveVoiceSessionSuccess() {
-                    this._updateConnectionState(f.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()
+                    this._updateConnectionState(y.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()
                 }
                 _joinVoiceSessionSuccess() {
-                    this._updateConnectionState(f.VOICE_CONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
+                    this._updateConnectionState(y.VOICE_CONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility(), clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
                         this._lockOutMemberJoinSound = !1
                     }), 500), d.default.participants().then(this.participantsDataListener)
                 }
@@ -694,14 +723,14 @@
                     if (e && e.data) {
                         this._lockOutMemberJoinSound = !1;
                         const t = e.data.message;
-                        i.logger.warning(`Failed to join voice channel: ${t}`), this._updateConnectionState(f.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()
+                        i.logger.warning(`Failed to join voice channel: ${t}`), this._updateConnectionState(y.VOICE_DISCONNECTED_STATE), this._updateTeamHeaderVisibility(), this._updateConnectionBarVisibility()
                     }
                 }
                 _leaveTeamVoiceSessionSuccess() {
-                    this._updateTeamConnectionState(f.VOICE_DISCONNECTED_STATE)
+                    this._updateTeamConnectionState(y.VOICE_DISCONNECTED_STATE)
                 }
                 _joinTeamVoiceSessionSuccess() {
-                    this._updateTeamConnectionState(f.VOICE_CONNECTED_STATE), clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
+                    this._updateTeamConnectionState(y.VOICE_CONNECTED_STATE), clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
                         this._lockOutMemberJoinSound = !1
                     }), 500), h.default.session().then(this.teamVoiceSessionListener)
                 }
@@ -709,7 +738,7 @@
                     if (e && e.data) {
                         this._lockOutMemberJoinSound = !1;
                         const t = e.data.message;
-                        i.logger.warning(`Failed to join team voice channel: ${t}`), this._updateTeamConnectionState(f.VOICE_DISCONNECTED_STATE)
+                        i.logger.warning(`Failed to join team voice channel: ${t}`), this._updateTeamConnectionState(y.VOICE_DISCONNECTED_STATE)
                     }
                 }
                 _removeOldParticipants() {
@@ -824,7 +853,7 @@
                     d.default.changeMicLevelSelf(e.value)
                 }
                 _updateCurrentPlayerMuteButton() {
-                    this._availability && this._settings && (this._availability.showDisconnectedState || this._settings.inputMode === E.INPUT_MODE_PUSH_TO_TALK ? (this.addClass("disabled", this._selectors.currentPlayerMic), this.removeClass("muted", this._selectors.currentPlayerMic)) : (this.removeClass("disabled", this._selectors.currentPlayerMic), this._settings && this._settings.localMicMuted ? this.addClass("muted", this._selectors.currentPlayerMic) : this.removeClass("muted", this._selectors.currentPlayerMic)), this._attachMuteSelfTooltip())
+                    this._availability && this._settings && (this._availability.showDisconnectedState ? (this.addClass("disabled", this._selectors.currentPlayerMic), this.removeClass("muted", this._selectors.currentPlayerMic)) : (this.removeClass("disabled", this._selectors.currentPlayerMic), this._settings && this._settings.localMicMuted ? this.addClass("muted", this._selectors.currentPlayerMic) : this.removeClass("muted", this._selectors.currentPlayerMic)), this._attachMuteSelfTooltip())
                 }
                 _createParticipantElement(e) {
                     const t = document.createElement(this._selectors.participantElement);
@@ -833,7 +862,7 @@
                     return t.updateChatParticipant(n), e.puuid && this._puuidsToNameOverrides[e.puuid] && t.setNameOverride(this._puuidsToNameOverrides[e.puuid]), t
                 }
                 _initDataBinding() {
-                    this.lobbyDataListener = this.lobbyUpdated.bind(this), A.default.observe("lobby", this.lobbyDataListener), A.default.lobby().then(this.lobbyDataListener), this.clashChatListener = this.clashRostersUpdated.bind(this), b.default.observe("rosters", this.clashChatListener), b.default.clashRosters().then(this.clashChatListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), m.default.observe("session", this.gameflowSessionListener), m.default.session().then(this.gameflowSessionListener), this.postgameStatsListener = this.postgameStatsUpdated.bind(this), _.default.observe("stats", this.postgameStatsListener), _.default.stats().then(this.postgameStatsListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), d.default.observe("availability", this.availabilityDataListener), d.default.availability().then(this.availabilityDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), d.default.observe("participants", this.participantsDataListener), d.default.participants().then(this.participantsDataListener), this.settingsDataListener = this.settingsUpdated.bind(this), d.default.observe("settings", this.settingsDataListener), d.default.settings().then(this.settingsDataListener), this.sessionDataListener = this.sessionUpdated.bind(this), g.default.observe("session", this.sessionDataListener), g.default.session().then(this.sessionDataListener), this.currentPlayerChatInfoListener = this.currentPlayerChatInfoUpdated.bind(this), v.default.observe("me", this.currentPlayerChatInfoListener), v.default.me().then(this.currentPlayerChatInfoListener), this.conversationsListener = this.conversationsUpdated.bind(this), v.default.observe("conversations", this.conversationsListener), v.default.conversations().then(this.conversationsListener), this.teamVoicePluginEnabledListener = this.teamVoicePluginEnabledUpdate.bind(this), u.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), u.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), h.default.observe("availability", this.teamVoiceAvailabilityListener), h.default.availability().then(this.teamVoiceAvailabilityListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), h.default.observe("session", this.teamVoiceSessionListener), h.default.session().then(this.teamVoiceSessionListener)
+                    this.lobbyDataListener = this.lobbyUpdated.bind(this), _.default.observe("lobby", this.lobbyDataListener), _.default.lobby().then(this.lobbyDataListener), this.clashChatListener = this.clashRostersUpdated.bind(this), f.default.observe("rosters", this.clashChatListener), f.default.clashRosters().then(this.clashChatListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), g.default.observe("session", this.gameflowSessionListener), g.default.session().then(this.gameflowSessionListener), this.postgameStatsListener = this.postgameStatsUpdated.bind(this), v.default.observe("stats", this.postgameStatsListener), v.default.stats().then(this.postgameStatsListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), d.default.observe("availability", this.availabilityDataListener), d.default.availability().then(this.availabilityDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), d.default.observe("participants", this.participantsDataListener), d.default.participants().then(this.participantsDataListener), this.settingsDataListener = this.settingsUpdated.bind(this), d.default.observe("settings", this.settingsDataListener), d.default.settings().then(this.settingsDataListener), this.sessionDataListener = this.sessionUpdated.bind(this), A.default.observe("session", this.sessionDataListener), A.default.session().then(this.sessionDataListener), this.currentPlayerChatInfoListener = this.currentPlayerChatInfoUpdated.bind(this), b.default.observe("me", this.currentPlayerChatInfoListener), b.default.me().then(this.currentPlayerChatInfoListener), this.conversationsListener = this.conversationsUpdated.bind(this), b.default.observe("conversations", this.conversationsListener), b.default.conversations().then(this.conversationsListener), this.teamVoicePluginEnabledListener = this.teamVoicePluginEnabledUpdate.bind(this), m.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), m.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), h.default.observe("availability", this.teamVoiceAvailabilityListener), h.default.availability().then(this.teamVoiceAvailabilityListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), h.default.observe("session", this.teamVoiceSessionListener), h.default.session().then(this.teamVoiceSessionListener)
                 }
                 _showMicrophonePermissionsModal() {
                     const e = i.tra.get("voice_microphone_permissions_modal_header"),
@@ -849,12 +878,12 @@
                     i.ModalManager.add(n)
                 }
                 _toggleMute() {
-                    this._settings && this._settings.inputMode !== E.INPUT_MODE_PUSH_TO_TALK && d.default.checkMicrophonePermissions().then((e => {
+                    this._settings && d.default.checkMicrophonePermissions().then((e => {
                         e ? (this._teamVoicePluginEnabled && (this._settings.localMicMuted ? this._unmuteSound.play() : this._muteSound.play()), d.default.muteSelf(!this._settings.localMicMuted)) : this._showMicrophonePermissionsModal()
                     }))
                 }
                 _settingsClicked() {
-                    this._isGameClientRunning || (0, E.default)()
+                    this._isGameClientRunning || (0, x.default)()
                 }
                 _setVoiceHaloPuuid(e) {
                     const t = e || "",
@@ -865,12 +894,12 @@
                     if (!this._settings || !this._settings.inputMode) return;
                     const e = this.shadowRoot.querySelector(this._selectors.currentPlayerMic);
                     let t;
-                    t = this._settings.inputMode === E.INPUT_MODE_PUSH_TO_TALK ? i.tra.get("parties_comm_panel_tooltip_mute_disabled") : this._settings.localMicMuted ? i.tra.get("parties_comm_panel_tooltip_unmute_self") : i.tra.get("parties_comm_panel_tooltip_mute_self"), x.default.attachSmallTooltip(e, t)
+                    t = this._settings.localMicMuted ? i.tra.get("parties_comm_panel_tooltip_unmute_self") : i.tra.get("parties_comm_panel_tooltip_mute_self"), k.default.attachSmallTooltip(e, t)
                 }
                 _attachSettingsTooltip() {
                     const e = this.shadowRoot.querySelector(this._selectors.settingsButton);
                     let t;
-                    t = this._isGameClientRunning ? i.tra.get("parties_comm_panel_tooltip_settings_disabled") : i.tra.get("parties_comm_panel_tooltip_settings"), x.default.attachSmallTooltip(e, t)
+                    t = this._isGameClientRunning ? i.tra.get("parties_comm_panel_tooltip_settings_disabled") : i.tra.get("parties_comm_panel_tooltip_settings"), k.default.attachSmallTooltip(e, t)
                 }
                 _minimizeClicked() {
                     this.dispatchEvent(new Event("minimizeVoicePanel"))
@@ -917,37 +946,56 @@
                 }
                 _updateToggleState(e, t) {
                     const n = this.shadowRoot.querySelector(e);
-                    n && (n.classList.remove(f.VOICE_CONNECTED_STATE, f.VOICE_DISCONNECTED_STATE, f.VOICE_CONNECTING_STATE, "disabled", "restricted", "disabled-disconnected"), n.classList.add(t))
+                    n && (n.classList.remove(y.VOICE_CONNECTED_STATE, y.VOICE_DISCONNECTED_STATE, y.VOICE_CONNECTING_STATE, "disabled", "restricted", "disabled-disconnected"), n.classList.add(t))
                 }
                 _setTeamToggleRestricted(e) {
                     this._setToggleRestricted(this._selectors.teamToggle, e)
                 }
                 _setToggleRestricted(e, t) {
                     const n = this.shadowRoot.querySelector(e);
-                    n && (t ? (n.classList.remove(f.VOICE_CONNECTED_STATE, f.VOICE_DISCONNECTED_STATE, f.VOICE_CONNECTING_STATE, "disabled"), n.classList.add("restricted")) : n.classList.remove("restricted"))
+                    n && (t ? (n.classList.remove(y.VOICE_CONNECTED_STATE, y.VOICE_DISCONNECTED_STATE, y.VOICE_CONNECTING_STATE, "disabled"), n.classList.add("restricted")) : n.classList.remove("restricted"))
                 }
                 _updatePartyToggleState() {
                     if (!this._teamVoicePluginEnabled) return;
-                    this._availability && this._availability.voiceChannelAvailable || this._connectionState === f.VOICE_CONNECTED_STATE ? this._updateToggleState(this._selectors.partyToggle, this._connectionState) : this._setToggleRestricted(this._selectors.partyToggle, !0)
+                    this._availability && this._availability.voiceChannelAvailable || this._connectionState === y.VOICE_CONNECTED_STATE ? (this._updateToggleState(this._selectors.partyToggle, this._connectionState), this._removeToggleTooltip(this._selectors.partyToggle)) : (this._setToggleRestricted(this._selectors.partyToggle, !0), this._attachToggleTooltip(this._selectors.partyToggle, i.tra.get("parties_comm_panel_party_voice_no_party_title"), i.tra.get("parties_comm_panel_party_voice_no_party_body")))
                 }
-                _attachTeamToggleRestrictionTooltip() {
-                    const e = this.shadowRoot.querySelector(this._selectors.teamToggle);
-                    if (!e) return;
-                    const t = `<b>${i.tra.get("parties_comm_panel_team_voice_disabled_title")}</b><br/>${i.tra.get("parties_comm_panel_team_voice_disabled_body")}`;
-                    x.default.attachSmallTooltip(e, t)
+                _attachTeamToggleRestrictionTooltip(e) {
+                    const t = O[e] || O[$];
+                    this._attachToggleTooltip(this._selectors.teamToggle, i.tra.get(t.title), i.tra.get(t.body))
                 }
                 _removeTeamToggleRestrictionTooltip() {
-                    const e = this.shadowRoot.querySelector(this._selectors.teamToggle);
-                    e && x.default.removeTooltip(e)
+                    this._removeToggleTooltip(this._selectors.teamToggle)
+                }
+                _attachToggleTooltip(e, t, n) {
+                    const r = this.shadowRoot.querySelector(e);
+                    if (!r) return;
+                    i.TooltipManager.unassign(r);
+                    const a = document.createElement("lol-uikit-tooltip"),
+                        o = document.createElement("lol-parties-team-voice-tooltip");
+                    o.setAttribute("header", t), o.setAttribute("body", n), a.appendChild(o), i.TooltipManager.assign(r, a, null, {
+                        targetAnchor: {
+                            x: "center",
+                            y: "top"
+                        },
+                        tooltipAnchor: {
+                            x: "center",
+                            y: "bottom"
+                        },
+                        showDelay: 400
+                    })
+                }
+                _removeToggleTooltip(e) {
+                    const t = this.shadowRoot.querySelector(e);
+                    t && i.TooltipManager.unassign(t)
                 }
                 _setToggleDisabled(e, t) {
                     const n = this.shadowRoot.querySelector(e);
                     n && (t ? n.classList.add("disabled") : n.classList.remove("disabled"))
                 }
             }
-            P.tagName = "lol-parties-comm-panel";
-            var $ = P;
-            t.default = $
+            D.tagName = "lol-parties-comm-panel";
+            var I = D;
+            t.default = I
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1178,6 +1226,63 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
+            var r = n(1),
+                i = o(n(27)),
+                a = o(n(28));
+
+            function o(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            const l = "couldShowTeamVoiceFtux";
+            var s = new class {
+                constructor() {
+                    this._ftuxShown = !1, this._checkInProgress = !1
+                }
+                async checkAndShowFtux() {
+                    if (this._ftuxShown || this._checkInProgress) return !1;
+                    this._checkInProgress = !0;
+                    try {
+                        if (!await i.default.teamVoicePluginEnabled()) return !1;
+                        const e = await a.default.navigationPreferences();
+                        return !(!e || !e.data || !0 !== e.data[l]) && (this._showFtux(), !0)
+                    } catch (e) {
+                        return r.logger.error(`team-voice-ftux-service -- error checking FTUX state: ${e}`), !1
+                    } finally {
+                        this._checkInProgress = !1
+                    }
+                }
+                _showFtux() {
+                    this._ftuxShown = !0;
+                    try {
+                        r.SharedPlayerBehaviorApps.showCommunicationsAgreementModal()
+                    } catch (e) {
+                        return r.logger.error(`team-voice-ftux-service -- error showing FTUX modal: ${e}`), void(this._ftuxShown = !1)
+                    }
+                    this._persistSeen()
+                }
+                showAgreementModal() {
+                    try {
+                        r.SharedPlayerBehaviorApps.showCommunicationsAgreementModal()
+                    } catch (e) {
+                        r.logger.error(`team-voice-ftux-service -- error showing agreement modal: ${e}`)
+                    }
+                }
+                _persistSeen() {
+                    a.default.patchNavigationPreferences({
+                        [l]: !1
+                    }).catch((e => {
+                        r.logger.error(`team-voice-ftux-service -- error saving FTUX preference: ${e}`)
+                    }))
+                }
+            };
+            t.default = s
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
             var r, i = (r = n(24)) && r.__esModule ? r : {
                 default: r
             };
@@ -1191,6 +1296,31 @@
             }
             var o = new a;
             t.default = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, i = (r = n(24)) && r.__esModule ? r : {
+                default: r
+            };
+            const a = "/v2/account/LCUPreferences/lol-navigation";
+            class o extends i.default {
+                constructor() {
+                    super(), this._settingsBinding = this.dataBinding("/lol-settings"), this.createObserver("navigationPreferences", a)
+                }
+                navigationPreferences() {
+                    return this._settingsBinding.get(a)
+                }
+                patchNavigationPreferences(e) {
+                    return this._settingsBinding.patch(a, {
+                        schemaVersion: 1,
+                        data: e
+                    })
+                }
+            }
+            var l = new o;
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1408,46 +1538,46 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-premade-voice-panel">\r\n    <div class="lol-premade-voice-panel-header">\r\n      <div class="lol-premade-voice-panel-header-default">\r\n        <div class="lol-premade-voice-panel-header-text"></div>\r\n        <div class="lol-premade-voice-panel-connection-status"></div>\r\n        <div class="voice-toggle lol-premade-voice-panel-connection-toggle disconnected">\r\n          <div class="voice-toggle-icon"></div>\r\n          <div class="voice-toggle-thumb"></div>\r\n        </div>\r\n        <div class="lol-premade-voice-panel-minimize-button"></div>\r\n      </div>\r\n      <div class="lol-premade-voice-panel-header-clash">\r\n        <img class="lol-premade-voice-panel-header-clash-logo" />\r\n        <div class="lol-premade-voice-panel-header-clash-title">\r\n          <div class="lol-premade-voice-panel-header-clash-shortName"></div>\r\n          <div class="lol-premade-voice-panel-header-clash-name"></div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <lol-uikit-scrollable class="lol-premade-voice-panel-participants lol-premade-voice-panel-content">\r\n      <div class="lol-premade-voice-panel-party-header">\r\n        <div class="lol-premade-voice-panel-party-header-text"></div>\r\n        <lol-parties-key-bind-indicator class="lol-premade-voice-panel-party-ptt-indicator"></lol-parties-key-bind-indicator>\r\n        <div class="voice-toggle lol-premade-voice-panel-party-toggle disconnected">\r\n          <div class="voice-toggle-icon"></div>\r\n          <div class="voice-toggle-thumb"></div>\r\n        </div>\r\n      </div>\r\n      <div class="lol-premade-voice-panel-section-divider hide"></div>\r\n      <div class="lol-premade-voice-panel-team-header hide">\r\n        <div class="lol-premade-voice-panel-team-header-text"></div>\r\n        <div class="lol-premade-voice-panel-team-unavailable hide"></div>\r\n        <lol-parties-key-bind-indicator class="lol-premade-voice-panel-team-ptt-indicator"></lol-parties-key-bind-indicator>\r\n       \r\n        <div class="voice-toggle lol-premade-voice-panel-team-toggle disconnected">\r\n          <div class="voice-toggle-icon"></div>\r\n          <div class="voice-toggle-thumb"></div>\r\n        </div>\r\n      </div>\r\n    </lol-uikit-scrollable>\r\n    <div class="lol-premade-voice-panel-availability lol-premade-voice-panel-content hide">\r\n      <div class="lol-premade-voice-panel-poro"></div>\r\n      <div class="lol-premade-voice-panel-message"></div>\r\n    </div>\r\n    <div class="lol-premade-voice-panel-connection-bar">\r\n      <div class="lol-premade-voice-panel-connection-state"></div>\r\n      <div class="lol-premade-voice-panel-connection-icon"></div>\r\n    </div>\r\n    <div class="lol-premade-voice-panel-current-player">\r\n      <div class="lol-premade-voice-panel-player-highlight"></div>\r\n      <div class="voice-panel-avatar-wrapper">\r\n        <lol-parties-comm-halo class="voice-panel-current-player-halo" size="small">\r\n          <lol-social-avatar-icon\r\n            class="lol-premade-voice-panel-cp-chat-icon"\r\n            icon-id=""\r\n            availability=""\r\n            show-availability="true"\r\n          >\r\n          </lol-social-avatar-icon>\r\n        </lol-parties-comm-halo>\r\n      </div>\r\n      <div class="lol-premade-voice-panel-current-player-content">\r\n        <div class="lol-premade-voice-panel-current-player-row">\r\n          <div class="lol-premade-voice-panel-current-player-name">\r\n            <lol-uikit-player-name format="tooltip" puuid="" />\r\n          </div>\r\n          <div class="lol-premade-voice-panel-current-player-volume-label"></div>\r\n        </div>\r\n        <lol-uikit-slider\r\n          for="currentPlayerVolume"\r\n          percentage\r\n          value="0"\r\n          class="lol-premade-voice-panel-current-player-volume"\r\n          clickset="true"\r\n        >\r\n        </lol-uikit-slider>\r\n      </div>\r\n      <div class="lol-premade-voice-panel-current-player-buttons">\r\n        <div class="lol-premade-voice-panel-current-player-mic"></div>\r\n        <div class="lol-premade-voice-panel-current-player-deafen"></div>\r\n        <div class="lol-premade-voice-panel-current-player-settings"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(40),
-                i = n(41),
-                a = n(42),
-                o = n(43),
-                l = n(44),
-                s = n(45),
-                c = n(46),
-                p = n(47),
-                d = n(48),
-                h = n(49),
-                u = n(50),
-                m = n(51),
-                g = n(52),
-                A = n(53),
-                _ = n(54),
-                v = n(55),
-                b = n(56),
-                f = n(57),
-                y = n(58),
-                E = n(59),
-                C = n(60),
-                x = n(61),
-                k = n(62),
-                S = n(63),
-                T = n(64),
+            var r = n(42),
+                i = n(43),
+                a = n(44),
+                o = n(45),
+                l = n(46),
+                s = n(47),
+                c = n(48),
+                p = n(49),
+                d = n(50),
+                h = n(51),
+                u = n(52),
+                m = n(53),
+                g = n(54),
+                A = n(55),
+                _ = n(56),
+                v = n(57),
+                b = n(58),
+                f = n(59),
+                y = n(60),
+                E = n(61),
+                x = n(62),
+                C = n(63),
+                k = n(64),
                 B = n(65),
-                w = n(66),
-                P = n(67),
-                $ = n(68),
-                O = n(69),
-                D = n(70),
-                I = n(71),
-                M = n(72),
-                V = n(73),
-                N = n(74),
-                L = n(75),
+                S = n(66),
+                w = n(67),
+                T = n(68),
+                $ = n(69),
+                P = n(70),
+                O = n(71),
+                D = n(72),
+                I = n(73),
+                M = n(74),
+                V = n(75),
+                N = n(76),
+                L = n(77),
                 j = i(r),
                 R = a(o),
-                U = a(l),
-                z = a(s),
+                z = a(l),
+                U = a(s),
                 F = a(c),
                 H = a(p),
                 Y = a(d),
@@ -1456,21 +1586,21 @@
                 G = a(m),
                 W = a(g),
                 K = a(A),
-                J = a(_),
-                Z = a(v),
+                Z = a(_),
+                J = a(v),
                 X = a(b),
                 ee = a(f),
                 te = a(y),
                 ne = a(E),
-                re = a(C),
-                ie = a(x),
+                re = a(x),
+                ie = a(C),
                 ae = a(k),
-                oe = a(S),
-                le = a(T),
-                se = a(B),
-                ce = a(w),
-                pe = a(P),
-                de = a($),
+                oe = a(B),
+                le = a(S),
+                se = a(w),
+                ce = a(T),
+                pe = a($),
+                de = a(P),
                 he = a(O),
                 ue = a(D),
                 me = a(I),
@@ -1478,7 +1608,7 @@
                 Ae = a(V),
                 _e = a(N),
                 ve = a(L);
-            j.push([e.id, '.lol-premade-voice-panel .lol-premade-voice-panel-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  font-family: var(--font-display);\n}\n.lol-premade-voice-panel,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable,\n.lol-premade-voice-panel .lol-premade-voice-panel-availability .lol-premade-voice-panel-message {\n  font-family: var(--font-body);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  font-family: var(--font-display);\n}\n.lol-premade-voice-panel,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable,\n.lol-premade-voice-panel .lol-premade-voice-panel-availability .lol-premade-voice-panel-message {\n  font-family: var(--font-body);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable {\n  -webkit-user-select: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  text-transform: uppercase;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(ko-kr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(ko-kr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(ko-kr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(ko-kr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(ja-jp),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(ja-jp),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(ja-jp),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(ja-jp),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(tr-tr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(tr-tr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(tr-tr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(tr-tr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(el-gr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(el-gr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(el-gr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(el-gr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(th-th),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(th-th),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(th-th),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(th-th),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(zh-tw),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(zh-tw),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(zh-tw),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(zh-tw) {\n  text-transform: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(ar-ae),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(ar-ae),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable:lang(ja-jp) {\n  font-size: 13px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash {\n  color: #f0e6d2;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content lol-uikit-slider {\n  width: 155px;\n  height: 15px;\n  --slider-base-before-top: 7px;\n  --slider-btn-cursor: pointer;\n  --slider-btn-width: 15px;\n  --slider-btn-height: 15px;\n  --slider-btn-hover-background-position: 0 -15px;\n  --slider-btn-active-background-position: 0 -30px;\n  --slider-fill-top: 6px;\n}\n:host {\n  width: 288px;\n  overflow: hidden;\n}\n.lol-premade-voice-panel {\n  display: flex;\n  flex-direction: column;\n  background: #010a13;\n  border: thin solid #1e2328;\n  cursor: default;\n  opacity: 0;\n  transform: translateY(350px);\n  transform-origin: center bottom;\n  transition: transform 500ms cubic-bezier(0.02, 0.85, 0.08, 0.99), opacity 300ms ease;\n  position: relative;\n  height: 317px;\n}\n.lol-premade-voice-panel:lang(ar-ae) {\n  direction: rtl;\n}\n.lol-premade-voice-panel.show {\n  opacity: 1;\n  transform: translateY(0);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  width: 100%;\n  height: 47px;\n  border-bottom: thin solid #463714;\n  align-items: center;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  flex-grow: 1;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text {\n  display: flex;\n  flex-direction: column;\n  font-size: 14px;\n  color: #f0e6d2;\n  margin: 0 0 0 8px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(ar-ae) {\n  margin: 0 8px 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-connection-status {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-connection-toggle {\n  margin: 0 8px 0 auto;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-connection-toggle:lang(ar-ae) {\n  margin: 0 auto 0 8px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-minimize-button {\n  display: block;\n  width: 16px;\n  height: 16px;\n  cursor: pointer;\n  margin: 0 8px 0 auto;\n  background-image: url(' + R + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  opacity: 0.7;\n  flex-shrink: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-minimize-button:lang(ar-ae) {\n  margin: 0 auto 0 8px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-minimize-button:hover {\n  opacity: 1;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash {\n  display: none;\n  color: #f0e6d2;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  height: 47px;\n  padding-left: 8px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  overflow: hidden;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-logo {\n  display: inline;\n  height: 32px;\n  width: 32px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName {\n  color: #c8aa6e;\n  flex-direction: row;\n  margin-left: 7px;\n  margin-right: 7px;\n  display: inline;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-name {\n  text-overflow: ellipsis;\n  max-width: 150px;\n  flex-direction: row;\n  display: inline;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-content {\n  display: flex;\n  height: 216px;\n  padding: 0px 11px;\n  box-sizing: border-box;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants {\n  flex-direction: column;\n  visibility: visible;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header {\n  color: #f0e6d2;\n  margin: 8px 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header .lol-premade-voice-panel-party-toggle {\n  margin: 0 0 0 auto;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header .lol-premade-voice-panel-party-toggle:lang(ar-ae) {\n  margin: 0 auto 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header .lol-premade-voice-panel-party-toggle.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-section-divider {\n  width: 100%;\n  height: 1px;\n  background: #3c3c41;\n  align-self: center;\n  flex-shrink: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-section-divider.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  color: #f0e6d2;\n  margin: 8px 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-header-text {\n  margin-right: 5px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable {\n  font-style: italic;\n  color: #5b5a56;\n  margin-left: auto;\n  margin-right: 6px;\n  font-size: 12px;\n  white-space: nowrap;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-ptt-indicator.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-toggle {\n  margin: 0 0 0 auto;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-toggle:lang(ar-ae) {\n  margin: 0 auto 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-toggle.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants lol-parties-comm-participant {\n  height: 54px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants.hide {\n  visibility: hidden;\n  margin: 0px;\n  height: 0px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-availability {\n  flex-direction: column;\n  align-items: center;\n  color: #3c3c41;\n  justify-content: center;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-availability .lol-premade-voice-panel-poro {\n  background-image: url(" + U + ");\n  background-size: cover;\n  width: 128px;\n  height: 128px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-availability .lol-premade-voice-panel-message {\n  width: 180px;\n  text-align: center;\n  font-size: 14px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-availability.hide {\n  display: none;\n  margin: 0px;\n  height: 0px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar {\n  display: flex;\n  justify-content: space-between;\n  height: 32px;\n  width: 100%;\n  align-items: center;\n  background: linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);\n  border-bottom: thin solid #1e2328;\n  cursor: default;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar:hover {\n  background: rgba(255,255,255,0.1);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected {\n  color: #3cb44b;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected.button-hover {\n  color: #f0e6d2;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected .lol-premade-voice-panel-connection-icon {\n  background-image: url(" + z + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected .lol-premade-voice-panel-connection-icon:hover {\n  background-image: url(" + F + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected .lol-premade-voice-panel-connection-icon:active {\n  background-image: url(" + H + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected {\n  color: #a09b8c;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected.button-hover {\n  color: #f0e6d2;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected .lol-premade-voice-panel-connection-icon {\n  background-image: url(" + Y + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected .lol-premade-voice-panel-connection-icon:hover {\n  background-image: url(" + Q + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected .lol-premade-voice-panel-connection-icon:active {\n  background-image: url(" + q + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connecting {\n  color: #cdbe91;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-state {\n  font-size: 14px;\n  flex-grow: 1;\n  margin: 0 0 0 7px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-state:lang(ar-ae) {\n  margin: 0 7px 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-icon {\n  background-size: cover;\n  width: 18px;\n  height: 18px;\n  cursor: pointer;\n  margin: 0 7px 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-icon:lang(ar-ae) {\n  margin: 0 0 0 7px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-icon.locked {\n  pointer-events: none;\n  opacity: 0.3;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player {\n  display: flex;\n  flex-direction: row;\n  height: 54px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player:hover {\n  background: linear-gradient(to right, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-player-highlight {\n  display: flex;\n  width: 7px;\n  background-color: #785a28;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-buttons {\n  display: flex;\n  position: absolute;\n  bottom: 11px;\n  right: 11px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-buttons:lang(ar-ae) {\n  right: auto;\n  left: 11px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic {\n  background-image: url(" + G + ");\n  background-size: cover;\n  width: 18px;\n  height: 18px;\n  cursor: pointer;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic:hover {\n  background-image: url(" + W + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic:active {\n  background-image: url(" + K + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic.muted {\n  background-image: url(" + J + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic.muted:hover {\n  background-image: url(" + Z + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic.muted:active {\n  background-image: url(" + X + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic.disabled {\n  background-image: url(" + ee + ");\n  cursor: default;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen {\n  background-image: url(" + te + ");\n  background-size: cover;\n  width: 18px;\n  height: 18px;\n  margin: 0 5px 0 5px;\n  cursor: pointer;\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen:hover {\n  background-image: url(" + ne + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen:active {\n  background-image: url(" + re + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen.deafened {\n  background-image: url(" + ie + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen.deafened:hover {\n  background-image: url(" + ae + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen.deafened:active {\n  background-image: url(" + oe + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings {\n  background-image: url(" + le + ");\n  background-size: cover;\n  width: 18px;\n  height: 18px;\n  cursor: pointer;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings:hover {\n  background-image: url(" + se + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings:active {\n  background-image: url(" + ce + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings.disabled,\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings .disabled:hover,\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings .disabled:active {\n  background-image: url(" + pe + ");\n  cursor: default;\n}\n.lol-premade-voice-panel .voice-panel-avatar-wrapper {\n  align-self: center;\n  margin: 0 8px 0 4px;\n}\n.lol-premade-voice-panel .voice-panel-avatar-wrapper:lang(ar-ae) {\n  margin: 0 4px 0 8px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content {\n  display: flex;\n  flex-direction: column;\n  font-size: 14px;\n  color: #cdbe91;\n  margin: 11px 0 11px 3px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content:lang(ar-ae) {\n  margin: 11px 3px 11px 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content .lol-premade-voice-panel-current-player-row {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content .lol-premade-voice-panel-current-player-row .lol-premade-voice-panel-current-player-name {\n  max-width: 130px;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content .lol-premade-voice-panel-current-player-row .lol-premade-voice-panel-current-player-volume-label {\n  margin: 0 2px 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content .lol-premade-voice-panel-current-player-row .lol-premade-voice-panel-current-player-volume-label:lang(ar-ae) {\n  margin: 0 0 0 2px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content.disabled {\n  color: #3c3c41;\n}\n.lol-premade-voice-panel .voice-toggle {\n  position: relative;\n  width: 44px;\n  height: 22px;\n  cursor: pointer;\n  flex-shrink: 0;\n  background-image: url(" + de + ");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n}\n.lol-premade-voice-panel .voice-toggle .voice-toggle-icon {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 14px;\n  height: 14px;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.lol-premade-voice-panel .voice-toggle .voice-toggle-thumb {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 18px;\n  height: 18px;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: left 200ms ease;\n}\n.lol-premade-voice-panel .voice-toggle.disconnected .voice-toggle-icon {\n  display: none;\n}\n.lol-premade-voice-panel .voice-toggle.disconnected .voice-toggle-thumb {\n  left: 2px;\n  background-image: url(" + he + ");\n}\n.lol-premade-voice-panel .voice-toggle.connected .voice-toggle-icon {\n  display: block;\n  left: 3px;\n  background-image: url(" + ue + ");\n}\n.lol-premade-voice-panel .voice-toggle.connected .voice-toggle-thumb {\n  left: 24px;\n  background-image: url(" + me + ");\n}\n.lol-premade-voice-panel .voice-toggle.connecting .voice-toggle-icon {\n  display: block;\n  left: 3px;\n  width: 14px;\n  height: 14px;\n  background-image: url(" + ge + ");\n  animation: voice-toggle-spin 1s linear infinite;\n}\n.lol-premade-voice-panel .voice-toggle.connecting .voice-toggle-thumb {\n  left: 24px;\n  background-image: url(" + me + ");\n}\n.lol-premade-voice-panel .voice-toggle.restricted {\n  cursor: not-allowed;\n}\n.lol-premade-voice-panel .voice-toggle.restricted .voice-toggle-icon {\n  display: block;\n  right: 3px;\n  left: auto;\n  background-image: url(" + Ae + ");\n}\n.lol-premade-voice-panel .voice-toggle.restricted .voice-toggle-thumb {\n  left: 2px;\n  background-image: url(" + _e + ");\n}\n.lol-premade-voice-panel .voice-toggle.disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n  pointer-events: none;\n}\n.lol-premade-voice-panel .voice-toggle.disabled-disconnected {\n  cursor: not-allowed;\n  pointer-events: none;\n}\n.lol-premade-voice-panel .voice-toggle.disabled-disconnected .voice-toggle-icon {\n  display: block;\n  right: 3px;\n  left: auto;\n  background-image: url(" + ve + ");\n}\n.lol-premade-voice-panel .voice-toggle.disabled-disconnected .voice-toggle-thumb {\n  left: 2px;\n  background-image: url(" + he + ");\n}\n@-moz-keyframes voice-toggle-spin {\n  0% {\n    transform: translateY(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateY(-50%) rotate(360deg);\n  }\n}\n@-webkit-keyframes voice-toggle-spin {\n  0% {\n    transform: translateY(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateY(-50%) rotate(360deg);\n  }\n}\n@-o-keyframes voice-toggle-spin {\n  0% {\n    transform: translateY(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateY(-50%) rotate(360deg);\n  }\n}\n@keyframes voice-toggle-spin {\n  0% {\n    transform: translateY(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateY(-50%) rotate(360deg);\n  }\n}\n", "", {
+            j.push([e.id, '.lol-premade-voice-panel .lol-premade-voice-panel-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  font-family: var(--font-display);\n}\n.lol-premade-voice-panel,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable,\n.lol-premade-voice-panel .lol-premade-voice-panel-availability .lol-premade-voice-panel-message {\n  font-family: var(--font-body);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  font-family: var(--font-display);\n}\n.lol-premade-voice-panel,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable,\n.lol-premade-voice-panel .lol-premade-voice-panel-availability .lol-premade-voice-panel-message {\n  font-family: var(--font-body);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable {\n  -webkit-user-select: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  text-transform: uppercase;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(ko-kr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(ko-kr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(ko-kr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(ko-kr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(ja-jp),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(ja-jp),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(ja-jp),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(ja-jp),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(tr-tr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(tr-tr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(tr-tr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(tr-tr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(el-gr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(el-gr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(el-gr),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(el-gr),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(th-th),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(th-th),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(th-th),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(th-th),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(zh-tw),\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(zh-tw),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(zh-tw),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(zh-tw) {\n  text-transform: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header,\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(ar-ae),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header:lang(ar-ae),\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable:lang(ja-jp) {\n  font-size: 13px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash {\n  color: #f0e6d2;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content lol-uikit-slider {\n  width: 155px;\n  height: 15px;\n  --slider-base-before-top: 7px;\n  --slider-btn-cursor: pointer;\n  --slider-btn-width: 15px;\n  --slider-btn-height: 15px;\n  --slider-btn-hover-background-position: 0 -15px;\n  --slider-btn-active-background-position: 0 -30px;\n  --slider-fill-top: 6px;\n}\n:host {\n  width: 288px;\n  overflow: hidden;\n}\n.lol-premade-voice-panel {\n  display: flex;\n  flex-direction: column;\n  background: #010a13;\n  border: thin solid #1e2328;\n  cursor: default;\n  opacity: 0;\n  transform: translateY(350px);\n  transform-origin: center bottom;\n  transition: transform 500ms cubic-bezier(0.02, 0.85, 0.08, 0.99), opacity 300ms ease;\n  position: relative;\n  height: 317px;\n}\n.lol-premade-voice-panel:lang(ar-ae) {\n  direction: rtl;\n}\n.lol-premade-voice-panel.show {\n  opacity: 1;\n  transform: translateY(0);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  width: 100%;\n  height: 47px;\n  border-bottom: thin solid #463714;\n  align-items: center;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  flex-grow: 1;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text {\n  display: flex;\n  flex-direction: column;\n  font-size: 14px;\n  color: #f0e6d2;\n  margin: 0 0 0 8px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-header-text:lang(ar-ae) {\n  margin: 0 8px 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-connection-status {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-connection-toggle {\n  margin: 0 8px 0 auto;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-connection-toggle:lang(ar-ae) {\n  margin: 0 auto 0 8px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-minimize-button {\n  display: block;\n  width: 16px;\n  height: 16px;\n  cursor: pointer;\n  margin: 0 8px 0 auto;\n  background-image: url(' + R + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  opacity: 0.7;\n  flex-shrink: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-minimize-button:lang(ar-ae) {\n  margin: 0 auto 0 8px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-default .lol-premade-voice-panel-minimize-button:hover {\n  opacity: 1;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash {\n  display: none;\n  color: #f0e6d2;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  height: 47px;\n  padding-left: 8px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  overflow: hidden;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-logo {\n  display: inline;\n  height: 32px;\n  width: 32px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-shortName {\n  color: #c8aa6e;\n  flex-direction: row;\n  margin-left: 7px;\n  margin-right: 7px;\n  display: inline;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-header .lol-premade-voice-panel-header-clash .lol-premade-voice-panel-header-clash-title .lol-premade-voice-panel-header-clash-name {\n  text-overflow: ellipsis;\n  max-width: 150px;\n  flex-direction: row;\n  display: inline;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-content {\n  display: flex;\n  height: 216px;\n  padding: 0px 11px;\n  box-sizing: border-box;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants {\n  flex-direction: column;\n  visibility: visible;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header {\n  color: #f0e6d2;\n  margin: 8px 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header .lol-premade-voice-panel-party-toggle {\n  margin: 0 0 0 auto;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header .lol-premade-voice-panel-party-toggle:lang(ar-ae) {\n  margin: 0 auto 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-party-header .lol-premade-voice-panel-party-toggle.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-section-divider {\n  width: 100%;\n  height: 1px;\n  background: #3c3c41;\n  align-self: center;\n  flex-shrink: 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-section-divider.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header {\n  color: #f0e6d2;\n  margin: 8px 0;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-header-text {\n  margin-right: 5px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable {\n  font-style: italic;\n  color: #5b5a56;\n  margin-left: auto;\n  margin-right: 6px;\n  font-size: 12px;\n  white-space: nowrap;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-unavailable.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-ptt-indicator.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-toggle {\n  margin: 0 0 0 auto;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-toggle:lang(ar-ae) {\n  margin: 0 auto 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants .lol-premade-voice-panel-team-header .lol-premade-voice-panel-team-toggle.hide {\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants lol-parties-comm-participant {\n  height: 54px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-participants.hide {\n  visibility: hidden;\n  margin: 0px;\n  height: 0px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-availability {\n  flex-direction: column;\n  align-items: center;\n  color: #3c3c41;\n  justify-content: center;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-availability .lol-premade-voice-panel-poro {\n  background-image: url(" + z + ");\n  background-size: cover;\n  width: 128px;\n  height: 128px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-availability .lol-premade-voice-panel-message {\n  width: 180px;\n  text-align: center;\n  font-size: 14px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-availability.hide {\n  display: none;\n  margin: 0px;\n  height: 0px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar {\n  display: flex;\n  justify-content: space-between;\n  height: 32px;\n  width: 100%;\n  align-items: center;\n  background: linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);\n  border-bottom: thin solid #1e2328;\n  cursor: default;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar:hover {\n  background: rgba(255,255,255,0.1);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected {\n  color: #3cb44b;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected.button-hover {\n  color: #f0e6d2;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected .lol-premade-voice-panel-connection-icon {\n  background-image: url(" + U + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected .lol-premade-voice-panel-connection-icon:hover {\n  background-image: url(" + F + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connected .lol-premade-voice-panel-connection-icon:active {\n  background-image: url(" + H + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected {\n  color: #a09b8c;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected.button-hover {\n  color: #f0e6d2;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected .lol-premade-voice-panel-connection-icon {\n  background-image: url(" + Y + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected .lol-premade-voice-panel-connection-icon:hover {\n  background-image: url(" + Q + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.disconnected .lol-premade-voice-panel-connection-icon:active {\n  background-image: url(" + q + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar.connecting {\n  color: #cdbe91;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-state {\n  font-size: 14px;\n  flex-grow: 1;\n  margin: 0 0 0 7px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-state:lang(ar-ae) {\n  margin: 0 7px 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-icon {\n  background-size: cover;\n  width: 18px;\n  height: 18px;\n  cursor: pointer;\n  margin: 0 7px 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-icon:lang(ar-ae) {\n  margin: 0 0 0 7px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-connection-bar .lol-premade-voice-panel-connection-icon.locked {\n  pointer-events: none;\n  opacity: 0.3;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player {\n  display: flex;\n  flex-direction: row;\n  height: 54px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player:hover {\n  background: linear-gradient(to right, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-player-highlight {\n  display: flex;\n  width: 7px;\n  background-color: #785a28;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-buttons {\n  display: flex;\n  position: absolute;\n  bottom: 11px;\n  right: 11px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-buttons:lang(ar-ae) {\n  right: auto;\n  left: 11px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic {\n  background-image: url(" + G + ");\n  background-size: cover;\n  width: 18px;\n  height: 18px;\n  cursor: pointer;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic:hover {\n  background-image: url(" + W + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic:active {\n  background-image: url(" + K + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic.muted {\n  background-image: url(" + Z + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic.muted:hover {\n  background-image: url(" + J + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic.muted:active {\n  background-image: url(" + X + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-mic.disabled {\n  background-image: url(" + ee + ");\n  cursor: default;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen {\n  background-image: url(" + te + ");\n  background-size: cover;\n  width: 18px;\n  height: 18px;\n  margin: 0 5px 0 5px;\n  cursor: pointer;\n  display: none;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen:hover {\n  background-image: url(" + ne + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen:active {\n  background-image: url(" + re + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen.deafened {\n  background-image: url(" + ie + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen.deafened:hover {\n  background-image: url(" + ae + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-deafen.deafened:active {\n  background-image: url(" + oe + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings {\n  background-image: url(" + le + ");\n  background-size: cover;\n  width: 18px;\n  height: 18px;\n  cursor: pointer;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings:hover {\n  background-image: url(" + se + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings:active {\n  background-image: url(" + ce + ");\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings.disabled,\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings .disabled:hover,\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player .lol-premade-voice-panel-current-player-settings .disabled:active {\n  background-image: url(" + pe + ");\n  cursor: default;\n}\n.lol-premade-voice-panel .voice-panel-avatar-wrapper {\n  align-self: center;\n  margin: 0 8px 0 4px;\n}\n.lol-premade-voice-panel .voice-panel-avatar-wrapper:lang(ar-ae) {\n  margin: 0 4px 0 8px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content {\n  display: flex;\n  flex-direction: column;\n  font-size: 14px;\n  color: #cdbe91;\n  margin: 11px 0 11px 3px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content:lang(ar-ae) {\n  margin: 11px 3px 11px 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content .lol-premade-voice-panel-current-player-row {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content .lol-premade-voice-panel-current-player-row .lol-premade-voice-panel-current-player-name {\n  max-width: 130px;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content .lol-premade-voice-panel-current-player-row .lol-premade-voice-panel-current-player-volume-label {\n  margin: 0 2px 0 0;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content .lol-premade-voice-panel-current-player-row .lol-premade-voice-panel-current-player-volume-label:lang(ar-ae) {\n  margin: 0 0 0 2px;\n}\n.lol-premade-voice-panel .lol-premade-voice-panel-current-player-content.disabled {\n  color: #3c3c41;\n}\n.lol-premade-voice-panel .voice-toggle {\n  position: relative;\n  width: 44px;\n  height: 22px;\n  cursor: pointer;\n  flex-shrink: 0;\n  background-image: url(" + de + ");\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n}\n.lol-premade-voice-panel .voice-toggle .voice-toggle-icon {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 14px;\n  height: 14px;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n.lol-premade-voice-panel .voice-toggle .voice-toggle-thumb {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 18px;\n  height: 18px;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: left 200ms ease;\n}\n.lol-premade-voice-panel .voice-toggle.disconnected .voice-toggle-icon {\n  display: none;\n}\n.lol-premade-voice-panel .voice-toggle.disconnected .voice-toggle-thumb {\n  left: 2px;\n  background-image: url(" + he + ");\n}\n.lol-premade-voice-panel .voice-toggle.connected .voice-toggle-icon {\n  display: block;\n  left: 3px;\n  background-image: url(" + ue + ");\n}\n.lol-premade-voice-panel .voice-toggle.connected .voice-toggle-thumb {\n  left: 24px;\n  background-image: url(" + me + ");\n}\n.lol-premade-voice-panel .voice-toggle.connecting .voice-toggle-icon {\n  display: block;\n  left: 3px;\n  width: 14px;\n  height: 14px;\n  background-image: url(" + ge + ");\n  animation: voice-toggle-spin 1s linear infinite;\n}\n.lol-premade-voice-panel .voice-toggle.connecting .voice-toggle-thumb {\n  left: 24px;\n  background-image: url(" + me + ");\n}\n.lol-premade-voice-panel .voice-toggle.restricted {\n  cursor: not-allowed;\n}\n.lol-premade-voice-panel .voice-toggle.restricted .voice-toggle-icon {\n  display: block;\n  right: 3px;\n  left: auto;\n  background-image: url(" + Ae + ");\n}\n.lol-premade-voice-panel .voice-toggle.restricted .voice-toggle-thumb {\n  left: 2px;\n  background-image: url(" + _e + ");\n}\n.lol-premade-voice-panel .voice-toggle.disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n  pointer-events: none;\n}\n.lol-premade-voice-panel .voice-toggle.disabled-disconnected {\n  cursor: not-allowed;\n  pointer-events: none;\n}\n.lol-premade-voice-panel .voice-toggle.disabled-disconnected .voice-toggle-icon {\n  display: block;\n  right: 3px;\n  left: auto;\n  background-image: url(" + ve + ");\n}\n.lol-premade-voice-panel .voice-toggle.disabled-disconnected .voice-toggle-thumb {\n  left: 2px;\n  background-image: url(" + he + ");\n}\n@-moz-keyframes voice-toggle-spin {\n  0% {\n    transform: translateY(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateY(-50%) rotate(360deg);\n  }\n}\n@-webkit-keyframes voice-toggle-spin {\n  0% {\n    transform: translateY(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateY(-50%) rotate(360deg);\n  }\n}\n@-o-keyframes voice-toggle-spin {\n  0% {\n    transform: translateY(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateY(-50%) rotate(360deg);\n  }\n}\n@keyframes voice-toggle-spin {\n  0% {\n    transform: translateY(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateY(-50%) rotate(360deg);\n  }\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/voice-panel/style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/shared.styl"],
                 names: [],
@@ -1635,45 +1765,46 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = E(n(1)),
-                i = E(n(16)),
-                a = f(n(77)),
-                o = f(n(78)),
-                l = f(n(79)),
-                s = f(n(80)),
-                c = f(n(81)),
-                p = f(n(82)),
-                d = f(n(83)),
-                h = f(n(84)),
-                u = f(n(23)),
-                m = f(n(25)),
-                g = f(n(26)),
-                A = f(n(27)),
-                _ = f(n(29)),
-                v = n(85),
-                b = n(33);
+            var r = x(n(1)),
+                i = x(n(16)),
+                a = y(n(79)),
+                o = y(n(80)),
+                l = y(n(81)),
+                s = y(n(82)),
+                c = y(n(83)),
+                p = y(n(84)),
+                d = y(n(85)),
+                h = y(n(86)),
+                u = y(n(23)),
+                m = y(n(25)),
+                g = y(n(27)),
+                A = y(n(29)),
+                _ = y(n(31)),
+                v = y(n(28)),
+                b = n(87),
+                f = n(35);
 
-            function f(e) {
+            function y(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
 
-            function y(e) {
+            function E(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (y = function(e) {
+                return (E = function(e) {
                     return e ? n : t
                 })(e)
             }
 
-            function E(e, t) {
+            function x(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
                     default: e
                 };
-                var n = y(t);
+                var n = E(t);
                 if (n && n.has(e)) return n.get(e);
                 var r = {},
                     i = Object.defineProperty && Object.getOwnPropertyDescriptor;
@@ -1683,12 +1814,13 @@
                         o && (o.get || o.set) ? Object.defineProperty(r, a, o) : r[a] = e[a]
                     } return r.default = e, n && n.set(e, r), r
             }
-            class C extends i.default {
+            const C = "couldShowTeamVoiceEat";
+            class k extends i.default {
                 templateMarkup() {
-                    return n(86)
+                    return n(88)
                 }
                 stylesheetMarkup() {
-                    return n(87)
+                    return n(89)
                 }
                 constructor() {
                     super(), this._listeners = {
@@ -1697,7 +1829,7 @@
                         minimizePanel: this._hidePanel.bind(this),
                         keyDown: this._handleKeyDown.bind(this),
                         keyUp: this._handleKeyUp.bind(this)
-                    }, this._voiceDisabled = null, this._buttonDisabled = !1, this._disabledAfterLogin = !1, this._isInCustomGame = !1, this._tooltip = null, this._firstExperienceContextualNotification = null, this._premadeVoiceAvailability = null, this._teamVoiceAvailability = null, this._parentNode = null, this._pttKey = null, this._pttTeamKey = null, this._pttActive = !1, this._connectionState = null, this._teamConnectionState = null, this._teamVoicePluginEnabled = !1, this._previousParticipantCount = 0, this._previousTeamSessionActive = !1, this._lockOutMemberJoinSound = !1, this._memberJoinTimeout = null;
+                    }, this._voiceDisabled = null, this._buttonDisabled = !1, this._disabledAfterLogin = !1, this._isInCustomGame = !1, this._tooltip = null, this._firstExperienceContextualNotification = null, this._teamVoiceEATNotification = null, this._teamVoiceEATSeen = null, this._teamVoiceEATShown = !1, this._premadeVoiceAvailability = null, this._teamVoiceAvailability = null, this._isInGame = !1, this._parentNode = null, this._pttKey = null, this._pttTeamKey = null, this._pttActive = !1, this._connectionState = null, this._teamConnectionState = null, this._teamVoicePluginEnabled = !1, this._previousParticipantCount = 0, this._previousTeamSessionActive = !1, this._lockOutMemberJoinSound = !1, this._memberJoinTimeout = null;
                     const e = r.Audio.getChannel(i.SOUND_CHANNEL);
                     this._teamPttClickSound = e.createSound(a.default), this._teamPttReleaseSound = e.createSound(o.default), this._partyPttClickSound = e.createSound(l.default), this._partyPttReleaseSound = e.createSound(s.default), this._joinSound = e.createSound(c.default), this._leaveSound = e.createSound(p.default), this._teamToggleOnSound = e.createSound(d.default), this._teamToggleOffSound = e.createSound(h.default), this._elements = {
                         voiceButton: ".lol-premade-voice-button"
@@ -1760,22 +1892,22 @@
                     this._teamVoiceAvailability = t || !r, this._updateCombinedAvailability()
                 }
                 _updateCombinedAvailability(e) {
-                    const t = this._premadeVoiceAvailability,
-                        n = this._teamVoiceAvailability;
-                    e || (this._voiceDisabled = !(t && t.showUI || n), this._handleVoiceDisabled(), this._disabledAfterLogin = t && t.disabledAfterLogin);
-                    const r = t && t.voiceChannelAvailable || n || this._connectionState === b.VOICE_CONNECTED_STATE || this._teamConnectionState === b.VOICE_CONNECTED_STATE;
-                    e || !this._disabledAfterLogin && r || this._buttonDisabled ? r && this._buttonDisabled && (this._buttonDisabled = !1, this.removeClass("button-disabled", this._elements.voiceButton), this._voicePanelElement && this._voicePanelElement.dispatchEvent(new Event("voiceButtonEnabled")), this._detachDisabledTooltip()) : (this._buttonDisabled = !0, this.addClass("button-disabled", this._elements.voiceButton), this._checkIfTooltipNeeded(), this._hidePanel())
+                    const t = this._premadeVoiceAvailability;
+                    e || (this._voiceDisabled = !1, this._handleVoiceDisabled(), this._disabledAfterLogin = t && t.disabledAfterLogin), e || !this._isInGame || this._buttonDisabled ? !this._isInGame && this._buttonDisabled && (this._buttonDisabled = !1, this.removeClass("button-disabled", this._elements.voiceButton), this._voicePanelElement && this._voicePanelElement.dispatchEvent(new Event("voiceButtonEnabled")), this._detachDisabledTooltip()) : (this._buttonDisabled = !0, this.addClass("button-disabled", this._elements.voiceButton), this._checkIfTooltipNeeded(), this._hidePanel())
                 }
                 lobbyUpdated(e) {
                     const t = e && e.gameConfig,
                         n = t && e.members && e.members.length > 1;
-                    this._isInCustomGame = t && e.gameConfig.isCustom, this._isInPremade = n && !e.gameConfig.isCustom, this._checkIfFirstExperience(), this._checkIfTooltipNeeded()
+                    this._isInLobby = !!t, this._isInCustomGame = t && e.gameConfig.isCustom, this._isInPremade = n && !e.gameConfig.isCustom, this._checkIfFirstExperience(), this._checkIfTooltipNeeded(), this._checkIfTeamVoiceEATNeeded()
                 }
                 _initDataBinding() {
                     this.lobbyDataListener = this.lobbyUpdated.bind(this), _.default.observe("lobby", this.lobbyDataListener), _.default.lobby().then(this.lobbyDataListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), u.default.observe("availability", this.availabilityDataListener), u.default.availability().then(this.availabilityDataListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), m.default.observe("availability", this.teamVoiceAvailabilityListener), m.default.availability().then(this.teamVoiceAvailabilityListener), this._voiceFirstExperienceListener = this._voiceFirstExperienceUpdated.bind(this), u.default.observe("firstExperience", this._voiceFirstExperienceListener), u.default.firstExperience().then(this._voiceFirstExperienceListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), A.default.observe("session", this.gameflowSessionListener), A.default.session().then(this.gameflowSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), u.default.observe("settings", this.settingsDataListener), u.default.settings().then(this.settingsDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), u.default.observe("participants", this.participantsDataListener), u.default.participants().then(this.participantsDataListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), m.default.observe("session", this.teamVoiceSessionListener), m.default.session().then(this.teamVoiceSessionListener), this.teamVoicePluginEnabledListener = this.teamVoiceEnabledUpdated.bind(this), g.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), g.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener)
                 }
                 gameflowSessionUpdated(e) {
-                    e && e.phase && "ReadyCheck" === e.phase && this._hidePanel()
+                    if (!e || !e.phase) return;
+                    "ReadyCheck" === e.phase && this._hidePanel();
+                    const t = "InProgress" === e.phase;
+                    t !== this._isInGame && (this._isInGame = t, this._updateCombinedAvailability())
                 }
                 _showPanel(e = !0) {
                     this._buttonDisabled || (this.addClass("active", this._elements.voiceButton), r.FlyoutManager.sendEvent(this, "showVoicePanel"), this._voicePanelElement && (this._voicePanelElement.dispatchEvent(new Event("willShowVoicePanel")), e && this._playSound("/fe/lol-premade-voice/sfx-soc-ui-chatwindow-open.ogg")))
@@ -1790,20 +1922,20 @@
                     this.parentNode && (this.parentNode.style && (this._voiceDisabled ? (this.addClass("voice-disabled", this._elements.voiceButton), this.parentNode.style.display = "none") : (this.removeClass("voice-disabled", this._elements.voiceButton), this.parentNode.style.display = "inherit")), this._parentNode = this.parentNode)
                 }
                 _checkIfTooltipNeeded() {
-                    this._buttonDisabled && (this._disabledAfterLogin ? this._tooltipType !== v.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED && this._attachDisabledTooltip(v.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED) : this._isInCustomGame ? this._tooltipType !== v.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME && this._attachDisabledTooltip(v.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME) : this._tooltipType !== v.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY && this._attachDisabledTooltip(v.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY))
+                    this._buttonDisabled && (this._disabledAfterLogin ? this._tooltipType !== b.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED && this._attachDisabledTooltip(b.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED) : this._isInCustomGame ? this._tooltipType !== b.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME && this._attachDisabledTooltip(b.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME) : this._tooltipType !== b.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY && this._attachDisabledTooltip(b.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY))
                 }
                 _attachDisabledTooltip(e) {
                     this._tooltipType && this._detachDisabledTooltip(), this._tooltipType = e;
                     const t = document.createElement("lol-uikit-tooltip");
                     let n;
                     switch (e) {
-                        case v.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME:
+                        case b.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME:
                             n = r.tra.get("parties_comm_button_error_in_custom_game");
                             break;
-                        case v.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY:
+                        case b.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY:
                             n = r.tra.get("parties_comm_button_error_not_in_party");
                             break;
-                        case v.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED:
+                        case b.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED:
                             n = r.tra.get("parties_comm_button_error_disabled")
                     }
                     const i = this._tooltipContentBlock(n);
@@ -1855,29 +1987,55 @@
                     e && (this._pttKey = e.pttKey ? e.pttKey.replace(/^\[|\]$/g, "") : e.pttKey, this._pttTeamKey = e.pushToTalkTeamKey ? e.pushToTalkTeamKey.replace(/^\[|\]$/g, "") : e.pushToTalkTeamKey, this._pttActive = e.pttActive)
                 }
                 teamVoiceEnabledUpdated(e) {
-                    this._teamVoicePluginEnabled = e
+                    this._teamVoicePluginEnabled = e, this._checkIfTeamVoiceEATNeeded()
+                }
+                _checkIfTeamVoiceEATNeeded() {
+                    !this._teamVoiceEATShown && this._teamVoicePluginEnabled && this._isInLobby && this.parentNode && null === this._teamVoiceEATSeen && (this._teamVoiceEATSeen = !1, v.default.navigationPreferences().then((e => {
+                        const t = !e || !e.data || !1 !== e.data[C];
+                        this._teamVoiceEATSeen = !t, t && this._showTeamVoiceEAT()
+                    })).catch((e => {
+                        r.logger.error(`voice-button -- error reading team voice EAT preference: ${e}`)
+                    })))
+                }
+                _showTeamVoiceEAT() {
+                    this._teamVoiceEATShown = !0;
+                    const e = document.createElement("lol-parties-team-voice-eat");
+                    e.setAttribute("header", r.tra.get("parties_comm_panel_team_voice_eat_title")), e.setAttribute("body", r.tra.get("parties_comm_panel_team_voice_eat_body")), e.addEventListener("dismiss", (() => this._dismissTeamVoiceEAT())), e.style.position = "fixed", e.style.zIndex = "1000", e.style.visibility = "hidden", document.body.appendChild(e), this._teamVoiceEATNotification = e;
+                    requestAnimationFrame((() => {
+                        const t = this.getBoundingClientRect(),
+                            n = e.getBoundingClientRect(),
+                            r = t.left + t.width / 2,
+                            i = Math.round(r - (n.width - 24)),
+                            a = Math.round(t.top - n.height - 11);
+                        e.style.left = `${i}px`, e.style.top = `${a}px`, e.style.visibility = "visible"
+                    })), this._teamVoiceEATSeen = !0
+                }
+                _dismissTeamVoiceEAT() {
+                    this._teamVoiceEATNotification && (this._teamVoiceEATNotification.parentNode && this._teamVoiceEATNotification.parentNode.removeChild(this._teamVoiceEATNotification), this._teamVoiceEATNotification = null), v.default.patchNavigationPreferences({
+                        [C]: !1
+                    })
                 }
                 participantsUpdated(e) {
-                    const t = e && e.length > 0 ? b.VOICE_CONNECTED_STATE : b.VOICE_DISCONNECTED_STATE,
+                    const t = e && e.length > 0 ? f.VOICE_CONNECTED_STATE : f.VOICE_DISCONNECTED_STATE,
                         n = e ? e.length : 0;
-                    this._connectionState === b.VOICE_DISCONNECTED_STATE && t === b.VOICE_CONNECTED_STATE ? (this._playJoinSound(), this._lockOutMemberJoinSound = !0, clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
+                    this._connectionState === f.VOICE_DISCONNECTED_STATE && t === f.VOICE_CONNECTED_STATE ? (this._playJoinSound(), this._lockOutMemberJoinSound = !0, clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
                         this._lockOutMemberJoinSound = !1
-                    }), 500)) : this._connectionState === b.VOICE_CONNECTED_STATE && t === b.VOICE_DISCONNECTED_STATE || this._connectionState === b.VOICE_CONNECTED_STATE && n < this._previousParticipantCount ? this._playLeaveSound() : this._connectionState === b.VOICE_CONNECTED_STATE && n > this._previousParticipantCount && !this._lockOutMemberJoinSound && this._playDelayedJoinSound();
+                    }), 500)) : this._connectionState === f.VOICE_CONNECTED_STATE && t === f.VOICE_DISCONNECTED_STATE || this._connectionState === f.VOICE_CONNECTED_STATE && n < this._previousParticipantCount ? this._playLeaveSound() : this._connectionState === f.VOICE_CONNECTED_STATE && n > this._previousParticipantCount && !this._lockOutMemberJoinSound && this._playDelayedJoinSound();
                     const r = this._connectionState !== t;
                     this._connectionState = t, this._previousParticipantCount = n, r && this._updateCombinedAvailability(!0)
                 }
                 teamVoiceSessionUpdated(e) {
                     const t = e && e.participants && e.participants.length > 0,
-                        n = t ? b.VOICE_CONNECTED_STATE : b.VOICE_DISCONNECTED_STATE;
+                        n = t ? f.VOICE_CONNECTED_STATE : f.VOICE_DISCONNECTED_STATE;
                     this._teamVoicePluginEnabled && (!this._previousTeamSessionActive && t ? this._playTeamToggleOnSound() : this._previousTeamSessionActive && !t && this._playTeamToggleOffSound());
                     const r = this._teamConnectionState !== n;
                     this._teamConnectionState = n, this._previousTeamSessionActive = t, r && this._updateCombinedAvailability(!0)
                 }
                 _handleKeyDown(e) {
-                    this._teamVoicePluginEnabled && (this._pttTeamKey && this._teamConnectionState === b.VOICE_CONNECTED_STATE && e.key === this._pttTeamKey && !e.repeat && (this._teamPttReleaseSound.stop(), this._teamPttClickSound.play()), this._pttKey && this._connectionState === b.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && !e.repeat && (this._partyPttReleaseSound.stop(), this._partyPttClickSound.play()))
+                    this._teamVoicePluginEnabled && (this._pttTeamKey && this._teamConnectionState === f.VOICE_CONNECTED_STATE && e.key === this._pttTeamKey && !e.repeat && (this._teamPttReleaseSound.stop(), this._teamPttClickSound.play()), this._pttKey && this._connectionState === f.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && !e.repeat && (this._partyPttReleaseSound.stop(), this._partyPttClickSound.play()))
                 }
                 _handleKeyUp(e) {
-                    this._teamVoicePluginEnabled && (this._pttTeamKey && this._teamConnectionState === b.VOICE_CONNECTED_STATE && e.key === this._pttTeamKey && (this._teamPttClickSound.stop(), this._teamPttReleaseSound.play()), this._pttKey && this._connectionState === b.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && (this._partyPttClickSound.stop(), this._partyPttReleaseSound.play()))
+                    this._teamVoicePluginEnabled && (this._pttTeamKey && this._teamConnectionState === f.VOICE_CONNECTED_STATE && e.key === this._pttTeamKey && (this._teamPttClickSound.stop(), this._teamPttReleaseSound.play()), this._pttKey && this._connectionState === f.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && (this._partyPttClickSound.stop(), this._partyPttReleaseSound.play()))
                 }
                 _playJoinSound() {
                     this._joinSound.play()
@@ -1897,9 +2055,9 @@
                     this._teamToggleOffSound.play()
                 }
             }
-            C.tagName = "lol-parties-comm-button";
-            var x = C;
-            t.default = x
+            k.tagName = "lol-parties-comm-button";
+            var B = k;
+            t.default = B
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "sfx-vc-team-ptt-click.ogg"
@@ -1938,8 +2096,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-premade-voice-button"></div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(40),
-                i = n(41)(r);
+            var r = n(42),
+                i = n(43)(r);
             i.push([e.id, '.lol-premade-voice-button {\n  display: flex;\n  width: 38px;\n  height: 32px;\n  background-image: url("/fe/lol-premade-voice/voice-button.png");\n  background-position-y: 0px;\n  background-size: cover;\n  cursor: pointer;\n}\n.lol-premade-voice-button:hover:not(.button-disabled) {\n  background-position-y: -32px;\n}\n.lol-premade-voice-button:active:not(.button-disabled) {\n  background-position-y: -64px;\n}\n.lol-premade-voice-button.button-disabled {\n  background-position-y: -160px;\n  cursor: default;\n}\n.lol-premade-voice-button.active {\n  background-position-y: -96px;\n}\n.lol-premade-voice-button.voice-disabled {\n  display: none;\n}\nlol-uikit-content-block.lol-premade-voice-button-tooltip[type=tooltip-small] {\n  padding: 9px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-premade-voice/src/elements/shared.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/voice-button/style.styl"],
@@ -1971,9 +2129,9 @@
                 }(n(16)),
                 i = m(n(23)),
                 a = m(n(25)),
-                o = m(n(26)),
+                o = m(n(27)),
                 l = n(1),
-                s = m(n(37)),
+                s = m(n(39)),
                 c = m(n(17)),
                 p = m(n(18)),
                 d = m(n(20)),
@@ -1996,10 +2154,10 @@
             }
             class A extends r.default {
                 templateMarkup() {
-                    return n(89)
+                    return n(91)
                 }
                 stylesheetMarkup() {
-                    return n(90)
+                    return n(92)
                 }
                 constructor() {
                     super(), this._lastSliderUpdate = 0, this._teamVoicePluginEnabled = !1, this._isDraggingSlider = !1, this._nameOverride = null;
@@ -2111,15 +2269,15 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-premade-voice-participant">\r\n    <lol-parties-comm-halo size="small">\r\n      <lol-social-avatar-icon\r\n        class="lol-premade-voice-panel-chat-icon"\r\n        icon-id=""\r\n        availability=""\r\n        show-availability="true"\r\n      >\r\n      </lol-social-avatar-icon>\r\n    </lol-parties-comm-halo>\r\n    <div class="lol-premade-voice-panel-participant-content">\r\n      <div class="lol-premade-voice-panel-participant-volume-row">\r\n        <div class="lol-premade-voice-panel-participant-name">\r\n          <lol-uikit-player-name format="tooltip" puuid="" summoner-id="" />\r\n        </div>\r\n        <div class="lol-premade-voice-panel-participant-volume"></div>\r\n      </div>\r\n      <lol-uikit-slider for="participantVolume" percentage value="0" clickset="true"> </lol-uikit-slider>\r\n    </div>\r\n    <div class="lol-premade-voice-panel-participant-mute"></div>\r\n  </div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(40),
-                i = n(41),
-                a = n(42),
-                o = n(91),
-                l = n(92),
-                s = n(93),
-                c = n(94),
-                p = n(95),
-                d = n(96),
+            var r = n(42),
+                i = n(43),
+                a = n(44),
+                o = n(93),
+                l = n(94),
+                s = n(95),
+                c = n(96),
+                p = n(97),
+                d = n(98),
                 h = i(r),
                 u = a(o),
                 m = a(l),
@@ -2161,8 +2319,8 @@
             var r = s(n(16)),
                 i = s(n(23)),
                 a = s(n(25)),
-                o = n(98),
-                l = n(99);
+                o = n(100),
+                l = n(101);
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -2171,10 +2329,10 @@
             }
             class c extends r.default {
                 templateMarkup() {
-                    return n(100)
+                    return n(102)
                 }
                 stylesheetMarkup() {
-                    return n(101)
+                    return n(103)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -2247,7 +2405,7 @@
                     l = n * r.MIN_BLUR_MULTIPLIER;
                 return (o - l) * a + ("small" === e ? 1 : 2)
             };
-            var r = n(99)
+            var r = n(101)
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2268,8 +2426,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-premade-voice-comm-halo">\r\n    <slot></slot>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(40),
-                i = n(41)(r);
+            var r = n(42),
+                i = n(43)(r);
             i.push([e.id, ":host .lol-premade-voice-comm-halo {\n  transition: box-shadow 0.15s ease-in-out;\n  position: relative;\n}\n:host .lol-premade-voice-comm-halo:before {\n  content: '';\n  opacity: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transition: opacity 0.15s ease-in-out;\n  box-shadow: 0 0 0 2px #4bb44b;\n}\n:host .lol-premade-voice-comm-halo.speaking:before {\n  opacity: 1;\n}\n:host .lol-premade-voice-comm-halo.small:before {\n  box-shadow: 0 0 0 1px #4bb44b;\n}\n:host .lol-premade-voice-comm-halo {\n  border-radius: 50%;\n}\n:host .lol-premade-voice-comm-halo:before {\n  border-radius: 50%;\n}\n:host {\n  --premade-voice-halo-margin: 0 0 0 0;\n  --premade-voice-halo-width: auto;\n  --premade-voice-halo-height: auto;\n  --premade-voice-halobefore-box-shadow: none;\n}\n:host .lol-premade-voice-comm-halo {\n  margin: var(--premade-voice-halo-margin);\n  width: var(--premade-voice-halo-width);\n  height: var(--premade-voice-halo-height);\n}\n:host .lol-premade-voice-comm-halo:before {\n  box-shadow: var(--premade-voice-halobefore-box-shadow);\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-premade-voice/src/elements/shared.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/voice-halo/style.styl"],
@@ -2286,8 +2444,8 @@
             var r = n(1),
                 i = s(n(16)),
                 a = s(n(23)),
-                o = n(98),
-                l = s(n(37));
+                o = n(100),
+                l = s(n(39));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -2296,10 +2454,10 @@
             }
             class c extends i.default {
                 templateMarkup() {
-                    return n(103)
+                    return n(105)
                 }
                 stylesheetMarkup() {
-                    return n(104)
+                    return n(106)
                 }
                 constructor() {
                     super(), this._listeners = {
@@ -2366,8 +2524,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="lol-voice-mic-test-label"></div>\r\n  <div class="lol-voice-mic-test-button"></div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(40),
-                i = n(41)(r);
+            var r = n(42),
+                i = n(43)(r);
             i.push([e.id, '.lol-voice-mic-test-label {\n  font-family: var(--font-body);\n}\n.lol-voice-mic-test-label {\n  font-family: var(--font-body);\n}\n.lol-voice-mic-test-label {\n  -webkit-user-select: none;\n}\n.lol-voice-mic-test-label {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.lol-voice-mic-test-label {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-voice-mic-test-label:lang(ja-jp) {\n  font-size: 13px;\n}\n.lol-voice-mic-test-label:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.lol-voice-mic-test-button {\n  display: flex;\n  width: 38px;\n  height: 32px;\n  background-image: url("/fe/lol-premade-voice/voice-button.png");\n  background-position-y: 0px;\n  background-size: cover;\n  cursor: pointer;\n}\n.lol-voice-mic-test-button:hover:not(.button-disabled) {\n  background-position-y: -32px;\n}\n.lol-voice-mic-test-button:active:not(.button-disabled) {\n  background-position-y: -64px;\n}\n.lol-voice-mic-test-button.button-disabled {\n  background-position-y: -160px;\n  cursor: default;\n}\n.lol-voice-mic-test-button.active {\n  background-position-y: -96px;\n}\n.lol-voice-mic-test-button {\n  transition: box-shadow 0.15s ease-in-out;\n  position: relative;\n}\n.lol-voice-mic-test-button:before {\n  content: \'\';\n  opacity: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transition: opacity 0.15s ease-in-out;\n  box-shadow: 0 0 0 2px #4bb44b;\n}\n.lol-voice-mic-test-button.speaking:before {\n  opacity: 1;\n}\n.lol-voice-mic-test-button.small:before {\n  box-shadow: 0 0 0 1px #4bb44b;\n}\n.lol-voice-mic-test-label {\n  min-height: 16px;\n  margin-bottom: 5px;\n}\n.lol-voice-mic-test-button.active {\n  background-position-y: -96px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/mic-test-button/style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/shared.styl"],
@@ -2386,10 +2544,10 @@
             };
             class a extends i.default {
                 templateMarkup() {
-                    return n(106)
+                    return n(108)
                 }
                 stylesheetMarkup() {
-                    return n(107)
+                    return n(109)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -2439,8 +2597,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="key-bind-indicator">\r\n    <span class="key-bind-indicator-key"></span>\r\n  </div>\r\n  <div class="key-bind-indicator-unbound" style="display: none;">\r\n    <span class="key-bind-indicator-unbound-square"></span>\r\n    <span class="key-bind-indicator-unbound-text"></span>\r\n  </div>\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var r = n(40),
-                i = n(41)(r);
+            var r = n(42),
+                i = n(43)(r);
             i.push([e.id, ".key-bind-indicator-key,\n.key-bind-indicator-unbound-text {\n  font-family: var(--font-body);\n}\n.key-bind-indicator-key,\n.key-bind-indicator-unbound-text {\n  font-family: var(--font-body);\n}\n:host {\n  display: flex;\n  align-items: center;\n}\n.key-bind-indicator {\n  display: inline-flex;\n  align-items: center;\n}\n.key-bind-indicator-key {\n  font-size: 11px;\n  color: #010a13;\n  background: #a09b8c;\n  border-radius: 3px;\n  padding: 1px 3px;\n  min-width: 10px;\n  text-align: center;\n}\n.key-bind-indicator-unbound {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n}\n.key-bind-indicator-unbound-square {\n  width: 16px;\n  height: 16px;\n  border: 1px solid #ff2345;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n.key-bind-indicator-unbound-text {\n  font-size: 12px;\n  line-height: 16px;\n  letter-spacing: 0.6px;\n  color: #ff2345;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/key-bind-indicator/style.styl"],
@@ -2451,10 +2609,125 @@
             }]), e.exports = i
         }, (e, t, n) => {
             "use strict";
-            var r = n(1);
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, i = (r = n(16)) && r.__esModule ? r : {
+                default: r
+            };
+            class a extends i.default {
+                templateMarkup() {
+                    return n(111)
+                }
+                stylesheetMarkup() {
+                    return n(112)
+                }
+                constructor() {
+                    super(), this._selectors = {
+                        header: ".team-voice-tooltip-header",
+                        body: ".team-voice-tooltip-body"
+                    }
+                }
+                static get observedAttributes() {
+                    return ["header", "body"]
+                }
+                attributeChangedCallback(e, t, n) {
+                    super.attributeChangedCallback(), "header" === e ? this.addInnerHtml(n || "", this._selectors.header) : "body" === e && this.addInnerHtml(n || "", this._selectors.body)
+                }
+                connectedCallback() {
+                    super.connectedCallback(), this.addInnerHtml(this.getAttribute("header") || "", this._selectors.header), this.addInnerHtml(this.getAttribute("body") || "", this._selectors.body)
+                }
+                getComponentFolderPath() {
+                    return super.getComponentFolderPath(), "team-voice-tooltip"
+                }
+            }
+            a.tagName = "lol-parties-team-voice-tooltip";
+            var o = a;
+            t.default = o
+        }, e => {
+            "use strict";
+            e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="team-voice-tooltip">\r\n    <div class="team-voice-tooltip-header"></div>\r\n    <div class="team-voice-tooltip-body"></div>\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(42),
+                i = n(43)(r);
+            i.push([e.id, ".team-voice-tooltip-header,\n.team-voice-tooltip-body {\n  font-family: var(--font-body);\n}\n.team-voice-tooltip-header,\n.team-voice-tooltip-body {\n  font-family: var(--font-body);\n}\n:host {\n  display: block;\n}\n.team-voice-tooltip {\n  display: flex;\n  flex-direction: column;\n  width: 180px;\n  padding: 9px;\n  text-align: center;\n  color: #a09b8c;\n  white-space: normal;\n  word-wrap: break-word;\n}\n.team-voice-tooltip-header {\n  font-weight: bold;\n  font-size: 12px;\n  margin-bottom: 4px;\n}\n.team-voice-tooltip-body {\n  font-size: 12px;\n  line-height: 1.3;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/team-voice-tooltip/style.styl"],
+                names: [],
+                mappings: "AAIA;;EACE,6BAAa;ACFf;ADCA;;EACE,6BAAa;ACEf;AAHA;EACE,cAAS;AAKX;AAFA;EACE,aAAS;EACT,sBAAgB;EAChB,YAAO;EACP,YAAS;EACT,kBAAY;EACZ,cAAO;EACP,mBAAa;EACb,qBAAW;AAIb;AADA;EAEE,iBAAa;EACb,eAAW;EACX,kBAAe;AAEjB;AACA;EAEE,eAAW;EACX,gBAAa;AAAf",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/fonts';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n\r\n:host {\r\n  display: block;\r\n}\r\n\r\n.team-voice-tooltip {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 180px;\r\n  padding: 9px;\r\n  text-align: center;\r\n  color: $color_palette_grey1;\r\n  white-space: normal;\r\n  word-wrap: break-word;\r\n}\r\n\r\n.team-voice-tooltip-header {\r\n  @extend $fonts_lol_body;\r\n  font-weight: bold;\r\n  font-size: 12px;\r\n  margin-bottom: 4px;\r\n}\r\n\r\n.team-voice-tooltip-body {\r\n  @extend $fonts_lol_body;\r\n  font-size: 12px;\r\n  line-height: 1.3;\r\n}\r\n"],
+                sourceRoot: ""
+            }]), e.exports = i
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, i = (r = n(16)) && r.__esModule ? r : {
+                default: r
+            };
+            class a extends i.default {
+                templateMarkup() {
+                    return n(114)
+                }
+                stylesheetMarkup() {
+                    return n(115)
+                }
+                constructor() {
+                    super(), this._selectors = {
+                        title: ".team-voice-eat-text-title",
+                        body: ".team-voice-eat-text-msg",
+                        close: ".team-voice-eat-dismiss"
+                    }, this._onCloseClick = this._onCloseClick.bind(this)
+                }
+                static get observedAttributes() {
+                    return ["header", "body"]
+                }
+                attributeChangedCallback(e, t, n) {
+                    super.attributeChangedCallback(), "header" === e ? this.addInnerHtml(n || "", this._selectors.title) : "body" === e && this.addInnerHtml(n || "", this._selectors.body)
+                }
+                connectedCallback() {
+                    super.connectedCallback(), this.addInnerHtml(this.getAttribute("header") || "", this._selectors.title), this.addInnerHtml(this.getAttribute("body") || "", this._selectors.body), this.attachListener("click", this._onCloseClick, this._selectors.close)
+                }
+                disconnectedCallback() {
+                    super.disconnectedCallback(), this.detachListener("click", this._onCloseClick, this._selectors.close)
+                }
+                getComponentFolderPath() {
+                    return super.getComponentFolderPath(), "team-voice-eat"
+                }
+                _onCloseClick() {
+                    this.dispatchEvent(new CustomEvent("dismiss", {
+                        bubbles: !0,
+                        composed: !0
+                    }))
+                }
+            }
+            a.tagName = "lol-parties-team-voice-eat";
+            var o = a;
+            t.default = o
+        }, e => {
+            "use strict";
+            e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template>\r\n  <div class="team-voice-eat">\r\n    <div class="team-voice-eat-dismiss" role="button" aria-label="close"></div>\r\n    <div class="team-voice-eat-content">\r\n      <svg class="team-voice-eat-caret" xmlns="http://www.w3.org/2000/svg" width="18" height="25" viewBox="0 0 18 25" fill="none">\r\n        <path d="M9 25L-1.72313e-08 16L18 16L9 25Z" fill="#C89B3C" />\r\n        <path d="M13 12L9 16L5 12L9 8L13 12Z" fill="#785A28" stroke="#785A28" />\r\n      </svg>\r\n      <div class="team-voice-eat-icon">\r\n        <div class="team-voice-eat-icon-image"></div>\r\n      </div>\r\n      <div class="team-voice-eat-text">\r\n        <div class="team-voice-eat-text-title"></div>\r\n        <div class="team-voice-eat-text-msg"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(42),
+                i = n(43)(r);
+            i.push([e.id, '.team-voice-eat-text-title {\n  font-family: var(--font-display);\n}\n.team-voice-eat-text-msg {\n  font-family: var(--font-body);\n}\n.team-voice-eat-text-title,\n.team-voice-eat-text-msg {\n  -webkit-user-select: none;\n}\n.team-voice-eat-text-title,\n.team-voice-eat-text-msg {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.team-voice-eat-text-title {\n  text-transform: uppercase;\n}\n.team-voice-eat-text-title:lang(ko-kr),\n.team-voice-eat-text-title:lang(ja-jp),\n.team-voice-eat-text-title:lang(tr-tr),\n.team-voice-eat-text-title:lang(el-gr),\n.team-voice-eat-text-title:lang(th-th),\n.team-voice-eat-text-title:lang(zh-tw) {\n  text-transform: none;\n}\n.team-voice-eat-text-title {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n.team-voice-eat-text-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.team-voice-eat-text-msg {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.team-voice-eat-text-msg:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  direction: ltr;\n  display: block;\n  width: 375px;\n  min-height: 115px;\n  position: relative;\n}\n.team-voice-eat {\n  position: relative;\n  width: 100%;\n  min-height: 100%;\n}\n.team-voice-eat-dismiss {\n  display: block;\n  height: 12px;\n  width: 12px;\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: url("/fe/lol-static-assets/images/close.svg");\n  background-position: center;\n  background-repeat: no-repeat;\n  cursor: pointer;\n  border-radius: 4px;\n  padding: 4px;\n  z-index: 2;\n}\n.team-voice-eat-content {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  min-height: 100px;\n  border-radius: 2px;\n  overflow: visible;\n  background: #c89b3c;\n  position: relative;\n}\n.team-voice-eat-caret {\n  position: absolute;\n  right: 15px;\n  bottom: -9px;\n  width: 18px;\n  height: 25px;\n  pointer-events: none;\n}\n.team-voice-eat-icon {\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  width: 81px;\n  height: 100%;\n  flex-shrink: 0;\n}\n.team-voice-eat-icon-image {\n  width: 48px;\n  height: 48px;\n  margin-top: 20px;\n  background-color: #3d2e1d;\n  -webkit-mask-image: url("/fe/lol-static-assets/images/hextech-ui-icons/social.svg");\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  -webkit-mask-size: contain;\n}\n.team-voice-eat-text {\n  display: flex;\n  flex-direction: column;\n  width: 266px;\n  height: 100%;\n  align-self: flex-end;\n  white-space: normal;\n}\n.team-voice-eat-text-title {\n  font-weight: bold;\n  margin-top: 20px;\n  color: #3d2e1d;\n  text-transform: none;\n}\n.team-voice-eat-text-msg {\n  margin-top: 5px;\n  margin-bottom: 20px;\n  color: #3d2e1d;\n  text-transform: none;\n}\n', "", {
+                version: 3,
+                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/team-voice-eat/style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
+                names: [],
+                mappings: "AAAA;EACE,gCAAa;ACCf;ADEA;EACE,6BAAa;ACAf;ACKA;;EACE,yBAAqB;ADFvB;ACcA;;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADZ1B;ACoBA;EACE,yBAAgB;ADlBlB;ACmBE;;;;;;EAME,oBAAgB;ADjBpB;ACmIA;EAIE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,iBAAa;EACb,sBAAgB;ADpIlB;ACqIE;EACE,iBAAgB;ADnIpB;ACsPA;EAGE,cAAO;EACP,eAAW;EACX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADzP1B;ACsPE;EACE,iBAAgB;ADpPpB;AA/BA;EACE,cAAW;EACX,cAAS;EACT,YAAO;EACP,iBAAY;EACZ,kBAAU;AAiCZ;AA9BA;EACE,kBAAU;EACV,WAAO;EACP,gBAAY;AAgCd;AA7BA;EACE,cAAS;EACT,YAAQ;EACR,WAAO;EACP,kBAAU;EACV,QAAK;EACL,UAAO;EACP,yDAA8C;EAC9C,2BAAqB;EACrB,4BAAmB;EACnB,eAAQ;EACR,kBAAe;EACf,YAAS;EACT,UAAS;AA+BX;AA5BA;EACE,aAAS;EACT,mBAAgB;EAChB,WAAO;EACP,iBAAY;EACZ,kBAAe;EACf,iBAAU;EACV,mBAAY;EACZ,kBAAU;AA8BZ;AAtBA;EACE,kBAAU;EACV,WAA6B;EAC7B,YAAQ;EACR,WAAO;EACP,YAAQ;EACR,oBAAgB;AAwBlB;AArBA;EACE,aAAS;EACT,uBAAa;EACb,uBAAiB;EACjB,WAAO;EACP,YAAQ;EACR,cAAa;AAuBf;AApBA;EACE,WAAO;EACP,YAAQ;EACR,gBAAY;EACZ,yBAAkB;EAClB,mFAAkF;EAClF,8BAAqB;EACrB,6BAAuB;EACvB,0BAAmB;AAsBrB;AAnBA;EACE,aAAS;EACT,sBAAgB;EAChB,YAAO;EACP,YAAQ;EACR,oBAAY;EACZ,mBAAa;AAqBf;AAlBA;EAEE,iBAAa;EACb,gBAAY;EACZ,cAAO;EACP,oBAAgB;AAmBlB;AAhBA;EAEE,eAAY;EACZ,mBAAe;EACf,cAAO;EACP,oBAAgB;AAiBlB",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n\r\n// Mirrors `rcp-fe-lol-navigation/src/app/styles/menu-item.styl`'s\r\n// `.menu-item-attention-tooltip*` styling, but positions the caret below the\r\n// tooltip (pointing downward at the voice button) and aligns it near the\r\n// right edge of the tooltip so it points at the right-anchored voice button.\r\n$eat-background = #C89B3C;\r\n$eat-text-color = #3D2E1D;\r\n$base-image-path = '/fe/lol-static-assets/images/';\r\n\r\n// Horizontal inset of the caret from the right edge of the tooltip. Tuned so\r\n// the caret lines up with the voice button sitting at the tooltip's right\r\n// edge (mirrors the `anchor: {x: 'right', y: 'bottom'}` + x-offset in the host).\r\n$caret-right-inset = 24px;\r\n\r\n:host {\r\n  direction: ltr;\r\n  display: block;\r\n  width: 375px;\r\n  min-height: 115px;\r\n  position: relative;\r\n}\r\n\r\n.team-voice-eat {\r\n  position: relative;\r\n  width: 100%;\r\n  min-height: 100%;\r\n}\r\n\r\n.team-voice-eat-dismiss {\r\n  display: block;\r\n  height: 12px;\r\n  width: 12px;\r\n  position: absolute;\r\n  top: 8px;\r\n  right: 8px;\r\n  background: url($base-image-path + 'close.svg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  cursor: pointer;\r\n  border-radius: 4px;\r\n  padding: 4px;\r\n  z-index: 2;\r\n}\r\n\r\n.team-voice-eat-content {\r\n  display: flex;\r\n  flex-direction: row;\r\n  width: 100%;\r\n  min-height: 100px;\r\n  border-radius: 2px;\r\n  overflow: visible;\r\n  background: $eat-background;\r\n  position: relative;\r\n}\r\n\r\n// Combined diamond + down-pointing triangle caret. The SVG is 18x25, with the\r\n// diamond at y=8..16 and the triangle at y=16..25. We position it so the\r\n// triangle's top edge (y=16) sits flush against the tooltip's bottom edge\r\n// (no gap), which leaves the diamond straddling the tooltip's bottom edge as\r\n// a decoration.\r\n.team-voice-eat-caret {\r\n  position: absolute;\r\n  right: ($caret-right-inset - 9px);\r\n  bottom: -9px; // = -(svg-height - 16)\r\n  width: 18px;\r\n  height: 25px;\r\n  pointer-events: none;\r\n}\r\n\r\n.team-voice-eat-icon {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  justify-content: center;\r\n  width: 81px;\r\n  height: 100%;\r\n  flex-shrink: 0;\r\n}\r\n\r\n.team-voice-eat-icon-image {\r\n  width: 48px;\r\n  height: 48px;\r\n  margin-top: 20px;\r\n  background-color: $eat-text-color;\r\n  -webkit-mask-image: url('/fe/lol-static-assets/images/hextech-ui-icons/social.svg');\r\n  -webkit-mask-repeat: no-repeat;\r\n  -webkit-mask-position: center;\r\n  -webkit-mask-size: contain;\r\n}\r\n\r\n.team-voice-eat-text {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 266px;\r\n  height: 100%;\r\n  align-self: flex-end;\r\n  white-space: normal;\r\n}\r\n\r\n.team-voice-eat-text-title {\r\n  @extend $typekit_h4;\r\n  font-weight: bold;\r\n  margin-top: 20px;\r\n  color: $eat-text-color;\r\n  text-transform: none;\r\n}\r\n\r\n.team-voice-eat-text-msg {\r\n  @extend $typekit_text_m;\r\n  margin-top: 5px;\r\n  margin-bottom: 20px;\r\n  color: $eat-text-color;\r\n  text-transform: none;\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                sourceRoot: ""
+            }]), e.exports = i
+        }, (e, t, n) => {
+            "use strict";
+            var r, i = n(1),
+                a = (r = n(26)) && r.__esModule ? r : {
+                    default: r
+                };
             e.exports = class {
                 constructor() {
-                    this._registerComponents(), this._addVoiceSocialButton()
+                    this._registerComponents(), this._addVoiceSocialButton(), a.default.checkAndShowFtux()
                 }
                 voiceButton(e) {
                     const t = document.createElement("lol-parties-comm-button");
@@ -2464,7 +2737,7 @@
                     return t.setVoicePanel(n), t
                 }
                 _addVoiceSocialButton() {
-                    r.Social.addSocialButton(this.voiceButton({
+                    i.Social.addSocialButton(this.voiceButton({
                         social: "true",
                         "data-dd-action-name": "button.social.voice"
                     }), "CommButton", 1)
@@ -2474,7 +2747,7 @@
                     return e || (e = document.createElement("lol-parties-comm-panel"), this._panelInstance = e), e
                 }
                 _registerComponents() {
-                    r.ComponentFactory.setFactory("lol-parties-comm-panel", (() => this._voicePanel()))
+                    i.ComponentFactory.setFactory("lol-parties-comm-panel", (() => this._voicePanel()))
                 }
                 setPuuidsToNameOverrides(e) {
                     const t = this._voicePanel();

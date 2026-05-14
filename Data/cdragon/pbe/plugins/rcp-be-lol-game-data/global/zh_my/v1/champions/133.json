@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "威洛，蒂玛西亚之鹰，每隔一段时间会将敌方标记为 <font color='#FFF673'>脆弱</font>。葵恩对此 <font color='#FFF673'>脆弱</font> 目标的首次普攻将会造成额外物理伤害。"
+        "description": "Spell_QuinnPassive_Summary"
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "葵恩呼唤威洛来标记敌方、降低视野，并在范围内造成伤害。",
-            "dynamicDescription": "葵恩命令威洛进行俯冲，使命中的第一个敌人标记为<keywordMajor>脆弱</keywordMajor>状态，降低其视野半径@VisionReductionDuration@秒并对附近所有敌人造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。<br><br>如果首个命中的敌人不是英雄，则会被<status>缴械</status> @VisionReductionDuration@秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "当对标记为 <font color='#FFF673'>脆弱</font> 的目标进行攻击时，会短暂提高葵恩的攻速和移动速度。启动来使威洛显示出附近的视野。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>攻击<keywordMajor>脆弱</keywordMajor>状态的目标时，葵恩会获得<attackSpeed>@AttackSpeedBonus*100@%攻击速度</attackSpeed>和<speed>@MovespeedAmount*100@%移动速度</speed>，持续@BuffDuration@秒。<br><br><spellActive>主动：</spellActive>威洛会揭示周围一大片区域的视野，持续@VisionDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnW_Summary",
+            "dynamicDescription": "Spell_QuinnW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "葵恩冲向一位敌人，对目标造成物理伤害和缓速效果。当攻击完成后，葵恩敏捷地向后弹跳离开战斗现场，同时中断目标当前的行动，最后再回到接近最远普攻距离的位置。",
-            "dynamicDescription": "葵恩突进至一名敌人，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>并将其标记为<keywordMajor>脆弱</keywordMajor>状态。葵恩随后会从目标处向后跳开，将其短暂<status>击</status><status>退</status>并造成@SlowAmount*100@%<status>减速</status>效果，在@SlowDecayTime@秒内持续衰减。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_QuinnE_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "葵恩与威洛一起在地图上以极高的速度飞行。技能结束后发动天空强袭，对周围敌人造成伤害，并对敌方英雄附加她的被动技能效果。",
-            "dynamicDescription": "葵恩呼唤威洛，在 2 秒吟唱后使两者结为一体，获得 <speed>@MovementSpeedMod*100@% 移动速度</speed>，她并可以<recast>重新施放</recast>此技能。普攻或施放<spellName>飞鹰突击</spellName>或是<spellName>完美奇袭</spellName>会自动<recast>重新施放</recast>此技能。<br><br><recast>重新施放</recast>：葵恩与威洛施展一次空中炫技，造成 <physicalDamage>@Damage@ 物理伤害</physicalDamage>，将英雄标记为<keywordMajor>脆弱</keywordMajor>状态，并结束此技能。@SpellModifierDescriptionAppend@",
+            "description": "Spell_QuinnR_Summary",
+            "dynamicDescription": "Spell_QuinnR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

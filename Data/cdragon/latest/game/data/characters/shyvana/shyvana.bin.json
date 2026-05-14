@@ -1032,6 +1032,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "Damage_AD_Ratio",
+                            "values": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "Calc_Max_Health_Damage": {
                     "mFormulaParts": [
@@ -2088,13 +2108,13 @@
                 {
                     "name": "Shield",
                     "values": [
-                        55.0,
-                        75.0,
-                        95.0,
-                        115.0,
-                        135.0,
-                        155.0,
-                        175.0
+                        40.0,
+                        60.0,
+                        80.0,
+                        100.0,
+                        120.0,
+                        140.0,
+                        160.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2292,11 +2312,11 @@
             "cooldownTime": [
                 13.0,
                 13.0,
-                12.0,
-                11.0,
+                12.25,
+                11.5,
+                10.75,
                 10.0,
-                9.0,
-                9.0
+                10.0
             ],
             "castRange": [
                 350.0,
@@ -2960,7 +2980,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaEDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2988,7 +3008,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaQDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3016,7 +3036,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaRMultihits",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3058,7 +3078,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaPStacks",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3086,7 +3106,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaDragonEKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3114,7 +3134,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaWDistance",
         "EventsToTrack": [
             {
-                "EventToTrack": 249,
+                "EventToTrack": 250,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3268,7 +3288,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 226,
+                "EventToTrack": 227,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3287,7 +3307,6 @@
     "{1005fb08}": {
         "mOverrides": [
             {
-                "mForceOverride": true,
                 "mOverrideContexts": [
                     {
                         "mMapID": 11,
@@ -3394,34 +3413,25 @@
     "{f43a653f}": {
         "RecSpellRankUpInfos": [
             {
-                "MapId": 12,
-                "Position": "{ada7afdb}",
-                "IsDefaultRecommendation": true,
-                "mEarlyLevelOverrides": [
-                    0,
-                    1,
-                    2
-                ],
-                "__type": "RecSpellRankUpInfo"
-            },
-            {
                 "MapId": 11,
                 "Position": "jungle",
                 "IsDefaultRecommendation": true,
                 "mEarlyLevelOverrides": [
                     0,
                     2,
-                    1
+                    1,
+                    0
                 ],
                 "__type": "RecSpellRankUpInfo"
             },
             {
-                "MapId": 11,
-                "Position": "Top",
+                "MapId": 12,
+                "Position": "{ada7afdb}",
                 "mEarlyLevelOverrides": [
                     0,
                     1,
-                    2
+                    2,
+                    0
                 ],
                 "__type": "RecSpellRankUpInfo"
             }
@@ -3498,7 +3508,7 @@
             "__type": "ModifiableFloat"
         },
         "hpPerLevelModifiable": {
-            "baseValue": 100.0,
+            "baseValue": 95.0,
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {

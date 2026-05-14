@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.9.1",
+    "version": "16.10.1",
     "data": {
         "Taliyah": {
             "id": "Taliyah",
@@ -236,7 +236,7 @@
                     "id": "TaliyahQ",
                     "name": "石穿",
                     "description": "塔莉垭朝目标方向扔出一串岩石，同时自身可自由移动。这个技能会在她脚下生成【掘石场】。如果塔莉垭在【掘石场】上使用【Q石穿】，她将消耗掉【掘石场】来投掷一颗更强大的岩石来减速敌人。",
-                    "tooltip": "塔莉垭挥出5块石头，每块会在命中的第一个敌人的附近区域内造成<magicDamage>{{ rockdamage }}魔法伤害</magicDamage>并在该区域生成【掘石场】。对相同敌人的后续命中造成的伤害降低{{ extramissilereduceddamagepercent }}%。<br /><br />在掘石场上施放时会消耗{{ e7 }}法力并且冷却时间缩短{{ workedgroundcdr*100 }}%，消耗掉【掘石场】，并挥出一块巨石来对命中的敌人们造成持续{{ slowduration }}秒的{{ slowpercent*100 }}%<status>减速</status>，对首要目标造成<magicDamage>{{ bigrockdamage }}魔法伤害</magicDamage>。被巨石命中的野怪会被<status>晕眩</status>{{ monsterstunduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "塔莉垭挥出5块石头，每块会在命中的第一个敌人的附近区域内造成<magicDamage>{{ rockdamage }}魔法伤害</magicDamage>并在该区域生成【掘石场】。对相同敌人的后续命中造成的伤害降低{{ extramissilereduceddamagepercent }}%。<br /><br />在【掘石场】上施放时会消耗{{ bigrockmanacost }}法力并且冷却时间缩短{{ workedgroundcdr*100 }}%，消耗掉【掘石场】，并挥出一块巨石来对命中的敌人们造成持续{{ slowduration }}秒的 {{ slowpercent*100 }}%<status>减速</status>，对首要目标造成<magicDamage>{{ bigrockdamage }}魔法伤害</magicDamage>。巨石对命中的野怪们造成{{ monsterstunduration }}秒<status>晕眩</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -665,7 +665,7 @@
                     "id": "TaliyahR",
                     "name": "墙幔",
                     "description": "塔莉垭创造出一个非常长的石墙，然后在石墙上冲浪。",
-                    "tooltip": "塔莉垭生成一道巨型土墙，持续{{ e1 }}秒。如果她立刻<recast>再次施放</recast>，那么她将踏上土墙随其一路骑行。移动或受到定身都将结束这段骑行。<br /><br />如果塔莉垭在{{ damagelockouttime }}秒内曾受到过来自英雄或建筑物的伤害，那么她将不能施放这个技能。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "塔莉垭生成一道巨型土墙，持续{{ wallduration }}秒。如果她立刻<recast>再次施放</recast>，那么她将踏上土墙随其一路骑行。移动或受到定身都将结束这段骑行。<br /><br />如果塔莉垭在{{ damagelockouttime }}秒内曾受到过来自英雄或建筑物的伤害，那么她将不能施放这个技能。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "墙体长度",

@@ -1313,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "Requisito: Consigue @TakedownsNeeded@ asesinatos o asistencias.<br><br>Recompensa: Espátula dorada",
@@ -3446,7 +3446,7 @@
             "id": 310,
             "name": "Universidad de payasos",
             "rarity": 2,
-            "tooltip": "<spellName>Puñalada por la espalda</spellName>: Infliges @BasicAttackDamage@ de <physicalDamage>daño físico adicional</physicalDamage> al golpear a los enemigos por la espalda.<br><br><spellName>Engañar</spellName>: Te teleportas y te vuelves <keywordStealth>invisible</keywordStealth> durante @StealthDuration@ s. Tu siguiente ataque mientras eres <keywordStealth>invisible</keywordStealth> inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> adicional. Si golpea a los enemigos por detrás, este ataque inflige un impacto crítico de @QCritDamageMod@ de daño.<br><br><spellName>Alucinación: Muerte</spellName>: Al morir, infliges un <trueDamage>@FearDamage*100@% de la vida máxima como daño verdadero</trueDamage> y aterrorizas durante @FearDuration@ s a tu alrededor."
+            "tooltip": "Cherry_ClownCollege_DeceiveTooltip"
         },
         {
             "apiName": "NumbToPain",
@@ -4807,7 +4807,7 @@
             "id": 76,
             "name": "Explosión sónica",
             "rarity": 0,
-            "tooltip": "Mejorar, <healing>curar</healing> u otorgar un <shield>escudo</shield> a tu aliado inflige <trueDamage>@Damage@ de daño verdadero</trueDamage> y <status>ralentiza a los enemigos a su alrededor</status> un @SlowAmount*-100@% durante @SlowDuration@ s.<br><br>Daño infligido esta ronda: @f1@<br>Daño total infligido: @f2@"
+            "tooltip": "Cherry_SonicBoom_Tooltip"
         },
         {
             "apiName": "GoHRemnantOfTheWatchers",
@@ -7615,22 +7615,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -9955,13 +9955,13 @@
                     1.0
                 ],
                 "CritDamageMultipler": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "MaxLevel": [
                     2.0,
@@ -11590,13 +11590,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11970,13 +11970,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -13632,7 +13632,7 @@
             "id": 215,
             "name": "Oscura bendición",
             "rarity": 1,
-            "tooltip": "Al <healing>curar</healing> u otorgar un <shield>escudo</shield> a un campeón aliado, obtienes @CurseCounter@ de <keywordMajor>Poder maldito</keywordMajor>.<br><br>Obtienes @f1@ de velocidad de habilidades (@AbilityHasteRatio*100@% de tu <keywordMajor>Poder maldito</keywordMajor>).<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "Cherry_DarkBlessing_Tooltip"
         },
         {
             "apiName": "MindtoMatter",

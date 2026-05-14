@@ -17126,193 +17126,37 @@
         "name": "Characters/Vex/Skins/Skin36/Materials/Vex_Skin36_Shadow_Mat",
         "samplerValues": [
             {
-                "TextureName": "Normal_Texture",
-                "texturePath": "ASSETS/Characters/Vex/Skins/Skin29/Vex_Skin29_NM_TX_CM.SKINS_Vex_Skin29.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Characters/Vex/Skins/Skin29/Vex_Skin29_ColorMask_TX_CM.SKINS_Vex_Skin29.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Shared/Materials/Gradient_test_04.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Characters/Vex/Skins/Skin36/Vex_Skin36_Shadow_TX_CM.Chroma_Vex_SadClown.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "SS_Texture",
-                "texturePath": "ASSETS/Shared/Materials/gradient_light_Dark.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "RA_Texture",
-                "texturePath": "ASSETS/Characters/Vex/Skins/Skin29/Vex_Skin29_RMA_TX_CM.SKINS_Vex_Skin29.tex",
+                "addressU": 1,
+                "addressV": 1,
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "Additive_Outline_Color",
+                "name": "Alpha",
                 "value": [
                     1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AdditiveOutline_Control",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Outline_Control",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Outline_Color",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AllAdditive_Strength",
-                "value": [
-                    0.800000011920929,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AO_Value",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Roughness_Value",
-                "value": [
-                    10.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Normal_Strength",
-                "value": [
-                    10.0,
-                    10.0,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DeformWaveStrength",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DeformMaskStrength",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DeformWaveController",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Sheen_TintColor",
-                "value": [
-                    1.0,
-                    0.7499961853027344,
-                    0.9499961733818054,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "SheenControl",
-                "value": [
-                    0.0,
-                    0.5,
-                    0.5,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TintColor",
-                "value": [
-                    0.8399938941001892,
-                    0.8399938941001892,
-                    0.8399938941001892,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "OUTLINE_MASK_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ADDITIVE_OUTLINE_MASK_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ADDITIVE_OUTLINE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "OUTLINE_ON",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ALL_ADDITIVE_MASK_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ALL_ADDITIVE_ON",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "TWO_D_DEFORM_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4",
-            "DISABLE_SHADOWS": "1"
+            "NUM_BLEND_WEIGHTS": "4"
         },
         "techniques": [
             {
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "Shaders/SkinnedMesh/Cloth_Base",
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha_mult",
                         "depthEnable": false,
                         "blendEnable": true,
-                        "cullEnable": false,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
                         "dstColorBlendFactor": 7,
@@ -17419,9 +17263,9 @@
         "__type": "ResourceResolver"
     },
     "__linked": [
+        "DATA/Characters/Vex/Vex_Multi_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Vex/Vex.bin",
-        "DATA/Vex_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37.bin",
         "DATA/Characters/Vex/Animations/Skin29.bin",
-        "DATA/Vex_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin"
+        "DATA/Characters/Vex/Vex_Multi_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37.bin"
     ]
 }

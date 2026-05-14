@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.9.1",
+    "version": "16.10.1",
     "data": {
         "Xayah": {
             "id": "Xayah",
@@ -650,7 +650,7 @@
                     "id": "XayahW",
                     "name": "致死羽衣",
                     "description": "霞创造一道刀刃风暴，来提升她的攻击速度和伤害，并且如果她的攻击命中了敌人，还会提升她的移动速度。",
-                    "tooltip": "霞创造一道持续{{ e2 }}秒的羽刃风暴，来为她提供<attackSpeed>{{ e1 }}%攻击速度</attackSpeed>并使她的攻击发射一支造成{{ bonusdamagepercent }}%伤害的次级羽刃。<br /><br />如果次级羽刃命中了一名敌方英雄，那么她自身会获得<speed>{{ e3 }}%移动速度</speed>，持续{{ e4 }}秒。<br /><br />如果洛在附近，那么他也会获得这个技能的效果，但他只会在<i>霞</i>命中了一个目标英雄时获得<speed>移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "霞创造一道持续{{ wattackspeedduration }}秒的羽刃风暴，来为她提供<attackSpeed>{{ wattackspeedamount }}%攻击速度</attackSpeed>并使她的攻击发射一支造成{{ bonusdamagepercent }}%伤害的次级羽刃。<br /><br />如果次级羽刃命中了一名敌方英雄，那么她自身会获得<speed>{{ wmovespeedamount }}%移动速度</speed>，持续{{ wmovespeedduration }}秒。<br /><br />如果洛在附近，那么他也会获得这个技能的效果，但他只会在<i>霞</i>命中了一个目标时获得<speed>移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "攻击速度",
@@ -658,7 +658,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }}% -> {{ e1NL }}%",
+                            "{{ wattackspeedamount }}% -> {{ wattackspeedamountNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]

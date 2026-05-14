@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.9.1",
+    "version": "16.10.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -7275,8 +7275,8 @@
                 "mp": 495,
                 "mpperlevel": 45,
                 "movespeed": 325,
-                "armor": 21,
-                "armorperlevel": 4.5,
+                "armor": 19,
+                "armorperlevel": 4.1,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 600,
@@ -10486,7 +10486,7 @@
                         ],
                         "effect": [
                             "{{ e4 }}% -> {{ e4NL }}%",
-                            "{{ effect6amount*100.000000 }}% -> {{ effect6amountnl*100.000000 }}%"
+                            "{{ damageperstrike*100.000000 }}% -> {{ damageperstrikenl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -10538,18 +10538,18 @@
                             60
                         ],
                         [
-                            0.22,
-                            0.235,
-                            0.25,
-                            0.265,
-                            0.28
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.1,
-                            1.175,
-                            1.25,
-                            1.325,
-                            1.4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             1,
@@ -10586,8 +10586,8 @@
                         "4",
                         "6",
                         "20/30/40/50/60",
-                        "0.22/0.235/0.25/0.265/0.28",
-                        "1.1/1.175/1.25/1.325/1.4",
+                        "0",
+                        "0",
                         "1",
                         "1",
                         "1",
@@ -35873,13 +35873,13 @@
                     ],
                     "cooldownBurn": "11/10/9/8/7",
                     "cost": [
+                        60,
+                        65,
                         70,
                         75,
-                        80,
-                        85,
-                        90
+                        80
                     ],
-                    "costBurn": "70/75/80/85/90",
+                    "costBurn": "60/65/70/75/80",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -46796,6 +46796,68 @@
                     "num": 30,
                     "name": "Spirit Blossom Ivern",
                     "chromas": false
+                },
+                {
+                    "id": "427031",
+                    "num": 31,
+                    "name": "Rain Shepherd Ivern",
+                    "chromas": false
+                },
+                {
+                    "id": "427032",
+                    "num": 32,
+                    "name": "Rain Shepherd Ivern (Ruby)",
+                    "chromas": true,
+                    "parentSkin": 31
+                },
+                {
+                    "id": "427033",
+                    "num": 33,
+                    "name": "Rain Shepherd Ivern (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 31
+                },
+                {
+                    "id": "427034",
+                    "num": 34,
+                    "name": "Rain Shepherd Ivern (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 31
+                },
+                {
+                    "id": "427035",
+                    "num": 35,
+                    "name": "Rain Shepherd Ivern (Tanzanite)",
+                    "chromas": false,
+                    "parentSkin": 31
+                },
+                {
+                    "id": "427036",
+                    "num": 36,
+                    "name": "Rain Shepherd Ivern (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 31
+                },
+                {
+                    "id": "427037",
+                    "num": 37,
+                    "name": "Rain Shepherd Ivern (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 31
+                },
+                {
+                    "id": "427038",
+                    "num": 38,
+                    "name": "Rain Shepherd Ivern (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 31
+                },
+                {
+                    "id": "427039",
+                    "num": 39,
+                    "name": "Rain Shepherd Ivern (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 31
                 }
             ],
             "lore": "Ivern Bramblefoot, known to many as the Green Father, is a peculiar half man, half tree who roams Runeterra's forests, cultivating life everywhere he goes. He knows the secrets of the natural world, and holds deep friendships with all things that grow, fly, and scuttle. Ivern wanders the wilderness, imparting strange wisdom to any he meets, enriching the forests, and occasionally entrusting loose-lipped butterflies with his secrets.",
@@ -68637,7 +68699,7 @@
                     "id": "LeeSinWOne",
                     "name": "Safeguard / Iron Will",
                     "description": "Safeguard: Lee Sin rushes to target ally, shielding himself from damage. If the ally is a champion, they are also shielded. After using Safeguard, Lee Sin can cast Iron Will.<br>Iron Will: Lee Sin's intense training allows him to thrive in battle. Lee Sin gains Omnivamp.",
-                    "tooltip": "Lee Sin dashes to an ally or ward. If the target is a champion, Lee Sin grants them and himself <shield>{{ shieldamount }} Shield</shield> for {{ shieldduration }} seconds and reduces this Ability's Cooldown by {{ w1cooldownrecovered*100 }}%. Lee Sin may <recast>Recast</recast> for the next {{ w1reactivatetime }} seconds.<br /><br /><recast>Recast:</recast> Lee Sin gains {{ lifestealandspellvamp }}% Omnivamp for {{ lifestealandspellvamptime }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Lee Sin dashes to an ally or ward. If the target is a champion, Lee Sin grants them and himself <shield>{{ shieldamount }} Shield</shield> for {{ shieldduration }}. Lee Sin may <recast>Recast</recast> for the next {{ w1reactivatetime }} seconds.<br /><br /><recast>Recast:</recast> Lee Sin gains {{ lifestealandspellvamp }}% Omnivamp for {{ lifestealandspellvamptime }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Safeguard Shield Absorption",
@@ -68650,13 +68712,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        12,
-                        12,
-                        12,
-                        12,
-                        12
+                        7,
+                        7,
+                        7,
+                        7,
+                        7
                     ],
-                    "cooldownBurn": "12",
+                    "cooldownBurn": "7",
                     "cost": [
                         50,
                         50,
@@ -94635,7 +94697,7 @@
                         "0"
                     ],
                     "vars": [],
-                    "costType": "Health",
+                    "costType": " Health",
                     "maxammo": "-1",
                     "range": [
                         325,
@@ -94654,7 +94716,7 @@
                         "w": 48,
                         "h": 48
                     },
-                    "resource": "Health"
+                    "resource": "{{ healthcostcalc }} Health"
                 },
                 {
                     "id": "OlafRagnarok",
@@ -95123,14 +95185,14 @@
                     "id": "OrianaIzunaCommand",
                     "name": "Command: Attack",
                     "description": "Orianna commands her Ball to fire toward a target location, dealing magic damage to targets along the way (deals less damage to subsequent targets). Her Ball remains at the target location after.",
-                    "tooltip": "Orianna commands her <keywordMajor>Ball</keywordMajor> to move to an area, dealing <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> to surrounding enemies and to enemies it passes through. Deals {{ e2 }}% less damage to all enemies after the first.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Orianna commands her <keywordMajor>Ball</keywordMajor> to move to an area, dealing <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> to surrounding enemies and to enemies it passes through. Deals {{ reduceddamagepercent }}% less damage to all enemies after the first.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -95409,7 +95471,7 @@
                     "id": "OrianaRedactCommand",
                     "name": "Command: Protect",
                     "description": "Orianna commands her Ball to attach to an allied champion, Shielding them and dealing magic damage to any enemies it passes through on the way. Additionally, the Ball grants additional Armor and Magic Resist to the champion it is attached to.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>The <keywordMajor>Ball</keywordMajor> adds <scaleArmor>{{ e2 }} Armor</scaleArmor> and <scaleMR>{{ e2 }} Magic Resist</scaleMR> to the allied champion it is attached to.<br /><br /><spellActive>Active: </spellActive>Orianna commands her <keywordMajor>Ball</keywordMajor> to attach to an allied champion, granting them <shield>{{ totalshieldtooltip }} Shield</shield> for {{ e5 }} seconds. Enemies the <keywordMajor>Ball</keywordMajor> passes through take <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>The <keywordMajor>Ball</keywordMajor> adds <scaleArmor>{{ defensebonus }} Armor</scaleArmor> and <scaleMR>{{ defensebonus }} Magic Resist</scaleMR> to the allied champion it is attached to.<br /><br /><spellActive>Active: </spellActive>Orianna commands her <keywordMajor>Ball</keywordMajor> to attach to an allied champion, granting them <shield>{{ totalshieldtooltip }} Shield</shield> for {{ shieldduration }} seconds. Enemies the <keywordMajor>Ball</keywordMajor> passes through take <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -95418,10 +95480,10 @@
                             "Shield Amount"
                         ],
                         "effect": [
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }} -> {{ e1NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ defensebonus }} -> {{ defensebonusNL }}",
+                            "{{ defensebonus }} -> {{ defensebonusNL }}",
+                            "{{ shieldamount }} -> {{ shieldamountNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -99260,7 +99322,7 @@
                     "id": "PykeW",
                     "name": "Ghostwater Dive",
                     "description": "Pyke enters Camouflage and gains significant Move Speed that decays over time.",
-                    "tooltip": "Pyke gains <keywordStealth>Camouflage</keywordStealth> and <speed>{{ movespeed }}% Move Speed</speed> decaying over {{ e0 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Pyke gains <keywordStealth>Camouflage</keywordStealth> and <speed>{{ movespeed }}% Move Speed</speed> decaying over {{ camoduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown"
@@ -100798,6 +100860,68 @@
                     "name": "Star Guardian Quinn (Brilliant)",
                     "chromas": false,
                     "parentSkin": 14
+                },
+                {
+                    "id": "133024",
+                    "num": 24,
+                    "name": "PROJECT: Quinn",
+                    "chromas": true
+                },
+                {
+                    "id": "133025",
+                    "num": 25,
+                    "name": "PROJECT: Quinn (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 24
+                },
+                {
+                    "id": "133026",
+                    "num": 26,
+                    "name": "PROJECT: Quinn (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 24
+                },
+                {
+                    "id": "133027",
+                    "num": 27,
+                    "name": "PROJECT: Quinn (Tanzanite)",
+                    "chromas": false,
+                    "parentSkin": 24
+                },
+                {
+                    "id": "133028",
+                    "num": 28,
+                    "name": "PROJECT: Quinn (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 24
+                },
+                {
+                    "id": "133029",
+                    "num": 29,
+                    "name": "PROJECT: Quinn (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 24
+                },
+                {
+                    "id": "133030",
+                    "num": 30,
+                    "name": "PROJECT: Quinn (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 24
+                },
+                {
+                    "id": "133031",
+                    "num": 31,
+                    "name": "PROJECT: Quinn (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 24
+                },
+                {
+                    "id": "133032",
+                    "num": 32,
+                    "name": "PROJECT: Quinn (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 24
                 }
             ],
             "lore": "Quinn is an elite ranger-knight of Demacia, who undertakes dangerous missions deep in enemy territory. She and her legendary eagle, Valor, share an unbreakable bond, and their foes are often slain before they realize they are fighting not one, but two of the kingdom's greatest heroes. Nimble and acrobatic when required, Quinn takes aim with her crossbow while Valor marks their elusive targets from above, making them a deadly pair on the battlefield.",
@@ -101302,11 +101426,11 @@
                     ],
                     "cooldownBurn": "3",
                     "cost": [
-                        100,
                         50,
+                        25,
                         0
                     ],
-                    "costBurn": "100/50/0",
+                    "costBurn": "50/25/0",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -102152,7 +102276,7 @@
                     "id": "RakanE",
                     "name": "Battle Dance",
                     "description": "Flies to an allied champion granting them a shield. Can be re-cast for free for a short duration.",
-                    "tooltip": "Rakan dashes to an allied champion, granting them <shield>{{ totalshield }} Shield</shield> for {{ e3 }} seconds.<br /><br />Rakan can <recast>Recast</recast> this Ability once within {{ e2 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Rakan dashes to an allied champion, granting them <shield>{{ totalshield }} Shield</shield> for {{ duration }} seconds.<br /><br />Rakan can <recast>Recast</recast> this Ability once within {{ recastwindow }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Shield Health",
@@ -102161,8 +102285,8 @@
                         ],
                         "effect": [
                             "{{ baseshield }} -> {{ baseshieldNL }}",
-                            "{{ e4 }} -> {{ e4NL }}",
-                            "{{ e5 }} -> {{ e5NL }}"
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -102295,7 +102419,7 @@
                     "id": "RakanR",
                     "name": "The Quickness",
                     "description": "Gains Move Speed, charming and dealing magic damage to enemies touched.",
-                    "tooltip": "Rakan gains <speed>{{ e5 }}% Move Speed</speed> for {{ e2 }} seconds. Rakan deals <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> and <status>Charms</status> enemies for {{ e3 }} second(s) the first time he touches them. The first champion touched grants Rakan <speed>{{ e6 }}% decaying Move Speed</speed>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Rakan gains <speed>{{ initialcastspeed }}% Move Speed</speed> for {{ duration }} seconds. Rakan deals <magicDamage>{{ totaldamagetooltip }} magic damage</magicDamage> and <status>Charms</status> enemies for {{ charmduration }} second(s) the first time he touches them. The first champion touched grants Rakan <speed>{{ touchspeed }}% decaying Move Speed</speed>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Charm Duration",
@@ -102303,8 +102427,8 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ charmduration }} -> {{ charmdurationNL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -118183,7 +118307,7 @@
             },
             "stats": {
                 "hp": 625,
-                "hpperlevel": 100,
+                "hpperlevel": 95,
                 "mp": 100,
                 "mpperlevel": 0,
                 "movespeed": 350,
@@ -118349,7 +118473,7 @@
                     "id": "ShyvanaW",
                     "name": "Inferno Aegis",
                     "description": "Shyvana gains a shield, movement speed, and after a short delay, the area around her detonates.  While in Dragon Form, the explosion will heal her if it strikes an enemy champion.",
-                    "tooltip": "Shyvana wraps herself in flames for {{ duration }} seconds, gaining <shield>{{ calc_shield }} Shield</shield>, increased by <shield>{{ calc_shield_per_nearby_champion }}</shield> per nearby enemy champion and <speed>{{ movespeed }} Move Speed</speed>, increased to <speed>{{ movespeedtowardsenemies }}</speed> when moving towards enemy champions.<br /><br />When the effect ends, the <shield>Shield</shield> is broken, or upon <recast>Recast</recast> the area around her detonates, dealing <magicDamage>{{ damage }} magic damage</magicDamage>.<br /><br /><keywordMajor>Dragon Form:</keywordMajor> If the detonation hits an enemy champion Shyvana <healing> {{ calc_base_heal }} + {{ calc_missing_health_heal }} Missing Health</healing>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Shyvana wraps herself in flames for {{ duration }} seconds, gaining <shield>{{ calc_shield }} Shield</shield>, increased by <shield>{{ calc_shield_per_nearby_champion }}</shield> per nearby enemy champion and <speed>{{ movespeed }} Move Speed</speed>, increased to <speed>{{ movespeedtowardsenemies }}</speed> when moving towards enemy champions.<br /><br />When the effect ends, the <shield>Shield</shield> is broken, or upon <recast>Recast</recast> the area around her detonates, dealing <magicDamage>{{ damage }} magic damage</magicDamage>.<br /><br /><keywordMajor>Dragon Form:</keywordMajor> If the detonation hits an enemy champion Shyvana heals for <healing> {{ calc_base_heal }} + {{ calc_missing_health_heal }} Missing Health</healing>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -118365,12 +118489,12 @@
                     "maxrank": 5,
                     "cooldown": [
                         13,
-                        12,
-                        11,
-                        10,
-                        9
+                        12.25,
+                        11.5,
+                        10.75,
+                        10
                     ],
-                    "cooldownBurn": "13/12/11/10/9",
+                    "cooldownBurn": "13/12.25/11.5/10.75/10",
                     "cost": [
                         0,
                         0,
@@ -129657,7 +129781,7 @@
                     "id": "TaliyahQ",
                     "name": "Threaded Volley",
                     "description": "Taliyah throws a volley of rocks in a target direction, moving freely as she casts. This creates Worked Ground below her. If Taliyah casts Threaded Volley on Worked Ground, she consumes the ground to throw a stronger boulder that slows enemies.",
-                    "tooltip": "Taliyah hurls 5 rocks, each dealing <magicDamage>{{ rockdamage }} magic damage</magicDamage> in an area around the first enemy hit while creating Worked Ground at that area. Subsequent hits against the same enemy deal {{ extramissilereduceddamagepercent }}% less damage.<br /><br />Casts on worked ground cost {{ e7 }} Mana and have {{ workedgroundcdr*100 }}% less Cooldown, consume the Worked Ground, and hurl a boulder that <status>Slows</status> enemies it hits by {{ slowpercent*100 }}% for {{ slowduration }} seconds, dealing <magicDamage>{{ bigrockdamage }} magic damage</magicDamage> to the primary target. Monsters hit by the boulder are <status>Stunned</status> for {{ monsterstunduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Taliyah hurls 5 rocks, each dealing <magicDamage>{{ rockdamage }} magic damage</magicDamage> in an area around the first enemy hit while creating Worked Ground at that area. Subsequent hits against the same enemy deal {{ extramissilereduceddamagepercent }}% less damage.<br /><br />Casts on worked ground cost {{ bigrockmanacost }} Mana and have {{ workedgroundcdr*100 }}% less Cooldown, consume the Worked Ground, and hurl a boulder that <status>Slows</status> enemies it hits by {{ slowpercent*100 }}% for {{ slowduration }} seconds, dealing <magicDamage>{{ bigrockdamage }} magic damage</magicDamage> to the primary target. Monsters hit by the boulder are <status>Stunned</status> for {{ monsterstunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -130086,7 +130210,7 @@
                     "id": "TaliyahR",
                     "name": "Weaver's Wall",
                     "description": "Taliyah creates a very long wall and then surfs it.",
-                    "tooltip": "Taliyah creates a massive earthen wall for {{ e1 }} seconds. If she immediately <recast>Recasts</recast>, she will ride along the wall as it unravels. Moving or being immobilized will end the ride.<br /><br />This ability cannot be cast if Taliyah has taken damage from Champions or structures within the last {{ damagelockouttime }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Taliyah creates a massive earthen wall for {{ wallduration }} seconds. If she immediately <recast>Recasts</recast>, she will ride along the wall as it unravels. Moving or being immobilized will end the ride.<br /><br />This ability cannot be cast if Taliyah has taken damage from Champions or structures within the last {{ damagelockouttime }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Wall length",
@@ -140413,7 +140537,7 @@
                     "id": "UrgotW",
                     "name": "Purge",
                     "description": "Urgot slows himself while he unloads his weapon on nearby enemies. Prioritizes enemy champions Urgot has recently struck with other abilities and triggers Echoing Flames.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Urgot's other Abilities mark the last champion hit for 5 seconds.<br /><br /><spellActive>Active:</spellActive> Urgot begins firing his chain gun at the closest enemy, prioritizing marked enemies. He Attacks them {{ e8 }} times a second dealing <physicalDamage>{{ damagepershot }} physical damage</physicalDamage> per shot. Urgot can move while firing and has {{ e2 }}% <status>Slow</status> resistance, but loses <speed>{{ e5 }} Move Speed</speed>.<br /><br />At max rank, this Ability lasts indefinitely and can be <toggle>Toggled</toggle> on and off.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Urgot's other Abilities mark the last champion hit for 5 seconds.<br /><br /><spellActive>Active:</spellActive> Urgot begins firing his chain gun at the closest enemy, prioritizing marked enemies. He Attacks them {{ wattackspersecond }} times a second dealing <physicalDamage>{{ damagepershot }} physical damage</physicalDamage> per shot. Urgot can move while firing and has {{ slowresistance }}% <status>Slow</status> resistance, but loses <speed>{{ movespeedmod }} Move Speed</speed>.<br /><br />At max rank, this Ability lasts indefinitely and can be <toggle>Toggled</toggle> on and off.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -140422,7 +140546,7 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e7 }}% -> {{ e7NL }}%",
+                            "{{ adratiott }}% -> {{ adratiottNL }}%",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
@@ -152106,7 +152230,7 @@
                     "id": "XayahW",
                     "name": "Deadly Plumage",
                     "description": "Xayah creates a storm of blades that increase her Attack Speed and damage while also granting her Move Speed if she attacks a champion.",
-                    "tooltip": "Xayah creates a storm of blades for {{ e2 }} seconds that grants her <attackSpeed>{{ e1 }}% Attack Speed</attackSpeed> and cause her Attacks to fire a secondary blade that deals {{ bonusdamagepercent }}% damage.<br /><br />When the secondary blade hits a champion, she grants herself <speed>{{ e3 }}% Move Speed</speed> for {{ e4 }} seconds.<br /><br />If Rakan is nearby he will also gain the effects of this Ability, except he gains <speed>Move Speed</speed> when <i>Xayah</i> strikes a target.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Xayah creates a storm of blades for {{ wattackspeedduration }} seconds that grants her <attackSpeed>{{ wattackspeedamount }}% Attack Speed</attackSpeed> and cause her Attacks to fire a secondary blade that deals {{ bonusdamagepercent }}% damage.<br /><br />When the secondary blade hits a champion, she grants herself <speed>{{ wmovespeedamount }}% Move Speed</speed> for {{ wmovespeedduration }} seconds.<br /><br />If Rakan is nearby he will also gain the effects of this Ability, except he gains <speed>Move Speed</speed> when <i>Xayah</i> strikes a target.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Attack Speed",
@@ -152114,7 +152238,7 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }}% -> {{ e1NL }}%",
+                            "{{ wattackspeedamount }}% -> {{ wattackspeedamountNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -153100,7 +153224,7 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -153235,7 +153359,7 @@
                     "id": "XerathLocusOfPower2",
                     "name": "Rite of the Arcane",
                     "description": "Xerath immobilizes himself and gains numerous long-range barrages.",
-                    "tooltip": "Xerath ascends to his true form and channels for {{ e1 }} seconds. During this time he may <recast>Recast</recast> up to {{ e2 }} times.<br /><br /><recast>Recast:</recast> Xerath launches a magical artillery, dealing <magicDamage>{{ tooltiptotaldamage }} magic damage</magicDamage>. For each champion hit, the artillery deals an additional <magicDamage>{{ rampdamagecalc }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Xerath ascends to his true form and channels for {{ duration }} seconds. During this time he may <recast>Recast</recast> up to {{ numberofshots }} times.<br /><br /><recast>Recast:</recast> Xerath launches a magical artillery, dealing <magicDamage>{{ tooltiptotaldamage }} magic damage</magicDamage>. For each champion hit, the artillery deals an additional <magicDamage>{{ rampdamagecalc }} magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -153244,8 +153368,8 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ numberofshots }} -> {{ numberofshotsNL }}",
                             "{{ rampbasedamage }} -> {{ rampbasedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
@@ -160705,11 +160829,11 @@
                             0
                         ],
                         [
-                            8,
-                            8,
-                            8,
-                            8,
-                            8
+                            0.08,
+                            0.08,
+                            0.08,
+                            0.08,
+                            0.08
                         ],
                         [
                             800,
@@ -160771,7 +160895,7 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "8",
+                        "0.08",
                         "800",
                         "-0.4",
                         "0.5",
@@ -160801,7 +160925,7 @@
                         "w": 48,
                         "h": 48
                     },
-                    "resource": "{{ e2 }}% of current Health ({{ healthcosttooltip }})"
+                    "resource": "{{ hpcost*100 }}% of current Health ({{ healthcosttooltip }})"
                 },
                 {
                     "id": "ZacW",
@@ -160846,11 +160970,11 @@
                             80
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0.04,
+                            0.04,
+                            0.04,
+                            0.04,
+                            0.04
                         ],
                         [
                             0.04,
@@ -160912,7 +161036,7 @@
                     "effectBurn": [
                         null,
                         "40/50/60/70/80",
-                        "4",
+                        "0.04",
                         "0.04/0.05/0.06/0.07/0.08",
                         "1",
                         "200",
@@ -160942,13 +161066,13 @@
                         "w": 48,
                         "h": 48
                     },
-                    "resource": "{{ e2 }}% of current Health ({{ tooltiphealthcost }})"
+                    "resource": "{{ hpcost*100 }}% of current Health ({{ tooltiphealthcost }})"
                 },
                 {
                     "id": "ZacE",
                     "name": "Elastic Slingshot",
                     "description": "Zac attaches his arms to the ground and stretches back, launching himself forward.",
-                    "tooltip": "<charge>Begin Charging:</charge> Zac pulls himself taut, charging up a dash over {{ e4 }} seconds.<br /><br /><release>Release:</release> Zac launches himself and <status>Knocks Up</status> enemies where he lands for up to {{ maxstun }} second (based on charge time), dealing them <magicDamage>{{ damage }} magic damage</magicDamage>. Zac spawns an extra chunk of <keywordMajor>Goo</keywordMajor> for each enemy champion hit.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<charge>Begin Charging:</charge> Zac pulls himself taut, charging up a dash over {{ channeltime }} seconds.<br /><br /><release>Release:</release> Zac launches himself and <status>Knocks Up</status> enemies where he lands for up to {{ maxstun }} second (based on charge time), dealing them <magicDamage>{{ damage }} magic damage</magicDamage>. Zac spawns an extra chunk of <keywordMajor>Goo</keywordMajor> for each enemy champion hit.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -160956,8 +161080,8 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e3 }} -> {{ e3NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ maxrange }} -> {{ maxrangeNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -160989,11 +161113,11 @@
                             240
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0.04,
+                            0.04,
+                            0.04,
+                            0.04,
+                            0.04
                         ],
                         [
                             1200,
@@ -161055,7 +161179,7 @@
                     "effectBurn": [
                         null,
                         "60/105/150/195/240",
-                        "4",
+                        "0.04",
                         "1200/1350/1500/1650/1800",
                         "0.9/1/1.1/1.2/1.3",
                         "0.5",
@@ -161085,7 +161209,7 @@
                         "w": 48,
                         "h": 48
                     },
-                    "resource": "{{ e2 }}% of current Health ({{ healthcosttooltip }})"
+                    "resource": "{{ hpcost*100 }}% of current Health ({{ healthcosttooltip }})"
                 },
                 {
                     "id": "ZacR",
@@ -161124,63 +161248,63 @@
                             0
                         ],
                         [
-                            1.1,
-                            1.1,
-                            1.1
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            700,
-                            850,
-                            1000
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            -0.3,
-                            -0.4,
-                            -0.5
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2.5,
-                            2.5,
-                            2.5
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            275,
-                            275,
-                            275
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            300,
-                            300,
-                            300
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.25,
-                            0.25,
-                            0.25
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.1,
-                            0.1,
-                            0.1
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
                         "0",
-                        "1.1",
-                        "700/850/1000",
-                        "-0.3/-0.4/-0.5",
-                        "2.5",
-                        "275",
-                        "300",
-                        "1",
-                        "0.25",
-                        "0.1"
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": "No Cost",
@@ -163827,7 +163951,7 @@
                             "Tower Destruction Threshold"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ turretdestroypercent*100.000000 }}% -> {{ turretdestroypercentnl*100.000000 }}%"
                         ]
@@ -163962,7 +164086,7 @@
                     "id": "ZiggsE",
                     "name": "Hexplosive Minefield",
                     "description": "Ziggs scatters proximity mines that detonate on enemy contact, dealing magic damage and slowing. Successive mine detonations on the same target deal reduced damage.",
-                    "tooltip": "Ziggs scatters proximity mines that detonate on enemy contact, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slows</status> by {{ slow*-100 }}% for {{ e4 }} seconds. Mines last {{ mineduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Ziggs scatters proximity mines that detonate on enemy contact, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slows</status> by {{ slow*-100 }}% for {{ slowduration }} seconds. Mines last {{ mineduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Mine Damage",
@@ -165590,7 +165714,7 @@
                     "id": "ZoeW",
                     "name": "Spell Thief",
                     "description": "Zoe can pick up the remnants of enemy summoner spell and active item casts and cast them once herself. Whenever she casts a summoner spell, she gains 3 missiles that fire at the nearest target.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Enemies drop spell shards when casting a Summoner Spell or using an Active Item. Specific minions also drop a spell shard when Zoe or a nearby ally kills them. Zoe can pick up this shard to cast that ability once.<br /><br /><spellPassive>Passive:</spellPassive> When Zoe casts this Ability or any Summoner Spell, she gains <speed>{{ e9 }}% Move Speed</speed> for {{ e0 }} seconds and tosses 3 missiles at the target she Attacked most recently. These missiles deal <magicDamage>{{ missiledamagetooltip }} magic damage</magicDamage> each.<br /><br /><spellActive>Active:</spellActive> Cast the Ability from a spell shard Zoe has picked up.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Enemies drop spell shards when casting a Summoner Spell or using an Active Item. Specific minions also drop a spell shard when Zoe or a nearby ally kills them. Zoe can pick up this shard to cast that ability once.<br /><br /><spellPassive>Passive:</spellPassive> When Zoe casts this Ability or any Summoner Spell, she gains <speed>{{ movementspeed*100 }}% Move Speed</speed> for {{ msduration }} seconds and tosses 3 missiles at the target she Attacked most recently. These missiles deal <magicDamage>{{ missiledamagetooltip }} magic damage</magicDamage> each.<br /><br /><spellActive>Active:</spellActive> Cast the Ability from a spell shard Zoe has picked up.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Total Damage",
@@ -165680,11 +165804,11 @@
                             0
                         ],
                         [
-                            30,
-                            40,
-                            50,
-                            60,
-                            70
+                            0.3,
+                            0.4,
+                            0.5,
+                            0.6,
+                            0.7
                         ],
                         [
                             2,
@@ -165704,7 +165828,7 @@
                         "20/50/80/110/140",
                         "0.2",
                         "0",
-                        "30/40/50/60/70",
+                        "0.3/0.4/0.5/0.6/0.7",
                         "2/2.25/2.5/2.75/3"
                     ],
                     "vars": [],

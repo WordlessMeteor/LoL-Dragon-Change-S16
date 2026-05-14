@@ -73,6 +73,9 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_tft17_EnemyAatrox_Spell_missilecast"
+            },
             "mSpellCooldownOrSealedQueueThreshold": 0.5,
             "__type": "SpellDataResource"
         },
@@ -88,19 +91,32 @@
                 {
                     "name": "GridADDamage",
                     "values": [
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "GridAPDamage",
                     "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SwordAoEADDamage",
+                    "values": [
                         200.0,
                         200.0,
                         200.0,
@@ -112,28 +128,15 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "SwordAoEADDamage",
-                    "values": [
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "SwordAoEAPDamage",
                     "values": [
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -166,13 +169,13 @@
                 {
                     "name": "Durability",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -503,10 +506,6 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "{726ee5cd}": {
-                "baseValue": 85.0,
-                "__type": "ModifiableFloat"
-            },
             "{c4ab3550}": {
                 "baseValue": 0.0,
                 "__type": "ModifiableFloat"
@@ -519,11 +518,11 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 150.0,
+            "baseValue": 60.0,
             "__type": "ModifiableFloat"
         },
         "baseMR": {
-            "baseValue": 150.0,
+            "baseValue": 60.0,
             "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
@@ -537,7 +536,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.8999999761581421,
+            "baseValue": 0.6000000238418579,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -577,7 +576,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 50.0,
+        "mInitialMana": 30.0,
         "mShopData": "{2e4a05f8}",
         "__type": "TFTCharacterRecord"
     },

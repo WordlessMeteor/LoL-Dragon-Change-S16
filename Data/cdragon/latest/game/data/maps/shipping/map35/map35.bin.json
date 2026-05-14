@@ -414,7 +414,10 @@
                 "evtSmartPlusSelfCastRoleBound": "[]",
                 "evtSmartCastWithIndicatorRoleBound": "[]",
                 "evtSmartPlusSelfCastWithIndicatorRoleBound": "[]",
-                "evtNormalCastRoleBound": "[]"
+                "evtNormalCastRoleBound": "[]",
+                "evtChatModeReturnPressed": "[]",
+                "evtOpenChat": "[]",
+                "evtOpenChatAll": "[]"
             },
             "__type": "{5a92b195}"
         },
@@ -663,7 +666,10 @@
             "evtPracticeToolInc100Health": "[]",
             "evtPracticeToolDec100Health": "[]",
             "evtPracticeToolInc10Resistance": "[]",
-            "evtPracticeToolDec10Resistance": "[]"
+            "evtPracticeToolDec10Resistance": "[]",
+            "evtChatModeReturnPressed": "[]",
+            "evtOpenChat": "[]",
+            "evtOpenChatAll": "[]"
         },
         "{911d1120}": true,
         "__type": "{5a92b195}"
@@ -123728,263 +123734,6 @@
         },
         "__type": "GameModeConstants"
     },
-    "{168a4690}": {
-        "ScriptName": "NeutralCamp_PrespawnMarkers_Setup",
-        "path": "{168a4690}",
-        "sequences": {
-            "GameEntityOnInit": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "58c4e78e-e85a-45e1-b233-c24f66c2563f",
-                        "Src": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{8f282079}",
-                            "__type": "FloatTableGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "CampSpawnLeadupSoft",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "2d808946-e091-4256-b519-db310654c89b",
-                        "Src": {
-                            "Table": {
-                                "__type": "InstanceVars"
-                            },
-                            "Var": "{3993c0a5}",
-                            "__type": "FloatTableGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "CampSpawnLeadupBright",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "4ecc74d4-6fa6-42a1-9577-0adc2f7d0db1",
-                        "Dest": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "NeutralCampSpawnPosDict",
-                            "__type": "CustomTableSet"
-                        },
-                        "__type": "CreateCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "5573fd41-beb7-48ef-9532-1aba6255e92a",
-                        "Dest": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "NeutralCampSpawnTimeDict",
-                            "__type": "CustomTableSet"
-                        },
-                        "__type": "CreateCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "8cd8be49-b607-4aa1-9b48-cf96760c2040",
-                        "Dest": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "NeutralCampRespawnTimeDict",
-                            "__type": "CustomTableSet"
-                        },
-                        "__type": "CreateCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "54b697dc-0265-477d-b18e-21cca84cd9e0",
-                        "Dest": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "NeutralCampSpawnDurationDict",
-                            "__type": "CustomTableSet"
-                        },
-                        "__type": "CreateCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "d876fcfb-8178-4107-b542-e1f0fe31b76a",
-                        "Dest": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "CampMarkersToSpawnDict",
-                            "__type": "CustomTableSet"
-                        },
-                        "__type": "CreateCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "764f7e1f-42e8-4c57-a89f-bbac956fe61b",
-                        "Dest": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "NeutralCampMaxSpawnLimitDict",
-                            "__type": "CustomTableSet"
-                        },
-                        "__type": "CreateCustomTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "{ee26c73f}": {
-            "{8f282079}": {
-                "value": 60.0,
-                "__type": "FloatGet"
-            },
-            "{3993c0a5}": {
-                "value": 10.0,
-                "__type": "FloatGet"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
-    "{a459bc5d}": {
-        "ScriptName": "NeutralCamp_PrespawnMarker",
-        "path": "{a459bc5d}",
-        "sequences": {
-            "GameEntityOnActivate": {
-                "blocks": [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    {
-                        "{d851ffa3}": "dc6503ec-b2d4-4399-8798-be45b2fe2312",
-                        "DestTable": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "{8b781c06}",
-                            "__type": "CustomTableGet"
-                        },
-                        "Key": {
-                            "Var": "CampName",
-                            "__type": "StringTableGet"
-                        },
-                        "value": {
-                            "Var": "{273d16f7}",
-                            "__type": "VectorTableGet"
-                        },
-                        "__type": "SetKeyValueInCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "8de15014-9495-49e4-bc9a-3ef1c48156e4",
-                        "DestTable": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "{0ea2ad95}",
-                            "__type": "CustomTableGet"
-                        },
-                        "Key": {
-                            "Var": "CampName",
-                            "__type": "StringTableGet"
-                        },
-                        "value": {
-                            "Var": "nextSpawnTime",
-                            "__type": "FloatTableGet"
-                        },
-                        "__type": "SetKeyValueInCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "5f657b63-32fd-4ed2-b1d5-71e72be15cb6",
-                        "DestTable": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "{d20a8f22}",
-                            "__type": "CustomTableGet"
-                        },
-                        "Key": {
-                            "Var": "CampName",
-                            "__type": "StringTableGet"
-                        },
-                        "value": {
-                            "Var": "respawnDelay",
-                            "__type": "FloatTableGet"
-                        },
-                        "__type": "SetKeyValueInCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "c11834de-08d2-42fe-836e-b1d3ce330825",
-                        "DestTable": {
-                            "Table": {
-                                "__type": "WorldVars"
-                            },
-                            "Var": "{359a0df8}",
-                            "__type": "CustomTableGet"
-                        },
-                        "Key": {
-                            "Var": "CampName",
-                            "__type": "StringTableGet"
-                        },
-                        "value": {
-                            "Var": "{5e0188b5}",
-                            "__type": "FloatTableGet"
-                        },
-                        "__type": "SetKeyValueInCustomTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "392d63e8-7d11-4c16-bf60-4143b64a1312",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "{04c5146e}",
-                                "__type": "BoolTableGet"
-                            },
-                            "Value2": {
-                                "value": true,
-                                "__type": "BoolGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "e6330aec-a6a7-4fbe-8e37-7d00198707e0",
-                                    "DestTable": {
-                                        "Table": {
-                                            "__type": "WorldVars"
-                                        },
-                                        "Var": "{45cc587d}",
-                                        "__type": "CustomTableGet"
-                                    },
-                                    "Key": {
-                                        "Var": "CampName",
-                                        "__type": "StringTableGet"
-                                    },
-                                    "value": {
-                                        "value": true,
-                                        "__type": "BoolGet"
-                                    },
-                                    "__type": "SetKeyValueInCustomTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            }
-        },
-        "__type": "{e2b34203}"
-    },
     "{1b63dd21}": {
         "InitialSpawnTimeSecs": 30.0,
         "WaveSpawnIntervalSecs": 25.0,
@@ -127665,7 +127414,8 @@
             "OnUnanimousSurrenderVoteStart": "{56792667}",
             "OnUnanimousAfkSurrenderAllowed": "{da9f1581}",
             "OnShutdown": "{8769e77d}",
-            "OnReviveAlly": "{a804359c}"
+            "OnReviveAlly": "{a804359c}",
+            "OnIGNBSurrenderVoteStart": "{2cb23ff8}"
         },
         "__type": "AnnouncementMap"
     },
@@ -128144,6 +127894,17 @@
             "MakeLowerPriorityEventsObsolete": false,
             "Style": "{fa08bea1}",
             "ChatMessageKey": "game_announcement_OnEqualizeNotEnoughLevels",
+            "__type": "AnnouncementDefinitionData"
+        },
+        "__type": "ChatOnlyAnnouncementDefinition_Deprecated"
+    },
+    "{2cb23ff8}": {
+        "DefaultData": {
+            "priority": 1,
+            "CanBeMadeObsolete": false,
+            "MakeLowerPriorityEventsObsolete": false,
+            "Style": "{fa08bea1}",
+            "ChatMessageKey": "game_announcement_OnIGNBSurrenderVoteStart",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "ChatOnlyAnnouncementDefinition_Deprecated"

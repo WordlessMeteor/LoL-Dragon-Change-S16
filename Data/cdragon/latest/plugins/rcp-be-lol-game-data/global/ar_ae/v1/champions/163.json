@@ -582,7 +582,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ترمي تاليا وابلًا من الصخور باتجاه الهدف، وتتحرك بحرية بينما تفعل ذلك. يتسبب ذلك في حدوث الأرض المقلوبة تحتها. إن ألقت تاليا الوابل اللولبي في الأرض المقلوبة، تستهلك الأرض لتلقي جلمودًا أقوى يبطئ الأعداء.",
-            "dynamicDescription": "تقذف تاليا 5 صخور، وتلحق كل صخرة منها <magicDamage>@RockDamage@ ضرر سحر</magicDamage> في منطقة ما حول أول عدو تصيبه بينما تنشئ الأرض المقلوبة في تلك المنطقة. تلحق الضربات اللاحقة بالعدو نفسه @ExtraMissileReducedDamagePercent@% ضرر أقل.<br><br>يكلف الإلقاء على الأرض المقلوبة @Effect7Amount@ من المانا ولديه @WorkedGroundCDR*100@% فترة تبريد أقل، ويستهلك الأرض المقلوبة ويقذف بجلمود <status>يبطئ</status> الأعداء الذين يصيبهم بنسبة @SlowPercent*100@% لمدة @SlowDuration@ث، ما يلحق <magicDamage>@BigRockDamage@ضرر سحر</magicDamage> بالهدف الأساسي. <status>تُصعق</status> الوحوش التي يصيبها الجلمود لمدة @MonsterStunDuration@ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تقذف تاليا 5 صخور، فتلحق كل منها <magicDamage>@RockDamage@ ضرر سحر</magicDamage> في منطقة حول أول عدو تصيبه بينما تنشئ الأرض المقلوبة في تلك المنطقة. تلحق الضربات اللاحقة ضد نفس العدو ضررًا أقل بنسبة @ExtraMissileReducedDamagePercent@%.<br><br>يكلف الإلقاء على الأرض المقلوبة @BigRockManaCost@ مانا ويمتلك فترة تبريد أقل بنسبة @WorkedGroundCDR*100@%، وتستهلك الأرض المقلوبة وتقذف جلمودًا <status>يبطئ</status> الأعداء الذين يصيبهم بنسبة @SlowPercent*100@% لمدة @SlowDuration@ث، ويلحق <magicDamage>@BigRockDamage@ ضرر سحر</magicDamage> بالهدف الرئيسي. يتم <status>صعق</status> الوحوش التي يصيبها الجلمود لمدة @MonsterStunDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1032,7 +1032,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تنصب تاليا حائطًا مرتفعًا جدًا، ثم تنزلق عليه.",
-            "dynamicDescription": "تنشئ تاليا جدارًا ترابيًا هائلًا لمدة @Effect1Amount@ث. إن <recast>أعادت الإلقاء</recast> في الحال، ستقفز على الجدار وهو ينكشف. سينهي التحرك أو شل الحركة الرحلة.<br><br>لا يمكن إلقاء هذه القدرة إن تلقت تاليا ضررًا من الأبطال أو الأبنية خلال الثواني @DamageLockoutTime@ الأخيرة.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تنشئ تاليا جدارًا ترابيًا هائلًا لمدة @WallDuration@ث. إن <recast>أعادت الإلقاء</recast> مباشرةً، تنزلق على طول الجدار أثناء تمدده. ينهي التحرك أو الخضوع لتأثير شل الحركة الانزلاق.<br><br>لا يمكن إلقاء هذه القدرة إن تلقت تاليا ضررًا من الأبطال أو الأبنية خلال الثواني الـ @DamageLockoutTime@ الأخيرة.@SpellModifierDescriptionAppend@",
             "range": [
                 2500.0,
                 4500.0,

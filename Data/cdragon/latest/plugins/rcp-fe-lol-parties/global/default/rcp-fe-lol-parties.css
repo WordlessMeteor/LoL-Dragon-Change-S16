@@ -8097,11 +8097,12 @@ lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: 40px
+    margin-top: 30px
 }
 
 .v2-banner-component .lobby-banner .position-icons-container .position-element.primary,
-.v2-banner-component .lobby-banner .position-icons-container .position-element.secondary {
+.v2-banner-component .lobby-banner .position-icons-container .position-element.secondary,
+.v2-banner-component .lobby-banner .position-icons-container .position-element.tertiary {
     transition: $easing_circular_ease_out .5s
 }
 
@@ -8113,6 +8114,55 @@ lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
     opacity: 0;
     pointer-events: none;
     transform: translateX(-30px) scale(.8)
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-layout {
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    position: relative
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-layout .position-element.primary {
+    order: 1;
+    position: relative
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-layout .position-element.secondary {
+    order: 2
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-layout .position-element.tertiary {
+    order: 3
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-layout .position-element.secondary,
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-layout .position-element.tertiary {
+    display: inline-block
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-layout .secondary-tertiary-row {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    order: 2
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-layout .demacia-position-error-indicator {
+    height: 16px;
+    pointer-events: none;
+    position: absolute;
+    right: 16px;
+    top: -10px;
+    width: 16px
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-button {
+    cursor: pointer
+}
+
+.v2-banner-component .lobby-banner .position-icons-container.demacia-position-button:hover {
+    filter: brightness(1.2)
 }
 
 .v2-banner-component .lobby-banner.empty {
@@ -8131,6 +8181,10 @@ lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
 
 .v2-banner-component .lobby-banner.local .position-icons-container {
     margin-top: 50px
+}
+
+.v2-banner-component .lobby-banner.local .position-icons-container.demacia-position-layout {
+    margin-top: 20px
 }
 
 .v2-banner-component .lobby-banner-animation-container {
@@ -8215,15 +8269,37 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
     padding-top: 4px
 }
 
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title,
 .v2-footer-component .center-container .find-match-button-container {
-    font-family: var(--font-display);
+    font-family: var(--font-display)
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status {
+    font-family: var(--font-body)
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status,
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title,
+.v2-footer-component .center-container .find-match-button-container {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title,
+.v2-footer-component .center-container .find-match-button-container {
     text-transform: uppercase
 }
 
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title:lang(el-gr),
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title:lang(ja-jp),
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title:lang(ko-kr),
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title:lang(th-th),
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title:lang(tr-tr),
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title:lang(zh-tw),
 .v2-footer-component .center-container .find-match-button-container:lang(el-gr),
 .v2-footer-component .center-container .find-match-button-container:lang(ja-jp),
 .v2-footer-component .center-container .find-match-button-container:lang(ko-kr),
@@ -8242,6 +8318,42 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 }
 
 .v2-footer-component .center-container .find-match-button-container:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-action:lang(ja-jp),
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status:lang(ja-jp) {
+    font-size: 13px
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-action:lang(ar-ae),
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status:lang(ar-ae) {
     letter-spacing: 0
 }
 
@@ -8315,6 +8427,12 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
     width: 122px
 }
 
+.v2-footer-component .center-container .aw-boost-button-container {
+    height: 32px;
+    margin-left: 15px;
+    width: 32px
+}
+
 .v2-footer-component .center-container .role-selectors-container {
     display: flex;
     width: 150px
@@ -8342,6 +8460,41 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
     position: absolute;
     right: 36px;
     width: 288px
+}
+
+.aw-boost-tooltip-content {
+    background: #1a1c21;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .75);
+    min-width: 200px
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header {
+    align-items: center;
+    display: flex
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-icon {
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text {
+    margin-left: 8px
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title {
+    font-size: 14px;
+    white-space: nowrap
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status {
+    white-space: nowrap
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-action {
+    margin-top: 8px;
+    white-space: nowrap
 }
 
 .v2-footer-notifications:has(>*)~.toggle-option-component {

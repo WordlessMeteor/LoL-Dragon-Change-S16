@@ -1,0 +1,630 @@
+{
+    "Characters/QuinnValor/Skins/Skin32": {
+        "championSkinName": "QuinnValorSkin32",
+        "skinParent": 24,
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/QuinnValor/Animations/Skin24",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/QuinnValor/Skins/Skin24/QuinnValor_Skin24.SKINS_Quinn_Skin24.skl",
+            "simpleSkin": "ASSETS/Characters/QuinnValor/Skins/Skin24/QuinnValor_Skin24.SKINS_Quinn_Skin24.skn",
+            "texture": "ASSETS/Characters/QuinnValor/Skins/Skin32/QuinnValor_Skin32_TX_CM.Chroma_Quinn_Project.tex",
+            "skinScale": 2.5,
+            "selfIllumination": 0.699999988079071,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "materialOverride": [
+                {
+                    "Material": "Characters/QuinnValor/Skins/Skin32/Materials/Valor_Skin32_Blade_inst",
+                    "submesh": "Blade",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "iconCircle": "ASSETS/Characters/Quinn/HUD/QuinnValor_Circle.tex",
+        "iconSquare": "ASSETS/Characters/Quinn/HUD/QuinnValor_Square.tex",
+        "mResourceResolver": "Characters/QuinnValor/Skins/Skin32/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/QuinnValor/Skins/Skin32/Materials/Valor_Skin32_Blade_inst": {
+        "name": "Characters/QuinnValor/Skins/Skin32/Materials/Valor_Skin32_Blade_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Mask",
+                "texturePath": "ASSETS/Shared/Materials/MatCap/MatCap_Metal.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/QuinnValor/Skins/Skin24/QuinnValor_Skin24_Blade_ScrollMask_TX_CM.SKINS_Quinn_Skin24.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Main_Texture",
+                "texturePath": "ASSETS/Characters/QuinnValor/Skins/Skin32/QuinnValor_Skin32_TX_CM.Chroma_Quinn_Project.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "OutlineMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "addressW": 2,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Maintex_Alpha_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Size",
+                "value": [
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Location",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_B_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_RG_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Main_Tex_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_TintColor",
+                "value": [
+                    0.0,
+                    0.6470588445663452,
+                    0.7411764860153198,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_Control",
+                "value": [
+                    5.0,
+                    10.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Texture_B_UV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBase",
+                "value": [
+                    0.0,
+                    -0.4000000059604645,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBlend",
+                "value": [
+                    0.0,
+                    -0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.45098039507865906
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Base_Tile",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blend_Tile",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BaseMat_Tint",
+                "value": [
+                    0.9921568632125854,
+                    0.5630426406860352,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMat_Tint",
+                "value": [
+                    0.9333333373069763,
+                    0.5295491218566895,
+                    0.125490203499794,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaskStrength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomValue",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "value": [
+                    0.04177920147776604,
+                    0.8849164843559265,
+                    0.6404058933258057,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_TintColor",
+                "value": [
+                    0.9058823585510254,
+                    0.7678034901618958,
+                    0.529320240020752,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveController",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipNoiseStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseUV",
+                "value": [
+                    5.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedMainTex",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHA_MAIN_SCROLL_OUTLINE_ADD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_RG",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_B",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_OUTLINEMASK_B_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLENDCOLOR_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIVEALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MASK_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MAINTEX_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_MAIN",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHACLIP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_TINTCOLOR_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLL_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/AlphaBlend_Additive_Scroll_Packed",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "MaskStrength",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "__type": "IsDeadDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "mValue": 1.2000000476837158,
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/QuinnValor/Skins/Skin32/Resources": {
+        "resourceMap": {
+            "Quinn_BA_Hit": "{16294046}",
+            "Quinn_BA_Mis": "{5ecc903c}",
+            "Quinn_Emote_dance_in_sound": "{8c9c49f3}",
+            "Quinn_Emote_dance_sound": "{aea7159b}",
+            "Quinn_Emote_death_sound": "{48d9c422}",
+            "Quinn_Emote_joke_vo": "{96a158db}",
+            "Quinn_Emote_laugh_sound": "{7b1fc88d}",
+            "Quinn_Emote_taunt_sound": "{363f19d4}",
+            "Quinn_E_Dash": "{e188c855}",
+            "Quinn_E_End": "{2011af8a}",
+            "Quinn_E_Tar": "{5e7c145c}",
+            "Quinn_Joke": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Joke",
+            "Quinn_P_Buff": "{af3ff629}",
+            "Quinn_P_buf_self": "{db7045d8}",
+            "Quinn_Q_AOE_unit_tar": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Q_AOE_unit_tar",
+            "Quinn_Q_Cas_Arm_Bird": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Q_Cas_Arm_Bird",
+            "Quinn_Q_Mis": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Q_Mis",
+            "Quinn_Q_tar": "{6ab89638}",
+            "Quinn_Q_Tar_Blind": "{68575294}",
+            "Quinn_Q_Vision_Reduction": "{33735fdb}",
+            "Quinn_R2_tar": "{dc4362b5}",
+            "Quinn_Respawn": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Respawn",
+            "Quinn_R_Cas": "{133cb75b}",
+            "Quinn_R_Cas_Finale_Mis_Child": "{fa04a766}",
+            "Quinn_R_Cas_Finale_Tar_Child": "{71d5aba2}",
+            "Quinn_R_Cas_Finale": "{bb81c433}",
+            "Quinn_R_Channel_child_valor": "{60e89309}",
+            "Quinn_R_channel_beam_child": "{d1bbef54}",
+            "Quinn_R_channel": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_R_channel",
+            "Quinn_R_End": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_R_End",
+            "Quinn_R_finale_cas_02": "{2715f1ca}",
+            "Quinn_R_tar_01": "{ba826c61}",
+            "Quinn_valor_Emote_joke_vo_sound": "{ea8e8f33}",
+            "Quinn_W_Cas_Nova": "{53cb29e7}",
+            "Quinn_W_Cas_Passive": "{dffce866}",
+            "Quinn_W_Mis": "{52cc21be}",
+            "Quinn_W_tar_enemy_sound": "{ad2336e5}",
+            "Quinn_W_Tar_Enhanced": "{48c6f785}",
+            "Quinn_W_Tar_Enhanced_Minion": "{38259714}",
+            "Quinn_W_tar_Valor": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_W_tar_Valor",
+            "Quinn_W_Vulnerable": "{3e09f89b}",
+            "Quinn_W_Vulnerable_Enemy": "{8b87fd00}",
+            "QuinnValor_BA_01": "{00000000}",
+            "QuinnValor_BA_02": "{00000000}",
+            "QuinnValor_E_Dash": "{00000000}",
+            "QuinnValor_Emote_death_sound": "{48d9c422}",
+            "QuinnValor_Emote_glide_sound": "{d934e5f5}",
+            "QuinnValor_Emote_idle1_sound": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Emote_idle1_sound",
+            "QuinnValor_Emote_idle_run_in_sound": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Emote_idle_run_in_sound",
+            "QuinnValor_Emote_idle_sound": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Emote_idle_sound",
+            "Quinn_BA_crit_tar": "{687802e9}",
+            "Quinn_R_BirdTrail_L": "{37446784}",
+            "Quinn_R_BirdTrail_R": "{3d4470f6}",
+            "Quinn_Q_Valor_Child": "{13dc7244}",
+            "Quinn_W_Arrow_Child": "{ba1bbefd}",
+            "{f9baeb81}": "{653dcd47}",
+            "{eedaa28f}": "{67177705}",
+            "{2883fec3}": "{21d022b1}",
+            "{f9fca031}": "{3e1e2433}",
+            "{8bafe4b9}": "{ca72ad93}",
+            "{8aafe326}": "{c972ac00}",
+            "{e35e5eb7}": "{21d8d05d}",
+            "{0460778b}": "{6ecc95e1}",
+            "{525625d2}": "{cfeb4bdc}",
+            "{5156243f}": "{d2eb5095}",
+            "{505622ac}": "{d1eb4f02}",
+            "{4f562119}": "{cceb4723}",
+            "{743ebd16}": "{169aa3c4}",
+            "Quinn_Z_Ground_City": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Z_Ground_City",
+            "{20dc06db}": "{6be92fcd}",
+            "Quinn_Idle_Back_01": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Idle_Back_01",
+            "Quinn_Idle_Arm_Screen_01": "Characters/Quinn/Skins/Skin32/Particles/Quinn_Skin32_Idle_Arm_Screen_01",
+            "{1f122ae3}": "{35adaf81}",
+            "{018c20a7}": "{03f60bb1}",
+            "{343b658e}": "{e40b2028}",
+            "{cf02396d}": "{54d084fb}",
+            "{92295078}": "{23fdd9e2}"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/QuinnValor/Animations/Skin24.bin",
+        "DATA/Characters/QuinnValor/QuinnValor.bin"
+    ]
+}

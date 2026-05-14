@@ -1313,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "Persyaratan: Melakukan @TakedownsNeeded@ takedown.<br><br>Reward: Golden Spatula",
@@ -3446,7 +3446,7 @@
             "id": 310,
             "name": "Clown College",
             "rarity": 2,
-            "tooltip": "<spellName>Backstab</spellName>: Kamu menghasilkan @BasicAttackDamage@ <physicalDamage>physical damage bonus</physicalDamage> jika menyerang dari belakang.<br><br><spellName>Deceive</spellName>: Kamu berteleportasi dan menjadi <keywordStealth>Invisible</keywordStealth> selama @StealthDuration@ detik. Seranganmu berikutnya saat <keywordStealth>Invisible</keywordStealth> menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> tambahan. Jika menyerang dari belakang, Serangan ini akan menghasilkan critical strike sebesar @QCritDamageMod@ damage.<br><br><spellName>Hallucinate: Death</spellName>: Saat tewas, menghasilkan <trueDamage>true damage sebesar @FearDamage*100@% Health maksimum</trueDamage> dan menerapkan fear selama @FearDuration@ detik di sekitarmu."
+            "tooltip": "Cherry_ClownCollege_DeceiveTooltip"
         },
         {
             "apiName": "NumbToPain",
@@ -4807,7 +4807,7 @@
             "id": 76,
             "name": "Sonic Boom",
             "rarity": 0,
-            "tooltip": "Memberi buff, <healing>Heal</healing>, atau <shield>Shield</shield> kepada sekutu akan menghasilkan <trueDamage>@Damage@ true damage</trueDamage> dan menerapkan <status>Slow ke musuh di sekitar mereka</status> sebesar @SlowAmount*-100@% selama @SlowDuration@ detik.<br><br>Damage Dihasilkan Ronde Ini: @f1@<br>Total Damage Dihasilkan: @f2@"
+            "tooltip": "Cherry_SonicBoom_Tooltip"
         },
         {
             "apiName": "GoHRemnantOfTheWatchers",
@@ -7615,22 +7615,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -9955,13 +9955,13 @@
                     1.0
                 ],
                 "CritDamageMultipler": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "MaxLevel": [
                     2.0,
@@ -11590,13 +11590,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11970,13 +11970,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -13632,7 +13632,7 @@
             "id": 215,
             "name": "Dark Blessing",
             "rarity": 1,
-            "tooltip": "Saat kamu <healing>Heal</healing> atau <shield>Shield</shield> champion sekutu, mendapatkan @CurseCounter@ <keywordMajor>Cursed Power</keywordMajor>.<br><br>Mendapatkan @f1@ Ability Haste (@AbilityHasteRatio*100@% dari <keywordMajor>Cursed Power</keywordMajor>-mu).<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "Cherry_DarkBlessing_Tooltip"
         },
         {
             "apiName": "MindtoMatter",

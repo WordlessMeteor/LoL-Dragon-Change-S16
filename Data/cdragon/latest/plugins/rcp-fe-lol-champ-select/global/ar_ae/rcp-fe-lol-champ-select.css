@@ -7137,6 +7137,10 @@ lol-uikit-content-block.champ-select-disconnect-notification-content[type=toolti
     left: 54px
 }
 
+.emotes-modal.is-demacia {
+    top: 57px
+}
+
 .custom-loadout-modal {
     height: 635px;
     left: 108px;
@@ -10019,6 +10023,9 @@ lol-uikit-content-block.runes-not-yet-unlocked {
     color: #463714
 }
 
+.aw-tooltip-content .aw-tooltip-description,
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text .aw-tooltip-status,
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text .aw-tooltip-title,
 .skin-selection-purchase-available-notification[type=notification] {
     font-family: var(--font-body);
     -webkit-font-feature-settings: "kern" 1;
@@ -10033,10 +10040,16 @@ lol-uikit-content-block.runes-not-yet-unlocked {
     -webkit-font-smoothing: subpixel-antialiased
 }
 
+.aw-tooltip-content .aw-tooltip-description:lang(ja-jp),
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text .aw-tooltip-status:lang(ja-jp),
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text .aw-tooltip-title:lang(ja-jp),
 .skin-selection-purchase-available-notification[type=notification]:lang(ja-jp) {
     font-size: 13px
 }
 
+.aw-tooltip-content .aw-tooltip-description:lang(ar-ae),
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text .aw-tooltip-status:lang(ar-ae),
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text .aw-tooltip-title:lang(ar-ae),
 .skin-selection-purchase-available-notification[type=notification]:lang(ar-ae) {
     letter-spacing: 0
 }
@@ -10277,6 +10290,72 @@ lol-uikit-content-block.runes-not-yet-unlocked {
     margin: 2px
 }
 
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked {
+    outline: 1px solid #0596aa
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked .skin-selection-thumbnail:before {
+    border-color: #0596aa
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.disabled .skin-selection-thumbnail {
+    -webkit-filter: brightness(100%)
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.disabled .skin-selection-thumbnail:after {
+    background-color: transparent;
+    opacity: 0
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.disabled:hover .skin-selection-thumbnail {
+    -webkit-filter: brightness(110%)
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.disabled:hover .skin-selection-thumbnail:after {
+    opacity: 0
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.disabled:active .skin-selection-thumbnail:after {
+    background-color: transparent;
+    opacity: 0
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.disabled:after {
+    background-image: url(/fe/lol-champ-select/images/config/icon-lock-small-open.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: auto
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled,
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled .skin-selection-thumbnail,
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled:active,
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled:hover {
+    cursor: pointer
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled:active .skin-selection-thumbnail,
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled:hover .skin-selection-thumbnail {
+    cursor: pointer;
+    -webkit-filter: brightness(110%)
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled:active .skin-selection-thumbnail:after,
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled:hover .skin-selection-thumbnail:after {
+    background-color: transparent;
+    opacity: 0
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled:after {
+    background-image: url(/fe/lol-champ-select/images/config/icon-lock-small-open.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    bottom: -20px;
+    display: block;
+    height: 40px;
+    width: 40px
+}
+
 .skin-selection-carousel-container .skin-selection-carousel .skin-selection-item .skin-selection-thumbnail {
     background-position: 50% 45%;
     background-repeat: no-repeat;
@@ -10361,6 +10440,23 @@ lol-uikit-content-block.runes-not-yet-unlocked {
 
 .skin-selection-carousel-container .skin-selection-carousel .skin-selection-item .chroma-button-2:hover {
     background-image: url(/fe/lol-champ-select/images/config/chroma-button-2-over.png)
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item .aw-badge-container {
+    height: 22px;
+    pointer-events: auto;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 22px;
+    z-index: 2
+}
+
+.skin-selection-carousel-container .skin-selection-carousel .skin-selection-item .aw-badge-container .aw-badge {
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    width: 100%
 }
 
 .skin-selection-carousel-container .skin-selection-carousel .skin-selection-item .skin-selection-item-information {
@@ -10466,6 +10562,37 @@ lol-uikit-content-block.runes-not-yet-unlocked {
 
 .skin-selection-purchase-available-notification[type=notification] {
     width: 230px
+}
+
+.aw-tooltip-content {
+    width: 200px
+}
+
+.aw-tooltip-content .aw-tooltip-header {
+    align-items: center;
+    display: flex
+}
+
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-icon {
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text {
+    margin-left: 8px
+}
+
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text .aw-tooltip-title {
+    font-weight: 700
+}
+
+.aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text .aw-tooltip-status {
+    opacity: .8
+}
+
+.aw-tooltip-content .aw-tooltip-description {
+    margin-top: 8px
 }
 
 .champion-skin-name .skin-name-text {
@@ -10666,7 +10793,7 @@ lol-uikit-content-block.runes-not-yet-unlocked {
 }
 
 .champion-select .skin-select:after {
-    content: url(/fe/lol-champ-select/images/config/skin-carousel-pip.png) url(/fe/lol-champ-select/images/config/skin-carousel-pip-selected.png) url(/fe/lol-champ-select/images/config/icon-lock-small-noframe.png);
+    content: url(/fe/lol-champ-select/images/config/skin-carousel-pip.png) url(/fe/lol-champ-select/images/config/skin-carousel-pip-selected.png) url(/fe/lol-champ-select/images/config/icon-lock-small-noframe.png) url(/fe/lol-champ-select/images/config/icon-lock-small-open.png);
     display: none;
     height: 0;
     width: 0
