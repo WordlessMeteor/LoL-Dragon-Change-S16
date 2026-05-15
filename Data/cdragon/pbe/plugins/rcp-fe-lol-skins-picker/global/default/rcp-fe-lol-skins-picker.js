@@ -1797,7 +1797,10 @@
                         const e = [],
                             o = [];
                         t?.skinAugments?.augments?.forEach((t => {
-                            this._renderContext.get("skinAugments")?.[t.contentId] && (o.push(`url(${t?.overlays?.[0].tileLCOverlayPath})`), e.push(t.contentId))
+                            if (this._renderContext.get("skinAugments")?.[t.contentId]) {
+                                const n = t?.overlays;
+                                n?.length > 0 && n[0]?.tileLCOverlayPath?.length > 0 && o.push(`url(${n[0].tileLCOverlayPath})`), e.push(t.contentId)
+                            }
                         })), i.style.backgroundImage = o.join(","), n.dataset.skinAugments = e.join(",")
                     }
                     e.dataset.skinId = t.id;

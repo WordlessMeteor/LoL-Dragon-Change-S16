@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Spell_QuinnPassive_Summary"
+        "description": "Valor, elang Demacia milik Quinn, secara berkala menandai musuh dengan <keywordMajor>Harrier</keywordMajor>. Basic attack pertama Quinn melawan target bertanda <keywordMajor>Harrier</keywordMajor> akan menghasilkan physical damage bonus."
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Quinn memanggil Valor untuk menandai musuh dan menghalangi penglihatannya sebelum menyerang semua musuh di area itu.",
-            "dynamicDescription": "Spell_QuinnQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn memerintahkan Valor untuk terjun, menandai musuh pertama yang terkena dengan <keywordMajor>Harrier</keywordMajor>, mengurangi radius vision mereka selama @VisionReductionDuration@ detik dan menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> pada semua musuh di sekitar.<br><br>Jika musuh pertama yang terkena bukan champion, dia akan terkena <status>Disarm</status> selama @VisionReductionDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_QuinnW_Summary",
-            "dynamicDescription": "Spell_QuinnW_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Quinn mendapatkan Attack Speed dan Move Speed secara pasif setelah dia menyerang target bertanda <keywordMajor>Harrier</keywordMajor>. Aktifkan untuk menyuruh Valor mengungkap area luas di sekitar.",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Menyerang target bertanda <keywordMajor>Harrier</keywordMajor> memberi Quinn <attackSpeed>@AttackSpeedBonus*100@% Attack Speed</attackSpeed> dan <speed>@MovespeedAmount*100@% Move Speed</speed> selama @BuffDuration@ detik.<br><br><spellActive>Aktif:</spellActive> Valor mengungkap area luas di sekitar selama @VisionDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Quinn dash ke arah musuh, menghasilkan physical damage dan memperlambat Move Speed target. Saat mencapai targetnya, dia melompat dari target, mengganggunya sesaat dan mendarat di sekitar jarak Attack Range maksimumnya, jauh dari target.",
-            "dynamicDescription": "Spell_QuinnE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn dash ke arah musuh, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan menandai mereka dengan <keywordMajor>Harrier</keywordMajor>. Quinn lalu melompat ke belakang, menjauhi target, menerapkan efek <status>Knock</status> <status>Back</status> sesaat pada lawan dan <status>Slow</status> sebesar @SlowAmount*100@%, yang melemah selama @SlowDecayTime@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell_QuinnR_Summary",
-            "dynamicDescription": "Spell_QuinnR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Quinn dan Valor bekerja sama untuk terbang dengan kecepatan tinggi.  Saat ability ini berakhir, Skystrike akan terpicu, yang menghasilkan damage ke musuh di sekitar dan menandai champion dengan Harrier.",
+            "dynamicDescription": "Quinn memanggil Valor, bergerak bersama setelah channeling selama 2 detik, mendapatkan <speed>@MovementSpeedMod*100@% Move Speed</speed> dan memungkinkannya untuk <recast>Recast</recast> Ability ini. Menyerang atau menggunakan <spellName>Blinding Assault</spellName> atau <spellName>Vault</spellName> akan <recast>Recast</recast> otomatis Ability ini.<br><br><recast>Recast</recast>: Quinn dan Valor melakukan manuver udara, menghasilkan <physicalDamage>@Damage@ physical damage</physicalDamage>, menandai champion dengan <keywordMajor>Harrier</keywordMajor>, dan mengakhiri Ability ini.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

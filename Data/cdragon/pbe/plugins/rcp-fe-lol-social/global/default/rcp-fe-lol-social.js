@@ -14419,13 +14419,12 @@
                 o = r.Ember.Component.extend({
                     classNames: ["discord-eat"],
                     isModalQueueEmpty: !0,
-                    shouldShowEat: !0,
                     showDiscordPopup: !1,
                     clientConfigService: r.Ember.inject.service("client-config"),
                     discordIntegrationService: r.Ember.inject.service("discord-integration"),
                     isDiscordIntegrationBeta: r.Ember.computed.alias("clientConfigService.discordBetaIntegrationEnabled"),
-                    showEphemeralActionTooltip: r.Ember.computed("discordIntegrationService.shouldShowDiscordEat", "isModalQueueEmpty", "shouldShowEat", (function() {
-                        return this.get("shouldShowEat") && this.get("isModalQueueEmpty") && this.get("discordIntegrationService.shouldShowDiscordEat")
+                    showEphemeralActionTooltip: r.Ember.computed("discordIntegrationService.shouldShowDiscordEat", "isModalQueueEmpty", (function() {
+                        return this.get("isModalQueueEmpty") && this.get("discordIntegrationService.shouldShowDiscordEat")
                     })),
                     eatTitle: r.Ember.computed("isDiscordIntegrationBeta", (function() {
                         return this.get("isDiscordIntegrationBeta") ? r.tra.get("discord_beta_eat_title") : r.tra.get("discord_eat_title")
@@ -14445,7 +14444,7 @@
                     actions: {
                         markToolTipRead: function() {
                             const e = this.get("discordIntegrationService");
-                            this.get("isDiscordIntegrationBeta") ? e.markDiscordBetaEatSeen() : e.markDiscordLiveEatSeen(), this.set("shouldShowEat", !1), this.set("showDiscordPopup", !0)
+                            this.get("isDiscordIntegrationBeta") ? e.markDiscordBetaEatSeen() : e.markDiscordLiveEatSeen(), this.set("showDiscordPopup", !0)
                         }
                     }
                 });

@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Spell_QuinnPassive_Summary"
+        "description": "Valor, Quinnin demacijský orel, pravidelně označuje nepřátele pomocí <keywordMajor>Dravce</keywordMajor>. Quinnin první základní útok proti cílům se znamením <keywordMajor>Dravce</keywordMajor> způsobí bonusové fyzické poškození."
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Quinn přivolá Valora, který tohoto nepřítele označí a omezí jeho rozhled, načež způsobí poškození všem cílům v těsném okolí.",
-            "dynamicDescription": "Spell_QuinnQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn vyšle Valora kupředu. Valor označí prvního zasaženého nepřítele pomocí <keywordMajor>Dravce</keywordMajor>, na @VisionReductionDuration@&nbsp;sek. mu omezí výhled a všem okolním nepřátelům způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage>.<br><br>Není-li prvním zasaženým nepřítelem šampion, Valor danou jednotku na @VisionReductionDuration@&nbsp;sek. navíc <status>odzbrojí</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_QuinnW_Summary",
-            "dynamicDescription": "Spell_QuinnW_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "V pasivním režimu získává Quinn po útoku na cíl se znamením <keywordMajor>Dravce</keywordMajor> bonus k rychlosti útoků i pohybu. Při aktivaci Valor odhalí širokou okolní oblast.",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Útokem na nepřítele se znamením <keywordMajor>Dravce</keywordMajor> získá Quinn na @BuffDuration@&nbsp;sek. <attackSpeed>@AttackSpeedBonus*100@&nbsp;% k rychlosti útoků</attackSpeed> a <speed>@MovespeedAmount*100@&nbsp;% k rychlosti pohybu</speed>.<br><br><spellActive>Aktivace:</spellActive> Valor na @VisionDuration@&nbsp;sek. odhalí rozlehlou oblast kolem sebe.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Quinn se vrhne k nepříteli, způsobí mu fyzické poškození a sníží mu rychlost pohybu. Když se dostane k cíli, odrazí se od něj, tím na krátkou dobu přeruší jeho akci a dopadne ve vzdálenosti od cíle, která zhruba odpovídá dosahu jejího útoku.",
-            "dynamicDescription": "Spell_QuinnE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn se vrhne k nepříteli, způsobí mu <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage> a označí jej pomocí <keywordMajor>Dravce</keywordMajor>. Poté Quinn od cíle odskočí, <status>odhodí</status> jej o kousek <status>zpět</status> a <status>zpomalí</status> ho o @SlowAmount*100@&nbsp;%, tento postih během @SlowDecayTime@&nbsp;sek. postupně odezní.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Spell_QuinnR_Summary",
-            "dynamicDescription": "Spell_QuinnR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Quinn a Valor se spojí a nesmírně rychle přelétají po mapě.  Ukončením schopnosti dojde k seslání Nebeského úderu, který způsobí poškození okolním nepřátelům a šampiony označí pomocí Dravce.",
+            "dynamicDescription": "Quinn přivolá Valora, po soustředění dlouhém 2&nbsp;sekundy se s ním spojí, získá <speed>@MovementSpeedMod*100@&nbsp;% k rychlosti pohybu</speed> a může tuto schopnost <recast>seslat znovu</recast>. Útokem či použitím schopnosti <spellName>Oslepující útok</spellName> nebo <spellName>Výpad</spellName> se tato schopnost automaticky <recast>sešle znovu</recast>.<br><br><recast>Opětovné seslání</recast>: Quinn a Valor provedou vzdušný manévr, kterým způsobí <physicalDamage>@Damage@ bodů fyzického poškození</physicalDamage>, označí šampiony pomocí <keywordMajor>Dravce</keywordMajor> a ukončí působení této schopnosti.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

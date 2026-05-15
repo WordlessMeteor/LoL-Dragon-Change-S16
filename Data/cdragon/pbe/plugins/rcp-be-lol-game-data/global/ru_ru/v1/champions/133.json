@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Spell_QuinnPassive_Summary"
+        "description": "Демасийский орел Квинн по кличке Вэлор периодически помечает врагов меткой <keywordMajor>Хищной птицы</keywordMajor>. 1-я автоатака Квинн против целей с меткой <keywordMajor>Хищной птицы</keywordMajor> наносит доп. физ. урон."
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Вэлор летит по прямой и нападает на первого встретившегося врага, помечая его меткой Уязвимости и значительно уменьшая его радиус обзора. После этого он атакует всех врагов поблизости, нанося им урон.",
-            "dynamicDescription": "Spell_QuinnQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Квинн приказывает Вэлору лететь вперед и атаковать 1-го врага на пути. Вэлор накладывает на цель метку <keywordMajor>Хищной птицы</keywordMajor>, снижая ее радиус обзора на @VisionReductionDuration@ сек., затем наносит <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage> всем врагам поблизости.<br><br>Если 1-й пораженный враг – не чемпион, он <status>обезоруживается</status> на @VisionReductionDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_QuinnW_Summary",
-            "dynamicDescription": "Spell_QuinnW_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Когда Квинн атакует врага, помеченного меткой <keywordMajor>Хищной птицы</keywordMajor>, ее скорость атаки и скорость передвижения растут. Активируя умение, Вэлор раскрывает большую область поблизости.",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> атакуя врага с меткой <keywordMajor>Хищной птицы</keywordMajor>, Квинн получает <attackSpeed>@AttackSpeedBonus*100@% скорости атаки</attackSpeed> и <speed>@MovespeedAmount*100@% скорости передвижения</speed> на @BuffDuration@ сек.<br><br><spellActive>Активно:</spellActive> Вэлор раскрывает большую область поблизости на @VisionDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Квинн делает рывок к врагу, нанося ему физический урон и замедляя его. Достигнув цели, она отпрыгивает обратно и приземляется на расстоянии, равном максимальной дальности автоатаки.",
-            "dynamicDescription": "Spell_QuinnE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Квинн совершает рывок к врагу, нанося <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage> и накладывая метку <keywordMajor>Хищной птицы</keywordMajor>. Затем Квинн отскакивает от цели, немного ее <status><status>отбрасывая</status></status> и <status>замедляя</status> на @SlowAmount*100@% (эффект ослабевает за @SlowDecayTime@ сек.).@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Spell_QuinnR_Summary",
-            "dynamicDescription": "Spell_QuinnR_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Квинн и Вэлор объединяются, летя с существенно повышенной скоростью. По окончании действия умения применяется Небесный удар, наносящий урон ближайшим врагам и накладывающий на чемпионов метки Хищной птицы.",
+            "dynamicDescription": "Квинн готовится 2 сек., а затем приказывает Вэлору поднять ее в воздух. В воздухе Квинн получает <speed>@MovementSpeedMod*100@% скорости передвижения</speed> и может <recast>повторно применить</recast> это умение. Применив автоатаку, <spellName>Слепящий удар</spellName> или <spellName>Рывок</spellName>, Квинн автоматически <recast>повторно применяет</recast> это умение.<br><br><recast>Повторное применение</recast>: Квинн и Вэлор выполняют воздушный маневр, нанося врагам <physicalDamage>@Damage@ ед. физ. урона</physicalDamage> и накладывая на чемпионов метку <keywordMajor>Хищной птицы</keywordMajor>. Действие умения прекращается.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

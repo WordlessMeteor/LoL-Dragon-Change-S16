@@ -8142,7 +8142,7 @@
                 };
             var l = a.Ember.Component.extend(o.default, {
                 classNames: ["rating-change-component"],
-                classNameBindings: ["isWin::is-loss", "lpChangeClassName:expanded", "removeGoldFrame:no-gold-frame"],
+                classNameBindings: ["isWin::is-loss", "lpChangeClassName:expanded", "removeGoldFrame:no-gold-frame", "isRankedOff:ranked-off"],
                 rankedAssetsService: a.Ember.inject.service("ranked-assets"),
                 isBeingPromoted: !1,
                 isBeingDemoted: !1,
@@ -8203,7 +8203,8 @@
                 tooltipDescription: a.Ember.computed("rankedAssetsService.assets.lpChangeValorAegisIconTooltipBodyLoc", (function() {
                     return this.get("rankedAssetsService.assets.lpChangeValorAegisIconTooltipBodyLoc")
                 })),
-                updateResultLoc: a.Ember.computed("ratingChangeLoc", "isPromotedOrDemoted", "isInMiniseries", "isWin", "isLossPrevented", "lpChangeClassName", "rankedAssetsService.assets", (function() {
+                updateResultLoc: a.Ember.computed("ratingChangeLoc", "isPromotedOrDemoted", "isInMiniseries", "isWin", "isLossPrevented", "lpChangeClassName", "rankedAssetsService.assets", "isRankedOff", (function() {
+                    if (this.get("isRankedOff")) return this.get("tra.career_postgame_ranked_ranked_off");
                     const e = this.get("isWin");
                     return this.get("isInMiniseries") ? e ? this.get("tra.career_postgame_ranked_win_short") : this.get("tra.career_postgame_ranked_loss_short") : this.get("isPromotedOrDemoted") ? e ? this.get("tra.career_postgame_ranked_promoted_short") : this.get("tra.career_postgame_ranked_demoted_short") : this.get("isLossPrevented") ? this.get("tra.career_postgame_ranked_loss_prevented") : this.get("lpChangeClassName") && !this.get("overrideShowLp") ? e ? this.get("rankedAssetsService.assets.lpChangeValorBonusLoc") : this.get("rankedAssetsService.assets.lpChangeValorProtectionLoc") : this.get("ratingChangeLoc")
                 }))

@@ -130,6 +130,45 @@
                         700.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HexLeapRange",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HexAoERadius",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PrimaryDamagePerMeep",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -142,9 +181,38 @@
                                 "mDataValue": "PrimaryDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
-                            "mRatio": 1.0,
-                            "mStat": 3,
+                            "mRatio": 0.009999999776482582,
                             "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{c70bbda7}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mBuffName": "{743a49ea}",
+                            "mDataValue": "{829f5610}",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalPrimaryDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSpellCalculationKey": "ModifiedPrimaryDamage",
+                                    "__type": "{f3cbe7b2}"
+                                },
+                                {
+                                    "mSpellCalculationKey": "{c70bbda7}",
+                                    "__type": "{f3cbe7b2}"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -198,9 +266,25 @@
                 "mTooltipData": {
                     "mObjectName": "TFT17_BardFollower2Spell",
                     "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT17_BardFollower2Spell_Name",
+                        "keyTooltip": "Spell_TFT17_BardFollower2Spell_Tooltip"
+                    },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "PrimaryDamagePerMeep",
+                                    "nameOverride": "Spell_TFT17_BardFollower2Spell_PrimaryDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PrimaryDamage",
+                                    "nameOverride": "Spell_TFT17_BardFollower2Spell_PrimaryDamageTotal",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
                             "__type": "TooltipInstanceList"
                         }
                     },
@@ -232,6 +316,32 @@
                         700.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        60.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -244,9 +354,38 @@
                                 "mDataValue": "PrimaryDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
-                            "mRatio": 1.0,
-                            "mStat": 3,
+                            "mRatio": 0.009999999776482582,
                             "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedDuration": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSpellCalculationKey": "{18321103}",
+                                    "__type": "{f3cbe7b2}"
+                                },
+                                {
+                                    "mDataValue": "BaseDuration",
+                                    "__type": "NamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{18321103}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mBuffName": "{743a49ea}",
+                            "mDataValue": "Duration",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -300,9 +439,32 @@
                 "mTooltipData": {
                     "mObjectName": "TFT17_BardFollower3Spell",
                     "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT17_BardFollower3Spell_Name",
+                        "keyTooltip": "Spell_TFT17_BardFollower3Spell_Tooltip"
+                    },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "PrimaryDamage",
+                                    "nameOverride": "Spell_TFT17_BardFollower3Spell_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDuration",
+                                    "nameOverride": "Spell_TFT17_BardFollower3Spell_BonusDuration",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Duration",
+                                    "nameOverride": "Spell_TFT17_BardFollower3Spell_Duration",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
                             "__type": "TooltipInstanceList"
                         }
                     },
@@ -473,6 +635,45 @@
                         550.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HexRadius",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PrimaryDamagePerMeep",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondaryDamagePerMeep",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -502,6 +703,66 @@
                             },
                             "mRatio": 0.009999999776482582,
                             "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{c70bbda7}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mBuffName": "{743a49ea}",
+                            "mDataValue": "{829f5610}",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{5070656f}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mBuffName": "{743a49ea}",
+                            "mDataValue": "{866b4618}",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalPrimaryDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSpellCalculationKey": "ModifiedPrimaryDamage",
+                                    "__type": "{f3cbe7b2}"
+                                },
+                                {
+                                    "mSpellCalculationKey": "{c70bbda7}",
+                                    "__type": "{f3cbe7b2}"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalSecondaryDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSpellCalculationKey": "ModifiedSecondaryDamage",
+                                    "__type": "{f3cbe7b2}"
+                                },
+                                {
+                                    "mSpellCalculationKey": "{5070656f}",
+                                    "__type": "{f3cbe7b2}"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -556,9 +817,35 @@
                 "mTooltipData": {
                     "mObjectName": "TFT17_BardFollower1Spell",
                     "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT17_BardFollower1Spell_Name",
+                        "keyTooltip": "Spell_TFT17_BardFollower1Spell_Tooltip"
+                    },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "PrimaryDamagePerMeep",
+                                    "nameOverride": "Spell_TFT17_BardFollower1Spell_PrimaryDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PrimaryDamage",
+                                    "nameOverride": "Spell_TFT17_BardFollower1Spell_PrimaryDamageTotal",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SecondaryDamagePerMeep",
+                                    "nameOverride": "Spell_TFT17_BardFollower1Spell_SecondaryDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SecondaryDamage",
+                                    "nameOverride": "Spell_TFT17_BardFollower1Spell_SecondaryDamageTotal",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
                             "__type": "TooltipInstanceList"
                         }
                     },
@@ -973,6 +1260,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
+        "mShopData": "{8f079e76}",
         "__type": "TFTCharacterRecord"
     },
     "__linked": []
