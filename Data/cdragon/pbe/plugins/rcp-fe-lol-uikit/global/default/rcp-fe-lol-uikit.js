@@ -12775,7 +12775,7 @@
                     }
                     if (void 0 !== e.data.nextButtonShown) {
                         const t = this.layer.querySelector(".footer-button");
-                        e.data.nextButtonShown ? t.style.opacity = "100%" : t.style.opacity = "0"
+                        e.data.nextButtonShown ? t.style.display = "block" : t.style.display = "none"
                     }
                     if (void 0 !== e.data.nextButtonEnabled) {
                         const t = this.layer.querySelector(".footer-button");

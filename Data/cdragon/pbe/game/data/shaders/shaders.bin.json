@@ -40140,6 +40140,74 @@
         "ShadingModel": "{9966ff25}",
         "parameters": [
             {
+                "name": "albedoNewMin",
+                "data": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "albedoNewMin",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "albedoNewMax",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "albedoNewMax",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "rimOffset",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "rimOffset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "modelHeight",
+                "data": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "modelHeight",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "DeformWaveController",
                 "data": [
                     0.5,
@@ -40745,6 +40813,16 @@
         ],
         "staticSwitches": [
             {
+                "name": "USE_RIM",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "TWO_D_DEFORM_ON",
                 "__type": "ShaderStaticSwitch"
             },
@@ -40865,6 +40943,7 @@
             }
         ],
         "featureDefines": {
+            "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BLOOM": "1",
             "FEATURE_DISPLACEMENT": "1",
             "FEATURE_SCREENSPACE_UV": "1",
@@ -82262,6 +82341,74 @@
         "ShadingModel": "{80362c4d}",
         "parameters": [
             {
+                "name": "albedoNewMin",
+                "data": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "albedoNewMin",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "albedoNewMax",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "albedoNewMax",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "rimOffset",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "rimOffset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "modelHeight",
+                "data": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "modelHeight",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "DeformWaveController",
                 "data": [
                     0.5,
@@ -82794,6 +82941,16 @@
         ],
         "staticSwitches": [
             {
+                "name": "USE_RIM",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "TWO_D_DEFORM_ON",
                 "__type": "ShaderStaticSwitch"
             },
@@ -82879,6 +83036,7 @@
             }
         ],
         "featureDefines": {
+            "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BLOOM": "1",
             "FEATURE_DISPLACEMENT": "1",
             "FEATURE_VERTEX_COLOR_VS": "1",

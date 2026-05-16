@@ -1,68 +1,202 @@
 {
+    "{d91d68af}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
+        "__type": "UISceneData"
+    },
+    "{0cac3777}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_ShockedPoro",
+        "Scene": "{d91d68af}",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1096.0,
+                    870.0
+                ],
+                "Size": [
+                    110.0,
+                    105.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Menu/VoicePanel_ShockedPoro.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{54ce85d8}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_Backdrop",
+        "Scene": "{d91d68af}",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1014.0,
+                    814.0
+                ],
+                "Size": [
+                    273.0,
+                    350.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/Menu/VoicePanelAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "TextureUs": [
+                7.0,
+                38.0,
+                70.0,
+                103.0
+            ],
+            "TextureVs": [
+                155.0,
+                186.0,
+                218.0,
+                251.0
+            ],
+            "TopBottomHeights": [
+                31.0,
+                33.0
+            ],
+            "LeftRightWidths": [
+                31.0,
+                33.0
+            ],
+            "__type": "AtlasData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{860aa9f1}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_DisabledMessage",
+        "Scene": "{d91d68af}",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1032.0,
+                    989.0
+                ],
+                "Size": [
+                    238.0,
+                    152.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "VoiceChatPanel_Message_ParentalControlDisabled",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
+        "TextAlignmentHorizontal": 1,
+        "TextAlignmentVertical": 0,
+        "WrappingMode": 1,
+        "__type": "UiElementTextData"
+    },
     "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 33,
         "__type": "UISceneData"
     },
-    "{b354974f}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Elements": [
-            "{b65c5d82}",
-            "{627f2b87}",
-            "{8b25c7bb}",
-            "{66385bd8}",
-            "{c073431b}",
-            "{46a8e5c5}",
-            "{110e8ef1}",
-            "{a2f55efe}"
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_HitRegion",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffClicked",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffDefault",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffHover",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffInactive",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnClicked",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnDefault",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnHover"
         ],
-        "HitRegionElement": "{b65c5d82}",
+        "HitRegionElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "{8b25c7bb}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "{66385bd8}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "{627f2b87}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "InactiveStateElements": {
             "DisplayElementList": [
-                "{c073431b}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffInactive"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedStateElements": {
             "DisplayElementList": [
-                "{110e8ef1}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedHoverStateElements": {
             "DisplayElementList": [
-                "{a2f55efe}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedClickedStateElements": {
             "DisplayElementList": [
-                "{46a8e5c5}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "InactiveSelectedStateElements": {
             "DisplayElementList": [
-                "{c073431b}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffInactive"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -73,7 +207,7 @@
         },
         "__type": "UiElementGroupButtonData"
     },
-    "{110e8ef1}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnDefault": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnDefault",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 6,
@@ -115,7 +249,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{46a8e5c5}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnClicked": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnClicked",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 8,
@@ -157,7 +291,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{627f2b87}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffClicked": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffClicked",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 8,
@@ -199,7 +333,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{66385bd8}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffHover": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffHover",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 7,
@@ -241,7 +375,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{8b25c7bb}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffDefault": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffDefault",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 6,
@@ -283,7 +417,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{a2f55efe}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnHover": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OnHover",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 7,
@@ -325,7 +459,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{b65c5d82}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_HitRegion": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_HitRegion",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -356,7 +490,7 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{c073431b}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffInactive": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton/VCP_SelfSlot_Mute_OffInactive",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 6,
@@ -404,47 +538,47 @@
         },
         "__type": "UiElementIconData"
     },
-    "{a131bd62}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Elements": [
-            "{253d6e9b}",
-            "{c4d026e9}",
-            "{6ee7b08a}",
-            "{bbd0397a}",
-            "{421b0fb8}",
-            "{7d3ecdb1}",
-            "{65909d9a}"
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Backdrop",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_BarTexture",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_DragTarget",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_HitRegion",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Slider",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_SliderClicked",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_SliderHover"
         ],
         "DefaultState": {
-            "BarBackdrop": "{253d6e9b}",
-            "BarFill": "{c4d026e9}",
-            "sliderIcon": "{421b0fb8}",
+            "BarBackdrop": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Backdrop",
+            "BarFill": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_BarTexture",
+            "sliderIcon": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Slider",
             "__type": "UiElementGroupSliderState"
         },
         "SliderClickedState": {
-            "BarBackdrop": "{253d6e9b}",
-            "BarFill": "{c4d026e9}",
-            "sliderIcon": "{7d3ecdb1}",
+            "BarBackdrop": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Backdrop",
+            "BarFill": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_BarTexture",
+            "sliderIcon": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_SliderClicked",
             "__type": "UiElementGroupSliderState"
         },
         "SliderHoveredState": {
-            "BarBackdrop": "{253d6e9b}",
-            "BarFill": "{c4d026e9}",
-            "sliderIcon": "{65909d9a}",
+            "BarBackdrop": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Backdrop",
+            "BarFill": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_BarTexture",
+            "sliderIcon": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_SliderHover",
             "__type": "UiElementGroupSliderState"
         },
         "BarHoveredState": {
-            "BarBackdrop": "{253d6e9b}",
-            "BarFill": "{c4d026e9}",
-            "sliderIcon": "{421b0fb8}",
+            "BarBackdrop": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Backdrop",
+            "BarFill": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_BarTexture",
+            "sliderIcon": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Slider",
             "__type": "UiElementGroupSliderState"
         },
-        "BarHitRegion": "{bbd0397a}",
-        "SliderHitRegion": "{6ee7b08a}",
+        "BarHitRegion": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_HitRegion",
+        "SliderHitRegion": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_DragTarget",
         "__type": "UiElementGroupSliderData"
     },
-    "{253d6e9b}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Backdrop": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Backdrop",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -487,7 +621,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{421b0fb8}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Slider": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Slider",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -530,7 +664,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{65909d9a}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_SliderHover": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_SliderHover",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -573,7 +707,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{6ee7b08a}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_DragTarget": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_DragTarget",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -607,7 +741,7 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{7d3ecdb1}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_SliderClicked": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_SliderClicked",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -650,7 +784,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{bbd0397a}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_HitRegion": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_HitRegion",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -681,7 +815,7 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{c4d026e9}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_BarTexture": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_BarTexture",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -725,76 +859,76 @@
         },
         "__type": "UiElementIconData"
     },
-    "{8e9f6653}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Elements": [
-            "{99d765f4}",
-            "{8bb5e47c}",
-            "{8a7a8822}",
-            "{ea863f4e}",
-            "{9d234efe}",
-            "{f9dde04d}",
-            "{a7948ff4}",
-            "{ca3eaa66}",
-            "{57baf464}",
-            "{69743dbc}",
-            "{2f9f224b}",
-            "{a43dd90e}",
-            "{52f3a8c0}"
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_ConnectionButton_HitRegion",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_BrightBackdrop",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_DimBackdrop",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonClicked",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonDefault",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonHover",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusText",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusTextHover",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonClicked",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonDefault",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonHover",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusText",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusTextHover"
         ],
-        "HitRegionElement": "{99d765f4}",
+        "HitRegionElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_ConnectionButton_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "{69743dbc}",
-                "{8a7a8822}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonDefault",
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_DimBackdrop"
             ],
-            "TextElement": "{a43dd90e}",
+            "TextElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusText",
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "{2f9f224b}",
-                "{8a7a8822}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonHover",
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_DimBackdrop"
             ],
-            "TextElement": "{52f3a8c0}",
+            "TextElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusTextHover",
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "{57baf464}",
-                "{8a7a8822}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonClicked",
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_DimBackdrop"
             ],
-            "TextElement": "{52f3a8c0}",
+            "TextElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusTextHover",
             "__type": "UiElementGroupButtonState"
         },
         "SelectedStateElements": {
             "DisplayElementList": [
-                "{9d234efe}",
-                "{8bb5e47c}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonDefault",
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_BrightBackdrop"
             ],
-            "TextElement": "{a7948ff4}",
+            "TextElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusText",
             "__type": "UiElementGroupButtonState"
         },
         "SelectedHoverStateElements": {
             "DisplayElementList": [
-                "{f9dde04d}",
-                "{8bb5e47c}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonHover",
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_BrightBackdrop"
             ],
-            "TextElement": "{ca3eaa66}",
+            "TextElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusTextHover",
             "__type": "UiElementGroupButtonState"
         },
         "SelectedClickedStateElements": {
             "DisplayElementList": [
-                "{ea863f4e}",
-                "{8bb5e47c}"
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonClicked",
+                "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_BrightBackdrop"
             ],
-            "TextElement": "{ca3eaa66}",
+            "TextElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusTextHover",
             "__type": "UiElementGroupButtonState"
         },
         "__type": "UiElementGroupButtonData"
     },
-    "{2f9f224b}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonHover": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonHover",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 7,
@@ -836,7 +970,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{52f3a8c0}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusTextHover": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusTextHover",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -869,7 +1003,7 @@
         "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel_Hover",
         "__type": "UiElementTextData"
     },
-    "{57baf464}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonClicked": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonClicked",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 8,
@@ -911,7 +1045,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{69743dbc}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonDefault": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_ButtonDefault",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 6,
@@ -953,7 +1087,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{8a7a8822}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_DimBackdrop": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_DimBackdrop",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -996,7 +1130,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{8bb5e47c}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_BrightBackdrop": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connect_BrightBackdrop",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -1039,7 +1173,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{99d765f4}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_ConnectionButton_HitRegion": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_ConnectionButton_HitRegion",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -1070,7 +1204,7 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{9d234efe}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonDefault": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonDefault",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 6,
@@ -1112,7 +1246,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{a43dd90e}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusText": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Disconnected_StatusText",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -1145,7 +1279,7 @@
         "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
         "__type": "UiElementTextData"
     },
-    "{a7948ff4}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusText": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusText",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -1178,7 +1312,7 @@
         "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
         "__type": "UiElementTextData"
     },
-    "{ca3eaa66}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusTextHover": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusTextHover",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
@@ -1211,7 +1345,7 @@
         "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel_Hover",
         "__type": "UiElementTextData"
     },
-    "{ea863f4e}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonClicked": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonClicked",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 8,
@@ -1253,7 +1387,7 @@
         },
         "__type": "UiElementIconData"
     },
-    "{f9dde04d}": {
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonHover": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_ButtonHover",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Layer": 7,

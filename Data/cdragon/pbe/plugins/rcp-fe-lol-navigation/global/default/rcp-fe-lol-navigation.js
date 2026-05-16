@@ -15568,7 +15568,8 @@
                 LEAGUE_CLIENT_LINK_LIST: "leagueClientLinkList",
                 LEAGUE_CLIENT_TAB_CONTENT_GROUPS: "leagueClientTabContentGroups",
                 LEAGUE_CLIENT_TAB_CONTENT_GROUP: "leagueClientTabContentGroup",
-                MEDIA_GALLERY_CONTENT_BLOCK: "mediaGalleryContentBlock"
+                MEDIA_GALLERY_CONTENT_BLOCK: "mediaGalleryContentBlock",
+                MEDIA_GALLERY: "mediaGallery"
             }
         }, (e, t, n) => {
             "use strict";
@@ -17439,7 +17440,7 @@
                 didInteract: !1,
                 init() {
                     this._super(...arguments), this.set("skinActivityCarouselConfig", a.Ember.copy(p, !0)), this.set("skinsViewed", new Map), this.set("itemIdToInventoryDataMap", {}), this.screenRootAutoPlayShow = this.screenRootAutoPlayShow.bind(this), this.screenRootAutoPlayHide = this.screenRootAutoPlayHide.bind(this), this.addObservers(), this.gameDataBinding = (0, a.dataBinding)("/lol-game-data", a.socket);
-                    const e = this.get(`data.formattedBlades.${l.BLADES_COMPONENT_TYPES.MEDIA_GALLERY_CONTENT_BLOCK}`);
+                    const e = this.get(`data.formattedBlades.${l.BLADES_COMPONENT_TYPES.MEDIA_GALLERY_CONTENT_BLOCK}`) || this.get(`data.formattedBlades.${l.BLADES_COMPONENT_TYPES.MEDIA_GALLERY}`);
                     this.processMediaGalleryContentBlock(e), this._onSkinPreviewExit = this.handleSkinPreviewExit.bind(this)
                 },
                 didInsertElement() {

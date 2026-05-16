@@ -4832,6 +4832,7 @@ div.player-name-input__split-inputs-wrapper {
 
 .communications-agreement-modal-component .communications-agreement-external-link {
     color: #0596aa;
+    cursor: pointer;
     text-decoration: underline
 }
 
@@ -16190,20 +16191,29 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     width: auto
 }
 
-.honor-panel-restriction-component .honor-panel-restriction-row-title {
+.honor-panel-restriction-component .honor-panel-restriction-row-title,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
     font-family: var(--font-display)
 }
 
-.honor-panel-restriction-component .honor-panel-restriction-row-badge-text {
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body {
     font-family: var(--font-body)
 }
 
 .honor-panel-restriction-component .honor-panel-restriction-row-badge-text,
-.honor-panel-restriction-component .honor-panel-restriction-row-title {
+.honor-panel-restriction-component .honor-panel-restriction-row-title,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
     -webkit-font-smoothing: antialiased
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-title,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
+    text-transform: uppercase
 }
 
 .honor-panel-restriction-component .honor-panel-restriction-row-title:lang(el-gr),
@@ -16211,34 +16221,47 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .honor-panel-restriction-component .honor-panel-restriction-row-title:lang(ko-kr),
 .honor-panel-restriction-component .honor-panel-restriction-row-title:lang(th-th),
 .honor-panel-restriction-component .honor-panel-restriction-row-title:lang(tr-tr),
-.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(zh-tw) {
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(zh-tw),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(el-gr),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(ja-jp),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(ko-kr),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(th-th),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(tr-tr),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(zh-tw) {
     text-transform: none
 }
 
-.honor-panel-restriction-component .honor-panel-restriction-row-title {
+.honor-panel-restriction-component .honor-panel-restriction-row-title,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
+    color: #f0e6d2;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: .075em;
     line-height: 18px
 }
 
-.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(ar-ae) {
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(ar-ae),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(ar-ae) {
     letter-spacing: 0
 }
 
-.honor-panel-restriction-component .honor-panel-restriction-row-badge-text {
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body {
     color: #a09b8c;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: .025em;
+    line-height: 16px;
     -webkit-font-smoothing: subpixel-antialiased
 }
 
-.honor-panel-restriction-component .honor-panel-restriction-row-badge-text:lang(ja-jp) {
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text:lang(ja-jp),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body:lang(ja-jp) {
     font-size: 13px
 }
 
-.honor-panel-restriction-component .honor-panel-restriction-row-badge-text:lang(ar-ae) {
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text:lang(ar-ae),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body:lang(ar-ae) {
     letter-spacing: 0
 }
 
@@ -16293,7 +16316,16 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     flex-shrink: 0;
     gap: 4px;
     height: 20px;
-    padding: 2px 8px
+    padding: 2px 8px;
+    transition: background-color .25s ease-in
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge:hover {
+    background-color: #010a13
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge .lol-tooltip-component {
+    display: none
 }
 
 .honor-panel-restriction-component .honor-panel-restriction-row-badge+.honor-panel-restriction-row-badge {
@@ -16315,6 +16347,30 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     font-weight: 700;
     letter-spacing: .6px;
     line-height: 16px
+}
+
+.honor-panel-restriction-tooltip-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    white-space: nowrap
+}
+
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
+    color: #f0e6d2;
+    letter-spacing: .98px;
+    text-transform: uppercase
+}
+
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body {
+    color: #a09b8c;
+    letter-spacing: .6px;
+    line-height: 16px
+}
+
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-value {
+    color: #f0e6d2
 }
 
 .honor-panel-reward-component .honor-panel-reward-row-title {

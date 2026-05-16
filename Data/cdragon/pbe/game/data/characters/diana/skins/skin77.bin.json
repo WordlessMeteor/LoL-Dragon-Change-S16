@@ -90626,7 +90626,6 @@
                     "constantValue": 0.3499999940395355,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.009999999776482582,
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "GroundLight",
@@ -91252,6 +91251,10 @@
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "SpawnShape": {
                     "flags": 1,
@@ -91883,6 +91886,10 @@
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "SpawnShape": {
                     "emitOffset": {
@@ -92646,6 +92653,10 @@
                 "isSingleParticle": 1,
                 "emitterName": "Purple Ring1",
                 "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -93420,6 +93431,10 @@
                     },
                     "__type": "IntegratedValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "Size": [
                         0.0,
@@ -93959,6 +93974,10 @@
                     },
                     "__type": "IntegratedValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "flags": 1,
                     "Size": [
@@ -94162,6 +94181,10 @@
                 "isSingleParticle": 1,
                 "emitterName": "cracks2",
                 "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "blendMode": 1,
                 "birthColor": {
                     "constantValue": [
@@ -94777,6 +94800,10 @@
                     },
                     "__type": "IntegratedValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeBox"
                 },
@@ -95243,6 +95270,10 @@
                     },
                     "__type": "IntegratedValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeBox"
                 },
@@ -95426,6 +95457,7 @@
                     },
                     "__type": "ValueVector3"
                 },
+                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         100.0,
@@ -95788,6 +95820,10 @@
                     },
                     "__type": "IntegratedValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "flags": 1,
                     "Size": [
@@ -96054,6 +96090,10 @@
                     },
                     "__type": "IntegratedValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -96239,6 +96279,10 @@
                 "isSingleParticle": 1,
                 "emitterName": "Temp_Ray",
                 "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         -14.985647201538086,
@@ -96389,6 +96433,32 @@
         ],
         "particleName": "Diana_Skin77_Emote_Respawn01",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_Emote_Respawn01",
+        "transform": [
+            [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+            ],
+            [
+                0.0,
+                200.0,
+                0.0,
+                1.0
+            ]
+        ],
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_Z_Spawn03": {
@@ -177807,6 +177877,7 @@
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
                 "stencilMode": 2,
                 "stencilRef": 7,
                 "birthRotation0": {
@@ -178351,8 +178422,11 @@
                     "erosionMapName": "ASSETS/Characters/Diana/Skins/Skin77/Particles/Diana_Skin75_Noise_keka.SKINS_Diana_Skin77.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -200.0,
                 "disableBackfaceCull": true,
                 "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         180.0,
@@ -240430,6 +240504,7 @@
                     "__type": "ValueColor"
                 },
                 "colorLookUpTypeY": 3,
+                "{cb13aff1}": -160.0,
                 "isUniformScale": 1,
                 "useNavmeshMask": 1,
                 "birthRotation0": {
@@ -240831,6 +240906,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -160.0,
                 "disableBackfaceCull": true,
                 "isUniformScale": 1,
                 "useNavmeshMask": 1,
@@ -242797,6 +242873,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -160.0,
                 "disableBackfaceCull": true,
                 "isUniformScale": 1,
                 "useNavmeshMask": 1,
@@ -243006,7 +243083,9 @@
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "isGroundLayer": 1,
                 "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -248133,7 +248212,9 @@
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "isGroundLayer": 1,
                 "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [

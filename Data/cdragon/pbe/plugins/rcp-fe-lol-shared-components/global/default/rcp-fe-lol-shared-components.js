@@ -5826,10 +5826,16 @@
                     super()
                 }
                 static get observedAttributes() {
-                    return ["ranked-tier"]
+                    return ["ranked-tier", "queue-type"]
                 }
                 attributeChangedCallback(e, t, n) {
-                    if (super.attributeChangedCallback(e, t, n), "ranked-tier" === e) this._updateRankedTier(n)
+                    switch (super.attributeChangedCallback(e, t, n), e) {
+                        case "ranked-tier":
+                            this._updateRankedTier(n);
+                            break;
+                        case "queue-type":
+                            this._updateQueueType(n)
+                    }
                 }
                 _updateRankedTier(e) {
                     let t = "unranked";
@@ -5838,6 +5844,13 @@
                 _setRankedTierAttr(e) {
                     const t = this.shadowRoot.querySelector(".regalia-emblem");
                     t && t.setAttribute("ranked-tier", e)
+                }
+                _updateQueueType(e = "RANKED_SOLO_5x5") {
+                    this._setQueueType(e)
+                }
+                _setQueueType(e) {
+                    const t = this.shadowRoot.querySelector(".regalia-emblem");
+                    t && t.setAttribute("queue-type", e)
                 }
                 connectedCallback() {
                     super.connectedCallback()
@@ -17303,20 +17316,25 @@
                 o = "/lol-player-behavior/v1/chat-restriction",
                 l = "/lol-leaver-buster/v1/ranked-restriction",
                 c = "/lol-summoner-profiles/v1/get-restriction-view",
-                d = new Set(["QUEUE_DELAY", "TEXT_CHAT_RESTRICTION", "REPUTATION_LIMIT"]);
-            var u = s.Ember.Component.extend({
+                d = "/lol-client-config/v3/client-config/lol.client_settings.summoner.restrictions_integration.enabled",
+                u = "/lol-client-config/v3/client-config/lol.client_settings.social_panel_restriction.enabled",
+                m = new Set(["QUEUE_DELAY", "TEXT_CHAT_RESTRICTION", "REPUTATION_LIMIT"]);
+            var p = s.Ember.Component.extend({
                 layout: r.default,
                 classNames: ["player-restriction-info-component"],
                 init() {
-                    this._super(...arguments), s.db.observe("/lol-client-config/v3/client-config/lol.client_settings.summoner.restrictions_integration.enabled", this, (e => {
+                    this._super(...arguments), s.db.observe(u, this, (e => {
+                        this.set("isSocialPanelRestrictionEnabled", !!e)
+                    })), s.db.observe(d, this, (e => {
                         if (this.set("isProfileRestrictionsIntegrationEnabled", e), !e) return s.db.observe(o, this, this.onChatRestrictionChange), s.db.observe(l, this, this.onRankedRestrictionChange), s.db.observe(i, this, this.onHonorChange), void s.db.unobserve(c, this);
                         s.db.unobserve(o, this), s.db.unobserve(l, this), s.db.unobserve(i, this), s.db.observe(c, this, this.onRestrictionChange)
                     }))
                 },
                 willDestroy() {
-                    s.db.unobserve(o, this), s.db.unobserve(l, this), s.db.unobserve(i, this), s.db.unobserve(c, this)
+                    s.db.unobserve(u, this), s.db.unobserve(d, this), s.db.unobserve(o, this), s.db.unobserve(l, this), s.db.unobserve(i, this), s.db.unobserve(c, this)
                 },
                 isProfileRestrictionsIntegrationEnabled: !1,
+                isSocialPanelRestrictionEnabled: !1,
                 hasRestrictions: s.Ember.computed.gt("restrictionDescriptions.length", 0),
                 hasRedemptionGamesRemaining: s.Ember.computed.gt("redemptionGamesRemaining", 0),
                 hasChatRestriction: s.Ember.computed.notEmpty("chatRestriction"),
@@ -17332,7 +17350,7 @@
                         restrictions: t
                     } = e;
                     this.set("restrictions", t);
-                    const n = t.filter((e => d.has(e.restrictionType))).map((e => {
+                    const n = t.filter((e => m.has(e.restrictionType))).map((e => {
                         const {
                             restrictionType: t,
                             expirationData: n
@@ -17353,8 +17371,8 @@
                     this.set("honorRedemptions", e.redemptions)
                 },
                 rankedRestrictionGamesRemaining: s.Ember.computed.alias("rankedRestriction.punishedGamesRemaining"),
-                isWarningShown: s.Ember.computed("isProfileRestrictionsIntegrationEnabled", "hasChatRestriction", "hasRankedRestriction", "hasRedemptionGamesRemaining", "hasRestrictions", (function() {
-                    return this.get("isProfileRestrictionsIntegrationEnabled") ? this.get("hasRestrictions") : this.get("hasChatRestriction") || this.get("hasRankedRestriction") || this.get("hasRedemptionGamesRemaining")
+                isWarningShown: s.Ember.computed("isSocialPanelRestrictionEnabled", "isProfileRestrictionsIntegrationEnabled", "hasChatRestriction", "hasRankedRestriction", "hasRedemptionGamesRemaining", "hasRestrictions", (function() {
+                    return !this.get("isSocialPanelRestrictionEnabled") && (this.get("isProfileRestrictionsIntegrationEnabled") ? this.get("hasRestrictions") : this.get("hasChatRestriction") || this.get("hasRankedRestriction") || this.get("hasRedemptionGamesRemaining"))
                 })),
                 hasRankedRestriction: s.Ember.computed.gt("rankedRestrictionGamesRemaining", 0),
                 rankedRestrictionMessage: s.Ember.computed("rankedRestrictionGamesRemaining", (function() {
@@ -17385,7 +17403,7 @@
                     return ""
                 }))
             });
-            t.default = u
+            t.default = p
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
@@ -26486,10 +26504,18 @@
                 openVoiceSettings() {
                     this.close(), (0, a.getProvider)().getOptional("rcp-fe-lol-settings").then((e => e.show("lol-premade-voice")), (e => a.logger.error("Failed to open voice settings panel", e)))
                 },
-                openTermsOfService() {},
-                openPrivacyNotice() {},
-                openKoreaDataCollectionDetails() {},
-                openKoreaDataTransferDetails() {},
+                openTermsOfService() {
+                    window.open(a.traService.get("communications_agreement_modal_terms_of_service_url"), "_blank")
+                },
+                openPrivacyNotice() {
+                    window.open(a.traService.get("communications_agreement_modal_privacy_notice_url"), "_blank")
+                },
+                openKoreaDataCollectionDetails() {
+                    window.open("https://legal.kr.riotgames.com/rve/privacy", "_blank")
+                },
+                openKoreaDataTransferDetails() {
+                    window.open("https://legal.kr.riotgames.com/rve/oversea", "_blank")
+                },
                 _setVoiceComplianceAgreement(e) {
                     return this.db.patch("/lol-settings/v2/account/LCUPreferences/lol-navigation", {
                         schemaVersion: 1,
@@ -26535,8 +26561,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "YpuKlwCk",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel.styl\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["honor-panel-header"],null,[["service"],[["get",["service"]]]]],false],["text","\\n\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","honor-panel-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["behaviorDescription"]]],null,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-section"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-section-title"],["flush-element"],["append",["unknown",["tra","honor_panel_active_penalties_rewards"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["panelRestrictionRows"]]],null,2],["block",["each"],[["get",["panelRewardRows"]]],null,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-signals"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-signals-heading"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-title"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-subtitle"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["each"],[["get",["resolvedSignalCategories"]]],null,0],["text","    "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["honor-panel-signal-category"],null,[["title","signals","isExpanded"],[["get",["category","title"]],["get",["category","signals"]],["get",["category","isExpanded"]]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["text","        "],["append",["helper",["honor-panel-reward"],null,[["rewardKey","tra"],[["get",["row","rewardKey"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","        "],["append",["helper",["honor-panel-restriction"],null,[["restrictionKey","gameCount","timeRemaining","restrictionDuration","honorLevel","tra"],[["get",["row","restrictionKey"]],["get",["row","gameCount"]],["get",["row","timeRemaining"]],["get",["row","restrictionDuration"]],["get",["row","honorLevel"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-description"],["flush-element"],["append",["unknown",["behaviorDescription"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "qylYXYHN",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel.styl\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["honor-panel-header"],null,[["service"],[["get",["service"]]]]],false],["text","\\n\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","honor-panel-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["behaviorDescription"]]],null,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-section"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-section-title"],["flush-element"],["append",["unknown",["tra","honor_panel_active_penalties_rewards"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["panelRestrictionRows"]]],null,2],["block",["each"],[["get",["panelRewardRows"]]],null,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-signals"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-signals-heading"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-title"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-subtitle"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["each"],[["get",["resolvedSignalCategories"]]],null,0],["text","    "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["honor-panel-signal-category"],null,[["title","signals","isExpanded"],[["get",["category","title"]],["get",["category","signals"]],["get",["category","isExpanded"]]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["text","        "],["append",["helper",["honor-panel-reward"],null,[["rewardKey","tra"],[["get",["row","rewardKey"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","        "],["append",["helper",["honor-panel-restriction"],null,[["restrictionKey","gameCount","timeRemaining","timeRemainingFull","restrictionDuration","honorLevel","requiredHonorLevel","tra"],[["get",["row","restrictionKey"]],["get",["row","gameCount"]],["get",["row","timeRemaining"]],["get",["row","timeRemainingFull"]],["get",["row","restrictionDuration"]],["get",["row","honorLevel"]],["get",["row","requiredHonorLevel"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-description"],["flush-element"],["append",["unknown",["behaviorDescription"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26643,8 +26669,10 @@
                 tra: null,
                 gameCount: 0,
                 timeRemaining: "",
+                timeRemainingFull: "",
                 restrictionDuration: "",
                 honorLevel: 1,
+                requiredHonorLevel: 0,
                 definition: s.Ember.computed("restrictionKey", (function() {
                     const e = this.get("restrictionKey");
                     return e && i.RESTRICTION_DEFINITIONS[e] || null
@@ -26670,7 +26698,53 @@
                     const e = this.get("definition");
                     return e ? "honor" === e.source ? (0, i.getHonorEmblemForLevel)(this.get("honorLevel")) : "game" === e.source ? i.BADGE_GAMES_FLAG_ICON : i.BADGE_CLOCK_ICON : ""
                 })),
-                badgeText: s.Ember.computed("definition", "tra", "gameCount", "timeRemaining", "honorLevel", (function() {
+                hasTooltip: s.Ember.computed("isGameBadge", "isEventBadge", "isHonorBadge", "gameCount", "timeRemainingFull", "requiredHonorLevel", (function() {
+                    return this.get("isGameBadge") ? (this.get("gameCount") || 0) > 0 : this.get("isEventBadge") ? !!this.get("timeRemainingFull") : !!this.get("isHonorBadge") && !!this.get("requiredHonorLevel")
+                })),
+                tooltipTitle: s.Ember.computed("definition", "tra", (function() {
+                    const e = this.get("definition"),
+                        t = this.get("tra");
+                    return "game" === e.source ? t.get("honor_panel_tooltip_games_restriction_title") : "event" === e.source ? t.get("honor_panel_tooltip_timed_restriction_title") : "honor" === e.source ? t.get("honor_panel_tooltip_honor_restriction_title") : e
+                })),
+                tooltipBodyParts: s.Ember.computed("definition", "tra", "gameCount", "timeRemainingFull", "requiredHonorLevel", (function() {
+                    const e = this.get("definition"),
+                        t = this.get("tra"),
+                        n = {
+                            before: "",
+                            value: "",
+                            after: ""
+                        };
+                    if (!e || !t) return n;
+                    let a = "",
+                        s = "";
+                    if ("game" === e.source) {
+                        const e = this.get("gameCount") || 0;
+                        if (!e) return n;
+                        a = t.get("honor_panel_tooltip_games_restriction_body") || "";
+                        s = (t.get("honor_panel_badge_games_count") || "{0} Games").replace("{0}", e)
+                    } else if ("event" === e.source) a = t.get("honor_panel_tooltip_timed_restriction_body") || "", s = this.get("timeRemainingFull") || "";
+                    else {
+                        if ("honor" !== e.source) return n;
+                        {
+                            a = t.get("honor_panel_tooltip_honor_restriction_body") || "";
+                            const e = this.get("requiredHonorLevel");
+                            if (!e) return n;
+                            s = (t.get("honor_panel_badge_honor_level") || "Honor {0}").replace("{0}", e)
+                        }
+                    }
+                    if (!a || !s) return n;
+                    const r = a.indexOf("{0}");
+                    return r < 0 ? {
+                        before: a,
+                        value: "",
+                        after: ""
+                    } : {
+                        before: a.slice(0, r),
+                        value: s,
+                        after: a.slice(r + 3)
+                    }
+                })),
+                badgeText: s.Ember.computed("definition", "tra", "gameCount", "timeRemaining", (function() {
                     const e = this.get("definition"),
                         t = this.get("tra");
                     if (!e) return "";
@@ -26678,17 +26752,15 @@
                         const e = this.get("gameCount") || 0;
                         return (t && t.get("honor_panel_badge_games_count") || "{0} Games").replace("{0}", e)
                     }
-                    if ("event" === e.source) return this.get("timeRemaining") || "";
-                    const n = this.get("honorLevel") || 1;
-                    return (t && t.get("honor_panel_badge_honor_level") || "Honor {0}").replace("{0}", n)
+                    return "event" === e.source ? this.get("timeRemaining") || "" : t && t.get("honor_panel_badge_low_honor") || "Low Honor"
                 }))
             });
             t.default = o
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "BP+YZM7i",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDurationBadge"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-restriction-row-badge-icon"],["dynamic-attr","src",["unknown",["durationBadgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["restrictionDuration"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "a3hHgxnY",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTooltip"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDurationBadge"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-restriction-row-badge-icon"],["dynamic-attr","src",["unknown",["durationBadgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["restrictionDuration"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["tooltipTitle"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["tooltipBodyParts","before"]],false],["open-element","span",[]],["static-attr","class","honor-panel-restriction-tooltip-value"],["flush-element"],["append",["unknown",["tooltipBodyParts","value"]],false],["close-element"],["append",["unknown",["tooltipBodyParts","after"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],1]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26987,63 +27059,77 @@
                 l = 60,
                 c = 24 * l;
 
-            function d(e) {
+            function d(e, t) {
                 if (!e || e <= 0) return "";
-                const t = Math.max(1, Math.ceil(e / o)),
-                    n = Math.floor(t / c),
-                    a = Math.floor(t % c / l),
-                    s = t % l,
-                    r = [];
-                return n > 0 && r.push(`${n}d`), a > 0 && r.push(`${a}h`), (s > 0 || 0 === r.length) && r.push(`${s}m`), r.join(" ")
+                const n = Math.max(1, Math.ceil(e / o)),
+                    a = Math.floor(n / c),
+                    s = Math.floor(n % c / l),
+                    r = n % l,
+                    i = [];
+                a > 0 && i.push(`${a}d`), s > 0 && i.push(`${s}h`), (r > 0 || 0 === i.length) && i.push(`${r}m`);
+                const d = t || 2;
+                return i.slice(0, d).join(" ")
             }
 
-            function u(e) {
+            function u(e, t, n) {
+                return !e || e <= 0 ? "" : d(e - t, n)
+            }
+
+            function m(e) {
                 const t = e && e.expirationData && e.expirationData.redemptions;
                 if (!Array.isArray(t) || 0 === t.length) return 0;
                 const n = t.find((e => e && e.redemptionCountRemaining > 0)) || t[0];
                 return Math.max(0, n && n.redemptionCountRemaining || 0)
             }
-            var m = a.Ember.Service.extend({
+            var p = a.Ember.Service.extend({
                 honorLevel: 0,
                 redemptions: null,
                 isTemporarilyReduced: !1,
                 restrictions: null,
                 tra: null,
+                nowMillis: 0,
                 init() {
-                    this._super(...arguments), this.db = a.dataBinding.bindTo(a.socket), this.set("redemptions", []), this.set("restrictions", []), this._onHonorViewChange = this._onHonorViewChange.bind(this), this._onRestrictionViewChange = this._onRestrictionViewChange.bind(this), this.db.observe(r, this, this._onHonorViewChange), this.db.observe(i, this, this._onRestrictionViewChange)
+                    this._super(...arguments), this.db = a.dataBinding.bindTo(a.socket), this.set("redemptions", []), this.set("restrictions", []), this.set("nowMillis", Date.now()), this._onHonorViewChange = this._onHonorViewChange.bind(this), this._onRestrictionViewChange = this._onRestrictionViewChange.bind(this), this.db.observe(r, this, this._onHonorViewChange), this.db.observe(i, this, this._onRestrictionViewChange), this._tickIntervalId = setInterval((() => {
+                        this.set("nowMillis", Date.now())
+                    }), o)
                 },
                 willDestroy() {
-                    this.db.unobserve(r, this), this.db.unobserve(i, this), this._super(...arguments)
+                    this._tickIntervalId && (clearInterval(this._tickIntervalId), this._tickIntervalId = null), this.db.unobserve(r, this), this.db.unobserve(i, this), this._super(...arguments)
                 },
                 hasRestrictions: a.Ember.computed("restrictions.[]", (function() {
                     const e = this.get("restrictions");
                     return Array.isArray(e) && e.length > 0
                 })),
-                panelRestrictionRows: a.Ember.computed("honorLevel", "restrictions.[]", (function() {
+                panelRestrictionRows: a.Ember.computed("honorLevel", "restrictions.[]", "nowMillis", (function() {
                     const e = this.get("honorLevel") || 1,
-                        t = (this.get("restrictions") || []).reduce(((e, t) => {
+                        t = this.get("restrictions") || [],
+                        n = this.get("nowMillis") || Date.now(),
+                        a = t.reduce(((e, t) => {
                             const n = t && s.RESTRICTION_TYPE_TO_KEY[t.restrictionType];
                             return n && !e[n] && (e[n] = t), e
                         }), {});
-                    return s.RESTRICTION_KEYS.reduce(((n, a) => {
-                        const r = s.RESTRICTION_DEFINITIONS[a] || {},
-                            i = t[a];
-                        if ("number" == typeof r.activeWhenHonorLevelBelow) return e < r.activeWhenHonorLevelBelow && n.push({
-                            restrictionKey: a,
+                    return s.RESTRICTION_KEYS.reduce(((t, r) => {
+                        const i = s.RESTRICTION_DEFINITIONS[r] || {},
+                            o = a[r];
+                        if ("number" == typeof i.activeWhenHonorLevelBelow) return e < i.activeWhenHonorLevelBelow && t.push({
+                            restrictionKey: r,
                             gameCount: 0,
                             timeRemaining: "",
+                            timeRemainingFull: "",
+                            requiredHonorLevel: i.activeWhenHonorLevelBelow,
                             honorLevel: e
-                        }), n;
-                        if (!i) return n;
-                        const o = i.expirationData || {};
-                        var l;
-                        return n.push({
-                            restrictionKey: a,
-                            gameCount: u(i),
-                            timeRemaining: (l = o.expirationMillis, !l || l <= 0 ? "" : d(l - Date.now())),
-                            restrictionDuration: d(i.restrictionsMillis),
+                        }), t;
+                        if (!o) return t;
+                        const l = o.expirationData || {};
+                        return t.push({
+                            restrictionKey: r,
+                            gameCount: m(o),
+                            timeRemaining: u(l.expirationMillis, n),
+                            timeRemainingFull: u(l.expirationMillis, n, 3),
+                            requiredHonorLevel: "honor" === i.source ? e + 1 : 0,
+                            restrictionDuration: d(o.restrictionsMillis),
                             honorLevel: e
-                        }), n
+                        }), t
                     }), [])
                 })),
                 panelRewardRows: a.Ember.computed("honorLevel", (function() {
@@ -27095,7 +27181,7 @@
                     }(e)))) : this.set("restrictions", [])
                 }
             });
-            t.default = m
+            t.default = p
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -28580,6 +28666,7 @@
                                 parentSkinId: null,
                                 isChroma: !1,
                                 traTitle: n.title,
+                                itemDescription: n.description,
                                 tilePath: t,
                                 splashPath: null,
                                 isSkinWithBorderIcon: !1,
@@ -28603,6 +28690,7 @@
                                 parentSkinId: null,
                                 isChroma: !1,
                                 traTitle: n.name,
+                                itemDescription: n.description,
                                 tilePath: a,
                                 splashPath: null,
                                 isSkinWithBorderIcon: !1,
@@ -28628,6 +28716,7 @@
                             traTitle: this.get("tra").formatString("shoppefront_transfer_item_title", {
                                 region: n
                             }),
+                            itemDescription: null,
                             tilePath: r.TRANSFER_IMAGES.has(t) ? r.TRANSFER_IMAGES.get(t) : r.DEFAULT_TRANSFER_IMAGE,
                             splashPath: null,
                             isSkinWithBorderIcon: !1,
@@ -28645,7 +28734,8 @@
                             r = this.isSkinWithBorderIcon(e),
                             i = this.getItemTraTitle(t?.gipName, n, s, r),
                             o = t?.gipName,
-                            l = await this.getGenericItemImageTypeClass(e);
+                            l = t?.gipDescription || t?.description,
+                            c = await this.getGenericItemImageTypeClass(e);
                         return {
                             ...e,
                             itemId: t?.id,
@@ -28654,6 +28744,7 @@
                             isChroma: s,
                             traTitle: i,
                             itemName: o,
+                            itemDescription: l,
                             tilePath: t?.gipImage,
                             splashPath: t?.splashPath,
                             purchaseModalSplashPath: t?.uncenteredSplashPath ?? t?.splashPath,
@@ -28661,7 +28752,7 @@
                             inventoryTypeId: e.purchaseUnits[0]?.fulfillment.itemTypeId,
                             videoPath: t?.videoPath,
                             displayConfirmationToast: !0,
-                            catalogImageTypeClass: l
+                            catalogImageTypeClass: c
                         }
                     },
                     async getGenericItemImageTypeClass(e) {
@@ -29147,6 +29238,12 @@
                 closePaymentsModal = () => {
                     this.api.closeWindowHandler()
                 };
+                getSkuPricePoints() {
+                    return this.dataLayer.getSkuPricePoints()
+                }
+                getTokenizedPmcUrl(e) {
+                    return this.dataLayer.getTokenizedPmcUrl(e)
+                }
                 openPayments({
                     action: e,
                     giftMessage: t,
@@ -29554,6 +29651,9 @@
                 }
                 getPaymentsModeFromClientConfig() {
                     return this.bindings.clientConfig.get("/lol.client_settings.payments.paymentsMode")
+                }
+                getSkuPricePoints() {
+                    return this.bindings.payments.get("/v1/sku-price-points")
                 }
             }
         }, (e, t, n) => {

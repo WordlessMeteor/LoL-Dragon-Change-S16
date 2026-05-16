@@ -993,8 +993,8 @@
                     PostgameScoreboardReplayButtonComponent: A.default,
                     TftHeaderComponent: w.default,
                     TftPartnerGroupPlacementComponent: I.default,
-                    TftPlayerComponent: L.default,
-                    TftTooltipComponent: R.default,
+                    TftPlayerComponent: R.default,
+                    TftTooltipComponent: L.default,
                     TftSkilltreeScoreboardComponent: O.default,
                     TftSkilltreeScoreRowComponent: N.default,
                     TftSkilltreeProgressionComponent: D.default,
@@ -1113,8 +1113,8 @@
                         "components/strawberry-scoreboard-row": Mt.default,
                         "components/render-timer": wt.default,
                         "components/eternals-token": It.default,
-                        "components/postgame-root": Lt.default,
-                        "components/postgame-sub-navigation": Rt.default,
+                        "components/postgame-root": Rt.default,
+                        "components/postgame-sub-navigation": Lt.default,
                         "components/postgame-progression": Ot.default,
                         "components/prestige-progression": Nt.default,
                         "components/prestige-progression-tooltip": Dt.default,
@@ -1145,8 +1145,8 @@
                         "components/tft-partner-group-placement": Me.default,
                         "components/tft-player": we.default,
                         "components/tft-tooltip": Ie.default,
-                        "components/tft-skilltree-scoreboard": Le.default,
-                        "components/tft-skilltree-score-row": Re.default,
+                        "components/tft-skilltree-scoreboard": Re.default,
+                        "components/tft-skilltree-score-row": Le.default,
                         "components/tft-skilltree-progression": Oe.default,
                         "components/tft-skilltree-progression-banner-spine": Ne.default
                     }
@@ -1229,8 +1229,8 @@
                 M = ln(n(63)),
                 w = ln(n(64)),
                 I = ln(n(65)),
-                L = ln(n(66)),
-                R = ln(n(67)),
+                R = ln(n(66)),
+                L = ln(n(67)),
                 O = ln(n(68)),
                 N = ln(n(69)),
                 D = ln(n(70)),
@@ -1283,8 +1283,8 @@
                 Me = ln(n(118)),
                 we = ln(n(119)),
                 Ie = ln(n(120)),
-                Le = ln(n(121)),
-                Re = ln(n(122)),
+                Re = ln(n(121)),
+                Le = ln(n(122)),
                 Oe = ln(n(123)),
                 Ne = ln(n(124)),
                 De = ln(n(125)),
@@ -1308,63 +1308,63 @@
                 et = ln(n(151)),
                 tt = ln(n(152)),
                 nt = ln(n(153)),
-                st = ln(n(154)),
-                at = ln(n(155)),
-                ot = ln(n(156)),
-                lt = ln(n(157)),
-                it = ln(n(158)),
-                rt = ln(n(159)),
-                mt = ln(n(160)),
-                ct = ln(n(162)),
-                dt = ln(n(164)),
-                pt = ln(n(165)),
-                ut = ln(n(166)),
-                gt = ln(n(167)),
-                ht = ln(n(168)),
-                ft = ln(n(170)),
-                bt = ln(n(171)),
-                _t = ln(n(172)),
-                yt = ln(n(173)),
-                Et = ln(n(174)),
-                vt = ln(n(175)),
-                St = ln(n(176)),
-                xt = n(179),
-                Pt = ln(n(188)),
-                kt = ln(n(189)),
-                Tt = ln(n(190)),
-                At = ln(n(191)),
-                Ct = ln(n(192)),
-                Mt = ln(n(193)),
-                wt = ln(n(194)),
-                It = ln(n(195)),
-                Lt = ln(n(196)),
+                st = ln(n(155)),
+                at = ln(n(156)),
+                ot = ln(n(157)),
+                lt = ln(n(158)),
+                it = ln(n(159)),
+                rt = ln(n(160)),
+                mt = ln(n(161)),
+                ct = ln(n(163)),
+                dt = ln(n(165)),
+                pt = ln(n(166)),
+                ut = ln(n(167)),
+                gt = ln(n(168)),
+                ht = ln(n(169)),
+                ft = ln(n(171)),
+                bt = ln(n(172)),
+                _t = ln(n(173)),
+                yt = ln(n(174)),
+                Et = ln(n(175)),
+                vt = ln(n(176)),
+                St = ln(n(177)),
+                xt = n(180),
+                Pt = ln(n(189)),
+                kt = ln(n(190)),
+                Tt = ln(n(191)),
+                At = ln(n(192)),
+                Ct = ln(n(193)),
+                Mt = ln(n(194)),
+                wt = ln(n(195)),
+                It = ln(n(196)),
                 Rt = ln(n(197)),
-                Ot = ln(n(198)),
-                Nt = ln(n(199)),
-                Dt = ln(n(200)),
-                Bt = ln(n(201)),
-                Gt = ln(n(202)),
-                Ut = ln(n(203)),
-                Ht = ln(n(204)),
-                Ft = ln(n(205)),
-                jt = ln(n(206)),
-                Vt = ln(n(207)),
-                Wt = ln(n(208)),
-                qt = ln(n(209)),
-                Yt = ln(n(210)),
-                Xt = ln(n(211)),
-                Kt = ln(n(212)),
-                $t = ln(n(213)),
-                Qt = ln(n(214)),
-                zt = ln(n(215)),
-                Jt = ln(n(216)),
-                Zt = ln(n(217)),
-                en = ln(n(218)),
-                tn = ln(n(219)),
-                nn = ln(n(220)),
-                sn = ln(n(221)),
-                an = ln(n(222)),
-                on = ln(n(223));
+                Lt = ln(n(198)),
+                Ot = ln(n(199)),
+                Nt = ln(n(200)),
+                Dt = ln(n(201)),
+                Bt = ln(n(202)),
+                Gt = ln(n(203)),
+                Ut = ln(n(204)),
+                Ht = ln(n(205)),
+                Ft = ln(n(206)),
+                jt = ln(n(207)),
+                Vt = ln(n(208)),
+                Wt = ln(n(209)),
+                qt = ln(n(210)),
+                Yt = ln(n(211)),
+                Xt = ln(n(212)),
+                Kt = ln(n(213)),
+                $t = ln(n(214)),
+                Qt = ln(n(215)),
+                zt = ln(n(216)),
+                Jt = ln(n(217)),
+                Zt = ln(n(218)),
+                en = ln(n(219)),
+                tn = ln(n(220)),
+                nn = ln(n(221)),
+                sn = ln(n(222)),
+                an = ln(n(223)),
+                on = ln(n(224));
 
             function ln(e) {
                 return e && e.__esModule ? e : {
@@ -7593,6 +7593,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
+            n(4);
             var s, a = n(1),
                 o = n(137),
                 l = n(39),
@@ -7696,26 +7697,33 @@
                     this.get("lpChangeBackground") && e && !u.has(t) && (u.add(t), this.showLpChangeModal(e))
                 },
                 showLpChangeModal(e) {
-                    const t = a.ComponentFactory.create("ValorAegisModalComponent", {
-                        isWin: this.get("isWin"),
-                        lpBonusAppliedReason: e,
-                        rankedAssetsService: this.get("rankedAssetsService")
-                    });
-                    let n = this.get("rankedAssetsService.assets.valorAegisModalTitleLoc");
-                    c.add({
-                        data: {
-                            header: {
-                                title: n
+                    this.get("gameMode");
+                    const t = {
+                            id: "valor-aegis-modal",
+                            data: {
+                                header: {
+                                    title: this.get("rankedAssetsService.assets.valorAegisModalTitleLoc")
+                                },
+                                nextButtonText: this.get("tra.postgame_rank_lp_modal_accept_text"),
+                                backgroundImageUrl: this.get("lpChangeBackground"),
+                                nextButtonShown: true
                             },
-                            nextButtonText: this.get("tra.postgame_rank_lp_modal_accept_text"),
-                            backgroundImageUrl: this.get("lpChangeBackground")
+                            height: "LARGE",
+                            onRemove: () => {
+                                this.sendAction("setModalDoneShowing")
+                            },
+                            customClassName: ""
                         },
-                        height: "LARGE",
-                        content: t,
-                        onRemove: () => {
-                            c.remove(t), this.sendAction("setModalDoneShowing")
-                        }
-                    })
+                        n = a.ComponentFactory.create("ValorAegisModalComponent", {
+                            isWin: this.get("isWin"),
+                            lpBonusAppliedReason: e,
+                            rankedAssetsService: this.get("rankedAssetsService"),
+                            showValorAegisNextButton: !1,
+                            onNextButtonClicked: () => {
+                                c.remove(t)
+                            }
+                        });
+                    t.content = n, c.add(t)
                 },
                 handleSeasonPassConfig(e) {
                     this.set("isSeasonPassEnabled", e)
@@ -8140,9 +8148,10 @@
                 o = (s = n(38)) && s.__esModule ? s : {
                     default: s
                 };
+            n(154);
             var l = a.Ember.Component.extend(o.default, {
                 classNames: ["rating-change-component"],
-                classNameBindings: ["isWin::is-loss", "lpChangeClassName:expanded", "removeGoldFrame:no-gold-frame", "isRankedOff:ranked-off"],
+                classNameBindings: ["isWin::is-loss", "lpChangeClassName:expanded", "isRankedOff:ranked-off"],
                 rankedAssetsService: a.Ember.inject.service("ranked-assets"),
                 isBeingPromoted: !1,
                 isBeingDemoted: !1,
@@ -8200,7 +8209,7 @@
                 lpChangeIcon: a.Ember.computed("rankedAssetsService.assets.autofillEmblemIconPath", (function() {
                     return this.get("rankedAssetsService.assets.autofillEmblemIconPath")
                 })),
-                tooltipDescription: a.Ember.computed("rankedAssetsService.assets.lpChangeValorAegisIconTooltipBodyLoc", (function() {
+                tooltipDescription: a.Ember.computed("rankedAssetsService.assets.lpChangeValorAegisIconTooltipBodyLoc", "lpChangeClassName", (function() {
                     return this.get("rankedAssetsService.assets.lpChangeValorAegisIconTooltipBodyLoc")
                 })),
                 updateResultLoc: a.Ember.computed("ratingChangeLoc", "isPromotedOrDemoted", "isInMiniseries", "isWin", "isLossPrevented", "lpChangeClassName", "rankedAssetsService.assets", "isRankedOff", (function() {
@@ -8210,6 +8219,15 @@
                 }))
             });
             t.default = l
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.AEGIS_AWARDED_REASONS = void 0;
+            t.AEGIS_AWARDED_REASONS = {
+                autofill: "AUTOFILL_AEGIS",
+                scarce: "SCARCE_AEGIS"
+            }
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -8645,7 +8663,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(161);
+            n(162);
             var a = s.Ember.Component.extend({
                 classNames: ["progression-modal-root-component"],
                 challenges: [],
@@ -8668,7 +8686,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(163),
+                a = n(164),
                 o = n(3),
                 l = s.Ember.Component.extend({
                     classNames: ["scoreboard-header-component"],
@@ -8748,7 +8766,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(163),
+                a = n(164),
                 o = s.Ember.Component.extend({
                     classNames: ["scoreboard-header-component"],
                     classNameBindings: ["team.isPlayerTeam"],
@@ -9239,7 +9257,7 @@
                 o = (n(3), (s = n(38)) && s.__esModule ? s : {
                     default: s
                 });
-            n(169);
+            n(170);
             const {
                 RunMixin: l
             } = a.EmberAddons.EmberLifeline;
@@ -9607,7 +9625,7 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(3),
-                o = n(163);
+                o = n(164);
             const l = [a.STAT_SWITCHER_STATS.DAMAGE_DEALT, a.STAT_SWITCHER_STATS.DAMAGE_TAKEN, a.STAT_SWITCHER_STATS.CC_SCORE],
                 i = [a.STAT_SWITCHER_STATS.GOLD, a.STAT_SWITCHER_STATS.CREEP_SCORE, a.STAT_SWITCHER_STATS.VISION_SCORE, a.STAT_SWITCHER_STATS.DAMAGE_DEALT_OVERALL],
                 r = [a.STAT_SWITCHER_STATS.GOLD, a.STAT_SWITCHER_STATS.DAMAGE_DEALT],
@@ -9883,13 +9901,12 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                o = (s = n(177)) && s.__esModule ? s : {
+                o = (s = n(178)) && s.__esModule ? s : {
                     default: s
                 };
-            n(178);
-            const l = "AUTOFILL_AEGIS",
-                i = "SCARCE_AEGIS";
-            var r = a.Ember.Component.extend({
+            n(179);
+            var l = n(154);
+            var i = a.Ember.Component.extend({
                 classNames: ["valor-aegis-modal-component"],
                 classNameBindings: ["postgame.largeAreaAnimationsEnabled:hide-static-image"],
                 layout: o.default,
@@ -9910,30 +9927,30 @@
                     return this.get("rankedAssetsService.assets.valorAegisModalAwardedSfx")
                 })),
                 introVideo: a.Ember.computed("lpBonusAppliedReason", "rankedAssetsService.assets.valorAegisAwardedVideoAutofillIntro", "rankedAssetsService.assets.valorAegisAwardedVideoScarceIntro", (function() {
-                    return this.get("lpBonusAppliedReason") === l ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoAutofillIntro") : (this.get("lpBonusAppliedReason"), this.get("rankedAssetsService.assets.valorAegisAwardedVideoScarceIntro"))
+                    return this.get("lpBonusAppliedReason") === l.AEGIS_AWARDED_REASONS.autofill ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoAutofillIntro") : (this.get("lpBonusAppliedReason"), l.AEGIS_AWARDED_REASONS.scarce, this.get("rankedAssetsService.assets.valorAegisAwardedVideoScarceIntro"))
                 })),
                 idleLoopVideo: a.Ember.computed("lpBonusAppliedReason", "rankedAssetsService.assets.valorAegisAwardedVideoAutofillIdle", "rankedAssetsService.assets.valorAegisAwardedVideoScarceIdle", (function() {
-                    return this.get("lpBonusAppliedReason") === l ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoAutofillIdle") : (this.get("lpBonusAppliedReason"), this.get("rankedAssetsService.assets.valorAegisAwardedVideoScarceIdle"))
+                    return this.get("lpBonusAppliedReason") === l.AEGIS_AWARDED_REASONS.autofill ? this.get("rankedAssetsService.assets.valorAegisAwardedVideoAutofillIdle") : (this.get("lpBonusAppliedReason"), l.AEGIS_AWARDED_REASONS.scarce, this.get("rankedAssetsService.assets.valorAegisAwardedVideoScarceIdle"))
                 })),
                 valorAegisEffectText: a.Ember.computed("isWin", "lpBonusAppliedReason", "rankedAssetsService.assets.lpChangeValorBonusLoc", "rankedAssetsService.assets.lpChangeValorProtectionLoc", (function() {
                     const e = this.get("lpBonusAppliedReason");
-                    if (e === i || e === l) return this.get("isWin") ? this.get("rankedAssetsService.assets.lpChangeValorBonusLoc") : this.get("rankedAssetsService.assets.lpChangeValorProtectionLoc")
+                    if (e === l.AEGIS_AWARDED_REASONS.scarce || e === l.AEGIS_AWARDED_REASONS.autofill) return this.get("isWin") ? this.get("rankedAssetsService.assets.lpChangeValorBonusLoc") : this.get("rankedAssetsService.assets.lpChangeValorProtectionLoc")
                 })),
                 valorAegisEmblemPath: a.Ember.computed("lpBonusAppliedReason", "rankedAssetsService.assets.valorAegisEmblemAutofillLarge", "rankedAssetsService.assets.valorAegisEmblemPriorityRoleLarge", (function() {
                     const e = this.get("lpBonusAppliedReason");
-                    return e === l ? this.get("rankedAssetsService.assets.valorAegisEmblemAutofillLarge") : this.get("rankedAssetsService.assets.valorAegisEmblemPriorityRoleLarge")
+                    return e === l.AEGIS_AWARDED_REASONS.autofill ? this.get("rankedAssetsService.assets.valorAegisEmblemAutofillLarge") : (l.AEGIS_AWARDED_REASONS.scarce, this.get("rankedAssetsService.assets.valorAegisEmblemPriorityRoleLarge"))
                 })),
                 valorAegisExplanationLines: a.Ember.computed("lpBonusAppliedReason", "rankedAssetsService.assets.valorAegisAutofillProtectionDesc", "rankedAssetsService.assets.valorAegisPriorityRoleProtectionDesc1", "rankedAssetsService.assets.valorAegisPriorityRoleProtectionDesc2", (function() {
                     const e = this.get("lpBonusAppliedReason");
-                    return e === l ? [this.get("rankedAssetsService.assets.valorAegisAutofillProtectionDesc")] : e === i ? [this.get("rankedAssetsService.assets.valorAegisPriorityRoleProtectionDesc1"), this.get("rankedAssetsService.assets.valorAegisPriorityRoleProtectionDesc2")] : []
+                    return e === l.AEGIS_AWARDED_REASONS.autofill ? [this.get("rankedAssetsService.assets.valorAegisAutofillProtectionDesc")] : e === l.AEGIS_AWARDED_REASONS.scarce ? [this.get("rankedAssetsService.assets.valorAegisPriorityRoleProtectionDesc1"), this.get("rankedAssetsService.assets.valorAegisPriorityRoleProtectionDesc2")] : []
                 }))
             });
-            t.default = r
+            t.default = i
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "oh7w4M8H",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-postgame\\\\src\\\\app\\\\templates\\\\components\\\\v2\\\\valor-aegis-modal.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","valor-aegis-modal-content-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["postgame","largeAreaAnimationsEnabled"]]],null,1],["text","\\n  "],["open-element","div",[]],["static-attr","class","valor-aegis-emblem-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","valor-aegis-emblem"],["dynamic-attr","src",["concat",[["unknown",["valorAegisEmblemPath"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","valor-aegis-spacer"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","valor-aegis-effect-text-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","valor-aegis-effect-text"],["flush-element"],["append",["unknown",["valorAegisEffectText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","valor-aegis-effect-explanation"],["flush-element"],["text","\\n"],["block",["each"],[["get",["valorAegisExplanationLines"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","valor-aegis-explanation-line"],["flush-element"],["append",["get",["line"]],false],["close-element"],["text","\\n"]],"locals":["line"]},{"statements":[["text","    "],["open-element","uikit-state-machine",[]],["static-attr","class","valor-aegis-modal-video-state-machine"],["static-attr","state","loading"],["flush-element"],["text","\\n      "],["open-element","uikit-states",[]],["flush-element"],["text","\\n        "],["open-element","uikit-state",[]],["static-attr","name","loading"],["flush-element"],["text","\\n          "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".valor-aegis-awarded-video"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".valor-aegis-awarded-video-idle"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n\\n          "],["open-element","uikit-transition",[]],["static-attr","next-state","intro"],["flush-element"],["text","\\n            "],["open-element","uikit-condition-media",[]],["static-attr","selector",".valor-aegis-awarded-video"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","uikit-state",[]],["static-attr","name","intro"],["flush-element"],["text","\\n          "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".valor-aegis-awarded-video"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","uikit-transition",[]],["static-attr","next-state","idle"],["flush-element"],["text","\\n            "],["open-element","uikit-condition-media",[]],["static-attr","selector",".valor-aegis-awarded-video"],["static-attr","ended",""],["flush-element"],["close-element"],["text","\\n            "],["open-element","uikit-condition-media",[]],["static-attr","selector",".valor-aegis-awarded-video-idle"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","uikit-state",[]],["static-attr","name","idle"],["flush-element"],["text","\\n          "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".valor-aegis-awarded-video-idle"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","uikit-video",[]],["static-attr","visible-state","intro"],["static-attr","class","valor-aegis-awarded-video"],["dynamic-attr","src",["unknown",["introVideo"]],null],["static-attr","autoplay",""],["static-attr","preload",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","uikit-video",[]],["static-attr","visible-state","idle"],["static-attr","class","valor-aegis-awarded-video-idle"],["dynamic-attr","src",["unknown",["idleLoopVideo"]],null],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "qpHiZT4v",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-postgame\\\\src\\\\app\\\\templates\\\\components\\\\v2\\\\valor-aegis-modal.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","valor-aegis-modal-content-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["postgame","largeAreaAnimationsEnabled"]]],null,2],["text","\\n  "],["open-element","div",[]],["static-attr","class","valor-aegis-emblem-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","valor-aegis-emblem"],["dynamic-attr","src",["concat",[["unknown",["valorAegisEmblemPath"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","valor-aegis-spacer"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","valor-aegis-effect-text-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","valor-aegis-effect-text"],["flush-element"],["append",["unknown",["valorAegisEffectText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","valor-aegis-effect-explanation"],["flush-element"],["text","\\n"],["block",["each"],[["get",["valorAegisExplanationLines"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["showValorAegisNextButton"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","valor-aegis-next-button"],["dynamic-attr","onclick",["unknown",["onNextButtonClicked"]],null],["flush-element"],["append",["unknown",["tra","postgame_rank_lp_modal_accept_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","valor-aegis-explanation-line"],["flush-element"],["append",["get",["line"]],false],["close-element"],["text","\\n"]],"locals":["line"]},{"statements":[["text","    "],["open-element","uikit-state-machine",[]],["static-attr","class","valor-aegis-modal-video-state-machine"],["static-attr","state","loading"],["flush-element"],["text","\\n      "],["open-element","uikit-states",[]],["flush-element"],["text","\\n        "],["open-element","uikit-state",[]],["static-attr","name","loading"],["flush-element"],["text","\\n          "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".valor-aegis-awarded-video"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".valor-aegis-awarded-video-idle"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n\\n          "],["open-element","uikit-transition",[]],["static-attr","next-state","intro"],["flush-element"],["text","\\n            "],["open-element","uikit-condition-media",[]],["static-attr","selector",".valor-aegis-awarded-video"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","uikit-state",[]],["static-attr","name","intro"],["flush-element"],["text","\\n          "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".valor-aegis-awarded-video"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","uikit-transition",[]],["static-attr","next-state","idle"],["flush-element"],["text","\\n            "],["open-element","uikit-condition-media",[]],["static-attr","selector",".valor-aegis-awarded-video"],["static-attr","ended",""],["flush-element"],["close-element"],["text","\\n            "],["open-element","uikit-condition-media",[]],["static-attr","selector",".valor-aegis-awarded-video-idle"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","uikit-state",[]],["static-attr","name","idle"],["flush-element"],["text","\\n          "],["open-element","uikit-behavior-media",[]],["static-attr","selector",".valor-aegis-awarded-video-idle"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","uikit-video",[]],["static-attr","visible-state","intro"],["static-attr","class","valor-aegis-awarded-video"],["dynamic-attr","src",["unknown",["introVideo"]],null],["static-attr","autoplay",""],["static-attr","preload",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","uikit-video",[]],["static-attr","visible-state","idle"],["static-attr","class","valor-aegis-awarded-video-idle"],["dynamic-attr","src",["unknown",["idleLoopVideo"]],null],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -9942,12 +9959,12 @@
         }, (e, t, n) => {
             "use strict";
             const s = {
-                    HonorVotingCeremonyComponent: n(180).default,
-                    HonorVotingPlayerCardComponent: n(184).default
+                    HonorVotingCeremonyComponent: n(181).default,
+                    HonorVotingPlayerCardComponent: n(185).default
                 },
                 a = {
-                    "components/honor-voting-ceremony": n(186),
-                    "components/honor-voting-player-card": n(187)
+                    "components/honor-voting-ceremony": n(187),
+                    "components/honor-voting-player-card": n(188)
                 };
             e.exports = {
                 HONOR_VOTING_COMPONENTS: s,
@@ -9959,11 +9976,11 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                o = (s = n(181)) && s.__esModule ? s : {
+                o = (s = n(182)) && s.__esModule ? s : {
                     default: s
                 },
-                l = n(182);
-            n(183);
+                l = n(183);
+            n(184);
             const {
                 RunMixin: i
             } = a.EmberAddons.EmberLifeline;
@@ -10126,11 +10143,11 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                o = (s = n(181)) && s.__esModule ? s : {
+                o = (s = n(182)) && s.__esModule ? s : {
                     default: s
                 },
-                l = n(182);
-            n(185);
+                l = n(183);
+            n(186);
             var i = a.Ember.Component.extend(o.default, {
                 honor: a.Ember.inject.service(),
                 gameflow: a.Ember.inject.service(),
@@ -10287,8 +10304,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "52jR6wLf",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-postgame\\\\src\\\\app\\\\templates\\\\components\\\\v2\\\\postgame-root.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","postgame-contents"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameClientStats"]]],null,14,10],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["postgame-header-section ",["helper",["if"],[["get",["isProgressionTabSelected"]],"progression-tab"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","postgame-header-background"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","postgame-header-container"],["flush-element"],["text","\\n    "],["append",["helper",["postgame-header"],null,[["gameId"],[["get",["gameId"]]]]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","postgame-header-button-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showAddPerksPageButton"]]],null,6],["block",["if"],[["get",["postgame","isLocalPlayerInGame"]]],null,5],["block",["unless"],[["get",["shouldShowGameClientStats"]]],null,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","postgame-footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","left-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["chat-container ",["helper",["if"],[["get",["shouldHideChatRoom"]],"hidden"],null]]]],["flush-element"],["text","\\n      "],["open-element","lol-social-chat-room",[]],["static-attr","class","scoreboard-v2"],["static-attr","type","postGame"],["dynamic-attr","room-changed-messages",["unknown",["roomChangedMessages"]],null],["dynamic-attr","placeholder",["concat",[["unknown",["tra","postgame_chat_placeholder"]]]]],["static-attr","can-hide-player-messages",""],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","center-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-close-button",[]],["static-attr","class","postgame-footer-exit-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"exitPostgame"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","find-match-button-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","find-match-button-decoration find-match-button-decoration-left"],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["animationsEnabled"]]],null,1,0],["text","      "],["open-element","div",[]],["static-attr","class","find-match-button-decoration find-match-button-decoration-right"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["career-postgame-countdown-meter-container ",["helper",["if"],[["get",["hasTimer"]],"visible"],null]]]],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","career-postgame-countdown-meter-background"],["static-attr","src","/fe/lol-postgame/countdown_meter_bg.svg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","career-postgame-countdown-meter"],["static-attr","src","/fe/lol-postgame/countdown_meter.svg"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["append",["helper",["postgame-party-status-v2"],null,[["partyStatus","animationsEnabled"],[["get",["partyStatus"]],["get",["animationsEnabled"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","right-container"],["flush-element"],["text","\\n    "],["append",["unknown",["postgame-scoreboard-progression-honor-notification"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["append",["helper",["postgame-sub-navigation"],null,[["tabs","onSelect"],[["get",["tabs"]],["helper",["action"],[["get",[null]],"handleTabSelected"],null]]]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","postgame-progression-lottie-outline"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-lottie",[]],["static-attr","id","lottie-outline-anim"],["static-attr","src","/fe/lol-static-assets/lottie/postgame/postgame-screen-border.json"],["static-attr","autoplay","false"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["animated-play-button"],null,[["onClick","hasIntroAnimationPlayed","buttonText","baseImgPath","overImgPath","downImgPath","onHoverSound","onClickSound","clickedStyle","partyStatus"],[["helper",["action"],[["get",[null]],"onButtonClick"],null],["get",["hasIntroAnimationPlayed"]],["get",["forwardButtonText"]],"/fe/lol-static-assets/images/buttons/find_match_default.png","/fe/lol-static-assets/images/buttons/find_match_hover.png","/fe/lol-static-assets/images/buttons/find_match_active.png",["get",["forwardHoverSound"]],["get",["forwardClickSound"]],"color: #005A82",["get",["partyStatus"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["generic-button"],null,[["onClick","baseImgPath","overImgPath","downImgPath","upText","overText","downText","onHoverSound","onClickSound"],[["helper",["action"],[["get",[null]],"onButtonClick"],null],"/fe/lol-postgame/button-find-match.png","/fe/lol-postgame/button-find-match-over.png","/fe/lol-postgame/button-find-match-down.png",["get",["forwardButtonText"]],["get",["forwardButtonText"]],["get",["forwardButtonText"]],["get",["forwardHoverSound"]],["get",["forwardClickSound"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","postgame-match-history-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"displayAdvancedDetails"],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["tra","postgame_scoreboard_view_advanced_details"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowAdvancedDetailsButton"]]],null,2]],"locals":[]},{"statements":[["block",["unless"],[["get",["isDetailsTabOpen"]]],null,3]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["postgame-scoreboard-replay-button"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","add-perks-page-button-container"],["flush-element"],["text","\\n          "],["append",["helper",["generic-button"],null,[["onClick","baseImgPath","overImgPath","downImgPath","disabledImgPath","tooltipText","disabledTooltipText","isEnabled","onHoverSound","onClickSound"],[["helper",["action"],[["get",[null]],"addPerksPage"],null],"/fe/lol-postgame/add-rune-page.png","/fe/lol-postgame/add-rune-page.png","/fe/lol-postgame/add-rune-page-disabled.png","/fe/lol-postgame/add-rune-page-disabled.png",["get",["tra","perks_add_rune_page_button"]],["get",["addRunePageButtonDisabledText"]],["get",["addPerksPageButtonEnabled"]],["get",["forwardHoverSound"]],["get",["forwardClickSound"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["scoreboard-root"],null,[["eogStats","showKeystone","hasScoreboardAnimationPlayed","hasCelebratedHonor","isContinueButtonClicked","updateHonorCelebrationAnimation","updateScoreboardAnimation"],[["get",["eogStats"]],["get",["gameflow","showKeystone"]],["get",["hasScoreboardAnimationPlayed"]],["get",["hasCelebratedHonor"]],["get",["isContinueButtonClicked"]],["helper",["action"],[["get",[null]],"updateHonorCelebrationAnimation"],null],["helper",["action"],[["get",[null]],"updateScoreboardAnimation"],null]]]],false],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isScoreboardTabSelected"]]],null,7]],"locals":[]},{"statements":[["text","      "],["append",["helper",["postgame-progression"],null,[["eogStats","updatedChallengesList","summonerIconPath","willAnimate","playOutlineAnimation","setModalDoneShowing"],[["get",["eogStats"]],["get",["updatedChallengesList"]],["get",["summonerIconPath"]],["get",["isAnimating"]],["helper",["action"],[["get",[null]],"playOutlineAnimation"],null],["helper",["action"],[["get",[null]],"setModalDoneShowing"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isProgressionTabSelected"]]],null,9,8]],"locals":[]},{"statements":[["text","      "],["append",["helper",["scoreboard-root"],null,[["eogStats","showKeystone","hasScoreboardAnimationPlayed","hasCelebratedHonor","isContinueButtonClicked","updateHonorCelebrationAnimation","updateScoreboardAnimation"],[["get",["gameClientStats"]],["get",["gameflow","showKeystone"]],["get",["hasScoreboardAnimationPlayed"]],["get",["hasCelebratedHonor"]],["get",["isContinueButtonClicked"]],["helper",["action"],[["get",[null]],"updateHonorCelebrationAnimation"],null],["helper",["action"],[["get",[null]],"updateScoreboardAnimation"],null]]]],false],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isScoreboardTabSelected"]]],null,11]],"locals":[]},{"statements":[["text","      "],["append",["helper",["postgame-progression"],null,[["eogStats","updatedChallengesList","summonerIconPath","willAnimate","playOutlineAnimation","setModalDoneShowing","shouldHidePrestigeProgression"],[["get",["gameClientStats"]],["get",["updatedChallengesList"]],["get",["summonerIconPath"]],["get",["isAnimating"]],["helper",["action"],[["get",[null]],"playOutlineAnimation"],null],["helper",["action"],[["get",[null]],"setModalDoneShowing"],null],["get",["shouldShowGameClientStats"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isProgressionTabSelected"]]],null,13,12]],"locals":[]}],"hasPartials":false}',
+                id: "oWt4LcxG",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-postgame\\\\src\\\\app\\\\templates\\\\components\\\\v2\\\\postgame-root.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","postgame-contents"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameClientStats"]]],null,14,10],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["postgame-header-section ",["helper",["if"],[["get",["isProgressionTabSelected"]],"progression-tab"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","postgame-header-background"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","postgame-header-container"],["flush-element"],["text","\\n    "],["append",["helper",["postgame-header"],null,[["gameId"],[["get",["gameId"]]]]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","postgame-header-button-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showAddPerksPageButton"]]],null,6],["block",["if"],[["get",["postgame","isLocalPlayerInGame"]]],null,5],["block",["unless"],[["get",["shouldShowGameClientStats"]]],null,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","postgame-footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","left-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["chat-container ",["helper",["if"],[["get",["shouldHideChatRoom"]],"hidden"],null]]]],["flush-element"],["text","\\n      "],["open-element","lol-social-chat-room",[]],["static-attr","class","scoreboard-v2"],["static-attr","type","postGame"],["dynamic-attr","room-changed-messages",["unknown",["roomChangedMessages"]],null],["dynamic-attr","placeholder",["concat",[["unknown",["tra","postgame_chat_placeholder"]]]]],["static-attr","can-hide-player-messages",""],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","center-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-close-button",[]],["static-attr","class","postgame-footer-exit-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"exitPostgame"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","find-match-button-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","find-match-button-decoration find-match-button-decoration-left"],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["animationsEnabled"]]],null,1,0],["text","      "],["open-element","div",[]],["static-attr","class","find-match-button-decoration find-match-button-decoration-right"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["career-postgame-countdown-meter-container ",["helper",["if"],[["get",["hasTimer"]],"visible"],null]]]],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","career-postgame-countdown-meter-background"],["static-attr","src","/fe/lol-postgame/countdown_meter_bg.svg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","career-postgame-countdown-meter"],["static-attr","src","/fe/lol-postgame/countdown_meter.svg"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["append",["helper",["postgame-party-status-v2"],null,[["partyStatus","animationsEnabled"],[["get",["partyStatus"]],["get",["animationsEnabled"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","right-container"],["flush-element"],["text","\\n    "],["append",["unknown",["postgame-scoreboard-progression-honor-notification"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["append",["helper",["postgame-sub-navigation"],null,[["tabs","onSelect"],[["get",["tabs"]],["helper",["action"],[["get",[null]],"handleTabSelected"],null]]]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","postgame-progression-lottie-outline"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-lottie",[]],["static-attr","id","lottie-outline-anim"],["static-attr","src","/fe/lol-static-assets/lottie/postgame/postgame-screen-border.json"],["static-attr","autoplay","false"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["animated-play-button"],null,[["onClick","hasIntroAnimationPlayed","buttonText","baseImgPath","overImgPath","downImgPath","onHoverSound","onClickSound","clickedStyle","partyStatus"],[["helper",["action"],[["get",[null]],"onButtonClick"],null],["get",["hasIntroAnimationPlayed"]],["get",["forwardButtonText"]],"/fe/lol-static-assets/images/buttons/find_match_default.png","/fe/lol-static-assets/images/buttons/find_match_hover.png","/fe/lol-static-assets/images/buttons/find_match_active.png",["get",["forwardHoverSound"]],["get",["forwardClickSound"]],"color: #005A82",["get",["partyStatus"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["generic-button"],null,[["onClick","baseImgPath","overImgPath","downImgPath","upText","overText","downText","onHoverSound","onClickSound"],[["helper",["action"],[["get",[null]],"onButtonClick"],null],"/fe/lol-postgame/button-find-match.png","/fe/lol-postgame/button-find-match-over.png","/fe/lol-postgame/button-find-match-down.png",["get",["forwardButtonText"]],["get",["forwardButtonText"]],["get",["forwardButtonText"]],["get",["forwardHoverSound"]],["get",["forwardClickSound"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","postgame-match-history-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"displayAdvancedDetails"],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["tra","postgame_scoreboard_view_advanced_details"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowAdvancedDetailsButton"]]],null,2]],"locals":[]},{"statements":[["block",["unless"],[["get",["isDetailsTabOpen"]]],null,3]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["postgame-scoreboard-replay-button"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","add-perks-page-button-container"],["flush-element"],["text","\\n          "],["append",["helper",["generic-button"],null,[["onClick","baseImgPath","overImgPath","downImgPath","disabledImgPath","tooltipText","disabledTooltipText","isEnabled","onHoverSound","onClickSound"],[["helper",["action"],[["get",[null]],"addPerksPage"],null],"/fe/lol-postgame/add-rune-page.png","/fe/lol-postgame/add-rune-page.png","/fe/lol-postgame/add-rune-page-disabled.png","/fe/lol-postgame/add-rune-page-disabled.png",["get",["tra","perks_add_rune_page_button"]],["get",["addRunePageButtonDisabledText"]],["get",["addPerksPageButtonEnabled"]],["get",["forwardHoverSound"]],["get",["forwardClickSound"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["scoreboard-root"],null,[["eogStats","showKeystone","hasScoreboardAnimationPlayed","hasCelebratedHonor","isContinueButtonClicked","updateHonorCelebrationAnimation","updateScoreboardAnimation"],[["get",["eogStats"]],["get",["gameflow","showKeystone"]],["get",["hasScoreboardAnimationPlayed"]],["get",["hasCelebratedHonor"]],["get",["isContinueButtonClicked"]],["helper",["action"],[["get",[null]],"updateHonorCelebrationAnimation"],null],["helper",["action"],[["get",[null]],"updateScoreboardAnimation"],null]]]],false],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isScoreboardTabSelected"]]],null,7]],"locals":[]},{"statements":[["text","      "],["append",["helper",["postgame-progression"],null,[["eogStats","updatedChallengesList","summonerIconPath","willAnimate","gameMode","playOutlineAnimation","setModalDoneShowing"],[["get",["eogStats"]],["get",["updatedChallengesList"]],["get",["summonerIconPath"]],["get",["isAnimating"]],["get",["gameMode"]],["helper",["action"],[["get",[null]],"playOutlineAnimation"],null],["helper",["action"],[["get",[null]],"setModalDoneShowing"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isProgressionTabSelected"]]],null,9,8]],"locals":[]},{"statements":[["text","      "],["append",["helper",["scoreboard-root"],null,[["eogStats","showKeystone","hasScoreboardAnimationPlayed","hasCelebratedHonor","isContinueButtonClicked","updateHonorCelebrationAnimation","updateScoreboardAnimation"],[["get",["gameClientStats"]],["get",["gameflow","showKeystone"]],["get",["hasScoreboardAnimationPlayed"]],["get",["hasCelebratedHonor"]],["get",["isContinueButtonClicked"]],["helper",["action"],[["get",[null]],"updateHonorCelebrationAnimation"],null],["helper",["action"],[["get",[null]],"updateScoreboardAnimation"],null]]]],false],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isScoreboardTabSelected"]]],null,11]],"locals":[]},{"statements":[["text","      "],["append",["helper",["postgame-progression"],null,[["eogStats","updatedChallengesList","summonerIconPath","willAnimate","gameMode","playOutlineAnimation","setModalDoneShowing","shouldHidePrestigeProgression"],[["get",["gameClientStats"]],["get",["updatedChallengesList"]],["get",["summonerIconPath"]],["get",["isAnimating"]],["get",["gameMode"]],["helper",["action"],[["get",[null]],"playOutlineAnimation"],null],["helper",["action"],[["get",[null]],"setModalDoneShowing"],null],["get",["shouldShowGameClientStats"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isProgressionTabSelected"]]],null,13,12]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

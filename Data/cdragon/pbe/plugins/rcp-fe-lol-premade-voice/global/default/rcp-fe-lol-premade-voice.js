@@ -2356,17 +2356,17 @@
                 _isParticipant(e) {
                     return e.puuid === this._puuid
                 }
-                _updateHalo(e, t) {
-                    const n = this.shadowRoot.querySelector(this._selectors.halo),
-                        r = this._calculateBlurRadius(t);
-                    (0, o.applyBlur)(n, e, r)
+                _updateHalo(e, t, n) {
+                    const r = this.shadowRoot.querySelector(this._selectors.halo),
+                        i = this._calculateBlurRadius(t);
+                    (0, o.applyBlur)(r, e, i, !!n)
                 }
                 _calculateBlurRadius(e) {
                     const t = this._sizeAttribute || "small";
                     return (0, o.calculateBlurRadius)(t, e)
                 }
                 _disconnectHalo() {
-                    this._updateHalo(!1, 0)
+                    this._updateHalo(!1, 0, !1)
                 }
                 _handleParticipantsChanged(e) {
                     const t = (e || []).find(this._isParticipant, this);
@@ -2379,8 +2379,9 @@
                 }
                 _resolveHaloState() {
                     const e = this._premadeVoiceSpeaking || this._teamVoiceSpeaking,
-                        t = Math.max(this._premadeVoiceEnergy || 0, this._teamVoiceEnergy || 0);
-                    this._updateHalo(e, t)
+                        t = this._teamVoiceSpeaking,
+                        n = t ? this._teamVoiceEnergy : this._premadeVoiceEnergy;
+                    this._updateHalo(e, n || 0, t)
                 }
                 getComponentFolderPath() {
                     return super.getComponentFolderPath(), "voice-halo"
@@ -2396,8 +2397,13 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.applyBlur = function(e, t, n) {
-                t ? (e.classList.add("speaking"), n && e.style.setProperty("box-shadow", `0 0 ${n}px 1px #36D987`)) : (e.classList.remove("speaking"), e.style.setProperty("box-shadow", "none"))
+            }), t.applyBlur = function(e, t, n, r) {
+                if (t) {
+                    if (e.classList.add("speaking"), e.classList.toggle("team-voice", !!r), n) {
+                        const t = r ? "#E88700" : "#36D987";
+                        e.style.setProperty("box-shadow", `0 0 ${n}px 1px ${t}`)
+                    }
+                } else e.classList.remove("speaking"), e.style.setProperty("box-shadow", "none")
             }, t.calculateBlurRadius = function(e, t) {
                 const n = r.SIZES[e],
                     i = r.MAX_BLUR_MULTIPLIERS[e];
@@ -2430,12 +2436,12 @@
         }, (e, t, n) => {
             var r = n(42),
                 i = n(43)(r);
-            i.push([e.id, ":host .lol-premade-voice-comm-halo {\n  transition: box-shadow 0.15s ease-in-out;\n  position: relative;\n}\n:host .lol-premade-voice-comm-halo:before {\n  content: '';\n  opacity: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transition: opacity 0.15s ease-in-out;\n  box-shadow: 0 0 0 2px #4bb44b;\n}\n:host .lol-premade-voice-comm-halo.speaking:before {\n  opacity: 1;\n}\n:host .lol-premade-voice-comm-halo.small:before {\n  box-shadow: 0 0 0 1px #4bb44b;\n}\n:host .lol-premade-voice-comm-halo {\n  border-radius: 50%;\n}\n:host .lol-premade-voice-comm-halo:before {\n  border-radius: 50%;\n}\n:host {\n  --premade-voice-halo-margin: 0 0 0 0;\n  --premade-voice-halo-width: auto;\n  --premade-voice-halo-height: auto;\n  --premade-voice-halobefore-box-shadow: none;\n}\n:host .lol-premade-voice-comm-halo {\n  margin: var(--premade-voice-halo-margin);\n  width: var(--premade-voice-halo-width);\n  height: var(--premade-voice-halo-height);\n}\n:host .lol-premade-voice-comm-halo:before {\n  box-shadow: var(--premade-voice-halobefore-box-shadow);\n}\n", "", {
+            i.push([e.id, ":host .lol-premade-voice-comm-halo {\n  transition: box-shadow 0.15s ease-in-out;\n  position: relative;\n}\n:host .lol-premade-voice-comm-halo:before {\n  content: '';\n  opacity: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  transition: opacity 0.15s ease-in-out;\n  box-shadow: 0 0 0 2px #4bb44b;\n}\n:host .lol-premade-voice-comm-halo.speaking:before {\n  opacity: 1;\n}\n:host .lol-premade-voice-comm-halo.small:before {\n  box-shadow: 0 0 0 1px #4bb44b;\n}\n:host .lol-premade-voice-comm-halo {\n  border-radius: 50%;\n}\n:host .lol-premade-voice-comm-halo:before {\n  border-radius: 50%;\n}\n:host {\n  --premade-voice-halo-margin: 0 0 0 0;\n  --premade-voice-halo-width: auto;\n  --premade-voice-halo-height: auto;\n  --premade-voice-halobefore-box-shadow: none;\n}\n:host .lol-premade-voice-comm-halo {\n  margin: var(--premade-voice-halo-margin);\n  width: var(--premade-voice-halo-width);\n  height: var(--premade-voice-halo-height);\n}\n:host .lol-premade-voice-comm-halo:before {\n  box-shadow: var(--premade-voice-halobefore-box-shadow);\n}\n:host .lol-premade-voice-comm-halo.team-voice:before {\n  box-shadow: 0 0 0 2px #e88700;\n}\n:host .lol-premade-voice-comm-halo.team-voice.small:before {\n  box-shadow: 0 0 0 1px #e88700;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-premade-voice/src/elements/shared.styl", "webpack://./fe/rcp-fe-lol-premade-voice/src/elements/voice-halo/style.styl"],
                 names: [],
-                mappings: "AA6BA;EAGE,wCAAY;EACZ,kBAAU;AC9BZ;ADgCE;EACE,WAAS;EACT,UAAS;EACT,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,MAAK;EACL,OAAM;EAEN,qCAAY;EACZ,6BAAY;AC/BhB;ADkCE;EACE,UAAS;AChCb;ADmCE;EACE,6BAAY;ACjChB;ADqCA;EAEE,kBAAe;ACpCjB;ADqCE;EACE,kBAAe;ACnCnB;AAtBA;EACE,oCAA6B;EAC7B,gCAA4B;EAC5B,iCAA6B;EAC7B,2CAAuC;AAwBzC;AApBE;EAEE,wCAAQ;EACR,sCAAO;EACP,wCAAQ;AAqBZ;AApBI;EACE,sDAAY;AAsBlB",
-                sourcesContent: ["$imagesPath = '../../images';\r\n\r\n$voice-button {\r\n  display: flex;\r\n  width: 38px;\r\n  height: 32px;\r\n  background-image: url('/fe/lol-premade-voice/voice-button.png');\r\n  background-position-y: 0px;\r\n  background-size: cover;\r\n  cursor: pointer;\r\n\r\n  &:hover:not(.button-disabled) {\r\n    background-position-y: -32px;\r\n  }\r\n\r\n  &:active:not(.button-disabled) {\r\n    background-position-y: -64px;\r\n  }\r\n\r\n  &.button-disabled {\r\n    background-position-y: -160px;\r\n    cursor: default;\r\n  }\r\n\r\n  &.active {\r\n    background-position-y: -96px;\r\n  }\r\n}\r\n\r\n$green-outer-blur {\r\n\r\n  // TODO: find alternative if not performant\r\n  transition: box-shadow 0.15s ease-in-out;\r\n  position: relative;\r\n\r\n  &:before  {\r\n    content: '';\r\n    opacity: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n\r\n    transition: opacity 0.15s ease-in-out;\r\n    box-shadow: 0 0 0 2px #4bb44b;\r\n  }\r\n\r\n  &.speaking:before {\r\n    opacity: 1;\r\n  }\r\n\r\n  &.small:before {\r\n    box-shadow: 0 0 0 1px #4bb44b;\r\n  }\r\n}\r\n\r\n$green-outer-round-blur {\r\n  @extend $green-outer-blur;\r\n  border-radius: 50%;\r\n  &:before {\r\n    border-radius: 50%;\r\n  }\r\n}\r\n\r\n$small-slider {\r\n  lol-uikit-slider {\r\n    width: 155px;\r\n    height: 15px;\r\n\r\n    --slider-base-before-top: 7px;\r\n    --slider-btn-cursor: pointer;\r\n    --slider-btn-width: 15px;\r\n    --slider-btn-height: 15px;\r\n    --slider-btn-hover-background-position: 0 -15px;\r\n    --slider-btn-active-background-position: 0 -30px;\r\n    --slider-fill-top: 6px;\r\n  }\r\n}", '@require "../shared.styl";\r\n\r\n\r\n// declare this component\'s CSS Custom Variables and defaults here\r\n:host {\r\n  --premade-voice-halo-margin: 0 0 0 0;\r\n  --premade-voice-halo-width: auto;\r\n  --premade-voice-halo-height: auto;\r\n  --premade-voice-halobefore-box-shadow: none;\r\n}\r\n\r\n:host {\r\n  .lol-premade-voice-comm-halo {\r\n    @extend $green-outer-round-blur;\r\n    margin: var(--premade-voice-halo-margin);\r\n    width: var(--premade-voice-halo-width);\r\n    height: var(--premade-voice-halo-height);\r\n    &:before {\r\n      box-shadow: var(--premade-voice-halobefore-box-shadow);\r\n    }\r\n  }\r\n}\r\n'],
+                mappings: "AA6BA;EAGE,wCAAY;EACZ,kBAAU;AC9BZ;ADgCE;EACE,WAAS;EACT,UAAS;EACT,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,MAAK;EACL,OAAM;EAEN,qCAAY;EACZ,6BAAY;AC/BhB;ADkCE;EACE,UAAS;AChCb;ADmCE;EACE,6BAAY;ACjChB;ADqCA;EAEE,kBAAe;ACpCjB;ADqCE;EACE,kBAAe;ACnCnB;AAtBA;EACE,oCAA6B;EAC7B,gCAA4B;EAC5B,iCAA6B;EAC7B,2CAAuC;AAwBzC;AApBE;EAEE,wCAAQ;EACR,sCAAO;EACP,wCAAQ;AAqBZ;AApBI;EACE,sDAAY;AAsBlB;AAnBI;EACE,6BAAY;AAqBlB;AAnBI;EACE,6BAAY;AAqBlB",
+                sourcesContent: ["$imagesPath = '../../images';\r\n\r\n$voice-button {\r\n  display: flex;\r\n  width: 38px;\r\n  height: 32px;\r\n  background-image: url('/fe/lol-premade-voice/voice-button.png');\r\n  background-position-y: 0px;\r\n  background-size: cover;\r\n  cursor: pointer;\r\n\r\n  &:hover:not(.button-disabled) {\r\n    background-position-y: -32px;\r\n  }\r\n\r\n  &:active:not(.button-disabled) {\r\n    background-position-y: -64px;\r\n  }\r\n\r\n  &.button-disabled {\r\n    background-position-y: -160px;\r\n    cursor: default;\r\n  }\r\n\r\n  &.active {\r\n    background-position-y: -96px;\r\n  }\r\n}\r\n\r\n$green-outer-blur {\r\n\r\n  // TODO: find alternative if not performant\r\n  transition: box-shadow 0.15s ease-in-out;\r\n  position: relative;\r\n\r\n  &:before  {\r\n    content: '';\r\n    opacity: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n\r\n    transition: opacity 0.15s ease-in-out;\r\n    box-shadow: 0 0 0 2px #4bb44b;\r\n  }\r\n\r\n  &.speaking:before {\r\n    opacity: 1;\r\n  }\r\n\r\n  &.small:before {\r\n    box-shadow: 0 0 0 1px #4bb44b;\r\n  }\r\n}\r\n\r\n$green-outer-round-blur {\r\n  @extend $green-outer-blur;\r\n  border-radius: 50%;\r\n  &:before {\r\n    border-radius: 50%;\r\n  }\r\n}\r\n\r\n$small-slider {\r\n  lol-uikit-slider {\r\n    width: 155px;\r\n    height: 15px;\r\n\r\n    --slider-base-before-top: 7px;\r\n    --slider-btn-cursor: pointer;\r\n    --slider-btn-width: 15px;\r\n    --slider-btn-height: 15px;\r\n    --slider-btn-hover-background-position: 0 -15px;\r\n    --slider-btn-active-background-position: 0 -30px;\r\n    --slider-fill-top: 6px;\r\n  }\r\n}", '@require "../shared.styl";\r\n\r\n\r\n// declare this component\'s CSS Custom Variables and defaults here\r\n:host {\r\n  --premade-voice-halo-margin: 0 0 0 0;\r\n  --premade-voice-halo-width: auto;\r\n  --premade-voice-halo-height: auto;\r\n  --premade-voice-halobefore-box-shadow: none;\r\n}\r\n\r\n:host {\r\n  .lol-premade-voice-comm-halo {\r\n    @extend $green-outer-round-blur;\r\n    margin: var(--premade-voice-halo-margin);\r\n    width: var(--premade-voice-halo-width);\r\n    height: var(--premade-voice-halo-height);\r\n    &:before {\r\n      box-shadow: var(--premade-voice-halobefore-box-shadow);\r\n    }\r\n\r\n    &.team-voice:before {\r\n      box-shadow: 0 0 0 2px #E88700;\r\n    }\r\n    &.team-voice.small:before {\r\n      box-shadow: 0 0 0 1px #E88700;\r\n    }\r\n  }\r\n}\r\n'],
                 sourceRoot: ""
             }]), e.exports = i
         }, (e, t, n) => {
