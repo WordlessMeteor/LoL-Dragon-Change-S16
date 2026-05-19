@@ -43237,6 +43237,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "USE_FRESNEL_ALPHA",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "POST_LIGHTING_ON_SCROLLTEX",
                 "__type": "ShaderStaticSwitch"
             },
@@ -72138,34 +72142,6 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "MatcapType",
-                "logicalParameters": [
-                    {
-                        "name": "MatcapType",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "MatcapNormalScale",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "MatcapNormalScale",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
                 "name": "DeformUVInfo",
                 "data": [
                     1.0,
@@ -72454,6 +72430,34 @@
                 "logicalParameters": [
                     {
                         "name": "LayerUVType01",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "MatcapType",
+                "logicalParameters": [
+                    {
+                        "name": "MatcapType",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "MatcapNormalScale",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "MatcapNormalScale",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }

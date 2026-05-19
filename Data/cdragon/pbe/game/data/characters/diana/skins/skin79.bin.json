@@ -337,6 +337,13 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "Emblems/31",
+                "mLoadingScreenAnchor": 1,
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/Diana/Skins/Skin79/Resources",
         "PersistentEffectConditions": [
             {
@@ -346,6 +353,13 @@
                             "mDriver": {
                                 "{4e748038}": 2,
                                 "__type": "{fe70e9c4}"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "championName": "Characters/Neeko",
+                                "__type": "{635d04b7}"
                             },
                             "__type": "NotMaterialDriver"
                         }
@@ -455,6 +469,30 @@
                         {
                             "mDriver": {
                                 "Spell": "{51c471fe}",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "Death"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Viego/Spells/ViegoPassiveAbility/ViegoPassiveSoul",
+                                "mDeactivateEarlySeconds": -1.0,
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"

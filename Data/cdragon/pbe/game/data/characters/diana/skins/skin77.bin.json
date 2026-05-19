@@ -78,6 +78,7 @@
                         "Play_sfx_DianaSkin77_Recall3D_buffactivate",
                         "Play_sfx_DianaSkin77_Recall_winddown_buffactivate",
                         "Play_sfx_DianaSkin77_Respawn_buffactivate",
+                        "Play_sfx_DianaSkin77_Spawn_buffactivate",
                         "Play_sfx_DianaSkin77_Taunt3D_in_buffactivate",
                         "Play_sfx_DianaSkin77_Taunt3D_in_buffactivate_lock_anim",
                         "Play_sfx_DianaSkin77_Taunt3D_loop_buffactivate",
@@ -93,6 +94,7 @@
                         "Stop_sfx_DianaSkin77_Idle3D_var2_buffactivate_anim",
                         "Stop_sfx_DianaSkin77_Joke3D_in_buffactivate",
                         "Stop_sfx_DianaSkin77_Recall_winddown_buffactivate",
+                        "Stop_sfx_DianaSkin77_Spawn_buffactivate",
                         "Stop_sfx_DianaSkin77_Taunt3D_in_buffactivate_anim",
                         "Stop_sfx_DianaSkin77_Taunt3D_in_buffactivate_lock_anim"
                     ],
@@ -336,11 +338,6 @@
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "Diana_P_Head_Glow",
-                "boneName": "VFX_Spine3",
-                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
-            },
-            {
                 "effectKey": "{0562b84f}",
                 "boneName": "Hairf5",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
@@ -400,6 +397,12 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "{aa951c53}",
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/Diana/Skins/Skin77/Resources",
         "PersistentEffectConditions": [
             {
@@ -513,6 +516,38 @@
                         {
                             "mDriver": {
                                 "Spell": "Characters/Viego/Spells/ViegoPassiveAbility/ViegoPassiveSoul",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "{51c471fe}",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "Death"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/TahmKench/Spells/TahmKenchRWrapperAbility/TahmKenchRTargetAlly",
+                                "mDeactivateEarlySeconds": -1.0,
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
@@ -583,6 +618,7 @@
                         {
                             "mDriver": {
                                 "Spell": "Characters/Viego/Spells/ViegoPassiveAbility/ViegoPassiveSoul",
+                                "mDeactivateEarlySeconds": -1.0,
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
@@ -595,6 +631,7 @@
                                 },
                                 "__type": "NotMaterialDriver"
                             },
+                            "mDelayOn": 1.0,
                             "__type": "DelayedBoolMaterialDriver"
                         }
                     ],
@@ -664,6 +701,7 @@
                         {
                             "mDriver": {
                                 "Spell": "Characters/Viego/Spells/ViegoPassiveAbility/ViegoPassiveSoul",
+                                "mDeactivateEarlySeconds": -1.0,
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
@@ -676,6 +714,7 @@
                                 },
                                 "__type": "NotMaterialDriver"
                             },
+                            "mDelayOn": 1.0,
                             "__type": "DelayedBoolMaterialDriver"
                         }
                     ],
@@ -690,6 +729,43 @@
                     {
                         "boneName": "Ball",
                         "effectKey": "{be30bf1f}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/TahmKench/Spells/TahmKenchRWrapperAbility/TahmKenchRTargetAlly",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPAltarBuff",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "VFX_Spine3",
+                        "effectKey": "Diana_P_Head_Glow",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -23818,7 +23894,11 @@
                     "constantValue": 3.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 3.0,
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.0,
                 "emitterName": "cracks2",
                 "importance": 3,
                 "bindWeight": {
@@ -24022,7 +24102,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 3.0,
+                "lifetime": 2.0,
                 "emitterName": "cracks6",
                 "importance": 3,
                 "birthVelocity": {
@@ -24496,7 +24576,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 4.0,
+                "lifetime": 2.0,
                 "emitterName": "SpecsHot_World",
                 "importance": 3,
                 "birthOrbitalVelocity": {
@@ -24838,7 +24918,11 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 3.0,
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.0,
                 "emitterName": "cracks7",
                 "importance": 3,
                 "bindWeight": {
@@ -24923,7 +25007,11 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 3.0,
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.0,
                 "emitterName": "cracks8",
                 "importance": 3,
                 "bindWeight": {
@@ -25037,7 +25125,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 4.0,
+                "lifetime": 2.0,
                 "emitterName": "SpecsHot_World1",
                 "importance": 3,
                 "bindWeight": {
@@ -25269,7 +25357,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 4.0,
+                "lifetime": 2.0,
                 "emitterName": "Godray",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -68752,6 +68840,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 2.0,
                 "isSingleParticle": 1,
                 "emitterName": "cracks2",
@@ -68951,7 +69043,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 3.0,
+                "lifetime": 2.0,
                 "emitterName": "cracks6",
                 "importance": 3,
                 "birthVelocity": {
@@ -69407,7 +69499,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 3.0,
+                "lifetime": 2.0,
                 "emitterName": "SpecsHot_World",
                 "importance": 3,
                 "birthOrbitalVelocity": {
@@ -69745,6 +69837,10 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "cracks7",
@@ -69853,6 +69949,10 @@
             },
             {
                 "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
@@ -119882,7 +119982,7 @@
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        100.0,
+                        200.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
@@ -119958,7 +120058,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
-                "{cb13aff1}": 150.0,
+                "{cb13aff1}": 100.0,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -182632,10 +182732,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
-                "depthBiasFactors": [
-                    -1.0,
-                    -80.0
-                ],
+                "{cb13aff1}": -160.0,
                 "disableBackfaceCull": true,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -201323,7 +201420,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 3.0,
+                "lifetime": 2.0,
                 "emitterName": "cracks",
                 "importance": 3,
                 "birthVelocity": {
@@ -201797,6 +201894,7 @@
                     },
                     "__type": "ValueFloat"
                 },
+                "lifetime": 2.0,
                 "emitterName": "SpecsHot_World",
                 "importance": 3,
                 "birthOrbitalVelocity": {
@@ -202138,6 +202236,7 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "lifetime": 2.0,
                 "emitterName": "cracks1",
                 "importance": 3,
                 "primitive": {
@@ -202222,7 +202321,7 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 4.0,
+                "lifetime": 3.0,
                 "emitterName": "cracks2",
                 "importance": 3,
                 "EmitterPosition": {
@@ -202331,6 +202430,7 @@
                     },
                     "__type": "ValueFloat"
                 },
+                "lifetime": 2.0,
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
@@ -227858,7 +227958,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 4.0,
+                    "constantValue": 2.0,
                     "dynamics": {
                         "probabilityTables": [
                             {
@@ -227877,7 +227977,7 @@
                             0.0
                         ],
                         "values": [
-                            4.0
+                            2.0
                         ],
                         "__type": "VfxAnimatedFloatVariableData"
                     },
@@ -229225,6 +229325,7 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "lifetime": 2.0,
                 "emitterName": "Shadow2",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -229486,7 +229587,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": -1.0,
+                    "constantValue": 4.0,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -229558,7 +229659,7 @@
                 "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        170.0,
+                        120.0,
                         700.0,
                         700.0
                     ],
@@ -229568,7 +229669,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.10000000149011612,
+                            0.05000000074505806,
                             1.0
                         ],
                         "values": [
@@ -229626,7 +229727,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": -1.0,
+                    "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 3.0,
@@ -229652,6 +229753,44 @@
                         0.05098039284348488,
                         1.0
                     ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
                     "__type": "ValueColor"
                 },
                 "pass": 1,
@@ -229716,7 +229855,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": -1.0,
+                    "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 3.0,
@@ -229742,6 +229881,44 @@
                         0.6110475063323975,
                         0.4117647111415863
                     ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
                     "__type": "ValueColor"
                 },
                 "pass": 21,
@@ -229850,6 +230027,7 @@
                     },
                     "__type": "ValueFloat"
                 },
+                "lifetime": 4.0,
                 "emitterName": "SpecsHot_World",
                 "importance": 3,
                 "birthOrbitalVelocity": {
@@ -230195,6 +230373,8 @@
                     },
                     "__type": "ValueFloat"
                 },
+                "lifetime": 3.0,
+                "isSingleParticle": 1,
                 "emitterName": "Moon14",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -230384,7 +230564,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 4.0,
+                    "constantValue": 2.0,
                     "dynamics": {
                         "probabilityTables": [
                             {
@@ -230403,12 +230583,14 @@
                             0.0
                         ],
                         "values": [
-                            4.0
+                            2.0
                         ],
                         "__type": "VfxAnimatedFloatVariableData"
                     },
                     "__type": "ValueFloat"
                 },
+                "lifetime": 3.0,
+                "isSingleParticle": 1,
                 "emitterName": "cracks",
                 "importance": 3,
                 "bindWeight": {
@@ -230659,6 +230841,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
+                    "constantValue": 2.0,
                     "dynamics": {
                         "probabilityTables": [
                             {
@@ -230667,7 +230850,7 @@
                                     1.0
                                 ],
                                 "keyValues": [
-                                    0.800000011920929,
+                                    0.6000000238418579,
                                     1.0
                                 ],
                                 "__type": "VfxProbabilityTableData"
@@ -230677,12 +230860,14 @@
                             0.0
                         ],
                         "values": [
-                            3.0
+                            2.0
                         ],
                         "__type": "VfxAnimatedFloatVariableData"
                     },
                     "__type": "ValueFloat"
                 },
+                "lifetime": 3.0,
+                "isSingleParticle": 1,
                 "emitterName": "cracks1",
                 "importance": 3,
                 "bindWeight": {
@@ -230692,7 +230877,7 @@
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        -100.0,
+                        -150.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
@@ -230703,7 +230888,7 @@
                         1.0,
                         0.6599984765052795,
                         0.9300068616867065,
-                        0.5000076293945312
+                        0.7499961853027344
                     ],
                     "dynamics": {
                         "probabilityTables": [
@@ -230736,7 +230921,7 @@
                                 1.0,
                                 0.6599984765052795,
                                 0.9300068616867065,
-                                0.5000076293945312
+                                0.7499961853027344
                             ]
                         ],
                         "__type": "VfxAnimatedColorVariableData"
@@ -230747,7 +230932,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.30000001192092896,
+                            0.4000000059604645,
                             1.0
                         ],
                         "values": [
@@ -230786,8 +230971,8 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        70.0,
-                        200.0,
+                        90.0,
+                        240.0,
                         600.0
                     ],
                     "__type": "ValueVector3"
@@ -230908,6 +231093,13 @@
                             "__type": "VfxAnimatedFloatVariableData"
                         },
                         "__type": "ValueFloat"
+                    },
+                    "uvScaleMult": {
+                        "constantValue": [
+                            1.2000000476837158,
+                            1.2000000476837158
+                        ],
+                        "__type": "ValueVector2"
                     },
                     "__type": "VfxTextureMultDefinitionData"
                 },
@@ -232079,6 +232271,7 @@
                     "constantValue": 4.0,
                     "__type": "ValueFloat"
                 },
+                "lifetime": 2.0,
                 "emitterName": "RayFront2",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -232260,6 +232453,7 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
+                "lifetime": 2.0,
                 "emitterName": "RayFront3",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -232422,6 +232616,11 @@
                     "constantValue": 0.30000001192092896,
                     "__type": "ValueFloat"
                 },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.0,
                 "emitterName": "RayFront5",
                 "importance": 3,
                 "bindWeight": {
@@ -232626,6 +232825,7 @@
                     },
                     "__type": "ValueFloat"
                 },
+                "lifetime": 2.0,
                 "emitterName": "cracks",
                 "importance": 3,
                 "birthVelocity": {
@@ -233083,6 +233283,7 @@
                     },
                     "__type": "ValueFloat"
                 },
+                "lifetime": 2.0,
                 "emitterName": "cracks1",
                 "importance": 3,
                 "birthVelocity": {
@@ -243301,6 +243502,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -160.0,
                 "disableBackfaceCull": true,
                 "isUniformScale": 1,
                 "useNavmeshMask": 1,

@@ -22283,10 +22283,17 @@
     "Globals/BuffStackingSettings": {
         "templateDefinition": [
             {
-                "name": "Unique Per Player",
+                "name": "Unique Per Player (Deprecated)",
                 "maxStacks": 25,
                 "StacksExclusive": true,
                 "BuffAddType": 2,
+                "__type": "BuffStackingTemplate"
+            },
+            {
+                "name": "Unique Per Player",
+                "maxStacks": 100,
+                "StacksExclusive": true,
+                "BuffAddType": 4,
                 "__type": "BuffStackingTemplate"
             }
         ],

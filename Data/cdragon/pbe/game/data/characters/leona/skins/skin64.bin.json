@@ -375,6 +375,13 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "Emblems/31",
+                "mLoadingScreenAnchor": 1,
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/Leona/Skins/Skin64/Resources",
         "PersistentEffectConditions": [
             {
@@ -775,22 +782,10 @@
                                     "Dance_In",
                                     "Dance_Loop",
                                     "Laugh_Loop",
-                                    "Death"
+                                    "Death",
+                                    "Laugh_In"
                                 ],
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
-                            },
-                            "__type": "NotMaterialDriver"
-                        },
-                        {
-                            "mDriver": {
-                                "mBoolDriver": {
-                                    "mAnimationNames": [
-                                        "Laugh_In"
-                                    ],
-                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
-                                },
-                                "mDelayOn": 1.0,
-                                "__type": "DelayedBoolMaterialDriver"
                             },
                             "__type": "NotMaterialDriver"
                         },
@@ -6089,7 +6084,7 @@
                 "lifetime": 2.0,
                 "isSingleParticle": 1,
                 "emitterName": "Wall_Big",
-                "importance": 1,
+                "importance": 3,
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -27960,7 +27955,7 @@
                 "lifetime": 2.0,
                 "isSingleParticle": 1,
                 "emitterName": "Wall_Big",
-                "importance": 1,
+                "importance": 3,
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -41870,7 +41865,6 @@
                 },
                 "pass": 10,
                 "alphaRef": 0,
-                "{cb13aff1}": -40.0,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -41980,7 +41974,6 @@
                 },
                 "pass": 10,
                 "alphaRef": 0,
-                "{cb13aff1}": -40.0,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -42090,7 +42083,6 @@
                 },
                 "pass": 10,
                 "alphaRef": 0,
-                "{cb13aff1}": -40.0,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -42206,6 +42198,7 @@
                     0.5,
                     0.0
                 ],
+                "{cb13aff1}": -800.0,
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
@@ -42877,6 +42870,7 @@
                 },
                 "pass": -2,
                 "alphaRef": 0,
+                "{cb13aff1}": -800.0,
                 "ParticlesShareRandomValue": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -43603,6 +43597,7 @@
                     ],
                     "__type": "ValueColor"
                 },
+                "{cb13aff1}": -800.0,
                 "disableBackfaceCull": true,
                 "birthScale0": {
                     "constantValue": [
@@ -45306,6 +45301,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 10,
+                "{cb13aff1}": -800.0,
                 "birthScale0": {
                     "constantValue": [
                         60.0,
@@ -45472,6 +45468,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 50,
+                "{cb13aff1}": -800.0,
                 "birthScale0": {
                     "constantValue": [
                         100.0,
@@ -45694,6 +45691,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 51,
+                "{cb13aff1}": -800.0,
                 "birthScale0": {
                     "constantValue": [
                         100.0,
@@ -46052,6 +46050,7 @@
                     "erosionMapName": "ASSETS/Characters/Leona/Skins/Skin64/Particles/alphaslice_mesh.SKINS_Leona_Skin64.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "{cb13aff1}": -800.0,
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isRotationEnabled": 1,
