@@ -853,7 +853,9 @@
                     d.default.changeMicLevelSelf(e.value)
                 }
                 _updateCurrentPlayerMuteButton() {
-                    this._availability && this._settings && (this._availability.showDisconnectedState ? (this.addClass("disabled", this._selectors.currentPlayerMic), this.removeClass("muted", this._selectors.currentPlayerMic)) : (this.removeClass("disabled", this._selectors.currentPlayerMic), this._settings && this._settings.localMicMuted ? this.addClass("muted", this._selectors.currentPlayerMic) : this.removeClass("muted", this._selectors.currentPlayerMic)), this._attachMuteSelfTooltip())
+                    if (!this._availability || !this._settings) return;
+                    const e = !this._teamVoicePluginEnabled && this._settings.inputMode === E.INPUT_MODE_PUSH_TO_TALK;
+                    this._availability.showDisconnectedState || e ? (this.addClass("disabled", this._selectors.currentPlayerMic), this.removeClass("muted", this._selectors.currentPlayerMic)) : (this.removeClass("disabled", this._selectors.currentPlayerMic), this._settings && this._settings.localMicMuted ? this.addClass("muted", this._selectors.currentPlayerMic) : this.removeClass("muted", this._selectors.currentPlayerMic)), this._attachMuteSelfTooltip()
                 }
                 _createParticipantElement(e) {
                     const t = document.createElement(this._selectors.participantElement);
@@ -878,7 +880,7 @@
                     i.ModalManager.add(n)
                 }
                 _toggleMute() {
-                    this._settings && d.default.checkMicrophonePermissions().then((e => {
+                    this._settings && (this._teamVoicePluginEnabled || this._settings.inputMode !== E.INPUT_MODE_PUSH_TO_TALK) && d.default.checkMicrophonePermissions().then((e => {
                         e ? (this._teamVoicePluginEnabled && (this._settings.localMicMuted ? this._unmuteSound.play() : this._muteSound.play()), d.default.muteSelf(!this._settings.localMicMuted)) : this._showMicrophonePermissionsModal()
                     }))
                 }
@@ -894,7 +896,7 @@
                     if (!this._settings || !this._settings.inputMode) return;
                     const e = this.shadowRoot.querySelector(this._selectors.currentPlayerMic);
                     let t;
-                    t = this._settings.localMicMuted ? i.tra.get("parties_comm_panel_tooltip_unmute_self") : i.tra.get("parties_comm_panel_tooltip_mute_self"), k.default.attachSmallTooltip(e, t)
+                    t = this._teamVoicePluginEnabled || this._settings.inputMode !== E.INPUT_MODE_PUSH_TO_TALK ? this._settings.localMicMuted ? i.tra.get("parties_comm_panel_tooltip_unmute_self") : i.tra.get("parties_comm_panel_tooltip_mute_self") : i.tra.get("parties_comm_panel_tooltip_mute_disabled"), k.default.attachSmallTooltip(e, t)
                 }
                 _attachSettingsTooltip() {
                     const e = this.shadowRoot.querySelector(this._selectors.settingsButton);

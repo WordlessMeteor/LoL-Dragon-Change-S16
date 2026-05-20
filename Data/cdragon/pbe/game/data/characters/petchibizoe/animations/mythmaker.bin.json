@@ -473,7 +473,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{d76d0d94}": {
+            "Run_01": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -1082,7 +1082,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c2cb87ae}": {
+            "Dance01_Loop": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -1211,7 +1211,7 @@
             "Run": {
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{d76d0d94}",
+                        "mClipName": "Run_01",
                         "mProbability": 70.0,
                         "__type": "SelectorPairData"
                     },
@@ -1239,7 +1239,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{088e1191}": {
+            "Cast_Loop": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -1259,7 +1259,7 @@
             "Cast_Cycle": {
                 "mClipNameList": [
                     "Cast_In",
-                    "{088e1191}"
+                    "Cast_Loop"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -1282,9 +1282,9 @@
             "{e067f3af}": {
                 "mClipNameList": [
                     "{676c70cf}",
-                    "{c2cb87ae}",
-                    "{c2cb87ae}",
-                    "{c2cb87ae}"
+                    "Dance01_Loop",
+                    "Dance01_Loop",
+                    "Dance01_Loop"
                 ],
                 "mEventDataMap": {
                     "{aa51a73a}": {
@@ -1338,7 +1338,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{9b2cc64d}": {
+            "Dance02_Loop": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -1583,8 +1583,8 @@
                         "mAnimationNames": [
                             "{e067f3af}",
                             "{676c70cf}",
-                            "{c2cb87ae}",
-                            "{9b2cc64d}"
+                            "Dance01_Loop",
+                            "Dance02_Loop"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
@@ -1598,14 +1598,14 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{9b2cc64d}"
+                            "Dance02_Loop"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
                 "mTrueConditionClipName": "{b64363e4}",
-                "mFalseConditionClipName": "{9b2cc64d}",
+                "mFalseConditionClipName": "Dance02_Loop",
                 "__type": "ConditionBoolClipData"
             },
             "Joke_Loop": {

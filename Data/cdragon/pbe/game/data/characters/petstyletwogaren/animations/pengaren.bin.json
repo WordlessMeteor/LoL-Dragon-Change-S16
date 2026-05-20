@@ -2061,7 +2061,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{eac56288}": {
+            "Pedestal_In_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mEventDataMap": {
@@ -2109,7 +2109,7 @@
                 "EndFrame": 2.0,
                 "__type": "AtomicClipData"
             },
-            "{c97be837}": {
+            "Pedestal_Out_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mAnimationResourceData": {
@@ -2147,7 +2147,7 @@
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
                 "mTrueConditionClipName": "{e9d54398}",
-                "mFalseConditionClipName": "{eac56288}",
+                "mFalseConditionClipName": "Pedestal_In_Vfx",
                 "__type": "ConditionBoolClipData"
             },
             "{1ea9f0d0}": {
@@ -2161,7 +2161,7 @@
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{c97be837}",
+                "mTrueConditionClipName": "Pedestal_Out_Vfx",
                 "mFalseConditionClipName": "{a11e46b5}",
                 "__type": "ConditionBoolClipData"
             },
@@ -2347,8 +2347,8 @@
                     "Finisher02",
                     "Finisher03",
                     "Finisher04",
-                    "{391ef30e}",
-                    "{381ef17b}"
+                    "Finisher05",
+                    "Finisher06"
                 ],
                 "mEventDataMap": {
                     "{4bea06bd}": {
@@ -2634,7 +2634,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{391ef30e}": {
+            "Finisher05": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -2704,7 +2704,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{381ef17b}": {
+            "Finisher06": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {

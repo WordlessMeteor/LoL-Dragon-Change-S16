@@ -1258,7 +1258,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{eac56288}": {
+            "Pedestal_In_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mEventDataMap": {
@@ -1306,7 +1306,7 @@
                 "EndFrame": 2.0,
                 "__type": "AtomicClipData"
             },
-            "{c97be837}": {
+            "Pedestal_Out_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mEventDataMap": {
@@ -1362,7 +1362,7 @@
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
                 "mTrueConditionClipName": "{e9d54398}",
-                "mFalseConditionClipName": "{eac56288}",
+                "mFalseConditionClipName": "Pedestal_In_Vfx",
                 "__type": "ConditionBoolClipData"
             },
             "{1ea9f0d0}": {
@@ -1376,7 +1376,7 @@
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{c97be837}",
+                "mTrueConditionClipName": "Pedestal_Out_Vfx",
                 "mFalseConditionClipName": "{a11e46b5}",
                 "__type": "ConditionBoolClipData"
             },

@@ -6962,7 +6962,10 @@
                     if (e) return e.description;
                     return this.get("metadata.tags").includes("ranked") ? this.get("tra.MATCH_HISTORY_TFT_RANKED") : this.get("tra.MATCH_HISTORY_TFT_NORMAL")
                 })),
-                units: a.Ember.computed.alias("currentPlayer.units"),
+                units: a.Ember.computed("currentPlayer.units", (function() {
+                    let e = this.get("currentPlayer.units");
+                    return e ? (e = e.filter((e => "tft17_bardfollower" !== e.character_id)), e) : a.Ember.A([])
+                })),
                 unitPlaceholders: a.Ember.computed("units.length", (function() {
                     const e = this.get("units.length");
                     if (e >= 10) return a.Ember.A();
@@ -12327,7 +12330,7 @@
                 })),
                 eventHubsPipStatus: s.Ember.computed("eventsData", "hasClaimableEventPassRewards", "eventHubVersionMap", "showSkillTreePip", "hasNewUnlocks", (function() {
                     return this.get("eventsData")?.map((e => {
-                        if (e?.eventId.includes("Set16AGE")) return this.get("hasNewUnlocks");
+                        if (e?.eventId.includes("Set17AGE")) return this.get("hasNewUnlocks");
                         const t = (this.get("eventHubVersionMap")?.get(e?.eventId || o.TFT_EVENT_HUB_DEFAULT_ID) || 0) < this._getEventStartTimeInMS(e?.startDate);
                         return e?.eventPassId && this.get("hasClaimableEventPassRewards") || t || e?.skillTreePassId && this.get("showSkillTreePip")
                     })) || []

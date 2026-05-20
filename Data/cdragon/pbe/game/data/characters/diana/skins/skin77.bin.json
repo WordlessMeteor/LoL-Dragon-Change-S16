@@ -414,6 +414,13 @@
                                 "__type": "{fe70e9c4}"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "championName": "Characters/Neeko",
+                                "__type": "{635d04b7}"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -453,8 +460,10 @@
                         },
                         {
                             "mDriver": {
-                                "SpellSlot": 0,
-                                "__type": "IsCastingBoolDriver"
+                                "mAnimationNames": [
+                                    "Spell1"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
                         },
@@ -570,12 +579,13 @@
                         {
                             "mBoolDriver": {
                                 "mDriver": {
-                                    "SpellSlot": 0,
-                                    "__type": "IsCastingBoolDriver"
+                                    "mAnimationNames": [
+                                        "Spell1"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 },
                                 "__type": "NotMaterialDriver"
                             },
-                            "mDelayOn": 0.20000000298023224,
                             "__type": "DelayedBoolMaterialDriver"
                         },
                         {
@@ -622,17 +632,6 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
-                        },
-                        {
-                            "mBoolDriver": {
-                                "mDriver": {
-                                    "BuffType": 5,
-                                    "__type": "HasBuffOfTypeBoolDriver"
-                                },
-                                "__type": "NotMaterialDriver"
-                            },
-                            "mDelayOn": 1.0,
-                            "__type": "DelayedBoolMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -657,12 +656,13 @@
                         {
                             "mBoolDriver": {
                                 "mDriver": {
-                                    "SpellSlot": 0,
-                                    "__type": "IsCastingBoolDriver"
+                                    "mAnimationNames": [
+                                        "Spell1"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                                 },
                                 "__type": "NotMaterialDriver"
                             },
-                            "mDelayOn": 0.20000000298023224,
                             "__type": "DelayedBoolMaterialDriver"
                         },
                         {
@@ -705,17 +705,6 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
-                        },
-                        {
-                            "mBoolDriver": {
-                                "mDriver": {
-                                    "BuffType": 5,
-                                    "__type": "HasBuffOfTypeBoolDriver"
-                                },
-                                "__type": "NotMaterialDriver"
-                            },
-                            "mDelayOn": 1.0,
-                            "__type": "DelayedBoolMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -13201,6 +13190,7 @@
         ],
         "particleName": "Diana_Skin77_P_HeadGlow",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_HeadGlow",
+        "flags": 1236,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_E_Tar": {
@@ -43295,6 +43285,7 @@
         ],
         "particleName": "Diana_Skin77_P_HeadGlowUlt",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_HeadGlowUlt",
+        "flags": 1236,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_Recall_10": {
@@ -85663,6 +85654,7 @@
         ],
         "particleName": "Diana_Skin77_R_HairUlt",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_R_HairUlt",
+        "flags": 1236,
         "transform": [
             [
                 0.9999999403953552,
@@ -110379,7 +110371,7 @@
         ],
         "particleName": "Diana_Skin77_P_Idle_BodyBuff",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_Idle_BodyBuff",
-        "flags": 197,
+        "flags": 1221,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_E_Cas": {
@@ -116029,6 +116021,7 @@
         ],
         "particleName": "Diana_Skin77_P_BuffWeaponUlt",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_BuffWeaponUlt",
+        "flags": 1236,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_R_TeleportSuccess": {
@@ -146249,7 +146242,7 @@
         ],
         "particleName": "Diana_Skin77_P_idle_hair",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_idle_hair",
-        "flags": 197,
+        "flags": 1221,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_Idle_HaedBuff": {
@@ -154712,9 +154705,6 @@
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 1,
-                "particleLinger": 0.20000000298023224,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low",
                 "importance": 3,
                 "birthVelocity": {
@@ -154849,9 +154839,6 @@
                     "constantValue": 0.15000000596046448,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 1,
-                "particleLinger": 0.20000000298023224,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low1",
                 "importance": 3,
                 "birthVelocity": {
@@ -154989,7 +154976,7 @@
         ],
         "particleName": "Diana_Skin77_P_HandBuff_R",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_HandBuff_R",
-        "flags": 221,
+        "flags": 1245,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_R_DashStart": {
@@ -195657,9 +195644,6 @@
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 1,
-                "particleLinger": 0.20000000298023224,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low3",
                 "importance": 3,
                 "birthVelocity": {
@@ -195794,9 +195778,6 @@
                     "constantValue": 0.1599999964237213,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 1,
-                "particleLinger": 0.20000000298023224,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low4",
                 "importance": 3,
                 "birthVelocity": {
@@ -195926,7 +195907,7 @@
         ],
         "particleName": "Diana_Skin77_P_HandBuff_R_Ult",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_HandBuff_R_Ult",
-        "flags": 221,
+        "flags": 1245,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_Z_PentakillChild02": {
@@ -201142,7 +201123,7 @@
         ],
         "particleName": "Diana_Skin77_P_Idle_WeaponUlt",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_Idle_WeaponUlt",
-        "flags": 197,
+        "flags": 1221,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_Emote_StarChild02": {
@@ -203896,7 +203877,6 @@
                     "__type": "ValueFloat"
                 },
                 "particleLingerType": 1,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low5",
                 "importance": 3,
                 "birthVelocity": {
@@ -204025,7 +204005,6 @@
                     "__type": "ValueFloat"
                 },
                 "particleLingerType": 1,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low6",
                 "importance": 3,
                 "birthVelocity": {
@@ -204299,7 +204278,7 @@
         ],
         "particleName": "Diana_Skin77_P_BufBody_R_Ult",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_BufBody_R_Ult",
-        "flags": 223,
+        "flags": 1247,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_HandBuffLUlt": {
@@ -204313,9 +204292,6 @@
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 1,
-                "particleLinger": 0.20000000298023224,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low",
                 "importance": 3,
                 "birthVelocity": {
@@ -204450,9 +204426,6 @@
                     "constantValue": 0.1599999964237213,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 1,
-                "particleLinger": 0.20000000298023224,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low1",
                 "importance": 3,
                 "birthVelocity": {
@@ -204610,7 +204583,6 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.30000001192092896,
                 "lifetime": 5.5,
                 "fieldCollectionDefinition": {
                     "fieldDragDefinitions": [
@@ -205211,7 +205183,7 @@
         ],
         "particleName": "Diana_Skin77_P_HandBuffLUlt",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_HandBuffLUlt",
-        "flags": 221,
+        "flags": 1245,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_BA3Decal": {
@@ -262946,7 +262918,6 @@
                     "__type": "ValueFloat"
                 },
                 "particleLingerType": 1,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low1",
                 "importance": 3,
                 "birthVelocity": {
@@ -263075,7 +263046,6 @@
                     "__type": "ValueFloat"
                 },
                 "particleLingerType": 1,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low2",
                 "importance": 3,
                 "birthVelocity": {
@@ -263349,7 +263319,7 @@
         ],
         "particleName": "Diana_Skin77_P_BufBodyLUlt",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_BufBodyLUlt",
-        "flags": 223,
+        "flags": 1247,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_Idle_HaedBuffChild": {
@@ -266845,9 +266815,6 @@
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 1,
-                "particleLinger": 0.20000000298023224,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low",
                 "importance": 3,
                 "birthVelocity": {
@@ -266982,9 +266949,6 @@
                     "constantValue": 0.15000000596046448,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 1,
-                "particleLinger": 0.20000000298023224,
-                "emitterLinger": 1.0,
                 "emitterName": "BACK_Low1",
                 "importance": 3,
                 "birthVelocity": {
@@ -267122,7 +267086,7 @@
         ],
         "particleName": "Diana_Skin77_P_HandBuffL",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_HandBuffL",
-        "flags": 221,
+        "flags": 1245,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_E_MeshOverlay": {
@@ -275988,7 +275952,7 @@
         ],
         "particleName": "Diana_Skin77_P_Idle_HairUlt",
         "particlePath": "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_Idle_HairUlt",
-        "flags": 197,
+        "flags": 1221,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Diana/Skins/Skin77/Particles/Diana_Skin77_P_Idle_WeaponUltSmall": {

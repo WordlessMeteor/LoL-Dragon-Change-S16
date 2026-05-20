@@ -2,7 +2,7 @@
     "Characters/TFT_Anniversary_Props/Animations/Skin1": {
         "mCascadeBlendValue": 0.0,
         "mClipDataMap": {
-            "{b52dc601}": {
+            "Intro_1": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{ee422ea9}": {
@@ -62,7 +62,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{b22dc148}": {
+            "Intro_2": {
                 "mFlags": 4,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -126,7 +126,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{b9d206b2}": {
+            "Level1_Idle1": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Butt": {
@@ -164,7 +164,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{b8d2051f}": {
+            "Level1_Idle2": {
                 "mFlags": 8,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -220,8 +220,8 @@
             },
             "Intro": {
                 "mClipNameList": [
-                    "{b52dc601}",
-                    "{b22dc148}",
+                    "Intro_1",
+                    "Intro_2",
                     "Hide"
                 ],
                 "mEventDataMap": {
@@ -245,7 +245,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{d8a58b4d}": {
+            "Level1_Win": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Face": {
@@ -458,7 +458,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{7b889548}": {
+            "Level1_Click_Head02": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Butt": {
@@ -539,7 +539,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{d91ac22d}": {
+            "Level1_Click_Butt": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Butt": {
@@ -609,7 +609,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{678ae0c8}": {
+            "Level7_Idle1": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Props": {
@@ -628,7 +628,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{6a8ae581}": {
+            "Level7_Idle2": {
                 "mFlags": 8,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -742,12 +742,12 @@
                 "mFlags": 2,
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{b9d206b2}",
+                        "mClipName": "Level1_Idle1",
                         "mProbability": 60.0,
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{b8d2051f}",
+                        "mClipName": "Level1_Idle2",
                         "mProbability": 40.0,
                         "__type": "SelectorPairData"
                     }
@@ -758,12 +758,12 @@
                 "mFlags": 2,
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{678ae0c8}",
+                        "mClipName": "Level7_Idle1",
                         "mProbability": 60.0,
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{6a8ae581}",
+                        "mClipName": "Level7_Idle2",
                         "mProbability": 40.0,
                         "__type": "SelectorPairData"
                     }
@@ -780,7 +780,7 @@
                 "mFalseConditionClipName": "{3a6955f7}",
                 "__type": "ConditionBoolClipData"
             },
-            "{7e889a01}": {
+            "Level1_Click_Head01": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Butt": {
@@ -853,12 +853,12 @@
             "{5c1f44de}": {
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{7e889a01}",
+                        "mClipName": "Level1_Click_Head01",
                         "mProbability": 50.0,
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{7b889548}",
+                        "mClipName": "Level1_Click_Head02",
                         "mProbability": 50.0,
                         "__type": "SelectorPairData"
                     }
@@ -869,8 +869,8 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{7e889a01}",
-                            "{7b889548}"
+                            "Level1_Click_Head01",
+                            "Level1_Click_Head02"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
@@ -884,17 +884,17 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{7e889a01}"
+                            "Level1_Click_Head01"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{7e889a01}",
-                "mFalseConditionClipName": "{7b889548}",
+                "mTrueConditionClipName": "Level1_Click_Head01",
+                "mFalseConditionClipName": "Level1_Click_Head02",
                 "__type": "ConditionBoolClipData"
             },
-            "{a65303fb}": {
+            "Level7_Click_Head01": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Eye01": {
@@ -939,7 +939,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{a753058e}": {
+            "Level7_Click_Head02": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Eye01": {
@@ -988,12 +988,12 @@
             "{40d3b528}": {
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{a65303fb}",
+                        "mClipName": "Level7_Click_Head01",
                         "mProbability": 50.0,
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{a753058e}",
+                        "mClipName": "Level7_Click_Head02",
                         "mProbability": 50.0,
                         "__type": "SelectorPairData"
                     }
@@ -1004,22 +1004,22 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{7e889a01}"
+                            "Level1_Click_Head01"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{a65303fb}",
-                "mFalseConditionClipName": "{a753058e}",
+                "mTrueConditionClipName": "Level7_Click_Head01",
+                "mFalseConditionClipName": "Level7_Click_Head02",
                 "__type": "ConditionBoolClipData"
             },
             "{22c333a5}": {
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{7e889a01}",
-                            "{7b889548}"
+                            "Level1_Click_Head01",
+                            "Level1_Click_Head02"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
@@ -1340,7 +1340,7 @@
                     "__type": "{267a1194}"
                 },
                 "mTrueConditionClipName": "{c91fd623}",
-                "mFalseConditionClipName": "{d8a58b4d}",
+                "mFalseConditionClipName": "Level1_Win",
                 "__type": "ConditionBoolClipData"
             },
             "{879d3aea}": {

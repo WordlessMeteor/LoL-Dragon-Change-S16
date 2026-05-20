@@ -1365,7 +1365,7 @@
             "{ab6a78a3}": {
                 "mClipNameList": [
                     "Laugh01",
-                    "{add81a2e}"
+                    "Joke_Loop01"
                 ],
                 "mEventDataMap": {
                     "{298465a2}": {
@@ -1749,7 +1749,7 @@
             "Celebrate": {
                 "mClipNameList": [
                     "{71176af2}",
-                    "{add81a2e}"
+                    "Joke_Loop01"
                 ],
                 "mEventDataMap": {
                     "{7c0dc71e}": {
@@ -1843,7 +1843,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{eac56288}": {
+            "Pedestal_In_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mEventDataMap": {
@@ -1880,7 +1880,7 @@
                 "EndFrame": 2.0,
                 "__type": "AtomicClipData"
             },
-            "{c97be837}": {
+            "Pedestal_Out_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mEventDataMap": {
@@ -1931,7 +1931,7 @@
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
                 "mTrueConditionClipName": "{e9d54398}",
-                "mFalseConditionClipName": "{eac56288}",
+                "mFalseConditionClipName": "Pedestal_In_Vfx",
                 "__type": "ConditionBoolClipData"
             },
             "{1ea9f0d0}": {
@@ -1945,7 +1945,7 @@
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{c97be837}",
+                "mTrueConditionClipName": "Pedestal_Out_Vfx",
                 "mFalseConditionClipName": "{a11e46b5}",
                 "__type": "ConditionBoolClipData"
             },
@@ -2508,7 +2508,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{add81a2e}": {
+            "Joke_Loop01": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -2550,7 +2550,7 @@
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{add81a2e}",
+                "mTrueConditionClipName": "Joke_Loop01",
                 "mFalseConditionClipName": "{e0bca822}",
                 "__type": "ConditionBoolClipData"
             }

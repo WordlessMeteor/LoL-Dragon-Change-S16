@@ -4397,7 +4397,6 @@
             6631,
             6630,
             3071,
-            3073,
             3078
         ],
         "categories": [
@@ -4784,7 +4783,7 @@
     {
         "id": 3071,
         "name": "黑色切割者",
-        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>400</attention>生命值<br><attention>20</attention>技能急速</stats><br><br>Item_3071_Tooltip</mainText>",
+        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>400</attention>生命值<br><attention>20</attention>技能急速</stats><br><br><passive>切割</passive><br>对英雄造成<physicalDamage>物理伤害</physicalDamage>时会将该目标的<scaleArmor>护甲降低6%</scaleArmor>，持续6秒(可叠加5次)。<br><br><passive>热烈</passive><br>造成<physicalDamage>物理伤害</physicalDamage>时会提供持续2秒的<speed>20移动速度</speed>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -4845,13 +4844,13 @@
     {
         "id": 3073,
         "name": "海克斯注力刚壁",
-        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>20%</attention>攻击速度<br><attention>450</attention>生命值</stats><br><br><passive>海克斯充能</passive><br>获得30终极技能急速。<br><br><passive>过载</passive><br>在施放你的终极技能后，获得持续8秒的<attackSpeed>50%攻击速度</attackSpeed>和<speed>20%移动速度</speed>。 </mainText>",
+        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>20%</attention>攻击速度<br><attention>500</attention>生命值</stats><br><br><passive>海克斯充能</passive><br>获得30终极技能急速。<br><br><passive>过载</passive> <br>在施放你的终极技能后，获得持续8秒的<attackDamage>30攻击力</attackDamage>和<speed>20%移动速度</speed>。 </mainText>",
         "active": false,
         "inStore": true,
         "from": [
             2021,
-            3044,
-            1042
+            1042,
+            2021
         ],
         "to": [],
         "categories": [
@@ -4869,7 +4868,7 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 500,
+        "price": 450,
         "priceTotal": 3000,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/3073_Hexaegis.png"
@@ -5088,7 +5087,7 @@
     {
         "id": 3084,
         "name": "心之钢",
-        "description": "<mainText><stats><attention>900</attention>生命值<br><attention>100%</attention>基础生命回复</stats><br><br><passive>庞然吞食</passive> 每个目标 (0秒)<br>如果一个敌方英雄在附近度过了若干秒，那么你的下一次对其打出的攻击会造成<physicalDamage>70外加你的6%</physicalDamage>最大生命值的<physicalDamage>额外物理伤害</physicalDamage>，并为你提供相当于<scaleHealth>8%</scaleHealth>该伤害的<scaleHealth>最大生命值</scaleHealth>。<br><br><passive>歌利亚巨人</passive><br>每有<scaleHealth>1000最大生命值</scaleHealth>，获得3%体型提升，至多至30%。 </mainText>",
+        "description": "<mainText><stats><attention>900</attention>生命值<br><attention>100%</attention>基础生命回复</stats><br><br><passive>庞然吞食</passive> 每个目标 (0秒)<br>如果一个敌方英雄在附近度过了若干秒，那么你的下一次对其打出的攻击会造成<physicalDamage>70外加你的6%</physicalDamage>最大生命值的<physicalDamage>额外物理伤害</physicalDamage>，并为你提供相当于<scaleHealth>10%</scaleHealth>该伤害的<scaleHealth>最大生命值</scaleHealth>。<br><br><passive>歌利亚巨人</passive><br>每有<scaleHealth>1000最大生命值</scaleHealth>，获得3%体型提升，至多至30%。 </mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -5181,7 +5180,7 @@
     {
         "id": 3087,
         "name": "斯塔缇克电刃",
-        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>45</attention>法术强度<br><attention>30%</attention>攻击速度<br><attention>4%</attention>移动速度</stats><br><br><passive>电火花</passive><br>你的<keyword>盈能攻击</keyword>会发射连锁闪电，造成 <OnHit>附带攻击</OnHit>特效，并且对附近的目标们造成<magicDamage>魔法伤害</magicDamage>。<br><br><passive>电疗</passive> <br>普通攻击提供额外<keyword>盈能</keyword>层数。</mainText>",
+        "description": "<mainText><stats><attention>45</attention>攻击力<br><attention>45</attention>法术强度<br><attention>30%</attention>攻击速度<br><attention>4%</attention>移动速度</stats><br><br><passive>电火花</passive><br>你的<keyword>盈能攻击</keyword>会发射连锁闪电，造成 <OnHit>附带攻击</OnHit>特效，并且对附近的目标们造成<magicDamage>魔法伤害</magicDamage>。<br><br><passive>电疗</passive> <br>普通攻击提供额外<keyword>盈能</keyword>层数。</mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -8582,7 +8581,7 @@
     {
         "id": 4016,
         "name": "无言承诺",
-        "description": "<mainText><stats><attention>50</attention>法术强度<br><attention> 25%</attention>治疗和护盾强度<br><attention>25</attention>技能急速</stats><br><br><passive>承诺</passive><br>获得被你<attention>承诺</attention>的<scaleAP>友军的20%  法术强度</scaleAP>，并为被你<attention>承诺</attention>的友军提供你的20%  技能急速。<br><br> <active>主动</active>  (0秒)<br><active>承诺</active><br>对一名友军做出<attention>承诺</attention>。</mainText>",
+        "description": "<mainText><stats><attention>50</attention>法术强度<br><attention> 15%</attention>治疗和护盾强度<br><attention>25</attention>技能急速</stats><br><br><passive>承诺</passive><br>获得被你<attention>承诺</attention>的<scaleAP>友军的15%  法术强度</scaleAP>，并为被你<attention>承诺</attention>的友军提供你的15%  技能急速。<br><br> <active>主动</active>  (0秒)<br><active>承诺</active><br>对一名友军做出<attention>承诺</attention>。</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -12643,7 +12642,7 @@
     {
         "id": 222523,
         "name": "海克斯镜片 C44",
-        "description": "<mainText><stats><attention>50</attention>攻击力<br><attention>25%</attention>暴击几率</stats><br><br><passive>高倍望远镜</passive><br>攻击造成至多10%额外伤害，基于敌人离你有多远 (在500码时达到最大伤害)。<br><br><passive>奥术瞄准</passive><br>当一个你在3秒内造成过伤害的英雄阵亡时，你获得持续10秒的150额外攻击距离。 </mainText>",
+        "description": "<mainText><stats><attention>55</attention>攻击力<br><attention>25%</attention>暴击几率</stats><br><br><passive>高倍望远镜</passive><br>攻击造成至多10%额外伤害，基于敌人离你有多远 (在500码时达到最大伤害)。<br><br><passive>奥术瞄准</passive><br>当一个你在3秒内造成过伤害的英雄阵亡时，你获得持续15秒的150额外攻击距离。 </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13042,7 +13041,7 @@
     {
         "id": 223031,
         "name": "无尽之刃",
-        "description": "<mainText><stats><attention>55</attention>攻击力<br><attention>25%</attention>暴击几率<br><attention>40%</attention>暴击伤害</stats><br><br></mainText>",
+        "description": "<mainText><stats><attention>75</attention>攻击力<br><attention>25%</attention>暴击几率<br><attention>30%</attention>暴击伤害</stats><br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13449,7 +13448,7 @@
     {
         "id": 223071,
         "name": "黑色切割者",
-        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>350</attention>生命值<br><attention>20</attention>技能急速</stats><br><br>Item_223071_Tooltip</mainText>",
+        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>350</attention>生命值<br><attention>20</attention>技能急速</stats><br><br><passive>切割</passive><br>对英雄造成<physicalDamage>物理伤害</physicalDamage>时会将该目标的<scaleArmor>护甲降低6%</scaleArmor>，持续6秒。(可叠加5次)。<br><br><passive>热烈</passive><br>造成<physicalDamage>物理伤害</physicalDamage>时会提供持续2秒的<speed>20移动速度</speed>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13502,7 +13501,7 @@
     {
         "id": 223073,
         "name": "海克斯注力刚壁",
-        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>30%</attention>攻击速度<br><attention>450</attention>生命值</stats><br><br><passive>海克斯充能</passive><br>获得30终极技能急速。<br><br><passive>过载</passive><br>在施放你的终极技能后，获得持续8秒的<attackSpeed>50%攻击速度</attackSpeed>和<speed>20%移动速度</speed>。 </mainText>",
+        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>30%</attention>攻击速度<br><attention>450</attention>生命值</stats><br><br><passive>海克斯充能</passive><br>获得30终极技能急速。<br><br><passive>过载</passive> <br>在施放你的终极技能后，获得持续8秒的<attackDamage>30攻击力</attackDamage>和<speed>20%移动速度</speed>。 </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13659,7 +13658,7 @@
     {
         "id": 223087,
         "name": "斯塔缇克电刃",
-        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>45</attention>法术强度<br><attention>30%</attention>攻击速度<br><attention>4%</attention>移动速度</stats><br><br><passive>电火花</passive><br>你的<keyword>盈能攻击</keyword>会发射连锁闪电，造成 <OnHit>附带攻击</OnHit>特效，并且对最多<attention>0</attention>个目标造成<magicDamage>魔法伤害</magicDamage>。<br><br><passive>电疗</passive> <br>普通攻击提供额外<keyword>盈能</keyword>层数。</mainText>",
+        "description": "<mainText><stats><attention>45</attention>攻击力<br><attention>45</attention>法术强度<br><attention>30%</attention>攻击速度<br><attention>4%</attention>移动速度</stats><br><br><passive>电火花</passive><br>你的<keyword>盈能攻击</keyword>会发射连锁闪电，造成 <OnHit>附带攻击</OnHit>特效，并且对最多<attention>0</attention>个目标造成<magicDamage>魔法伤害</magicDamage>。<br><br><passive>电疗</passive> <br>普通攻击提供额外<keyword>盈能</keyword>层数。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13708,7 +13707,7 @@
     {
         "id": 223091,
         "name": "智慧末刃",
-        "description": "<mainText><stats><attention>50%</attention>攻击速度<br><attention>40</attention>魔法抗性<br><attention>20%</attention>韧性</stats><br><br><br><li><passive>喧争：</passive>攻击附带魔法伤害并提供移动速度。</mainText>",
+        "description": "<mainText><stats><attention>50%</attention>攻击速度<br><attention>45</attention>魔法抗性<br><attention>20%</attention>韧性</stats><br><br><br><li><passive>喧争：</passive>攻击附带魔法伤害并提供移动速度。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13759,7 +13758,7 @@
     {
         "id": 223095,
         "name": "岚切",
-        "description": "<mainText><stats><attention>50</attention>攻击力<br><attention>20%</attention>攻击速度<br><attention>25%</attention>暴击几率</stats><br><br><passive>盈能</passive><br>移动和攻击会生成一次<keyword>盈能攻击</keyword>。<br><br><passive>电冲</passive><br>你的<keyword>盈能攻击</keyword>附带<magicDamage>0额外魔法伤害</magicDamage>并提供持续1.5秒的<speed>45%移动速度</speed>。<br><br><buffedStat>【盈能】的叠层速度在【斗魂竞技场】中翻倍。</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention>50</attention>攻击力<br><attention>20%</attention>攻击速度<br><attention>25%</attention>暴击几率</stats><br><br><passive>盈能</passive><br>移动和攻击会生成一次<keyword>盈能攻击</keyword>。<br><br><passive>电冲</passive><br>你的<keyword>盈能攻击</keyword>附带<magicDamage>0额外魔法伤害</magicDamage>并提供持续2秒的<speed>45%移动速度</speed>。<br><br><buffedStat>【盈能】的叠层速度在【斗魂竞技场】中翻倍。</buffedStat><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13859,7 +13858,7 @@
     {
         "id": 223107,
         "name": "救赎",
-        "description": "<mainText><stats><attention>30</attention>法术强度<br><attention>15</attention>技能急速<br><attention>100%</attention>基础法力回复<br><attention> 16%</attention>治疗和护盾强度</stats><br><br><br><br> <active>主动</active>  (0秒)<br><active>干涉</active><br>选择范围内的一个区域作为目标。在2.5秒后，召下一道光束来治疗友方英雄们并伤害敌方英雄们。</mainText>",
+        "description": "<mainText><stats><attention>30</attention>法术强度<br><attention>15</attention>技能急速<br><attention>100%</attention>基础法力回复<br><attention> 12%</attention>治疗和护盾强度</stats><br><br><br><br> <active>主动</active>  (0秒)<br><active>干涉</active><br>选择范围内的一个区域作为目标。在2.5秒后，召下一道光束来治疗友方英雄们并伤害敌方英雄们。</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14666,7 +14665,7 @@
     {
         "id": 223222,
         "name": "米凯尔的祝福",
-        "description": "<mainText><stats><attention>400</attention>生命值<br><attention>100%</attention>基础法力回复<br><attention> 16%</attention>治疗和护盾强度</stats><br><br> <active>主动</active> (0秒)<br><active>纯化</active><br>移除一名友方英雄身上的所有控制类减益效果(<status>击飞</status>和<status>压制</status>除外)并回复生命值。</mainText>",
+        "description": "<mainText><stats><attention>400</attention>生命值<br><attention>100%</attention>基础法力回复<br><attention> 12%</attention>治疗和护盾强度</stats><br><br> <active>主动</active> (0秒)<br><active>纯化</active><br>移除一名友方英雄身上的所有控制类减益效果(<status>击飞</status>和<status>压制</status>除外)并回复生命值。</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14694,7 +14693,7 @@
     {
         "id": 223302,
         "name": "界弓",
-        "description": "<mainText><stats><attention>30</attention>攻击力<br><attention>25%</attention>攻击速度</stats><br><br><passive>晦影</passive><br>攻击造成<magicDamage>30额外魔法伤害</magicDamage> <OnHit>攻击特效</OnHit>。<br><br><passive>交相</passive><br>对抗英雄时，在<keywordMajor>光明</keywordMajor>特效和<keywordMajor>黑暗</keywordMajor>特效之间轮换：<li>附带<keywordMajor>光明</keywordMajor>特效的攻击提供持续5秒的 <scaleArmor>护甲</scaleArmor>和<scaleMR>魔抗</scaleMR>。<li>附带<keywordMajor>黑暗</keywordMajor>特效的攻击提供持续5秒的8%<scaleArmor>护甲穿透</scaleArmor>和<scaleMR>法术穿透</scaleMR>。 </mainText>",
+        "description": "<mainText><stats><attention>30</attention>攻击力<br><attention>40%</attention>攻击速度</stats><br><br><passive>晦影</passive><br>攻击造成<magicDamage>30额外魔法伤害</magicDamage> <OnHit>攻击特效</OnHit>。<br><br><passive>交相</passive><br>对抗英雄时，在<keywordMajor>光明</keywordMajor>特效和<keywordMajor>黑暗</keywordMajor>特效之间轮换：<li>附带<keywordMajor>光明</keywordMajor>特效的攻击提供持续5秒的 <scaleArmor>护甲</scaleArmor>和<scaleMR>魔抗</scaleMR>。<li>附带<keywordMajor>黑暗</keywordMajor>特效的攻击提供持续5秒的8%<scaleArmor>护甲穿透</scaleArmor>和<scaleMR>法术穿透</scaleMR>。 </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15349,7 +15348,7 @@
     {
         "id": 226621,
         "name": "黎明核心",
-        "description": "<mainText><stats><attention>45</attention>法术强度<br><attention> 16%</attention>治疗和护盾强度<br><attention>200%</attention>基础法力回复</stats><br><br><passive>最初之光</passive><br>每<scaleMana>100%基础法力回复</scaleMana>获得<healing>3%治疗和护盾强度</healing>和<scaleAP>10法术强度</scaleAP>。</mainText>",
+        "description": "<mainText><stats><attention>45</attention>法术强度<br><attention> 12%</attention>治疗和护盾强度<br><attention>200%</attention>基础法力回复</stats><br><br><passive>最初之光</passive><br>每<scaleMana>100%基础法力回复</scaleMana>获得<healing>3%治疗和护盾强度</healing>和<scaleAP>10法术强度</scaleAP>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15561,8 +15560,8 @@
     },
     {
         "id": 226660,
-        "name": "斑比的熔渣",
-        "description": "<mainText><stats><attention>150</attention>生命值<br><attention>5</attention>技能急速</stats><br><br><passive>献祭</passive><br>承受或造成伤害后，对附近敌人造成<magicDamage>魔法伤害</magicDamage>，持续3秒。</mainText>",
+        "name": "Item_226660_Name",
+        "description": "<mainText><stats><attention>550</attention>生命值<br><attention>5</attention>技能急速</stats><br><br><passive>献祭</passive><br>承受或造成伤害后，对附近敌人造成<magicDamage>魔法伤害</magicDamage>，持续3秒。</mainText>",
         "active": false,
         "inStore": false,
         "from": [],
@@ -15722,7 +15721,7 @@
     {
         "id": 226672,
         "name": "海妖杀手",
-        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>35%</attention>攻击速度<br><attention>7%</attention>移动速度</stats><br><br><passive>放倒它</passive><br>每第三次攻击造成<physicalDamage>额外物理伤害</physicalDamage><OnHit>攻击特效</OnHit>，这个伤害会基于目标的已损失生命值获得提升。</mainText>",
+        "description": "<mainText><stats><attention>50</attention>攻击力<br><attention>35%</attention>攻击速度<br><attention>7%</attention>移动速度</stats><br><br><passive>放倒它</passive><br>每第三次攻击造成<physicalDamage>额外物理伤害</physicalDamage><OnHit>攻击特效</OnHit>，这个伤害会基于目标的已损失生命值获得提升。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16184,7 @@
     {
         "id": 228005,
         "name": "黑曜切割者",
-        "description": "<mainText><stats><ornnBonus>70</ornnBonus>攻击力<br><ornnBonus>700</ornnBonus>生命值<br><ornnBonus>40</ornnBonus>技能急速</stats><br><br>Item_3071_Tooltip</mainText>",
+        "description": "<mainText><stats><ornnBonus>70</ornnBonus>攻击力<br><ornnBonus>700</ornnBonus>生命值<br><ornnBonus>40</ornnBonus>技能急速</stats><br><br><passive>切割</passive><br>对英雄造成<physicalDamage>物理伤害</physicalDamage>时会将该目标的<scaleArmor>护甲降低500%</scaleArmor>，持续0.1秒(可叠加5次)。<br><br><passive>热烈</passive><br>造成<physicalDamage>物理伤害</physicalDamage>时会提供持续2秒的<speed>20移动速度</speed>。</mainText>",
         "active": false,
         "inStore": false,
         "from": [],
@@ -17434,7 +17433,7 @@
     {
         "id": 443081,
         "name": "海克斯弹丸配枪",
-        "description": "<mainText><stats><attention>75%</attention>攻击速度<br><attention>500</attention>生命值<br><attention>4%</attention>移动速度</stats><br><br><passive>掩护射击</passive><br>每10秒，<keywordMajor>自动施放</keywordMajor>朝附近的单位发射一枚弩箭，造成<physicalDamage>0物理伤害</physicalDamage>并施加<OnHit>攻击特效</OnHit>特效。<br><br><passive>盈能</passive><br>移动和攻击会生成一次<keyword>盈能攻击</keyword>。<br><br>你的<keyword>盈能</keyword>攻击会触发你的<keywordMajor>自动施放</keywordMajor>效果。</mainText>",
+        "description": "<mainText><stats><attention>70</attention>攻击力<br><attention>50%</attention>攻击速度<br><attention>6%</attention>移动速度</stats><br><br><passive>掩护射击</passive><br>每10秒，<keywordMajor>自动施放</keywordMajor>朝附近的单位发射一枚弩箭，造成<physicalDamage>0物理伤害</physicalDamage>并施加<OnHit>攻击特效</OnHit>特效。<br><br><passive>盈能</passive><br>移动和攻击会生成一次<keyword>盈能攻击</keyword>。<br><br>你的<keyword>盈能</keyword>攻击会触发你的<keywordMajor>自动施放</keywordMajor>效果。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -18266,7 +18265,7 @@
     {
         "id": 447120,
         "name": "钻头长矛",
-        "description": "<mainText><stats><attention> 75</attention>适应之力<br><attention>30%</attention>攻击速度</stats><br><br><passive>长兵器</passive><br>使你的攻击距离提升75。<br><br><passive>百步穿杨</passive><br>基于你的目标与你相隔的距离，攻击至多造成30%额外伤害并且技能至多造成50%额外伤害。额外伤害在700码时达到上限。 </mainText>",
+        "description": "<mainText><stats><attention> 75</attention>适应之力<br><attention>40%</attention>攻击速度</stats><br><br><passive>长兵器</passive><br>使你的攻击距离提升75。<br><br><passive>百步穿杨</passive><br>基于你的目标与你相隔的距离，攻击至多造成30%额外伤害并且技能至多造成50%额外伤害。额外伤害在700码时达到上限。 </mainText>",
         "active": false,
         "inStore": true,
         "from": [],

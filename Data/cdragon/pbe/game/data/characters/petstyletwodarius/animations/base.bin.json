@@ -561,7 +561,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{4964b7eb}": {
+            "Taunt_Press": {
                 "mFlags": 8,
                 "mTrackDataName": "Base",
                 "mAnimationResourceData": {
@@ -699,7 +699,7 @@
             },
             "Taunt2": {
                 "mClipNameList": [
-                    "{4964b7eb}",
+                    "Taunt_Press",
                     "Taunt_loop"
                 ],
                 "mEventDataMap": {
@@ -757,7 +757,7 @@
                         "mAnimationNames": [
                             "Taunt_loop",
                             "Taunt_In",
-                            "{4964b7eb}"
+                            "Taunt_Press"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
@@ -824,7 +824,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{c97be837}": {
+            "Pedestal_Out_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mEventDataMap": {
@@ -854,7 +854,7 @@
                 "EndFrame": 2.0,
                 "__type": "AtomicClipData"
             },
-            "{89214b91}": {
+            "Pedestal_Novfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mTickDuration": 0.03125,
@@ -876,8 +876,8 @@
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{89214b91}",
-                "mFalseConditionClipName": "{eac56288}",
+                "mTrueConditionClipName": "Pedestal_Novfx",
+                "mFalseConditionClipName": "Pedestal_In_Vfx",
                 "__type": "ConditionBoolClipData"
             },
             "Taunt": {
@@ -1039,8 +1039,8 @@
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{c97be837}",
-                "mFalseConditionClipName": "{89214b91}",
+                "mTrueConditionClipName": "Pedestal_Out_Vfx",
+                "mFalseConditionClipName": "Pedestal_Novfx",
                 "__type": "ConditionBoolClipData"
             },
             "{5e5fc064}": {
@@ -1084,7 +1084,7 @@
                 ],
                 "__type": "SequencerClipData"
             },
-            "{eac56288}": {
+            "Pedestal_In_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mEventDataMap": {

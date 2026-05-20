@@ -2441,6 +2441,7 @@
             "calculations": {
                 "MaxShredTooltipOnly": {
                     "__type": "GameCalculation",
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
@@ -2449,12 +2450,9 @@
                         {
                             "__type": "NamedDataValueCalculationPart",
                             "mDataValue": "MaxStacks"
-                        },
-                        {
-                            "__type": "NumberCalculationPart",
-                            "mNumber": 10.0
                         }
-                    ]
+                    ],
+                    "mSimpleTooltipCalculationDisplay": 5
                 }
             },
             "dataValues": {
@@ -2836,8 +2834,8 @@
                 "NumberOfMissiles": [
                     3.0,
                     3.0,
+                    3.0,
                     5.0,
-                    6.0,
                     6.0,
                     6.0,
                     6.0
@@ -5906,7 +5904,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/grevious_venmon.png",
             "iconSmall": "assets/ux/cherry/augments/icons/grevious_venmon_small.png",
             "id": 316,
-            "name": "Cherry_GreviousVenom_Name",
+            "name": "Súlyos méreg",
             "rarity": 0,
             "tooltip": "Az ellenséges hősöknek okozott sebzés @DebuffDuration@ másodpercig @ShieldShred@%-kal csökkenti az általuk szerzett <shield>pajzsok</shield> erejét, és <status>@GrievousAmount*100@%-os Súlyos seb hatást</status> alkalmaz rájuk. <br><br><buffedStat>Ha egy ellenfél a <status>Súlyos seb</status> hatása alatt a maximális életerejének @GrievousAmpThreshold*100@%-ánál többet gyógyul, a mértéke <status>@GrievousAmpAmount*100@%-os Súlyos sebre</status> növekszik.</buffedStat><br><br><rules>{{ Item_Grievous_Wounds }}</rules><br><br><rules>Csak az általános és fizikai sebzés ellen védő pajzsokra hat, a teljesen varázssebzés ellen védő pajzsokra nem.</rules>"
         },
@@ -6063,7 +6061,7 @@
                 "InverseRate": [
                     0.6000000238418579,
                     0.6000000238418579,
-                    0.800000011920929,
+                    2.799999952316284,
                     0.800000011920929,
                     0.800000011920929,
                     0.800000011920929,
@@ -6255,7 +6253,7 @@
                 "ADcoefficient": [
                     0.07000000029802322,
                     0.07000000029802322,
-                    0.09000000357627869,
+                    0.07999999821186066,
                     0.09000000357627869,
                     0.09000000357627869,
                     0.09000000357627869,
@@ -6264,7 +6262,7 @@
                 "APcoefficient": [
                     0.03999999910593033,
                     0.03999999910593033,
-                    0.07000000029802322,
+                    0.05999999865889549,
                     0.07000000029802322,
                     0.07000000029802322,
                     0.07000000029802322,
@@ -6273,7 +6271,7 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.007499999832361937,
+                    0.006500000134110451,
                     0.007499999832361937,
                     0.007499999832361937,
                     0.007499999832361937,
@@ -8534,7 +8532,7 @@
                 "InverseRate": [
                     1.666659951210022,
                     1.666659951210022,
-                    0.0,
+                    2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
@@ -8860,13 +8858,13 @@
                     1.5
                 ],
                 "ReviveMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ],
                 "SelfReviveTimerModMax": [
                     0.5,
@@ -8887,13 +8885,13 @@
                     0.4000000059604645
                 ],
                 "SizeMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ]
             },
             "desc": "@BonusLives@ további <attention>újjáéledést</attention> kapsz, és ha meghalsz, elkezded újjáéleszteni magad.<br><br><attention>Újraéledéskor</attention> <status>hátralököd</status> a közeli ellenfeleket, valamint kisebb leszel, és a <scaleHealth>maximális életerőd</scaleHealth> csökken.",
@@ -9032,7 +9030,7 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Támadáskor @AdditionalBolts@ lövedéket lősz ki, amelyek mindegyike <physicalDamage>fizikai sebzést</physicalDamage> okoz és alkalmazza a hatásokat {{ Item_Keyword_OnHit }}.",
+            "desc": "Cherry_FanTheHammer_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/fanthehammer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fanthehammer_small.png",
             "id": 220,
@@ -9826,13 +9824,13 @@
                     0.3499999940395355
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaximumDistanceRoF": [
                     1500.0,
@@ -9955,13 +9953,13 @@
                     1.0
                 ],
                 "CritDamageMultipler": [
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.15000000596046448
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "MaxLevel": [
                     2.0,
@@ -12050,22 +12048,22 @@
             "calculations": {},
             "dataValues": {
                 "Haste": [
-                    125.0,
+                    75.0,
                     200.0,
-                    275.0,
-                    350.0,
-                    425.0,
-                    500.0,
-                    575.0
+                    325.0,
+                    450.0,
+                    575.0,
+                    700.0,
+                    825.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelTenacityDuration": [
                     3.0,
@@ -12202,13 +12200,13 @@
                     40.0
                 ],
                 "TotalASValue": [
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ]
             },
             "desc": "<attackSpeed>@TotalASValue*100@% teljes támadási sebességet</attackSpeed> biztosít. <br><br>@Breakpoint1@ <attackSpeed>másodpercenkénti támadásnál</attackSpeed> további <magicDamage>varázssebzést</magicDamage> okoz {{ Item_Keyword_OnHit }}.",
