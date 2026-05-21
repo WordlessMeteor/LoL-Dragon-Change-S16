@@ -9502,7 +9502,7 @@
                 hasTFTNewPlayerRestriction: o.Ember.computed("restrictions", (function() {
                     return !!this.get("restrictions").find((e => e.restrictionCode === a.TFT_NEW_PLAYER_RESTRICTION))
                 })),
-                teamSizeRestrictionMembers: o.Ember.computed("restrictions", "restrictions.[]", (function() {
+                teamSizeRestrictionMembers: o.Ember.computed("currentPartyMembers", "restrictions", "restrictions.[]", (function() {
                     const e = this.get("restrictions");
                     if (e)
                         for (let t = 0; t < e.length; t++)
@@ -9580,17 +9580,19 @@
                         y: 0
                     }
                 },
-                restrictionsText: o.Ember.computed("shouldShowPremadeSizeError", "hasLobbyRestrictions", "teamSizeRestrictionMembers", "hasTFTNewPlayerRestriction", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "tra.ready", "tra.game_select_queue_restriction_party_notification", "tra.game_select_queue_restriction_party_doubleupteamsizerestriction", "eligibilityService.partyHasNewTFTPlayer", "tftNewPlayerErrorText", "lobbiesService.queueId", (function() {
+                restrictionsText: o.Ember.computed("shouldShowPremadeSizeError", "hasLobbyRestrictions", "teamSizeRestrictionMembers", "hasTFTNewPlayerRestriction", "currentPartyMembers", "restrictions", "restrictions.@each.restrictionCode", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "tra.ready", "tra.game_select_queue_restriction_party_teamsizerestriction", "tra.game_select_queue_restriction_party_doubleupteamsizerestriction", "eligibilityService.partyHasNewTFTPlayer", "tftNewPlayerErrorText", "lobbiesService.queueId", (function() {
                     if (this.get("shouldShowPremadeSizeError")) return this.get("premadeSizeErrorText");
                     if (this.get("teamSizeRestrictionMembers") > 0) {
                         const e = this.get("lobbiesService.queueId");
-                        return a.PAIRS_QUEUE_IDS.includes(e) ? this.get("tra.game_select_queue_restriction_party_doubleupteamsizerestriction") : this.get("tra.game_select_queue_restriction_party_notification")
+                        return a.PAIRS_QUEUE_IDS.includes(e) ? this.get("tra.game_select_queue_restriction_party_doubleupteamsizerestriction") : this.get("tra").formatString("game_select_queue_restriction_party_teamsizerestriction", {
+                            teamSizeRestriction: this.get("teamSizeRestrictionMembers")
+                        })
                     }
                     if (this.get("hasTFTNewPlayerRestriction") && this.get("eligibilityService.partyHasNewTFTPlayer")) return this.get("tftNewPlayerErrorText");
                     const e = this.get("disabledReasons");
                     return e && e.length > 0 ? e[0] : ""
                 })),
-                restrictionsTooltipTextObserver: o.Ember.on("init", o.Ember.observer("hasLobbyRestrictions", "restrictions.@each.restrictionCode", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "restrictions", "lobbiesService.currentPartyMembers.@each.summonerId", "lobbiesService.queueId", "tra.ready", (function() {
+                restrictionsTooltipTextObserver: o.Ember.on("init", o.Ember.observer("teamSizeRestrictionMembers", "hasLobbyRestrictions", "restrictions.@each.restrictionCode", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "restrictions", "currentPartyMembers", "lobbiesService.currentPartyMembers.@each.summonerId", "lobbiesService.queueId", "tra.ready", (function() {
                     o.Ember.run.once(this, (() => {
                         this.generateRestrictionStringsForParty()
                     }))
@@ -15906,7 +15908,7 @@
                 })),
                 hidePositionWarning: i.Ember.computed.or("matchmakingService.isInQueue", "currentTeamIsFull", "notDraftPick"),
                 hideAutofillStatus: i.Ember.computed.alias("hidePositionWarning"),
-                teamSizeRestrictionMembers: i.Ember.computed("restrictions", "restrictions.[]", (function() {
+                teamSizeRestrictionMembers: i.Ember.computed("currentPartyMembers", "restrictions", "restrictions.[]", (function() {
                     const e = this.get("restrictions");
                     if (e)
                         for (let t = 0; t < e.length; t++)
@@ -16025,7 +16027,7 @@
                         y: 0
                     }
                 },
-                restrictionsText: i.Ember.computed("shouldShowPremadeSizeError", "hasLobbyRestrictions", "teamSizeRestrictionMembers", "hasTFTNewPlayerRestriction", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "tra.ready", "tra.game_select_queue_restriction_party_notification", "tra.game_select_queue_restriction_party_doubleupteamsizerestriction", "disabledReasons", "QPLobbyRestrictions", "queuesEntity", "eligibilityService.partyHasNewTFTPlayer", "tftNewPlayerErrorText", "lobbiesService.queueId", "clientPlatformRestrictions", (function() {
+                restrictionsText: i.Ember.computed("shouldShowPremadeSizeError", "hasLobbyRestrictions", "teamSizeRestrictionMembers", "hasTFTNewPlayerRestriction", "currentPartyMembers", "restrictions", "restrictions.@each.restrictionCode", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "tra.ready", "tra.game_select_queue_restriction_party_teamsizerestriction", "tra.game_select_queue_restriction_party_doubleupteamsizerestriction", "disabledReasons", "QPLobbyRestrictions", "queuesEntity", "eligibilityService.partyHasNewTFTPlayer", "tftNewPlayerErrorText", "lobbiesService.queueId", "clientPlatformRestrictions", (function() {
                     const e = this.get("QPLobbyRestrictions");
                     if (e) return e;
                     if (this.get("shouldShowPremadeSizeError")) return this.get("premadeSizeErrorText");
@@ -16033,13 +16035,15 @@
                         const e = this.get("queuesEntity"),
                             t = this.get("lobbiesService.queueId"),
                             n = e.getQueueById(t);
-                        return n && n.gameMode === a.CHERRY_GAME_MODE ? this.get("tra.game_select_queue_restriction_party_cherrypartyineligiblesize") : this.get("tra.game_select_queue_restriction_party_notification")
+                        return n && n.gameMode === a.CHERRY_GAME_MODE ? this.get("tra.game_select_queue_restriction_party_cherrypartyineligiblesize") : this.get("tra").formatString("game_select_queue_restriction_party_teamsizerestriction", {
+                            teamSizeRestriction: this.get("teamSizeRestrictionMembers")
+                        })
                     }
                     if (this.get("hasTFTNewPlayerRestriction") && this.get("eligibilityService.partyHasNewTFTPlayer")) return this.get("tftNewPlayerErrorText");
                     const t = this.get("disabledReasons");
                     return t && t.length > 0 ? t.find((e => e[0])) : ""
                 })),
-                restrictionsTooltipTextObserver: i.Ember.on("init", i.Ember.observer("hasLobbyRestrictions", "restrictions.@each.restrictionCode", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "restrictions", "lobbiesService.currentPartyMembers.@each.summonerId", "lobbiesService.queueId", "tra.ready", (function() {
+                restrictionsTooltipTextObserver: i.Ember.on("init", i.Ember.observer("teamSizeRestrictionMembers", "hasLobbyRestrictions", "restrictions.@each.restrictionCode", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "restrictions", "currentPartyMembers", "lobbiesService.currentPartyMembers.@each.summonerId", "lobbiesService.queueId", "tra.ready", (function() {
                     i.Ember.run.once(this, (() => {
                         this.generateRestrictionStringsForParty()
                     }))

@@ -5904,7 +5904,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/grevious_venmon.png",
             "iconSmall": "assets/ux/cherry/augments/icons/grevious_venmon_small.png",
             "id": 316,
-            "name": "Cherry_GreviousVenom_Name",
+            "name": "重创毒液",
             "rarity": 0,
             "tooltip": "对敌方英雄造成伤害时会使其获得的所有<shield>护盾</shield>降低@ShieldShred@%，并施加<status>@GrievousAmount*100@%重创</status>效果，持续@DebuffDuration@秒。<br><br><buffedStat>如果敌人在持续受到<status>重创</status>影响的同时获得其最大生命值@GrievousAmpThreshold*100@%的治疗，则提升至<status>@GrievousAmpAmount*100@%重创</status>。</buffedStat><br><br><rules>{{ Item_Grievous_Wounds }}</rules><br><br><rules>只会影响一般护盾和物理伤害护盾，但不会影响单纯格挡魔法伤害的护盾。</rules>"
         },
@@ -7684,13 +7684,13 @@
             "calculations": {},
             "dataValues": {
                 "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "EnemyDetectionRadius": [
                     800.0,
@@ -9030,7 +9030,7 @@
                     0.20000000298023224
                 ]
             },
-            "desc": "Cherry_FanTheHammer_Summary",
+            "desc": "普攻时，发射@AdditionalBolts@支箭矢，每支造成<physicalDamage>物理伤害</physicalDamage>并附加{{ Item_Keyword_OnHit }}。",
             "iconLarge": "assets/ux/cherry/augments/icons/fanthehammer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/fanthehammer_small.png",
             "id": 220,
@@ -10182,10 +10182,10 @@
             "calculations": {},
             "dataValues": {
                 "AttackSpeed": [
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.75,
-                    1.2000000476837158,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.800000011920929,
+                    1.2999999523162842,
                     1.5,
                     1.5,
                     1.5
@@ -11170,64 +11170,6 @@
             "name": "财富的渴望",
             "rarity": 4,
             "tooltip": "向贪啃奇献祭<scaleHealth>@HealthReductionPercent@%自身最大生命值</scaleHealth>。<br><br>你的献祭总量将提升至<scaleHealth>-@MaxHealthReduction@%最大生命值</scaleHealth>。<br><br>获得<gold>+%i:goldCoins%@GoldToGrant@金钱</gold>。"
-        },
-        {
-            "apiName": "FrozenFoundations",
-            "calculations": {},
-            "dataValues": {
-                "ChampPushDistance": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "NonChampPushDistance": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
-                ],
-                "WallDuration": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "WallWidth": [
-                    800.0,
-                    800.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0
-                ]
-            },
-            "desc": "获得召唤师技能<spellName>极冻基域</spellName>。<br><br><rules><spellName>极冻基域</spellName>可在指定区域召唤一道冰墙。</rules>",
-            "iconLarge": "assets/ux/cherry/augments/icons/frozenfoundations_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/frozenfoundations_small.png",
-            "id": 40,
-            "name": "极冻基域",
-            "rarity": 0,
-            "tooltip": "<rules>在目标区域召唤一道冰墙。</rules>"
         },
         {
             "apiName": "CriticalHealing",

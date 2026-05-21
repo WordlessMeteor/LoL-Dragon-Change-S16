@@ -2505,9 +2505,9 @@
                     const e = this.get("queues").get(this.get("gameData.queueId"));
                     return e ? e.detailedDescription ? e.detailedDescription : e.description : ""
                 })),
-                outcome: n.Ember.computed("currentParticipant.win", "gameData.endOfGameResult", "tra.postgame_progress_victory", "tra.postgame_progress_defeat", "tra.MATCH_HISTORY_MATCH_RESULT_REMAKE", "tra.MATCH_HISTORY_MATCH_RESULT_CHEATER_TERMINATED_VANGUARD", "currentParticipant.stats.gameEndedInEarlySurrender", (function() {
+                outcome: n.Ember.computed("currentParticipant.win", "gameData.endOfGameResult", "tra.postgame_progress_victory", "tra.postgame_progress_defeat", "tra.MATCH_HISTORY_MATCH_RESULT_REMAKE", "tra.MATCH_HISTORY_MATCH_RESULT_CHEATER_TERMINATED_VANGUARD", "currentParticipant.stats.gameEndedInEarlySurrender", "currentParticipant.stats.gameEndedInIGNBSurrender", (function() {
                     const e = this.get("currentParticipant").win;
-                    return "Abort_AntiCheatExit" === this.get("gameData.endOfGameResult") ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_CHEATER_TERMINATED_VANGUARD") : this.get("currentParticipant.stats.gameEndedInEarlySurrender") ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_REMAKE") : this.get("tra." + (e ? "postgame_progress_victory" : "postgame_progress_defeat"))
+                    return "Abort_AntiCheatExit" === this.get("gameData.endOfGameResult") ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_CHEATER_TERMINATED_VANGUARD") : this.get("currentParticipant.stats.gameEndedInIGNBSurrender") ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_TERMINATED_DISRUPTIVE_BEHAVIOR") : this.get("currentParticipant.stats.gameEndedInEarlySurrender") ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_REMAKE") : this.get("tra." + (e ? "postgame_progress_victory" : "postgame_progress_defeat"))
                 })),
                 mapIcon: n.Ember.computed("currentParticipant.win", "gameData.mapId", "animationDisabled", (function() {
                     const e = this.get("map");

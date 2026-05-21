@@ -3235,26 +3235,26 @@
                 {
                     "name": "QCritRatio",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "QDamagePerStack",
                     "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
+                        0.33000001311302185,
+                        0.33000001311302185,
+                        0.33000001311302185,
+                        0.33000001311302185,
+                        0.33000001311302185,
+                        0.33000001311302185,
+                        0.33000001311302185
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3274,13 +3274,13 @@
                 {
                     "name": "EDamagePerStack",
                     "values": [
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3381,6 +3381,37 @@
                     "__type": "GameCalculation"
                 },
                 "EBonusDamage": {
+                    "mMultiplier": {
+                        "mSubparts": [
+                            {
+                                "mNumber": 1.0,
+                                "__type": "NumberCalculationPart"
+                            },
+                            {
+                                "mPart1": {
+                                    "mStat": 8,
+                                    "mCoefficient": 0.6000000238418579,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                "mPart2": {
+                                    "mSubparts": [
+                                        {
+                                            "mNumber": -1.0,
+                                            "__type": "NumberCalculationPart"
+                                        },
+                                        {
+                                            "mStat": 9,
+                                            "mCoefficient": 1.0,
+                                            "__type": "StatByCoefficientCalculationPart"
+                                        }
+                                    ],
+                                    "__type": "SumOfSubPartsCalculationPart"
+                                },
+                                "__type": "ProductOfSubPartsCalculationPart"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
+                    },
                     "mFormulaParts": [
                         {
                             "mBuffName": "{32bcea5d}",

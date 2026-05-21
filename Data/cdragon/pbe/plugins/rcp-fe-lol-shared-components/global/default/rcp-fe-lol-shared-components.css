@@ -4861,8 +4861,7 @@ div.player-name-input__split-inputs-wrapper {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-top: 12px;
-    padding-left: 24px
+    margin: 12px auto
 }
 
 .communications-agreement-modal-component .communications-agreement-korea-option {
@@ -16476,7 +16475,12 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     flex-shrink: 0;
     gap: 4px;
     height: 20px;
-    padding: 2px 8px
+    padding: 2px 8px;
+    transition: background-color .25s ease-in
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge:hover {
+    background-color: #010a13
 }
 
 .honor-panel-reward-component .honor-panel-reward-row-badge-icon {

@@ -913,8 +913,8 @@
                     TEMPLATES: {
                         application: w.default,
                         "components/objectives-game-tabs": S.default,
-                        "components/objectives-sub-nav-v2": j.default,
-                        "components/objectives-main-v2": I.default,
+                        "components/objectives-sub-nav-v2": I.default,
+                        "components/objectives-main-v2": j.default,
                         "components/objectives-card-v2": O.default,
                         "components/objectives-progress-radial": P.default,
                         "components/objectives-reward-tooltip": y.default,
@@ -958,8 +958,8 @@
                 y = X(s(12)),
                 C = X(s(39)),
                 w = X(s(40)),
-                j = X(s(41)),
-                I = X(s(42)),
+                I = X(s(41)),
+                j = X(s(42)),
                 O = X(s(15)),
                 A = X(s(43)),
                 M = X(s(44)),
@@ -1845,8 +1845,7 @@
             s(37);
             const o = a(s(14)),
                 i = s(2),
-                l = s(8),
-                r = ["97267a01-5d78-469a-8fea-d9083298d572"];
+                l = s(8);
             t.default = n.Ember.Controller.extend({
                 pipNotifications: n.Ember.inject.service("pip-notifications"),
                 seasonPassService: n.Ember.inject.service("season-pass"),
@@ -1882,29 +1881,18 @@
                     }))
                 },
                 fetchObjectivesData(e) {
-                    const t = Promise.all(r.map((e => (0, n.dataBinding)("/lol-event-hub", n.socket).get(`/v1/events/${e}/objectives-banner`))));
-                    return Promise.all([(0, n.dataBinding)("/lol-objectives", n.socket).get(`/v1/objectives/${e}`), t]).then((t => {
-                        const s = t[0],
-                            a = t[1];
-                        if (!s || 0 === s.length) throw new Error(`No objective data found in response for gameType: ${e}`);
-                        let n = this.convertObjectiveDataV2(s);
-                        n = n.filter((e => {
-                            const t = r.indexOf(e.id);
-                            if (t > -1) {
-                                const e = a[t];
-                                if (e?.rewardTrackProgress?.level === e?.rewardTrackProgress?.totalLevels) return !1
-                            }
-                            return !0
-                        }));
-                        const o = this.validateGroupParam(n, this.get("selectedGroupId")),
-                            i = this.validateCategoryParam(this.get("selectedCategoryId")),
-                            l = this.get("selectedMissionId") || "";
+                    return (0, n.dataBinding)("/lol-objectives", n.socket).get(`/v1/objectives/${e}`).then((t => {
+                        if (!t || 0 === t.length) throw new Error(`No objective data found in response for gameType: ${e}`);
+                        const s = this.convertObjectiveDataV2(t),
+                            a = this.validateGroupParam(s, this.get("selectedGroupId")),
+                            n = this.validateCategoryParam(this.get("selectedCategoryId")),
+                            o = this.get("selectedMissionId") || "";
                         this.setProperties({
                             hasInitialized: !0,
-                            objectiveCategories: n,
-                            selectedGroupId: o,
-                            selectedCategoryId: i,
-                            selectedMissionId: l,
+                            objectiveCategories: s,
+                            selectedGroupId: a,
+                            selectedCategoryId: n,
+                            selectedMissionId: o,
                             isLoading: !1
                         })
                     })).catch((e => {

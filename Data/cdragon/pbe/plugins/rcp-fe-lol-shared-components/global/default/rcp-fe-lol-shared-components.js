@@ -19014,7 +19014,7 @@
                 },
                 _onKoreaComplianceConfigUpdate(e) {
                     if (this.isDestroyed || this.isDestroying) return;
-                    const t = Boolean(e && e.enabled);
+                    const t = Boolean(e);
                     this.set("showKoreaCompliance", t), s.logger.trace("Communications agreement Korea compliance section enabled:", t)
                 },
                 actions: {

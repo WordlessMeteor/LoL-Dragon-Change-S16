@@ -451,7 +451,7 @@
         "constants": {
             "{df085b93}": {
                 "Health": {
-                    "mValue": 6,
+                    "mValue": 7,
                     "__type": "GameModeConstantInteger"
                 },
                 "AttackSpeed": {
@@ -4478,7 +4478,7 @@
                     "__type": "GameModeConstantInteger"
                 },
                 "SpecialistMissileDamage_TOOLTIPONLY": {
-                    "mValue": 85,
+                    "mValue": 70,
                     "__type": "GameModeConstantInteger"
                 },
                 "CasterManaSpent_TOOLTIPONLY": {
@@ -10920,6 +10920,52 @@
         ],
         "__type": "TftItemData"
     },
+    "{1e69e552}": {
+        "mName": "TFT6_Augment_ThriftShop",
+        "MutuallyExclusiveItems": [
+            "{63ac6499}",
+            "{782ffaa4}",
+            "{26e1ae45}"
+        ],
+        "constants": {
+            "{df085b93}": {
+                "XP": {
+                    "mValue": 2.0,
+                    "__type": "GameModeConstantFloat"
+                },
+                "Gold": {
+                    "mValue": 3,
+                    "__type": "GameModeConstantInteger"
+                },
+                "Numrolls": {
+                    "mValue": 1,
+                    "__type": "GameModeConstantInteger"
+                }
+            },
+            "__type": "{d65315ee}"
+        },
+        "ItemTags": [
+            "{cf1fd3af}",
+            "{b72bd3bf}",
+            "{92e7310e}",
+            "{a7b22c38}",
+            "{d22ae649}",
+            "{7aaa3b47}",
+            "{24d36c27}"
+        ],
+        "IsAugment": true,
+        "mDisplayNameTra": "TFT6_Augment_ThriftShop_Name",
+        "mDescriptionNameTra": "TFT6_Augment_ThriftShop_Desc",
+        "mArmoryIconOverridePath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/WiseSpending3.tex",
+        "mIconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/WiseSpending3.tex",
+        "mColor": [
+            76,
+            241,
+            255,
+            255
+        ],
+        "__type": "TftItemData"
+    },
     "{1ee5658d}": {
         "mName": "TFT10_Augment_FullyAdapted",
         "MutuallyExclusiveItems": [
@@ -11344,7 +11390,8 @@
             "{5d4c7a70}",
             "{1df3986c}",
             "{782ffaa4}",
-            "{1172cdd1}"
+            "{1172cdd1}",
+            "{1e69e552}"
         ],
         "constants": {
             "{df085b93}": {
@@ -14073,6 +14120,43 @@
         },
         "__type": "ResourceResolver"
     },
+    "{63ac6499}": {
+        "mName": "TFT_Augment_DualPurpose",
+        "MutuallyExclusiveItems": [
+            "{1e69e552}"
+        ],
+        "constants": {
+            "{df085b93}": {
+                "goldtogive": {
+                    "mValue": 2.0,
+                    "__type": "GameModeConstantFloat"
+                }
+            },
+            "__type": "{d65315ee}"
+        },
+        "ItemTags": [
+            "{b72bd3bf}",
+            "{cf1fd3af}",
+            "{d12ae4b6}",
+            "{7aaa3b47}",
+            "{d22ae649}",
+            "{24d36c27}"
+        ],
+        "IsAugment": true,
+        "mDisplayNameTra": "tft_Augment_DualPurpose_name_",
+        "mDescriptionNameTra": "tft_Augment_DualPurpose_description_",
+        "mArmoryIconOverridePath": "ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/DualPurpose_III.TFT_Set12.tex",
+        "mIconPath": "ASSETS/Maps/TFT/Icons/Augments/Hexcore/DualPurpose_III.TFT_Set12.tex",
+        "{41b0f90b}": "ClientStates/Gameplay/UX/TFT/UiMaterials/Augments/Set12/ChoiceUI/DualPurpose_III",
+        "IconMaterial": "ClientStates/Gameplay/UX/TFT/UiMaterials/Augments/Set12/Hexcore/DualPurpose_III",
+        "mColor": [
+            76,
+            241,
+            255,
+            255
+        ],
+        "__type": "TftItemData"
+    },
     "{6430856f}": {
         "mName": "TFT_Augment_HighVoltage",
         "MutuallyExclusiveItems": [
@@ -15194,7 +15278,8 @@
         "mName": "TFT6_Augment_MaxLevel10",
         "MutuallyExclusiveItems": [
             "{23484123}",
-            "{b952c1c7}"
+            "{b952c1c7}",
+            "{1e69e552}"
         ],
         "constants": {
             "{df085b93}": {
@@ -19611,7 +19696,8 @@
         "mName": "TFT6_Augment_Legend_MaxLevel10",
         "MutuallyExclusiveItems": [
             "{23484123}",
-            "{b952c1c7}"
+            "{b952c1c7}",
+            "{1e69e552}"
         ],
         "constants": {
             "{df085b93}": {
@@ -29908,7 +29994,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set17/Malphite_Skin25_Primary_Z_Tar_exit_smoke.TFT_Set17.tex",
+                "texture": "ASSETS/Characters/TFT3_SuperMech/Skins/Base/Particles/TFT3_SuperMech_Base_Primary_R_Tar_exit_smoke.tex",
                 "numFrames": 4,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -57153,7 +57239,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set17/PetChibiMorgana_Skin2_Emote_TFT_Base_01_1.scb",
+                        "mSimpleMeshName": "ASSETS/Shared/Particles/TFT/Vex_Skin10_W_01_1.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"

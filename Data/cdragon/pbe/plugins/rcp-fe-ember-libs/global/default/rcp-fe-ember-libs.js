@@ -45931,7 +45931,7 @@
                     }));
                     this._starShardsTimeout && (clearTimeout(this._starShardsTimeout), this._starShardsTimeout = null);
                     const o = () => {
-                        this._starShardsAmount -= n, this._starShardsAmount < t && (this._starShardsAmount = t, this.set("_starShardsAmountRaw", t)), this._starShardsAmount > t && (this._starShardsTimeout = setTimeout(o, 10))
+                        this._starShardsAmount -= n, this._starShardsAmount <= t && (this._starShardsAmount = t, this.set("_starShardsAmountRaw", t)), this._starShardsAmount > t && (this._starShardsTimeout = setTimeout(o, 10))
                     };
                     return o(), i
                 }

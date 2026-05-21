@@ -303,9 +303,9 @@
                 },
                 _handleSummonerLeaguesData: function(e) {
                     if (!e) return;
-                    if (!this.get("isViewingLocalSummoner") && this.leagueTierNames.isApexForQueue(e[0])) {
+                    if (e[0].queueType && this.set("highestRankedQueueType", e[0].queueType), !this.get("isViewingLocalSummoner") && this.leagueTierNames.isApexForQueue(e[0])) {
                         const t = e[0];
-                        this._cacheApexQueueInfo(t, t.queueType, t.tier), e && e[0].queueType && this.set("highestRankedQueueType", e[0].queueType)
+                        this._cacheApexQueueInfo(t, t.queueType, t.tier)
                     }
                     const t = this.enrichSummonerLeaguesData(e);
                     this.set("leagues.summonerLeagues", t), this.set("isLoading", !1)
@@ -527,7 +527,7 @@
                         standing: n
                     })
                 },
-                _selectLeagueType: function(e, t) {
+                _selectLeagueType: function(e, t, n = !1) {
                     switch (this.get("leagueTypeSelected") !== e && this.set("leagueTypeSelected", e), e) {
                         case "unranked":
                             this._selectUnranked();
@@ -541,7 +541,7 @@
                             break
                         }
                         default:
-                            this._requestAndSelectApexLeague(t, "CHALLENGER")
+                            this._requestAndSelectApexLeague(t, "CHALLENGER", n)
                     }
                 },
                 _selectUnranked: function() {
@@ -551,14 +551,14 @@
                         standing: null
                     })
                 },
-                _requestApexData: function(e, t) {
-                    const n = this.get(`leagues.apexQueueInfoByQueueAndTier.${e}.${t}`);
-                    return n ? Promise.resolve(this._handleApexQueueInfoData(n, e, t)) : this.rankedService.get(`/v1/apex-leagues/${e}/${t}`, {
+                _requestApexData: function(e, t, n) {
+                    const a = this.get(`leagues.apexQueueInfoByQueueAndTier.${e}.${t}`);
+                    return n || !a || null != a.nextApexUpdateMillis && Date.now() > a.nextApexUpdateMillis ? this.rankedService.get(`/v1/apex-leagues/${e}/${t}`, {
                         skipCache: !0
-                    }).then((n => this._handleApexQueueInfoData(n, e, t)))
+                    }).then((n => this._handleApexQueueInfoData(n, e, t))) : Promise.resolve(this._handleApexQueueInfoData(a, e, t))
                 },
-                _requestAndSelectApexLeague: function(e = "RANKED_SOLO_5x5", t = "CHALLENGER") {
-                    return this._requestApexData(e, t).then((t => {
+                _requestAndSelectApexLeague: function(e = "RANKED_SOLO_5x5", t = "CHALLENGER", n) {
+                    return this._requestApexData(e, t, n).then((t => {
                         const n = t.find((t => t.queueType === e));
                         this._selectLeague(n, !0)
                     }))
@@ -610,7 +610,7 @@
                     refreshRankings: function() {
                         const e = this.get("leagueTypeSelected"),
                             t = this.get("selectedState.league.queueType");
-                        this._selectLeagueType(e, t)
+                        this._selectLeagueType(e, t, !0)
                     }
                 }
             })
@@ -1432,8 +1432,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "htyGByiP",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isProvisional"]]],null,7],["text","\\n"],["open-element","lol-regalia-ranked-banner-v2-element",[]],["static-attr","animations","false"],["static-attr","banner-type","lastSeasonHighestRank"],["dynamic-attr","banner-rank",["concat",[["unknown",["displayedPreviousTier"]]]]],["static-attr","animation-config","{\\"topFadeEnd\\": 1, \\"topFadeStart\\": 0.15}"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","ranked-banner-contents-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","banner-ranked-emblem-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","banner-regalia-crest-sizer"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["unranked"]],"unranked",["get",["displayedTier"]]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isProvisional"]]],null,4,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-tier-division-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["banner-league-points-display ",["helper",["unless"],[["get",["showLeaguePoints"]],"hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["leaguePointsString"]],false],["text","\\n    "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-apex-ladder-rank"],["flush-element"],["text","\\n        "],["append",["unknown",["apexLadderRank"]],false],["text","\\n      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasApexLadderRank"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-miniseries-progress"],["flush-element"],["text","\\n        "],["append",["helper",["miniseries-results"],null,[["results","showingAsSelf"],[["get",["miniseries"]],true]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["miniseries"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-provisional-text-container"],["flush-element"],["text","\\n        "],["append",["unknown",["provisionalGamesProgressText"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","provisional-banner-static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","id","provisional-banner-loop"],["static-attr","src","/fe/lol-static-assets/videos/provisional-banner-loop.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isAnimationEnabled"]]],null,6,5]],"locals":[]}],"hasPartials":false}',
+                id: "qH2AXzzK",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isProvisional"]]],null,7],["text","\\n"],["open-element","lol-regalia-ranked-banner-v2-element",[]],["static-attr","animations","false"],["static-attr","banner-type","lastSeasonHighestRank"],["dynamic-attr","banner-rank",["concat",[["unknown",["displayedPreviousTier"]]]]],["static-attr","animation-config","{\\"topFadeEnd\\": 1, \\"topFadeStart\\": 0.15}"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","ranked-banner-contents-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","banner-ranked-emblem-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","banner-regalia-crest-sizer"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","queue-type",["unknown",["queueType"]],null],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["unranked"]],"unranked",["get",["displayedTier"]]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isProvisional"]]],null,4,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-tier-division-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["banner-league-points-display ",["helper",["unless"],[["get",["showLeaguePoints"]],"hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["leaguePointsString"]],false],["text","\\n    "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-apex-ladder-rank"],["flush-element"],["text","\\n        "],["append",["unknown",["apexLadderRank"]],false],["text","\\n      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasApexLadderRank"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-miniseries-progress"],["flush-element"],["text","\\n        "],["append",["helper",["miniseries-results"],null,[["results","showingAsSelf"],[["get",["miniseries"]],true]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["miniseries"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-provisional-text-container"],["flush-element"],["text","\\n        "],["append",["unknown",["provisionalGamesProgressText"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","provisional-banner-static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","id","provisional-banner-loop"],["static-attr","src","/fe/lol-static-assets/videos/provisional-banner-loop.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isAnimationEnabled"]]],null,6,5]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -4013,7 +4013,9 @@
                     })), t.addEventListener(i.EVENT_OUT_SHOW_SUBSECTION, ((t, n) => {
                         n.summonerId && d.summonerId !== n.summonerId && (e.setHideSubsection(!0), d.summonerId = null, function(e) {
                             const t = l + e;
-                            return (0, a.dataBinding)(o, (0, a.getProvider)().getSocket()).get(t).then((e => {
+                            return (0, a.dataBinding)(o, (0, a.getProvider)().getSocket()).get(t, {
+                                skipCache: !0
+                            }).then((e => {
                                 const t = e.filter((e => e && a.LeaguesConsts.APEX_TIERS.includes(e.tier)));
                                 return !t || t.length > 0
                             }))

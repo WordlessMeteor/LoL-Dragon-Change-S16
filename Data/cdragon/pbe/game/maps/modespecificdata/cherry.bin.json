@@ -134849,7 +134849,42 @@
                 "cherry": {
                     "SpellDataValues": [
                         {
+                            "name": "HastePerStack",
+                            "values": [
+                                8.0,
+                                8.0,
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MoveSpeedAmpPerStack",
+                            "values": [
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.014999999664723873,
+                                0.014999999664723873,
+                                0.014999999664723873,
+                                0.014999999664723873,
+                                0.014999999664723873
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
                             "name": "PercentOfStacksLost",
+                            "values": [
+                                0.25,
+                                0.25,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
                             "__type": "SpellDataValue"
                         }
                     ],
@@ -134868,10 +134903,22 @@
                             "levelCount": 2,
                             "Elements": [
                                 {
-                                    "type": "PercentOfStacksLost",
+                                    "type": "HastePerStack",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_StacksLost",
+                                    "nameOverride": "Spell_ListType_AbilityHaste",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MoveSpeedAmpPerStack",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentOfStacksLost",
+                                    "nameOverride": "Spell_ListType_StacksLost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
