@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ]
             },
             "desc": "要求：取得@TakedownsNeeded@次击杀/助攻。<br><br>奖励：黄金锅铲",
@@ -6018,13 +6018,13 @@
                     1.0
                 ]
             },
-            "desc": "为你的队伍投票，选择与恶魔结盟。<br><br>与恶魔结盟后，每当<keywordMajor>猎人队伍被淘汰</keywordMajor>时，获得<keywordMajor>%i:AugmentLevel%个增幅装置等级</keywordMajor>。",
+            "desc": "为你的队伍投票，选择与恶魔结盟。<br><br>与恶魔结盟后，每当<keywordMajor>猎人队伍被淘汰</keywordMajor>时，获得<keywordMajor>%i:AugmentLevel%一个增幅装置等级</keywordMajor>。",
             "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
             "id": 361,
             "name": "友方恶魔",
             "rarity": 4,
-            "tooltip": "为你的队伍投票，选择与恶魔结盟。<br><br>与恶魔结盟后，每当<keywordMajor>猎人队伍被淘汰</keywordMajor>时，获得<keywordMajor>%i:AugmentLevel%个增幅装置等级</keywordMajor>。"
+            "tooltip": "为你的队伍投票，选择与恶魔结盟。<br><br>与恶魔结盟后，每当<keywordMajor>猎人队伍被淘汰</keywordMajor>时，获得<keywordMajor>%i:AugmentLevel%一个增幅装置等级</keywordMajor>。"
         },
         {
             "apiName": "ADAPt",
@@ -8215,7 +8215,23 @@
         },
         {
             "apiName": "ScopiestWeapons",
-            "calculations": {},
+            "calculations": {
+                "RangeIncrease": {
+                    "__type": "{e9a3c91d}",
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "__type": "NamedDataValueCalculationPart",
+                            "mDataValue": "MeleeRangeIncrease"
+                        }
+                    ],
+                    "mRangedMultiplier": {
+                        "__type": "NumberCalculationPart",
+                        "mNumber": 0.6000000238418579
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5
+                }
+            },
             "dataValues": {
                 "MaxLevel": [
                     3.0,
@@ -8236,22 +8252,22 @@
                     450.0
                 ],
                 "RangedRangeIncrease": [
-                    75.0,
-                    75.0,
-                    125.0,
-                    175.0,
+                    90.0,
+                    90.0,
+                    135.0,
+                    180.0,
                     250.0,
                     300.0,
                     350.0
                 ]
             },
-            "desc": "获得@MeleeRangeIncrease@攻击距离（远程角色减少至@RangedRangeIncrease@）。",
+            "desc": "获得@RangeIncrease@攻击距离。",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "超广域武器",
             "rarity": 2,
-            "tooltip": "获得@MeleeRangeIncrease@攻击距离（远程角色减少至@RangedRangeIncrease@）。"
+            "tooltip": "获得@RangeIncrease@攻击距离。"
         },
         {
             "apiName": "SlimeTime",
@@ -8488,13 +8504,13 @@
                     0.75
                 ]
             },
-            "desc": "你获得一项技能的永久<keywordMajor>叠层</keywordMajor>时，获得的叠层数额外提升@StackModifier*100@%！",
+            "desc": "当你获得一项技能、增幅装置或道具的永久<keywordMajor>叠层</keywordMajor>时，获得的叠层数额外提升@StackModifier*100@%！",
             "iconLarge": "assets/ux/cherry/augments/icons/stackosaurusrex_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stackosaurusrex_small.png",
             "id": 204,
             "name": "叠层霸王龙",
             "rarity": 0,
-            "tooltip": "你获得一项技能的永久<keywordMajor>叠层</keywordMajor>时，获得的叠层数额外提升@StackModifier*100@%！"
+            "tooltip": "当你获得一项技能、增幅装置或道具的永久<keywordMajor>叠层</keywordMajor>时，获得的叠层数额外提升@StackModifier*100@%！"
         },
         {
             "apiName": "escAPADe",
@@ -9166,6 +9182,46 @@
             "name": "士兵法师",
             "rarity": 1,
             "tooltip": "你的召唤物体型、生命值和伤害都会提升@MinionAmp*100@%。"
+        },
+        {
+            "apiName": "GoHSwindlersOrb",
+            "calculations": {},
+            "dataValues": {
+                "DebuffDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "ShieldShred": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ]
+            },
+            "desc": "对敌方英雄造成伤害会削减其 <shield>护盾</shield>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/swindlers_orb_item_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/swindlers_orb_item_small.png",
+            "id": 392,
+            "name": "诈骗晶球",
+            "rarity": 4,
+            "tooltip": "对敌方英雄造成伤害时会使其拥有或获得的所有<shield>护盾</shield>降低@ShieldShred@%，持续@DebuffDuration@秒。<br><br><rules>影响一般护盾和<physicalDamage>物理伤害</physicalDamage>护盾，但不会影响单纯格挡<magicDamage>魔法伤害</magicDamage>的护盾。</rules>"
         },
         {
             "apiName": "TankEngine",

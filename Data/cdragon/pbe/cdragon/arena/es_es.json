@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ]
             },
             "desc": "Requisito: Consigue @TakedownsNeeded@ asesinatos o asistencias.<br><br>Recompensa: Espátula dorada",
@@ -3444,7 +3444,7 @@
             "id": 310,
             "name": "Universidad de payasos",
             "rarity": 2,
-            "tooltip": "<spellName>Puñalada por la espalda</spellName>: Infliges @BasicAttackDamage@ de <physicalDamage>daño físico adicional</physicalDamage> al golpear a los enemigos por la espalda.<br><br><spellName>Engañar</spellName>: Te teleportas y te vuelves <keywordStealth>invisible</keywordStealth> durante @StealthDuration@ s. Tu siguiente ataque mientras eres <keywordStealth>invisible</keywordStealth> inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> adicional. Si golpea a los enemigos por detrás, este ataque inflige un impacto crítico de @QCritDamageMod@ de daño.<br><br><spellName>Alucinación - Muerte</spellName>: Al morir, infliges un <magicDamage>@FearDamage*100@% de la vida máxima como daño verdadero y aterrorizas durante @FearDuration@ s a tu alrededor.</magicDamage>"
+            "tooltip": "<spellName>Puñalada por la espalda</spellName>: Infliges @BasicAttackDamage@ de <physicalDamage>daño físico adicional</physicalDamage> al golpear a los enemigos por la espalda.<br><br><spellName>Engañar</spellName>: Te teleportas y te vuelves <keywordStealth>invisible</keywordStealth> durante @StealthDuration@ s. Tu siguiente ataque mientras eres <keywordStealth>invisible</keywordStealth> inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> adicional. Si golpea a los enemigos por detrás, este ataque inflige un impacto crítico de un @QCritDamageMod@ de daño.<br><br><spellName>Alucinación - Muerte</spellName>: Al morir, infliges un <magicDamage>@FearDamage*100@% de la vida máxima como daño verdadero</magicDamage> y aterrorizas durante @FearDuration@ s a tu alrededor."
         },
         {
             "apiName": "NumbToPain",
@@ -8215,7 +8215,23 @@
         },
         {
             "apiName": "ScopiestWeapons",
-            "calculations": {},
+            "calculations": {
+                "RangeIncrease": {
+                    "__type": "{e9a3c91d}",
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "__type": "NamedDataValueCalculationPart",
+                            "mDataValue": "MeleeRangeIncrease"
+                        }
+                    ],
+                    "mRangedMultiplier": {
+                        "__type": "NumberCalculationPart",
+                        "mNumber": 0.6000000238418579
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5
+                }
+            },
             "dataValues": {
                 "MaxLevel": [
                     3.0,
@@ -8236,22 +8252,22 @@
                     450.0
                 ],
                 "RangedRangeIncrease": [
-                    75.0,
-                    75.0,
-                    125.0,
-                    175.0,
+                    90.0,
+                    90.0,
+                    135.0,
+                    180.0,
                     250.0,
                     300.0,
                     350.0
                 ]
             },
-            "desc": "Obtienes @MeleeRangeIncrease@ de alcance de ataque, que se reduce a @RangedRangeIncrease@ si atacas a distancia.",
+            "desc": "Otorga @RangeIncrease@ de alcance de ataque.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Armas telescópicamente telescópicas",
             "rarity": 2,
-            "tooltip": "Obtienes @MeleeRangeIncrease@ de alcance de ataque, que se reduce a @RangedRangeIncrease@ si atacas a distancia."
+            "tooltip": "Otorga @RangeIncrease@ de alcance de ataque."
         },
         {
             "apiName": "SlimeTime",
@@ -8488,13 +8504,13 @@
                     0.75
                 ]
             },
-            "desc": "Cuando obtienes <keywordMajor>acumulaciones</keywordMajor> permanentes de una habilidad, ¡obtienes un @StackModifier*100@% más!",
+            "desc": "Cuando obtienes <keywordMajor>acumulaciones</keywordMajor> permanentes de una habilidad, aumento u objeto, ¡obtienes un @StackModifier*100@% más!",
             "iconLarge": "assets/ux/cherry/augments/icons/stackosaurusrex_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stackosaurusrex_small.png",
             "id": 204,
             "name": "Acumulasaurio Rex",
             "rarity": 0,
-            "tooltip": "Cuando obtienes <keywordMajor>acumulaciones</keywordMajor> permanentes de una habilidad, ¡obtienes un @StackModifier*100@% más!"
+            "tooltip": "Cuando obtienes <keywordMajor>acumulaciones</keywordMajor> permanentes de una habilidad, aumento u objeto, ¡obtienes un @StackModifier*100@% más!"
         },
         {
             "apiName": "escAPADe",
@@ -9166,6 +9182,46 @@
             "name": "Subditomante",
             "rarity": 1,
             "tooltip": "Tus súbditos obtienen un @MinionAmp*100@% de tamaño, vida y daño adicionales."
+        },
+        {
+            "apiName": "GoHSwindlersOrb",
+            "calculations": {},
+            "dataValues": {
+                "DebuffDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "ShieldShred": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ]
+            },
+            "desc": "Al infligir daño a un enemigo, reduce sus <shield>escudos</shield>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/swindlers_orb_item_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/swindlers_orb_item_small.png",
+            "id": 392,
+            "name": "Orbe del estafador",
+            "rarity": 4,
+            "tooltip": "Infligir daño a un campeón enemigo reduce los <shield>escudos</shield> que obtiene un @ShieldShred@% durante @DebuffDuration@ s.<br><br><rules>Afecta a los escudos generales y de <physicalDamage>daño físico</physicalDamage>, pero no a los de <magicDamage>daño mágico</magicDamage>.</rules>"
         },
         {
             "apiName": "TankEngine",

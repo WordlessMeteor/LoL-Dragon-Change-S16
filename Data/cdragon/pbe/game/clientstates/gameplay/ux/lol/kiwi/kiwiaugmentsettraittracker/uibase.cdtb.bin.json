@@ -3,6 +3,16 @@
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker",
         "Layer": 520,
         "HandleInputDuringPause": true,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.25,
+            "__type": "SceneScreenEdgeTransitionData"
+        },
+        "SceneTransitionOut": {
+            "TransitionTime": 0.25,
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "__type": "SceneScreenEdgeTransitionData"
+        },
         "Elements": [
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker/Set/InnerSet",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker/NewSetWithPadding/NewSet"
@@ -70,7 +80,8 @@
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker",
         "Elements": [
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker/Set/InnerSet/HorizontalList/Group/Icon",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker/Set/InnerSet/HorizontalList/Group/Background"
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker/Set/InnerSet/HorizontalList/Group/Background",
+            "{dedf40d2}"
         ],
         "__type": "UiElementGroupData"
     },
@@ -106,6 +117,30 @@
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementIconData"
+    },
+    "{dedf40d2}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker/Set/InnerSet/HorizontalList/Group/Celebrate_1",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    10.0,
+                    9.0
+                ],
+                "Size": [
+                    52.0,
+                    52.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "{d3083b06}",
+        "__type": "UiElementParticleSystemData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker/Set/InnerSet/HorizontalList/Group/Background": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker/UIBase/SetTraitTracker/Set/InnerSet/HorizontalList/Group/Background",
@@ -309,12 +344,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    -220.0,
-                    -47.0
+                    -250.0,
+                    -978.0
                 ],
                 "Size": [
-                    30.0,
-                    30.0
+                    27.0,
+                    29.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,

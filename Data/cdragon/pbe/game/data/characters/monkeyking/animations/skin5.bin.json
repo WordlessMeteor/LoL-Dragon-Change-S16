@@ -277,7 +277,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Run": {
+            "Run_Base": {
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.05000000074505806,
                 "mAnimationResourceData": {
@@ -336,6 +336,35 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "Run": {
+                "Updater": {
+                    "__type": "IsHomeguardParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "mPlayAnimChangeFromBeginning": true,
+                "mTrueConditionClipName": "Run_Haste",
+                "mFalseConditionClipName": "{bc1ef3fb}",
+                "__type": "ConditionBoolClipData"
+            },
+            "{bc1ef3fb}": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Base",
+                        "mValue": 340.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Haste",
+                        "mValue": 450.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
             }
         },
         "mTrackDataMap": {
@@ -364,7 +393,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6521702299739180746": {
+            "6521702303065634226": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },

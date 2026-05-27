@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ]
             },
             "desc": "Koşul: Rakipleri @TakedownsNeeded@ kez alt et.<br><br>Ödül: Altın Spatula",
@@ -8215,7 +8215,23 @@
         },
         {
             "apiName": "ScopiestWeapons",
-            "calculations": {},
+            "calculations": {
+                "RangeIncrease": {
+                    "__type": "{e9a3c91d}",
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "__type": "NamedDataValueCalculationPart",
+                            "mDataValue": "MeleeRangeIncrease"
+                        }
+                    ],
+                    "mRangedMultiplier": {
+                        "__type": "NumberCalculationPart",
+                        "mNumber": 0.6000000238418579
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5
+                }
+            },
             "dataValues": {
                 "MaxLevel": [
                     3.0,
@@ -8236,22 +8252,22 @@
                     450.0
                 ],
                 "RangedRangeIncrease": [
-                    75.0,
-                    75.0,
-                    125.0,
-                    175.0,
+                    90.0,
+                    90.0,
+                    135.0,
+                    180.0,
                     250.0,
                     300.0,
                     350.0
                 ]
             },
-            "desc": "Yakın dövüşçüysen @MeleeRangeIncrease@, menzilliysen @RangedRangeIncrease@ Saldırı Menzili kazanırsın.",
+            "desc": "@RangeIncrease@ Saldırı Menzili kazanırsın.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "En Büyük Dürbünlü Silahlar",
             "rarity": 2,
-            "tooltip": "Yakın dövüşçüysen @MeleeRangeIncrease@, menzilliysen @RangedRangeIncrease@ Saldırı Menzili kazanırsın."
+            "tooltip": "@RangeIncrease@ Saldırı Menzili kazanırsın."
         },
         {
             "apiName": "SlimeTime",
@@ -8488,13 +8504,13 @@
                     0.75
                 ]
             },
-            "desc": "Yetenekler için kazandığın kalıcı <keywordMajor>yükler</keywordMajor> %@StackModifier*100@ artar!",
+            "desc": "Yetenek, eklenti veya eşyalar için kazandığın kalıcı <keywordMajor>yükler</keywordMajor> %@StackModifier*100@ artar!",
             "iconLarge": "assets/ux/cherry/augments/icons/stackosaurusrex_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stackosaurusrex_small.png",
             "id": 204,
             "name": "Zahmetsiz Yük",
             "rarity": 0,
-            "tooltip": "Yetenekler için kazandığın kalıcı <keywordMajor>yükler</keywordMajor> %@StackModifier*100@ artar!"
+            "tooltip": "Yetenek, eklenti veya eşyalar için kazandığın kalıcı <keywordMajor>yükler</keywordMajor> %@StackModifier*100@ artar!"
         },
         {
             "apiName": "escAPADe",
@@ -9166,6 +9182,46 @@
             "name": "Seçkin Kuvvetler",
             "rarity": 1,
             "tooltip": "Çağırdığın birimlerin boyutu, canı ve hasarı %@MinionAmp*100@ artar."
+        },
+        {
+            "apiName": "GoHSwindlersOrb",
+            "calculations": {},
+            "dataValues": {
+                "DebuffDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "ShieldShred": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ]
+            },
+            "desc": "Bir rakip şampiyona hasar vermek onun <shield>kalkanını</shield> azaltır.",
+            "iconLarge": "assets/ux/cherry/augments/icons/swindlers_orb_item_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/swindlers_orb_item_small.png",
+            "id": 392,
+            "name": "Madrabaz Küresi",
+            "rarity": 4,
+            "tooltip": "Rakip şampiyona hasar vermek onun sahip olduğu veya kazandığı <shield>kalkanı</shield> @DebuffDuration@ saniyeliğine %@ShieldShred@ azaltır.<br><br><rules>Genel ve <physicalDamage>fiziksel hasar</physicalDamage> kalkanlarını etkiler ama yalnızca <magicDamage>büyü hasarını</magicDamage> engelleyen kalkanları etkilemez.</rules>"
         },
         {
             "apiName": "TankEngine",

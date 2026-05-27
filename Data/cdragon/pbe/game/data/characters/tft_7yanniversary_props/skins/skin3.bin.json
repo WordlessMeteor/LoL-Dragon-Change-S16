@@ -1,0 +1,195 @@
+{
+    "{2cf8461c}": {
+        "championSkinName": "TFT_7yAnniversary_Props",
+        "skinAnimationProperties": {
+            "animationGraphData": "{eb05e357}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin03/TFT_7yAnniversary_Props_Skin03.TFT_ArenaSkin_7yAnniversary.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin03/TFT_7yAnniversary_Props_Skin03.TFT_ArenaSkin_7yAnniversary.skn",
+            "selfIllumination": 2.0,
+            "overrideBoundingBox": [
+                500.0,
+                500.0,
+                500.0
+            ],
+            "submeshRenderOrder": "Choncc_Cup_B Choncc_Cup_A Choncc_Eyes Choncc_Body",
+            "materialOverride": [
+                {
+                    "Material": "{44082279}",
+                    "submesh": "Choncc_Body",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "{df1d4e6f}",
+                    "submesh": "Choncc_Eyes",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "{d6397d93}",
+                    "submesh": "Choncc_Cup_A",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "{a9200632}",
+                    "submesh": "Choncc_Cup_B",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "{948f5da7}",
+                "boneName": "Spine2",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "mResourceResolver": "{cc9624de}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{44082279}": {
+        "name": "Characters/TFT_7yAnniversary_Props/Skins/Skin3/Materials/7yAnniversary_AnimProp_Mat_Body",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin03/TFT_7YAnniversary_PetChoncc_Tx.TFT_ArenaSkin_7yAnniversary.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha_mult",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "env_transition",
+                "parentName": "normal",
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Alpha",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mAnimationNames": [
+                                "SHADOW"
+                            ],
+                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 0.0,
+                        "mOffValue": 1.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "{cc9624de}": {
+        "resourceMap": {
+            "{948f5da7}": "{01069ed7}",
+            "{2c7e52f7}": "{8086f1c7}"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_7yAnniversary_Props/TFT_7yAnniversary_Props.bin",
+        "DATA/Characters/TFT_7yAnniversary_Props/Animations/Skin3.bin",
+        "DATA/Characters/TFT_7yAnniversary_Props/TFT_7yAnniversary_Props_Multi_Skins_Skin2_Skins_Skin3_Skins_Skin9.bin",
+        "DATA/Characters/TFT_7yAnniversary_Props/TFT_7yAnniversary_Props_Multi_Skins_Skin3_Skins_Skin9.bin"
+    ]
+}

@@ -21883,7 +21883,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set17/TFT17_Blitzcrank_Base_3161color_hold.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/TFT/DefaultColorOverlifetime.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -22137,7 +22137,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set17/TFT17_Blitzcrank_Base_3161color_hold.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/TFT/DefaultColorOverlifetime.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -22390,7 +22390,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set17/TFT17_Blitzcrank_Base_3161color_hold.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/TFT/DefaultColorOverlifetime.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -22509,7 +22509,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set17/TFT17_Blitzcrank_Base_3161color_hold.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/TFT/DefaultColorOverlifetime.tex",
                 "numFrames": 4,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -41932,6 +41932,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Noise_Offset",
                 "value": [
                     0.0,
@@ -42173,6 +42213,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "MULTIPLY_FRESNEL_TO_MASK",
                 "on": false,

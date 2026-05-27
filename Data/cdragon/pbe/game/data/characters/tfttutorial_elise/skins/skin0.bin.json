@@ -90,7 +90,7 @@
                 },
                 "texture": "ASSETS/Characters/TFT_Lissandra/Skins/Base/Particles/common_Blaster-blue.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteCount": 16,
                     "__type": "VfxPaletteDefinitionData"
                 },
@@ -280,7 +280,7 @@
                 },
                 "texture": "ASSETS/Characters/TFT_Lissandra/Skins/Base/Particles/common_Blaster-blue.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteCount": 16,
                     "__type": "VfxPaletteDefinitionData"
                 },
@@ -2355,7 +2355,7 @@
         "assetRemappingTable": [
             {
                 "type": 1,
-                "oldAsset": "{4f47c6b8}",
+                "oldAsset": "{b2564427}",
                 "newAsset": "ASSETS/Characters/TFTTutorial_EliseSpiderling/Skins/Base/Particles/Smoke_Clouds_2x2.tex",
                 "__type": "VfxAssetRemap"
             }
@@ -2379,6 +2379,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "IntensityStrength",
                 "value": [
@@ -2555,6 +2595,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,

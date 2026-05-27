@@ -1070,6 +1070,7 @@
 }
 
 .paw-modal-layout .paw-window .paw-content .aw-expiry-info,
+.paw-modal-layout .paw-window .paw-content .aw-extension-info,
 .paw-modal-layout .paw-window .paw-content .title-text {
     font-family: var(--font-display)
 }
@@ -1093,7 +1094,7 @@
 }
 
 .paw-modal-layout .paw-window.boost {
-    width: 660px
+    width: 605px
 }
 
 .paw-modal-layout .paw-window.paw-window-choice {
@@ -1105,6 +1106,10 @@
     flex-direction: row;
     height: 622px;
     width: 808px
+}
+
+.paw-modal-layout .paw-window.paw-window-aw .paw-price-details {
+    padding-top: 3px
 }
 
 .paw-modal-layout .paw-window .spinner-wrapper {
@@ -1138,14 +1143,22 @@
     -webkit-animation: fade-out .5s forwards
 }
 
+.paw-modal-layout .paw-window .paw-content .aw-extension-info {
+    font-weight: 1000
+}
+
 .paw-modal-layout .paw-window .paw-content .aw-expiry-info {
-    background: rgba(205, 175, 95, .15);
+    border-image-repeat: stretch;
+    border-image-slice: 6 fill;
+    border-image-source: url(/fe/lol-static-assets/images/aram-wardrobe/paw-expiration-rect.png);
+    border-style: solid;
+    border-width: 6px;
     color: #f0e6d2;
     display: inline-block;
     font-size: 14px;
     font-weight: 700;
     margin-top: 10px;
-    padding: 4px 8px
+    padding: 8px 22px
 }
 
 @-moz-keyframes fade-in {
@@ -1516,7 +1529,6 @@
     box-sizing: border-box;
     margin: 0 -20px;
     min-height: 296px;
-    padding: 0 20px;
     width: calc(100% + 40px)
 }
 
@@ -1676,6 +1688,12 @@
 .paw-overlay-image-content .overlay-image-wrapper .paw-purchase-overlay-image {
     max-height: 100%;
     max-width: 100%
+}
+
+.paw-overlay-image-content .overlay-image-wrapper .paw-purchase-overlay-image.aram-wardrobe {
+    height: 110px;
+    margin-top: 42px;
+    width: 110px
 }
 
 .paw-overlay-image-content .overlay-image-wrapper .chroma-icon {

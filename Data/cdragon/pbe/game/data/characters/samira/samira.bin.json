@@ -15,7 +15,9 @@
             "mAffectsTypeFlags": 16386,
             "mSpellTags": [
                 "PositiveEffect_MoveBlock",
-                "Trait_AttackReset"
+                "Trait_AttackReset",
+                "Trait_DamageAbility",
+                "Trait_Low_Damage"
             ],
             "DataValues": [
                 {
@@ -117,6 +119,19 @@
                 12.0,
                 10.0
             ],
+            "Cooldown": {
+                "values": [
+                    22.0,
+                    20.0,
+                    18.0,
+                    16.0,
+                    14.0,
+                    12.0,
+                    10.0
+                ],
+                "{0a3e0478}": 22.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileChanneling": true,
             "cantCastWhileRooted": true,
@@ -130,6 +145,19 @@
                 600.0,
                 600.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
             "castConeDistance": 100.0,
             "mLineWidth": 50.0,
             "mFloatVarsDecimals": [
@@ -158,6 +186,18 @@
                 40.0,
                 40.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "{0a3e0478}": 40.0,
+                "__type": "{630af303}"
+            },
             "selectionPriority": 1,
             "TargetingForgivenessDefinitions": [
                 {
@@ -340,6 +380,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "mRollForCriticalHit": true,
             "castRange": [
@@ -351,6 +404,19 @@
                 950.0,
                 950.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
             "mMissileSpec": {
                 "mMissileWidth": 50.0,
                 "movementComponent": {
@@ -404,7 +470,10 @@
             "flags": 4,
             "mAffectsTypeFlags": 6154,
             "mSpellTags": [
-                "Trait_Ultimate"
+                "Trait_Ultimate",
+                "Trait_DamageAbility",
+                "Trait_DoT",
+                "Trait_AoE"
             ],
             "DataValues": [
                 {
@@ -541,6 +610,19 @@
                 5.0,
                 5.0
             ],
+            "Cooldown": {
+                "values": [
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
+                ],
+                "{0a3e0478}": 5.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCooldownNotAffectedByCDR": true,
             "mCantCancelWhileWindingUp": true,
             "useAnimatorFramerate": true,
@@ -553,6 +635,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 600.0,
                 600.0,
@@ -691,6 +786,13 @@
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_SignatureSpell",
+                "Trait_Ranged_StopsFirstHit",
+                "Trait_AoE"
+            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -824,6 +926,18 @@
                 2.0,
                 2.0
             ],
+            "Cooldown": {
+                "values": [
+                    6.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    3.0,
+                    2.0,
+                    2.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mCanMoveWhileChanneling": true,
             "useAnimatorFramerate": true,
@@ -836,6 +950,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 950.0,
                 950.0,
@@ -873,6 +1000,18 @@
                 30.0,
                 30.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0
+                ],
+                "{0a3e0478}": 30.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "Location"
             },
@@ -1031,6 +1170,18 @@
                 10.0,
                 7.0
             ],
+            "Cooldown": {
+                "values": [
+                    22.0,
+                    22.0,
+                    19.0,
+                    16.0,
+                    13.0,
+                    10.0,
+                    7.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mPreCastLockoutDeltaTime": 0.25,
             "mPostCastLockoutDeltaTime": 0.25,
             "canCastOrQueueWhileCasting": true,
@@ -1050,6 +1201,19 @@
                 325.0,
                 325.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0
+                ],
+                "{0a3e0478}": 325.0,
+                "__type": "{0a0eddc9}"
+            },
             "castFrame": 9.5,
             "mLineWidth": 65.0,
             "mFloatVarsDecimals": [
@@ -1185,6 +1349,18 @@
                 4.0,
                 3.0
             ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    3.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCasterPositionEndOfCastUpdate": 1,
             "mAmmoUsed": [
                 0,
@@ -1210,6 +1386,19 @@
                 950.0,
                 950.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 210.0,
                 210.0,
@@ -1348,6 +1537,18 @@
                 10.0,
                 7.0
             ],
+            "Cooldown": {
+                "values": [
+                    22.0,
+                    22.0,
+                    19.0,
+                    16.0,
+                    13.0,
+                    10.0,
+                    7.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mPreCastLockoutDeltaTime": 0.25,
             "mPostCastLockoutDeltaTime": 0.25,
             "mCantCancelWhileWindingUp": true,
@@ -1368,6 +1569,19 @@
                 325.0,
                 325.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0
+                ],
+                "{0a3e0478}": 325.0,
+                "__type": "{0a0eddc9}"
+            },
             "castFrame": 9.5,
             "mLineWidth": 65.0,
             "mFloatVarsDecimals": [
@@ -1396,6 +1610,18 @@
                 30.0,
                 30.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0,
+                    30.0
+                ],
+                "{0a3e0478}": 30.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "SelfAoe"
             },
@@ -1465,6 +1691,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mApplyAttackDamage": true,
             "bHaveHitEffect": true,
             "mTurnSpeedScalar": 1.7999999523162842,
@@ -1477,6 +1716,19 @@
                 552.0999755859375,
                 552.0999755859375
             ],
+            "{0e1136d1}": {
+                "values": [
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375
+                ],
+                "{0a3e0478}": 552.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -1545,6 +1797,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "canCastWhileDisabled": true,
             "mApplyAttackDamage": true,
             "bHaveHitEffect": true,
@@ -1558,6 +1823,19 @@
                 552.0999755859375,
                 552.0999755859375
             ],
+            "{0e1136d1}": {
+                "values": [
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375
+                ],
+                "{0a3e0478}": 552.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -1707,6 +1985,18 @@
                 11.0,
                 10.0
             ],
+            "Cooldown": {
+                "values": [
+                    15.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileChanneling": true,
             "cantCastWhileRooted": true,
@@ -1720,6 +2010,19 @@
                 600.0,
                 600.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
             "castConeDistance": 100.0,
             "mLineWidth": 50.0,
             "mFloatVarsDecimals": [
@@ -1748,6 +2051,18 @@
                 40.0,
                 40.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "{0a3e0478}": 40.0,
+                "__type": "{630af303}"
+            },
             "selectionPriority": 1,
             "mSpellCooldownOrSealedQueueThreshold": 0.5,
             "mCastingBreaksStealth": true,
@@ -1835,6 +2150,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "canCastWhileDisabled": true,
             "mApplyAttackDamage": true,
             "mTurnSpeedScalar": 1.5,
@@ -1847,6 +2175,19 @@
                 552.0999755859375,
                 552.0999755859375
             ],
+            "{0e1136d1}": {
+                "values": [
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375
+                ],
+                "{0a3e0478}": 552.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -1976,6 +2317,19 @@
                 0.0,
                 0.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -2039,6 +2393,12 @@
         "mSpell": {
             "flags": 32,
             "mAffectsTypeFlags": 8193,
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_ProjectileDestruction",
+                "Trait_Low_Damage",
+                "Trait_AoE"
+            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -2100,6 +2460,18 @@
                 22.0,
                 20.0
             ],
+            "Cooldown": {
+                "values": [
+                    30.0,
+                    30.0,
+                    28.0,
+                    26.0,
+                    24.0,
+                    22.0,
+                    20.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mPreCastLockoutDeltaTime": 0.25,
             "mPostCastLockoutDeltaTime": 0.25,
             "mCantCancelWhileWindingUp": true,
@@ -2119,6 +2491,19 @@
                 325.0,
                 325.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0
+                ],
+                "{0a3e0478}": 325.0,
+                "__type": "{0a0eddc9}"
+            },
             "castFrame": 9.5,
             "mLineWidth": 65.0,
             "mFloatVarsDecimals": [
@@ -2147,6 +2532,18 @@
                 60.0,
                 60.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0
+                ],
+                "{0a3e0478}": 60.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "SelfAoe"
             },
@@ -2264,6 +2661,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "mTurnSpeedScalar": 1.7999999523162842,
             "castRange": [
@@ -2275,6 +2685,19 @@
                 552.0999755859375,
                 552.0999755859375
             ],
+            "{0e1136d1}": {
+                "values": [
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375
+                ],
+                "{0a3e0478}": 552.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -2343,6 +2766,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mApplyAttackDamage": true,
             "bHaveHitEffect": true,
             "mTurnSpeedScalar": 1.7999999523162842,
@@ -2355,6 +2791,19 @@
                 552.0999755859375,
                 552.0999755859375
             ],
+            "{0e1136d1}": {
+                "values": [
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375
+                ],
+                "{0a3e0478}": 552.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -2524,6 +2973,18 @@
                 6.0,
                 5.0
             ],
+            "Cooldown": {
+                "values": [
+                    10.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,
             "mCantCancelWhileWindingUp": true,
@@ -2541,6 +3002,19 @@
                 10000.0,
                 10000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 900.0,
                 900.0,
@@ -2665,6 +3139,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "mDoNotNeedToFaceTarget": true,
             "mTurnSpeedScalar": 5.0,
@@ -2678,6 +3165,19 @@
                 850.0,
                 850.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0
+                ],
+                "{0a3e0478}": 850.0,
+                "__type": "{0a0eddc9}"
+            },
             "mMissileSpec": {
                 "mMissileWidth": 110.0,
                 "movementComponent": {
@@ -2850,6 +3350,18 @@
                 4.0,
                 3.0
             ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    3.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCasterPositionEndOfCastUpdate": 1,
             "mAmmoUsed": [
                 0,
@@ -2875,6 +3387,19 @@
                 950.0,
                 950.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 210.0,
                 210.0,
@@ -3107,6 +3632,18 @@
                 6.0,
                 5.0
             ],
+            "Cooldown": {
+                "values": [
+                    10.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,
             "mCantCancelWhileWindingUp": true,
@@ -3124,6 +3661,19 @@
                 10000.0,
                 10000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 900.0,
                 900.0,
@@ -3375,6 +3925,19 @@
                 0.0,
                 0.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -3450,6 +4013,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "canCastWhileDisabled": true,
             "mApplyAttackDamage": true,
             "mTurnSpeedScalar": 1.5,
@@ -3462,6 +4038,19 @@
                 552.0999755859375,
                 552.0999755859375
             ],
+            "{0e1136d1}": {
+                "values": [
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375
+                ],
+                "{0a3e0478}": 552.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -3530,6 +4119,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "mDoNotNeedToFaceTarget": true,
             "mRollForCriticalHit": true,
@@ -3542,6 +4144,19 @@
                 850.0,
                 850.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0,
+                    850.0
+                ],
+                "{0a3e0478}": 850.0,
+                "__type": "{0a0eddc9}"
+            },
             "mMissileSpec": {
                 "mMissileWidth": 110.0,
                 "movementComponent": {
@@ -3626,6 +4241,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mApplyAttackDamage": true,
             "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
@@ -3640,6 +4268,19 @@
                 552.0999755859375,
                 552.0999755859375
             ],
+            "{0e1136d1}": {
+                "values": [
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375,
+                    552.0999755859375
+                ],
+                "{0a3e0478}": 552.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,

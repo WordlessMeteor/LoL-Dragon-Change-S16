@@ -3275,7 +3275,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/TFT_Base_hit_aoering.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/TFT_Base_hit_aoering.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4587,7 +4587,7 @@
                 },
                 "texture": "ASSETS/Maps/Particles/TFT/color-rampdown32_03.TFT_Set17.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteSelector": {
                         "constantValue": [
                             7.0,
@@ -11001,7 +11001,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/TFT_Base_hit_aoering.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/TFT_Base_hit_aoering.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11305,7 +11305,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/3026_Items_ball32_02.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/3026_Items_ball32_02.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11416,7 +11416,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/3026_Items_ball32_02.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/3026_Items_ball32_02.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -14885,7 +14885,7 @@
                 },
                 "texture": "ASSETS/Maps/Particles/TFT/color-rampdown32_03.TFT_Set17.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteSelector": {
                         "constantValue": [
                             7.0,
@@ -15368,7 +15368,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/TFT_Lair_Backdrop_Mult.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/TFT_Lair_Backdrop_Mult.TFT_Event_5YR_Set17.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -17848,7 +17848,7 @@
                 "particleIsLocalOrientation": 1,
                 "texture": "ASSETS/Characters/TFT5_Teemo/Skins/Base/Particles/TFT5_Teemo_base_StaffGlow.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Maps/Particles/TFT/Alpha_Mult.TFT_Set17.tex",
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Alpha_Mult.TFT_Event_5YR_Set17.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             5.0,
@@ -19614,7 +19614,7 @@
                 "particleIsLocalOrientation": 1,
                 "texture": "ASSETS/Characters/TFT5_Teemo/Skins/Base/Particles/TFT5_Teemo_base_CrownGlow.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Maps/Particles/TFT/Alpha_Mult.TFT_Set17.tex",
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Alpha_Mult.TFT_Event_5YR_Set17.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             5.0,
@@ -19789,6 +19789,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "IntensityStrength",
                 "value": [
@@ -19965,6 +20005,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,

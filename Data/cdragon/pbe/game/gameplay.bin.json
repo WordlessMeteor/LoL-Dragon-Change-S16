@@ -461,6 +461,30 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{2aa4037d}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSetEvent5YR",
+                    "__type": "{349845d9}"
+                },
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Mobile"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Event",
+            "ClientStates/Gameplay/UX/TFT/TFTGameStart",
+            "ClientStates/Gameplay/UX/TFT/TFTChampionUnlockCeremony",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionTooltip"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{2ff23ec6}": {
         "Filter": {
             "Filters": [
@@ -883,6 +907,26 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{6a5cd88f}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSetEvent5YR",
+                    "__type": "{349845d9}"
+                },
+                {
+                    "__type": "ViewControllerFilter_Mobile"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Event",
+            "ClientStates/Gameplay/UX/TFT/TFTGameStart",
+            "ClientStates/Gameplay/UX/TFT/TFTChampionUnlockCeremony_Mobile"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{6e8e0534}": {
         "Filter": {
             "Filters": [
@@ -1025,7 +1069,6 @@
             "ClientStates/Gameplay/UX/TFT/TFTItemCodex",
             "ClientStates/Gameplay/UX/TFT/TFTGameHeader",
             "ClientStates/Gameplay/UX/TFT/TFTArmory",
-            "ClientStates/Gameplay/UX/TFT/TFTArmory_Assists",
             "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars",
             "ClientStates/Gameplay/UX/TFT/TFTTraitTracker",
             "ClientStates/Gameplay/UX/TFT/TFTCombatRecap",
@@ -1433,6 +1476,10 @@
                     "__type": "{349845d9}"
                 },
                 {
+                    "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSetEvent5YR",
+                    "__type": "{349845d9}"
+                },
+                {
                     "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSet17_PVEMODE",
                     "__type": "{349845d9}"
                 },
@@ -1685,6 +1732,14 @@
                     },
                     {
                         "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSet7_Stage2_CT",
+                        "__type": "{349845d9}"
+                    },
+                    {
+                        "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSetEvent5YR",
+                        "__type": "{349845d9}"
+                    },
+                    {
+                        "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSet17",
                         "__type": "{349845d9}"
                     }
                 ],
@@ -2016,12 +2071,13 @@
         "ViewControllers": [
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection",
             "ClientStates/Gameplay/UX/LoL/LoLHANeutralTimerViewController",
-            "ClientStates/Gameplay/UX/LoL/NemesisQuestFlyout",
+            "ClientStates/Gameplay/UX/LoL/QuestTrackers",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiScoreboard",
             "ClientStates/Gameplay/UX/LoL/TeamFrames",
             "ClientStates/Gameplay/UX/LoL/EnemyRespawnTimers",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTooltips",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker"
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSetTraitTracker",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker"
         ],
         "__type": "ViewControllerList"
     },
@@ -2451,8 +2507,10 @@
             "{3833c472}",
             "{aae70773}",
             "{862591ad}",
+            "{2aa4037d}",
             "{9129c87d}",
-            "{989b6675}"
+            "{989b6675}",
+            "{6a5cd88f}"
         ],
         "__type": "ViewControllerSet"
     },

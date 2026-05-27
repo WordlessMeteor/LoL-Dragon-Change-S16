@@ -17403,7 +17403,7 @@
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_DA",
@@ -17439,7 +17439,7 @@
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_DA",
@@ -17447,7 +17447,7 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "Mountain_Health",
@@ -17475,7 +17475,7 @@
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_DA",
@@ -17483,7 +17483,7 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "Mountain_Health",
@@ -17534,7 +17534,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.25
+                        "value": 0.2
                     }
                 ],
                 "min_units": 3,
@@ -25246,6 +25246,2621 @@
                 "min_units": 6,
                 "style_idx": 5,
                 "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Bilgewater",
+        "trait_id": "TFTEvent5YR_Bilgewater",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Bilgewater.png",
+        "tooltip_text": "Takımının saldırıları ve yetenekleri rakipleri işaretler. İşaret, rakiplere verilen hasarın yüzdelik bir kısmını muhafaza eder.<br><br>İşaretlenen hedefler @TFTTrait.TFTEvent5YR_Bilgewater.1:BarrageInterval@ saniye sonra bir top atışına maruz kalır. Atış, muhafaza edilen hasar + sabit bir değer kadar <physicalDamage>fiziksel hasar</physicalDamage> verir.<br><br><row>(@TFTTrait.TFTEvent5YR_Bilgewater.1:MinUnits@) Top atışı verilen hasarın %@TFTTrait.TFTEvent5YR_Bilgewater.1:DamagePercent@ kadarı + @TFTTrait.TFTEvent5YR_Bilgewater.1:Damage@ Hasar verir.</row><br><row>(@TFTTrait.TFTEvent5YR_Bilgewater.2:MinUnits@) Top atışı verilen hasarın %@TFTTrait.TFTEvent5YR_Bilgewater.2:DamagePercent@ kadarı + @TFTTrait.TFTEvent5YR_Bilgewater.2:Damage@ Hasar verir. Her @TFTTrait.TFTEvent5YR_Bilgewater.2:ShotsUntilTreasure@. top atışının yerini altın kazandıran bir hazine sandığı alır!</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BarrageInterval",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "CannonballScale",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Damage",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "DamagePercent",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "ShotsUntilTreasure",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BarrageInterval",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "CannonballScale",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "Damage",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "DamagePercent",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "ShotsUntilTreasure",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Patron",
+        "trait_id": "TFTEvent5YR_Boss",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_4_Theboss.png",
+        "tooltip_text": "Patron Muştası kazanırsın. Kullanıcı canı ilk defa %@TFTTrait.TFTEvent5YR_Boss.1:HealthThreshold*100@ değerinin altına düştüğünde Patron olur ve çatışmadan ayrılıp mekik çekmeye başlar. Her mekik azami canın belli bir kısmını yeniler ve saldırı hızı kazandırır. <br><br><row>(@TFTTrait.TFTEvent5YR_Boss.1:MinUnits@) %@TFTTrait.TFTEvent5YR_Boss.1:HealPercent*100@ %i:scaleHealth% yeniler ve %@TFTTrait.TFTEvent5YR_Boss.1:AttackSpeedPercent*100@ %i:scaleAS% kazandırır.</row><br><row>(@TFTTrait.TFTEvent5YR_Boss.2:MinUnits@) %@TFTTrait.TFTEvent5YR_Boss.2:HealPercent*100@ %i:scaleHealth% yeniler ve %@TFTTrait.TFTEvent5YR_Boss.2:AttackSpeedPercent*100@ %i:scaleAS% kazandırır. Ayrıca kullanıcı canı tamamen yenilendiğinde kasları şişmiş bir halde çatışmaya döner. Bu haldeyken tüm saldırı ve yetenekleri hasarın %@TFTTrait.TFTEvent5YR_Boss.2:TrueDamagePercentage*100@ kadarını gerçek hasar olarak verir.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "HealPercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "HealPercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TrueDamagePercentage",
+                        "value": 0.7
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Fatih",
+        "trait_id": "TFTEvent5YR_Conqueror",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_13_Conqueror.TFT_Set13.png",
+        "tooltip_text": "Takımın rakipleri alt ettiğinde fetih yükü kazanır. Yeterince fetih yükü biriktiğinde ganimetlerle dolu savaş sandıkları açar!<br><br>Takımın saldırı gücü ve yetenek gücü kazanır. Bu ilaveler açılan her savaş sandığı başına %@TFTTrait.TFTEvent5YR_Conqueror:PercentIncreasePerChest*100@ artar.<br><br><row>(@TFTTrait.TFTEvent5YR_Conqueror.1:MinUnits@) %@TFTTrait.TFTEvent5YR_Conqueror.1:ADAPBase*100@&nbsp;%i:scaleAD% %i:scaleAP% kazanırlar. Alt etmeler @TFTTrait.TFTEvent5YR_Conqueror.1:StacksPerKill@&nbsp;fetih yükü kazandırır.</row><br><row>(@TFTTrait.TFTEvent5YR_Conqueror.2:MinUnits@) %@TFTTrait.TFTEvent5YR_Conqueror.2:ADAPBase*100@&nbsp;%i:scaleAD% %i:scaleAP% kazanırlar. Alt etmeler @TFTTrait.TFTEvent5YR_Conqueror.2:StacksPerKill@&nbsp;fetih yükü kazandırır.</row><br><br><rules>Açılan Savaş Sandıkları: @TFTUnitProperty.trait:TFTEvent5YR_Conqueror_ChestsCompleted@</rules><br><rules>Mevcut Nitelikler: %@TFTUnitProperty.trait:TFTEvent5YR_Conqueror_CurrentADAP@&nbsp;%i:scaleAD% ve %i:scaleAP%</rules><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PercentIncreasePerChest",
+                        "value": 0.06
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAPBase",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "StacksPerKill",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPBase",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "StacksPerKill",
+                        "value": 6.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Cadılar Meclisi",
+        "trait_id": "TFTEvent5YR_Coven",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Coven.png",
+        "tooltip_text": "Takımının merkezine en yakın birim Meclis Lideri seçilerek ilave yetenek gücü kazanır.<br><br>Takımın her yetenek kullandığında Meclis Lideri mana kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Coven.1:MinUnits@) @TFTTrait.TFTEvent5YR_Coven.1:AbilityPower@ %i:scaleAP% ve @TFTTrait.TFTEvent5YR_Coven.1:ManaToGive@ %i:scaleMana%</row><br><row>(@TFTTrait.TFTEvent5YR_Coven.2:MinUnits@) @TFTTrait.TFTEvent5YR_Coven.2:AbilityPower@ %i:scaleAP% ve @TFTTrait.TFTEvent5YR_Coven.2:ManaToGive@ %i:scaleMana%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "ManaToGive",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "ManaToGive",
+                        "value": 8.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Kristal",
+        "trait_id": "TFTEvent5YR_Crystal",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_2_Crystal.png",
+        "tooltip_text": "Tanklarının çatışmanın ilk birkaç saniyesinde tek bir saldırıdan veya yetenekten alabileceği azami hasar sınırlıdır.<br><br><row>(@TFTTrait.TFTEvent5YR_Crystal.1:MinUnits@) @TFTTrait.TFTEvent5YR_Crystal.1:DamageThreshold@ Azami Hasar, @TFTTrait.TFTEvent5YR_Crystal.1:Duration@ saniye.</row><br><row>(@TFTTrait.TFTEvent5YR_Crystal.2:MinUnits@) @TFTTrait.TFTEvent5YR_Crystal.2:DamageThreshold@ Azami Hasar, @TFTTrait.TFTEvent5YR_Crystal.2:Duration@ saniye.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageReduction",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "DamageThreshold",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 6.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageReduction",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "DamageThreshold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Demacia",
+        "trait_id": "TFTEvent5YR_Demacia",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Demacia.TFT_Set16.png",
+        "tooltip_text": "Takımın azami canlarının %@TFTTrait.TFTEvent5YR_Demacia.1:MaxHealthLost*100@ kadarını her kaybettiğinde hücuma geçerek mana bedellerini %@TFTTrait.TFTEvent5YR_Demacia.1:ManaReductionPct*100@ azaltır. Takımın zırh ve büyü direnci kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Demacia.1:MinUnits@) @TFTTrait.TFTEvent5YR_Demacia.1:ArmorMR@&nbsp;%i:scaleArmor% %i:scaleMR% kazanırlar.</row><br><row>(@TFTTrait.TFTEvent5YR_Demacia.2:MinUnits@) @TFTTrait.TFTEvent5YR_Demacia.2:ArmorMR@&nbsp;%i:scaleArmor% %i:scaleMR% kazanırlar. Galio açılır. Takımın hücuma geçtiğinde en güçlü Galio biriminin sahip olduğu her eşya için mana bedellerini %@TFTTrait.TFTEvent5YR_Demacia.2:ManaReductionPctPerGalioItem*100@ azaltır ve rakiplere azami canlarının %@TFTTrait.TFTEvent5YR_Demacia.2:EnemyTrueDamage*100@ kadarına eşdeğer miktarda hasar verir.</row><br><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnemyTrueDamage",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "ManaReductionPct",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "MaxHealthLost",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "MaxHealthLostSummonGalio",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "MaxNumberOfRallies",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "PrismaticDamageAmp",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "PrismaticShield",
+                        "value": 1500.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ArmorMR",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ManaReductionPctPerGalioItem",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ArmorMR",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "ManaReductionPctPerGalioItem",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Ejder Lordu",
+        "trait_id": "TFTEvent5YR_Dragonlord",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Dragonlord.png",
+        "tooltip_text": "Ejder çatışma başladıktan @TFTTrait.TFTEvent5YR_Dragonlord.1:FirstDelay@ saniye sonra tahtaya saldırarak tüm rakiplere <trueDamage>gerçek hasar</trueDamage> verir ve onları sersemletir. Dost birimler çatışmanın geri kalanı boyunca saldırı hızı kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Dragonlord.1:MinUnits@) %@TFTTrait.TFTEvent5YR_Dragonlord.1:TrueDamageHPRatio*100@ %i:scaleHealth% Gerçek Hasar verir, @TFTTrait.TFTEvent5YR_Dragonlord.1:StunDuration@ saniyeliğine sersemletir, %@TFTTrait.TFTEvent5YR_Dragonlord.1:AttackSpeedBuff*100@ %i:scaleAS% kazandırır.</row><br><row>(@TFTTrait.TFTEvent5YR_Dragonlord.2:MinUnits@) %@TFTTrait.TFTEvent5YR_Dragonlord.2:TrueDamageHPRatio*100@ %i:scaleHealth% Gerçek Hasar verir, @TFTTrait.TFTEvent5YR_Dragonlord.2:StunDuration@ saniyeliğine sersemletir, %@TFTTrait.TFTEvent5YR_Dragonlord.2:AttackSpeedBuff*100@ %i:scaleAS% kazandırır.<br>@TFTTrait.TFTEvent5YR_Dragonlord.2:SecondDelay@ saniye daha geçtikten sonra ejder yeniden saldırır.</row><br><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ASDuration",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "AttackSpeedBuff",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "FirstDelay",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "StrikeLevel",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "StunDuration",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "TrueDamageHPRatio",
+                        "value": 0.12
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASDuration",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "AttackSpeedBuff",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "FirstDelay",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "SecondDelay",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StrikeLevel",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "StunDuration",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TrueDamageHPRatio",
+                        "value": 0.18
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Kadim Orman",
+        "trait_id": "TFTEvent5YR_Elderwood",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_4_Wilderness.png",
+        "tooltip_text": "Takımın @TFTTrait.TFTEvent5YR_Elderwood.1:TickRate@ saniyede bir büyüyerek ilave nitelikler kazanır. Bu etki @TFTTrait.TFTEvent5YR_Elderwood.1:MaxStacks@ defaya kadar birikebilir.<br><br><row>(@TFTTrait.TFTEvent5YR_Elderwood.1:MinUnits@) @TFTTrait.TFTEvent5YR_Elderwood.1:BonusResists@&nbsp;%i:scaleArmor% %i:scaleMR%, @TFTTrait.TFTEvent5YR_Elderwood.1:BonusADSP@&nbsp;%i:scaleAP% %i:scaleAD%</row><br><row>(@TFTTrait.TFTEvent5YR_Elderwood.2:MinUnits@) @TFTTrait.TFTEvent5YR_Elderwood.2:BonusResists@&nbsp;%i:scaleArmor% %i:scaleMR%, @TFTTrait.TFTEvent5YR_Elderwood.2:BonusADSP@&nbsp;%i:scaleAP% %i:scaleAD%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusADSP",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "BonusResists",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "PercentVisualGrowth",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "TickRate",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusADSP",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "BonusResists",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "PercentVisualGrowth",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "TickRate",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "İmparatoriçe",
+        "trait_id": "TFTEvent5YR_Empress",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Empress.png",
+        "tooltip_text": "Bir Mor Taç kazanırsın. Çatışmanın ilk @TFTTrait.TFTEvent5YR_Empress.1:DelayForInitialCoralSpawn@ saniyesinin ardından kullanıcının mevcut hedefinin yakınında bir Hiçlik Mercanı ortaya çıkar.<br>Kullanıcı, Hiçlik Mercanı'nın konumuna sıçrayıp onu tüketerek azami can, saldırı gücü ve yetenek gücü kazanır. Ayrıca @TFTTrait.TFTEvent5YR_Empress.1:HexRange@ hücrelik bir alan içindeki rakiplere büyü hasarı verir.<br><br><row>(@TFTTrait.TFTEvent5YR_Empress.1:MinUnits@) Mercan %@TFTTrait.TFTEvent5YR_Empress.1:PercentBonusMaxHealth*100@ Azami Can ve %@TFTTrait.TFTEvent5YR_Empress.1:BonusAD*100@ %i:scaleAD% %i:scaleAP% kazandırır.</row><br><row>(@TFTTrait.TFTEvent5YR_Empress.2:MinUnits@) Katletme halinde ilave Hiçlik Mercanları ortaya çıkar. İlk mercan %@TFTTrait.TFTEvent5YR_Empress.2:PercentBonusMaxHealth*100@ Azami Can ve %@TFTTrait.TFTEvent5YR_Empress.2:BonusAD*100@ %i:scaleAD% %i:scaleAP% kazandırır. Sonraki mercanlar kullanıcıyı %@TFTTrait.TFTEvent5YR_Empress.2:PercentHealthHeal*100@ %i:scaleHealth% iyileştirir ve fazladan %@TFTTrait.TFTEvent5YR_Empress.2:StackingBonusAD*100@ %i:scaleAD% %i:scaleAP% kazandırır.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusAD",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "BonusAP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "DelayForInitialCoralSpawn",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "HexRange",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentADDamage",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "PercentAPDamage",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "PercentBonusDamageAmp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PercentBonusMaxHealth",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentHealthHeal",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentHealthMagicDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PercentStackingBonusDamageAmp",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StackingBonusAD",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "StackingBonusAP",
+                        "value": 7.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusAD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "BonusAP",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "DelayForInitialCoralSpawn",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "HexRange",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentADDamage",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "PercentAPDamage",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "PercentBonusDamageAmp",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentBonusMaxHealth",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "PercentHealthHeal",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentHealthMagicDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PercentStackingBonusDamageAmp",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "StackingBonusAD",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "StackingBonusAP",
+                        "value": 7.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Kader Ortağı",
+        "trait_id": "TFTEvent5YR_Fated",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Fated.png",
+        "tooltip_text": "Bir şampiyonu başka bir şampiyonun üstüne sürükleyerek onları eşleştirirsin ve şampiyonların rollerine göre bir <TFTBonus>Kader Ortağı ilavesi</TFTBonus> etkinleştirirsin.<br><br><row>(@TFTTrait.TFTEvent5YR_Fated.1:MinUnits@) Eşler Kader Ortağı ilavesini elde eder ve %@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@ Azami Can kazanır.</row><br><row>(@TFTTrait.TFTEvent5YR_Fated.2:MinUnits@) TÜM birimler Kader Ortağı ilavesini kazanır. Eşler %@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@ Azami Can kazanır ve %@TFTTrait.TFTEvent5YR_Fated.2:PairBondIncreasePercent*100@ Kader Ortağı ilavesi elde eder.</row><br><br>Kader Ortağı İlaveleri:<br><ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><status>Suikastçılar</status>: Çatışma başlangıcında @TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@ Kalkan.</ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><TFTGuildInactive>Suikastçılar: Çatışma başlangıcında @TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@ Kalkan.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><br><ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><status>Sahirler</status>: %@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@ Saldırı Gücü ve Yetenek Gücü.</ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><TFTGuildInactive>Sahirler: %@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@ Saldırı Gücü ve Yetenek Gücü.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><status>Dövüşçüler</status>: %@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@ Mutlak Sömürü.</ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><TFTGuildInactive>Dövüşçüler: %@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@ Mutlak Sömürü.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><status>Nişancılar</status>: %@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@ Saldırı Hızı.</ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><TFTGuildInactive>Nişancılar: %@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@ Saldırı Hızı.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><br><ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><status>Uzmanlar</status>: Hasarın %@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@ kadarını gerçek hasar olarak verirler.</ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><TFTGuildInactive>Uzmanlar: Hasarın %@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@ kadarını gerçek hasar olarak verirler.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><br><ShowIf.TFTEvent5YR_Trait_Fated_TankActive><status>Tanklar</status>: @TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@ Zırh ve Büyü Direnci.</ShowIf.TFTEvent5YR_Trait_Fated_TankActive><ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><TFTGuildInactive>Tanklar: @TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@ Zırh ve Büyü Direnci.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><br><br>Birimlerin yalnızca spesifik bir Kader Ortağı ilavesinden faydalanabilir.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AhriBuffBonus",
+                        "value": 0.19
+                    },
+                    {
+                        "name": "EmblemHPRegen",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "KindredBuffBonus",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "PairHPBonus",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "SettBuffBonus",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "SyndraBuffBonus",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "ThreshBuffBonus",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "YasuoBuffBonus",
+                        "value": 250.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BondIncreasePercent",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "GiveToAll",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "PairBondIncreasePercent",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PairCount",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BondIncreasePercent",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "GiveToAll",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PairBondIncreasePercent",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PairCount",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Hayalet Efendisi",
+        "trait_id": "TFTEvent5YR_Ghostly",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Ghostly.png",
+        "tooltip_text": "@TFTTrait.TFTEvent5YR_Ghostly:NumInstances@ kez hasar verince veya alınca birimler yakındaki rakiplere musallat olan @TFTTrait.TFTEvent5YR_Ghostly:NumSpectres@ hayalet çağırır. Ayrıca @TFTTrait.TFTEvent5YR_Ghostly:TickRate@ saniyede bir azami canlarının %@TFTTrait.TFTEvent5YR_Ghostly:HealingPercent*100@ kadarını yenilerler.<br><br>Hayaletlerin musallat olduğu rakipler her hayalet başına ilave hasar alır ve katledildiklerinde bu hayaletler başka bir rakibe geçer.<br><br><row>(@TFTTrait.TFTEvent5YR_Ghostly.1:MinUnits@) Hayalet başına %@TFTTrait.TFTEvent5YR_Ghostly.1:DamagePercent*100@ İlave Hasar</row><br><row>(@TFTTrait.TFTEvent5YR_Ghostly.2:MinUnits@) Hayalet başına %@TFTTrait.TFTEvent5YR_Ghostly.2:DamagePercent*100@ İlave Hasar</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealingPercent",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "NumInstances",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "NumSpectres",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TickRate",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamagePercent",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamagePercent",
+                        "value": 0.13
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Buzul",
+        "trait_id": "TFTEvent5YR_Glacial",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_2_Glacial.png",
+        "tooltip_text": "Bir Buzul Balyozu kazanırsın. Buzul Balyozu'na sahip şampiyonların saldırıları %@TFTTrait.TFTEvent5YR_Glacial.1:ProcPercent*100@ ihtimalle hedeflerini @TFTTrait.TFTEvent5YR_Glacial.1:StunDuration@ saniyeliğine sersemletir ve ilave büyü hasarı verir.<br><br><row>(@TFTTrait.TFTEvent5YR_Glacial.1:MinUnits@) Saldırılar @TFTTrait.TFTEvent5YR_Glacial.1:BonusDamage@ Büyü Hasarı verir.</row><br><row>(@TFTTrait.TFTEvent5YR_Glacial.2:MinUnits@) Saldırılar @TFTTrait.TFTEvent5YR_Glacial.2:BonusDamage@ Büyü Hasarı verir. Bir Buzul Balyozu daha kazanırsın.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 200.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ProcPercent",
+                        "value": 0.33
+                    },
+                    {
+                        "name": "StunDuration",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "ProcPercent",
+                        "value": 0.33
+                    },
+                    {
+                        "name": "StunDuration",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Hacker",
+        "trait_id": "TFTEvent5YR_Hacker",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_Hacker.png",
+        "tooltip_text": "Takımın mutlak sömürü kazanır ve bir H4ckerr!m çağırır. H4ckerr!m'in içinden geçtiği rakipler h4ckl3n1r ve zırh ile büyü dirençlerinin %@TFTTrait.TFTEvent5YR_Hacker.1:PercentArmorToRemove*100@ kadarını kaybeder. <br><br><row>(@TFTTrait.TFTEvent5YR_Hacker.1:MinUnits@) Takımın %@TFTTrait.TFTEvent5YR_Hacker.1:Omnivamp*100@ %i:scaleSV% kazanır.</row><br><row>(@TFTTrait.TFTEvent5YR_Hacker.2:MinUnits@) Takımın %@TFTTrait.TFTEvent5YR_Hacker.2:Omnivamp*100@ %i:scaleSV% kazanır. Ayrıca bir sonraki rakibini görürsün. İçindeki birimi çatışma başlangıcında rakibin arka saflarına gönderen bir binici hücresi kazanırsın. Binici %@TFTTrait.TFTEvent5YR_Hacker.2:Horsevamp*100@ %i:scaleSV% kazanır ve katletme halinde %@TFTTrait.TFTEvent5YR_Hacker.2:PercentChanceToDropGoldOnKill*100@ihtimalle 1 Altın kazandırır.<br><br>Kazanılan Toplam Altın: @TFTUnitProperty.trait:TFTEvent5YR_Hacker_RiderGold_Earned@</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "SecondsUntargetable",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Horsevamp",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PercentArmorToRemove",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentChanceToDropGoldOnKill",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "PercentMRToRemove",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASDuration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "AttackSpeedOnTakedown",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Horsevamp",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "PercentArmorToRemove",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentChanceToDropGoldOnKill",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "PercentMRToRemove",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Haylaz",
+        "trait_id": "TFTEvent5YR_Hellion",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Hellion.png",
+        "tooltip_text": "Bir dost şampiyon katledildiğinde bu şampiyonun yıldız seviyesi bir azalmış Haylaz Kopyası, Haylaz geçidinden atlayarak savaşa katılır! Bu Haylaz Kopyası, Kırmızı Güçlendirme'ye sahip olur.<br><br><row>(@TFTTrait.TFTEvent5YR_Hellion.1:MinUnits@) İlk @TFTTrait.TFTEvent5YR_Hellion.1:NumOfUnits@ şampiyon</row><br><row>(@TFTTrait.TFTEvent5YR_Hellion.2:MinUnits@) İlk @TFTTrait.TFTEvent5YR_Hellion.2:NumOfUnits@ şampiyon</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumHellionItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "NumOfUnits",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "NumHellionItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "NumOfUnits",
+                        "value": 9.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Kahraman",
+        "trait_id": "TFTEvent5YR_Heroic",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Heroic.TFT_Set16.png",
+        "tooltip_text": "Galio çatışmada ileri sürülemez. Özelliğe yedek kulübesinden katkıda bulunur ve takımın hücuma geçtiğinde çatışmaya katılır.<br><br>Çatışmaya katıldığında @HexRadius@ hücrelik bir alana etki eden bir şok dalgası oluşturarak azami canının %@PercentMaxHP*100@ kadarına eşdeğer miktarda büyü hasarı verir. İsabet alan rakipler merkeze olan uzaklıklarına göre azalacak şekilde @KnockupDuration@ saniyeliğine havaya savrulur.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HexRadius",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "KnockupDuration",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentMaxHP",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Talihli",
+        "trait_id": "TFTEvent5YR_HighRoller",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_13_HighRoller.TFT_Set13.png",
+        "tooltip_text": "Sevika'nın Uğursuz Kolu eşyasını kazanırsın!<br><br>Çatışma Başlangıcında: Kullanıcıya rasgele bir Jinx modifikasyonu verilir. Farklı bir modifikasyon eklemek için gereken süre:<br><row>(@TFTTrait.TFTEvent5YR_HighRoller.1:MinUnits@) @TFTTrait.TFTEvent5YR_HighRoller.1:RollingFrequency@ saniye sonra.</row><br><row>(@TFTTrait.TFTEvent5YR_HighRoller.2:MinUnits@) @TFTTrait.TFTEvent5YR_HighRoller.2:RollingFrequency@ saniyede bir. Ayrıca modifikasyonlar daha da güçlenir ve kullanıcı artık Uğursuz Büyük Ödül'ü kazanabilir!</row><br><br>Modlar:<br>- Roket: Kullanıcı rasgele rakiplere roketler fırlatır.<br>- Kalkan: Kullanıcı @TFTTrait.TFTEvent5YR_HighRoller.1:Spell2ShieldDuration@ saniyeliğine kalkan kazanır.<br>- Altın: Kullanıcı altın kazandırır.<br><br>Fırlatılan Roketler: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_RocketsFired@<br>Kazanılan Kalkan: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_ShieldsGained@<br>Kazanılan Altın: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_GoldGained@<br>Kazanılan Büyük Ödül: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_JackpotsHit@",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 0.8
+                    },
+                    {
+                        "name": "JackpotGold",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "JackpotNumRockets",
+                        "value": 24.0
+                    },
+                    {
+                        "name": "JackpotShieldDuration",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "JackpotShieldFlatAmount",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "JackpotShieldMaxHealthScalar",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "RollingFrequency",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Spell1NumRockets",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "Spell1Probability",
+                        "value": 0.525
+                    },
+                    {
+                        "name": "Spell1RocketADScalar",
+                        "value": 1.3
+                    },
+                    {
+                        "name": "Spell1RocketAPScalar",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Spell2Probability",
+                        "value": 0.325
+                    },
+                    {
+                        "name": "Spell2ShieldDuration",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Spell2ShieldFlatAmount",
+                        "value": 200.0
+                    },
+                    {
+                        "name": "Spell2ShieldMaxHealthScalar",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Spell3Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Spell3Probability",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Spell4Probability",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 0.8
+                    },
+                    {
+                        "name": "JackpotGold",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "JackpotNumRockets",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "JackpotShieldDuration",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "JackpotShieldFlatAmount",
+                        "value": 1000.0
+                    },
+                    {
+                        "name": "JackpotShieldMaxHealthScalar",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PrismaticTooltipModScalar",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "RollingFrequency",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Spell1NumRockets",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Spell1Probability",
+                        "value": 0.505
+                    },
+                    {
+                        "name": "Spell1RocketADScalar",
+                        "value": 1.3
+                    },
+                    {
+                        "name": "Spell1RocketAPScalar",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Spell1RocketDamage",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Spell2Probability",
+                        "value": 0.305
+                    },
+                    {
+                        "name": "Spell2ShieldDuration",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Spell2ShieldFlatAmount",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "Spell2ShieldMaxHealthScalar",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Spell3Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Spell3Probability",
+                        "value": 0.14
+                    },
+                    {
+                        "name": "Spell4Probability",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Kovan",
+        "trait_id": "TFTEvent5YR_Honeymancy",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Bee.TFT_Set12.png",
+        "tooltip_text": "Şampiyonların hedeflerine @TFTTrait.TFTEvent5YR_Honeymancy:Period@ saniyede bir büyü hasarı veren arılar kazanır. Arı hasarı arıların bağlı olduğu şampiyonun verdiği ve aldığı hasar artı arı başına sabit bir miktara bağlı olarak değişir.<br><br>Katledilen şampiyonlar geride çatışmanın sonuna dek yakındaki şampiyonları takip eden @TFTTrait.TFTEvent5YR_Honeymancy:NumTransfers@ arı bırakır.<br><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.1:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.1:MiniCount@ arı, %@TFTTrait.TFTEvent5YR_Honeymancy.1:BonusDamage*100@ verilen hasar, %@TFTTrait.TFTEvent5YR_Honeymancy.1:DamageReceived*100@ alınan hasar, arı başına @TFTTrait.TFTEvent5YR_Honeymancy.1:DamagePerMini@ Hasar</row><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.2:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.2:MiniCount@ arı, %@TFTTrait.TFTEvent5YR_Honeymancy.2:BonusDamage*100@ verilen hasar, %@TFTTrait.TFTEvent5YR_Honeymancy.2:DamageReceived*100@ alınan hasar, arı başına @TFTTrait.TFTEvent5YR_Honeymancy.2:DamagePerMini@ Hasar</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumTransfers",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Period",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "DamagePerMini",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "DamageReceived",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "MiniCount",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "DamagePerMini",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "DamageReceived",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "MiniCount",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Seçkin",
+        "trait_id": "TFTEvent5YR_Imperial",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Imperial.png",
+        "tooltip_text": "Çatışma Başlangıcında: Belli şampiyonlar %@TFTTrait.TFTEvent5YR_Imperial.1:DamageAmp*100@ %i:scaleDA% kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Imperial.1:MinUnits@) Rasgele @TFTTrait.TFTEvent5YR_Imperial.1:NumOfUnits@ şampiyon</row><br><row>(@TFTTrait.TFTEvent5YR_Imperial.2:MinUnits@) Rasgele @TFTTrait.TFTEvent5YR_Imperial.2:NumOfUnits@ şampiyon</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "NumOfUnits",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "NumOfUnits",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Ixtal",
+        "trait_id": "TFTEvent5YR_Ixtal",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Ixtal.TFT_Set16.png",
+        "tooltip_text": "<row>(@TFTTrait.TFTEvent5YR_Ixtal.1:MinUnits@) Görevleri tamamlayarak güneş kristalleri (%i:Set16Ixtal%) kazan ve onları harcayarak ganimet elde et!</row><br><row>(@TFTTrait.TFTEvent5YR_Ixtal.2:MinUnits@) Oyunculara karşı çatışma turlarının başlangıcında strateji ustan 2 Can yeniler. Çatışmaların sonunda @TFTTrait.TFTEvent5YR_Ixtal.2:BonusClues@ %i:Set16Ixtal% kazanırsın ve 500 %i:Set16Ixtal% elde ettiğinde Brock'u açabilirsin!</row><br><br><rules>Çatışma sona ermeden bir görevi tamamladığında sıradaki turun başlangıcında yeni bir görev edinirsin.</rules><br><br>Kazanılan Toplam Güneş Kristali: @TFTUnitProperty.trait:TFTEvent5YR_Explorer_TotalExplorerPoints@ %i:Set16Ixtal%",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth_PAIRS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusClues",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Caz",
+        "trait_id": "TFTEvent5YR_Jazz",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Jazz.png",
+        "tooltip_text": "Takımın her etkin özellik için ilave can ve hasar artışı kazanır.<br><rules>(Eşsiz özellikler ve yıldönümü özellikleri dahil değildir.)</rules><br><br><row>(@TFTTrait.TFTEvent5YR_Jazz.1:MinUnits@) %@TFTTrait.TFTEvent5YR_Jazz.1:BonusHealth*100@ %i:scaleHealth%, %@TFTTrait.TFTEvent5YR_Jazz.1:BonusDamage*100@ %i:scaleDA%</row><br><row>(@TFTTrait.TFTEvent5YR_Jazz.2:MinUnits@) %@TFTTrait.TFTEvent5YR_Jazz.2:BonusHealth*100@ %i:scaleHealth%, %@TFTTrait.TFTEvent5YR_Jazz.2:BonusDamage*100@ %i:scaleDA%</row><br><br>İlave Can: %@TFTUnitProperty.trait:TFT10_Trait_Jazz_TraitTracker_CurrentBonus@<br>İlave Hasar Artışı: %@TFTUnitProperty.trait:TFT10_Trait_Jazz_TraitTracker_CurrentBonus_Damage@",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 0.015
+                    },
+                    {
+                        "name": "BonusHealth",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 0.03
+                    },
+                    {
+                        "name": "BonusHealth",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Lazer Birliği",
+        "trait_id": "TFTEvent5YR_LaserCorps",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_Lasercorps.png",
+        "tooltip_text": "Takımın lazer dronları kazanır. Birimler saldırdığında veya saldırılardan isabet aldığında dronları hedeflerine büyü hasarı verir. Dronlar @TFTTrait.TFTEvent5YR_LaserCorps.1:ICD@ saniyede bir saldırır. Birimler katledildiğinde dronları başka bir dost birime atanır.<br><br><row>(@TFTTrait.TFTEvent5YR_LaserCorps.1:MinUnits@) Dronlar @TFTTrait.TFTEvent5YR_LaserCorps.1:MagicDamage@ Büyü Hasarı verir.</row><br><row>(@TFTTrait.TFTEvent5YR_LaserCorps.2:MinUnits@) Dronlar @TFTTrait.TFTEvent5YR_LaserCorps.2:MagicDamage@ Büyü Hasarı verir. Ayrıca tüm birimler birer dron daha kazanır.</row><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DroneHeal",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "DronesForNonLaserCorps",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ICD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "MagicDamage",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "PercentChance",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DroneHeal",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "DronesForNonLaserCorps",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "ICD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "MagicDamage",
+                        "value": 33.0
+                    },
+                    {
+                        "name": "PercentChance",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Maestro",
+        "trait_id": "TFTEvent5YR_Maestro",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Classical.png",
+        "tooltip_text": "Bir Maestro Batonu kazanırsın.<br>Kullanıcının saldırı hızı sabitlenir ve ilave saldırı hızı saldırı gücüne dönüşür.<br><br>Maestro her @TFTTrait.TFTEvent5YR_Maestro.1:NumAutosToSpawnJhinGun@ saldırıda bir yedek kulübesindeki boş yuvalardan birine bir Büyük Final Tüfeği yerleştirir. En fazla 4 tüfek yerleştirebilir. 4 tane yerleştirdikten sonra tüfekler Maestro'nunkine denk bir saldırı hızıyla saldırır ve fiziksel hasar verir. <br>Tüfekler her 4. salvoda <tftEvent5YRHarmonic>ahenkli</tftEvent5YRHarmonic> atış yaparak Maestro ile tüfeklerinin son ahenkli salvodan itibaren verdiği toplam hasarın belli bir oranına eşdeğer miktarda hasar verir.<br><br><row>(@TFTTrait.TFTEvent5YR_Maestro.1:MinUnits@) Tüfekler %@TFTTrait.TFTEvent5YR_Maestro.1:EmpoweredShotEchoDamagePercentage*100@ <tftEvent5YRHarmonic>Ahenk</tftEvent5YRHarmonic> Hasarı verir.</row><br><row>(@TFTTrait.TFTEvent5YR_Maestro.2:MinUnits@) Tüfekler %@TFTTrait.TFTEvent5YR_Maestro.2:EmpoweredShotEchoDamagePercentage*100@ <tftEvent5YRHarmonic>Ahenk</tftEvent5YRHarmonic> Hasarı verir. <br>Maestro 4'ten fazla tüfek yerleştirebilir. Çatışma Başlangıcında: Yedek kulübesindeki boş yuvalardan birine 1 tüfek yerleştirir.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusAttackDamage",
+                        "value": 0.75
+                    },
+                    {
+                        "name": "BonusAttackSpeed",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "JhinAttackSpeed",
+                        "value": 0.9
+                    },
+                    {
+                        "name": "RifleADScalar",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "RifleAPScalar",
+                        "value": 0.2
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EmpoweredShotBonus",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "EmpoweredShotEchoDamagePercentage",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "NumAutosToSpawnJhinGun",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumJhinGunsToStartCombatWith",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EmpoweredShotBonus",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "EmpoweredShotEchoDamagePercentage",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "NumAutosToSpawnJhinGun",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumJhinGunsToStartCombatWith",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Maskot",
+        "trait_id": "TFTEvent5YR_Mascot",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_Mascot.png",
+        "tooltip_text": "Takımın @TFTTrait.TFTEvent5YR_Mascot.1:Seconds@ saniyede bir azami canlarının yüzdelik bir bölümünü yeniler.<br><br>Katledilen şampiyonlar kenara geçip takımına tezahürat yapar. Takımının iyileşme oranı tezahürat yapan şampiyon başına artar.<br><br><row>(@TFTTrait.TFTEvent5YR_Mascot.1:MinUnits@) %@TFTTrait.TFTEvent5YR_Mascot.1:BaseHealthRegen@ %i:scaleHealth% ve tezahürat yapan şampiyon başına %@TFTTrait.TFTEvent5YR_Mascot.1:HealthRegenPerMascot@ %i:scaleHealth%</row><br><row>(@TFTTrait.TFTEvent5YR_Mascot.2:MinUnits@) %@TFTTrait.TFTEvent5YR_Mascot.2:BaseHealthRegen@ %i:scaleHealth% ve tezahürat yapan şampiyon başına %@TFTTrait.TFTEvent5YR_Mascot.2:HealthRegenPerMascot@ %i:scaleHealth%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BaseHealthRegen",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "HealthRegenPerMascot",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Seconds",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BaseHealthRegen",
+                        "value": 7.5
+                    },
+                    {
+                        "name": "HealthRegenPerMascot",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "Seconds",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Meka Pilotu",
+        "trait_id": "TFTEvent5YR_MechPilot",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_3_MechPilot.png",
+        "tooltip_text": "Pilot seçmek için Pilot Seçici'yi kullan. Çatışma Başlangıcında: Pilot bir mekaya biner.<br><br>Meka, pilotun özelliklerine ve eşyalarına sahip olur. Ayrıca pilotun saldırı gücünün ve azami canının belli bir yüzdesini kazanır. Meka katledildiğinde pilot azami canının %@TFTTrait.TFTEvent5YR_MechPilot.1:EjectedPilotHealthPercent@ kadarıyla çatışmaya dahil olur.<br><br><row>(@TFTTrait.TFTEvent5YR_MechPilot.1:MinUnits@) Mini Meka: %@TFTTrait.TFTEvent5YR_MechPilot.1:MechCombinedADRatio*100@ %i:scaleAD% %i:scaleHealth% kazanır.</row><br><row>(@TFTTrait.TFTEvent5YR_MechPilot.2:MinUnits@) Süper Meka: %@TFTTrait.TFTEvent5YR_MechPilot.2:MechCombinedADRatio*100@ %i:scaleAD% %i:scaleHealth% kazanır. Pilotun en yakınındaki 2 birim de mekaya biner.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CleaveRatio",
+                        "value": 0.8
+                    },
+                    {
+                        "name": "EjectedPilotHealthPercent",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "ManaOnDeath",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "MechBaseAD",
+                        "value": 90.0
+                    },
+                    {
+                        "name": "MechBaseHealth",
+                        "value": 1200.0
+                    },
+                    {
+                        "name": "MechCombinedADRatio",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "MechCombinedHealthRatio",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumOfSubUnits",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "PercentAPPerStarLevel",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "CleaveRatio",
+                        "value": 0.8
+                    },
+                    {
+                        "name": "EjectedPilotHealthPercent",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "ManaOnDeath",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "MechBaseAD",
+                        "value": 105.0
+                    },
+                    {
+                        "name": "MechBaseHealth",
+                        "value": 2400.0
+                    },
+                    {
+                        "name": "MechCombinedADRatio",
+                        "value": 0.55
+                    },
+                    {
+                        "name": "MechCombinedHealthRatio",
+                        "value": 0.55
+                    },
+                    {
+                        "name": "NumOfSubUnits",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentAPPerStarLevel",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Dağ",
+        "trait_id": "TFTEvent5YR_Mountain",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_2_Mountain.png",
+        "tooltip_text": "Ön sıradaki 2 hücre Dağ hücresine dönüşür.<br>Çatışma Başlangıcında: Dağ hücrelerinde bulunan birimler kalkan ve kalıcı ilave can kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Mountain.1:MinUnits@) Birimler @TFTTrait.TFTEvent5YR_Mountain.1:ShieldValue@ Kalkan ve @TFTTrait.TFTEvent5YR_Mountain.1:PermBonusHealth@ %i:scaleHealth% kazanır.</row><br><row>(@TFTTrait.TFTEvent5YR_Mountain.2:MinUnits@) Birimler @TFTTrait.TFTEvent5YR_Mountain.2:ShieldValue@ Kalkan ve @TFTTrait.TFTEvent5YR_Mountain.2:PermBonusHealth@ %i:scaleHealth% kazanır. Ön sıradaki hücrelerin tamamı Dağ hücrelerine dönüşür.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PermBonusHealth",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "ShieldValue",
+                        "value": 400.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PermBonusHealth",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "ShieldValue",
+                        "value": 600.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Nitro",
+        "trait_id": "TFTEvent5YR_Nitro",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_14_NitroForge.TFT_Set14.png",
+        "tooltip_text": "Şampiyonların her tur yıldız seviyelerine bağlı olarak R-080T'a krom sağlar. Her krom @TFTTrait.TFTEvent5YR_Nitro.:HealthPerScrap@ Can ve @TFTTrait.TFTEvent5YR_Nitro.:APPerScrap@ Yetenek Gücü kazandırır.<br><br><row>(@TFTTrait.TFTEvent5YR_Nitro.1:MinUnits@) R-080T'u çağırırsın!</row><br><row>(@TFTTrait.TFTEvent5YR_Nitro.2:MinUnits@) R-080T'u T-43X'e yükseltirsin! @TFTTrait.TFTEvent5YR_Nitro.:FourStarScrapThreshold@ krom elde ettiğinde T-43X'i devasa bir lazer ateşleyecek şekilde geliştirirsin!</row><br><br><rules>Yıldız Seviyesi Başına Krom: @TFTTrait.TFTEvent5YR_Nitro.:ScrapPerOneStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerTwoStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerThreeStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerFourStar@</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "APPerScrap",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "FourStarScrapThreshold",
+                        "value": 400.0
+                    },
+                    {
+                        "name": "HealthPerScrap",
+                        "value": 7.0
+                    },
+                    {
+                        "name": "ScrapPerFourStar",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "ScrapPerOneStar",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ScrapPerThreeStar",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "ScrapPerTwoStar",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Stage2BonusHP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Stage3BonusHP",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Stage4BonusHP",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "Stage5BonusHP",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "Stage6BonusHP",
+                        "value": 800.0
+                    },
+                    {
+                        "name": "ThreeStarScrapThreshold",
+                        "value": 260.0
+                    },
+                    {
+                        "name": "TwoStarScrapThreshold",
+                        "value": 120.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Zorba",
+        "trait_id": "TFTEvent5YR_Overlord",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_14_Overlord.TFT_Set14.png",
+        "tooltip_text": "Zorba Seçici'yi kullanarak bir Zorba seç.<br><br>Zorba arkasındaki hücrede bulunan birimden bir ısırık alarak ona gerçek hasar verir.<br>Zorba ısırığın verdiği hasar kadar can ve o birimin saldırı gücü ile yetenek gücünün belli bir yüzdesini kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Overlord.1:MinUnits@) Azami canın %@TFTTrait.TFTEvent5YR_Overlord.1:HPPercentDamage*100@ kadarı gerçek hasar verir ve %@TFTTrait.TFTEvent5YR_Overlord.1:PercentADAPGain*100@ %i:scaleAD% %i:scaleAP% kazanır.</row><br><row>(@TFTTrait.TFTEvent5YR_Overlord.2:MinUnits@) Azami canın %@TFTTrait.TFTEvent5YR_Overlord.2:HPPercentDamage*100@ kadarı gerçek hasar verir ve %@TFTTrait.TFTEvent5YR_Overlord.2:PercentADAPGain*100@ %i:scaleAD% %i:scaleAP% kazanır. <br>İki birimden ısırık alır. Zorba'nın hasar veren saldırıları ve yetenekleri rakipleri @TFTTrait.TFTEvent5YR_Overlord.2:DebuffDuration@ saniyeliğine %30 <TFTKeyword>örseler</TFTKeyword>, %30 <TFTKeyword>aşındırır</TFTKeyword>, %@TFTTrait.TFTEvent5YR_Overlord.2:EnemyDamageReduction*100@ <TFTKeyword>güçsüz düşürür</TFTKeyword> ve %33 <TFTKeyword>yaralar</TFTKeyword>. Bu etkiler birikmez.</row><br><br><tftitemrules><tftbold>Örseleme</tftbold>: Örselenen birimlerin büyü direnci azalır.<br><tftbold>Aşındırma</tftbold>: Aşındırılan birimlerin zırhı azalır.<br><tftbold>Güçsüz Düşme</tftbold>: Güçsüz düşen birimlerin verdiği hasar azalır.<br><tftbold>Yara</tftbold>: Yaralanan birimlerin aldığı iyileştirme etkileri azalır.</tftitemrules><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HPPercentDamage",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumHexes",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentADAPGain",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "PercentHPGain",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DebuffDuration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "EnemyDamageReduction",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HPPercentDamage",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumHexes",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentADAPGain",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "PercentHPGain",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Pentakill",
+        "trait_id": "TFTEvent5YR_Pentakill",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Pentakill.png",
+        "tooltip_text": "Takımın %@TFTTrait.TFTEvent5YR_Pentakill.1:Damage_Reduction*100@ Dayanıklılık ve Hasar Artışı kazanır. Katledilen her şampiyon, takımındaki bir şampiyonun coşmasını sağlayarak bu ilave hasar artışını %@TFTTrait.TFTEvent5YR_Pentakill.:Kill_Bonus*100@ arttırır.<br><br>@TFTTrait.TFTEvent5YR_Pentakill.:Kill_Count@. katletmede tüm takımın coşar ve saldırı hızı kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Pentakill.1:MinUnits@) %@TFTTrait.TFTEvent5YR_Pentakill.1:Bonus_Damage*100@ %i:scaleDA%, 5. katletmeden sonra %@TFTTrait.TFTEvent5YR_Pentakill.1:Attack_Speed*100@ Saldırı Hızı</row><br><row>(@TFTTrait.TFTEvent5YR_Pentakill.2:MinUnits@) %@TFTTrait.TFTEvent5YR_Pentakill.2:Bonus_Damage*100@ %i:scaleDA%, 5. katletmeden sonra %@TFTTrait.TFTEvent5YR_Pentakill.2:Attack_Speed*100@ Saldırı Hızı</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Kill_Bonus",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Kill_Count",
+                        "value": 5.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Attack_Speed",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Bonus_Damage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Damage_Reduction",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Attack_Speed",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Bonus_Damage",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Damage_Reduction",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Hayalet",
+        "trait_id": "TFTEvent5YR_Phantom",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Phantom.png",
+        "tooltip_text": "Çatışma Başlangıcında: Rasgele rakiplerin canı azalır.<br><br><row>(@TFTTrait.TFTEvent5YR_Phantom.1:MinUnits@) @TFTTrait.TFTEvent5YR_Phantom.1:NumUnitsToReduce@ rakibin canı %@TFTTrait.TFTEvent5YR_Phantom.1:PercentHealth*100@ Azami Cana düşer.</row><br><row>(@TFTTrait.TFTEvent5YR_Phantom.2:MinUnits@) @TFTTrait.TFTEvent5YR_Phantom.2:NumUnitsToReduce@ rakibin canı @TFTTrait.TFTEvent5YR_Phantom.2:FlatHealth@ Cana düşer.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "FlatHealth",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumUnitsToReduce",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentHealth",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "FlatHealth",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "NumUnitsToReduce",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentHealth",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Dinçleştirici",
+        "trait_id": "TFTEvent5YR_Preserver",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Rejuvenator.png",
+        "tooltip_text": "Takımın @TFTTrait.TFTEvent5YR_Preserver.1:Duration@ saniyede bir azami canlarının belirli bir oranına eşdeğer miktarda can yeniler. Canları tamamen doluysa mana yenilerler.<br><br><row>(@TFTTrait.TFTEvent5YR_Preserver.1:MinUnits@) %@TFTTrait.TFTEvent5YR_Preserver.1:HealthPct*100@ %i:scaleHealth% veya %@TFTTrait.TFTEvent5YR_Preserver.1:ManaPct*100@ %i:scaleMana% yenilerler.</row><br><row>(@TFTTrait.TFTEvent5YR_Preserver.2:MinUnits@) %@TFTTrait.TFTEvent5YR_Preserver.2:HealthPct*100@ %i:scaleHealth% ve %@TFTTrait.TFTEvent5YR_Preserver.2:ManaPct*100@ %i:scaleMana% yenilerler. Her zaman iki etkiyi de elde ederler.</row><br><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthPct",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "ManaPct",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HealthPct",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "ManaPct",
+                        "value": 0.09
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Punk",
+        "trait_id": "TFTEvent5YR_Punk",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Punk.png",
+        "tooltip_text": "Takımın ilave can, saldırı gücü ve yetenek gücü kazanır. Bu ilaveler dükkânı yenilemek için altın harcadığında %1 artar.<br><br>Her çatışmanın ardından o tur için 1 Altın bedelli bir yenileme hakkı kazanırsın. Her tur ilk yenilemen %@TFTTrait.TFTEvent5YR_Punk:FIRST_ROLL_BONUS@ ilave sağlar!<br><br><row>(@TFTTrait.TFTEvent5YR_Punk.1:MinUnits@) @TFTTrait.TFTEvent5YR_Punk.1:BONUS_HEALTH@ %i:scaleHealth% ve %@TFTTrait.TFTEvent5YR_Punk.1:BONUS_AD_AP*100@ %i:scaleAD% %i:scaleAP%</row><br><row>(@TFTTrait.TFTEvent5YR_Punk.2:MinUnits@) @TFTTrait.TFTEvent5YR_Punk.2:BONUS_HEALTH@ %i:scaleHealth% ve %@TFTTrait.TFTEvent5YR_Punk.2:BONUS_AD_AP*100@ %i:scaleAD% %i:scaleAP%</row><br><br>Mevcut İlave: %@TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentBonus@<br>@TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentHealthBonus@ %i:scaleHealth% ve %@TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentADBonus@ %i:scaleAD% %i:scaleAP%",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "FIRST_ROLL_BONUS",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PUNK_3_STAR_BONUS",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BONUS_AD_AP",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "BONUS_HEALTH",
+                        "value": 60.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BONUS_AD_AP",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "BONUS_HEALTH",
+                        "value": 180.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Alaz",
+        "trait_id": "TFTEvent5YR_Pyro",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Pyrokinesis.TFT_Set12.png",
+        "tooltip_text": "Takımın %@TFTTrait.TFTEvent5YR_Pyro:BaseASPct@ %i:scaleAS% Saldırı Hızı kazanır.<br><br>Takımın her katletme için sonraki tur toplayabileceğin bir kor oluşturur. Takımın topladığın her @TFTTrait.TFTEvent5YR_Pyro:NumCinders@ kor için fazladan %@TFTTrait.TFTEvent5YR_Pyro:ASPctPerNumCinders@ %i:scaleAS% kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Pyro.1:MinUnits@) Rakip başına @TFTTrait.TFTEvent5YR_Pyro.1:NumCindersPerKill@ alev koru oluştururlar.</row><br><row>(@TFTTrait.TFTEvent5YR_Pyro.2:MinUnits@) Rakip başına @TFTTrait.TFTEvent5YR_Pyro.2:NumCindersPerKill@ alev koru oluştururlar ve canı %@TFTTrait.TFTEvent5YR_Pyro.2:ExecutePct@ değerinin altındaki rakipleri infaz ederler.</row><br><br>Toplanan Kor: @TFTUnitProperty.trait:TFTEvent5YR_PyroCindersCollected@<br>Takım %i:scaleAS%: %@TFTUnitProperty.trait:TFTEvent5YR_PyroAttackSpeed@",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ASPctPerNumCinders",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "BaseASPct",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "NumCinders",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "NumCindersHR",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ExecutePct",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumCindersPerKill",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PyroUnitAS",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ExecutePct",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "NumCindersPerKill",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PyroUnitAS",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Asi",
+        "trait_id": "TFTEvent5YR_Rebel",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_3_Rebel.png",
+        "tooltip_text": "Takımındaki birimler bitişiklerindeki her takım arkadaşı başına kalkan ve hasar artışı kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Rebel.1:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.1:ShieldDuration@ saniyeliğine @TFTTrait.TFTEvent5YR_Rebel.1:ShieldAmount@ Kalkan, %@TFTTrait.TFTEvent5YR_Rebel.1:DamageAmp@ %i:scaleDA%</row><br><row>(@TFTTrait.TFTEvent5YR_Rebel.2:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.2:ShieldDuration@ saniyeliğine @TFTTrait.TFTEvent5YR_Rebel.2:ShieldAmount@ Kalkan, %@TFTTrait.TFTEvent5YR_Rebel.2:DamageAmp@ %i:scaleDA%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 4.5
+                    },
+                    {
+                        "name": "ShieldAmount",
+                        "value": 150.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 9.0
+                    },
+                    {
+                        "name": "ShieldAmount",
+                        "value": 350.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Parlakpul",
+        "trait_id": "TFTEvent5YR_Shimmerscale",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Shimmerscale.png",
+        "tooltip_text": "Parlakpul eşyaları kazanırsın. Bu eşyalar çatışma gücü ve altın kazandırır.<br><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.1:MinUnits@) Bir Altın Hâkimi'nin Asası kazanırsın. Ayrıca Aşama @TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemStage@-@TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemRound@ sırasında bir Draven'ın Baltası kazanırsın.</row><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.2:MinUnits@) Bir Şampiyon Tacı kazanırsın.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "SecondItemRound",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "SecondItemStage",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "SecondItemRound",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "SecondItemStage",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Shurima",
+        "trait_id": "TFTEvent5YR_Shurima",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Shurima.png",
+        "tooltip_text": "Çatışma Başlangıcında: Belli şampiyonlar yükselerek %@TFTTrait.TFTEvent5YR_Shurima.1:BonusHealthPercent*100@ Azami Can %i:scaleHealth% ve %@TFTTrait.TFTEvent5YR_Shurima.1:BonusASPercent*100@ Saldırı Hızı %i:scaleAS% kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Shurima.1:MinUnits@) En güçlü şampiyon @TFTTrait.TFTEvent5YR_Shurima.1:SecondsToAscend@ saniyenin ardından yükselir.</row><br><row>(@TFTTrait.TFTEvent5YR_Shurima.2:MinUnits@) En güçlü @TFTTrait.TFTEvent5YR_Shurima.2:NumUnitsToAscend@ şampiyon hemen yükselir.</row><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusASPercent",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "BonusHealthPercent",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "HealthRegen",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "NumPulsesToAscend",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumUnitsToAscend",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PulsePeriod",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "SecondsToAscend",
+                        "value": 8.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusASPercent",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "BonusHealthPercent",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "HealthRegen",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "NumPulsesToAscend",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumUnitsToAscend",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "PulsePeriod",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "SecondsToAscend",
+                        "value": 8.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Sosyetik",
+        "trait_id": "TFTEvent5YR_Socialite",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Socialite.png",
+        "tooltip_text": "Bir hücre spot ışığıyla aydınlanır.<br>Çatışma Başlangıcında: Spot ışığının altındaki birim ilave nitelikler kazanır.<br><br><row>(@TFTTrait.TFTEvent5YR_Socialite.1:MinUnits@) Her saniye %@TFTTrait.TFTEvent5YR_Socialite.1:DamagePercent*100@ %i:scaleDA% ve @TFTTrait.TFTEvent5YR_Socialite.1:ManaPerSecond@&nbsp;%i:scaleMana% kazanır.</row><br><row>(@TFTTrait.TFTEvent5YR_Socialite.2:MinUnits@) Her saniye %@TFTTrait.TFTEvent5YR_Socialite.2:DamagePercent*100@ %i:scaleDA%, @TFTTrait.TFTEvent5YR_Socialite.2:ManaPerSecond@&nbsp;%i:scaleMana% ve %@TFTTrait.TFTEvent5YR_Socialite.2:OmnivampPercent*100@ %i:scaleSV% kazanır. Ayrıca bir hücre daha spot ışığıyla aydınlanır.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamagePercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "DamageReductionPercent",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "ManaPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "OmnivampPercent",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Tier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamagePercent",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "DamageReductionPercent",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "ManaPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "OmnivampPercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Tier",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Hikâyebaz",
+        "trait_id": "TFTEvent5YR_Storyweaver",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Storyweaver.png",
+        "tooltip_text": "Kayle adında bir kahraman çağırırsın ve seviye atladıkça onu geliştirirsin!<br><br><row>(@TFTTrait.TFTEvent5YR_Storyweaver.1:MinUnits@) @TFTTrait.TFTEvent5YR_Storyweaver:FirstArmoryLevel@. seviyeye ulaştığında Kayle gelişip 2 yıldızlı olur. Bir destek etkisi seçersin.</row><br><row>(@TFTTrait.TFTEvent5YR_Storyweaver.2:MinUnits@) Kayle @TFTTrait.TFTEvent5YR_Storyweaver:SecondArmoryLevel@, @TFTTrait.TFTEvent5YR_Storyweaver:ThirdArmoryLevel@ ve @TFTTrait.TFTEvent5YR_Storyweaver:FourStarUpgradeLevel@. seviyelerde yeniden gelişir:<br>@TFTTrait.TFTEvent5YR_Storyweaver:SecondArmoryLevel@. Seviye: Bir çatışma etkisi seçersin. <br>@TFTTrait.TFTEvent5YR_Storyweaver:ThirdArmoryLevel@. Seviye: Kayle gelişip 3 yıldızlı olur. Bir çatışma etkisi seçersin.<br>@TFTTrait.TFTEvent5YR_Storyweaver:FourStarUpgradeLevel@. Seviye: Kayle gelişip 4 yıldızlı olur.</row><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusASPerStage",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "FirstArmoryLevel",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "FourStarUpgradeLevel",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "HealthPerChapter",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "SecondArmoryLevel",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "Storyweaver3CarryItemPercent",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Storyweaver3ChoiceCount",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Storyweaver3JazzItemPercent",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Storyweaver5ChoiceCount",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Storyweaver5TraitItemPercent",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "Storyweaver7ChoiceCount",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ThirdArmoryLevel",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "ThreeStarUpgradeLevel",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "TwoStarUpgradeLevel",
+                        "value": 5.0
+                    }
+                ]
+            },
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Mürettebat",
+        "trait_id": "TFTEvent5YR_TheCrew",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_StarCrew.TFT_Set15.png",
+        "tooltip_text": "Savaşta sana yardım etmesi için <i>Nocturnus</i>'u çağırırsın! Nocturnus takımının verdiği her @TFTTrait.TFTEvent5YR_TheCrew.1:BaseDamageThreshold@ Hasar için bir roket ateşler. Roket @TFTTrait.TFTEvent5YR_TheCrew.1:BaseRocketDamage@ Büyü Hasarı verir.<br><br>2 Altınlık ve daha yüksek bedelli şampiyonlar 3 yıldıza ulaştıktan sonra Mürettebat üyesi olur. Her bir Mürettebat üyesi için fazladan ilaveler kazanırsın.<br><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.1:MinUnits@) En fazla 2 Mürettebat üyen olur.</row><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.2:MinUnits@) En fazla 4 Mürettebat üyen olur.</row><br><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus1Active default=false alternate=TFTGuildInactive>(1x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>): Son çatışmada ileri sürdüğün bir birimin yıldız seviyesini yükselttiğinde +@TFTTrait.TFTEvent5YR_TheCrew.1:OnARollRolls@ bedelsiz yenileme hakkı kazanırsın.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus2Active default=false alternate=TFTGuildInactive>(2x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>): Roketler <magicDamage>@TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedRocketDamage@</magicDamage> Hasar verir.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus3Active default=false alternate=TFTGuildInactive>(3x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>): Her tur +@TFTTrait.TFTEvent5YR_TheCrew.1:FreeRerollsPerRound@ bedelsiz yenileme hakkı kazanırsın.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus4Active default=false alternate=TFTGuildInactive>(4x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>): Roketler verilen her @TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedDamageThreshold@ Hasarda bir ateşlenir. Her tur @TFTTrait.TFTEvent5YR_TheCrew.1:XPPerRound@ XP kazanırsın.</tftActiveRank>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BaseDamageThreshold",
+                        "value": 440.0
+                    },
+                    {
+                        "name": "BaseRocketDamage",
+                        "value": 85.0
+                    },
+                    {
+                        "name": "FreeRerollOdds",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "FreeRerollsPerRound",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "OnARollRolls",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "UpgradedDamageThreshold",
+                        "value": 210.0
+                    },
+                    {
+                        "name": "UpgradedRocketDamage",
+                        "value": 120.0
+                    },
+                    {
+                        "name": "XPPerRound",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Terbiyeci",
+        "trait_id": "TFTEvent5YR_Trainer",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Trainers.png",
+        "tooltip_text": "Çatışmaların ardından Nomsy'ye en yakın üç şampiyon ona yıldız seviyeleri başına bir kurabiye vererek onun canını ve yetenek gücünü arttırır. Nomsy'nin yıldız seviyesi 25 kurabiyede bir artar!<br><br><row>(@TFTTrait.TFTEvent5YR_Trainer.1:MinUnits@) Nomsy'yi çağırırsın!</row><br><row>(@TFTTrait.TFTEvent5YR_Trainer.2:MinUnits@) Nomsy'nin yeteneği %@TFTTrait.TFTEvent5YR_Trainer.2:DamageInc*100@ İlave Hasar verir.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageInc",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "DragonlingTier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageInc",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "DragonlingTier",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Yordle",
+        "trait_id": "TFTEvent5YR_Yordle",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Yordle.png",
+        "tooltip_text": "Oyunculara karşı her çatışmanın ardından Yordle ganimetleriyle dolu bir Yordle Kesesi kazanırsın!<br><br><row>(@TFTTrait.TFTEvent5YR_Yordle.1:MinUnits@) Bir Yordle Kesesi kazanırsın!</row><br><row>(@TFTTrait.TFTEvent5YR_Yordle.2:MinUnits@) En az @TFTTrait.TFTEvent5YR_Yordle.2:NumOfThreeStarsNeeded@ tane 3 yıldızlı şampiyonun varsa Yordle Kesesi bir Yordle Lordu içerir.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumOfThreeStarsNeeded",
+                        "value": 999.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "NumOfThreeStarsNeeded",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Yordle Lordu",
+        "trait_id": "TFTEvent5YR_YordleLord",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_YordleLord.png",
+        "tooltip_text": "Yordle Lordu Veigar ve onun Hiddetboynuzları Penguş'un Partisi'ni basıyor!",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
             }
         ]
     },

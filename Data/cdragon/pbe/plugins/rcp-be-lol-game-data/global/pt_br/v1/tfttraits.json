@@ -17403,7 +17403,7 @@
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_DA",
@@ -17439,7 +17439,7 @@
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_DA",
@@ -17447,7 +17447,7 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "Mountain_Health",
@@ -17475,7 +17475,7 @@
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_DA",
@@ -17483,7 +17483,7 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "Mountain_Health",
@@ -17534,7 +17534,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.25
+                        "value": 0.2
                     }
                 ],
                 "min_units": 3,
@@ -25246,6 +25246,2621 @@
                 "min_units": 6,
                 "style_idx": 5,
                 "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Águas de Sentina",
+        "trait_id": "TFTEvent5YR_Bilgewater",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Bilgewater.png",
+        "tooltip_text": "Os ataques e habilidades da sua equipe marcam os inimigos. A marca armazena um percentual do dano causado ao inimigo.<br><br>Os inimigos marcados são atingidos por uma bala de canhão depois de @TFTTrait.TFTEvent5YR_Bilgewater.1:BarrageInterval@s, causando o dano armazenado mais um valor fixo como <physicalDamage>Dano Físico</physicalDamage>.<br><br><row>(@TFTTrait.TFTEvent5YR_Bilgewater.1:MinUnits@) @TFTTrait.TFTEvent5YR_Bilgewater.1:Damage@ + @TFTTrait.TFTEvent5YR_Bilgewater.1:DamagePercent@% do dano causado</row><br><row>(@TFTTrait.TFTEvent5YR_Bilgewater.2:MinUnits@) @TFTTrait.TFTEvent5YR_Bilgewater.2:Damage@ + @TFTTrait.TFTEvent5YR_Bilgewater.2:DamagePercent@% do dano causado. Toda @TFTTrait.TFTEvent5YR_Bilgewater.2:ShotsUntilTreasure@ª bala de canhão é substituída por um baú de tesouro que concede ouro!</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BarrageInterval",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "CannonballScale",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Damage",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "DamagePercent",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "ShotsUntilTreasure",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BarrageInterval",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "CannonballScale",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "Damage",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "DamagePercent",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "ShotsUntilTreasure",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "O Chefe",
+        "trait_id": "TFTEvent5YR_Boss",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_4_Theboss.png",
+        "tooltip_text": "Recebe Socos do Chefe. Quando a Vida do usuário fica abaixo de @TFTTrait.TFTEvent5YR_Boss.1:HealthThreshold*100@% pela primeira vez, ele se torna o Chefe e sai do combate para começar a fazer abdominais. Cada abdominal restaura Vida máxima e concede Velocidade de Ataque. <br><br><row>(@TFTTrait.TFTEvent5YR_Boss.1:MinUnits@) @TFTTrait.TFTEvent5YR_Boss.1:HealPercent*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Boss.1:AttackSpeedPercent*100@% %i:scaleAS%.</row><br><row>(@TFTTrait.TFTEvent5YR_Boss.2:MinUnits@) @TFTTrait.TFTEvent5YR_Boss.2:HealPercent*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Boss.2:AttackSpeedPercent*100@% %i:scaleAS%. Se a Vida ficar cheia, ele volta ao combate Motivado: todos os ataques e habilidades causam @TFTTrait.TFTEvent5YR_Boss.2:TrueDamagePercentage*100@% de dano como Dano Verdadeiro.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "HealPercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedPercent",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "HealPercent",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "TrueDamagePercentage",
+                        "value": 0.7
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Conquistador",
+        "trait_id": "TFTEvent5YR_Conqueror",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_13_Conqueror.TFT_Set13.png",
+        "tooltip_text": "Eliminações da sua equipe concedem acúmulos de Conquista. Depois de obter Conquista suficiente, abra Baús de Guerra recheados de espólios!<br><br>Sua equipe recebe Dano de Ataque e Poder de Habilidade, que aumentam em @TFTTrait.TFTEvent5YR_Conqueror:PercentIncreasePerChest*100@% a cada Baú de Guerra aberto.<br><br><row>(@TFTTrait.TFTEvent5YR_Conqueror.1:MinUnits@) @TFTTrait.TFTEvent5YR_Conqueror.1:ADAPBase*100@%&nbsp;%i:scaleAD%%i:scaleAP%; @TFTTrait.TFTEvent5YR_Conqueror.1:StacksPerKill@x&nbsp;Conquista</row><br><row>(@TFTTrait.TFTEvent5YR_Conqueror.2:MinUnits@) @TFTTrait.TFTEvent5YR_Conqueror.2:ADAPBase*100@%&nbsp;%i:scaleAD%%i:scaleAP%; @TFTTrait.TFTEvent5YR_Conqueror.2:StacksPerKill@x&nbsp;Conquista</row><br><br><rules>Baús de Guerra abertos: @TFTUnitProperty.trait:TFTEvent5YR_Conqueror_ChestsCompleted@</rules><br><rules>Atributos atuais: @TFTUnitProperty.trait:TFTEvent5YR_Conqueror_CurrentADAP@%&nbsp;%i:scaleAD%%i:scaleAP%</rules><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PercentIncreasePerChest",
+                        "value": 0.06
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAPBase",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "StacksPerKill",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPBase",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "StacksPerKill",
+                        "value": 6.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Bruxa",
+        "trait_id": "TFTEvent5YR_Coven",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Coven.png",
+        "tooltip_text": "No início do combate, a unidade mais próxima ao ponto central da sua equipe é escolhida como Líder das Bruxas, recebendo Poder de Habilidade adicional.<br><br>Quando sua equipe conjurar uma habilidade, o Líder das Bruxas ganhará Mana.<br><br><row>(@TFTTrait.TFTEvent5YR_Coven.1:MinUnits@) @TFTTrait.TFTEvent5YR_Coven.1:AbilityPower@ %i:scaleAP%, @TFTTrait.TFTEvent5YR_Coven.1:ManaToGive@ %i:scaleMana% </row><br><row>(@TFTTrait.TFTEvent5YR_Coven.2:MinUnits@) @TFTTrait.TFTEvent5YR_Coven.2:AbilityPower@ %i:scaleAP%, @TFTTrait.TFTEvent5YR_Coven.2:ManaToGive@ %i:scaleMana% </row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "ManaToGive",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "ManaToGive",
+                        "value": 8.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Cristal",
+        "trait_id": "TFTEvent5YR_Crystal",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_2_Crystal.png",
+        "tooltip_text": "Seus Tanques têm uma quantidade máxima de dano que podem sofrer de um único ataque ou habilidade durante os primeiros segundos de combate.<br><br><row>(@TFTTrait.TFTEvent5YR_Crystal.1:MinUnits@) @TFTTrait.TFTEvent5YR_Crystal.1:DamageThreshold@ de dano máximo; @TFTTrait.TFTEvent5YR_Crystal.1:Duration@s.</row><br><row>(@TFTTrait.TFTEvent5YR_Crystal.2:MinUnits@) @TFTTrait.TFTEvent5YR_Crystal.2:DamageThreshold@ de dano máximo; @TFTTrait.TFTEvent5YR_Crystal.2:Duration@s.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageReduction",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "DamageThreshold",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 6.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageReduction",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "DamageThreshold",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Duration",
+                        "value": 10.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Demacia",
+        "trait_id": "TFTEvent5YR_Demacia",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Demacia.TFT_Set16.png",
+        "tooltip_text": "Sempre que sua equipe perde @TFTTrait.TFTEvent5YR_Demacia.1:MaxHealthLost*100@% da Vida máxima, ela se Revigora, reduzindo o Custo de Mana em @TFTTrait.TFTEvent5YR_Demacia.1:ManaReductionPct*100@%. Sua equipe recebe Armadura e Resistência Mágica.<br><br><row>(@TFTTrait.TFTEvent5YR_Demacia.1:MinUnits@) @TFTTrait.TFTEvent5YR_Demacia.1:ArmorMR@&nbsp;%i:scaleArmor%%i:scaleMR%</row><br><row>(@TFTTrait.TFTEvent5YR_Demacia.2:MinUnits@) @TFTTrait.TFTEvent5YR_Demacia.2:ArmorMR@&nbsp;%i:scaleArmor%%i:scaleMR%. Habilita Galio. Ao Revigorar, reduz os Custos de Mana da sua equipe em @TFTTrait.TFTEvent5YR_Demacia.2:ManaReductionPctPerGalioItem*100@% para cada item equipado no seu Galio mais forte e golpeia inimigos, causando dano equivalente a @TFTTrait.TFTEvent5YR_Demacia.2:EnemyTrueDamage*100@% da Vida&nbsp;máxima deles.</row><br><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnemyTrueDamage",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "ManaReductionPct",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "MaxHealthLost",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "MaxHealthLostSummonGalio",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "MaxNumberOfRallies",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "PrismaticDamageAmp",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "PrismaticShield",
+                        "value": 1500.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ArmorMR",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "ManaReductionPctPerGalioItem",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ArmorMR",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "ManaReductionPctPerGalioItem",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Majestade Dracônica",
+        "trait_id": "TFTEvent5YR_Dragonlord",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Dragonlord.png",
+        "tooltip_text": "Após @TFTTrait.TFTEvent5YR_Dragonlord.1:FirstDelay@s de combate, o Dragão golpeia o tabuleiro, causando <trueDamage>Dano Verdadeiro</trueDamage> e Atordoando todos os inimigos. Aliados recebem Velocidade de Ataque pelo resto do combate.<br><br><row>(@TFTTrait.TFTEvent5YR_Dragonlord.1:MinUnits@) @TFTTrait.TFTEvent5YR_Dragonlord.1:TrueDamageHPRatio*100@% %i:scaleHealth% de dano, Atordoa por @TFTTrait.TFTEvent5YR_Dragonlord.1:StunDuration@s, @TFTTrait.TFTEvent5YR_Dragonlord.1:AttackSpeedBuff*100@% %i:scaleAS%.</row><br><row>(@TFTTrait.TFTEvent5YR_Dragonlord.2:MinUnits@) @TFTTrait.TFTEvent5YR_Dragonlord.2:TrueDamageHPRatio*100@% %i:scaleHealth% de dano, Atordoa por @TFTTrait.TFTEvent5YR_Dragonlord.2:StunDuration@s, @TFTTrait.TFTEvent5YR_Dragonlord.2:AttackSpeedBuff*100@% %i:scaleAS%.<br>Depois de mais @TFTTrait.TFTEvent5YR_Dragonlord.2:SecondDelay@s, o Dragão golpeia novamente.</row><br><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ASDuration",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "AttackSpeedBuff",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "FirstDelay",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "StrikeLevel",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "StunDuration",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "TrueDamageHPRatio",
+                        "value": 0.12
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASDuration",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "AttackSpeedBuff",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "FirstDelay",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "SecondDelay",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "StrikeLevel",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "StunDuration",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TrueDamageHPRatio",
+                        "value": 0.18
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Sabugueiro",
+        "trait_id": "TFTEvent5YR_Elderwood",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_4_Wilderness.png",
+        "tooltip_text": "A cada @TFTTrait.TFTEvent5YR_Elderwood.1:TickRate@s, sua equipe cresce e ganha atributos adicionais. Esse efeito acumula até @TFTTrait.TFTEvent5YR_Elderwood.1:MaxStacks@x.<br><br><row>(@TFTTrait.TFTEvent5YR_Elderwood.1:MinUnits@) @TFTTrait.TFTEvent5YR_Elderwood.1:BonusResists@&nbsp;%i:scaleArmor%%i:scaleMR%, @TFTTrait.TFTEvent5YR_Elderwood.1:BonusADSP@&nbsp;%i:scaleAP%%i:scaleAD%</row><br><row>(@TFTTrait.TFTEvent5YR_Elderwood.2:MinUnits@) @TFTTrait.TFTEvent5YR_Elderwood.2:BonusResists@&nbsp;%i:scaleArmor%%i:scaleMR%, @TFTTrait.TFTEvent5YR_Elderwood.2:BonusADSP@&nbsp;%i:scaleAP%%i:scaleAD%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusADSP",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "BonusResists",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "PercentVisualGrowth",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "TickRate",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusADSP",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "BonusResists",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "MaxStacks",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "PercentVisualGrowth",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "TickRate",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Imperatriz",
+        "trait_id": "TFTEvent5YR_Empress",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Empress.png",
+        "tooltip_text": "Recebe uma Coroa de Lavanda. Após os primeiros @TFTTrait.TFTEvent5YR_Empress.1:DelayForInitialCoralSpawn@s de combate, um Coral do Vazio surge próximo ao alvo atual do usuário.<br>O usuário se teleporta até o Coral e o consome, recebendo Vida máxima, Dano de Ataque e Poder de Habilidade, além de causar Dano Mágico a inimigos em até @TFTTrait.TFTEvent5YR_Empress.1:HexRange@ casa(s).<br><br><row>(@TFTTrait.TFTEvent5YR_Empress.1:MinUnits@) O Coral concede @TFTTrait.TFTEvent5YR_Empress.1:PercentBonusMaxHealth*100@% de aumento de Vida máxima e @TFTTrait.TFTEvent5YR_Empress.1:BonusAD*100@% %i:scaleAD% %i:scaleAP%.</row><br><row>(@TFTTrait.TFTEvent5YR_Empress.2:MinUnits@) Abates passam a deixar Corais do Vazio adicionais para trás. O primeiro Coral concede @TFTTrait.TFTEvent5YR_Empress.2:PercentBonusMaxHealth*100@% de aumento de Vida máxima e @TFTTrait.TFTEvent5YR_Empress.2:BonusAD*100@% %i:scaleAD% %i:scaleAP%. Consumir Corais adicionais cura o usuário em @TFTTrait.TFTEvent5YR_Empress.2:PercentHealthHeal*100@% %i:scaleHealth% e concede mais @TFTTrait.TFTEvent5YR_Empress.2:StackingBonusAD*100@% %i:scaleAD% %i:scaleAP%.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusAD",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "BonusAP",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "DelayForInitialCoralSpawn",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "HexRange",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentADDamage",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "PercentAPDamage",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "PercentBonusDamageAmp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PercentBonusMaxHealth",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentHealthHeal",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentHealthMagicDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PercentStackingBonusDamageAmp",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "StackingBonusAD",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "StackingBonusAP",
+                        "value": 7.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusAD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "BonusAP",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "DelayForInitialCoralSpawn",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "HexRange",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentADDamage",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "PercentAPDamage",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "PercentBonusDamageAmp",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentBonusMaxHealth",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "PercentHealthHeal",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentHealthMagicDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PercentStackingBonusDamageAmp",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "StackingBonusAD",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "StackingBonusAP",
+                        "value": 7.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Destinado",
+        "trait_id": "TFTEvent5YR_Fated",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Fated.png",
+        "tooltip_text": "Coloque um Campeão sobre outro para formar uma dupla e habilitar um <TFTBonus>Efeito de Destinado</TFTBonus> com base na função dos Campeões.<br><br><row>(@TFTTrait.TFTEvent5YR_Fated.1:MinUnits@) A dupla ganha o Efeito de Destinado e recebe @TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@% de Vida máxima. </row><br><row>(@TFTTrait.TFTEvent5YR_Fated.2:MinUnits@) TODAS as unidades ganham o Efeito de Destinado. A dupla recebe @TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@% de Vida máxima e @TFTTrait.TFTEvent5YR_Fated.2:PairBondIncreasePercent*100@% do Efeito de Destinado. </row><br><br>Efeitos de Destinado:<br><ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><status>Assassinos</status>: @TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@ de Escudo no início do combate.</ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><TFTGuildInactive>Assassinos: @TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@ de Escudo no início do combate.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><br><ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><status>Conjuradores</status>: @TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@% de Dano de Ataque e de Poder de Habilidade.</ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><TFTGuildInactive>Conjuradores: @TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@% de Dano de Ataque e de Poder de Habilidade.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><status>Lutadores</status>: @TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@% de Vampirismo Universal.</ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><TFTGuildInactive>Lutadores: @TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@% de Vampirismo Universal.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><status>Atiradores</status>: @TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@% de Velocidade de Ataque.</ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><TFTGuildInactive>Atiradores: @TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@% de Velocidade de Ataque.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><br><ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><status>Especialistas</status>: causam @TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@% do dano como Dano Verdadeiro.</ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><TFTGuildInactive>Especialistas: causam @TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@% do dano como Dano Verdadeiro.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><br><ShowIf.TFTEvent5YR_Trait_Fated_TankActive><status>Tanques</status>: @TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@ de Armadura e de Resistência Mágica.</ShowIf.TFTEvent5YR_Trait_Fated_TankActive><ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><TFTGuildInactive>Tanques: @TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@ de Armadura e de Resistência Mágica.</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><br><br>Suas unidades só se beneficiam de uma única instância de um Efeito de Destinado específico.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AhriBuffBonus",
+                        "value": 0.19
+                    },
+                    {
+                        "name": "EmblemHPRegen",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "KindredBuffBonus",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "PairHPBonus",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "SettBuffBonus",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "SyndraBuffBonus",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "ThreshBuffBonus",
+                        "value": 18.0
+                    },
+                    {
+                        "name": "YasuoBuffBonus",
+                        "value": 250.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BondIncreasePercent",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "GiveToAll",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "PairBondIncreasePercent",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PairCount",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BondIncreasePercent",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "GiveToAll",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PairBondIncreasePercent",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PairCount",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Espectral",
+        "trait_id": "TFTEvent5YR_Ghostly",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Ghostly.png",
+        "tooltip_text": "Após causar ou sofrer dano @TFTTrait.TFTEvent5YR_Ghostly:NumInstances@x, unidades enviam @TFTTrait.TFTEvent5YR_Ghostly:NumSpectres@ espectros para assombrar inimigos próximos e curam @TFTTrait.TFTEvent5YR_Ghostly:HealingPercent*100@%&nbsp;da própria Vida máxima a cada @TFTTrait.TFTEvent5YR_Ghostly:TickRate@s. <br><br>Inimigos Assombrados sofrem dano adicional para cada espectro sobre si e passam seus espectros adiante ao morrerem.<br><br><row>(@TFTTrait.TFTEvent5YR_Ghostly.1:MinUnits@) @TFTTrait.TFTEvent5YR_Ghostly.1:DamagePercent*100@% por espectro</row><br><row>(@TFTTrait.TFTEvent5YR_Ghostly.2:MinUnits@) @TFTTrait.TFTEvent5YR_Ghostly.2:DamagePercent*100@% por espectro</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealingPercent",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "NumInstances",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "NumSpectres",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TickRate",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamagePercent",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamagePercent",
+                        "value": 0.13
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Glacial",
+        "trait_id": "TFTEvent5YR_Glacial",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_2_Glacial.png",
+        "tooltip_text": "Recebe um Malho Glacial. Ataques de Campeões com um Malho Glacial têm @TFTTrait.TFTEvent5YR_Glacial.1:ProcPercent*100@% de chance de Atordoar o alvo por @TFTTrait.TFTEvent5YR_Glacial.1:StunDuration@s e causar Dano Mágico adicional. <br><br><row>(@TFTTrait.TFTEvent5YR_Glacial.1:MinUnits@) @TFTTrait.TFTEvent5YR_Glacial.1:BonusDamage@ de Dano Mágico.</row><br><row>(@TFTTrait.TFTEvent5YR_Glacial.2:MinUnits@) @TFTTrait.TFTEvent5YR_Glacial.2:BonusDamage@ de Dano Mágico. Recebe outro Malho Glacial.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 200.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ProcPercent",
+                        "value": 0.33
+                    },
+                    {
+                        "name": "StunDuration",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "ProcPercent",
+                        "value": 0.33
+                    },
+                    {
+                        "name": "StunDuration",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Hacker",
+        "trait_id": "TFTEvent5YR_Hacker",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_Hacker.png",
+        "tooltip_text": "Sua equipe recebe Vampirismo Universal e invoca um H4ckerr!m. Inimigos atingidos são H4ck3ados e perdem @TFTTrait.TFTEvent5YR_Hacker.1:PercentArmorToRemove*100@% de Armadura e de Resistência Mágica. <br><br><row>(@TFTTrait.TFTEvent5YR_Hacker.1:MinUnits@) @TFTTrait.TFTEvent5YR_Hacker.1:Omnivamp*100@% %i:scaleSV%</row><br><row>(@TFTTrait.TFTEvent5YR_Hacker.2:MinUnits@) @TFTTrait.TFTEvent5YR_Hacker.2:Omnivamp*100@% %i:scaleSV% e vê seu próximo oponente. Recebe uma casa do cavaleiro que manda sua unidade para a retaguarda inimiga no início do combate. O cavaleiro recebe @TFTTrait.TFTEvent5YR_Hacker.2:Horsevamp*100@% %i:scaleSV% e os abates dele têm @TFTTrait.TFTEvent5YR_Hacker.2:PercentChanceToDropGoldOnKill*100@% de chance de conceder 1 de ouro.<br><br>Total de ouro obtido: @TFTUnitProperty.trait:TFTEvent5YR_Hacker_RiderGold_Earned@</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "SecondsUntargetable",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Horsevamp",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PercentArmorToRemove",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentChanceToDropGoldOnKill",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "PercentMRToRemove",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASDuration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "AttackSpeedOnTakedown",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Horsevamp",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "PercentArmorToRemove",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "PercentChanceToDropGoldOnKill",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "PercentMRToRemove",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Endiabrado",
+        "trait_id": "TFTEvent5YR_Hellion",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Hellion.png",
+        "tooltip_text": "Quando um Campeão aliado morre, um Endiaclone (uma cópia com uma estrela a menos) equipado com um Efeito Vermelho salta do portal Endiabrado e entra na luta!<br><br><row>(@TFTTrait.TFTEvent5YR_Hellion.1:MinUnits@) Os primeiros @TFTTrait.TFTEvent5YR_Hellion.1:NumOfUnits@ Campeões</row><br><row>(@TFTTrait.TFTEvent5YR_Hellion.2:MinUnits@) Os primeiros @TFTTrait.TFTEvent5YR_Hellion.2:NumOfUnits@ Campeões</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumHellionItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "NumOfUnits",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "NumHellionItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "NumOfUnits",
+                        "value": 9.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Heroico",
+        "trait_id": "TFTEvent5YR_Heroic",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Heroic.TFT_Set16.png",
+        "tooltip_text": "Não é possível colocar Galio em campo em combate. Em vez disso, as características dele funcionam da reserva, e ele entra na luta quando sua equipe se Revigora. <br><br>Ao pousar, ele cria uma onda de choque de @HexRadius@ casa(s) que causa @PercentMaxHP*100@% da Vida máxima dele como Dano Mágico. Inimigos atingidos são arremessados ao ar por @KnockupDuration@s, com efeito reduzido com base na distância do centro.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HexRadius",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "KnockupDuration",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentMaxHP",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Experiente",
+        "trait_id": "TFTEvent5YR_HighRoller",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_13_HighRoller.TFT_Set13.png",
+        "tooltip_text": "Recebe um Braço Jinxificado da Sevika!<br><br>Início do combate: sorteie uma modificação aleatória da Jinx. Sorteie outra:<br><row>(@TFTTrait.TFTEvent5YR_HighRoller.1:MinUnits@) depois de @TFTTrait.TFTEvent5YR_HighRoller.1:RollingFrequency@s.</row><br><row>(@TFTTrait.TFTEvent5YR_HighRoller.2:MinUnits@) a cada @TFTTrait.TFTEvent5YR_HighRoller.2:RollingFrequency@s. As modificações ficam mais fortes e o usuário tem a chance de conseguir uma Sorte Grande Jinxificada!</row><br><br>Modificações:<br>– Foguete: lança foguetes em inimigos aleatórios. <br>– Escudo: recebe um Escudo por @TFTTrait.TFTEvent5YR_HighRoller.1:Spell2ShieldDuration@s.<br>– Moeda: recebe ouro.<br><br>Foguetes disparados: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_RocketsFired@<br>Escudos recebidos: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_ShieldsGained@<br>Ouro recebido: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_GoldGained@<br>Sortes Grandes obtidas: @TFTUnitProperty.trait:TFTEvent5YR_HighRoller_JackpotsHit@",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 0.8
+                    },
+                    {
+                        "name": "JackpotGold",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "JackpotNumRockets",
+                        "value": 24.0
+                    },
+                    {
+                        "name": "JackpotShieldDuration",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "JackpotShieldFlatAmount",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "JackpotShieldMaxHealthScalar",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "RollingFrequency",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Spell1NumRockets",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "Spell1Probability",
+                        "value": 0.525
+                    },
+                    {
+                        "name": "Spell1RocketADScalar",
+                        "value": 1.3
+                    },
+                    {
+                        "name": "Spell1RocketAPScalar",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Spell2Probability",
+                        "value": 0.325
+                    },
+                    {
+                        "name": "Spell2ShieldDuration",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Spell2ShieldFlatAmount",
+                        "value": 200.0
+                    },
+                    {
+                        "name": "Spell2ShieldMaxHealthScalar",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Spell3Gold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Spell3Probability",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Spell4Probability",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 0.8
+                    },
+                    {
+                        "name": "JackpotGold",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "JackpotNumRockets",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "JackpotShieldDuration",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "JackpotShieldFlatAmount",
+                        "value": 1000.0
+                    },
+                    {
+                        "name": "JackpotShieldMaxHealthScalar",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PrismaticTooltipModScalar",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "RollingFrequency",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Spell1NumRockets",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "Spell1Probability",
+                        "value": 0.505
+                    },
+                    {
+                        "name": "Spell1RocketADScalar",
+                        "value": 1.3
+                    },
+                    {
+                        "name": "Spell1RocketAPScalar",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "Spell1RocketDamage",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Spell2Probability",
+                        "value": 0.305
+                    },
+                    {
+                        "name": "Spell2ShieldDuration",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Spell2ShieldFlatAmount",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "Spell2ShieldMaxHealthScalar",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Spell3Gold",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "Spell3Probability",
+                        "value": 0.14
+                    },
+                    {
+                        "name": "Spell4Probability",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Melmancia",
+        "trait_id": "TFTEvent5YR_Honeymancy",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Bee.TFT_Set12.png",
+        "tooltip_text": "Seus Campeões recebem Abelhas que causam Dano Mágico aos alvos a cada @TFTTrait.TFTEvent5YR_Honeymancy:Period@s. O dano das Abelhas se baseia no dano causado e sofrido pelo Campeão hospedeiro, mais um valor fixo por Abelha.<br><br>Quando um Campeão morre, ele deixa para trás @TFTTrait.TFTEvent5YR_Honeymancy:NumTransfers@ Abelhas que seguem Campeões próximos pelo resto do combate.<br><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.1:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.1:MiniCount@ Abelhas, @TFTTrait.TFTEvent5YR_Honeymancy.1:BonusDamage*100@% de dano causado, @TFTTrait.TFTEvent5YR_Honeymancy.1:DamageReceived*100@% de dano sofrido, @TFTTrait.TFTEvent5YR_Honeymancy.1:DamagePerMini@ de dano por Abelha.</row><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.2:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.2:MiniCount@ Abelhas, @TFTTrait.TFTEvent5YR_Honeymancy.2:BonusDamage*100@% de dano causado, @TFTTrait.TFTEvent5YR_Honeymancy.2:DamageReceived*100@% de dano sofrido, @TFTTrait.TFTEvent5YR_Honeymancy.2:DamagePerMini@ de dano por Abelha.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumTransfers",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "Period",
+                        "value": 2.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "DamagePerMini",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "DamageReceived",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "MiniCount",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "DamagePerMini",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "DamageReceived",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "MiniCount",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Imperial",
+        "trait_id": "TFTEvent5YR_Imperial",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Imperial.png",
+        "tooltip_text": "Início do combate: Campeões selecionados ganham @TFTTrait.TFTEvent5YR_Imperial.1:DamageAmp*100@% %i:scaleDA%.<br><br><row>(@TFTTrait.TFTEvent5YR_Imperial.1:MinUnits@) @TFTTrait.TFTEvent5YR_Imperial.1:NumOfUnits@ Campeões aleatórios.</row><br><row>(@TFTTrait.TFTEvent5YR_Imperial.2:MinUnits@) @TFTTrait.TFTEvent5YR_Imperial.2:NumOfUnits@ Campeões aleatórios.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "NumOfUnits",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.6
+                    },
+                    {
+                        "name": "NumOfUnits",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Ixtal",
+        "trait_id": "TFTEvent5YR_Ixtal",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Ixtal.TFT_Set16.png",
+        "tooltip_text": "<row>(@TFTTrait.TFTEvent5YR_Ixtal.1:MinUnits@) Cumpra Missões para ganhar Fragmentos Solares (%i:Set16Ixtal%) e troque-os por&nbsp;espólios!</row><br><row>(@TFTTrait.TFTEvent5YR_Ixtal.2:MinUnits@) Cura 2 de Vida de jogador no início de combates entre jogadores. Encontre @TFTTrait.TFTEvent5YR_Ixtal.2:BonusClues@ %i:Set16Ixtal% no final do combate. Então você poderá habilitar Brock após obter 500 %i:Set16Ixtal%!</row><br><br><rules>Cumprir uma Missão antes do fim do combate concede outra no começo da próxima rodada.</rules><br><br>Total de Fragmentos Solares obtidos: @TFTUnitProperty.trait:TFTEvent5YR_Explorer_TotalExplorerPoints@ %i:Set16Ixtal%",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth_PAIRS",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusClues",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Jazz",
+        "trait_id": "TFTEvent5YR_Jazz",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Jazz.png",
+        "tooltip_text": "Para cada característica que estiver ativa, sua equipe recebe Vida adicional e Amplificação de Dano.<br><rules>(Exceto características únicas e Características de Aniversário.)</rules><br><br><row>(@TFTTrait.TFTEvent5YR_Jazz.1:MinUnits@) @TFTTrait.TFTEvent5YR_Jazz.1:BonusHealth*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Jazz.1:BonusDamage*100@% %i:scaleDA%</row><br><row>(@TFTTrait.TFTEvent5YR_Jazz.2:MinUnits@) @TFTTrait.TFTEvent5YR_Jazz.2:BonusHealth*100@% %i:scaleHealth%, @TFTTrait.TFTEvent5YR_Jazz.2:BonusDamage*100@% %i:scaleDA%</row><br><br>Vida adicional: @TFTUnitProperty.trait:TFT10_Trait_Jazz_TraitTracker_CurrentBonus@%<br>Amplificação de Dano adicional: @TFTUnitProperty.trait:TFT10_Trait_Jazz_TraitTracker_CurrentBonus_Damage@%",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 0.015
+                    },
+                    {
+                        "name": "BonusHealth",
+                        "value": 0.02
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamage",
+                        "value": 0.03
+                    },
+                    {
+                        "name": "BonusHealth",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "LaserCorps",
+        "trait_id": "TFTEvent5YR_LaserCorps",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_Lasercorps.png",
+        "tooltip_text": "Sua equipe recebe drones laser. Quando uma unidade ataca ou é atingida por um ataque, o drone dela causa Dano Mágico ao alvo (@TFTTrait.TFTEvent5YR_LaserCorps.1:ICD@s de Tempo de Recarga). Quando a unidade morre, os drones são repassados para outro aliado.<br><br><row>(@TFTTrait.TFTEvent5YR_LaserCorps.1:MinUnits@) @TFTTrait.TFTEvent5YR_LaserCorps.1:MagicDamage@ de Dano Mágico. </row><br><row>(@TFTTrait.TFTEvent5YR_LaserCorps.2:MinUnits@) @TFTTrait.TFTEvent5YR_LaserCorps.2:MagicDamage@ de Dano Mágico. Todas as unidades ganham um drone adicional.</row><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DroneHeal",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "DronesForNonLaserCorps",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ICD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "MagicDamage",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "PercentChance",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DroneHeal",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "DronesForNonLaserCorps",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "ICD",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "MagicDamage",
+                        "value": 33.0
+                    },
+                    {
+                        "name": "PercentChance",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Maestro",
+        "trait_id": "TFTEvent5YR_Maestro",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Classical.png",
+        "tooltip_text": "Recebe uma Batuta de Maestro.<br>O usuário tem Velocidade de Ataque fixa e converte Velocidade de Ataque adicional em Dano de Ataque.<br><br>A cada @TFTTrait.TFTEvent5YR_Maestro.1:NumAutosToSpawnJhinGun@ ataques, o Maestro invoca um Fuzil do Grand Finale em um dos espaços vazios da sua reserva. Máximo de 4. Após invocar 4 Fuzis, eles atiram no mesmo ritmo do Maestro, causando Dano Físico. <br>Cada 4ª rajada é <tftEvent5YRHarmonic>Harmônica</tftEvent5YRHarmonic> e causa uma porcentagem do dano total que o Maestro e seus Fuzis causaram desde a última rajada Harmônica.<br><br><row>(@TFTTrait.TFTEvent5YR_Maestro.1:MinUnits@) @TFTTrait.TFTEvent5YR_Maestro.1:EmpoweredShotEchoDamagePercentage*100@% de dano <tftEvent5YRHarmonic>Harmônico</tftEvent5YRHarmonic>.</row><br><row>(@TFTTrait.TFTEvent5YR_Maestro.2:MinUnits@) @TFTTrait.TFTEvent5YR_Maestro.2:EmpoweredShotEchoDamagePercentage*100@% de dano <tftEvent5YRHarmonic>Harmônico</tftEvent5YRHarmonic>. <br>O Maestro pode invocar mais de 4 Fuzis. Início do combate: invoca 1 Fuzil em um espaço vazio da reserva.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusAttackDamage",
+                        "value": 0.75
+                    },
+                    {
+                        "name": "BonusAttackSpeed",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "JhinAttackSpeed",
+                        "value": 0.9
+                    },
+                    {
+                        "name": "RifleADScalar",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "RifleAPScalar",
+                        "value": 0.2
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EmpoweredShotBonus",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "EmpoweredShotEchoDamagePercentage",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "NumAutosToSpawnJhinGun",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumJhinGunsToStartCombatWith",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EmpoweredShotBonus",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "EmpoweredShotEchoDamagePercentage",
+                        "value": 0.12
+                    },
+                    {
+                        "name": "NumAutosToSpawnJhinGun",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumJhinGunsToStartCombatWith",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "NumOfItems",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Mascote",
+        "trait_id": "TFTEvent5YR_Mascot",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_Mascot.png",
+        "tooltip_text": "Sua equipe se cura em uma porcentagem da Vida máxima a cada @TFTTrait.TFTEvent5YR_Mascot.1:Seconds@s.<br><br>Quando um Campeão morre, ele se retira para torcer pela sua equipe. A cura da sua equipe aumenta a cada Campeão na torcida.<br><br><row> (@TFTTrait.TFTEvent5YR_Mascot.1:MinUnits@) @TFTTrait.TFTEvent5YR_Mascot.1:BaseHealthRegen@% %i:scaleHealth% base, @TFTTrait.TFTEvent5YR_Mascot.1:HealthRegenPerMascot@% %i:scaleHealth% por Campeão na torcida</row><br><row> (@TFTTrait.TFTEvent5YR_Mascot.2:MinUnits@) @TFTTrait.TFTEvent5YR_Mascot.2:BaseHealthRegen@% %i:scaleHealth% base, @TFTTrait.TFTEvent5YR_Mascot.2:HealthRegenPerMascot@% %i:scaleHealth% por Campeão na torcida</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BaseHealthRegen",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "HealthRegenPerMascot",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Seconds",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BaseHealthRegen",
+                        "value": 7.5
+                    },
+                    {
+                        "name": "HealthRegenPerMascot",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "Seconds",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Piloto Mech",
+        "trait_id": "TFTEvent5YR_MechPilot",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_3_MechPilot.png",
+        "tooltip_text": "Use o Seletor de Piloto para escolher um Piloto. Início do combate: o Piloto entra em um Mech.<br><br>O Mech tem os itens e as características do Piloto e ganha uma porcentagem do Dano de Ataque e da Vida máxima dele. Quando o Mech morre, quaisquer Pilotos são ejetados com @TFTTrait.TFTEvent5YR_MechPilot.1:EjectedPilotHealthPercent@% da própria Vida máxima.<br><br><row>(@TFTTrait.TFTEvent5YR_MechPilot.1:MinUnits@) Minimech: @TFTTrait.TFTEvent5YR_MechPilot.1:MechCombinedADRatio*100@% %i:scaleAD%%i:scaleHealth%</row> <br><row>(@TFTTrait.TFTEvent5YR_MechPilot.2:MinUnits@) Supermech: @TFTTrait.TFTEvent5YR_MechPilot.2:MechCombinedADRatio*100@% %i:scaleAD%%i:scaleHealth%. As 2 unidades mais próximas do Piloto também entram no Mech. </row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CleaveRatio",
+                        "value": 0.8
+                    },
+                    {
+                        "name": "EjectedPilotHealthPercent",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "ManaOnDeath",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "MechBaseAD",
+                        "value": 90.0
+                    },
+                    {
+                        "name": "MechBaseHealth",
+                        "value": 1200.0
+                    },
+                    {
+                        "name": "MechCombinedADRatio",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "MechCombinedHealthRatio",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "NumOfSubUnits",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "PercentAPPerStarLevel",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "CleaveRatio",
+                        "value": 0.8
+                    },
+                    {
+                        "name": "EjectedPilotHealthPercent",
+                        "value": 45.0
+                    },
+                    {
+                        "name": "ManaOnDeath",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "MechBaseAD",
+                        "value": 105.0
+                    },
+                    {
+                        "name": "MechBaseHealth",
+                        "value": 2400.0
+                    },
+                    {
+                        "name": "MechCombinedADRatio",
+                        "value": 0.55
+                    },
+                    {
+                        "name": "MechCombinedHealthRatio",
+                        "value": 0.55
+                    },
+                    {
+                        "name": "NumOfSubUnits",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentAPPerStarLevel",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Montanha",
+        "trait_id": "TFTEvent5YR_Mountain",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_2_Mountain.png",
+        "tooltip_text": "Ganhe 2 casas Montanha na fileira da frente.<br>Início do combate: as unidades que estiverem em casas Montanha ganham um Escudo e Vida adicional permanente.<br><br><row>(@TFTTrait.TFTEvent5YR_Mountain.1:MinUnits@) @TFTTrait.TFTEvent5YR_Mountain.1:ShieldValue@ de Escudo, @TFTTrait.TFTEvent5YR_Mountain.1:PermBonusHealth@ %i:scaleHealth%. </row><br><row>(@TFTTrait.TFTEvent5YR_Mountain.2:MinUnits@) @TFTTrait.TFTEvent5YR_Mountain.2:ShieldValue@ de Escudo, @TFTTrait.TFTEvent5YR_Mountain.2:PermBonusHealth@ %i:scaleHealth%. A fileira da frente inteira se transforma em casas Montanha.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "PermBonusHealth",
+                        "value": 40.0
+                    },
+                    {
+                        "name": "ShieldValue",
+                        "value": 400.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PermBonusHealth",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "ShieldValue",
+                        "value": 600.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Nitro",
+        "trait_id": "TFTEvent5YR_Nitro",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_14_NitroForge.TFT_Set14.png",
+        "tooltip_text": "A cada rodada, seus Campeões concedem Cromo ao R-080T com base no nível de Estrela deles. Cada Cromo concede @TFTTrait.TFTEvent5YR_Nitro.:HealthPerScrap@ de Vida e @TFTTrait.TFTEvent5YR_Nitro.:APPerScrap@ de Poder de Habilidade. <br><br><row>(@TFTTrait.TFTEvent5YR_Nitro.1:MinUnits@) Invoca o R-080T!</row><br><row>(@TFTTrait.TFTEvent5YR_Nitro.2:MinUnits@) O R-080T é aprimorado e se torna T-43X! Junte @TFTTrait.TFTEvent5YR_Nitro.:FourStarScrapThreshold@ de Cromo e aprimore o T-43X para disparar um laser gigante!</row><br><br><rules>Cromo por Estrela: @TFTTrait.TFTEvent5YR_Nitro.:ScrapPerOneStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerTwoStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerThreeStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerFourStar@</rules>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "APPerScrap",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "FourStarScrapThreshold",
+                        "value": 400.0
+                    },
+                    {
+                        "name": "HealthPerScrap",
+                        "value": 7.0
+                    },
+                    {
+                        "name": "ScrapPerFourStar",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "ScrapPerOneStar",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ScrapPerThreeStar",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "ScrapPerTwoStar",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Stage2BonusHP",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Stage3BonusHP",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "Stage4BonusHP",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "Stage5BonusHP",
+                        "value": 500.0
+                    },
+                    {
+                        "name": "Stage6BonusHP",
+                        "value": 800.0
+                    },
+                    {
+                        "name": "ThreeStarScrapThreshold",
+                        "value": 260.0
+                    },
+                    {
+                        "name": "TwoStarScrapThreshold",
+                        "value": 120.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Soberano",
+        "trait_id": "TFTEvent5YR_Overlord",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_14_Overlord.TFT_Set14.png",
+        "tooltip_text": "Use o Seletor de Soberano para escolher um Soberano.<br><br>O Soberano morde uma unidade na casa atrás dele e causa Dano Verdadeiro a essa unidade.<br>O Soberano recebe o equivalente ao dano causado pela mordida em Vida e ganha uma porcentagem do Dano de Ataque e do Poder de Habilidade da unidade.<br><br><row>(@TFTTrait.TFTEvent5YR_Overlord.1:MinUnits@) @TFTTrait.TFTEvent5YR_Overlord.1:HPPercentDamage*100@% da Vida máxima como Dano Verdadeiro, @TFTTrait.TFTEvent5YR_Overlord.1:PercentADAPGain*100@%i:scaleAD%% %i:scaleAP%</row> <br><row>(@TFTTrait.TFTEvent5YR_Overlord.2:MinUnits@) @TFTTrait.TFTEvent5YR_Overlord.2:HPPercentDamage*100@% da Vida máxima como Dano Verdadeiro, @TFTTrait.TFTEvent5YR_Overlord.2:PercentADAPGain*100@% %i:scaleAD%%i:scaleAP%. <br>Morde duas unidades. O dano dos ataques e habilidades do Soberano aplica 30% de <TFTKeyword>Fragmentação</TFTKeyword>, 30% de <TFTKeyword>Fatiamento</TFTKeyword>, @TFTTrait.TFTEvent5YR_Overlord.2:EnemyDamageReduction*100@% de <TFTKeyword>Enfraquecimento</TFTKeyword> e 33% de <TFTKeyword>Ferimento</TFTKeyword> aos inimigos por @TFTTrait.TFTEvent5YR_Overlord.2:DebuffDuration@s. Esses efeitos não acumulam.</row><br><br><tftitemrules><tftbold>Fragmentação</tftbold>: reduz a Resistência Mágica<br><tftbold>Fatiamento</tftbold>: reduz a Armadura<br><tftbold>Enfraquecimento</tftbold>: reduz o dano causado<br><tftbold>Ferimento</tftbold>: reduz a cura recebida</tftitemrules><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HPPercentDamage",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumHexes",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentADAPGain",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "PercentHPGain",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DebuffDuration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "EnemyDamageReduction",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HPPercentDamage",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumHexes",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentADAPGain",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "PercentHPGain",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Penta Kill",
+        "trait_id": "TFTEvent5YR_Pentakill",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Pentakill.png",
+        "tooltip_text": "Sua equipe recebe @TFTTrait.TFTEvent5YR_Pentakill.1:Damage_Reduction*100@% de Durabilidade e de Amplificação de Dano. Para cada Campeão abatido, um Campeão na sua equipe arrasa, aumentando a Amplificação de Dano adicional em @TFTTrait.TFTEvent5YR_Pentakill.:Kill_Bonus*100@%.<br><br>No @TFTTrait.TFTEvent5YR_Pentakill.:Kill_Count@º abate, sua equipe inteira arrasa e recebe Velocidade de Ataque.<br><br><row>(@TFTTrait.TFTEvent5YR_Pentakill.1:MinUnits@) @TFTTrait.TFTEvent5YR_Pentakill.1:Bonus_Damage*100@% %i:scaleDA%, @TFTTrait.TFTEvent5YR_Pentakill.1:Attack_Speed*100@% de Velocidade de Ataque após um Penta Kill</row><br><row>(@TFTTrait.TFTEvent5YR_Pentakill.2:MinUnits@) @TFTTrait.TFTEvent5YR_Pentakill.2:Bonus_Damage*100@% %i:scaleDA%, @TFTTrait.TFTEvent5YR_Pentakill.2:Attack_Speed*100@% de Velocidade de Ataque após um Penta Kill</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Kill_Bonus",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Kill_Count",
+                        "value": 5.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Attack_Speed",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Bonus_Damage",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "Damage_Reduction",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Attack_Speed",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Bonus_Damage",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Damage_Reduction",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Fantasma",
+        "trait_id": "TFTEvent5YR_Phantom",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Phantom.png",
+        "tooltip_text": "Início do combate: a Vida de inimigos aleatórios é reduzida.<br><br><row>(@TFTTrait.TFTEvent5YR_Phantom.1:MinUnits@) A Vida de @TFTTrait.TFTEvent5YR_Phantom.1:NumUnitsToReduce@ inimigo é @TFTTrait.TFTEvent5YR_Phantom.1:PercentHealth*100@% da sua Vida máxima.</row><br><row>(@TFTTrait.TFTEvent5YR_Phantom.2:MinUnits@) A Vida de @TFTTrait.TFTEvent5YR_Phantom.2:NumUnitsToReduce@ inimigos é @TFTTrait.TFTEvent5YR_Phantom.2:FlatHealth@.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "FlatHealth",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumUnitsToReduce",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PercentHealth",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "FlatHealth",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "NumUnitsToReduce",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PercentHealth",
+                        "value": 0.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Regenerador",
+        "trait_id": "TFTEvent5YR_Preserver",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Rejuvenator.png",
+        "tooltip_text": "Sua equipe se cura em uma porcentagem da Vida máxima a cada @TFTTrait.TFTEvent5YR_Preserver.1:Duration@s. Se estiverem com a Vida cheia, eles restauram Mana.<br><br><row> (@TFTTrait.TFTEvent5YR_Preserver.1:MinUnits@) @TFTTrait.TFTEvent5YR_Preserver.1:HealthPct*100@% %i:scaleHealth% ou @TFTTrait.TFTEvent5YR_Preserver.1:ManaPct*100@% %i:scaleMana%.</row><br><row> (@TFTTrait.TFTEvent5YR_Preserver.2:MinUnits@) @TFTTrait.TFTEvent5YR_Preserver.2:HealthPct*100@% %i:scaleHealth% e @TFTTrait.TFTEvent5YR_Preserver.2:ManaPct*100@% %i:scaleMana%. Sempre recebe ambos.</row><br><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthPct",
+                        "value": 0.04
+                    },
+                    {
+                        "name": "ManaPct",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HealthPct",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "ManaPct",
+                        "value": 0.09
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Punk",
+        "trait_id": "TFTEvent5YR_Punk",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Punk.png",
+        "tooltip_text": "Sua equipe recebe Vida adicional, Dano de Ataque e Poder de Habilidade, com 1% de aumento sempre que você gasta ouro em uma atualização da Loja.<br><br>Depois de cada combate, ganha uma atualização e 1 de ouro para esta rodada. Sua primeira atualização a cada rodada concede um adicional de @TFTTrait.TFTEvent5YR_Punk:FIRST_ROLL_BONUS@%!<br><br><row>(@TFTTrait.TFTEvent5YR_Punk.1:MinUnits@)@TFTTrait.TFTEvent5YR_Punk.1:BONUS_HEALTH@ %i:scaleHealth% e @TFTTrait.TFTEvent5YR_Punk.1:BONUS_AD_AP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@TFTTrait.TFTEvent5YR_Punk.2:MinUnits@)@TFTTrait.TFTEvent5YR_Punk.2:BONUS_HEALTH@ %i:scaleHealth% e @TFTTrait.TFTEvent5YR_Punk.2:BONUS_AD_AP*100@% %i:scaleAD%%i:scaleAP%</row><br><br>Efeito atual: @TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentBonus@%<br>@TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentHealthBonus@ %i:scaleHealth% e @TFTUnitProperty.trait:TFTEvent5YR_Punk_CurrentADBonus@% %i:scaleAD%%i:scaleAP%",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "FIRST_ROLL_BONUS",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PUNK_3_STAR_BONUS",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BONUS_AD_AP",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "BONUS_HEALTH",
+                        "value": 60.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BONUS_AD_AP",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "BONUS_HEALTH",
+                        "value": 180.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Pirofagia",
+        "trait_id": "TFTEvent5YR_Pyro",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Pyrokinesis.TFT_Set12.png",
+        "tooltip_text": "Sua equipe recebe @TFTTrait.TFTEvent5YR_Pyro:BaseASPct@% %i:scaleAS% de Velocidade de Ataque.<br><br>Para cada abate, sua equipe cria uma brasa infernal que pode ser coletada na próxima rodada. A cada @TFTTrait.TFTEvent5YR_Pyro:NumCinders@ brasas coletadas, sua equipe recebe mais @TFTTrait.TFTEvent5YR_Pyro:ASPctPerNumCinders@% %i:scaleAS%.<br><br><row>(@TFTTrait.TFTEvent5YR_Pyro.1:MinUnits@) @TFTTrait.TFTEvent5YR_Pyro.1:NumCindersPerKill@ brasas infernais por inimigo.</row><br><row>(@TFTTrait.TFTEvent5YR_Pyro.2:MinUnits@) @TFTTrait.TFTEvent5YR_Pyro.2:NumCindersPerKill@ brasas infernais por inimigo e executa inimigos com menos de @TFTTrait.TFTEvent5YR_Pyro.2:ExecutePct@% de Vida.</row><br><br>Brasas coletadas: @TFTUnitProperty.trait:TFTEvent5YR_PyroCindersCollected@<br>Equipe %i:scaleAS%: @TFTUnitProperty.trait:TFTEvent5YR_PyroAttackSpeed@%",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ASPctPerNumCinders",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "BaseASPct",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "NumCinders",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "NumCindersHR",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ExecutePct",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "NumCindersPerKill",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PyroUnitAS",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ExecutePct",
+                        "value": 12.0
+                    },
+                    {
+                        "name": "NumCindersPerKill",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "PyroUnitAS",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Rebelde",
+        "trait_id": "TFTEvent5YR_Rebel",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_3_Rebel.png",
+        "tooltip_text": "Sua equipe ganha um Escudo e Amplificação de Dano para cada aliado adjacente.<br><br><row>(@TFTTrait.TFTEvent5YR_Rebel.1:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.1:ShieldAmount@ de Escudo por @TFTTrait.TFTEvent5YR_Rebel.1:ShieldDuration@s, @TFTTrait.TFTEvent5YR_Rebel.1:DamageAmp@% %i:scaleDA%</row><br><row>(@TFTTrait.TFTEvent5YR_Rebel.2:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.2:ShieldAmount@ de Escudo por @TFTTrait.TFTEvent5YR_Rebel.2:ShieldDuration@s, @TFTTrait.TFTEvent5YR_Rebel.2:DamageAmp@% %i:scaleDA%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 4.5
+                    },
+                    {
+                        "name": "ShieldAmount",
+                        "value": 150.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 9.0
+                    },
+                    {
+                        "name": "ShieldAmount",
+                        "value": 350.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 12.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Escamaluz",
+        "trait_id": "TFTEvent5YR_Shimmerscale",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Shimmerscale.png",
+        "tooltip_text": "Recebe itens Escamaluz. Esses itens concedem ouro e poder de combate.<br><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.1:MinUnits@) Recebe Cajado do Ouromante. No Estágio @TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemStage@-@TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemRound@, recebe o Machado do Draven.</row><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.2:MinUnits@) Recebe Coroa dos Campeões.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "SecondItemRound",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "SecondItemStage",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "SecondItemRound",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "SecondItemStage",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Shurima",
+        "trait_id": "TFTEvent5YR_Shurima",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Shurima.png",
+        "tooltip_text": "Início do combate: Campeões específicos ascendem e ganham @TFTTrait.TFTEvent5YR_Shurima.1:BonusHealthPercent*100@% de Vida máxima %i:scaleHealth% e @TFTTrait.TFTEvent5YR_Shurima.1:BonusASPercent*100@% de Velocidade de Ataque %i:scaleAS%.<br><br><row>(@TFTTrait.TFTEvent5YR_Shurima.1:MinUnits@) O Campeão mais forte ascende após @TFTTrait.TFTEvent5YR_Shurima.1:SecondsToAscend@s. </row><br><row>(@TFTTrait.TFTEvent5YR_Shurima.2:MinUnits@) Os @TFTTrait.TFTEvent5YR_Shurima.2:NumUnitsToAscend@ Campeões mais fortes ascendem imediatamente.</row><br>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusASPercent",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "BonusHealthPercent",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "HealthRegen",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "NumPulsesToAscend",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumUnitsToAscend",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "PulsePeriod",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "SecondsToAscend",
+                        "value": 8.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusASPercent",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "BonusHealthPercent",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "HealthRegen",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "NumPulsesToAscend",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "NumUnitsToAscend",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "PulsePeriod",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "SecondsToAscend",
+                        "value": 8.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Socialite",
+        "trait_id": "TFTEvent5YR_Socialite",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Socialite.png",
+        "tooltip_text": "Recebe uma casa sob um holofote.<br>Início do combate: a unidade no holofote ganha atributos adicionais.<br><br><row>(@TFTTrait.TFTEvent5YR_Socialite.1:MinUnits@) @TFTTrait.TFTEvent5YR_Socialite.1:DamagePercent*100@% %i:scaleDA% e @TFTTrait.TFTEvent5YR_Socialite.1:ManaPerSecond@&nbsp;%i:scaleMana% por segundo.</row><br><row>(@TFTTrait.TFTEvent5YR_Socialite.2:MinUnits@) @TFTTrait.TFTEvent5YR_Socialite.2:DamagePercent*100@% %i:scaleDA%, @TFTTrait.TFTEvent5YR_Socialite.2:ManaPerSecond@&nbsp;%i:scaleMana% por segundo e @TFTTrait.TFTEvent5YR_Socialite.2:OmnivampPercent*100@% %i:scaleSV%. Recebe outra casa sob um holofote.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamagePercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "DamageReductionPercent",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "ManaPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "OmnivampPercent",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "Tier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamagePercent",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "DamageReductionPercent",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "ManaPerSecond",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "OmnivampPercent",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "Tier",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Tecetramas",
+        "trait_id": "TFTEvent5YR_Storyweaver",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Storyweaver.png",
+        "tooltip_text": "Invoca uma heroína chamada Kayle que evolui conforme você sobe de nível!<br><br><row>(@TFTTrait.TFTEvent5YR_Storyweaver.1:MinUnits@) Ao alcançar o nível @TFTTrait.TFTEvent5YR_Storyweaver:FirstArmoryLevel@, Kayle é aprimorada para 2 Estrelas. Escolhe um efeito de suporte.</row><br><row>(@TFTTrait.TFTEvent5YR_Storyweaver.2:MinUnits@) Kayle é aprimorada novamente nos níveis @TFTTrait.TFTEvent5YR_Storyweaver:SecondArmoryLevel@, @TFTTrait.TFTEvent5YR_Storyweaver:ThirdArmoryLevel@ e @TFTTrait.TFTEvent5YR_Storyweaver:FourStarUpgradeLevel@:<br>Nível @TFTTrait.TFTEvent5YR_Storyweaver:SecondArmoryLevel@: Escolhe um efeito de combate. <br>Nível @TFTTrait.TFTEvent5YR_Storyweaver:ThirdArmoryLevel@: Kayle evolui para 3 Estrelas. Escolhe um efeito de combate.<br>Nível @TFTTrait.TFTEvent5YR_Storyweaver:FourStarUpgradeLevel@: Kayle é aprimorada para 4 Estrelas.</row><br>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusASPerStage",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "FirstArmoryLevel",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "FourStarUpgradeLevel",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "HealthPerChapter",
+                        "value": 100.0
+                    },
+                    {
+                        "name": "SecondArmoryLevel",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "Storyweaver3CarryItemPercent",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Storyweaver3ChoiceCount",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Storyweaver3JazzItemPercent",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "Storyweaver5ChoiceCount",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "Storyweaver5TraitItemPercent",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "Storyweaver7ChoiceCount",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ThirdArmoryLevel",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "ThreeStarUpgradeLevel",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "TwoStarUpgradeLevel",
+                        "value": 5.0
+                    }
+                ]
+            },
+            {
+                "constants": []
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Tripulação",
+        "trait_id": "TFTEvent5YR_TheCrew",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_StarCrew.TFT_Set15.png",
+        "tooltip_text": "Invoca o <i>Nocturnus</i> para ajudar na batalha! Ele dispara um foguete que causa @TFTTrait.TFTEvent5YR_TheCrew.1:BaseRocketDamage@ de Dano Mágico a cada @TFTTrait.TFTEvent5YR_TheCrew.1:BaseDamageThreshold@ de dano causado pela sua equipe.<br><br>Campeões de custo 2 ou mais se tornam membros da Tripulação ao alcançarem 3 Estrelas. Recebe efeitos adicionais para cada membro da Tripulação.<br><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.1:MinUnits@) Até 2 membros da Tripulação.</row><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.2:MinUnits@) Até 4 membros da Tripulação.</row><br><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus1Active default=false alternate=TFTGuildInactive>(1x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:OnARollRolls@ atualizações de Loja gratuitas ao subir o nível de Estrela de uma unidade que você colocou em campo no último combate.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus2Active default=false alternate=TFTGuildInactive>(2x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>): foguetes causam <magicDamage>@TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedRocketDamage@</magicDamage> de dano.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus3Active default=false alternate=TFTGuildInactive>(3x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:FreeRerollsPerRound@ atualização gratuita por rodada</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus4Active default=false alternate=TFTGuildInactive>(4x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>): dispara foguetes a cada @TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedDamageThreshold@ de dano causado. Recebe @TFTTrait.TFTEvent5YR_TheCrew.1:XPPerRound@ de EXP por rodada.</tftActiveRank>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BaseDamageThreshold",
+                        "value": 440.0
+                    },
+                    {
+                        "name": "BaseRocketDamage",
+                        "value": 85.0
+                    },
+                    {
+                        "name": "FreeRerollOdds",
+                        "value": 25.0
+                    },
+                    {
+                        "name": "FreeRerollsPerRound",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "OnARollRolls",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "UpgradedDamageThreshold",
+                        "value": 210.0
+                    },
+                    {
+                        "name": "UpgradedRocketDamage",
+                        "value": 120.0
+                    },
+                    {
+                        "name": "XPPerRound",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Treinador",
+        "trait_id": "TFTEvent5YR_Trainer",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Trainers.png",
+        "tooltip_text": "Após o combate, os 3 Campeões mais próximos de Nomsy a alimentam com 1 Poritos por nível de estrela dela, adicionando Vida e Poder de Habilidade. O nível de estrelas de Nomsy aumenta a cada 25 Poritos!<br><br><row>(@TFTTrait.TFTEvent5YR_Trainer.1:MinUnits@) Invoca Nomsy!</row><br><row>(@TFTTrait.TFTEvent5YR_Trainer.2:MinUnits@) A habilidade de Nomsy causa @TFTTrait.TFTEvent5YR_Trainer.2:DamageInc*100@% de dano adicional</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageInc",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "DragonlingTier",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DamageInc",
+                        "value": 1.5
+                    },
+                    {
+                        "name": "DragonlingTier",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Yordle",
+        "trait_id": "TFTEvent5YR_Yordle",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Yordle.png",
+        "tooltip_text": "Após cada combate entre jogadores, recebe um Saco de Brindes de Yordle repleto de espólios de yordle!<br><br><row>(@TFTTrait.TFTEvent5YR_Yordle.1:MinUnits@) Recebe um Saco de Brindes de Yordle!</row><br><row>(@TFTTrait.TFTEvent5YR_Yordle.2:MinUnits@) Se você tiver @TFTTrait.TFTEvent5YR_Yordle.2:NumOfThreeStarsNeeded@ ou mais Campeões 3 Estrelas, seu Saco de Brindes de Yordle virá com um Yordle Supremo.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NumOfThreeStarsNeeded",
+                        "value": 999.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "NumOfThreeStarsNeeded",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Yordle Supremo",
+        "trait_id": "TFTEvent5YR_YordleLord",
+        "set": "TFTSetEvent5YR",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_YordleLord.png",
+        "tooltip_text": "Veigar Yordle Supremo e seus Ranzinzins vão invadir a Festa do Pingu!",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
             }
         ]
     },

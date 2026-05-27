@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ]
             },
             "desc": "Requirement: Score @TakedownsNeeded@ takedowns.<br><br>Reward: Golden Spatula",
@@ -8215,7 +8215,23 @@
         },
         {
             "apiName": "ScopiestWeapons",
-            "calculations": {},
+            "calculations": {
+                "RangeIncrease": {
+                    "__type": "{e9a3c91d}",
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "__type": "NamedDataValueCalculationPart",
+                            "mDataValue": "MeleeRangeIncrease"
+                        }
+                    ],
+                    "mRangedMultiplier": {
+                        "__type": "NumberCalculationPart",
+                        "mNumber": 0.6000000238418579
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5
+                }
+            },
             "dataValues": {
                 "MaxLevel": [
                     3.0,
@@ -8236,22 +8252,22 @@
                     450.0
                 ],
                 "RangedRangeIncrease": [
-                    75.0,
-                    75.0,
-                    125.0,
-                    175.0,
+                    90.0,
+                    90.0,
+                    135.0,
+                    180.0,
                     250.0,
                     300.0,
                     350.0
                 ]
             },
-            "desc": "Gain @MeleeRangeIncrease@ Attack Range, reduced to @RangedRangeIncrease@ if you are Ranged.",
+            "desc": "Gain @RangeIncrease@ Attack Range.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Scopiest Weapons",
             "rarity": 2,
-            "tooltip": "Gain @MeleeRangeIncrease@ Attack Range, reduced to @RangedRangeIncrease@ if you are Ranged."
+            "tooltip": "Gain @RangeIncrease@ Attack Range."
         },
         {
             "apiName": "SlimeTime",
@@ -8488,13 +8504,13 @@
                     0.75
                 ]
             },
-            "desc": "When you gain permanent <keywordMajor>Stacks</keywordMajor> of an Ability, gain @StackModifier*100@% more!",
+            "desc": "When you gain permanent <keywordMajor>Stacks</keywordMajor> of an Ability, Augment, or Item gain @StackModifier*100@% more!",
             "iconLarge": "assets/ux/cherry/augments/icons/stackosaurusrex_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stackosaurusrex_small.png",
             "id": 204,
             "name": "Stackosaurus Rex",
             "rarity": 0,
-            "tooltip": "When you gain permanent <keywordMajor>Stacks</keywordMajor> of an Ability, gain @StackModifier*100@% more!"
+            "tooltip": "When you gain permanent <keywordMajor>Stacks</keywordMajor> of an Ability, Augment, or Item gain @StackModifier*100@% more!"
         },
         {
             "apiName": "escAPADe",
@@ -9166,6 +9182,46 @@
             "name": "Minionmancer",
             "rarity": 1,
             "tooltip": "Your summons gain @MinionAmp*100@% increased size, health, and damage."
+        },
+        {
+            "apiName": "GoHSwindlersOrb",
+            "calculations": {},
+            "dataValues": {
+                "DebuffDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "ShieldShred": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ]
+            },
+            "desc": "Dealing damage to an enemy champion reduces their <shield>shields</shield>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/swindlers_orb_item_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/swindlers_orb_item_small.png",
+            "id": 392,
+            "name": "Swindler's Orb",
+            "rarity": 4,
+            "tooltip": "Dealing damage to an enemy champion reduces any <shield>shields</shield> they have or gain by @ShieldShred@% for @DebuffDuration@ seconds. <br><br><rules>Affects General and <physicalDamage>Physical Damage</physicalDamage> shields, but not purely <magicDamage>Magical Damage</magicDamage> blocking shields.</rules>"
         },
         {
             "apiName": "TankEngine",

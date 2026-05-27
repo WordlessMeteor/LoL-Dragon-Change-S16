@@ -1515,7 +1515,7 @@
             "id": 351,
             "name": "Frosthammer",
             "rarity": 4,
-            "tooltip": "Schaden <status>verlangsamt</status> @SlowDuration@&nbsp;Sekunde(n) lang um <speed>@SlowAmount*100@&nbsp;%</speed>."
+            "tooltip": "Schaden <status>verlangsamt</status> @SlowDuration@&nbsp;Sekunden lang um <speed>@SlowAmount*100@&nbsp;%</speed>."
         },
         {
             "apiName": "Quest_MadHatter",
@@ -2249,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0,
-                    10.0
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
                 ]
             },
             "desc": "Voraussetzung: Erziele @TakedownsNeeded@&nbsp;Kills/Unterstützungen.<br><br>Belohnung: Goldener Pfannenwender",
@@ -3438,7 +3438,7 @@
                     3.0
                 ]
             },
-            "desc": "Du erhältst den Beschwörerzauber <spellName>Täuschen</spellName>.<br><br><spellName>Täuschen</spellName>: Du teleportierst dich und wirst <keywordStealth>unsichtbar</keywordStealth>. Während du <keywordStealth>unsichtbar</keywordStealth> bist, verursacht dein nächster Angriff zusätzlichen <physicalDamage>normalen Schaden</physicalDamage>. <br><br>Wenn du stirbst, erscheint eine explodierende Kiste, die hohen <trueDamage>absoluten Schaden</trueDamage> verursacht und Gegner in der Nähe in <status>Furcht</status> versetzt.",
+            "desc": "Du erhältst den Beschwörerzauber <spellName>Täuschen</spellName>.<br><br><spellName>Täuschen</spellName>: Du teleportierst dich, wirst <keywordStealth>unsichtbar</keywordStealth> und verursachst zusätzlichen <physicalDamage>normalen Schaden</physicalDamage> beim nächsten Angriff. <br><br>Wenn du stirbst, erscheint eine explodierende Kiste, die hohen <trueDamage>absoluten Schaden</trueDamage> verursacht und Gegner in der Nähe in <status>Furcht</status> versetzt.",
             "iconLarge": "assets/ux/cherry/augments/icons/clowncollege_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/clowncollege_small.png",
             "id": 310,
@@ -8215,7 +8215,23 @@
         },
         {
             "apiName": "ScopiestWeapons",
-            "calculations": {},
+            "calculations": {
+                "RangeIncrease": {
+                    "__type": "{e9a3c91d}",
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "__type": "NamedDataValueCalculationPart",
+                            "mDataValue": "MeleeRangeIncrease"
+                        }
+                    ],
+                    "mRangedMultiplier": {
+                        "__type": "NumberCalculationPart",
+                        "mNumber": 0.6000000238418579
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5
+                }
+            },
             "dataValues": {
                 "MaxLevel": [
                     3.0,
@@ -8236,22 +8252,22 @@
                     450.0
                 ],
                 "RangedRangeIncrease": [
-                    75.0,
-                    75.0,
-                    125.0,
-                    175.0,
+                    90.0,
+                    90.0,
+                    135.0,
+                    180.0,
                     250.0,
                     300.0,
                     350.0
                 ]
             },
-            "desc": "Du erhältst @MeleeRangeIncrease@&nbsp;Angriffsreichweite (für Fernkämpfer verringert auf @RangedRangeIncrease@).",
+            "desc": "Du erhältst @RangeIncrease@&nbsp;Angriffsreichweite.",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "Bestes Zielfernrohr",
             "rarity": 2,
-            "tooltip": "Du erhältst @MeleeRangeIncrease@&nbsp;Angriffsreichweite (für Fernkämpfer verringert auf @RangedRangeIncrease@)."
+            "tooltip": "Du erhältst @RangeIncrease@&nbsp;Angriffsreichweite."
         },
         {
             "apiName": "SlimeTime",
@@ -8488,13 +8504,13 @@
                     0.75
                 ]
             },
-            "desc": "Wenn du für eine Fähigkeit permanente <keywordMajor>Steigerungen</keywordMajor> erhältst, erhältst du @StackModifier*100@&nbsp;% mehr!",
+            "desc": "Wenn du dauerhafte <keywordMajor>Steigerungen</keywordMajor> einer Fähigkeit, einer Augmentierung oder eines Gegenstands erhältst, erhältst du @StackModifier*100@&nbsp;% mehr!",
             "iconLarge": "assets/ux/cherry/augments/icons/stackosaurusrex_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stackosaurusrex_small.png",
             "id": 204,
             "name": "Steigerosaurus Rex",
             "rarity": 0,
-            "tooltip": "Wenn du für eine Fähigkeit permanente <keywordMajor>Steigerungen</keywordMajor> erhältst, erhältst du @StackModifier*100@&nbsp;% mehr!"
+            "tooltip": "Wenn du dauerhafte <keywordMajor>Steigerungen</keywordMajor> einer Fähigkeit, einer Augmentierung oder eines Gegenstands erhältst, erhältst du @StackModifier*100@&nbsp;% mehr!"
         },
         {
             "apiName": "escAPADe",
@@ -9166,6 +9182,46 @@
             "name": "Vasallenbeschwörer",
             "rarity": 1,
             "tooltip": "Deine Beschwörungen erhalten @MinionAmp*100@&nbsp;% mehr Größe, Leben und Schaden."
+        },
+        {
+            "apiName": "GoHSwindlersOrb",
+            "calculations": {},
+            "dataValues": {
+                "DebuffDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "ShieldShred": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ]
+            },
+            "desc": "Wenn du einem gegnerischen Champion Schaden zufügst, verringerst du seine <shield>Schilde</shield>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/swindlers_orb_item_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/swindlers_orb_item_small.png",
+            "id": 392,
+            "name": "Schwindlerkugel",
+            "rarity": 4,
+            "tooltip": "Wenn du einem gegnerischen Champion Schaden zufügst, werden sämtliche <shield>Schilde</shield>, die er hat oder erhält, @DebuffDuration@&nbsp;Sekunden lang um @ShieldShred@&nbsp;% verringert. <br><br><rules>Betrifft allgemeine Schilde und Schilde gegen <physicalDamage>normalen Schaden</physicalDamage>, aber nicht Schilde, die ausschließlich <magicDamage>magischen Schaden</magicDamage> blocken.</rules>"
         },
         {
             "apiName": "TankEngine",

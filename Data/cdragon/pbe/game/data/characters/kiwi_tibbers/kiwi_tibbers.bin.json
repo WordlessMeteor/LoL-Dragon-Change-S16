@@ -1,0 +1,247 @@
+{
+    "{06ec0e7f}": {
+        "mCharacterName": "Kiwi_Tibbers",
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.20000000298023224,
+            "__type": "ModifiableFloat"
+        },
+        "{2290fc9a}": {
+            "baseValue": 0.001500000013038516,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 92.0,
+        "primaryAbilityResource": {
+            "arType": 9,
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arIncrements": 1.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "arDisplayAsPips": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "secondaryAbilityResource": {
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 50.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 50.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 1.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 350.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 150.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.0010000000474974513,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 625.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": 0.10000000149011612,
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "Kiwi_TibbersBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "towerTargetingPriorityBoost": 10.0,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 50.0,
+        "significance": 0.5,
+        "name": "game_spell_displayname_InfernalGuardian",
+        "weaponMaterials": [
+            "Kiwi_TibbersBasicAttack"
+        ],
+        "minimapIconOverride": "NoIcon",
+        "DisguiseMinimapIconOverride": "NoIcon",
+        "selectionHeight": 180.0,
+        "selectionRadius": 155.0,
+        "pathfindingCollisionRadius": 35.0,
+        "overrideGameplayCollisionRadius": 80.0,
+        "unitTagsString": "Minion | Minion_Summon | Minion_Summon_Large",
+        "useRiotRelationships": true,
+        "flags": 8398088,
+        "__type": "CharacterRecord"
+    },
+    "{a3a930b3}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{a49948b9}": {
+        "ObjectName": "Kiwi_TibbersBasicAttack",
+        "mScriptName": "Kiwi_TibbersBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "{0a3e0478}": 150.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{0f9ab881}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{a84d32d1}": {
+        "ObjectName": "Kiwi_TibbersBasicAttack2",
+        "mScriptName": "Kiwi_TibbersBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "{0a3e0478}": 150.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{0f9ab881}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "__linked": []
+}

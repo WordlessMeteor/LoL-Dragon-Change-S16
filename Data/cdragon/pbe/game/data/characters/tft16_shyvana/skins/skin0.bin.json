@@ -1675,7 +1675,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Base_Throw_Sparks.TFT_Set16.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Base_Throw_Sparks.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2289,7 +2289,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Base_Throw_Sparks.TFT_Set16.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Base_Throw_Sparks.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -13359,7 +13359,7 @@
                     },
                     "erosionFeatherOut": 0.15000000596046448,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Set17.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             0.0,
@@ -15573,7 +15573,7 @@
                     },
                     "erosionFeatherOut": 0.15000000596046448,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Set17.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             0.0,
@@ -16876,7 +16876,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/Base_weaponswipe.scb",
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/Base_weaponswipe.TFT_Event_5YR_Set17.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -20752,6 +20752,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     1.0,
@@ -20927,6 +20967,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,

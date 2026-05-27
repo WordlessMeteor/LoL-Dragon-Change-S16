@@ -568,7 +568,7 @@
                     },
                     "erosionFeatherIn": 0.15000000596046448,
                     "erosionFeatherOut": 0.30000001192092896,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Base_Dissolve_Cloudy_01.TFT_Set17.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Base_Dissolve_Cloudy_01.TFT_Event_5YR_Set17.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "isUniformScale": 1,
@@ -675,7 +675,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Belveth_Base_E_Splashes_Dissolve.TFT_Set16.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Belveth_Base_E_Splashes_Dissolve.TFT_Event_5YR_Set17.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -6027,6 +6027,46 @@
         ],
         "paramValues": [
             {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Vert_Anm_Size",
                 "value": [
                     0.1899999976158142,
@@ -6119,6 +6159,16 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {

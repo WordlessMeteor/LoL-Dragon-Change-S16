@@ -17855,6 +17855,8 @@
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
+                "stencilMode": 3,
+                "stencilRef": 1,
                 "isUniformScale": 1,
                 "birthRotationalVelocity0": {
                     "constantValue": [
@@ -18002,6 +18004,8 @@
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
+                "stencilMode": 3,
+                "stencilRef": 1,
                 "isUniformScale": 1,
                 "birthRotationalVelocity0": {
                     "constantValue": [
@@ -18825,147 +18829,6 @@
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.15000000596046448,
-                "rate": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 9.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "STENCIL",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Recall_Portal.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        0.18039216101169586,
-                        0.05882352963089943,
-                        0.3019607961177826,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "constantValue": [
-                        0.0800030529499054,
-                        0.0800030529499054,
-                        0.0800030529499054,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": -9999,
-                "alphaRef": 1,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "dynamics": {
-                            "times": [
-                                0.949999988079071,
-                                1.0
-                            ],
-                            "values": [
-                                0.0,
-                                1.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionFeatherOut": 0.0,
-                    "erosionMapName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_21.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            1.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
-                "miscRenderFlags": 5,
-                "stencilMode": 1,
-                "stencilRef": 7,
-                "isUniformScale": 1,
-                "isGroundLayer": 1,
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        20.5,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "constantValue": [
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.009999999776482582,
-                            0.019999999552965164,
-                            0.9100000262260437,
-                            0.9599999785423279,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.600000023841858,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                2.0,
-                                2.5999999046325684,
-                                2.5999999046325684
-                            ],
-                            [
-                                2.0,
-                                2.0,
-                                2.0
-                            ],
-                            [
-                                2.0,
-                                1.7999999523162842,
-                                1.7999999523162842
-                            ],
-                            [
-                                2.0,
-                                2.5999999046325684,
-                                2.5999999046325684
-                            ],
-                            [
-                                2.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_white_RGB.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
                 "rate": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -19222,6 +19085,7 @@
                 "miscRenderFlags": 1,
                 "stencilMode": 2,
                 "stencilRef": 7,
+                "isUniformScale": 1,
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -19235,15 +19099,7 @@
                     "constantValue": [
                         500.0,
                         500.0,
-                        500.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "constantValue": [
-                        2.0,
-                        2.0,
-                        2.0
+                        300.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -19262,15 +19118,8 @@
                     ],
                     "__type": "ValueVector2"
                 },
-                "uvScale": {
-                    "constantValue": [
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector2"
-                },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Assets_1_630.tex",
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Assets_1_630_mask001.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -19348,6 +19197,7 @@
                 "miscRenderFlags": 1,
                 "stencilMode": 2,
                 "stencilRef": 7,
+                "isUniformScale": 1,
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -19359,7 +19209,7 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        500.0,
+                        250.0,
                         500.0,
                         500.0
                     ],
@@ -19396,7 +19246,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Assets_1_630.tex",
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Assets_1_630_mask001.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -20699,170 +20549,6 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend7",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -95.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_StormMesh01.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        0.3294117748737335,
-                        0.24313725531101227,
-                        0.47843137383461,
-                        0.34117648005485535
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.060858000069856644,
-                            0.699999988079071,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": -465,
-                "depthBiasFactors": [
-                    -1.0,
-                    -100.0
-                ],
-                "miscRenderFlags": 1,
-                "stencilMode": 2,
-                "stencilRef": 7,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        80.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        0.0,
-                        10.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        6.0,
-                        6.0,
-                        6.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.03999999910593033,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.699999988079071,
-                                1.0,
-                                0.699999988079071
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_10.tex",
-                "uvScale": {
-                    "constantValue": [
-                        1.0,
-                        0.5
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "particleUVRotateRate": {
-                    "dynamics": {
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            0.0
-                        ],
-                        "__type": "VfxAnimatedFloatVariableData"
-                    },
-                    "__type": "IntegratedValueFloat"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 0.10000000149011612,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 9.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.149999976158142,
-                "isSingleParticle": 1,
                 "emitterName": "blend9",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -21833,231 +21519,6 @@
                         ],
                         "__type": "ValueVector2"
                     },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 9.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.149999976158142,
-                "isSingleParticle": 1,
-                "emitterName": "blend15",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        -20.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_flower_torus.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        0.7137255072593689,
-                        0.35686275362968445,
-                        0.9333333373069763,
-                        0.30980393290519714
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.060858000069856644,
-                            0.699999988079071,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": -50,
-                "depthBiasFactors": [
-                    -1.0,
-                    -100.0
-                ],
-                "miscRenderFlags": 1,
-                "stencilMode": 2,
-                "stencilRef": 7,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        150.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        0.0,
-                        20.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        3.700000047683716,
-                        0.0,
-                        3.700000047683716
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.03999999910593033,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.699999988079071,
-                                0.699999988079071,
-                                0.699999988079071
-                            ],
-                            [
-                                1.5,
-                                1.0,
-                                1.5
-                            ],
-                            [
-                                1.7000000476837158,
-                                1.0,
-                                1.7000000476837158
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_8.tex",
-                "birthUVOffset": {
-                    "constantValue": [
-                        0.0,
-                        0.5
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "particleUVScrollRate": {
-                    "constantValue": [
-                        -0.10000000149011612,
-                        -1.0
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.029999999329447746,
-                            0.10000000149011612
-                        ],
-                        "values": [
-                            [
-                                -0.10000000149011612,
-                                -1.2999999523162842
-                            ],
-                            [
-                                -0.019999999552965164,
-                                -0.25
-                            ],
-                            [
-                                -0.004999999888241291,
-                                -0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector2fVariableData"
-                    },
-                    "__type": "IntegratedValueVector2"
-                },
-                "uvScale": {
-                    "constantValue": [
-                        0.699999988079071,
-                        0.8999999761581421
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.399999976158142,
-                                0.8999999761581421
-                            ],
-                            [
-                                1.190000057220459,
-                                0.9900000095367432
-                            ],
-                            [
-                                0.9799999594688416,
-                                1.1699999570846558
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector2fVariableData"
-                    },
-                    "__type": "ValueVector2"
-                },
-                "particleUVRotateRate": {
-                    "dynamics": {
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            0.0
-                        ],
-                        "__type": "VfxAnimatedFloatVariableData"
-                    },
-                    "__type": "IntegratedValueFloat"
-                },
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_9.tex",
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
@@ -23325,6 +22786,666 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/Senna/Skins/Skin46/Senna_Skin46_Body_TX_CM.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.15000000596046448,
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 9.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "STENCIL1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Ally_mistBuffed_Ring_FBX002.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.18039216101169586,
+                        0.05882352963089943,
+                        0.3019607961177826,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -9999,
+                "alphaRef": 1,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.949999988079071,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionFeatherOut": 0.0,
+                    "erosionMapName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_21.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "miscRenderFlags": 5,
+                "stencilMode": 1,
+                "stencilRef": 7,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        15.699999809265137,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.029999999329447746,
+                            0.05999999865889549,
+                            0.9100000262260437,
+                            0.9599999785423279,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.600000023841858,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                2.0,
+                                2.5999999046325684,
+                                2.5999999046325684
+                            ],
+                            [
+                                2.0,
+                                2.0,
+                                2.0
+                            ],
+                            [
+                                2.0,
+                                1.7999999523162842,
+                                1.7999999523162842
+                            ],
+                            [
+                                2.0,
+                                2.5999999046325684,
+                                2.5999999046325684
+                            ],
+                            [
+                                2.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Mis_Mask003.tex",
+                "texAddressModeBase": 2,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.10000000149011612,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 9.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.149999976158142,
+                "isSingleParticle": 1,
+                "emitterName": "blend17",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        -95.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Ally_mistBuffed_Ring_FBX002.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.3294117748737335,
+                        0.24313725531101227,
+                        0.47843137383461,
+                        0.34117648005485535
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.060858000069856644,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -465,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -100.0
+                ],
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "stencilRef": 7,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        80.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        35.0,
+                        6.0,
+                        35.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.03999999910593033,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.699999988079071,
+                                1.0,
+                                0.699999988079071
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Mis_Mask004.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "particleUVRotateRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "IntegratedValueFloat"
+                },
+                "textureMult": {
+                    "birthUvRotateRateMult": {
+                        "constantValue": 180.0,
+                        "__type": "ValueFloat"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 9.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.149999976158142,
+                "isSingleParticle": 1,
+                "emitterName": "blend18",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -20.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Ally_mistBuffed_Ring_FBX002.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.7100023031234741,
+                        0.36000609397888184,
+                        0.9300068616867065,
+                        0.31000229716300964
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.060858000069856644,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -50,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -100.0
+                ],
+                "miscRenderFlags": 1,
+                "stencilRef": 7,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        150.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        20.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        36.0,
+                        0.0,
+                        3.700000047683716
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.03999999910593033,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                1.5,
+                                1.0,
+                                1.5
+                            ],
+                            [
+                                1.7000000476837158,
+                                1.0,
+                                1.7000000476837158
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_8_1.tex",
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        -0.10000000149011612,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.029999999329447746,
+                            0.10000000149011612
+                        ],
+                        "values": [
+                            [
+                                -0.10000000149011612,
+                                0.0
+                            ],
+                            [
+                                -0.019999999552965164,
+                                0.0
+                            ],
+                            [
+                                -0.004999999888241291,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        2.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "particleUVRotateRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "IntegratedValueFloat"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Mis_Mask003.tex",
+                    "UvRotationMult": {
+                        "constantValue": 180.0,
+                        "__type": "ValueFloat"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 9.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.30000001192092896,
+                "lifetime": 8.0,
+                "isSingleParticle": 1,
+                "emitterLinger": 5.0,
+                "emitterName": "LensFlare_Pink2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "{ee39916f}"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "particleColorTexture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/3161color-hold.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.20000000298023224,
+                        0.14000152051448822,
+                        0.2899976968765259,
+                        0.7400014996528625
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -6666,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilRef": 7,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        600.0,
+                        130.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.699999988079071,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.699999988079071,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Mis_AlphaCircleGradient_1.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.019999999552965164
+                    ],
+                    "__type": "ValueVector2"
+                },
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -33520,6 +33641,8 @@
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
+                "stencilMode": 3,
+                "stencilRef": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
                 "useNavmeshMask": 1,
@@ -33673,6 +33796,8 @@
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
+                "stencilMode": 3,
+                "stencilRef": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
                 "useNavmeshMask": 1,
@@ -34369,7 +34494,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Pet_Texture.tex",
+                "texture": "ASSETS/Characters/Senna/Skins/Skin55/Particles/Senna_Skin55_Pet_Texture.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -34732,7 +34857,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Senna_Skin46_Body_TX_CM.tex",
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Body_TX_CM_VFX001.tex",
                 "textureMult": {
                     "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Ally_mistBuffed_outside_Mult.tex",
                     "birthUvScrollRateMult": {
@@ -34850,7 +34975,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Senna_Skin46_Body_TX_CM.tex",
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Body_TX_CM_VFX001.tex",
                 "textureMult": {
                     "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Base_Nova_Mult.tex",
                     "birthUvScrollRateMult": {
@@ -34988,7 +35113,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Senna_Skin46_Body_TX_CM.tex",
+                "texture": "ASSETS/Characters/Senna/Skins/Skin55/Senna_Skin55_Body_TX_CM.tex",
                 "textureMult": {
                     "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Ally_mistBuffed_outside_Mult.tex",
                     "birthUvScrollRateMult": {
@@ -35013,15 +35138,6 @@
                     "__type": "ValueFloat"
                 },
                 "lifetime": 9.0,
-                "childParticleSetDefinition": {
-                    "childrenIdentifiers": [
-                        {
-                            "effectKey": "{325a054e}",
-                            "__type": "VfxChildIdentifier"
-                        }
-                    ],
-                    "__type": "VfxChildParticleSetDefinitionData"
-                },
                 "emitterName": "BigStar",
                 "importance": 3,
                 "birthOrbitalVelocity": {
@@ -35386,11 +35502,12 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_Recall_Portal.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Ally_mistBuffed_Ring_FBX002.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
+                "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
                         0.18039216101169586,
@@ -35447,7 +35564,7 @@
                 "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        20.5,
+                        15.699999809265137,
                         1.0,
                         1.0
                     ],
@@ -35504,7 +35621,8 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_white_RGB.tex",
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Mis_Mask003.tex",
+                "texAddressModeBase": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -36340,7 +36458,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend4",
+                "emitterName": "blend3",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -36585,7 +36703,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend6",
+                "emitterName": "blend4",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -36879,7 +36997,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend7",
+                "emitterName": "blend5",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -37101,7 +37219,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend8",
+                "emitterName": "blend6",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -37116,7 +37234,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_StormMesh01.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Ally_mistBuffed_Ring_FBX002.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -37170,6 +37288,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": -465,
+                "alphaRef": 0,
                 "depthBiasFactors": [
                     -1.0,
                     -100.0
@@ -37198,9 +37317,9 @@
                 "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
+                        35.0,
                         6.0,
-                        6.0,
-                        6.0
+                        35.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -37232,13 +37351,10 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_10.tex",
-                "uvScale": {
-                    "constantValue": [
-                        1.0,
-                        0.5
-                    ],
-                    "__type": "ValueVector2"
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Mis_Mask004.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
                 },
                 "particleUVRotateRate": {
                     "dynamics": {
@@ -37251,6 +37367,13 @@
                         "__type": "VfxAnimatedFloatVariableData"
                     },
                     "__type": "IntegratedValueFloat"
+                },
+                "textureMult": {
+                    "birthUvRotateRateMult": {
+                        "constantValue": 180.0,
+                        "__type": "ValueFloat"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -37266,7 +37389,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend10",
+                "emitterName": "blend7",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -37489,7 +37612,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend13",
+                "emitterName": "blend8",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -37755,7 +37878,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend14",
+                "emitterName": "blend9",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -37989,7 +38112,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend15",
+                "emitterName": "blend10",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -38255,7 +38378,7 @@
                 },
                 "lifetime": 1.149999976158142,
                 "isSingleParticle": 1,
-                "emitterName": "blend16",
+                "emitterName": "blend13",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -38270,7 +38393,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_flower_torus.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Ally_mistBuffed_Ring_FBX002.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -38278,10 +38401,10 @@
                 "blendMode": 1,
                 "birthColor": {
                     "constantValue": [
-                        0.7137255072593689,
-                        0.35686275362968445,
-                        0.9333333373069763,
-                        0.30980393290519714
+                        0.7100023031234741,
+                        0.36000609397888184,
+                        0.9300068616867065,
+                        0.31000229716300964
                     ],
                     "__type": "ValueColor"
                 },
@@ -38323,14 +38446,15 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": -50,
+                "pass": -20,
+                "alphaRef": 0,
                 "depthBiasFactors": [
                     -1.0,
                     -100.0
                 ],
                 "miscRenderFlags": 1,
-                "stencilMode": 2,
                 "stencilRef": 7,
+                "isUniformScale": 1,
                 "isGroundLayer": 1,
                 "useNavmeshMask": 1,
                 "birthRotation0": {
@@ -38352,7 +38476,7 @@
                 "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        3.700000047683716,
+                        36.0,
                         0.0,
                         3.700000047683716
                     ],
@@ -38386,18 +38510,11 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_8.tex",
-                "birthUVOffset": {
-                    "constantValue": [
-                        0.0,
-                        0.5
-                    ],
-                    "__type": "ValueVector2"
-                },
+                "texture": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_8_1.tex",
                 "particleUVScrollRate": {
                     "constantValue": [
                         -0.10000000149011612,
-                        -1.0
+                        0.0
                     ],
                     "dynamics": {
                         "times": [
@@ -38408,15 +38525,15 @@
                         "values": [
                             [
                                 -0.10000000149011612,
-                                -1.2999999523162842
+                                0.0
                             ],
                             [
                                 -0.019999999552965164,
-                                -0.25
+                                0.0
                             ],
                             [
                                 -0.004999999888241291,
-                                -0.0
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedVector2fVariableData"
@@ -38425,31 +38542,9 @@
                 },
                 "uvScale": {
                     "constantValue": [
-                        0.699999988079071,
-                        0.8999999761581421
+                        2.0,
+                        1.0
                     ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.399999976158142,
-                                0.8999999761581421
-                            ],
-                            [
-                                1.190000057220459,
-                                0.9900000095367432
-                            ],
-                            [
-                                0.9799999594688416,
-                                1.1699999570846558
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector2fVariableData"
-                    },
                     "__type": "ValueVector2"
                 },
                 "particleUVRotateRate": {
@@ -38465,7 +38560,11 @@
                     "__type": "IntegratedValueFloat"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Clould_9.tex",
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin46/Particles/Senna_Skin46_E_Mis_Mask003.tex",
+                    "UvRotationMult": {
+                        "constantValue": 180.0,
+                        "__type": "ValueFloat"
+                    },
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
@@ -39721,6 +39820,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "VertAnim_UV_Dir2",
                 "value": [
                     1.0,
@@ -39907,6 +40046,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "DIFFUSEHOLD_USING_BCHANNEL",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -39994,6 +40141,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Pulse_Strength",
                 "value": [
@@ -40276,6 +40463,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ALPHABLEND_BLENDMAT",
                 "on": false,

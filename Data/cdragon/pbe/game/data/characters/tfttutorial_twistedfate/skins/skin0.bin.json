@@ -378,7 +378,7 @@
                     2.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Maps/Particles/TFT/TFT_Trait_Guardian_Bar_Mult.TFT_Set13.tex",
+                    "textureMult": "ASSETS/Maps/Particles/TFT/TFT_Trait_Guardian_Bar_Mult.TFT_Event_5YR_Set17.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -564,7 +564,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -786,7 +786,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.TFT_Event_5YR_Set17.tex",
                 "blendMode": 4,
                 "Color": {
                     "constantValue": [
@@ -5727,7 +5727,7 @@
                     2.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Maps/Particles/TFT/TFT_Trait_Guardian_Bar_Mult.TFT_Set13.tex",
+                    "textureMult": "ASSETS/Maps/Particles/TFT/TFT_Trait_Guardian_Bar_Mult.TFT_Event_5YR_Set17.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -5913,7 +5913,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -6323,7 +6323,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.TFT_Event_5YR_Set17.tex",
                 "blendMode": 4,
                 "Color": {
                     "constantValue": [
@@ -6653,7 +6653,7 @@
                     2.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Maps/Particles/TFT/TFT_Trait_Guardian_Bar_Mult.TFT_Set13.tex",
+                    "textureMult": "ASSETS/Maps/Particles/TFT/TFT_Trait_Guardian_Bar_Mult.TFT_Event_5YR_Set17.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -6839,7 +6839,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7243,7 +7243,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.TFT_Event_5YR_Set17.tex",
                 "blendMode": 4,
                 "Color": {
                     "constantValue": [
@@ -7550,7 +7550,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7696,7 +7696,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -9364,6 +9364,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     1.0,
@@ -9539,6 +9579,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,
@@ -9931,6 +9979,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     1.0,
@@ -10106,6 +10194,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,

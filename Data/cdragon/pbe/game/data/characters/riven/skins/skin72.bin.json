@@ -110,6 +110,11 @@
             "simpleSkin": "ASSETS/Characters/Riven/Skins/Skin44/Riven_Skin44.skn",
             "skinScale": 1.5,
             "selfIllumination": 0.699999988079071,
+            "overrideBoundingBox": [
+                74.0,
+                168.0,
+                74.0
+            ],
             "Material": "Characters/Riven/Skins/Skin72/Materials/Matcap_Iridescent_Holographic_inst",
             "reflectionFresnelColor": [
                 0,
@@ -69084,6 +69089,46 @@
         ],
         "paramValues": [
             {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Alpha_Sharpness",
                 "value": [
                     0.0010000000474974513,
@@ -69269,6 +69314,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_DISSOLVE",
                 "on": false,

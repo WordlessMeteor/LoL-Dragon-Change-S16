@@ -1377,6 +1377,10 @@ lol-uikit-content-block.cherry-progression-champion-tooltip {
     background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .65) 42%, rgba(0, 0, 0, .65))
 }
 
+.parties-view .parties-background.is-demacia .parties-background-mask {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .65) 0, rgba(0, 0, 0, .65) 42%, rgba(0, 0, 0, .65))
+}
+
 @-moz-keyframes parties-slide-down {
     0% {
         transform: translate(0)
@@ -5155,6 +5159,12 @@ hr {
     cursor: default
 }
 
+.parties-game-type-card-category-btn.unselectable {
+    color: #cdbe91;
+    cursor: default;
+    pointer-events: none
+}
+
 .parties-game-type-highlight-mode {
     height: 27px;
     margin-left: auto;
@@ -8271,11 +8281,13 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon,
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status {
     font-family: var(--font-body)
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon,
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status,
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title,
 .v2-footer-component .center-container .find-match-button-container {
@@ -8334,6 +8346,7 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon,
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status {
     color: #a09b8c;
     font-size: 12px;
@@ -8344,11 +8357,13 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action:lang(ja-jp),
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon:lang(ja-jp),
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status:lang(ja-jp) {
     font-size: 13px
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action:lang(ar-ae),
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon:lang(ar-ae),
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status:lang(ar-ae) {
     letter-spacing: 0
 }
@@ -8426,6 +8441,7 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 .v2-footer-component .center-container .aw-boost-button-container {
     height: 32px;
     margin-left: 15px;
+    position: relative;
     width: 32px
 }
 
@@ -8471,8 +8487,8 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-icon {
     flex-shrink: 0;
-    height: 24px;
-    width: 24px
+    height: 36px;
+    width: 36px
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text {
@@ -8491,6 +8507,20 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 .aw-boost-tooltip-content .aw-boost-tooltip-action {
     margin-top: 8px;
     white-space: nowrap
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon {
+    margin-top: 8px;
+    white-space: pre-line
+}
+
+.aw-boost-expiration-tooltip-anchor {
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
 }
 
 .v2-footer-notifications,
@@ -8891,6 +8921,10 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] {
     position: absolute;
     top: 79px;
     width: 100%
+}
+
+.v2-header-component.is-demacia {
+    margin-top: 4px
 }
 
 .v2-header-component .lobby-header-overlay {

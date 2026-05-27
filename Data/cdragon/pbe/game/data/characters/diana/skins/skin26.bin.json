@@ -46387,7 +46387,8 @@
                     -80.0
                 ],
                 "disableBackfaceCull": true,
-                "isGroundLayer": 1,
+                "miscRenderFlags": 1,
+                "isFollowingTerrain": 1,
                 "birthScale0": {
                     "constantValue": [
                         12.600000381469727,
@@ -46422,147 +46423,6 @@
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             -0.10000000149011612,
-                            0.0
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 1.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "TeamCircle-Red3",
-                "disabled": true,
-                "importance": 3,
-                "Filtering": {
-                    "spectatorPolicy": 1,
-                    "__type": "VfxEmitterFiltering"
-                },
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Diana/Skins/Skin26/Particles/Diana_Skin26_FlatCircle_01.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "Color": {
-                    "constantValue": [
-                        0.7490196228027344,
-                        0.48235294222831726,
-                        0.054901961237192154,
-                        0.6000000238418579
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.7490196228027344,
-                                0.48235294222831726,
-                                0.054901961237192154,
-                                0.0
-                            ],
-                            [
-                                0.7490196228027344,
-                                0.48235294222831726,
-                                0.054901961237192154,
-                                0.6000000238418579
-                            ],
-                            [
-                                0.25261053442955017,
-                                0.03972318395972252,
-                                0.027128027752041817,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "depthBiasFactors": [
-                    -1.0,
-                    -80.0
-                ],
-                "disableBackfaceCull": true,
-                "isGroundLayer": 1,
-                "birthScale0": {
-                    "constantValue": [
-                        4.0,
-                        1.0,
-                        4.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.20000000298023224,
-                            0.4000000059604645,
-                            0.6000000238418579,
-                            0.800000011920929,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.8999999761581421,
-                                0.8999999761581421,
-                                0.8999999761581421
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.8999999761581421,
-                                0.8999999761581421,
-                                0.8999999761581421
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.8999999761581421,
-                                0.8999999761581421,
-                                0.8999999761581421
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Diana/Skins/Skin26/Particles/Diana_Skin26_Z_magic_04.tex",
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Zilean/Skins/Base/Particles/Zilean_Skin05_Q_Indicator_TeamCircle_Mult.tex",
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            -0.0026000000070780516,
                             0.0
                         ],
                         "__type": "ValueVector2"
@@ -47116,7 +46976,8 @@
                     -80.0
                 ],
                 "disableBackfaceCull": true,
-                "isGroundLayer": 1,
+                "miscRenderFlags": 1,
+                "isFollowingTerrain": 1,
                 "birthScale0": {
                     "constantValue": [
                         12.600000381469727,
@@ -99787,6 +99648,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "MoveIntensity",
                 "value": [
                     0.20000000298023224,
@@ -100028,6 +99929,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_DIRECTIONALDISSOLUTION",
                 "on": false,
