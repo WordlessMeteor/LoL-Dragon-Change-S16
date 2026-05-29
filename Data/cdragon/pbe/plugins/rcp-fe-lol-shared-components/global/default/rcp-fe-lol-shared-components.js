@@ -26310,6 +26310,9 @@
                 createHonorPanel() {
                     return this._privateApi.createHonorPanel()
                 }
+                showHonorPanelDrawer(e) {
+                    return this._privateApi.showHonorPanelDrawer(e)
+                }
             }
         }, (e, t, n) => {
             "use strict";
@@ -26394,6 +26397,18 @@
                             service: e
                         }
                     })
+                }
+                showHonorPanelDrawer({
+                    wrapperClassName: e
+                } = {}) {
+                    const t = a.UIKit && a.UIKit.getDrawerManager && a.UIKit.getDrawerManager();
+                    if (!t) return null;
+                    const n = this.createHonorPanel();
+                    if (!n || !n.domNode) return null;
+                    const s = document.createElement("div");
+                    return s.classList.add("lol-honor-panel-drawer"), e && s.classList.add(e), s.style.width = "600px", s.style.height = "100vh", s.style.maxHeight = "100vh", s.style.padding = "24px", s.style.boxSizing = "border-box", s.style.background = "#010a13", s.style.overflow = "hidden", s.style.display = "flex", s.style.flexDirection = "column", n.domNode.style && (n.domNode.style.flex = "1 1 auto", n.domNode.style.minHeight = "0", n.domNode.style.height = "100%"), s.appendChild(n.domNode), t.show({
+                        domNode: s
+                    }), n
                 }
                 showVerbalAbuseRemedyModal() {
                     a.logger.trace("Open report modal"), this._verbalAbuseRemedyModalInstance = a.ComponentFactory.create({
@@ -26687,6 +26702,12 @@
                         t = this.get("tra");
                     return e && t && t.get(e.titleKey) || ""
                 })),
+                description: s.Ember.computed("definition", "tra", (function() {
+                    const e = this.get("definition"),
+                        t = this.get("tra");
+                    return e && t && e.descriptionKey && t.get(e.descriptionKey) || ""
+                })),
+                hasDescription: s.Ember.computed.notEmpty("description"),
                 isGameBadge: s.Ember.computed.equal("definition.source", "game"),
                 isEventBadge: s.Ember.computed.equal("definition.source", "event"),
                 isHonorBadge: s.Ember.computed.equal("definition.source", "honor"),
@@ -26759,8 +26780,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "Yoodc5X2",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTooltip"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDurationBadge"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-restriction-row-badge-icon"],["dynamic-attr","src",["unknown",["durationBadgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["restrictionDuration"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["tooltipTitle"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["tooltipBodyParts","before"]],false],["open-element","span",[]],["static-attr","class","honor-panel-restriction-tooltip-value"],["flush-element"],["append",["unknown",["tooltipBodyParts","value"]],false],["close-element"],["append",["unknown",["tooltipBodyParts","after"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],1]],"locals":[]}],"hasPartials":false}',
+                id: "IP837HyN",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTooltip"]]],null,4],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDurationBadge"]]],null,2],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDescription"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["left","system"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-restriction-row-badge-icon"],["dynamic-attr","src",["unknown",["durationBadgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["restrictionDuration"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["tooltipTitle"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["tooltipBodyParts","before"]],false],["open-element","span",[]],["static-attr","class","honor-panel-restriction-tooltip-value"],["flush-element"],["append",["unknown",["tooltipBodyParts","value"]],false],["close-element"],["append",["unknown",["tooltipBodyParts","after"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],3]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26779,6 +26800,7 @@
                     honor_downgrade: {
                         icon: a("honor-downgrade"),
                         titleKey: "honor_panel_restriction_honor_downgrade_title",
+                        descriptionKey: "honor_panel_restriction_honor_downgrade_description",
                         source: "game",
                         isHonorIcon: !0,
                         restrictionType: "REPUTATION_LIMIT"
@@ -26786,42 +26808,49 @@
                     ranked_suspension: {
                         icon: a("ranked-suspension"),
                         titleKey: "honor_panel_restriction_ranked_suspension_title",
+                        descriptionKey: "honor_panel_restriction_ranked_suspension_description",
                         source: "honor",
                         restrictionType: "RANKED_RESTRICTION"
                     },
                     queue_lock: {
                         icon: a("queue-lock"),
                         titleKey: "honor_panel_restriction_queue_lock_title",
+                        descriptionKey: "honor_panel_restriction_queue_lock_description",
                         source: "event",
                         restrictionType: "QUEUE_LOCKOUT"
                     },
                     queue_delay: {
                         icon: a("queue-delay"),
                         titleKey: "honor_panel_restriction_queue_delay_title",
+                        descriptionKey: "honor_panel_restriction_queue_delay_description",
                         source: "game",
                         restrictionType: "QUEUE_DELAY"
                     },
                     chat_restriction: {
                         icon: a("chat-restriction"),
                         titleKey: "honor_panel_restriction_chat_restriction_title",
+                        descriptionKey: "honor_panel_restriction_chat_restriction_description",
                         source: "event",
                         restrictionType: "TEXT_CHAT_RESTRICTION"
                     },
                     ping_restriction: {
                         icon: a("ping-restriction"),
                         titleKey: "honor_panel_restriction_ping_restriction_title",
+                        descriptionKey: "honor_panel_restriction_ping_restriction_description",
                         source: "event",
                         restrictionType: "ALL_PINGS_RESTRICTION"
                     },
                     gameflow_chat_locked: {
                         icon: a("chat-restriction"),
                         titleKey: "honor_panel_restriction_gameflow_chat_locked_title",
+                        descriptionKey: "honor_panel_restriction_gameflow_chat_locked_description",
                         source: "honor",
                         activeWhenHonorLevelBelow: 2
                     },
                     gameflow_voice_locked: {
                         icon: a("voice-restriction"),
                         titleKey: "honor_panel_restriction_gameflow_voice_locked_title",
+                        descriptionKey: "honor_panel_restriction_gameflow_voice_locked_description",
                         source: "honor",
                         activeWhenHonorLevelBelow: 3,
                         restrictionType: "TEAM_VOICE_LOCKOUT"

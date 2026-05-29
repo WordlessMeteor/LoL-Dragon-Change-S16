@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Gragas rollt sein Fass zu einem Zielort. Das Fass kann entweder manuell zur Explosion gebracht werden oder es explodiert nach 4 Sekunden automatisch. Die Stärke der Explosion nimmt mit der Zeit zu. Gegner, die von der Explosion erfasst werden, werden verlangsamt.",
-            "dynamicDescription": "Gragas rollt ein Fass, das nach @Effect4Amount@&nbsp;Sekunden explodiert. Die Explosion verursacht zwischen <magicDamage>@MinDamage@</magicDamage> und <magicDamage>@MaxDamage@&nbsp;magischen Schaden</magicDamage> und <status>verlangsamt</status> @Effect3Amount@&nbsp;Sekunden lang um @Effect2Amount@ bis @Effect2Amount*1.5@&nbsp;%. Der Schaden und die <status>Verlangsamung</status> erhöhen sich mit Vorbereitungszeit, bevor das Fass explodiert. <br><br>Gragas kann die Fähigkeit <recast>reaktivieren</recast>, um das Fass vorzeitig zur Explosion zu bringen.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas rollt ein Fass, das nach @BarrelMaxDuration@&nbsp;Sekunden explodiert. Die Explosion verursacht zwischen <magicDamage>@MinDamage@</magicDamage> und <magicDamage>@MaxDamage@&nbsp;magischen Schaden</magicDamage> und <status>verlangsamt</status> @SlowDuration@&nbsp;Sekunden lang um @SlowPercent@ bis @SlowPercent*1.5@&nbsp;%. Der Schaden und die <status>Verlangsamung</status> erhöhen sich mit Vorbereitungszeit, bevor das Fass explodiert. <br><br>Gragas kann die Fähigkeit <recast>reaktivieren</recast>, um das Fass vorzeitig zur Explosion zu bringen.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

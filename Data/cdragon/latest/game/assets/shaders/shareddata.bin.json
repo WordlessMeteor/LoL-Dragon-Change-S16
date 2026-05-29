@@ -59,7 +59,6 @@
             {
                 "name": "TERRAIN_BLEND",
                 "type": 5,
-                "SAMPLER": "{a6bded4f}",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -276,6 +275,11 @@
             {
                 "name": "ADDITIONAL_MRT_TEXTURE",
                 "SAMPLER": "{a6bded4f}",
+                "__type": "X3DSharedTextureDef"
+            },
+            {
+                "name": "GAMEPLAY_TEXTURE_VS",
+                "BindLocation": 0,
                 "__type": "X3DSharedTextureDef"
             }
         ],
@@ -508,6 +512,14 @@
                 "type": 10,
                 "{9d17b3be}": "{b5cc9d24}",
                 "Count": 32,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "TEEMO_ACTIVE",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "DRAGON_TERRAIN",
                 "__type": "X3DSharedConstantDef"
             }
         ],
@@ -859,7 +871,12 @@
                 "__type": "X3DSharedConstantDef"
             },
             {
-                "name": "BOUNDING_BOX_SIZE",
+                "name": "LOCAL_BOUNDING_BOX_MIN",
+                "type": 2,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "LOCAL_BOUNDING_BOX_MAX",
                 "type": 2,
                 "__type": "X3DSharedConstantDef"
             }
@@ -902,7 +919,12 @@
                 "__type": "X3DSharedConstantDef"
             },
             {
-                "name": "BOUNDING_BOX_SIZE",
+                "name": "LOCAL_BOUNDING_BOX_MIN",
+                "type": 2,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "LOCAL_BOUNDING_BOX_MAX",
                 "type": 2,
                 "__type": "X3DSharedConstantDef"
             }

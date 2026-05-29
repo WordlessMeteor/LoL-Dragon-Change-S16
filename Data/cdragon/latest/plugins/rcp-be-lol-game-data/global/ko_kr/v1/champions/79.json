@@ -1072,7 +1072,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "그라가스가 술통을 굴려 폭발시킵니다. 술통은 4초 뒤 자동으로 폭발하며 스킬을 다시 사용하여 직접 폭발시킬 수도 있습니다. 술통이 오래 남아 있을수록 위력이 증가하며, 폭발에 맞은 적은 둔화됩니다.",
-            "dynamicDescription": "그라가스가 술통을 굴립니다. 술통은 @Effect4Amount@초 후 폭발해 <magicDamage>@MinDamage@</magicDamage>~<magicDamage>@MaxDamage@의 마법 피해</magicDamage>를 입히고 @Effect3Amount@초 동안 @Effect2Amount@~@Effect2Amount*1.5@% <status>둔화</status>시킵니다. 피해량과 <status>둔화</status> 효과는 폭발 전 술통이 유지됐던 시간에 비례해 증가합니다. <br><br><recast>재사용</recast>하여 술통을 더 빨리 폭발시킬 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "그라가스가 술통을 굴립니다. 술통은 @BarrelMaxDuration@초 후 폭발해 <magicDamage>@MinDamage@</magicDamage>~<magicDamage>@MaxDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @SlowPercent@~@SlowPercent*1.5@% <status>둔화</status>시킵니다. 피해량과 <status>둔화</status> 효과는 폭발 전 술통이 유지됐던 시간에 비례해 증가합니다. <br><br><recast>재사용</recast>하여 술통을 더 빨리 폭발시킬 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Valor, Quinns demacianischer Adler, markiert Gegner regelmäßig als <font color='#FFF673'>verwundbar</font>. Quinns erster normaler Angriff gegen <font color='#FFF673'>verwundbare</font> Ziele verursacht zusätzlichen normalen Schaden."
+        "description": "Valor, Quinns demacianischer Adler, markiert Gegner regelmäßig mit <keywordMajor>Adleraugen</keywordMajor>. Quinns erster normaler Angriff gegen Ziele, die mit <keywordMajor>Adleraugen</keywordMajor> markiert sind, verursacht zusätzlichen normalen Schaden."
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Quinn befiehlt Valor, ein Ziel zu markieren und zu blenden und danach an allen Feinden in unmittelbarer Nähe Schaden zu verursachen.",
-            "dynamicDescription": "Quinn schickt Valor los und lässt ihn den ersten getroffenen Gegner als <keywordMajor>verwundbar</keywordMajor> markieren, wodurch dessen Sichtbereich @VisionReductionDuration@&nbsp;Sekunden lang verringert wird, und fügt allen umstehenden Gegnern <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> zu.<br><br>Wenn der erste getroffene Gegner kein Champion ist, wird er @VisionReductionDuration@&nbsp;Sekunden lang <status>entwaffnet</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn schickt Valor los und lässt ihn den ersten getroffenen Gegner mit <keywordMajor>Adleraugen</keywordMajor> markieren, wodurch dessen Sichtbereich @VisionReductionDuration@&nbsp;Sekunden lang verringert wird, und fügt allen umstehenden Gegnern <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> zu.<br><br>Wenn der erste getroffene Gegner kein Champion ist, wird er @VisionReductionDuration@&nbsp;Sekunden lang <status>entwaffnet</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Gewährt Quinn passiv Angriffstempo und Lauftempo, nachdem sie ein <font color='#FFF673'>verwundbares</font> Ziel angegriffen hat. Diese Fähigkeit kann aktiviert werden, damit Valor ein großes Gebiet in der Nähe aufdeckt.",
-            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Wenn Quinn ein <keywordMajor>verwundbares</keywordMajor> Ziel angreift, erhält sie @BuffDuration@&nbsp;Sekunden lang <attackSpeed>@AttackSpeedBonus*100@&nbsp;% Angriffstempo</attackSpeed> und <speed>@MovespeedAmount*100@&nbsp;% Lauftempo</speed>.<br><br><spellActive>Aktiv:</spellActive> Valor deckt @VisionDuration@&nbsp;Sekunden lang einen großen Bereich in der Nähe auf.@SpellModifierDescriptionAppend@",
+            "description": "Gewährt Quinn passiv Angriffstempo und Lauftempo, nachdem sie ein mit <keywordMajor>Adleraugen</keywordMajor> markiertes Ziel angegriffen hat. Aktivieren, damit Valor einen großen Bereich in der Nähe aufdeckt.",
+            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Wenn Quinn ein mit <keywordMajor>Adleraugen</keywordMajor> markiertes Ziel angreift, erhält sie @BuffDuration@&nbsp;Sekunden lang <attackSpeed>@AttackSpeedBonus*100@&nbsp;% Angriffstempo</attackSpeed> und <speed>@MovespeedAmount*100@&nbsp;% Lauftempo</speed>.<br><br><spellActive>Aktiv:</spellActive> Valor deckt @VisionDuration@&nbsp;Sekunden lang einen großen Bereich in der Nähe auf.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Quinn sprintet auf einen Gegner zu, verursacht normalen Schaden und verlangsamt dessen Lauftempo. Beim Erreichen des Ziels springt sie vom Ziel weg, unterbricht es kurz und landet fast soweit davon entfernt, wie ihre maximale Angriffsreichweite beträgt.",
-            "dynamicDescription": "Quinn springt zu einem Gegner, fügt ihm <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> zu und markiert ihn als <keywordMajor>verwundbar</keywordMajor>. Quinn springt rückwärts vom Ziel weg, das dadurch leicht <status>zurückgestoßen</status> und um @SlowAmount*100@&nbsp;% <status>verlangsamt</status> wird. Die Verlangsamung fällt über @SlowDecayTime@&nbsp;Sekunden hinweg ab.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn springt zu einem Gegner, fügt ihm <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> zu und markiert ihn mit <keywordMajor>Adleraugen</keywordMajor>. Dann springt Quinn rückwärts vom Ziel weg, das dadurch leicht <status>zurückgestoßen</status> und um @SlowAmount*100@&nbsp;% <status>verlangsamt</status> wird. Die Verlangsamung fällt über @SlowDecayTime@&nbsp;Sekunden hinweg ab.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Quinn und Valor tun sich zusammen und fliegen mit hoher Geschwindigkeit herum. Beendest du die Fähigkeit, führen sie „Himmelsschlag“ aus, was Schaden an nahen Gegnern verursacht und Champions als verwundbar markiert.",
-            "dynamicDescription": "Quinn ruft Valor zu sich. Nach einer Kanalisierungszeit von 2&nbsp;Sekunden bewegen sie sich zusammen, wodurch Quinn <speed>@MovementSpeedMod*100@&nbsp;% Lauftempo</speed> erhält und die Fähigkeit <recast>reaktivieren</recast> kann. Durch einen Angriff oder den Einsatz von <spellName>Blendender Ansturm</spellName> oder <spellName>Anspringen</spellName> wird die Fähigkeit automatisch <recast>reaktiviert</recast>.<br><br><recast>Reaktivierung</recast>: Quinn und Valor führen ein Luftmanöver durch, das <physicalDamage>@Damage@&nbsp;normalen Schaden</physicalDamage> verursacht, Champions als <keywordMajor>verwundbar</keywordMajor> markiert und die Fähigkeit beendet.@SpellModifierDescriptionAppend@",
+            "description": "Quinn und Valor tun sich zusammen und fliegen mit hoher Geschwindigkeit umher.  Beendest du die Fähigkeit, wird „Himmelsschlag“ gewirkt, was Gegnern in der Nähe Schaden zufügt und Champions mit „Adleraugen“ markiert.",
+            "dynamicDescription": "Quinn ruft Valor zu sich. Nach einer Kanalisierungszeit von 2&nbsp;Sekunden bewegen sie sich zusammen, wodurch sie <speed>@MovementSpeedMod*100@&nbsp;% Lauftempo</speed> erhält und die Fähigkeit <recast>reaktivieren</recast> kann. Durch einen Angriff oder den Einsatz von <spellName>Blendender Ansturm</spellName> oder <spellName>Anspringen</spellName> wird die Fähigkeit automatisch <recast>reaktiviert</recast>.<br><br><recast>Reaktivierung</recast>: Quinn und Valor führen ein Luftmanöver aus, das <physicalDamage>@Damage@&nbsp;normalen Schaden</physicalDamage> verursacht, Champions mit <keywordMajor>Adleraugen</keywordMajor> markiert und die Fähigkeit beendet.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

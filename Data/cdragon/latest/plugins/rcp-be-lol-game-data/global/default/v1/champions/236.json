@@ -1779,7 +1779,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Lucian shoots a missile that explodes in a star shape, marking and briefly revealing enemies. Lucian gains Move Speed for attacking marked enemies.",
-            "dynamicDescription": "Lucian fires a shot that explodes at the end of its range or on the first enemy hit, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>, briefly revealing enemies and marking them for 6 seconds.<br><br>When Lucian or an ally damages a marked enemy, Lucian gains <speed>@Effect2Amount@ Move Speed</speed> for 1 second. Allies triggering this effect will also grant Lucian <attention>Vigilance</attention>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lucian fires a shot that explodes at the end of its range or on the first enemy hit, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>, briefly revealing enemies and marking them for 6 seconds.<br><br>When Lucian or an ally damages a marked enemy, Lucian gains <speed>@MoveSpeedAmount@ Move Speed</speed> for 1 second. Allies triggering this effect will also grant Lucian <attention>Vigilance</attention>.@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1929,7 +1929,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Lucian quickly dashes a short distance. Lightslinger attacks reduce Relentless Pursuit's cooldown.",
-            "dynamicDescription": "Lucian dashes.<br><br>Cooldown is reduced by @Effect1Amount@ second whenever Lucian hits an enemy with <spellName>Lightslinger</spellName> (@Effect2Amount@ seconds for champions). @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lucian dashes.<br><br>Cooldown is reduced by @CDRefundBase@ second whenever Lucian hits an enemy with <spellName>Lightslinger</spellName> (@CDRefundChampion@ seconds for champions). @SpellModifierDescriptionAppend@",
             "range": [
                 445.0,
                 445.0,

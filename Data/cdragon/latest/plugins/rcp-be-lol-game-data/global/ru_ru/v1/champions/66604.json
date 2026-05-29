@@ -76,7 +76,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "Новый заряд: @AmmoRechargeTime@ сек. (@Cooldown@ сек. %i:cooldown%)",
             "description": "Амуму кидает во врага бинт. При попадании бинт приклеивается к врагу, оглушая его, и Амуму подтягивается к цели, нанося ей урон.",
-            "dynamicDescription": "Амуму выпускает бинт и притягивается к первому пораженному врагу, <status>оглушая</status> его на @Effect2Amount@ сек. и нанося <magicDamage>@TotalDamage@ магического урона</magicDamage>.<br><br>У этого умения может быть до 2 зарядов.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Амуму выпускает бинт и притягивается к первому пораженному врагу, <status>оглушая</status> его на @StunDuration@ сек. и нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>.<br><br>У этого умения может быть до 2 зарядов.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -376,7 +376,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Амуму получает уменьшенный физический урон. При активации умения Амуму дает волю гневу, нанося урон всем окружающим врагам. Каждый раз, когда Амуму получает урон, перезарядка умения сокращается.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> Амуму получает на @DamageReduction@ меньше физического урона. Кроме того, когда к Амуму применяется автоатака, перезарядка этого умения сокращается на @Effect3Amount@ сек.<br><br><spellActive>Активно:</spellActive> Амуму срывается, нанося <magicDamage>@TantrumDamage@ магического урона</magicDamage> врагам поблизости.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> Амуму получает на @DamageReduction@ меньше физ. урона. Когда Амуму поражают автоатакой, перезарядка этого умения сокращается на @CDROnHit@ сек.<br><br><spellActive>Активно:</spellActive> Амуму срывается, нанося <magicDamage>@TantrumDamage@ ед. маг. урона</magicDamage> врагам поблизости.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

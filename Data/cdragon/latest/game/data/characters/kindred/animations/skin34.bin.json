@@ -349,19 +349,12 @@
                 "__type": "AtomicClipData"
             },
             "Run": {
-                "mSelectorPairDataList": [
-                    {
-                        "mClipName": "{cffe7c8b}",
-                        "mProbability": 90.0,
-                        "__type": "SelectorPairData"
-                    },
-                    {
-                        "mClipName": "{72d20e44}",
-                        "mProbability": 10.0,
-                        "__type": "SelectorPairData"
-                    }
-                ],
-                "__type": "SelectorClipData"
+                "Updater": {
+                    "__type": "IsHomeguardParametricUpdater"
+                },
+                "mTrueConditionClipName": "{bc1ef3fb}",
+                "mFalseConditionClipName": "{bc1ef3fb}",
+                "__type": "ConditionBoolClipData"
             },
             "Spell1Back": {
                 "mTrackDataName": "Default",
@@ -704,6 +697,45 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "{bc1ef3fb}": {
+                "mFlags": 2,
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Slow",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Base",
+                        "mValue": 310.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Haste",
+                        "mValue": 420.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "Run_Base": {
+                "mSelectorPairDataList": [
+                    {
+                        "mClipName": "{cffe7c8b}",
+                        "mProbability": 90.0,
+                        "__type": "SelectorPairData"
+                    },
+                    {
+                        "mClipName": "{72d20e44}",
+                        "mProbability": 10.0,
+                        "__type": "SelectorPairData"
+                    }
+                ],
+                "__type": "SelectorClipData"
             }
         },
         "mMaskDataMap": {

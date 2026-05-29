@@ -1170,7 +1170,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Shen gọi ra kiếm hồn cùng tấn công, gây sát thương dựa trên tỉ lệ máu tối đa của mục tiêu. Nếu kiếm hồn trúng vào một tướng địch, Shen gây thêm sát thương và được tăng mạnh tốc độ đánh. Tất cả kẻ địch kiếm hồn đánh trúng trên đường trở lại sẽ bị giảm tốc độ di chuyển khi chạy khỏi Shen.",
-            "dynamicDescription": "Shen triệu gọi <keywordMajor>Kiếm Hồn</keywordMajor> của mình. Kẻ địch trúng phải kiếm đang bay về sẽ bị <status>Làm Chậm</status> @Effect4Amount@% khi chạy khỏi Shen trong @Effect5Amount@ giây tới.<br><br>Ngoài ra, @Effect3Amount@ Đòn đánh kế tiếp của Shen sẽ gây thêm <magicDamage>sát thương phép tương đương @BaseFlatDamage@</magicDamage> cộng <magicDamage>@BasePercentHealth@ Máu tối đa</magicDamage> của kẻ địch. Nếu Shen tấn công tướng địch với <keywordMajor>Kiếm Hồn</keywordMajor>, các Đòn đánh này sẽ gây <magicDamage>sát thương phép tương đương @BaseFlatDamage@</magicDamage> cộng <magicDamage>@EmpPercentHealth@ Máu tối đa</magicDamage> và nhận <attackSpeed>@Effect9Amount@% Tốc độ Đánh</attackSpeed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen thu hồi <keywordMajor>Kiếm Hồn</keywordMajor> của mình. Kẻ địch bị đánh trúng khi thu hồi kiếm sẽ bị <status>Làm Chậm</status> @SlowPercent@% khi chạy khỏi Shen trong @SlowDuration@ giây tiếp theo.<br><br>Ngoài ra, @NumEnhancedAttacks@ Đòn Đánh tiếp theo của Shen gây thêm <magicDamage>@BaseFlatDamage@</magicDamage> cộng thêm <magicDamage>@BasePercentHealth@ sát thương phép theo Máu tối đa</magicDamage>. Nếu Shen đánh trúng một tướng địch bằng <keywordMajor>Kiếm Hồn</keywordMajor>, sát thương sẽ được tăng lên <magicDamage>@BaseFlatDamage@</magicDamage> cộng thêm <magicDamage>@EmpPercentHealth@ sát thương phép theo Máu tối đa</magicDamage> và anh nhận được <attackSpeed>@SteroidAS@% Tốc Độ Đánh</attackSpeed> cho các Đòn Đánh đó.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Đòn đánh nhắm vào Shen hoặc đồng minh gần Kiếm Hồn sẽ bị chặn lại.",
-            "dynamicDescription": "Shen tạo ra một vùng phòng thủ tại vị trí của <keywordMajor>Kiếm Hồn</keywordMajor>, tồn tại trong @Effect1Amount@ giây. Đòn đánh lên tướng đồng minh trong khu vực này sẽ được chặn lại. <br><br>Nếu như không có tướng nào để bảo vệ trong khu vực khi kích hoạt, nó sẽ đợi tối đa @Effect2Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen tạo ra một vùng phòng thủ tại vị trí <keywordMajor>Kiếm Hồn</keywordMajor> trong @ZoneDuration@ giây. Các đòn đánh nhắm vào tướng đồng minh trong vùng này sẽ bị chặn lại. <br><br>Nếu không có tướng nào để bảo vệ trong vùng khi kích hoạt, nó sẽ đợi tối đa @ZoneDelay@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

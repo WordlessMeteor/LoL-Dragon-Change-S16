@@ -1,5 +1,5 @@
 {
-    "{08222c3a}": {
+    "Characters/PetChibiVex/Skins/Skin2": {
         "championSkinName": "PetChibiVex_CafeCuties_CafeCuties1_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetChibiVex/HUD/LoadScreen_ChibiVex_CafeCuties_CafeCuties1_Tier1.CHIBI_Vex_CafeCuties.tex",
@@ -79,22 +79,22 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{222a291c}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Transparent",
                     "submesh": "Entity",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{cbd0f2d4}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_ShadowForm",
                     "submesh": "Hand",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{cbd0f2d4}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_ShadowForm",
                     "submesh": "Hand2",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{222a291c}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Transparent",
                     "submesh": "Arm",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -196,7 +196,7 @@
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{c7c85796}",
+                    "mStartingJointName": "r_ear",
                     "mEndingJointName": "R_Ear3",
                     "mDefaultMaskName": "{72821679}",
                     "mMaxBoneAngle": 45.0,
@@ -217,15 +217,15 @@
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{0668e093}",
-                    "mEndingJointName": "{b8199d73}",
+                    "mStartingJointName": "L_Shadow_Ear",
+                    "mEndingJointName": "L_Shadow_Ear2",
                     "mDefaultMaskName": "{72821679}",
                     "mMaxBoneAngle": 45.0,
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{7ca9bef1}",
-                    "mEndingJointName": "{02374cf9}",
+                    "mStartingJointName": "R_Shadow_Ear",
+                    "mEndingJointName": "R_Shadow_Ear2",
                     "mDefaultMaskName": "{72821679}",
                     "mMaxBoneAngle": 45.0,
                     "__type": "ConformToPathRigPoseModifierData"
@@ -255,7 +255,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{93a97f28}",
+        "mResourceResolver": "Characters/PetChibiVex/Skins/Skin2/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -278,12 +278,12 @@
                     },
                     {
                         "boneName": "R_Shadow_Ear1",
-                        "effectKey": "{b14f1fd8}",
+                        "effectKey": "PetChibiVex_Skin2_Emote_IdleTrailEar",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "L_Shadow_Ear1",
-                        "effectKey": "{f0785dbe}",
+                        "effectKey": "PetChibiVex_Skin2_Emote_IdleTrailEar02",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -292,20 +292,20 @@
             {
                 "OwnerCondition": {
                     "Submeshes": [
-                        "{d33ff5da}"
+                        "Entity"
                     ],
                     "__type": "SubmeshVisibilityBoolDriver"
                 },
                 "SourceCondition": {
                     "Submeshes": [
-                        "{d33ff5da}"
+                        "Entity"
                     ],
                     "__type": "SubmeshVisibilityBoolDriver"
                 },
                 "PersistentVfxs": [
                     {
                         "boneName": "Root",
-                        "effectKey": "{591a21d5}",
+                        "effectKey": "PetChibiVex_Skin2_3d_Shadow",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -314,7 +314,7 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{0342b344}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Fre_1": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -391,7 +391,7 @@
                         "mSubmeshesToDraw": [
                             "BODY",
                             "Hair",
-                            "{9103be60}"
+                            "Body_Arm"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -522,7 +522,7 @@
                         "mSubmeshesToDraw": [
                             "BODY",
                             "Hair",
-                            "{9103be60}"
+                            "Body_Arm"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -591,7 +591,7 @@
                         "mSubmeshesToDraw": [
                             "BODY",
                             "Hair",
-                            "{9103be60}",
+                            "Body_Arm",
                             ""
                         ],
                         "mLockMeshToAttachment": true,
@@ -677,7 +677,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Fre_1",
         "__type": "VfxSystemDefinitionData"
     },
-    "{07bdb210}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_04": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2688,7 +2688,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{07e31b4a}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laugh_Fire": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -3310,7 +3310,7 @@
         "flags": 198,
         "__type": "VfxSystemDefinitionData"
     },
-    "{08bdb3a3}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_05": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -3452,7 +3452,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{09bdb536}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_06": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -3542,7 +3542,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{232442da}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_VFXEnemy": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -3943,7 +3943,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{2739a960}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpace1": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -4703,7 +4703,7 @@
         "buildUpTime": 1.0,
         "__type": "VfxSystemDefinitionData"
     },
-    "{27670d11}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpace": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -6974,7 +6974,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{2a39ae19}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpace2": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7111,7 +7111,7 @@
         "flags": 199,
         "__type": "VfxSystemDefinitionData"
     },
-    "{2bb7d2a2}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_ArmTrail": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7766,7 +7766,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{2ea30aff}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_VFXBoom02": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.20000000298023224,
@@ -10618,7 +10618,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{2fa30c92}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_VFXBoom01": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.07000000029802322,
@@ -15265,7 +15265,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{39614373}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_03Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -15592,7 +15592,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_03Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{3b424172}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Trail1": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -16371,7 +16371,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{3ef89a6c}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Water": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -16847,7 +16847,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{40d20908}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpaceparticle01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -17195,7 +17195,7 @@
         "buildUpTime": 1.0,
         "__type": "VfxSystemDefinitionData"
     },
-    "{419424bd}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_01Fre": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -17218,7 +17218,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{d33ff5da}"
+                            "Entity"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -17389,7 +17389,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{d33ff5da}"
+                            "Entity"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -17585,7 +17585,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{d33ff5da}"
+                            "Entity"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -17705,7 +17705,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{c3181956}"
+                            "Hand2"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -17877,7 +17877,7 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "Arm",
-                            "{c3181956}"
+                            "Hand2"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -18074,7 +18074,7 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "Arm",
-                            "{c3181956}"
+                            "Hand2"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -18179,7 +18179,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_01Fre",
         "__type": "VfxSystemDefinitionData"
     },
-    "{43d20dc1}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpaceparticle02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -18735,7 +18735,7 @@
         "buildUpTime": 2.0,
         "__type": "VfxSystemDefinitionData"
     },
-    "{4c7396a0}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_JokeSpark": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -21780,7 +21780,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_JokeSpark",
         "__type": "VfxSystemDefinitionData"
     },
-    "{4dc903d0}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Fre": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -21857,7 +21857,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{d33ff5da}",
+                            "Entity",
                             "Arm",
                             "Hand"
                         ],
@@ -21990,7 +21990,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{d33ff5da}",
+                            "Entity",
                             "Arm",
                             "Hand"
                         ],
@@ -22055,7 +22055,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{d33ff5da}",
+                            "Entity",
                             "Arm"
                         ],
                         "mLockMeshToAttachment": true,
@@ -22363,7 +22363,7 @@
                         "mSubmeshesToDraw": [
                             "Hand",
                             "Arm",
-                            "{d33ff5da}"
+                            "Entity"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -22405,7 +22405,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{82b48797}"
+                            "CupB"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -22459,6 +22459,7 @@
                 "blendMode": 3,
                 "pass": 1,
                 "alphaRef": 0,
+                "{cb13aff1}": -5.0,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -22478,7 +22479,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Fre",
         "__type": "VfxSystemDefinitionData"
     },
-    "{50afeb3a}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_IdleTrail": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -25722,7 +25723,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{52139b27}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_CameraGlow": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -26347,7 +26348,7 @@
         "drawingLayer": 1,
         "__type": "VfxSystemDefinitionData"
     },
-    "{5287c79e}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_1_Cut": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -26965,7 +26966,7 @@
         "drawingLayer": 1,
         "__type": "VfxSystemDefinitionData"
     },
-    "{5a33aded}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_outro": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -28296,7 +28297,7 @@
         "drawingLayer": 1,
         "__type": "VfxSystemDefinitionData"
     },
-    "{5aab344c}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_03": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -29112,7 +29113,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{5bab35df}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -30555,7 +30556,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{5ef60943}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_Fre": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -30603,7 +30604,7 @@
                         "mSubmeshesToDraw": [
                             "Hair",
                             "BODY",
-                            "{9103be60}"
+                            "Body_Arm"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -30757,7 +30758,7 @@
                         "mSubmeshesToDraw": [
                             "Hair",
                             "BODY",
-                            "{9103be60}"
+                            "Body_Arm"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -30864,7 +30865,7 @@
         "overrideScaleCap": -1.0,
         "__type": "VfxSystemDefinitionData"
     },
-    "{62595f52}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laugh_04": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -30938,7 +30939,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{6fd2675d}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Mix": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -32591,7 +32592,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{7438cf04}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Mix1": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.20000000298023224,
@@ -33887,7 +33888,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{76de860c}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_IdleTrailEar02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -34232,7 +34233,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{82cf3048}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Finisher_Env_House": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -39150,7 +39151,7 @@
                         "mSubmeshesToDraw": [
                             "Hand",
                             "Arm",
-                            "{d33ff5da}"
+                            "Entity"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -39180,7 +39181,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{855842ad}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_VFXScreen01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -39314,7 +39315,7 @@
         "drawingLayer": 1,
         "__type": "VfxSystemDefinitionData"
     },
-    "{90d67c04}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -42845,7 +42846,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{91d67d97}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_03": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -43253,7 +43254,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{93d680bd}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -43481,7 +43482,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{a0c18f27}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Decal": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -46191,7 +46192,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Decal",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a1ca7b08}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_Cup02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -46211,7 +46212,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc03.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{1271b79f}"
+                            "MilkFoam"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -46250,7 +46251,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc03.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{34075218}"
+                            "HappyFace"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -46280,7 +46281,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc03.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{1271b79f}"
+                            "MilkFoam"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -46356,7 +46357,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc03.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{1271b79f}"
+                            "MilkFoam"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -46405,7 +46406,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc03.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{1271b79f}"
+                            "MilkFoam"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -46443,7 +46444,7 @@
         "flags": 199,
         "__type": "VfxSystemDefinitionData"
     },
-    "{a2ca7c9b}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_Cup03": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -46482,7 +46483,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{c08223d9}",
+                            "effectKey": "PetChibiVex_Skin2_Finisher_VFXBoom02",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -46498,7 +46499,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc04.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{1ada9efe}"
+                            "SadFace"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -46533,7 +46534,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc04.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{56bc0094}"
+                            "MilkFoam_Sad"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -46569,7 +46570,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{bd821f20}",
+                            "effectKey": "PetChibiVex_Skin2_Finisher_VFXBoom01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -46607,7 +46608,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc04.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{56bc0094}"
+                            "MilkFoam_Sad"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -46958,7 +46959,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc04.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{56bc0094}"
+                            "MilkFoam_Sad"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -47037,7 +47038,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc04.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{1271b79f}"
+                            "MilkFoam"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -47072,7 +47073,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc04.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{34075218}"
+                            "HappyFace"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -47111,7 +47112,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc04.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{1271b79f}"
+                            "MilkFoam"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -47571,7 +47572,7 @@
                         "mSubmeshesToDraw": [
                             "Hand",
                             "Arm",
-                            "{d33ff5da}"
+                            "Entity"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -47626,7 +47627,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{a45e4168}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -49189,7 +49190,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{a4ca7fc1}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_Cup01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -49239,7 +49240,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc02.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{1271b79f}"
+                            "MilkFoam"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -49269,7 +49270,7 @@
                         "mMeshSkeletonName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB.CHIBI_Vex_CafeCuties.skl",
                         "mAnimationName": "ASSETS/Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_CafeCuties_Finisher_PropsB_sc02.CHIBI_Vex_CafeCuties.anm",
                         "mSubmeshesToDraw": [
-                            "{34075218}"
+                            "HappyFace"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -49314,7 +49315,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{a55e42fb}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_03": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -50072,7 +50073,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{d144e7a5}",
+                            "effectKey": "PetChibiVex_Skin2_Emote_ShadowRun_03Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -50184,7 +50185,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_03",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a75e4621}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -54190,7 +54191,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{ab638242}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_IdleTrailEar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -54536,7 +54537,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{b41945cb}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_RunTrail_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -56656,7 +56657,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{b87fcb26}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_Decal": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -59026,7 +59027,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_Decal",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b8f73258}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Intro": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -59575,7 +59576,7 @@
         "drawingLayer": 1,
         "__type": "VfxSystemDefinitionData"
     },
-    "{bea8c72f}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_3d_Shadow": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -59590,14 +59591,14 @@
                 "emitterName": "EyeDefault",
                 "importance": 3,
                 "CustomMaterial": {
-                    "Material": "{cbd0f2d4}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_ShadowForm",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{d33ff5da}"
+                            "Entity"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -59624,7 +59625,7 @@
                 "emitterName": "EyeDefault1",
                 "importance": 3,
                 "CustomMaterial": {
-                    "Material": "{cbd0f2d4}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_ShadowForm",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 5,
@@ -59652,7 +59653,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{d21ac391}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Shadow": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -59667,17 +59668,17 @@
                 "emitterName": "EyeDefault",
                 "importance": 3,
                 "CustomMaterial": {
-                    "Material": "{0ddfc4be}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow_Face",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{344ac6ea}",
-                            "{f3d9c255}",
-                            "{f1d29344}",
-                            "{899b003d}"
+                            "Projection_Eye_Base",
+                            "Projection_Eye_Frown",
+                            "Projection_Eye_Speechless",
+                            "Projection_Eye_Heart"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -59708,14 +59709,14 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "{d09eccdf}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow_Arms01",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{4135280a}"
+                            "Projection_Arms"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -59747,7 +59748,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "{fcd90f22}",
+                    "Material": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 5,
@@ -59898,7 +59899,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{d52f1697}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Fre02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -59946,7 +59947,7 @@
                         "mSubmeshesToDraw": [
                             "Hair",
                             "BODY",
-                            "{9103be60}"
+                            "Body_Arm"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -60026,7 +60027,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Fre02",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d62f182a}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Fre01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -60693,7 +60694,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Fre01",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d8223d31}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_Fre": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -60712,7 +60713,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{d33ff5da}",
+                            "Entity",
                             "Arm"
                         ],
                         "__type": "VfxMeshDefinitionData"
@@ -60880,7 +60881,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{de5ab60d}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_outro2": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -61076,7 +61077,7 @@
         "particlePath": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_outro2",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e26f3b1e}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Speedline": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -61734,7 +61735,7 @@
         "flags": 199,
         "__type": "VfxSystemDefinitionData"
     },
-    "{e7e307ec}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_ArmTrail02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -62381,7 +62382,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{f0319ab2}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Wink": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.800000011920929,
@@ -62655,7 +62656,7 @@
         "overrideScaleCap": -1.0,
         "__type": "VfxSystemDefinitionData"
     },
-    "{fa11dc9b}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_CameraGlow_1": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -63241,7 +63242,7 @@
         "flags": 199,
         "__type": "VfxSystemDefinitionData"
     },
-    "{fdc503a3}": {
+    "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Sad": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -63416,7 +63417,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{0ddfc4be}": {
+    "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow_Face": {
         "name": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow_Face",
         "samplerValues": [
             {
@@ -63525,7 +63526,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{222a291c}": {
+    "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Transparent": {
         "name": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Transparent",
         "samplerValues": [
             {
@@ -63634,7 +63635,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{94966d7e}": {
+    "Characters/PetChibiVex/Skins/Skin2/Materials/Mat_PetChibiVex_Skin2_Radialblur001": {
         "name": "Characters/PetChibiVex/Skins/Skin2/Materials/Mat_PetChibiVex_Skin2_Radialblur001",
         "type": 4,
         "samplerValues": [
@@ -63728,7 +63729,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{cbd0f2d4}": {
+    "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_ShadowForm": {
         "name": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_ShadowForm",
         "samplerValues": [
             {
@@ -64208,7 +64209,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{d09eccdf}": {
+    "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow_Arms01": {
         "name": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow_Arms01",
         "samplerValues": [
             {
@@ -64702,7 +64703,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{fcd90f22}": {
+    "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow": {
         "name": "Characters/PetChibiVex/Skins/Skin2/Materials/PetChibiVex_Skin2_Shadow",
         "samplerValues": [
             {
@@ -65196,72 +65197,72 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{93a97f28}": {
+    "Characters/PetChibiVex/Skins/Skin2/Resources": {
         "resourceMap": {
-            "{99a67fb2}": "{82cf3048}",
-            "{5a93ad00}": "{50afeb3a}",
-            "{2482dabd}": "{b41945cb}",
-            "{b14f1fd8}": "{ab638242}",
-            "{f0785dbe}": "{76de860c}",
-            "{7006fb29}": "{d21ac391}",
-            "{1d4d156b}": "{27670d11}",
-            "{b985b459}": "{5bab35df}",
-            "{b885b2c6}": "{5aab344c}",
-            "{cc18783f}": "{419424bd}",
-            "{703c9d73}": "{93d680bd}",
-            "{713c9f06}": "{90d67c04}",
-            "{723ca099}": "{91d67d97}",
-            "{db7ef724}": "{d62f182a}",
-            "{de7efbdd}": "{d52f1697}",
-            "{9fb9bbb8}": "{62595f52}",
-            "{3aef3275}": "{a0c18f27}",
-            "{af9b3eaa}": "{4c7396a0}",
-            "{8332693c}": "{09bdb536}",
-            "{86326df5}": "{08bdb3a3}",
-            "{85326c62}": "{07bdb210}",
+            "PetChibiVex_Finisher_Env_House": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Finisher_Env_House",
+            "PetChibiVex_Skin2_Emote_IdleTrail": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_IdleTrail",
+            "PetChibiVex_Skin2_Emote_RunTrail_01": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_RunTrail_01",
+            "PetChibiVex_Skin2_Emote_IdleTrailEar": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_IdleTrailEar",
+            "PetChibiVex_Skin2_Emote_IdleTrailEar02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_IdleTrailEar02",
+            "{7006fb29}": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Shadow",
+            "PetChibiVex_Skin2_Finisher_Env_MagicSpace": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpace",
+            "PetChibiVex_Skin2_Emote_Taunt_02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_02",
+            "PetChibiVex_Skin2_Emote_Taunt_03": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_03",
+            "PetChibiVex_Skin2_Emote_Taunt_01Fre": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_01Fre",
+            "PetChibiVex_Skin2_Emote_Laguh_01": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_01",
+            "PetChibiVex_Skin2_Emote_Laguh_02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_02",
+            "PetChibiVex_Skin2_Emote_Laguh_03": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_03",
+            "PetChibiVex_Skin2_Emote_Laguh_Fre01": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Fre01",
+            "PetChibiVex_Skin2_Emote_Laguh_Fre02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Fre02",
+            "PetChibiVex_Skin2_Emote_Laugh_04": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laugh_04",
+            "PetChibiVex_Skin2_Emote_Laguh_Decal": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laguh_Decal",
+            "PetChibiVex_Skin2_Emote_JokeSpark": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_JokeSpark",
+            "PetChibiVex_Skin2_Emote_Dance_06": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_06",
+            "PetChibiVex_Skin2_Emote_Dance_05": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_05",
+            "PetChibiVex_Skin2_Emote_Dance_04": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_04",
             "{7f3262f0}": "{00000000}",
-            "{67f0c187}": "{a75e4621}",
-            "{68f0c31a}": "{a45e4168}",
-            "{411806e9}": "{5ef60943}",
-            "{47fc79eb}": "{d8223d31}",
-            "{69f0c4ad}": "{a55e42fb}",
+            "PetChibiVex_Skin2_Emote_ShadowRun_01": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_01",
+            "PetChibiVex_Skin2_Emote_ShadowRun_02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_02",
+            "PetChibiVex_Skin2_Emote_Dance_Fre": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_Fre",
+            "PetChibiVex_Skin2_Emote_ShadowRun_Fre": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_Fre",
+            "PetChibiVex_Skin2_Emote_ShadowRun_03": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_03",
             "{eb45f86f}": "{00000000}",
             "{14ce73ad}": "{00000000}",
-            "{ee13b3e4}": "{2bb7d2a2}",
-            "{bb6f818a}": "{e7e307ec}",
-            "{d144e7a5}": "{39614373}",
-            "{a26c7668}": "{07e31b4a}",
-            "{d7f5d064}": "{b87fcb26}",
-            "{bf960e13}": "{5a33aded}",
-            "{176e39d6}": "{b8f73258}",
-            "{f304b763}": "{a4ca7fc1}",
-            "{f404b8f6}": "{a1ca7b08}",
-            "{f504ba89}": "{a2ca7c9b}",
+            "PetChibiVex_Skin2_Emote_Dance_ArmTrail": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_ArmTrail",
+            "PetChibiVex_Skin2_Emote_Dance_ArmTrail02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Dance_ArmTrail02",
+            "PetChibiVex_Skin2_Emote_ShadowRun_03Child": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_ShadowRun_03Child",
+            "PetChibiVex_Skin2_Emote_Laugh_Fire": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Laugh_Fire",
+            "PetChibiVex_Skin2_Emote_Taunt_Decal": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Emote_Taunt_Decal",
+            "PetChibiVex_Skin2_Finisher_outro": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_outro",
+            "PetChibiVex_Skin2_Finisher_Intro": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Intro",
+            "PetChibiVex_Skin2_Finisher_Env_Cup01": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_Cup01",
+            "PetChibiVex_Skin2_Finisher_Env_Cup02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_Cup02",
+            "PetChibiVex_Skin2_Finisher_Env_Cup03": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_Cup03",
             "{8b5d5070}": "{00000000}",
-            "{8a0f3800}": "{5287c79e}",
-            "{812e0506}": "{3ef89a6c}",
-            "{bd821f20}": "{2fa30c92}",
-            "{c08223d9}": "{2ea30aff}",
-            "{fb4a5722}": "{4dc903d0}",
-            "{12ce96cc}": "{f0319ab2}",
-            "{c7e40537}": "{6fd2675d}",
-            "{eb29be42}": "{0342b344}",
-            "{b1f3e872}": "{7438cf04}",
-            "{a8153cff}": "{855842ad}",
-            "{7a589cae}": "{2739a960}",
-            "{79589b1b}": "{2a39ae19}",
-            "{36e14b9c}": "{3b424172}",
+            "PetChibiVex_Skin2_Finisher_1_Cut": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_1_Cut",
+            "PetChibiVex_Skin2_Finisher_2_Water": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Water",
+            "PetChibiVex_Skin2_Finisher_VFXBoom01": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_VFXBoom01",
+            "PetChibiVex_Skin2_Finisher_VFXBoom02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_VFXBoom02",
+            "PetChibiVex_Skin2_Finisher_2_Fre": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Fre",
+            "PetChibiVex_Skin2_Finisher_2_Wink": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Wink",
+            "PetChibiVex_Skin2_Finisher_2_Mix": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Mix",
+            "PetChibiVex_Skin2_Finisher_2_Fre_1": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Fre_1",
+            "PetChibiVex_Skin2_Finisher_2_Mix1": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Mix1",
+            "PetChibiVex_Skin2_Finisher_VFXScreen01": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_VFXScreen01",
+            "PetChibiVex_Skin2_Finisher_Env_MagicSpace1": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpace1",
+            "PetChibiVex_Skin2_Finisher_Env_MagicSpace2": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpace2",
+            "PetChibiVex_Skin2_Finisher_2_Trail1": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Trail1",
             "{02c67cac}": "{00000000}",
-            "{f2374ab9}": "{fdc503a3}",
-            "{d7a51100}": "{e26f3b1e}",
-            "{750f3689}": "{52139b27}",
-            "{6c071cf9}": "{94966d7e}",
-            "{0dcafc74}": "{232442da}",
-            "{660b6229}": "{fa11dc9b}",
-            "{020238fa}": "{40d20908}",
-            "{01023767}": "{43d20dc1}",
-            "{ba383df3}": "{de5ab60d}",
-            "{591a21d5}": "{bea8c72f}"
+            "PetChibiVex_Skin2_Finisher_2_Sad": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Sad",
+            "PetChibiVex_Skin2_Finisher_2_Speedline": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_Speedline",
+            "PetChibiVex_Skin2_Finisher_2_CameraGlow": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_CameraGlow",
+            "Mat_PetChibiVex_Skin2_Radialblur001": "Characters/PetChibiVex/Skins/Skin2/Materials/Mat_PetChibiVex_Skin2_Radialblur001",
+            "PetChibiVex_Skin2_Finisher_VFXEnemy": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_VFXEnemy",
+            "PetChibiVex_Skin2_Finisher_2_CameraGlow_1": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_2_CameraGlow_1",
+            "PetChibiVex_Skin2_Finisher_Env_MagicSpaceparticle01": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpaceparticle01",
+            "PetChibiVex_Skin2_Finisher_Env_MagicSpaceparticle02": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_Env_MagicSpaceparticle02",
+            "PetChibiVex_Skin2_Finisher_outro2": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_Finisher_outro2",
+            "PetChibiVex_Skin2_3d_Shadow": "Characters/PetChibiVex/Skins/Skin2/Particles/PetChibiVex_Skin2_3d_Shadow"
         },
         "__type": "ResourceResolver"
     },

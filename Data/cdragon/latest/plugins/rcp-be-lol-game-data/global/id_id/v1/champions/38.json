@@ -769,11 +769,11 @@
                 80.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.5,
                 9.0,
                 8.5,
                 8.0,
+                7.5,
+                7.0,
                 8.0
             ],
             "coefficients": {
@@ -941,13 +941,13 @@
                     6.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
                 ],
                 "Effect3Amount": [
                     25.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Kassadin menarik energi dari spell cast di sekitarnya. Saat melakukan charge, Kassadin bisa menggunakan Force Pulse untuk menghasilkan damage dan menerapkan slow pada musuh dalam kerucut di depannya.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Cooldown <spellName>Force Pulse</spellName> dikurangi sebesar @ReductionPerSpellCast@ detik tiap kali Ability apa pun digunakan di dekat Kassadin.<br><br><spellActive>Aktif:</spellActive> Kassadin melepaskan void pulse, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> sebesar @Effect2Amount@% selama @Effect3Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Cooldown <spellName>Force Pulse</spellName> berkurang sebanyak @ReductionPerSpellCast@ detik tiap kali Ability apa pun digunakan di dekat Kassadin.<br><br><spellActive>Aktif:</spellActive> Kassadin melepaskan void pulse, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> sebesar @SlowAmount@% selama @SlowDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

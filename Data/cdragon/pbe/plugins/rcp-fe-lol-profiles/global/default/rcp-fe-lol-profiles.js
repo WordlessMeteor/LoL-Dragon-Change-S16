@@ -1551,16 +1551,9 @@
                     }
                     return ""
                 })),
-                openHonorDrawer() {
-                    const e = s.UIKit && s.UIKit.getDrawerManager && s.UIKit.getDrawerManager();
-                    if (!e || !s.SharedPlayerBehaviorApps || !s.SharedPlayerBehaviorApps.createHonorPanel) return !1;
-                    const t = s.SharedPlayerBehaviorApps.createHonorPanel();
-                    if (!t || !t.domNode) return !1;
-                    const n = document.createElement("div");
-                    return n.classList.add("lol-profiles-honor-drawer"), n.style.width = "600px", n.style.height = "100vh", n.style.maxHeight = "100vh", n.style.padding = "24px", n.style.boxSizing = "border-box", n.style.background = "#010a13", n.style.overflow = "hidden", n.style.display = "flex", n.style.flexDirection = "column", t.domNode.style && (t.domNode.style.flex = "1 1 auto", t.domNode.style.minHeight = "0", t.domNode.style.height = "100%"), n.appendChild(t.domNode), e.show({
-                        domNode: n
-                    }), !0
-                },
+                openHonorDrawer: () => !(!s.SharedPlayerBehaviorApps || !s.SharedPlayerBehaviorApps.showHonorPanelDrawer) && !!s.SharedPlayerBehaviorApps.showHonorPanelDrawer({
+                    wrapperClassName: "lol-profiles-honor-drawer"
+                }),
                 actions: {
                     openHonorExplainerModal() {
                         this.get("socialPanelRestrictionEnabled") ? this.openHonorDrawer() : s.SharedPlayerBehaviorApps.showHonorV3ExplainerModal()

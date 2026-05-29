@@ -1295,10 +1295,10 @@
                     "name": "ADDamage",
                     "values": [
                         50.0,
-                        18.0,
-                        27.0,
-                        41.0,
-                        69.0,
+                        20.0,
+                        30.0,
+                        45.0,
+                        77.0,
                         0.0,
                         0.0
                     ],
@@ -3970,7 +3970,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.699999988079071,
+            "baseValue": 0.75,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -6101,7 +6101,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 50.0,
+            "baseValue": 52.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -6313,8 +6313,8 @@
                     "name": "PrimaryTargetBonusDamage",
                     "values": [
                         10.0,
-                        10.0,
-                        15.0,
+                        25.0,
+                        40.0,
                         200.0,
                         10.0,
                         10.0,
@@ -6357,7 +6357,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{005ff112}",
+                                "mDataValue": "PrimaryTargetBonusDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 1.0,
@@ -7970,8 +7970,8 @@
                     "values": [
                         0.33000001311302185,
                         0.33000001311302185,
-                        0.4000000059604645,
-                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.44999998807907104,
                         0.33000001311302185,
                         0.33000001311302185,
                         0.33000001311302185
@@ -8162,7 +8162,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 50.0,
+        "mInitialMana": 40.0,
         "mShopData": "{409ecedd}",
         "MobileHealthBarHeightOverride": 130.0,
         "mManaPerAttack": 5.0,
@@ -9967,6 +9967,10 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 90.0,
+                "__type": "ModifiableFloat"
+            },
             "{c4ab3550}": {
                 "baseValue": 0.0,
                 "__type": "ModifiableFloat"
@@ -9997,7 +10001,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.6000000238418579,
+            "baseValue": 0.8999999761581421,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -10065,10 +10069,10 @@
                     "name": "HealAP",
                     "values": [
                         150.0,
-                        300.0,
-                        375.0,
-                        575.0,
-                        775.0,
+                        325.0,
+                        400.0,
+                        650.0,
+                        900.0,
                         180.0,
                         180.0
                     ],
@@ -10103,13 +10107,13 @@
                 {
                     "name": "NOVAModifier",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -14816,8 +14820,8 @@
         "__type": "TFTCharacterRecord"
     },
     "{2918365d}": {
-        "ObjectName": "TFT17_RekSaiSpell",
-        "mScriptName": "TFT17_RekSaiSpell",
+        "ObjectName": "TFT17_ReksaiSpell",
+        "mScriptName": "TFT17_ReksaiSpell",
         "mSpell": {
             "mAffectsTypeFlags": 11333,
             "mAffectsStatusFlags": 32,
@@ -14966,7 +14970,7 @@
             "mSpellCooldownOrSealedQueueThreshold": 0.5,
             "mClientData": {
                 "mTooltipData": {
-                    "mObjectName": "TFT17_RekSaiSpell",
+                    "mObjectName": "TFT17_ReksaiSpell",
                     "mFormat": "{fffee0e7}",
                     "mLocKeys": {
                         "keyName": "Spell_TFT17_RekSaiSpell_Name",
@@ -15454,8 +15458,8 @@
                     "name": "PercentHPHealthGain",
                     "values": [
                         0.0,
-                        0.10000000149011612,
-                        0.10000000149011612,
+                        0.15000000596046448,
+                        0.15000000596046448,
                         0.5,
                         3000.0,
                         0.0,
@@ -15537,7 +15541,7 @@
                             "mSubparts": [
                                 {
                                     "mSubpart": {
-                                        "mDataValue": "{760046fb}",
+                                        "mDataValue": "PercentHPHealthGain",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     "mRatio": 1.0,
@@ -15546,7 +15550,7 @@
                                 },
                                 {
                                     "mSubpart": {
-                                        "mDataValue": "{fe34d385}",
+                                        "mDataValue": "APHealthGain",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     "mRatio": 0.009999999776482582,
@@ -15805,7 +15809,7 @@
             "__type": "ModifiableFloat"
         },
         "attackRangeModifiable": {
-            "baseValue": 420.0,
+            "baseValue": 180.0,
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
@@ -17383,8 +17387,8 @@
                     "name": "MissileAD",
                     "values": [
                         25.0,
-                        30.0,
-                        44.0,
+                        28.0,
+                        42.0,
                         280.0,
                         200.0,
                         25.0,
@@ -17474,8 +17478,8 @@
                     "name": "MeepDamage",
                     "values": [
                         150.0,
-                        120.0,
-                        180.0,
+                        110.0,
+                        165.0,
                         900.0,
                         1200.0,
                         1200.0,
@@ -19067,7 +19071,7 @@
     "Characters/TFT17_Ornn/CharacterRecords/Root": {
         "mCharacterName": "TFT17_Ornn",
         "baseHPModifiable": {
-            "baseValue": 850.0,
+            "baseValue": 950.0,
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {
@@ -25045,10 +25049,10 @@
                     "name": "DamageMin",
                     "values": [
                         180.0,
-                        180.0,
-                        270.0,
-                        405.0,
-                        690.0,
+                        190.0,
+                        285.0,
+                        430.0,
+                        730.0,
                         500.0,
                         500.0
                     ],
@@ -25058,10 +25062,10 @@
                     "name": "DamageMax",
                     "values": [
                         330.0,
-                        360.0,
-                        540.0,
-                        810.0,
-                        1380.0,
+                        380.0,
+                        570.0,
+                        860.0,
+                        1460.0,
                         1000.0,
                         1000.0
                     ],
@@ -28848,10 +28852,10 @@
                     "name": "Damage",
                     "values": [
                         200.0,
-                        185.0,
-                        275.0,
-                        475.0,
-                        800.0,
+                        190.0,
+                        290.0,
+                        500.0,
+                        850.0,
                         505.0,
                         505.0
                     ],
@@ -28987,8 +28991,8 @@
                     "name": "BonusDamageOnAttack",
                     "values": [
                         50.0,
-                        20.0,
-                        30.0,
+                        25.0,
+                        40.0,
                         777.0,
                         777.0,
                         777.0,
@@ -29334,7 +29338,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 10.0,
+        "mInitialMana": 20.0,
         "mShopData": "{502b1bc2}",
         "MobileHealthBarHeightOverride": 150.0,
         "mManaPerAttack": 5.0,
@@ -32186,10 +32190,10 @@
                     "name": "FlatDR",
                     "values": [
                         0.0,
-                        15.0,
                         20.0,
                         25.0,
                         30.0,
+                        35.0,
                         0.0,
                         0.0
                     ],
@@ -32242,14 +32246,8 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mSubpart": {
-                                "mDataValue": "FlatDR",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mRatio": 0.009999999776482582,
-                            "mStyleTag": "noScale",
-                            "mStyleTagIfScaled": "scaleAP",
-                            "__type": "SubPartScaledProportionalToStat"
+                            "mDataValue": "FlatDR",
+                            "__type": "NamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -32890,7 +32888,7 @@
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "baseValue": 70.0,
+                "baseValue": 65.0,
                 "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
@@ -32979,7 +32977,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 25.0,
+        "mInitialMana": 20.0,
         "mShopData": "{f16b5619}",
         "MobileHealthBarHeightOverride": 130.0,
         "mManaPerAttack": 5.0,
@@ -35583,11 +35581,11 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 45.0,
+            "baseValue": 50.0,
             "__type": "ModifiableFloat"
         },
         "baseMR": {
-            "baseValue": 45.0,
+            "baseValue": 50.0,
             "__type": "ModifiableFloat"
         },
         "baseCritChance": 0.25,
@@ -35696,8 +35694,8 @@
                         180.0,
                         145.0,
                         220.0,
-                        380.0,
-                        650.0,
+                        410.0,
+                        700.0,
                         840.0,
                         840.0
                     ],
@@ -36082,7 +36080,7 @@
                                 },
                                 {
                                     "type": "AoEDamage",
-                                    "nameOverride": "TFT_AD_AoEDamage",
+                                    "nameOverride": "Spell_TFT17_PykeSpell_AoEDamage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -36653,26 +36651,26 @@
                 {
                     "name": "NovaRepeatTimer",
                     "values": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
+                        4.5,
+                        4.5,
+                        4.5,
+                        4.5,
+                        4.5,
+                        4.5,
+                        4.5
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "NovaDamageAmp",
                     "values": [
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -38222,10 +38220,10 @@
                     "name": "NovaDamagePerSecond",
                     "values": [
                         12.0,
-                        10.0,
-                        14.0,
+                        12.0,
                         18.0,
-                        31.0,
+                        24.0,
+                        30.0,
                         22.0,
                         22.0
                     ],
@@ -38234,13 +38232,13 @@
                 {
                     "name": "NovaShurikenBonusDamage",
                     "values": [
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -40887,7 +40885,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.699999988079071,
+            "baseValue": 0.75,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -41774,10 +41772,10 @@
                     "name": "Damage",
                     "values": [
                         50.0,
-                        68.0,
-                        102.0,
-                        153.0,
-                        260.0,
+                        73.0,
+                        110.0,
+                        180.0,
+                        300.0,
                         210.0,
                         155.0
                     ],
@@ -45687,10 +45685,10 @@
                     "name": "SplitDamage",
                     "values": [
                         3.0,
-                        370.0,
-                        555.0,
-                        890.0,
-                        1575.0,
+                        400.0,
+                        600.0,
+                        960.0,
+                        1650.0,
                         3.0,
                         3.0
                     ],
@@ -46604,8 +46602,8 @@
                     "name": "VitalDamage",
                     "values": [
                         50.0,
-                        40.0,
-                        60.0,
+                        37.0,
+                        56.0,
                         777.0,
                         777.0,
                         777.0,
@@ -48934,6 +48932,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
+        "mShopData": "{8f079e76}",
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT15_Gnar/Spells/TFT15_GnarSpell": {
@@ -50598,6 +50597,19 @@
         "mDescriptionTra": "Spell_TFT17_XayahSpell_Tooltip",
         "__type": "TftShopData"
     },
+    "{8f079e76}": {
+        "mName": "TFT17_Meeplord",
+        "mRarity": 9,
+        "{4d4e5cf5}": 4,
+        "AbilityIconPath": "ASSETS/Characters/TFT17_Bard/HUD/Icons2D/TFT17_Bard_Meeps.TFT_Set17.tex",
+        "PcSplashPath": "ASSETS/UX/TFT/ChampionSplashes/TFT17_PVE_DefaultSplash.TFT_Set17.tex",
+        "SquareSplashPath": "ASSETS/UX/TFT/ChampionSplashes/TFT17_PVE_DefaultMobile.TFT_Set17.tex",
+        "TeamPlannerPortraitPath": "ASSETS/Characters/TFT17_PVE_Raptor/HUD/TFT17_PVE_Raptor_Square.TFT_Set17.tex",
+        "mDisplayNameTra": "DisplayName_TFT17_Meeplord",
+        "mAbilityNameTra": "Spell_TFT17_PVE_RaptorSpell_Name",
+        "mDescriptionTra": "Spell_TFT17_PVE_RaptorSpell_Tooltip",
+        "__type": "TftShopData"
+    },
     "{8fc56a87}": {
         "mName": "TFT17_Gragas",
         "mRarity": 9,
@@ -51651,7 +51663,7 @@
                 "constants": {
                     "{df085b93}": {
                         "AttackSpeedPercent": {
-                            "mValue": 0.2199999988079071,
+                            "mValue": 0.2800000011920929,
                             "__type": "GameModeConstantFloat"
                         },
                         "DamageReduction": {
@@ -51686,7 +51698,7 @@
                 "constants": {
                     "{df085b93}": {
                         "AttackSpeedPercent": {
-                            "mValue": 0.4000000059604645,
+                            "mValue": 0.41999998688697815,
                             "__type": "GameModeConstantFloat"
                         },
                         "DamageReduction": {
@@ -51771,19 +51783,19 @@
                             "__type": "GameModeConstantFloat"
                         },
                         "BonusDefensiveStat2": {
-                            "mValue": 2.5,
+                            "mValue": 2.0,
                             "__type": "GameModeConstantFloat"
                         },
                         "BonusOffensiveStat2": {
-                            "mValue": 0.02500000037252903,
+                            "mValue": 0.019999999552965164,
                             "__type": "GameModeConstantFloat"
                         },
                         "BonusDefensiveStat3": {
-                            "mValue": 3.0,
+                            "mValue": 2.0,
                             "__type": "GameModeConstantFloat"
                         },
                         "BonusOffensiveStat3": {
-                            "mValue": 0.029999999329447746,
+                            "mValue": 0.019999999552965164,
                             "__type": "GameModeConstantFloat"
                         }
                     },
@@ -51830,7 +51842,7 @@
                             "mValue": 0.10000000149011612,
                             "__type": "GameModeConstantFloat"
                         },
-                        "{3b1fef00}": {
+                        "Shield_Interval": {
                             "mValue": 1,
                             "__type": "GameModeConstantInteger"
                         },
@@ -52445,7 +52457,7 @@
                 "constants": {
                     "{df085b93}": {
                         "PercentDamageIncrease": {
-                            "mValue": 24.0,
+                            "mValue": 25.0,
                             "__type": "GameModeConstantFloat"
                         },
                         "PerHexIncrease": {
@@ -52472,7 +52484,7 @@
                 "constants": {
                     "{df085b93}": {
                         "PercentDamageIncrease": {
-                            "mValue": 28.0,
+                            "mValue": 35.0,
                             "__type": "GameModeConstantFloat"
                         },
                         "PerHexIncrease": {
@@ -52633,11 +52645,11 @@
                             "__type": "GameModeConstantInteger"
                         },
                         "SupermassivePercentBonus": {
-                            "mValue": 0.8500000238418579,
+                            "mValue": 0.699999988079071,
                             "__type": "GameModeConstantFloat"
                         },
                         "PercentHealth": {
-                            "mValue": 0.30000001192092896,
+                            "mValue": 0.25,
                             "__type": "GameModeConstantFloat"
                         }
                     },
@@ -53553,7 +53565,7 @@
                             "__type": "GameModeConstantFloat"
                         },
                         "EffectBonus": {
-                            "mValue": 10.0,
+                            "mValue": 15.0,
                             "__type": "GameModeConstantFloat"
                         }
                     },
@@ -57443,7 +57455,7 @@
                     "__type": "{d65315ee}"
                 },
                 "minUnits": 9,
-                "maxUnits": 9,
+                "maxUnits": 10,
                 "Style": 5,
                 "__type": "TftConditionalTraitSetData"
             },
@@ -57470,7 +57482,7 @@
                     },
                     "__type": "{d65315ee}"
                 },
-                "minUnits": 10,
+                "minUnits": 11,
                 "Style": 6,
                 "__type": "TftConditionalTraitSetData"
             }
@@ -59151,7 +59163,7 @@
                     "__type": "{d65315ee}"
                 },
                 "minUnits": 8,
-                "maxUnits": 9,
+                "maxUnits": 10,
                 "ShouldAlwaysDisplay": false,
                 "Style": 5,
                 "__type": "TftConditionalTraitSetData"
@@ -59191,7 +59203,7 @@
                     },
                     "__type": "{d65315ee}"
                 },
-                "minUnits": 10,
+                "minUnits": 11,
                 "ShouldAlwaysDisplay": false,
                 "Style": 6,
                 "__type": "TftConditionalTraitSetData"

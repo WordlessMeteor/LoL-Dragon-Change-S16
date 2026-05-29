@@ -23,7 +23,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmumuWMultiHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -52,7 +52,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmumuEPDamageBlocked",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -80,7 +80,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmumuPDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -162,7 +162,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 227,
+                "EventToTrack": 229,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -273,7 +273,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmumuEBonusCooldown",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -302,7 +302,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmumuMultiChampCurse",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -330,7 +330,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmumuQHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -1079,6 +1079,58 @@
                         0.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        65.0,
+                        95.0,
+                        125.0,
+                        155.0,
+                        185.0,
+                        215.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamageReduction",
+                    "values": [
+                        0.0,
+                        5.0,
+                        7.0,
+                        9.0,
+                        11.0,
+                        13.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CDROnHit",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveScaling",
+                    "values": [
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1086,8 +1138,8 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamageReduction",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 1,
@@ -1107,8 +1159,8 @@
                 "TantrumDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.5,
@@ -1185,8 +1237,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamageReduction",
                                     "nameOverride": "Spell_ListType_DamageReduced",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1195,8 +1246,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -1482,14 +1532,55 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        45.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        145.0,
+                        170.0,
+                        195.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashSpeed",
+                    "values": [
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.8500000238418579,
@@ -1600,8 +1691,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1663,8 +1753,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1676,8 +1766,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1689,8 +1779,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1702,8 +1792,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "DashSpeed",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

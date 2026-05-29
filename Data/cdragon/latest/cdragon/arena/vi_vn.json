@@ -90,6 +90,46 @@
             "tooltip": "Trở nên <keywordStealth>Tàng Hình</keywordStealth> trong @StealthDuration@ giây hoặc cho tới khi bạn Tấn Công hoặc sử dụng Kỹ Năng."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Tất cả sát thương bạn gây ra sẽ áp dụng <keyword>Vết Thương Sâu</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Bình Thải Hóa Dược",
+            "rarity": 4,
+            "tooltip": "Gây <Damage>sát thương</Damage> lên tướng sẽ đặt <keyword>@GrievousAmount*100@% Vết Thương Sâu</keyword> trong @GrievousDuration@ giây."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1273,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -1436,6 +1476,46 @@
             "name": "Ánh Sáng Hộ Vệ",
             "rarity": 1,
             "tooltip": "Mỗi @Cooldown@ giây, <keywordMajor>Thi Triển Tự Động</keywordMajor> một ánh sáng bảo hộ về phía đồng minh, trao <shield>@TotalShield@ Lá Chắn</shield> cho bản thân và những đồng đội nó đi qua trước khi trở về, lặp lại hiệu ứng một lần nữa."
+        },
+        {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Gây sát thương sẽ <status>Làm Chậm</status> kẻ địch.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Búa Băng",
+            "rarity": 4,
+            "tooltip": "Gây sát thương sẽ <status>Làm Chậm</status> <speed>@SlowAmount*100@%</speed> trong @SlowDuration@ giây."
         },
         {
             "apiName": "Quest_MadHatter",
@@ -2169,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "Yêu cầu: Tham gia hạ gục @TakedownsNeeded@ lần.<br><br>Phần thưởng: Xẻng Vàng",
@@ -2317,10 +2397,51 @@
             "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Gây sát thương sẽ gây thêm sát thương vật lý tương đương <physicalDamage>@MaxHealthDamage*100@% máu tối đa</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Huyết Đao",
+            "rarity": 4,
+            "tooltip": "Gây sát thương sẽ gây thêm sát thương vật lý tương đương <physicalDamage>@MaxHealthDamage*100@% máu tối đa</physicalDamage>."
+        },
+        {
             "apiName": "Erosion",
             "calculations": {
                 "MaxShredTooltipOnly": {
                     "__type": "GameCalculation",
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
@@ -2329,12 +2450,9 @@
                         {
                             "__type": "NamedDataValueCalculationPart",
                             "mDataValue": "MaxStacks"
-                        },
-                        {
-                            "__type": "NumberCalculationPart",
-                            "mNumber": 10.0
                         }
-                    ]
+                    ],
+                    "mSimpleTooltipCalculationDisplay": 5
                 }
             },
             "dataValues": {
@@ -2716,8 +2834,8 @@
                 "NumberOfMissiles": [
                     3.0,
                     3.0,
+                    3.0,
                     5.0,
-                    6.0,
                     6.0,
                     6.0,
                     6.0
@@ -3326,7 +3444,7 @@
             "id": 310,
             "name": "Học Thuật Làm Hề",
             "rarity": 2,
-            "tooltip": "<spellName>Đâm Lén</spellName>: Bạn gây thêm @BasicAttackDamage@ <physicalDamage>sát thương vật lý</physicalDamage> khi tấn công từ phía sau.<br><br><spellName>Lừa Gạt</spellName>: Bạn dịch chuyển và trở nên <keywordStealth>Tàng Hình</keywordStealth> trong @StealthDuration@ giây. Đòn đánh kế tiếp của bạn khi đang <keywordStealth>Tàng Hình</keywordStealth> sẽ gây thêm <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>. Nếu tung đòn từ phía sau, đòn đánh sẽ chí mạng gây @QCritDamageMod@ sát thương.<br><br><spellName>Ảo Giác: Chết Chóc</spellName>: Khi hy sinh, gây sát thương chuẩn bằng <trueDamage>@FearDamage*100@% Máu tối đa của bản thân</trueDamage> và khiến kẻ địch xung quanh hoảng sợ trong @FearDuration@ giây."
+            "tooltip": "<spellName>Đâm Lén</spellName>: Bạn gây thêm @BasicAttackDamage@ <physicalDamage>sát thương vật lý</physicalDamage> khi tấn công từ phía sau.<br><br><spellName>Lừa Gạt</spellName>: Bạn dịch chuyển và trở nên <keywordStealth>Tàng Hình</keywordStealth> trong @StealthDuration@ giây. Đòn đánh kế tiếp của bạn khi đang <keywordStealth>Tàng Hình</keywordStealth> sẽ gây thêm <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage>. Nếu tung đòn từ phía sau, đòn đánh sẽ chí mạng gây @QCritDamageMod@ sát thương.<br><br><spellName>Phân Thân: Hy Sinh</spellName>: Khi hy sinh, gây sát thương chuẩn bằng <magicDamage>@FearDamage*100@% Máu tối đa của bản thân</magicDamage> và khiến kẻ địch xung quanh hoảng sợ trong @FearDuration@ giây."
         },
         {
             "apiName": "NumbToPain",
@@ -3403,6 +3521,37 @@
             "name": "Vô Cảm Trước Đau Đớn",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@% sát thương bạn phải chịu ngay sẽ gây thương tổn dần dần trong @BleedDuration@ giây (@RangedReduction*100@% với tướng đánh xa)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Bỏ phiếu để đội của bạn liên minh với Thợ Săn Quỷ. <br><br>Liên minh với Thợ Săn Quỷ sẽ trao <gold>+%i:goldCoins%@BonusGold@ vàng thưởng</gold> khi bạn đánh bại một <keywordMajor>đội Quỷ</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Liên Minh Thợ Săn",
+            "rarity": 4,
+            "tooltip": "Bỏ phiếu để đội của bạn liên minh với Thợ Săn Quỷ. <br><br>Liên minh với Thợ Săn Quỷ sẽ trao <gold>+%i:goldCoins%@BonusGold@ vàng thưởng</gold> khi bạn đánh bại một <keywordMajor>đội Quỷ</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4765,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Cường Hóa, <healing>Hồi Máu</healing> hoặc <shield>Tạo Lá Chắn</shield> cho đồng minh sẽ gây sát thương và <status>Làm Chậm</status> những kẻ địch xung quanh họ.",
@@ -4656,7 +4805,47 @@
             "id": 76,
             "name": "Vụ Nổ Siêu Thanh",
             "rarity": 0,
-            "tooltip": "Cường Hóa, <healing>Hồi Máu</healing> hoặc <shield>Tạo Lá Chắn</shield> cho đồng minh sẽ gây <trueDamage>@Damage@ sát thương chuẩn</trueDamage> và <status>Làm Chậm kẻ địch xung quanh đồng minh</status> đi @SlowAmount*-100@% trong @SlowDuration@ giây.<br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@"
+            "tooltip": "Cường Hóa, <healing>Hồi Máu</healing> hoặc <shield>Tạo Lá Chắn</shield> cho đồng minh sẽ gây <trueDamage>@Damage@ sát thương chuẩn</trueDamage> và <status>Làm Chậm kẻ địch xung quanh đồng minh</status> đi @SlowAmount*-100@% trong @SlowDuration@ giây.<br><br><rules>@ProcCooldown@ giây hồi chiêu mỗi lần thi triển.</rules><br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Giảm <attackSpeed>Tốc Độ Đánh</attackSpeed> của các tướng địch xung quanh.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Di Vật Ác Thần",
+            "rarity": 4,
+            "tooltip": "Giảm <attackSpeed>Tốc Độ Đánh</attackSpeed> của các tướng địch xung quanh đi <attackSpeed>@ASPDSlow*-100@%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5070,37 @@
             "name": "Bứt Tốc",
             "rarity": 1,
             "tooltip": "Tăng <speed>@AbilityHasteToMSConversionCalc@ Tốc Độ Di Chuyển</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Gây sát thương sẽ hành quyết tướng còn dưới @ExecuteThreshold*100@% Máu.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Máy Phân Rã Năng Lượng",
+            "rarity": 4,
+            "tooltip": "Gây sát thương sẽ hành quyết tướng còn dưới @ExecuteThreshold*100@% Máu."
         },
         {
             "apiName": "FallenAegis",
@@ -5684,7 +5904,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/grevious_venmon.png",
             "iconSmall": "assets/ux/cherry/augments/icons/grevious_venmon_small.png",
             "id": 316,
-            "name": "Nọc Độc Sâu",
+            "name": "Độc Lực Sâu",
             "rarity": 0,
             "tooltip": "Gây sát thương lên một tướng địch sẽ làm giảm lượng <shield>lá chắn</shield> chúng nhận được đi @ShieldShred@% và gây <status>Vết Thương Sâu @GrievousAmount*100@%</status> trong @DebuffDuration@ giây. <br><br><buffedStat>Nếu một kẻ địch hồi lại lượng máu nhiều hơn @GrievousAmpThreshold*100@% máu tối đa của chúng trong khi liên tục hứng chịu <status>Vết Thương Sâu</status>, hiệu ứng này sẽ tăng thành <status>Vết Thương Sâu @GrievousAmpAmount*100@%</status>.</buffedStat><br><br><rules>{{ Item_Grievous_Wounds }}</rules><br><br><rules>Giảm lá chắn Sát Thương Vật Lý và Mọi Sát Thương, nhưng không giảm lá chắn chỉ chặn Sát Thương Phép.</rules>"
         },
@@ -5785,6 +6005,28 @@
             "tooltip": "Kỹ Năng của bạn gây cộng dồn <keywordMajor>Thiêu Đốt</keywordMajor> vô hạn, gây <magicDamage>@BleedDamageTooltip@ sát thương phép</magicDamage> mỗi giây trong @BleedDuration@ giây.<br><br>Toàn bộ hiệu ứng <keywordMajor>Thiêu Đốt</keywordMajor> của bạn sẽ giảm hồi chiêu các Kỹ Năng Cơ Bản đi @FlatCooldownRefundPerTick@ giây khi gây sát thương lên kẻ địch.<br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@<br>"
         },
         {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Bỏ phiếu để đội của bạn liên minh với Quỷ. <br><br>Liên minh với Quỷ sẽ trao một <keywordMajor>%i:AugmentLevel% Cấp Độ Nâng Cấp</keywordMajor> khi một đội <keywordMajor>Thợ Săn bị tiêu diệt.</keywordMajor>",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Liên Minh Quỷ",
+            "rarity": 4,
+            "tooltip": "Bỏ phiếu để đội của bạn liên minh với Quỷ. <br><br>Liên minh với Quỷ sẽ trao một <keywordMajor>%i:AugmentLevel% Cấp Độ Nâng Cấp</keywordMajor> khi một đội <keywordMajor>Thợ Săn bị tiêu diệt.</keywordMajor>"
+        },
+        {
             "apiName": "ADAPt",
             "calculations": {
                 "APAmpCalcTooltip": {
@@ -5819,7 +6061,7 @@
                 "InverseRate": [
                     0.6000000238418579,
                     0.6000000238418579,
-                    0.800000011920929,
+                    2.799999952316284,
                     0.800000011920929,
                     0.800000011920929,
                     0.800000011920929,
@@ -6011,7 +6253,7 @@
                 "ADcoefficient": [
                     0.07000000029802322,
                     0.07000000029802322,
-                    0.09000000357627869,
+                    0.07999999821186066,
                     0.09000000357627869,
                     0.09000000357627869,
                     0.09000000357627869,
@@ -6020,7 +6262,7 @@
                 "APcoefficient": [
                     0.03999999910593033,
                     0.03999999910593033,
-                    0.07000000029802322,
+                    0.05999999865889549,
                     0.07000000029802322,
                     0.07000000029802322,
                     0.07000000029802322,
@@ -6029,7 +6271,7 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.007499999832361937,
+                    0.006500000134110451,
                     0.007499999832361937,
                     0.007499999832361937,
                     0.007499999832361937,
@@ -7174,6 +7416,37 @@
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Tổng Sát Thương Nhận Thay: @f1@<br>Tổng Hồi Máu Nhận Được: @f2@<br>"
         },
         {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Nhận 1 <attention>Khiên Phép</attention> mỗi @Cooldown@ giây.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Bình Thuốc Ma Thuật",
+            "rarity": 4,
+            "tooltip": "Nhận 1 <attention>Khiên Phép</attention> mỗi @Cooldown@ giây để chặn Kỹ Năng tiếp theo của kẻ địch."
+        },
+        {
             "apiName": "Deathtouch",
             "calculations": {},
             "dataValues": {
@@ -7340,22 +7613,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -7411,13 +7684,13 @@
             "calculations": {},
             "dataValues": {
                 "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "EnemyDetectionRadius": [
                     800.0,
@@ -8259,7 +8532,7 @@
                 "InverseRate": [
                     1.666659951210022,
                     1.666659951210022,
-                    0.0,
+                    2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
@@ -8585,13 +8858,13 @@
                     1.5
                 ],
                 "ReviveMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ],
                 "SelfReviveTimerModMax": [
                     0.5,
@@ -8612,13 +8885,13 @@
                     0.4000000059604645
                 ],
                 "SizeMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ]
             },
             "desc": "Nhận thêm @BonusLives@ lần <attention>Hồi Sinh</attention>, và bắt đầu tự hồi sinh sau khi bạn bị hạ gục.<br><br>Khi bạn <attention>Hồi Sinh</attention>, <status>Đẩy Lùi</status> kẻ địch xung quanh và trở lại với kích thước nhỏ hơn cùng lượng <scaleHealth>Máu tối đa</scaleHealth> giảm.",
@@ -9551,13 +9824,13 @@
                     0.3499999940395355
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaximumDistanceRoF": [
                     1500.0,
@@ -9909,10 +10182,10 @@
             "calculations": {},
             "dataValues": {
                 "AttackSpeed": [
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.75,
-                    1.2000000476837158,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.800000011920929,
+                    1.2999999523162842,
                     1.5,
                     1.5,
                     1.5
@@ -10899,64 +11172,6 @@
             "tooltip": "Hiến tế <scaleHealth>@HealthReductionPercent@% máu tối đa của bạn</scaleHealth> cho Tahm Kench. <br><br>Tổng lượng hiến tế của bạn sẽ tăng thành <scaleHealth>-@MaxHealthReduction@% máu tối đa</scaleHealth>.<br><br>Nhận <gold>+%i:goldCoins% @GoldToGrant@ vàng</gold>."
         },
         {
-            "apiName": "FrozenFoundations",
-            "calculations": {},
-            "dataValues": {
-                "ChampPushDistance": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "NonChampPushDistance": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
-                ],
-                "WallDuration": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "WallWidth": [
-                    800.0,
-                    800.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0
-                ]
-            },
-            "desc": "Nhận Phép Bổ Trợ <spellName>Nền Băng</spellName>.<br><br><rules><spellName>Nền Băng</spellName> triệu hồi 1 bức tường băng tại một vị trí.</rules>",
-            "iconLarge": "assets/ux/cherry/augments/icons/frozenfoundations_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/frozenfoundations_small.png",
-            "id": 40,
-            "name": "Nền Băng",
-            "rarity": 0,
-            "tooltip": "<rules>Triệu hồi 1 bức tường băng tại vị trí chỉ định.</rules>"
-        },
-        {
             "apiName": "CriticalHealing",
             "calculations": {
                 "CriticalHealCalc": {
@@ -11315,13 +11530,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11695,13 +11910,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -11775,22 +11990,22 @@
             "calculations": {},
             "dataValues": {
                 "Haste": [
-                    125.0,
+                    75.0,
                     200.0,
-                    275.0,
-                    350.0,
-                    425.0,
-                    500.0,
-                    575.0
+                    325.0,
+                    450.0,
+                    575.0,
+                    700.0,
+                    825.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelTenacityDuration": [
                     3.0,
@@ -11927,13 +12142,13 @@
                     40.0
                 ],
                 "TotalASValue": [
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ]
             },
             "desc": "Nhận <attackSpeed>@TotalASValue*100@% tổng Tốc Độ Đánh</attackSpeed>. <br><br>Tại @Breakpoint1@ <attackSpeed>Đòn Đánh mỗi giây</attackSpeed>, gây thêm <magicDamage>sát thương phép</magicDamage> {{ Item_Keyword_OnHit }}.",
@@ -13357,7 +13572,7 @@
             "id": 215,
             "name": "Chúc Phúc Hắc Ám",
             "rarity": 1,
-            "tooltip": "Khi bạn <healing>Hồi Máu</healing> hoặc <shield>Tạo Lá Chắn</shield> cho một tướng đồng minh, nhận @CurseCounter@ <keywordMajor>Sức Mạnh Nguyền Rủa</keywordMajor>.<br><br>Nhận @f1@ Điểm Hồi Kỹ Năng (@AbilityHasteRatio*100@% <keywordMajor>Sức Mạnh Nguyền Rủa</keywordMajor> của bạn).<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "Khi bạn <healing>Hồi Máu</healing> hoặc <shield>Tạo Lá Chắn</shield> cho một tướng đồng minh, nhận @CurseCounter@ <keywordMajor>Sức Mạnh Nguyền Rủa</keywordMajor>.<br><br>Nhận @f1@ Điểm Hồi Kỹ Năng (@AbilityHasteRatio*100@% <keywordMajor>Sức Mạnh Nguyền Rủa</keywordMajor> của bạn).<br><br><rules>@Cooldown@ giây hồi chiêu mỗi lần thi triển.</rules><br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "MindtoMatter",

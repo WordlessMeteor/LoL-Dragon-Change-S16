@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Darius mengumpulkan tenaga dan mengayunkan kapaknya dalam lingkaran besar. Musuh yang terkena bilah kapaknya menerima damage lebih besar dibandingkan yang terkena gagangnya. Darius mendapat heal berdasarkan champion musuh dan monster besar yang dihantam oleh bilah kapaknya.",
-            "dynamicDescription": "Darius mengangkat lalu mengayunkan kapaknya, menghasilkan <physicalDamage>@BladeDamage@ physical damage</physicalDamage> dengan tepiannya dan <physicalDamage>@HandleDamage@ damage</physicalDamage> dengan gagangnya. Musuh yang dihantam oleh gagangnya tidak menerima stack <keywordMajor>Hemorrhage</keywordMajor>.<br><br>Darius memulihkan <healing>@Effect5Amount@% Health yang hilang</healing> per champion musuh dan monster jungle besar yang dihantam oleh tepian kapaknya, hingga maksimum <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius mengangkat lalu mengayunkan kapaknya, menghasilkan <physicalDamage>@BladeDamage@ physical damage</physicalDamage> dengan tepiannya dan <physicalDamage>@HandleDamage@ damage</physicalDamage> dengan gagangnya. Musuh yang dihantam oleh gagangnya tidak menerima stack <keywordMajor>Hemorrhage</keywordMajor>.<br><br>Darius memulihkan <healing>@MissingHealthHeal@% Health yang hilang</healing> per champion musuh dan monster jungle besar yang dihantam oleh tepian kapaknya, hingga maksimum <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Serangan Darius berikutnya mengenai arteri vital musuh. Karena perdarahan, Move Speed mereka berkurang.",
-            "dynamicDescription": "Serangan Darius berikutnya menghasilkan <physicalDamage>@EmpoweredAttackDamage@ physical damage</physicalDamage> dan menerapkan <status>Slow</status> sebanyak @Effect2Amount@% selama @Effect5Amount@ detik.<br><br>Ability ini mengembalikan biaya Mana dan mengurangi Cooldown sebanyak @Effect3Amount@% jika target terbunuh.<br><br><rules>Ability ini memicu efek spell saat menghasilkan damage.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Serangan berikutnya dari Darius menghasilkan <physicalDamage>@EmpoweredAttackDamage@ physical damage</physicalDamage> dan menerapkan <status>Slow</status> sebesar @SlowPercent@% selama @SlowDuration@ detik.<br><br>Ability ini mengembalikan biaya Mana dan mengurangi Cooldown sebesar @PercentCDRefund@% jika berhasil kill target.<br><br><rules>Ability ini memicu efek spell saat menghasilkan damage.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Darius mengasah kapaknya, secara pasif menyebabkan physical damage-nya mengabaikan sekian persen Armor targetnya. Saat diaktifkan, Darius menyapu bersih musuh dengan kait kapaknya dan menarik mereka ke arahnya.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Darius mendapatkan @Effect1Amount@% Armor Penetration.<br><br><spellActive>Aktif:</spellActive> Darius mengait dengan kapaknya, melakukan <status>Pull</status>, dan <status>Knock Up</status> serta <status>Slow</status> sebanyak @Effect2Amount@% selama @Effect3Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Darius mendapatkan @PassivePercentArmorPen@% Armor Penetration.<br><br><spellActive>Aktif:</spellActive> Darius mengait dengan kapaknya, melakukan <status>Pull</status>, dan <status>Knock Up</status> serta <status>Slow</status> sebesar @SlowPercent@% selama @SlowDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

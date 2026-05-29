@@ -57,56 +57,6 @@
             "flags": 4,
             "mAffectsTypeFlags": 14346,
             "mAffectsStatusFlags": 40,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        110.0,
-                        110.0,
-                        110.0,
-                        110.0,
-                        110.0,
-                        110.0,
-                        110.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        130.0,
-                        130.0,
-                        130.0,
-                        130.0,
-                        130.0,
-                        130.0,
-                        130.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -375,6 +325,162 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "QCollisionRadiusStart",
+                    "values": [
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "QCollisionRadiusEnd",
+                    "values": [
+                        130.0,
+                        130.0,
+                        130.0,
+                        130.0,
+                        130.0,
+                        130.0,
+                        130.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MonsterAmp",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BasePercentDamage",
+                    "values": [
+                        1.5,
+                        2.0,
+                        2.5,
+                        3.0,
+                        3.5,
+                        4.0,
+                        4.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "NumEnhancedAttacks",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        25.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnhancedPercentDamage",
+                    "values": [
+                        4.5,
+                        5.0,
+                        5.5,
+                        6.0,
+                        6.5,
+                        7.0,
+                        7.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinionDamageCap",
+                    "values": [
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0,
+                        200.0,
+                        225.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackBuffDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SteroidAS",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SteroidDuration",
+                    "values": [
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -423,8 +529,8 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BasePercentDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.014999999664723873,
@@ -442,8 +548,8 @@
                     },
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 6,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "EnhancedPercentDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.019999999552965164,
@@ -542,22 +648,19 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BasePercentDamage",
                                     "nameOverride": "Spell_ListType_ShenQBasePercentDamage",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 6,
+                                    "type": "EnhancedPercentDamage",
                                     "nameOverride": "Spell_ListType_ShenQEnhancedPercentDamage",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 4,
+                                    "type": "SlowPercent",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -567,8 +670,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 7,
+                                    "type": "MinionDamageCap",
                                     "nameOverride": "Spell_ListType_MaxDamageToMonsters",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -640,8 +742,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1798,6 +1900,50 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "ZoneDuration",
+                    "values": [
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ZoneDelay",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "UnnamedEffectAmount3",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "UnnamedEffectAmount4",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "UnnamedEffectAmount5",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "UnnamedEffectAmount9",
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mImgIconName": [
                 "ASSETS/Characters/Shen/HUD/Icons2D/Shen_W.dds"
             ],
@@ -1898,8 +2044,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "ZoneDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1911,8 +2057,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "ZoneDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2080,7 +2226,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShenRTakedowns",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2108,7 +2254,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShenQDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2136,7 +2282,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShenPBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2178,7 +2324,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShenRtoECombo",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2206,7 +2352,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShenQSlowDuration",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2235,7 +2381,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShenWBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2317,7 +2463,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 227,
+                "EventToTrack": 229,
                 "__type": "StatStoneEventToTrack"
             }
         ],

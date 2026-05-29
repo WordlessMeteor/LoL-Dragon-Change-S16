@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.10.1",
+    "version": "16.11.1",
     "data": {
         "Darius": {
             "id": "Darius",
@@ -563,7 +563,7 @@
                     "id": "DariusCleave",
                     "name": "大杀四方",
                     "description": "德莱厄斯蓄力然后将他的斧头挥舞成一个大圈。被斧刃击中的敌人会比被斧柄击中的敌人受到更多伤害。德莱厄斯会基于被斧刃击中的敌方英雄或大型野怪的数量来获得治疗效果。",
-                    "tooltip": "德莱厄斯举起他的斧头然后挥舞一圈，斧刃造成<physicalDamage>{{ bladedamage }}物理伤害</physicalDamage>并且斧柄造成<physicalDamage>{{ handledamage }}伤害</physicalDamage>。被斧柄命中的敌人不会被施加<keywordMajor>出血</keywordMajor>。<br /><br />德莱厄斯每用斧刃命中一个敌方英雄或大型野怪就会回复<healing>{{ e5 }}%已损失生命值</healing>，至多回复<healing>{{ e7 }}%</healing>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "德莱厄斯举起他的斧头然后挥舞一圈，斧刃造成<physicalDamage>{{ bladedamage }}物理伤害</physicalDamage>并且斧柄造成<physicalDamage>{{ handledamage }}伤害</physicalDamage>。被斧柄命中的敌人不会被施加<keywordMajor>出血</keywordMajor>层数。<br /><br />德莱厄斯每用斧刃命中一个敌方英雄或大型野怪就会回复<healing>{{ missinghealthheal }}%已损失生命值</healing>，至多回复<healing>{{ missinghealpercent }}%</healing>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -572,8 +572,8 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }}% -> {{ e1NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ totaladratio }}% -> {{ totaladratioNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -708,13 +708,13 @@
                     "id": "DariusNoxianTacticsONH",
                     "name": "致残打击",
                     "description": "德莱厄斯的下一次攻击会打向敌人的大动脉。在目标流血不止的同时，目标的移动速度也会被减缓。",
-                    "tooltip": "德莱厄斯的下次攻击造成<physicalDamage>{{ empoweredattackdamage }}物理伤害</physicalDamage>和持续{{ e5 }}秒的{{ e2 }}%<status>减速</status>。<br /><br />如果这个技能击杀了目标，那么会返还其法力消耗并缩短其{{ e3 }}%的冷却时间。<br /><br /><rules>这个技能会在造成伤害时触发技能特效。</rules>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "德莱厄斯的下次攻击造成<physicalDamage>{{ empoweredattackdamage }}物理伤害</physicalDamage>和持续{{ slowduration }}秒的{{ slowpercent }}%<status>减速</status>。<br /><br />如果这个技能击杀了目标，那么会返还其法力消耗并缩短其{{ percentcdrefund }}%的冷却时间。<br /><br /><rules>这个技能会在造成伤害时触发技能特效。</rules>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "总攻击力收益"
                         ],
                         "effect": [
-                            "{{ effect4amount*100.000000 }} -> {{ effect4amountnl*100.000000 }}"
+                            "{{ adratio*100.000000 }} -> {{ adrationl*100.000000 }}"
                         ]
                     },
                     "maxrank": 5,
@@ -847,7 +847,7 @@
                     "id": "DariusAxeGrabCone",
                     "name": "无情铁手",
                     "description": "德莱厄斯磨利他的巨斧，被动地让他的物理伤害无视目标一部分护甲。在主动施放时，德莱厄斯会用斧头上的钩子横扫他的敌人，并将他们拉到德莱厄斯身边。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>德莱厄斯获得{{ e1 }}%护甲穿透。<br /><br /><spellActive>主动：</spellActive>德莱厄斯用他的斧头进行钩拽，造成<status>拖拽</status>、<status>击飞</status>和持续{{ e3 }}秒的{{ e2 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>德莱厄斯获得{{ passivepercentarmorpen }}%护甲穿透。<br /><br /><spellActive>主动：</spellActive>德莱厄斯用他的斧头进行钩拽，造成<status>拖拽</status>、<status>击飞</status>和持续{{ slowduration }}秒的{{ slowpercent }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "百分比护甲穿透",
@@ -855,7 +855,7 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ passivepercentarmorpen }} -> {{ passivepercentarmorpenNL }}",
                             "{{ cost }} -> {{ costNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]

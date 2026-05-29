@@ -10,6 +10,11 @@
         "mType": 3,
         "__type": "AbilityObject"
     },
+    "{157c10d0}": {
+        "ObjectName": "DianaSkin76Manager",
+        "mScriptName": "DianaSkin76Manager",
+        "__type": "SpellObject"
+    },
     "Characters/Diana/Spells/DianaQAbility": {
         "mRootSpell": "Characters/Diana/Spells/DianaQAbility/DianaQ",
         "mChildSpells": [
@@ -20,6 +25,11 @@
         ],
         "mName": "DianaQAbility",
         "__type": "AbilityObject"
+    },
+    "{1ef9c32e}": {
+        "ObjectName": "DianaSkin77KillEventTracker",
+        "mScriptName": "DianaSkin77KillEventTracker",
+        "__type": "SpellObject"
     },
     "Characters/Diana/Spells/DianaOrbsAbility": {
         "mRootSpell": "Characters/Diana/Spells/DianaOrbsAbility/DianaOrbs",
@@ -431,13 +441,13 @@
                 {
                     "name": "ShieldBHPRatio",
                     "values": [
-                        0.09000000357627869,
-                        0.09000000357627869,
-                        0.09000000357627869,
-                        0.09000000357627869,
-                        0.09000000357627869,
-                        0.09000000357627869,
-                        0.09000000357627869
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1689,6 +1699,11 @@
         "mScriptName": "DianaSkin47Manager",
         "__type": "SpellObject"
     },
+    "{8176131d}": {
+        "ObjectName": "DianaSkin77Manager",
+        "mScriptName": "DianaSkin77Manager",
+        "__type": "SpellObject"
+    },
     "Characters/Diana/Spells/DianaTeleportAbility": {
         "mRootSpell": "Characters/Diana/Spells/DianaTeleportAbility/DianaTeleport",
         "mChildSpells": [
@@ -2060,13 +2075,13 @@
                 {
                     "name": "MonsterMod",
                     "values": [
-                        2.299999952316284,
-                        2.299999952316284,
-                        2.299999952316284,
-                        2.299999952316284,
-                        2.299999952316284,
-                        2.299999952316284,
-                        2.299999952316284
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2347,7 +2362,7 @@
         "mDescriptionTraKey": "stat_stone_description_DianaPDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2375,7 +2390,7 @@
         "mDescriptionTraKey": "stat_stone_description_DianaRMultihits",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2403,7 +2418,7 @@
         "mDescriptionTraKey": "stat_stone_description_DianaEFollows",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2446,7 +2461,7 @@
         "mDescriptionTraKey": "stat_stone_description_DianaDamageBlockedWithW",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2474,7 +2489,7 @@
         "mDescriptionTraKey": "stat_stone_description_DianaEHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2502,7 +2517,7 @@
         "mDescriptionTraKey": "stat_stone_description_DianaLunarRushDouble",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2530,7 +2545,7 @@
         "mDescriptionTraKey": "stat_stone_description_DianaRDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2587,7 +2602,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 227,
+                "EventToTrack": 229,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3095,6 +3110,26 @@
                 "SkinFilter": {
                     "skinIds": [
                         47
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{157c10d0}",
+                "SkinFilter": {
+                    "skinIds": [
+                        76
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{8176131d}",
+                "SkinFilter": {
+                    "skinIds": [
+                        77
                     ],
                     "__type": "SkinFilterData"
                 },

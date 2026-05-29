@@ -1211,7 +1211,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تلحق هجمات شين جاو العادية الثلاث التالية زيادةً في الضرر ويطيح هجومه الثالث بخصمه في الهواء.",
-            "dynamicDescription": "تلحق هجمات شين جاو الأساسية الثلاث التالية مقدارًا إضافيًا من <physicalDamage>@BonusDamage@ الضرر المادي</physicalDamage> وتقلص فترة تبريد القدرة ثانيةً واحدة. الهجوم الثالث بإمكانه كذلك <status>إعاقة الحركة</status> لمدة @Effect2Amount@ث.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تلحق هجمات شين جاو الثلاث التالية <physicalDamage>@BonusDamage@ ضرر مادي</physicalDamage> وتقلص فترات تبريد قدراته الأخرى بمقدار 1ث. كما يؤدي الهجوم الثالث إلى <status>الإطاحة إلى الأعلى</status> بالعدو لمدة @KnockUpDuration@ث.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 375.0,
                 375.0,
@@ -1237,27 +1237,27 @@
                 5.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    15.0,
-                    15.0,
-                    30.0,
-                    45.0,
-                    60.0,
-                    75.0,
-                    75.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

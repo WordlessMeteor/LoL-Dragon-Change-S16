@@ -28,7 +28,7 @@
             },
             "Run_Slow": {
                 "mTrackDataName": "Default",
-                "mTickDuration": 0.02222222276031971,
+                "mTickDuration": 0.02500000223517418,
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Kindred/skins/base/animations/Lamb_run_injured.anm",
                     "__type": "AnimationResourceData"
@@ -85,11 +85,12 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Spell2_Idle": {
+            "{3c54219b}": {
+                "mMaskDataName": "{731cb44a}",
                 "mTrackDataName": "Spell2",
                 "mTickDuration": 0.02500000037252903,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Kindred/skins/base/animations/Lamb_Spell2.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/Kindred/skins/base/animations/Lamb_Spell2_arm.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -124,7 +125,7 @@
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{c63720f8}": {
-                        "mName": "Audio_Idle",
+                        "mName": "{ff5de275}",
                         "mSoundName": "Play_vosfx_Kindred_Idle_buffactivate",
                         "mIsLoop": false,
                         "__type": "SoundEventData"
@@ -237,17 +238,17 @@
                 "mSelectorPairDataList": [
                     {
                         "mClipName": "Attack1",
-                        "mProbability": 33.0,
+                        "mProbability": 34.0,
                         "__type": "SelectorPairData"
                     },
                     {
                         "mClipName": "Attack2",
-                        "mProbability": 33.0,
+                        "mProbability": 35.0,
                         "__type": "SelectorPairData"
                     },
                     {
                         "mClipName": "Attack3",
-                        "mProbability": 34.0,
+                        "mProbability": 31.0,
                         "__type": "SelectorPairData"
                     }
                 ],
@@ -281,19 +282,12 @@
                 "__type": "AtomicClipData"
             },
             "Run": {
-                "mSelectorPairDataList": [
-                    {
-                        "mClipName": "{cffe7c8b}",
-                        "mProbability": 90.0,
-                        "__type": "SelectorPairData"
-                    },
-                    {
-                        "mClipName": "{72d20e44}",
-                        "mProbability": 10.0,
-                        "__type": "SelectorPairData"
-                    }
-                ],
-                "__type": "SelectorClipData"
+                "Updater": {
+                    "__type": "IsHomeguardParametricUpdater"
+                },
+                "mTrueConditionClipName": "{bc1ef3fb}",
+                "mFalseConditionClipName": "{bc1ef3fb}",
+                "__type": "ConditionBoolClipData"
             },
             "Spell1Back": {
                 "mTrackDataName": "Default",
@@ -392,13 +386,11 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "{584a6a6f}": {
                         "mName": "Audio_Event",
                         "mSoundName": "Play_sfx_Kindred_Recall3D_buffactivate",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     }
                 },
@@ -411,6 +403,12 @@
             "Death": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
+                    "{edd1e584}": {
+                        "mName": "{e88a123f}",
+                        "mSoundName": "Play_sfx_Kindred_Death3D_cast",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
                     "{958638eb}": {
                         "mName": "{958638eb}",
                         "mStartFrame": 60.0,
@@ -449,12 +447,6 @@
                         ],
                         "mIsLoop": false,
                         "__type": "ParticleEventData"
-                    },
-                    "{edd1e584}": {
-                        "mName": "{e88a123f}",
-                        "mSoundName": "Play_sfx_Kindred_Death3D_cast",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
                     }
                 },
                 "mAnimationResourceData": {
@@ -471,15 +463,6 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Hair": {
-                "mFlags": 6,
-                "mTrackDataName": "{c5555ba1}",
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Kindred/skins/Skin01/Animations/Lamb_Skin01_hairADD.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
             "Taunt": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -492,18 +475,34 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "{0616544e}": {
                         "mName": "Audio_Taunt",
                         "mSoundName": "Play_sfx_Kindred_Taunt3D_buffactivate",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     }
                 },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Kindred/skins/base/animations/Lamb_Taunt.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell2": {
+                "Updater": {
+                    "__type": "IsMovingParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "mTrueConditionClipName": "{3c54219b}",
+                "mFalseConditionClipName": "Spell2_Idle",
+                "__type": "ConditionBoolClipData"
+            },
+            "Spell2_Idle": {
+                "mTrackDataName": "Spell2",
+                "mTickDuration": 0.02500000037252903,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Kindred/skins/base/animations/Lamb_Spell2.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -515,24 +514,6 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
-            },
-            "{3c54219b}": {
-                "mMaskDataName": "{731cb44a}",
-                "mTrackDataName": "Spell2",
-                "mTickDuration": 0.02500000037252903,
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Kindred/skins/base/animations/Lamb_Spell2_arm.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
-            "Spell2": {
-                "Updater": {
-                    "__type": "IsMovingParametricUpdater"
-                },
-                "mTrueConditionClipName": "{3c54219b}",
-                "mFalseConditionClipName": "Spell2_Idle",
-                "__type": "ConditionBoolClipData"
             },
             "Channel": {
                 "mFlags": 2,
@@ -551,6 +532,45 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "{bc1ef3fb}": {
+                "mFlags": 2,
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Slow",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Base",
+                        "mValue": 310.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Haste",
+                        "mValue": 420.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "Run_Base": {
+                "mSelectorPairDataList": [
+                    {
+                        "mClipName": "{cffe7c8b}",
+                        "mProbability": 90.0,
+                        "__type": "SelectorPairData"
+                    },
+                    {
+                        "mClipName": "{72d20e44}",
+                        "mProbability": 10.0,
+                        "__type": "SelectorPairData"
+                    }
+                ],
+                "__type": "SelectorClipData"
             }
         },
         "mMaskDataMap": {
@@ -634,11 +654,6 @@
             },
             "Default": {
                 "mPriority": 1,
-                "__type": "TrackData"
-            },
-            "{c5555ba1}": {
-                "mPriority": 2,
-                "mBlendMode": 1,
                 "__type": "TrackData"
             }
         },

@@ -769,11 +769,11 @@
                 80.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.5,
                 9.0,
                 8.5,
                 8.0,
+                7.5,
+                7.0,
                 8.0
             ],
             "coefficients": {
@@ -941,13 +941,13 @@
                     6.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
                 ],
                 "Effect3Amount": [
                     25.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "附近有單位施放法術技能時，卡薩丁將吸收能量，當充能完畢後，吸收的能量可轉化為脈衝，對面前錐形區域內敵人造成傷害並減速。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>每當卡薩丁附近有任何技能被施放，<spellName>能量脈衝</spellName>的冷卻時間便會被減少 @ReductionPerSpellCast@ 秒。<br><br><spellActive>主動：</spellActive>卡薩丁釋放一道虛空脈衝，造成 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage>並<status>緩速</status>敵人 @Effect2Amount@%，持續 @Effect3Amount@ 秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>每當卡薩丁附近有任何技能被施放，<spellName>能量脈衝</spellName>的冷卻時間便會縮短@ReductionPerSpellCast@秒。<br><br><spellActive>主動：</spellActive>卡薩丁釋放一道虛空脈衝，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>並<status>緩速</status>@SlowAmount@%，持續@SlowDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

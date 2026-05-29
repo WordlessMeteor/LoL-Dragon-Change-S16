@@ -769,11 +769,11 @@
                 80.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.5,
                 9.0,
                 8.5,
                 8.0,
+                7.5,
+                7.0,
                 8.0
             ],
             "coefficients": {
@@ -941,13 +941,13 @@
                     6.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
                 ],
                 "Effect3Amount": [
                     25.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Kassadin extrae energía de los hechizos lanzados a su alrededor. Después de cargar, Kassadin puede usar Pulso de Fuerza para dañar y ralentizar a enemigos en un cono frente a él.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> El enfriamiento de <spellName>Pulso de Fuerza</spellName> se reduce en @ReductionPerSpellCast@ seg cada vez que se usa una habilidad cerca de Kassadin.<br><br><spellActive>Activa:</spellActive> Kassadin desata un pulso de vacío e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> en un @Effect2Amount@% por @Effect3Amount@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> El enfriamiento de <spellName>Pulso de Fuerza</spellName> se reduce en @ReductionPerSpellCast@ seg cada vez que se usa una habilidad cerca de Kassadin.<br><br><spellActive>Activa:</spellActive> Kassadin desata un pulso de vacío e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> en un @SlowAmount@% por @SlowDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

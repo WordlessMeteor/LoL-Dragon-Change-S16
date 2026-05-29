@@ -1170,7 +1170,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Shen rappelle sa lame spirituelle pour attaquer avec elle, infligeant des dégâts basés sur les PV max de sa cible. Les attaques sont grandement renforcées si la lame touche un champion ennemi. Tous les ennemis touchés par la lame sont ralentis quand ils s'éloignent de Shen.",
-            "dynamicDescription": "Shen rappelle sa <keywordMajor>lame spirituelle</keywordMajor>. Les ennemis touchés par la lame sont <status>ralentis</status> de @Effect4Amount@% pendant @Effect5Amount@ sec quand ils s'éloignent de Shen.<br><br>De plus, les @Effect3Amount@ prochaines attaques de Shen infligent <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@BasePercentHealth@ des PV max en dégâts magiques</magicDamage> supplémentaires. Si Shen touche un champion ennemi avec la <keywordMajor>lame spirituelle</keywordMajor>, les dégâts sont augmentés à <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@EmpPercentHealth@ des PV max en dégâts magiques</magicDamage> et il gagne <attackSpeed>+@Effect9Amount@% de vitesse d'attaque</attackSpeed> pour ces attaques.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen rappelle sa <keywordMajor>lame spirituelle</keywordMajor>. Les ennemis touchés par la lame sont <status>ralentis</status> de @SlowPercent@% pendant @SlowDuration@ sec quand ils s'éloignent de Shen.<br><br>De plus, les @NumEnhancedAttacks@ prochaines attaques de Shen infligent <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@BasePercentHealth@ des PV max en dégâts magiques bonus</magicDamage>. Si Shen touche un champion ennemi avec la <keywordMajor>lame spirituelle</keywordMajor>, les dégâts sont augmentés à <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@EmpPercentHealth@ des PV max en dégâts magiques</magicDamage> et il gagne <attackSpeed>@SteroidAS@% de vitesse d'attaque</attackSpeed> pour ces attaques.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Les attaques qui ciblent Shen ou ses alliés sont bloquées quand ils sont près de la lame spirituelle.",
-            "dynamicDescription": "Shen crée une zone défensive à l'emplacement de sa <keywordMajor>lame spirituelle</keywordMajor> pendant @Effect1Amount@ sec. Les attaques contre les champions alliés à l'intérieur de cette zone sont bloquées. <br><br>Si elle n'a aucun champion à protéger au début de son effet, la zone temporise pendant un maximum de @Effect2Amount@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen crée une zone défensive à l'emplacement de sa <keywordMajor>lame spirituelle</keywordMajor> pendant @ZoneDuration@ sec. Les attaques contre les champions alliés à l'intérieur de cette zone sont bloquées. <br><br>Si elle n'a aucun champion à protéger au début de son effet, la zone temporise pendant un maximum de @ZoneDelay@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

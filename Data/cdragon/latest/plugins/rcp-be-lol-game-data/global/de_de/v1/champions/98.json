@@ -1170,7 +1170,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Shen ruft seine Geisterklinge zurück, um damit anzugreifen. Sie verursacht Schaden basierend auf dem maximalen Leben des Ziels. Die Angriffe werden erheblich verstärkt, wenn die Klinge mit einem gegnerischen Champion zusammenstößt und jeder getroffene Gegner wird verlangsamt, wenn er vor Shen flüchtet.",
-            "dynamicDescription": "Shen ruft seine <keywordMajor>Geisterklinge</keywordMajor> zurück. Gegner, die auf ihrem Weg getroffen wurden, werden um @Effect4Amount@&nbsp;% <status>verlangsamt</status>, während sie sich über die nächsten @Effect5Amount@&nbsp;Sekunden von Shen wegbewegen.<br><br>Außerdem verursachen Shens nächsten @Effect3Amount@&nbsp;Angriffe zusätzlich <magicDamage>magischen Schaden</magicDamage> in Höhe von @BaseFlatDamage@ plus <magicDamage>@BasePercentHealth@ des max. Lebens</magicDamage>. Wenn Shen einen gegnerischen Champion mit der <keywordMajor>Geisterklinge</keywordMajor> trifft, wird der Schaden auf <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@EmpPercentHealth@ des maximalen Lebens</magicDamage> erhöht und er erhält für diese Angriffe <attackSpeed>@Effect9Amount@&nbsp;% Angriffstempo</attackSpeed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen ruft seine <keywordMajor>Geisterklinge</keywordMajor> zurück. Gegner, die auf ihrem Weg getroffen wurden, werden um @SlowPercent@&nbsp;% <status>verlangsamt</status>, während sie sich über die nächsten @SlowDuration@&nbsp;Sekunden von Shen wegbewegen.<br><br>Außerdem verursachen Shens nächste @NumEnhancedAttacks@&nbsp;Angriffe zusätzlich <magicDamage>magischen Schaden in Höhe von @BaseFlatDamage@</magicDamage> plus <magicDamage>@BasePercentHealth@ des maximalen Lebens</magicDamage>. Wenn Shen einen gegnerischen Champion mit der <keywordMajor>Geisterklinge</keywordMajor> trifft, wird der Schaden auf <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@EmpPercentHealth@ des maximalen Lebens</magicDamage> erhöht und er erhält für diese Angriffe <attackSpeed>@SteroidAS@&nbsp;% Angriffstempo</attackSpeed>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Angriffe, die Shen oder seine Verbündeten in der Nähe der Geisterklinge treffen würden, werden geblockt.",
-            "dynamicDescription": "Shen erschafft @Effect1Amount@&nbsp;Sekunden lang einen Verteidigungsbereich bei seiner <keywordMajor>Geisterklinge</keywordMajor>. Angriffe gegen verbündete Champions im Bereich werden geblockt. <br><br>Wenn sich zu Beginn keine Champions im Bereich befinden, wartet der Effekt bis zu @Effect2Amount@&nbsp;Sekunden.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen erschafft @ZoneDuration@&nbsp;Sekunden lang einen Verteidigungsbereich bei seiner <keywordMajor>Geisterklinge</keywordMajor>. Angriffe gegen verbündete Champions im Bereich werden geblockt.<br><br>Wenn sich zu Beginn keine Champions im Bereich befinden, wartet der Effekt bis zu @ZoneDelay@&nbsp;Sekunden.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

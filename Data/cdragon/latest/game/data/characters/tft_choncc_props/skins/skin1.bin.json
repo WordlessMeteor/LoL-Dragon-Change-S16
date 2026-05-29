@@ -1,8 +1,8 @@
 {
-    "{425b5dce}": {
+    "Characters/TFT_Choncc_Props/Skins/Skin1": {
         "championSkinName": "TFT_Choncc_Props",
         "skinAnimationProperties": {
-            "animationGraphData": "{75184a71}",
+            "animationGraphData": "Characters/TFT_Choncc_Props/Animations/Skin1",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -130,7 +130,7 @@
         "armorMaterial": "Metal",
         "emoteBuffbone": "",
         "godrayFXbone": "",
-        "mResourceResolver": "{f97ed4a4}",
+        "mResourceResolver": "Characters/TFT_Choncc_Props/Skins/Skin1/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/TFT_Choncc_Props/Skins/Skin1/Materials/TableGame_002_Tail_Shadow_inst": {
@@ -3856,6 +3856,16 @@
         ],
         "paramValues": [
             {
+                "name": "fresnelAlpha_minmax",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "ScreenSpace_Tiling",
                 "value": [
                     1.0,
@@ -4063,6 +4073,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_FRESNEL_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "POST_LIGHTING_ON_SCROLLTEX",
                 "on": false,
@@ -86020,7 +86035,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{f97ed4a4}": {
+    "Characters/TFT_Choncc_Props/Skins/Skin1/Resources": {
         "resourceMap": {
             "TFT_ArenaSkin_Choncc_Skin1_Intro_Cam1": "Characters/TFT_Choncc_Props/Skins/Skin1/Particles/TFT_ArenaSkin_Choncc_Skin1_Intro_Cam1",
             "TFT_ArenaSkin_Choncc_Skin1_Intro_Cam2": "Characters/TFT_Choncc_Props/Skins/Skin1/Particles/TFT_ArenaSkin_Choncc_Skin1_Intro_Cam2",

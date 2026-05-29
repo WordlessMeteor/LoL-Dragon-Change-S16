@@ -258,7 +258,7 @@
         "majorChangePatchVersion": "",
         "tooltip": "用攻击或技能对敌方英雄造成伤害时，会向其派出艾黎，造成<font color='#48C4B7'>@DamageCalc@</font>额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适应性伤害</font></lol-uikit-tooltipped-keyword>。<br><br>在用技能强化或保护友方英雄时，会向其派出艾黎，为其提供<shield>@ShieldCalc@护盾值</shield>。<br><br>艾黎在回到你的位置前无法被再次派出。<br><br>艾黎已攻击了敌人<font color='#FFFFFF'>@f1@</font>次，共造成<font color='#FFFFFF'>@f3@</font>伤害值。<br>艾黎已帮助了友军<font color='#FFFFFF'>@f2@</font>次，共提供<font color='#FFFFFF'>@f4@</font>护盾值。",
         "shortDesc": "你的攻击和技能会向目标派出艾黎，来对敌方英雄造成伤害或为友方英雄套上护盾。",
-        "longDesc": "用攻击或技能对敌方英雄造成伤害时，会向其派出艾黎，来造成10 - 50(基于等级)(+<scaleAP>0.05法术强度</scaleAP>) (+<scaleAD>0.1额外攻击力</scaleAD>)伤害。<br><br>在用技能强化或保护友方英雄时，会向其派出艾黎，为其提供护盾，护盾生命值为30 - 100(基于等级)(+<scaleAP>0.05法术强度</scaleAP>)(+<scaleAD>0.1额外攻击力</scaleAD>)。<br><br>艾黎在回到你的位置前无法被再次派出。",
+        "longDesc": "用攻击或技能对敌方英雄造成伤害时，会向其派出艾黎，来造成10 - 50(基于等级)(+<scaleAP>0.05法术强度</scaleAP>) (+<scaleAD>0.1额外攻击力</scaleAD>)伤害。<br><br>在用技能强化或保护友方英雄时，会向其派出艾黎，为其提供护盾，护盾生命值为20 - 100(基于等级)(+<scaleAP>0.05法术强度</scaleAP>)(+<scaleAD>0.1额外攻击力</scaleAD>)。<br><br>艾黎在回到你的位置前无法被再次派出。",
         "recommendationDescriptor": "远程消耗伤害",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
         "endOfGameStatDescs": [
@@ -741,7 +741,7 @@
         "majorChangePatchVersion": "9.9",
         "tooltip": "定身住一名敌方英雄后，获得<scaleArmor>@ArmorBuff@护甲</scaleArmor>与<scaleMR>@MagicResistBuff@魔抗</scaleMR>，持续2.5秒。随后爆炸，对附近敌人造成<magicDamage>@DamageCalc@魔法伤害</magicDamage>。<br>冷却时间：20秒<br><rules><i>双抗收益的上限为@MaxResistCalc@</i></rules><br><br>已造成伤害的总和：<magicDamage>@f1@</magicDamage><br>已缓和的伤害总和：<scaleHealth>@f9@</scaleHealth>",
         "shortDesc": "在你<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Immobilize'>定身</lol-uikit-tooltipped-keyword>一个敌方英雄后提供防御属性，稍后会在你的周围造成爆发性的魔法伤害。",
-        "longDesc": "在定身住一名敌方英雄后，使你的护甲和魔法抗性提升，数额为35+你80%的额外双抗，持续2.5秒。随后会爆炸，对附近的敌人造成魔法伤害。<br><br>伤害值：25 - 120 (+你8%的额外生命值)<br>冷却时间：20秒<br><br>来自余震的双抗加成封顶值：80-150(基于等级)<br>",
+        "longDesc": "在定身住一名敌方英雄后，使你的护甲和魔法抗性提升，数额为45+你75%的额外双抗，持续2.5秒。随后会爆炸，对附近的敌人造成魔法伤害。<br><br>伤害值：25 - 120 (+你8%的额外生命值)<br>冷却时间：20秒<br><br>来自余震的双抗加成封顶值：80-150(基于等级)<br>",
         "recommendationDescriptor": "爆发防御",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
         "endOfGameStatDescs": [
@@ -1169,9 +1169,9 @@
         "id": 8992,
         "name": "冥火之触",
         "majorChangePatchVersion": "16.9",
-        "tooltip": "用一个技能对一名英雄造成伤害时，会灼烧其造成每秒@DamageCalc@自适应伤害。在灼烧3秒之后，如果该目标仍在着火状态，则这个灼烧的伤害提升75%。<br><rules><br>持续时长：<br>单体目标技能：4秒<br>群体目标技能：2秒<br>持续伤害技能：1秒<br></rules><br>你已通过【冥火之触】的灼烧对英雄们造成了@f1@伤害。",
+        "tooltip": "用一个技能对一名英雄造成伤害时，会灼烧其造成每秒<magicalDamage>@DamageCalc@魔法伤害</magicalDamage>。在灼烧3秒之后，如果该目标仍在着火状态，则这个灼烧的伤害提升75%。<br><rules><br>持续时长：<br>单体目标技能：4秒<br>群体目标技能：2秒<br>持续伤害技能：1秒<br></rules><br>你已通过【冥火之触】的灼烧对英雄们造成了@f1@伤害。",
         "shortDesc": "用一个技能对一名英雄造成伤害时，会持续灼烧该英雄。",
-        "longDesc": "用一个技能对一名英雄造成伤害时，会灼烧其造成每秒3 - 12 基于等级 (+<scaleAP>0.03法术强度</scaleAP>) (+<scaleAD>0.07额外攻击力</scaleAD>)自适应伤害。在灼烧3秒之后，如果该目标仍在着火状态，则这个灼烧的伤害提升75%。<br><rules><br>持续时长：<br>单体目标技能：4秒<br>群体目标技能：2秒<br>持续伤害技能：1秒<br></rules>",
+        "longDesc": "用一个技能对一名英雄造成伤害时，会灼烧其造成每秒3 - 12 基于等级 (+<scaleAP>7.0%法术强度</scaleAP>) (+<scaleAD>2.5%额外攻击力</scaleAD>)魔法伤害。在灼烧3秒之后，如果该目标仍在着火状态，则这个灼烧的伤害提升75%。<br><rules><br>持续时长：<br>单体目标技能：4秒<br>群体目标技能：2秒<br>持续伤害技能：1秒<br></rules>",
         "recommendationDescriptor": "持续技能伤害",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
         "endOfGameStatDescs": [
@@ -1185,7 +1185,7 @@
         "majorChangePatchVersion": "",
         "tooltip": "<i>守护</i>距离你350码内的友军，以及被你选为技能目标的友军2.5秒。当<i>守护</i>持续时，如果你或该友军在<i>守护</i>持续期间承受的伤害超过一定数额，那么你们两个都会获得一层持续1.5秒的护盾。<br><br>强度：<shield>@ShieldCalc@护盾值</shield>。<br>伤害阈值： <scaleAD>@ThresholdCalc@</scaleAD>折后伤害。<br>冷却时间：@CooldownCalc@秒。<br>已格挡的伤害总和：<healing>@f1@</healing>。",
         "shortDesc": "守护你选作技能目标的友军和那些距离你非常近的友军们。如果你和一个被守护的友军即将承受伤害，那么你们两个都会获得一层护盾。",
-        "longDesc": "<i>守护</i>距离你350码内的友军，以及被你选为技能目标的友军2.5秒。当<i>守护</i>持续时，如果你或该友军在<i>守护</i>持续期间承受的伤害超过一定数额，那么你们两个都会获得一层持续1.5秒的护盾。<br><br>冷却时间：<scaleLevel>90 ~40</scaleLevel>秒<br>护盾值：<scaleLevel>45~180</scaleLevel>+你<scaleAP>25%</scaleAP>法术强度+你<scalehealth>5%</scalehealth>额外生命值。<br>触发阈值：<scaleLevel>50~165</scaleLevel>折后伤害。",
+        "longDesc": "<i>守护</i>距离你350码内的友军，以及被你选为技能目标的友军2.5秒。当<i>守护</i>持续时，如果你或该友军在<i>守护</i>持续期间承受的伤害超过一定数额，那么你们两个都会获得一层持续1.5秒的护盾。<br><br>冷却时间：<scaleLevel>75 ~40</scaleLevel>秒<br>护盾值：<scaleLevel>40~150</scaleLevel>+你<scaleAP>20%</scaleAP>法术强度+你<scalehealth>6%</scalehealth>额外生命值。<br>触发阈值：<scaleLevel>50~165</scaleLevel>折后伤害。",
         "recommendationDescriptor": "守护友军",
         "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Guardian/Guardian.png",
         "endOfGameStatDescs": [

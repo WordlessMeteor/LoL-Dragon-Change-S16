@@ -20759,11 +20759,11 @@
                 _formattedExpirationDate: i.Ember.computed("boostExpirationDate", "tra.metadata.locale", (function() {
                     const e = this.get("boostExpirationDate");
                     if (!e) return null;
-                    let t = this.get("tra.metadata.locale.id") || "en_US";
-                    "ar_AE" === t && (t = "ar-tn"), t = t.toLowerCase().replace("_", "-");
-                    const n = m(e);
-                    if (!n || isNaN(n.getTime())) return null;
-                    return `${n.toLocaleDateString(t,{month:"long",day:"numeric",year:"numeric"})} ${n.toLocaleTimeString(t,{hour:"numeric",minute:"numeric",timeZoneName:"short"})}`
+                    const t = m(e);
+                    if (!t || isNaN(t.getTime())) return null;
+                    const n = i.tra.exists("moment_date_format") ? i.tra.get("moment_date_format") : "L",
+                        o = i.tra.exists("moment_time_format") ? i.tra.get("moment_time_format") : "LT";
+                    return `${i.tra.moment(t).format(n)} ${i.tra.moment(t).format(o)}`
                 })),
                 actionText: i.Ember.computed("ownsBoost", "endsSoon", "_formattedExpirationDate", (function() {
                     if (this.get("ownsBoost")) {

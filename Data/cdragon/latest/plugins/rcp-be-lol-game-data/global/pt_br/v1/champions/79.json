@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Gragas rola seu barril até um local, podendo ativá-lo novamente para explodir. Caso isso não aconteça, o barril explodirá sozinho após 4s. A potência da explosão aumenta ao longo do tempo. Os inimigos atingidos pela explosão sofrem Lentidão.",
-            "dynamicDescription": "Gragas arremessa um barril que explode após @Effect4Amount@s, causando <magicDamage>@MinDamage@</magicDamage> - <magicDamage>@MaxDamage@ de Dano Mágico</magicDamage>, além de @Effect2Amount@% - @Effect2Amount*1.5@% de <status>Lentidão</status> por @Effect3Amount@s. O dano e a <status>Lentidão</status> aumentam de acordo com o tempo que o barril levou para explodir. <br><br>Gragas pode <recast>Reconjurar</recast> para detonar o barril antecipadamente.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas arremessa um barril que explode após @BarrelMaxDuration@s, causando <magicDamage>@MinDamage@</magicDamage> - <magicDamage>@MaxDamage@ de Dano Mágico</magicDamage>, além de @SlowPercent@ - @SlowPercent*1.5@% de <status>Lentidão</status> por @SlowDuration@s. O dano e a <status>Lentidão</status> aumentam de acordo com o tempo que o barril levou para explodir. <br><br>Gragas pode <recast>Reconjurar</recast> para detonar o barril antecipadamente.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

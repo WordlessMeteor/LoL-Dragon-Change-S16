@@ -2274,16 +2274,19 @@
                         if (a && String(t) === String(s?.boostContentId)) {
                             const e = new Date(n.expirationDate.replace(/(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})/, "$1-$2-$3T$4:$5:$6")),
                                 t = e.getTime() + o * r.MILLISECONDS_IN_A_DAY,
-                                a = this.get("tra.moment"),
-                                s = a(e).format("MM/DD/YYYY"),
-                                i = a(e).format("HH:mm:ss"),
-                                c = this.get("tra").formatString("cat_paw_aw_max_extension_warning", {
-                                    expiryDate: s,
-                                    expiryTime: i
+                                a = this.get("tra"),
+                                s = this.get("tra.moment"),
+                                i = a.exists("moment_date_format") ? a.get("moment_date_format") : "L",
+                                c = a.exists("moment_time_format") ? a.get("moment_time_format") : "LT",
+                                p = s(e).format(i),
+                                m = s(e).format(c),
+                                u = a.formatString("cat_paw_aw_max_extension_warning", {
+                                    expiryDate: p,
+                                    expiryTime: m
                                 });
-                            t > l ? (this.set("bottomErrorMessageClass", "aw-expiry-info"), this.set("bottomErrorMessage", c)) : (this.set("isAwExtension", !0), this.set("awExtensionMessage", this.get("tra").formatString("cat_paw_aw_extension_info", {
+                            t > l ? (this.set("bottomErrorMessageClass", "aw-expiry-info"), this.set("bottomErrorMessage", u)) : (this.set("isAwExtension", !0), this.set("awExtensionMessage", this.get("tra").formatString("cat_paw_aw_extension_info", {
                                 duration: o
-                            })), this.set("awExpiryMessage", c))
+                            })), this.set("awExpiryMessage", u))
                         } else {
                             Date.now() + o * r.MILLISECONDS_IN_A_DAY > l && this.set("bottomErrorMessage", this.get("tra").formatString("cat_paw_error_validation_item_not_active"))
                         }

@@ -231,13 +231,14 @@
                 "__type": "AtomicClipData"
             },
             "Run": {
-                "mFlags": 2,
-                "mTrackDataName": "Default",
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Sona/Skins/Skin06/animations/Sona_Skin06_Run.anm",
-                    "__type": "AnimationResourceData"
+                "Updater": {
+                    "__type": "IsHomeguardParametricUpdater"
                 },
-                "__type": "AtomicClipData"
+                "mChangeAnimationMidPlay": true,
+                "mPlayAnimChangeFromBeginning": true,
+                "mTrueConditionClipName": "Run_Haste",
+                "mFalseConditionClipName": "{bc1ef3fb}",
+                "__type": "ConditionBoolClipData"
             },
             "Spell1_Upper": {
                 "mFlags": 4,
@@ -1223,6 +1224,34 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "{bc1ef3fb}": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Base",
+                        "mValue": 315.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Haste",
+                        "mValue": 450.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "Run_Base": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Sona/Skins/Skin06/animations/Sona_Skin06_Run.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
             }
         },
         "mMaskDataMap": {
@@ -1762,13 +1791,13 @@
                 "mPriority": 5,
                 "__type": "TrackData"
             },
-            "{20ae80d9}": {
-                "mPriority": 6,
+            "TURN": {
+                "mPriority": 7,
                 "mBlendMode": 1,
                 "__type": "TrackData"
             },
-            "TURN": {
-                "mPriority": 7,
+            "{20ae80d9}": {
+                "mPriority": 6,
                 "mBlendMode": 1,
                 "__type": "TrackData"
             }
@@ -7566,10 +7595,6 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11374364252946910922": {
-                "mClipName": "{cbc3f8cc}",
-                "__type": "TransitionClipBlendData"
-            },
             "11374364252972907011": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
@@ -8699,10 +8724,6 @@
                 "__type": "TimeBlendData"
             },
             "14682852765887303944": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "14682852765933063882": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -10585,6 +10606,26 @@
             "18408923137153016334": {
                 "mTime": 0.4000000059604645,
                 "__type": "TimeBlendData"
+            },
+            "11374364255384957947": {
+                "mClipName": "{cbc3f8cc}",
+                "__type": "TransitionClipBlendData"
+            },
+            "3084207952465163259": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14682852768371110907": {
+                "mTime": 3.0,
+                "__type": "TimeBlendData"
+            },
+            "17371216860222708742": {
+                "mClipName": "{ccfeec94}",
+                "__type": "TransitionClipBlendData"
+            },
+            "2786235698021332402": {
+                "mClipName": "{cbc3f8cc}",
+                "__type": "TransitionClipBlendData"
             }
         },
         "__type": "AnimationGraphData"

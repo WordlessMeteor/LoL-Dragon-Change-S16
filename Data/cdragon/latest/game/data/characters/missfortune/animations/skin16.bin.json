@@ -242,7 +242,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{76bbc6a0}": {
+            "Idle3_BASE": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{9536db4d}": {
@@ -278,7 +278,7 @@
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{76bbc6a0}",
+                        "mClipName": "Idle3_BASE",
                         "mProbability": 25.0,
                         "__type": "SelectorPairData"
                     }
@@ -1204,15 +1204,6 @@
             },
             "Run_W2": {
                 "Updater": {
-                    "__type": "IsHomeguardParametricUpdater"
-                },
-                "mChangeAnimationMidPlay": true,
-                "mTrueConditionClipName": "{7ec0e94e}",
-                "mFalseConditionClipName": "Run2",
-                "__type": "ConditionBoolClipData"
-            },
-            "Run": {
-                "Updater": {
                     "driver": {
                         "mScriptName": "MissFortuneStrutMax",
                         "__type": "HasBuffDynamicMaterialBoolDriver"
@@ -1220,7 +1211,20 @@
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
                 "mChangeAnimationMidPlay": true,
-                "mTrueConditionClipName": "Run_W2",
+                "mTrueConditionClipName": "Run2",
+                "mFalseConditionClipName": "Run_Base",
+                "__type": "ConditionBoolClipData"
+            },
+            "Run": {
+                "Updater": {
+                    "driver": {
+                        "Spell": "Characters/MissFortune/Spells/MissFortuneViciousStrikesAbility/MissFortuneViciousStrikes",
+                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "mTrueConditionClipName": "{7ec0e94e}",
                 "mFalseConditionClipName": "{b87a3f27}",
                 "__type": "ConditionBoolClipData"
             },
@@ -1230,7 +1234,7 @@
                 },
                 "mChangeAnimationMidPlay": true,
                 "mTrueConditionClipName": "Run_Homeguard",
-                "mFalseConditionClipName": "Run_Base",
+                "mFalseConditionClipName": "Run_W2",
                 "__type": "ConditionBoolClipData"
             }
         },

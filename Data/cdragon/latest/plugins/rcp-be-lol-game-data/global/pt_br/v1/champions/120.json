@@ -1101,7 +1101,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Hecarim golpeia inimigos próximos, causando Dano Físico. Caso ele cause dano a ao menos um inimigo, os usos subsequentes da habilidade causam mais dano e têm menor Tempo de Recarga.",
-            "dynamicDescription": "Hecarim golpeia inimigos próximos, causando <physicalDamage>@Damage@ de Dano Físico</physicalDamage>. Se a Habilidade atingir inimigos, ele ganha um acúmulo que reduz o Tempo de Recarga em @RampageCooldownReduction@s e aumenta o dano dela em @RampageBonusDamagePerc@% por @Effect6Amount@s. Acumula até @Effect2Amount@ vezes.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hecarim golpeia inimigos próximos, causando <physicalDamage>@Damage@ de Dano Físico</physicalDamage>. Se a habilidade atinge inimigos, ele ganha um acúmulo que reduz o Tempo de Recarga em @RampageCooldownReduction@s e aumenta o dano dela em @RampageBonusDamagePerc@% por @BuffDuration@s. Acumula até @MaxStacks@ vezes.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1401,7 +1401,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Hecarim recebe Velocidade de Movimento crescente e ignora colisão com unidades por um curto período. O próximo Ataque dele empurra o alvo e causa Dano Físico adicional com base na distância percorrida desde a ativação da Habilidade.",
-            "dynamicDescription": "Hecarim recebe efeito Fantasma e <speed>@MinMoveSpeed*100@% de Velocidade de Movimento</speed>, aumentando para <speed>@MaxMoveSpeed*100@%</speed> ao longo de @Effect5Amount@s. Seu próximo Ataque <status>Empurra</status> e causa <physicalDamage>@MinDamage@</physicalDamage> - <physicalDamage>@MaxDamage@ de Dano Físico</physicalDamage>. A distância e o dano do <status>Empurrão</status> escalam com a distância percorrida ao longo da Habilidade.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hecarim recebe efeito Fantasma e <speed>@MinMoveSpeed*100@% de Velocidade de Movimento</speed> que aumenta para <speed>@MaxMoveSpeed*100@%</speed> ao longo de @Duration@s. O próximo ataque do Campeão <status>Empurra</status> e causa <physicalDamage>@MinDamage@</physicalDamage> - <physicalDamage>@MaxDamage@ de Dano Físico</physicalDamage>. A distância e o dano do <status>Empurrão</status> aumentam conforme a distância percorrida ao longo da habilidade.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

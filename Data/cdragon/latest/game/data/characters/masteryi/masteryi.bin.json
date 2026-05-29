@@ -2175,6 +2175,52 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "RDuration",
+                            "values": [
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "RCooldownRefund",
+                            "values": [
+                                0.5,
+                                0.5,
+                                0.5,
+                                0.5,
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "RKillAssistExtension",
+                            "values": [
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_R.dds"
@@ -2489,7 +2535,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 227,
+                "EventToTrack": 229,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2600,7 +2646,7 @@
         "mDescriptionTraKey": "stat_stone_description_MasterYiEDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2628,7 +2674,7 @@
         "mDescriptionTraKey": "stat_stone_description_MasterYiQFollows",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2657,7 +2703,7 @@
         "mDescriptionTraKey": "stat_stone_description_MasterYiRBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2699,7 +2745,7 @@
         "mDescriptionTraKey": "stat_stone_description_MasterYiRMultikills",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2727,7 +2773,7 @@
         "mDescriptionTraKey": "stat_stone_description_MasterYiDamageBlockedWithW",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2755,7 +2801,7 @@
         "mDescriptionTraKey": "stat_stone_description_MasterYiQDodges",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2842,6 +2888,23 @@
                 "MapId": 11,
                 "Position": "jungle",
                 "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
                 "mDefaultPriority": [
                     3,
                     0,

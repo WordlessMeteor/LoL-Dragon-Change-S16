@@ -1170,7 +1170,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Shen recalls his spirit blade to attack with it, dealing damage based on the target's max health. The attacks are greatly empowered if it collides with an enemy champion, and all collided enemies are slowed while running away from Shen.",
-            "dynamicDescription": "Shen recalls his <keywordMajor>Spirit Blade</keywordMajor>. Enemies hit by the pull are <status>Slowed</status> by @Effect4Amount@% while moving away from Shen for the next @Effect5Amount@ seconds.<br><br>Additionally, Shen's next @Effect3Amount@ Attacks deal an additional <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@BasePercentHealth@ max Health magic damage</magicDamage>. If Shen hit an enemy champion with the <keywordMajor>Spirit Blade</keywordMajor>, the damage is increased to <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@EmpPercentHealth@ max Health magic damage</magicDamage> and he gains <attackSpeed>@Effect9Amount@% Attack Speed</attackSpeed> for those Attacks.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen recalls his <keywordMajor>Spirit Blade</keywordMajor>. Enemies hit by the pull are <status>Slowed</status> by @SlowPercent@% while moving away from Shen for the next @SlowDuration@ seconds.<br><br>Additionally, Shen's next @NumEnhancedAttacks@ Attacks deal an additional <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@BasePercentHealth@ max Health magic damage</magicDamage>. If Shen hit an enemy champion with the <keywordMajor>Spirit Blade</keywordMajor>, the damage is increased to <magicDamage>@BaseFlatDamage@</magicDamage> plus <magicDamage>@EmpPercentHealth@ max Health magic damage</magicDamage> and he gains <attackSpeed>@SteroidAS@% Attack Speed</attackSpeed> for those Attacks.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Attacks that would hit Shen or his allies near his spirit blade are blocked.",
-            "dynamicDescription": "Shen creates a defensive zone at his <keywordMajor>Spirit Blade</keywordMajor> for @Effect1Amount@ seconds. Attacks against allied champions in the zone are blocked. <br><br>If there are no champions to protect in the zone when it starts, it will wait for up to @Effect2Amount@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen creates a defensive zone at his <keywordMajor>Spirit Blade</keywordMajor> for @ZoneDuration@ seconds. Attacks against allied champions in the zone are blocked. <br><br>If there are no champions to protect in the zone when it starts, it will wait for up to @ZoneDelay@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

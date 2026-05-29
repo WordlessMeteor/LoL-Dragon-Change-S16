@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Darius winds up and swings his axe in a wide circle. Enemies struck by the blade take more damage than those struck by the handle. Darius heals based on enemy champions and large monsters hit by the blade.",
-            "dynamicDescription": "Darius hefts his axe then swings it around, dealing <physicalDamage>@BladeDamage@ physical damage</physicalDamage> with the edge and <physicalDamage>@HandleDamage@ damage</physicalDamage> with the handle. Enemies hit with the handle do not take a <keywordMajor>Hemorrhage</keywordMajor> stack.<br><br>Darius restores <healing>@Effect5Amount@% missing Health</healing> per enemy champion and large jungle monster hit with the edge, up to a max of <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius hefts his axe then swings it around, dealing <physicalDamage>@BladeDamage@ physical damage</physicalDamage> with the edge and <physicalDamage>@HandleDamage@ damage</physicalDamage> with the handle. Enemies hit with the handle do not take a <keywordMajor>Hemorrhage</keywordMajor> stack.<br><br>Darius restores <healing>@MissingHealthHeal@% missing Health</healing> per enemy champion and large jungle monster hit with the edge, up to a max of <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Darius's next attack strikes an enemy's crucial artery. As they bleed out, their Move Speed is slowed.",
-            "dynamicDescription": "Darius' next Attack deals <physicalDamage>@EmpoweredAttackDamage@ physical damage</physicalDamage> and <status>Slows</status> by @Effect2Amount@% for @Effect5Amount@ second.<br><br>This Ability refunds its Mana cost and reduces its Cooldown by @Effect3Amount@% if it kills the target.<br><br><rules>This Ability triggers spell effects upon dealing damage.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius' next Attack deals <physicalDamage>@EmpoweredAttackDamage@ physical damage</physicalDamage> and <status>Slows</status> by @SlowPercent@% for @SlowDuration@ second.<br><br>This Ability refunds its Mana cost and reduces its Cooldown by @PercentCDRefund@% if it kills the target.<br><br><rules>This Ability triggers spell effects upon dealing damage.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Darius hones his axe, passively causing his physical damage to ignore a percentage of his target's Armor. When activated, Darius sweeps up his enemies with his axe's hook and pulls them to him.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Darius gains @Effect1Amount@% Armor Penetration.<br><br><spellActive>Active:</spellActive> Darius hooks with his axe, <status>Pulling</status>, and <status>Knocking Up</status> and <status>Slowing</status> by @Effect2Amount@% for @Effect3Amount@ second.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Darius gains @PassivePercentArmorPen@% Armor Penetration.<br><br><spellActive>Active:</spellActive> Darius hooks with his axe, <status>Pulling</status>, and <status>Knocking Up</status> and <status>Slowing</status> by @SlowPercent@% for @SlowDuration@ second.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

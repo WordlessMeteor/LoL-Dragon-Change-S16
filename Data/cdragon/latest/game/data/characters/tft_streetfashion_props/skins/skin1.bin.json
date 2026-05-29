@@ -1,0 +1,2028 @@
+{
+    "Characters/TFT_StreetFashion_Props/Skins/Skin1": {
+        "championSkinName": "TFT_StreetFashion_Props",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/TFT_StreetFashion_Props/Animations/Skin1",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_StreetFashion_Props/Skins/Skin01/TFT_StreetFashion_Props_Skin01.TFT_ArenaSkin_StreetFashion.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_StreetFashion_Props/Skins/Skin01/TFT_StreetFashion_Props_Skin01.TFT_ArenaSkin_StreetFashion.skn",
+            "texture": "ASSETS/Characters/TFT_GoldMine/Skins/Skin120/Level1_StarNesis_Goldmine_Star.TFT_ArenaSkin_StarNemesis.tex",
+            "selfIllumination": 2.0,
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "Level1_StreetFashion_City",
+                "boneName": "City_Root",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "mResourceResolver": "Characters/TFT_StreetFashion_Props/Skins/Skin1/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/TFT_StreetFashion_Props/Skins/Skin1/Resources": {
+        "resourceMap": {
+            "Level1_StreetFashion_City": "Characters/TFT_StreetFashion_Props/Skins/Skin1/Particles/Level1_StreetFashion_City",
+            "Level1_StreetFashion_City_03": "Characters/TFT_StreetFashion_Props/Skins/Skin1/Particles/Level1_StreetFashion_City_03"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/TFT_StreetFashion_Props/Skins/Skin1/Particles/Level1_StreetFashion_City": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "City_A",
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "City"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 3,
+                "birthColor": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.8352941274642944,
+                        0.8784313797950745,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -7250,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/L1_StreetFashion_City_A_Tx.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "City_A1",
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Windows"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 3,
+                "birthColor": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.8352941274642944,
+                        0.8784313797950745,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -7240,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/L1_StreetFashion_BackGround_A_Tx.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "City_",
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Billboard_A"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 3,
+                "pass": -7600,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/L1_StreetFashion_Prop_C_Tx.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 7.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "City_A3",
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Windows"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.8299992084503174,
+                        0.5199969410896301,
+                        0.36000609397888184
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7300068736076355
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.34272727370262146,
+                            0.5618181824684143,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.7300068736076355
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.7300068736076355
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -7000,
+                "alphaRef": 0,
+                "{cb13aff1}": -3.0,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Project/TFT_GoldMine_Skin82_Trail01.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.009999999776482582,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.05000000074505806
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvRotation": {
+                    "constantValue": 90.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.0,
+                "rate": {
+                    "constantValue": 0.05000000074505806,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "City_A4",
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "City"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.10000000149011612,
+                            0.20000000298023224,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -7150,
+                "alphaRef": 0,
+                "{cb13aff1}": -20.0,
+                "{d1ee8634}": 1,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/TFT_AprilFool_Intro_Tx21.TFT_ArenaSkin_StreetFashion.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.20000000298023224
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 2,
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Akshan_Skin10_colorGrad_02.TFT_ArenaSkin_StreetFashion.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            2.0,
+                            2.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            0.10000000149011612
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 2000.0,
+        "particleName": "Level1_StreetFashion_City",
+        "particlePath": "Characters/TFT_StreetFashion_Props/Skins/Skin1/Particles/Level1_StreetFashion_City",
+        "buildUpTime": 0.5,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/TFT_StreetFashion_Props/Skins/Skin1/Particles/Level1_StreetFashion_City_03": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 1.4500000476837158,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "City_A",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_010.TFT_ArenaSkin_StreetFashion.scb",
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.7600061297416687,
+                        0.20999465882778168,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.03210112079977989,
+                            0.2240113466978073
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/LunarRevel_Modern/TFT_Modern_LunarRevel_Idle_Tx005.TFT_ArenaSkin_LunarRevel_Modern.tex",
+                "texAddressModeBase": 2,
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.200000047683716,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "City_A1",
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            ""
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.6392157077789307
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.7677156925201416,
+                            0.9006060361862183,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.019999999552965164,
+                    "fresnelColor": [
+                        1.0,
+                        0.7199969291687012,
+                        0.3499961793422699,
+                        1.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -3.0,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/TFT_StreetFashion_Tx001.TFT_ArenaSkin_StreetFashion.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.07000000029802322,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 2,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.4800000190734863,
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "new",
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_002.TFT_ArenaSkin_StreetFashion.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_002.TFT_ArenaSkin_StreetFashion.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.26341158151626587
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.20000000298023224,
+                    "fresnelColor": [
+                        1.0,
+                        0.6195010542869568,
+                        0.10435645282268524,
+                        0.5098039507865906
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -10.0,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/color-hold.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.4500000476837158,
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "new1",
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_003.TFT_ArenaSkin_StreetFashion.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_003.TFT_ArenaSkin_StreetFashion.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.26341158151626587
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.20000000298023224,
+                    "fresnelColor": [
+                        1.0,
+                        0.6195010542869568,
+                        0.10435645282268524,
+                        0.5098039507865906
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -10.0,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/color-hold.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.2300000190734863,
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "new2",
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_004.TFT_ArenaSkin_StreetFashion.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_004.TFT_ArenaSkin_StreetFashion.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.26341158151626587
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.20000000298023224,
+                    "fresnelColor": [
+                        1.0,
+                        0.6195010542869568,
+                        0.10435645282268524,
+                        0.5098039507865906
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -10.0,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/color-hold.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.8100000023841858,
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "new3",
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_005.TFT_ArenaSkin_StreetFashion.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_005.TFT_ArenaSkin_StreetFashion.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.26341158151626587
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.20000000298023224,
+                    "fresnelColor": [
+                        1.0,
+                        0.6195010542869568,
+                        0.10435645282268524,
+                        0.5098039507865906
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -10.0,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/color-hold.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.100000023841858,
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "new4",
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_006.TFT_ArenaSkin_StreetFashion.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_006.TFT_ArenaSkin_StreetFashion.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.26341158151626587
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.20000000298023224,
+                    "fresnelColor": [
+                        1.0,
+                        0.6195010542869568,
+                        0.10435645282268524,
+                        0.5098039507865906
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -10.0,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/color-hold.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 2.0,
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "new5",
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_007.TFT_ArenaSkin_StreetFashion.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_007.TFT_ArenaSkin_StreetFashion.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.26341158151626587
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.20000000298023224,
+                    "fresnelColor": [
+                        1.0,
+                        0.6195010542869568,
+                        0.10435645282268524,
+                        0.5098039507865906
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -10.0,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/color-hold.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.4199999570846558,
+                "rate": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "new6",
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_008.TFT_ArenaSkin_StreetFashion.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_008.TFT_ArenaSkin_StreetFashion.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.26341158151626587
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.20000000298023224,
+                    "fresnelColor": [
+                        1.0,
+                        0.6195010542869568,
+                        0.10435645282268524,
+                        0.5098039507865906
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -10.0,
+                "texture": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/color-hold.TFT_ArenaSkin_StreetFashion.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.8799999952316284,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "City_A2",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_FANGZI_009.TFT_ArenaSkin_StreetFashion.scb",
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.8899977207183838,
+                        0.5300068855285645,
+                        0.5600060820579529
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.04925840348005295,
+                            0.21425676345825195
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/LunarRevel_Modern/Ahri_Skin42_Particles_1_234.TFT_ArenaSkin_LunarRevel_Modern.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.8799999952316284,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "City_A3",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set17_StreetFashion/Set17_StreetFashion_idle_ac_001.TFT_ArenaSkin_StreetFashion.scb",
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.8899977207183838,
+                        0.5300068855285645,
+                        0.8299992084503174
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.04925840348005295,
+                            0.21425676345825195
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/LunarRevel_Modern/TFT_Modern_LunarRevel_Idle_Tx005.TFT_ArenaSkin_LunarRevel_Modern.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.4800000190734863,
+                "rate": {
+                    "constantValue": 55.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.5499999523162842,
+                "emitterName": "City_A4",
+                "birthVelocity": {
+                    "constantValue": [
+                        200.0,
+                        1500.0,
+                        200.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.10000000149011612,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                200.0,
+                                1500.0,
+                                200.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthAcceleration": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -100.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -100.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "flags": 1,
+                    "Size": [
+                        1.0,
+                        350.0,
+                        200.0
+                    ],
+                    "__type": "VfxShapeBox"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        2125.8544921875,
+                        -1871.5328369140625,
+                        1187.9757080078125
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.7600061297416687,
+                        0.20999465882778168,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.03210112079977989,
+                            0.2240113466978073
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        90.0,
+                        90.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                90.0,
+                                90.0,
+                                90.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        55.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.14000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.3061161935329437,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0932722091674805,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.2999999523162842,
+                                0.9938837885856628,
+                                0.9938837885856628
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/AprilFool/TFT_Anniversary_star01_Level1.TFT_ArenaSkin_AprilFool.tex",
+                "texAddressModeBase": 2,
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.399999976158142,
+                "rate": {
+                    "constantValue": 55.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.5499999523162842,
+                "emitterName": "City_A6",
+                "birthVelocity": {
+                    "constantValue": [
+                        200.0,
+                        1500.0,
+                        200.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.10000000149011612,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                200.0,
+                                1500.0,
+                                200.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthAcceleration": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -100.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -100.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "flags": 1,
+                    "Size": [
+                        200.0,
+                        200.0,
+                        1.0
+                    ],
+                    "__type": "VfxShapeBox"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        2316.981689453125,
+                        -1871.5328369140625,
+                        981.5848388671875
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.7600061297416687,
+                        0.20999465882778168,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.03210112079977989,
+                            0.2240113466978073
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        90.0,
+                        90.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                90.0,
+                                90.0,
+                                90.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        55.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/AprilFool/TFT_Anniversary_star01_Level1.TFT_ArenaSkin_AprilFool.tex",
+                "texAddressModeBase": 2,
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.8799999952316284,
+                "rate": {
+                    "constantValue": 55.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.899999976158142,
+                "emitterName": "City_A7",
+                "birthVelocity": {
+                    "constantValue": [
+                        200.0,
+                        1500.0,
+                        200.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.10000000149011612,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                200.0,
+                                1500.0,
+                                200.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthAcceleration": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -100.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -100.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "radius": 200.0,
+                    "height": 400.0,
+                    "__type": "VfxShapeCylinder"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        2316.98095703125,
+                        -1871.5328369140625,
+                        902.625244140625
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.7600061297416687,
+                        0.20999465882778168,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.03210112079977989,
+                            0.2240113466978073
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        -2.985570232878765e-13
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                90.0,
+                                0.0,
+                                -2.985570232878765e-13
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        55.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/AprilFool/TFT_Anniversary_star01_Level1.TFT_ArenaSkin_AprilFool.tex",
+                "texAddressModeBase": 2,
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 2000.0,
+        "particleName": "Level1_StreetFashion_City_03",
+        "particlePath": "Characters/TFT_StreetFashion_Props/Skins/Skin1/Particles/Level1_StreetFashion_City_03",
+        "buildUpTime": 0.5,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_StreetFashion_Props/TFT_StreetFashion_Props.bin",
+        "DATA/Characters/TFT_StreetFashion_Props/Animations/Skin1.bin"
+    ]
+}

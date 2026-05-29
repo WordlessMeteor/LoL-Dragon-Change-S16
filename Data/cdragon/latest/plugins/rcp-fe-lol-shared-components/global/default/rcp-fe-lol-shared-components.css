@@ -4832,6 +4832,7 @@ div.player-name-input__split-inputs-wrapper {
 
 .communications-agreement-modal-component .communications-agreement-external-link {
     color: #0596aa;
+    cursor: pointer;
     text-decoration: underline
 }
 
@@ -4860,8 +4861,7 @@ div.player-name-input__split-inputs-wrapper {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-top: 12px;
-    padding-left: 24px
+    margin: 12px auto
 }
 
 .communications-agreement-modal-component .communications-agreement-korea-option {
@@ -4886,7 +4886,8 @@ div.player-name-input__split-inputs-wrapper {
     align-items: center;
     display: flex;
     flex-direction: row;
-    gap: 8px
+    gap: 8px;
+    margin-bottom: 16px
 }
 
 .communications-agreement-modal-component .communications-agreement-info-icon {
@@ -4903,17 +4904,6 @@ div.player-name-input__split-inputs-wrapper {
     color: #a09b8c;
     letter-spacing: .05em;
     line-height: 16px
-}
-
-.communications-agreement-modal-component .communications-agreement-button-group {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    justify-content: center
-}
-
-.communications-agreement-modal-component .communications-agreement-button {
-    width: 128px
 }
 
 .player-block-selector-component .team-block-selection-container .block-all-selection .block-all-text {
@@ -15857,6 +15847,800 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     display: block;
     margin: -3px 0 0 23px;
     word-wrap: break-word
+}
+
+.honor-panel-component .honor-panel-section-title,
+.honor-panel-component .honor-panel-signals-title {
+    font-family: var(--font-display)
+}
+
+.honor-panel-component .honor-panel-description,
+.honor-panel-component .honor-panel-restriction-name,
+.honor-panel-component .honor-panel-signals-subtitle {
+    font-family: var(--font-body)
+}
+
+.honor-panel-component .honor-panel-description,
+.honor-panel-component .honor-panel-restriction-name,
+.honor-panel-component .honor-panel-section-title,
+.honor-panel-component .honor-panel-signals-subtitle,
+.honor-panel-component .honor-panel-signals-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.honor-panel-component .honor-panel-section-title,
+.honor-panel-component .honor-panel-signals-title {
+    text-transform: uppercase
+}
+
+.honor-panel-component .honor-panel-section-title:lang(el-gr),
+.honor-panel-component .honor-panel-section-title:lang(ja-jp),
+.honor-panel-component .honor-panel-section-title:lang(ko-kr),
+.honor-panel-component .honor-panel-section-title:lang(th-th),
+.honor-panel-component .honor-panel-section-title:lang(tr-tr),
+.honor-panel-component .honor-panel-section-title:lang(zh-tw),
+.honor-panel-component .honor-panel-signals-title:lang(el-gr),
+.honor-panel-component .honor-panel-signals-title:lang(ja-jp),
+.honor-panel-component .honor-panel-signals-title:lang(ko-kr),
+.honor-panel-component .honor-panel-signals-title:lang(th-th),
+.honor-panel-component .honor-panel-signals-title:lang(tr-tr),
+.honor-panel-component .honor-panel-signals-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.honor-panel-component .honor-panel-signals-title {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.honor-panel-component .honor-panel-signals-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-component .honor-panel-section-title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.honor-panel-component .honor-panel-section-title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-component .honor-panel-section-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-component .honor-panel-description,
+.honor-panel-component .honor-panel-signals-subtitle {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-component .honor-panel-description:lang(ja-jp),
+.honor-panel-component .honor-panel-signals-subtitle:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-component .honor-panel-description:lang(ar-ae),
+.honor-panel-component .honor-panel-signals-subtitle:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-component .honor-panel-description {
+    font-weight: 400;
+    letter-spacing: .05em
+}
+
+.honor-panel-component .honor-panel-restriction-name {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-component .honor-panel-restriction-name:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-component .honor-panel-restriction-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-component {
+    color: #f0e6d2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    width: 100%
+}
+
+.honor-panel-component .honor-panel-scrollable {
+    display: block;
+    max-height: calc(100vh - 160px);
+    width: 100%
+}
+
+.honor-panel-component .honor-panel-description {
+    color: #ccc4b3;
+    padding: 12px 0
+}
+
+.honor-panel-component .honor-panel-section {
+    padding-top: 12px
+}
+
+.honor-panel-component .honor-panel-signals {
+    margin-top: 24px
+}
+
+.honor-panel-component .honor-panel-signals-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 12px
+}
+
+.honor-panel-component .honor-panel-signals-title {
+    color: #ccc4b3;
+    text-transform: uppercase
+}
+
+.honor-panel-component .honor-panel-signals-subtitle {
+    color: #a09b8c
+}
+
+.honor-panel-component .honor-panel-section-title {
+    margin-bottom: 8px;
+    text-transform: uppercase
+}
+
+.honor-panel-component .honor-panel-restriction-row {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    padding: 8px 0
+}
+
+.honor-panel-component .honor-panel-restriction-icon {
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px
+}
+
+.honor-panel-component .honor-panel-restriction-name {
+    text-transform: uppercase
+}
+
+.honor-panel-header-component .honor-panel-header-title {
+    font-family: var(--font-display)
+}
+
+.honor-panel-header-component .honor-panel-header-eyebrow,
+.honor-panel-header-component .honor-panel-header-status-label {
+    font-family: var(--font-body)
+}
+
+.honor-panel-header-component .honor-panel-header-eyebrow,
+.honor-panel-header-component .honor-panel-header-status-label,
+.honor-panel-header-component .honor-panel-header-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.honor-panel-header-component .honor-panel-header-title {
+    text-transform: uppercase
+}
+
+.honor-panel-header-component .honor-panel-header-title:lang(el-gr),
+.honor-panel-header-component .honor-panel-header-title:lang(ja-jp),
+.honor-panel-header-component .honor-panel-header-title:lang(ko-kr),
+.honor-panel-header-component .honor-panel-header-title:lang(th-th),
+.honor-panel-header-component .honor-panel-header-title:lang(tr-tr),
+.honor-panel-header-component .honor-panel-header-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.honor-panel-header-component .honor-panel-header-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 28px
+}
+
+.honor-panel-header-component .honor-panel-header-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-header-component .honor-panel-header-eyebrow {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-header-component .honor-panel-header-eyebrow:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-header-component .honor-panel-header-eyebrow:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-header-component .honor-panel-header-status-label {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-header-component .honor-panel-header-status-label:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-header-component .honor-panel-header-status-label:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-header-component {
+    align-items: center;
+    color: #f0e6d2;
+    display: flex;
+    gap: 12px;
+    min-width: 0;
+    overflow: hidden;
+    padding-bottom: 12px
+}
+
+.honor-panel-header-component .honor-panel-header-icon {
+    flex-shrink: 0;
+    height: 100px;
+    object-fit: contain;
+    width: 100px
+}
+
+.honor-panel-header-component .honor-panel-header-content {
+    align-items: flex-end;
+    display: flex;
+    flex: 1 1 auto;
+    margin-bottom: 5px;
+    min-width: 0
+}
+
+.honor-panel-header-component .honor-panel-header-title-block {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column
+}
+
+.honor-panel-header-component .honor-panel-header-eyebrow {
+    color: #c8aa6e;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.honor-panel-header-component .honor-panel-header-title {
+    color: #f0e6d2;
+    white-space: nowrap
+}
+
+.honor-panel-header-component .honor-panel-header-status {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: 6px
+}
+
+.honor-panel-header-component .honor-panel-header-status-reduced,
+.honor-panel-header-component .honor-panel-header-status-reduced .honor-panel-header-status-label {
+    color: rgba(244, 62, 62, .98)
+}
+
+.honor-panel-header-component .honor-panel-header-status-icon {
+    flex-shrink: 0;
+    height: 16px;
+    object-fit: contain;
+    width: 16px
+}
+
+.honor-panel-header-component .honor-panel-header-status-column {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 6px;
+    margin-left: auto;
+    margin-right: 45px
+}
+
+.honor-panel-header-component .honor-panel-header-status-column:lang(ar-ae) {
+    align-items: flex-start;
+    margin-left: 45px;
+    margin-right: auto
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track {
+    flex-shrink: 0;
+    height: 18px;
+    width: auto
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-title,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
+    font-family: var(--font-display)
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body {
+    font-family: var(--font-body)
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text,
+.honor-panel-restriction-component .honor-panel-restriction-row-title,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-title,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
+    text-transform: uppercase
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(el-gr),
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(ja-jp),
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(ko-kr),
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(th-th),
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(tr-tr),
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(zh-tw),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(el-gr),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(ja-jp),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(ko-kr),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(th-th),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(tr-tr),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-title,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-title:lang(ar-ae),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text,
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text:lang(ja-jp),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text:lang(ar-ae),
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-restriction-component {
+    background: linear-gradient(90deg, rgba(141, 34, 34, .5), rgba(118, 16, 13, .15));
+    display: block;
+    height: 44px;
+    margin-bottom: 8px;
+    position: relative
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-stripe {
+    background-color: #ff4545;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 6px
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-content {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    left: 0;
+    padding: 0 16px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-icon {
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-title {
+    color: #f0e6d2;
+    flex: 1 1 auto;
+    letter-spacing: .28px;
+    min-width: 0;
+    text-transform: uppercase
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge {
+    align-items: center;
+    background-color: rgba(1, 10, 19, .5);
+    border-radius: 37px;
+    display: flex;
+    flex-shrink: 0;
+    gap: 4px;
+    height: 20px;
+    padding: 2px 8px;
+    transition: background-color .25s ease-in
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge:hover {
+    background-color: #010a13
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge .lol-tooltip-component {
+    display: none
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge+.honor-panel-restriction-row-badge {
+    margin-left: -6px
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-icon {
+    height: 16px;
+    width: 16px
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-icon.honor-emblem {
+    height: 24px;
+    width: 24px
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text {
+    color: #ccc4b3;
+    font-weight: 700;
+    letter-spacing: .6px;
+    line-height: 16px
+}
+
+.honor-panel-restriction-tooltip-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    white-space: nowrap
+}
+
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
+    color: #f0e6d2;
+    letter-spacing: .98px;
+    text-transform: uppercase
+}
+
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body {
+    color: #a09b8c;
+    letter-spacing: .6px;
+    line-height: 16px
+}
+
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-value {
+    color: #f0e6d2
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-title {
+    font-family: var(--font-display)
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge-text {
+    font-family: var(--font-body)
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge-text,
+.honor-panel-reward-component .honor-panel-reward-row-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-title:lang(el-gr),
+.honor-panel-reward-component .honor-panel-reward-row-title:lang(ja-jp),
+.honor-panel-reward-component .honor-panel-reward-row-title:lang(ko-kr),
+.honor-panel-reward-component .honor-panel-reward-row-title:lang(th-th),
+.honor-panel-reward-component .honor-panel-reward-row-title:lang(tr-tr),
+.honor-panel-reward-component .honor-panel-reward-row-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge-text {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge-text:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-reward-component {
+    background: linear-gradient(96.02deg, rgba(36, 108, 163, .4) 3.56%, rgba(36, 108, 163, .06) 99.55%);
+    display: block;
+    height: 44px;
+    margin-bottom: 8px;
+    position: relative
+}
+
+.honor-panel-reward-component .honor-panel-reward-stripe {
+    background-color: #50d9ff;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 6px
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-content {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    left: 0;
+    padding: 0 16px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-icon {
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-title {
+    color: #f0e6d2;
+    flex: 1 1 auto;
+    letter-spacing: .28px;
+    min-width: 0;
+    text-transform: uppercase
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge {
+    align-items: center;
+    background-color: rgba(1, 10, 19, .5);
+    border-radius: 37px;
+    display: flex;
+    flex-shrink: 0;
+    gap: 4px;
+    height: 20px;
+    padding: 2px 8px;
+    transition: background-color .25s ease-in
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge:hover {
+    background-color: #010a13
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge-icon {
+    height: 24px;
+    width: 24px
+}
+
+.honor-panel-reward-component .honor-panel-reward-row-badge-text {
+    color: #ccc4b3;
+    font-weight: 700;
+    letter-spacing: .6px;
+    line-height: 16px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-title {
+    font-family: var(--font-display)
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-description,
+.honor-panel-signal-category-component .honor-panel-signal-name {
+    font-family: var(--font-body)
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-title,
+.honor-panel-signal-category-component .honor-panel-signal-description,
+.honor-panel-signal-category-component .honor-panel-signal-name {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(el-gr),
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(ja-jp),
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(ko-kr),
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(th-th),
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(tr-tr),
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-title {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-description {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-description:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-name {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(ja-jp) {
+    font-size: 13px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-signal-category-component {
+    border-top: 1px solid hsla(40, 45%, 61%, .15);
+    cursor: pointer;
+    display: block;
+    padding: 12px 0
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-header {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-title {
+    color: #ccc4b3;
+    text-transform: uppercase
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-chevron {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #ccc4b3;
+    height: 0;
+    transition: transform .15s ease;
+    width: 0
+}
+
+.honor-panel-signal-category-component.expanded .honor-panel-signal-category-chevron {
+    transform: rotate(180deg)
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-body {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 12px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-row {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-bullet {
+    background-color: #ccc4b3;
+    border: 1px solid #010a13;
+    flex-shrink: 0;
+    height: 8px;
+    margin-left: 2px;
+    transform: rotate(45deg);
+    width: 8px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-bullet:lang(ar-ae) {
+    margin-left: 0;
+    margin-right: 2px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-name {
+    color: #a09b8c;
+    letter-spacing: .6px;
+    text-transform: uppercase
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-description {
+    color: #a09b8c;
+    margin-left: 20px;
+    margin-top: -14px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-description:lang(ar-ae) {
+    margin-left: 0;
+    margin-right: 20px
 }
 
 .shoppefront-catalog-wrapper .shoppefront-category-title,

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.10.1",
+    "version": "16.11.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -6307,14 +6307,14 @@
                     "id": "BandageToss",
                     "name": "绷带牵引",
                     "description": "阿木木向目标投掷粘稠的绷带，将自己拉向目标，并对目标造成伤害和眩晕效果。",
-                    "tooltip": "阿木木掷出一条绷带，然后将他拉向命中的第一个敌人，使其<status>晕眩</status>{{ e2 }}秒，并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />这个技能拥有2层充能。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "阿木木掷出一条绷带，然后将他拉向命中的第一个敌人，使其<status>晕眩</status>{{ stunduration }}秒，并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />这个技能有2层充能。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
                             "充能时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}"
                         ]
                     },
@@ -6587,7 +6587,7 @@
                     "id": "Tantrum",
                     "name": "阿木木的愤怒",
                     "description": "永久减少阿木木所受的物理伤害。主动施放时，阿木木可以发泄他的怒火，对周围的敌人造成伤害。阿木木每被攻击一次，该技能的冷却时间就会缩短。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>阿木木受到的物理伤害降低{{ damagereduction }}。此外，当阿木木被一次攻击命中时，这个技能的冷却时间会缩短{{ e3 }}秒。<br /><br /><spellActive>主动：</spellActive>阿木木大发脾气，对附近的敌人们造成<magicDamage>{{ tantrumdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>阿木木受到的物理伤害降低{{ damagereduction }}。此外，当阿木木被一次攻击命中时，这个技能的冷却时间会缩短{{ cdronhit }}秒。<br /><br /><spellActive>主动：</spellActive>阿木木大发脾气，对附近的敌人们造成<magicDamage>{{ tantrumdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害减免",
@@ -6595,9 +6595,9 @@
                             "伤害"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamagereduction }} -> {{ basedamagereductionNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -16743,7 +16743,7 @@
                 "mp": 469,
                 "mpperlevel": 21,
                 "movespeed": 340,
-                "armor": 27,
+                "armor": 24,
                 "armorperlevel": 4.2,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
@@ -24479,7 +24479,7 @@
                     "id": "DariusCleave",
                     "name": "大杀四方",
                     "description": "德莱厄斯蓄力然后将他的斧头挥舞成一个大圈。被斧刃击中的敌人会比被斧柄击中的敌人受到更多伤害。德莱厄斯会基于被斧刃击中的敌方英雄或大型野怪的数量来获得治疗效果。",
-                    "tooltip": "德莱厄斯举起他的斧头然后挥舞一圈，斧刃造成<physicalDamage>{{ bladedamage }}物理伤害</physicalDamage>并且斧柄造成<physicalDamage>{{ handledamage }}伤害</physicalDamage>。被斧柄命中的敌人不会被施加<keywordMajor>出血</keywordMajor>。<br /><br />德莱厄斯每用斧刃命中一个敌方英雄或大型野怪就会回复<healing>{{ e5 }}%已损失生命值</healing>，至多回复<healing>{{ e7 }}%</healing>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "德莱厄斯举起他的斧头然后挥舞一圈，斧刃造成<physicalDamage>{{ bladedamage }}物理伤害</physicalDamage>并且斧柄造成<physicalDamage>{{ handledamage }}伤害</physicalDamage>。被斧柄命中的敌人不会被施加<keywordMajor>出血</keywordMajor>层数。<br /><br />德莱厄斯每用斧刃命中一个敌方英雄或大型野怪就会回复<healing>{{ missinghealthheal }}%已损失生命值</healing>，至多回复<healing>{{ missinghealpercent }}%</healing>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -24488,8 +24488,8 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }}% -> {{ e1NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ totaladratio }}% -> {{ totaladratioNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -24624,13 +24624,13 @@
                     "id": "DariusNoxianTacticsONH",
                     "name": "致残打击",
                     "description": "德莱厄斯的下一次攻击会打向敌人的大动脉。在目标流血不止的同时，目标的移动速度也会被减缓。",
-                    "tooltip": "德莱厄斯的下次攻击造成<physicalDamage>{{ empoweredattackdamage }}物理伤害</physicalDamage>和持续{{ e5 }}秒的{{ e2 }}%<status>减速</status>。<br /><br />如果这个技能击杀了目标，那么会返还其法力消耗并缩短其{{ e3 }}%的冷却时间。<br /><br /><rules>这个技能会在造成伤害时触发技能特效。</rules>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "德莱厄斯的下次攻击造成<physicalDamage>{{ empoweredattackdamage }}物理伤害</physicalDamage>和持续{{ slowduration }}秒的{{ slowpercent }}%<status>减速</status>。<br /><br />如果这个技能击杀了目标，那么会返还其法力消耗并缩短其{{ percentcdrefund }}%的冷却时间。<br /><br /><rules>这个技能会在造成伤害时触发技能特效。</rules>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "总攻击力收益"
                         ],
                         "effect": [
-                            "{{ effect4amount*100.000000 }} -> {{ effect4amountnl*100.000000 }}"
+                            "{{ adratio*100.000000 }} -> {{ adrationl*100.000000 }}"
                         ]
                     },
                     "maxrank": 5,
@@ -24763,7 +24763,7 @@
                     "id": "DariusAxeGrabCone",
                     "name": "无情铁手",
                     "description": "德莱厄斯磨利他的巨斧，被动地让他的物理伤害无视目标一部分护甲。在主动施放时，德莱厄斯会用斧头上的钩子横扫他的敌人，并将他们拉到德莱厄斯身边。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>德莱厄斯获得{{ e1 }}%护甲穿透。<br /><br /><spellActive>主动：</spellActive>德莱厄斯用他的斧头进行钩拽，造成<status>拖拽</status>、<status>击飞</status>和持续{{ e3 }}秒的{{ e2 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>德莱厄斯获得{{ passivepercentarmorpen }}%护甲穿透。<br /><br /><spellActive>主动：</spellActive>德莱厄斯用他的斧头进行钩拽，造成<status>拖拽</status>、<status>击飞</status>和持续{{ slowduration }}秒的{{ slowpercent }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "百分比护甲穿透",
@@ -24771,7 +24771,7 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ passivepercentarmorpen }} -> {{ passivepercentarmorpenNL }}",
                             "{{ cost }} -> {{ costNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
@@ -25557,6 +25557,60 @@
                     "name": "暗星女王 黛安娜 类星体",
                     "chromas": false,
                     "parentSkin": 64
+                },
+                {
+                    "id": "131076",
+                    "num": 76,
+                    "name": "永恒星灵 黛安娜",
+                    "chromas": false
+                },
+                {
+                    "id": "131077",
+                    "num": 77,
+                    "name": "无光月神 永恒星灵 黛安娜",
+                    "chromas": true
+                },
+                {
+                    "id": "131078",
+                    "num": 78,
+                    "name": "永恒星灵 黛安娜 朔月",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131079",
+                    "num": 79,
+                    "name": "永恒星灵 黛安娜 晦月",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131080",
+                    "num": 80,
+                    "name": "永恒星灵 黛安娜 望月",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131081",
+                    "num": 81,
+                    "name": "永恒星灵 黛安娜 蛾眉月",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131082",
+                    "num": 82,
+                    "name": "永恒星灵 黛安娜 弦月",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131083",
+                    "num": 83,
+                    "name": "永恒星灵 黛安娜 凸月",
+                    "chromas": false,
+                    "parentSkin": 76
                 }
             ],
             "lore": "永远都佩着她的月刃的黛安娜 ，是皎月教派的武士，但这个教派在巨神峰附近几乎已经销声匿迹。身着闪烁冬夜寒雪之光铠甲的黛安娜，在巨神峰之巅与星灵精魄相融，如今的她已不再是一个单纯的凡人，而是皎月神力的凡间化身。她努力抗争命运，寻找着神的启示，以及自己的力量与存在对于这个世界的意义。",
@@ -39614,7 +39668,7 @@
                     "id": "GragasQ",
                     "name": "滚动酒桶",
                     "description": "古拉加斯将酒桶滚到目标地点，酒桶可以被主动引爆或在到达目标地点4秒后自行爆炸。爆炸的威力会随时间持续提升。被酒桶炸到的敌人，移动速度会被降低。",
-                    "tooltip": "古拉加斯滚动出一个酒桶，该酒桶会在{{ e4 }}秒后爆炸， 造成<magicDamage>{{ mindamage }}魔法伤害</magicDamage>到<magicDamage>{{ maxdamage }}魔法伤害</magicDamage>和持续{{ e3 }}秒的{{ e2 }}到{{ effect2amount*1.5 }}%<status>减速</status>。伤害和<status>减速</status>会基于该酒桶在爆炸前的时长来提升。<br /><br />古拉加斯可以<recast>再次施放</recast>这个技能来提前引爆该酒桶。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "古拉加斯滚动出一个酒桶，该酒桶会在{{ barrelmaxduration }}秒后爆炸， 造成<magicDamage>{{ mindamage }}魔法伤害</magicDamage>到<magicDamage>{{ maxdamage }}魔法伤害</magicDamage>和持续{{ slowduration }}秒的{{ slowpercent }}到{{ slowpercent*1.5 }}%<status>减速</status>。伤害和<status>减速</status>会基于该酒桶在爆炸前的时长来提升。<br /><br />古拉加斯可以<recast>再次施放</recast>这个技能来提前引爆该酒桶。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -39622,8 +39676,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ slowpercent }} -> {{ slowpercentNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -39937,11 +39991,11 @@
                             0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -40003,7 +40057,7 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "1",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -42503,7 +42557,7 @@
                     "id": "HecarimRapidSlash",
                     "name": "暴走",
                     "description": "赫卡里姆猛劈周围的敌人，同时造成物理伤害。如果这个技能对至少一名敌人造成伤害，那么赫卡里姆会提升【暴走】的伤害并为随后施放的【暴走】缩短冷却时间。",
-                    "tooltip": "赫卡里姆顺劈周围的敌人，造成<physicalDamage>{{ damage }}物理伤害</physicalDamage>。如果这个技能命中了敌人，那么他会获得一层效果，来使这次技能的冷却时间降低{{ rampagecooldownreduction }}秒并提升此技能{{ rampagebonusdamageperc }}%伤害，持续{{ e6 }}秒。这个效果至多可达{{ e2 }}层。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赫卡里姆猛劈周围的敌人，造成<physicalDamage>{{ damage }}物理伤害</physicalDamage>。如果这个技能命中了敌人，那么他会获得一层效果，来使这次技能的冷却时间缩短{{ rampagecooldownreduction }}秒并提升此技能{{ rampagebonusdamageperc }}%伤害，持续{{ buffduration }}秒。至多可叠加{{ maxstacks }}层。<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -42789,7 +42843,7 @@
                     "id": "HecarimRamp",
                     "name": "毁灭冲锋",
                     "description": "赫卡里姆获得不断提升的移动速度加成并且移动时可以无视单位的碰撞体积。他的下一次攻击将会击退目标，并且造成额外物理伤害，伤害值基于他在激活该技能后所移动的距离。",
-                    "tooltip": "赫卡里姆变为幽灵状态，并获得<speed>{{ minmovespeed*100 }}%移动速度</speed>，在{{ e5 }}秒里持续提升至<speed>{{ maxmovespeed*100 }}%</speed>。他的下次攻击会<status>击退</status>目标并造成<physicalDamage>{{ mindamage }}</physicalDamage>到<physicalDamage>{{ maxdamage }}物理伤害</physicalDamage>。<status>击退</status>距离和伤害随此技能期间的位移距离而增长。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赫卡里姆变为幽灵状态，并获得<speed>{{ minmovespeed*100 }}%移动速度</speed>，在{{ duration }}秒里持续提升至<speed>{{ maxmovespeed*100 }}%</speed>。他的下次攻击会<status>击退</status>目标并造成<physicalDamage>{{ mindamage }}</physicalDamage>到<physicalDamage>{{ maxdamage }}物理伤害</physicalDamage>。<status>击退</status>距离和伤害随此技能期间的位移距离而增长。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "最小伤害",
@@ -44922,6 +44976,68 @@
                     "name": "幻灵巨熊 俄洛伊 隐秘夜影",
                     "chromas": false,
                     "parentSkin": 27
+                },
+                {
+                    "id": "420037",
+                    "num": 37,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊",
+                    "chromas": true
+                },
+                {
+                    "id": "420038",
+                    "num": 38,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊 螺旋面",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420039",
+                    "num": 39,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊 蝴蝶面",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420040",
+                    "num": 40,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊 贝壳面",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420041",
+                    "num": 41,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊 通心面",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420042",
+                    "num": 42,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊 笔管面",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420043",
+                    "num": 43,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊 粗管面",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420044",
+                    "num": 44,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊 千层面",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420045",
+                    "num": 45,
+                    "name": "慢炖海鲜意面掌锅人 俄洛伊 字母面",
+                    "chromas": false,
+                    "parentSkin": 37
                 }
             ],
             "lore": "俄洛伊的体格强横无比，却唯独会在她的坚定信仰面前屈身。作为大海兽的先知，她挥舞着一个巨大的金色神像，将敌人的灵魂抽离体外，完全击毁他们对现实的感知。所有对“娜伽卡波洛丝的真者”发起挑战的人，很快就会发现，俄洛伊从来不单打独斗——蟒行群岛的神明会与她并肩作战。",
@@ -45969,6 +46085,68 @@
                     "name": "iG 艾瑞莉娅 极境",
                     "chromas": false,
                     "parentSkin": 15
+                },
+                {
+                    "id": "39063",
+                    "num": 63,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅",
+                    "chromas": true
+                },
+                {
+                    "id": "39064",
+                    "num": 64,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅 飞舞吧，番茄面包",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39065",
+                    "num": 65,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅 飞舞吧，薄巧面包",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39066",
+                    "num": 66,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅 飞舞吧，鳄梨面包",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39067",
+                    "num": 67,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅 飞舞吧，香橙面包",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39068",
+                    "num": 68,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅 飞舞吧，白桃面包",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39069",
+                    "num": 69,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅 飞舞吧，海盐面包",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39070",
+                    "num": 70,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅 飞舞吧，黑巧面包",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39071",
+                    "num": 71,
+                    "name": "利刃充饥面包师傅 艾瑞莉娅 飞舞吧，炼乳面包",
+                    "chromas": false,
+                    "parentSkin": 63
                 }
             ],
             "lore": "诺克萨斯对艾欧尼亚的占领催生了许多英雄，但没有谁像来自纳沃利的艾瑞莉娅一般令人意外。她将家乡的古老舞艺化为战技，以精心修习的优雅身姿操控着致命的刀阵。在向众人证明了自己的战斗实力后，这位刀锋舞者被推举为反抗军的领袖和首脑，为守卫家园奋斗至今。",
@@ -57794,13 +57972,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        10,
-                        9.5,
                         9,
                         8.5,
-                        8
+                        8,
+                        7.5,
+                        7
                     ],
-                    "cooldownBurn": "10/9.5/9/8.5/8",
+                    "cooldownBurn": "9/8.5/8/7.5/7",
                     "cost": [
                         60,
                         65,
@@ -57963,11 +58141,11 @@
                             6
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
+                            25,
+                            25,
+                            25,
+                            25,
+                            25
                         ],
                         [
                             50,
@@ -58029,7 +58207,7 @@
                     "effectBurn": [
                         null,
                         "4/4.5/5/5.5/6",
-                        "20",
+                        "25",
                         "50/75/100/125/150",
                         "20/22.5/25/27.5/30",
                         "0",
@@ -58065,7 +58243,7 @@
                     "id": "ForcePulse",
                     "name": "能量脉冲",
                     "description": "附近有单位施放法术技能时，卡萨丁将吸收能量，当充能完毕后，吸收的能量可转化为脉冲，对面前锥形区域内敌人造成伤害并减速。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>卡萨丁附近每有任一个技能施放，<spellName>能量脉冲</spellName>的冷却时间就会缩短{{ reductionperspellcast }}秒。<br /><br /><spellActive>主动：</spellActive>卡萨丁释放一道虚空脉冲，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和持续{{ e3 }}秒的{{ e2 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>卡萨丁附近每有任一个技能施放，<spellName>能量脉冲</spellName>的冷却时间就会缩短{{ reductionperspellcast }}秒。<br /><br /><spellActive>主动：</spellActive>卡萨丁释放一道虚空脉冲，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和持续{{ slowduration }}秒的{{ slowamount }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -58075,7 +58253,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ slowamount }}% -> {{ slowamountNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -69553,6 +69731,54 @@
                     "name": "幻灵狮心 蕾欧娜 突破极限",
                     "chromas": false,
                     "parentSkin": 52
+                },
+                {
+                    "id": "89064",
+                    "num": 64,
+                    "name": "永恒星灵 蕾欧娜",
+                    "chromas": true
+                },
+                {
+                    "id": "89065",
+                    "num": 65,
+                    "name": "永恒星灵 蕾欧娜 骄阳",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89066",
+                    "num": 66,
+                    "name": "永恒星灵 蕾欧娜 拂晓",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89067",
+                    "num": 67,
+                    "name": "永恒星灵 蕾欧娜 朝阳",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89068",
+                    "num": 68,
+                    "name": "永恒星灵 蕾欧娜 斜阳",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89069",
+                    "num": 69,
+                    "name": "永恒星灵 蕾欧娜 夕阳",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89070",
+                    "num": 70,
+                    "name": "永恒星灵 蕾欧娜 余晖",
+                    "chromas": false,
+                    "parentSkin": 64
                 }
             ],
             "lore": "蕾欧娜是一名被灌注了烈阳之火的烈阳教派圣殿武士，用天顶之刃和破晓之盾守护着巨神峰。她的皮肤闪烁着星火，她体内天界星灵的力量透过她的双眼炯炯燃烧。蕾欧娜身披金色铠甲，背负着沉重的上古知识，为一些人带来启示，也为另一些人带去死亡。",
@@ -72823,7 +73049,7 @@
                     "id": "LucianW",
                     "name": "热诚烈弹",
                     "description": "卢锡安发射一个会呈星形爆炸的飞弹，标记并暂时显形敌人。在卢锡安攻击被标记的敌人时，会获得移动速度加成。",
-                    "tooltip": "卢锡安发射一颗子弹，子弹会在到达射程终点或命中第一个敌人时爆炸，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，暂时显形敌人们并将其标记6秒。<br /><br />当卢锡安或一名友方英雄对被标记的敌人造成伤害时，卢锡安会获得持续1秒的<speed>{{ e2 }}移动速度</speed>。友方英雄在触发这个效果时，将也会为卢锡安提供<attention>警惕</attention>效果。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "卢锡安发射一颗子弹，子弹会在到达射程终点或命中第一个敌人时爆炸，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，暂时显形敌人们并将其标记6秒。<br /><br />当卢锡安或一名友方英雄对被标记的敌人造成伤害时，卢锡安会获得持续1秒的<speed>{{ movespeedamount }}移动速度</speed>。友方英雄在触发这个效果时，也会为卢锡安提供<attention>警惕</attention>效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -72832,7 +73058,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ movespeedamount }} -> {{ movespeedamountNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -72966,7 +73192,7 @@
                     "id": "LucianE",
                     "name": "冷酷追击",
                     "description": "卢锡安冲刺一小段距离。【圣光银弹】的攻击会减少【冷酷追击】的冷却时间。",
-                    "tooltip": "卢锡安进行冲刺。<br /><br />当卢锡安用<spellName>圣光银弹</spellName>命中一名敌人时，这个技能的冷却时间会缩短{{ e1 }}秒(对英雄时缩短{{ e2 }}秒)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "卢锡安进行冲刺。<br /><br />当卢锡安用<spellName>圣光银弹</spellName>命中一名敌人时，这个技能的冷却时间会缩短{{ cdrefundbase }}秒(对英雄时缩短{{ cdrefundchampion }}秒)。 {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -78915,8 +79141,8 @@
                     "chromas": true
                 }
             ],
-            "lore": "易师锤炼身体、磨砺心智，直至身心合一。尽管他将暴力作为不得已的选择，但他优雅迅猛的剑法总是让这一手段显得尤为快捷。作为无极之道最后的门徒，易大师致力于这个门派的传承，用七度洞悉目镜搜寻着最有资格的人，寻找潜在的新弟子。",
-            "blurb": "易师锤炼身体、磨砺心智，直至身心合一。尽管他将暴力作为不得已的选择，但他优雅迅猛的剑法总是让这一手段显得尤为快捷。作为无极之道最后的门徒，易大师致力于这个门派的传承，用七度洞悉目镜搜寻着最有资格的人，寻找潜在的新弟子。",
+            "lore": "易大师锤炼身体、磨砺心智，直至身心合一。尽管他将暴力作为不得已的选择，但他优雅迅猛的剑法总是让这一手段显得尤为快捷。作为无极之道最后的门徒，易大师致力于这个门派的传承，用七度洞悉目镜搜寻着最有资格的人，寻找潜在的新弟子。",
+            "blurb": "易大师锤炼身体、磨砺心智，直至身心合一。尽管他将暴力作为不得已的选择，但他优雅迅猛的剑法总是让这一手段显得尤为快捷。作为无极之道最后的门徒，易大师致力于这个门派的传承，用七度洞悉目镜搜寻着最有资格的人，寻找潜在的新弟子。",
             "allytips": [
                 "- 如果你在与远程玩家作战的兵线，升级冥想可以让你在线上呆得更久，比对手升级更快。",
                 "- 早期，无极剑道在给小兵们最后一击的时候很强。",
@@ -87920,7 +88146,7 @@
                     "id": "NasusE",
                     "name": "灵魂烈焰",
                     "description": "内瑟斯在目标区域施放灵魂烈焰，伤害并削弱敌人。",
-                    "tooltip": "内瑟斯引发一团灵魂烈焰，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>。区域内的敌人们会失去<scaleArmor>{{ e2 }}%护甲</scaleArmor>并在{{ e3 }}秒里持续受到共<magicDamage>{{ totaldotdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "内瑟斯引发一团灵魂烈焰，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>。区域内的敌人们会失去<scaleArmor>{{ armorshredpercent*-100 }}%护甲</scaleArmor>并在{{ duration }}秒里持续受到共<magicDamage>{{ totaldotdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "初始伤害",
@@ -87929,9 +88155,9 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e4 }} -> {{ e4NL }}",
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ effect2amount*-100.000000 }}% -> {{ effect2amountnl*-100.000000 }}%",
+                            "{{ initialhitdamage }} -> {{ initialhitdamageNL }}",
+                            "{{ damagepertick }} -> {{ damagepertickNL }}",
+                            "{{ armorshredpercent*-100.000000 }}% -> {{ armorshredpercentnl*-100.000000 }}%",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
@@ -87963,11 +88189,11 @@
                             34
                         ],
                         [
-                            30,
-                            35,
-                            40,
-                            45,
-                            50
+                            -0.3,
+                            -0.35,
+                            -0.4,
+                            -0.45,
+                            -0.5
                         ],
                         [
                             5,
@@ -88029,7 +88255,7 @@
                     "effectBurn": [
                         null,
                         "10/16/22/28/34",
-                        "30/35/40/45/50",
+                        "-0.3/-0.35/-0.4/-0.45/-0.5",
                         "5",
                         "50/80/110/140/170",
                         "0",
@@ -100975,7 +101201,7 @@
                     "id": "QuinnQ",
                     "name": "炫目攻势",
                     "description": "奎因唤出华洛，来标记一名敌人并遮蔽其视野，然后对目标附近区域内的所有敌人造成伤害。",
-                    "tooltip": "奎因命令华洛进行俯冲，将命中的第一个敌人标记为<keywordMajor>易损</keywordMajor>、降低其视野半径{{ visionreductionduration }}秒并对所有周围的敌人们造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。<br /><br />如果命中的第一个敌人不是英雄，那么该敌人会还会被<status>缴械</status>{{ visionreductionduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "奎因命令华洛进行俯冲，用<keywordMajor>侵扰</keywordMajor>标记命中的第一个敌人、降低其视野半径{{ visionreductionduration }}秒并对所有周围的敌人们造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。<br /><br />如果命中的第一个敌人不是英雄，那么该敌人会还会被<status>缴械</status>{{ visionreductionduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -101119,8 +101345,8 @@
                 {
                     "id": "QuinnW",
                     "name": "敏锐感知",
-                    "description": "在奎因攻击了一名<font color='#FFF673'>易损</font>目标后，被动地为奎因提供攻击速度和移动速度加成。主动激活可以让华洛驱散周围一大片区域的战争迷雾。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>攻击一名<keywordMajor>易损</keywordMajor>目标会为奎因提供<attackSpeed>{{ attackspeedbonus*100 }}%攻击速度</attackSpeed>和<speed>{{ movespeedamount*100 }}%移动速度</speed>，持续{{ buffduration }}秒。<br /><br /><spellActive>主动：</spellActive>华洛显形附近的一大片区域，持续{{ visionduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "description": "在奎因攻击了一名<keywordMajor>侵扰</keywordMajor>目标后，被动地为奎因提供攻击速度和移动速度。主动激活可以让华洛显形附近的一大片区域。",
+                    "tooltip": "<spellPassive>被动：</spellPassive>攻击一名<keywordMajor>侵扰</keywordMajor>目标会为奎因提供<attackSpeed>{{ attackspeedbonus*100 }}%攻击速度</attackSpeed>和<speed>{{ movespeedamount*100 }}%移动速度</speed>，持续{{ buffduration }}秒。<br /><br /><spellActive>主动：</spellActive>华洛显形附近的一大片区域，持续{{ visionduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "攻击速度",
@@ -101263,7 +101489,7 @@
                     "id": "QuinnE",
                     "name": "旋翔掠杀",
                     "description": "奎因冲向一名敌人，造成物理伤害，并减少目标的移动速度。在接触到目标的同时，她会向后空翻，暂时打断目标的行动，并在接近她最大攻击距离的地方着陆。",
-                    "tooltip": "奎因冲刺向一名敌人，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并将其标记为<keywordMajor>易损</keywordMajor>状态。奎因随后会从目标处向后跳开，将其<status>击</status><status>退</status>并对其造成在{{ slowdecaytime }}秒里持续衰减的{{ slowamount*100 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "奎因冲刺向一名敌人，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并用<keywordMajor>侵扰</keywordMajor>将其标记。奎因随后会从目标处向后跳开，将其<status>击</status><status>退</status>并对其造成在{{ slowdecaytime }}秒里持续衰减的{{ slowamount*100 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -101403,8 +101629,8 @@
                 {
                     "id": "QuinnR",
                     "name": "深入敌后",
-                    "description": "奎因和华洛联成一体并以极高的速度进行移动。在结束此技能时会施放【鹰翼天翔】，对附近的敌人造成伤害并对英雄施加易损效果。",
-                    "tooltip": "奎因召唤华洛，在引导2秒后进行合体，获得<speed>{{ movementspeedmod*100 }}%移动速度</speed>并允许她<recast>再次施放</recast>这个技能。攻击或使用<spellName>炫目攻势</spellName>或<spellName>旋翔掠杀</spellName>都会自动地<recast>再次施放</recast>这个技能。<br /><br /><recast>再次施放</recast>：奎因和华洛表演一次空中特技，造成<physicalDamage>{{ damage }}物理伤害</physicalDamage>、将英雄们标记为<keywordMajor>易损</keywordMajor>并结束这个技能。{{ spellmodifierdescriptionappend }}",
+                    "description": "奎因和华洛联成一体并以极高的速度进行移动。在结束此技能时会施放【鹰翼天翔】，对附近的敌人造成伤害并用侵扰标记英雄们。",
+                    "tooltip": "奎因召唤华洛，在引导2秒后进行合体，获得<speed>{{ movementspeedmod*100 }}%移动速度</speed>并允许她<recast>再次施放</recast>这个技能。攻击或使用<spellName>炫目攻势</spellName>或<spellName>旋翔掠杀</spellName>都会自动地<recast>再次施放</recast>这个技能。<br /><br /><recast>再次施放</recast>：奎因和华洛表演一次空中特技，造成<physicalDamage>{{ damage }}物理伤害</physicalDamage>、用<keywordMajor>侵扰</keywordMajor>标记英雄们并结束这个技能。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -101520,7 +101746,7 @@
             ],
             "passive": {
                 "name": "侵扰",
-                "description": "华洛，奎因的德玛西亚鹰，会周期性地将敌人标记为<font color='#FFF673'>易损</font>状态。奎因对<font color='#FFF673'>易损</font>目标的第一次普通攻击将造成额外物理伤害。",
+                "description": "华洛，奎因的德玛西亚鹰，会周期性地用<keywordMajor>侵扰</keywordMajor>标记敌人。奎因对<keywordMajor>侵扰</keywordMajor>目标的第一次普攻将造成额外物理伤害。",
                 "image": {
                     "full": "Quinn_Passive.png",
                     "sprite": "passive3.png",
@@ -108600,7 +108826,7 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -108741,7 +108967,7 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ shieldamount }} -> {{ shieldamountNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -117533,7 +117759,7 @@
                     "id": "ShenQ",
                     "name": "奥义！暮临",
                     "description": "慎召回他的魂刃并用它进行攻击，造成基于目标最大生命值的额外伤害。如果魂刃在召回途中与一个敌方英雄产生了碰撞，那么慎的魂刃攻击会获得极大强化，并且所有被碰撞的敌人在逃离慎的时候都会被减速。",
-                    "tooltip": "慎召回他的<keywordMajor>魂刃</keywordMajor>。被其命中的敌人们在接下来的{{ e5 }}秒里，在远离慎的时候会被<status>减速</status>{{ e4 }}%。<br /><br />此外，慎的下{{ e3 }}次攻击造成额外的<magicDamage>{{ baseflatdamage }}</magicDamage>外加<magicDamage>{{ basepercenthealth }}最大生命值的魔法伤害</magicDamage>。如果慎用<keywordMajor>魂刃</keywordMajor>命中了一名英雄，那么伤害提升至<magicDamage>{{ baseflatdamage }}</magicDamage>外加<magicDamage>{{ emppercenthealth }}最大生命值的魔法伤害</magicDamage>并且他的那几次攻击获得<attackSpeed>{{ e9 }}%攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "慎召回他的<keywordMajor>魂刃</keywordMajor>。被其命中的敌人们在接下来的{{ slowduration }}秒里，在远离慎的时候会被<status>减速</status>{{ slowpercent }}%。<br /><br />此外，慎的下{{ numenhancedattacks }}次攻击造成额外的<magicDamage>{{ baseflatdamage }}</magicDamage>外加<magicDamage>{{ basepercenthealth }}最大生命值的魔法伤害</magicDamage>。如果慎用<keywordMajor>魂刃</keywordMajor>命中了一名英雄，那么伤害提升至<magicDamage>{{ baseflatdamage }}</magicDamage>外加<magicDamage>{{ emppercenthealth }}最大生命值的魔法伤害</magicDamage>并且他的那几次攻击获得<attackSpeed>{{ steroidas }}%攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础百分比伤害",
@@ -117544,11 +117770,11 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e2 }}% -> {{ e2NL }}%",
-                            "{{ e6 }}% -> {{ e6NL }}%",
-                            "{{ e4 }}% -> {{ e4NL }}%",
+                            "{{ basepercentdamage }}% -> {{ basepercentdamageNL }}%",
+                            "{{ enhancedpercentdamage }}% -> {{ enhancedpercentdamageNL }}%",
+                            "{{ slowpercent }}% -> {{ slowpercentNL }}%",
                             "{{ cost }} -> {{ costNL }}",
-                            "{{ e7 }} -> {{ e7NL }}",
+                            "{{ miniondamagecap }} -> {{ miniondamagecapNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -117682,7 +117908,7 @@
                     "id": "ShenW",
                     "name": "奥义！魂佑",
                     "description": "当慎或友方英雄在魂刃附近时，魂刃会对原本要命中他们的攻击进行格挡。",
-                    "tooltip": "慎在他的<keywordMajor>魂刃</keywordMajor>位置生成一个防御结界，持续{{ e1 }}秒。对结界内的友方英雄进行的攻击都会被格挡。 <br /><br />如果结界在开启时并没有英雄在其中，那么它会等待至多{{ e2 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "慎在他的<keywordMajor>魂刃</keywordMajor>位置生成一个防御结界，持续{{ zoneduration }}秒。对结界内的友方英雄进行的攻击都会被格挡。 <br /><br />如果结界在开启时并没有英雄在其中，那么它会等待至多{{ zonedelay }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间"
@@ -120054,6 +120280,68 @@
                     "num": 49,
                     "name": "最高清算 赛恩",
                     "chromas": false
+                },
+                {
+                    "id": "14050",
+                    "num": 50,
+                    "name": "玛格丽特披萨大厨 赛恩",
+                    "chromas": true
+                },
+                {
+                    "id": "14051",
+                    "num": 51,
+                    "name": "玛格丽特披萨大厨 赛恩 谁放的草莓？！",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14052",
+                    "num": 52,
+                    "name": "玛格丽特披萨大厨 赛恩 谁放的菠萝？！",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14053",
+                    "num": 53,
+                    "name": "玛格丽特披萨大厨 赛恩 谁放的牛油果？！",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14054",
+                    "num": 54,
+                    "name": "玛格丽特披萨大厨 赛恩 谁放的蓝莓？！",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14055",
+                    "num": 55,
+                    "name": "玛格丽特披萨大厨 赛恩 谁放的葡萄？！",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14056",
+                    "num": 56,
+                    "name": "玛格丽特披萨大厨 赛恩 谁放的水蜜桃？！",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14057",
+                    "num": 57,
+                    "name": "玛格丽特披萨大厨 赛恩 谁放的巧克力？！",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14058",
+                    "num": 58,
+                    "name": "玛格丽特披萨大厨 赛恩 谁烤焦了？！",
+                    "chromas": false,
+                    "parentSkin": 50
                 }
             ],
             "lore": "赛恩是一个来自先前时代的诺克萨斯战争英雄，曾经徒手掐死过一代德玛西亚国王。但他拒绝了死亡和湮灭，以活尸的状态继续为帝国效命。只要挡住他的去路，都会被他无差别地屠杀，敌我不分，足可证明他已经失去了从前的人性。即便如此，他腐朽的身体还是被钉进了粗糙的装甲，继续以丧心病狂的鲁莽冲上战场，在每一下巨斧的挥砍中艰难地回忆真正的自我。",
@@ -122757,7 +123045,7 @@
                 "mpregenperlevel": 0.7,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 60,
+                "attackdamage": 58,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 4,
                 "attackspeed": 0.638
@@ -132690,7 +132978,7 @@
                 "mpperlevel": 25,
                 "movespeed": 330,
                 "armor": 24,
-                "armorperlevel": 4.95,
+                "armorperlevel": 4.5,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 500,
@@ -144461,6 +144749,54 @@
                     "name": "从容自若小绿松 维克兹",
                     "chromas": false,
                     "parentSkin": 20
+                },
+                {
+                    "id": "161029",
+                    "num": 29,
+                    "name": "飞天意面 维克兹",
+                    "chromas": true
+                },
+                {
+                    "id": "161030",
+                    "num": 30,
+                    "name": "飞天意面 维克兹 辣酱风味",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161031",
+                    "num": 31,
+                    "name": "飞天意面 维克兹 青酱风味",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161032",
+                    "num": 32,
+                    "name": "飞天意面 维克兹 火龙果风味",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161033",
+                    "num": 33,
+                    "name": "飞天意面 维克兹 草莓风味",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161034",
+                    "num": 34,
+                    "name": "飞天意面 维克兹 墨鱼汁风味",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161035",
+                    "num": 35,
+                    "name": "飞天意面 维克兹 白酱风味",
+                    "chromas": false,
+                    "parentSkin": 29
                 }
             ],
             "lore": "人们不太确定维克兹是否是符文之地上出现的第一个虚空生物，但可以确定的是没有第二个虚空生物能超过他的残忍和精明。他的同类通常都会吞噬或者破坏周围的一切，然而维克兹却一直在仔细观察并研究这个物质世界，以及世界上这些奇怪的好战生物，寻找虚空可以利用的弱点。但维克兹绝不是个被动的观察者，他会用致命的电浆射线回击任何威胁，甚至还能扰动世界本身的基础构造。",
@@ -153905,14 +154241,14 @@
                     "id": "XinZhaoQ",
                     "name": "三重爪击",
                     "description": "赵信的下3次普攻将造成额外伤害并且第三次攻击将击飞目标。",
-                    "tooltip": "赵信的下3次普攻造成额外的<physicalDamage>{{ bonusdamage }}物理伤害</physicalDamage>并使他的其它技能的冷却时间缩短1秒。第3次普攻还会<status>击飞</status>目标{{ e2 }}秒。<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赵信的下3次普攻造成额外的<physicalDamage>{{ bonusdamage }}物理伤害</physicalDamage>并使他的其它技能的冷却时间缩短1秒。第3次普攻还会<status>击飞</status>目标{{ knockupduration }}秒。<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "额外伤害：",
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -153937,18 +154273,18 @@
                     "effect": [
                         null,
                         [
-                            15,
-                            30,
-                            45,
-                            60,
-                            75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.75,
-                            0.75,
-                            0.75,
-                            0.75,
-                            0.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -154009,8 +154345,8 @@
                     ],
                     "effectBurn": [
                         null,
-                        "15/30/45/60/75",
-                        "0.75",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -158018,7 +158354,7 @@
                     "id": "YunaraQ",
                     "name": "灵蕴拳",
                     "description": "芸阿娜获得攻击速度、额外附带伤害并且她的攻击会散播至附近的敌人。",
-                    "tooltip": "<spellPassive>被动</spellPassive>：芸阿娜造成<magicDamage>{{ calc_passive_damage }}魔法伤害</magicDamage><OnHit>%i:OnHit%攻击特效</OnHit>并且攻击提供<evolve>{{ resource_nonchampion }}灵蕴</evolve> (对抗英雄时为<evolve>{{ resource_champion }}灵蕴</evolve>)。<br /><br /><spellPassive>主动</spellPassive>：芸阿娜消耗<evolve>{{ resource_max }}灵蕴</evolve>，在{{ buff_duration }}秒期间里获得<attackSpeed>{{ calc_attack_speed }}攻击速度</attackSpeed>并且造成额外<magicDamage>{{ calc_damage }}魔法伤害</magicDamage><OnHit>%i:OnHit%进攻特效</OnHit>。在此期间，她的攻击会散播至附近的敌人，对其造成<physicalDamage>{{ calc_damage_spread }}物理伤害</physicalDamage>。<br /><br /><keywordMajor>超凡形态</keywordMajor>：这个技能会即刻激活并持续{{ spell.yunarar:buff_duration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动</spellPassive>：芸阿娜造成<magicDamage>{{ calc_passive_damage }}魔法伤害</magicDamage><OnHit>%i:OnHit%攻击特效</OnHit>并且攻击提供<evolve>{{ resource_nonchampion }}灵蕴</evolve> (对抗英雄时为<evolve>{{ resource_champion }}灵蕴</evolve>)。<br /><br /><spellPassive>主动</spellPassive>：芸阿娜消耗<evolve>{{ resource_max }}灵蕴</evolve>，在{{ buff_duration }}秒期间里获得<attackSpeed>{{ calc_attack_speed }}攻击速度</attackSpeed>并且造成额外<magicDamage>{{ calc_damage }}魔法伤害</magicDamage><OnHit>%i:OnHit%攻击特效</OnHit>。在此期间，她的攻击会散播至附近的敌人，对其造成<physicalDamage>{{ calc_damage_spread }}物理伤害</physicalDamage>。<br /><br /><keywordMajor>超凡形态</keywordMajor>：这个技能会即刻激活并持续{{ spell.yunarar:buff_duration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "被动附带伤害",

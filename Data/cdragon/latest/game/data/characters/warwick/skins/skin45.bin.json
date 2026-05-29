@@ -54,12 +54,14 @@
                         "Play_vo_Warwick_Move2DStandard",
                         "Play_vo_Warwick_Recall3DGeneral",
                         "Play_vo_Warwick_Respawn2DGeneral",
+                        "Play_vo_Warwick_Spell3DBasic",
                         "Play_vo_Warwick_Spell3DE1Cast",
                         "Play_vo_Warwick_Spell3DE2Cast",
                         "Play_vo_Warwick_Spell3DQCast",
                         "Play_vo_Warwick_Spell3DRHit",
                         "Play_vo_Warwick_Spell3DRHitEnd",
                         "Play_vo_Warwick_Spell3DRMiss",
+                        "Play_vo_Warwick_Spell3DWCast",
                         "Play_vo_Warwick_Taunt3DGeneral",
                         "Play_vo_Warwick_WarwickBasicAttack2_cast3D",
                         "Play_vo_Warwick_WarwickBasicAttack3_cast3D",
@@ -7450,6 +7452,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Emission_Bloom_Strength",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -7787,6 +7829,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "BLOOM_EMISSION_ONLY",
                 "on": false,

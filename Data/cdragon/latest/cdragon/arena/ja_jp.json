@@ -90,6 +90,46 @@
             "tooltip": "@StealthDuration@秒間、または通常攻撃かスキルを使用するまで<keywordStealth>インビジブル</keywordStealth>状態になる。"
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "自身が与えるすべてのダメージが<keyword>重傷</keyword>を付与する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "ケミテック ピュートリファイアー",
+            "rarity": 4,
+            "tooltip": "チャンピオンに<Damage>ダメージ</Damage>を与えると、@GrievousDuration@秒間<keyword>@GrievousAmount*100@%の「負傷」</keyword>を付与する。"
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1273,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -1436,6 +1476,46 @@
             "name": "ライトワーデン",
             "rarity": 1,
             "tooltip": "@Cooldown@秒ごとに、味方に向かって結界の光を<keywordMajor>自動発動</keywordMajor>し、自身と通過した味方に<shield>耐久値@TotalShield@のシールド</shield>を付与する。その後、光は戻りながら再び効果を繰り返す。"
+        },
+        {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "敵にダメージを与えた際に<status>スロウ効果</status>を付与する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "フローズン マレット",
+            "rarity": 4,
+            "tooltip": "ダメージを与えると@SlowDuration@秒間、<speed>@SlowAmount*100@%</speed>の<status>スロウ効果</status>を付与する。"
         },
         {
             "apiName": "Quest_MadHatter",
@@ -2169,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "条件: キルまたはアシストを@TakedownsNeeded@回獲得する。<br><br>報酬: 金のへら",
@@ -2317,10 +2397,51 @@
             "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "ダメージを与えると、追加で<physicalDamage>最大体力の@MaxHealthDamage*100@%にあたる物理ダメージ</physicalDamage>を与える。",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "ブラッドレイザー",
+            "rarity": 4,
+            "tooltip": "ダメージを与えると、追加で<physicalDamage>最大体力の@MaxHealthDamage*100@%にあたる物理ダメージ</physicalDamage>を与える。"
+        },
+        {
             "apiName": "Erosion",
             "calculations": {
                 "MaxShredTooltipOnly": {
                     "__type": "GameCalculation",
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
@@ -2329,12 +2450,9 @@
                         {
                             "__type": "NamedDataValueCalculationPart",
                             "mDataValue": "MaxStacks"
-                        },
-                        {
-                            "__type": "NumberCalculationPart",
-                            "mNumber": 10.0
                         }
-                    ]
+                    ],
+                    "mSimpleTooltipCalculationDisplay": 5
                 }
             },
             "dataValues": {
@@ -2716,8 +2834,8 @@
                 "NumberOfMissiles": [
                     3.0,
                     3.0,
+                    3.0,
                     5.0,
-                    6.0,
                     6.0,
                     6.0,
                     6.0
@@ -3326,7 +3444,7 @@
             "id": 310,
             "name": "ピエロ大学",
             "rarity": 2,
-            "tooltip": "<spellName>バックスタブ</spellName>: 敵を背後から攻撃した場合、@BasicAttackDamage@の<physicalDamage>追加物理ダメージ</physicalDamage>を与える。<br><spellName>幻惑</spellName>: 瞬間移動して@StealthDuration@秒間<keywordStealth>インビジブル</keywordStealth>状態になる。<keywordStealth>インビジブル</keywordStealth>状態中の次の通常攻撃が<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を追加で与える。背後から攻撃した場合は、この通常攻撃がクリティカルになり、@QCritDamageMod@のダメージを与える。<br><spellName>ハルシネイト: デス</spellName>: 倒された際に最大体力の<trueDamage>@FearDamage*100@%の確定ダメージ</trueDamage>を与え、自身の周囲に@FearDuration@秒間フィアー効果を与える。"
+            "tooltip": "<spellName>バックスタブ</spellName>: 敵を背後から攻撃した場合、@BasicAttackDamage@の<physicalDamage>追加物理ダメージ</physicalDamage>を与える。<br><br><spellName>幻惑</spellName>: 瞬間移動して@StealthDuration@秒間<keywordStealth>インビジブル</keywordStealth>状態になる。<keywordStealth>インビジブル</keywordStealth>状態中の次の通常攻撃が<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を追加で与える。背後から攻撃した場合は、この通常攻撃がクリティカルになり、@QCritDamageMod@のダメージを与える。<br><br><spellName>ハルシネイト: デス</spellName>: 倒された際に最大体力の<magicDamage>@FearDamage*100@%の確定ダメージ</magicDamage>を与え、自身の周囲に@FearDuration@秒間フィアー効果を与える。"
         },
         {
             "apiName": "NumbToPain",
@@ -3403,6 +3521,37 @@
             "name": "痛覚耐性",
             "rarity": 0,
             "tooltip": "受けたダメージの@MeleeReduction*100@%を代わりに@BleedDuration@秒かけて受ける(遠隔チャンピオンは@RangedReduction*100@%)。"
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "味方チームがデーモンハンターと手を組む方に投票する。<br><br>デーモンハンターと手を組むと、<keywordMajor>悪魔のチーム</keywordMajor>を倒した際に<gold>追加で%i:goldCoins% @BonusGold@ゴールド</gold>を獲得する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "ハンターと手を組む",
+            "rarity": 4,
+            "tooltip": "味方チームがデーモンハンターと手を組む方に投票する。<br><br>デーモンハンターと手を組むと、<keywordMajor>悪魔のチーム</keywordMajor>を倒した際に<gold>追加で%i:goldCoins% @BonusGold@ゴールド</gold>を獲得する。"
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4765,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "味方にバフ、<healing>体力回復効果</healing>、または<shield>シールド</shield>を付与すると、その周囲の敵にダメージと<status>スロウ効果</status>を与える。",
@@ -4656,7 +4805,47 @@
             "id": 76,
             "name": "ソニックブーム",
             "rarity": 0,
-            "tooltip": "味方にバフ、<healing>体力回復効果</healing>、または<shield>シールド</shield>を付与すると、その周囲の敵に<trueDamage>@Damage@の確定ダメージ</trueDamage>を与え、@SlowDuration@秒間@SlowAmount*-100@%の<status>スロウ効果</status>を付与する。<br><br>このラウンド中に与えたダメージ量: @f1@<br>与えたダメージ量の合計: @f2@"
+            "tooltip": "味方にバフ、<healing>体力回復効果</healing>、または<shield>シールド</shield>を付与すると、その周囲の敵に<trueDamage>@Damage@の確定ダメージ</trueDamage>を与え、@SlowDuration@秒間@SlowAmount*-100@%の<status>スロウ効果</status>を付与する。<br><br><rules>スキル発動ごとにクールダウン@ProcCooldown@秒。</rules><br><br>このラウンド中に与えたダメージ量: @f1@<br>与えたダメージ量の合計: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "周囲のチャンピオンの<attackSpeed>攻撃速度</attackSpeed>を低下させる。",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "ウォッチャーのレムナント",
+            "rarity": 4,
+            "tooltip": "周囲のチャンピオンの<attackSpeed>攻撃速度</attackSpeed>を<attackSpeed>@ASPDSlow*-100@%</attackSpeed>低下させる。"
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5070,37 @@
             "name": "大急ぎ",
             "rarity": 1,
             "tooltip": "<speed>移動速度が@AbilityHasteToMSConversionCalc@</speed>増加する。"
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "体力が@ExecuteThreshold*100@%未満のチャンピオンにとどめを刺す。",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "吸収装置",
+            "rarity": 4,
+            "tooltip": "体力が@ExecuteThreshold*100@%未満のチャンピオンにとどめを刺す。"
         },
         {
             "apiName": "FallenAegis",
@@ -5785,6 +6005,28 @@
             "tooltip": "スキルが無限にスタック可能な<keywordMajor>炎上</keywordMajor>を付与し、@BleedDuration@秒間、毎秒<magicDamage>@BleedDamageTooltip@の魔法ダメージ</magicDamage>を与える。<br><br>すべての<keywordMajor>炎上</keywordMajor>効果で敵にダメージを与えた時、自身の通常スキルのクールダウンが@FlatCooldownRefundPerTick@秒短縮される。<br><br>このラウンドで与えたダメージ: @f1@<br>与えたダメージの合計: @f2@<br>"
         },
         {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "味方チームが悪魔と手を組む方に投票する。<br><br>悪魔と手を組むと、<keywordMajor>ハンターのチームが敗退</keywordMajor>した際に<keywordMajor>%i:AugmentLevel%オーグメントレベルを</keywordMajor>獲得する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "悪魔と手を組む",
+            "rarity": 4,
+            "tooltip": "味方チームが悪魔と手を組む方に投票する。<br><br>悪魔と手を組むと、<keywordMajor>ハンターのチームが敗退</keywordMajor>した際に<keywordMajor>%i:AugmentLevel%オーグメントレベルを</keywordMajor>獲得する。"
+        },
+        {
             "apiName": "ADAPt",
             "calculations": {
                 "APAmpCalcTooltip": {
@@ -5819,7 +6061,7 @@
                 "InverseRate": [
                     0.6000000238418579,
                     0.6000000238418579,
-                    0.800000011920929,
+                    2.799999952316284,
                     0.800000011920929,
                     0.800000011920929,
                     0.800000011920929,
@@ -6011,7 +6253,7 @@
                 "ADcoefficient": [
                     0.07000000029802322,
                     0.07000000029802322,
-                    0.09000000357627869,
+                    0.07999999821186066,
                     0.09000000357627869,
                     0.09000000357627869,
                     0.09000000357627869,
@@ -6020,7 +6262,7 @@
                 "APcoefficient": [
                     0.03999999910593033,
                     0.03999999910593033,
-                    0.07000000029802322,
+                    0.05999999865889549,
                     0.07000000029802322,
                     0.07000000029802322,
                     0.07000000029802322,
@@ -6029,7 +6271,7 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.007499999832361937,
+                    0.006500000134110451,
                     0.007499999832361937,
                     0.007499999832361937,
                     0.007499999832361937,
@@ -7174,6 +7416,37 @@
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>代わりに受けたダメージ量の合計: @f1@<br>体力回復量の合計: @f2@<br>"
         },
         {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "@Cooldown@秒ごとに<attention>スペルシールド</attention>を獲得する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "魔法のフラスコ",
+            "rarity": 4,
+            "tooltip": "次に敵から受けるスキルをブロックする<attention>スペルシールド</attention>を@Cooldown@秒ごとに獲得する。"
+        },
+        {
             "apiName": "Deathtouch",
             "calculations": {},
             "dataValues": {
@@ -7340,22 +7613,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -7411,13 +7684,13 @@
             "calculations": {},
             "dataValues": {
                 "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "EnemyDetectionRadius": [
                     800.0,
@@ -8259,7 +8532,7 @@
                 "InverseRate": [
                     1.666659951210022,
                     1.666659951210022,
-                    0.0,
+                    2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
@@ -8585,13 +8858,13 @@
                     1.5
                 ],
                 "ReviveMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ],
                 "SelfReviveTimerModMax": [
                     0.5,
@@ -8612,13 +8885,13 @@
                     0.4000000059604645
                 ],
                 "SizeMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ]
             },
             "desc": "追加で@BonusLives@回<attention>復活</attention>できるようになり、デス後に自力で復活を開始する。<br><br><attention>復活</attention>した際に、周囲の敵を<status>ノックバック</status>させ、サイズが小さくなって<scaleHealth>最大体力</scaleHealth>が減少した状態で復帰する。",
@@ -9551,13 +9824,13 @@
                     0.3499999940395355
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaximumDistanceRoF": [
                     1500.0,
@@ -9909,10 +10182,10 @@
             "calculations": {},
             "dataValues": {
                 "AttackSpeed": [
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.75,
-                    1.2000000476837158,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.800000011920929,
+                    1.2999999523162842,
                     1.5,
                     1.5,
                     1.5
@@ -10899,64 +11172,6 @@
             "tooltip": "タム・ケンチに<scaleHealth>自身の最大体力の@HealthReductionPercent@%</scaleHealth>を捧げる。<br><br>捧げる体力の合計が最大体力の<scaleHealth>-@MaxHealthReduction@%</scaleHealth>に増加する。<br><br><gold>+%i:goldCoins% @GoldToGrant@ゴールド</gold>を獲得する。"
         },
         {
-            "apiName": "FrozenFoundations",
-            "calculations": {},
-            "dataValues": {
-                "ChampPushDistance": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "NonChampPushDistance": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
-                ],
-                "WallDuration": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "WallWidth": [
-                    800.0,
-                    800.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0
-                ]
-            },
-            "desc": "サモナースペルの<spellName>「凍てつく礎」</spellName>を獲得する。<br><br><rules><spellName>「凍てつく礎」</spellName>は指定地点に氷の壁を召喚する。</rules>",
-            "iconLarge": "assets/ux/cherry/augments/icons/frozenfoundations_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/frozenfoundations_small.png",
-            "id": 40,
-            "name": "凍てつく礎",
-            "rarity": 0,
-            "tooltip": "<rules>指定地点に氷の壁を召喚する。</rules>"
-        },
-        {
             "apiName": "CriticalHealing",
             "calculations": {
                 "CriticalHealCalc": {
@@ -11315,13 +11530,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11695,13 +11910,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -11775,22 +11990,22 @@
             "calculations": {},
             "dataValues": {
                 "Haste": [
-                    125.0,
+                    75.0,
                     200.0,
-                    275.0,
-                    350.0,
-                    425.0,
-                    500.0,
-                    575.0
+                    325.0,
+                    450.0,
+                    575.0,
+                    700.0,
+                    825.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelTenacityDuration": [
                     3.0,
@@ -11927,13 +12142,13 @@
                     40.0
                 ],
                 "TotalASValue": [
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ]
             },
             "desc": "<attackSpeed>合計攻撃速度が@TotalASValue*100@%</attackSpeed>増加する。<br><br><attackSpeed>毎秒攻撃回数</attackSpeed>が@Breakpoint1@回になると、追加で<magicDamage>魔法ダメージ</magicDamage>{{ Item_Keyword_OnHit }}を与える。",
@@ -13357,7 +13572,7 @@
             "id": 215,
             "name": "闇の祝福",
             "rarity": 1,
-            "tooltip": "味方チャンピオンに<healing>体力回復効果</healing>または<shield>シールド</shield>を付与すると、<keywordMajor>「呪われし力」</keywordMajor>を@CurseCounter@獲得する。<br><br>スキルヘイストが@f1@ (自身の<keywordMajor>「呪われし力」</keywordMajor>の@AbilityHasteRatio*100@%)増加する。<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "味方チャンピオンに<healing>体力回復効果</healing>または<shield>シールド</shield>を付与すると、<keywordMajor>「呪われし力」</keywordMajor>を@CurseCounter@獲得する。<br><br>スキルヘイストが@f1@ (自身の<keywordMajor>「呪われし力」</keywordMajor>の@AbilityHasteRatio*100@%)増加する。<br><br><rules>スキル発動ごとにクールダウン@Cooldown@秒。</rules><br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "MindtoMatter",

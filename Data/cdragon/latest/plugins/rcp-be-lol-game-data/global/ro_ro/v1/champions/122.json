@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Darius își rotește securea într-un cerc larg. Inamicii loviți de tăiș suferă mai multe daune decât cei loviți de mâner. Darius se vindecă în funcție de numărul de campioni și monștri mari loviți cu tăișul.",
-            "dynamicDescription": "Darius își ridică securea, apoi o rotește în jurul său, provocând <physicalDamage>@BladeDamage@ daune fizice</physicalDamage> cu tăișul și <physicalDamage>@HandleDamage@ daune</physicalDamage> cu mânerul. Inamicilor loviți de mâner nu li se aplică niciun cumul de <keywordMajor>''Hemoragie''</keywordMajor>.<br><br>Darius își reface <healing>@Effect5Amount@% din viața lipsă</healing> per campion inamic și monstru mare din junglă lovit de tăiș, până la maximum <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius își ridică securea, apoi o rotește în jurul său, provocând <physicalDamage>@BladeDamage@ daune fizice</physicalDamage> cu tăișul și <physicalDamage>@HandleDamage@ daune</physicalDamage> cu mânerul. Inamicilor loviți de mâner nu li se aplică niciun cumul de <keywordMajor>''Hemoragie''</keywordMajor>.<br><br>Darius își reface <healing>@MissingHealthHeal@% din viața lipsă</healing> per campion inamic și monstru mare din junglă lovit de tăiș, până la maximum <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Următorul atac al lui Darius lovește o arteră vitală a unui inamic. Cât timp ținta sângerează, aceasta are viteza de mișcare redusă.",
-            "dynamicDescription": "Următorul atac al lui Darius provoacă <physicalDamage>@EmpoweredAttackDamage@ daune fizice</physicalDamage> și <status>încetinește</status> ținta cu @Effect2Amount@% timp de @Effect5Amount@ secundă.<br><br>Dacă ucide ținta, această abilitate returnează costul de mană și își reduce timpul de reactivare cu @Effect3Amount@%.<br><br><rules>Această abilitate declanșează efectele vrăjilor când provoacă daune.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Următorul atac al lui Darius provoacă <physicalDamage>@EmpoweredAttackDamage@ daune fizice</physicalDamage> și <status>încetinește</status> ținta cu @SlowPercent@% timp de @SlowDuration@ secundă.<br><br>Dacă ucide ținta, această abilitate returnează costul de mană și își reduce timpul de reactivare cu @PercentCDRefund@%.<br><br><rules>Această abilitate declanșează efectele vrăjilor când provoacă daune.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Darius își ascute securea, astfel încât daunele sale fizice ignoră pasiv o parte din armura țintei. Atunci când abilitatea este activată, Darius își agață inamicii și îi trage spre el.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Darius primește @Effect1Amount@% penetrare armură.<br><br><spellActive>Activă:</spellActive> Darius își întinde securea, <status>trăgând</status>, <status>aruncând în sus</status> și <status>încetinind</status> inamicii cu @Effect2Amount@% timp de @Effect3Amount@ secundă.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Darius primește @PassivePercentArmorPen@% penetrare armură.<br><br><spellActive>Activă:</spellActive> Darius își întinde securea, <status>trăgând</status>, <status>aruncând în sus</status> și <status>încetinind</status> inamicii cu @SlowPercent@% timp de @SlowDuration@ secundă.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

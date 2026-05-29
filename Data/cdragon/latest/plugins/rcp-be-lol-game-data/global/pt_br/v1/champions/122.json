@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Darius pega impulso e golpeia com seu machado em um movimento circular. Os inimigos atingidos pela lâmina recebem mais dano do que aqueles atingidos pelo cabo. Darius cura a si mesmo com base nos Campeões inimigos e monstros grandes atingidos pela lâmina.",
-            "dynamicDescription": "Darius se prepara e gira seu machado, causando <physicalDamage>@BladeDamage@ de Dano Físico</physicalDamage> com a lâmina e <physicalDamage>@HandleDamage@ de Dano Físico</physicalDamage> com o cabo. Inimigos atingidos pelo cabo não recebem acúmulo de <keywordMajor>Hemorragia</keywordMajor>.<br><br>Darius restaura <healing>@Effect5Amount@% da Vida perdida</healing> por cada Campeão inimigo ou monstro da selva atingido pela lâmina, até um máximo de <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius se prepara e gira seu machado, causando <physicalDamage>@BladeDamage@ de Dano Físico</physicalDamage> com a lâmina e <physicalDamage>@HandleDamage@ de Dano Físico</physicalDamage> com o cabo. Inimigos atingidos pelo cabo não recebem um acúmulo de <keywordMajor>Hemorragia</keywordMajor>.<br><br>Darius restaura <healing>@MissingHealthHeal@% da Vida perdida</healing> por Campeão inimigo ou monstro grande da selva atingido pela lâmina, até um máximo de <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "O próximo ataque de Darius acerta uma artéria importante do inimigo. Enquanto a vítima sangra, a Velocidade de Movimento dela é reduzida.",
-            "dynamicDescription": "O próximo Ataque de Darius causa <physicalDamage>@EmpoweredAttackDamage@ de Dano Físico</physicalDamage> e @Effect2Amount@% de <status>Lentidão</status> por @Effect5Amount@s.<br><br>Caso abata o alvo, o custo de Mana é restituído e o Tempo de Recarga é reduzido em @Effect3Amount@%.<br><br><rules>Esta Habilidade ativa efeitos ao causar dano.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "O próximo ataque de Darius causa <physicalDamage>@EmpoweredAttackDamage@ de Dano Físico</physicalDamage> e @SlowPercent@% de <status>Lentidão</status> por @SlowDuration@s.<br><br>Caso a habilidade abata o alvo, o Custo de Mana é restituído e o Tempo de Recarga é reduzido em @PercentCDRefund@%.<br><br><rules>Esta Habilidade ativa efeitos ao causar dano.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Darius afia seu machado, fazendo com que seu Dano Físico ignore passivamente um percentual da Armadura do alvo. Quando ativado, Darius ataca seus inimigos com o gancho do seu machado e os puxa em sua direção.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Darius recebe @Effect1Amount@% de Penetração de Armadura.<br><br><spellActive>Ativo:</spellActive> Darius maneja seu machado, <status>Puxando</status>, <status>Arremessando ao ar</status> e causando @Effect2Amount@% de <status>Lentidão</status> por @Effect3Amount@s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Darius recebe @PassivePercentArmorPen@% de Penetração de Armadura.<br><br><spellActive>Ativo:</spellActive> Darius maneja seu machado, <status>Puxando</status>, <status>Arremessando ao ar</status> e causando @SlowPercent@% de <status>Lentidão</status> por @SlowDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

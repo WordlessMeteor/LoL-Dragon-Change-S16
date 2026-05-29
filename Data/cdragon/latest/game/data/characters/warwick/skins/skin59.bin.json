@@ -65,12 +65,14 @@
                         "Play_vo_Warwick_Move2DStandard",
                         "Play_vo_Warwick_Recall3DGeneral",
                         "Play_vo_Warwick_Respawn2DGeneral",
+                        "Play_vo_Warwick_Spell3DBasic",
                         "Play_vo_Warwick_Spell3DE1Cast",
                         "Play_vo_Warwick_Spell3DE2Cast",
                         "Play_vo_Warwick_Spell3DQCast",
                         "Play_vo_Warwick_Spell3DRHit",
                         "Play_vo_Warwick_Spell3DRHitEnd",
                         "Play_vo_Warwick_Spell3DRMiss",
+                        "Play_vo_Warwick_Spell3DWCast",
                         "Play_vo_Warwick_Taunt3DGeneral",
                         "Play_vo_Warwick_WarwickBasicAttack2_cast3D",
                         "Play_vo_Warwick_WarwickBasicAttack3_cast3D",
@@ -312,6 +314,16 @@
         ],
         "paramValues": [
             {
+                "name": "fresnelAlpha_minmax",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "ScreenSpace_Tiling",
                 "value": [
                     1.0,
@@ -531,6 +543,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_FRESNEL_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "POST_LIGHTING_ON_SCROLLTEX",
                 "on": false,
@@ -1756,6 +1773,16 @@
         ],
         "paramValues": [
             {
+                "name": "fresnelAlpha_minmax",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "ScreenSpace_Tiling",
                 "value": [
                     1.0,
@@ -1957,6 +1984,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_FRESNEL_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "POST_LIGHTING_ON_SCROLLTEX",
                 "on": false,

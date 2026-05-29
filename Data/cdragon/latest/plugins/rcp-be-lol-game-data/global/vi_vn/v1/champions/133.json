@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Valor, chú đại bàng Demacia của Quinn, đánh dấu <font color='#FFF673'>Tiêu Điểm</font> lên kẻ địch. Đòn đánh đầu tiên của Quinn lên mục tiêu có <font color='#FFF673'>Tiêu Điểm</font> sẽ gây thêm sát thương vật lý."
+        "description": "Valor, đại bàng Demacia của Quinn, định kỳ đánh dấu kẻ địch bằng <keywordMajor>Chim Săn Mồi</keywordMajor>. Đòn đánh thường đầu tiên của Quinn lên mục tiêu <keywordMajor>Chim Săn Mồi</keywordMajor> sẽ gây thêm sát thương vật lý."
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Quinn gọi Valor lướt tới, đánh dấu và gây sát thương những kẻ địch trong vùng ảnh hưởng.",
-            "dynamicDescription": "Quinn ra lệnh cho Valor lao xuống, đánh dấu <keywordMajor>Tiêu Điểm</keywordMajor> lên kẻ địch đầu tiên trúng đòn, giảm bán kính tầm nhìn của chúng trong @VisionReductionDuration@ giây và gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> lên tất cả kẻ địch xung quanh.<br><br>Nếu kẻ địch đầu tiên trúng đòn không phải tướng, chúng sẽ bị <status>Cấm Đánh</status> trong @VisionReductionDuration@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn ra lệnh cho Valor lao xuống, đánh dấu <keywordMajor>Chim Săn Mồi</keywordMajor> lên kẻ địch đầu tiên trúng đòn, giảm bán kính tầm nhìn của chúng trong @VisionReductionDuration@ giây và gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> lên tất cả kẻ địch xung quanh.<br><br>Nếu kẻ địch đầu tiên trúng đòn không phải tướng, chúng sẽ bị <status>Cấm Đánh</status> trong @VisionReductionDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Không Tiêu hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Quinn được tăng Tốc độ Đánh và Tốc độ Di chuyển sau khi tấn công một kẻ địch <font color='#FFF673'>Tiêu Điểm</font>. Kích hoạt để Valor làm lộ diện một vùng rộng lớn quanh đó.",
-            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Tấn công mục tiêu có <keywordMajor>Tiêu Điểm</keywordMajor> ban cho Quinn <attackSpeed>@AttackSpeedBonus*100@% Tốc Độ Đánh</attackSpeed> và <speed>@MovespeedAmount*100@% Tốc Độ Di Chuyển</speed> trong @BuffDuration@ giây.<br><br><spellActive>Kích Hoạt:</spellActive> Valor soi sáng một khu vực lớn xung quanh trong @VisionDuration@ giây.@SpellModifierDescriptionAppend@",
+            "description": "Quinn nhận thêm Tốc Độ Đánh và Tốc Độ Di Chuyển từ nội tại sau khi tấn công mục tiêu <keywordMajor>Chim Săn Mồi</keywordMajor>. Kích hoạt để Valor soi sáng một khu vực lớn gần đó.",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Tấn công mục tiêu của <keywordMajor>Chim Săn Mồi</keywordMajor> ban cho Quinn <attackSpeed>@AttackSpeedBonus*100@% Tốc Độ Đánh</attackSpeed> và <speed>@MovespeedAmount*100@% Tốc Độ Di Chuyển</speed> trong @BuffDuration@ giây.<br><br><spellActive>Kích Hoạt:</spellActive> Valor soi sáng một khu vực lớn xung quanh trong @VisionDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Quinn lướt tới một kẻ địch, gây sát thương vật lí và làm chậm Tốc độ Di chuyển của nạn nhân. Khi đến nơi cô lộn ngược lại ngắt quãng nạn nhân trong thoáng chốc, rồi đáp xuống cách mục tiêu một khoảng bằng tầm đánh tối đa của bản thân.",
-            "dynamicDescription": "Quinn lao tới một kẻ địch, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> và đánh dấu <keywordMajor>Tiêu Điểm</keywordMajor> lên chúng. Quinn sau đó nhảy lùi lại khỏi mục tiêu, <status>Đẩy</status> chúng <status>Lùi</status> lại một khoảng ngắn và <status>Làm Chậm</status> chúng @SlowAmount*100@%, giảm dần trong @SlowDecayTime@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn lao tới một kẻ địch, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> và đánh dấu chúng với <keywordMajor>Chim Săn Mồi</keywordMajor>. Quinn sau đó nhảy lùi lại khỏi mục tiêu, <status>Đẩy</status> chúng <status>Lùi</status> lại một khoảng ngắn và <status>Làm Chậm</status> chúng @SlowAmount*100@%, giảm dần trong @SlowDecayTime@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Valor giúp Quinn bay với tốc độ cao. Kết thúc kỹ năng này sẽ tung ra Oanh Tạc, gây sát thương lên các kẻ địch xung quanh và đánh dấu Tiêu Điểm lên tướng.",
-            "dynamicDescription": "Quinn vận sức trong 2 giây và gọi Valor xuống để cùng chiến đấu, tăng <speed>@MovementSpeedMod*100@% Tốc độ Di chuyển</speed> và cho phép cô <recast>Tái kích hoạt</recast> Kỹ năng này. Tấn công hoặc sử dụng <spellName>Không Kích</spellName> hay <spellName>Đột Kích</spellName> sẽ tự động <recast>Tái kích hoạt</recast> Kỹ năng này.<br><br><recast>Tái kích hoạt</recast>: Quinn và Valor thực hiện pha tấn công trên không, gây <physicalDamage>@Damage@ sát thương vật lý</physicalDamage>, đánh dấu <keywordMajor>Tiêu Điểm</keywordMajor> lên tướng, và kết thúc Kỹ năng này.@SpellModifierDescriptionAppend@",
+            "description": "Valor giúp Quinn bay với tốc độ cao.  Kết thúc kỹ năng này sẽ tung ra Oanh Tạc, gây sát thương lên các kẻ địch xung quanh và đánh dấu Chim Săn Mồi lên tướng.",
+            "dynamicDescription": "Quinn vận sức trong 2 giây và gọi Valor xuống để cùng chiến đấu, nhận thêm <speed>@MovementSpeedMod*100@% Tốc Độ Di Chuyển</speed> và cho phép cô ấy <recast>Tái Kích Hoạt</recast> kỹ năng này. Đòn đánh hoặc sử dụng <spellName>Không Kích</spellName> hoặc <spellName>Đột Kích</spellName> sẽ tự động <recast>Tái Kích Hoạt</recast> kỹ năng này.<br><br><recast>Tái Kích Hoạt</recast>: Quinn và Valor thực hiện một pha nhào lộn trên không, gây <physicalDamage>@Damage@ sát thương vật lý</physicalDamage>, đánh dấu tướng địch bằng <keywordMajor>Chim Săn Mồi</keywordMajor> và kết thúc kỹ năng này.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

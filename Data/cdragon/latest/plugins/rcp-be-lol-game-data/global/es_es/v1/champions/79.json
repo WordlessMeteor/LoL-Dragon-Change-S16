@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Gragas hace rodar su tonel hacia un lugar específico. La explosión se puede activar o, de lo contrario, explotará automáticamente tras 4 s. La potencia de la explosión aumenta a lo largo del tiempo. Los enemigos a los que alcance la explosión sufrirán una reducción de velocidad de movimiento.",
-            "dynamicDescription": "Gragas hace rodar un tonel que explota tras @Effect4Amount@ s, lo que inflige entre <magicDamage>@MinDamage@</magicDamage> y <magicDamage>@MaxDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> entre un @Effect2Amount@ y un @Effect2Amount*1.5@% durante @Effect3Amount@ s. El daño y la <status>ralentización</status> aumentan según el tiempo que tarde el tonel en explotar. <br><br>Gragas puede <recast>volver a lanzar</recast> la habilidad para detonar el tonel antes.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas hace rodar un tonel que explota tras @BarrelMaxDuration@ s, lo que inflige entre <magicDamage>@MinDamage@</magicDamage> y <magicDamage>@MaxDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> entre un @SlowPercent@ y un @SlowPercent*1.5@% durante @SlowDuration@ s. El daño y la <status>ralentización</status> aumentan según el tiempo que tarde el tonel en explotar.<br><br>Gragas puede <recast>reactivar</recast> la habilidad para detonar el tonel antes.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

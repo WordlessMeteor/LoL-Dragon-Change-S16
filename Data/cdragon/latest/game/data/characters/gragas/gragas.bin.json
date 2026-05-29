@@ -23,7 +23,7 @@
         "mDescriptionTraKey": "stat_stone_description_GragasRKnockIntoTeam",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -51,7 +51,7 @@
         "mDescriptionTraKey": "stat_stone_description_GragasMaxQ",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -79,7 +79,7 @@
         "mDescriptionTraKey": "stat_stone_description_GragasPTriggers",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -121,7 +121,7 @@
         "mDescriptionTraKey": "stat_stone_description_GragasRMultihits",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -149,7 +149,7 @@
         "mDescriptionTraKey": "stat_stone_description_GragasWFlashCombo",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -177,7 +177,7 @@
         "mDescriptionTraKey": "stat_stone_description_GragasWDamageIgnored",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -304,7 +304,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 227,
+                "EventToTrack": 229,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -1275,44 +1275,6 @@
             },
             "mCastingBreaksStealth": true,
             "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "GragasQSpellPassive",
-                    "mFormat": "{d7c27163}",
-                    "mLocKeys": {
-                        "keyName": "Spell_GragasQ_Name",
-                        "keySummary": "Spell_GragasQ_Summary",
-                        "keyTooltip": "Spell_GragasQ_Tooltip"
-                    },
-                    "mLists": {
-                        "LevelUp": {
-                            "levelCount": 5,
-                            "Elements": [
-                                {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
-                                    "nameOverride": "Spell_ListType_Damage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_Slow",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cost",
-                                    "__type": "TooltipInstanceListElement"
-                                }
-                            ],
-                            "__type": "TooltipInstanceList"
-                        }
-                    },
-                    "__type": "TooltipInstanceSpell"
-                },
                 "mTargeterDefinitions": [
                     {
                         "__type": "TargeterDefinitionRange"
@@ -1449,6 +1411,84 @@
                         280.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0,
+                        60.0,
+                        65.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BarrelMaxDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BarrelCookMaxTime",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BarrelCookMaxAmp",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinionDamageMod",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1576,14 +1616,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SlowPercent",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1634,8 +1672,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1676,47 +1714,6 @@
                 "PositiveEffect_MoveBlock",
                 "Trait_ImmobilizingCCSpell",
                 "Trait_PlayerSelectedDashDirection"
-            ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
             ],
             "DataValues": [
                 {
@@ -2110,8 +2107,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2123,8 +2120,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2136,8 +2133,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2426,12 +2423,6 @@
                 {
                     "EffectTag": 4194304,
                     "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
-                            }
-                        ],
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"

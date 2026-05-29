@@ -1170,7 +1170,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Shen menggunakan Spirit Blade untuk menyerang, menghasilkan damage berdasarkan health maksimum target. Serangannya akan bertambah kuat jika Spirit Blade mengenai champion musuh, dan semua musuh yang terkena akan mendapat efek slow saat kabur dari Shen.",
-            "dynamicDescription": "Shen menggunakan <keywordMajor>Spirit Blade</keywordMajor>. Musuh yang terkena oleh tarikannya terkena efek <status>Slow</status> sebesar @Effect4Amount@% saat kabur dari Shen selama @Effect5Amount@ detik berikutnya.<br><br>Lalu, @Effect3Amount@ Serangan Shen berikutnya menghasilkan <magicDamage>@BaseFlatDamage@</magicDamage> tambahan ditambah <magicDamage>@BasePercentHealth@ magic damage Health maksimum</magicDamage>. Jika Shen mengenai champion musuh dengan <keywordMajor>Spirit Blade</keywordMajor>, damage ditingkatkan hingga <magicDamage>@BaseFlatDamage@</magicDamage> ditambah <magicDamage>@EmpPercentHealth@ magic damage Health maksimum</magicDamage> dan dia mendapatkan <attackSpeed>@Effect9Amount@% Attack Speed</attackSpeed> untuk Serangan tersebut.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen recall <keywordMajor>Spirit Blade</keywordMajor>. Musuh yang terkena oleh tarikannya terkena efek <status>Slow</status> sebesar @SlowPercent@% saat kabur dari Shen selama @SlowDuration@ detik berikutnya.<br><br>Lalu, @NumEnhancedAttacks@ Serangan Shen berikutnya menghasilkan <magicDamage>@BaseFlatDamage@</magicDamage> tambahan ditambah <magicDamage>@BasePercentHealth@ magic damage Health maksimum</magicDamage>. Jika Shen mengenai champion musuh dengan <keywordMajor>Spirit Blade</keywordMajor>, damage ditingkatkan hingga <magicDamage>@BaseFlatDamage@</magicDamage> ditambah <magicDamage>@EmpPercentHealth@ magic damage Health maksimum</magicDamage> dan dia mendapatkan <attackSpeed>@SteroidAS@% Attack Speed</attackSpeed> untuk Serangan tersebut.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Serangan yang bisa mengenai Shen atau sekutunya di sekitar Spirit Blade akan diblokir.",
-            "dynamicDescription": "Shen menciptakan zona pertahanan pada lokasi <keywordMajor>Spirit Blade</keywordMajor> selama @Effect1Amount@ detik. Serangan terhadap champion sekutu dalam zona tersebut diblokir. <br><br>Jika tidak ada champion yang bisa dilindungi dalam zona itu saat dimulai, ability ini akan menunggu hingga @Effect2Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen menciptakan zona pertahanan pada lokasi <keywordMajor>Spirit Blade</keywordMajor> selama @ZoneDuration@ detik. Serangan pada champion sekutu dalam zona tersebut diblokir. <br><br>Jika tidak ada champion yang bisa dilindungi dalam zona itu saat dimulai, ability ini akan menunggu hingga @ZoneDelay@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

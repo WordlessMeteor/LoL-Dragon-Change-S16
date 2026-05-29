@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Valor, l'aquila demaciana di Quinn, marchia periodicamente i nemici come <font color='#FFF673'>vulnerabili</font>. Il primo attacco base di Quinn contro un nemico <font color='#FFF673'>vulnerabile</font> infligge danni fisici bonus."
+        "description": "Valor, l'aquila demaciana di Quinn, marchia periodicamente i nemici con <keywordMajor>Rapace</keywordMajor>. Il primo attacco base di Quinn contro bersagli marchiati con <keywordMajor>Rapace</keywordMajor> infligge danni fisici bonus."
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Quinn chiama Valor affinché marchi un nemico e ostacoli la sua visione, per poi danneggiare tutti i nemici nell'area circostante.",
-            "dynamicDescription": "Quinn lancia Valor in picchiata, rendendo <keywordMajor>vulnerabile</keywordMajor> il primo nemico colpito, riducendo il suo raggio di visione per @VisionReductionDuration@ secondi e infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> a tutti i nemici circostanti.<br><br>Se il primo nemico colpito non è un campione, viene <status>disarmato</status> per @VisionReductionDuration@ secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn lancia Valor in picchiata, marchiando con <keywordMajor>Rapace</keywordMajor> il primo nemico colpito, riducendo il suo raggio di visione per @VisionReductionDuration@ secondi e infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> a tutti i nemici circostanti.<br><br>Se il primo nemico colpito non è un campione, viene <status>disarmato</status> per @VisionReductionDuration@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Conferisce passivamente velocità d'attacco e di movimento a Quinn dopo aver attaccato un nemico <font color='#FFF673'>vulnerabile</font>. Attiva per far svelare a Valor un'ampia area vicina.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> attaccare un bersaglio <keywordMajor>vulnerabile</keywordMajor> fornisce a Quinn un <attackSpeed>@AttackSpeedBonus*100@% di velocità d'attacco</attackSpeed> e un <speed>@MovespeedAmount*100@% di velocità di movimento</speed> @BuffDuration@ secondi.<br><br><spellActive>Attiva:</spellActive> Valor rivela una grande area vicina per @VisionDuration@ secondi.@SpellModifierDescriptionAppend@",
+            "description": "Conferisce passivamente a Quinn velocità d'attacco e velocità di movimento quando attacca un bersaglio marchiato da <keywordMajor>Rapace</keywordMajor>. Attiva per far svelare a Valor un'ampia area vicina.",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> attaccare un bersaglio marchiato con <keywordMajor>Rapace</keywordMajor> fornisce a Quinn un <attackSpeed>@AttackSpeedBonus*100@% di velocità d'attacco</attackSpeed> e un <speed>@MovespeedAmount*100@% di velocità di movimento</speed> per @BuffDuration@ secondi.<br><br><spellActive>Attiva:</spellActive> Valor rivela una grande area vicina per @VisionDuration@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Quinn salta addosso a un nemico, infliggendogli danni fisici e rallentandone la velocità di movimento. Quando raggiunge il bersaglio, se ne stacca con un balzo, interrompendolo momentaneamente, e atterra a una distanza prossima alla sua portata massima dal bersaglio.",
-            "dynamicDescription": "Quinn scatta verso un nemico, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e marchiandolo come <keywordMajor>vulnerabile</keywordMajor>. Dopodiché Quinn salta all'indietro, <status>respingendo</status> leggermente il bersaglio e <status>rallentandolo</status> di un @SlowAmount*100@%, effetto che decade nel corso di @SlowDecayTime@ secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn scatta verso un nemico, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e marchiandolo con <keywordMajor>Rapace</keywordMajor>. Dopodiché, Quinn salta all'indietro, <status>respingendo</status> leggermente il bersaglio e <status>rallentandolo</status> di un @SlowAmount*100@%, effetto che decade nel corso di @SlowDecayTime@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Insieme, Quinn e Valor spiccano il volo a grande velocità. Concludere l'abilità lancia Attacco dal cielo, che infligge danni ai nemici nelle vicinanze e marchia i campioni come vulnerabili.",
-            "dynamicDescription": "Quinn chiama Valor canalizzando per 2 secondi, ottenendo <speed>@MovementSpeedMod*100@% velocità di movimento</speed> con la possibilità di <recast>rilanciare</recast> questa abilità. Attaccare o usare <spellName>Assalto accecante</spellName> o <spellName>Colpo acrobatico</spellName> <recast>rilancia</recast> automaticamente questa abilità.<br><br><recast>Rilancio</recast>: Quinn e Valor eseguono una manovra aerea, infliggendo <physicalDamage>@Damage@ danni fisici</physicalDamage>, marchiando i campioni come <keywordMajor>vulnerabili</keywordMajor> e terminando questa abilità.@SpellModifierDescriptionAppend@",
+            "description": "Insieme, Quinn e Valor spiccano il volo a grande velocità.  Concludere l'abilità lancia Attacco dal cielo, che infligge danni ai nemici nelle vicinanze e marchia i campioni con Rapace.",
+            "dynamicDescription": "Quinn chiama Valor canalizzando per 2 secondi, ottenendo <speed>@MovementSpeedMod*100@% velocità di movimento</speed> con la possibilità di <recast>rilanciare</recast> questa abilità. Attaccando o usando <spellName>Assalto accecante</spellName> o <spellName>Colpo acrobatico</spellName>, questa abilità viene <recast>rilanciata</recast> automaticamente.<br><br><recast>Rilancio</recast>: Quinn e Valor eseguono una manovra aerea, infliggendo <physicalDamage>@Damage@ danni fisici</physicalDamage>, marcando i campioni con <keywordMajor>Rapace</keywordMajor> e terminando questa abilità.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

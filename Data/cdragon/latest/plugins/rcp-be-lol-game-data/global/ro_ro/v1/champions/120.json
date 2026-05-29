@@ -1101,7 +1101,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Hecarim spintecă inamicii din apropiere provocând daune fizice. Dacă Hecarim îi provoacă daune cel puțin unui inamic, daunele pentru folosirile ulterioare ale ''Furiei'' cresc, iar timpul de reactivare scade.",
-            "dynamicDescription": "Hecarim spintecă inamicii din apropiere, provocându-le <physicalDamage>@Damage@ daune fizice</physicalDamage>. Dacă această abilitate lovește o țintă, primește un cumul care îi reduce timpul de reactivare cu @RampageCooldownReduction@ secunde și îi crește daunele cu @RampageBonusDamagePerc@% timp de @Effect6Amount@ secunde. Se cumulează de maximum @Effect2Amount@ ori.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hecarim spintecă inamicii din apropiere, provocându-le <physicalDamage>@Damage@ daune fizice</physicalDamage>. Dacă această abilitate lovește o țintă, primește un cumul care îi reduce timpul de reactivare cu @RampageCooldownReduction@ secunde și îi crește daunele cu @RampageBonusDamagePerc@% timp de @BuffDuration@ secunde. Se cumulează de maximum @MaxStacks@ ori.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1401,7 +1401,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Hecarim primește un bonus la viteza de mișcare și se poate deplasa prin unități pentru scurt timp. Următorul său atac aruncă ținta în spate și îi provoacă daune fizice suplimentare în funcție de distanța pe care a parcurs-o de la activarea abilității.",
-            "dynamicDescription": "Hecarim primește efectul ''Fantomă'' și <speed>@MinMoveSpeed*100@% viteză de mișcare</speed>, valoare ce crește la <speed>@MaxMoveSpeed*100@%</speed> de-a lungul a @Effect5Amount@ secunde. Următorul său atac <status>aruncă în spate</status> ținta și îi provoacă între <physicalDamage>@MinDamage@</physicalDamage> și <physicalDamage>@MaxDamage@ daune fizice</physicalDamage>. Distanța <status>aruncării în spate</status> și daunele cresc în funcție de distanța parcursă în timpul acestei abilități.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hecarim primește efectul ''Fantomă'' și <speed>@MinMoveSpeed*100@% viteză de mișcare</speed>, valoare ce crește la <speed>@MaxMoveSpeed*100@%</speed> de-a lungul a @Duration@ secunde. Următorul său atac <status>aruncă în spate</status> ținta și îi provoacă între <physicalDamage>@MinDamage@</physicalDamage> și <physicalDamage>@MaxDamage@ daune fizice</physicalDamage>. Distanța <status>aruncării în spate</status> și daunele cresc în funcție de distanța parcursă în timpul acestei abilități.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

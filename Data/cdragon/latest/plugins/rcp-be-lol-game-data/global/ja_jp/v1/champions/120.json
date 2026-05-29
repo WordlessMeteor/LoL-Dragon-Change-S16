@@ -1101,7 +1101,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "周囲の敵を斬りつけて物理ダメージを与える。1体以上の敵にダメージを与えた場合、それ以降に行う「ランページ」のダメージが増加して、クールダウンが短縮される。",
-            "dynamicDescription": "周囲の敵を斬りつけて、<physicalDamage>@Damage@の物理ダメージ</physicalDamage>を与える。このスキルが命中すると、クールダウンが@RampageCooldownReduction@秒短縮されて、@Effect6Amount@秒間ダメージが@RampageBonusDamagePerc@%増加する。この効果は@Effect2Amount@回までスタックする。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "周囲の敵を斬りつけて、<physicalDamage>@Damage@の物理ダメージ</physicalDamage>を与える。このスキルが命中すると、クールダウンが@RampageCooldownReduction@秒短縮されて、@BuffDuration@秒間ダメージが@RampageBonusDamagePerc@%増加する。この効果は@MaxStacks@回までスタックする。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1401,7 +1401,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "移動速度が短時間増加し、ユニットを通り抜けられるようになる。さらに次の通常攻撃に対象をノックバックする効果と、スキル発動後の移動距離に応じた追加物理ダメージが付与される。",
-            "dynamicDescription": "ゴースト化して、<speed>移動速度が@MinMoveSpeed*100@%</speed>増加する(@Effect5Amount@秒かけて最大<speed>@MaxMoveSpeed*100@%</speed>まで増加する)。次の通常攻撃が対象を<status>ノックバック</status>させ、<physicalDamage>@MinDamage@</physicalDamage> - <physicalDamage>@MaxDamage@の物理ダメージ</physicalDamage>を与える。<status>ノックバック</status>の距離とダメージは、このスキル使用中に移動した距離に応じて増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ゴースト化して、<speed>移動速度が@MinMoveSpeed*100@%</speed>増加する(@Duration@秒かけて最大<speed>@MaxMoveSpeed*100@%</speed>まで増加する)。次の通常攻撃が対象を<status>ノックバック</status>して、<physicalDamage>@MinDamage@</physicalDamage> - <physicalDamage>@MaxDamage@の物理ダメージ</physicalDamage>を与える。<status>ノックバック</status>する距離とダメージは、このスキル使用中に移動した距離に応じて増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

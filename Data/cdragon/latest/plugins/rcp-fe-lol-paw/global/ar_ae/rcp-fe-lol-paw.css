@@ -1092,6 +1092,10 @@
     width: 526px
 }
 
+.paw-modal-layout .paw-window.boost {
+    width: 660px
+}
+
 .paw-modal-layout .paw-window.paw-window-choice {
     height: 610px;
     width: 756px
@@ -1500,6 +1504,22 @@
     width: 100%
 }
 
+.paw-content-details .item-inner-content {
+    width: 100%
+}
+
+.paw-content-details .item-inner-content--boost-splash {
+    background-color: #010a13;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, cover;
+    box-sizing: border-box;
+    margin: 0 -20px;
+    min-height: 296px;
+    padding: 0 20px;
+    width: calc(100% + 40px)
+}
+
 .paw-content-details .content-separator {
     border-color: #463714;
     border-width: 1px 0;
@@ -1610,6 +1630,11 @@
     padding-top: 25px
 }
 
+.paw-overlay-image-content.boost {
+    min-height: 0;
+    width: 620px
+}
+
 .paw-overlay-image-content .overlay-image-wrapper {
     background-size: cover;
     border: thin solid transparent;
@@ -1617,6 +1642,12 @@
     border-image-slice: 1;
     padding: 5px;
     position: relative
+}
+
+.paw-overlay-image-content .overlay-image-wrapper.boost {
+    border: none;
+    border-image: none;
+    padding: 0
 }
 
 .paw-overlay-image-content .overlay-image-wrapper .overlay-image-border {
@@ -1634,6 +1665,12 @@
 .paw-overlay-image-content .overlay-image-wrapper .overlay-image-border.summoner_icon {
     height: 150px;
     width: 150px
+}
+
+.paw-overlay-image-content .overlay-image-wrapper .overlay-image-border.boost {
+    border: none;
+    border-image: none;
+    box-shadow: none
 }
 
 .paw-overlay-image-content .overlay-image-wrapper .paw-purchase-overlay-image {
@@ -1702,7 +1739,19 @@
     position: relative
 }
 
+.paw-price-details-boost-refund-disclaimer {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 8px
+}
+
+.paw-price-details-boost-refund-disclaimer .digital-goods-disclaimer-url:after {
+    vertical-align: baseline
+}
+
 .paw-price-details-digital-goods-disclaimer {
+    font-size: 12px;
+    line-height: 16px;
     margin-bottom: 5px
 }
 

@@ -90,6 +90,46 @@
             "tooltip": "<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @StealthDuration@ วินาที หรือจนกว่าคุณจะโจมตีหรือใช้สกิล"
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "ความเสียหายทั้งหมดที่คุณทำจะติด <keyword>Grevious Wounds</keyword>",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Chemtech Putrifier",
+            "rarity": 4,
+            "tooltip": "การสร้าง<Damage>ความเสียหาย</Damage>จะทำให้แชมเปี้ยนติดเอฟเฟกต์<keyword>บาดแผล @GrievousAmount*100@%</keyword> เป็นเวลา @GrievousDuration@ วินาที"
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1273,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -1436,6 +1476,46 @@
             "name": "Light Warden",
             "rarity": 1,
             "tooltip": "ทุก @Cooldown@ วินาที <keywordMajor>ร่ายอัตโนมัติ</keywordMajor>แสงแห่งการปกปัก มอบ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield> ให้กับตัวคุณและเพื่อนร่วมทีมที่มันทะลุผ่านก่อนที่จะกลับมา และปล่อยเอฟเฟกต์ซ้ำ"
+        },
+        {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "<status>สโลว์</status>ศัตรูเมื่อสร้างความเสียหาย",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Frozen Mallet",
+            "rarity": 4,
+            "tooltip": "การสร้างความเสียหายจะมอบ<status>สโลว์</status> <speed>@SlowAmount*100@%</speed> เป็นเวลา @SlowDuration@ วินาที"
         },
         {
             "apiName": "Quest_MadHatter",
@@ -2169,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "เงื่อนไข: โค่นล้มศัตรู @TakedownsNeeded@ ครั้ง<br><br>รางวัล: Golden Spatula",
@@ -2317,10 +2397,51 @@
             "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "การสร้างความเสียหายจะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @MaxHealthDamage*100@% ของพลังชีวิตสูงสุด</physicalDamage>",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Bloodrazor",
+            "rarity": 4,
+            "tooltip": "การสร้างความเสียหายจะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @MaxHealthDamage*100@% ของพลังชีวิตสูงสุด</physicalDamage>"
+        },
+        {
             "apiName": "Erosion",
             "calculations": {
                 "MaxShredTooltipOnly": {
                     "__type": "GameCalculation",
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
@@ -2329,12 +2450,9 @@
                         {
                             "__type": "NamedDataValueCalculationPart",
                             "mDataValue": "MaxStacks"
-                        },
-                        {
-                            "__type": "NumberCalculationPart",
-                            "mNumber": 10.0
                         }
-                    ]
+                    ],
+                    "mSimpleTooltipCalculationDisplay": 5
                 }
             },
             "dataValues": {
@@ -2716,8 +2834,8 @@
                 "NumberOfMissiles": [
                     3.0,
                     3.0,
+                    3.0,
                     5.0,
-                    6.0,
                     6.0,
                     6.0,
                     6.0
@@ -3326,7 +3444,7 @@
             "id": 310,
             "name": "Clown College",
             "rarity": 2,
-            "tooltip": "<spellName>Backstab</spellName>: คุณสร้าง<physicalDamage>โบนัสความเสียหายกายภาพ @BasicAttackDamage@ หน่วย</physicalDamage> เมื่อโจมตีศัตรูจากด้านหลัง<br><br><spellName>Deceive</spellName>: คุณจะเทเลพอร์ตและ<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @StealthDuration@ วินาที การโจมตีครั้งถัดไปของคุณขณะที่<keywordStealth>ล่องหน</keywordStealth>จะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TotalDamage@ หน่วย</physicalDamage> หากโจมตีจากด้านหลัง การโจมตีนี้จะติดคริติคอลเป็นความเสียหาย @QCritDamageMod@<br><br><spellName>Hallucinate: Death</spellName>: เมื่อตาย จะสร้าง<trueDamage>ความเสียหายจริง @FearDamage*100@% ของพลังชีวิตสูงสุด</trueDamage> และทำให้ศัตรูรอบตัวคุณหวาดกลัวเป็นเวลา @FearDuration@ วินาที"
+            "tooltip": "<spellName>Backstab</spellName>: คุณสร้าง<physicalDamage>โบนัสความเสียหายกายภาพ @BasicAttackDamage@ หน่วย</physicalDamage>เมื่อโจมตีศัตรูจากด้านหลัง<br><br><spellName>Deceive</spellName>: คุณจะเทเลพอร์ตและ<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @StealthDuration@ วินาที การโจมตีครั้งถัดไปของคุณขณะที่<keywordStealth>ล่องหน</keywordStealth>จะสร้าง<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TotalDamage@ หน่วย</physicalDamage> หากโจมตีจากด้านหลัง การโจมตีนี้จะติดคริติคอลเป็นความเสียหาย @QCritDamageMod@ หน่วย<br><br><spellName>Hallucinate: Death</spellName>: เมื่อตาย จะสร้าง<magicDamage>ความเสียหายจริง @FearDamage*100@% ของพลังชีวิตสูงสุด</magicDamage> และทำให้ศัตรูรอบตัวคุณหวาดกลัวเป็นเวลา @FearDuration@ วินาที"
         },
         {
             "apiName": "NumbToPain",
@@ -3403,6 +3521,37 @@
             "name": "Numb to Pain",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@% ของความเสียหายที่คุณได้รับจะค่อย ๆ เกิดขึ้นในช่วงระยะเวลา @BleedDuration@ วินาทีแทน (@RangedReduction*100@% สำหรับแชมเปี้ยนระยะไกล)"
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "โหวตให้ทีมของคุณเป็นพันธมิตรกับเหล่านักล่าปีศาจ <br><br>การเป็นพันธมิตรกับเหล่านักล่าปีศาจจะมอบ<gold>โบนัสทอง +%i:goldCoins% @BonusGold@ ทอง</gold>ให้คุณเมื่อคุณเอาชนะ<keywordMajor>ทีมปีศาจ</keywordMajor>ได้",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Ally Hunter",
+            "rarity": 4,
+            "tooltip": "โหวตให้ทีมของคุณเป็นพันธมิตรกับเหล่านักล่าปีศาจ <br><br>การเป็นพันธมิตรกับเหล่านักล่าปีศาจจะมอบ<gold>โบนัสทอง +%i:goldCoins% @BonusGold@ ทอง</gold>ให้คุณเมื่อคุณเอาชนะ<keywordMajor>ทีมปีศาจ</keywordMajor>ได้"
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4765,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "การมอบบัฟ <healing>การฮีล</healing> หรือ<shield>โล่ป้องกันความเสียหาย</shield>ให้แก่เพื่อนร่วมทีม จะสร้างความเสียหายและ<status>สโลว์</status>ศัตรูโดยรอบ",
@@ -4656,7 +4805,47 @@
             "id": 76,
             "name": "Sonic Boom",
             "rarity": 0,
-            "tooltip": "การมอบบัฟ <healing>การฮีล</healing> หรือการมอบ<shield>โล่ป้องกัน</shield>ให้กับเพื่อนร่วมทีมจะสร้าง<trueDamage>ความเสียหายจริง @Damage@ หน่วย</trueDamage> และ<status>สโลว์ศัตรูโดยรอบลง</status> @SlowAmount*-100@% เป็นเวลา @SlowDuration@ วินาที<br><br>ความเสียหายที่ทำได้รอบนี้: @f1@ หน่วย<br>ความเสียหายทั้งหมดที่ทำได้: @f2@ หน่วย"
+            "tooltip": "การมอบบัฟ <healing>การฮีล</healing> หรือการมอบ<shield>โล่ป้องกัน</shield>ให้กับเพื่อนร่วมทีมจะสร้าง<trueDamage>ความเสียหายจริง @Damage@ หน่วย</trueDamage> และ<status>สโลว์ศัตรูโดยรอบลง</status> @SlowAmount*-100@% เป็นเวลา @SlowDuration@ วินาที<br><br><rules>คูลดาวน์ @ProcCooldown@ วินาทีต่อสกิล</rules><br><br>ความเสียหายที่ทำได้รอบนี้: @f1@ หน่วย<br>ความเสียหายทั้งหมดที่ทำได้: @f2@ หน่วย"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "ลด<attackSpeed>ความเร็วโจมตี</attackSpeed>ของแชมเปี้ยนใกล้เคียงลง",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Remnant of the Watchers",
+            "rarity": 4,
+            "tooltip": "ลด<attackSpeed>ความเร็วโจมตี</attackSpeed>ของแชมเปี้ยนใกล้เคียงลง <attackSpeed>@ASPDSlow*-100@%</attackSpeed>"
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5070,37 @@
             "name": "With Haste",
             "rarity": 1,
             "tooltip": "ได้รับ<speed>ความเร็วเคลื่อนที่ @AbilityHasteToMSConversionCalc@ หน่วย</speed>"
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "การสร้างความเสียหายจะสังหารแชมเปี้ยนที่มีพลังชีวิตต่ำกว่า @ExecuteThreshold*100@% ในทันที",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "Dematerializer",
+            "rarity": 4,
+            "tooltip": "การสร้างความเสียหายจะสังหารแชมเปี้ยนที่มีพลังชีวิตต่ำกว่า @ExecuteThreshold*100@% ในทันที"
         },
         {
             "apiName": "FallenAegis",
@@ -5785,6 +6005,28 @@
             "tooltip": "สกิลของคุณจะทำให้ติด<keywordMajor>เผา</keywordMajor>ที่สแตคได้ไม่จำกัด สร้าง<magicDamage>ความเสียหายเวท @BleedDamageTooltip@ หน่วย</magicDamage>ต่อวินาที เป็นเวลา @BleedDuration@ วินาที<br><br>เอฟเฟกต์<keywordMajor>เผา</keywordMajor>ทั้งหมดที่คุณมีจะช่วยลดคูลดาวน์สกิลพื้นฐานลง @FlatCooldownRefundPerTick@ วินาที เมื่อสกิลดังกล่าวสร้างความเสียหายให้กับศัตรู<br><br>ความเสียหายที่ทำได้รอบนี้: @f1@ หน่วย<br>ความเสียหายทั้งหมดที่ทำได้: @f2@ หน่วย<br>"
         },
         {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "โหวตให้ทีมของคุณเป็นพันธมิตรกับเหล่าปีศาจ <br><br>การเป็นพันธมิตรกับเหล่าปีศาจจะมอบ <keywordMajor>Augment Level %i:AugmentLevel%</keywordMajor> <keywordMajor>เมื่อทีมนักล่าถูกกำจัด</keywordMajor>",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Ally Demon",
+            "rarity": 4,
+            "tooltip": "โหวตให้ทีมของคุณเป็นพันธมิตรกับเหล่าปีศาจ <br><br>การเป็นพันธมิตรกับเหล่าปีศาจจะมอบ <keywordMajor>Augment Level %i:AugmentLevel%</keywordMajor> <keywordMajor>เมื่อทีมนักล่าถูกกำจัด</keywordMajor>"
+        },
+        {
             "apiName": "ADAPt",
             "calculations": {
                 "APAmpCalcTooltip": {
@@ -5819,7 +6061,7 @@
                 "InverseRate": [
                     0.6000000238418579,
                     0.6000000238418579,
-                    0.800000011920929,
+                    2.799999952316284,
                     0.800000011920929,
                     0.800000011920929,
                     0.800000011920929,
@@ -6011,7 +6253,7 @@
                 "ADcoefficient": [
                     0.07000000029802322,
                     0.07000000029802322,
-                    0.09000000357627869,
+                    0.07999999821186066,
                     0.09000000357627869,
                     0.09000000357627869,
                     0.09000000357627869,
@@ -6020,7 +6262,7 @@
                 "APcoefficient": [
                     0.03999999910593033,
                     0.03999999910593033,
-                    0.07000000029802322,
+                    0.05999999865889549,
                     0.07000000029802322,
                     0.07000000029802322,
                     0.07000000029802322,
@@ -6029,7 +6271,7 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.007499999832361937,
+                    0.006500000134110451,
                     0.007499999832361937,
                     0.007499999832361937,
                     0.007499999832361937,
@@ -7174,6 +7416,37 @@
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>ความเสียหายทั้งหมดที่ถูกส่งมา: @f1@ หน่วย<br>การฮีลทั้งหมด: @f2@ หน่วย<br>"
         },
         {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "ได้รับ<attention>โล่กันสกิล</attention> ทุก ๆ @Cooldown@ วินาที",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Enchanted Flask",
+            "rarity": 4,
+            "tooltip": "ได้รับ<attention>โล่กันสกิล</attention>ที่จะช่วยบล็อกสกิลครั้งถัดไปของศัตรูทุก ๆ @Cooldown@ วินาที"
+        },
+        {
             "apiName": "Deathtouch",
             "calculations": {},
             "dataValues": {
@@ -7340,22 +7613,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -7411,13 +7684,13 @@
             "calculations": {},
             "dataValues": {
                 "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "EnemyDetectionRadius": [
                     800.0,
@@ -8259,7 +8532,7 @@
                 "InverseRate": [
                     1.666659951210022,
                     1.666659951210022,
-                    0.0,
+                    2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
@@ -8585,13 +8858,13 @@
                     1.5
                 ],
                 "ReviveMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ],
                 "SelfReviveTimerModMax": [
                     0.5,
@@ -8612,13 +8885,13 @@
                     0.4000000059604645
                 ],
                 "SizeMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ]
             },
             "desc": "ได้รับการ<attention>ฟื้นคืนชีพ</attention>เพิ่มเติม @BonusLives@ ครั้ง และเริ่มชุบชีวิตตัวเองหลังจากที่คุณตาย<br><br>เมื่อคุณ<attention>ฟื้นคืนชีพ</attention>มาแล้ว จะ<status>กระแทก</status>ศัตรูรอบตัวคุณออกไป และกลับมาพร้อมกับขนาดตัวที่เล็กลง และมี<scaleHealth>พลังชีวิตสูงสุด</scaleHealth>ที่ลดลง",
@@ -9551,13 +9824,13 @@
                     0.3499999940395355
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaximumDistanceRoF": [
                     1500.0,
@@ -9909,10 +10182,10 @@
             "calculations": {},
             "dataValues": {
                 "AttackSpeed": [
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.75,
-                    1.2000000476837158,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.800000011920929,
+                    1.2999999523162842,
                     1.5,
                     1.5,
                     1.5
@@ -10899,64 +11172,6 @@
             "tooltip": "สละ<scaleHealth> @HealthReductionPercent@% ของพลังชีวิตสูงสุดของคุณ</scaleHealth> ให้กับ Tahm Kench<br><br>การสละพลังชีวิตทั้งหมดของคุณ จะเพิ่มขึ้นเป็น <scaleHealth>-@MaxHealthReduction@% ของพลังชีวิตสูงสุด</scaleHealth><br><br>ได้รับ <gold>+@GoldToGrant@ %i:goldCoins% ทอง</gold>"
         },
         {
-            "apiName": "FrozenFoundations",
-            "calculations": {},
-            "dataValues": {
-                "ChampPushDistance": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "NonChampPushDistance": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
-                ],
-                "WallDuration": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "WallWidth": [
-                    800.0,
-                    800.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0
-                ]
-            },
-            "desc": "ได้รับเวทซัมมอนเนอร์ <spellName>Frozen Foundations</spellName><br><br><rules><spellName>Frozen Foundations</spellName> อัญเชิญกำแพงน้ำแข็งออกมา</rules>",
-            "iconLarge": "assets/ux/cherry/augments/icons/frozenfoundations_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/frozenfoundations_small.png",
-            "id": 40,
-            "name": "Frozen Foundations",
-            "rarity": 0,
-            "tooltip": "<rules>อัญเชิญกำแพงน้ำแข็งออกมายังตำแหน่งเป้าหมาย</rules>"
-        },
-        {
             "apiName": "CriticalHealing",
             "calculations": {
                 "CriticalHealCalc": {
@@ -11315,13 +11530,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11695,13 +11910,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -11775,22 +11990,22 @@
             "calculations": {},
             "dataValues": {
                 "Haste": [
-                    125.0,
+                    75.0,
                     200.0,
-                    275.0,
-                    350.0,
-                    425.0,
-                    500.0,
-                    575.0
+                    325.0,
+                    450.0,
+                    575.0,
+                    700.0,
+                    825.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelTenacityDuration": [
                     3.0,
@@ -11927,13 +12142,13 @@
                     40.0
                 ],
                 "TotalASValue": [
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ]
             },
             "desc": "ได้รับ<attackSpeed>ความเร็วโจมตีทั้งหมด @TotalASValue*100@%</attackSpeed> <br><br>เมื่อมี<attackSpeed>ความเร็วโจมตีต่อวินาที</attackSpeed>ถึง @Breakpoint1@ ครั้ง จะสร้าง<magicDamage>ความเสียหายเวท</magicDamage>เพิ่มเติม {{ Item_Keyword_OnHit }}",
@@ -13357,7 +13572,7 @@
             "id": 215,
             "name": "Dark Blessing",
             "rarity": 1,
-            "tooltip": "ได้รับ <keywordMajor>Cursed Power</keywordMajor> @CurseCounter@ สแตค เมื่อคุณ<healing>ฮีล</healing>หรือมอบ<shield>โล่ป้องกัน</shield>ให้กับแชมเปี้ยนร่วมทีม<br><br>ได้รับเร่งสกิล @f1@ หน่วย (@AbilityHasteRatio*100@% จากสแตค <keywordMajor>Cursed Power</keywordMajor>)<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "ได้รับ <keywordMajor>Cursed Power</keywordMajor> @CurseCounter@ สแตค เมื่อคุณ<healing>ฮีล</healing>หรือมอบ<shield>โล่ป้องกัน</shield>ให้กับแชมเปี้ยนร่วมทีม<br><br>ได้รับเร่งสกิล @f1@ หน่วย (@AbilityHasteRatio*100@% จากสแตค <keywordMajor>Cursed Power</keywordMajor>)<br><br><rules>คูลดาวน์ @Cooldown@ วินาทีต่อสกิล</rules><br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "MindtoMatter",

@@ -90,6 +90,46 @@
             "tooltip": "تصبح <keywordStealth>غير مرئي</keywordStealth> لمدة @StealthDuration@ث، ما لم تقم بهجوم أو تستخدم قدرة."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "يتسبب كل ضرر تلحقه في تطبيق <keyword>الجراح الخطيرة</keyword>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "عفن الكيمتيك",
+            "rarity": 4,
+            "tooltip": "يتسبب إلحاق <Damage>الضرر</Damage> بالأبطال في تطبيق <keyword>@GrievousAmount*100@% من الجراح</keyword> لمدة @GrievousDuration@ث."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1273,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -1436,6 +1476,46 @@
             "name": "مأمور النور",
             "rarity": 1,
             "tooltip": "كل @Cooldown@ث، <keywordMajor>تلقي تلقائيًا</keywordMajor> ضوء حراسة باتجاه حليفك، مما يمنح <shield>@TotalShield@ درع</shield> لك وللحلفاء يمر عبرهم قبل أن يعود ليكرر التأثير."
+        },
+        {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "يتسبب إلحاق الضرر في <status>إبطاء</status> الأعداء.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "المطرقة المتجمدة",
+            "rarity": 4,
+            "tooltip": "يطبق إلحاق الضرر <speed>@SlowAmount*100@%</speed> <status>إبطاء</status> لمدة @SlowDuration@ث."
         },
         {
             "apiName": "Quest_MadHatter",
@@ -2111,7 +2191,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/crafting_sellaug.png",
             "iconSmall": "assets/ux/cherry/augments/icons/crafting_sellaug_small.png",
             "id": 342,
-            "name": "ترقية التحسينات",
+            "name": "تحسينات ترقية المستوى",
             "rarity": 4,
             "tooltip": "قم بإزالة <keywordMajor>%i:Augment% تحسين</keywordMajor>. <br><br>تكسب @AugmentLevelsToGrant@ من <keywordMajor>%i:AugmentLevel% مستويات التحسينات</keywordMajor> عشوائيًا.<br><br><attention>لديك @LevelableAugmentCount@ %i:AugmentLevel% من التحسينات القابلة للترقية.</attention>"
         },
@@ -2169,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "الشروط: حقق @TakedownsNeeded@ من الإطاحات.<br><br>الجائزة: الملعقة المسطحة الذهبية",
@@ -2317,10 +2397,51 @@
             "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "يؤدي إلحاق الضرر إلى إلحاق <physicalDamage>@MaxHealthDamage*100@% من الصحة القصوى على شكل ضرر مادي</physicalDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "بتار الدم",
+            "rarity": 4,
+            "tooltip": "يؤدي إلحاق الضرر إلى إلحاق <physicalDamage>@MaxHealthDamage*100@% من الصحة القصوى على شكل ضرر مادي</physicalDamage>."
+        },
+        {
             "apiName": "Erosion",
             "calculations": {
                 "MaxShredTooltipOnly": {
                     "__type": "GameCalculation",
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
@@ -2329,12 +2450,9 @@
                         {
                             "__type": "NamedDataValueCalculationPart",
                             "mDataValue": "MaxStacks"
-                        },
-                        {
-                            "__type": "NumberCalculationPart",
-                            "mNumber": 10.0
                         }
-                    ]
+                    ],
+                    "mSimpleTooltipCalculationDisplay": 5
                 }
             },
             "dataValues": {
@@ -2716,8 +2834,8 @@
                 "NumberOfMissiles": [
                     3.0,
                     3.0,
+                    3.0,
                     5.0,
-                    6.0,
                     6.0,
                     6.0,
                     6.0
@@ -3326,7 +3444,7 @@
             "id": 310,
             "name": "كلية المهرجين",
             "rarity": 2,
-            "tooltip": "<spellName>الطعنة الغادرة</spellName>: تلحق @BasicAttackDamage@ <physicalDamage>ضرر مادي إضافي</physicalDamage> عند الضرب من الخلف.<br><br><spellName>الخداع</spellName>: تنفذ الانتقال السريع وتصبح <keywordStealth>غير مرئي</keywordStealth> لمدة @StealthDuration@ث. يلحق هجومك التالي حين تكون <keywordStealth>غير مرئي</keywordStealth> مقدارًا إضافيًا يبلغ <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. عند الهجوم من الخلف، يسبب هذا الهجوم ضربة حرجة تُلحق @QCritDamageMod@ ضرر.<br><br><spellName>الهلوسة: الموت</spellName>: تلحق عند الموت <trueDamage>@FearDamage*100@% من الصحة القصوى على شكل ضرر حقيقي</trueDamage> وتثير الخوف من حولك لمدة @FearDuration@ث."
+            "tooltip": "<spellName>الطعنة الغادرة</spellName>: تلحق @BasicAttackDamage@ <physicalDamage>ضرر مادي إضافي</physicalDamage> عند الضرب من الخلف.<br><br><spellName>الخداع</spellName>: تنفذ الانتقال السريع وتصبح <keywordStealth>غير مرئي</keywordStealth> لمدة @StealthDuration@ث. يلحق هجومك التالي حين تكون <keywordStealth>غير مرئي</keywordStealth> مقدارًا إضافيًا يبلغ <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage>. عند الهجوم من الخلف، يسبب هذا الهجوم ضربة حرجة تُلحق @QCritDamageMod@ ضرر.<br><br><spellName>هلوسة: الموت</spellName>: تلحق عند الموت <magicDamage>@FearDamage*100@% من الصحة القصوى على شكل ضرر حقيقي</magicDamage> وتثير الخوف من حولك لمدة @FearDuration@ث."
         },
         {
             "apiName": "NumbToPain",
@@ -3403,6 +3521,37 @@
             "name": "منيع ضد الألم",
             "rarity": 0,
             "tooltip": "يتم توزيع @MeleeReduction*100@% من الضرر الذي تتلقاه على مدار @BleedDuration@ث (@RangedReduction*100@% لأبطال المدى البعيد)."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "صوّت على تحالف فريقك مع صيادي الشياطين. <br><br>يمنحك التحالف مع صيادي الشياطين <gold>+%i:goldCoins%@BonusGold@ ذهب إضافي</gold> عند هزيمة <keywordMajor>فريق الشياطين</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "الحليف الصياد",
+            "rarity": 4,
+            "tooltip": "صوّت على تحالف فريقك مع صيادي الشياطين. <br><br>يمنحك التحالف مع صيادي الشياطين <gold>+%i:goldCoins%@BonusGold@ ذهب إضافي</gold> عند هزيمة <keywordMajor>فريق الشياطين</keywordMajor>."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4765,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "يؤدي تعزيز أو <healing>علاج</healing> أو <shield>تدريع</shield> حليفك إلى إلحاق ضرر و<status>إبطاء</status> الأعداء المحيطين به.",
@@ -4656,7 +4805,47 @@
             "id": 76,
             "name": "الانفجار الصوتي",
             "rarity": 0,
-            "tooltip": "يؤدي تعزيز أو <healing>علاج</healing> أو <shield>تدريع</shield> حليفك إلى إلحاق <trueDamage>@Damage@ضرر حقيقي</trueDamage> و<status>إبطاء الأعداء المحيطين به</status> بنسبة @SlowAmount*-100@% لمدة @SlowDuration@ث.<br><br>الضرر الملحق في هذه الجولة: @f1@<br>إجمالي الضرر الملحق: @f2@"
+            "tooltip": "يؤدي تعزيز أو <healing>علاج</healing> أو <shield>تدريع</shield> حليفك إلى إلحاق <trueDamage>@Damage@ضرر حقيقي</trueDamage> و<status>إبطاء الأعداء المحيطين به</status> بنسبة @SlowAmount*-100@% لمدة @SlowDuration@ث.<br><br><rules>@ProcCooldown@ث فترة تبريد لكل إلقاء.</rules><br><br>الضرر الملحق في هذه الجولة: @f1@<br>إجمالي الضرر الملحق: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "تقلص <attackSpeed>سرعة هجوم</attackSpeed> الأبطال القريبين.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "رفات المراقبين",
+            "rarity": 4,
+            "tooltip": "تقلص <attackSpeed>سرعة هجوم</attackSpeed> الأبطال القريبين بنسبة <attackSpeed>@ASPDSlow*-100@%</attackSpeed>."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5070,37 @@
             "name": "التسارع الكبير",
             "rarity": 1,
             "tooltip": "تكسب <speed>@AbilityHasteToMSConversionCalc@ سرعة حركة</speed>."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "يُجهز الضرر الذي تلحقه على الأبطال الذين تقل صحتهم عن @ExecuteThreshold*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "المبيد",
+            "rarity": 4,
+            "tooltip": "يُجهز الضرر الذي تلحقه على الأبطال الذين تقل صحتهم عن @ExecuteThreshold*100@%."
         },
         {
             "apiName": "FallenAegis",
@@ -5785,6 +6005,28 @@
             "tooltip": "تطبق قدراتك تكدسات لا نهائية من تأثير <keywordMajor>الحرق</keywordMajor>، مما يلحق <magicDamage>@BleedDamageTooltip@ ضرر سحر</magicDamage> كل ثانية لمدة @BleedDuration@ث.<br><br>تقلص جميع تأثيرات <keywordMajor>الحرق</keywordMajor> لديك فترات تبريد قدراتك الأساسية بمقدار @FlatCooldownRefundPerTick@ث عندما تلحق ضررًا بالأعداء.<br><br>الضرر الملحق هذه الجولة: @f1@<br>إجمالي الضرر الملحق: @f2@<br>"
         },
         {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "صوّت على تحالف فريقك مع الشياطين. <br><br>يمنح التحالف مع الشياطين <keywordMajor>%i:AugmentLevel% مستوى تحسين</keywordMajor> عند <keywordMajor>إقصاء فريق الصياد</keywordMajor>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "الحليف الشيطاني",
+            "rarity": 4,
+            "tooltip": "صوّت على تحالف فريقك مع الشياطين. <br><br>يمنح التحالف مع الشياطين <keywordMajor>%i:AugmentLevel% مستوى تحسين</keywordMajor> عند <keywordMajor>إقصاء فريق الصياد</keywordMajor>."
+        },
+        {
             "apiName": "ADAPt",
             "calculations": {
                 "APAmpCalcTooltip": {
@@ -5819,7 +6061,7 @@
                 "InverseRate": [
                     0.6000000238418579,
                     0.6000000238418579,
-                    0.800000011920929,
+                    2.799999952316284,
                     0.800000011920929,
                     0.800000011920929,
                     0.800000011920929,
@@ -6011,7 +6253,7 @@
                 "ADcoefficient": [
                     0.07000000029802322,
                     0.07000000029802322,
-                    0.09000000357627869,
+                    0.07999999821186066,
                     0.09000000357627869,
                     0.09000000357627869,
                     0.09000000357627869,
@@ -6020,7 +6262,7 @@
                 "APcoefficient": [
                     0.03999999910593033,
                     0.03999999910593033,
-                    0.07000000029802322,
+                    0.05999999865889549,
                     0.07000000029802322,
                     0.07000000029802322,
                     0.07000000029802322,
@@ -6029,7 +6271,7 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.007499999832361937,
+                    0.006500000134110451,
                     0.007499999832361937,
                     0.007499999832361937,
                     0.007499999832361937,
@@ -7174,6 +7416,37 @@
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>إجمالي الضرر المعاد توجيهه: @f1@<br>إجمالي العلاج المطبق: @f2@<br>"
         },
         {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "تكسب <attention>درع تعويذة</attention> كل @Cooldown@ث.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "القارورة المسحورة",
+            "rarity": 4,
+            "tooltip": "تكسب <attention>درع تعويذة</attention> كل @Cooldown@ث يقوم بصد قدرة العدو التالية."
+        },
+        {
             "apiName": "Deathtouch",
             "calculations": {},
             "dataValues": {
@@ -7340,22 +7613,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -7411,13 +7684,13 @@
             "calculations": {},
             "dataValues": {
                 "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "EnemyDetectionRadius": [
                     800.0,
@@ -8259,7 +8532,7 @@
                 "InverseRate": [
                     1.666659951210022,
                     1.666659951210022,
-                    0.0,
+                    2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
@@ -8585,13 +8858,13 @@
                     1.5
                 ],
                 "ReviveMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ],
                 "SelfReviveTimerModMax": [
                     0.5,
@@ -8612,13 +8885,13 @@
                     0.4000000059604645
                 ],
                 "SizeMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ]
             },
             "desc": "تكسب @BonusLives@ من <attention>عمليات الإنعاش</attention> الإضافية وتبدأ بإنعاش نفسك بعد موتك.<br><br>عند <attention>إنعاشك</attention>، <status>تطيح إلى الخلف</status> بالأعداء من حولك وتعود إلى الميدان بحجم أصغر مع انخفاض في <scaleHealth>الصحة القصوى</scaleHealth>.",
@@ -9551,13 +9824,13 @@
                     0.3499999940395355
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaximumDistanceRoF": [
                     1500.0,
@@ -9909,10 +10182,10 @@
             "calculations": {},
             "dataValues": {
                 "AttackSpeed": [
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.75,
-                    1.2000000476837158,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.800000011920929,
+                    1.2999999523162842,
                     1.5,
                     1.5,
                     1.5
@@ -10208,7 +10481,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
             "id": 343,
-            "name": "غضب الشرفاء",
+            "name": "فورة الشرفاء",
             "rarity": 2,
             "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@ث فترة تبريد لكل إلقاء قدرة وتحسين وعنصر."
         },
@@ -10899,64 +11172,6 @@
             "tooltip": "تضحي بنسبة <scaleHealth>@HealthReductionPercent@% من صحتك القصوى</scaleHealth> لصالح تام كينش. <br><br>يزداد إجمالي التضحية لديك إلى <scaleHealth> - @MaxHealthReduction@% من الصحة القصوى</scaleHealth>.<br><br>تكسب <gold>+%i:goldCoins% @GoldToGrant@ ذهب</gold>."
         },
         {
-            "apiName": "FrozenFoundations",
-            "calculations": {},
-            "dataValues": {
-                "ChampPushDistance": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "NonChampPushDistance": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
-                ],
-                "WallDuration": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "WallWidth": [
-                    800.0,
-                    800.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0
-                ]
-            },
-            "desc": "تكسب تعويذة مستدعي <spellName>الأساس المجمد</spellName>.<br><br><rules>تستدعي تعويذة <spellName>الأساس المجمد</spellName> جدارًا من الجليد في موقع محدد.</rules>",
-            "iconLarge": "assets/ux/cherry/augments/icons/frozenfoundations_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/frozenfoundations_small.png",
-            "id": 40,
-            "name": "الأساس المجمد",
-            "rarity": 0,
-            "tooltip": "<rules>استدع جدارًا من الجليد عند موقع محدد.</rules>"
-        },
-        {
             "apiName": "CriticalHealing",
             "calculations": {
                 "CriticalHealCalc": {
@@ -11315,13 +11530,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11695,13 +11910,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -11775,22 +11990,22 @@
             "calculations": {},
             "dataValues": {
                 "Haste": [
-                    125.0,
+                    75.0,
                     200.0,
-                    275.0,
-                    350.0,
-                    425.0,
-                    500.0,
-                    575.0
+                    325.0,
+                    450.0,
+                    575.0,
+                    700.0,
+                    825.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelTenacityDuration": [
                     3.0,
@@ -11927,13 +12142,13 @@
                     40.0
                 ],
                 "TotalASValue": [
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ]
             },
             "desc": "تكسب <attackSpeed>@TotalASValue*100@% إجمالي سرعة هجوم</attackSpeed>. <br><br>عند بلوغ عتبة @Breakpoint1@ <attackSpeed>من الهجمات في الثانية</attackSpeed>، تلحق <magicDamage>ضرر سحر</magicDamage> إضافي {{ Item_Keyword_OnHit }}",
@@ -13357,7 +13572,7 @@
             "id": 215,
             "name": "مباركات الظلام",
             "rarity": 1,
-            "tooltip": "عند قيامك <healing>بعلاج</healing> أو <shield>تدريع</shield> بطل حليف، تكسب @CurseCounter@ <keywordMajor>قوة ملعونة</keywordMajor>.<br><br>تكسب @f1@ تسارع قدرة (@AbilityHasteRatio*100@% من <keywordMajor>القوة الملعونة</keywordMajor> لديك).<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "عند قيامك <healing>بعلاج</healing> أو <shield>تدريع</shield> بطل حليف، تكسب @CurseCounter@ <keywordMajor>قوة ملعونة</keywordMajor>.<br><br>تكسب @f1@ تسارع قدرة (@AbilityHasteRatio*100@% من <keywordMajor>القوة الملعونة</keywordMajor> لديك).<br><br><rules>@Cooldown@ث فترة تبريد لكل إلقاء.</rules><br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "MindtoMatter",

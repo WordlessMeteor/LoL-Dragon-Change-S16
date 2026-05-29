@@ -1170,7 +1170,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Shen recupera su espada espiritual para atacar con ella e infligir un daño basado en la vida máxima del objetivo. Los ataques se verán muy potenciados si la espada impacta en un campeón enemigo. Además, todos los enemigos impactados se verán ralentizados al intentar huir de Shen.",
-            "dynamicDescription": "Shen recupera su <keywordMajor>espada espiritual</keywordMajor>. Los enemigos con los que impacte se verán <status>ralentizados</status> un @Effect4Amount@% durante @Effect5Amount@ s al intentar alejarse de Shen.<br><br>Además, los siguientes @Effect3Amount@ ataques de Shen infligirán adicionalmente <magicDamage>@BaseFlatDamage@</magicDamage> más un <magicDamage>@BasePercentHealth@ de daño mágico según la vida máxima</magicDamage>. Si Shen ha golpeado a un campeón enemigo con la <keywordMajor>espada espiritual</keywordMajor>, el daño aumenta a <magicDamage>@BaseFlatDamage@</magicDamage> más un <magicDamage>@EmpPercentHealth@ de daño mágico según la vida máxima</magicDamage> y obtiene un <attackSpeed>@Effect9Amount@% de velocidad de ataque</attackSpeed> para esos ataques.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen recupera su <keywordMajor>espada espiritual</keywordMajor>. Los enemigos con los que impacte se verán <status>ralentizados</status> un @SlowPercent@% durante @SlowDuration@ s al intentar alejarse de Shen.<br><br>Además, los siguientes @NumEnhancedAttacks@ ataques de Shen infligirán <magicDamage>@BaseFlatDamage@</magicDamage> + <magicDamage>@BasePercentHealth@ de daño mágico en función de la vida máxima</magicDamage> adicional. Si Shen ha golpeado a un campeón enemigo con la <keywordMajor>espada espiritual</keywordMajor>, el daño aumenta a <magicDamage>@BaseFlatDamage@</magicDamage> + <magicDamage>@EmpPercentHealth@ de daño mágico en función de la vida máxima</magicDamage> y obtiene un <attackSpeed>@SteroidAS@% de velocidad de ataque</attackSpeed> para esos ataques.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Se bloquean los ataques que pudiesen recibir Shen o sus aliados cerca de la espada espiritual.",
-            "dynamicDescription": "Shen crea una zona defensiva donde está su <keywordMajor>espada espiritual</keywordMajor> durante @Effect1Amount@ s. Los ataques contra campeones aliados en la zona están bloqueados. <br><br>Si no hay campeones que proteger en la zona cuando empieza, esperará hasta @Effect2Amount@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen crea una zona defensiva donde está su <keywordMajor>espada espiritual</keywordMajor> durante @ZoneDuration@ s. Los ataques contra campeones aliados en la zona están bloqueados.<br><br>Si no hay campeones que proteger en la zona cuando empieza, esperará hasta @ZoneDelay@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

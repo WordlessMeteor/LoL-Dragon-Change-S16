@@ -1646,7 +1646,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "После небольшой задержки Дариус выполняет круговой удар топором. Враги, задетые лезвием, получают больше урона, чем те, по которым пришелся удар рукоятью. Кроме того, запас здоровья Дариуса восстанавливается на величину, зависящую от числа чемпионов и больших монстров, пораженных лезвием.",
-            "dynamicDescription": "Дариус замахивается топором, а затем вращает им вокруг себя, нанося <physicalDamage>@BladeDamage@ физического урона</physicalDamage> лезвием и <physicalDamage>@HandleDamage@ урона</physicalDamage> рукоятью. Враги, пораженные рукоятью, не получают заряд <keywordMajor>Кровотечения</keywordMajor>.<br><br>Дариус восстанавливает <healing>@Effect5Amount@% от недостающего здоровья</healing> за каждого вражеского чемпиона или большого лесного монстра, пораженного лезвием, вплоть до <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Дариус замахивается топором и вращает им вокруг себя, нанося <physicalDamage>@BladeDamage@ ед. физ. урона</physicalDamage> лезвием и <physicalDamage>@HandleDamage@ ед. урона</physicalDamage> рукоятью. Враги, пораженные рукоятью, не получают заряд <keywordMajor>Кровотечения</keywordMajor>.<br><br>Дариус восстанавливает <healing>@MissingHealthHeal@% от недост. здоровья</healing> за каждого вражеского чемпиона или большого лесного монстра, пораженного лезвием, вплоть до <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Следующая автоатака Дариуса повреждает жизненно важную артерию врага. Пока цель истекает кровью, ее скорость передвижения уменьшена.",
-            "dynamicDescription": "Следующая автоатака Дариуса наносит <physicalDamage>@EmpoweredAttackDamage@ физического урона</physicalDamage> и <status>замедляет</status> цель на @Effect2Amount@% на @Effect5Amount@ сек.<br><br>Если цель умирает, Дариус получает назад затраченную ману, а время перезарядки этого умения сокращается на @Effect3Amount@%.<br><br><rules>При нанесении урона это умение активирует эффекты заклинаний.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Следующая автоатака Дариуса наносит <physicalDamage>@EmpoweredAttackDamage@ ед. физ. урона</physicalDamage> и <status>замедляет</status> цель на @SlowPercent@% на @SlowDuration@ сек.<br><br>Если цель умирает, Дариус восстанавливает затраченную ману, а перезарядка этого умения сокращается на @PercentCDRefund@%.<br><br><rules>При нанесении урона это умение активирует эффекты заклинаний.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Дариус затачивает свой топор, пассивно игнорируя часть брони цели. При активации умения Дариус цепляет врагов крюком топора и притягивает их к себе.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> пробивание брони Дариуса увеличено на @Effect1Amount@%.<br><br><spellActive>Активно:</spellActive> Дариус совершает захват топором, <status>притягивая</status>, <status>подбрасывая</status> и <status>замедляя</status> врагов на @Effect2Amount@% на @Effect3Amount@ сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> Дариус получает @PassivePercentArmorPen@% пробивания брони.<br><br><spellActive>Активно:</spellActive> Дариус совершает захват топором, <status>притягивая</status>, <status>подбрасывая</status> и <status>замедляя</status> врагов на @SlowPercent@% на @SlowDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

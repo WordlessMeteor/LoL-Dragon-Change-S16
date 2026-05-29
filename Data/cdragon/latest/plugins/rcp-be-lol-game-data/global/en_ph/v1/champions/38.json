@@ -769,11 +769,11 @@
                 80.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.5,
                 9.0,
                 8.5,
                 8.0,
+                7.5,
+                7.0,
                 8.0
             ],
             "coefficients": {
@@ -941,13 +941,13 @@
                     6.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
                 ],
                 "Effect3Amount": [
                     25.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kassadin draws energy from spells cast in his vicinity. Upon charging up, Kassadin can use Force Pulse to damage and slow enemies in a cone in front of him.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> <spellName>Force Pulse's</spellName> Cooldown is reduced by @ReductionPerSpellCast@ second whenever any Ability is used near Kassadin.<br><br><spellActive>Active:</spellActive> Kassadin unleashes a void pulse, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slowing</status> by @Effect2Amount@% for @Effect3Amount@ second.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> <spellName>Force Pulse's</spellName> Cooldown is reduced by @ReductionPerSpellCast@ second whenever any Ability is used near Kassadin.<br><br><spellActive>Active:</spellActive> Kassadin unleashes a void pulse, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Slowing</status> by @SlowAmount@% for @SlowDuration@ second.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Darius múa rìu xung quanh mình. Những kẻ địch trúng phải lưỡi rìu sẽ cho nhiều sát thương hơn những kẻ bị trúng phải cán rìu. Darius sẽ hồi máu lại dựa vào số tướng và quái to bị lưỡi rìu chém phải.",
-            "dynamicDescription": "Darius vung rìu của mình xung quanh, gây <physicalDamage>@BladeDamage@ sát thương vật lý</physicalDamage> cho những kẻ địch trúng phần lưỡi và <physicalDamage>@HandleDamage@ sát thương</physicalDamage> với phần cán rìu. Kẻ địch trúng phần cán rìu sẽ không phải chịu cộng dồn <keywordMajor>Xuất Huyết</keywordMajor>.<br><br>Darius hồi lại <healing>@Effect5Amount@% Máu đã mất</healing> với mỗi tướng địch và quái to dính phải phần lưỡi rìu, tối đa <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius vung rìu của mình xung quanh, gây <physicalDamage>@BladeDamage@ sát thương vật lý</physicalDamage> bằng lưỡi rìu và <physicalDamage>@HandleDamage@ sát thương</physicalDamage> bằng cán rìu. Kẻ địch trúng cán sẽ không nhận cộng dồn <keywordMajor>Xuất Huyết</keywordMajor>.<br><br>Darius hồi lại <healing>@MissingHealthHeal@% Máu đã mất</healing> cho mỗi tướng địch và quái rừng lớn trúng phải lưỡi rìu, tối đa <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Đòn đánh tiếp theo của Darius nhắm vào động mạch kẻ địch. Khi bị chảy máu trầm trọng, Tốc Độ Di Chuyển của chúng sẽ chậm đi đáng kể.",
-            "dynamicDescription": "Đòn đánh kế tiếp của Darius gây <physicalDamage>@EmpoweredAttackDamage@ sát thương vật lý</physicalDamage> và <status>Làm Chậm</status> kẻ địch đi @Effect2Amount@% trong @Effect5Amount@ giây.<br><br>Kỹ năng này sẽ hoàn trả Năng lượng tiêu hao và giảm Hồi chiêu đi @Effect3Amount@% nếu kết liễu được mục tiêu.<br><br><rules>Kỹ năng này kích hoạt hiệu ứng kỹ năng khi gây sát thương</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Đòn Đánh tiếp theo của Darius gây <physicalDamage>@EmpoweredAttackDamage@ sát thương vật lý</physicalDamage> và <status>Làm Chậm</status> chúng đi @SlowPercent@% trong @SlowDuration@ giây.<br><br>Kỹ Năng này sẽ hoàn trả năng lượng tiêu hao và giảm thời gian hồi chiêu đi @PercentCDRefund@% nếu kết liễu được mục tiêu.<br><br><rules>Kỹ năng này kích hoạt hiệu ứng kỹ năng khi gây sát thương</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Darius cường hóa chiếc rìu của mình, khiến sát thương vật lí của hắn bỏ qua một số phần trăm Giáp của mục tiêu. Khi được kích hoạt, Darius sẽ quét kẻ địch bằng chiếc rìu của mình và kéo chúng đến cạnh bên hắn.",
-            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Darius nhận @Effect1Amount@% Xuyên Giáp.<br><br><spellActive>Kích hoạt:</spellActive> Darius móc kẻ địch với rìu của mình, <status>Kéo</status>, <status>Hất Tung</status> và <status>Làm Chậm</status> chúng đi @Effect2Amount@% trong @Effect3Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Darius nhận @PassivePercentArmorPen@% Xuyên Giáp.<br><br><spellActive>Kích Hoạt:</spellActive> Darius móc kẻ địch với rìu của mình, <status>Kéo</status>, đồng thời <status>Hất Tung</status> và <status>Làm Chậm</status> chúng đi @SlowPercent@% trong @SlowDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

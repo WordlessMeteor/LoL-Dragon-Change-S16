@@ -3170,7 +3170,7 @@
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-panel" noshadow>\r\n  <template>\r\n    \x3c!-- only display one game info panel at a time --\x3e\r\n    <lol-parties-game-info-panel if="{{!data.tournaments.gameInfoPanel}}" animate="slide"></lol-parties-game-info-panel>\r\n    <div class="tournaments-game-info-panel" animate="slide" else>{{{data.tournaments.gameInfoPanel}}}</div>\r\n\r\n    <lol-social-restriction-banner\r\n      if="{{data.clientConfig.socialPanelRestrictionEnabled && data.restrictionView.restrictions.length > 0}}"\r\n      animate="slide"\r\n    ></lol-social-restriction-banner>\r\n\r\n    <div class="tournaments-persistent-panel" if="{{data.tournaments.persistentPanel}}" animate="slide">\r\n      {{{data.tournaments.persistentPanel}}}\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
         }, e => {
             "use strict";
-            e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-restriction-banner" noshadow>\r\n  <template>\r\n    <div class="restriction-banner" if="{{data.restrictionView.restrictions.length > 0}}" on-click="{{openRestrictionDrawer()}}">\r\n      <div class="restriction-banner-header">\r\n        <div class="restriction-banner-title">{{t(\'active_penalties_header\')}}</div>\r\n      </div>\r\n      <div class="restriction-banner-pills">\r\n        <div class="restriction-banner-collapse-arrow"></div>\r\n        <div\r\n          repeat="{{restriction in visibleRestrictions(data.restrictionView.restrictions)}}"\r\n          class="restriction-pill restriction-pill-{{restrictionIconType(restriction)}}"\r\n        >\r\n          <div class="restriction-pill-icon"></div>\r\n          <div class="restriction-pill-duration">{{restrictionDurationLabel(restriction)}}</div>\r\n        </div>\r\n        <div\r\n          if="{{overflowRestrictionCount(data.restrictionView.restrictions) > 0}}"\r\n          class="restriction-pill restriction-pill-overflow"\r\n        >\r\n          <div class="restriction-pill-duration">+{{overflowRestrictionCount(data.restrictionView.restrictions)}}</div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
+            e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-restriction-banner" noshadow>\r\n  <template>\r\n    <div class="restriction-banner" if="{{data.restrictionView.restrictions.length > 0}}" on-click="{{openRestrictionDrawer()}}">\r\n      <div class="restriction-banner-header">\r\n        <div class="restriction-banner-title">{{t(\'active_penalties_header\')}}</div>\r\n      </div>\r\n      <div class="restriction-banner-pills">\r\n        <div class="restriction-banner-collapse-arrow"></div>\r\n        <div\r\n          repeat="{{restriction in visibleRestrictions(data.restrictionView.restrictions)}}"\r\n          class="restriction-pill restriction-pill-{{restrictionIconType(restriction)}}"\r\n          on-mouseenter="{{showPillTooltip($event, restriction)}}"\r\n          on-mouseleave="{{hidePillTooltip($event)}}"\r\n        >\r\n          <div class="restriction-pill-icon"></div>\r\n          <div class="restriction-pill-duration">{{restrictionDurationLabel(restriction)}}</div>\r\n        </div>\r\n        <div\r\n          if="{{overflowRestrictionCount(data.restrictionView.restrictions) > 0}}"\r\n          class="restriction-pill restriction-pill-overflow"\r\n        >\r\n          <div class="restriction-pill-duration">+{{overflowRestrictionCount(data.restrictionView.restrictions)}}</div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-roster-group-name" attributes="group" noshadow>\r\n  <template>\r\n    <div class="group-name-animation" if="{{saved}}" animate></div>\r\n    <div class="group-name-text" error="{{errorMessage}}">\r\n      <div class="group-label" if="{{!editing}}">\r\n        <span if="{{group.isLocalized}}" class="group-label-localized">\r\n          <span class="group-label-locale-direction-override">{{group.name}}</span> ({{getFriendCount()}})\r\n        </span>\r\n        <span else-if="{{group.isDefault}}">\r\n          <span class="group-label-locale-direction-override">{{t(\'group_label_default\')}}</span> ({{getFriendCount()}})\r\n        </span>\r\n        <span else-if="{{group.isOtherShards}}">\r\n          <span class="group-label-locale-direction-override">{{t(\'group_label_other_shards\')}}</span>\r\n          ({{getFriendCount()}})\r\n        </span>\r\n        <span else-if="{{group.isOther}}">\r\n          <span class="group-label-locale-direction-override">{{t(\'group_label_other\')}}</span> ({{getFriendCount()}})\r\n        </span>\r\n        <span else-if="{{group.isMetaGroup}}">\r\n          <span class="group-label-locale-direction-override">{{t(\'group_label_\' + group.name.toLowerCase())}}</span>\r\n          ({{getFriendCount()}})\r\n        </span>\r\n        <span else> <span class="group-label-locale-direction-override">{{label}}</span> ({{getFriendCount()}}) </span>\r\n      </div>\r\n      <input\r\n        ref="groupNameInput"\r\n        class="group-name-input"\r\n        is="lol-social-input"\r\n        type="text"\r\n        value-events="input"\r\n        if="{{editing}}"\r\n        value="{{groupName}}"\r\n        on-enter="{{changeGroupName()}}"\r\n        on-unfocus="{{cancelEdit($event)}}"\r\n        on-esc="{{cancelEdit($event)}}"\r\n        maxlength="25"\r\n        on-input="{{validate()}}"\r\n      />\r\n    </div>\r\n  </template>\r\n</lol-social-element>\r\n'
@@ -9910,13 +9910,13 @@
                 "./menu/menu.js": 297,
                 "./panel/panel.js": 299,
                 "./restriction-banner/restriction-banner.js": 303,
-                "./roster-group-name/roster-group-name.js": 307,
-                "./roster-group/roster-group.js": 309,
+                "./roster-group-name/roster-group-name.js": 314,
+                "./roster-group/roster-group.js": 316,
                 "./roster-member/context-menu-items.js": 253,
-                "./roster-member/roster-member.js": 313,
-                "./roster/roster.js": 320,
-                "./roster/virtualize-roster-members.js": 321,
-                "./status/status.js": 324
+                "./roster-member/roster-member.js": 320,
+                "./roster/roster.js": 327,
+                "./roster/virtualize-roster-members.js": 328,
+                "./status/status.js": 331
             };
 
             function o(e) {
@@ -12785,31 +12785,72 @@
                 } = r,
                 i = 864e5,
                 a = 36e5,
-                s = new Set(["DM_RESTRICTION", "TEXT_CHAT_RESTRICTION", "HONOR_GAMEFLOW_CHAT_LOCKED"]),
-                l = new Set(["HONOR_GAMEFLOW_VOICE_LOCKED"]),
-                c = new Set(["HONOR_GAMEFLOW_CHAT_LOCKED", "HONOR_GAMEFLOW_VOICE_LOCKED"]);
+                s = 6e4,
+                l = {
+                    REPUTATION_LIMIT: "honor-downgrade",
+                    RANKED_RESTRICTION: "ranked-suspension",
+                    QUEUE_LOCKOUT: "queue-lock",
+                    QUEUE_DELAY: "queue-delay",
+                    TEXT_CHAT_RESTRICTION: "chat-restriction",
+                    DM_RESTRICTION: "chat-restriction",
+                    ALL_PINGS_RESTRICTION: "ping-restriction",
+                    HONOR_GAMEFLOW_CHAT_LOCKED: "chat-restriction",
+                    HONOR_GAMEFLOW_VOICE_LOCKED: "voice-restriction",
+                    TEAM_VOICE_LOCKOUT: "voice-restriction"
+                },
+                c = ["honor-downgrade", "ranked-suspension", "queue-lock", "queue-delay", "chat-restriction", "ping-restriction", "voice-restriction"],
+                d = new Set(["HONOR_GAMEFLOW_CHAT_LOCKED", "HONOR_GAMEFLOW_VOICE_LOCKED"]),
+                p = {
+                    HONOR_GAMEFLOW_CHAT_LOCKED: 2,
+                    HONOR_GAMEFLOW_VOICE_LOCKED: 3
+                },
+                u = 60,
+                m = 24 * u;
+
+            function g(e) {
+                const t = {
+                    time: "",
+                    games: 0,
+                    level: 0
+                };
+                if (!e) return t;
+                const n = e.expirationData;
+                if (n) {
+                    const e = n.expirationMillis;
+                    e && e > 0 && (t.time = function(e) {
+                        if (!e || e <= 0) return "";
+                        const t = Math.max(1, Math.ceil(e / s)),
+                            n = Math.floor(t / m),
+                            r = Math.floor(t % m / u),
+                            o = t % u,
+                            i = [];
+                        return n > 0 && i.push(`${n}D`), r > 0 && i.push(`${r}H`), (o > 0 || 0 === i.length) && i.push(`${o}M`), i.slice(0, 2).join(" ")
+                    }(e - Date.now()));
+                    const r = n.redemptions;
+                    if (Array.isArray(r) && r.length > 0) {
+                        const e = r.find((e => e && e.redemptionCountRemaining > 0)) || r[0];
+                        t.games = Math.max(0, e && e.redemptionCountRemaining || 0)
+                    }
+                }
+                return t.level = p[e.restrictionType] || 0, t
+            }
+
+            function h(e) {
+                if (e && d.has(e.restrictionType)) return 2;
+                const t = e && e.expirationData;
+                return t && t.expirationMillis && t.expirationMillis > 0 ? 0 : t && Array.isArray(t.redemptions) && t.redemptions.length > 0 ? 1 : 2
+            }
             o.defineElement("lol-social-restriction-banner", {
                 styles: n(304),
-                restrictionIconType(e) {
-                    if (!e || !e.restrictionType) return "clock";
-                    if (s.has(e.restrictionType)) return "mute";
-                    if (l.has(e.restrictionType)) return "voice";
-                    const t = e.expirationData;
-                    if (t) {
-                        const e = t.expirationMillis && t.expirationMillis > 0,
-                            n = Array.isArray(t.redemptions) && t.redemptions.length > 0;
-                        if (!e && n) return "flag"
-                    }
-                    return "clock"
-                },
+                restrictionIconType: e => e && e.restrictionType && l[e.restrictionType] || "chat-restriction",
                 restrictionDurationLabel(e) {
-                    if (e && c.has(e.restrictionType)) return "";
+                    if (e && d.has(e.restrictionType)) return "";
                     const t = e && e.expirationData;
                     if (!t) return "";
                     const n = t.expirationMillis;
                     if (n && n > 0) {
                         const e = n - Date.now();
-                        return e <= 0 ? "" : e >= i ? `${Math.ceil(e/i)}D` : e >= a ? `${Math.ceil(e/a)}H` : `${Math.max(1,Math.ceil(e/6e4))}M`
+                        return e <= 0 ? "" : e >= i ? `${Math.ceil(e/i)}D` : e >= a ? `${Math.ceil(e/a)}H` : `${Math.max(1,Math.ceil(e/s))}M`
                     }
                     const r = t.redemptions;
                     if (Array.isArray(r) && r.length > 0) {
@@ -12818,20 +12859,68 @@
                     }
                     return ""
                 },
-                visibleRestrictions: e => Array.isArray(e) ? e.slice(0, 3) : [],
-                overflowRestrictionCount: e => Array.isArray(e) ? Math.max(0, e.length - 3) : 0,
+                dedupedSortedRestrictions(e) {
+                    if (!Array.isArray(e)) return [];
+                    const t = {};
+                    return e.forEach((e => {
+                        if (!e || !e.restrictionType) return;
+                        const n = l[e.restrictionType];
+                        if (!n) return;
+                        const r = t[n];
+                        (!r || h(e) < h(r)) && (t[n] = e)
+                    })), c.map((e => t[e])).filter((e => Boolean(e)))
+                },
+                visibleRestrictions(e) {
+                    return this.dedupedSortedRestrictions(e).slice(0, 3)
+                },
+                overflowRestrictionCount(e) {
+                    return Math.max(0, this.dedupedSortedRestrictions(e).length - 3)
+                },
+                restrictionTooltipTitle(e) {
+                    const t = this.restrictionIconType(e).replace(/-/g, "_");
+                    return this.t(`social_restriction_${t}_name`)
+                },
+                restrictionTooltipBody(e) {
+                    const t = g(e);
+                    return t.time ? this.t("social_restriction_time_remaining", {
+                        time: t.time
+                    }) : t.games > 0 ? this.t("social_restriction_games_remaining", {
+                        games: t.games
+                    }) : t.level > 0 ? this.t("social_restriction_honor_remaining", {
+                        level: t.level
+                    }) : ""
+                },
+                showPillTooltip(e, t) {
+                    const n = e && (e.currentTarget || e.target);
+                    if (!(n && this.data && this.data.tooltipManager && this.data.templateHelper)) return;
+                    this._pillTooltipTarget && this._pillTooltipTarget !== n && this.data.tooltipManager.unassign(this._pillTooltipTarget);
+                    const r = this.restrictionTooltipTitle(t),
+                        o = this.restrictionTooltipBody(t),
+                        i = document.createElement("lol-uikit-tooltip"),
+                        a = this.data.templateHelper.contentBlockTooltip(r, o || "");
+                    a.style.whiteSpace = "nowrap", i.appendChild(a), this.data.tooltipManager.assign(n, i, {}, {
+                        orientation: "top",
+                        targetAnchor: {
+                            x: "center",
+                            y: "top"
+                        },
+                        tooltipAnchor: {
+                            x: "center",
+                            y: "bottom"
+                        },
+                        type: "system",
+                        showDelay: 200
+                    }), this.data.tooltipManager.show(n), this._pillTooltipTarget = n
+                },
+                hidePillTooltip(e) {
+                    const t = e && (e.currentTarget || e.target);
+                    t && this.data && this.data.tooltipManager && (this.data.tooltipManager.hide(t), this.data.tooltipManager.unassign(t), this._pillTooltipTarget === t && (this._pillTooltipTarget = null))
+                },
                 openRestrictionDrawer() {
-                    const e = r.drawerManager,
-                        t = r.SharedComponents;
-                    if (!e || !t || !t.getApi_SharedPlayerBehaviorApps) return;
-                    const n = (this.data && this.data.restrictionView || {}).restrictions || [],
-                        o = t.getApi_SharedPlayerBehaviorApps().createHonorPanel({
-                            isTemporarilyReduced: n.length > 0,
-                            restrictions: n
-                        }),
-                        i = document.createElement("div");
-                    i.classList.add("lol-social-restriction-drawer"), i.style.width = "600px", i.style.height = "100vh", i.style.maxHeight = "100vh", i.style.padding = "24px", i.style.boxSizing = "border-box", i.style.background = "#010a13", i.style.overflow = "hidden", i.style.display = "flex", i.style.flexDirection = "column", o.domNode && o.domNode.style && (o.domNode.style.flex = "1 1 auto", o.domNode.style.minHeight = "0", o.domNode.style.height = "100%"), i.appendChild(o.domNode), e.show({
-                        domNode: i
+                    const e = r.SharedComponents,
+                        t = e && e.getApi_SharedPlayerBehaviorApps && e.getApi_SharedPlayerBehaviorApps();
+                    t && t.showHonorPanelDrawer && t.showHonorPanelDrawer({
+                        wrapperClassName: "lol-social-restriction-drawer"
                     })
                 }
             })
@@ -12841,17 +12930,31 @@
                 i = n(210),
                 a = n(305),
                 s = n(306),
-                l = o(r),
-                c = i(a),
-                d = i(s);
-            l.push([e.id, 'lol-social-restriction-banner .restriction-banner-title {\n  font-family: var(--font-display);\n}\nlol-social-restriction-banner .restriction-pill {\n  font-family: var(--font-body);\n}\nlol-social-restriction-banner .restriction-banner-title,\nlol-social-restriction-banner .restriction-pill {\n  -webkit-user-select: none;\n}\nlol-social-restriction-banner .restriction-banner-title,\nlol-social-restriction-banner .restriction-pill {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-restriction-banner .restriction-banner-title {\n  text-transform: uppercase;\n}\nlol-social-restriction-banner .restriction-banner-title:lang(ko-kr),\nlol-social-restriction-banner .restriction-banner-title:lang(ja-jp),\nlol-social-restriction-banner .restriction-banner-title:lang(tr-tr),\nlol-social-restriction-banner .restriction-banner-title:lang(el-gr),\nlol-social-restriction-banner .restriction-banner-title:lang(th-th),\nlol-social-restriction-banner .restriction-banner-title:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-restriction-banner .restriction-banner-title {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\nlol-social-restriction-banner .restriction-banner-title:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-restriction-banner .restriction-banner-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-restriction-banner .restriction-pill {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-restriction-banner .restriction-pill:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-restriction-banner .restriction-pill:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-restriction-banner {\n  display: block;\n}\nlol-social-restriction-banner .restriction-banner {\n  position: relative;\n  padding: 5px 9px 9px;\n  background: url(' + c + ") no-repeat center center;\n  background-size: 100% 100%;\n  color: #fdfdfd;\n  cursor: pointer;\n  isolation: isolate;\n}\nlol-social-restriction-banner .restriction-banner::after {\n  content: '';\n  position: absolute;\n  inset: 0;\n  z-index: -1;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 250ms ease-in;\n  background: linear-gradient(253.85deg, rgba(47,0,0,0.2) 1.32%, rgba(47,0,0,0) 32.37%), linear-gradient(164.08deg, rgba(255,70,70,0.1) 35.83%, rgba(255,70,70,0) 35.85%), linear-gradient(90deg, #931717 0%, #931717 100%);\n  border: 2px solid #a62c2c;\n  box-sizing: border-box;\n}\nlol-social-restriction-banner .restriction-banner:hover::after {\n  opacity: 1;\n}\nlol-social-restriction-banner .restriction-banner-header {\n  display: flex;\n  align-items: center;\n  margin-bottom: 5px;\n}\nlol-social-restriction-banner .restriction-banner-collapse-arrow {\n  width: 7px;\n  height: 11px;\n  background: url(" + d + ') no-repeat center center;\n  background-size: contain;\n  flex-shrink: 0;\n}\nlol-social-restriction-banner .restriction-banner-title {\n  color: #ccc4b3;\n  text-transform: uppercase;\n}\nlol-social-restriction-banner .restriction-banner-pills {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 3px;\n}\nlol-social-restriction-banner .restriction-pill {\n  display: inline-flex;\n  align-items: center;\n  gap: 2px;\n  padding: 2px 6px;\n  border-radius: 49px;\n  background-color: #ff4545;\n  color: #fdfdfd;\n  font-weight: bold;\n  line-height: 1;\n}\nlol-social-restriction-banner .restriction-pill-icon {\n  width: 12px;\n  height: 12px;\n  background-repeat: no-repeat;\n  background-position: center center;\n  background-size: contain;\n}\nlol-social-restriction-banner .restriction-pill-clock .restriction-pill-icon {\n  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2016%2016%27%20fill=%27none%27%20stroke=%27white%27%20stroke-width=%271.5%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%3E%3Ccircle%20cx=%278%27%20cy=%278%27%20r=%276.25%27/%3E%3Cpath%20d=%27M8%204.5V8l2.5%201.5%27/%3E%3C/svg%3E");\n}\nlol-social-restriction-banner .restriction-pill-mute .restriction-pill-icon {\n  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2018.4843%2016.7854%27%20fill=%27white%27%3E%3Cpath%20d=%27M5.29706%200L3.6%201.69706L16.7872%2014.8843L18.4843%2013.1872L16.8%2011.5029V2.38542H7.68248L5.29706%200Z%27/%3E%3Cpath%20d=%27M0%202.38542H1.88833L12.8802%2013.3773L7.2%2016.7854H6V13.1854H0V2.38542Z%27/%3E%3C/svg%3E");\n}\nlol-social-restriction-banner .restriction-pill-flag .restriction-pill-icon {\n  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2012.8%2012.8%27%20fill=%27white%27%3E%3Cpath%20d=%27M0%201.84874C0%201.84874%203.37738%204.44127%206.30548%201.74731C9.23358%20-0.94664%2010.6667%200.277484%2010.6667%200.277484L8.17778%208.53333H7.55033C7.55033%208.53333%208.15685%207.08955%204.42312%207.08955C0.313725%207.08955%200%201.84874%200%201.84874Z%27/%3E%3Cpath%20d=%27M11.3778%200.355554H12.8L9.24449%2012.8H7.82227L11.3778%200.355554Z%27/%3E%3C/svg%3E");\n}\nlol-social-restriction-banner .restriction-pill-voice .restriction-pill-icon {\n  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2015.4619%2018%27%20fill=%27white%27%3E%3Cpath%20d=%27M2.40039%209.90039L4.5166%2012H7.22754L9.59961%2014.4004H8.40039V15.5996H12V18H2.40039V15.5996H6V14.4004H3.59961L0%2010.7998V7.2002H2.40039V9.90039ZM10.2383%201.5V7.94629L12%209.70801V7.2002H14.4004V10.7998L13.7451%2011.4531L15.4619%2013.1699L13.7646%2014.8672L0.613281%201.71484L2.30957%200.0175781L4.21582%201.92383V1.5L5.72168%200H8.73242L10.2383%201.5Z%27/%3E%3C/svg%3E");\n}\nlol-social-restriction-banner .restriction-pill-mute .restriction-pill-duration:empty,\nlol-social-restriction-banner .restriction-pill-voice .restriction-pill-duration:empty {\n  display: none;\n}\nlol-social-restriction-banner .restriction-pill-duration {\n  white-space: nowrap;\n}\nlol-social-restriction-banner .restriction-pill-overflow .restriction-pill-icon {\n  display: none;\n}\n', "", {
+                l = n(307),
+                c = n(308),
+                d = n(309),
+                p = n(310),
+                u = n(311),
+                m = n(312),
+                g = n(313),
+                h = o(r),
+                f = i(a),
+                _ = i(s),
+                A = i(l),
+                b = i(c),
+                y = i(d),
+                x = i(p),
+                v = i(u),
+                k = i(m),
+                E = i(g);
+            h.push([e.id, 'lol-social-restriction-banner .restriction-banner-title {\n  font-family: var(--font-display);\n}\nlol-social-restriction-banner .restriction-pill {\n  font-family: var(--font-body);\n}\nlol-social-restriction-banner .restriction-banner-title,\nlol-social-restriction-banner .restriction-pill {\n  -webkit-user-select: none;\n}\nlol-social-restriction-banner .restriction-banner-title,\nlol-social-restriction-banner .restriction-pill {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-restriction-banner .restriction-banner-title {\n  text-transform: uppercase;\n}\nlol-social-restriction-banner .restriction-banner-title:lang(ko-kr),\nlol-social-restriction-banner .restriction-banner-title:lang(ja-jp),\nlol-social-restriction-banner .restriction-banner-title:lang(tr-tr),\nlol-social-restriction-banner .restriction-banner-title:lang(el-gr),\nlol-social-restriction-banner .restriction-banner-title:lang(th-th),\nlol-social-restriction-banner .restriction-banner-title:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-restriction-banner .restriction-banner-title {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\nlol-social-restriction-banner .restriction-banner-title:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-restriction-banner .restriction-banner-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-restriction-banner .restriction-pill {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-restriction-banner .restriction-pill:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-restriction-banner .restriction-pill:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-restriction-banner {\n  display: block;\n}\nlol-social-restriction-banner .restriction-banner {\n  position: relative;\n  padding: 5px 9px 9px;\n  background: url(' + f + ") no-repeat center center;\n  background-size: 100% 100%;\n  color: #fdfdfd;\n  cursor: pointer;\n  isolation: isolate;\n}\nlol-social-restriction-banner .restriction-banner::after {\n  content: '';\n  position: absolute;\n  inset: 0;\n  z-index: -1;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 250ms ease-in;\n  background: linear-gradient(253.85deg, rgba(47,0,0,0.2) 1.32%, rgba(47,0,0,0) 32.37%), linear-gradient(164.08deg, rgba(255,70,70,0.1) 35.83%, rgba(255,70,70,0) 35.85%), linear-gradient(90deg, #931717 0%, #931717 100%);\n  border: 2px solid #a62c2c;\n  box-sizing: border-box;\n}\nlol-social-restriction-banner .restriction-banner:hover::after {\n  opacity: 1;\n}\nlol-social-restriction-banner .restriction-banner-header {\n  display: flex;\n  align-items: center;\n  margin-bottom: 5px;\n}\nlol-social-restriction-banner .restriction-banner-collapse-arrow {\n  width: 7px;\n  height: 11px;\n  background: url(" + _ + ") no-repeat center center;\n  background-size: contain;\n  flex-shrink: 0;\n}\nlol-social-restriction-banner .restriction-banner-title {\n  color: #ccc4b3;\n  text-transform: uppercase;\n}\nlol-social-restriction-banner .restriction-banner-pills {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 3px;\n}\nlol-social-restriction-banner .restriction-pill {\n  display: inline-flex;\n  align-items: center;\n  gap: 2px;\n  padding: 2px 6px;\n  border-radius: 49px;\n  background-color: #ff4545;\n  color: #fdfdfd;\n  font-weight: bold;\n  line-height: 1;\n}\nlol-social-restriction-banner .restriction-pill-icon {\n  width: 12px;\n  height: 12px;\n  background-repeat: no-repeat;\n  background-position: center center;\n  background-size: contain;\n}\nlol-social-restriction-banner .restriction-pill-chat-restriction .restriction-pill-icon {\n  background-image: url(" + A + ");\n}\nlol-social-restriction-banner .restriction-pill-voice-restriction .restriction-pill-icon {\n  background-image: url(" + b + ");\n}\nlol-social-restriction-banner .restriction-pill-ranked-suspension .restriction-pill-icon {\n  background-image: url(" + y + ");\n}\nlol-social-restriction-banner .restriction-pill-queue-lock .restriction-pill-icon {\n  background-image: url(" + x + ");\n}\nlol-social-restriction-banner .restriction-pill-queue-delay .restriction-pill-icon {\n  background-image: url(" + v + ");\n}\nlol-social-restriction-banner .restriction-pill-ping-restriction .restriction-pill-icon {\n  background-image: url(" + k + ");\n}\nlol-social-restriction-banner .restriction-pill-honor-downgrade .restriction-pill-icon {\n  background-image: url(" + E + ");\n}\nlol-social-restriction-banner .restriction-pill-duration:empty {\n  display: none;\n}\nlol-social-restriction-banner .restriction-pill-duration {\n  white-space: nowrap;\n}\nlol-social-restriction-banner .restriction-pill-overflow .restriction-pill-icon {\n  display: none;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/restriction-banner/restriction-banner.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
                 names: [],
-                mappings: "AAAA;EACE,gCAAa;ACCf;ADEA;EACE,6BAAa;ACAf;ACKA;;EACE,yBAAqB;ADFvB;ACcA;;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADZ1B;ACoBA;EACE,yBAAgB;ADlBlB;ACmBE;;;;;;EAME,oBAAgB;ADjBpB;ACiMA;EAIE,cAAO;EACP,eAAW;EAIX,gBAAa;EACb,iBAAa;EACb,uBAAgB;ADrMlB;ACgME;EACE,eAAW;AD9Lf;ACmME;EACE,iBAAgB;ADjMpB;ACiQA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADvQ1B;AC8PE;EACE,eAAW;AD5Pf;ACiQE;EACE,iBAAgB;AD/PpB;AAjDA;EACE,cAAS;AAmDX;AAjDE;EACE,kBAAU;EACV,oBAAS;EACT,2EAAwD;EACxD,0BAAiB;EACjB,cAAO;EACP,eAAQ;EAER,kBAAW;AAkDf;AAhDI;EACE,WAAS;EACT,kBAAU;EACV,QAAO;EACP,WAAS;EACT,oBAAgB;EAChB,UAAS;EACT,iCAAY;EACZ,yNACyE;EAGzE,yBAAQ;EACR,sBAAY;AA+ClB;AA5CI;EACE,UAAS;AA8Cf;AA1CE;EACE,aAAS;EACT,mBAAa;EACb,kBAAe;AA4CnB;AAzCE;EACE,UAAO;EACP,YAAQ;EACR,2EAAkD;EAClD,wBAAiB;EACjB,cAAa;AA2CjB;AAxCE;EAEE,cAAO;EACP,yBAAgB;AAyCpB;AAtCE;EACE,aAAS;EACT,eAAW;EACX,mBAAa;EACb,QAAK;AAwCT;AArCE;EACE,oBAAS;EACT,mBAAa;EACb,QAAK;EACL,gBAAS;EACT,mBAAe;EACf,yBAAkB;EAClB,cAAO;EAEP,iBAAa;EACb,cAAa;AAsCjB;AAnCE;EACE,WAAO;EACP,YAAQ;EACR,4BAAmB;EACnB,kCAAqB;EACrB,wBAAiB;AAqCrB;AAlCE;EACE,wWAA2Q;AAoC/Q;AAjCE;EACE,yYAAkU;AAmCtU;AAhCE;EACE,ohBAA6a;AAkCjb;AA/BE;EACE,+hBAAwd;AAiC5d;AA5BE;;EAEE,aAAS;AA8Bb;AA3BE;EACE,mBAAa;AA6BjB;AA1BE;EACE,aAAS;AA4Bb",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n@require 'riotclient-lol-asset-csslib/styles/colors'\r\n@require 'riotclient-lol-asset-csslib/styles/color-palette'\r\n\r\nlol-social-restriction-banner {\r\n  display: block;\r\n\r\n  .restriction-banner {\r\n    position: relative;\r\n    padding: 5px 9px 9px;\r\n    background: url('../../images/social-restriction-bg.png') no-repeat center center;\r\n    background-size: 100% 100%;\r\n    color: #fdfdfd;\r\n    cursor: pointer;\r\n\r\n    isolation: isolate;\r\n\r\n    &::after {\r\n      content: '';\r\n      position: absolute;\r\n      inset: 0;\r\n      z-index: -1;\r\n      pointer-events: none;\r\n      opacity: 0;\r\n      transition: opacity 250ms ease-in;\r\n      background:\r\n        linear-gradient(253.85deg, rgba(47, 0, 0, 0.2) 1.32%, rgba(47, 0, 0, 0) 32.37%),\r\n        linear-gradient(164.08deg, rgba(255, 70, 70, 0.1) 35.83%, rgba(255, 70, 70, 0) 35.85%),\r\n        linear-gradient(90deg, #931717 0%, #931717 100%);\r\n      border: 2px solid #a62c2c;\r\n      box-sizing: border-box;\r\n    }\r\n\r\n    &:hover::after {\r\n      opacity: 1;\r\n    }\r\n  }\r\n\r\n  .restriction-banner-header {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-bottom: 5px;\r\n  }\r\n\r\n  .restriction-banner-collapse-arrow {\r\n    width: 7px;\r\n    height: 11px;\r\n    background: url('../../images/penalty-chevron.svg') no-repeat center center;\r\n    background-size: contain;\r\n    flex-shrink: 0;\r\n  }\r\n\r\n  .restriction-banner-title {\r\n    @extend $typekit_h6;\r\n    color: $color_palette_grey0;\r\n    text-transform: uppercase;\r\n  }\r\n\r\n  .restriction-banner-pills {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    gap: 3px;\r\n  }\r\n\r\n  .restriction-pill {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    gap: 2px;\r\n    padding: 2px 6px;\r\n    border-radius: 49px;\r\n    background-color: #ff4545;\r\n    color: #fdfdfd;\r\n    @extend $typekit_text_s;\r\n    font-weight: bold;\r\n    line-height: 1;\r\n  }\r\n\r\n  .restriction-pill-icon {\r\n    width: 12px;\r\n    height: 12px;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    background-size: contain;\r\n  }\r\n\r\n  .restriction-pill-clock .restriction-pill-icon {\r\n    background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='8' cy='8' r='6.25'/><path d='M8 4.5V8l2.5 1.5'/></svg>\");\r\n  }\r\n\r\n  .restriction-pill-mute .restriction-pill-icon {\r\n    background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.4843 16.7854' fill='white'><path d='M5.29706 0L3.6 1.69706L16.7872 14.8843L18.4843 13.1872L16.8 11.5029V2.38542H7.68248L5.29706 0Z'/><path d='M0 2.38542H1.88833L12.8802 13.3773L7.2 16.7854H6V13.1854H0V2.38542Z'/></svg>\");\r\n  }\r\n\r\n  .restriction-pill-flag .restriction-pill-icon {\r\n    background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12.8 12.8' fill='white'><path d='M0 1.84874C0 1.84874 3.37738 4.44127 6.30548 1.74731C9.23358 -0.94664 10.6667 0.277484 10.6667 0.277484L8.17778 8.53333H7.55033C7.55033 8.53333 8.15685 7.08955 4.42312 7.08955C0.313725 7.08955 0 1.84874 0 1.84874Z'/><path d='M11.3778 0.355554H12.8L9.24449 12.8H7.82227L11.3778 0.355554Z'/></svg>\");\r\n  }\r\n\r\n  .restriction-pill-voice .restriction-pill-icon {\r\n    background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.4619 18' fill='white'><path d='M2.40039 9.90039L4.5166 12H7.22754L9.59961 14.4004H8.40039V15.5996H12V18H2.40039V15.5996H6V14.4004H3.59961L0 10.7998V7.2002H2.40039V9.90039ZM10.2383 1.5V7.94629L12 9.70801V7.2002H14.4004V10.7998L13.7451 11.4531L15.4619 13.1699L13.7646 14.8672L0.613281 1.71484L2.30957 0.0175781L4.21582 1.92383V1.5L5.72168 0H8.73242L10.2383 1.5Z'/></svg>\");\r\n  }\r\n\r\n  // Honor-derived pills have no duration label; drop the empty div so the\r\n  // pill collapses around the icon.\r\n  .restriction-pill-mute .restriction-pill-duration:empty,\r\n  .restriction-pill-voice .restriction-pill-duration:empty {\r\n    display: none;\r\n  }\r\n\r\n  .restriction-pill-duration {\r\n    white-space: nowrap;\r\n  }\r\n\r\n  .restriction-pill-overflow .restriction-pill-icon {\r\n    display: none;\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                mappings: "AAAA;EACE,gCAAa;ACCf;ADEA;EACE,6BAAa;ACAf;ACKA;;EACE,yBAAqB;ADFvB;ACcA;;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADZ1B;ACoBA;EACE,yBAAgB;ADlBlB;ACmBE;;;;;;EAME,oBAAgB;ADjBpB;ACiMA;EAIE,cAAO;EACP,eAAW;EAIX,gBAAa;EACb,iBAAa;EACb,uBAAgB;ADrMlB;ACgME;EACE,eAAW;AD9Lf;ACmME;EACE,iBAAgB;ADjMpB;ACiQA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADvQ1B;AC8PE;EACE,eAAW;AD5Pf;ACiQE;EACE,iBAAgB;AD/PpB;AAjDA;EACE,cAAS;AAmDX;AAjDE;EACE,kBAAU;EACV,oBAAS;EACT,2EAAwD;EACxD,0BAAiB;EACjB,cAAO;EACP,eAAQ;EAER,kBAAW;AAkDf;AAhDI;EACE,WAAS;EACT,kBAAU;EACV,QAAO;EACP,WAAS;EACT,oBAAgB;EAChB,UAAS;EACT,iCAAY;EACZ,yNACyE;EAGzE,yBAAQ;EACR,sBAAY;AA+ClB;AA5CI;EACE,UAAS;AA8Cf;AA1CE;EACE,aAAS;EACT,mBAAa;EACb,kBAAe;AA4CnB;AAzCE;EACE,UAAO;EACP,YAAQ;EACR,2EAAkD;EAClD,wBAAiB;EACjB,cAAa;AA2CjB;AAxCE;EAEE,cAAO;EACP,yBAAgB;AAyCpB;AAtCE;EACE,aAAS;EACT,eAAW;EACX,mBAAa;EACb,QAAK;AAwCT;AArCE;EACE,oBAAS;EACT,mBAAa;EACb,QAAK;EACL,gBAAS;EACT,mBAAe;EACf,yBAAkB;EAClB,cAAO;EAEP,iBAAa;EACb,cAAa;AAsCjB;AAnCE;EACE,WAAO;EACP,YAAQ;EACR,4BAAmB;EACnB,kCAAqB;EACrB,wBAAiB;AAqCrB;AAlCE;EACE,yDAA8D;AAoClE;AAjCE;EACE,yDAA+D;AAmCnE;AAhCE;EACE,yDAA+D;AAkCnE;AA/BE;EACE,yDAAwD;AAiC5D;AA9BE;EACE,yDAAyD;AAgC7D;AA7BE;EACE,yDAA8D;AA+BlE;AA5BE;EACE,yDAA6D;AA8BjE;AAzBE;EACE,aAAS;AA2Bb;AAxBE;EACE,mBAAa;AA0BjB;AAvBE;EACE,aAAS;AAyBb",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", '@require \'riotclient-lol-asset-csslib/styles/typekit\'\r\n@require \'riotclient-lol-asset-csslib/styles/colors\'\r\n@require \'riotclient-lol-asset-csslib/styles/color-palette\'\r\n\r\nlol-social-restriction-banner {\r\n  display: block;\r\n\r\n  .restriction-banner {\r\n    position: relative;\r\n    padding: 5px 9px 9px;\r\n    background: url(\'../../images/social-restriction-bg.png\') no-repeat center center;\r\n    background-size: 100% 100%;\r\n    color: #fdfdfd;\r\n    cursor: pointer;\r\n\r\n    isolation: isolate;\r\n\r\n    &::after {\r\n      content: \'\';\r\n      position: absolute;\r\n      inset: 0;\r\n      z-index: -1;\r\n      pointer-events: none;\r\n      opacity: 0;\r\n      transition: opacity 250ms ease-in;\r\n      background:\r\n        linear-gradient(253.85deg, rgba(47, 0, 0, 0.2) 1.32%, rgba(47, 0, 0, 0) 32.37%),\r\n        linear-gradient(164.08deg, rgba(255, 70, 70, 0.1) 35.83%, rgba(255, 70, 70, 0) 35.85%),\r\n        linear-gradient(90deg, #931717 0%, #931717 100%);\r\n      border: 2px solid #a62c2c;\r\n      box-sizing: border-box;\r\n    }\r\n\r\n    &:hover::after {\r\n      opacity: 1;\r\n    }\r\n  }\r\n\r\n  .restriction-banner-header {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-bottom: 5px;\r\n  }\r\n\r\n  .restriction-banner-collapse-arrow {\r\n    width: 7px;\r\n    height: 11px;\r\n    background: url(\'../../images/penalty-chevron.svg\') no-repeat center center;\r\n    background-size: contain;\r\n    flex-shrink: 0;\r\n  }\r\n\r\n  .restriction-banner-title {\r\n    @extend $typekit_h6;\r\n    color: $color_palette_grey0;\r\n    text-transform: uppercase;\r\n  }\r\n\r\n  .restriction-banner-pills {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    gap: 3px;\r\n  }\r\n\r\n  .restriction-pill {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    gap: 2px;\r\n    padding: 2px 6px;\r\n    border-radius: 49px;\r\n    background-color: #ff4545;\r\n    color: #fdfdfd;\r\n    @extend $typekit_text_s;\r\n    font-weight: bold;\r\n    line-height: 1;\r\n  }\r\n\r\n  .restriction-pill-icon {\r\n    width: 12px;\r\n    height: 12px;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    background-size: contain;\r\n  }\r\n\r\n  .restriction-pill-chat-restriction .restriction-pill-icon {\r\n    background-image: url("../../images/chat-restriction-icon.svg");\r\n  }\r\n\r\n  .restriction-pill-voice-restriction .restriction-pill-icon {\r\n    background-image: url("../../images/voice-restriction-icon.svg");\r\n  }\r\n\r\n  .restriction-pill-ranked-suspension .restriction-pill-icon {\r\n    background-image: url("../../images/ranked-suspension-icon.svg");\r\n  }\r\n\r\n  .restriction-pill-queue-lock .restriction-pill-icon {\r\n    background-image: url("../../images/queue-lock-icon.svg");\r\n  }\r\n\r\n  .restriction-pill-queue-delay .restriction-pill-icon {\r\n    background-image: url("../../images/queue-delay-icon.svg");\r\n  }\r\n\r\n  .restriction-pill-ping-restriction .restriction-pill-icon {\r\n    background-image: url("../../images/ping-restriction-icon.svg");\r\n  }\r\n\r\n  .restriction-pill-honor-downgrade .restriction-pill-icon {\r\n    background-image: url("../../images/honor-downgrade-icon.svg");\r\n  }\r\n\r\n  // Honor-derived pills have no duration label; drop the empty div so the\r\n  // pill collapses around the icon.\r\n  .restriction-pill-duration:empty {\r\n    display: none;\r\n  }\r\n\r\n  .restriction-pill-duration {\r\n    white-space: nowrap;\r\n  }\r\n\r\n  .restriction-pill-overflow .restriction-pill-icon {\r\n    display: none;\r\n  }\r\n}\r\n', "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
                 sourceRoot: ""
-            }]), e.exports = l
+            }]), e.exports = h
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "social-restriction-bg.png"
@@ -12860,11 +12963,32 @@
             e.exports = n.p + "penalty-chevron.svg"
         }, (e, t, n) => {
             "use strict";
+            e.exports = n.p + "chat-restriction-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "voice-restriction-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "ranked-suspension-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "queue-lock-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "queue-delay-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "ping-restriction-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "honor-downgrade-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
             var r = n(1);
             const o = "offline",
                 i = "mobile";
             r.components.defineElement("lol-social-roster-group-name", {
-                styles: n(308),
+                styles: n(315),
                 computed: {
                     filterByName: 'group.isMetaGroup ? "displayGroupId" : "groupId"',
                     groupFriends: "data.friends | filter(filterByName, group.id)",
@@ -12942,12 +13066,12 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1);
-            const o = n(310);
+            const o = n(317);
             r.components.defineElement("lol-social-roster-group", o, {
                 FRIEND_HEIGHT: 48,
                 ARROW_CONTAIN_HEIGHT: 56,
                 GROUP_NAME_HEIGHT: 28,
-                styles: n(311),
+                styles: n(318),
                 acceptMimes: ["application/riot.roster-member+json"],
                 computed: {
                     groupFriendsLength: "data.friends.filter(friendFilter.bind(this)).length",
@@ -13069,7 +13193,7 @@
             var r = n(206),
                 o = n(207),
                 i = n(210),
-                a = n(312),
+                a = n(319),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-social-roster-group .group-header {\n  font-family: var(--font-display);\n}\n.social-count-badge {\n  font-family: var(--font-body);\n}\nlol-social-roster-group .group-header {\n  -webkit-user-select: none;\n}\nlol-social-roster-group .group-header {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-roster-group .group-header {\n  text-transform: uppercase;\n}\nlol-social-roster-group .group-header:lang(ko-kr),\nlol-social-roster-group .group-header:lang(ja-jp),\nlol-social-roster-group .group-header:lang(tr-tr),\nlol-social-roster-group .group-header:lang(el-gr),\nlol-social-roster-group .group-header:lang(th-th),\nlol-social-roster-group .group-header:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-roster-group .group-header {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\nlol-social-roster-group .group-header:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-roster-group .group-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-roster-group .group-header {\n  color: #a09b8c;\n}\nlol-social-roster-group .group.unread .group-header {\n  color: #f0e6d2;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-roster-group {\n  display: block;\n}\nlol-social-roster-group:lang(ar-ae) {\n  direction: rtl;\n}\nlol-social-roster-group .hidden {\n  display: none !important;\n}\nlol-social-roster-group .group {\n  position: relative;\n}\nlol-social-roster-group .group.unread .group-header {\n  font-weight: bold;\n  background: rgba(240,230,210,0.18);\n}\nlol-social-roster-group .group.unread .unread-count {\n  margin-top: 4px;\n  margin-right: 10px;\n}\nlol-social-roster-group .group.unread.use-animation .group-header {\n  animation: highlight 825ms 4 alternate;\n}\nlol-social-roster-group .group.unread.use-animation .social-count-badge {\n  animation: highlightBadge 825ms 4 alternate;\n}\nlol-social-roster-group .group .unread-dot {\n  height: 10px;\n  width: 10px;\n  border-radius: 5px;\n  background-color: #c89b3c;\n}\nlol-social-roster-group .group-header {\n  background: rgba(1,10,19,0.45);\n  height: 24px;\n  cursor: pointer;\n  display: flex;\n  margin-bottom: 4px;\n}\nlol-social-roster-group .group-header:hover {\n  background: rgba(240,230,210,0.1);\n  color: #f0e6d2;\n}\nlol-social-roster-group .group-header:active {\n  color: #cdbe91;\n}\nlol-social-roster-group .group-header.dragging {\n  opacity: 0.5;\n}\nlol-social-roster-group .group-header.drag-capture {\n  border: thin solid #785a28;\n  padding: 0 9px;\n  line-height: 20px;\n}\nlol-social-roster-group .group-header.drag-capture .arrow-container {\n  display: none;\n}\nlol-social-roster-group .group-name {\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\nlol-social-roster-group.drop-available .drop-area {\n  overflow: hidden;\n  position: absolute;\n  margin-top: -28px;\n  box-sizing: border-box;\n  width: 100%;\n  height: 100%;\n  z-index: 2;\n}\nlol-social-roster-group.dropping .drop-area {\n  border: thin solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0%, #c89b3c 100%) 1 1;\n  background: linear-gradient(to bottom, transparent 28px, rgba(1,10,19,0.75) 28px);\n}\nlol-social-roster-group.dropping .drop-area .drop-area-arrow {\n  content: '';\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 32px;\n  height: 28px;\n  background-image: url(" + l + ");\n  background-position-y: -28px;\n  background-size: cover;\n  align-self: center;\n}\nlol-social-roster-group.dropping .group-header {\n  background-color: #3c3c41;\n  color: #f0e6d2;\n}\nlol-social-roster-group.dropping .arrow {\n  -webkit-filter: brightness(2);\n}\nlol-social-roster-group .arrow-container {\n  display: flex;\n  justify-content: flex-end;\n  width: 18px;\n  opacity: 1;\n}\nlol-social-roster-group .arrow-container.use-animation {\n  transition: width 250ms cubic-bezier(0, 0, 0, 1), opacity 250ms ease-out;\n}\nlol-social-roster-group .arrow-container.hide {\n  width: 0;\n  opacity: 0;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n", "", {
@@ -13091,7 +13215,7 @@
                 a = n(267),
                 s = n(251);
             r.components.defineElement("lol-social-roster-member", a, s, {
-                styles: n(314),
+                styles: n(321),
                 computed: {
                     conversation: "member && data.getConversation(member.id)",
                     isInQueueOrGame: 'member.availability === "dnd"',
@@ -13331,13 +13455,13 @@
             var r = n(206),
                 o = n(207),
                 i = n(210),
-                a = n(315),
+                a = n(322),
                 s = n(257),
-                l = n(316),
-                c = n(317),
-                d = n(318),
+                l = n(323),
+                c = n(324),
+                d = n(325),
                 p = n(302),
-                u = n(319),
+                u = n(326),
                 m = o(r),
                 g = i(a),
                 h = i(s),
@@ -13375,9 +13499,9 @@
                 components: r,
                 SocialTelemetry: o,
                 logger: i
-            } = n(1), a = n(321), s = n(310), l = n(252);
+            } = n(1), a = n(328), s = n(317), l = n(252);
             r.defineElement("lol-social-roster", s, l, a, {
-                styles: n(322),
+                styles: n(329),
                 acceptMimes: ["application/riot.roster-group+json"],
                 groupMime: "application/riot.roster-group+json",
                 created: function() {
@@ -13545,8 +13669,8 @@
             var r = n(206),
                 o = n(207),
                 i = n(210),
-                a = n(315),
-                s = n(323),
+                a = n(322),
+                s = n(330),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -13568,7 +13692,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-status", {
-                styles: n(325),
+                styles: n(332),
                 computed: {
                     gameStatus: 'friend.lol.gameStatus || "outOfGame"',
                     tournamentStatus: 'friend.lol.clashTournamentState || "NONE"',
@@ -13625,50 +13749,50 @@
                     Router: r.Ember.Router.extend({
                         location: "none"
                     }),
-                    ApplicationController: n(330).default,
-                    ActionsBarComponent: n(331).default,
-                    ActionsFolderInputComponent: n(333).default,
-                    ArrowToggleComponent: n(334).default,
-                    AvailabilityHitboxComponent: n(336).default,
-                    ChatToggleButtonComponent: n(338).default,
-                    ClashRosterPanelComponent: n(339).default,
-                    ClashRosterPanelItemComponent: n(341).default,
-                    DiscordBannerComponent: n(343).default,
-                    DiscordEatComponent: n(345).default,
-                    FriendFinderAddSummonerByNameComponent: n(346).default,
-                    FriendFinderButtonComponent: n(348).default,
-                    FriendFinderDiscordComponent: n(349).default,
-                    FriendFinderModalComponent: n(350).default,
-                    FriendFinderRecentlyPlayedComponent: n(349).default,
-                    FriendFinderRecentSummonerComponent: n(351).default,
-                    FriendFinderRequestedPlayerComponent: n(355).default,
-                    FriendFinderRequestedPlayersComponent: n(356).default,
-                    HovercardComponentComponent: n(357).default,
-                    HovercardContentComponent: n(360).default,
-                    HovercardShellComponent: n(365).default,
-                    IdentityAndPartiesComponent: n(368).default,
-                    SidebarMainComponent: n(369).default,
-                    SocialAvatarComponent: n(371).default,
-                    SocialButtonComponent: n(373).default,
-                    SocialFriendRequestComponent: n(374).default,
-                    SocialFriendRequestsComponent: n(377).default,
-                    SocialFriendRequestsModalComponent: n(379).default,
-                    SocialIdentityComponent: n(381).default,
-                    SocialMenuComponent: n(382).default,
-                    SocialMenuInputComponent: n(384).default,
-                    SocialMenuItemComponent: n(385).default,
-                    SocialPanelComponent: n(387).default,
-                    SocialRosterComponent: n(388).default,
-                    SocialRosterGroupComponent: n(390).default,
-                    SocialRosterGroupNameComponent: n(394).default,
-                    SocialRosterMemberComponent: n(396).default,
-                    SocialStatusWrapperComponent: n(398).default,
-                    SocialTextTooltipComponent: n(400).default,
-                    SocialTooltipComponent: n(401).default,
-                    TooltipMessageComponent: n(402).default,
-                    UikitRadioComponent: n(403).default,
-                    VersionBarComponent: n(404).default,
-                    VngAgeRatingComponent: n(405).default,
+                    ApplicationController: n(337).default,
+                    ActionsBarComponent: n(338).default,
+                    ActionsFolderInputComponent: n(340).default,
+                    ArrowToggleComponent: n(341).default,
+                    AvailabilityHitboxComponent: n(343).default,
+                    ChatToggleButtonComponent: n(345).default,
+                    ClashRosterPanelComponent: n(346).default,
+                    ClashRosterPanelItemComponent: n(348).default,
+                    DiscordBannerComponent: n(350).default,
+                    DiscordEatComponent: n(352).default,
+                    FriendFinderAddSummonerByNameComponent: n(353).default,
+                    FriendFinderButtonComponent: n(355).default,
+                    FriendFinderDiscordComponent: n(356).default,
+                    FriendFinderModalComponent: n(357).default,
+                    FriendFinderRecentlyPlayedComponent: n(356).default,
+                    FriendFinderRecentSummonerComponent: n(358).default,
+                    FriendFinderRequestedPlayerComponent: n(362).default,
+                    FriendFinderRequestedPlayersComponent: n(363).default,
+                    HovercardComponentComponent: n(364).default,
+                    HovercardContentComponent: n(367).default,
+                    HovercardShellComponent: n(372).default,
+                    IdentityAndPartiesComponent: n(375).default,
+                    SidebarMainComponent: n(376).default,
+                    SocialAvatarComponent: n(378).default,
+                    SocialButtonComponent: n(380).default,
+                    SocialFriendRequestComponent: n(381).default,
+                    SocialFriendRequestsComponent: n(384).default,
+                    SocialFriendRequestsModalComponent: n(386).default,
+                    SocialIdentityComponent: n(388).default,
+                    SocialMenuComponent: n(389).default,
+                    SocialMenuInputComponent: n(391).default,
+                    SocialMenuItemComponent: n(392).default,
+                    SocialPanelComponent: n(394).default,
+                    SocialRosterComponent: n(395).default,
+                    SocialRosterGroupComponent: n(397).default,
+                    SocialRosterGroupNameComponent: n(401).default,
+                    SocialRosterMemberComponent: n(403).default,
+                    SocialStatusWrapperComponent: n(405).default,
+                    SocialTextTooltipComponent: n(407).default,
+                    SocialTooltipComponent: n(408).default,
+                    TooltipMessageComponent: n(409).default,
+                    UikitRadioComponent: n(410).default,
+                    VersionBarComponent: n(411).default,
+                    VngAgeRatingComponent: n(412).default,
                     DiscordBetaComponent: d,
                     DiscordButtonComponent: p,
                     DiscordPopupComponent: m,
@@ -13679,105 +13803,105 @@
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
                     SharedNotificationsService: c,
-                    AnalyticsService: n(407).default,
-                    BanNotificationService: n(408).default,
-                    ChatErrorsService: n(409).default,
-                    ChatRestrictionService: n(410).default,
-                    ChatWindowSettingsService: n(411).default,
-                    ClashService: n(412).default,
-                    ClientConfigService: n(413).default,
-                    CodeOfConductService: n(414).default,
-                    ConversationsService: n(417).default,
-                    DiagnosticAssistantService: n(418).default,
-                    DiscordIntegrationService: n(419).default,
-                    DragStateService: n(420).default,
-                    EogService: n(421).default,
-                    FriendFinderService: n(422).default,
-                    FriendGroupsService: n(423).default,
-                    FriendHovercardsService: n(424).default,
-                    FriendRequestsService: n(425).default,
-                    FriendsService: n(426).default,
-                    GameDataService: n(427).default,
-                    GameflowService: n(428).default,
-                    GameInvitesService: n(429).default,
-                    GameQueuesService: n(430).default,
-                    GenericAssetsService: n(431).default,
-                    HoneyfruitService: n(432).default,
-                    LeaverBusterService: n(433).default,
-                    LobbyService: n(437).default,
-                    MapsService: n(438).default,
-                    MatchmakingService: n(439).default,
-                    NotificationsService: n(440).default,
-                    OpenPartiesService: n(441).default,
-                    PatcherService: n(442).default,
-                    PlatformConfigService: n(443).default,
-                    ProductsService: n(444).default,
-                    ProfileChampionInfoService: n(445).default,
-                    ProfilesService: n(446).default,
-                    ReformCardService: n(447).default,
-                    RemedyService: n(465).default,
-                    ReportedPlayersService: n(466).default,
-                    ReporterFeedbackMessagesService: n(467).default,
-                    ReporterFeedbackService: n(468).default,
-                    RequestCacheService: n(469).default,
-                    SettingsService: n(470).default,
-                    SocialButtonsService: n(471).default,
-                    SocialPlatformConfigService: n(472).default,
-                    SocialSessionService: n(473).default,
-                    SocialSettingsService: n(474).default,
-                    SpectatorService: n(475).default,
-                    StatusUpdatesService: n(476).default,
-                    StoreService: n(477).default,
-                    SummonerService: n(478).default,
-                    SystemService: n(479).default,
-                    UxSettingsService: n(480).default,
+                    AnalyticsService: n(414).default,
+                    BanNotificationService: n(415).default,
+                    ChatErrorsService: n(416).default,
+                    ChatRestrictionService: n(417).default,
+                    ChatWindowSettingsService: n(418).default,
+                    ClashService: n(419).default,
+                    ClientConfigService: n(420).default,
+                    CodeOfConductService: n(421).default,
+                    ConversationsService: n(424).default,
+                    DiagnosticAssistantService: n(425).default,
+                    DiscordIntegrationService: n(426).default,
+                    DragStateService: n(427).default,
+                    EogService: n(428).default,
+                    FriendFinderService: n(429).default,
+                    FriendGroupsService: n(430).default,
+                    FriendHovercardsService: n(431).default,
+                    FriendRequestsService: n(432).default,
+                    FriendsService: n(433).default,
+                    GameDataService: n(434).default,
+                    GameflowService: n(435).default,
+                    GameInvitesService: n(436).default,
+                    GameQueuesService: n(437).default,
+                    GenericAssetsService: n(438).default,
+                    HoneyfruitService: n(439).default,
+                    LeaverBusterService: n(440).default,
+                    LobbyService: n(444).default,
+                    MapsService: n(445).default,
+                    MatchmakingService: n(446).default,
+                    NotificationsService: n(447).default,
+                    OpenPartiesService: n(448).default,
+                    PatcherService: n(449).default,
+                    PlatformConfigService: n(450).default,
+                    ProductsService: n(451).default,
+                    ProfileChampionInfoService: n(452).default,
+                    ProfilesService: n(453).default,
+                    ReformCardService: n(454).default,
+                    RemedyService: n(472).default,
+                    ReportedPlayersService: n(473).default,
+                    ReporterFeedbackMessagesService: n(474).default,
+                    ReporterFeedbackService: n(475).default,
+                    RequestCacheService: n(476).default,
+                    SettingsService: n(477).default,
+                    SocialButtonsService: n(478).default,
+                    SocialPlatformConfigService: n(479).default,
+                    SocialSessionService: n(480).default,
+                    SocialSettingsService: n(481).default,
+                    SpectatorService: n(482).default,
+                    StatusUpdatesService: n(483).default,
+                    StoreService: n(484).default,
+                    SummonerService: n(485).default,
+                    SystemService: n(486).default,
+                    UxSettingsService: n(487).default,
                     MissionsService: g.MissionsService,
                     TEMPLATES: {
-                        application: n(481),
-                        index: n(482),
-                        "components/actions-bar": n(483),
-                        "components/actions-folder-input": n(484),
-                        "components/arrow-toggle": n(485),
-                        "components/availability-hitbox": n(486),
-                        "components/chat-toggle-button": n(487),
-                        "components/clash-roster-panel": n(488),
-                        "components/clash-roster-panel-item": n(489),
-                        "components/content-block-attention": n(490),
-                        "components/discord-banner": n(491),
-                        "components/discord-eat": n(492),
-                        "components/friend-finder-add-summoner-by-name": n(493),
-                        "components/friend-finder-button": n(494),
-                        "components/friend-finder-discord": n(495),
-                        "components/friend-finder-modal": n(496),
-                        "components/friend-finder-recent-summoner": n(497),
-                        "components/friend-finder-recently-played": n(498),
-                        "components/friend-finder-requested-player": n(499),
-                        "components/friend-finder-requested-players": n(500),
-                        "components/hovercard-name-alias-mode": n(501),
-                        "components/hovercard-name-summoner-mode": n(502),
-                        "components/identity-and-parties": n(503),
-                        "components/sidebar-main": n(504),
-                        "components/social-avatar": n(505),
-                        "components/social-button": n(506),
-                        "components/social-friend-request": n(507),
-                        "components/social-friend-requests-modal": n(508),
-                        "components/social-friend-requests": n(509),
-                        "components/social-identity": n(510),
-                        "components/social-menu-input": n(511),
-                        "components/social-menu-item": n(512),
-                        "components/social-menu": n(513),
-                        "components/social-panel": n(514),
-                        "components/social-roster-group-name": n(515),
-                        "components/social-roster-group": n(516),
-                        "components/social-roster-member": n(517),
-                        "components/social-roster": n(518),
-                        "components/social-status-wrapper": n(519),
-                        "components/social-text-tooltip": n(520),
-                        "components/social-tooltip": n(521),
-                        "components/tooltip-message": n(522),
-                        "components/uikit-radio": n(523),
-                        "components/version-bar": n(524),
-                        "components/vng-age-rating": n(525),
+                        application: n(488),
+                        index: n(489),
+                        "components/actions-bar": n(490),
+                        "components/actions-folder-input": n(491),
+                        "components/arrow-toggle": n(492),
+                        "components/availability-hitbox": n(493),
+                        "components/chat-toggle-button": n(494),
+                        "components/clash-roster-panel": n(495),
+                        "components/clash-roster-panel-item": n(496),
+                        "components/content-block-attention": n(497),
+                        "components/discord-banner": n(498),
+                        "components/discord-eat": n(499),
+                        "components/friend-finder-add-summoner-by-name": n(500),
+                        "components/friend-finder-button": n(501),
+                        "components/friend-finder-discord": n(502),
+                        "components/friend-finder-modal": n(503),
+                        "components/friend-finder-recent-summoner": n(504),
+                        "components/friend-finder-recently-played": n(505),
+                        "components/friend-finder-requested-player": n(506),
+                        "components/friend-finder-requested-players": n(507),
+                        "components/hovercard-name-alias-mode": n(508),
+                        "components/hovercard-name-summoner-mode": n(509),
+                        "components/identity-and-parties": n(510),
+                        "components/sidebar-main": n(511),
+                        "components/social-avatar": n(512),
+                        "components/social-button": n(513),
+                        "components/social-friend-request": n(514),
+                        "components/social-friend-requests-modal": n(515),
+                        "components/social-friend-requests": n(516),
+                        "components/social-identity": n(517),
+                        "components/social-menu-input": n(518),
+                        "components/social-menu-item": n(519),
+                        "components/social-menu": n(520),
+                        "components/social-panel": n(521),
+                        "components/social-roster-group-name": n(522),
+                        "components/social-roster-group": n(523),
+                        "components/social-roster-member": n(524),
+                        "components/social-roster": n(525),
+                        "components/social-status-wrapper": n(526),
+                        "components/social-text-tooltip": n(527),
+                        "components/social-tooltip": n(528),
+                        "components/tooltip-message": n(529),
+                        "components/uikit-radio": n(530),
+                        "components/version-bar": n(531),
+                        "components/vng-age-rating": n(532),
                         "components/missions-button": g.MissionsButtonComponentTemplate
                     }
                 };
@@ -13786,30 +13910,30 @@
                     name: "RemedyReceived",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    RemediesReceivedComponent: n(526).default,
-                    RemedyRewardCardComponent: n(534).default,
+                    RemediesReceivedComponent: n(533).default,
+                    RemedyRewardCardComponent: n(541).default,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(465).default
+                    RemedyService: n(472).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "HostageDetectedComponent",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    HostageDetectedComponent: n(327).HostageDetectedComponent,
+                    HostageDetectedComponent: n(334).HostageDetectedComponent,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(465).default
+                    RemedyService: n(472).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "CredibilityBehaviorWarning",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    CredibilityBehaviorWarningComponent: n(537).default,
-                    CredibilityBehaviorWarningOptionComponent: n(541).default,
-                    RemedyService: n(465).default
+                    CredibilityBehaviorWarningComponent: n(544).default,
+                    CredibilityBehaviorWarningOptionComponent: n(548).default,
+                    RemedyService: n(472).default
                 })
             };
             var r = n(1);
-            n(327);
+            n(334);
             const o = {
                     EMBER_CLI_COMPAT: !0
                 },
@@ -13824,9 +13948,9 @@
                 value: !0
             }), t.HostageDetectedComponent = void 0;
             const r = n(1);
-            n(328), t.HostageDetectedComponent = r.Ember.Component.extend({
+            n(335), t.HostageDetectedComponent = r.Ember.Component.extend({
                 classNames: ["hostage-detected-component"],
-                layout: n(329),
+                layout: n(336),
                 offenderPuuid: "",
                 didReceiveAttrs: function() {
                     this._super(...arguments);
@@ -13890,7 +14014,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(332)) && r.__esModule ? r : {
+                i = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 };
             const {
@@ -14151,7 +14275,7 @@
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(1)),
-                i = (r = n(332)) && r.__esModule ? r : {
+                i = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 };
 
@@ -14234,7 +14358,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(335);
+            n(342);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-arrow-toggle"],
                 attributeBindings: ["open", "point-down"],
@@ -14253,10 +14377,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(332)) && r.__esModule ? r : {
+                i = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 };
-            n(337);
+            n(344);
             var a = o.Ember.Component.extend({
                 availability: "",
                 large: !1,
@@ -14309,7 +14433,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(332)) && r.__esModule ? r : {
+                i = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -14339,7 +14463,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(340);
+            n(347);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-clash-roster-panel-item"],
                 clashService: r.Ember.inject.service("clash"),
@@ -14355,7 +14479,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(342);
+            n(349);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-clash-roster-panel-item"],
                 roster: {},
@@ -14390,7 +14514,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(344);
+            n(351);
             var o = r.Ember.Component.extend({
                 classNames: ["discord-banner"],
                 bannerText: "",
@@ -14455,7 +14579,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(347);
+                o = n(354);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = (e, t) => "string" == typeof e && "string" == typeof t && e.toUpperCase() === t.toUpperCase();
@@ -14672,7 +14796,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(332)) && r.__esModule ? r : {
+                i = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -14776,10 +14900,10 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(352),
-                i = n(353),
-                a = n(354),
-                s = n(347),
+                o = n(359),
+                i = n(360),
+                a = n(361),
+                s = n(354),
                 l = n(222),
                 c = r.Ember.Component.extend({
                     classNames: ["lol-friend-finder-recent-summoner"],
@@ -14935,12 +15059,12 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(332)) && r.__esModule ? r : {
+                i = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(353),
-                s = n(354),
-                l = n(352),
+                a = n(360),
+                s = n(361),
+                l = n(359),
                 c = n(222);
             var d = o.Ember.Component.extend({
                 classNames: ["lol-friend-finder-requested-player"],
@@ -15032,7 +15156,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(358);
+                o = n(365);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = "show-hovercard", s = "hide-hovercard", l = {
@@ -15056,7 +15180,7 @@
             let c = !1;
             var d = r.Ember.Component.extend(i, {
                 tagName: "template",
-                layout: n(359),
+                layout: n(366),
                 socialPlatformConfig: r.Ember.inject.service(),
                 puuid: null,
                 summonerId: null,
@@ -15207,9 +15331,9 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(361),
-                i = n(362),
-                a = n(363);
+                o = n(368),
+                i = n(369),
+                a = n(370);
             let s = "PRACTICE_GAME",
                 l = "NONE",
                 c = "PRACTICETOOL",
@@ -15219,7 +15343,7 @@
             var m = r.Ember.Component.extend({
                 clientConfig: r.Ember.inject.service("client-config"),
                 tagName: "",
-                layout: n(364),
+                layout: n(371),
                 loggedIn: null,
                 isKnown: null,
                 me: null,
@@ -15723,17 +15847,17 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(358),
-                a = n(361),
-                s = n(366),
-                l = n(363),
-                c = (r = n(332)) && r.__esModule ? r : {
+                i = n(365),
+                a = n(368),
+                s = n(373),
+                l = n(370),
+                c = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 };
             const d = /\W+/g;
             var p = o.Ember.Component.extend({
                 tagName: "",
-                layout: n(367),
+                layout: n(374),
                 friendHovercardsService: o.Ember.inject.service("friend-hovercards"),
                 profileChampionInfo: o.Ember.inject.service(),
                 socialPlatformConfig: o.Ember.inject.service(),
@@ -15951,7 +16075,7 @@
             }), t.default = void 0;
             var r = n(1);
             const o = n(154),
-                i = n(370),
+                i = n(377),
                 a = (0, r.emberDataBinding)({
                     Ember: r.Ember,
                     websocket: (0, r.getProvider)().getSocket(),
@@ -16047,11 +16171,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(363),
-                a = (r = n(332)) && r.__esModule ? r : {
+                i = n(370),
+                a = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 };
-            n(372);
+            n(379);
             var s = o.Ember.Component.extend({
                 avatarClassNames: "",
                 championId: null,
@@ -16139,15 +16263,15 @@
             }), t.default = void 0;
             var r = n(1),
                 o = n(221),
-                i = s(n(332)),
-                a = s(n(375));
+                i = s(n(339)),
+                a = s(n(382));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(376);
+            n(383);
             var l = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-request"],
                 closeModal: null,
@@ -16322,7 +16446,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(378);
+            n(385);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-requests"],
                 alertNewFriendRequests: !1,
@@ -16392,7 +16516,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(380);
+            n(387);
             var o = r.Ember.Component.extend({
                 friendsService: r.Ember.inject.service("friends"),
                 friendRequestsService: r.Ember.inject.service("friendRequests"),
@@ -16417,7 +16541,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = a(n(332)),
+                o = a(n(339)),
                 i = a(n(154));
 
             function a(e) {
@@ -16425,14 +16549,19 @@
                     default: e
                 }
             }
-            const s = "identity-icon";
-            var l = r.Ember.Component.extend({
+            const s = "identity-icon",
+                l = "/lol-client-config/v3/client-config/lol.client_settings.social_panel_restriction.enabled",
+                c = "/lol-summoner-profiles/v1/get-honor-view";
+            var d = r.Ember.Component.extend({
                 classNames: ["lol-social-identity"],
                 statusInputMessagePacket: null,
                 iconPickerEnabled: !1,
                 isMenuOpen: !1,
                 hoveringAvatar: !1,
                 statusError: !1,
+                honorEnabled: !1,
+                honorLevel: 0,
+                socialPanelRestrictionEnabled: !1,
                 openPartiesService: r.Ember.inject.service("open-parties"),
                 clientConfig: r.Ember.inject.service("client-config"),
                 notificationsService: r.Ember.inject.service("notifications"),
@@ -16497,14 +16626,39 @@
                 openPartyDescription: r.Ember.computed("openPartiesService", "sessionService.me.lol.pty", (function() {
                     return this.get("openPartiesService").getPartyOccupancyString(this.get("meObj"))
                 })),
+                showHonorBadge: r.Ember.computed("honorEnabled", "honorLevel", "socialPanelRestrictionEnabled", (function() {
+                    if (!this.get("socialPanelRestrictionEnabled")) return !1;
+                    const e = this.get("honorLevel");
+                    return this.get("honorEnabled") && e >= 1 && e <= 5
+                })),
+                honorBadgeUrl: r.Ember.computed("honorLevel", (function() {
+                    return `/fe/lol-shared-components/badge-honor-${this.get("honorLevel")}.svg`
+                })),
                 didInsertElement() {
-                    this._super(...arguments), r.iconPicker.addConfigObserver((e => this.set("iconPickerEnabled", e.Enabled))), this.target = this.element.querySelector(`.${s}`), this.handleHover = this._handleHover.bind(this), this.handleUnhover = this._handleUnhover.bind(this), this.addEvents()
+                    this._super(...arguments), r.iconPicker.addConfigObserver((e => this.set("iconPickerEnabled", e.Enabled))), this.target = this.element.querySelector(`.${s}`), this.handleHover = this._handleHover.bind(this), this.handleUnhover = this._handleUnhover.bind(this), this.addEvents(), this._setupHonorObservers()
                 },
                 didRender() {
                     this._super(...arguments), r.SocialTelemetry.isEnded_avatar() || this.get("avatarReady") && r.SocialTelemetry.endEvent_avatar()
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this.target && (this.removeEvents(), this.target = null)
+                    this._super(...arguments), this.target && (this.removeEvents(), this.target = null), r.db.unobserve(c, this), r.db.unobserve(l, this)
+                },
+                _setupHonorObservers() {
+                    r.db.observe(l, this, (e => {
+                        this.set("socialPanelRestrictionEnabled", "boolean" == typeof e && e)
+                    })), r.db.get("/lol-honor-v2/v1/config").then((e => {
+                        const t = !(!e || !e.Enabled);
+                        this.set("honorEnabled", t), t && r.db.observe(c, this, (e => {
+                            const t = e && "number" == typeof e.honorLevel ? e.honorLevel : 0;
+                            this.set("honorLevel", t)
+                        }))
+                    }))
+                },
+                _openHonorDrawer() {
+                    const e = r.SharedComponents && r.SharedComponents.getApi_SharedPlayerBehaviorApps && r.SharedComponents.getApi_SharedPlayerBehaviorApps();
+                    e && e.showHonorPanelDrawer && e.showHonorPanelDrawer({
+                        wrapperClassName: "lol-social-honor-drawer"
+                    })
                 },
                 addEvents() {
                     this.target && (this.target.addEventListener("mouseenter", this.handleHover), this.target.addEventListener("mouseleave", this.handleUnhover))
@@ -16535,6 +16689,9 @@
                     })
                 },
                 actions: {
+                    openHonorDrawer() {
+                        this._openHonorDrawer()
+                    },
                     doCloseMenu() {
                         this.closeMenu()
                     },
@@ -16555,14 +16712,14 @@
                     }
                 }
             });
-            t.default = l
+            t.default = d
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(383);
+            n(390);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu"],
                 keepOpenOnScroll: !1,
@@ -16592,7 +16749,7 @@
                 value: !0
             }), t.default = t.SAVING_ANIMATION_MS = void 0;
             var r, o = n(1),
-                i = (r = n(332)) && r.__esModule ? r : {
+                i = (r = n(339)) && r.__esModule ? r : {
                     default: r
                 };
             t.SAVING_ANIMATION_MS = 300;
@@ -16663,7 +16820,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(386);
+            n(393);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu-item"]
             });
@@ -16715,16 +16872,16 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(363),
-                i = s(n(332)),
-                a = s(n(310));
+                o = n(370),
+                i = s(n(339)),
+                a = s(n(317));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(389);
+            n(396);
             const l = 28;
             var c = r.Ember.Component.extend(a.default, {
                 classNames: ["lol-social-roster", "social-ember-fade-in"],
@@ -16960,18 +17117,18 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(363),
-                i = c(n(332)),
-                a = c(n(391)),
-                s = c(n(310)),
-                l = c(n(392));
+                o = n(370),
+                i = c(n(339)),
+                a = c(n(398)),
+                s = c(n(317)),
+                l = c(n(399));
 
             function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(393);
+            n(400);
             var d = r.Ember.Component.extend(a.default, s.default, l.default, {
                 classNames: ["lol-social-roster-group"],
                 attributeBindings: ["draggable"],
@@ -17208,10 +17365,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(392)) && r.__esModule ? r : {
+                i = (r = n(399)) && r.__esModule ? r : {
                     default: r
                 };
-            n(395);
+            n(402);
             var a = o.Ember.Component.extend(i.default, {
                 classNames: ["lol-social-roster-group-name"],
                 group: null,
@@ -17291,20 +17448,20 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = p(n(392)),
-                i = n(363),
-                a = n(347),
-                s = p(n(332)),
+                o = p(n(399)),
+                i = n(370),
+                a = n(354),
+                s = p(n(339)),
                 l = n(221),
                 c = n(222),
-                d = p(n(391));
+                d = p(n(398));
 
             function p(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(397);
+            n(404);
             var u = r.Ember.Component.extend(d.default, o.default, {
                 classNames: ["lol-social-roster-member"],
                 classNameBindings: ["useMessagesMutedClass:muted", "showUnreadMessageCount:has-unread", "isOffline:offline"],
@@ -17421,7 +17578,7 @@
                     const e = this.get("friend");
                     return null !== e?.discordInfo
                 })),
-                isFriendDiscordOnly: r.Ember.computed("friend", (function() {
+                isFriendDiscordOnly: r.Ember.computed("friend.relationshipOnRiot", (function() {
                     const e = this.get("friend");
                     return e?.relationshipOnRiot === i.SOCIAL_RELATIONSHIP_TYPES.NONE
                 })),
@@ -17507,96 +17664,36 @@
                         }))
                     }
                 })),
-                spectateAvailability: r.Ember.computed("clashService.isPlaymodeRestricted", "eogService", "friend", "friendsService.friends", "gameInvitesService.lobby", "isFriendRemote", "isFriendSummoner", "spectatorService", (async function() {
+                spectateAvailability: r.Ember.computed("friend.puuid", "friend.lol.spectatorKey", "friend.lol.gameQueueType", "isFriendDiscordOnly", (async function() {
                     const e = this.get("friend"),
-                        t = this.get("spectatorService"),
-                        n = e?.puuid,
-                        o = e?.lol?.spectatorKey,
-                        i = {
+                        t = e?.puuid,
+                        n = e?.lol?.spectatorKey,
+                        o = {
                             disabled: !1,
                             hidden: this.get("isFriendDiscordOnly"),
                             tooltip: ""
                         };
-                    if (t.useSpectatorKey) {
-                        if (!n?.length || !o?.length) return {
-                            ...i,
-                            hidden: !0
-                        };
-                        try {
-                            const t = await r.db.get(`/lol-spectator/v3/buddy/can-spectate/${n}/${encodeURIComponent(o)}`);
-                            if (!0 !== t?.availableForWatching) {
-                                let t;
-                                return t = ["NONE", "PRACTICE_GAME"].indexOf(e.lol.gameQueueType) > -1 ? "spectator_tooltip_custom_games_transient_disabled" : "spectator_tooltip_queue_disabled", {
-                                    ...i,
-                                    disabled: !0,
-                                    hidden: !1,
-                                    tooltip: t
-                                }
-                            }
-                            return i
-                        } catch (e) {
-                            return r.logger.error("Failed to check if game can be spectated:", e), {
-                                ...i,
-                                hidden: !0
-                            }
-                        }
-                    }
-                    const a = this.get("friendsService.friends"),
-                        s = this.get("isFriendRemote"),
-                        l = this.get("isFriendSummoner");
-                    if (!((void 0 === t.lcuBuddySpectateEnabled || null === t.lcuBuddySpectateEnabled || t.lcuBuddySpectateEnabled) && t.observerModeEnabled || t.v3Enabled) || s || !l) return {
-                        ...i,
+                    if (!t?.length || !n?.length) return {
+                        ...o,
                         hidden: !0
                     };
-                    const c = this.get("clashService.isPlaymodeRestricted"),
-                        d = this.get("eogService"),
-                        p = this.get("gameInvitesService.lobby");
-                    if (!("dnd" !== this.get("socialSessionService.me").availability && null === p && !d.isEndOfGame() && !c)) return {
-                        ...i,
-                        disabled: !0
-                    };
-                    const u = e.lol ? e.lol.gameStatus : "";
-                    if ("inGame" === u) {
-                        if (["NONE", "PRACTICE_GAME"].indexOf(e.lol.gameQueueType) > -1) {
-                            if (!(["ALL", "DROPINONLY"].indexOf(t.observableCustomGameModes) > -1) && !t.v3Enabled) return {
-                                ...i,
+                    try {
+                        const i = await r.db.get(`/lol-spectator/v3/buddy/can-spectate/${t}/${encodeURIComponent(n)}`);
+                        if (!0 !== i?.availableForWatching) {
+                            let t;
+                            return t = ["NONE", "PRACTICE_GAME"].indexOf(e.lol.gameQueueType) > -1 ? "spectator_tooltip_custom_games_transient_disabled" : "spectator_tooltip_queue_disabled", {
+                                ...o,
                                 disabled: !0,
-                                tooltip: "spectator_tooltip_custom_games_disabled"
-                            };
-                            return ["ALL", "DROPINONLY"].indexOf(e.lol.isObservable) > -1 ? i : {
-                                ...i,
-                                disabled: !0,
-                                tooltip: "spectator_tooltip_custom_game_closed"
-                            }
-                        } {
-                            if (t.usingV3InsteadOfPlatform && !t.v3Enabled) return {
-                                ...i,
-                                disabled: !0,
-                                tooltip: "spectator_tooltip_queue_disabled"
-                            };
-                            const n = t.get("observableGameModes"),
-                                r = n?.indexOf(e.lol.gameQueueType) > -1;
-                            if (!t.v3Enabled && r) return i;
-                            const o = t.get("v3SpectatableQueueIds"),
-                                a = o?.indexOf(parseInt(e.lol.queueId)) > -1;
-                            return t.v3Enabled && a ? i : {
-                                ...i,
-                                disabled: !0,
-                                tooltip: "spectator_tooltip_queue_disabled"
+                                hidden: !1,
+                                tooltip: t
                             }
                         }
-                    }
-                    if ("spectating" === u && e.lol.dropInSpectateGameId) {
-                        const t = a.some((t => t?.name?.toUpperCase() === e.lol.dropInSpectateGameId.toUpperCase()));
-                        return void 0 === e.lol.isObservable || "ALL" === e.lol.isObservable || "DROPINONLY" === e.lol.isObservable && t ? i : {
-                            ...i,
-                            disabled: !0,
-                            tooltip: "spectator_tooltip_custom_games_transient_disabled"
+                        return o
+                    } catch (e) {
+                        return r.logger.error("Failed to check if game can be spectated:", e), {
+                            ...o,
+                            hidden: !0
                         }
-                    }
-                    return {
-                        ...i,
-                        disabled: !0
                     }
                 })),
                 _createTextTooltipRenderer(e, t, n) {
@@ -17997,8 +18094,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(363);
-            n(399);
+                o = n(370);
+            n(406);
             const i = "outOfGame",
                 a = "NONE";
             var s = r.Ember.Component.extend({
@@ -18109,7 +18206,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(363),
+                o = n(370),
                 i = r.Ember.Component.extend({
                     tagName: "template",
                     type: "top",
@@ -18354,7 +18451,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(406);
+            n(413);
             var o = r.Ember.Component.extend({
                 classNames: ["vng-age-rating"],
                 classNameBindings: ["isHidden:vng-age-rating-hidden"],
@@ -18549,7 +18646,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(392)) && r.__esModule ? r : {
+                i = (r = n(399)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "ForcedShutdown",
@@ -18643,7 +18740,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(392)) && r.__esModule ? r : {
+                i = (r = n(399)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -18951,7 +19048,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(392)) && r.__esModule ? r : {
+                i = (r = n(399)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Service.extend(i.default, {
@@ -18963,7 +19060,7 @@
                         name: "CodeOfConduct",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        CodeOfConductComponent: n(415).default
+                        CodeOfConductComponent: n(422).default
                     })
                 },
                 handleCodeOfConductNotification: function(e) {
@@ -18992,7 +19089,7 @@
             const o = (0, r.getProvider)().get("rcp-fe-lol-uikit").getTemplateHelper();
             var i = r.Ember.Component.extend({
                 classNames: ["code-of-conduct"],
-                layout: n(416),
+                layout: n(423),
                 didInsertElement: function() {
                     this._super(...arguments), this.unlockRule(1)
                 },
@@ -19543,7 +19640,7 @@
                 i = (r = n(159)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(363);
+                a = n(370);
             var s = o.Ember.Service.extend({
                 friendsService: o.Ember.inject.service("friends"),
                 systemService: o.Ember.inject.service("system"),
@@ -19677,8 +19774,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(363),
-                i = n(361);
+                o = n(370),
+                i = n(368);
             const a = "/lol-chat/v2/friend-requests",
                 s = "/lol-chat/v1/blocked-players",
                 l = "/lol-client-config/v3/client-config/lol.client_settings.match_history.recently_played_summoners.friend_finder_disabled",
@@ -19786,8 +19883,8 @@
                 i = (r = n(161)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(361),
-                s = n(363);
+                a = n(368),
+                s = n(370);
             const l = "/lol-chat/v1/friends",
                 c = "/lol-honor-v2/v1/recognition-history",
                 d = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegration.enabled";
@@ -19982,7 +20079,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(363);
+                o = n(370);
             const i = {
                     NORMAL_GAME: "game_type_normal",
                     TUTORIAL_GAME: "game_type_tutorial",
@@ -20174,7 +20271,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(392)) && r.__esModule ? r : {
+                i = (r = n(399)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20191,7 +20288,7 @@
                 d = "OnLockoutWarning",
                 p = "RankedRestrictedGames",
                 u = ["InProgress", "WaitingForStats", "PreEndOfGame"],
-                m = n(434),
+                m = n(441),
                 g = o.Ember.get;
             var h = o.Ember.Service.extend(a, i.default, {
                 init() {
@@ -20202,7 +20299,7 @@
                         name: "LeaverBusterWarning",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        LeaverBusterWarningComponent: n(435).default
+                        LeaverBusterWarningComponent: n(442).default
                     })
                 },
                 notificationObserver: o.Ember.on("init", o.Ember.observer("leaverBusterNotifications.[]", "gameflow.phase", (function() {
@@ -20323,7 +20420,7 @@
             var r = n(1),
                 o = r.Ember.Component.extend({
                     classNames: ["leaver-buster-dialog"],
-                    layout: n(436),
+                    layout: n(443),
                     agreeText: r.Ember.computed("tra.leaver_buster_warning_agree", "tra.leaver_buster_warning_agree_prompt$html", "notificationContext.agreeText", (function() {
                         return this.get("tra").formatString("leaver_buster_warning_agree_prompt$html", {
                             leaverBusterWarningAgree: this.get("notificationContext.agreeText")
@@ -20502,7 +20599,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(363);
+                o = n(370);
             const i = {
                 queue_id_800: "Intermediate",
                 queue_id_810: "Intro",
@@ -20684,7 +20781,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(361);
+            var r = n(368);
             const o = n(1),
                 {
                     dataBinding: i,
@@ -20766,7 +20863,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(392)) && r.__esModule ? r : {
+                i = (r = n(399)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "PERMA_BAN";
@@ -20779,22 +20876,22 @@
                         name: "ReformCard",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardComponent: n(448).default,
-                        ReformCardChatLogComponent: n(450).default,
-                        ReformCardMatchHistoryComponent: n(452).default
+                        ReformCardComponent: n(455).default,
+                        ReformCardChatLogComponent: n(457).default,
+                        ReformCardMatchHistoryComponent: n(459).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV2",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV2Component: n(454).default,
-                        ReformCardV2ChatLogComponent: n(456).default,
-                        ReformCardV2MatchHistoryComponent: n(458).default
+                        ReformCardV2Component: n(461).default,
+                        ReformCardV2ChatLogComponent: n(463).default,
+                        ReformCardV2MatchHistoryComponent: n(465).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV3",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV3Component: n(460).default,
-                        ReformCardV3ChatLogComponent: n(463).default
+                        ReformCardV3Component: n(467).default,
+                        ReformCardV3ChatLogComponent: n(470).default
                     }))
                 },
                 initDataBindings() {
@@ -20877,7 +20974,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(449)) && r.__esModule ? r : {
+                i = (r = n(456)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21021,7 +21118,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(451)) && r.__esModule ? r : {
+                i = (r = n(458)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -21095,7 +21192,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(453)) && r.__esModule ? r : {
+                i = (r = n(460)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21133,7 +21230,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(455)) && r.__esModule ? r : {
+                i = (r = n(462)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21311,7 +21408,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(457)) && r.__esModule ? r : {
+                i = (r = n(464)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -21366,7 +21463,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(459)) && r.__esModule ? r : {
+                i = (r = n(466)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21404,10 +21501,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(461)) && r.__esModule ? r : {
+                i = (r = n(468)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(462);
+                a = n(469);
             const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             var l = o.Ember.Component.extend({
                 classNames: ["player-behavior-reform-card-v3"],
@@ -21464,7 +21561,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(464)) && r.__esModule ? r : {
+                i = (r = n(471)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -21510,7 +21607,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(392)) && r.__esModule ? r : {
+                i = (r = n(399)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "/client-config/v2/config/lol.client_settings.remedy.obfuscated_player_name";
@@ -21650,7 +21747,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(392)) && r.__esModule ? r : {
+                i = (r = n(399)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21951,7 +22048,6 @@
             }), t.default = void 0;
             var r = n(1),
                 o = r.Ember.Service.extend({
-                    useSpectatorKey: !1,
                     lcuConfig: {},
                     spectateConfig: {},
                     v3Config: {},
@@ -21963,9 +22059,7 @@
                     observableCustomGameModes: r.Ember.computed.alias("spectateConfig.observableCustomGameModes"),
                     lcuBuddySpectateEnabled: r.Ember.computed.alias("lcuConfig.enabled"),
                     async init() {
-                        this._super(...arguments), r.db.get("/lol-client-config/v3/client-config/lol.client_settings.spectator.use_spectator_key").then((e => {
-                            "boolean" == typeof e && this.set("useSpectatorKey", e)
-                        })), this.set("lcuConfig", await r.db.get("/lol-platform-config/v1/namespaces/LcuBuddySpectate")), this.set("spectateConfig", await r.db.get("/lol-platform-config/v1/namespaces/ClientSystemStates")), this.set("v3Config", await r.db.get("/lol-spectator/v1/spectate/config"))
+                        this._super(...arguments), this.set("lcuConfig", await r.db.get("/lol-platform-config/v1/namespaces/LcuBuddySpectate")), this.set("spectateConfig", await r.db.get("/lol-platform-config/v1/namespaces/ClientSystemStates")), this.set("v3Config", await r.db.get("/lol-spectator/v1/spectate/config"))
                     },
                     spectateGame: (e, t, n, o, i) => r.db.post("/lol-spectator/v1/spectate/launch", {
                         dropInSpectateGameId: e,
@@ -22359,8 +22453,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "Cv+bphPi",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-identity.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-identity.js\\" "],["text","\\n"],["block",["if"],[["get",["hasUnreadNotifications"]]],null,6],["text","\\n"],["block",["social-avatar"],null,[["avatarClassNames","iconId","large","me"],[["get",["avatarClassNames"]],["get",["avatarIcon"]],true,true]],5],["text","\\n"],["open-element","div",[]],["static-attr","class","details"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["transitionContainerClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["viewProfileTransitionClassNames"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","details-view-profile"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","details-view-profile-icon"],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["tra","social_identity_view_profile"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerNameTransitionClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lower-details"],["flush-element"],["text","\\n      "],["append",["helper",["availability-hitbox"],null,[["availability","large","me"],[["get",["availability"]],true,true]]],false],["text","\\n"],["block",["if"],[["get",["availability"]]],null,4],["block",["if"],[["get",["playerNotificationsEnabled"]]],null,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isMenuOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"doCloseMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","offsety","2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","identity-menu"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isMenuOpen"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay","selector"],["bottom",["get",["statusInputMessagePacket"]],-1,".social-status-change-input"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-menu-input"],null,[["error","currentInput","saveMessage","placeholderText","onCancel","onChange","onSave","maxLength"],[["get",["statusError"]],["get",["statusMessage"]],["get",["tra","menu_item_status_saved"]],["get",["tra","menu_item_set_status"]],["helper",["action"],[["get",[null]],"doCloseMenu"],null],["helper",["action"],[["get",[null]],"doClearStatusError"],null],["helper",["action"],[["get",[null]],"saveNewMessage"],null],"25"]]],false],["text","\\n"],["block",["if"],[["get",["statusInputMessagePacket"]]],null,0]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_notifications"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-player-notifications-button",[]],["static-attr","class","notifications-button"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction"],["left"]],2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["unknown",["statusClassNames"]],null],["modifier",["action"],[["get",[null]],"openMenu"]],["flush-element"],["text","\\n          "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["identity-message",["get",["meObj"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["hovercard-component"],null,[["canShow","summonerId","puuid","openPartyDescription"],[["get",["canShowHovercard"]],["get",["summonerId"]],["get",["meObj","puuid"]],["get",["openPartyDescription"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","identity-rewards-unread-pip"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "9Hm+eBD8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-identity.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-identity.js\\" "],["text","\\n"],["block",["if"],[["get",["hasUnreadNotifications"]]],null,8],["text","\\n"],["block",["social-avatar"],null,[["avatarClassNames","iconId","large","me"],[["get",["avatarClassNames"]],["get",["avatarIcon"]],true,true]],7],["text","\\n"],["open-element","div",[]],["static-attr","class","details"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["transitionContainerClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["viewProfileTransitionClassNames"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","details-view-profile"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","details-view-profile-icon"],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["tra","social_identity_view_profile"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerNameTransitionClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lower-details"],["flush-element"],["text","\\n      "],["append",["helper",["availability-hitbox"],null,[["availability","large","me"],[["get",["availability"]],true,true]]],false],["text","\\n"],["block",["if"],[["get",["availability"]]],null,6],["block",["if"],[["get",["showHonorBadge"]]],null,5],["block",["if"],[["get",["playerNotificationsEnabled"]]],null,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isMenuOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"doCloseMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","offsety","2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","identity-menu"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isMenuOpen"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay","selector"],["bottom",["get",["statusInputMessagePacket"]],-1,".social-status-change-input"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-menu-input"],null,[["error","currentInput","saveMessage","placeholderText","onCancel","onChange","onSave","maxLength"],[["get",["statusError"]],["get",["statusMessage"]],["get",["tra","menu_item_status_saved"]],["get",["tra","menu_item_set_status"]],["helper",["action"],[["get",[null]],"doCloseMenu"],null],["helper",["action"],[["get",[null]],"doClearStatusError"],null],["helper",["action"],[["get",[null]],"saveNewMessage"],null],"25"]]],false],["text","\\n"],["block",["if"],[["get",["statusInputMessagePacket"]]],null,0]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_notifications"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-player-notifications-button",[]],["static-attr","class","notifications-button"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction"],["left"]],2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_honor"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","honor-button"],["static-attr","role","button"],["static-attr","tabindex","0"],["modifier",["action"],[["get",[null]],"openHonorDrawer"]],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","honor-button-icon"],["dynamic-attr","src",["concat",[["unknown",["honorBadgeUrl"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction"],["left"]],4],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["unknown",["statusClassNames"]],null],["modifier",["action"],[["get",[null]],"openMenu"]],["flush-element"],["text","\\n          "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["identity-message",["get",["meObj"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["hovercard-component"],null,[["canShow","summonerId","puuid","openPartyDescription"],[["get",["canShowHovercard"]],["get",["summonerId"]],["get",["meObj","puuid"]],["get",["openPartyDescription"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","identity-rewards-unread-pip"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22474,11 +22568,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(527)) && r.__esModule ? r : {
+                i = (r = n(534)) && r.__esModule ? r : {
                     default: r
                 };
-            n(528);
-            var a = n(529);
+            n(535);
+            var a = n(536);
             var s = o.Ember.Component.extend({
                 classNames: ["remedies-received-component"],
                 layout: i.default,
@@ -22566,13 +22660,13 @@
             t.ARAM_REROLL_REFUND_REWARD_TYPE = h;
             const f = "LP_CONSOLATION";
             t.LP_CONSOLATION_REWARD_TYPE = f;
-            const _ = n(530);
+            const _ = n(537);
             t.ARAM_REROLL_ICON_PATH = _;
-            const A = n(531);
+            const A = n(538);
             t.XP_BOOST_ICON_PATH = A;
-            const b = n(532);
+            const b = n(539);
             t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = b;
-            const y = n(533);
+            const y = n(540);
             t.LP_CONSOLATION_REMEDY_ICON_PATH = y;
             const x = {};
             t.REMEDY_ICON_MAP = x, x[m] = A, x[g] = b, x[h] = _, x[f] = y
@@ -22594,11 +22688,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(529),
-                a = (r = n(535)) && r.__esModule ? r : {
+                i = n(536),
+                a = (r = n(542)) && r.__esModule ? r : {
                     default: r
                 };
-            n(536);
+            n(543);
             const s = {};
             s[i.XP_BOOSTED_GAMES_REWARD_TYPE] = "xp_boosted_games_reward_description", s[i.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE] = "autofill_protected_games_reward_description", s[i.ARAM_REROLL_REFUND_REWARD_TYPE] = "aram_reroll_refund_reward_description", s[i.LP_CONSOLATION_REWARD_TYPE] = "lp_consolation_reward_description";
             var l = o.Ember.Component.extend({
@@ -22633,11 +22727,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(538),
-                a = (r = n(539)) && r.__esModule ? r : {
+                i = n(545),
+                a = (r = n(546)) && r.__esModule ? r : {
                     default: r
                 };
-            n(540);
+            n(547);
             var s = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-component"],
                 layout: a.default,
@@ -22703,10 +22797,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(542)) && r.__esModule ? r : {
+                i = (r = n(549)) && r.__esModule ? r : {
                     default: r
                 };
-            n(543);
+            n(550);
             var a = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-option"],
                 layout: i.default,
@@ -22732,7 +22826,7 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            n(545), n(546), n(547), n(550), n(552), n(565), n(567), n(570), n(571), n(573), n(574), n(576), n(577), n(579), n(580), n(581), n(583), n(584), n(586), n(587)
+            n(552), n(553), n(554), n(557), n(559), n(572), n(574), n(577), n(578), n(580), n(581), n(583), n(584), n(586), n(587), n(588), n(590), n(591), n(593), n(594)
         }, (e, t, n) => {
             "use strict";
             const r = n(1);
@@ -22834,7 +22928,7 @@
                     computed: i
                 } = o;
             o.defineElement("lol-player-notifications-button", {
-                styles: n(548),
+                styles: n(555),
                 computed: {
                     notifications: i.resource("/player-notifications/v1/notifications"),
                     toastNotifications: "notifications.reduce(reduceToasts, [])",
@@ -22916,7 +23010,7 @@
             var r = n(206),
                 o = n(207),
                 i = n(210),
-                a = n(549),
+                a = n(556),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "/* notifications button styles */\n.player-notifications-button {\n  position: relative;\n  cursor: pointer;\n  width: 18px;\n  height: 18px;\n}\n.player-notifications-button-icon {\n  outline: none;\n  border: none;\n  background: none;\n  padding: 0;\n  width: 18px;\n  height: 18px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #c8aa6e;\n  -webkit-mask-size: contain;\n}\n.player-notifications-button-icon:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-button-icon:active,\n.player-notifications-button.open .player-notifications-button-icon {\n  background-color: #785a28;\n}\n.player-notifications-button.disabled .player-notifications-button-icon {\n  background-color: #5c5b57;\n}\n.player-notifications-button.disabled {\n  pointer-events: none;\n}\n.player-notifications-button-unread-pip {\n  position: absolute;\n  top: 1px;\n  right: -1px;\n  width: 8px;\n  height: 8px;\n  box-sizing: border-box;\n  border-radius: 50%;\n  flex-shrink: 0;\n  background: #010a13;\n  box-shadow: 0 0 0 2px #010a13;\n  background-color: #c89b3c;\n}\n", "", {
@@ -22937,7 +23031,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-default-toast", {
-                styles: n(551)
+                styles: n(558)
             })
         }, (e, t, n) => {
             var r = n(206),
@@ -22952,7 +23046,7 @@
             }]), e.exports = o
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(553)) && r.__esModule ? r : {
+            var r, o = (r = n(560)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(1),
@@ -22961,7 +23055,7 @@
                     tra: s
                 } = i;
             a.defineElement("lol-player-notifications-item", {
-                styles: n(563),
+                styles: n(570),
                 dismiss: function() {
                     Object.prototype.hasOwnProperty.call(this.notification, "dismissible") && !this.notification.dismissible || (this.notification.state = "dismissed", i.ajax.delete("/player-notifications/v1/notifications/" + this.notification.id).then((() => {
                         i.playerNotificationsPrivateApi.dispatch("remove", this.notification)
@@ -22993,15 +23087,15 @@
             }), t.default = function(e) {
                 return m.get(e) || e
             };
-            var r = u(n(554)),
-                o = u(n(555)),
-                i = u(n(556)),
-                a = u(n(557)),
-                s = u(n(558)),
-                l = u(n(559)),
-                c = u(n(560)),
-                d = u(n(561)),
-                p = u(n(562));
+            var r = u(n(561)),
+                o = u(n(562)),
+                i = u(n(563)),
+                a = u(n(564)),
+                s = u(n(565)),
+                l = u(n(566)),
+                c = u(n(567)),
+                d = u(n(568)),
+                p = u(n(569));
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -23050,7 +23144,7 @@
             var r = n(206),
                 o = n(207),
                 i = n(210),
-                a = n(564),
+                a = n(571),
                 s = o(r),
                 l = i(a);
             s.push([e.id, ".player-notifications-item {\n  display: flex;\n  padding: 12px 18px 10px;\n  border-bottom: thin solid #1e282d;\n}\n.player-notifications-item:hover {\n  background: #1e2328;\n}\n.player-notifications-item:hover .text {\n  color: #f0e6d2;\n}\n.player-notifications-item:hover .time {\n  color: #a09b8c;\n}\n.player-notifications-item-image {\n  width: 56px;\n  height: 56px;\n  flex: 0 0 auto;\n  margin: 0 18px 0 0;\n}\n.player-notifications-item-image:lang(ar-ae) {\n  margin: 0 0 0 18px;\n}\n.player-notifications-item-text {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 auto;\n  overflow: hidden;\n}\n.player-notifications-item-dismiss-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\n.player-notifications-item-dismiss-button {\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  width: 18px;\n  height: 18px;\n  flex: 0 0 auto;\n}\n.player-notifications-item-dismiss-button:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-item-dismiss-button:active {\n  background-color: #463714;\n}\n.text {\n  color: #a09b8c;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\nh6.unread,\nh6.toast {\n  color: #c89b3c;\n}\n.text-unread,\n.text-toast {\n  color: #f0e6d2;\n}\n.time {\n  color: #3c3c41;\n}\n.time-unread,\n.time-toast {\n  color: #a09b8c;\n}\n", "", {
@@ -23072,7 +23166,7 @@
                 } = r,
                 i = /^(\/|https?:\/\/)/;
             o.defineElement("lol-player-notifications-toast", {
-                styles: n(566),
+                styles: n(573),
                 attached: function() {
                     const e = this.querySelector(".player-notifications-toast-container");
                     let t = this.notification.backgroundUrl;
@@ -23104,7 +23198,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-tray", {
-                styles: n(568),
+                styles: n(575),
                 dismissAll: function() {
                     r.modalManager.add({
                         type: "DialogConfirm",
@@ -23136,7 +23230,7 @@
             var r = n(206),
                 o = n(207),
                 i = n(210),
-                a = n(569),
+                a = n(576),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-player-notifications-tray {\n  display: block;\n  width: 414px;\n  height: 402px;\n}\n.notifications-tray {\n  display: flex;\n  flex-direction: column;\n}\n.notifications-tray-header {\n  display: flex;\n  align-items: center;\n  height: 46px;\n  padding: 0 18px;\n  border-bottom: thin solid #463714;\n}\n.notifications-tray-title {\n  flex-grow: 1;\n}\n.notifications-dismiss-all-btn {\n  width: 16px;\n  height: 16px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  cursor: pointer;\n}\n.notifications-dismiss-all-btn:hover {\n  background-color: #f0e6d2;\n}\n.notifications-dismiss-all-btn:active {\n  background-color: #463714;\n}\n.notifications-dismiss-all-btn:lang(ar-ae) {\n  transform: scaleX(-1);\n}\n.notifications-tray-body {\n  flex-grow: 1;\n  height: 355px;\n}\n", "", {
@@ -23166,7 +23260,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-esports-toast", {
-                styles: n(572)
+                styles: n(579)
             })
         }, (e, t, n) => {
             var r = n(206),
@@ -23190,14 +23284,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(553)) && r.__esModule ? r : {
+            var r, o = (r = n(560)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-esports-tft-toast", {
-                styles: n(575),
+                styles: n(582),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -23232,7 +23326,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-merch-toast", {
-                styles: n(578)
+                styles: n(585)
             })
         }, (e, t, n) => {
             var r = n(206),
@@ -23267,14 +23361,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(553)) && r.__esModule ? r : {
+            var r, o = (r = n(560)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-rewards-program-toast", {
-                styles: n(582),
+                styles: n(589),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -23332,7 +23426,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-rgm-toast", {
-                styles: n(585)
+                styles: n(592)
             })
         }, (e, t, n) => {
             var r = n(206),
@@ -23356,14 +23450,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(553)) && r.__esModule ? r : {
+            var r, o = (r = n(560)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-xbox-gamepass-toast", {
-                styles: n(588),
+                styles: n(595),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -23423,21 +23517,21 @@
                         r.tournaments.persistentPanel = e || null, i.sync()
                     },
                     getHovercardTemplates: () => ({
-                        "components/hovercard-name-alias-mode": n(501),
-                        "components/hovercard-name-summoner-mode": n(502)
+                        "components/hovercard-name-alias-mode": n(508),
+                        "components/hovercard-name-summoner-mode": n(509)
                     }),
                     getHovercardComponent: () => {
                         const {
                             PlayerNameComponent: e
                         } = s;
                         return {
-                            HovercardComponentComponent: n(357).default,
-                            HovercardShellComponent: n(365).default,
-                            HovercardContentComponent: n(360).default,
-                            SocialSessionService: n(473).default,
-                            SocialPlatformConfigService: n(472).default,
-                            SocialSettingsService: n(474).default,
-                            ProfileChampionInfoService: n(445).default,
+                            HovercardComponentComponent: n(364).default,
+                            HovercardShellComponent: n(372).default,
+                            HovercardContentComponent: n(367).default,
+                            SocialSessionService: n(480).default,
+                            SocialPlatformConfigService: n(479).default,
+                            SocialSettingsService: n(481).default,
+                            ProfileChampionInfoService: n(452).default,
                             PlayerNameComponent: e
                         }
                     },
@@ -23582,13 +23676,13 @@
                 });
                 const {
                     ComponentFactory: f
-                } = e.default, _ = e.default.Viewport.sidebar().getScreenRoot("social"), A = n(326).default, b = document.createElement("div");
+                } = e.default, _ = e.default.Viewport.sidebar().getScreenRoot("social"), A = n(333).default, b = document.createElement("div");
                 b.classList.add("social-plugin-home"), A(b, (e => {
                     const t = e.__container__.lookup("service:conversations");
                     g.setChatWindowVisibility = e => {
                         t.setVisibility(e)
                     }
-                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(544);
+                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(551);
                 const y = f.create("rcp-fe-lol-social");
                 _.bump().then((e => {
                     e.getElement().appendChild(b)
@@ -23598,7 +23692,7 @@
                         friendFinder: x.__container__.lookup("service:friend-finder"),
                         socialButtons: x.__container__.lookup("service:social-buttons")
                     };
-                return n(589)(v)
+                return n(596)(v)
             }))
         }), {
             once: !0

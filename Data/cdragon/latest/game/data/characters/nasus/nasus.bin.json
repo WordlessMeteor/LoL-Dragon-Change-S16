@@ -907,18 +907,72 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "DamagePerTick",
+                    "values": [
+                        10.0,
+                        10.0,
+                        16.0,
+                        22.0,
+                        28.0,
+                        34.0,
+                        34.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorShredPercent",
+                    "values": [
+                        -0.30000001192092896,
+                        -0.30000001192092896,
+                        -0.3499999940395355,
+                        -0.4000000059604645,
+                        -0.44999998807907104,
+                        -0.5,
+                        -0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InitialHitDamage",
+                    "values": [
+                        50.0,
+                        50.0,
+                        80.0,
+                        110.0,
+                        140.0,
+                        170.0,
+                        170.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDotDamage": {
                     "mMultiplier": {
-                        "mEffectIndex": 3,
-                        "__type": "EffectValueCalculationPart"
+                        "mDataValue": "Duration",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 6,
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "DamagePerTick",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.11999999731779099,
@@ -932,8 +986,8 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 4,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "InitialHitDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.6000000238418579,
@@ -1011,20 +1065,17 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 4,
+                                    "type": "InitialHitDamage",
                                     "nameOverride": "Spell_ListType_InitialDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "DamagePerTick",
                                     "nameOverride": "Spell_ListType_DamagePerSecond",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "ArmorShredPercent",
                                     "multiplier": -100.0,
                                     "nameOverride": "Spell_ListType_ArmorReductionPercent",
                                     "Style": 1,
@@ -1904,7 +1955,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 227,
+                "EventToTrack": 229,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2041,7 +2092,7 @@
         "mDescriptionTraKey": "stat_stone_description_NasusQDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2069,7 +2120,7 @@
         "mDescriptionTraKey": "stat_stone_description_NasusPHealing",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2097,7 +2148,7 @@
         "mDescriptionTraKey": "stat_stone_description_NasusEDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2139,7 +2190,7 @@
         "mDescriptionTraKey": "stat_stone_description_NasusWDuration",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2168,7 +2219,7 @@
         "mDescriptionTraKey": "stat_stone_description_NasusQStacks",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -2196,7 +2247,7 @@
         "mDescriptionTraKey": "stat_stone_description_NasusRKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],

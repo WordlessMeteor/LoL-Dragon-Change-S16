@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Quinn'in Demacia kartalı Valor, rakipleri belli aralıklarla <font color='#FFF673'>Savunmasız</font> olarak işaretler. Quinn'in <font color='#FFF673'>Savunmasız</font> hedeflere yaptığı ilk normal saldırı ilave fiziksel hasar verir."
+        "description": "Quinn'in Demacia kartalı Valor, rakipleri belli aralıklarla <keywordMajor>Alıcı Kuş</keywordMajor> ile işaretler. Quinn'in <keywordMajor>Alıcı Kuş</keywordMajor> ile işaretlenmiş hedeflere karşı yaptığı ilk normal saldırı ilave fiziksel hasar verir."
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Quinn, Valor'u çağırarak bir rakibi işaretlemesini ve önce görüşünü engellemesini, sonra da yakınındaki bütün rakiplere hasar vermesini sağlar.",
-            "dynamicDescription": "Quinn, Valor'a dalış yapmasını emrederek isabet alan ilk rakibi <keywordMajor>savunmasız</keywordMajor> hale getirir, onun görüş menzilini @VisionReductionDuration@ saniyeliğine azaltır ve çevredeki tüm rakiplere <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir.<br><br>İsabet alan ilk rakip, şampiyon değilse @VisionReductionDuration@ saniyeliğine <status>silahsız bırakılır</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn, Valor'a dalış yapmasını emrederek isabet alan ilk rakibi <keywordMajor>Alıcı Kuş</keywordMajor> ile işaretler, onun görüş menzilini @VisionReductionDuration@ saniyeliğine azaltır ve çevredeki tüm rakiplere <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir.<br><br>İsabet alan ilk rakip, şampiyon değilse @VisionReductionDuration@ saniyeliğine <status>silahsız bırakılır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Quinn <font color='#FFF673'>Savunmasız</font> bir hedefe saldırdıktan sonra pasif olarak Saldırı Hızı ve Hareket Hızı elde eder. Valor'un yakındaki geniş bir alanı görünür kılması için etkinleştir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> <keywordMajor>Savunmasız</keywordMajor> bir hedefe saldırmak, Quinn'e @BuffDuration@ saniyeliğine <attackSpeed>%@AttackSpeedBonus*100@ Saldırı Hızı</attackSpeed> ve <speed>%@MovespeedAmount*100@ Hareket Hızı</speed> kazandırır.<br><br><spellActive>Aktif:</spellActive> Valor yakınındaki geniş bir alanı @VisionDuration@ saniyeliğine açığa çıkarır.@SpellModifierDescriptionAppend@",
+            "description": "Quinn, <keywordMajor>Alıcı Kuş</keywordMajor> ile işaretlenmiş bir hedefe saldırdıktan sonra pasif olarak saldırı hızı ve hareket hızı elde eder. Valor'un yakındaki geniş bir alanı açığa çıkarması için etkinleştir.",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> <keywordMajor>Alıcı Kuş</keywordMajor> ile işaretlenmiş bir hedefe saldırmak, Quinn'e @BuffDuration@ saniyeliğine <attackSpeed>%@AttackSpeedBonus*100@ Saldırı Hızı</attackSpeed> ve <speed>%@MovespeedAmount*100@ Hareket Hızı</speed> kazandırır.<br><br><spellActive>Aktif:</spellActive> Valor yakınındaki geniş bir alanı @VisionDuration@ saniyeliğine açığa çıkarır.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Quinn bir rakibe atılarak fiziksel hasar verir ve hedefin Hareket Hızı değerini azaltır. Hedefe ulaştığında hedefi kısa süre engelleyip, geri sıçrar ve azami saldırı mesafesinin sınırına yakın bir yere iner.",
-            "dynamicDescription": "Quinn bir rakibe atılarak <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir ve onu <keywordMajor>savunmasız</keywordMajor> olarak işaretler. Daha sonra Quinn hedefinden uzağa atlayarak onu kısa bir mesafe <status>geri</status> <status>savurur</status> ve @SlowDecayTime@ saniye boyunca azalarak kaybolacak şekilde %@SlowAmount*100@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn bir rakibe atılarak <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir ve onu <keywordMajor>Alıcı Kuş</keywordMajor> ile işaretler. Daha sonra Quinn hedefinden uzağa atlayarak onu kısa bir mesafe <status>geri</status> <status>savurur</status> ve @SlowDecayTime@ saniye boyunca azalarak kaybolacak şekilde %@SlowAmount*100@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Quinn ve Valor büyük bir hızla uçmak için güç birliği yapar. Yeteneği sonlandırmak Hava Saldırısı gerçekleştirerek yakındaki rakiplere hasar verir ve şampiyonları Savunmasız olarak işaretler.",
-            "dynamicDescription": "Quinn, Valor'a seslenir ve 2 saniye yoğunlaştıktan sonra onunla birlikte uçarak <speed>%@MovementSpeedMod*100@ Hareket Hızı</speed> kazanır ve bu yeteneği <recast>yeniden kullanabilir</recast>. Saldırmak veya <spellName>Kör Eden Saldırı</spellName> ya da <spellName>Pike</spellName> yeteneğini kullanmak, bu yeteneğin otomatik olarak <recast>yeniden kullanılmasını</recast> sağlar.<br><br><recast>Yeniden Kullanım:</recast> Quinn ve Valor havada taktiksel bir manevra yaparak rakiplere <physicalDamage>@Damage@ Fiziksel Hasar</physicalDamage> verir, şampiyonları <keywordMajor>savunmasız</keywordMajor> olarak işaretler ve bu yeteneği sonlandırır.@SpellModifierDescriptionAppend@",
+            "description": "Quinn ve Valor büyük bir hızla uçmak için güç birliği yapar.  Yeteneği sonlandırmak Hava Saldırısı gerçekleştirerek yakındaki rakiplere hasar verir ve şampiyonları Alıcı Kuş ile işaretler.",
+            "dynamicDescription": "Quinn, Valor'a seslenir ve 2 saniye yoğunlaştıktan sonra onunla birlikte uçarak <speed>%@MovementSpeedMod*100@ Hareket Hızı</speed> kazanır ve bu yeteneği <recast>yeniden kullanabilir</recast>. Saldırmak veya <spellName>Kör Eden Saldırı</spellName> ya da <spellName>Pike</spellName> yeteneğini kullanmak, bu yeteneğin otomatik olarak <recast>yeniden kullanılmasını</recast> sağlar.<br><br><recast>Yeniden Kullanım</recast>: Quinn ve Valor havada taktiksel bir manevra yaparak rakiplere <physicalDamage>@Damage@ Fiziksel Hasar</physicalDamage> verir, şampiyonları <keywordMajor>Alıcı Kuş</keywordMajor> ile işaretler ve bu yeteneği sonlandırır.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

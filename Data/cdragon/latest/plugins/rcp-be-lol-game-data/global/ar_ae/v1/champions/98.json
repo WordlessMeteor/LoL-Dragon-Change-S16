@@ -1170,7 +1170,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يعيد شين استدعاء نصله الروحي للهجوم به، فيلحق ضررًا يتناسب مع الصحة القصوى للهدف. تتعزز الهجمات بشكل كبير إذا اصطدم النصل ببطل معادٍ، ويتم إبطاء كل الأعداء الذين اصطدم بهم النصل أثناء هربهم من شين.",
-            "dynamicDescription": "يقوم شين بحركة استدعاء <keywordMajor>نصل الروح</keywordMajor> الخاص به. يتم <status>إبطاء</status> الأعداء المتأثرين بقوة الجذب بمقدار @Effect4Amount@% بينما يبتعدون عن شين للثواني الـ @Effect5Amount@ القادمة.<br><br>بالإضافة إلى ذلك، تلحق هجمات شين التالية @Effect3Amount@ <magicDamage>@BaseFlatDamage@</magicDamage> إضافي، والمزيد من <magicDamage>@BasePercentHealth@ ضرر سحر من الصحة القصوى</magicDamage> إذا ضرب شين أحد الأبطال المعادين <keywordMajor>بنصل الروح</keywordMajor> يزيد الضرر إلى <magicDamage>@BaseFlatDamage@</magicDamage> إضافة إلى <magicDamage>@EmpPercentHealth@ من ضرر السحر بناءً على الصحة القصوى</magicDamage> ويكسب زيادة بنسبة <attackSpeed>@Effect9Amount@% من سرعة الهجوم</attackSpeed> لتلك الهجمات.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يستدعي شين <keywordMajor>نصل الروح</keywordMajor>. يتم <status>إبطاء</status> الأعداء المتضررين من السحب بنسبة @SlowPercent@% أثناء ابتعادهم عن شين خلال الـ @SlowDuration@ث التالية.<br><br>بالإضافة إلى ذلك، تُلحق هجمات شين الـ @NumEnhancedAttacks@ التالية <magicDamage>@BaseFlatDamage@</magicDamage> إضافي، بالإضافة إلى <magicDamage>@BasePercentHealth@ من الصحة القصوى على شكل ضرر سحر</magicDamage>. إذا أصاب شين بطلًا معاديًا باستخدام <keywordMajor>نصل الروح</keywordMajor>، يزداد الضرر إلى <magicDamage>@BaseFlatDamage@</magicDamage> بالإضافة إلى <magicDamage>@EmpPercentHealth@ من الصحة القصوى على شكل ضرر سحر</magicDamage> ويكسب <attackSpeed>@SteroidAS@% سرعة هجوم</attackSpeed> لتلك الهجمات.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يتم صد الهجمات التي توشك على إصابة شين أو حلفائه قرب نصله الروحي.",
-            "dynamicDescription": "ينشئ شين منطقة دفاعية حول <keywordMajor>نصل الروح</keywordMajor> الخاص به لمدة @Effect1Amount@ من الثواني. يتم صد الهجمات ضد الأبطال الحلفاء في المنطقة. <br><br>إذا لم يكن هناك أبطال لحمايتهم في المنطقة عند استحداثها، فستنتظر لما يصل إلى @Effect2Amount@ من الثواني.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينشئ شين منطقة دفاعية عند <keywordMajor>نصل الروح</keywordMajor> لمدة @ZoneDuration@ث. يتم صد الهجمات ضد الأبطال الحلفاء داخل المنطقة. <br><br>إذا لم يكن هناك أبطال لحمايتهم في المنطقة عند تفعيلها، فستبقى نشطة لمدة تصل إلى @ZoneDelay@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

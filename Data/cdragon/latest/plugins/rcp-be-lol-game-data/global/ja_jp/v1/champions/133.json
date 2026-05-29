@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "相棒であるデマーシアの鷲、ヴァロールが定期的に周囲の敵に<font color='#FFF673'>「弱点」</font>のマークをつける。<font color='#FFF673'>「弱点」</font>のマークを付与された敵に対して、クインの次の通常攻撃は追加物理ダメージを与える。"
+        "description": "相棒であるデマーシアの鷲、ヴァロールが定期的に周囲の敵を<keywordMajor>「鷲匠」</keywordMajor>でマークする。<keywordMajor>「鷲匠」</keywordMajor>のマークが付与された敵に対して、クインの次の通常攻撃が追加物理ダメージを与える。"
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ヴァロールを呼び、敵にマークをつけさせた後、その場の対象にダメージを与えるとともに、視界を奪う。",
-            "dynamicDescription": "ヴァロールに急降下するように命じ、最初に命中した敵を<keywordMajor>「弱点」</keywordMajor>でマークして、@VisionReductionDuration@秒間その視界範囲を狭め、周囲のすべての敵に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える。<br><br>最初に命中した敵がチャンピオン以外だった場合は、@VisionReductionDuration@秒間<status>武装解除</status>させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ヴァロールに急降下するように命じ、最初に命中した敵を<keywordMajor>「鷲匠」</keywordMajor>でマークして、@VisionReductionDuration@秒間その視界範囲を狭め、周囲のすべての敵に<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与える。<br><br>最初に命中した敵がチャンピオン以外だった場合は、@VisionReductionDuration@秒間<status>武装解除</status>させる。@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "自動効果により<font color='#FFF673'>「弱点」</font>マークが付与された敵を攻撃するとクインの攻撃速度と移動速度が増加する。発動した場合は、ヴァロールがその付近の広い視界を得る。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <keywordMajor>「弱点」</keywordMajor>でマークされた対象に通常攻撃を行うと、@BuffDuration@秒間、<attackSpeed>攻撃速度が@AttackSpeedBonus*100@%</attackSpeed>、<speed>移動速度が@MovespeedAmount*100@%</speed>増加する。<br><br><spellActive>発動効果:</spellActive> ヴァロールが周囲を偵察し、自身を中心とした広範囲の視界を@VisionDuration@秒間確保する。@SpellModifierDescriptionAppend@",
+            "description": "自動効果により<keywordMajor>「鷲匠」</keywordMajor>のマークが付与された敵を攻撃すると、クインの攻撃速度と移動速度が増加する。発動すると、ヴァロールが周囲の広範囲を可視化する。",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> <keywordMajor>「鷲匠」</keywordMajor>でマークされた対象に通常攻撃を行うと、@BuffDuration@秒間、<attackSpeed>攻撃速度が@AttackSpeedBonus*100@%</attackSpeed>、<speed>移動速度が@MovespeedAmount*100@%</speed>増加する。<br><br><spellActive>発動効果:</spellActive> ヴァロールが周囲を偵察し、自身を中心とした広範囲の視界を@VisionDuration@秒間確保する。@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵に飛びかかり、対象に物理ダメージを与え、移動速度を低下させる。クインは対象に接触すると同時に、一瞬ノックバックさせて飛び離れ、自身の最大射程距離付近に着地する。",
-            "dynamicDescription": "敵のところまでダッシュして<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、対象を<keywordMajor>「弱点」</keywordMajor>でマークする。その後、後方に飛びのいて対象から離れ、少しだけ対象を<status>ノック</status><status>バック</status>して、@SlowAmount*100@%の<status>スロウ効果</status>を与える。このスロウ効果は@SlowDecayTime@秒かけて減衰する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵のところまでダッシュして<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、対象を<keywordMajor>「鷲匠」</keywordMajor>でマークする。その後、後方に飛びのいて対象から離れ、少しだけ対象を<status>ノック</status><status>バック</status>して、@SlowAmount*100@%の<status>スロウ効果</status>を与える。このスロウ効果は@SlowDecayTime@秒かけて減衰する。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "クインとヴァロールが連携し、高速で飛行する。スキルが終了すると「スカイストライク」が発動して周囲の敵にダメージを与え、敵チャンピオンには「弱点」のマークを付与する。",
-            "dynamicDescription": "ヴァロールを呼び寄せ、2秒間の詠唱後に連携して、<speed>移動速度が@MovementSpeedMod*100@%</speed>増加する。連携後はこのスキルを<recast>再発動</recast>できるようになる。通常攻撃を行うか、<spellName>「暗闇の強襲」</spellName>または<spellName>「飛翔撃」</spellName>を使用すると、自動的にこのスキルを<recast>再発動</recast>する。<br><br><recast>再発動</recast>: クインとヴァロールが空中から攻撃し、<physicalDamage>@Damage@の物理ダメージ</physicalDamage>を与えて、チャンピオンを<keywordMajor>「弱点」</keywordMajor>でマークし、このスキルを終了する。@SpellModifierDescriptionAppend@",
+            "description": "クインとヴァロールが連携し、高速で飛行する。スキルが終了すると「スカイストライク」が発動して周囲の敵にダメージを与え、敵チャンピオンには「鷲匠」のマークを付与する。",
+            "dynamicDescription": "ヴァロールを呼び寄せ、2秒間の詠唱後に連携して、<speed>移動速度が@MovementSpeedMod*100@%</speed>増加する。連携後はこのスキルを<recast>再発動</recast>できるようになる。通常攻撃を行うか、<spellName>「暗闇の強襲」</spellName>または<spellName>「飛翔撃」</spellName>を使用すると、自動的にこのスキルを<recast>再発動</recast>する。<br><br><recast>再発動</recast>: クインとヴァロールが空中から攻撃し、<physicalDamage>@Damage@の物理ダメージ</physicalDamage>を与えて、チャンピオンを<keywordMajor>「鷲匠」</keywordMajor>でマークし、このスキルを終了する。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

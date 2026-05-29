@@ -769,11 +769,11 @@
                 80.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.5,
                 9.0,
                 8.5,
                 8.0,
+                7.5,
+                7.0,
                 8.0
             ],
             "coefficients": {
@@ -941,13 +941,13 @@
                     6.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
                 ],
                 "Effect3Amount": [
                     25.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يجتذب كاسادين الطاقة من التعويذات الملقاة في جواره. لدى اكتمال الشحن، يستطيع كاسادين استعمال نبضة القوة لإلحاق الضرر بالأعداء وإبطائهم ضمن مخروط أمامه.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن</spellPassive> يتم تخفيض فترة تبريد <spellName>نبضة القوة</spellName> بمقدار @ReductionPerSpellCast@ث كلما استُخدِمت قدرة قرب كاسادين.<br><br><spellActive>التأثير النشط:</spellActive> يطلق كاسادين العنان لنبضة فويد، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> ويطبق أثر <status>إبطاء</status> بنسبة @Effect2Amount@% لمدة @Effect3Amount@ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> يتم تخفيض فترة تبريد <spellName>نبضة القوة</spellName> بمقدار @ReductionPerSpellCast@ث كلما تم استخدام قدرة قرب كاسادين.<br><br><spellActive>تأثير نشط:</spellActive> يطلق كاسادين العنان لنبضة فويد، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> ويطبق تأثير <status>الإبطاء</status> بنسبة @SlowAmount@% لمدة @SlowDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

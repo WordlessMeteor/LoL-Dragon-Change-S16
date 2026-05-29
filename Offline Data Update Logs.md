@@ -1522,5 +1522,17 @@
 					</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-05-29 10-42-48</td>
+			<td style="text-align:center;">CDragon: 1/2/1<br>DDragon: 2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: 16.10.776.5552 -> 16.11.781.1789</li>
+						<li>PBE: 16.12.780.7756 -> 16.12.781.3383</li>
+					</ul>
+				DDragon: 16.10.1 -> 16.11.1
+			</td>
+		</tr>
 	</tbody>
 </table>

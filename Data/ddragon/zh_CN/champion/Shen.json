@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.10.1",
+    "version": "16.11.1",
     "data": {
         "Shen": {
             "id": "Shen",
@@ -424,7 +424,7 @@
                     "id": "ShenQ",
                     "name": "奥义！暮临",
                     "description": "慎召回他的魂刃并用它进行攻击，造成基于目标最大生命值的额外伤害。如果魂刃在召回途中与一个敌方英雄产生了碰撞，那么慎的魂刃攻击会获得极大强化，并且所有被碰撞的敌人在逃离慎的时候都会被减速。",
-                    "tooltip": "慎召回他的<keywordMajor>魂刃</keywordMajor>。被其命中的敌人们在接下来的{{ e5 }}秒里，在远离慎的时候会被<status>减速</status>{{ e4 }}%。<br /><br />此外，慎的下{{ e3 }}次攻击造成额外的<magicDamage>{{ baseflatdamage }}</magicDamage>外加<magicDamage>{{ basepercenthealth }}最大生命值的魔法伤害</magicDamage>。如果慎用<keywordMajor>魂刃</keywordMajor>命中了一名英雄，那么伤害提升至<magicDamage>{{ baseflatdamage }}</magicDamage>外加<magicDamage>{{ emppercenthealth }}最大生命值的魔法伤害</magicDamage>并且他的那几次攻击获得<attackSpeed>{{ e9 }}%攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "慎召回他的<keywordMajor>魂刃</keywordMajor>。被其命中的敌人们在接下来的{{ slowduration }}秒里，在远离慎的时候会被<status>减速</status>{{ slowpercent }}%。<br /><br />此外，慎的下{{ numenhancedattacks }}次攻击造成额外的<magicDamage>{{ baseflatdamage }}</magicDamage>外加<magicDamage>{{ basepercenthealth }}最大生命值的魔法伤害</magicDamage>。如果慎用<keywordMajor>魂刃</keywordMajor>命中了一名英雄，那么伤害提升至<magicDamage>{{ baseflatdamage }}</magicDamage>外加<magicDamage>{{ emppercenthealth }}最大生命值的魔法伤害</magicDamage>并且他的那几次攻击获得<attackSpeed>{{ steroidas }}%攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "基础百分比伤害",
@@ -435,11 +435,11 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e2 }}% -> {{ e2NL }}%",
-                            "{{ e6 }}% -> {{ e6NL }}%",
-                            "{{ e4 }}% -> {{ e4NL }}%",
+                            "{{ basepercentdamage }}% -> {{ basepercentdamageNL }}%",
+                            "{{ enhancedpercentdamage }}% -> {{ enhancedpercentdamageNL }}%",
+                            "{{ slowpercent }}% -> {{ slowpercentNL }}%",
                             "{{ cost }} -> {{ costNL }}",
-                            "{{ e7 }} -> {{ e7NL }}",
+                            "{{ miniondamagecap }} -> {{ miniondamagecapNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -573,7 +573,7 @@
                     "id": "ShenW",
                     "name": "奥义！魂佑",
                     "description": "当慎或友方英雄在魂刃附近时，魂刃会对原本要命中他们的攻击进行格挡。",
-                    "tooltip": "慎在他的<keywordMajor>魂刃</keywordMajor>位置生成一个防御结界，持续{{ e1 }}秒。对结界内的友方英雄进行的攻击都会被格挡。 <br /><br />如果结界在开启时并没有英雄在其中，那么它会等待至多{{ e2 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "慎在他的<keywordMajor>魂刃</keywordMajor>位置生成一个防御结界，持续{{ zoneduration }}秒。对结界内的友方英雄进行的攻击都会被格挡。 <br /><br />如果结界在开启时并没有英雄在其中，那么它会等待至多{{ zonedelay }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间"

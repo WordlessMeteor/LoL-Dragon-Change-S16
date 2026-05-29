@@ -699,7 +699,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.png",
         "abilityVideoPath": "champion-abilities/0133/ability_0133_P1.webm",
         "abilityVideoImagePath": "champion-abilities/0133/ability_0133_P1.jpg",
-        "description": "Valor, l'aigle demacien de Quinn, marque périodiquement des ennemis, les rendant <font color='#FFF673'>vulnérables</font>. La première attaque de base de Quinn contre une cible <font color='#FFF673'>vulnérable</font> inflige des dégâts physiques supplémentaires."
+        "description": "Valor, l'aigle demacien de Quinn, marque périodiquement des ennemis avec <keywordMajor>Busard</keywordMajor>. La première attaque de base de Quinn contre une cible marquée par le <keywordMajor>Busard</keywordMajor> inflige des dégâts physiques bonus."
     },
     "spells": [
         {
@@ -711,7 +711,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Quinn fait appel à Valor pour marquer un ennemi et limiter sa vision avant de blesser tous les ennemis proches.",
-            "dynamicDescription": "Quinn ordonne à Valor d'attaquer, rendant <keywordMajor>vulnérable</keywordMajor> le premier ennemi touché, réduisant son champ de vision pendant @VisionReductionDuration@ sec et infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> à tous les ennemis proches.<br><br>Si le premier ennemi touché n'est pas un champion, il est <status>désarmé</status> pendant @VisionReductionDuration@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn ordonne à Valor d'attaquer en piqué, rendant le premier ennemi touché visible avec <keywordMajor>Busard</keywordMajor>, ce qui réduit son champ de vision pendant @VisionReductionDuration@ sec et inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> à tous les ennemis proches.<br><br>Si le premier ennemi touché n'est pas un champion, il est <status>désarmé</status> pendant @VisionReductionDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 1025.0,
                 1025.0,
@@ -860,8 +860,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_W1.jpg",
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Confère passivement de plus grandes vitesses d'attaque et de déplacement à Quinn lorsqu'elle a attaqué un ennemi <font color='#FFF673'>vulnérable</font>. Activer pour que Valor révèle une large zone proche.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> attaquer une cible <keywordMajor>vulnérable</keywordMajor> octroie à Quinn <attackSpeed>@AttackSpeedBonus*100@% de vitesse d'attaque</attackSpeed> et <speed>@MovespeedAmount*100@% de vitesse de déplacement</speed> pendant @BuffDuration@ sec.<br><br><spellActive>Active :</spellActive> Valor révèle une large zone proche pendant @VisionDuration@ sec.@SpellModifierDescriptionAppend@",
+            "description": "Confère passivement à Quinn de la vitesse d'attaque et de la vitesse de déplacement après qu'elle a attaqué une cible marquée par <keywordMajor>Busard</keywordMajor>. Activez pour que Valor révèle une grande zone à proximité.",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> attaquer une cible marquée par <keywordMajor>Busard</keywordMajor> octroie à Quinn <attackSpeed>@AttackSpeedBonus*100@% de vitesse d'attaque</attackSpeed> et <speed>@MovespeedAmount*100@% de vitesse de déplacement</speed> pendant @BuffDuration@ sec.<br><br><spellActive>Active :</spellActive> Valor révèle une large zone proche pendant @VisionDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 2100.0,
                 2100.0,
@@ -1011,7 +1011,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Quinn charge un ennemi, lui infligeant des dégâts physiques et réduisant sa vitesse de déplacement. Après avoir atteint sa cible, elle prend appui sur celle-ci, l'interrompt brièvement et se projette en arrière sur une distance équivalente à sa portée d'attaque max.",
-            "dynamicDescription": "Quinn se rue sur un ennemi, lui infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> et le rendant <keywordMajor>vulnérable</keywordMajor>. Quinn bondit ensuite vers l'arrière, <status>repoussant</status> légèrement l'ennemi et le <status>ralentissant</status> de @SlowAmount*100@% (ce ralentissement diminue en @SlowDecayTime@ sec).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Quinn se rue sur un ennemi, lui infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> et le marquant avec <keywordMajor>Busard</keywordMajor>. Quinn bondit ensuite vers l'arrière, <status>repoussant</status> légèrement l'ennemi et le <status>ralentissant</status> de @SlowAmount*100@% (ce ralentissement diminue en @SlowDecayTime@ sec).@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -1160,8 +1160,8 @@
             "abilityVideoImagePath": "champion-abilities/0133/ability_0133_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Quinn et Valor s'unissent pour voler à grande vitesse. Mettre fin à la compétence lance Volée fatale, qui inflige des dégâts aux ennemis proches et rend les champions vulnérables.",
-            "dynamicDescription": "Quinn demande à Valor de la porter. Après une canalisation de 2 sec, elle gagne <speed>+@MovementSpeedMod*100@% de vitesse de déplacement</speed> et elle peut <recast>réactiver</recast> cette compétence. Attaquer ou utiliser <spellName>Assaut aveuglant</spellName> ou <spellName>Salto</spellName> <recast>réactive</recast> automatiquement cette compétence.<br><br><recast>Réactivation</recast> : Quinn et Valor effectuent une manœuvre aérienne, infligeant <physicalDamage>@Damage@ pts de dégâts physiques</physicalDamage>, marquant les champions comme <keywordMajor>vulnérables</keywordMajor> et mettant fin à cette compétence.@SpellModifierDescriptionAppend@",
+            "description": "Quinn et Valor s'unissent pour voler à grande vitesse.  Mettre fin à la compétence lance Volée fatale, qui inflige des dégâts aux ennemis proches et marque les champions avec Busard.",
+            "dynamicDescription": "Quinn demande à Valor de la porter. Après une canalisation de 2 sec, elle gagne <speed>@MovementSpeedMod*100@% de vitesse de déplacement</speed> et elle peut <recast>réactiver</recast> cette compétence. Attaquer ou utiliser <spellName>Assaut aveuglant</spellName> ou <spellName>Salto</spellName> <recast>relance</recast> automatiquement cette compétence.<br><br><recast>Relancer</recast> : Quinn et Valor effectuent une manœuvre aérienne, infligeant <physicalDamage>@Damage@ pts de dégâts physiques</physicalDamage>, marquant les champions avec <keywordMajor>Busard</keywordMajor> et mettant fin à cette compétence.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

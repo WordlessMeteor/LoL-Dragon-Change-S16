@@ -90,6 +90,46 @@
             "tooltip": "進入<keywordStealth>隱形</keywordStealth>狀態@StealthDuration@秒，直到進行普攻或施放技能。"
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "你造成的所有傷害都會附加<keyword>重創</keyword>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "生化科技腐化器",
+            "rarity": 4,
+            "tooltip": "對敵方英雄造成<Damage>傷害</Damage>時附加<keyword>@GrievousAmount*100@%重創效果</keyword>，持續@GrievousDuration@秒。"
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1273,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -1436,6 +1476,46 @@
             "name": "光之守衛",
             "rarity": 1,
             "tooltip": "每隔@Cooldown@秒，朝友軍<keywordMajor>自動施放</keywordMajor>一道守護之光，賦予自身與穿過的友軍<shield>@TotalShield@護盾</shield>，然後守護之光會折返，重複發動效果。"
+        },
+        {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "造成傷害會<status>緩速</status>敵軍。",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "冰霜之錘",
+            "rarity": 4,
+            "tooltip": "造成傷害時會施加<speed>@SlowAmount*100@%</speed><status>緩速</status>，持續@SlowDuration@秒。"
         },
         {
             "apiName": "Quest_MadHatter",
@@ -2169,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "資格：獲得@TakedownsNeeded@次擊殺或助攻。<br><br>獎勵：黃金鍋鏟",
@@ -2317,10 +2397,51 @@
             "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "造成傷害時，額外造成<physicalDamage>@MaxHealthDamage*100@%最大生命物理傷害</physicalDamage>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "血爪",
+            "rarity": 4,
+            "tooltip": "造成傷害時，額外造成<physicalDamage>@MaxHealthDamage*100@%最大生命物理傷害</physicalDamage>。"
+        },
+        {
             "apiName": "Erosion",
             "calculations": {
                 "MaxShredTooltipOnly": {
                     "__type": "GameCalculation",
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
@@ -2329,12 +2450,9 @@
                         {
                             "__type": "NamedDataValueCalculationPart",
                             "mDataValue": "MaxStacks"
-                        },
-                        {
-                            "__type": "NumberCalculationPart",
-                            "mNumber": 10.0
                         }
-                    ]
+                    ],
+                    "mSimpleTooltipCalculationDisplay": 5
                 }
             },
             "dataValues": {
@@ -2716,8 +2834,8 @@
                 "NumberOfMissiles": [
                     3.0,
                     3.0,
+                    3.0,
                     5.0,
-                    6.0,
                     6.0,
                     6.0,
                     6.0
@@ -3326,7 +3444,7 @@
             "id": 310,
             "name": "小丑學院",
             "rarity": 2,
-            "tooltip": "<spellName>背刺</spellName>：從背後攻擊時造成@BasicAttackDamage@<physicalDamage>額外物理傷害</physicalDamage>。<br><br><spellName>欺詐魔術</spellName>：傳送並進入<keywordStealth>隱形</keywordStealth>狀態，持續@StealthDuration@秒。處於<keywordStealth>隱形</keywordStealth>狀態時，下一次普攻額外造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>。若從背後攻擊，此普攻將造成@QCritDamageMod@暴擊傷害。<br><br><spellName>幻象：死亡</spellName>：死亡時，在周圍造成<trueDamage>@FearDamage*100@%最大生命的真實傷害</trueDamage>及恐懼效果，持續@FearDuration@秒。"
+            "tooltip": "<spellName>背刺</spellName>：從目標背後攻擊時造成@BasicAttackDamage@<physicalDamage>額外物理傷害</physicalDamage>。<br><br><spellName>欺詐魔術</spellName>：傳送並進入<keywordStealth>隱形</keywordStealth>狀態，持續@StealthDuration@秒。處於<keywordStealth>隱形</keywordStealth>狀態時，下一次普攻額外造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>。若從背後攻擊，此普攻將造成@QCritDamageMod@暴擊傷害。<br><br><spellName>幻象：死亡</spellName>死亡時，在周圍造成<magicDamage>@FearDamage*100@%最大生命的真實傷害</magicDamage>及恐懼效果，持續@FearDuration@秒。"
         },
         {
             "apiName": "NumbToPain",
@@ -3403,6 +3521,37 @@
             "name": "痛苦麻木",
             "rarity": 0,
             "tooltip": "@MeleeReduction*100@%受到的傷害會在@BleedDuration@秒內發生(遠程英雄為@RangedReduction*100@%)。"
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "為你的隊伍投票，選擇與惡魔獵手結盟。<br><br>與惡魔獵手結盟時，每當擊敗<keywordMajor>惡魔隊伍</keywordMajor>時，會獲得<gold>+%i:goldCoins% @BonusGold@額外金錢</gold>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "獵手朋朋",
+            "rarity": 4,
+            "tooltip": "為你的隊伍投票，選擇與惡魔獵手結盟。<br><br>與惡魔獵手結盟時，每當擊敗<keywordMajor>惡魔隊伍</keywordMajor>時，會獲得<gold>+%i:goldCoins% @BonusGold@額外金錢</gold>。"
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4765,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "強化、<healing>治療</healing>、或<shield>賦予友軍護盾</shield>時，會對友軍周圍的敵人造成傷害與<status>緩速</status>。",
@@ -4656,7 +4805,47 @@
             "id": 76,
             "name": "餘音震盪",
             "rarity": 0,
-            "tooltip": "強化、<healing>治療</healing>、或<shield>賦予友軍護盾</shield>時，會對友軍周圍的敵軍造成<trueDamage>@Damage@真實傷害</trueDamage>，並<status>緩速@SlowAmount*-100@%</status>，持續@SlowDuration@秒。<br><br>本回合造成傷害：@f1@<br>總輸出傷害：@f2@"
+            "tooltip": "強化、<healing>治療</healing>、或<shield>賦予友軍護盾</shield>時，會對友軍周圍的敵軍造成<trueDamage>@Damage@真實傷害</trueDamage>，並<status>緩速@SlowAmount*-100@%</status>，持續@SlowDuration@秒。<br><br><rules>每項技能有@ProcCooldown@秒冷卻時間。</rules><br><br>本回合造成傷害：@f1@<br>總輸出傷害：@f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "降低鄰近英雄的<attackSpeed>攻速</attackSpeed>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "守望之骸",
+            "rarity": 4,
+            "tooltip": "降低鄰近英雄<attackSpeed>%</attackSpeed><attackSpeed>@ASPDSlow*-100@攻速</attackSpeed>。"
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5070,37 @@
             "name": "腳程加速",
             "rarity": 1,
             "tooltip": "增加<speed>@AbilityHasteToMSConversionCalc@跑速</speed>。"
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "你造成的傷害會處決生命低於@ExecuteThreshold*100@%的英雄。",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "去質器",
+            "rarity": 4,
+            "tooltip": "你造成的傷害會處決生命低於@ExecuteThreshold*100@%的英雄。"
         },
         {
             "apiName": "FallenAegis",
@@ -5785,6 +6005,28 @@
             "tooltip": "技能附加無限累加的<keywordMajor>燃燒</keywordMajor>效果，在@BleedDuration@秒內每秒造成<magicDamage>@BleedDamageTooltip@魔法傷害</magicDamage>。<br><br>自身造成的所有<keywordMajor>燃燒</keywordMajor>效果傷害敵軍時可降低基礎技能冷卻時間@FlatCooldownRefundPerTick@秒。<br><br>本回合造成的傷害：@f1@<br>造成傷害總計：@f2@<br>"
         },
         {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "為你的隊伍投票，選擇與惡魔結盟。<br><br>與惡魔結盟時，每當<keywordMajor>獵手隊伍被淘汰</keywordMajor>，就會獲得1級<keywordMajor>%i:AugmentLevel%增幅裝置等級</keywordMajor>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "惡魔朋朋",
+            "rarity": 4,
+            "tooltip": "為你的隊伍投票，選擇與惡魔結盟。<br><br>與惡魔結盟時，每當<keywordMajor>獵手隊伍被淘汰</keywordMajor>，就會獲得1級<keywordMajor>%i:AugmentLevel%增幅裝置等級</keywordMajor>。"
+        },
+        {
             "apiName": "ADAPt",
             "calculations": {
                 "APAmpCalcTooltip": {
@@ -5819,7 +6061,7 @@
                 "InverseRate": [
                     0.6000000238418579,
                     0.6000000238418579,
-                    0.800000011920929,
+                    2.799999952316284,
                     0.800000011920929,
                     0.800000011920929,
                     0.800000011920929,
@@ -6011,7 +6253,7 @@
                 "ADcoefficient": [
                     0.07000000029802322,
                     0.07000000029802322,
-                    0.09000000357627869,
+                    0.07999999821186066,
                     0.09000000357627869,
                     0.09000000357627869,
                     0.09000000357627869,
@@ -6020,7 +6262,7 @@
                 "APcoefficient": [
                     0.03999999910593033,
                     0.03999999910593033,
-                    0.07000000029802322,
+                    0.05999999865889549,
                     0.07000000029802322,
                     0.07000000029802322,
                     0.07000000029802322,
@@ -6029,7 +6271,7 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.007499999832361937,
+                    0.006500000134110451,
                     0.007499999832361937,
                     0.007499999832361937,
                     0.007499999832361937,
@@ -7174,6 +7416,37 @@
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>總計轉移傷害：@f1@<br>總治療量：@f2@<br>"
         },
         {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "每@Cooldown@秒獲得一道<attention>法術護盾</attention>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "附魔藥瓶",
+            "rarity": 4,
+            "tooltip": "每@Cooldown@秒獲得一道<attention>法術護盾</attention>，可阻擋下一個敵方技能。"
+        },
+        {
             "apiName": "Deathtouch",
             "calculations": {},
             "dataValues": {
@@ -7340,22 +7613,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -7411,13 +7684,13 @@
             "calculations": {},
             "dataValues": {
                 "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "EnemyDetectionRadius": [
                     800.0,
@@ -8259,7 +8532,7 @@
                 "InverseRate": [
                     1.666659951210022,
                     1.666659951210022,
-                    0.0,
+                    2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
@@ -8585,13 +8858,13 @@
                     1.5
                 ],
                 "ReviveMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ],
                 "SelfReviveTimerModMax": [
                     0.5,
@@ -8612,13 +8885,13 @@
                     0.4000000059604645
                 ],
                 "SizeMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ]
             },
             "desc": "獲得@BonusLives@次額外<attention>復活</attention>次數，死亡後會自動開始復活。<br><br><attention>復活</attention>時，<status>擊退</status>周遭敵軍，並以較小體型和較低的<scaleHealth>最大生命</scaleHealth>回歸。",
@@ -9551,13 +9824,13 @@
                     0.3499999940395355
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaximumDistanceRoF": [
                     1500.0,
@@ -9909,10 +10182,10 @@
             "calculations": {},
             "dataValues": {
                 "AttackSpeed": [
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.75,
-                    1.2000000476837158,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.800000011920929,
+                    1.2999999523162842,
                     1.5,
                     1.5,
                     1.5
@@ -10899,64 +11172,6 @@
             "tooltip": "獻祭<scaleHealth>@HealthReductionPercent@%最大生命</scaleHealth>給貪啃奇。<br><br>你的總獻祭量將提升至<scaleHealth>-@MaxHealthReduction@%最大生命</scaleHealth>。<br><br>獲得<gold>+%i:goldCoins% @GoldToGrant@金錢</gold>。"
         },
         {
-            "apiName": "FrozenFoundations",
-            "calculations": {},
-            "dataValues": {
-                "ChampPushDistance": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "NonChampPushDistance": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
-                ],
-                "WallDuration": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "WallWidth": [
-                    800.0,
-                    800.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0
-                ]
-            },
-            "desc": "獲得「<spellName>冰封地基</spellName>」召喚師技能。<br><br><rules>「<spellName>冰封地基</spellName>」可在任意位置召喚冰牆。</rules>",
-            "iconLarge": "assets/ux/cherry/augments/icons/frozenfoundations_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/frozenfoundations_small.png",
-            "id": 40,
-            "name": "冰封地基",
-            "rarity": 0,
-            "tooltip": "<rules>在目標位置召喚冰牆。</rules>"
-        },
-        {
             "apiName": "CriticalHealing",
             "calculations": {
                 "CriticalHealCalc": {
@@ -11315,13 +11530,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11695,13 +11910,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -11775,22 +11990,22 @@
             "calculations": {},
             "dataValues": {
                 "Haste": [
-                    125.0,
+                    75.0,
                     200.0,
-                    275.0,
-                    350.0,
-                    425.0,
-                    500.0,
-                    575.0
+                    325.0,
+                    450.0,
+                    575.0,
+                    700.0,
+                    825.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelTenacityDuration": [
                     3.0,
@@ -11927,13 +12142,13 @@
                     40.0
                 ],
                 "TotalASValue": [
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ]
             },
             "desc": "增加<attackSpeed>@TotalASValue*100@%總攻速</attackSpeed>。<br><br><attackSpeed>每秒普攻次數</attackSpeed>達@Breakpoint1@次時，造成額外<magicDamage>魔法傷害</magicDamage>{{ Item_Keyword_OnHit }}。",
@@ -13357,7 +13572,7 @@
             "id": 215,
             "name": "闇黑之賜",
             "rarity": 1,
-            "tooltip": "<healing>治療</healing>或賦予<shield>護盾</shield>給友方英雄時，獲得@CurseCounter@<keywordMajor>詛咒之力</keywordMajor>。<br><br>獲得@f1@技能加速(相當於自身@AbilityHasteRatio*100@%<keywordMajor>詛咒之力</keywordMajor>)。<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "<healing>治療</healing>或賦予<shield>護盾</shield>給友方英雄時，獲得@CurseCounter@<keywordMajor>詛咒之力</keywordMajor>。<br><br>獲得@f1@技能加速(相當於自身@AbilityHasteRatio*100@%<keywordMajor>詛咒之力</keywordMajor>)。<br><br><rules>每項技能有@Cooldown@秒冷卻時間。</rules><br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "MindtoMatter",

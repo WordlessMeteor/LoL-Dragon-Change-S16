@@ -1779,7 +1779,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "路西恩发射一枚导弹，爆炸时会迸发星形火花，标记并短暂地使敌人现形。路西恩击中被标记的敌人会获得移动速度。",
-            "dynamicDescription": "路西恩进行一次射击，并会在技能范围尾端或命中第一个敌人时爆炸，造成 <magicDamage>@TotalDamage@ 魔法伤害</magicDamage>，短暂揭露敌人位置并标记他们 6 秒。<br><br>当路西恩或友军伤害一名被标记的敌人，路西恩会获得 <speed>@Effect2Amount@ 移动速度</speed>，持续 1 秒。友军触发此效果也会使路西恩获得<attention>全神贯注</attention>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "路西恩发射一颗子弹，子弹会在到达射程终点或命中首个敌人时爆炸，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，使敌人短暂现形并将其标记6秒。<br><br>当路西恩或其他友军对被标记的敌人造成伤害时，路西恩会获得<speed>@MoveSpeedAmount@移动速度</speed>，持续1秒。友军在触发此效果时，也会为路西恩提供<attention>警惕</attention>效果。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1929,7 +1929,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "路西恩向前冲刺一小段距离。光之猎手的攻击将减少冷酷进击的冷却时间。",
-            "dynamicDescription": "路西恩进行冲刺。<br><br>当路西恩用<spellName>光之猎手</spellName>命中一名敌人时，此技能的冷却时间会减少 @Effect1Amount@ 秒（目标为英雄时则减少 @Effect2Amount@ 秒）。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "路西恩进行冲刺。<br><br>每当路西恩使用<spellName>光之猎手</spellName>命中敌人时，冷却时间就会缩短@CDRefundBase@秒（命中英雄时缩短@CDRefundChampion@秒）。 @SpellModifierDescriptionAppend@",
             "range": [
                 445.0,
                 445.0,

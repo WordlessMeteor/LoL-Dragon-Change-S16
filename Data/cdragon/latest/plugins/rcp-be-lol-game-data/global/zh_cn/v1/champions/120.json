@@ -1146,7 +1146,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "赫卡里姆猛劈周围的敌人，同时造成物理伤害。如果这个技能对至少一名敌人造成伤害，那么赫卡里姆会提升【暴走】的伤害并为随后施放的【暴走】缩短冷却时间。",
-            "dynamicDescription": "赫卡里姆顺劈周围的敌人，造成<physicalDamage>@Damage@物理伤害</physicalDamage>。如果这个技能命中了敌人，那么他会获得一层效果，来使这次技能的冷却时间降低@RampageCooldownReduction@秒并提升此技能@RampageBonusDamagePerc@%伤害，持续@Effect6Amount@秒。这个效果至多可达@Effect2Amount@层。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赫卡里姆猛劈周围的敌人，造成<physicalDamage>@Damage@物理伤害</physicalDamage>。如果这个技能命中了敌人，那么他会获得一层效果，来使这次技能的冷却时间缩短@RampageCooldownReduction@秒并提升此技能@RampageBonusDamagePerc@%伤害，持续@BuffDuration@秒。至多可叠加@MaxStacks@层。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1446,7 +1446,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "赫卡里姆获得不断提升的移动速度加成并且移动时可以无视单位的碰撞体积。他的下一次攻击将会击退目标，并且造成额外物理伤害，伤害值基于他在激活该技能后所移动的距离。",
-            "dynamicDescription": "赫卡里姆变为幽灵状态，并获得<speed>@MinMoveSpeed*100@%移动速度</speed>，在@Effect5Amount@秒里持续提升至<speed>@MaxMoveSpeed*100@%</speed>。他的下次攻击会<status>击退</status>目标并造成<physicalDamage>@MinDamage@</physicalDamage>到<physicalDamage>@MaxDamage@物理伤害</physicalDamage>。<status>击退</status>距离和伤害随此技能期间的位移距离而增长。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赫卡里姆变为幽灵状态，并获得<speed>@MinMoveSpeed*100@%移动速度</speed>，在@Duration@秒里持续提升至<speed>@MaxMoveSpeed*100@%</speed>。他的下次攻击会<status>击退</status>目标并造成<physicalDamage>@MinDamage@</physicalDamage>到<physicalDamage>@MaxDamage@物理伤害</physicalDamage>。<status>击退</status>距离和伤害随此技能期间的位移距离而增长。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

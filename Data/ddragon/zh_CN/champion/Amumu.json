@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.10.1",
+    "version": "16.11.1",
     "data": {
         "Amumu": {
             "id": "Amumu",
@@ -488,14 +488,14 @@
                     "id": "BandageToss",
                     "name": "绷带牵引",
                     "description": "阿木木向目标投掷粘稠的绷带，将自己拉向目标，并对目标造成伤害和眩晕效果。",
-                    "tooltip": "阿木木掷出一条绷带，然后将他拉向命中的第一个敌人，使其<status>晕眩</status>{{ e2 }}秒，并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />这个技能拥有2层充能。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "阿木木掷出一条绷带，然后将他拉向命中的第一个敌人，使其<status>晕眩</status>{{ stunduration }}秒，并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />这个技能有2层充能。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
                             "充能时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}"
                         ]
                     },
@@ -768,7 +768,7 @@
                     "id": "Tantrum",
                     "name": "阿木木的愤怒",
                     "description": "永久减少阿木木所受的物理伤害。主动施放时，阿木木可以发泄他的怒火，对周围的敌人造成伤害。阿木木每被攻击一次，该技能的冷却时间就会缩短。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>阿木木受到的物理伤害降低{{ damagereduction }}。此外，当阿木木被一次攻击命中时，这个技能的冷却时间会缩短{{ e3 }}秒。<br /><br /><spellActive>主动：</spellActive>阿木木大发脾气，对附近的敌人们造成<magicDamage>{{ tantrumdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>阿木木受到的物理伤害降低{{ damagereduction }}。此外，当阿木木被一次攻击命中时，这个技能的冷却时间会缩短{{ cdronhit }}秒。<br /><br /><spellActive>主动：</spellActive>阿木木大发脾气，对附近的敌人们造成<magicDamage>{{ tantrumdamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害减免",
@@ -776,9 +776,9 @@
                             "伤害"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamagereduction }} -> {{ basedamagereductionNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,

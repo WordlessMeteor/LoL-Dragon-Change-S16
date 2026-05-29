@@ -1072,7 +1072,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Грагас катит бочку в указанную точку, а затем может взорвать ее, или же она сама взрывается по прошествии 4 секунд. Сила взрыва со временем увеличивается. Враги, пораженные взрывом, замедляются.",
-            "dynamicDescription": "Грагас выпускает бочку, которая взрывается через @Effect4Amount@ сек., нанося <magicDamage>от @MinDamage@ до @MaxDamage@ магического урона</magicDamage> и <status>замедляя</status> врагов на @Effect2Amount@-@Effect2Amount*1.5@% на @Effect3Amount@ сек. Урон и <status>замедление</status> зависят от того, сколько пролежала бочка. <br><br>Грагас может <recast>повторно применить</recast> это умение, чтобы взорвать бочку преждевременно.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Грагас выпускает бочку, которая взрывается через @BarrelMaxDuration@ сек., нанося <magicDamage>@MinDamage@</magicDamage>–<magicDamage>@MaxDamage@ ед. маг. урона</magicDamage> и <status>замедляя</status> врагов на @SlowPercent@–@SlowPercent*1.5@% на @SlowDuration@ сек. Урон и <status>замедление</status> зависят от того, сколько пролежала бочка. <br><br>Грагас может <recast>повторно применить</recast> это умение, чтобы взорвать бочку преждевременно.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

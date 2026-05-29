@@ -93,12 +93,14 @@
                 "__type": "AtomicClipData"
             },
             "Run": {
-                "mTrackDataName": "Default",
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Run_02.anm",
-                    "__type": "AnimationResourceData"
+                "mFlags": 2,
+                "Updater": {
+                    "__type": "IsHomeguardParametricUpdater"
                 },
-                "__type": "AtomicClipData"
+                "mChangeAnimationMidPlay": true,
+                "mTrueConditionClipName": "{bc1ef3fb}",
+                "mFalseConditionClipName": "{bc1ef3fb}",
+                "__type": "ConditionBoolClipData"
             },
             "Attack1": {
                 "mTrackDataName": "Default",
@@ -1174,12 +1176,12 @@
                 "mSelectorPairDataList": [
                     {
                         "mClipName": "{0c8c9755}",
-                        "mProbability": 5.0,
+                        "mProbability": 50.0,
                         "__type": "SelectorPairData"
                     },
                     {
                         "mClipName": "{098c929c}",
-                        "mProbability": 5.0,
+                        "mProbability": 50.0,
                         "__type": "SelectorPairData"
                     }
                 ],
@@ -1232,6 +1234,38 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "Run_Base": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Braum/Skins/Base/Animations/Braum_Run_02.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{bc1ef3fb}": {
+                "mFlags": 2,
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Slow",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Base",
+                        "mValue": 310.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Haste",
+                        "mValue": 450.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
             }
         },
         "mTrackDataMap": {

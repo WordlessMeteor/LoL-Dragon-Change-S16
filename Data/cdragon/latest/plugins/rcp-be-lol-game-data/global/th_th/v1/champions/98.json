@@ -1170,7 +1170,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Shen เรียกดาบวิญญาณของเขาให้กลับมาเพื่อใช้โจมตี สร้างความเสียหายโดยขึ้นอยู่กับพลังชีวิตสูงสุดของเป้าหมาย การโจมตีจะได้รับการเสริมพลังมากขึ้น ถ้าหากดาบวิญญาณโดนแชมเปี้ยนศัตรู และศัตรูทุกตัวที่โดนจะถูกสโลว์เมื่อพยายามหนีออกห่างจาก Shen",
-            "dynamicDescription": "Shen เรียก<keywordMajor>ดาบวิญญาณ</keywordMajor>ของเขากลับมา ศัตรูที่โดนดาบจะถูก<status>สโลว์</status> @Effect4Amount@% ในขณะที่วิ่งหนีจาก Shen เป็นเวลา @Effect5Amount@ วินาที<br><br>นอกจากนี้ การโจมตี @Effect3Amount@ ครั้งถัดไปของ Shen จะสร้าง<magicDamage>ความเสียหายเวท @BaseFlatDamage@ หน่วย</magicDamage> บวกกับ <magicDamage>@BasePercentHealth@ ของพลังชีวิตสูงสุด</magicDamage> หาก Shen ดึง<keywordMajor>ดาบวิญญาณ</keywordMajor>กลับมาโดนแชมเปี้ยนศัตรู ความเสียหายเวทจะเพิ่มเป็น <magicDamage>@BaseFlatDamage@ หน่วย</magicDamage> บวกกับ <magicDamage>@EmpPercentHealth@ ของพลังชีวิตสูงสุด</magicDamage> และได้รับ<attackSpeed>ความเร็วโจมตีเพิ่ม @Effect9Amount@%</attackSpeed> สำหรับการโจมตีเหล่านั้น@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen เรียก<keywordMajor>ดาบวิญญาณ</keywordMajor>ของเขากลับคืนมา ศัตรูที่โดนดาบดึงจะถูก<status>สโลว์</status> @SlowPercent@% เมื่อวิ่งหนีจาก Shen เป็นเวลา @SlowDuration@ วินาที<br><br>นอกจากนี้ การโจมตี @NumEnhancedAttacks@ ครั้งถัดไปของ Shen จะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @BaseFlatDamage@ หน่วย</magicDamage> บวกด้วย <magicDamage>@BasePercentHealth@ ของพลังชีวิตสูงสุด</magicDamage> หาก Shen ดึง<keywordMajor>ดาบวิญญาณ</keywordMajor>โดนแชมเปี้ยนศัตรู ความเสียหายจะเพิ่มขึ้นเป็น <magicDamage>@BaseFlatDamage@ หน่วย</magicDamage> บวกกับ <magicDamage>@EmpPercentHealth@ ของพลังชีวิตสูงสุด</magicDamage> และเขาจะได้รับ<attackSpeed>ความเร็วโจมตี @SteroidAS@%</attackSpeed> สำหรับการโจมตีเหล่านั้น@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "การโจมตีที่จะโดน Shen หรือเพื่อนร่วมทีมของเขา ที่อยู่ใกล้กับดาบวิญญาณจะถูกปกป้องเอาไว้",
-            "dynamicDescription": "Shen สร้างพื้นที่ป้องกันด้วย<keywordMajor>ดาบวิญญาณ</keywordMajor>เป็นเวลา @Effect1Amount@ วินาที การโจมตีใส่เพื่อนร่วมทีมในพื้นที่นี้จะถูกบล็อกไว้<br><br>หากไม่มีแชมเปี้ยนให้ป้องกันในพื้นที่เมื่อเริ่มใช้งาน มันจะรอเป็นเวลาสูงสุดถึง @Effect2Amount@ วินาทีก่อนจะใช้งาน@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shen สร้างเขตป้องกันบริเวณ<keywordMajor>ดาบวิญญาณ</keywordMajor>เป็นเวลา @ZoneDuration@ วินาที การโจมตีปกติที่แชมเปี้ยนร่วมทีมได้รับในเขตป้องกันจะถูกบล็อก <br><br>หากไม่มีแชมเปี้ยนให้ป้องกันในพื้นที่เมื่อเริ่มทำงาน สกิลจะรอใช้งานได้นานสูงสุด @ZoneDelay@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

@@ -769,11 +769,11 @@
                 80.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.5,
                 9.0,
                 8.5,
                 8.0,
+                7.5,
+                7.0,
                 8.0
             ],
             "coefficients": {
@@ -941,13 +941,13 @@
                     6.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
                 ],
                 "Effect3Amount": [
                     25.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Kassadin, çevresinde kullanılan yeteneklerden enerji çeker. Tam güce ulaştığında, Kassadin Güç Darbesi'ni koni şeklindeki bir alana göndererek önündeki rakiplere hasar verebilir ve onları yavaşlatabilir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Kassadin'in yakınında bir yetenek kullanıldığında <spellName>Güç Darbesi</spellName> yeteneğinin bekleme süresi @ReductionPerSpellCast@ saniye azalır.<br><br><spellActive>Aktif:</spellActive> Kassadin rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren ve onları @Effect3Amount@ saniyeliğine %@Effect2Amount@ <status>yavaşlatan</status> bir Hiçlik dalgası gönderir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Kassadin'in yakınında bir yetenek kullandığında <spellName>Güç Darbesi</spellName> yeteneğinin bekleme süresi @ReductionPerSpellCast@ saniye azalır.<br><br><spellActive>Aktif:</spellActive> Kassadin rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren ve onları @SlowDuration@ saniyeliğine %@SlowAmount@ <status>yavaşlatan</status> bir Hiçlik dalgası gönderir.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

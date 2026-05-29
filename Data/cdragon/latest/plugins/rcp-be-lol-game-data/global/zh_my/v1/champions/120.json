@@ -1101,7 +1101,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赫克林朝周遭敌人劈斩，造成物理伤害。如果这个技能对至少一个敌人造成伤害，逸骑刃击的伤害会增加，而后续施放的逸骑刃击冷却时间会降低。",
-            "dynamicDescription": "赫克林朝周遭敌人劈斩，造成 <physicalDamage>@Damage@ 物理伤害</physicalDamage>。如果此技能命中敌人，他将获得一层叠加，使此技能的冷却时间降低 @RampageCooldownReduction@ 秒并提升此技能 @RampageBonusDamagePerc@% 伤害，持续 @Effect6Amount@ 秒。此效果最多可叠加 @Effect2Amount@ 次。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赫克林对附近敌人造成<physicalDamage>@Damage@物理伤害</physicalDamage>。如果这个技能命中，则会获得一层效果，使其冷却时间缩短@RampageCooldownReduction@秒，并在@BuffDuration@秒内提升@RampageBonusDamagePerc@%伤害。此效果最多可叠加@MaxStacks@次。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1401,7 +1401,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "赫克林在短时间内提高移动速度且能在单位间不受阻碍地移动。他的下一次普攻将会击退目标并造成额外的物理伤害，增加的伤害取决于启动技能后所移动的距离。",
-            "dynamicDescription": "赫克林变得无视单位碰撞，并获得 <speed>@MinMoveSpeed*100@% 移动速度</speed>，在 @Effect5Amount@ 秒里持续提升至 <speed>@MaxMoveSpeed*100@%</speed>。他的下次攻击会<status>击退</status>目标并造成 <physicalDamage>@MinDamage@</physicalDamage> 到 <physicalDamage>@MaxDamage@ 物理伤害</physicalDamage>。<status>击退</status>距离和伤害随此技能期间的位移距离而增长。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "赫克林无视单位碰撞，并获得<speed>@MinMoveSpeed*100@%移动速度</speed>，在@Duration@秒内逐渐提升至<speed>@MaxMoveSpeed*100@%</speed>。他的下一次普攻会造成<status>击退</status>，并造成<physicalDamage>@MinDamage@</physicalDamage>至<physicalDamage>@MaxDamage@物理伤害</physicalDamage>。<status>击退</status>的距离和伤害会随着使用此技能移动的距离而提升。@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,

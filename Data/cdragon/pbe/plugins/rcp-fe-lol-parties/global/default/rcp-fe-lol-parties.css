@@ -8090,6 +8090,19 @@ lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
     width: 16px
 }
 
+.v2-banner-component .lobby-banner .player-name-container .voice-team-mute-warning-icon {
+    align-items: center;
+    display: inline-flex;
+    height: 16px;
+    margin-left: 4px;
+    width: 16px
+}
+
+.v2-banner-component .lobby-banner .player-name-container .voice-team-mute-warning-icon img {
+    height: 16px;
+    width: 16px
+}
+
 .v2-banner-component .lobby-banner .player-achievements-container {
     display: flex;
     min-height: 82px
@@ -8698,7 +8711,8 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
 .v2-footer-notifications .parties-mmr-warning-icon,
 .v2-footer-notifications .parties-notification-warning-icon,
 .v2-footer-notifications .parties-ready-warning-icon,
-.v2-footer-notifications .parties-tft-warning-icon {
+.v2-footer-notifications .parties-tft-warning-icon,
+.v2-footer-notifications .parties-voice-limited-warning-icon {
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
@@ -8773,6 +8787,18 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
     fill: #c89b3c
 }
 
+.v2-footer-notifications .parties-voice-limited-warning-icon {
+    margin-right: 4px
+}
+
+.v2-footer-notifications .parties-voice-limited-warning-icon path {
+    fill: #c89b3c
+}
+
+.v2-footer-notifications .parties-voice-limited-warning {
+    color: #c89b3c
+}
+
 .v2-footer-notifications .parties-footer-error,
 .v2-footer-notifications .parties-footer-warning,
 .v2-footer-notifications .parties-restrictions-warning-error {
@@ -8832,6 +8858,12 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
 lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] {
     max-width: 400px;
     text-align: left
+}
+
+lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] .parties-voice-limited-player-list {
+    list-style: disc;
+    margin: 4px 0 0;
+    padding-left: 16px
 }
 
 .v2-header-component .lobby-header-content .lobby-header-description {

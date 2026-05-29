@@ -90,6 +90,46 @@
             "tooltip": "@StealthDuration@ saniyeliğine, bir saldırı yapana veya yetenek kullanana dek <keywordStealth>görünmez</keywordStealth> olursun."
         },
         {
+            "apiName": "GoHChemtechPutrifier",
+            "calculations": {},
+            "dataValues": {
+                "GrievousAmount": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645
+                ],
+                "GrievousDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Verdiğin her hasar <keyword>Ağır Yara</keyword> uygular.",
+            "iconLarge": "assets/ux/cherry/augments/icons/chemtechpurifier_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/chemtechpurifier_small.arena_2026_s2_a2.png",
+            "id": 347,
+            "name": "Kimyasal Çürütücü",
+            "rarity": 4,
+            "tooltip": "Rakip şampiyonlara <Damage>hasar</Damage> vermek @GrievousDuration@ saniyeliğine <keyword>%@GrievousAmount*100@ etkili Yara</keyword> uygular."
+        },
+        {
             "apiName": "GoHLamb",
             "calculations": {},
             "dataValues": {
@@ -1273,9 +1313,9 @@
             },
             "dataValues": {
                 "AttackSpeed": [
-                    0.3499999940395355,
-                    0.6000000238418579,
-                    0.8500000238418579,
+                    0.5,
+                    0.5,
+                    0.699999988079071,
                     1.100000023841858,
                     1.350000023841858,
                     1.600000023841858,
@@ -1436,6 +1476,46 @@
             "name": "Işığın Muhafızı",
             "rarity": 1,
             "tooltip": "Her @Cooldown@ saniyede bir takım arkadaşına doğru <keywordMajor>otomatik olarak</keywordMajor> bir koruyucu ışık gönderirsin. Işık sana ve temas ettiği takım arkadaşlarına <shield>@TotalShield@ Kalkan</shield> sağladıktan sonra geri dönerek aynı etkiyi tekrarlar."
+        },
+        {
+            "apiName": "GoHFrozenMallet",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SlowAmount": [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ],
+                "SlowDuration": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            },
+            "desc": "Hasar vermek <status>rakipleri</status> yavaşlatır.",
+            "iconLarge": "assets/ux/cherry/augments/icons/frozenmallet_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/frozenmallet_small.arena_2026_s2_a2.png",
+            "id": 351,
+            "name": "Donmuş Balyoz",
+            "rarity": 4,
+            "tooltip": "Hasar vermek hedefi @SlowDuration@ saniyeliğine <speed>%@SlowAmount*100@</speed> <status>yavaşlatır</status>."
         },
         {
             "apiName": "Quest_MadHatter",
@@ -2169,13 +2249,13 @@
                     1.2000000476837158
                 ],
                 "TakedownsNeeded": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ]
             },
             "desc": "Koşul: Rakipleri @TakedownsNeeded@ kez alt et.<br><br>Ödül: Altın Spatula",
@@ -2317,10 +2397,51 @@
             "tooltip": "{{Cherry_Vengeance_Summary}}"
         },
         {
+            "apiName": "GoHBloodrazor",
+            "calculations": {},
+            "dataValues": {
+                "MaxHealthDamage": [
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873,
+                    0.014999999664723873
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "SpellCD": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Hasar vermek, <physicalDamage>azami canın %@MaxHealthDamage*100@ kadarına eşdeğer miktarda fazladan fiziksel hasar</physicalDamage> verir.",
+            "iconLarge": "assets/ux/cherry/augments/icons/bloodrazor_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/bloodrazor_small.arena_2026_s2_a2.png",
+            "id": 348,
+            "name": "Kanlı Ustura",
+            "rarity": 4,
+            "tooltip": "Hasar vermek, <physicalDamage>azami canın %@MaxHealthDamage*100@ kadarına eşdeğer miktarda fazladan fiziksel hasar</physicalDamage> verir."
+        },
+        {
             "apiName": "Erosion",
             "calculations": {
                 "MaxShredTooltipOnly": {
                     "__type": "GameCalculation",
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "__type": "NamedDataValueCalculationPart",
@@ -2329,12 +2450,9 @@
                         {
                             "__type": "NamedDataValueCalculationPart",
                             "mDataValue": "MaxStacks"
-                        },
-                        {
-                            "__type": "NumberCalculationPart",
-                            "mNumber": 10.0
                         }
-                    ]
+                    ],
+                    "mSimpleTooltipCalculationDisplay": 5
                 }
             },
             "dataValues": {
@@ -2716,8 +2834,8 @@
                 "NumberOfMissiles": [
                     3.0,
                     3.0,
+                    3.0,
                     5.0,
-                    6.0,
                     6.0,
                     6.0,
                     6.0
@@ -3326,7 +3444,7 @@
             "id": 310,
             "name": "Palyaço Koleji",
             "rarity": 2,
-            "tooltip": "<spellName>Arkadan Vuruş</spellName>: Arkadan saldırmak @BasicAttackDamage@ <physicalDamage>İlave Fiziksel Hasar</physicalDamage> verir.<br><br><spellName>Kandırmaca</spellName>: Işınlanır ve @StealthDuration@ saniyeliğine <keywordStealth>görünmez</keywordStealth> olursun. <keywordStealth>Görünmez</keywordStealth> haldeyken gerçekleştirdiğin sonraki saldırı fazladan <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. Rakibe arkadan saldırırsan bu saldırı kritik vuruş yaparak @QCritDamageMod@ Hasar verir.<br><br><spellName>Halüsinasyon: Ölüm</spellName>: Katledildiğinde etrafındaki rakiplere <trueDamage>azami canın %@FearDamage*100@ kadarına eşdeğer miktarda gerçek hasar</trueDamage> verir ve onları @FearDuration@ saniyeliğine korkutursun."
+            "tooltip": "<spellName>Arkadan Vuruş</spellName>: Arkadan saldırmak @BasicAttackDamage@ <physicalDamage>İlave Fiziksel Hasar</physicalDamage> verir.<br><br><spellName>Kandırmaca</spellName>: Işınlanır ve @StealthDuration@ saniyeliğine <keywordStealth>görünmez</keywordStealth> olursun. <keywordStealth>Görünmez</keywordStealth> haldeyken gerçekleştirdiğin sonraki saldırı fazladan <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir. Rakibe arkadan saldırırsan bu saldırı kritik vuruş yaparak @QCritDamageMod@ Hasar verir.<br><br><spellName>Halüsinasyon: Katledilme</spellName>: Katledildiğinde etrafındaki rakiplere <magicDamage>azami canın %@FearDamage*100@ kadarına eşdeğer miktarda gerçek hasar</magicDamage> verir ve onları @FearDuration@ saniyeliğine korkutursun."
         },
         {
             "apiName": "NumbToPain",
@@ -3403,6 +3521,37 @@
             "name": "Hissizleşmiş",
             "rarity": 0,
             "tooltip": "Aldığın hasarın %@MeleeReduction*100@ kadarını @BleedDuration@ saniye içinde alırsın. Bu oran menzilli şampiyonlar için %@RangedReduction*100@ olur."
+        },
+        {
+            "apiName": "GoHVoteAllyHunter",
+            "calculations": {},
+            "dataValues": {
+                "BonusGold": [
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0,
+                    250.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Takımının iblis avcılarıyla müttefik olması için oy verirsin. <br><br>İblis avcılarıyla müttefik olmak, bir <keywordMajor>iblis takımını</keywordMajor> yendiğinde <gold>@BonusGold@ İlave Altın %i:goldCoins%</gold> kazandırır.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
+            "id": 362,
+            "name": "Müttefik Avcı",
+            "rarity": 4,
+            "tooltip": "Takımının iblis avcılarıyla müttefik olması için oy verirsin. <br><br>İblis avcılarıyla müttefik olmak, bir <keywordMajor>iblis takımını</keywordMajor> yendiğinde <gold>@BonusGold@ İlave Altın %i:goldCoins%</gold> kazandırır."
         },
         {
             "apiName": "AugmentedPower",
@@ -4616,38 +4765,38 @@
                 "ProcCooldown": [
                     2.0,
                     2.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "Radius": [
-                    450.0,
-                    450.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0,
-                    700.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "SlowAmount": [
                     -0.30000001192092896,
                     -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896,
-                    -0.30000001192092896
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579,
+                    -0.6000000238418579
                 ],
                 "SlowDuration": [
-                    2.0,
-                    2.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.5
                 ]
             },
             "desc": "Güçlendirdiğin, <healing>iyileştirdiğin</healing> veya <shield>kalkan sağladığın</shield> takım arkadaşının etrafındaki rakiplere hasar verirsin ve onları <status>yavaşlatırsın</status>.",
@@ -4656,7 +4805,47 @@
             "id": 76,
             "name": "Ses Patlaması",
             "rarity": 0,
-            "tooltip": "Güçlendirdiğin, <healing>iyileştirdiğin</healing> veya <shield>kalkan sağladığın</shield> takım arkadaşının etrafındaki rakiplere <trueDamage>@Damage@ Gerçek Hasar</trueDamage> verirsin ve onları @SlowDuration@ saniyeliğine %@SlowAmount*-100@ <status>yavaşlatırsın</status>.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+            "tooltip": "Güçlendirdiğin, <healing>iyileştirdiğin</healing> veya <shield>kalkan sağladığın</shield> takım arkadaşının etrafındaki rakiplere <trueDamage>@Damage@ Gerçek Hasar</trueDamage> verirsin ve onları @SlowDuration@ saniyeliğine %@SlowAmount*-100@ <status>yavaşlatırsın</status>.<br><br><rules>Yetenek kullanımı başına @ProcCooldown@ sn. bekleme süresi.</rules><br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+        },
+        {
+            "apiName": "GoHRemnantOfTheWatchers",
+            "calculations": {},
+            "dataValues": {
+                "ASPDSlow": [
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25,
+                    -0.25
+                ],
+                "AuraRadius": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Yakındaki şampiyonların <attackSpeed>saldırı hızını</attackSpeed> azaltır.",
+            "iconLarge": "assets/ux/cherry/augments/icons/remnantofthewatchers_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/remnantofthewatchers_small.arena_2026_s2_a2.png",
+            "id": 354,
+            "name": "Gözcülerin Mirası",
+            "rarity": 4,
+            "tooltip": "Yakındaki şampiyonların <attackSpeed>saldırı hızını</attackSpeed> <attackSpeed>%@ASPDSlow*-100@</attackSpeed> azaltır."
         },
         {
             "apiName": "TwiceThrice",
@@ -4881,6 +5070,37 @@
             "name": "Süratle",
             "rarity": 1,
             "tooltip": "<speed>@AbilityHasteToMSConversionCalc@ Hareket Hızı</speed> kazanırsın."
+        },
+        {
+            "apiName": "GoHDematerializer",
+            "calculations": {},
+            "dataValues": {
+                "ExecuteThreshold": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Verdiğin hasar, canı %@ExecuteThreshold*100@ değerinin altındaki rakip şampiyonları infaz eder.",
+            "iconLarge": "assets/ux/cherry/augments/icons/dematerializer_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/dematerializer_small.arena_2026_s2_a2.png",
+            "id": 349,
+            "name": "İlik Kurutucu",
+            "rarity": 4,
+            "tooltip": "Verdiğin hasar, canı %@ExecuteThreshold*100@ değerinin altındaki rakip şampiyonları infaz eder."
         },
         {
             "apiName": "FallenAegis",
@@ -5785,6 +6005,28 @@
             "tooltip": "Yeteneklerin sınırsız kez birikebilen bir <keywordMajor>yakma</keywordMajor> etkisi uygular. Bu etki @BleedDuration@ saniye boyunca her saniye <magicDamage>@BleedDamageTooltip@ Büyü Hasarı</magicDamage> verir.<br><br>Rakiplere hasar veren tüm <keywordMajor>yakma</keywordMajor> etkilerin, temel yeteneklerinin bekleme sürelerini @FlatCooldownRefundPerTick@ saniye azaltır.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@<br>"
         },
         {
+            "apiName": "GoHVoteAllyDemon",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Takımının iblislerle müttefik olması için oy verirsin. <br><br>İblislerle müttefik olmak, bir <keywordMajor>iblis avcısı takımı elendiğinde</keywordMajor> bir <keywordMajor>eklenti seviyesi %i:AugmentLevel%</keywordMajor> kazandırır.",
+            "iconLarge": "assets/ux/cherry/augments/icons/yonedemon_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/yonedemon_small.arena_2026_s2_a2.png",
+            "id": 361,
+            "name": "Müttefik İblis",
+            "rarity": 4,
+            "tooltip": "Takımının iblislerle müttefik olması için oy verirsin. <br><br>İblislerle müttefik olmak, bir <keywordMajor>iblis avcısı takımı elendiğinde</keywordMajor> bir <keywordMajor>eklenti seviyesi %i:AugmentLevel%</keywordMajor> kazandırır."
+        },
+        {
             "apiName": "ADAPt",
             "calculations": {
                 "APAmpCalcTooltip": {
@@ -5819,7 +6061,7 @@
                 "InverseRate": [
                     0.6000000238418579,
                     0.6000000238418579,
-                    0.800000011920929,
+                    2.799999952316284,
                     0.800000011920929,
                     0.800000011920929,
                     0.800000011920929,
@@ -6011,7 +6253,7 @@
                 "ADcoefficient": [
                     0.07000000029802322,
                     0.07000000029802322,
-                    0.09000000357627869,
+                    0.07999999821186066,
                     0.09000000357627869,
                     0.09000000357627869,
                     0.09000000357627869,
@@ -6020,7 +6262,7 @@
                 "APcoefficient": [
                     0.03999999910593033,
                     0.03999999910593033,
-                    0.07000000029802322,
+                    0.05999999865889549,
                     0.07000000029802322,
                     0.07000000029802322,
                     0.07000000029802322,
@@ -6029,7 +6271,7 @@
                 "Healthcoefficient": [
                     0.004999999888241291,
                     0.004999999888241291,
-                    0.007499999832361937,
+                    0.006500000134110451,
                     0.007499999832361937,
                     0.007499999832361937,
                     0.007499999832361937,
@@ -7174,6 +7416,37 @@
             "tooltip": "{{Cherry_SpiritLink_Summary}}<br><br>Yönlendirilen Toplam Hasar: @f1@<br>Toplam İyileştirme: @f2@<br>"
         },
         {
+            "apiName": "GoHEnchantedFlask",
+            "calculations": {},
+            "dataValues": {
+                "Cooldown": [
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "desc": "Her @Cooldown@ saniyede bir <attention>büyü kalkanı</attention> kazandırır.",
+            "iconLarge": "assets/ux/cherry/augments/icons/crystallineflask_large.arena_2026_s2_a2.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/crystallineflask_small.arena_2026_s2_a2.png",
+            "id": 350,
+            "name": "Efsunlu Matara",
+            "rarity": 4,
+            "tooltip": "Her @Cooldown@ saniyede bir sonraki rakip yeteneğini engelleyen bir <attention>büyü kalkanı</attention> kazandırır."
+        },
+        {
             "apiName": "Deathtouch",
             "calculations": {},
             "dataValues": {
@@ -7340,22 +7613,22 @@
             "calculations": {},
             "dataValues": {
                 "DamageAmp": [
-                    0.10000000149011612,
-                    0.20000000298023224,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "Gold": [
                     150.0,
                     150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0,
-                    150.0
+                    200.0,
+                    250.0,
+                    300.0,
+                    300.0,
+                    300.0
                 ],
                 "MaxLevel": [
                     2.0,
@@ -7411,13 +7684,13 @@
             "calculations": {},
             "dataValues": {
                 "CurseCounter": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
                 ],
                 "EnemyDetectionRadius": [
                     800.0,
@@ -8259,7 +8532,7 @@
                 "InverseRate": [
                     1.666659951210022,
                     1.666659951210022,
-                    0.0,
+                    2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
                     2.2219998836517334,
@@ -8585,13 +8858,13 @@
                     1.5
                 ],
                 "ReviveMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ],
                 "SelfReviveTimerModMax": [
                     0.5,
@@ -8612,13 +8885,13 @@
                     0.4000000059604645
                 ],
                 "SizeMod": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071,
+                    0.699999988079071
                 ]
             },
             "desc": "@BonusLives@ ilave <attention>dirilme</attention> kazanırsın ve katledildikten sonra kendini diriltmeye başlarsın.<br><br><attention>Dirildiğinde</attention> etrafındaki rakipleri <status>geri savurursun</status>. Ayrıca daha küçük bir boyutla ve daha az <scaleHealth>azami canla</scaleHealth> geri dönersin.",
@@ -9551,13 +9824,13 @@
                     0.3499999940395355
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaximumDistanceRoF": [
                     1500.0,
@@ -9909,10 +10182,10 @@
             "calculations": {},
             "dataValues": {
                 "AttackSpeed": [
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.75,
-                    1.2000000476837158,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.800000011920929,
+                    1.2999999523162842,
                     1.5,
                     1.5,
                     1.5
@@ -10899,64 +11172,6 @@
             "tooltip": "<scaleHealth>Azami canının %@HealthReductionPercent@</scaleHealth> kadarını Tahm Kench'e feda edersin. <br><br>Feda ettiğin <scaleHealth>azami can miktarı artarak -%@MaxHealthReduction@</scaleHealth> olur.<br><br><gold>@GoldToGrant@ Altın %i:goldCoins%</gold> kazanırsın."
         },
         {
-            "apiName": "FrozenFoundations",
-            "calculations": {},
-            "dataValues": {
-                "ChampPushDistance": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "NonChampPushDistance": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
-                ],
-                "WallDuration": [
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0,
-                    5.0
-                ],
-                "WallWidth": [
-                    800.0,
-                    800.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0,
-                    2000.0
-                ]
-            },
-            "desc": "<spellName>Donmuş Temeller</spellName> sihirdar büyüsünü kazanırsın.<br><br><rules><spellName>Donmuş Temeller</spellName>, hedeflenen konumda bir buz duvarı oluşturur.</rules>",
-            "iconLarge": "assets/ux/cherry/augments/icons/frozenfoundations_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/frozenfoundations_small.png",
-            "id": 40,
-            "name": "Donmuş Temeller",
-            "rarity": 0,
-            "tooltip": "<rules>Hedeflenen konumda bir buz duvarı oluşturursun.</rules>"
-        },
-        {
             "apiName": "CriticalHealing",
             "calculations": {
                 "CriticalHealCalc": {
@@ -11315,13 +11530,13 @@
                     6.0
                 ],
                 "TimeUntilStarLands": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "TotalShield": [
                     200.0,
@@ -11695,13 +11910,13 @@
                     3.0
                 ],
                 "MaxLevelGrowthDuration": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
                 ],
                 "PercentageGrowth": [
                     0.009999999776482582,
@@ -11775,22 +11990,22 @@
             "calculations": {},
             "dataValues": {
                 "Haste": [
-                    125.0,
+                    75.0,
                     200.0,
-                    275.0,
-                    350.0,
-                    425.0,
-                    500.0,
-                    575.0
+                    325.0,
+                    450.0,
+                    575.0,
+                    700.0,
+                    825.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelTenacityDuration": [
                     3.0,
@@ -11927,13 +12142,13 @@
                     40.0
                 ],
                 "TotalASValue": [
-                    0.15000000596046448,
-                    0.15000000596046448,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896,
+                    0.30000001192092896
                 ]
             },
             "desc": "<attackSpeed>%@TotalASValue*100@ Toplam Saldırı Hızı</attackSpeed> kazanırsın.<br><br><attackSpeed>Saniye başına @Breakpoint1@ saldırıya</attackSpeed> ulaştığında {{ Item_Keyword_OnHit }} fazladan <magicDamage>büyü hasarı</magicDamage> verirsin.",
@@ -13357,7 +13572,7 @@
             "id": 215,
             "name": "Karanlık Lütuf",
             "rarity": 1,
-            "tooltip": "Bir takım arkadaşını <healing>iyileştirdiğinde</healing> veya ona <shield>kalkan</shield> sağladığında @CurseCounter@ <keywordMajor>Lanetli Güç</keywordMajor> kazanırsın.<br><br>@f1@ Yetenek Hızı (<keywordMajor>lanetli gücünün</keywordMajor> %@AbilityHasteRatio*100@ kadarı) kazanırsın.<br><br>{{ Cherry_CurseShared }}"
+            "tooltip": "Bir takım arkadaşını <healing>iyileştirdiğinde</healing> veya ona <shield>kalkan</shield> sağladığında @CurseCounter@ <keywordMajor>Lanetli Güç</keywordMajor> kazanırsın.<br><br>@f1@ Yetenek Hızı (<keywordMajor>lanetli gücünün</keywordMajor> %@AbilityHasteRatio*100@ kadarı) kazanırsın.<br><br><rules>Yetenek kullanımı başına @Cooldown@ sn. bekleme süresi.</rules><br><br>{{ Cherry_CurseShared }}"
         },
         {
             "apiName": "MindtoMatter",

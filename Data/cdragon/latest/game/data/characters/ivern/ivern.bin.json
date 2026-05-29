@@ -37,7 +37,7 @@
         "mDescriptionTraKey": "stat_stone_description_IvernEBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -65,7 +65,7 @@
         "mDescriptionTraKey": "stat_stone_description_IvernWDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -93,7 +93,7 @@
         "mDescriptionTraKey": "stat_stone_description_IvernPCamps",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -206,7 +206,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 227,
+                "EventToTrack": 229,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -273,7 +273,7 @@
         "mDescriptionTraKey": "stat_stone_description_IvernQTakedowns",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -301,7 +301,7 @@
         "mDescriptionTraKey": "stat_stone_description_IvernPBuffsShared",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -330,7 +330,7 @@
         "mDescriptionTraKey": "stat_stone_description_IvernWBrushDuration",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -359,7 +359,7 @@
         "mDescriptionTraKey": "stat_stone_description_IvernRKnockups",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -894,6 +894,11 @@
         },
         "__type": "SpellObject"
     },
+    "{9473e5ed}": {
+        "ObjectName": "IvernWPassive",
+        "mScriptName": "IvernWPassive",
+        "__type": "SpellObject"
+    },
     "Characters/Ivern/Spells/IvernPAbility": {
         "mRootSpell": "Characters/Ivern/Spells/IvernPAbility/IvernP",
         "mChildSpells": [
@@ -1299,7 +1304,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{60aa666f}": {
+                "HealthCostPercent": {
                     "mFormulaParts": [
                         {
                             "mLevel1Value": 15.0,
@@ -1326,7 +1331,7 @@
                         "mCoefficient": 0.009999999776482582,
                         "__type": "StatByCoefficientCalculationPart"
                     },
-                    "mModifiedGameCalculation": "{60aa666f}",
+                    "mModifiedGameCalculation": "HealthCostPercent",
                     "__type": "GameCalculationModified"
                 },
                 "ManaTooltip": {

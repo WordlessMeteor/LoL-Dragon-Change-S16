@@ -76,7 +76,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@AmmoRechargeTime@ث إعادة شحن (@Cooldown@ث %i:cooldown%)",
             "description": "يرمي أمومو لفافة لاصقة على أحد الأهداف، فتصعق الهدف وتلحق الضرر به بينما يسحب نفسه إليه.",
-            "dynamicDescription": "يطلق أمومو لفافة ثم يسحب نفسه نحو أول عدوٍ يصيبه، حيث <status>يصعقه</status> لمدة @Effect2Amount@ ثوان ويلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.<br><br>لدى هذه القدرة شحنتان.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يرمي أمومو لفافة ثم يسحب نفسه نحو أول عدوٍ يصيبه، <status>فيصعقه</status> لمدة @StunDuration@ث ويلحق به <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.<br><br>تمتلك هذه القدرة شحنتين.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -376,7 +376,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تقلص بشكل دائم الضرر المادي الذي يتلقاه أمومو. ويستطيع أمومو إطلاق لجام غضبه، فيلحق الضرر بالأعداء المحيطين. وكلما أصيب أمومو، تتقلص فترة تبريد نوبة الغضب.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> يتلقى أمومو @DamageReduction@ ضرر مادي مخفض. بالإضافة إلى ذلك، عندما تصيب أمومو هجمة، تقل فترة تبريد هذه القدرة بمقدار @Effect3Amount@ث.<br><br><spellActive>التأثير النشط:</spellActive> يدخل أمومو في نوبة غضب، فيلحق <magicDamage>@TantrumDamage@ ضرر سحر</magicDamage> بالأعداء في الجوار.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> يتلقى أمومو ضررًا ماديًا مقلصًا بمقدار @DamageReduction@. بالإضافة إلى ذلك، كلما أصيب أمومو بهجوم، تتقلص فترة تبريد هذه القدرة بمقدار @CDROnHit@ث.<br><br><spellActive>تأثير نشط:</spellActive> يدخل أمومو في نوبة غضب، فيلحق <magicDamage>@TantrumDamage@ ضرر سحر</magicDamage> بالأعداء في الجوار.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Gragas กลิ้งถังไม้ของเขาไปยังพื้นที่ที่กำหนด เขาสามารถกดสั่งให้ถังระเบิดได้ หรือจะระเบิดเองเมื่อเวลาผ่านไป 4 วินาที ความแรงของการระเบิดจะเพิ่มขึ้นตามช่วงเวลา ศัตรูที่โดนระเบิดจะถูกสโลว์ความเร็วเคลื่อนที่ชั่วคราว",
-            "dynamicDescription": "Gragas กลิ้งถังที่จะระเบิดหลังจาก @Effect4Amount@ วินาที สร้าง<magicDamage>ความเสียหายเวท @MinDamage@</magicDamage> ถึง <magicDamage>@MaxDamage@ หน่วย</magicDamage> และ<status>สโลว์</status>ศัตรู @Effect2Amount@ - @Effect2Amount*1.5@% เป็นเวลา @Effect3Amount@ วินาที ความเสียหายและ<status>สโลว์</status>จะเพิ่มขึ้นตามระยะเวลาที่ถังใช้ในการระเบิด<br><br>Gragas สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อระเบิดมันก่อนเวลา@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas กลิ้งถังระเบิดหลังจาก @BarrelMaxDuration@ วินาที สร้าง<magicDamage>ความเสียหายเวทระหว่าง @MinDamage@ หน่วย</magicDamage> ถึง <magicDamage>@MaxDamage@ หน่วย</magicDamage> และ<status>สโลว์</status>ศัตรูระหว่าง @SlowPercent@ และ @SlowPercent*1.5@% เป็นเวลา @SlowDuration@ วินาที โดยความเสียหายและ<status>สโลว์</status>จะเพิ่มขึ้นตามระยะเวลาก่อนที่ถังจะระเบิด<br><br>Gragas สามารถ<recast>กดใช้ซ้ำ</recast>เพื่อระเบิดถังก่อนเวลาได้@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

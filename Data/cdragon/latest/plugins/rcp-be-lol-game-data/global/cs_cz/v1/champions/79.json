@@ -1072,7 +1072,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Gragas dovalí svůj soudek do dané oblasti, kde pak vybuchne buď po aktivaci, nebo po 4&nbsp;sekundách. Síla výbuchu se zvyšuje v závislosti na době přípravy. Nepřátelům zasaženým výbuchem se sníží rychlost pohybu.",
-            "dynamicDescription": "Gragas pošle soudek, který po uplynutí @Effect4Amount@&nbsp;sek. vybuchne, způsobí <magicDamage>@MinDamage@</magicDamage>–<magicDamage>@MaxDamage@ bodů magického poškození</magicDamage> a na @Effect3Amount@&nbsp;sek. <status>zpomalí</status> zasažené nepřátele o @Effect2Amount@–@Effect2Amount*1.5@&nbsp;%. Poškození a míra <status>zpomalení</status> se zvyšují v závislosti na době, po které soudek vybuchl. <br><br><recast>Opětovným sesláním</recast> této schopnosti může Gragas odpálit soudek předčasně.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas pošle soudek, který po uplynutí @BarrelMaxDuration@&nbsp;sek. vybuchne, způsobí <magicDamage>@MinDamage@</magicDamage>–<magicDamage>@MaxDamage@ bodů magického poškození</magicDamage> a na @SlowDuration@&nbsp;sek. <status>zpomalí</status> zasažené nepřátele o @SlowPercent@–@SlowPercent*1.5@&nbsp;%. Poškození a míra <status>zpomalení</status> se zvyšují v závislosti na době, po které soudek vybuchl. <br><br><recast>Opětovným sesláním</recast> této schopnosti může Gragas odpálit soudek předčasně.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

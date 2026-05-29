@@ -769,11 +769,11 @@
                 80.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.5,
                 9.0,
                 8.5,
                 8.0,
+                7.5,
+                7.0,
                 8.0
             ],
             "coefficients": {
@@ -941,13 +941,13 @@
                     6.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
                 ],
                 "Effect3Amount": [
                     25.0,
@@ -1051,7 +1051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Kassadin hút năng lượng từ những phép tung ra từ xung quanh. Khi tích tụ xong, Kassadin có thể sử dụng Áp Suất Hư Không để gây sát thương và làm chậm kẻ địch theo hình nón trước mặt hắn.",
-            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> <spellName>Áp Suất Hư Không</spellName> Hồi chiêu được giảm đi @ReductionPerSpellCast@ giây khi có bất kỳ Kỹ Năng nào được sử dụng xung quanh Kassadin.<br><br><spellActive>Kích Hoạt:</spellActive> Kassadin phóng thích một đợt sóng hư không, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> đi @Effect2Amount@% trong@Effect3Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Hồi chiêu của <spellName>Áp Suất Hư Không</spellName> được giảm đi @ReductionPerSpellCast@ giây mỗi khi bất kỳ Kỹ Năng nào được sử dụng gần Kassadin.<br><br><spellActive>Kích Hoạt:</spellActive> Kassadin phóng ra một luồng xung hư không, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> @SlowAmount@% trong @SlowDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

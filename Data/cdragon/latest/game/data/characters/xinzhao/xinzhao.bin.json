@@ -2283,56 +2283,6 @@
                 "Trait_AttackReset",
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        15.0,
-                        15.0,
-                        30.0,
-                        45.0,
-                        60.0,
-                        75.0,
-                        75.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BADRatio",
@@ -2344,6 +2294,32 @@
                         0.4000000059604645,
                         0.4000000059604645,
                         0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        0.0,
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockUpDuration",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2387,8 +2363,8 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
@@ -2400,7 +2376,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.4000000059604645,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoReworkQ.dds"
@@ -2482,7 +2457,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_BonusDamage",
                                     "__type": "TooltipInstanceListElement"
@@ -2583,6 +2558,40 @@
                                 "__type": "ByCharLevelBreakpointsCalculationPart"
                             },
                             "__type": "StatBySubPartCalculationPart"
+                        },
+                        {
+                            "mSubpart": {
+                                "mLevel1Value": 0.05000000074505806,
+                                "mBreakpoints": [
+                                    {
+                                        "mLevel": 6,
+                                        "mAdditionalBonusAtThisLevel": 0.05000000074505806,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 11,
+                                        "mAdditionalBonusAtThisLevel": 0.05000000074505806,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 16,
+                                        "mAdditionalBonusAtThisLevel": 0.05000000074505806,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 21,
+                                        "mAdditionalBonusAtThisLevel": 0.05000000074505806,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 26,
+                                        "mAdditionalBonusAtThisLevel": 0.05000000074505806,
+                                        "__type": "Breakpoint"
+                                    }
+                                ],
+                                "__type": "ByCharLevelBreakpointsCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2644,11 +2653,11 @@
                 "HealAPRatio": {
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 0.5,
+                            "mLevel1Value": 0.44999998807907104,
                             "mBreakpoints": [
                                 {
                                     "mLevel": 6,
-                                    "mAdditionalBonusAtThisLevel": 0.15000000596046448,
+                                    "mAdditionalBonusAtThisLevel": 0.10000000149011612,
                                     "__type": "Breakpoint"
                                 },
                                 {
@@ -3462,7 +3471,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoEWTakedowns",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3490,7 +3499,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoRBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3518,7 +3527,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoPHealing",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3645,7 +3654,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 227,
+                "EventToTrack": 229,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3711,7 +3720,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoLongRangeW",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3739,7 +3748,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoRKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3767,7 +3776,7 @@
         "mDescriptionTraKey": "stat_stone_description_XinZhaoQKnockuops",
         "EventsToTrack": [
             {
-                "EventToTrack": 250,
+                "EventToTrack": 252,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3851,6 +3860,23 @@
                 "MapId": 11,
                 "Position": "jungle",
                 "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "middle",
                 "mDefaultPriority": [
                     3,
                     1,

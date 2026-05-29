@@ -1170,7 +1170,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Шен призывает призрачный клинок, после чего его следующие автоатаки наносят урон, зависящий от максимального запаса здоровья цели. Если клинок на своем пути к Шену задевает вражеского чемпиона, автоатаки дополнительно существенно усиливаются, а задетый чемпион замедляется при попытке убежать от Шена.",
-            "dynamicDescription": "Шен призывает к себе <keywordMajor>призрачный клинок</keywordMajor>. Пораженные враги <status>замедляются</status> на @Effect4Amount@% при движении от Шена в течение следующих @Effect5Amount@ сек.<br><br>Кроме того, @Effect3Amount@ следующие автоатаки Шена дополнительно наносят <magicDamage>магический урон в размере @BaseFlatDamage@ плюс @BasePercentHealth@ от максимального запаса здоровья</magicDamage>. Если <keywordMajor>призрачный клинок</keywordMajor> задел вражеского чемпиона, урон увеличивается до <magicDamage>@BaseFlatDamage@ плюс @EmpPercentHealth@ от максимального запаса здоровья</magicDamage>, а скорость усиленных автоатак Шена увеличивается на <attackSpeed>@Effect9Amount@%</attackSpeed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Шен призывает к себе <keywordMajor>призрачный клинок</keywordMajor>. Пораженные враги <status>замедляются</status> на @SlowPercent@% при движении от Шена в течение следующих @SlowDuration@ сек.<br><br>Кроме того, следующие автоатаки (@NumEnhancedAttacks@) Шена дополнительно наносят <magicDamage>маг. урон в размере @BaseFlatDamage@</magicDamage> плюс <magicDamage>@BasePercentHealth@ от макс. здоровья</magicDamage>. Если <keywordMajor>призрачный клинок</keywordMajor> задел вражеского чемпиона, урон растет до <magicDamage>@BaseFlatDamage@</magicDamage> плюс <magicDamage>@EmpPercentHealth@ от макс. здоровья</magicDamage>, а скорость усиленных автоатак Шена растет на <attackSpeed>@SteroidAS@%</attackSpeed>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Призрачный клинок блокирует автоатаки, направленные против Шена и союзных чемпионов, в зоне вокруг себя.",
-            "dynamicDescription": "Шен создает вокруг своего <keywordMajor>призрачного клинка</keywordMajor> охраняемую зону на @Effect1Amount@ сек. Автоатаки против союзных чемпионов в этой области блокируются. <br><br>Если в момент применения рядом с <keywordMajor>призрачным клинком</keywordMajor> нет чемпионов, создание зоны отсрочивается на время до @Effect2Amount@ сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Шен создает вокруг своего <keywordMajor>призрачного клинка</keywordMajor> охраняемую зону на @ZoneDuration@ сек. Автоатаки против союзных чемпионов в этой области блокируются. <br><br>Если в момент применения рядом в зоне не будет чемпионов, ее создание отсрочивается на время до @ZoneDelay@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "古拉格斯將酒桶滾到目標地點，可以主動引爆或在到達目標地點 4 秒後自行爆炸。爆炸的威力會隨時間持續提升。被炸到的敵人跑速會降低。",
-            "dynamicDescription": "古拉格斯滾動出一個酒桶，該酒桶會在 @Effect4Amount@ 秒後爆炸， 造成 <magicDamage>@MinDamage@ 魔法傷害</magicDamage>到 <magicDamage>@MaxDamage@ 魔法傷害</magicDamage>和持續 @Effect3Amount@ 秒的 @Effect2Amount@ 到 @Effect2Amount*1.5@% <status>緩速</status>。傷害和<status>緩速</status>會根據酒桶在爆炸前的存在時間來提升。<br><br>古拉格斯可以<recast>重新施放</recast>此技能來提前引爆該酒桶。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "古拉格斯滾動出一個酒桶，該酒桶會在@BarrelMaxDuration@秒後爆炸，造成<magicDamage>@MinDamage@</magicDamage>至<magicDamage>@MaxDamage@魔法傷害</magicDamage>和持續@SlowDuration@秒的@SlowPercent@至@SlowPercent*1.5@%<status>緩速</status>。傷害和<status>緩速</status>的數值會隨酒桶爆炸前的存在時間提升。<br><br>古拉格斯可以<recast>重新施放</recast>來提前引爆酒桶。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

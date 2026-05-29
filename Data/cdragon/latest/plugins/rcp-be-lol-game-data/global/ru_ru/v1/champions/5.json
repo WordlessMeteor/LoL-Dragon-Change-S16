@@ -1211,7 +1211,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Следующие три автоатаки Ксина Жао наносят дополнительный урон. Кроме того, третья автоатака подбрасывает противника в воздух.",
-            "dynamicDescription": "Следующие 3 автоатаки Ксин Жао дополнительно наносят <physicalDamage>@BonusDamage@ физического урона</physicalDamage> и сокращают время перезарядки его остальных умений на 1 сек. Кроме того, третья автоатака <status>подбрасывает</status> врага на @Effect2Amount@ сек.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Следующие 3 автоатаки Ксина Жао дополнительно наносят <physicalDamage>@BonusDamage@ ед. физ. урона</physicalDamage> и сокращают перезарядку его остальных умений на 1 сек. 3-я автоатака также <status>подбрасывает</status> врага на @KnockUpDuration@ сек.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 375.0,
                 375.0,
@@ -1237,27 +1237,27 @@
                 5.0
             ],
             "coefficients": {
-                "coefficient1": 0.4,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    15.0,
-                    15.0,
-                    30.0,
-                    45.0,
-                    60.0,
-                    75.0,
-                    75.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75,
-                    0.75
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

@@ -769,11 +769,11 @@
                 80.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.5,
                 9.0,
                 8.5,
                 8.0,
+                7.5,
+                7.0,
                 8.0
             ],
             "coefficients": {
@@ -941,13 +941,13 @@
                     6.0
                 ],
                 "Effect2Amount": [
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0,
-                    20.0
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
                 ],
                 "Effect3Amount": [
                     25.0,
@@ -1051,7 +1051,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Kassadin čerpá energii z kouzel seslaných v jeho blízkosti. Po nabití může Kassadin Silovým impulzem poškodit a zpomalit nepřátele v kuželové výseči před sebou.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Kdykoliv dojde v Kassadinově blízkosti k použití nějaké schopnosti, přebíjecí doba schopnosti <spellName>Silový impulz</spellName> se zkrátí o @ReductionPerSpellCast@&nbsp;sek.<br><br><spellActive>Aktivace:</spellActive> Kassadin vyšle pulz Prázdnoty, který způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @Effect3Amount@&nbsp;sek. <status>zpomalí</status> nepřátele o @Effect2Amount@&nbsp;%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Kdykoliv dojde v Kassadinově blízkosti k použití nějaké schopnosti, přebíjecí doba schopnosti <spellName>Silový impulz</spellName> se zkrátí o @ReductionPerSpellCast@&nbsp;sek.<br><br><spellActive>Aktivace:</spellActive> Kassadin vyšle pulz Prázdnoty, který způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @SlowDuration@&nbsp;sek. <status>zpomalí</status> nepřátele o @SlowAmount@&nbsp;%.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

@@ -179,8 +179,10 @@
             2510,
             2522,
             3116,
+            324005,
             3135,
             3165,
+            4005,
             4637,
             6621,
             6657
@@ -689,7 +691,6 @@
             3113,
             3116,
             3124,
-            324005,
             3147,
             323504,
             326616,
@@ -1440,7 +1441,7 @@
     {
         "id": 1206,
         "name": "Récompense de quête de la voie du milieu",
-        "description": "<mainText><stats></stats><br><br><font color = '#00FF00'>Récompenses</font><br>• Les bottes sont améliorées au palier 3.<br>• +6% de dégâts d'attaque et de puissance bonus.</mainText>",
+        "description": "<mainText><stats></stats><br><br><font color = '#00FF00'>Récompenses</font><br>• Les bottes sont améliorées au palier 3.<br>• +8% de dégâts d'attaque et de puissance bonus.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],
@@ -4783,7 +4784,7 @@
     {
         "id": 3071,
         "name": "Couperet noir",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +400</attention> PV<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> à un champion réduit son armure de <scaleArmor>6%</scaleArmor> pendant 6 sec (effet cumulable 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>+20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
+        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +400</attention> PV<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> aux champions ennemis avec des compétences, des compétences passives et des attaques réduit leur <scaleArmor>armure de 6%</scaleArmor> pendant 6 sec. (se cumule 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -4844,13 +4845,13 @@
     {
         "id": 3073,
         "name": "Hexplaque expérimentale",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +20%</attention> de vitesse d'attaque<br><attention> +450</attention> PV</stats><br><br><passive>Charge Hextech</passive><br>Vous gagnez +30 accélération d'ultime.<br><br><passive>Surcharge</passive><br>Après avoir lancé votre compétence ultime, vous gagnez <attackSpeed>+50% de vitesse d'attaque</attackSpeed> et <speed>+20% de vitesse de déplacement</speed> pendant 8 sec. </mainText>",
+        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +20%</attention> de vitesse d'attaque<br><attention> +450</attention> PV</stats><br><br><passive>Charge Hextech</passive><br>Vous gagnez 30 accélération d'ultime.<br><br><passive>Surcharge</passive><br>Après avoir lancé votre compétence ultime, vous gagnez <attackSpeed>0% de vitesse d'attaque</attackSpeed> et <speed>0% de vitesse de déplacement</speed> pendant 8 sec. </mainText>",
         "active": false,
         "inStore": true,
         "from": [
             2021,
-            3044,
-            1042
+            1042,
+            3044
         ],
         "to": [],
         "categories": [
@@ -5087,7 +5088,7 @@
     {
         "id": 3084,
         "name": "Cœuracier",
-        "description": "<mainText><stats><attention> +900</attention> PV<br><attention> +100%</attention> de régénération de base des PV</stats><br><br><passive>Consommation colossale</passive>  (0 sec) par cible<br>Si un champion ennemi reste proche pendant quelques sec, votre prochaine attaque contre lui inflige des <physicalDamage>dégâts physiques bonus</physicalDamage> équivalents à <physicalDamage>70 + 6%</physicalDamage> de vos PV max et vous octroie des <scaleHealth>PV max</scaleHealth> équivalents à <scaleHealth>8% des dégâts</scaleHealth>.<br><br><passive>Goliath</passive><br>Tous les <scaleHealth>1000 PV max</scaleHealth>, votre taille augmente de 3% (jusqu'à 30%). </mainText>",
+        "description": "<mainText><stats><attention> +900</attention> PV<br><attention> +100%</attention> de régénération de base des PV</stats><br><br><passive>Consommation colossale</passive>  (0 sec) par cible<br>Si un champion ennemi reste proche pendant quelques sec, votre prochaine attaque contre lui inflige des <physicalDamage>dégâts physiques bonus</physicalDamage> équivalents à <physicalDamage>70 + 6%</physicalDamage> de vos PV max et vous octroie des <scaleHealth>PV max</scaleHealth> équivalents à <scaleHealth>10% des dégâts</scaleHealth>.<br><br><passive>Goliath</passive><br>Tous les <scaleHealth>1000 PV max</scaleHealth>, votre taille augmente de 3% (jusqu'à 30%). </mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -5180,7 +5181,7 @@
     {
         "id": 3087,
         "name": "Poignard de Statikk",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +45</attention> puissance<br><attention> +30%</attention> de vitesse d'attaque<br><attention> +4%</attention> de vitesse de déplacement</stats><br><br><passive>Étincelle électrique</passive><br>Vos <keyword>attaques énergisées</keyword> lancent une chaîne d'éclairs, appliquant  effets <OnHit>à l'impact</OnHit> et infligeant des <magicDamage>dégâts magiques</magicDamage> aux cibles proches.<br><br><passive>Électrochoc</passive><br>Les attaques de base octroient des effets <keyword>énergisants</keyword> supplémentaires.</mainText>",
+        "description": "<mainText><stats><attention> +45</attention> dégâts d'attaque<br><attention> +45</attention> puissance<br><attention> +30%</attention> de vitesse d'attaque<br><attention> +4%</attention> de vitesse de déplacement</stats><br><br><passive>Étincelle électrique</passive><br>Vos <keyword>attaques énergisées</keyword> lancent une chaîne d'éclairs, appliquant  effets <OnHit>à l'impact</OnHit> et infligeant des <magicDamage>dégâts magiques</magicDamage> aux cibles proches.<br><br><passive>Électrochoc</passive><br>Les attaques de base octroient des effets <keyword>énergisants</keyword> supplémentaires.</mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -5490,11 +5491,9 @@
             4628,
             3137,
             3107,
-            324005,
             3152,
             326616,
             4636,
-            4005,
             4629,
             4633,
             6616,
@@ -5520,7 +5519,7 @@
     {
         "id": 3109,
         "name": "Vœu du chevalier",
-        "description": "<mainText><stats><attention> +200</attention> PV<br><attention> +40</attention> armure<br><attention> +10</attention> accélération de compétence<br><attention> +100%</attention> de régénération de base des PV</stats><br><br><passive>Sacrifice</passive><br>Quand l'allié <attention>digne</attention> est proche, vous redirigez vers vous 12% des dégâts qu'il subit et vous récupérez des <healing>PV équivalents à 10%</healing> des dégâts qu'il inflige aux champions. <active>Serment</active>  (0 sec)<br>Vous désignez un allié qui est <attention>digne</attention> de votre aide.</mainText>",
+        "description": "<mainText><stats><attention> +200</attention> PV<br><attention> +40</attention> armure<br><attention> +10</attention> accélération de compétence<br><attention> +100%</attention> de régénération de base des PV</stats><br><br><passive>Sacrifice</passive><br>Quand l'allié <attention>digne</attention> est proche, vous redirigez vers vous 14% des dégâts qu'il subit et vous récupérez des <healing>PV équivalents à 12%</healing> des dégâts qu'il inflige aux champions. <active>Serment</active>  (0 sec)<br>Vous désignez un allié qui est <attention>digne</attention> de votre aide.</mainText>",
         "active": true,
         "inStore": true,
         "from": [
@@ -6952,7 +6951,7 @@
     {
         "id": 3190,
         "name": "Médaillon de l'Iron Solari",
-        "description": "<mainText><stats><attention> +200</attention> PV<br><attention> +25</attention> armure<br><attention> +25</attention> résistance magique<br><attention> +10</attention> accélération de compétence</stats><br><br> <active>Dévotion</active><br>Vous octroyez aux alliés proches un <shield>bouclier de 290 - 360 PV</shield> qui se désagrège en 2.5 sec.</mainText>",
+        "description": "<mainText><stats><attention> +200</attention> PV<br><attention> +30</attention> armure<br><attention> +30</attention> résistance magique<br><attention> +10</attention> accélération de compétence</stats><br><br> <active>Dévotion</active><br>Vous octroyez aux alliés proches un <shield>bouclier de 290 - 360 PV</shield> qui se désagrège en 2.5 sec.</mainText>",
         "active": true,
         "inStore": true,
         "from": [
@@ -8395,11 +8394,11 @@
     {
         "id": 4005,
         "name": "Mandat impérial",
-        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +20</attention> accélération de compétence<br><attention> +125%</attention> de régénération de base du mana</stats><br><br><passive>Tir coordonné</passive>  (0 sec) par cible.<br><keyword>Ralentir</keyword> ou <keyword>immobiliser</keyword> un champion ennemi le marque pendant 5 sec. Les dégâts d'un champion allié font exploser la marque, infligeant des <magicDamage>dégâts magiques équivalents à 10% des PV actuels</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> +65</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Contrôle</passive><br>Vous gagnez  15 d'accélération de compétence pour vos compétences avec des effets <keyword>d'immobilisation</keyword>.<br><br><passive>Commande</passive><br>Lorsque vous <keyword>immobilisez</keyword> un champion ennemi, vous le marquez avec 6% de <Keyword>vulnérabilité</Keyword> pendant 4 sec.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            3108,
+            1026,
             4642
         ],
         "to": [],
@@ -8416,15 +8415,15 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 500,
-        "priceTotal": 2250,
+        "price": 650,
+        "priceTotal": 2400,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
     },
     {
         "id": 4010,
         "name": "Malédiction du sanguinaire",
-        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +350</attention> PV<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Vile décomposition</passive><br>Infliger des <magicDamage>dégâts magiques</magicDamage> avec des compétences ou des compétences passives à des champions réduit leur <scaleMR>résistance magique de 7.5%</scaleMR> pendant 6 sec (jusqu'à 30%).</mainText>",
+        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +350</attention> PV<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Vile décomposition</passive><br>Infliger des <magicDamage>dégâts magiques</magicDamage> avec des compétences ou des compétences passives à des champions réduit leur <scaleMR>résistance magique de 7.5%</scaleMR> pendant 6 sec. (Cumulable 4 fois).</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8583,7 +8582,7 @@
     {
         "id": 4016,
         "name": "Promesse ineffable",
-        "description": "<mainText><stats><attention> +50</attention> puissance<br><attention> +25%</attention> d'efficacité des soins et boucliers<br><attention> +25</attention> accélération de compétence</stats><br><br><passive>Promesse</passive><br>Vous gagnez 20% de la <scaleAP> puissance de l'allié</scaleAP> auquel vous avez fait une <attention>promesse</attention>, et vous octroyez 20% de votre  accélération de compétence à l'allié auquel vous avez fait une <attention>promesse</attention>.<br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Promesse</active><br>Vous faites une <attention>promesse</attention> à un allié.</mainText>",
+        "description": "<mainText><stats><attention> +50</attention> puissance<br><attention> +15%</attention> d'efficacité des soins et boucliers<br><attention> +25</attention> accélération de compétence</stats><br><br><passive>Promesse</passive><br>Vous gagnez 15% de la <scaleAP> puissance de l'allié</scaleAP> auquel vous avez fait une <attention>promesse</attention>, et vous octroyez 15% de votre  accélération de compétence à l'allié auquel vous avez fait une <attention>promesse</attention>.<br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Promesse</active><br>Vous faites une <attention>promesse</attention> à un allié.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -9429,7 +9428,7 @@
     {
         "id": 6620,
         "name": "Échos d'Helia",
-        "description": "<mainText><stats><attention> +35</attention> puissance<br><attention> +200</attention> PV<br><attention> +20</attention> accélération de compétence<br><attention> +125%</attention> de régénération de base du mana</stats><br><br><passive>Siphon d'âme</passive><br>Vous gagnez 35% des dégâts infligés aux champions avant mitigation sous forme de charges spirituelles. Lancer un soin ou un bouclier sur un allié consomme toutes les <passive>charges spirituelles</passive> pour lui rendre des <healing>PV</healing>.</mainText>",
+        "description": "<mainText><stats><attention> +35</attention> puissance<br><attention> +200</attention> PV<br><attention> +20</attention> accélération de compétence<br><attention> +125%</attention> de régénération de base du mana</stats><br><br><passive>Siphon d'âme</passive><br>Vous gagnez 30% des dégâts infligés aux champions avant mitigation sous forme de charges spirituelles. Lancer un soin ou un bouclier sur un allié consomme toutes les <passive>charges spirituelles</passive> pour lui rendre des <healing>PV</healing>.</mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -10494,7 +10493,7 @@
     {
         "id": 8010,
         "name": "Malédiction du sanguinaire",
-        "description": "<mainText><stats><attention> +65</attention> puissance<br><attention> +400</attention> PV<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Vile décomposition</passive><br>Infliger des <magicDamage>dégâts magiques</magicDamage> avec des compétences ou des compétences passives à des champions réduit leur <scaleMR>résistance magique de 7.5%</scaleMR> pendant 6 sec (jusqu'à 30%).</mainText>",
+        "description": "<mainText><stats><attention> +65</attention> puissance<br><attention> +400</attention> PV<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Vile décomposition</passive><br>Infliger des <magicDamage>dégâts magiques</magicDamage> avec des compétences ou des compétences passives à des champions réduit leur <scaleMR>résistance magique de 7.5%</scaleMR> pendant 6 sec. (Cumulable 4 fois).</mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -12644,7 +12643,7 @@
     {
         "id": 222523,
         "name": "Lunettes Hextech C44",
-        "description": "<mainText><stats><attention> +50</attention> dégâts d'attaque<br><attention> +25%</attention> de chances de coup critique</stats><br><br><passive>Grossissement</passive><br>Vous infligez jusqu'à 10% de dégâts bonus avec vos attaques, en fonction de la distance entre vous et l'ennemi (vous infligez le maximum de dégâts lorsque vous êtes à une portée de 500 unités).<br><br><passive>Visée arcanique</passive><br>Quand un champion auquel vous avez infligé des dégâts meurt dans les 3 sec, vous gagnez 150 de portée d'attaque bonus pendant 10 sec. </mainText>",
+        "description": "<mainText><stats><attention> +55</attention> dégâts d'attaque<br><attention> +25%</attention> de chances de coup critique</stats><br><br><passive>Grossissement</passive><br>Vous infligez jusqu'à 10% de dégâts bonus avec vos attaques, en fonction de la distance entre vous et l'ennemi (vous infligez le maximum de dégâts lorsque vous êtes à une portée de 500 unités).<br><br><passive>Visée arcanique</passive><br>Quand un champion auquel vous avez infligé des dégâts meurt dans les 3 sec, vous gagnez 150 de portée d'attaque bonus pendant 15 sec. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13043,7 +13042,7 @@
     {
         "id": 223031,
         "name": "Lame d'infini",
-        "description": "<mainText><stats><attention> +55</attention> dégâts d'attaque<br><attention> +25%</attention> de chances de coup critique<br><attention> +40%</attention> de dégâts de coup critique</stats><br><br></mainText>",
+        "description": "<mainText><stats><attention> +75</attention> dégâts d'attaque<br><attention> +25%</attention> de chances de coup critique<br><attention> +30%</attention> de dégâts de coup critique</stats><br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13450,7 +13449,7 @@
     {
         "id": 223071,
         "name": "Couperet noir",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +350</attention> PV<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> à un champion applique un effet de <scaleArmor>6% de réduction d'armure</scaleArmor> pendant 6 sec (jusqu'à <scaleArmor>30% de réduction d'armure</scaleArmor>).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>+20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
+        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +350</attention> PV<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> aux champions ennemis avec des compétences, des compétences passives et des attaques réduit leur <scaleArmor>armure de 6%</scaleArmor> pendant 6 sec. (Cumulable 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13503,7 +13502,7 @@
     {
         "id": 223073,
         "name": "Hexplaque expérimentale",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +30%</attention> de vitesse d'attaque<br><attention> +450</attention> PV</stats><br><br><passive>Charge Hextech</passive><br>Vous gagnez +30 accélération d'ultime.<br><br><passive>Surcharge</passive><br>Après avoir lancé votre compétence ultime, vous gagnez <attackSpeed>+50% de vitesse d'attaque</attackSpeed> et <speed>+20% de vitesse de déplacement</speed> pendant 8 sec. </mainText>",
+        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +30%</attention> de vitesse d'attaque<br><attention> +450</attention> PV</stats><br><br><passive>Charge Hextech</passive><br>Vous gagnez 30 accélération d'ultime.<br><br><passive>Surcharge</passive><br>Après avoir lancé votre compétence ultime, vous gagnez <attackSpeed>0% de vitesse d'attaque</attackSpeed> et <speed>0% de vitesse de déplacement</speed> pendant 8 sec. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13660,7 +13659,7 @@
     {
         "id": 223087,
         "name": "Poignard de Statikk",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +45</attention> puissance<br><attention> +30%</attention> de vitesse d'attaque<br><attention> +4%</attention> de vitesse de déplacement</stats><br><br><passive>Étincelle électrique</passive><br>Vos <keyword>attaques énergisées</keyword> lancent une chaîne d'éclairs, appliquant  effets <OnHit>à l'impact</OnHit> et infligeant des <magicDamage>dégâts magiques</magicDamage> à <attention>0</attention> cibles proches max.<br><br><passive>Électrochoc</passive><br>Les attaques de base octroient des effets <keyword>énergisants</keyword> supplémentaires.</mainText>",
+        "description": "<mainText><stats><attention> +45</attention> dégâts d'attaque<br><attention> +45</attention> puissance<br><attention> +30%</attention> de vitesse d'attaque<br><attention> +4%</attention> de vitesse de déplacement</stats><br><br><passive>Étincelle électrique</passive><br>Vos <keyword>attaques énergisées</keyword> lancent une chaîne d'éclairs, appliquant  effets <OnHit>à l'impact</OnHit> et infligeant des <magicDamage>dégâts magiques</magicDamage> à <attention>0</attention> cibles proches max.<br><br><passive>Électrochoc</passive><br>Les attaques de base octroient des effets <keyword>énergisants</keyword> supplémentaires.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13709,7 +13708,7 @@
     {
         "id": 223091,
         "name": "Au bout du rouleau",
-        "description": "<mainText><stats><attention> +50%</attention> de vitesse d'attaque<br><attention> +40</attention> résistance magique<br><attention> +20%</attention> de ténacité</stats><br><br><br><li><passive>Conflit :</passive> vos attaques appliquent des dégâts magiques à l'impact et vous octroient de la vitesse de déplacement.</mainText>",
+        "description": "<mainText><stats><attention> +50%</attention> de vitesse d'attaque<br><attention> +45</attention> résistance magique<br><attention> +20%</attention> de ténacité</stats><br><br><br><li><passive>Conflit :</passive> vos attaques appliquent des dégâts magiques à l'impact et vous octroient de la vitesse de déplacement.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13760,7 +13759,7 @@
     {
         "id": 223095,
         "name": "Lame tempête",
-        "description": "<mainText><stats><attention> +50</attention> dégâts d'attaque<br><attention> +20%</attention> de vitesse d'attaque<br><attention> +25%</attention> de chances de coup critique</stats><br><br><passive>Énergisant</passive><br>Vos déplacements et vos attaques permettent d'<keyword>énergiser une attaque</keyword>.<br><br><passive>Éclair</passive><br>Vos <keyword>attaques énergisées</keyword> appliquent <magicDamage>0 pts de dégâts magiques supplémentaires</magicDamage> et vous octroient <speed>+45% de vitesse de déplacement</speed> pendant 1.5 sec.<br>.<br><buffedStat>Dans le mode Arena, les effets Énergisant se génèrent deux fois plus vite.</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention> +50</attention> dégâts d'attaque<br><attention> +20%</attention> de vitesse d'attaque<br><attention> +25%</attention> de chances de coup critique</stats><br><br><passive>Énergisant</passive><br>Vos déplacements et vos attaques permettent d'<keyword>énergiser une attaque</keyword>.<br><br><passive>Éclair</passive><br>Vos <keyword>attaques énergisées</keyword> appliquent <magicDamage>0 pts de dégâts magiques supplémentaires</magicDamage> et vous octroient <speed>+45% de vitesse de déplacement</speed> pendant 2 sec.<br>.<br><buffedStat>Dans le mode Arena, les effets Énergisant se génèrent deux fois plus vite.</buffedStat><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13860,7 +13859,7 @@
     {
         "id": 223107,
         "name": "Rédemption",
-        "description": "<mainText><stats><attention> +30</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +100%</attention> de régénération de base du mana<br><attention> +16%</attention> d'efficacité des soins et boucliers</stats><br><br><br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Intervention</active><br>Vous ciblez une zone. Au bout de 2.5 sec, vous faites tomber un rayon de lumière qui rend des PV aux alliés et inflige des dégâts aux champions ennemis.</mainText>",
+        "description": "<mainText><stats><attention> +30</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +100%</attention> de régénération de base du mana<br><attention> +12%</attention> d'efficacité des soins et boucliers</stats><br><br><br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Intervention</active><br>Vous ciblez une zone. Au bout de 2.5 sec, vous faites tomber un rayon de lumière qui rend des PV aux alliés et inflige des dégâts aux champions ennemis.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -13886,7 +13885,7 @@
     {
         "id": 223109,
         "name": "Vœu du chevalier",
-        "description": "<mainText><stats><attention> +400</attention> PV<br><attention> +50</attention> armure<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Sacrifice</passive><br>Quand l'allié <attention>digne</attention> est proche, vous redirigez vers vous 12% des dégâts qu'il subit et vous récupérez des <healing>PV équivalents à 10% des dégâts qu'il inflige</healing> aux champions.<br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Serment</active><br>Vous désignez un allié qui est <attention>digne</attention> de votre aide.</mainText>",
+        "description": "<mainText><stats><attention> +400</attention> PV<br><attention> +50</attention> armure<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Sacrifice</passive><br>Quand l'allié <attention>digne</attention> est proche, vous redirigez vers vous 12% des dégâts qu'il subit et vous récupérez des <healing>PV équivalents à 12% des dégâts qu'il inflige</healing> aux champions.<br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Serment</active><br>Vous désignez un allié qui est <attention>digne</attention> de votre aide.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14667,7 +14666,7 @@
     {
         "id": 223222,
         "name": "Bénédiction de Mikael",
-        "description": "<mainText><stats><attention> +400</attention> PV<br><attention> +100%</attention> de régénération de base du mana<br><attention> +16%</attention> d'efficacité des soins et boucliers</stats><br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Purification</active><br>Vous dissipez tous les contrôles de foule qui affectent un champion allié (sauf les <status>projections dans les airs</status> et les <status>neutralisations</status>) et vous lui rendez des PV.</mainText>",
+        "description": "<mainText><stats><attention> +400</attention> PV<br><attention> +100%</attention> de régénération de base du mana<br><attention> +12%</attention> d'efficacité des soins et boucliers</stats><br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Purification</active><br>Vous dissipez tous les contrôles de foule qui affectent un champion allié (sauf les <status>projections dans les airs</status> et les <status>neutralisations</status>) et vous lui rendez des PV.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14695,7 +14694,7 @@
     {
         "id": 223302,
         "name": "Terminus",
-        "description": "<mainText><stats><attention> +30</attention> dégâts d'attaque<br><attention> +25%</attention> de vitesse d'attaque</stats><br><br><passive>Ombre</passive><br>Vos attaques infligent <magicDamage>30 pts de dégâts magiques bonus</magicDamage>  <OnHit>à l'impact</OnHit>.<br><br><passive>Juxtaposition</passive><br>Vous alternez entre des attaques <keywordMajor>lumineuses</keywordMajor> et <keywordMajor>ténébreuses</keywordMajor> contre les champions : <li>Les attaques <keywordMajor>lumineuses</keywordMajor> vous octroient de l'<scaleArmor>armure</scaleArmor> et de la <scaleMR>résistance magique</scaleMR> pendant 5 sec. <li>Les attaques <keywordMajor>ténébreuses</keywordMajor> vous octroient +8% de <scaleArmor>pénétration d'armure</scaleArmor> et de <scaleMR>pénétration magique</scaleMR> pendant 5 sec. </mainText>",
+        "description": "<mainText><stats><attention> +30</attention> dégâts d'attaque<br><attention> +40%</attention> de vitesse d'attaque</stats><br><br><passive>Ombre</passive><br>Vos attaques infligent <magicDamage>30 pts de dégâts magiques bonus</magicDamage>  <OnHit>à l'impact</OnHit>.<br><br><passive>Juxtaposition</passive><br>Vous alternez entre des attaques <keywordMajor>lumineuses</keywordMajor> et <keywordMajor>ténébreuses</keywordMajor> contre les champions : <li>Les attaques <keywordMajor>lumineuses</keywordMajor> vous octroient de l'<scaleArmor>armure</scaleArmor> et de la <scaleMR>résistance magique</scaleMR> pendant 5 sec. <li>Les attaques <keywordMajor>ténébreuses</keywordMajor> vous octroient +8% de <scaleArmor>pénétration d'armure</scaleArmor> et de <scaleMR>pénétration magique</scaleMR> pendant 5 sec. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15350,7 +15349,7 @@
     {
         "id": 226621,
         "name": "Cœur de l'aube",
-        "description": "<mainText><stats><attention> +45</attention> puissance<br><attention> +16%</attention> d'efficacité des soins et boucliers<br><attention> +200%</attention> de régénération de base du mana</stats><br><br><passive>Première lumière</passive><br>Vous gagnez <healing>3% d'efficacité des soins et boucliers</healing> et <scaleAP>10 puissance</scaleAP> tous les <scaleMana>100% de régénération de base du mana</scaleMana>.</mainText>",
+        "description": "<mainText><stats><attention> +45</attention> puissance<br><attention> +12%</attention> d'efficacité des soins et boucliers<br><attention> +200%</attention> de régénération de base du mana</stats><br><br><passive>Première lumière</passive><br>Vous gagnez <healing>3% d'efficacité des soins et boucliers</healing> et <scaleAP>10 puissance</scaleAP> tous les <scaleMana>100% de régénération de base du mana</scaleMana>.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15562,8 +15561,8 @@
     },
     {
         "id": 226660,
-        "name": "Cendres de Bami",
-        "description": "<mainText><stats><attention> +150</attention> PV<br><attention> +5</attention> accélération de compétence</stats><br><br><passive>Immolation</passive><br>Subir ou infliger des dégâts vous permet d'infliger des <magicDamage>dégâts magiques</magicDamage> aux ennemis proches pendant 3 sec.</mainText>",
+        "name": "Item_226660_Name",
+        "description": "<mainText><stats><attention> +550</attention> PV<br><attention> +5</attention> accélération de compétence</stats><br><br><passive>Immolation</passive><br>Subir ou infliger des dégâts vous permet d'infliger des <magicDamage>dégâts magiques</magicDamage> aux ennemis proches pendant 3 sec.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],
@@ -15723,7 +15722,7 @@
     {
         "id": 226672,
         "name": "Tueur de krakens",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +35%</attention> de vitesse d'attaque<br><attention> +7%</attention> de vitesse de déplacement</stats><br><br><passive>Trempe</passive><br>Toutes les trois attaques, vous infligez des <physicalDamage>dégâts physiques bonus</physicalDamage>  <OnHit>à l'impact</OnHit> (ces dégâts sont augmentés en fonction des PV manquants de la cible).</mainText>",
+        "description": "<mainText><stats><attention> +50</attention> dégâts d'attaque<br><attention> +35%</attention> de vitesse d'attaque<br><attention> +7%</attention> de vitesse de déplacement</stats><br><br><passive>Trempe</passive><br>Toutes les trois attaques, vous infligez des <physicalDamage>dégâts physiques bonus</physicalDamage>  <OnHit>à l'impact</OnHit> (ces dégâts sont augmentés en fonction des PV manquants de la cible).</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16186,7 +16185,7 @@
     {
         "id": 228005,
         "name": "Couperet d'obsidienne",
-        "description": "<mainText><stats><ornnBonus> +70</ornnBonus> dégâts d'attaque<br><ornnBonus> +700</ornnBonus> PV<br><ornnBonus> +40</ornnBonus> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> à un champion réduit son armure de <scaleArmor>7%</scaleArmor> pendant 0.1 sec (effet cumulable 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>+20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
+        "description": "<mainText><stats><ornnBonus> +70</ornnBonus> dégâts d'attaque<br><ornnBonus> +700</ornnBonus> PV<br><ornnBonus> +40</ornnBonus> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> aux champions ennemis avec des compétences, des compétences passives et des attaques réduit leur <scaleArmor>armure de 500%</scaleArmor> pendant 0.1 sec. (se cumule 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],
@@ -16667,7 +16666,7 @@
     {
         "id": 323109,
         "name": "Vœu du chevalier",
-        "description": "<mainText><stats><attention> +300</attention> PV<br><attention> +50</attention> armure<br><attention> +10</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base des PV</stats><br><br><passive>Sacrifice</passive><br>Quand l'allié <attention>digne</attention> est proche, vous redirigez vers vous 12% des dégâts qu'il subit et vous récupérez des <healing>PV équivalents à 10%</healing> des dégâts qu'il inflige aux champions. <active>Serment</active>  (0 sec)<br>Vous désignez un allié qui est <attention>digne</attention> de votre aide.</mainText>",
+        "description": "<mainText><stats><attention> +300</attention> PV<br><attention> +50</attention> armure<br><attention> +10</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base des PV</stats><br><br><passive>Sacrifice</passive><br>Quand l'allié <attention>digne</attention> est proche, vous redirigez vers vous 14% des dégâts qu'il subit et vous récupérez des <healing>PV équivalents à 12%</healing> des dégâts qu'il inflige aux champions. <active>Serment</active>  (0 sec)<br>Vous désignez un allié qui est <attention>digne</attention> de votre aide.</mainText>",
         "active": true,
         "inStore": true,
         "from": [
@@ -16879,12 +16878,11 @@
     {
         "id": 324005,
         "name": "Mandat impérial",
-        "description": "<mainText><stats><attention> +65</attention> puissance<br><attention> +20</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Tir coordonné</passive>  (0 sec) par cible.<br><keyword>Ralentir</keyword> ou <keyword>immobiliser</keyword> un champion ennemi le marque pendant 5 sec. Les dégâts d'un champion allié font exploser la marque, infligeant des <magicDamage>dégâts magiques équivalents à 10% des PV actuels</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> +65</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Contrôle</passive><br>Vous gagnez  15 d'accélération de compétence pour vos compétences avec des effets <keyword>d'immobilisation</keyword>.<br><br><passive>Commande</passive><br>Lorsque vous <keyword>immobilisez</keyword> un champion ennemi, vous le marquez avec 6% de <Keyword>vulnérabilité</Keyword> pendant 4 sec.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            3108,
-            1052,
+            1026,
             4642
         ],
         "to": [],
@@ -16901,8 +16899,8 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 600,
-        "priceTotal": 2750,
+        "price": 650,
+        "priceTotal": 2400,
         "displayInItemSets": false,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
     },
@@ -16970,7 +16968,7 @@
     {
         "id": 326620,
         "name": "Échos d'Helia",
-        "description": "<mainText><stats><attention> +35</attention> puissance<br><attention> +250</attention> PV<br><attention> +20</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Siphon d'âme</passive><br>Vous gagnez 35% des dégâts infligés aux champions avant mitigation sous forme de charges spirituelles. Lancer un soin ou un bouclier sur un allié consomme toutes les <passive>charges spirituelles</passive> pour lui rendre des <healing>PV</healing>.</mainText>",
+        "description": "<mainText><stats><attention> +35</attention> puissance<br><attention> +250</attention> PV<br><attention> +20</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Siphon d'âme</passive><br>Vous gagnez 30% des dégâts infligés aux champions avant mitigation sous forme de charges spirituelles. Lancer un soin ou un bouclier sur un allié consomme toutes les <passive>charges spirituelles</passive> pour lui rendre des <healing>PV</healing>.</mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -17436,7 +17434,7 @@
     {
         "id": 443081,
         "name": "Compagnon Hexclair",
-        "description": "<mainText><stats><attention> +75%</attention> de vitesse d'attaque<br><attention> +500</attention> PV<br><attention> +4%</attention> de vitesse de déplacement</stats><br><br><passive>Tir de couverture</passive><br>Toutes les 10 sec, vos <keywordMajor>lancements automatiques</keywordMajor> tirent un projectile vers une cible proche, infligeant <physicalDamage>0 pts de dégâts physiques</physicalDamage> et appliquant les effets  <OnHit>à l'impact</OnHit>.<br><br><passive>Énergisant</passive><br>Vos déplacements et vos attaques permettent d'<keyword>énergiser une attaque</keyword>.<br><br><passive>Décharge</passive><br>Vos <keyword>attaques énergisées</keyword> déclenchent vos effets de <keywordMajor>lancement automatique</keywordMajor>.</mainText>",
+        "description": "<mainText><stats><attention> +70</attention> dégâts d'attaque<br><attention> +50%</attention> de vitesse d'attaque<br><attention> +6%</attention> de vitesse de déplacement</stats><br><br><passive>Tir de couverture</passive><br>Toutes les 10 sec, vos <keywordMajor>lancements automatiques</keywordMajor> tirent un projectile vers une cible proche, infligeant <physicalDamage>0 pts de dégâts physiques</physicalDamage> et appliquant les effets  <OnHit>à l'impact</OnHit>.<br><br><passive>Énergisant</passive><br>Vos déplacements et vos attaques permettent d'<keyword>énergiser une attaque</keyword>.<br><br><passive>Décharge</passive><br>Vos <keyword>attaques énergisées</keyword> déclenchent vos effets de <keywordMajor>lancement automatique</keywordMajor>.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -18268,7 +18266,7 @@
     {
         "id": 447120,
         "name": "Lance de diamant",
-        "description": "<mainText><stats><attention> 75</attention> force adaptative<br><attention> +30%</attention> de vitesse d'attaque</stats><br><br><passive>Allonge</passive><br>Augmente votre portée d'attaque de 75.<br><br><passive>Distance létale</passive><br>Vous infligez jusqu'à 30% de dégâts bonus avec vos attaques et jusqu'à 50% de dégâts bonus avec vos compétences, en fonction de la distance entre vous et la cible. Les dégâts max sont atteints à 700 unités de distance. </mainText>",
+        "description": "<mainText><stats><attention> 75</attention> force adaptative<br><attention> +40%</attention> de vitesse d'attaque</stats><br><br><passive>Allonge</passive><br>Augmente votre portée d'attaque de 75.<br><br><passive>Distance létale</passive><br>Vous infligez jusqu'à 30% de dégâts bonus avec vos attaques et jusqu'à 50% de dégâts bonus avec vos compétences, en fonction de la distance entre vous et la cible. Les dégâts max sont atteints à 700 unités de distance. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],

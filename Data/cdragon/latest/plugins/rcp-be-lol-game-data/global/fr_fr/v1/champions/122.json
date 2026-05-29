@@ -1646,7 +1646,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Darius tend tous ses muscles et donne un coup circulaire avec sa hache. Les ennemis touchés par la lame subissent plus de dégâts que ceux touchés par la hampe. Darius récupère des PV en fonction du nombre de champions ennemis et de grands monstres touchés par la lame.",
-            "dynamicDescription": "Darius donne un coup de hache circulaire, infligeant <physicalDamage>@BladeDamage@ pts de dégâts physiques</physicalDamage> avec la lame et <physicalDamage>@HandleDamage@ pts de dégâts</physicalDamage> avec la hampe. Les ennemis touchés par la hampe ne reçoivent pas d'effet <keywordMajor>Plaie béante</keywordMajor>.<br><br>Darius récupère <healing>@Effect5Amount@% de ses PV manquants</healing> par champion ennemi ou grand monstre de la jungle touché par la lame, jusqu'à un maximum de <healing>@Effect7Amount@%</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Darius donne un coup de hache circulaire, infligeant <physicalDamage>@BladeDamage@ pts de dégâts physiques</physicalDamage> avec la lame et <physicalDamage>@HandleDamage@ pts de dégâts</physicalDamage> avec la hampe. Les ennemis touchés par la hampe ne reçoivent pas d'effet <keywordMajor>Plaie béante</keywordMajor>.<br><br>Darius récupère <healing>@MissingHealthHeal@% de ses PV manquants</healing> par champion ennemi ou grand monstre touché par la lame, jusqu'à un maximum de <healing>@MissingHealPercent@%</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1.0,
                 1.0,
@@ -1796,7 +1796,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "La prochaine attaque de Darius tranche une artère vitale de l'ennemi. Le saignement réduit la vitesse de déplacement de la cible.",
-            "dynamicDescription": "La prochaine attaque de Darius inflige <physicalDamage>@EmpoweredAttackDamage@ pts de dégâts physiques</physicalDamage> et <status>ralentit</status> de @Effect2Amount@% pendant @Effect5Amount@ sec.<br><br>Si cette compétence tue sa cible, son coût en mana est annulé et son délai de récupération est réduit de @Effect3Amount@%.<br><br><rules>Cette compétence déclenche les effets de sort quand elle inflige des dégâts.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "La prochaine attaque de Darius inflige <physicalDamage>@EmpoweredAttackDamage@ pts de dégâts physiques</physicalDamage> et <status>ralentit</status> de @SlowPercent@% pendant @SlowDuration@ sec.<br><br>Si cette compétence tue sa cible, son coût en mana est annulé et son délai de récupération est réduit de @PercentCDRefund@%.<br><br><rules>Cette compétence déclenche les effets de sort quand elle inflige des dégâts.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -1946,7 +1946,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Darius aiguise sa hache, ce qui permet à ses dégâts physiques d'ignorer passivement un pourcentage de l'armure de la cible. À l'activation, Darius attire ses ennemis avec sa hache.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Darius gagne +@Effect1Amount@% de pénétration d'armure.<br><br><spellActive>Active :</spellActive> Darius se sert de sa hache pour <status>attirer</status> un ennemi, le <status>projeter dans les airs</status> et le <status>ralentir</status> de @Effect2Amount@% pendant @Effect3Amount@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Darius gagne @PassivePercentArmorPen@% de pénétration d'armure.<br><br><spellActive>Active :</spellActive> Darius se sert de sa hache pour <status>attirer</status> un ennemi, le <status>projeter dans les airs</status> et le <status>ralentir</status> de @SlowPercent@% pendant @SlowDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 535.0,
                 535.0,

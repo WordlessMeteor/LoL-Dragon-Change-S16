@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.10.1",
+    "version": "16.11.1",
     "data": {
         "Hecarim": {
             "id": "Hecarim",
@@ -404,7 +404,7 @@
                     "id": "HecarimRapidSlash",
                     "name": "暴走",
                     "description": "赫卡里姆猛劈周围的敌人，同时造成物理伤害。如果这个技能对至少一名敌人造成伤害，那么赫卡里姆会提升【暴走】的伤害并为随后施放的【暴走】缩短冷却时间。",
-                    "tooltip": "赫卡里姆顺劈周围的敌人，造成<physicalDamage>{{ damage }}物理伤害</physicalDamage>。如果这个技能命中了敌人，那么他会获得一层效果，来使这次技能的冷却时间降低{{ rampagecooldownreduction }}秒并提升此技能{{ rampagebonusdamageperc }}%伤害，持续{{ e6 }}秒。这个效果至多可达{{ e2 }}层。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赫卡里姆猛劈周围的敌人，造成<physicalDamage>{{ damage }}物理伤害</physicalDamage>。如果这个技能命中了敌人，那么他会获得一层效果，来使这次技能的冷却时间缩短{{ rampagecooldownreduction }}秒并提升此技能{{ rampagebonusdamageperc }}%伤害，持续{{ buffduration }}秒。至多可叠加{{ maxstacks }}层。<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -690,7 +690,7 @@
                     "id": "HecarimRamp",
                     "name": "毁灭冲锋",
                     "description": "赫卡里姆获得不断提升的移动速度加成并且移动时可以无视单位的碰撞体积。他的下一次攻击将会击退目标，并且造成额外物理伤害，伤害值基于他在激活该技能后所移动的距离。",
-                    "tooltip": "赫卡里姆变为幽灵状态，并获得<speed>{{ minmovespeed*100 }}%移动速度</speed>，在{{ e5 }}秒里持续提升至<speed>{{ maxmovespeed*100 }}%</speed>。他的下次攻击会<status>击退</status>目标并造成<physicalDamage>{{ mindamage }}</physicalDamage>到<physicalDamage>{{ maxdamage }}物理伤害</physicalDamage>。<status>击退</status>距离和伤害随此技能期间的位移距离而增长。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "赫卡里姆变为幽灵状态，并获得<speed>{{ minmovespeed*100 }}%移动速度</speed>，在{{ duration }}秒里持续提升至<speed>{{ maxmovespeed*100 }}%</speed>。他的下次攻击会<status>击退</status>目标并造成<physicalDamage>{{ mindamage }}</physicalDamage>到<physicalDamage>{{ maxdamage }}物理伤害</physicalDamage>。<status>击退</status>距离和伤害随此技能期间的位移距离而增长。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "最小伤害",

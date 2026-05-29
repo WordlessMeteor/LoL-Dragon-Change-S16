@@ -1072,7 +1072,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Gragas lăn thùng rượu đến một vị trí, có thể kích hoạt để phát nổ hoặc tự phát nổ sau 4 giây. Sức mạnh của vụ nổ sẽ tăng dần theo thời gian. Những kẻ địch trúng vụ nổ sẽ bị làm chậm Tốc độ Di chuyển.",
-            "dynamicDescription": "Gragas quẳng thùng rượu phát nổ sau @Effect4Amount@ giây, gây <magicDamage>@MinDamage@</magicDamage> đến <magicDamage>@MaxDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> kẻ địch đi @Effect2Amount@ đến @Effect2Amount*1.5@% trong @Effect3Amount@ giây. Sát thương và khả năng <status>Làm Chậm</status> tăng lên theo thời gian ủ rượu trước khi phát nổ. <br><br>Gragas có thể <recast>Tái kích hoạt</recast> để phát nổ thùng rượu sớm.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gragas quẳng thùng rượu phát nổ sau @BarrelMaxDuration@ giây, gây từ <magicDamage>@MinDamage@ sát thương phép</magicDamage> đến <magicDamage>@MaxDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> @SlowPercent@ - @SlowPercent*1.5@% trong @SlowDuration@ giây. Sát thương và <status>Làm Chậm</status> tăng theo thời gian thùng rượu tồn tại trước khi phát nổ. <br><br>Gragas có thể <recast>Tái Kích Hoạt</recast> để kích nổ thùng rượu sớm.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1412,13 +1412,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

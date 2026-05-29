@@ -22262,17 +22262,38 @@
             "{c0c647d9}",
             "{bb3830cd}",
             "{0adda428}",
-            "{fc0ecef6}"
+            "{fc0ecef6}",
+            "{0b52d240}",
+            "{340ac4fe}",
+            "{1a79d745}",
+            "{0c15b2a6}",
+            "{f933978e}",
+            "{e7b90c0b}",
+            "{64c3c5d2}",
+            "{47fc581f}",
+            "{42fdedc6}",
+            "{1152df8a}",
+            "{c5403caf}",
+            "{caa9fdb6}",
+            "{6f97c5a7}",
+            "{015cd209}"
         ],
         "__type": "UnitObjectTagsSettings"
     },
     "Globals/BuffStackingSettings": {
         "templateDefinition": [
             {
-                "name": "Unique Per Player",
+                "name": "Unique Per Player (Deprecated)",
                 "maxStacks": 25,
                 "StacksExclusive": true,
                 "BuffAddType": 2,
+                "__type": "BuffStackingTemplate"
+            },
+            {
+                "name": "Unique Per Player",
+                "maxStacks": 100,
+                "StacksExclusive": true,
+                "BuffAddType": 4,
                 "__type": "BuffStackingTemplate"
             }
         ],
@@ -23412,7 +23433,6 @@
         },
         "mGameplayToggles": {
             "fowCastRayAccurate": true,
-            "disableSpellLevelMinimumProtections": true,
             "__type": "GameplayFeatureToggles"
         },
         "__type": "LiveFeatureToggles"

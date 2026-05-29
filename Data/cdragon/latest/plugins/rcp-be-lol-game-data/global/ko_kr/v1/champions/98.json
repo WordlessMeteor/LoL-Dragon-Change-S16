@@ -1170,7 +1170,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "쉔이 기의 검을 불러들여 공격해 대상의 최대 체력에 비례한 피해를 입힙니다. 기의 검이 적 챔피언과 충돌하면 이 공격이 크게 강화되며, 기의 검에 부딪힌 적들은 쉔으로부터 달아날 때 둔화됩니다.",
-            "dynamicDescription": "쉔이 <keywordMajor>기의 검</keywordMajor>을 불러냅니다. 기의 검에 부딪히는 적들은 @Effect5Amount@초 동안 쉔으로부터 멀어지려 할 때 @Effect4Amount@% <status>둔화</status>됩니다.<br><br>쉔의 다음 기본 공격 @Effect3Amount@회는 <magicDamage>@BaseFlatDamage@</magicDamage>+<magicDamage>최대 체력의 @BasePercentHealth@에 해당하는 마법 피해</magicDamage>를 입힙니다. <keywordMajor>기의 검</keywordMajor>이 적 챔피언에게 부딪힌 경우, <magicDamage>@BaseFlatDamage@</magicDamage>의 마법 피해+<magicDamage>최대 체력의 @EmpPercentHealth@에 해당하는 마법 피해</magicDamage>를 입힙니다. 또한 공격 속도가 <attackSpeed>@Effect9Amount@%</attackSpeed> 증가합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "쉔이 <keywordMajor>기의 검</keywordMajor>을 불러냅니다. 기의 검에 부딪히는 적들은 @SlowDuration@초 동안 쉔으로부터 멀어지려 할 때 @SlowPercent@% <status>둔화</status>됩니다.<br><br>쉔의 다음 기본 공격 @NumEnhancedAttacks@회는 <magicDamage>@BaseFlatDamage@</magicDamage>+<magicDamage>최대 체력의 @BasePercentHealth@에 해당하는 마법 피해</magicDamage>를 추가로 입힙니다. <keywordMajor>기의 검</keywordMajor>이 적 챔피언에게 부딪힌 경우, <magicDamage>@BaseFlatDamage@</magicDamage>+<magicDamage>최대 체력의 @EmpPercentHealth@에 해당하는 마법 피해</magicDamage>를 입힙니다. 또한 <attackSpeed>공격 속도가 @SteroidAS@%</attackSpeed> 증가합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1320,7 +1320,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "쉔이나 기의 검 근처 아군에 대한 공격이 차단됩니다.",
-            "dynamicDescription": "쉔이 <keywordMajor>기의 검</keywordMajor> 위치에 @Effect1Amount@초 동안 지속되는 보호 결계를 생성합니다. 결계 안의 아군 챔피언에 대한 기본 공격이 차단됩니다. <br><br>결계 안에 보호할 아군 챔피언이 없으면 @Effect2Amount@초가 지나기 전까지 활성화되지 않습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "쉔이 <keywordMajor>기의 검</keywordMajor> 위치에 @ZoneDuration@초 동안 지속되는 보호 결계를 생성합니다. 결계 안의 아군 챔피언에 대한 기본 공격이 차단됩니다. <br><br>결계 안에 보호할 아군 챔피언이 없으면 @ZoneDelay@초가 지나기 전까지 활성화되지 않습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

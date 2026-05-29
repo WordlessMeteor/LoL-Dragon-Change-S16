@@ -58871,12 +58871,12 @@
             "mSpellScriptData": {
                 "mEffectAmount": {
                     "SnuggleRange": 350.0,
-                    "ShieldBase": 45.0,
-                    "ShieldMax": 180.0,
-                    "APRatio": 0.25,
-                    "HPRatio": 0.05000000074505806,
+                    "ShieldBase": 40.0,
+                    "ShieldMax": 150.0,
+                    "APRatio": 0.20000000298023224,
+                    "HPRatio": 0.05999999865889549,
                     "ShieldDuration": 1.5,
-                    "Cooldown": 90.0,
+                    "Cooldown": 75.0,
                     "GuardDuration": 2.5,
                     "CooldownMaxLevel": 40.0,
                     "ThresholdMin": 50.0,
@@ -58896,8 +58896,8 @@
                         "mSimpleTooltipCalculationDisplay": 4,
                         "mFormulaParts": [
                             {
-                                "mStartValue": 50.0,
-                                "mEndValue": 165.0,
+                                "mStartValue": 40.0,
+                                "mEndValue": 150.0,
                                 "__type": "ByCharLevelInterpolationCalculationPart"
                             }
                         ],
@@ -58907,8 +58907,8 @@
                         "mSimpleTooltipCalculationDisplay": 4,
                         "mFormulaParts": [
                             {
-                                "mStartValue": 45.0,
-                                "mEndValue": 180.0,
+                                "mStartValue": 40.0,
+                                "mEndValue": 150.0,
                                 "__type": "ByCharLevelInterpolationCalculationPart"
                             },
                             {
@@ -58929,7 +58929,7 @@
                         "mSimpleTooltipCalculationDisplay": 4,
                         "mFormulaParts": [
                             {
-                                "mStartValue": 90.0,
+                                "mStartValue": 75.0,
                                 "mEndValue": 40.0,
                                 "__type": "ByCharLevelInterpolationCalculationPart"
                             }
@@ -100868,10 +100868,10 @@
                     "MaxBaseDamage": 120.0,
                     "DelayBeforeBurst": 2.5,
                     "HealthRatio": 0.07999999821186066,
-                    "FlatResists": 35.0,
+                    "FlatResists": 45.0,
                     "BonusResistMin": 80.0,
                     "BonusResistMax": 150.0,
-                    "PercentBonusResist": 0.800000011920929
+                    "PercentBonusResist": 0.75
                 },
                 "mEffectAmountGameMode": {
                     "URF": {
@@ -113129,7 +113129,7 @@
                     "Perks/Styles/Sorcery/SummonAery",
                     "Perks/Styles/Sorcery/ArcaneComet",
                     "Perks/Styles/Sorcery/PhaseRush",
-                    "{c9d12615}"
+                    "Perks/Styles/Sorcery/DeathfireTouch"
                 ],
                 "__type": "PerkSlot"
             },
@@ -127102,7 +127102,7 @@
             "mSpellScriptName": "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua",
             "mSpellScriptData": {
                 "mEffectAmount": {
-                    "ShieldBase": 30.0,
+                    "ShieldBase": 20.0,
                     "ShieldMax": 100.0,
                     "ShieldRatio": 0.05000000074505806,
                     "DamageMax": 50.0,
@@ -127138,7 +127138,7 @@
                         "mSimpleTooltipCalculationDisplay": 4,
                         "mFormulaParts": [
                             {
-                                "mStartValue": 30.0,
+                                "mStartValue": 20.0,
                                 "mEndValue": 100.0,
                                 "__type": "ByCharLevelInterpolationCalculationPart"
                             },
@@ -142836,7 +142836,7 @@
         "mDefault": true,
         "__type": "Perk"
     },
-    "{c9d12615}": {
+    "Perks/Styles/Sorcery/DeathfireTouch": {
         "mPerkId": 8992,
         "mPerkName": "DeathfireTouch",
         "mDisplayNameLocalizationKey": "perk_displayname_DeathfireTouch",
@@ -142861,7 +142861,9 @@
                     "DotDuration": 1.0,
                     "Level1DamageTOOLTIP": 3.0,
                     "{2156e250}": 12.0,
-                    "TicksPerSecond": 2.0
+                    "TicksPerSecond": 2.0,
+                    "{7c0d555f}": 7.0,
+                    "ADRatioTT": 2.5
                 },
                 "mCalculations": {
                     "DamageCalc": {

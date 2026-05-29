@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.10.1",
+    "version": "16.11.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -6307,14 +6307,14 @@
                     "id": "BandageToss",
                     "name": "Bandage Toss",
                     "description": "Amumu tosses a sticky bandage at a target, stunning and damaging the target while he pulls himself to them.",
-                    "tooltip": "Amumu launches a bandage, pulling himself to the first enemy hit, <status>Stunning</status> them for {{ e2 }} second, and dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>.<br /><br />This Ability has 2 charges.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Amumu launches a bandage, pulling himself to the first enemy hit, <status>Stunning</status> them for {{ stunduration }} second, and dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>.<br /><br />This Ability has 2 charges.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
                             "Recharge Time"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}"
                         ]
                     },
@@ -6587,7 +6587,7 @@
                     "id": "Tantrum",
                     "name": "Tantrum",
                     "description": "Permanently reduces the physical damage Amumu would take. Amumu can unleash his rage, dealing damage to surrounding enemies. Each time Amumu is hit, the cooldown on Tantrum is reduced.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Amumu takes {{ damagereduction }} reduced physical damage. Additionally, when Amumu is hit by an Attack, this Ability's Cooldown is reduced by {{ e3 }} seconds.<br /><br /><spellActive>Active:</spellActive> Amumu throws a tantrum, dealing <magicDamage>{{ tantrumdamage }} magic damage</magicDamage> to nearby enemies.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Amumu takes {{ damagereduction }} reduced physical damage. Additionally, when Amumu is hit by an Attack, this Ability's Cooldown is reduced by {{ cdronhit }} seconds.<br /><br /><spellActive>Active:</spellActive> Amumu throws a tantrum, dealing <magicDamage>{{ tantrumdamage }} magic damage</magicDamage> to nearby enemies.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage Reduced",
@@ -6595,9 +6595,9 @@
                             "Damage"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamagereduction }} -> {{ basedamagereductionNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -16743,7 +16743,7 @@
                 "mp": 469,
                 "mpperlevel": 21,
                 "movespeed": 340,
-                "armor": 27,
+                "armor": 24,
                 "armorperlevel": 4.2,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
@@ -24479,7 +24479,7 @@
                     "id": "DariusCleave",
                     "name": "Decimate",
                     "description": "Darius winds up and swings his axe in a wide circle. Enemies struck by the blade take more damage than those struck by the handle. Darius heals based on enemy champions and large monsters hit by the blade.",
-                    "tooltip": "Darius hefts his axe then swings it around, dealing <physicalDamage>{{ bladedamage }} physical damage</physicalDamage> with the edge and <physicalDamage>{{ handledamage }} damage</physicalDamage> with the handle. Enemies hit with the handle do not take a <keywordMajor>Hemorrhage</keywordMajor> stack.<br /><br />Darius restores <healing>{{ e5 }}% missing Health</healing> per enemy champion and large jungle monster hit with the edge, up to a max of <healing>{{ e7 }}%</healing>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Darius hefts his axe then swings it around, dealing <physicalDamage>{{ bladedamage }} physical damage</physicalDamage> with the edge and <physicalDamage>{{ handledamage }} damage</physicalDamage> with the handle. Enemies hit with the handle do not take a <keywordMajor>Hemorrhage</keywordMajor> stack.<br /><br />Darius restores <healing>{{ missinghealthheal }}% missing Health</healing> per enemy champion and large jungle monster hit with the edge, up to a max of <healing>{{ missinghealpercent }}%</healing>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -24488,8 +24488,8 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }}% -> {{ e1NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ totaladratio }}% -> {{ totaladratioNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -24624,13 +24624,13 @@
                     "id": "DariusNoxianTacticsONH",
                     "name": "Crippling Strike",
                     "description": "Darius's next attack strikes an enemy's crucial artery. As they bleed out, their Move Speed is slowed.",
-                    "tooltip": "Darius' next Attack deals <physicalDamage>{{ empoweredattackdamage }} physical damage</physicalDamage> and <status>Slows</status> by {{ e2 }}% for {{ e5 }} second.<br /><br />This Ability refunds its Mana cost and reduces its Cooldown by {{ e3 }}% if it kills the target.<br /><br /><rules>This Ability triggers spell effects upon dealing damage.</rules>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Darius' next Attack deals <physicalDamage>{{ empoweredattackdamage }} physical damage</physicalDamage> and <status>Slows</status> by {{ slowpercent }}% for {{ slowduration }} second.<br /><br />This Ability refunds its Mana cost and reduces its Cooldown by {{ percentcdrefund }}% if it kills the target.<br /><br /><rules>This Ability triggers spell effects upon dealing damage.</rules>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Total AD Ratio"
                         ],
                         "effect": [
-                            "{{ effect4amount*100.000000 }} -> {{ effect4amountnl*100.000000 }}"
+                            "{{ adratio*100.000000 }} -> {{ adrationl*100.000000 }}"
                         ]
                     },
                     "maxrank": 5,
@@ -24763,7 +24763,7 @@
                     "id": "DariusAxeGrabCone",
                     "name": "Apprehend",
                     "description": "Darius hones his axe, passively causing his physical damage to ignore a percentage of his target's Armor. When activated, Darius sweeps up his enemies with his axe's hook and pulls them to him.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Darius gains {{ e1 }}% Armor Penetration.<br /><br /><spellActive>Active:</spellActive> Darius hooks with his axe, <status>Pulling</status>, and <status>Knocking Up</status> and <status>Slowing</status> by {{ e2 }}% for {{ e3 }} second.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Darius gains {{ passivepercentarmorpen }}% Armor Penetration.<br /><br /><spellActive>Active:</spellActive> Darius hooks with his axe, <status>Pulling</status>, and <status>Knocking Up</status> and <status>Slowing</status> by {{ slowpercent }}% for {{ slowduration }} second.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Percent Armor Penetration",
@@ -24771,7 +24771,7 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ passivepercentarmorpen }} -> {{ passivepercentarmorpenNL }}",
                             "{{ cost }} -> {{ costNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
@@ -25557,6 +25557,60 @@
                     "name": "Dark Cosmic Diana (Quasar)",
                     "chromas": false,
                     "parentSkin": 64
+                },
+                {
+                    "id": "131076",
+                    "num": 76,
+                    "name": "Eternal Aspect Diana",
+                    "chromas": false
+                },
+                {
+                    "id": "131077",
+                    "num": 77,
+                    "name": "Eclipse Eternal Aspect Diana",
+                    "chromas": true
+                },
+                {
+                    "id": "131078",
+                    "num": 78,
+                    "name": "Eternal Aspect Diana (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131079",
+                    "num": 79,
+                    "name": "Eternal Aspect Diana (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131080",
+                    "num": 80,
+                    "name": "Eternal Aspect Diana (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131081",
+                    "num": 81,
+                    "name": "Eternal Aspect Diana (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131082",
+                    "num": 82,
+                    "name": "Eternal Aspect Diana (Tanzanite)",
+                    "chromas": false,
+                    "parentSkin": 76
+                },
+                {
+                    "id": "131083",
+                    "num": 83,
+                    "name": "Eternal Aspect Diana (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 76
                 }
             ],
             "lore": "Bearing her crescent moonblade, Diana fights as a warrior of the Lunari—a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, she is a living embodiment of the silver moon's power. Imbued with the essence of an Aspect from beyond Targon's towering summit, Diana is no longer wholly human, and struggles to understand her power and purpose in this world.",
@@ -39614,7 +39668,7 @@
                     "id": "GragasQ",
                     "name": "Barrel Roll",
                     "description": "Gragas rolls his cask to a location, which can be activated to explode or will explode on its own after 4 seconds. The potency of the explosion increases over time. Enemies struck by the blast have their Move Speed slowed.",
-                    "tooltip": "Gragas rolls a cask that explodes after {{ e4 }} seconds, dealing between <magicDamage>{{ mindamage }} magic damage</magicDamage> and <magicDamage>{{ maxdamage }} magic damage</magicDamage> and <status>Slowing</status> for between {{ e2 }} and {{ effect2amount*1.5 }}% for {{ e3 }} seconds. The damage and <status>Slow</status> increase with time the cask spent before exploding. <br /><br />Gragas can <recast>Recast</recast> to detonate the cask early.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Gragas rolls a cask that explodes after {{ barrelmaxduration }} seconds, dealing between <magicDamage>{{ mindamage }} magic damage</magicDamage> and <magicDamage>{{ maxdamage }} magic damage</magicDamage> and <status>Slowing</status> for between {{ slowpercent }} and {{ slowpercent*1.5 }}% for {{ slowduration }} seconds. The damage and <status>Slow</status> increase with time the cask spent before exploding. <br /><br />Gragas can <recast>Recast</recast> to detonate the cask early.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -39622,8 +39676,8 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ slowpercent }} -> {{ slowpercentNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -39937,11 +39991,11 @@
                             0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -40003,7 +40057,7 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "1",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -42503,7 +42557,7 @@
                     "id": "HecarimRapidSlash",
                     "name": "Rampage",
                     "description": "Hecarim cleaves nearby enemies dealing physical damage. If Hecarim damages at least one enemy, he increases the damage and lowers the cooldown of subsequent Rampages.",
-                    "tooltip": "Hecarim cleaves nearby enemies for <physicalDamage>{{ damage }} physical damage</physicalDamage>. If this Ability hits, he gains a stack that decreases its Cooldown by {{ rampagecooldownreduction }} seconds and increases its damage by {{ rampagebonusdamageperc }}% for {{ e6 }} seconds. Stacks up to {{ e2 }} times.<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Hecarim cleaves nearby enemies for <physicalDamage>{{ damage }} physical damage</physicalDamage>. If this Ability hits, he gains a stack that decreases its Cooldown by {{ rampagecooldownreduction }} seconds and increases its damage by {{ rampagebonusdamageperc }}% for {{ buffduration }} seconds. Stacks up to {{ maxstacks }} times.<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -42789,7 +42843,7 @@
                     "id": "HecarimRamp",
                     "name": "Devastating Charge",
                     "description": "Hecarim gains increasing Move Speed and can move through units for a short duration. His next attack knocks the target back and deals additional physical damage based on the distance he has traveled since activating the ability.",
-                    "tooltip": "Hecarim becomes Ghosted and gains <speed>{{ minmovespeed*100 }}% Move Speed</speed> increasing to <speed>{{ maxmovespeed*100 }}%</speed> over {{ e5 }} seconds. His next Attack <status>Knocks Back</status> and deals between <physicalDamage>{{ mindamage }}</physicalDamage> and <physicalDamage>{{ maxdamage }} physical damage</physicalDamage>. <status>Knock Back</status> distance and damage scales with distance travelled during this Ability.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Hecarim becomes Ghosted and gains <speed>{{ minmovespeed*100 }}% Move Speed</speed> increasing to <speed>{{ maxmovespeed*100 }}%</speed> over {{ duration }} seconds. His next Attack <status>Knocks Back</status> and deals between <physicalDamage>{{ mindamage }}</physicalDamage> and <physicalDamage>{{ maxdamage }} physical damage</physicalDamage>. <status>Knock Back</status> distance and damage scales with distance travelled during this Ability.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Minimum Damage",
@@ -44923,6 +44977,68 @@
                     "name": "Battle Bear Illaoi (Nightwire)",
                     "chromas": false,
                     "parentSkin": 27
+                },
+                {
+                    "id": "420037",
+                    "num": 37,
+                    "name": "Pasta Maker Illaoi",
+                    "chromas": true
+                },
+                {
+                    "id": "420038",
+                    "num": 38,
+                    "name": "Pasta Maker Illaoi (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420039",
+                    "num": 39,
+                    "name": "Pasta Maker Illaoi (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420040",
+                    "num": 40,
+                    "name": "Pasta Maker Illaoi (Amethyst)",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420041",
+                    "num": 41,
+                    "name": "Pasta Maker Illaoi (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420042",
+                    "num": 42,
+                    "name": "Pasta Maker Illaoi (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420043",
+                    "num": 43,
+                    "name": "Pasta Maker Illaoi (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420044",
+                    "num": 44,
+                    "name": "Pasta Maker Illaoi (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 37
+                },
+                {
+                    "id": "420045",
+                    "num": 45,
+                    "name": "Pasta Maker Illaoi (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 37
                 }
             ],
             "lore": "Illaoi's powerful physique is dwarfed only by her indomitable faith. As the prophet of the Great Kraken, she uses a huge, golden idol to rip her foes' spirits from their bodies and shatter their perception of reality. All who challenge the “Truth Bearer of Nagakabouros” soon discover Illaoi never battles alone—the god of the Serpent Isles fights by her side.",
@@ -45970,6 +46086,68 @@
                     "name": "iG Irelia (Elite)",
                     "chromas": false,
                     "parentSkin": 15
+                },
+                {
+                    "id": "39063",
+                    "num": 63,
+                    "name": "Breadsticks Irelia",
+                    "chromas": true
+                },
+                {
+                    "id": "39064",
+                    "num": 64,
+                    "name": "Breadsticks Irelia (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39065",
+                    "num": 65,
+                    "name": "Breadsticks Irelia (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39066",
+                    "num": 66,
+                    "name": "Breadsticks Irelia (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39067",
+                    "num": 67,
+                    "name": "Breadsticks Irelia (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39068",
+                    "num": 68,
+                    "name": "Breadsticks Irelia (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39069",
+                    "num": 69,
+                    "name": "Breadsticks Irelia (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39070",
+                    "num": 70,
+                    "name": "Breadsticks Irelia (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 63
+                },
+                {
+                    "id": "39071",
+                    "num": 71,
+                    "name": "Breadsticks Irelia (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 63
                 }
             ],
             "lore": "The Noxian occupation of Ionia produced many heroes, none more unlikely than young Irelia of Navori. Trained in the ancient dances of her province, she adapted her art for war, using the graceful and carefully practised movements to levitate a host of deadly blades. After proving herself as a fighter, she was thrust into the role of resistance leader and figurehead, and to this day remains dedicated to the preservation of her homeland.",
@@ -57795,13 +57973,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        10,
-                        9.5,
                         9,
                         8.5,
-                        8
+                        8,
+                        7.5,
+                        7
                     ],
-                    "cooldownBurn": "10/9.5/9/8.5/8",
+                    "cooldownBurn": "9/8.5/8/7.5/7",
                     "cost": [
                         60,
                         65,
@@ -57964,11 +58142,11 @@
                             6
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
+                            25,
+                            25,
+                            25,
+                            25,
+                            25
                         ],
                         [
                             50,
@@ -58030,7 +58208,7 @@
                     "effectBurn": [
                         null,
                         "4/4.5/5/5.5/6",
-                        "20",
+                        "25",
                         "50/75/100/125/150",
                         "20/22.5/25/27.5/30",
                         "0",
@@ -58066,7 +58244,7 @@
                     "id": "ForcePulse",
                     "name": "Force Pulse",
                     "description": "Kassadin draws energy from spells cast in his vicinity. Upon charging up, Kassadin can use Force Pulse to damage and slow enemies in a cone in front of him.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> <spellName>Force Pulse's</spellName> Cooldown is reduced by {{ reductionperspellcast }} second whenever any Ability is used near Kassadin.<br /><br /><spellActive>Active:</spellActive> Kassadin unleashes a void pulse, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slowing</status> by {{ e2 }}% for {{ e3 }} second.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> <spellName>Force Pulse's</spellName> Cooldown is reduced by {{ reductionperspellcast }} second whenever any Ability is used near Kassadin.<br /><br /><spellActive>Active:</spellActive> Kassadin unleashes a void pulse, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> and <status>Slowing</status> by {{ slowamount }}% for {{ slowduration }} second.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -58076,7 +58254,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ slowamount }}% -> {{ slowamountNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -69554,6 +69732,54 @@
                     "name": "Battle Lion Leona (Override)",
                     "chromas": false,
                     "parentSkin": 52
+                },
+                {
+                    "id": "89064",
+                    "num": 64,
+                    "name": "Eternal Aspect Leona",
+                    "chromas": true
+                },
+                {
+                    "id": "89065",
+                    "num": 65,
+                    "name": "Eternal Aspect Leona (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89066",
+                    "num": 66,
+                    "name": "Eternal Aspect Leona (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89067",
+                    "num": 67,
+                    "name": "Eternal Aspect Leona (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89068",
+                    "num": 68,
+                    "name": "Eternal Aspect Leona (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89069",
+                    "num": 69,
+                    "name": "Eternal Aspect Leona (Tanzanite)",
+                    "chromas": false,
+                    "parentSkin": 64
+                },
+                {
+                    "id": "89070",
+                    "num": 70,
+                    "name": "Eternal Aspect Leona (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 64
                 }
             ],
             "lore": "Imbued with the fire of the sun, Leona is a holy warrior of the Solari who defends Mount Targon with her Zenith Blade and the Shield of Daybreak. Her skin shimmers with starfire while her eyes burn with the power of the celestial Aspect within her. Armored in gold and bearing a terrible burden of ancient knowledge, Leona brings enlightenment to some, death to others.",
@@ -72824,7 +73050,7 @@
                     "id": "LucianW",
                     "name": "Ardent Blaze",
                     "description": "Lucian shoots a missile that explodes in a star shape, marking and briefly revealing enemies. Lucian gains Move Speed for attacking marked enemies.",
-                    "tooltip": "Lucian fires a shot that explodes at the end of its range or on the first enemy hit, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>, briefly revealing enemies and marking them for 6 seconds.<br /><br />When Lucian or an ally damages a marked enemy, Lucian gains <speed>{{ e2 }} Move Speed</speed> for 1 second. Allies triggering this effect will also grant Lucian <attention>Vigilance</attention>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Lucian fires a shot that explodes at the end of its range or on the first enemy hit, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage>, briefly revealing enemies and marking them for 6 seconds.<br /><br />When Lucian or an ally damages a marked enemy, Lucian gains <speed>{{ movespeedamount }} Move Speed</speed> for 1 second. Allies triggering this effect will also grant Lucian <attention>Vigilance</attention>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -72833,7 +73059,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ movespeedamount }} -> {{ movespeedamountNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -72967,7 +73193,7 @@
                     "id": "LucianE",
                     "name": "Relentless Pursuit",
                     "description": "Lucian quickly dashes a short distance. Lightslinger attacks reduce Relentless Pursuit's cooldown.",
-                    "tooltip": "Lucian dashes.<br /><br />Cooldown is reduced by {{ e1 }} second whenever Lucian hits an enemy with <spellName>Lightslinger</spellName> ({{ e2 }} seconds for champions). {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Lucian dashes.<br /><br />Cooldown is reduced by {{ cdrefundbase }} second whenever Lucian hits an enemy with <spellName>Lightslinger</spellName> ({{ cdrefundchampion }} seconds for champions). {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -87921,7 +88147,7 @@
                     "id": "NasusE",
                     "name": "Spirit Fire",
                     "description": "Nasus unleashes a spirit flame at a location, dealing damage and reducing the Armor of enemies who stand on it.",
-                    "tooltip": "Nasus ignites a spirit flame, dealing <magicDamage>{{ initialdamage }} magic damage</magicDamage>. Enemies in the area lose <scaleArmor>{{ e2 }}% Armor</scaleArmor> and take <magicDamage>{{ totaldotdamage }} magic damage</magicDamage> over {{ e3 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Nasus ignites a spirit flame, dealing <magicDamage>{{ initialdamage }} magic damage</magicDamage>. Enemies in the area lose <scaleArmor>{{ armorshredpercent*-100 }}% Armor</scaleArmor> and take <magicDamage>{{ totaldotdamage }} magic damage</magicDamage> over {{ duration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Initial Damage",
@@ -87930,9 +88156,9 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e4 }} -> {{ e4NL }}",
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ effect2amount*-100.000000 }}% -> {{ effect2amountnl*-100.000000 }}%",
+                            "{{ initialhitdamage }} -> {{ initialhitdamageNL }}",
+                            "{{ damagepertick }} -> {{ damagepertickNL }}",
+                            "{{ armorshredpercent*-100.000000 }}% -> {{ armorshredpercentnl*-100.000000 }}%",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
@@ -87964,11 +88190,11 @@
                             34
                         ],
                         [
-                            30,
-                            35,
-                            40,
-                            45,
-                            50
+                            -0.3,
+                            -0.35,
+                            -0.4,
+                            -0.45,
+                            -0.5
                         ],
                         [
                             5,
@@ -88030,7 +88256,7 @@
                     "effectBurn": [
                         null,
                         "10/16/22/28/34",
-                        "30/35/40/45/50",
+                        "-0.3/-0.35/-0.4/-0.45/-0.5",
                         "5",
                         "50/80/110/140/170",
                         "0",
@@ -100976,7 +101202,7 @@
                     "id": "QuinnQ",
                     "name": "Blinding Assault",
                     "description": "Quinn calls Valor to mark an enemy and hinder its vision before damaging all enemies in the immediate area.",
-                    "tooltip": "Quinn orders Valor to dive, making the first enemy hit <keywordMajor>Vulnerable</keywordMajor>, reducing their vision radius for {{ visionreductionduration }} seconds and dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to all surrounding enemies.<br /><br />If the first enemy struck is not a champion, it is <status>Disarmed</status> for {{ visionreductionduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Quinn orders Valor to dive, making the first enemy hit with <keywordMajor>Harrier</keywordMajor>, reducing their vision radius for {{ visionreductionduration }} seconds and dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to all surrounding enemies.<br /><br />If the first enemy struck is not a champion, it is <status>Disarmed</status> for {{ visionreductionduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -101120,8 +101346,8 @@
                 {
                     "id": "QuinnW",
                     "name": "Heightened Senses",
-                    "description": "Passively grants Quinn Attack Speed and Move Speed after she attacks a <font color='#FFF673'>Vulnerable</font> target. Activate to have Valor reveal a large area nearby.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Attacking a <keywordMajor>Vulnerable</keywordMajor> target grants Quinn <attackSpeed>{{ attackspeedbonus*100 }}% Attack Speed</attackSpeed> and <speed>{{ movespeedamount*100 }}% Move Speed</speed> for {{ buffduration }} seconds.<br /><br /><spellActive>Active:</spellActive> Valor reveals a large area nearby for {{ visionduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "description": "Passively grants Quinn Attack Speed and Move Speed after she attacks a <keywordMajor>Harrier</keywordMajor> target. Activate to have Valor reveal a large area nearby.",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Attacking a <keywordMajor>Harrier</keywordMajor> target grants Quinn <attackSpeed>{{ attackspeedbonus*100 }}% Attack Speed</attackSpeed> and <speed>{{ movespeedamount*100 }}% Move Speed</speed> for {{ buffduration }} seconds.<br /><br /><spellActive>Active:</spellActive> Valor reveals a large area nearby for {{ visionduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Attack Speed",
@@ -101264,7 +101490,7 @@
                     "id": "QuinnE",
                     "name": "Vault",
                     "description": "Quinn dashes to an enemy, dealing physical damage and slowing the target's Move Speed. Upon reaching the target, she leaps off the target, briefly interrupting it, and lands near her maximum Attack Range away from the target.",
-                    "tooltip": "Quinn dashes to an enemy, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and marking them <keywordMajor>Vulnerable</keywordMajor>. Quinn then leaps backwards from the target, slightly <status>Knocking</status> them <status>Back</status> and <status>Slowing</status> them by {{ slowamount*100 }}%, decaying over {{ slowdecaytime }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Quinn dashes to an enemy, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and marking them with <keywordMajor>Harrier</keywordMajor>. Quinn then leaps backwards from the target, slightly <status>Knocking</status> them <status>Back</status> and <status>Slowing</status> them by {{ slowamount*100 }}%, decaying over {{ slowdecaytime }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -101404,8 +101630,8 @@
                 {
                     "id": "QuinnR",
                     "name": "Behind Enemy Lines",
-                    "description": "Quinn and Valor team up to fly around at great speed.  Ending the ability casts Skystrike, which deals damage to nearby enemies and marks champions as Vulnerable.",
-                    "tooltip": "Quinn calls to Valor, pairing up after channeling for 2 seconds gaining <speed>{{ movementspeedmod*100 }}% Move Speed</speed> and allowing her to <recast>Recast</recast> this Ability. Attacking or using <spellName>Blinding Assault</spellName> or <spellName>Vault</spellName> automatically <recast>Recasts</recast> this Ability.<br /><br /><recast>Recast</recast>: Quinn and Valor perform an aerial maneuver, dealing <physicalDamage>{{ damage }} physical damage</physicalDamage>, marking champions as <keywordMajor>Vulnerable</keywordMajor>, and ending this Ability.{{ spellmodifierdescriptionappend }}",
+                    "description": "Quinn and Valor team up to fly around at great speed.  Ending the ability casts Skystrike, which deals damage to nearby enemies and marks champions with Harrier.",
+                    "tooltip": "Quinn calls to Valor, pairing up after channeling for 2 seconds gaining <speed>{{ movementspeedmod*100 }}% Move Speed</speed> and allowing her to <recast>Recast</recast> this Ability. Attacking or using <spellName>Blinding Assault</spellName> or <spellName>Vault</spellName> automatically <recast>Recasts</recast> this Ability.<br /><br /><recast>Recast</recast>: Quinn and Valor perform an aerial maneuver, dealing <physicalDamage>{{ damage }} physical damage</physicalDamage>, marking champions with <keywordMajor>Harrier</keywordMajor>, and ending this Ability.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -101521,7 +101747,7 @@
             ],
             "passive": {
                 "name": "Harrier",
-                "description": "Valor, Quinn's Demacian eagle, periodically marks enemies as <font color='#FFF673'>Vulnerable</font>. Quinn's first basic attack against <font color='#FFF673'>Vulnerable</font> targets will deal bonus physical damage.",
+                "description": "Valor, Quinn's Demacian eagle, periodically marks enemies with <keywordMajor>Harrier</keywordMajor>. Quinn's first basic attack against <keywordMajor>Harrier</keywordMajor> targets will deal bonus physical damage.",
                 "image": {
                     "full": "Quinn_Passive.png",
                     "sprite": "passive3.png",
@@ -108594,14 +108820,14 @@
                     "id": "RivenMartyr",
                     "name": "Ki Burst",
                     "description": "Riven emits a Ki Burst, damaging and stunning nearby enemies.",
-                    "tooltip": "Riven's sword emits a burst of runic energy, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and <status>Stunning</status> for {{ e5 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Riven's sword emits a burst of runic energy, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and <status>Stunning</status> for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -108742,7 +108968,7 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ shieldamount }} -> {{ shieldamountNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -117534,7 +117760,7 @@
                     "id": "ShenQ",
                     "name": "Twilight Assault",
                     "description": "Shen recalls his spirit blade to attack with it, dealing damage based on the target's max health. The attacks are greatly empowered if it collides with an enemy champion, and all collided enemies are slowed while running away from Shen.",
-                    "tooltip": "Shen recalls his <keywordMajor>Spirit Blade</keywordMajor>. Enemies hit by the pull are <status>Slowed</status> by {{ e4 }}% while moving away from Shen for the next {{ e5 }} seconds.<br /><br />Additionally, Shen's next {{ e3 }} Attacks deal an additional <magicDamage>{{ baseflatdamage }}</magicDamage> plus <magicDamage>{{ basepercenthealth }} max Health magic damage</magicDamage>. If Shen hit an enemy champion with the <keywordMajor>Spirit Blade</keywordMajor>, the damage is increased to <magicDamage>{{ baseflatdamage }}</magicDamage> plus <magicDamage>{{ emppercenthealth }} max Health magic damage</magicDamage> and he gains <attackSpeed>{{ e9 }}% Attack Speed</attackSpeed> for those Attacks.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Shen recalls his <keywordMajor>Spirit Blade</keywordMajor>. Enemies hit by the pull are <status>Slowed</status> by {{ slowpercent }}% while moving away from Shen for the next {{ slowduration }} seconds.<br /><br />Additionally, Shen's next {{ numenhancedattacks }} Attacks deal an additional <magicDamage>{{ baseflatdamage }}</magicDamage> plus <magicDamage>{{ basepercenthealth }} max Health magic damage</magicDamage>. If Shen hit an enemy champion with the <keywordMajor>Spirit Blade</keywordMajor>, the damage is increased to <magicDamage>{{ baseflatdamage }}</magicDamage> plus <magicDamage>{{ emppercenthealth }} max Health magic damage</magicDamage> and he gains <attackSpeed>{{ steroidas }}% Attack Speed</attackSpeed> for those Attacks.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Base Percent Damage",
@@ -117545,11 +117771,11 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e2 }}% -> {{ e2NL }}%",
-                            "{{ e6 }}% -> {{ e6NL }}%",
-                            "{{ e4 }}% -> {{ e4NL }}%",
+                            "{{ basepercentdamage }}% -> {{ basepercentdamageNL }}%",
+                            "{{ enhancedpercentdamage }}% -> {{ enhancedpercentdamageNL }}%",
+                            "{{ slowpercent }}% -> {{ slowpercentNL }}%",
                             "{{ cost }} -> {{ costNL }}",
-                            "{{ e7 }} -> {{ e7NL }}",
+                            "{{ miniondamagecap }} -> {{ miniondamagecapNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -117683,7 +117909,7 @@
                     "id": "ShenW",
                     "name": "Spirit's Refuge",
                     "description": "Attacks that would hit Shen or his allies near his spirit blade are blocked.",
-                    "tooltip": "Shen creates a defensive zone at his <keywordMajor>Spirit Blade</keywordMajor> for {{ e1 }} seconds. Attacks against allied champions in the zone are blocked. <br /><br />If there are no champions to protect in the zone when it starts, it will wait for up to {{ e2 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Shen creates a defensive zone at his <keywordMajor>Spirit Blade</keywordMajor> for {{ zoneduration }} seconds. Attacks against allied champions in the zone are blocked. <br /><br />If there are no champions to protect in the zone when it starts, it will wait for up to {{ zonedelay }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown"
@@ -120055,6 +120281,68 @@
                     "num": 49,
                     "name": "Grand Reckoning Sion",
                     "chromas": false
+                },
+                {
+                    "id": "14050",
+                    "num": 50,
+                    "name": "Pizza Chef Sion",
+                    "chromas": true
+                },
+                {
+                    "id": "14051",
+                    "num": 51,
+                    "name": "Pizza Chef Sion (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14052",
+                    "num": 52,
+                    "name": "Pizza Chef Sion (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14053",
+                    "num": 53,
+                    "name": "Pizza Chef Sion (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14054",
+                    "num": 54,
+                    "name": "Pizza Chef Sion (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14055",
+                    "num": 55,
+                    "name": "Pizza Chef Sion (Tanzanite)",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14056",
+                    "num": 56,
+                    "name": "Pizza Chef Sion (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14057",
+                    "num": 57,
+                    "name": "Pizza Chef Sion (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "14058",
+                    "num": 58,
+                    "name": "Pizza Chef Sion (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 50
                 }
             ],
             "lore": "A war hero from a bygone era, Sion was revered in Noxus for choking the life out of a Demacian king with his bare hands—but, denied oblivion, he was resurrected to serve his empire even in death. His indiscriminate slaughter claimed all who stood in his way, regardless of allegiance, proving he no longer retained his former humanity. Even so, with crude armor bolted onto rotten flesh, Sion continues to charge into battle with reckless abandon, struggling to remember his true self between the swings of his mighty axe.",
@@ -122758,7 +123046,7 @@
                 "mpregenperlevel": 0.7,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 60,
+                "attackdamage": 58,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 4,
                 "attackspeed": 0.638
@@ -132691,7 +132979,7 @@
                 "mpperlevel": 25,
                 "movespeed": 330,
                 "armor": 24,
-                "armorperlevel": 4.95,
+                "armorperlevel": 4.5,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 500,
@@ -144462,6 +144750,54 @@
                     "name": "Bee'Koz (Turquoise)",
                     "chromas": false,
                     "parentSkin": 20
+                },
+                {
+                    "id": "161029",
+                    "num": 29,
+                    "name": "Spaghetti alla Vel'Koz",
+                    "chromas": true
+                },
+                {
+                    "id": "161030",
+                    "num": 30,
+                    "name": "Spaghetti alla Vel'Koz (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161031",
+                    "num": 31,
+                    "name": "Spaghetti alla Vel'Koz (Pesto)",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161032",
+                    "num": 32,
+                    "name": "Spaghetti alla Vel'Koz (Dragon Fruit Noodle)",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161033",
+                    "num": 33,
+                    "name": "Spaghetti alla Vel'Koz (Strawberry Pasta)",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161034",
+                    "num": 34,
+                    "name": "Spaghetti alla Vel'Koz (Squid Ink Pasta)",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "161035",
+                    "num": 35,
+                    "name": "Spaghetti alla Vel'Koz (Alfredo)",
+                    "chromas": false,
+                    "parentSkin": 29
                 }
             ],
             "lore": "It is unclear if Vel'Koz was the first Void-spawn to emerge on Runeterra, but there has certainly never been another to match his level of cruel, calculating sentience. While his kin devour or defile everything around them, he seeks instead to scrutinize and study the physical realm—and the strange, warlike beings that dwell there—for any weakness the Void might exploit. But Vel'Koz is far from a passive observer, striking back at threats with deadly plasma, or by disrupting the very fabric of the world itself.",
@@ -153906,14 +154242,14 @@
                     "id": "XinZhaoQ",
                     "name": "Three Talon Strike",
                     "description": "Xin Zhao's next 3 standard attacks deal increased damage with the third attack knocking an opponent into the air.",
-                    "tooltip": "Xin Zhao's next 3 Attacks deal an additional <physicalDamage>{{ bonusdamage }} physical damage</physicalDamage> and reduces his other Ability's Cooldowns by 1 second. The third Attack also <status>Knocks Up</status> for {{ e2 }} seconds.<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Xin Zhao's next 3 Attacks deal an additional <physicalDamage>{{ bonusdamage }} physical damage</physicalDamage> and reduces his other Ability's Cooldowns by 1 second. The third Attack also <status>Knocks Up</status> for {{ knockupduration }} seconds.<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Damage:",
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -153938,18 +154274,18 @@
                     "effect": [
                         null,
                         [
-                            15,
-                            30,
-                            45,
-                            60,
-                            75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.75,
-                            0.75,
-                            0.75,
-                            0.75,
-                            0.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -154010,8 +154346,8 @@
                     ],
                     "effectBurn": [
                         null,
-                        "15/30/45/60/75",
-                        "0.75",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
