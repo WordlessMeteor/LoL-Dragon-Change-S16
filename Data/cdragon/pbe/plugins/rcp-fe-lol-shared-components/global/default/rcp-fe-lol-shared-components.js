@@ -491,9 +491,9 @@
                     const C = new(0, n(698).default);
                     a.getApi_SharedReportModalApps = () => C;
                     const k = new(0, n(707).default);
-                    a.getApi_SharedPlayerBehaviorApps = () => k, a.getShoppefrontComponents = () => n(765).default;
-                    const T = (0, n(814).default)();
-                    a.getApi_Payments = () => T, a.getApi_SharedChampionMasteryComponents = () => n(824).default, a.getApi_SharedChampionMasteryConstants = () => n(845).default, a.getApi_SfxUiAudioManager = () => n(857).default
+                    a.getApi_SharedPlayerBehaviorApps = () => k, a.getShoppefrontComponents = () => n(766).default;
+                    const T = (0, n(815).default)();
+                    a.getApi_Payments = () => T, a.getApi_SharedChampionMasteryComponents = () => n(825).default, a.getApi_SharedChampionMasteryConstants = () => n(846).default, a.getApi_SfxUiAudioManager = () => n(858).default
                 },
                 privateApi: s,
                 publicApi: a
@@ -5826,12 +5826,15 @@
                     super()
                 }
                 static get observedAttributes() {
-                    return ["ranked-tier", "queue-type"]
+                    return ["ranked-tier", "ranked-division", "queue-type"]
                 }
                 attributeChangedCallback(e, t, n) {
                     switch (super.attributeChangedCallback(e, t, n), e) {
                         case "ranked-tier":
                             this._updateRankedTier(n);
+                            break;
+                        case "ranked-division":
+                            this._updateRankedDivision(n);
                             break;
                         case "queue-type":
                             this._updateQueueType(n)
@@ -5841,9 +5844,17 @@
                     let t = "unranked";
                     (0, s.attributeValueIsSet)(e) && "string" == typeof e && (t = e.toLowerCase()), this._setRankedTierAttr(t)
                 }
+                _updateRankedDivision(e) {
+                    let t = "i";
+                    (0, s.attributeValueIsSet)(e) && "string" == typeof e && (t = e.toLowerCase()), this._setRankedDivision(t)
+                }
                 _setRankedTierAttr(e) {
                     const t = this.shadowRoot.querySelector(".regalia-emblem");
                     t && t.setAttribute("ranked-tier", e)
+                }
+                _setRankedDivision(e) {
+                    const t = this.shadowRoot.querySelector(".regalia-emblem");
+                    t && t.setAttribute("ranked-division", e)
                 }
                 _updateQueueType(e = "RANKED_SOLO_5x5") {
                     this._setQueueType(e)
@@ -26099,8 +26110,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "JkTR3vKb",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\ranked\\\\addon\\\\templates\\\\ranked-progression-widget.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\ranked\\\\addon\\\\styles\\\\ranked-progression-widget.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-progression-widget-ranked-icon-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-ranked-icon-background"],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","queue-type",["unknown",["queueType"]],null],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["isUnranked"]],"unranked",["get",["tier"]]],null],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-progression-widget-content-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-tier-division-text"],["flush-element"],["text","\\n    "],["append",["unknown",["tierDivisionText"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-wins-lp-text"],["flush-element"],["text","\\n    "],["append",["unknown",["winsText"]],false],["text"," | "],["append",["unknown",["leaguePointsText"]],false],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isAtMilestone"]]],null,0],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-progression-widget-icons-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-icon ranked-progression-widget-skin-icon"],["static-attr","title","Skin"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-icon-completed"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-milestone-text"],["flush-element"],["text","\\n      "],["append",["unknown",["milestoneText"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "GYsb26ie",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\ranked\\\\addon\\\\templates\\\\ranked-progression-widget.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\ranked\\\\addon\\\\styles\\\\ranked-progression-widget.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-progression-widget-ranked-icon-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-ranked-icon-background"],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-division",["unknown",["division"]],null],["dynamic-attr","queue-type",["unknown",["queueType"]],null],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["isUnranked"]],"unranked",["get",["tier"]]],null],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-progression-widget-content-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-tier-division-text"],["flush-element"],["text","\\n    "],["append",["unknown",["tierDivisionText"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-wins-lp-text"],["flush-element"],["text","\\n    "],["append",["unknown",["winsText"]],false],["text"," | "],["append",["unknown",["leaguePointsText"]],false],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isAtMilestone"]]],null,0],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-progression-widget-icons-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-icon ranked-progression-widget-skin-icon"],["static-attr","title","Skin"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-icon-completed"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","ranked-progression-widget-milestone-text"],["flush-element"],["text","\\n      "],["append",["unknown",["milestoneText"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26294,9 +26305,16 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
+            var a = n(708);
             t.default = class {
                 constructor() {
-                    this._privateApi = n(708).default
+                    this._privateApi = n(709).default
+                }
+                formatDuration(e, t, n) {
+                    return (0, a.formatDuration)(e, t, n)
+                }
+                formatTimeRemaining(e, t, n, s) {
+                    return (0, a.formatTimeRemaining)(e, t, n, s)
                 }
                 showVerbalAbuseRemedyModal() {
                     this._privateApi.showVerbalAbuseRemedyModal()
@@ -26310,9 +26328,54 @@
                 createHonorPanel() {
                     return this._privateApi.createHonorPanel()
                 }
-                showHonorPanelDrawer(e) {
-                    return this._privateApi.showHonorPanelDrawer(e)
+                createHonorPanelDrawer(e) {
+                    return this._privateApi.createHonorPanelDrawer(e)
                 }
+            }
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.formatDuration = l, t.formatTimeRemaining = function(e, t, n, a) {
+                if (!t || t <= 0) return "";
+                return l(e, t - n, a)
+            };
+            const n = 6e4,
+                a = 60 * n,
+                s = 24 * a,
+                r = 60,
+                i = 24 * r,
+                o = "player_behavior_duration";
+
+            function l(e, t, l) {
+                if (!e || "function" != typeof e.formatString || !t || t <= 0) return "";
+                const {
+                    maxUnits: c,
+                    keyPrefix: d = o
+                } = "number" == typeof(u = l) ? {
+                    maxUnits: u
+                } : u || {};
+                var u;
+                const m = c || 2;
+                if (1 === m) return t >= s ? e.formatString(d + "_d", {
+                    days: Math.ceil(t / s)
+                }) : t >= a ? e.formatString(d + "_h", {
+                    hours: Math.ceil(t / a)
+                }) : e.formatString(d + "_m", {
+                    minutes: Math.max(1, Math.ceil(t / n))
+                });
+                const p = Math.max(1, Math.ceil(t / n)),
+                    h = Math.floor(p / i),
+                    g = Math.floor(p % i / r),
+                    f = p % r,
+                    _ = [];
+                h > 0 && _.push("d"), g > 0 && _.push("h"), (f > 0 || 0 === _.length) && _.push("m");
+                const b = _.slice(0, m).join("");
+                return e.formatString(d + "_" + b, {
+                    days: h,
+                    hours: g,
+                    minutes: f
+                })
             }
         }, (e, t, n) => {
             "use strict";
@@ -26320,14 +26383,14 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = m(n(709)),
-                r = m(n(710)),
-                i = m(n(713)),
-                o = m(n(727)),
-                l = m(n(757)),
-                c = m(n(760)),
-                d = m(n(761)),
-                u = m(n(764));
+                s = m(n(710)),
+                r = m(n(711)),
+                i = m(n(714)),
+                o = m(n(728)),
+                l = m(n(758)),
+                c = m(n(761)),
+                d = m(n(762)),
+                u = m(n(765));
 
             function m(e) {
                 return e && e.__esModule ? e : {
@@ -26398,7 +26461,7 @@
                         }
                     })
                 }
-                showHonorPanelDrawer({
+                createHonorPanelDrawer({
                     wrapperClassName: e
                 } = {}) {
                     const t = a.UIKit && a.UIKit.getDrawerManager && a.UIKit.getDrawerManager();
@@ -26555,10 +26618,10 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(711)) && a.__esModule ? a : {
+                r = (a = n(712)) && a.__esModule ? a : {
                     default: a
                 };
-            n(712);
+            n(713);
             var i = s.Ember.Component.extend({
                 classNames: ["honor-panel-component"],
                 layout: r.default,
@@ -26576,8 +26639,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "rYE8rSKB",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel.styl\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["honor-panel-header"],null,[["service"],[["get",["service"]]]]],false],["text","\\n\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","honor-panel-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["behaviorDescription"]]],null,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-section"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-section-title"],["flush-element"],["append",["unknown",["tra","honor_panel_active_penalties_rewards"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["panelRestrictionRows"]]],null,2],["block",["each"],[["get",["panelRewardRows"]]],null,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-signals"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-signals-heading"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-title"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-subtitle"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["each"],[["get",["resolvedSignalCategories"]]],null,0],["text","    "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["honor-panel-signal-category"],null,[["title","signals","isExpanded"],[["get",["category","title"]],["get",["category","signals"]],["get",["category","isExpanded"]]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["text","        "],["append",["helper",["honor-panel-reward"],null,[["rewardKey","tra"],[["get",["row","rewardKey"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","        "],["append",["helper",["honor-panel-restriction"],null,[["restrictionKey","gameCount","timeRemaining","timeRemainingFull","restrictionDuration","honorLevel","requiredHonorLevel","tra"],[["get",["row","restrictionKey"]],["get",["row","gameCount"]],["get",["row","timeRemaining"]],["get",["row","timeRemainingFull"]],["get",["row","restrictionDuration"]],["get",["row","honorLevel"]],["get",["row","requiredHonorLevel"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-description"],["flush-element"],["append",["unknown",["behaviorDescription"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "zk70YOAW",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel.styl\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["honor-panel-header"],null,[["service"],[["get",["service"]]]]],false],["text","\\n\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","honor-panel-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["behaviorDescription"]]],null,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-section"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-section-title"],["flush-element"],["append",["unknown",["tra","honor_panel_active_penalties_rewards"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["panelRestrictionRows"]]],null,2],["block",["each"],[["get",["panelRewardRows"]]],null,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-signals"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-signals-heading"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-title"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-subtitle"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["each"],[["get",["resolvedSignalCategories"]]],null,0],["text","    "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["honor-panel-signal-category"],null,[["title","signals","isExpanded"],[["get",["category","title"]],["get",["category","signals"]],["get",["category","isExpanded"]]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["text","        "],["append",["helper",["honor-panel-reward"],null,[["rewardKey","tra"],[["get",["row","rewardKey"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","        "],["append",["helper",["honor-panel-restriction"],null,[["restrictionKey","source","gameCount","timeRemaining","remainingMillis","restrictionDuration","honorLevel","requiredHonorLevel","tra"],[["get",["row","restrictionKey"]],["get",["row","source"]],["get",["row","gameCount"]],["get",["row","timeRemaining"]],["get",["row","remainingMillis"]],["get",["row","restrictionDuration"]],["get",["row","honorLevel"]],["get",["row","requiredHonorLevel"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-description"],["flush-element"],["append",["unknown",["behaviorDescription"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26589,13 +26652,13 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(714)) && a.__esModule ? a : {
+                r = (a = n(715)) && a.__esModule ? a : {
                     default: a
                 };
-            n(715);
-            const i = [n(716), n(717), n(718), n(719), n(720)],
-                o = [n(721), n(722), n(723), n(724), n(725)],
-                l = n(726);
+            n(716);
+            const i = [n(717), n(718), n(719), n(720), n(721)],
+                o = [n(722), n(723), n(724), n(725), n(726)],
+                l = n(727);
             var c = s.Ember.Component.extend({
                 classNames: ["honor-panel-header-component"],
                 layout: r.default,
@@ -26620,14 +26683,17 @@
                         t = Math.max(0, Math.min(o.length - 1, e - 1));
                     return o[t]
                 })),
-                honorTemporarilyReducedIconPath: l
+                honorTemporarilyReducedIconPath: l,
+                honorProgressTrackLevelClass: s.Ember.computed("honorLevel", (function() {
+                    return "honor-panel-header-progress-track-wrapper-level-" + Math.max(0, Math.min(5, this.get("honorLevel") || 0))
+                }))
             });
             t.default = c
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "uF//Nhcc",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-header.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-header.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","img",[]],["static-attr","class","honor-panel-header-icon"],["dynamic-attr","src",["unknown",["honorEmblemPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-header-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-header-title-block"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-header-eyebrow"],["flush-element"],["append",["unknown",["tra","honor_panel_behavior_standing"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-header-title"],["flush-element"],["append",["unknown",["honorLevelLabel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-header-status-column"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTemporarilyReduced"]]],null,0],["text","    "],["open-element","img",[]],["static-attr","class","honor-panel-header-progress-track"],["dynamic-attr","src",["unknown",["honorProgressTrackPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-header-status honor-panel-header-status-reduced"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","honor-panel-header-status-icon"],["dynamic-attr","src",["unknown",["honorTemporarilyReducedIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-header-status-label"],["flush-element"],["append",["unknown",["tra","honor_panel_temporarily_reduced"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "46Rw8BQ7",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-header.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-header.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","img",[]],["static-attr","class","honor-panel-header-icon"],["dynamic-attr","src",["unknown",["honorEmblemPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-header-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-header-title-block"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-header-eyebrow"],["flush-element"],["append",["unknown",["tra","honor_panel_behavior_standing"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-header-title"],["flush-element"],["append",["unknown",["honorLevelLabel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-header-status-column"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTemporarilyReduced"]]],null,0],["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["honor-panel-header-progress-track-wrapper ",["unknown",["honorProgressTrackLevelClass"]]]]],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-header-progress-track"],["dynamic-attr","src",["unknown",["honorProgressTrackPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-header-progress-track-node honor-panel-header-progress-track-node-1"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-header-progress-track-node honor-panel-header-progress-track-node-2"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-header-progress-track-node honor-panel-header-progress-track-node-3"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-header-progress-track-node honor-panel-header-progress-track-node-4"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-header-progress-track-node honor-panel-header-progress-track-node-5"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-header-status honor-panel-header-status-reduced"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","honor-panel-header-status-icon"],["dynamic-attr","src",["unknown",["honorTemporarilyReducedIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-header-status-label"],["flush-element"],["append",["unknown",["tra","honor_panel_temporarily_reduced"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26635,19 +26701,19 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "honor_1_progress_track.png"
+            e.exports = n.p + "honor_1_progress_track.svg"
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "honor_2_progress_track.png"
+            e.exports = n.p + "honor_2_progress_track.svg"
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "honor_3_progress_track.png"
+            e.exports = n.p + "honor_3_progress_track.svg"
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "honor_4_progress_track.png"
+            e.exports = n.p + "honor_4_progress_track.svg"
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "honor_5_progress_track.png"
+            e.exports = n.p + "honor_5_progress_track.svg"
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "Emblem_Level_1.png"
@@ -26672,19 +26738,21 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(728)) && a.__esModule ? a : {
+                r = (a = n(729)) && a.__esModule ? a : {
                     default: a
                 };
-            n(729);
-            var i = n(730);
-            var o = s.Ember.Component.extend({
+            n(730);
+            var i = n(731),
+                o = n(708);
+            var l = s.Ember.Component.extend({
                 classNames: ["honor-panel-restriction-component"],
                 layout: r.default,
                 restrictionKey: null,
+                source: null,
                 tra: null,
                 gameCount: 0,
                 timeRemaining: "",
-                timeRemainingFull: "",
+                remainingMillis: 0,
                 restrictionDuration: "",
                 honorLevel: 1,
                 requiredHonorLevel: 0,
@@ -26708,80 +26776,69 @@
                     return e && t && e.descriptionKey && t.get(e.descriptionKey) || ""
                 })),
                 hasDescription: s.Ember.computed.notEmpty("description"),
-                isGameBadge: s.Ember.computed.equal("definition.source", "game"),
-                isEventBadge: s.Ember.computed.equal("definition.source", "event"),
-                isHonorBadge: s.Ember.computed.equal("definition.source", "honor"),
+                effectiveSource: s.Ember.computed("source", "definition.source", (function() {
+                    return this.get("source") || this.get("definition.source") || ""
+                })),
+                isGameBadge: s.Ember.computed.equal("effectiveSource", "game"),
+                isEventBadge: s.Ember.computed.equal("effectiveSource", "event"),
+                isHonorBadge: s.Ember.computed.equal("effectiveSource", "honor"),
                 hasDurationBadge: s.Ember.computed("isGameBadge", "restrictionDuration", (function() {
                     return this.get("isGameBadge") && !!this.get("restrictionDuration")
                 })),
                 durationBadgeIconPath: i.BADGE_CLOCK_ICON,
-                badgeIconPath: s.Ember.computed("definition", "honorLevel", (function() {
-                    const e = this.get("definition");
-                    return e ? "honor" === e.source ? (0, i.getHonorEmblemForLevel)(this.get("honorLevel")) : "game" === e.source ? i.BADGE_GAMES_FLAG_ICON : i.BADGE_CLOCK_ICON : ""
+                badgeIconPath: s.Ember.computed("effectiveSource", "honorLevel", (function() {
+                    const e = this.get("effectiveSource");
+                    return "honor" === e ? (0, i.getHonorEmblemForLevel)(this.get("honorLevel")) : "game" === e ? i.BADGE_GAMES_FLAG_ICON : i.BADGE_CLOCK_ICON
                 })),
-                hasTooltip: s.Ember.computed("isGameBadge", "isEventBadge", "isHonorBadge", "gameCount", "timeRemainingFull", "requiredHonorLevel", (function() {
-                    return this.get("isGameBadge") ? (this.get("gameCount") || 0) > 0 : this.get("isEventBadge") ? !!this.get("timeRemainingFull") : !!this.get("isHonorBadge") && !!this.get("requiredHonorLevel")
-                })),
-                tooltipTitle: s.Ember.computed("definition", "tra", (function() {
-                    const e = this.get("definition"),
+                hasTooltip: s.Ember.computed.notEmpty("tooltipBody"),
+                tooltipTitle: s.Ember.computed("effectiveSource", "tra", (function() {
+                    const e = this.get("effectiveSource"),
                         t = this.get("tra");
-                    return "game" === e.source ? t.get("honor_panel_tooltip_games_restriction_title") : "event" === e.source ? t.get("honor_panel_tooltip_timed_restriction_title") : "honor" === e.source ? t.get("honor_panel_tooltip_honor_restriction_title") : e
+                    return t ? "game" === e ? t.get("honor_panel_tooltip_games_restriction_title") : "event" === e ? t.get("honor_panel_tooltip_timed_restriction_title") : "honor" === e ? t.get("honor_panel_tooltip_honor_restriction_title") : "" : ""
                 })),
-                tooltipBodyParts: s.Ember.computed("definition", "tra", "gameCount", "timeRemainingFull", "requiredHonorLevel", (function() {
-                    const e = this.get("definition"),
-                        t = this.get("tra"),
-                        n = {
-                            before: "",
-                            value: "",
-                            after: ""
-                        };
-                    if (!e || !t) return n;
-                    let a = "",
-                        s = "";
-                    if ("game" === e.source) {
-                        const e = this.get("gameCount") || 0;
-                        if (!e) return n;
-                        a = t.get("honor_panel_tooltip_games_restriction_body") || "";
-                        s = (t.get("honor_panel_badge_games_count") || "{0} Games").replace("{0}", e)
-                    } else if ("event" === e.source) a = t.get("honor_panel_tooltip_timed_restriction_body") || "", s = this.get("timeRemainingFull") || "";
-                    else {
-                        if ("honor" !== e.source) return n;
-                        {
-                            a = t.get("honor_panel_tooltip_honor_restriction_body") || "";
-                            const e = this.get("requiredHonorLevel");
-                            if (!e) return n;
-                            s = (t.get("honor_panel_badge_honor_level") || "Honor {0}").replace("{0}", e)
-                        }
-                    }
-                    if (!a || !s) return n;
-                    const r = a.indexOf("{0}");
-                    return r < 0 ? {
-                        before: a,
-                        value: "",
-                        after: ""
-                    } : {
-                        before: a.slice(0, r),
-                        value: s,
-                        after: a.slice(r + 3)
-                    }
-                })),
-                badgeText: s.Ember.computed("definition", "tra", "gameCount", "timeRemaining", (function() {
-                    const e = this.get("definition"),
+                tooltipBody: s.Ember.computed("effectiveSource", "tra", "gameCount", "remainingMillis", "requiredHonorLevel", (function() {
+                    const e = this.get("effectiveSource"),
                         t = this.get("tra");
-                    if (!e) return "";
-                    if ("game" === e.source) {
+                    if (!e || !t) return "";
+                    if ("game" === e) {
                         const e = this.get("gameCount") || 0;
-                        return (t && t.get("honor_panel_badge_games_count") || "{0} Games").replace("{0}", e)
+                        return e && t.formatString("honor_panel_tooltip_games_restriction_body", {
+                            games: e
+                        }) || ""
                     }
-                    return "event" === e.source ? this.get("timeRemaining") || "" : t && t.get("honor_panel_badge_low_honor") || "Low Honor"
+                    if ("event" === e) {
+                        const e = this.get("remainingMillis") || 0;
+                        return e <= 0 ? "" : (0, o.formatDuration)(t, e, {
+                            maxUnits: 3,
+                            keyPrefix: "honor_panel_tooltip_timed_restriction_body"
+                        })
+                    }
+                    if ("honor" === e) {
+                        const e = this.get("requiredHonorLevel");
+                        return e && t.formatString("honor_panel_tooltip_honor_restriction_body", {
+                            level: e
+                        }) || ""
+                    }
+                    return ""
+                })),
+                badgeText: s.Ember.computed("effectiveSource", "tra", "gameCount", "timeRemaining", (function() {
+                    const e = this.get("effectiveSource"),
+                        t = this.get("tra");
+                    if ("game" === e) {
+                        const e = this.get("gameCount") || 0;
+                        return t && t.formatString("honor_panel_badge_games_count", {
+                            games: e
+                        }) || ""
+                    }
+                    return "event" === e ? this.get("timeRemaining") || "" : t && t.get("honor_panel_badge_low_honor") || "Low Honor"
                 }))
             });
-            t.default = o
+            t.default = l
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "IP837HyN",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTooltip"]]],null,4],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDurationBadge"]]],null,2],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDescription"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["left","system"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-restriction-row-badge-icon"],["dynamic-attr","src",["unknown",["durationBadgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text"],["flush-element"],["append",["unknown",["restrictionDuration"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["tooltipTitle"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["tooltipBodyParts","before"]],false],["open-element","span",[]],["static-attr","class","honor-panel-restriction-tooltip-value"],["flush-element"],["append",["unknown",["tooltipBodyParts","value"]],false],["close-element"],["append",["unknown",["tooltipBodyParts","after"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],3]],"locals":[]}],"hasPartials":false}',
+                id: "AdUg48au",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-text ",["helper",["if"],[["get",["isEventBadge"]],"is-time"],null]]]],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTooltip"]]],null,4],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDurationBadge"]]],null,2],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDescription"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["left","system"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-restriction-row-badge-icon"],["dynamic-attr","src",["unknown",["durationBadgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text is-time"],["flush-element"],["append",["unknown",["restrictionDuration"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["tooltipTitle"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["tooltipBody"]],true],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],3]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26795,7 +26852,7 @@
                 const t = Math.max(1, Math.min(5, e || 3));
                 return l[t]
             };
-            const a = e => n(731)(`./${e}-icon.svg`),
+            const a = e => n(732)(`./${e}-icon.svg`),
                 s = {
                     honor_downgrade: {
                         icon: a("honor-downgrade"),
@@ -26851,9 +26908,16 @@
                         icon: a("voice-restriction"),
                         titleKey: "honor_panel_restriction_gameflow_voice_locked_title",
                         descriptionKey: "honor_panel_restriction_gameflow_voice_locked_description",
+                        source: "event",
+                        restrictionType: "TEAM_VOICE_LOCKOUT"
+                    },
+                    voice_chat_muted: {
+                        icon: a("voice-restriction"),
+                        titleKey: "honor_panel_restriction_voice_chat_muted_title",
+                        descriptionKey: "honor_panel_restriction_voice_chat_muted_description",
                         source: "honor",
                         activeWhenHonorLevelBelow: 3,
-                        restrictionType: "TEAM_VOICE_LOCKOUT"
+                        restrictionType: "VOICE_CHAT_MUTED"
                     }
                 };
             t.RESTRICTION_DEFINITIONS = s;
@@ -26862,8 +26926,8 @@
                 return n && (e[n] = t), e
             }), {});
             t.RESTRICTION_TYPE_TO_KEY = r;
-            t.RESTRICTION_KEYS = ["honor_downgrade", "ranked_suspension", "queue_lock", "queue_delay", "chat_restriction", "ping_restriction", "gameflow_chat_locked", "gameflow_voice_locked"];
-            const i = e => n(731)(`./${e}-icon.svg`),
+            t.RESTRICTION_KEYS = ["honor_downgrade", "ranked_suspension", "queue_lock", "queue_delay", "chat_restriction", "ping_restriction", "gameflow_chat_locked", "gameflow_voice_locked", "voice_chat_muted"];
+            const i = e => n(732)(`./${e}-icon.svg`),
                 o = {
                     ultra_pass_xp_drops: {
                         icon: i("pass-xp-drops"),
@@ -26900,38 +26964,38 @@
             t.REWARD_DEFINITIONS = o;
             t.REWARD_KEYS = ["ultra_pass_xp_drops", "honor_skins_unlocked", "honor_recall", "mega_pass_xp_drops", "pass_xp_drops", "ranked_rewards"];
             const l = {
-                    1: n(750),
-                    2: n(751),
-                    3: n(752),
-                    4: n(753),
-                    5: n(754)
+                    1: n(751),
+                    2: n(752),
+                    3: n(753),
+                    4: n(754),
+                    5: n(755)
                 },
-                c = n(755);
+                c = n(756);
             t.BADGE_GAMES_FLAG_ICON = c;
-            const d = n(756);
+            const d = n(757);
             t.BADGE_CLOCK_ICON = d
         }, (e, t, n) => {
             var a = {
-                "./all-chat-icon.svg": 732,
-                "./allied-chat-icon.svg": 733,
-                "./block-all-icon.svg": 734,
-                "./chat-restriction-icon.svg": 735,
-                "./communications-agreement-close-icon.svg": 736,
-                "./communications-agreement-info-icon.svg": 737,
-                "./honor-downgrade-icon.svg": 738,
-                "./honor-recall-icon.svg": 739,
-                "./honor-skins-icon.svg": 740,
-                "./honor-temporarily-reduced-icon.svg": 726,
-                "./party-chat-icon.svg": 741,
-                "./pass-xp-drops-icon.svg": 742,
-                "./ping-restriction-icon.svg": 743,
+                "./all-chat-icon.svg": 733,
+                "./allied-chat-icon.svg": 734,
+                "./block-all-icon.svg": 735,
+                "./chat-restriction-icon.svg": 736,
+                "./communications-agreement-close-icon.svg": 737,
+                "./communications-agreement-info-icon.svg": 738,
+                "./honor-downgrade-icon.svg": 739,
+                "./honor-recall-icon.svg": 740,
+                "./honor-skins-icon.svg": 741,
+                "./honor-temporarily-reduced-icon.svg": 727,
+                "./party-chat-icon.svg": 742,
+                "./pass-xp-drops-icon.svg": 743,
+                "./ping-restriction-icon.svg": 744,
                 "./player-blocked-icon.svg": 471,
-                "./player-restriction-warning-icon.svg": 744,
-                "./queue-delay-icon.svg": 745,
-                "./queue-lock-icon.svg": 746,
-                "./ranked-rewards-icon.svg": 747,
-                "./ranked-suspension-icon.svg": 748,
-                "./voice-restriction-icon.svg": 749
+                "./player-restriction-warning-icon.svg": 745,
+                "./queue-delay-icon.svg": 746,
+                "./queue-lock-icon.svg": 747,
+                "./ranked-rewards-icon.svg": 748,
+                "./ranked-suspension-icon.svg": 749,
+                "./voice-restriction-icon.svg": 750
             };
 
             function s(e) {
@@ -26948,7 +27012,7 @@
             }
             s.keys = function() {
                 return Object.keys(a)
-            }, s.resolve = r, e.exports = s, s.id = 731
+            }, s.resolve = r, e.exports = s, s.id = 732
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "all-chat-icon.svg"
@@ -27030,11 +27094,11 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(758)) && a.__esModule ? a : {
+                r = (a = n(759)) && a.__esModule ? a : {
                     default: a
                 };
-            n(759);
-            var i = n(730);
+            n(760);
+            var i = n(731);
             var o = s.Ember.Component.extend({
                 classNames: ["honor-panel-reward-component"],
                 layout: r.default,
@@ -27060,8 +27124,9 @@
                 badgeText: s.Ember.computed("definition", "tra", (function() {
                     const e = this.get("definition"),
                         t = this.get("tra");
-                    if (!e) return "";
-                    return (t && t.get("honor_panel_badge_honor_level") || "Honor {0}").replace("{0}", e.requiredHonorLevel)
+                    return e && t && t.formatString("honor_panel_badge_honor_level", {
+                        level: e.requiredHonorLevel
+                    }) || ""
                 }))
             });
             t.default = o
@@ -27081,36 +27146,19 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = n(730);
-            const r = "/lol-summoner-profiles/v1/get-honor-view",
-                i = "/lol-summoner-profiles/v1/get-restriction-view",
-                o = 6e4,
-                l = 60,
-                c = 24 * l;
+                s = n(731),
+                r = n(708);
+            const i = "/lol-summoner-profiles/v1/get-honor-view",
+                o = "/lol-summoner-profiles/v1/get-restriction-view";
 
-            function d(e, t) {
-                if (!e || e <= 0) return "";
-                const n = Math.max(1, Math.ceil(e / o)),
-                    a = Math.floor(n / c),
-                    s = Math.floor(n % c / l),
-                    r = n % l,
-                    i = [];
-                a > 0 && i.push(`${a}d`), s > 0 && i.push(`${s}h`), (r > 0 || 0 === i.length) && i.push(`${r}m`);
-                const d = t || 2;
-                return i.slice(0, d).join(" ")
+            function l(e, t, n) {
+                return (0, r.formatDuration)(e, t, n)
             }
 
-            function u(e, t, n) {
-                return !e || e <= 0 ? "" : d(e - t, n)
+            function c(e, t, n, a) {
+                return (0, r.formatTimeRemaining)(e, t, n, a)
             }
-
-            function m(e) {
-                const t = e && e.expirationData && e.expirationData.redemptions;
-                if (!Array.isArray(t) || 0 === t.length) return 0;
-                const n = t.find((e => e && e.redemptionCountRemaining > 0)) || t[0];
-                return Math.max(0, n && n.redemptionCountRemaining || 0)
-            }
-            var p = a.Ember.Service.extend({
+            var d = a.Ember.Service.extend({
                 honorLevel: 0,
                 redemptions: null,
                 isTemporarilyReduced: !1,
@@ -27118,45 +27166,57 @@
                 tra: null,
                 nowMillis: 0,
                 init() {
-                    this._super(...arguments), this.db = a.dataBinding.bindTo(a.socket), this.set("redemptions", []), this.set("restrictions", []), this.set("nowMillis", Date.now()), this._onHonorViewChange = this._onHonorViewChange.bind(this), this._onRestrictionViewChange = this._onRestrictionViewChange.bind(this), this.db.observe(r, this, this._onHonorViewChange), this.db.observe(i, this, this._onRestrictionViewChange), this._tickIntervalId = setInterval((() => {
+                    this._super(...arguments), this.db = a.dataBinding.bindTo(a.socket), this.set("redemptions", []), this.set("restrictions", []), this.set("nowMillis", Date.now()), this._onHonorViewChange = this._onHonorViewChange.bind(this), this._onRestrictionViewChange = this._onRestrictionViewChange.bind(this), this.db.observe(i, this, this._onHonorViewChange), this.db.observe(o, this, this._onRestrictionViewChange), this._tickIntervalId = setInterval((() => {
                         this.set("nowMillis", Date.now())
-                    }), o)
+                    }), 6e4)
                 },
                 willDestroy() {
-                    this._tickIntervalId && (clearInterval(this._tickIntervalId), this._tickIntervalId = null), this.db.unobserve(r, this), this.db.unobserve(i, this), this._super(...arguments)
+                    this._tickIntervalId && (clearInterval(this._tickIntervalId), this._tickIntervalId = null), this.db.unobserve(i, this), this.db.unobserve(o, this), this._super(...arguments)
                 },
                 hasRestrictions: a.Ember.computed("restrictions.[]", (function() {
                     const e = this.get("restrictions");
                     return Array.isArray(e) && e.length > 0
                 })),
-                panelRestrictionRows: a.Ember.computed("honorLevel", "restrictions.[]", "nowMillis", (function() {
+                panelRestrictionRows: a.Ember.computed("honorLevel", "restrictions.[]", "nowMillis", "tra", (function() {
                     const e = this.get("honorLevel") || 1,
                         t = this.get("restrictions") || [],
                         n = this.get("nowMillis") || Date.now(),
-                        a = t.reduce(((e, t) => {
+                        a = this.get("tra"),
+                        r = t.reduce(((e, t) => {
                             const n = t && s.RESTRICTION_TYPE_TO_KEY[t.restrictionType];
                             return n && !e[n] && (e[n] = t), e
                         }), {});
-                    return s.RESTRICTION_KEYS.reduce(((t, r) => {
-                        const i = s.RESTRICTION_DEFINITIONS[r] || {},
-                            o = a[r];
-                        if ("number" == typeof i.activeWhenHonorLevelBelow) return e < i.activeWhenHonorLevelBelow && t.push({
-                            restrictionKey: r,
+                    return s.RESTRICTION_KEYS.reduce(((t, i) => {
+                        const o = s.RESTRICTION_DEFINITIONS[i] || {},
+                            d = r[i];
+                        if ("number" == typeof o.activeWhenHonorLevelBelow && e < o.activeWhenHonorLevelBelow) return t.push({
+                            restrictionKey: i,
+                            source: "honor",
                             gameCount: 0,
                             timeRemaining: "",
                             timeRemainingFull: "",
-                            requiredHonorLevel: i.activeWhenHonorLevelBelow,
+                            requiredHonorLevel: o.activeWhenHonorLevelBelow,
                             honorLevel: e
                         }), t;
-                        if (!o) return t;
-                        const l = o.expirationData || {};
+                        if (!d) return t;
+                        const u = d.expirationData || {},
+                            m = function(e) {
+                                const t = e && e.expirationData && e.expirationData.redemptions;
+                                if (!Array.isArray(t) || 0 === t.length) return 0;
+                                const n = t.find((e => e && e.redemptionCountRemaining > 0)) || t[0];
+                                return Math.max(0, n && n.redemptionCountRemaining || 0)
+                            }(d),
+                            p = u.expirationMillis > 0,
+                            h = p ? "event" : m > 0 ? "game" : o.source,
+                            g = p ? Math.max(0, u.expirationMillis - n) : 0;
                         return t.push({
-                            restrictionKey: r,
-                            gameCount: m(o),
-                            timeRemaining: u(l.expirationMillis, n),
-                            timeRemainingFull: u(l.expirationMillis, n, 3),
-                            requiredHonorLevel: "honor" === i.source ? e + 1 : 0,
-                            restrictionDuration: d(o.restrictionsMillis),
+                            restrictionKey: i,
+                            source: h,
+                            gameCount: m,
+                            timeRemaining: c(a, u.expirationMillis, n),
+                            remainingMillis: g,
+                            requiredHonorLevel: "honor" === h ? e + 1 : 0,
+                            restrictionDuration: l(a, d.restrictionsMillis),
                             honorLevel: e
                         }), t
                     }), [])
@@ -27188,7 +27248,7 @@
                     }, {
                         title: e.get("honor_panel_signals_play_fair_title"),
                         isExpanded: !0,
-                        signals: [t("gameplay_integrity_violations"), t("cheating"), t("rank_manipulation")]
+                        signals: [t("cheating"), t("rank_manipulation")]
                     }, {
                         title: e.get("honor_panel_signals_play_with_respect_title"),
                         isExpanded: !0,
@@ -27210,17 +27270,17 @@
                     }(e)))) : this.set("restrictions", [])
                 }
             });
-            t.default = p
+            t.default = d
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(762)) && a.__esModule ? a : {
+                r = (a = n(763)) && a.__esModule ? a : {
                     default: a
                 };
-            n(763);
+            n(764);
             var i = s.Ember.Component.extend({
                 classNames: ["honor-panel-signal-category-component"],
                 classNameBindings: ["isExpanded:expanded"],
@@ -27333,38 +27393,38 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = S(n(766)),
-                s = S(n(770)),
-                r = S(n(772)),
-                i = S(n(774)),
-                o = S(n(777)),
-                l = S(n(779)),
-                c = S(n(781)),
-                d = S(n(783)),
-                u = S(n(786)),
-                m = S(n(788)),
-                p = S(n(790)),
-                h = S(n(792)),
-                g = S(n(794)),
-                f = S(n(796)),
-                _ = S(n(798)),
-                b = S(n(800)),
-                y = S(n(804)),
-                v = S(n(805)),
-                E = S(n(807)),
-                A = S(n(808)),
-                x = S(n(809)),
-                C = S(n(810)),
-                k = S(n(811)),
-                T = n(768),
-                w = n(769);
+            var a = S(n(767)),
+                s = S(n(771)),
+                r = S(n(773)),
+                i = S(n(775)),
+                o = S(n(778)),
+                l = S(n(780)),
+                c = S(n(782)),
+                d = S(n(784)),
+                u = S(n(787)),
+                m = S(n(789)),
+                p = S(n(791)),
+                h = S(n(793)),
+                g = S(n(795)),
+                f = S(n(797)),
+                _ = S(n(799)),
+                b = S(n(801)),
+                y = S(n(805)),
+                v = S(n(806)),
+                E = S(n(808)),
+                A = S(n(809)),
+                x = S(n(810)),
+                C = S(n(811)),
+                k = S(n(812)),
+                T = n(769),
+                w = n(770);
 
             function S(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(813);
+            n(814);
             var I = {
                 INVENTORY_TYPE_IDS: T.INVENTORY_TYPE_IDS,
                 CATEGORIES: w.CATEGORIES,
@@ -27400,11 +27460,11 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(767)) && a.__esModule ? a : {
+                r = (a = n(768)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(768),
-                o = n(769);
+                i = n(769),
+                o = n(770);
             const {
                 RunMixin: l
             } = s.EmberAddons.EmberLifeline;
@@ -27691,7 +27751,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(771)) && a.__esModule ? a : {
+                r = (a = n(772)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -27755,7 +27815,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(773)) && a.__esModule ? a : {
+                r = (a = n(774)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -27781,11 +27841,11 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = n(775),
-                i = (a = n(776)) && a.__esModule ? a : {
+                r = n(776),
+                i = (a = n(777)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(768);
+                o = n(769);
             var l = s.Ember.Component.extend({
                 layout: i.default,
                 tagName: "",
@@ -28042,7 +28102,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(778)) && a.__esModule ? a : {
+                r = (a = n(779)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -28064,10 +28124,10 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(780)) && a.__esModule ? a : {
+                r = (a = n(781)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(768);
+                i = n(769);
             var o = s.Ember.Component.extend({
                 classNames: ["shoppefront-categories-sidebar"],
                 layout: r.default,
@@ -28108,7 +28168,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(782)) && a.__esModule ? a : {
+                r = (a = n(783)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -28139,10 +28199,10 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(784)) && a.__esModule ? a : {
+                r = (a = n(785)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(785);
+                i = n(786);
             var o = s.Ember.Component.extend({
                 classNames: ["shoppefront-currency-counter-root"],
                 layout: r.default,
@@ -28204,7 +28264,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(787)) && a.__esModule ? a : {
+                r = (a = n(788)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -28243,7 +28303,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(789)) && a.__esModule ? a : {
+                r = (a = n(790)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -28280,7 +28340,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(791)) && a.__esModule ? a : {
+                r = (a = n(792)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -28309,10 +28369,10 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(793)) && a.__esModule ? a : {
+                r = (a = n(794)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(768);
+                i = n(769);
             var o = s.Ember.Component.extend({
                 classNames: ["shoppefront-purchase-modal"],
                 shoppefrontService: s.Ember.inject.service("shoppefront"),
@@ -28427,7 +28487,7 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = (a = n(795)) && a.__esModule ? a : {
+                r = (a = n(796)) && a.__esModule ? a : {
                     default: a
                 };
             var i = s.Ember.Component.extend({
@@ -28485,8 +28545,8 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = n(768),
-                i = (a = n(797)) && a.__esModule ? a : {
+                r = n(769),
+                i = (a = n(798)) && a.__esModule ? a : {
                     default: a
                 };
             var o = s.Ember.Component.extend({
@@ -28519,11 +28579,11 @@
                 value: !0
             }), t.default = void 0;
             var a, s = n(1),
-                r = n(769),
-                i = (a = n(799)) && a.__esModule ? a : {
+                r = n(770),
+                i = (a = n(800)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(768);
+                o = n(769);
             var l = s.Ember.Component.extend({
                 layout: i.default,
                 shoppefrontService: s.Ember.inject.service("shoppefront"),
@@ -28598,9 +28658,9 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = o(n(801)),
-                r = o(n(802)),
-                i = o(n(803));
+                s = o(n(802)),
+                r = o(n(803)),
+                i = o(n(804));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -28660,8 +28720,8 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = n(768),
-                r = n(806),
+                s = n(769),
+                r = n(807),
                 i = a.Ember.Service.extend({
                     lootService: a.Ember.inject.service("shoppefront-loot"),
                     shoppefrontService: a.Ember.inject.service("shoppefront"),
@@ -28868,7 +28928,7 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = n(768),
+                s = n(769),
                 r = a.Ember.Service.extend({
                     shoppefrontService: a.Ember.inject.service("shoppefront"),
                     shoppefrontId: a.Ember.computed.alias("shoppefrontService.shoppefrontId"),
@@ -28937,9 +28997,9 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = n(768),
-                r = n(769),
-                i = n(775);
+                s = n(769),
+                r = n(770),
+                i = n(776);
             const {
                 RunMixin: o
             } = a.EmberAddons.EmberLifeline;
@@ -29163,7 +29223,7 @@
                     ContextualNotificationManager: a.UIKit.getContextualNotificationManager(),
                     displayConfirmationToast: function(e, t) {
                         if (!e || !t) return;
-                        const s = n(812)({
+                        const s = n(813)({
                                 titleLoc: e,
                                 bodyLoc: this.get("tra").get("shoppefront_confirm_toast_body"),
                                 borderType: "permanent",
@@ -29241,10 +29301,10 @@
                 return new s.default(t, e)
             };
             var a = n(1);
-            n(815);
-            var s = o(n(816)),
-                r = o(n(817)),
-                i = o(n(823));
+            n(816);
+            var s = o(n(817)),
+                r = o(n(818)),
+                i = o(n(824));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -29311,11 +29371,11 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                s = c(n(818)),
-                r = c(n(819)),
-                i = c(n(820)),
-                o = n(821),
-                l = c(n(822));
+                s = c(n(819)),
+                r = c(n(820)),
+                i = c(n(821)),
+                o = n(822),
+                l = c(n(823));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -29690,12 +29750,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = c(n(825)),
-                s = c(n(840)),
-                r = c(n(843)),
-                i = c(n(847)),
-                o = c(n(850)),
-                l = c(n(854));
+            var a = c(n(826)),
+                s = c(n(841)),
+                r = c(n(844)),
+                i = c(n(848)),
+                o = c(n(851)),
+                l = c(n(855));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -29714,11 +29774,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(826);
-            var s = n(827);
+            n(827);
+            var s = n(828);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-grade-display"],
-                layout: n(839),
+                layout: n(840),
                 milestoneProgressMap: {},
                 gradeDisplaySize: s.GRADE_BOX_SIZE.LARGE,
                 isGradeListCentered: !1,
@@ -29833,19 +29893,19 @@
             };
             t.MASTERY_REWARD_TYPES = c;
             const d = {
-                [c.HEXTECH_CHEST]: n(828),
-                [c.MARK]: n(829),
-                [c.AURORA]: n(830),
-                [c.MASTERY_LEVEL]: n(831),
-                [c.TITLE]: n(832)
+                [c.HEXTECH_CHEST]: n(829),
+                [c.MARK]: n(830),
+                [c.AURORA]: n(831),
+                [c.MASTERY_LEVEL]: n(832),
+                [c.TITLE]: n(833)
             };
             t.REWARD_TO_ASSET_PATH = d;
             const u = {
-                [c.HEXTECH_CHEST]: n(833),
-                [c.MARK]: n(834),
-                [c.AURORA]: n(830),
-                [c.MASTERY_LEVEL]: n(831),
-                [c.TITLE]: n(832)
+                [c.HEXTECH_CHEST]: n(834),
+                [c.MARK]: n(835),
+                [c.AURORA]: n(831),
+                [c.MASTERY_LEVEL]: n(832),
+                [c.TITLE]: n(833)
             };
             t.TOOLTIP_REWARD_TO_ASSET_PATH = u;
             const m = 3,
@@ -29910,10 +29970,10 @@
                     10: 3
                 },
                 b = {
-                    0: n(835),
-                    1: n(836),
-                    2: n(837),
-                    3: n(838)
+                    0: n(836),
+                    1: n(837),
+                    2: n(838),
+                    3: n(839)
                 };
             t.MASTERY_SEASON_NAME = "ACTS"
         }, (e, t, n) => {
@@ -29959,11 +30019,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(841);
-            var s = n(827);
+            n(842);
+            var s = n(828);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-tooltip-component"],
-                layout: n(842),
+                layout: n(843),
                 championMasteryUpdateNotification: {},
                 customRewards: [],
                 hideTitle: !1,
@@ -30053,14 +30113,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(844);
-            var s, r = n(827),
-                i = (s = n(845)) && s.__esModule ? s : {
+            n(845);
+            var s, r = n(828),
+                i = (s = n(846)) && s.__esModule ? s : {
                     default: s
                 };
             e.exports = a.Ember.Component.extend({
                 classNames: ["milestone-tooltip-component"],
-                layout: n(846),
+                layout: n(847),
                 masteryRewardData: {},
                 milestoneProgressMap: {},
                 seasonMilestone: 0,
@@ -30159,7 +30219,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(827),
+            var a = n(828),
                 s = {
                     NUMBER_TO_ROMAN_NUMERAL: a.NUMBER_TO_ROMAN_NUMERAL,
                     MINIMUM_MASTERY_LEVEL: a.MINIMUM_MASTERY_LEVEL,
@@ -30187,11 +30247,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(848);
-            var s = n(827);
+            n(849);
+            var s = n(828);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-crest-component"],
-                layout: n(849),
+                layout: n(850),
                 masteryLevel: 0,
                 isAuroraEnabled: !1,
                 isAnimationsEnabled: !1,
@@ -30216,9 +30276,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(851);
-            var s, r = n(827),
-                i = (s = n(852)) && s.__esModule ? s : {
+            n(852);
+            var s, r = n(828),
+                i = (s = n(853)) && s.__esModule ? s : {
                     default: s
                 };
             const o = {
@@ -30239,7 +30299,7 @@
                 };
             e.exports = a.Ember.Component.extend({
                 classNames: ["lcm-celebration-vignette-component"],
-                layout: n(853),
+                layout: n(854),
                 animationsEnabled: !0,
                 animationStarted: !1,
                 audioObject: null,
@@ -30379,8 +30439,8 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1);
-            n(855);
-            var s, r = (s = n(845)) && s.__esModule ? s : {
+            n(856);
+            var s, r = (s = n(846)) && s.__esModule ? s : {
                 default: s
             };
             const i = a.Audio.getChannel("sfx-ui"),
@@ -30391,7 +30451,7 @@
             var u = a.Ember.Component.extend({
                 classNames: ["champion-sets-carousel"],
                 classNameBindings: ["isObjectivesView"],
-                layout: n(856),
+                layout: n(857),
                 isObjectivesView: !1,
                 isLeftArrowDisabled: !0,
                 isRightArrowDisabled: !0,

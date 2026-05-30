@@ -3083,8 +3083,8 @@
                 j = H(n(138)),
                 z = H(n(139)),
                 F = H(n(140)),
-                G = H(n(141)),
-                q = H(n(142)),
+                q = H(n(141)),
+                G = H(n(142)),
                 U = H(n(143));
 
             function H(e) {
@@ -3092,7 +3092,7 @@
                     default: e
                 }
             }
-            const W = [r.default, o.default, i.default, a.default, s.default, l.default, c.default, d.default, p.default, u.default, m.default, g.default, h.default, f.default, _.default, A.default, b.default, y.default, x.default, v.default, k.default, E.default, w.default, C.default, $.default, B.default, S.default, I.default, T.default, O.default, M.default, R.default, D.default, N.default, P.default, L.default, j.default, z.default, F.default, G.default, q.default, U.default]
+            const W = [r.default, o.default, i.default, a.default, s.default, l.default, c.default, d.default, p.default, u.default, m.default, g.default, h.default, f.default, _.default, A.default, b.default, y.default, x.default, v.default, k.default, E.default, w.default, C.default, $.default, B.default, S.default, I.default, T.default, O.default, M.default, R.default, D.default, N.default, P.default, L.default, j.default, z.default, F.default, q.default, G.default, U.default]
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-arrow-toggle" noshadow>\r\n  <template>\r\n    <div class="arrow-toggle" class-use-animation="{{!data.disableAnimations}}"></div>\r\n  </template>\r\n</lol-social-element>\r\n'
@@ -3810,6 +3810,7 @@
                     gameInvite: "sfx-soc-notif-gameinvite-rcvd.ogg",
                     gameInviteAccept: "sfx-soc-ui-gameinvite-accept-click.ogg",
                     gameInviteFailed: "sfx-lobby-notif-bad-invite.ogg",
+                    joinedChatRoom: null,
                     leftChatRoom: "sfx-soc-notif-player-leave-lobby.ogg",
                     menuOpen: "sfx-soc-ui-statuswindow-open.ogg",
                     menuClose: "sfx-soc-ui-statuswindow-close.ogg",
@@ -3834,7 +3835,7 @@
                 },
                 _setupSound: function(e, t) {
                     const n = this._sfxChannel.createSound(t);
-                    if (!n) return r.logger.error("error setting up sound:", e), null;
+                    if (!n) return r.logger.error("error setting up sound", e), null;
                     const {
                         play: o
                     } = n;
@@ -3848,10 +3849,15 @@
                 play: function(e) {
                     const t = o?.gameflow?.gameMode,
                         n = `${t}_${e}`;
-                    return t && Object.prototype.hasOwnProperty.call(this, n) ? this[n].play() : Object.prototype.hasOwnProperty.call(this, e) ? this[e].play() : void r.logger.error("error playing sound:", e)
+                    if (t && Object.prototype.hasOwnProperty.call(this, n)) return this[n].play();
+                    if (Object.prototype.hasOwnProperty.call(this, e)) {
+                        if (null === this[e]) return;
+                        return this[e].play()
+                    }
+                    r.logger.error("error playing sound", e)
                 },
                 delayedPlay: function(e, t) {
-                    Object.prototype.hasOwnProperty.call(this, e) ? this[e].delayedPlay(t) : r.logger.error("error playing delayed sound:", e)
+                    Object.prototype.hasOwnProperty.call(this, e) ? this[e].delayedPlay(t) : r.logger.error("error playing delayed sound", e)
                 }
             }
         }, (e, t, n) => {
@@ -4401,8 +4407,8 @@
                         j = "[object Int16Array]",
                         z = "[object Int32Array]",
                         F = "[object Uint8Array]",
-                        G = "[object Uint8ClampedArray]",
-                        q = "[object Uint16Array]",
+                        q = "[object Uint8ClampedArray]",
+                        G = "[object Uint16Array]",
                         U = "[object Uint32Array]",
                         H = /\b__p \+= '';/g,
                         W = /\b(__p \+=) '' \+/g,
@@ -4455,30 +4461,30 @@
                         je = "\\ud83c[\\udffb-\\udfff]",
                         ze = "[^" + Ee + "]",
                         Fe = "(?:\\ud83c[\\udde6-\\uddff]){2}",
-                        Ge = "[\\ud800-\\udbff][\\udc00-\\udfff]",
-                        qe = "[" + Be + "]",
+                        qe = "[\\ud800-\\udbff][\\udc00-\\udfff]",
+                        Ge = "[" + Be + "]",
                         Ue = "\\u200d",
                         He = "(?:" + Pe + "|" + Le + ")",
-                        We = "(?:" + qe + "|" + Le + ")",
+                        We = "(?:" + Ge + "|" + Le + ")",
                         Ye = "(?:['’](?:d|ll|m|re|s|t|ve))?",
                         Ve = "(?:['’](?:D|LL|M|RE|S|T|VE))?",
                         Qe = "(?:" + Re + "|" + je + ")" + "?",
                         Ke = "[" + Se + "]?",
-                        Ze = Ke + Qe + ("(?:" + Ue + "(?:" + [ze, Fe, Ge].join("|") + ")" + Ke + Qe + ")*"),
-                        Xe = "(?:" + [Ne, Fe, Ge].join("|") + ")" + Ze,
-                        Je = "(?:" + [ze + Re + "?", Re, Fe, Ge, Oe].join("|") + ")",
+                        Ze = Ke + Qe + ("(?:" + Ue + "(?:" + [ze, Fe, qe].join("|") + ")" + Ke + Qe + ")*"),
+                        Xe = "(?:" + [Ne, Fe, qe].join("|") + ")" + Ze,
+                        Je = "(?:" + [ze + Re + "?", Re, Fe, qe, Oe].join("|") + ")",
                         et = RegExp(Te, "g"),
                         tt = RegExp(Re, "g"),
                         nt = RegExp(je + "(?=" + je + ")|" + Je + Ze, "g"),
-                        rt = RegExp([qe + "?" + Pe + "+" + Ye + "(?=" + [Me, qe, "$"].join("|") + ")", We + "+" + Ve + "(?=" + [Me, qe + He, "$"].join("|") + ")", qe + "?" + He + "+" + Ye, qe + "+" + Ve, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", De, Xe].join("|"), "g"),
+                        rt = RegExp([Ge + "?" + Pe + "+" + Ye + "(?=" + [Me, Ge, "$"].join("|") + ")", We + "+" + Ve + "(?=" + [Me, Ge + He, "$"].join("|") + ")", Ge + "?" + He + "+" + Ye, Ge + "+" + Ve, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", De, Xe].join("|"), "g"),
                         ot = RegExp("[" + Ue + Ee + we + Se + "]"),
                         it = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/,
                         at = ["Array", "Buffer", "DataView", "Date", "Error", "Float32Array", "Float64Array", "Function", "Int8Array", "Int16Array", "Int32Array", "Map", "Math", "Object", "Promise", "RegExp", "Set", "String", "Symbol", "TypeError", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "WeakMap", "_", "clearTimeout", "isFinite", "parseInt", "setTimeout"],
                         st = -1,
                         lt = {};
-                    lt[N] = lt[P] = lt[L] = lt[j] = lt[z] = lt[F] = lt[G] = lt[q] = lt[U] = !0, lt[A] = lt[b] = lt[R] = lt[y] = lt[D] = lt[x] = lt[v] = lt[k] = lt[w] = lt[C] = lt[$] = lt[S] = lt[I] = lt[T] = lt[M] = !1;
+                    lt[N] = lt[P] = lt[L] = lt[j] = lt[z] = lt[F] = lt[q] = lt[G] = lt[U] = !0, lt[A] = lt[b] = lt[R] = lt[y] = lt[D] = lt[x] = lt[v] = lt[k] = lt[w] = lt[C] = lt[$] = lt[S] = lt[I] = lt[T] = lt[M] = !1;
                     var ct = {};
-                    ct[A] = ct[b] = ct[R] = ct[D] = ct[y] = ct[x] = ct[N] = ct[P] = ct[L] = ct[j] = ct[z] = ct[w] = ct[C] = ct[$] = ct[S] = ct[I] = ct[T] = ct[O] = ct[F] = ct[G] = ct[q] = ct[U] = !0, ct[v] = ct[k] = ct[M] = !1;
+                    ct[A] = ct[b] = ct[R] = ct[D] = ct[y] = ct[x] = ct[N] = ct[P] = ct[L] = ct[j] = ct[z] = ct[w] = ct[C] = ct[$] = ct[S] = ct[I] = ct[T] = ct[O] = ct[F] = ct[q] = ct[G] = ct[U] = !0, ct[v] = ct[k] = ct[M] = !1;
                     var dt = {
                             "\\": "\\",
                             "'": "'",
@@ -4556,7 +4562,7 @@
                     }
 
                     function Mt(e, t) {
-                        return !!(null == e ? 0 : e.length) && qt(e, t, 0) > -1
+                        return !!(null == e ? 0 : e.length) && Gt(e, t, 0) > -1
                     }
 
                     function Rt(e, t, n) {
@@ -4602,20 +4608,20 @@
                         })), r
                     }
 
-                    function Gt(e, t, n, r) {
+                    function qt(e, t, n, r) {
                         for (var o = e.length, i = n + (r ? 1 : -1); r ? i-- : ++i < o;)
                             if (t(e[i], i, e)) return i;
                         return -1
                     }
 
-                    function qt(e, t, n) {
+                    function Gt(e, t, n) {
                         return t == t ? function(e, t, n) {
                             var r = n - 1,
                                 o = e.length;
                             for (; ++r < o;)
                                 if (e[r] === t) return r;
                             return -1
-                        }(e, t, n) : Gt(e, Ht, n)
+                        }(e, t, n) : qt(e, Ht, n)
                     }
 
                     function Ut(e, t, n, r) {
@@ -4681,12 +4687,12 @@
                     }
 
                     function tn(e, t) {
-                        for (var n = -1, r = e.length; ++n < r && qt(t, e[n], 0) > -1;);
+                        for (var n = -1, r = e.length; ++n < r && Gt(t, e[n], 0) > -1;);
                         return n
                     }
 
                     function nn(e, t) {
-                        for (var n = e.length; n-- && qt(t, e[n], 0) > -1;);
+                        for (var n = e.length; n-- && Gt(t, e[n], 0) > -1;);
                         return n
                     }
                     var rn = Vt({
@@ -4981,8 +4987,8 @@
                             je = (n = /[^.]+$/.exec(De && De.keys && De.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
                             ze = Re.toString,
                             Fe = Ne.call(Be),
-                            Ge = ht._,
-                            qe = Se("^" + Ne.call(Pe).replace(oe, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+                            qe = ht._,
+                            Ge = Se("^" + Ne.call(Pe).replace(oe, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
                             Ue = At ? t.Buffer : o,
                             He = t.Symbol,
                             We = t.Uint8Array,
@@ -5040,7 +5046,7 @@
                             }
                             return new Un(e)
                         }
-                        var Gn = function() {
+                        var qn = function() {
                             function e() {}
                             return function(t) {
                                 if (!es(t)) return {};
@@ -5051,7 +5057,7 @@
                             }
                         }();
 
-                        function qn() {}
+                        function Gn() {}
 
                         function Un(e, t) {
                             this.__wrapped__ = e, this.__actions__ = [], this.__chain__ = !!t, this.__index__ = 0, this.__values__ = o
@@ -5101,7 +5107,7 @@
 
                         function Zn(e, t) {
                             var n = Ua(e),
-                                r = !n && qa(e),
+                                r = !n && Ga(e),
                                 o = !n && !r && Va(e),
                                 i = !n && !r && !o && cs(e),
                                 a = n || r || o || i,
@@ -5214,8 +5220,8 @@
                                             case j:
                                             case z:
                                             case F:
-                                            case G:
                                             case q:
+                                            case G:
                                             case U:
                                                 return $o(e, n);
                                             case w:
@@ -5299,7 +5305,7 @@
                             imports: {
                                 _: Fn
                             }
-                        }, Fn.prototype = qn.prototype, Fn.prototype.constructor = Fn, Un.prototype = Gn(qn.prototype), Un.prototype.constructor = Un, Hn.prototype = Gn(qn.prototype), Hn.prototype.constructor = Hn, Wn.prototype.clear = function() {
+                        }, Fn.prototype = Gn.prototype, Fn.prototype.constructor = Fn, Un.prototype = qn(Gn.prototype), Un.prototype.constructor = Un, Hn.prototype = qn(Gn.prototype), Hn.prototype.constructor = Hn, Wn.prototype.clear = function() {
                             this.__data__ = In ? In(null) : {}, this.size = 0
                         }, Wn.prototype.delete = function(e) {
                             var t = this.has(e) && delete this.__data__[e];
@@ -5612,12 +5618,12 @@
                         }
 
                         function Dr(e) {
-                            return !(!es(e) || (t = e, je && je in t)) && (Za(e) ? qe : Ae).test(Li(e));
+                            return !(!es(e) || (t = e, je && je in t)) && (Za(e) ? Ge : Ae).test(Li(e));
                             var t
                         }
 
                         function Nr(e) {
-                            return "function" == typeof e ? e : null == e ? rl : "object" == typeof e ? Ua(e) ? Gr(e[0], e[1]) : Fr(e) : ul(e)
+                            return "function" == typeof e ? e : null == e ? rl : "object" == typeof e ? Ua(e) ? qr(e[0], e[1]) : Fr(e) : ul(e)
                         }
 
                         function Pr(e) {
@@ -5659,14 +5665,14 @@
                             }
                         }
 
-                        function Gr(e, t) {
+                        function qr(e, t) {
                             return vi(e) && Ci(t) ? $i(Pi(e), t) : function(n) {
                                 var r = Cs(n, e);
                                 return r === o && r === t ? $s(n, e) : Mr(t, r, 3)
                             }
                         }
 
-                        function qr(e, t, n, r, i) {
+                        function Gr(e, t, n, r, i) {
                             e !== t && br(t, (function(a, s) {
                                 if (es(a)) i || (i = new Kn),
                                     function(e, t, n, r, i, a, s) {
@@ -5680,11 +5686,11 @@
                                             var m = Ua(c),
                                                 g = !m && Va(c),
                                                 h = !m && !g && cs(c);
-                                            p = c, m || g || h ? Ua(l) ? p = l : Ya(l) ? p = To(l) : g ? (u = !1, p = wo(c, !0)) : h ? (u = !1, p = $o(c, !0)) : p = [] : os(c) || qa(c) ? (p = l, qa(l) ? p = _s(l) : (!es(l) || r && Za(l)) && (p = Ai(c))) : u = !1
+                                            p = c, m || g || h ? Ua(l) ? p = l : Ya(l) ? p = To(l) : g ? (u = !1, p = wo(c, !0)) : h ? (u = !1, p = $o(c, !0)) : p = [] : os(c) || Ga(c) ? (p = l, Ga(l) ? p = _s(l) : (!es(l) || r && Za(l)) && (p = Ai(c))) : u = !1
                                         }
                                         u && (s.set(c, p), i(p, c, r, a, s), s.delete(c));
                                         tr(e, n, p)
-                                    }(e, t, s, n, qr, r, i);
+                                    }(e, t, s, n, Gr, r, i);
                                 else {
                                     var l = r ? r(pn(e, s), a, s + "", e, t, i) : o;
                                     l === o && (l = a), tr(e, s, l)
@@ -5740,7 +5746,7 @@
                         }
 
                         function Yr(e, t, n, r) {
-                            var o = r ? Ut : qt,
+                            var o = r ? Ut : Gt,
                                 i = -1,
                                 a = t.length,
                                 s = e;
@@ -6086,7 +6092,7 @@
 
                         function Lo(e) {
                             return function(t) {
-                                return Pt(Zs(qs(t).replace(et, "")), e, "")
+                                return Pt(Zs(Gs(t).replace(et, "")), e, "")
                             }
                         }
 
@@ -6111,7 +6117,7 @@
                                     case 7:
                                         return new e(t[0], t[1], t[2], t[3], t[4], t[5], t[6])
                                 }
-                                var n = Gn(e.prototype),
+                                var n = qn(e.prototype),
                                     r = e.apply(n, t);
                                 return es(r) ? r : n
                             }
@@ -6156,7 +6162,7 @@
                             }))
                         }
 
-                        function Go(e, t, n, i, a, s, l, c, d, u) {
+                        function qo(e, t, n, i, a, s, l, c, d, u) {
                             var m = t & p,
                                 g = 1 & t,
                                 h = 2 & t,
@@ -6172,7 +6178,7 @@
                                     }(y, v);
                                 if (i && (y = So(y, i, a, f)), s && (y = Io(y, s, l, f)), b -= k, f && b < u) {
                                     var E = dn(y, v);
-                                    return Qo(e, t, Go, p.placeholder, n, y, E, c, d, u - b)
+                                    return Qo(e, t, qo, p.placeholder, n, y, E, c, d, u - b)
                                 }
                                 var w = g ? n : this,
                                     C = h ? w[e] : e;
@@ -6189,7 +6195,7 @@
                             }
                         }
 
-                        function qo(e, t) {
+                        function Go(e, t) {
                             return function(n, r) {
                                 return function(e, t, n, r) {
                                     return xr(e, (function(e, o, i) {
@@ -6311,9 +6317,9 @@
                                 return function a() {
                                     for (var s = arguments.length, l = r(s), c = s, d = ci(a); c--;) l[c] = arguments[c];
                                     var p = s < 3 && l[0] !== d && l[s - 1] !== d ? [] : dn(l, d);
-                                    return (s -= p.length) < n ? Qo(e, t, Go, a.placeholder, o, l, p, o, o, n - s) : $t(this && this !== ht && this instanceof a ? i : e, this, l)
+                                    return (s -= p.length) < n ? Qo(e, t, qo, a.placeholder, o, l, p, o, o, n - s) : $t(this && this !== ht && this instanceof a ? i : e, this, l)
                                 }
-                            }(e, t, f) : t != c && 33 != t || m.length ? Go.apply(o, v) : function(e, t, n, o) {
+                            }(e, t, f) : t != c && 33 != t || m.length ? qo.apply(o, v) : function(e, t, n, o) {
                                 var i = 1 & t,
                                     a = jo(e);
                                 return function t() {
@@ -6337,7 +6343,7 @@
                         }
 
                         function ti(e, t, n, r, i, a) {
-                            return es(e) && es(t) && (a.set(t, e), qr(e, t, o, ti, a), a.delete(t)), e
+                            return es(e) && es(t) && (a.set(t, e), Gr(e, t, o, ti, a), a.delete(t)), e
                         }
 
                         function ni(e) {
@@ -6451,15 +6457,15 @@
                                 if (!(i = null != e && n(e, a))) break;
                                 e = e[a]
                             }
-                            return i || ++r != o ? i : !!(o = null == e ? 0 : e.length) && Ja(o) && yi(a, o) && (Ua(e) || qa(e))
+                            return i || ++r != o ? i : !!(o = null == e ? 0 : e.length) && Ja(o) && yi(a, o) && (Ua(e) || Ga(e))
                         }
 
                         function Ai(e) {
-                            return "function" != typeof e.constructor || wi(e) ? {} : Gn(Ve(e))
+                            return "function" != typeof e.constructor || wi(e) ? {} : qn(Ve(e))
                         }
 
                         function bi(e) {
-                            return Ua(e) || qa(e) || !!(Xe && e && e[Xe])
+                            return Ua(e) || Ga(e) || !!(Xe && e && e[Xe])
                         }
 
                         function yi(e, t) {
@@ -6625,23 +6631,23 @@
                                 var n = Ki(t);
                                 return Ya(n) && (n = o), Ya(e) ? ur(e, Ar(t, 1, Ya, !0), di(n, 2)) : []
                             })),
-                            Gi = Zr((function(e, t) {
+                            qi = Zr((function(e, t) {
                                 var n = Ki(t);
                                 return Ya(n) && (n = o), Ya(e) ? ur(e, Ar(t, 1, Ya, !0), o, n) : []
                             }));
 
-                        function qi(e, t, n) {
+                        function Gi(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             if (!r) return -1;
                             var o = null == n ? 0 : gs(n);
-                            return o < 0 && (o = bn(r + o, 0)), Gt(e, di(t, 3), o)
+                            return o < 0 && (o = bn(r + o, 0)), qt(e, di(t, 3), o)
                         }
 
                         function Ui(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             if (!r) return -1;
                             var i = r - 1;
-                            return n !== o && (i = gs(n), i = n < 0 ? bn(r + i, 0) : yn(i, r - 1)), Gt(e, di(t, 3), i, !0)
+                            return n !== o && (i = gs(n), i = n < 0 ? bn(r + i, 0) : yn(i, r - 1)), qt(e, di(t, 3), i, !0)
                         }
 
                         function Hi(e) {
@@ -6762,7 +6768,7 @@
                         var ha = Mo((function(e, t, n) {
                             Pe.call(e, n) ? ++e[n] : ar(e, n, 1)
                         }));
-                        var fa = zo(qi),
+                        var fa = zo(Gi),
                             _a = zo(Ui);
 
                         function Aa(e, t) {
@@ -6945,10 +6951,10 @@
                             return e === t || e != e && t != t
                         }
                         var Fa = Vo($r),
-                            Ga = Vo((function(e, t) {
+                            qa = Vo((function(e, t) {
                                 return e >= t
                             })),
-                            qa = Or(function() {
+                            Ga = Or(function() {
                                 return arguments
                             }()) ? Or : function(e) {
                                 return ts(e) && Pe.call(e, "callee") && !Ke.call(e, "callee")
@@ -7120,10 +7126,10 @@
                         function $s(e, t) {
                             return null != e && _i(e, t, Sr)
                         }
-                        var Bs = qo((function(e, t, n) {
+                        var Bs = Go((function(e, t, n) {
                                 null != t && "function" != typeof t.toString && (t = ze.call(t)), e[t] = n
                             }), el(rl)),
-                            Ss = qo((function(e, t, n) {
+                            Ss = Go((function(e, t, n) {
                                 null != t && "function" != typeof t.toString && (t = ze.call(t)), Pe.call(e, t) ? e[t].push(n) : e[t] = [n]
                             }), di),
                             Is = Zr(Tr);
@@ -7136,10 +7142,10 @@
                             return Wa(e) ? Zn(e, !0) : Lr(e)
                         }
                         var Ms = Ro((function(e, t, n) {
-                                qr(e, t, n)
+                                Gr(e, t, n)
                             })),
                             Rs = Ro((function(e, t, n, r) {
-                                qr(e, t, n, r)
+                                Gr(e, t, n, r)
                             })),
                             Ds = oi((function(e, t) {
                                 var n = {};
@@ -7175,14 +7181,14 @@
                             return null == e ? [] : Jt(e, Ts(e))
                         }
                         var Fs = Lo((function(e, t, n) {
-                            return t = t.toLowerCase(), e + (n ? Gs(t) : t)
+                            return t = t.toLowerCase(), e + (n ? qs(t) : t)
                         }));
 
-                        function Gs(e) {
+                        function qs(e) {
                             return Ks(As(e).toLowerCase())
                         }
 
-                        function qs(e) {
+                        function Gs(e) {
                             return (e = As(e)) && e.replace(xe, rn).replace(tt, "")
                         }
                         var Us = Lo((function(e, t, n) {
@@ -7358,7 +7364,7 @@
                                 }
                             }(cr(e, 1))
                         }, Fn.constant = el, Fn.countBy = ha, Fn.create = function(e, t) {
-                            var n = Gn(e);
+                            var n = qn(e);
                             return null == t ? n : ir(n, t)
                         }, Fn.curry = function e(t, n, r) {
                             var i = Jo(t, 8, o, o, o, o, o, n = r ? o : n);
@@ -7366,7 +7372,7 @@
                         }, Fn.curryRight = function e(t, n, r) {
                             var i = Jo(t, l, o, o, o, o, o, n = r ? o : n);
                             return i.placeholder = e.placeholder, i
-                        }, Fn.debounce = Ta, Fn.defaults = Es, Fn.defaultsDeep = ws, Fn.defer = Oa, Fn.delay = Ma, Fn.difference = zi, Fn.differenceBy = Fi, Fn.differenceWith = Gi, Fn.drop = function(e, t, n) {
+                        }, Fn.debounce = Ta, Fn.defaults = Es, Fn.defaultsDeep = ws, Fn.defer = Oa, Fn.delay = Ma, Fn.difference = zi, Fn.differenceBy = Fi, Fn.differenceWith = qi, Fn.drop = function(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             return r ? oo(e, (t = n || t === o ? 1 : gs(t)) < 0 ? 0 : t, r) : []
                         }, Fn.dropRight = function(e, t, n) {
@@ -7422,7 +7428,7 @@
                         }, Fn.matches = function(e) {
                             return Fr(cr(e, 1))
                         }, Fn.matchesProperty = function(e, t) {
-                            return Gr(e, cr(t, 1))
+                            return qr(e, cr(t, 1))
                         }, Fn.memoize = Ra, Fn.merge = Ms, Fn.mergeWith = Rs, Fn.method = il, Fn.methodOf = al, Fn.mixin = sl, Fn.negate = Da, Fn.nthArg = function(e) {
                             return e = gs(e), Zr((function(t) {
                                 return Ur(t, e)
@@ -7511,7 +7517,7 @@
                                 o = r || Va(e) || cs(e);
                             if (t = di(t, 4), null == n) {
                                 var i = e && e.constructor;
-                                n = o ? r ? new i : [] : es(e) && Za(i) ? Gn(Ve(e)) : {}
+                                n = o ? r ? new i : [] : es(e) && Za(i) ? qn(Ve(e)) : {}
                             }
                             return (o ? St : xr)(e, (function(e, r, o) {
                                 return t(n, e, r, o)
@@ -7538,7 +7544,7 @@
                             return Ao(e || [], t || [], nr)
                         }, Fn.zipObjectDeep = function(e, t) {
                             return Ao(e || [], t || [], eo)
-                        }, Fn.zipWith = pa, Fn.entries = Ls, Fn.entriesIn = js, Fn.extend = ys, Fn.extendWith = xs, sl(Fn, Fn), Fn.add = _l, Fn.attempt = Xs, Fn.camelCase = Fs, Fn.capitalize = Gs, Fn.ceil = Al, Fn.clamp = function(e, t, n) {
+                        }, Fn.zipWith = pa, Fn.entries = Ls, Fn.entriesIn = js, Fn.extend = ys, Fn.extendWith = xs, sl(Fn, Fn), Fn.add = _l, Fn.attempt = Xs, Fn.camelCase = Fs, Fn.capitalize = qs, Fn.ceil = Al, Fn.clamp = function(e, t, n) {
                             return n === o && (n = t, t = o), n !== o && (n = (n = fs(n)) == n ? n : 0), t !== o && (t = (t = fs(t)) == t ? t : 0), lr(fs(e), t, n)
                         }, Fn.clone = function(e) {
                             return cr(e, 4)
@@ -7550,7 +7556,7 @@
                             return cr(e, 4, t = "function" == typeof t ? t : o)
                         }, Fn.conformsTo = function(e, t) {
                             return null == t || dr(e, t, Ts(t))
-                        }, Fn.deburr = qs, Fn.defaultTo = function(e, t) {
+                        }, Fn.deburr = Gs, Fn.defaultTo = function(e, t) {
                             return null == e || e != e ? t : e
                         }, Fn.divide = bl, Fn.endsWith = function(e, t, n) {
                             e = As(e), t = po(t);
@@ -7564,7 +7570,7 @@
                         }, Fn.every = function(e, t, n) {
                             var r = Ua(e) ? Tt : hr;
                             return n && xi(e, t, n) && (t = o), r(e, di(t, 3))
-                        }, Fn.find = fa, Fn.findIndex = qi, Fn.findKey = function(e, t) {
+                        }, Fn.find = fa, Fn.findIndex = Gi, Fn.findKey = function(e, t) {
                             return Ft(e, di(t, 3), xr)
                         }, Fn.findLast = _a, Fn.findLastIndex = Ui, Fn.findLastKey = function(e, t) {
                             return Ft(e, di(t, 3), vr)
@@ -7576,29 +7582,29 @@
                             return e && xr(e, di(t, 3))
                         }, Fn.forOwnRight = function(e, t) {
                             return e && vr(e, di(t, 3))
-                        }, Fn.get = Cs, Fn.gt = Fa, Fn.gte = Ga, Fn.has = function(e, t) {
+                        }, Fn.get = Cs, Fn.gt = Fa, Fn.gte = qa, Fn.has = function(e, t) {
                             return null != e && _i(e, t, Br)
                         }, Fn.hasIn = $s, Fn.head = Wi, Fn.identity = rl, Fn.includes = function(e, t, n, r) {
                             e = Wa(e) ? e : zs(e), n = n && !r ? gs(n) : 0;
                             var o = e.length;
-                            return n < 0 && (n = bn(o + n, 0)), ss(e) ? n <= o && e.indexOf(t, n) > -1 : !!o && qt(e, t, n) > -1
+                            return n < 0 && (n = bn(o + n, 0)), ss(e) ? n <= o && e.indexOf(t, n) > -1 : !!o && Gt(e, t, n) > -1
                         }, Fn.indexOf = function(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             if (!r) return -1;
                             var o = null == n ? 0 : gs(n);
-                            return o < 0 && (o = bn(r + o, 0)), qt(e, t, o)
+                            return o < 0 && (o = bn(r + o, 0)), Gt(e, t, o)
                         }, Fn.inRange = function(e, t, n) {
                             return t = ms(t), n === o ? (n = t, t = 0) : n = ms(n),
                                 function(e, t, n) {
                                     return e >= yn(t, n) && e < bn(t, n)
                                 }(e = fs(e), t, n)
-                        }, Fn.invoke = Is, Fn.isArguments = qa, Fn.isArray = Ua, Fn.isArrayBuffer = Ha, Fn.isArrayLike = Wa, Fn.isArrayLikeObject = Ya, Fn.isBoolean = function(e) {
+                        }, Fn.invoke = Is, Fn.isArguments = Ga, Fn.isArray = Ua, Fn.isArrayBuffer = Ha, Fn.isArrayLike = Wa, Fn.isArrayLikeObject = Ya, Fn.isBoolean = function(e) {
                             return !0 === e || !1 === e || ts(e) && Cr(e) == y
                         }, Fn.isBuffer = Va, Fn.isDate = Qa, Fn.isElement = function(e) {
                             return ts(e) && 1 === e.nodeType && !os(e)
                         }, Fn.isEmpty = function(e) {
                             if (null == e) return !0;
-                            if (Wa(e) && (Ua(e) || "string" == typeof e || "function" == typeof e.splice || Va(e) || cs(e) || qa(e))) return !e.length;
+                            if (Wa(e) && (Ua(e) || "string" == typeof e || "function" == typeof e.splice || Va(e) || cs(e) || Ga(e))) return !e.length;
                             var t = fi(e);
                             if (t == w || t == I) return !e.size;
                             if (wi(e)) return !Pr(e).length;
@@ -7643,7 +7649,7 @@
                                 for (var r = n + 1; r--;)
                                     if (e[r] === t) return r;
                                 return r
-                            }(e, t, i) : Gt(e, Ht, i, !0)
+                            }(e, t, i) : qt(e, Ht, i, !0)
                         }, Fn.lowerCase = Hs, Fn.lowerFirst = Ws, Fn.lt = ds, Fn.lte = ps, Fn.max = function(e) {
                             return e && e.length ? fr(e, rl, $r) : o
                         }, Fn.maxBy = function(e, t) {
@@ -7665,7 +7671,7 @@
                         }, Fn.multiply = vl, Fn.nth = function(e, t) {
                             return e && e.length ? Ur(e, gs(t)) : o
                         }, Fn.noConflict = function() {
-                            return ht._ === this && (ht._ = Ge), this
+                            return ht._ === this && (ht._ = qe), this
                         }, Fn.noop = ll, Fn.now = Ca, Fn.pad = function(e, t, n) {
                             e = As(e);
                             var r = (t = gs(t)) ? gn(e) : 0;
@@ -7945,7 +7951,7 @@
                                     func: n
                                 })
                             }
-                        })), On[Go(o, 2).name] = [{
+                        })), On[qo(o, 2).name] = [{
                             name: "wrapper",
                             func: o
                         }], Hn.prototype.clone = function() {
@@ -8025,7 +8031,7 @@
                                 value: e ? o : this.__values__[this.__index__++]
                             }
                         }, Fn.prototype.plant = function(e) {
-                            for (var t, n = this; n instanceof qn;) {
+                            for (var t, n = this; n instanceof Gn;) {
                                 var r = ji(n);
                                 r.__index__ = 0, r.__values__ = o, t ? i.__wrapped__ = r : t = r;
                                 var i = r;
@@ -8810,12 +8816,12 @@
                 {
                     components: o
                 } = r,
-                i = new Set(["REPUTATION_LIMIT", "RANKED_RESTRICTION", "QUEUE_LOCKOUT", "QUEUE_DELAY", "TEAM_VOICE_LOCKOUT", "TEXT_CHAT_RESTRICTION", "ALL_PINGS_RESTRICTION"]),
+                i = new Set(["REPUTATION_LIMIT", "RANKED_RESTRICTION", "QUEUE_LOCKOUT", "QUEUE_DELAY", "TEAM_VOICE_LOCKOUT", "VOICE_CHAT_MUTED", "TEXT_CHAT_RESTRICTION", "ALL_PINGS_RESTRICTION"]),
                 a = [{
                     restrictionType: "HONOR_GAMEFLOW_CHAT_LOCKED",
                     activeWhenHonorLevelBelow: 2
                 }, {
-                    restrictionType: "HONOR_GAMEFLOW_VOICE_LOCKED",
+                    restrictionType: "HONOR_VOICE_CHAT_MUTED",
                     activeWhenHonorLevelBelow: 3
                 }];
             e.exports = {
@@ -12781,12 +12787,10 @@
             "use strict";
             const r = n(1),
                 {
-                    components: o
+                    components: o,
+                    tra: i
                 } = r,
-                i = 864e5,
-                a = 36e5,
-                s = 6e4,
-                l = {
+                a = {
                     REPUTATION_LIMIT: "honor-downgrade",
                     RANKED_RESTRICTION: "ranked-suspension",
                     QUEUE_LOCKOUT: "queue-lock",
@@ -12795,67 +12799,69 @@
                     DM_RESTRICTION: "chat-restriction",
                     ALL_PINGS_RESTRICTION: "ping-restriction",
                     HONOR_GAMEFLOW_CHAT_LOCKED: "chat-restriction",
-                    HONOR_GAMEFLOW_VOICE_LOCKED: "voice-restriction",
-                    TEAM_VOICE_LOCKOUT: "voice-restriction"
+                    HONOR_VOICE_CHAT_MUTED: "voice-restriction",
+                    TEAM_VOICE_LOCKOUT: "voice-restriction",
+                    VOICE_CHAT_MUTED: "voice-restriction"
                 },
-                c = ["honor-downgrade", "ranked-suspension", "queue-lock", "queue-delay", "chat-restriction", "ping-restriction", "voice-restriction"],
-                d = new Set(["HONOR_GAMEFLOW_CHAT_LOCKED", "HONOR_GAMEFLOW_VOICE_LOCKED"]),
-                p = {
+                s = ["honor-downgrade", "ranked-suspension", "queue-lock", "queue-delay", "chat-restriction", "ping-restriction", "voice-restriction"],
+                l = new Set(["HONOR_GAMEFLOW_CHAT_LOCKED", "HONOR_VOICE_CHAT_MUTED"]),
+                c = {
                     HONOR_GAMEFLOW_CHAT_LOCKED: 2,
-                    HONOR_GAMEFLOW_VOICE_LOCKED: 3
-                },
-                u = 60,
-                m = 24 * u;
-
-            function g(e) {
-                const t = {
-                    time: "",
-                    games: 0,
-                    level: 0
+                    HONOR_VOICE_CHAT_MUTED: 3
                 };
-                if (!e) return t;
-                const n = e.expirationData;
-                if (n) {
-                    const e = n.expirationMillis;
-                    e && e > 0 && (t.time = function(e) {
-                        if (!e || e <= 0) return "";
-                        const t = Math.max(1, Math.ceil(e / s)),
-                            n = Math.floor(t / m),
-                            r = Math.floor(t % m / u),
-                            o = t % u,
-                            i = [];
-                        return n > 0 && i.push(`${n}D`), r > 0 && i.push(`${r}H`), (o > 0 || 0 === i.length) && i.push(`${o}M`), i.slice(0, 2).join(" ")
-                    }(e - Date.now()));
-                    const r = n.redemptions;
-                    if (Array.isArray(r) && r.length > 0) {
-                        const e = r.find((e => e && e.redemptionCountRemaining > 0)) || r[0];
-                        t.games = Math.max(0, e && e.redemptionCountRemaining || 0)
-                    }
-                }
-                return t.level = p[e.restrictionType] || 0, t
+
+            function d() {
+                const e = r.SharedComponents;
+                return e && "function" == typeof e.getApi_SharedPlayerBehaviorApps ? e.getApi_SharedPlayerBehaviorApps() : null
             }
 
-            function h(e) {
-                if (e && d.has(e.restrictionType)) return 2;
+            function p(e) {
+                if (e && l.has(e.restrictionType)) return 2;
                 const t = e && e.expirationData;
                 return t && t.expirationMillis && t.expirationMillis > 0 ? 0 : t && Array.isArray(t.redemptions) && t.redemptions.length > 0 ? 1 : 2
             }
             o.defineElement("lol-social-restriction-banner", {
                 styles: n(304),
-                restrictionIconType: e => e && e.restrictionType && l[e.restrictionType] || "chat-restriction",
+                restrictionIconType: e => e && e.restrictionType && a[e.restrictionType] || "chat-restriction",
+                formatDurationLong(e) {
+                    const t = d();
+                    return t && "function" == typeof t.formatDuration ? t.formatDuration(i, e, 2) : ""
+                },
+                restrictionDimensions(e) {
+                    const t = {
+                        time: "",
+                        games: 0,
+                        level: 0
+                    };
+                    if (!e) return t;
+                    const n = e.expirationData;
+                    if (n) {
+                        const e = n.expirationMillis;
+                        e && e > 0 && (t.time = this.formatDurationLong(e - Date.now()));
+                        const r = n.redemptions;
+                        if (Array.isArray(r) && r.length > 0) {
+                            const e = r.find((e => e && e.redemptionCountRemaining > 0)) || r[0];
+                            t.games = Math.max(0, e && e.redemptionCountRemaining || 0)
+                        }
+                    }
+                    return t.level = c[e.restrictionType] || 0, t
+                },
                 restrictionDurationLabel(e) {
-                    if (e && d.has(e.restrictionType)) return "";
+                    if (e && l.has(e.restrictionType)) return "";
                     const t = e && e.expirationData;
                     if (!t) return "";
                     const n = t.expirationMillis;
                     if (n && n > 0) {
-                        const e = n - Date.now();
-                        return e <= 0 ? "" : e >= i ? `${Math.ceil(e/i)}D` : e >= a ? `${Math.ceil(e/a)}H` : `${Math.max(1,Math.ceil(e/s))}M`
+                        const e = d();
+                        return e && "function" == typeof e.formatTimeRemaining ? e.formatTimeRemaining(i, n, Date.now(), 1) : ""
                     }
                     const r = t.redemptions;
                     if (Array.isArray(r) && r.length > 0) {
-                        const e = r.find((e => e && e.redemptionCountRemaining > 0)) || r[0];
-                        return `${Math.max(0,e.redemptionCountRemaining||0)}G`
+                        const e = r.find((e => e && e.redemptionCountRemaining > 0)) || r[0],
+                            t = Math.max(0, e.redemptionCountRemaining || 0);
+                        return this.t("social_restriction_redemption_games", {
+                            games: t
+                        })
                     }
                     return ""
                 },
@@ -12864,11 +12870,11 @@
                     const t = {};
                     return e.forEach((e => {
                         if (!e || !e.restrictionType) return;
-                        const n = l[e.restrictionType];
+                        const n = a[e.restrictionType];
                         if (!n) return;
                         const r = t[n];
-                        (!r || h(e) < h(r)) && (t[n] = e)
-                    })), c.map((e => t[e])).filter((e => Boolean(e)))
+                        (!r || p(e) < p(r)) && (t[n] = e)
+                    })), s.map((e => t[e])).filter((e => Boolean(e)))
                 },
                 visibleRestrictions(e) {
                     return this.dedupedSortedRestrictions(e).slice(0, 3)
@@ -12881,7 +12887,7 @@
                     return this.t(`social_restriction_${t}_name`)
                 },
                 restrictionTooltipBody(e) {
-                    const t = g(e);
+                    const t = this.restrictionDimensions(e);
                     return t.time ? this.t("social_restriction_time_remaining", {
                         time: t.time
                     }) : t.games > 0 ? this.t("social_restriction_games_remaining", {
@@ -12919,7 +12925,7 @@
                 openRestrictionDrawer() {
                     const e = r.SharedComponents,
                         t = e && e.getApi_SharedPlayerBehaviorApps && e.getApi_SharedPlayerBehaviorApps();
-                    t && t.showHonorPanelDrawer && t.showHonorPanelDrawer({
+                    t && t.createHonorPanelDrawer && t.createHonorPanelDrawer({
                         wrapperClassName: "lol-social-restriction-drawer"
                     })
                 }
@@ -16559,7 +16565,6 @@
                 isMenuOpen: !1,
                 hoveringAvatar: !1,
                 statusError: !1,
-                honorEnabled: !1,
                 honorLevel: 0,
                 socialPanelRestrictionEnabled: !1,
                 openPartiesService: r.Ember.inject.service("open-parties"),
@@ -16626,10 +16631,10 @@
                 openPartyDescription: r.Ember.computed("openPartiesService", "sessionService.me.lol.pty", (function() {
                     return this.get("openPartiesService").getPartyOccupancyString(this.get("meObj"))
                 })),
-                showHonorBadge: r.Ember.computed("honorEnabled", "honorLevel", "socialPanelRestrictionEnabled", (function() {
+                showHonorBadge: r.Ember.computed("honorLevel", "socialPanelRestrictionEnabled", (function() {
                     if (!this.get("socialPanelRestrictionEnabled")) return !1;
                     const e = this.get("honorLevel");
-                    return this.get("honorEnabled") && e >= 1 && e <= 5
+                    return e >= 1 && e <= 5
                 })),
                 honorBadgeUrl: r.Ember.computed("honorLevel", (function() {
                     return `/fe/lol-shared-components/badge-honor-${this.get("honorLevel")}.svg`
@@ -16646,17 +16651,14 @@
                 _setupHonorObservers() {
                     r.db.observe(l, this, (e => {
                         this.set("socialPanelRestrictionEnabled", "boolean" == typeof e && e)
-                    })), r.db.get("/lol-honor-v2/v1/config").then((e => {
-                        const t = !(!e || !e.Enabled);
-                        this.set("honorEnabled", t), t && r.db.observe(c, this, (e => {
-                            const t = e && "number" == typeof e.honorLevel ? e.honorLevel : 0;
-                            this.set("honorLevel", t)
-                        }))
+                    })), r.db.observe(c, this, (e => {
+                        const t = e && "number" == typeof e.honorLevel ? e.honorLevel : 0;
+                        this.set("honorLevel", t)
                     }))
                 },
                 _openHonorDrawer() {
                     const e = r.SharedComponents && r.SharedComponents.getApi_SharedPlayerBehaviorApps && r.SharedComponents.getApi_SharedPlayerBehaviorApps();
-                    e && e.showHonorPanelDrawer && e.showHonorPanelDrawer({
+                    e && e.createHonorPanelDrawer && e.createHonorPanelDrawer({
                         wrapperClassName: "lol-social-honor-drawer"
                     })
                 },
@@ -23646,7 +23648,7 @@
                     windowManager: e => e.get("rcp-fe-lol-uikit").getWindowManager(),
                     _: e => e.get("rcp-fe-common-libs").getLodash("v4")
                 });
-                let a = i.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-social/trans.json").overlay("/fe/lol-social/trans-player-behavior.json").overlay("/fe/lol-shared-components/trans-challenges.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-tft-promethium/trans.json");
+                let a = i.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-social/trans.json").overlay("/fe/lol-social/trans-player-behavior.json").overlay("/fe/lol-shared-components/trans-challenges.json").overlay("/fe/lol-shared-components/trans-player-behavior.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-tft-promethium/trans.json");
                 const c = e.default.emberL10n(e.default.Ember, a),
                     d = i.getSocket(),
                     p = e.default.dataBinding.bindTo(d);

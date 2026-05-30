@@ -2544,6 +2544,11 @@ lol-friend-finder-social-summoner .social-added {
     margin: 0 0 0 4px
 }
 
+.hover-card-ranked-description .hover-card-rank-img-container .hover-card-rank-image {
+    height: 20px;
+    width: 20px
+}
+
 .hover-card-footer {
     letter-spacing: .05em;
     padding-right: 12px !important
@@ -2900,6 +2905,7 @@ lol-friend-finder-social-summoner .social-added {
 }
 
 .lol-social-identity .lower-details {
+    align-items: center;
     display: flex;
     overflow: hidden
 }
@@ -2955,10 +2961,36 @@ lol-friend-finder-social-summoner .social-added {
     margin-right: 4px
 }
 
-.lol-social-identity .notifications-button {
-    align-self: flex-end;
+.lol-social-identity .honor-button {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    height: 18px;
+    justify-content: center;
     margin-left: 4px;
-    margin-right: 2px
+    position: relative;
+    width: 18px
+}
+
+.lol-social-identity .honor-button .honor-button-icon {
+    display: block;
+    height: 18px;
+    pointer-events: none;
+    width: 18px
+}
+
+.lol-social-identity .honor-button:hover .honor-button-icon {
+    filter: brightness(1.15)
+}
+
+.lol-social-identity .notifications-button {
+    align-items: center;
+    display: inline-flex;
+    height: 18px;
+    justify-content: center;
+    margin-left: 4px;
+    margin-right: 2px;
+    width: 18px
 }
 
 .lol-social-identity .status .status-message:lang(ar-ae) {

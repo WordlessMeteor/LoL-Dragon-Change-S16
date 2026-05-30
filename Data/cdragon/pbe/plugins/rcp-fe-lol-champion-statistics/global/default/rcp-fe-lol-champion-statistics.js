@@ -4,20 +4,20 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = function() {
-                return function() {
-                    Object.keys(r).forEach((e => {
-                        Object.keys(r[e]).forEach((t => {
-                            const n = r[e][t],
-                                u = {
-                                    pos: e,
-                                    rate: n
-                                };
-                            o[t] ? o[t].push(u) : o[t] = [u]
-                        }))
-                    })), Object.keys(o).forEach((e => {
-                        o[e].sort(((e, t) => e - t))
+                Object.keys(r).forEach((e => {
+                    Object.keys(r[e]).forEach((t => {
+                        const n = r[e][t],
+                            s = {
+                                pos: e,
+                                rate: n
+                            };
+                        o[t] ? o[t].push(s) : o[t] = [s]
                     }))
-                }(), {
+                })), Object.keys(o).forEach((e => {
+                    o[e].sort(((e, t) => e - t))
+                }));
+                0;
+                return {
                     getPlayRates: function() {
                         return r
                     },
@@ -42,10 +42,10 @@
     function n(r) {
         var o = t[r];
         if (void 0 !== o) return o.exports;
-        var u = t[r] = {
+        var s = t[r] = {
             exports: {}
         };
-        return e[r](u, u.exports, n), u.exports
+        return e[r](s, s.exports, n), s.exports
     }
     n.r = e => {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
