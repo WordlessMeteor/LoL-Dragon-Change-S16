@@ -1781,17 +1781,19 @@
             const n = "UNRANKED",
                 a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 o = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                i = ["IV", "III", "II", "I"],
-                s = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                i = a[a.length - 1],
+                s = [i, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                r = ["IV", "III", "II", "I"],
+                l = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function r(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var l = {
+            var u = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -1801,14 +1803,14 @@
                 TIERS: o,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: a[a.length - 1],
+                HIGHEST_TIER: i,
                 LOWEST_TIER: a[0],
-                DIVISIONS: i,
-                HIGHEST_DIVISION: i[i.length - 1],
-                LOWEST_DIVISION: i[0],
+                DIVISIONS: r,
+                HIGHEST_DIVISION: r[r.length - 1],
+                LOWEST_DIVISION: r[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: r(o),
-                DIVISION_TO_ORDINAL: r(i),
+                TIER_NAME_TO_ORDINAL: c(o),
+                DIVISION_TO_ORDINAL: c(r),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1816,9 +1818,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: s,
+                TFT_RATED_TIERS: l,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: s[0],
+                LOWEST_TFT_RATED_TIER: l[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -1835,9 +1837,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: s
             };
-            t.default = l
+            t.default = u
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -5500,9 +5503,9 @@
                             "error.message": e.message
                         })
                     },
-                    P = (0, N.startFeatureFlagContexts)(O, n.getOrCreateTracker(0)),
-                    D = (0, i.createPageExitObservable)(e),
-                    G = D.subscribe((function(e) {
+                    D = (0, N.startFeatureFlagContexts)(O, n.getOrCreateTracker(0)),
+                    P = (0, i.createPageExitObservable)(e),
+                    G = P.subscribe((function(e) {
                         O.notify(10, e)
                     }));
                 k.push((function() {
@@ -5511,7 +5514,7 @@
                 var K = (0, s.canUseEventBridge)() ? (0, v.startRumSessionManagerStub)() : (0, v.startRumSessionManager)(e, O, T);
                 if ((0, s.canUseEventBridge)())(0, y.startRumEventBridge)(O);
                 else {
-                    var V = (0, S.startRumBatch)(e, O, R.observable, w, D, K.expireObservable, f);
+                    var V = (0, S.startRumBatch)(e, O, R.observable, w, P, K.expireObservable, f);
                     k.push((function() {
                         return V.stop()
                     })), (0, C.startCustomerDataTelemetry)(e, R, O, n, V.flushObservable)
@@ -5526,7 +5529,7 @@
                     W = H.addAction,
                     q = H.stop;
                 k.push(q), (0, o.drainPreStartTelemetry)();
-                var $ = (0, E.startViewCollection)(O, e, location, U, B, P, F, t, m),
+                var $ = (0, E.startViewCollection)(O, e, location, U, B, D, F, t, m),
                     X = $.addTiming,
                     Z = $.startView,
                     J = $.setViewName,
@@ -5541,7 +5544,7 @@
                         k.push(ae)
                     }
                 } else(0, _.startLongTaskCollection)(O, e);
-                var oe = (0, g.startErrorCollection)(O, e, F, P).addError;
+                var oe = (0, g.startErrorCollection)(O, e, F, D).addError;
                 (0, p.startRequestCollection)(O, e, K);
                 var ie = (0, L.startVitalCollection)(O, F, I),
                     se = (0, u.startInternalContext)(e.applicationId, K, Y, z, j);
@@ -5549,7 +5552,7 @@
                     addAction: W,
                     addError: oe,
                     addTiming: X,
-                    addFeatureFlagEvaluation: P.addFeatureFlagEvaluation,
+                    addFeatureFlagEvaluation: D.addFeatureFlagEvaluation,
                     startView: Z,
                     setViewContext: Q,
                     setViewContextProperty: ee,
@@ -8447,27 +8450,27 @@
                         var w = (0, c.throttle)(X, g, {
                                 leading: !1
                             }),
-                            P = w.throttled,
-                            D = w.cancel,
-                            G = (0, f.trackCommonViewMetrics)(e, t, n, P, E, v),
+                            D = w.throttled,
+                            P = w.cancel,
+                            G = (0, f.trackCommonViewMetrics)(e, t, n, D, E, v),
                             K = G.setLoadEvent,
                             V = G.setViewEnd,
                             U = G.stop,
                             B = G.stopINPTracking,
                             F = G.getCommonViewMetrics,
-                            H = "initial_load" === E ? (0, p.trackInitialViewMetrics)(n, K, P) : {
+                            H = "initial_load" === E ? (0, p.trackInitialViewMetrics)(n, K, D) : {
                                 stop: c.noop,
                                 initialViewMetrics: {}
                             },
                             Y = H.stop,
                             j = H.initialViewMetrics,
-                            z = (0, m.trackViewEventCounts)(e, A, P),
+                            z = (0, m.trackViewEventCounts)(e, A, D),
                             W = z.stop,
                             q = z.eventCounts,
                             $ = (0, u.setInterval)(X, _);
 
                         function X() {
-                            D(), k += 1;
+                            P(), k += 1;
                             var t = void 0 === y ? (0, a.timeStampNow)() : y.timeStamp;
                             e.notify(3, {
                                 customTimings: L,
@@ -8516,7 +8519,7 @@
                                         var t = e.replace(/[^a-zA-Z0-9-_.@$]/g, "_");
                                         t !== e && d.display.warn("Invalid timing name: ".concat(e, ", sanitized to: ").concat(t));
                                         return t
-                                    }(e)] = n, P()
+                                    }(e)] = n, D()
                                 }
                             },
                             setViewName: function(e) {

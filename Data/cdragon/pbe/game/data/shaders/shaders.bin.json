@@ -71609,6 +71609,57 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Rim_Light_Power",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Rim_Light_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Rim_Light_Color",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Rim_Light_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Rim_Light_Intensity",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Rim_Light_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Bloom_Intensity",
                 "data": [
                     1.0,
@@ -71671,6 +71722,10 @@
             },
             {
                 "name": "USE_DISSOLVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "ADD_FRESNEL_RIM",
                 "__type": "ShaderStaticSwitch"
             }
         ],
@@ -92236,6 +92291,7 @@
             {
                 "name": "WaterNormal",
                 "defaultTexturePath": "ASSETS/Shared/Materials/velvet_NM.tex",
+                "samplerName": "Wrap_No_Mip",
                 "__type": "ShaderTexture"
             },
             {

@@ -1183,17 +1183,19 @@
             const n = "UNRANKED",
                 a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                l = ["IV", "III", "II", "I"],
-                o = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                l = a[a.length - 1],
+                o = [l, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                i = ["IV", "III", "II", "I"],
+                r = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function i(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var r = {
+            var m = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -1203,14 +1205,14 @@
                 TIERS: s,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: a[a.length - 1],
+                HIGHEST_TIER: l,
                 LOWEST_TIER: a[0],
-                DIVISIONS: l,
-                HIGHEST_DIVISION: l[l.length - 1],
-                LOWEST_DIVISION: l[0],
+                DIVISIONS: i,
+                HIGHEST_DIVISION: i[i.length - 1],
+                LOWEST_DIVISION: i[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: i(s),
-                DIVISION_TO_ORDINAL: i(l),
+                TIER_NAME_TO_ORDINAL: c(s),
+                DIVISION_TO_ORDINAL: c(i),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1218,9 +1220,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: o,
+                TFT_RATED_TIERS: r,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: o[0],
+                LOWEST_TFT_RATED_TIER: r[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -1237,9 +1239,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: o
             };
-            t.default = r
+            t.default = m
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -5753,19 +5756,24 @@
                 async _getVersionFromSettings() {
                     const e = this.get("name");
                     let t = 0;
-                    return await (0, a.dataBinding)(s.SETTINGS_PATH).get(s.TFT_BINDING_PATH + s.DATABINDING_CATEGORY.FIRST_TIME).then((n => {
+                    return window.top.__activeTftCheats && window.top.__activeTftCheats[e] ? (window.top.__activeTftCheats[e] = !1, this.set("seen", !1), this.set("responseData", {}), 0) : (await (0, a.dataBinding)(s.SETTINGS_PATH).get(s.TFT_BINDING_PATH + s.DATABINDING_CATEGORY.FIRST_TIME).then((n => {
                         n && n.data && n.data[e] && (t = n.data[e]), n.data || (n.data = {}), this.get("manual") || (n.data[e] = this.get("version")), this.set("responseData", n.data)
-                    })), t
+                    })), t)
                 },
                 init() {
-                    this._super(...arguments), this._getVersionFromSettings().then((e => {
+                    this._super(...arguments);
+                    const e = this.get("name");
+                    this._getVersionFromSettings().then((e => {
                         this._isOutdatedVersion(e) && (this.set("seen", !1), this.get("manual") || this._patchVersionToSettings(this.get("version")))
-                    }))
+                    })), window.top[`__resetContainer_${e}`] = () => {
+                        const t = this.get("responseData");
+                        t && delete t[e], this.set("seen", !1), this.notifyPropertyChange("responseData")
+                    }
                 },
                 actions: {
                     manuallyTriggerSeen() {
                         const e = this.get("responseData");
-                        e && (e[this.get("name")] = this.get("version")), this._patchVersionToSettings(this.get("version"))
+                        e && (e[this.get("name")] = this.get("version")), this._patchVersionToSettings(this.get("version")), this.set("seen", !0)
                     }
                 }
             });
@@ -6373,8 +6381,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "gjy9CxqB",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-xs\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-xs\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-xs\\\\index.js\\" "],["text","\\n"],["block",["tft-event-hub"],null,[["eventData","eventHubAssets","spineBackgroundWidth","spineBackgroundHeight","spineBackgroundOffsetX","spineBackgroundOffsetY","telemetryEventPassTimeSpent"],[["get",["eventData"]],["get",["eventHubAssets"]],6100,1,-1180,150,["get",["telemetryEventPassTimeSpent"]]]],4],["text","\\n"],["append",["helper",["tft-event-hub-first-time-flow-2"],null,[["backgroundAsset","buttonAssetClicked","buttonAssetDefault","buttonAssetHover","buttonText","description","dividerAsset","eventId","title","version"],[["get",["eventHubAssets","event-welcome-background"]],["get",["eventHubAssets","event-welcome-button-click"]],["get",["eventHubAssets","event-welcome-button-default"]],["get",["eventHubAssets","event-welcome-button-hover"]],["get",["tra","tft_eventhub_first_time_flow_7ya_button"]],["get",["tra","tft_eventhub_first_time_flow_7ya_description"]],["get",["eventHubAssets","event-welcome-divider"]],["get",["eventId"]],["get",["tra","tft_eventhub_first_time_flow_7ya_title"]],["get",["eventStartTimeInMS"]]]]],false],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","event-timer"],["flush-element"],["text","\\n      "],["append",["helper",["tft-event-timer"],null,[["eventData"],[["get",["eventData"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","mission-panel"],["flush-element"],["text","\\n      "],["append",["helper",["tft-event-mission-panel"],null,[["eventData","eventHubAssets","showMissionTracker","showTimer","flattenChain"],[["get",["eventData"]],["get",["eventHubAssets"]],false,false,true]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","icon-question-mark-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"circleButtonClick"],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"circleButtonHover"],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","icon-question-mark"],["dynamic-attr","style",["concat",["--info-icon-image: url(\'",["unknown",["eventHubAssets","event-hub-info-icon"]],"\'); --info-icon-hover: url(\'",["unknown",["eventHubAssets","event-hub-info-icon-hover"]],"\'); --info-icon-clicked: url(\'",["unknown",["eventHubAssets","event-hub-info-icon-clicked"]],"\')"]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openEventUrlFaq",["get",["urlFaq"]]],null],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","event-info-link"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","link-text"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openEventUrlFaq"],null],null],["flush-element"],["append",["unknown",["tra","tft_eventhub_faq_text"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","link-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["eventHubAssets","event-info-link-icon"]],"\');"]]],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","timer-wrapper"],["flush-element"],["text","\\n            "],["append",["helper",["tft-event-timer"],null,[["basicTimer","eventData"],[true,["get",["eventData"]]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","left-panel gray-box"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","left-top gray-box"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","logo-tft-name"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["logoTftNameImagePath"]],"\')"]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","event-name"],["flush-element"],["append",["unknown",["titleName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["showTimer"]]],null,2],["block",["if"],[["get",["showEventInfoLink"]]],null,1],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","left-btm gray-box"],["flush-element"],["text","\\n        "],["append",["helper",["tft-quick-play"],null,[["buttonClassName","queueIdOverride","queueButtonTextOverride","quickPlayFontSize"],["event-play",6120,["get",["tra","tft_eventhub_play_button_text"]],26]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["baseHub","leftPanel"],null,null,3],["block",["baseHub","rightPanel"],null,null,0]],"locals":["baseHub"]}],"hasPartials":false}',
+                id: "9+6x2e7m",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-xs\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-xs\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-xs\\\\index.js\\" "],["text","\\n"],["block",["tft-event-hub"],null,[["eventData","eventHubAssets","spineBackgroundWidth","spineBackgroundHeight","spineBackgroundOffsetX","spineBackgroundOffsetY","telemetryEventPassTimeSpent"],[["get",["eventData"]],["get",["eventHubAssets"]],6100,1,-1180,150,["get",["telemetryEventPassTimeSpent"]]]],4],["text","\\n"],["append",["helper",["tft-event-hub-first-time-flow-2"],null,[["backgroundAsset","buttonAssetClicked","buttonAssetDefault","buttonAssetHover","buttonText","description","dividerAsset","eventId","title","version"],[["get",["eventHubAssets","event-welcome-background"]],["get",["eventHubAssets","intro_modal_button_clicked"]],["get",["eventHubAssets","intro_modal_button_default"]],["get",["eventHubAssets","intro_modal_button_hover"]],["get",["tra","tft_eventhub_first_time_flow_7ya_button"]],["get",["tra","tft_eventhub_first_time_flow_7ya_description"]],["get",["eventHubAssets","event-welcome-divider"]],["get",["eventId"]],["get",["tra","tft_eventhub_first_time_flow_7ya_title"]],["get",["eventStartTimeInMS"]]]]],false],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","event-timer"],["flush-element"],["text","\\n      "],["append",["helper",["tft-event-timer"],null,[["eventData"],[["get",["eventData"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","mission-panel"],["flush-element"],["text","\\n      "],["append",["helper",["tft-event-mission-panel"],null,[["eventData","eventHubAssets","showMissionTracker","showTimer","flattenChain"],[["get",["eventData"]],["get",["eventHubAssets"]],false,false,true]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","icon-question-mark-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"circleButtonClick"],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"circleButtonHover"],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","icon-question-mark"],["dynamic-attr","style",["concat",["--info-icon-image: url(\'",["unknown",["eventHubAssets","event-hub-info-icon"]],"\'); --info-icon-hover: url(\'",["unknown",["eventHubAssets","event-hub-info-icon-hover"]],"\'); --info-icon-clicked: url(\'",["unknown",["eventHubAssets","event-hub-info-icon-clicked"]],"\')"]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openEventUrlFaq",["get",["urlFaq"]]],null],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","event-info-link"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","link-text"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openEventUrlFaq"],null],null],["flush-element"],["append",["unknown",["tra","tft_eventhub_faq_text"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","link-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["eventHubAssets","event-info-link-icon"]],"\');"]]],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","timer-wrapper"],["flush-element"],["text","\\n            "],["append",["helper",["tft-event-timer"],null,[["basicTimer","eventData"],[true,["get",["eventData"]]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","left-panel gray-box"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","left-top gray-box"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","logo-tft-name"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["logoTftNameImagePath"]],"\')"]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","event-name"],["flush-element"],["append",["unknown",["titleName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["showTimer"]]],null,2],["block",["if"],[["get",["showEventInfoLink"]]],null,1],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","left-btm gray-box"],["flush-element"],["text","\\n        "],["append",["helper",["tft-quick-play"],null,[["buttonClassName","queueIdOverride","queueButtonTextOverride","quickPlayFontSize"],["event-play",6120,["get",["tra","tft_eventhub_play_button_text"]],26]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["baseHub","leftPanel"],null,null,3],["block",["baseHub","rightPanel"],null,null,0]],"locals":["baseHub"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -6602,9 +6610,8 @@
                     eventId: "",
                     title: "",
                     version: 1,
-                    showModal: !0,
                     init() {
-                        this._super(...arguments), (0, l.trackEventHubIntroModalOpen)(this.get("eventId"))
+                        this._super(...arguments), this.set("showModal", !0), (0, l.trackEventHubIntroModalOpen)(this.get("eventId"))
                     },
                     actions: {
                         hideModal(e) {
@@ -6616,8 +6623,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "V2iS7edt",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-first-time-flow-2\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-first-time-flow-2\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-first-time-flow-2\\\\index.js\\" "],["text","\\n"],["block",["tft-versioned-container"],null,[["name","version","manual"],[["get",["eventId"]],["get",["version"]],true]],2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-modal"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["backgroundAsset"]],"\')"]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-divider"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["dividerAsset"]],"\')"]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["description"]]],null],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"hideModal",["get",["manuallyTriggerSeen"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-button-text"],["flush-element"],["text"," "],["append",["unknown",["buttonText"]],false],["text"," "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType"],["DialogAlert","inside"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["showModal"]]],null,1]],"locals":["manuallyTriggerSeen"]}],"hasPartials":false}',
+                id: "bxilk8Dh",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-first-time-flow-2\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-first-time-flow-2\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft\\\\src\\\\app\\\\components\\\\tft-event-hub-first-time-flow-2\\\\index.js\\" "],["text","\\n"],["block",["tft-versioned-container"],null,[["name","version","manual"],[["get",["eventId"]],["get",["version"]],true]],2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-modal"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["backgroundAsset"]],"\')"]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-divider"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["dividerAsset"]],"\')"]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["description"]]],null],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"hideModal",["get",["manuallyTriggerSeen"]]],null],null],["dynamic-attr","style",["concat",["\\n              --button-default: url(",["unknown",["buttonAssetDefault"]],");\\n              --button-hover: url(",["unknown",["buttonAssetHover"]],");\\n              --button-clicked: url(",["unknown",["buttonAssetClicked"]],");\\n            "]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-tft-event-hub-first-time-flow-2-button-text"],["flush-element"],["text"," "],["append",["unknown",["buttonText"]],false],["text"," "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType"],["DialogAlert","inside"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["showModal"]]],null,1]],"locals":["manuallyTriggerSeen"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

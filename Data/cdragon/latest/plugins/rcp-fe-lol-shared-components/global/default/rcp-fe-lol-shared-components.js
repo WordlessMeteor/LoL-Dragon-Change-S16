@@ -1405,6 +1405,9 @@
                 isApexForQueue(e) {
                     return !(!e || !e.tier) && r.RANKED.APEX_TIERS.includes(e.tier)
                 }
+                tierHasDecay(e) {
+                    return !(!e || !e.tier) && r.RANKED.TIERS_WITH_DECAY.includes(e.tier)
+                }
                 getUpOneDivision(e, t, n) {
                     let a, s;
                     if (t === r.RANKED.HIGHEST_DIVISION || r.RANKED.APEX_TIERS.includes(e)) {
@@ -1897,17 +1900,19 @@
             const n = "UNRANKED",
                 a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                r = ["IV", "III", "II", "I"],
-                i = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                r = a[a.length - 1],
+                i = [r, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                o = ["IV", "III", "II", "I"],
+                l = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function o(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var l = {
+            var d = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -1917,14 +1922,14 @@
                 TIERS: s,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: a[a.length - 1],
+                HIGHEST_TIER: r,
                 LOWEST_TIER: a[0],
-                DIVISIONS: r,
-                HIGHEST_DIVISION: r[r.length - 1],
-                LOWEST_DIVISION: r[0],
+                DIVISIONS: o,
+                HIGHEST_DIVISION: o[o.length - 1],
+                LOWEST_DIVISION: o[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: o(s),
-                DIVISION_TO_ORDINAL: o(r),
+                TIER_NAME_TO_ORDINAL: c(s),
+                DIVISION_TO_ORDINAL: c(o),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1932,9 +1937,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: i,
+                TFT_RATED_TIERS: l,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: i[0],
+                LOWEST_TFT_RATED_TIER: l[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -1951,9 +1956,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: i
             };
-            t.default = l
+            t.default = d
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -8705,13 +8711,13 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                AsYouType: () => G,
+                AsYouType: () => V,
                 AsYouTypeCustom: () => b.default,
                 DIGITS: () => x.DIGITS,
                 DIGIT_PLACEHOLDER: () => b.DIGIT_PLACEHOLDER,
                 Metadata: () => y.default,
                 ParseError: () => C.default,
-                PhoneNumberMatcher: () => V,
+                PhoneNumberMatcher: () => G,
                 PhoneNumberSearch: () => B,
                 PhoneNumberSearchCustom: () => h.PhoneNumberSearch,
                 findNumbers: () => H,
@@ -8850,11 +8856,11 @@
                 return e.push(a), f.default.apply(this, e)
             }
 
-            function V(e, t) {
+            function G(e, t) {
                 _.default.call(this, e, t, a)
             }
 
-            function G(e) {
+            function V(e) {
                 b.default.call(this, e, a)
             }
 
@@ -8894,7 +8900,7 @@
             function Q(e, t) {
                 return (0, y.getCountryCallingCode)(e, t)
             }
-            B.prototype = Object.create(h.PhoneNumberSearch.prototype, {}), B.prototype.constructor = B, V.prototype = Object.create(_.default.prototype, {}), V.prototype.constructor = V, G.prototype = Object.create(b.default.prototype, {}), G.prototype.constructor = G
+            B.prototype = Object.create(h.PhoneNumberSearch.prototype, {}), B.prototype.constructor = B, G.prototype = Object.create(_.default.prototype, {}), G.prototype.constructor = G, V.prototype = Object.create(b.default.prototype, {}), V.prototype.constructor = V
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
@@ -12698,8 +12704,8 @@
                 B = z(n(482)),
                 H = z(n(485)),
                 U = z(n(491)),
-                V = z(n(506)),
-                G = z(n(509)),
+                G = z(n(506)),
+                V = z(n(509)),
                 F = z(n(512)),
                 j = z(n(515)),
                 Y = z(n(518));
@@ -12748,8 +12754,8 @@
                 PlayerBlockSelectionComponent: B.default,
                 HonorV3ExplainerModalComponent: H.default,
                 HonorV3LevelExplainerCarouselComponent: U.default,
-                PlayerReadyStateBlockComponent: V.default,
-                WardSkinSelectComponent: G.default,
+                PlayerReadyStateBlockComponent: G.default,
+                WardSkinSelectComponent: V.default,
                 WardSkinPopupComponent: F.default,
                 WardSkinPopupButtonComponent: j.default,
                 WardSkinRendererComponent: Y.default

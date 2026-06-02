@@ -1405,6 +1405,9 @@
                 isApexForQueue(e) {
                     return !(!e || !e.tier) && r.RANKED.APEX_TIERS.includes(e.tier)
                 }
+                tierHasDecay(e) {
+                    return !(!e || !e.tier) && r.RANKED.TIERS_WITH_DECAY.includes(e.tier)
+                }
                 getUpOneDivision(e, t, n) {
                     let a, s;
                     if (t === r.RANKED.HIGHEST_DIVISION || r.RANKED.APEX_TIERS.includes(e)) {
@@ -1897,17 +1900,19 @@
             const n = "UNRANKED",
                 a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                r = ["IV", "III", "II", "I"],
-                i = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                r = a[a.length - 1],
+                i = [r, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                o = ["IV", "III", "II", "I"],
+                l = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function o(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var l = {
+            var d = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -1917,14 +1922,14 @@
                 TIERS: s,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: a[a.length - 1],
+                HIGHEST_TIER: r,
                 LOWEST_TIER: a[0],
-                DIVISIONS: r,
-                HIGHEST_DIVISION: r[r.length - 1],
-                LOWEST_DIVISION: r[0],
+                DIVISIONS: o,
+                HIGHEST_DIVISION: o[o.length - 1],
+                LOWEST_DIVISION: o[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: o(s),
-                DIVISION_TO_ORDINAL: o(r),
+                TIER_NAME_TO_ORDINAL: c(s),
+                DIVISION_TO_ORDINAL: c(o),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1932,9 +1937,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: i,
+                TFT_RATED_TIERS: l,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: i[0],
+                LOWEST_TFT_RATED_TIER: l[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -1951,9 +1956,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: i
             };
-            t.default = l
+            t.default = d
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -26639,8 +26645,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "zk70YOAW",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel.styl\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["honor-panel-header"],null,[["service"],[["get",["service"]]]]],false],["text","\\n\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","honor-panel-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["behaviorDescription"]]],null,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-section"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-section-title"],["flush-element"],["append",["unknown",["tra","honor_panel_active_penalties_rewards"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["panelRestrictionRows"]]],null,2],["block",["each"],[["get",["panelRewardRows"]]],null,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-signals"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-signals-heading"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-title"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-subtitle"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["each"],[["get",["resolvedSignalCategories"]]],null,0],["text","    "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["honor-panel-signal-category"],null,[["title","signals","isExpanded"],[["get",["category","title"]],["get",["category","signals"]],["get",["category","isExpanded"]]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["text","        "],["append",["helper",["honor-panel-reward"],null,[["rewardKey","tra"],[["get",["row","rewardKey"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","        "],["append",["helper",["honor-panel-restriction"],null,[["restrictionKey","source","gameCount","timeRemaining","remainingMillis","restrictionDuration","honorLevel","requiredHonorLevel","tra"],[["get",["row","restrictionKey"]],["get",["row","source"]],["get",["row","gameCount"]],["get",["row","timeRemaining"]],["get",["row","remainingMillis"]],["get",["row","restrictionDuration"]],["get",["row","honorLevel"]],["get",["row","requiredHonorLevel"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-description"],["flush-element"],["append",["unknown",["behaviorDescription"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "brMPBavq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel.styl\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["honor-panel-header"],null,[["service"],[["get",["service"]]]]],false],["text","\\n\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","honor-panel-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["behaviorDescription"]]],null,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-section"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-section-title"],["flush-element"],["append",["unknown",["tra","honor_panel_active_penalties_rewards"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["panelRestrictionRows"]]],null,2],["block",["each"],[["get",["panelRewardRows"]]],null,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","honor-panel-signals"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-signals-heading"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-title"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","honor-panel-signals-subtitle"],["flush-element"],["append",["unknown",["tra","honor_panel_signals_section_description"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["each"],[["get",["resolvedSignalCategories"]]],null,0],["text","    "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["honor-panel-signal-category"],null,[["title","signals","isExpanded"],[["get",["category","title"]],["get",["category","signals"]],["get",["category","isExpanded"]]]]],false],["text","\\n"]],"locals":["category"]},{"statements":[["text","        "],["append",["helper",["honor-panel-reward"],null,[["rewardKey","tra"],[["get",["row","rewardKey"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","        "],["append",["helper",["honor-panel-restriction"],null,[["restrictionKey","source","gameCount","timeRemaining","remainingMillis","restrictionDurationMillis","honorLevel","requiredHonorLevel","tra"],[["get",["row","restrictionKey"]],["get",["row","source"]],["get",["row","gameCount"]],["get",["row","timeRemaining"]],["get",["row","remainingMillis"]],["get",["row","restrictionDurationMillis"]],["get",["row","honorLevel"]],["get",["row","requiredHonorLevel"]],["get",["tra"]]]]],false],["text","\\n"]],"locals":["row"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","honor-panel-description"],["flush-element"],["append",["unknown",["behaviorDescription"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26753,7 +26759,7 @@
                 gameCount: 0,
                 timeRemaining: "",
                 remainingMillis: 0,
-                restrictionDuration: "",
+                restrictionDurationMillis: 0,
                 honorLevel: 1,
                 requiredHonorLevel: 0,
                 definition: s.Ember.computed("restrictionKey", (function() {
@@ -26765,10 +26771,14 @@
                     return e ? e.icon : ""
                 })),
                 isHonorIcon: s.Ember.computed.readOnly("definition.isHonorIcon"),
-                title: s.Ember.computed("definition", "tra", (function() {
+                title: s.Ember.computed("definition", "tra", "hasDurationBadge", "restrictionDurationMillis", (function() {
                     const e = this.get("definition"),
                         t = this.get("tra");
-                    return e && t && t.get(e.titleKey) || ""
+                    if (!e || !t) return "";
+                    const n = t.get(e.titleKey) || "";
+                    return this.get("hasDurationBadge") && e.titleWithDurationKey && (0, o.formatDuration)(t, this.get("restrictionDurationMillis"), {
+                        keyPrefix: e.titleWithDurationKey
+                    }) || n
                 })),
                 description: s.Ember.computed("definition", "tra", (function() {
                     const e = this.get("definition"),
@@ -26782,10 +26792,9 @@
                 isGameBadge: s.Ember.computed.equal("effectiveSource", "game"),
                 isEventBadge: s.Ember.computed.equal("effectiveSource", "event"),
                 isHonorBadge: s.Ember.computed.equal("effectiveSource", "honor"),
-                hasDurationBadge: s.Ember.computed("isGameBadge", "restrictionDuration", (function() {
-                    return this.get("isGameBadge") && !!this.get("restrictionDuration")
+                hasDurationBadge: s.Ember.computed("isGameBadge", "restrictionDurationMillis", (function() {
+                    return this.get("isGameBadge") && this.get("restrictionDurationMillis") > 0
                 })),
-                durationBadgeIconPath: i.BADGE_CLOCK_ICON,
                 badgeIconPath: s.Ember.computed("effectiveSource", "honorLevel", (function() {
                     const e = this.get("effectiveSource");
                     return "honor" === e ? (0, i.getHonorEmblemForLevel)(this.get("honorLevel")) : "game" === e ? i.BADGE_GAMES_FLAG_ICON : i.BADGE_CLOCK_ICON
@@ -26837,8 +26846,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "AdUg48au",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-text ",["helper",["if"],[["get",["isEventBadge"]],"is-time"],null]]]],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTooltip"]]],null,4],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDurationBadge"]]],null,2],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDescription"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["left","system"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","honor-panel-restriction-row-badge-icon"],["dynamic-attr","src",["unknown",["durationBadgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge-text is-time"],["flush-element"],["append",["unknown",["restrictionDuration"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["tooltipTitle"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["tooltipBody"]],true],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],3]],"locals":[]}],"hasPartials":false}',
+                id: "52V+bMFL",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\templates\\\\honor-panel-restriction.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\styles\\\\honor-panel-restriction.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-stripe"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-content"],["flush-element"],["text","\\n  "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-icon ",["helper",["if"],[["get",["isHonorIcon"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["iconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-row-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-icon ",["helper",["if"],[["get",["isHonorBadge"]],"honor-emblem"],null]]]],["dynamic-attr","src",["unknown",["badgeIconPath"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["honor-panel-restriction-row-badge-text ",["helper",["if"],[["get",["isEventBadge"]],"is-time"],null]]]],["flush-element"],["append",["unknown",["badgeText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTooltip"]]],null,3],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDescription"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["description"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["left","system"]],0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-title"],["flush-element"],["append",["unknown",["tooltipTitle"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","honor-panel-restriction-tooltip-body"],["flush-element"],["append",["unknown",["tooltipBody"]],true],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],2]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -26879,6 +26888,7 @@
                     queue_delay: {
                         icon: a("queue-delay"),
                         titleKey: "honor_panel_restriction_queue_delay_title",
+                        titleWithDurationKey: "honor_panel_restriction_queue_delay_title_with_duration",
                         descriptionKey: "honor_panel_restriction_queue_delay_description",
                         source: "game",
                         restrictionType: "QUEUE_DELAY"
@@ -27151,14 +27161,10 @@
             const i = "/lol-summoner-profiles/v1/get-honor-view",
                 o = "/lol-summoner-profiles/v1/get-restriction-view";
 
-            function l(e, t, n) {
-                return (0, r.formatDuration)(e, t, n)
-            }
-
-            function c(e, t, n, a) {
+            function l(e, t, n, a) {
                 return (0, r.formatTimeRemaining)(e, t, n, a)
             }
-            var d = a.Ember.Service.extend({
+            var c = a.Ember.Service.extend({
                 honorLevel: 0,
                 redemptions: null,
                 isTemporarilyReduced: !1,
@@ -27188,7 +27194,7 @@
                         }), {});
                     return s.RESTRICTION_KEYS.reduce(((t, i) => {
                         const o = s.RESTRICTION_DEFINITIONS[i] || {},
-                            d = r[i];
+                            c = r[i];
                         if ("number" == typeof o.activeWhenHonorLevelBelow && e < o.activeWhenHonorLevelBelow) return t.push({
                             restrictionKey: i,
                             source: "honor",
@@ -27198,25 +27204,25 @@
                             requiredHonorLevel: o.activeWhenHonorLevelBelow,
                             honorLevel: e
                         }), t;
-                        if (!d) return t;
-                        const u = d.expirationData || {},
-                            m = function(e) {
+                        if (!c) return t;
+                        const d = c.expirationData || {},
+                            u = function(e) {
                                 const t = e && e.expirationData && e.expirationData.redemptions;
                                 if (!Array.isArray(t) || 0 === t.length) return 0;
                                 const n = t.find((e => e && e.redemptionCountRemaining > 0)) || t[0];
                                 return Math.max(0, n && n.redemptionCountRemaining || 0)
-                            }(d),
-                            p = u.expirationMillis > 0,
-                            h = p ? "event" : m > 0 ? "game" : o.source,
-                            g = p ? Math.max(0, u.expirationMillis - n) : 0;
+                            }(c),
+                            m = d.expirationMillis > 0,
+                            p = m ? "event" : u > 0 ? "game" : o.source,
+                            h = m ? Math.max(0, d.expirationMillis - n) : 0;
                         return t.push({
                             restrictionKey: i,
-                            source: h,
-                            gameCount: m,
-                            timeRemaining: c(a, u.expirationMillis, n),
-                            remainingMillis: g,
-                            requiredHonorLevel: "honor" === h ? e + 1 : 0,
-                            restrictionDuration: l(a, d.restrictionsMillis),
+                            source: p,
+                            gameCount: u,
+                            timeRemaining: l(a, d.expirationMillis, n),
+                            remainingMillis: h,
+                            requiredHonorLevel: "honor" === p ? e + 1 : 0,
+                            restrictionDurationMillis: c.restrictionsMillis || 0,
                             honorLevel: e
                         }), t
                     }), [])
@@ -27270,7 +27276,7 @@
                     }(e)))) : this.set("restrictions", [])
                 }
             });
-            t.default = d
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

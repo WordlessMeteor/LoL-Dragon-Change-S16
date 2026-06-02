@@ -2119,17 +2119,19 @@
             const n = "UNRANKED",
                 i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 o = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                s = ["IV", "III", "II", "I"],
-                a = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                s = i[i.length - 1],
+                a = [s, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                r = ["IV", "III", "II", "I"],
+                l = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function r(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var l = {
+            var m = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -2139,14 +2141,14 @@
                 TIERS: o,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: i[i.length - 1],
+                HIGHEST_TIER: s,
                 LOWEST_TIER: i[0],
-                DIVISIONS: s,
-                HIGHEST_DIVISION: s[s.length - 1],
-                LOWEST_DIVISION: s[0],
+                DIVISIONS: r,
+                HIGHEST_DIVISION: r[r.length - 1],
+                LOWEST_DIVISION: r[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: r(o),
-                DIVISION_TO_ORDINAL: r(s),
+                TIER_NAME_TO_ORDINAL: c(o),
+                DIVISION_TO_ORDINAL: c(r),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -2154,9 +2156,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: a,
+                TFT_RATED_TIERS: l,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: a[0],
+                LOWEST_TFT_RATED_TIER: l[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -2173,9 +2175,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: a
             };
-            t.default = l
+            t.default = m
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12392,6 +12395,9 @@
                 isSwiftPlay: i.Ember.computed("queueId", (function() {
                     return !!a.SWIFTPLAY_QUEUES_MAP[this.get("queueId")]
                 })),
+                shouldShowPartySizeRequirement: i.Ember.computed("queueId", (function() {
+                    return !1
+                })),
                 allowablePremadeSizesString: i.Ember.computed("tra", "tra.ready", "tra.game_select_flex_premade_size_any", "tra.game_select_flex_premade_size_fours_disabled", "tra.game_select_flex_premade_size_fives_only", "shouldShowAllowablePremadeSizes", "allowablePremadeSizesForQueue440", (function() {
                     if (!this.get("shouldShowAllowablePremadeSizes") || !this.get("platformConfigSingleton")) return "";
                     const e = this.get("allowablePremadeSizesForQueue440");
@@ -12428,8 +12434,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "xuEiL+2c",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showDisabledRadioButton"]]],null,10,9],["text","\\n"],["append",["helper",["event-countdown"],null,[["queueId"],[["get",["queueId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","class","parties-game-type-card-category-unlock-video"],["static-attr","cache-name","rcp-fe-lol-parties"],["static-attr","preload",""],["dynamic-attr","src",["concat",[["unknown",["unlockVideo"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-game-type-queue-cta-container"],["flush-element"],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","quick-play-text"],["flush-element"],["append",["unknown",["tra","game_select_quick_play_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","allowable-premade-sizes-text"],["flush-element"],["append",["unknown",["allowablePremadeSizesString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_ip_incentive"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_autofill_protection"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_title"]],false],["close-element"],["text","\\n        "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["soloAutofillProtectionEnabled"]]],null,5],["block",["if"],[["get",["soloIpIncentivesEnabled"]]],null,4],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,7],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","parties-game-type-card-category-radio-option"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["queue-eligibility-error queue-status-icon ",["helper",["if"],[["get",["isEligibilityRestricted"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],8],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["solo-rewards-icon queue-status-icon ",["helper",["if"],[["get",["shouldShowSoloRewards"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],6],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","data-queue-id",["concat",[["unknown",["queueId"]]]]],["dynamic-attr","data-disabled-reason",["concat",[["unknown",["computeDisabledReasons"]]]]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isSelected"]],"current"],null]," ",["helper",["if"],[["get",["isDisabled"]],"disabled"],null]," parties-game-type-card-category-btn"]]],["flush-element"],["text","\\n    "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n"],["block",["if"],[["get",["shouldShowAllowablePremadeSizes"]]],null,3],["block",["if"],[["get",["isSwiftPlay"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasPip"]]],null,1],["block",["if"],[["get",["shouldShowUnlockVideo"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","unselectable parties-game-type-card-category-btn"],["flush-element"],["text","\\n    "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "tXYv4oEY",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\game-type-category-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showDisabledRadioButton"]]],null,11,10],["text","\\n"],["append",["helper",["event-countdown"],null,[["queueId"],[["get",["queueId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","class","parties-game-type-card-category-unlock-video"],["static-attr","cache-name","rcp-fe-lol-parties"],["static-attr","preload",""],["dynamic-attr","src",["concat",[["unknown",["unlockVideo"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-game-type-queue-cta-container"],["flush-element"],["append",["helper",["call-to-action-pip"],null,[["isSmall"],[true]]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","game-mode-description-text"],["flush-element"],["append",["unknown",["tra","game_select_ranked_premade_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","quick-play-text"],["flush-element"],["append",["unknown",["tra","game_select_quick_play_description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","allowable-premade-sizes-text"],["flush-element"],["append",["unknown",["allowablePremadeSizesString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_ip_incentive"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","game-select-solo-rewards-item"],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_autofill_protection"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","game_select_solo_rewards_title"]],false],["close-element"],["text","\\n        "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["soloAutofillProtectionEnabled"]]],null,6],["block",["if"],[["get",["soloIpIncentivesEnabled"]]],null,5],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,8],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","parties-game-type-card-category-radio-option"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["queue-eligibility-error queue-status-icon ",["helper",["if"],[["get",["isEligibilityRestricted"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],9],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["solo-rewards-icon queue-status-icon ",["helper",["if"],[["get",["shouldShowSoloRewards"]],"queue-status-icon-visible"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],7],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","data-queue-id",["concat",[["unknown",["queueId"]]]]],["dynamic-attr","data-disabled-reason",["concat",[["unknown",["computeDisabledReasons"]]]]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isSelected"]],"current"],null]," ",["helper",["if"],[["get",["isDisabled"]],"disabled"],null]," parties-game-type-card-category-btn"]]],["flush-element"],["text","\\n    "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n"],["block",["if"],[["get",["shouldShowAllowablePremadeSizes"]]],null,4],["block",["if"],[["get",["isSwiftPlay"]]],null,3],["block",["if"],[["get",["shouldShowPartySizeRequirement"]]],null,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasPip"]]],null,1],["block",["if"],[["get",["shouldShowUnlockVideo"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","unselectable parties-game-type-card-category-btn"],["flush-element"],["text","\\n    "],["append",["unknown",["gameTypeQueueName"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16315,7 +16321,7 @@
                     const e = this.get("lobbiesService.currentQueue");
                     return e ? e.shortName : ""
                 })),
-                pickTypeName: i.Ember.computed("pickType", "tra.ready", "lobbiesService.isMap21", "tra.game_select_pick_type_name_blind", "isStrawberry", (function() {
+                pickTypeName: i.Ember.computed("pickType", "tra.ready", "lobbiesService.isMap21", "lobbiesService.currentQueue.type", "tra.game_select_pick_type_name_blind", "isStrawberry", (function() {
                     if (this.get("lobbiesService.isMap21")) return this.get("tra.game_select_pick_type_name_blind");
                     if (this.get("isStrawberry")) return this.get("tra.game_select_pick_type_name_pve");
                     const e = this.get("pickType");
@@ -20761,9 +20767,7 @@
                     if (!e) return null;
                     const t = m(e);
                     if (!t || isNaN(t.getTime())) return null;
-                    const n = i.tra.exists("moment_date_format") ? i.tra.get("moment_date_format") : "L",
-                        o = i.tra.exists("moment_time_format") ? i.tra.get("moment_time_format") : "LT";
-                    return `${i.tra.moment(t).format(n)} ${i.tra.moment(t).format(o)}`
+                    return `${i.tra.moment(t).format("L")} ${i.tra.moment(t).format("LT")}`
                 })),
                 actionText: i.Ember.computed("ownsBoost", "endsSoon", "_formattedExpirationDate", (function() {
                     if (this.get("ownsBoost")) {

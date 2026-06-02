@@ -6543,7 +6543,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 52.0,
+            "baseValue": 49.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -6799,7 +6799,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{005ff112}",
+                                "mDataValue": "PrimaryTargetBonusDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 1.0,
@@ -8434,6 +8434,10 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 120.0,
+                "__type": "ModifiableFloat"
+            },
             "{c4ab3550}": {
                 "baseValue": 0.0,
                 "__type": "ModifiableFloat"
@@ -8524,7 +8528,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 20.0,
+        "mInitialMana": 30.0,
         "mShopData": "{a188e55c}",
         "MobileHealthBarHeightOverride": 160.0,
         "mManaPerAttack": 5.0,
@@ -12828,7 +12832,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 40.0,
+            "baseValue": 45.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -16789,7 +16793,7 @@
                             "mSubparts": [
                                 {
                                     "mSubpart": {
-                                        "mDataValue": "{760046fb}",
+                                        "mDataValue": "PercentHPHealthGain",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     "mRatio": 1.0,
@@ -16798,7 +16802,7 @@
                                 },
                                 {
                                     "mSubpart": {
-                                        "mDataValue": "{fe34d385}",
+                                        "mDataValue": "APHealthGain",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     "mRatio": 0.009999999776482582,
@@ -17080,7 +17084,7 @@
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "baseValue": 90.0,
+                "baseValue": 80.0,
                 "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
@@ -45022,8 +45026,8 @@
                     "name": "Damage",
                     "values": [
                         50.0,
-                        73.0,
-                        110.0,
+                        68.0,
+                        102.0,
                         180.0,
                         300.0,
                         210.0,
@@ -52459,8 +52463,8 @@
                     "name": "ADBleedDamage",
                     "values": [
                         2.5,
-                        430.0,
-                        645.0,
+                        400.0,
+                        600.0,
                         1000.0,
                         1700.0,
                         2.5,
@@ -55782,7 +55786,7 @@
                             "mValue": 0.10000000149011612,
                             "__type": "GameModeConstantFloat"
                         },
-                        "{3b1fef00}": {
+                        "Shield_Interval": {
                             "mValue": 1,
                             "__type": "GameModeConstantInteger"
                         },
@@ -57428,7 +57432,7 @@
                 "constants": {
                     "{df085b93}": {
                         "StartOfCombatDuration": {
-                            "mValue": 3.0,
+                            "mValue": 4.0,
                             "__type": "GameModeConstantFloat"
                         },
                         "ADAPPerSecond": {
@@ -57462,7 +57466,7 @@
                 "constants": {
                     "{df085b93}": {
                         "StartOfCombatDuration": {
-                            "mValue": 3.0,
+                            "mValue": 4.0,
                             "__type": "GameModeConstantFloat"
                         },
                         "ADAPPerSecond": {
@@ -57497,7 +57501,7 @@
                 "constants": {
                     "{df085b93}": {
                         "StartOfCombatDuration": {
-                            "mValue": 3.0,
+                            "mValue": 4.0,
                             "__type": "GameModeConstantFloat"
                         },
                         "ADAPPerSecond": {

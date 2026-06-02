@@ -256,7 +256,7 @@
                         d = i.Navigation.getMissionsButton(),
                         {
                             ArrowFooterComponent: h,
-                            PlayerNameComponent: g
+                            PlayerNameComponent: E
                         } = i.SharedComponents.getSharedEmberComponents();
                     i.EmberApplicationFactory.setFactoryDefinition({
                         name: s,
@@ -281,7 +281,7 @@
                         UxSettingsService: p,
                         MissionsService: d.MissionsService,
                         ArrowFooterComponent: h,
-                        PlayerNameComponent: g
+                        PlayerNameComponent: E
                     }), i.EmberApplicationFactory.setFactoryDefinition({
                         name: "rcp-fe-lol-new-player-experience-reward-celebration",
                         tra: e,
@@ -728,7 +728,7 @@
             }), Object.defineProperty(t, "VANGUARD_STATES", {
                 enumerable: !0,
                 get: function() {
-                    return g.default
+                    return E.default
                 }
             }), Object.defineProperty(t, "getGameKeyFromGameMode", {
                 enumerable: !0,
@@ -736,21 +736,21 @@
                     return o.getGameKeyFromGameMode
                 }
             });
-            var a = E(n(21)),
-                i = E(n(22)),
+            var a = g(n(21)),
+                i = g(n(22)),
                 o = n(23),
-                s = E(n(24)),
-                l = E(n(25)),
-                r = E(n(36)),
-                c = E(n(37)),
-                u = E(n(38)),
-                m = E(n(39)),
-                p = E(n(40)),
-                d = E(n(41)),
-                h = E(n(42)),
-                g = E(n(43));
+                s = g(n(24)),
+                l = g(n(25)),
+                r = g(n(36)),
+                c = g(n(37)),
+                u = g(n(38)),
+                m = g(n(39)),
+                p = g(n(40)),
+                d = g(n(41)),
+                h = g(n(42)),
+                E = g(n(43));
 
-            function E(e) {
+            function g(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -1035,8 +1035,8 @@
                 p = [o],
                 d = [s, l],
                 h = [r, c],
-                g = [...d, ...h],
-                E = [...m, ...d],
+                E = [...d, ...h],
+                g = [...m, ...d],
                 f = [...h, ...p];
             var _ = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
@@ -1051,10 +1051,10 @@
                 RANKED_SR_QUEUE_TYPES: u,
                 RANKED_TFT_QUEUE_TYPES: d,
                 RATED_TFT_QUEUE_TYPES: h,
-                RANKED_AND_RATED_TFT_QUEUE_TYPES: g,
-                ALL_RANKED_QUEUE_TYPES: E,
+                RANKED_AND_RATED_TFT_QUEUE_TYPES: E,
+                ALL_RANKED_QUEUE_TYPES: g,
                 ALL_RATED_QUEUE_TYPES: f,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...E, ...f]
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...g, ...f]
             };
             t.default = _
         }, (e, t) => {
@@ -1065,17 +1065,19 @@
             const n = "UNRANKED",
                 a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                o = ["IV", "III", "II", "I"],
-                s = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                o = a[a.length - 1],
+                s = [o, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                l = ["IV", "III", "II", "I"],
+                r = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function l(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var r = {
+            var u = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -1085,14 +1087,14 @@
                 TIERS: i,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: a[a.length - 1],
+                HIGHEST_TIER: o,
                 LOWEST_TIER: a[0],
-                DIVISIONS: o,
-                HIGHEST_DIVISION: o[o.length - 1],
-                LOWEST_DIVISION: o[0],
+                DIVISIONS: l,
+                HIGHEST_DIVISION: l[l.length - 1],
+                LOWEST_DIVISION: l[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: l(i),
-                DIVISION_TO_ORDINAL: l(o),
+                TIER_NAME_TO_ORDINAL: c(i),
+                DIVISION_TO_ORDINAL: c(l),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1100,9 +1102,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: s,
+                TFT_RATED_TIERS: r,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: s[0],
+                LOWEST_TFT_RATED_TIER: r[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -1119,9 +1121,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: s
             };
-            t.default = r
+            t.default = u
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1568,8 +1571,8 @@
                         },
                         d = Object.fromEntries(Object.entries(p).filter((([e, t]) => !0 === t))),
                         h = Object.values(d).some((e => !0 === e)),
-                        g = this.get("playButtonDisabledReasons");
-                    return (0, s.shallowEquals)(d, g) || (this.set("playButtonDisabledReasons", d), h && a.logger.info("reasons.npe.playButtonDisabled", d)), h
+                        E = this.get("playButtonDisabledReasons");
+                    return (0, s.shallowEquals)(d, E) || (this.set("playButtonDisabledReasons", d), h && a.logger.info("reasons.npe.playButtonDisabled", d)), h
                 })),
                 playButtonEnabled: a.Ember.computed.not("playButtonDisabled"),
                 playButtonLocText: a.Ember.computed("isReconnecting", "isInQueue", "isInGame", "isInEog", "patcherService.isPlayable", "npeService.experimentGroup", "selectedTutorial", (function() {

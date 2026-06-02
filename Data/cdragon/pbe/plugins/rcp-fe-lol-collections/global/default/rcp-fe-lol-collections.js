@@ -758,8 +758,8 @@
                     PipNotificationsService: F.default,
                     PlatformConfigService: U.default,
                     RiotclientService: j.default,
-                    SettingsPreferencesService: $.default,
-                    SummonerService: H.default,
+                    SettingsPreferencesService: H.default,
+                    SummonerService: $.default,
                     StoreService: Te.default,
                     TutorialService: Pe.default,
                     PlatformSettingsService: Ie.default,
@@ -791,8 +791,8 @@
                         spells: Fe.default,
                         items: Ue.default,
                         "summoner-icons": je.default,
-                        wards: $e.default,
-                        chromas: He.default,
+                        wards: He.default,
+                        chromas: $e.default,
                         finishers: Ge.default,
                         "components/champion-item-lcm": Ye.default,
                         "components/legacy-app-mount": We.default,
@@ -858,8 +858,8 @@
                 F = ct(n(117)),
                 U = ct(n(118)),
                 j = ct(n(119)),
-                $ = ct(n(120)),
-                H = ct(n(122)),
+                H = ct(n(120)),
+                $ = ct(n(122)),
                 G = ct(n(123)),
                 W = ct(n(125)),
                 Y = ct(n(131)),
@@ -912,8 +912,8 @@
                 Fe = ct(n(254)),
                 Ue = ct(n(255)),
                 je = ct(n(256)),
-                $e = ct(n(257)),
-                He = ct(n(258)),
+                He = ct(n(257)),
+                $e = ct(n(258)),
                 Ge = ct(n(259)),
                 We = ct(n(260)),
                 Ye = ct(n(261)),
@@ -3652,17 +3652,19 @@
             const n = "UNRANKED",
                 s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 o = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                i = ["IV", "III", "II", "I"],
-                r = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                i = s[s.length - 1],
+                r = [i, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                l = ["IV", "III", "II", "I"],
+                a = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function l(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var a = {
+            var d = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -3672,14 +3674,14 @@
                 TIERS: o,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: s[s.length - 1],
+                HIGHEST_TIER: i,
                 LOWEST_TIER: s[0],
-                DIVISIONS: i,
-                HIGHEST_DIVISION: i[i.length - 1],
-                LOWEST_DIVISION: i[0],
+                DIVISIONS: l,
+                HIGHEST_DIVISION: l[l.length - 1],
+                LOWEST_DIVISION: l[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: l(o),
-                DIVISION_TO_ORDINAL: l(i),
+                TIER_NAME_TO_ORDINAL: c(o),
+                DIVISION_TO_ORDINAL: c(l),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -3687,9 +3689,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: r,
+                TFT_RATED_TIERS: a,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: r[0],
+                LOWEST_TFT_RATED_TIER: a[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -3706,9 +3708,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: r
             };
-            t.default = a
+            t.default = d
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -7172,8 +7175,8 @@
                     F = window,
                     U = F.document,
                     j = F.parseInt,
-                    $ = F.setTimeout,
-                    H = F.jQuery || F.Zepto,
+                    H = F.setTimeout,
+                    $ = F.jQuery || F.Zepto,
                     G = F.Polymer,
                     W = {
                         capture: !1,
@@ -7204,8 +7207,8 @@
                             i = Pe(e, 1, t),
                             r = o && ve(o),
                             l = i && ve(i),
-                            a = r && j(r.marginLeft) + j(r.marginRight) + $e(o).width,
-                            c = l && j(l.marginLeft) + j(l.marginRight) + $e(i).width;
+                            a = r && j(r.marginLeft) + j(r.marginRight) + He(o).width,
+                            c = l && j(l.marginLeft) + j(l.marginRight) + He(i).width;
                         if ("flex" === n.display) return "column" === n.flexDirection || "column-reverse" === n.flexDirection ? "vertical" : "horizontal";
                         if ("grid" === n.display) return n.gridTemplateColumns.split(" ").length <= 1 ? "vertical" : "horizontal";
                         if (o && "none" !== r.float) {
@@ -7250,7 +7253,7 @@
                                 g = l;
                             do {
                                 var f, y, _, b, E, S, v, A, x, C = g,
-                                    I = $e(C),
+                                    I = He(C),
                                     P = I.top,
                                     O = I.bottom,
                                     M = I.left,
@@ -7311,7 +7314,7 @@
                         var n = function(e, t) {
                             for (var n = 0; n < M.length; n++)
                                 if (!Oe(M[n])) {
-                                    var s = $e(M[n]),
+                                    var s = He(M[n]),
                                         o = M[n][N].options.emptyInsertThreshold,
                                         i = e >= s.left - o && e <= s.right + o,
                                         r = t >= s.top - o && t <= s.bottom + o;
@@ -7456,7 +7459,7 @@
                     return !window.CustomEvent || Y || V ? (a = U.createEvent("Event")).initEvent("move", !0, !0) : a = new CustomEvent("move", {
                         bubbles: !0,
                         cancelable: !0
-                    }), a.to = t, a.from = e, a.dragged = n, a.draggedRect = s, a.related = o || t, a.relatedRect = i || $e(t), a.willInsertAfter = l, a.originalEvent = r, e.dispatchEvent(a), m && (c = m.call(d, a, r)), c
+                    }), a.to = t, a.from = e, a.dragged = n, a.draggedRect = s, a.related = o || t, a.relatedRect = i || He(t), a.willInsertAfter = l, a.originalEvent = r, e.dispatchEvent(a), m && (c = m.call(d, a, r)), c
                 }
 
                 function we(e) {
@@ -7517,7 +7520,7 @@
                         if (!ge) {
                             var n = arguments,
                                 s = this;
-                            ge = $((function() {
+                            ge = H((function() {
                                 1 === n.length ? e.call(s, n[0]) : e.apply(s, n), ge = void 0
                             }), t)
                         }
@@ -7531,18 +7534,18 @@
                 }
 
                 function Fe(e) {
-                    return G && G.dom ? G.dom(e).cloneNode(!0) : H ? H(e).clone(!0)[0] : e.cloneNode(!0)
+                    return G && G.dom ? G.dom(e).cloneNode(!0) : $ ? $(e).clone(!0)[0] : e.cloneNode(!0)
                 }
 
                 function Ue(e) {
-                    return $(e, 0)
+                    return H(e, 0)
                 }
 
                 function je(e) {
                     return clearTimeout(e)
                 }
 
-                function $e(e, t, n, s) {
+                function He(e, t, n, s) {
                     if (e.getBoundingClientRect || e === F) {
                         var o, i, r, l, a, c, d;
                         if (e !== F && e !== le() ? (i = (o = e.getBoundingClientRect()).top, r = o.left, l = o.bottom, a = o.right, c = o.height, d = o.width) : (i = 0, r = 0, l = window.innerHeight, a = window.innerWidth, c = window.innerHeight, d = window.innerWidth), s && e !== F && (n = n || e.parentNode, !Y))
@@ -7570,9 +7573,9 @@
                     }
                 }
 
-                function He(e, t) {
-                    for (var n = re(e, !0), s = $e(e)[t]; n;) {
-                        var o = $e(n)[t];
+                function $e(e, t) {
+                    for (var n = re(e, !0), s = He(e)[t]; n;) {
+                        var o = He(n)[t];
                         if (!("top" === t || "left" === t ? s >= o : s <= o)) return n;
                         if (n === le()) break;
                         n = re(n, !1)
@@ -7598,8 +7601,8 @@
                     _computeIsAligned: function(t) {
                         var s;
                         if (n && !Z ? (ue(), s = U.elementFromPoint(t.clientX, t.clientY), he()) : s = t.target, s = _e(s, this.options.draggable, this.el, !1), !ee && e && e.parentNode === this.el) {
-                            for (var o, i, r, l, a, c, d, m, p = this.el.children, u = 0; u < p.length; u++) _e(p[u], this.options.draggable, this.el, !1) && p[u] !== s && (p[u].sortableMouseAligned = (o = t.clientX, i = t.clientY, r = p[u], l = this._getDirection(t, null), this.options, a = void 0, c = void 0, d = void 0, m = void 0, a = $e(r), c = "vertical" === l ? a.left : a.top, d = "vertical" === l ? a.right : a.bottom, c < (m = "vertical" === l ? o : i) && m < d));
-                            _e(s, this.options.draggable, this.el, !0) || (S = null), ee = !0, $((function() {
+                            for (var o, i, r, l, a, c, d, m, p = this.el.children, u = 0; u < p.length; u++) _e(p[u], this.options.draggable, this.el, !1) && p[u] !== s && (p[u].sortableMouseAligned = (o = t.clientX, i = t.clientY, r = p[u], l = this._getDirection(t, null), this.options, a = void 0, c = void 0, d = void 0, m = void 0, a = He(r), c = "vertical" === l ? a.left : a.top, d = "vertical" === l ? a.right : a.bottom, c < (m = "vertical" === l ? o : i) && m < d));
+                            _e(s, this.options.draggable, this.el, !0) || (S = null), ee = !0, H((function() {
                                 ee = !1
                             }), 30)
                         }
@@ -7670,7 +7673,7 @@
                             u._disableDelayedDragEvents(), !K && u.nativeDraggable && (e.draggable = !0), u._triggerDragStart(n, s), Ce(u, o, "choose", e, o, o, d, void 0, p), Se(e, f.chosenClass, !0)
                         }, f.ignore.split(",").forEach((function(t) {
                             xe(e, t.trim(), we)
-                        })), ke(y, "dragover", fe), ke(y, "mousemove", fe), ke(y, "touchmove", fe), ke(y, "mouseup", u._onDrop), ke(y, "touchend", u._onDrop), ke(y, "touchcancel", u._onDrop), K && this.nativeDraggable && (this.options.touchStartThreshold = 4, e.draggable = !0), !f.delay || f.delayOnTouchOnly && !s || this.nativeDraggable && (V || Y) ? m() : (ke(y, "mouseup", u._disableDelayedDrag), ke(y, "touchend", u._disableDelayedDrag), ke(y, "touchcancel", u._disableDelayedDrag), ke(y, "mousemove", u._delayedDragTouchMoveHandler), ke(y, "touchmove", u._delayedDragTouchMoveHandler), f.supportPointer && ke(y, "pointermove", u._delayedDragTouchMoveHandler), u._dragStartTimer = $(m, f.delay)))
+                        })), ke(y, "dragover", fe), ke(y, "mousemove", fe), ke(y, "touchmove", fe), ke(y, "mouseup", u._onDrop), ke(y, "touchend", u._onDrop), ke(y, "touchcancel", u._onDrop), K && this.nativeDraggable && (this.options.touchStartThreshold = 4, e.draggable = !0), !f.delay || f.delayOnTouchOnly && !s || this.nativeDraggable && (V || Y) ? m() : (ke(y, "mouseup", u._disableDelayedDrag), ke(y, "touchend", u._disableDelayedDrag), ke(y, "touchcancel", u._disableDelayedDrag), ke(y, "mousemove", u._delayedDragTouchMoveHandler), ke(y, "touchmove", u._delayedDragTouchMoveHandler), f.supportPointer && ke(y, "pointermove", u._delayedDragTouchMoveHandler), u._dragStartTimer = H(m, f.delay)))
                     },
                     _delayedDragTouchMoveHandler: function(e) {
                         var t = e.touches ? e.touches[0] : e;
@@ -7739,13 +7742,13 @@
                     _appendGhost: function() {
                         if (!n) {
                             var t = this.options.fallbackOnBody ? U.body : o,
-                                s = $e(e, !0, t, !X),
+                                s = He(e, !0, t, !X),
                                 i = (ve(e), this.options);
                             if (X) {
                                 for (C = t;
                                     "static" === ve(C, "position") && "none" === ve(C, "transform") && C !== U;) C = C.parentNode;
                                 if (C !== U) {
-                                    var r = $e(C, !0);
+                                    var r = He(C, !0);
                                     s.top -= r.top, s.left -= r.left
                                 }
                                 C !== U.body && C !== U.documentElement ? (C === U && (C = le()), s.top += C.scrollTop, s.left += C.scrollLeft) : C = le(), B = Ge(C)
@@ -7774,10 +7777,10 @@
                             if (void 0 !== n.preventDefault && n.cancelable && n.preventDefault(), E = !0, c = _e(c, m.draggable, a, !0), e.contains(n.target) || c.animated) return W(!1);
                             if (c !== e && (O = !1), f && !m.disabled && (y ? _ || (l = !o.contains(e)) : g === this || (this.lastPutMode = h.checkPull(this, f, e, n)) && u.checkPut(this, f, e, n))) {
                                 var k = this._getDirection(n, c);
-                                if (s = $e(e), l) return this._hideClone(), t = o, i ? o.insertBefore(e, i) : o.appendChild(e), W(!0);
+                                if (s = He(e), l) return this._hideClone(), t = o, i ? o.insertBefore(e, i) : o.appendChild(e), W(!0);
                                 var C = Oe(a);
                                 if (!C || function(e, t, n) {
-                                        var s = $e(Oe(n)),
+                                        var s = He(Oe(n)),
                                             o = "vertical" === t ? e.clientY : e.clientX,
                                             i = "vertical" === t ? e.clientX : e.clientY,
                                             r = "vertical" === t ? s.bottom : s.right,
@@ -7786,17 +7789,17 @@
                                             c = 10;
                                         return "vertical" === t ? i > a + c || i <= a && o > r && i >= l : o > r && i > l || o <= r && i > a + c
                                     }(n, k, a) && !C.animated) {
-                                    if (C && a === n.target && (c = C), c && (r = $e(c)), y ? f._hideClone() : f._showClone(this), !1 !== Ie(o, a, e, s, c, r, n, !!c)) return a.appendChild(e), t = a, I = null, Y(), W(!0)
+                                    if (C && a === n.target && (c = C), c && (r = He(c)), y ? f._hideClone() : f._showClone(this), !1 !== Ie(o, a, e, s, c, r, n, !!c)) return a.appendChild(e), t = a, I = null, Y(), W(!0)
                                 } else if (c && c !== e && c.parentNode === a) {
                                     var w, T = 0,
                                         P = c.sortableMouseAligned,
                                         M = e.parentNode !== a,
                                         B = "vertical" === k ? "top" : "left",
-                                        L = He(c, "top") || He(e, "top"),
+                                        L = $e(c, "top") || $e(e, "top"),
                                         F = L ? L.scrollTop : void 0;
-                                    if (S !== c && (A = null, w = $e(c)[B], D = !1), function(t, n, s) {
-                                            var o = t === e && I || $e(t),
-                                                i = n === e && I || $e(n),
+                                    if (S !== c && (A = null, w = He(c)[B], D = !1), function(t, n, s) {
+                                            var o = t === e && I || He(t),
+                                                i = n === e && I || He(n),
                                                 r = "vertical" === s ? o.left : o.top,
                                                 l = "vertical" === s ? o.right : o.bottom,
                                                 a = "vertical" === s ? o.width : o.height,
@@ -7805,12 +7808,12 @@
                                                 m = "vertical" === s ? i.width : i.height;
                                             return r === c || l === d || r + a / 2 === c + m / 2
                                         }(e, c, k) && P || M || L || m.invertSwap || "insert" === A || "swap" === A ? ("swap" !== A && (R = m.invertSwap || M), T = function(t, n, s, o, i, r, l) {
-                                            var a = $e(n),
+                                            var a = He(n),
                                                 c = "vertical" === s ? t.clientY : t.clientX,
                                                 d = "vertical" === s ? a.height : a.width,
                                                 m = "vertical" === s ? a.top : a.left,
                                                 p = "vertical" === s ? a.bottom : a.right,
-                                                u = $e(e),
+                                                u = He(e),
                                                 h = !1;
                                             if (!r)
                                                 if (l && x < d * o)
@@ -7823,11 +7826,11 @@
                                             if ((h = h || r) && (c < m + d * i / 2 || c > p - d * i / 2)) return c > m + d / 2 ? 1 : -1;
                                             return 0
                                         }(n, c, k, m.swapThreshold, null == m.invertedSwapThreshold ? m.swapThreshold : m.invertedSwapThreshold, R, S === c), A = "swap") : (T = Me(c), A = "insert"), 0 === T) return W(!1);
-                                    I = null, S = c, v = T, r = $e(c);
+                                    I = null, S = c, v = T, r = He(c);
                                     var j = c.nextElementSibling,
-                                        H = !1,
-                                        G = Ie(o, a, e, s, c, r, n, H = 1 === T);
-                                    if (!1 !== G) return 1 !== G && -1 !== G || (H = 1 === G), J = !0, $(Te, 30), y ? f._hideClone() : f._showClone(this), H && !j ? a.appendChild(e) : c.parentNode.insertBefore(e, H ? j : c), L && ae(L, 0, F - L.scrollTop), t = e.parentNode, void 0 === w || R || (x = te(w - $e(c)[B])), Y(), W(!0)
+                                        $ = !1,
+                                        G = Ie(o, a, e, s, c, r, n, $ = 1 === T);
+                                    if (!1 !== G) return 1 !== G && -1 !== G || ($ = 1 === G), J = !0, H(Te, 30), y ? f._hideClone() : f._showClone(this), $ && !j ? a.appendChild(e) : c.parentNode.insertBefore(e, $ ? j : c), L && ae(L, 0, F - L.scrollTop), t = e.parentNode, void 0 === w || R || (x = te(w - He(c)[B])), Y(), W(!0)
                                 }
                                 if (a.contains(e)) return W(!1)
                             }
@@ -7845,14 +7848,14 @@
                     _animate: function(t, n) {
                         var s = this.options.animation;
                         if (s) {
-                            var o = $e(n);
-                            if (n === e && (I = o), 1 === t.nodeType && (t = $e(t)), t.left + t.width / 2 !== o.left + o.width / 2 || t.top + t.height / 2 !== o.top + o.height / 2) {
+                            var o = He(n);
+                            if (n === e && (I = o), 1 === t.nodeType && (t = He(t)), t.left + t.width / 2 !== o.left + o.width / 2 || t.top + t.height / 2 !== o.top + o.height / 2) {
                                 var i = Ae(this.el),
                                     r = i && i.a,
                                     l = i && i.d;
                                 ve(n, "transition", "none"), ve(n, "transform", "translate3d(" + (t.left - o.left) / (r || 1) + "px," + (t.top - o.top) / (l || 1) + "px,0)"), this._repaint(n), ve(n, "transition", "transform " + s + "ms" + (this.options.easing ? " " + this.options.easing : "")), ve(n, "transform", "translate3d(0,0,0)")
                             }
-                            "number" == typeof n.animated && clearTimeout(n.animated), n.animated = $((function() {
+                            "number" == typeof n.animated && clearTimeout(n.animated), n.animated = H((function() {
                                 ve(n, "transition", ""), ve(n, "transform", ""), n.animated = !1
                             }), s)
                         }
@@ -10731,11 +10734,11 @@
                     for (C = 0, P = c.length; C < P; C++) {
                         var j = c[C];
                         if (-1 !== _.indexOf(j)) {
-                            var $ = encodeURIComponent(j);
-                            $ === j && ($ = escape(j)), _ = _.split(j).join($)
+                            var H = encodeURIComponent(j);
+                            H === j && (H = escape(j)), _ = _.split(j).join(H)
                         }
                     }
-                var H = _.indexOf("#"); - 1 !== H && (this.hash = _.substr(H), _ = _.slice(0, H));
+                var $ = _.indexOf("#"); - 1 !== $ && (this.hash = _.substr($), _ = _.slice(0, $));
                 var G = _.indexOf("?");
                 if (-1 !== G ? (this.search = _.substr(G), this.query = _.substr(G + 1), t && (this.query = y.parse(this.query)), _ = _.slice(0, G)) : t && (this.search = "", this.query = {}), _ && (this.pathname = _), f[E] && this.hostname && !this.pathname && (this.pathname = "/"), this.pathname || this.search) {
                     F = this.pathname || "";
@@ -15623,8 +15626,8 @@
                 F = oe(n(330)),
                 U = oe(n(331)),
                 j = oe(n(332)),
-                $ = oe(n(333)),
-                H = oe(n(334)),
+                H = oe(n(333)),
+                $ = oe(n(334)),
                 G = oe(n(335)),
                 W = oe(n(336)),
                 Y = oe(n(337)),
@@ -15704,9 +15707,9 @@
                     PrimarySelectedPerkComponent: B.default,
                     PrimaryStyleSelectorComponent: L.default,
                     RunesRecommenderControlsComponent: U.default,
-                    RunesRecommenderPageComponent: $.default,
+                    RunesRecommenderPageComponent: H.default,
                     RunesRecommenderPageSummaryComponent: j.default,
-                    RunesRecommenderPositionFiltersComponent: H.default,
+                    RunesRecommenderPositionFiltersComponent: $.default,
                     RunesRecommenderSpellComponent: G.default,
                     SavePageButtonComponent: W.default,
                     SplashedPerkOptionComponent: Y.default,

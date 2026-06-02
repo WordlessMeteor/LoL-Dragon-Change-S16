@@ -1762,17 +1762,19 @@
             const n = "UNRANKED",
                 s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                o = ["IV", "III", "II", "I"],
-                a = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                o = s[s.length - 1],
+                a = [o, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                l = ["IV", "III", "II", "I"],
+                r = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function l(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var r = {
+            var u = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -1782,14 +1784,14 @@
                 TIERS: i,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: s[s.length - 1],
+                HIGHEST_TIER: o,
                 LOWEST_TIER: s[0],
-                DIVISIONS: o,
-                HIGHEST_DIVISION: o[o.length - 1],
-                LOWEST_DIVISION: o[0],
+                DIVISIONS: l,
+                HIGHEST_DIVISION: l[l.length - 1],
+                LOWEST_DIVISION: l[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: l(i),
-                DIVISION_TO_ORDINAL: l(o),
+                TIER_NAME_TO_ORDINAL: c(i),
+                DIVISION_TO_ORDINAL: c(l),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1797,9 +1799,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: a,
+                TFT_RATED_TIERS: r,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: a[0],
+                LOWEST_TFT_RATED_TIER: r[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -1816,9 +1818,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: a
             };
-            t.default = r
+            t.default = u
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
