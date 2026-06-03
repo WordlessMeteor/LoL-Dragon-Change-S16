@@ -953,6 +953,19 @@
                         30.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageStoreMaxBonusADRatio",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -999,8 +1012,8 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 8.0,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "{6cb0fc88}",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2866,6 +2879,20 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        12.0,
+                        12.0,
+                        11.0,
+                        10.0,
+                        9.0,
+                        8.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "{601654a1}": {
                     "mFormulaParts": [
@@ -3085,7 +3112,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{8e133a99}",
+                                "mDataValue": "CamoDuration",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -3098,7 +3125,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{8e133a99}",
+                                "mDataValue": "CamoDuration",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],

@@ -1698,8 +1698,9 @@
                 })),
                 progressBarFill: a.Ember.computed("currentLevelXP", "nextLevelXP", (function() {
                     const e = this.get("currentLevelXP"),
-                        t = this.get("nextLevelXP");
-                    return t ? e / t * 100 : 0
+                        t = this.get("nextLevelXP"),
+                        s = t ? e / t * 100 : 0;
+                    return Math.min(s, 100)
                 })),
                 rewardLevelText: a.Ember.computed("nextRewardLevel", "tra", (function() {
                     const e = this.get("nextRewardLevel");
@@ -1827,8 +1828,8 @@
                     const {
                         currentLevelXP: t,
                         nextLevelXP: s
-                    } = e;
-                    return s ? t / s * 100 : 0
+                    } = e, a = s ? t / s * 100 : 0;
+                    return Math.min(a, 100)
                 }))
             })
         }, function(e, t, s) {

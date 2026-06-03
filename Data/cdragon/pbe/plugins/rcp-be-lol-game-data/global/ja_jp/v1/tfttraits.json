@@ -15262,7 +15262,7 @@
                 "constants": [
                     {
                         "name": "BonusHealth",
-                        "value": 400.0
+                        "value": 350.0
                     },
                     {
                         "name": "Meeps",
@@ -15278,7 +15278,7 @@
                 "constants": [
                     {
                         "name": "BonusHealth",
-                        "value": 400.0
+                        "value": 450.0
                     },
                     {
                         "name": "Meeps",
@@ -15294,7 +15294,7 @@
                 "constants": [
                     {
                         "name": "BonusHealth",
-                        "value": 500.0
+                        "value": 550.0
                     },
                     {
                         "name": "Meeps",
@@ -17783,7 +17783,7 @@
         "trait_id": "TFT17_Timebreaker",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) 味方の攻撃速度が@AttackSpeed*100@%増加する。</row><br><row>(@MinUnits@) さらに、敗北時に無料のリロールを獲得する。勝利時には「時空の核」にXPを蓄積する(ステージに応じて増加)。</row><br><row>(@MinUnits@) さらに、「タイムブレーカー」の攻撃速度が追加で@TimebreakerAdditionalAS*100@%増加する。</row><br><br><rules>敗北時のリロール: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>勝利時のXP: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "tooltip_text": "<row>(@MinUnits@) 味方の攻撃速度が@AttackSpeed*100@%増加する。</row><br><row>(@MinUnits@) さらに、敗北時に無料のリロールを獲得する。勝利時には時空のコアにXPを蓄積する(ステージに応じて増加)。</row><br><row>(@MinUnits@) さらに、「タイムブレーカー」の攻撃速度が追加で@TimebreakerAdditionalAS*100@%増加する。</row><br><br><rules>敗北時のリロール: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>勝利時のXP: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -25847,7 +25847,7 @@
                     },
                     {
                         "name": "PercentBonusMaxHealth",
-                        "value": 0.35
+                        "value": 0.3
                     },
                     {
                         "name": "PercentHealthHeal",
@@ -25881,7 +25881,7 @@
         "trait_id": "TFTEvent5YR_Fated",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Fated.png",
-        "tooltip_text": "チャンピオンを別のチャンピオンに重ねてペアを作ると、チャンピオンのロールに応じた<TFTBonus>「運命の祝福」</TFTBonus>が解放される。<br><br><row>(@TFTTrait.TFTEvent5YR_Fated.1:MinUnits@)ペアが「運命の祝福」を獲得し、最大体力が@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@%増加する。</row><br><row>(@TFTTrait.TFTEvent5YR_Fated.2:MinUnits@)すべてのユニットが「運命の祝福」を獲得する。ペアは追加で最大体力が@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@%増加し、さらに「運命の祝福」も@TFTTrait.TFTEvent5YR_Fated.2:PairBondIncreasePercent*100@%増加する。</row><br><br>運命の祝福:<br><ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><status>アサシン</status>: 戦闘開始時に耐久値@TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@のシールドを獲得</ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><TFTGuildInactive>アサシン: 戦闘開始時に耐久値@TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@のシールドを獲得</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><br><ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><status>キャスター</status>: %i:scaleAD%と%i:scaleAP%が@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><TFTGuildInactive>キャスター: %i:scaleAD%と%i:scaleAP%が@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><status>ファイター</status>: %i:scaleSV%が@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><TFTGuildInactive>ファイター: %i:scaleSV%が@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><status>マークスマン</status>: %i:scaleAS%が@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><TFTGuildInactive>マークスマン: %i:scaleAS%が@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><br><ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><status>スペシャリスト</status>: ダメージの@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@%を確定ダメージとして与える</ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><TFTGuildInactive>スペシャリスト: ダメージの@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@%を確定ダメージとして与える</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><br><ShowIf.TFTEvent5YR_Trait_Fated_TankActive><status>タンク</status>: %i:scaleArmor%と%i:scaleMR%が@TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@増加</ShowIf.TFTEvent5YR_Trait_Fated_TankActive><ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><TFTGuildInactive>タンク: %i:scaleArmor%と%i:scaleMR%が@TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><br><br>味方のユニットが特定の「運命の祝福」から得られる効果は1つのみ。",
+        "tooltip_text": "チャンピオンを別のチャンピオンに重ねてペアを作ると、チャンピオンのロールに応じた<TFTBonus>「運命の祝福」</TFTBonus>が解放される。<br><br><row>(@TFTTrait.TFTEvent5YR_Fated.1:MinUnits@) ペアが「運命の祝福」を獲得し、最大体力が@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@%増加する。</row><br><row>(@TFTTrait.TFTEvent5YR_Fated.2:MinUnits@) すべてのユニットが「運命の祝福」を獲得する。ペアは追加で最大体力が@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@%増加し、さらに「運命の祝福」も@TFTTrait.TFTEvent5YR_Fated.2:PairBondIncreasePercent*100@%増加する。</row><br><br>運命の祝福:<br><ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><status>アサシン</status>: 戦闘開始時に耐久値@TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@のシールドを獲得</ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><TFTGuildInactive>アサシン: 戦闘開始時に耐久値@TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@のシールドを獲得</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><br><ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><status>キャスター</status>: %i:scaleAD%と%i:scaleAP%が@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><TFTGuildInactive>キャスター: %i:scaleAD%と%i:scaleAP%が@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><status>ファイター</status>: %i:scaleSV%が@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><TFTGuildInactive>ファイター: %i:scaleSV%が@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><status>マークスマン</status>: %i:scaleAS%が@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><TFTGuildInactive>マークスマン: %i:scaleAS%が@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><br><ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><status>スペシャリスト</status>: ダメージの@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@%を確定ダメージとして与える</ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><TFTGuildInactive>スペシャリスト: ダメージの@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@%を確定ダメージとして与える</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><br><ShowIf.TFTEvent5YR_Trait_Fated_TankActive><status>タンク</status>: %i:scaleArmor%と%i:scaleMR%が@TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@増加</ShowIf.TFTEvent5YR_Trait_Fated_TankActive><ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><TFTGuildInactive>タンク: %i:scaleArmor%と%i:scaleMR%が@TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><br><br>味方のユニットが特定の「運命の祝福」から得られる効果は1つのみ。",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -26044,7 +26044,7 @@
                     },
                     {
                         "name": "ProcPercent",
-                        "value": 0.33
+                        "value": 0.25
                     },
                     {
                         "name": "StunDuration",
@@ -26068,7 +26068,7 @@
                     },
                     {
                         "name": "ProcPercent",
-                        "value": 0.33
+                        "value": 0.25
                     },
                     {
                         "name": "StunDuration",
@@ -26451,7 +26451,7 @@
                     },
                     {
                         "name": "DamagePerMini",
-                        "value": 18.0
+                        "value": 15.0
                     },
                     {
                         "name": "DamageReceived",
@@ -26475,7 +26475,7 @@
                     },
                     {
                         "name": "DamagePerMini",
-                        "value": 36.0
+                        "value": 30.0
                     },
                     {
                         "name": "DamageReceived",
@@ -26806,7 +26806,7 @@
                     },
                     {
                         "name": "HealthRegenPerMascot",
-                        "value": 2.5
+                        "value": 2.25
                     },
                     {
                         "name": "Seconds",
@@ -27061,7 +27061,7 @@
                     },
                     {
                         "name": "PercentADAPGain",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "PercentHPGain",
@@ -27093,7 +27093,7 @@
                     },
                     {
                         "name": "PercentADAPGain",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "PercentHPGain",
@@ -27135,11 +27135,11 @@
                     },
                     {
                         "name": "Bonus_Damage",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "Damage_Reduction",
-                        "value": 0.1
+                        "value": 0.08
                     }
                 ],
                 "min_units": 1,
@@ -27159,7 +27159,7 @@
                     },
                     {
                         "name": "Damage_Reduction",
-                        "value": 0.1
+                        "value": 0.08
                     }
                 ],
                 "min_units": 2,
@@ -27715,11 +27715,11 @@
         ]
     },
     {
-        "display_name": "クルー",
+        "display_name": "ザ・クルー",
         "trait_id": "TFTEvent5YR_TheCrew",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_StarCrew.TFT_Set15.png",
-        "tooltip_text": "<i></i>「ノクターナス」を召喚し、戦闘を援護させる！「ノクターナス」は味方チームが@TFTTrait.TFTEvent5YR_TheCrew.1:BaseDamageThreshold@ダメージを与えるたびに、@TFTTrait.TFTEvent5YR_TheCrew.1:BaseRocketDamage@の魔法ダメージを与えるロケットを発射する。<br><br>コスト2以上のチャンピオンは、★3になるとクルーのメンバーになる。クルーメンバー1人ごとに追加ボーナスを獲得する。<br><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.1:MinUnits@) クルーメンバーは最大2人。</row><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.2:MinUnits@) クルーメンバーは最大4人。</row><br><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus1Active default=false alternate=TFTGuildInactive>(<ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>x1): 前回の戦闘で配置していたユニットのスターレベルを上げると、無料リロールを@TFTTrait.TFTEvent5YR_TheCrew.1:OnARollRolls@回獲得する。</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus2Active default=false alternate=TFTGuildInactive>(<ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>x2): ロケットが<magicDamage>@TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedRocketDamage@</magicDamage>のダメージを与える。</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus3Active default=false alternate=TFTGuildInactive>(<ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>x3): 各ラウンドで無料リロールを@TFTTrait.TFTEvent5YR_TheCrew.1:FreeRerollsPerRound@回獲得する。</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus4Active default=false alternate=TFTGuildInactive>(<ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>x4): @TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedDamageThreshold@ダメージごとにロケットが発射される。毎ラウンド@TFTTrait.TFTEvent5YR_TheCrew.1:XPPerRound@XPを獲得する。</tftActiveRank>",
+        "tooltip_text": "<i></i>「ノクターナス」を召喚し、戦闘を援護させる！「ノクターナス」は味方チームが@TFTTrait.TFTEvent5YR_TheCrew.1:BaseDamageThreshold@ダメージを与えるたびに、@TFTTrait.TFTEvent5YR_TheCrew.1:BaseRocketDamage@の魔法ダメージを与えるロケットを発射する。<br><br>コスト2以上のチャンピオンは、★3になると「ザ・クルー」のメンバーになる。「ザ・クルー」メンバー1人ごとに追加ボーナスを獲得する。<br><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.1:MinUnits@) 「ザ・クルー」メンバーは最大2人。</row><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.2:MinUnits@) 「ザ・クルー」メンバーは最大4人。</row><br><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus1Active default=false alternate=TFTGuildInactive>(<ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>x1): 前回の戦闘で配置していたユニットのスターレベルを上げると、無料リロールを@TFTTrait.TFTEvent5YR_TheCrew.1:OnARollRolls@回獲得する。</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus2Active default=false alternate=TFTGuildInactive>(<ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>x2): ロケットが<magicDamage>@TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedRocketDamage@</magicDamage>のダメージを与える。</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus3Active default=false alternate=TFTGuildInactive>(<ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>x3): 各ラウンドで無料リロールを@TFTTrait.TFTEvent5YR_TheCrew.1:FreeRerollsPerRound@回獲得する。</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus4Active default=false alternate=TFTGuildInactive>(<ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>x4): @TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedDamageThreshold@ダメージごとにロケットが発射される。毎ラウンド@TFTTrait.TFTEvent5YR_TheCrew.1:XPPerRound@XPを獲得する。</tftActiveRank>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -27729,7 +27729,7 @@
                     },
                     {
                         "name": "BaseRocketDamage",
-                        "value": 85.0
+                        "value": 90.0
                     },
                     {
                         "name": "FreeRerollOdds",
@@ -27741,11 +27741,11 @@
                     },
                     {
                         "name": "OnARollRolls",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "UpgradedDamageThreshold",
-                        "value": 210.0
+                        "value": 200.0
                     },
                     {
                         "name": "UpgradedRocketDamage",
