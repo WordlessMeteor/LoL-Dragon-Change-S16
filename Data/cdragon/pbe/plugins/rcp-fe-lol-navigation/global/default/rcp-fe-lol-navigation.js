@@ -16442,7 +16442,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.subscribeAwConfig = t.inventoryOwnershipObserveHandler = t.inventoryNotificationObserveHandler = t.eventPassProgressObserveHandler = t.eventPassObserverHandler = void 0;
+            }), t.subscribeAwConfig = t.isAwExperimentNearingEnd = t.inventoryOwnershipObserveHandler = t.inventoryNotificationObserveHandler = t.getAwExperimentEndMs = t.eventPassProgressObserveHandler = t.eventPassObserverHandler = t.AW_EXPERIMENT_END_THRESHOLD_DAYS = void 0;
             var i = n(1),
                 a = n(231),
                 s = n(232);
@@ -16466,7 +16466,32 @@
                 return () => d.delete(e)
             }
             t.subscribeAwConfig = e => u(e);
-            const m = {
+            t.AW_EXPERIMENT_END_THRESHOLD_DAYS = 30;
+            const m = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})\.(\d{3})Z$/;
+            const p = e => function(e) {
+                if (null == e || "" === e) return null;
+                if ("number" == typeof e) return Number.isFinite(e) ? e : null;
+                if ("string" != typeof e) return null;
+                const t = e.trim();
+                if ("" === t) return null;
+                const n = t.match(m);
+                if (n) {
+                    const [, e, t, i, a, s, o, r] = n, l = new Date(`${e}-${t}-${i}T${a}:${s}:${o}.${r}Z`);
+                    return isNaN(l.getTime()) ? null : l.getTime()
+                }
+                if (/^\d+$/.test(t)) return Number(t);
+                const i = new Date(t);
+                return isNaN(i.getTime()) ? null : i.getTime()
+            }(e?.endDate);
+            t.getAwExperimentEndMs = p;
+            t.isAwExperimentNearingEnd = (e, {
+                thresholdDays: t = 30,
+                now: n = Date.now()
+            } = {}) => {
+                const i = p(e);
+                return null !== i && i - n < 864e5 * t
+            };
+            const h = {
                 observePathConstructor: ({
                     inventoryType: e
                 }) => `/lol-inventory/v2/inventory/${e}`,
@@ -16508,8 +16533,8 @@
                     }
                 }
             };
-            t.inventoryOwnershipObserveHandler = m;
-            const p = {
+            t.inventoryOwnershipObserveHandler = h;
+            const g = {
                 observePathConstructor: ({
                     inventoryType: e
                 }) => `/lol-inventory/v1/notifications/${e}`,
@@ -16521,8 +16546,8 @@
                     }))
                 }
             };
-            t.inventoryNotificationObserveHandler = p;
-            const h = {
+            t.inventoryNotificationObserveHandler = g;
+            const f = {
                 observePath: a.OBSERVE_PATH.EVENT_PASS,
                 handler: (e, {
                     eventId: t,
@@ -16534,8 +16559,8 @@
                     }))
                 }
             };
-            t.eventPassObserverHandler = h;
-            const g = {
+            t.eventPassObserverHandler = f;
+            const _ = {
                 observePathConstructor: ({
                     eventId: e
                 }) => `/lol-event-hub/v1/events/${e}/objectives-banner`,
@@ -16547,7 +16572,7 @@
                     }))
                 }
             };
-            t.eventPassProgressObserveHandler = g
+            t.eventPassProgressObserveHandler = _
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -18612,7 +18637,7 @@
             } = a.TIME.TIME_CONVERSIONS, _ = 2 * p, v = h, E = p, b = /^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})\.(\d{3})Z$/;
             var y = u.default.extend({
                 classNames: ["activity-center-media-card"],
-                classNameBindings: ["isOwned:owned:unowned", "showTruncatedText:truncated", "isLoading:loading", "isDisabled:is-disabled", "isErroredOut:errored-out", "isLongCard:activity-center-media-card--long"],
+                classNameBindings: ["showOwnedStyle:owned:unowned", "showTruncatedText:truncated", "isLoading:loading", "isDisabled:is-disabled", "isErroredOut:errored-out", "isLongCard:activity-center-media-card--long"],
                 audioManager: null,
                 patcherService: i.Ember.inject.service("patcher"),
                 clientConfigService: i.Ember.inject.service("client-config"),
@@ -18669,6 +18694,7 @@
                 _boostTickIntervalId: null,
                 _boostTickIntervalMs: v,
                 _awBoostItemId: null,
+                _awConfig: null,
                 _awConfigUnsubscribe: null,
                 ownedText: i.Ember.computed("isOwned", (function() {
                     return this.get("tra").get("activity_center_component_media_card_owned")
@@ -18682,6 +18708,17 @@
                     const e = this.get("_awBoostItemId"),
                         t = this.get("catalogItem.itemId");
                     return null != e && String(e) === String(t) && this.get("_boostExpirationMs") > this.get("_boostNowMs")
+                })),
+                isAwBoostCard: i.Ember.computed("catalogItem.inventoryType", "catalogItem.itemId", "_awBoostItemId", (function() {
+                    if (this.get("catalogItem.inventoryType") !== l.CATALOG_INVENTORY_TYPE.BOOST) return !1;
+                    const e = this.get("_awBoostItemId");
+                    return null != e && String(e) === String(this.get("catalogItem.itemId"))
+                })),
+                isAwNearingEnd: i.Ember.computed("_awConfig", "_boostNowMs", (function() {
+                    return (0, d.isAwExperimentNearingEnd)(this.get("_awConfig"))
+                })),
+                showOwnedStyle: i.Ember.computed("isOwned", "isAwBoostCard", "isAwNearingEnd", (function() {
+                    return !(this.get("isOwned") && this.get("isAwBoostCard") && !this.get("isAwNearingEnd")) && this.get("isOwned")
                 })),
                 boostTimeRemainingText: i.Ember.computed("isOwnedBoost", "_boostExpirationMs", "_boostNowMs", (function() {
                     if (!this.get("isOwnedBoost")) return "";
@@ -18791,7 +18828,7 @@
                     const e = (0, d.subscribeAwConfig)((e => {
                         if (this.isDestroyed || this.isDestroying) return;
                         const t = e?.boostItemId;
-                        this.set("_awBoostItemId", null == t ? null : String(t))
+                        this.set("_awBoostItemId", null == t ? null : String(t)), this.set("_awConfig", e)
                     }));
                     this.set("_awConfigUnsubscribe", e)
                 },
@@ -19022,8 +19059,10 @@
                     default: i
                 },
                 l = n(226),
-                c = n(252);
-            var d = r.default.extend({
+                c = n(252),
+                d = n(232),
+                u = n(230);
+            var m = r.default.extend({
                 classNames: ["activity-center-cta-button"],
                 patcherService: a.Ember.inject.service("patcher"),
                 clientConfigService: a.Ember.inject.service("client-config"),
@@ -19034,18 +19073,45 @@
                 telemetryPageId: null,
                 isPrimary: !0,
                 locale: null,
-                isButtonDisabled: a.Ember.computed.or("isPatcherBusy", "isInfoHubDisabled"),
+                isButtonDisabled: a.Ember.computed.or("isPatcherBusy", "isInfoHubDisabled", "isAwPurchaseDisabled"),
                 isPatcherBusy: a.Ember.computed("action", "patcherService.isGettingReadyForGame", (function() {
                     return this.get("action.type") === l.ACTION.ROUTE_LOBBY && this.get("patcherService.isGettingReadyForGame")
                 })),
                 isInfoHubDisabled: a.Ember.computed("action", "clientConfigService.isInfoHubDisabled", (function() {
                     return this.get("action.type") === l.ACTION.ROUTE_INFO_HUB && this.get("clientConfigService.isInfoHubDisabled")
                 })),
+                _awConfig: null,
+                _awConfigUnsubscribe: null,
+                isAwBoostPawCta: a.Ember.computed("action", "_awConfig", (function() {
+                    const e = this.get("_awConfig");
+                    if (!e) return !1;
+                    const t = this.get("action") || {};
+                    if (t.type !== l.ACTION.ROUTE_OPEN_PAW) return !1;
+                    const n = e.boostItemId;
+                    if (null == n) return !1;
+                    const i = t.payload || {};
+                    return (i.inventoryType ?? i.itemType) === d.CATALOG_INVENTORY_TYPE.BOOST && String(n) === String(i.itemId)
+                })),
+                isAwPurchaseDisabled: a.Ember.computed("isAwBoostPawCta", "_awConfig", (function() {
+                    return !!this.get("isAwBoostPawCta") && (0, u.isAwExperimentNearingEnd)(this.get("_awConfig"))
+                })),
                 shouldShowDiscordCta: a.Ember.computed("telemetryPageId", (function() {
                     return this.get("telemetryPageId") === c.DISCORD_SCREEN_ID
                 })),
                 init() {
-                    this._super(...arguments), this.mouseEnter = this.mouseEnter.bind(this), this.mouseLeave = this.mouseLeave.bind(this), this.sendClickEvent = this.sendClickEvent.bind(this)
+                    this._super(...arguments), this.mouseEnter = this.mouseEnter.bind(this), this.mouseLeave = this.mouseLeave.bind(this), this.sendClickEvent = this.sendClickEvent.bind(this), this._subscribeToAwConfig()
+                },
+                willDestroy() {
+                    this._super(...arguments);
+                    const e = this.get("_awConfigUnsubscribe");
+                    "function" == typeof e && (e(), this.set("_awConfigUnsubscribe", null))
+                },
+                _subscribeToAwConfig() {
+                    if (this.get("action.type") !== l.ACTION.ROUTE_OPEN_PAW) return;
+                    const e = (0, u.subscribeAwConfig)((e => {
+                        this.isDestroyed || this.isDestroying || this.set("_awConfig", e)
+                    }));
+                    this.set("_awConfigUnsubscribe", e)
                 },
                 mouseEnter() {
                     const e = new CustomEvent("cta-hovered", {
@@ -19083,7 +19149,7 @@
                     }
                 }
             });
-            t.default = d
+            t.default = m
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

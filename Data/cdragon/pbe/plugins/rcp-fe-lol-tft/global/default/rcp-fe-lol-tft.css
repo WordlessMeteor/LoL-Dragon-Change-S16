@@ -9925,6 +9925,7 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 
 .rcp-fe-lol-tft-event-mission-chain .event-mission-container .card {
     display: flex;
+    height: fit-content;
     padding: 20px 8px;
     width: 100%
 }
@@ -9945,7 +9946,8 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 
 .rcp-fe-lol-tft-event-mission-chain .event-mission-container .card .card-left .objective-columns .middle-column {
     flex: 9;
-    height: var(--column-height)
+    max-height: fit-content;
+    min-height: 30px
 }
 
 .rcp-fe-lol-tft-event-mission-chain .event-mission-container .card .card-left .objective-columns .right-column {
@@ -12214,6 +12216,14 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     top: -50vh;
     width: 100vw;
     z-index: 1
+}
+
+.rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .modal-close-x-button {
+    color: #f0e6d2;
+    left: 82%;
+    position: absolute;
+    top: 9%;
+    transform: translateX(-100%)
 }
 
 .rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .rcp-fe-lol-tft-event-hub-first-time-flow-2-content {
