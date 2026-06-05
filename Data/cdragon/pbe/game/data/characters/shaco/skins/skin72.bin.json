@@ -110,7 +110,7 @@
             "submeshRenderOrder": "Head1 Head Body Ball Disc Arm Arm1 ArmYellow Weapon_L WL EyesM VFXP VFXP1 Face Face1 Face2 Face3 Face4 Face5 VFXP2",
             "materialOverride": [
                 {
-                    "Material": "{590b24f1}",
+                    "Material": "Characters/Shaco/Skins/Skin72/Materials/Shaco_Skin72_Body_inst",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -380,6 +380,32 @@
                         "UseDifferentKeyForOtherTeam": true,
                         "__type": "PersistentVfxData"
                     }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "__type": "{d4933ea0}"
+                        },
+                        {
+                            "mDriver": {
+                                "__type": "IsEnemyDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "SubmeshesToShow": [
+                    "Arm1"
+                ],
+                "SubmeshesToHide": [
+                    "Arm",
+                    "ArmYellow",
+                    "VFXP2",
+                    "EyesM"
                 ],
                 "__type": "PersistentEffectConditionData"
             }
@@ -31034,6 +31060,38 @@
                             },
                             "TextureName": "ASSETS/Characters/Shaco/Skins/Skin71/Shaco_Skin71_HeadQ_TX_CM.SKINS_Shaco_Skin71.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mDrivers": [
+                                    {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "BuffType": 10,
+                                            "__type": "HasBuffOfTypeBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "mScriptName": "sylasrstatstonemanager",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "__type": "IsEnemyDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    }
+                                ],
+                                "__type": "AllTrueMaterialDriver"
+                            },
+                            "TextureName": "ASSETS/Characters/Shaco/Skins/Skin71/Shaco_Skin71_HeadQ_TX_CM.SKINS_Shaco_Skin71.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
                     "__type": "DynamicMaterialTextureSwapDef"
@@ -31056,6 +31114,32 @@
                                     {
                                         "mDriver": {
                                             "__type": "IsDeadDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    }
+                                ],
+                                "__type": "AllTrueMaterialDriver"
+                            },
+                            "TextureName": "ASSETS/Characters/Shaco/Skins/Skin71/Shaco_Skin71_Cry_Flowmap_TX_CM.SKINS_Shaco_Skin71.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mDrivers": [
+                                    {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "BuffType": 10,
+                                            "__type": "HasBuffOfTypeBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "mScriptName": "sylasrstatstonemanager",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
                                         },
                                         "__type": "NotMaterialDriver"
                                     }
@@ -32578,7 +32662,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{590b24f1}": {
+    "Characters/Shaco/Skins/Skin72/Materials/Shaco_Skin72_Body_inst": {
         "name": "Characters/Shaco/Skins/Skin72/Materials/Shaco_Skin72_Body_inst",
         "samplerValues": [
             {
@@ -34489,6 +34573,38 @@
                                             "__type": "FloatLiteralMaterialDriver"
                                         },
                                         "__type": "FloatComparisonMaterialDriver"
+                                    }
+                                ],
+                                "__type": "AllTrueMaterialDriver"
+                            },
+                            "TextureName": "ASSETS/Characters/Shaco/Skins/Skin71/Shaco_Skin71_Weapen_Q_diffuse_TX_CM.SKINS_Shaco_Skin71.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "mDrivers": [
+                                    {
+                                        "__type": "{d4933ea0}"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "BuffType": 10,
+                                            "__type": "HasBuffOfTypeBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "mScriptName": "sylasrstatstonemanager",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
+                                    },
+                                    {
+                                        "mDriver": {
+                                            "__type": "IsEnemyDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "NotMaterialDriver"
                                     }
                                 ],
                                 "__type": "AllTrueMaterialDriver"
