@@ -188,46 +188,6 @@
             "tooltip": "獲得@RevivesToGain@次額外復活，且復活所需時間減半。"
         },
         {
-            "apiName": "ChainLightning",
-            "calculations": {},
-            "dataValues": {
-                "DamageMod": [
-                    0.25,
-                    0.25,
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.4000000059604645
-                ],
-                "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "Range": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ]
-            },
-            "desc": "對目標造成傷害時，也會對最靠近的敵人造成<trueDamage>等同於@DamageMod*100@%實際造成傷害的真實傷害</trueDamage>。",
-            "iconLarge": "assets/ux/cherry/augments/icons/chainlightning_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/chainlightning_small.png",
-            "id": 166,
-            "name": "連鎖閃電",
-            "rarity": 2,
-            "tooltip": "{{Cherry_ChainLightning_Summary}}"
-        },
-        {
             "apiName": "Cerberus",
             "calculations": {},
             "dataValues": {
@@ -6560,13 +6520,13 @@
                     300.0
                 ]
             },
-            "desc": "獲得<gold>+%i:goldCoins%@GoldBonus@金錢</gold>，並降低所有鐵砧的價格<br>。<br><attention>稜鏡鐵砧</attention>：<gold>-%i:goldCoins%@PrismaticCostReduction@金錢</gold><br><attention>傳奇鐵砧</attention>：<gold>-%i:goldCoins%@LegendaryCostReduction@金錢</gold><br><attention>屬性鐵砧</attention>：<gold>-%i:goldCoins%@StatCostReduction@金錢</gold><br><br><rules>從鐵砧獲得的物品轉售價格減少<gold>%i:goldCoins%500金錢</gold>。</rules>",
+            "desc": "獲得<gold>+%i:goldCoins%@GoldBonus@金錢</gold>，並降低所有鐵砧的價格<br>。<br><attention>稜鏡鐵砧</attention>：<gold>-%i:goldCoins%@PrismaticCostReduction@金錢</gold><br><attention>傳說鐵砧</attention>：<gold>-%i:goldCoins%@LegendaryCostReduction@金錢</gold><br><attention>屬性鐵砧</attention>：<gold>-%i:goldCoins%@StatCostReduction@金錢</gold><br><br><rules>從鐵砧獲得的物品轉售價格減少<gold>%i:goldCoins%500金錢</gold>。</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.png",
             "id": 234,
             "name": "鐵砧賭博",
             "rarity": 2,
-            "tooltip": "獲得<gold>+%i:goldCoins%@GoldBonus@金錢</gold>，並降低所有鐵砧的價格<br>。<br><attention>稜鏡鐵砧</attention>：<gold>-%i:goldCoins%@PrismaticCostReduction@金錢</gold><br><attention>傳奇鐵砧</attention>：<gold>-%i:goldCoins%@LegendaryCostReduction@金錢</gold><br><attention>屬性鐵砧</attention>：<gold>-%i:goldCoins%@StatCostReduction@金錢</gold><br><br><rules>從鐵砧獲得的物品轉售價格減少<gold>%i:goldCoins%500金錢</gold>。</rules>"
+            "tooltip": "獲得<gold>+%i:goldCoins%@GoldBonus@金錢</gold>，並降低所有鐵砧的價格<br>。<br><attention>稜鏡鐵砧</attention>：<gold>-%i:goldCoins%@PrismaticCostReduction@金錢</gold><br><attention>傳說鐵砧</attention>：<gold>-%i:goldCoins%@LegendaryCostReduction@金錢</gold><br><attention>屬性鐵砧</attention>：<gold>-%i:goldCoins%@StatCostReduction@金錢</gold><br><br><rules>從鐵砧獲得的物品轉售價格減少<gold>%i:goldCoins%500金錢</gold>。</rules>"
         },
         {
             "apiName": "DivineIntervention",
@@ -8449,37 +8409,6 @@
             "name": "恐懼使者",
             "rarity": 2,
             "tooltip": "每@TickCadence@秒從每位鄰近敵方英雄身上獲得@CurseStacksPerTick@<keywordMajor>詛咒之力</keywordMajor>。<br><br>增加<scaleHealth>@f1@生命</scaleHealth>(相當於自身@MaxHealthRatio*100@%<keywordMajor>詛咒之力</keywordMajor>)。<br><br>{{ Cherry_CurseShared }}"
-        },
-        {
-            "apiName": "CalculatedRisk",
-            "calculations": {},
-            "dataValues": {
-                "AugmentThreshold": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "你無法再進行%i:Reroll%重抽。<br><br>開始選擇<keywordMajor>%i:Augment%金級增幅裝置</keywordMajor>時，如果你擁有@AugmentThreshold@件以下的增幅裝置，則改為獲得<keywordMajor>%i:Augment%稜鏡增幅裝置</keywordMajor>。",
-            "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
-            "id": 320,
-            "name": "風險計算",
-            "rarity": 0,
-            "tooltip": "{{ Cherry_CalculatedRisk_Summary }}"
         },
         {
             "apiName": "StackosaurusRex",

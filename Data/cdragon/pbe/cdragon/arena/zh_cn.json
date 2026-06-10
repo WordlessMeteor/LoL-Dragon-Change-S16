@@ -188,46 +188,6 @@
             "tooltip": "获得@RevivesToGain@次额外复活次数，并且将复活所需的时间减半。"
         },
         {
-            "apiName": "ChainLightning",
-            "calculations": {},
-            "dataValues": {
-                "DamageMod": [
-                    0.25,
-                    0.25,
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.4000000059604645
-                ],
-                "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "Range": [
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0,
-                    800.0
-                ]
-            },
-            "desc": "对目标造成伤害时，还会对相距最近的那个敌人造成<trueDamage>@DamageMod*100@%已造成伤害的真实伤害</trueDamage>。",
-            "iconLarge": "assets/ux/cherry/augments/icons/chainlightning_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/chainlightning_small.png",
-            "id": 166,
-            "name": "连锁闪电",
-            "rarity": 2,
-            "tooltip": "{{Cherry_ChainLightning_Summary}}"
-        },
-        {
             "apiName": "Cerberus",
             "calculations": {},
             "dataValues": {
@@ -6560,13 +6520,13 @@
                     300.0
                 ]
             },
-            "desc": "获得<gold>%i:goldCoins%@GoldBonus@金币</gold>并降低所有锻造器的价格。<br><br><attention>棱彩锻造器</attention>：<gold>-%i:goldCoins%@PrismaticCostReduction@金币</gold><br><attention>传说锻造器</attention>：<gold>-%i:goldCoins%@LegendaryCostReduction@金币</gold><br><attention>属性锻造器</attention>：<gold>-%i:goldCoins%@StatCostReduction@金币</gold><br><br><rules>从锻造器中获得的装备的售价降低<gold>%i:goldCoins%500金币</gold>。</rules>",
+            "desc": "Cherry_GambaAnvil_Tooltip",
             "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.png",
             "id": 234,
             "name": "财运锻造器",
             "rarity": 2,
-            "tooltip": "获得<gold>%i:goldCoins%@GoldBonus@金币</gold>并降低所有锻造器的价格。<br><br><attention>棱彩锻造器</attention>：<gold>-%i:goldCoins%@PrismaticCostReduction@金币</gold><br><attention>传说锻造器</attention>：<gold>-%i:goldCoins%@LegendaryCostReduction@金币</gold><br><attention>属性锻造器</attention>：<gold>-%i:goldCoins%@StatCostReduction@金币</gold><br><br><rules>从锻造器中获得的装备的售价降低<gold>%i:goldCoins%500金币</gold>。</rules>"
+            "tooltip": "Cherry_GambaAnvil_Tooltip"
         },
         {
             "apiName": "DivineIntervention",
@@ -8449,37 +8409,6 @@
             "name": "恐惧使者",
             "rarity": 2,
             "tooltip": "每@TickCadence@秒，从每个附近的敌方英雄那里获得@CurseStacksPerTick@<keywordMajor>诅咒能量</keywordMajor>。<br><br>获得<scaleHealth>@f1@生命值</scaleHealth> (你的@MaxHealthRatio*100@%<keywordMajor>诅咒能量</keywordMajor>)。<br><br>{{ Cherry_CurseShared }}"
-        },
-        {
-            "apiName": "CalculatedRisk",
-            "calculations": {},
-            "dataValues": {
-                "AugmentThreshold": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "MaxLevel": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "desc": "你不再能够%i:Reroll%刷新。<br><br>开始一次<keywordMajor>%i:Augment%黄金阶强化符文</keywordMajor>选择，如果你拥有@AugmentThreshold@个或更少强化符文，则获得一个<keywordMajor>%i:Augment%棱彩阶强化符文</keywordMajor>作为替代。",
-            "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
-            "id": 320,
-            "name": "精算风险",
-            "rarity": 0,
-            "tooltip": "{{ Cherry_CalculatedRisk_Summary }}"
         },
         {
             "apiName": "StackosaurusRex",

@@ -1,0 +1,3041 @@
+{
+    "{422f91cd}": {
+        "mClipDataMap": {
+            "Idle01": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "{22d7c251}": {
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle01.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Dance_In": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "necklace": {
+                        "mStartFrame": 10.0,
+                        "mShowSubmeshList": [
+                            "necklace"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Table": {
+                        "mShowSubmeshList": [
+                            "Table_B",
+                            "Table_A"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{0d29703c}": {
+                        "mStartFrame": 18.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "HEAD",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_DanceIn.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle02": {
+                "mFlags": 2,
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "{8e9c1ed5}": {
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Stage": {
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{3983c8cc}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle02.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Interact": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle01.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Recall": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle01.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Recall_Winddown": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle01.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Run_Haste": {
+                "mFlags": 2,
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "{76b3a666}": {
+                        "mMaskDataName": "{a977cbbd}",
+                        "mBlendInTime": 0.15000000596046448,
+                        "mBlendOutTime": 0.15000000596046448,
+                        "__type": "ConformToPathEventData"
+                    },
+                    "{37dc5e54}": {
+                        "mStartFrame": 5.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{39e31d3f}": {
+                        "mStartFrame": 5.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "l_buffbone_glb_hand_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mTickDuration": 0.05000000074505806,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Run.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Run": {
+                "mFlags": 2,
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Base",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Haste",
+                        "mValue": 400.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "Run_Base": {
+                "mFlags": 2,
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "{76b3a666}": {
+                        "mMaskDataName": "{a977cbbd}",
+                        "mBlendInTime": 0.15000000596046448,
+                        "mBlendOutTime": 0.15000000596046448,
+                        "__type": "ConformToPathEventData"
+                    },
+                    "{3aab6ca4}": {
+                        "mStartFrame": 5.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{3dab715d}": {
+                        "mStartFrame": 5.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "l_buffbone_glb_hand_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Run.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Cast_Cycle": {
+                "mFlags": 2,
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Stage": {
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{dd3151ef}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{d01ec7fc}": {
+                        "mIsSelfOnly": true,
+                        "mSoundName": "Play_sfx_Pet_littlelegend_cast_cycle3d",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Taunt_Loop.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Damage_Hurt": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Stage": {
+                        "mHideSubmeshList": [
+                            "Table_B",
+                            "Table_A"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_damage_hurt3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Hurt.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Death": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_death3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Death.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Dive_In": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mIsSelfOnly": true,
+                        "mSoundName": "Play_sfx_Pet_littlelegend_dive_in3d",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{37dc5e54}": {
+                        "mStartFrame": 5.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{39e31d3f}": {
+                        "mStartFrame": 5.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "l_buffbone_glb_hand_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_dive_in.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Dive_Out": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mIsSelfOnly": true,
+                        "mSoundName": "Play_sfx_Pet_littlelegend_dive_out3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{37dc5e54}": {
+                        "mStartFrame": 5.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{39e31d3f}": {
+                        "mStartFrame": 5.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "l_buffbone_glb_hand_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_dive_out.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Cast_Damage": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Stage": {
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{864efa16}": {
+                        "mStartFrame": 7.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{99561048}": {
+                        "mEndFrame": 8.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{c8e6a7ae}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{9c561501}": {
+                        "mEndFrame": 8.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{dd3151ef}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{d01ec7fc}": {
+                        "mIsSelfOnly": true,
+                        "mSoundName": "Play_sfx_Pet_littlelegend_cast3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{2ee2b616}": {
+                        "mIsSelfOnly": true,
+                        "mSoundName": "Play_sfx_Pet_littlelegend_cast_vo3d",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Cast_Damage.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{ff7ec843}": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle01.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{2977b336}": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle01.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{ef33df2e}": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle01.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{c3fa865c}": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_idle01.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle_In": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Idle_in.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Taunt_Press": {
+                "mFlags": 8,
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Stage": {
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{864efa16}": {
+                        "mStartFrame": 7.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{99561048}": {
+                        "mEndFrame": 8.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{c8e6a7ae}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{9c561501}": {
+                        "mEndFrame": 8.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{dd3151ef}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Taunt.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "ADSpellRatio22Prefix": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "{8e9c1ed5}": {
+                        "mStartFrame": 10.0,
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Stage": {
+                        "mStartFrame": 50.0,
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "BODY": {
+                        "mStartFrame": 17.0,
+                        "mEndFrame": 35.0,
+                        "mHideSubmeshList": [
+                            "Hair",
+                            "BODY",
+                            "Skirt",
+                            "Knife",
+                            "Grass",
+                            "necklace"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{20ab62ca}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{0bd27cdf}": {
+                        "mStartFrame": 16.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{895aa917}": {
+                        "mStartFrame": 35.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{65cccc68}": {
+                        "mStartFrame": 35.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{2e377c90}": {
+                        "mStartFrame": 53.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{995e1004}": {
+                        "mStartFrame": 74.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{6f44ed8e}": {
+                        "mStartFrame": 50.0,
+                        "mEndFrame": 74.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_joke3d",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{6e2edafa}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{9b1fa80c}": {
+                        "mStartFrame": 35.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Joke.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Taunt_loop": {
+                "mFlags": 2,
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Stage": {
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{dd3151ef}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Taunt_Loop.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{b62a6094}": {
+                "mClipNameList": [
+                    "Cast_Damage",
+                    "Idle02"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Taunt1": {
+                "mClipNameList": [
+                    "Taunt_loop"
+                ],
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_taunt_in3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "Taunt2": {
+                "mClipNameList": [
+                    "Taunt_Press",
+                    "Taunt_loop"
+                ],
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_taunt_attack3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "Taunt": {
+                "Updater": {
+                    "driver": {
+                        "mAnimationNames": [
+                            "Taunt_loop",
+                            "Taunt_In",
+                            "Taunt_Press"
+                        ],
+                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "Taunt2",
+                "mFalseConditionClipName": "Taunt1",
+                "__type": "ConditionBoolClipData"
+            },
+            "Joke": {
+                "mClipNameList": [
+                    "ADSpellRatio22Prefix",
+                    "Idle02"
+                ],
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_joke3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "Idle1": {
+                "mClipNameList": [
+                    "Idle01",
+                    "Idle01",
+                    "Idle01",
+                    "ADSpellRatio22Prefix",
+                    "Idle02"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Dance": {
+                "mClipNameList": [
+                    "Dance_Base",
+                    "Idle02"
+                ],
+                "mEventDataMap": {
+                    "{4a83aa4a}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{ec4281d8}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{aa51a73a}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "{c27e434a}": {
+                "mClipNameList": [
+                    "{9e55a33e}",
+                    "Idle02"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Cast_Animation": {
+                "Updater": {
+                    "__type": "{d59163d9}"
+                },
+                "mChangeAnimationMidPlay": true,
+                "SyncFrameOnChangeAnim": true,
+                "mTrueConditionClipName": "{5e5fc064}",
+                "mFalseConditionClipName": "{b62a6094}",
+                "__type": "ConditionBoolClipData"
+            },
+            "{5e5fc064}": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Run.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "EndFrame": 8.0,
+                "__type": "AtomicClipData"
+            },
+            "Greeting": {
+                "mClipNameList": [
+                    "ADSpellRatio22Prefix",
+                    "Idle02"
+                ],
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mIsSelfOnly": true,
+                        "mSoundName": "Play_sfx_Pet_littlelegend_joke3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "Celebrate": {
+                "mClipNameList": [
+                    "Dance"
+                ],
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_dance3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "Laugh_In": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Stage": {
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Grass": {
+                        "mShowSubmeshList": [
+                            "Grass"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Laugh_In.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Laugh_Loop": {
+                "mFlags": 2,
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Stage": {
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Grass": {
+                        "mShowSubmeshList": [
+                            "Grass"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{ad28f658}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Laugh_Loop.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{5659b8ef}": {
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Stage": {
+                        "mShowSubmeshList": [
+                            "Table_A",
+                            "Table_B"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Grass": {
+                        "mShowSubmeshList": [
+                            "Grass"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{99561048}": {
+                        "mStartFrame": 2.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{c8e6a7ae}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{9c561501}": {
+                        "mStartFrame": 7.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Knife",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{62593173}": {
+                        "mStartFrame": 4.5,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{63593306}": {
+                        "mStartFrame": 9.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{64593499}": {
+                        "mStartFrame": 15.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{6559362c}": {
+                        "mStartFrame": 24.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Laugh_Jump.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Laugh": {
+                "Updater": {
+                    "driver": {
+                        "mAnimationNames": [
+                            "Laugh_In",
+                            "Laugh_Loop",
+                            "{5659b8ef}"
+                        ],
+                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "{362c285f}",
+                "mFalseConditionClipName": "{a6d2b894}",
+                "__type": "ConditionBoolClipData"
+            },
+            "{a6d2b894}": {
+                "mClipNameList": [
+                    "Laugh_In",
+                    "Laugh_Loop"
+                ],
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_laugh_in3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "{362c285f}": {
+                "mClipNameList": [
+                    "{5659b8ef}",
+                    "Laugh_Loop"
+                ],
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_laugh_attack3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "Dance_Loop": {
+                "mFlags": 2,
+                "mTrackDataName": "Base",
+                "mEventDataMap": {
+                    "Table": {
+                        "mShowSubmeshList": [
+                            "Table_B",
+                            "Table_A"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "necklace": {
+                        "mShowSubmeshList": [
+                            "necklace"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{0d29703c}": {
+                        "mStartFrame": 44.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "HEAD",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Dance_Loop.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Dance_Base": {
+                "mClipNameList": [
+                    "Dance_In",
+                    "Dance_Loop"
+                ],
+                "mEventDataMap": {
+                    "{d01ec7fc}": {
+                        "mSoundName": "Play_sfx_Pet_littlelegend_dance3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "{9e55a33e}": {
+                "mTrackDataName": "Base",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoRengar/Themes/Base/Animations/PetStyleTwoRengar_Base_Laugh_In.TFT_Style2_Rengar_Common.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            }
+        },
+        "mMaskDataMap": {
+            "Vfx": {
+                "mWeightList": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "MaskData"
+            },
+            "{a977cbbd}": {
+                "mWeightList": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.699999988079071,
+                    0.7999999523162842,
+                    0.8999999761581421,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "MaskData"
+            },
+            "{72821679}": {
+                "mWeightList": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "MaskData"
+            }
+        },
+        "mTrackDataMap": {
+            "Base": {
+                "__type": "TrackData"
+            },
+            "Vfx": {
+                "mPriority": 1,
+                "__type": "TrackData"
+            }
+        },
+        "mBlendDataTable": {
+            "13328384923734369899": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13544562898463614571": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1255103310602167915": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702301854066283": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168340399723": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2786235696809764459": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1669951435763869291": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299021082624": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702302624476363": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702300076959536": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702302194646349": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702302124339064": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299313309135": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702302174671921": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702300539534768": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299739180746": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702303065634226": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299669803674": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299409898491": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522733811531776": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522737414925515": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522734867408688": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522736985095501": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522735809340407": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522735949455740": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522736914788216": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522734103758287": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522736965121073": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522735329983920": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522736644515435": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522734529629898": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522737856083378": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522734460252826": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522734200347643": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313506714681344": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313510318075083": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313507770558256": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313509888245069": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313508712489975": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313508852605308": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313507006907855": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313509868270641": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313508233133488": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313509547665003": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313507432779466": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313510759232946": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313507363402394": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313507103497211": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15476458265613968375": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15476458265754083708": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4534956807639278583": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4534956807779393916": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352412644746231": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352412784861564": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13328384922899194871": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13328384923039310204": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1255103309766992887": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1255103309907108220": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13544562897628439543": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13544562897768554876": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702301018891255": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702301159006588": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167505224695": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572167645340028": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207951306826743": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207951446942076": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17371216859572216823": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17371216859712332156": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2786235695974589431": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2786235696114704764": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1669951434928694263": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1669951435068809596": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15476458264656562994": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4468497934442515250": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "4534956806681873202": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13630352411687340850": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "8580522734851935026": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "9182313507755084594": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13328384921941789490": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "1255103308809587506": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13544562896671034162": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6521702300061485874": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "12167572166547819314": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "3084207950349421362": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "17371216858614811442": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "2786235695017184050": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "1669951433971288882": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "3084207952412274552": {
+                "mClipName": "Idle_In",
+                "__type": "TransitionClipBlendData"
+            },
+            "2786235697080037240": {
+                "mClipName": "Idle_In",
+                "__type": "TransitionClipBlendData"
+            },
+            "17371216860677664632": {
+                "mClipName": "Idle_In",
+                "__type": "TransitionClipBlendData"
+            },
+            "11409204720849908785": {
+                "mTime": 0.30000001192092896,
+                "__type": "TimeBlendData"
+            },
+            "6954732971893241835": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5288554084004277450": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "5288554083616339947": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13544562897249905866": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "4279628572918041475": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4279628573540887754": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4279628573152950251": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5288554083381431171": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4351687897827789699": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4351687898450635978": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4351687898062698475": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13328384922520661194": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13332298552555351242": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "11374364253848087754": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13222943557008239818": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "3084207950928293066": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "17371216859193683146": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "2786235695596055754": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "6222207698274466031": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4468497937005505739": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13544562899234024651": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "11374364255832206539": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13328384924504779979": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "3084207952912411851": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "17371216861177801931": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "2786235697580174539": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "17371216860653114651": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13328384921957263152": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13332298551991953200": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13544562896686507824": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11374364253284689712": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "4534956806697346864": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "4468497936555701297": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "13332298554089665585": {
+                "mTime": 0.30000001192092896,
+                "__type": "TimeBlendData"
+            },
+            "13332298555153836315": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554539470027": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551976479538": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298552519409764": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554858008842": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298555098212508": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298552487779364": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554859937146": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551469500247": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554109640013": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298552933884919": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553074000252": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554508427190": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554039332728": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553584376838": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554014782747": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551228302799": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553999346878": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553592488766": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553765862208": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553734903956": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298552384796911": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551844939871": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553496807329": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554199130954": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554224051804": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554949230382": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551631786806": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298555222575171": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298552454528432": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553769059947": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551654174410": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554980627890": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551584797338": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554100450403": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551949282582": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298551932504963": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298552167413739": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298553992306836": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674967911694336": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674972129454363": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970967924884": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971515088075": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968952097586": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674969495027812": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971833626890": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968967571248": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674972073830556": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674969463397412": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971835555194": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968445118295": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971085258061": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674969909502967": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970049618300": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971484045238": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971014950776": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971015861989": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971065283633": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970559994886": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970990400795": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968203920847": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971168453702": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970974964926": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970568106814": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970741480256": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970710522004": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674969360414959": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968820557919": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970472425377": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971174749002": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971199669852": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971924848430": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968607404854": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674972198193219": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674969430146480": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674970744677995": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968629792458": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971956245938": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968560415386": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674971076068451": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968924900630": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674968908123011": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674969530969290": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13987674969143031787": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18115141381597836358": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13126410255952917574": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15476458266872919110": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4468497936658871366": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6800365501338760262": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16844572059804513350": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4534956808898229318": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17876238949653820486": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6664513967779361862": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16852854062421259334": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2291038462064604230": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352413903696966": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522737068291142": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313509971440710": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15343130297182860358": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13328384924158145606": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554192835654": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13544562898887390278": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364255485572166": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13222943558645724230": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1255103311025943622": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13156647006105384006": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11409204720953078854": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12153837984338031686": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12020873304456705094": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6222207700082504774": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3903539368767140934": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10998256078203794502": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14014713078786962502": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14121747314525484102": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17236365590795269190": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2988053925549978694": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18410372520082289734": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702302277841990": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168764175430": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207952565777478": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17371216860831167558": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2786235697233540166": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13590883339490702406": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4351687900088120390": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4279628575178372166": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6954732973918663750": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5288554085641761862": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18115141381445244645": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13126410255800325861": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15476458266720327397": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4468497936506279653": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6800365501186168549": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16844572059651921637": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4534956808745637605": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17876238949501228773": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6664513967626770149": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16852854062268667621": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2291038461912012517": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352413751105253": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8580522736915699429": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9182313509818848997": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15343130297030268645": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13328384924005553893": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298554040243941": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364255332980453": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13222943558493132517": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "1255103310873351909": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13156647005952792293": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11409204720800487141": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12153837984185439973": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12020873304304113381": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6222207699929913061": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3903539368614549221": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10998256078051202789": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14014713078634370789": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14121747314372892389": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17236365590642677477": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2988053925397386981": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18410372519929698021": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702302125250277": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12167572168611583717": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207952413185765": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17371216860678575845": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13332298550936076288": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2786235697080948453": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13590883339338110693": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4351687899935528677": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4279628575025780453": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6954732973766072037": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5288554085489170149": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

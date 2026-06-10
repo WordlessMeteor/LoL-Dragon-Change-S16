@@ -1,0 +1,1522 @@
+{
+    "{f2496685}": {
+        "mCascadeBlendValue": 0.0,
+        "mClipDataMap": {
+            "Idle1": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{67dbfa90}": {
+                        "mEffectKey": "{63e6f77c}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{5b6a5fee}": {
+                        "mEffectKey": "{3a40f559}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "HEAD",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{84819d9a}": {
+                        "mSoundName": "Play_sfx_LockeTotem_LockeR_buffactivate_loop",
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Idle_Main.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "mUpdaterResourceData": {
+                    "__type": "UpdaterResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{2d875ae3}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{dadee8eb}": {
+                        "__type": "EnableLookAtEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/ChannelExecute.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{dbe03b55}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Idle_Inactive.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "startFrame": 20.0,
+                "EndFrame": 25.0,
+                "__type": "AtomicClipData"
+            },
+            "CAST": {
+                "mFlags": 4,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{d8d8226d}": {
+                        "mStartFrame": 10.0,
+                        "mSoundName": "Play_sfx_LockeTotem_LockeR_groundhit",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{003db06f}": {
+                        "mEffectKey": "{97a5491c}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "HEAD",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Cast_Main.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{b8319fb8}": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Cast_to_Idle_Main.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{e11b0e97}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{818198e1}": {
+                        "mStartFrame": 3.0,
+                        "mSoundName": "Play_sfx_LockeTotem_LockeR_buffdeactivate",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Execute_to_Inactive_Idle.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "startFrame": 5.0,
+                "__type": "AtomicClipData"
+            },
+            "{30074cc5}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{818198e1}": {
+                        "mStartFrame": 3.0,
+                        "mSoundName": "Play_sfx_LockeTotem_LockeR_buffdeactivate",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Execute_to_Inactive_Idle.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "startFrame": 5.0,
+                "__type": "AtomicClipData"
+            },
+            "Idle": {
+                "mFlags": 3,
+                "Updater": {
+                    "driver": {
+                        "mScriptName": "LockeRPickUp",
+                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "{dbe03b55}",
+                "mFalseConditionClipName": "Idle1",
+                "__type": "ConditionBoolClipData"
+            },
+            "{71e5c6aa}": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Idle2_Variant01.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{72e5c83d}": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Idle2_Variant02.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{6be5bd38}": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Idle2_Variant03.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{6ce5becb}": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Idle_Variant04.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{6de5c05e}": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Idle_Variant05.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Channel": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "VFX_Channel": {
+                        "mEffectKey": "{6589053e}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "HEAD",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{24ad5508}": {
+                        "mEffectKey": "{875dab53}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{80aab6be}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{27ad59c1}": {
+                        "mEffectKey": "{875dab53}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{83aabb77}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{26ad582e}": {
+                        "mEffectKey": "{875dab53}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{81aab851}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Channel.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{3eea73f2}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{1b9d21ce}": {
+                        "mStartFrame": 1.0,
+                        "mSoundName": "Play_sfx_LockeTotem_LockeRPickUp_buffactivate_foley_loop",
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Idle_Inactive.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{a01e3d98}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{dadee8eb}": {
+                        "__type": "EnableLookAtEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Execute2.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{34c4e85a}": {
+                "mFlags": 4,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{24ad5508}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{80aab6be}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{27ad59c1}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{83aabb77}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{26ad582e}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{81aab851}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{ec4ae051}": {
+                        "mSoundName": "Play_sfx_Locke_LockeRSuckIn_execute_buffdeactivate",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mTickDuration": 0.02222222276031971,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Execute_Bite_01.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{33c4e6c7}": {
+                "mFlags": 4,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{ec4ae051}": {
+                        "mSoundName": "Play_sfx_Locke_LockeRSuckIn_execute_buffdeactivate",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{24ad5508}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{80aab6be}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{27ad59c1}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{83aabb77}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{26ad582e}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{81aab851}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mTickDuration": 0.02222222276031971,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Execute_Bite_02.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{79c8964f}": {
+                "mSelectorPairDataList": [
+                    {
+                        "mClipName": "{34c4e85a}",
+                        "mProbability": 33.0,
+                        "__type": "SelectorPairData"
+                    },
+                    {
+                        "mClipName": "{33c4e6c7}",
+                        "mProbability": 33.0,
+                        "__type": "SelectorPairData"
+                    },
+                    {
+                        "mClipName": "{32c4e534}",
+                        "mProbability": 34.0,
+                        "__type": "SelectorPairData"
+                    }
+                ],
+                "__type": "SelectorClipData"
+            },
+            "Recall": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{d61daeeb}": {
+                        "__type": "FaceTargetEventData"
+                    },
+                    "{635f20ad}": {
+                        "mEndFrame": 170.0,
+                        "mHideSubmeshList": [
+                            "Skull"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{0dc05a4d}": {
+                        "mShowSubmeshList": [
+                            "Skull"
+                        ],
+                        "mHideSubmeshList": [
+                            "{32af8392}"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Recall_Totem.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{32c4e534}": {
+                "mFlags": 4,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{ec4ae051}": {
+                        "mSoundName": "Play_sfx_Locke_LockeRSuckIn_execute_buffdeactivate",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{24ad5508}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{80aab6be}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{27ad59c1}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{83aabb77}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{26ad582e}": {
+                        "mEffectKey": "{bf8c56d0}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{81aab851}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mTickDuration": 0.02222222276031971,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/LockeTotem/Skins/Base/Animations/Execute_Bite_03.Locke.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "__type": "TrackData"
+            }
+        },
+        "mBlendDataTable": {
+            "3280690788255677269": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "11374364255917718357": {
+                "mClipName": "{30074cc5}",
+                "__type": "TransitionClipBlendData"
+            },
+            "15843728729036569429": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293859172015110": {
+                "mClipName": "{b8319fb8}",
+                "__type": "TransitionClipBlendData"
+            },
+            "12260293859613974456": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565192550621112": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690787657031608": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16220574527698083768": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364255319072696": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728728437923768": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293860300361367": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "13272565193237008023": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "3280690788343418519": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "16220574528384470679": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "11374364256005459607": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "15843728729124310679": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "12260293859378286670": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565192314933326": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690787421343822": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16220574527462395982": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364255083384910": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728728202235982": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574528296729429": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293860212620117": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565193149266773": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565192108661766": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574527256124422": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254877113350": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728727995964422": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293857329499333": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565190266145989": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690785372556485": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16220574525413608645": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253034597573": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819248455568581": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728726153448645": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819250504355918": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819250740043704": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819251426430615": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "3460819250298084358": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819251338689365": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690784566771712": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3280690787838447507": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3280690787215072262": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3280690786477655722": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3280690786494433341": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3280690786376990008": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3280690786393767627": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3280690786410545246": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "2432597613061603328": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597615916175438": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597616151863224": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597613627986596": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597616838250135": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "2432597616333279123": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597615709903878": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597613867388101": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "2432597616750508885": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "2432597614972487338": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597614989264957": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597614871821624": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597614888599243": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597614905376862": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293857287559907": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565190224206563": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597613825448675": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690785330617059": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574525371669219": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14051740543403645667": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364252992658147": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819248413629155": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728726111509219": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8207184330163182307": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8279243655072930531": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7774828380704692963": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7846887705614441187": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7918947030524189411": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293857090097828": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364252795196068": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690785622324210": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "11374364253284365298": {
+                "mClipName": "{30074cc5}",
+                "__type": "TransitionClipBlendData"
+            },
+            "3460819248705336306": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574525663376370": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11537727018414112768": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727021268684878": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727021504372664": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727019177958115": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11537727022190759575": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11537727021685788563": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727021062413318": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727019219897541": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727022103018325": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "11537727019469665266": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "11537727020324996778": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727020341774397": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727020224331064": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727020241108683": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11537727020257886302": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "12260293859210050968": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565192146697624": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597615747939736": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690787253108120": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11537727021100449176": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574527294160280": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14051740545326136728": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254915149208": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819250336120216": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728728034000280": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8207184332085673368": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8279243656995421592": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7774828382627184024": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7846887707536932248": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7918947032446680472": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419458652241920": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419461506814030": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419461742501816": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419459218625188": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419459416087267": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419461338578328": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419462428888727": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419461923917715": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419461300542470": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419462341147477": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "3802419459707794418": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "3802419460563125930": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419460579903549": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419460462460216": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419460479237835": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419460496015454": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360133742493696": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360136597065806": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360136832753592": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360134308876964": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360134506339043": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360136428830104": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360137519140503": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360137014169491": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360136390794246": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360137431399253": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "3730360134798046194": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "3730360135653377706": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360135670155325": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360135552711992": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360135569489611": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360135586267230": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293858566903375": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565191503550031": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597615104792143": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690786609960527": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11537727020457301583": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8775429142021183055": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419460695430735": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360135785682511": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574526651012687": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14051740544682989135": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254272001615": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819249692972623": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728727390852687": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4533563460164294223": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8207184331442525775": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8279243656352273999": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7774828381984036431": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7846887706893784655": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7918947031803532879": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293857409034330": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565190345680986": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597613946923098": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690785452091482": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11537727019299432538": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8775429140863314010": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419459537561690": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360134627813466": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574525493143642": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14051740543525120090": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253114132570": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819248535103578": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728726232983642": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4533563459006425178": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8207184330284656730": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8279243655194404954": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7774828380826167386": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7846887705735915610": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7918947030645663834": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293857392256711": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565190328903367": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597613930145479": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690785435313863": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11537727019282654919": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8775429140846536391": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419459520784071": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360134611035847": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574525476366023": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14051740543508342471": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253097354951": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819248518325959": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728726216206023": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4533563458989647559": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8207184330267879111": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8279243655177627335": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7774828380809389767": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7846887705719137991": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7918947030628886215": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8775429142664330648": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8775429140741839587": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4533563458884950755": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4533563460807441816": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300808832745472": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300811687317582": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300811923005368": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300809399128740": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300809596590819": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300811519081880": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300810875934287": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300809718065242": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300809701287623": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300809684510004": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300812609392279": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300812104421267": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300811481046022": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300809638530245": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300812521651029": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "3658300809888297970": {
+                "mClipName": "{e11b0e97}",
+                "__type": "TransitionClipBlendData"
+            },
+            "3658300810743629482": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300810760407101": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300810642963768": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300810659741387": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300810676519006": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3658300810351197616": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12260293857375479092": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13272565190312125748": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "2432597613913367860": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3280690785418536244": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11537727019265877300": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8775429140829758772": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3802419459504006452": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3730360134594258228": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16220574525459588404": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14051740543491564852": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253080577332": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3460819248501548340": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "15843728726199428404": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "4533563458972869940": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8207184330251101492": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8279243655160849716": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7774828380792612148": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7846887705702360372": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "7918947030612108596": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299872847156": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299784927971": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702301707419032": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702301064271439": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299906402394": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6521702299889624775": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8775429143754641047": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "14051740546416447127": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "4533563461897752215": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "8207184333175983767": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "8279243658085731991": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "7774828383717494423": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "7846887708627242647": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "7918947033536990871": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "6521702302797729431": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

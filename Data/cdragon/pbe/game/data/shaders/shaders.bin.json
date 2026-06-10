@@ -91779,6 +91779,40 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "VoidTendrilNormalIntensity",
+                "data": [
+                    0.3499999940395355,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VoidTendrilNormalIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VoidTendrilSoftness",
+                "data": [
+                    0.15000000596046448,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VoidTendrilSoftness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Refraction_Distortion_Strength",
                 "logicalParameters": [
                     {
@@ -92307,64 +92341,67 @@
             {
                 "name": "CurlNormal",
                 "defaultTexturePath": "ASSETS/Shared/Materials/CurlNoiseFlow_NM.tex",
-                "samplerName": "Wrap_No_Mip",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "WaterNormal",
-                "defaultTexturePath": "ASSETS/Shared/Materials/velvet_NM.tex",
-                "samplerName": "Wrap_No_Mip",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Mantis_Water_02_NM.tex",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "BAKED_NORMAL_TEXTURE",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_NM.tex",
+                "samplerName": "EnvironmentClamp",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "VoidNormal2",
                 "defaultTexturePath": "ASSETS/Maps/TerrainPaint/PaintLayers/Mantis/VisualSpike/Mantis_VisualSpike_VoidTendrils_AB_NM.tex",
-                "samplerName": "Wrap_No_Mip",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "VoidHeight",
                 "defaultTexturePath": "ASSETS/Maps/TerrainPaint/PaintLayers/Mantis/VisualSpike/Mantis_VisualSpike_VoidTendrils_AC_H.tex",
-                "samplerName": "Wrap_No_Mip",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "VoidAlbedo2",
                 "defaultTexturePath": "ASSETS/Maps/TerrainPaint/PaintLayers/Mantis/VisualSpike/Mantis_VisualSpike_VoidTendrils_AB_ALB.tex",
-                "samplerName": "Wrap_No_Mip",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "VoidNormal",
                 "defaultTexturePath": "ASSETS/Maps/TerrainPaint/PaintLayers/Mantis/VisualSpike/Mantis_VisualSpike_VoidTendrils_AC_NM.tex",
-                "samplerName": "Wrap_No_Mip",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "FoamSparkleNoise",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Foam_Sparkle_Noise_M.tex",
-                "samplerName": "Wrap_No_Mip",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "BAKED_DIFFUSE_TEXTURE",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_Albedo.tex",
+                "samplerName": "EnvironmentClamp",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "Caustics",
                 "defaultTexturePath": "ASSETS/Shared/Materials/velvet_Mantis_Caustics_Mask_03.tex",
-                "samplerName": "Wrap_No_Mip",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             },
             {
                 "name": "BAKED_RMA_TEXTURE",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_rma.tex",
+                "samplerName": "EnvironmentClamp",
                 "__type": "ShaderTexture"
             }
         ],

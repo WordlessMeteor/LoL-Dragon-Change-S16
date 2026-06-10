@@ -295,6 +295,42 @@
         "mTarget": 0,
         "__type": "ScriptCheat"
     },
+    "{039edda1}": {
+        "mName": "Locke_ResetUltStacks",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Reset Ult Stacks",
+            "mTooltipText": "Removes all stacks of ultimate",
+            "__type": "CheatMenuUIData"
+        },
+        "__type": "ScriptCheat"
+    },
+    "{a5ebd32c}": {
+        "mName": "Locke_AddUltStack",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Add Ult Stack",
+            "mTooltipText": "Adds one stack of ultimate",
+            "__type": "CheatMenuUIData"
+        },
+        "__type": "ScriptCheat"
+    },
+    "{ee991873}": {
+        "mName": "Locke_ToggleSuperUnfairUlt",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Toggle Super Unfair Ult",
+            "mTooltipText": "Triples the size of the ultimate and auto kills units hit after 1.5s",
+            "__type": "CheatMenuUIData"
+        },
+        "__type": "ScriptCheat"
+    },
+    "{f8eb980b}": {
+        "mName": "Locke_SubtractUltStack",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Subtract Ult Stack",
+            "mTooltipText": "Removes one stack of ultimate",
+            "__type": "CheatMenuUIData"
+        },
+        "__type": "ScriptCheat"
+    },
     "{068012a3}": {
         "mName": "Sett_PAR",
         "mCheatMenuUIData": {
@@ -4407,6 +4443,15 @@
         "mCheatMenuUIData": {
             "mDisplayName": "Cherry_DamageSelf",
             "mTooltipText": "Lose 10% of your health.",
+            "__type": "CheatMenuUIData"
+        },
+        "__type": "ScriptCheat"
+    },
+    "{21c5fc6f}": {
+        "mName": "SetGoHLocke",
+        "mCheatMenuUIData": {
+            "mDisplayName": "SetGoHLocke",
+            "mTooltipText": "Set which Guest of Honor will appear. Only works before the roll.",
             "__type": "CheatMenuUIData"
         },
         "__type": "ScriptCheat"
@@ -10693,6 +10738,10 @@
             "mFloatingTextDisplayName": "game_cheats_floatingtext_spawnjungle",
             "mTooltipText": "game_cheats_tooltip_spawnjungle",
             "mDynamicTooltipText": "game_cheats_dynamic_tooltip_spawnjungle",
+            "mHotkey": "evtPracticeToolSpawnJungle",
+            "mHotkeys": [
+                "evtPracticeToolSpawnJungle"
+            ],
             "__type": "CheatMenuUIData"
         },
         "__type": "ScriptCheat"
@@ -10860,9 +10909,9 @@
             "mFloatingTextDisplayName": "game_cheats_floatingtext_spawnriftherald",
             "mTooltipText": "game_cheats_tooltip_spawnriftherald",
             "mDynamicTooltipText": "game_cheats_dynamic_tooltip_spawnriftherald",
-            "mHotkey": "evtPracticeToolSpawnJungle",
+            "mHotkey": "evtPracticeToolSpawnRiftHerald",
             "mHotkeys": [
-                "evtPracticeToolSpawnJungle"
+                "evtPracticeToolSpawnRiftHerald"
             ],
             "__type": "CheatMenuUIData"
         },
@@ -12209,7 +12258,8 @@
                     "Cheats/GameModes/Cherry/SetGoHVayne",
                     "Cheats/GameModes/Cherry/SetGoHVladimir",
                     "Cheats/GameModes/Cherry/SetGoHXinZhao",
-                    "Cheats/GameModes/Cherry/SetGoHYone"
+                    "Cheats/GameModes/Cherry/SetGoHYone",
+                    "{21c5fc6f}"
                 ],
                 "__type": "CheatPage"
             }
@@ -12518,6 +12568,28 @@
                     "{3a94aee6}",
                     "{fb87a342}",
                     "{613904b2}"
+                ],
+                "__type": "CheatPage"
+            }
+        ],
+        "__type": "CheatSet"
+    },
+    "{49f62b6c}": {
+        "mName": "LockeCheats",
+        "mGameModeName": "CLASSIC",
+        "AssociatedChampions": [
+            {
+                "champion": "{5861e9f8}",
+                "__type": "{9d79fb9f}"
+            }
+        ],
+        "{bd50bdef}": [
+            {
+                "{928eb9b4}": [
+                    "{a5ebd32c}",
+                    "{f8eb980b}",
+                    "{039edda1}",
+                    "{ee991873}"
                 ],
                 "__type": "CheatPage"
             }
